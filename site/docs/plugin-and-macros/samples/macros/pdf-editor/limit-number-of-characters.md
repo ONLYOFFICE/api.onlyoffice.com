@@ -4,6 +4,8 @@ description: Set a character limit for text form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Limit number of characters
 
 Restricts the number of characters allowed in text fields whose keys contain a specific keyword.
@@ -33,5 +35,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.png#gh-light-mode-only)
-![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/limit-number-of-characters" dark />

@@ -20,12 +20,12 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取文档中包含表格的表格单元格。
+访问文档中直接包含嵌套表格的单元格。
 
 ```javascript editor-docx
-// How to get the parent table cell.
+// How do I find the cell that holds a nested table in a document?
 
-// Retrieve the parent table cell, apply the shading to it.
+// Locate the surrounding cell so its appearance can be adjusted in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

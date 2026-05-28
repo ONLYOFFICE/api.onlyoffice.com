@@ -3,6 +3,8 @@ description: Load custom fields with questions and dropdowns.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Load custom fields
 
 Loads custom fields from the document.
@@ -15,9 +17,7 @@ The fields should be already added to the document with the [Example add custom 
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/load-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/load-custom-fields" />
 
 ## Installation
 

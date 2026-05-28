@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中的段落内容对齐方式。
+读取文档中应用于段落的文本对齐设置。
 
 ```javascript editor-docx
-// Get the justification of the paragraph and show it in the document.
+// How do I find out how a paragraph's text is aligned in a document?
 
-// How to know the justification type of the paragraph in a document.
+// Confirm the alignment type before deciding whether to unify or override it across styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

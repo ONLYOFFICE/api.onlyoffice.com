@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将文本设置应用于单元格的全部内容。
+在文档中为表格单元格内的所有内容应用统一的文本格式。
 
 ```javascript editor-docx
-// Set text properties to the table cell.
+// How do I change the font style and size of all text in a table cell in a document?
 
-// Make the table cell bold and with bigger font.
+// Style every character in a table cell at once by setting shared text properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

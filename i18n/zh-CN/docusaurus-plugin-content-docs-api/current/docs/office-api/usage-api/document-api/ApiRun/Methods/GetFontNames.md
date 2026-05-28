@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取文档中 run 内所有元素的所有字体名称。
+收集文档中文本运行内使用的所有字体名称。
 
 ```javascript editor-docx
-// How to get all font names from the text run object elements in a document.
+// How do I find out which fonts are applied to a text run in a document?
 
-// Get all font names from a text run as an array and display it in the worksheet.
+// List every font family assigned to the pieces of a text run in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

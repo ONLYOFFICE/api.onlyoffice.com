@@ -5,7 +5,7 @@ Sets button widget scale how type
 ## Syntax
 
 ```javascript
-expression.SetScaleHow(sType);
+expression.SetScaleHow(scaleHow);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetScaleHow(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | button widget scale how type |
+| scaleHow | Required | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | The icon scaling mode. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ boolean
 Set button widget scale how type in a PDF document.
 
 ```javascript editor-pdf
-// How do I set scale how in a PDF document?
+// Apply scale how type such as 'proportional' to a button widget.
 
-// Set scale how using a button widget object in a PDF document.
+// Display the set scale how value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

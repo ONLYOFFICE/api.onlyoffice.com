@@ -26,12 +26,12 @@ number
 
 ## Example
 
-Return the inverse of the cumulative beta probability density function for a specified beta distribution (BETADIST) in a spreadsheet.
+Find the quantile value for a given probability in beta distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from inverse of the cumulative beta probability density function in a spreadsheet.
+// How do I convert a probability percentage back into the original data range in a spreadsheet?
 
-// Use function to get the cumulative beta probability density function in a spreadsheet.
+// Retrieve the input value that corresponds to a specific cumulative probability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

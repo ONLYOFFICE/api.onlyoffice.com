@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中渐变光圈的类类型。
+获取演示文稿中渐变光圈对象的类型。
 
 ```javascript editor-pptx
-// How to identify the class type of a gradient stop in a presentation?
+// How do I identify what type a gradient stop is in a presentation?
 
-// Obtain the class type identifier of a gradient stop object in a presentation.
+// Retrieve the class name for a gradient stop object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

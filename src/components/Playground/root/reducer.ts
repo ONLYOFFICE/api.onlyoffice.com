@@ -7,6 +7,7 @@ export interface PlaygroundState {
     scriptType: ScriptType;
     scriptValue: string;
     isScriptModified: boolean;
+    isEditorReady: boolean;
     fileType: FileType;
     documentServerUrl: string;
     documentServerSecret: string;
@@ -19,7 +20,8 @@ export type PlaygroundAction =
     | { type: 'SET_SCRIPT_VALUE'; payload: string }
     | { type: 'RESET_SCRIPT' }
     | { type: 'SET_FILE_TYPE'; payload: FileType }
-    | { type: 'SET_SERVER_CONFIG'; payload: { documentServerUrl: string; documentServerSecret: string } };
+    | { type: 'SET_SERVER_CONFIG'; payload: { documentServerUrl: string; documentServerSecret: string } }
+    | { type: 'SET_EDITOR_READY'; payload: boolean };
 
 function isCodeScriptType(t: ScriptType): t is Exclude<ScriptType, 'config'> {
     return t !== 'config';
@@ -82,6 +84,8 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
                 documentServerUrl: action.payload.documentServerUrl,
                 documentServerSecret: action.payload.documentServerSecret,
             };
+        case 'SET_EDITOR_READY':
+            return {...state, isEditorReady: action.payload};
         default:
             return state;
     }

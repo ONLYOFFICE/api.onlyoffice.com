@@ -3,6 +3,8 @@ description: Add a new slide to a presentation.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add new slide
 
 This function adds a new slide at the end of presentation using default layout from the current slide's master.
@@ -78,12 +80,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-new-slide.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-new-slide.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/presentation-editor/add-new-slide" dark />

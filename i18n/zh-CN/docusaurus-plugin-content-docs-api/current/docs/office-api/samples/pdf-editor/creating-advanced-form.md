@@ -91,7 +91,7 @@ function getTableCellParagraph(table, row, col, width) {
 }
 
 function createFullWidthTable(rows, cols, borderColor, marginTop) {
-  let table = Api.CreateTable(cols, rows);
+  let table = Api.CreateTable(rows, cols);
   table.SetWidth("percent", 100);
   setBorders(table, borderColor);
   table.SetTableCellMarginTop(marginTop);

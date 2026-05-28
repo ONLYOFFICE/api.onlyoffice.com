@@ -14,7 +14,7 @@ expression.SetContents(contents);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| contents | Required | string |  | No description provided. |
+| contents | Required | string |  | The annotation text contents. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set contents to it in a PDF document.
+Add text content to an annotation in a PDF.
 
 ```javascript editor-pdf
-// How can I set contents using an annotation in a PDF document?
+// Store a message or note within an annotation in a PDF.
 
-// Set contents for an annotation in a PDF document.
+// Assign descriptive text to mark or label an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

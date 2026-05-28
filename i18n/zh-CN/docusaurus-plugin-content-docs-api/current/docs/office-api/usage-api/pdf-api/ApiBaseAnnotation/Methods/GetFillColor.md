@@ -20,12 +20,12 @@ expression.GetFillColor();
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其填充颜色。
+检索 PDF 中注释的填充颜色。
 
 ```javascript editor-pdf
-// How to get the fill color for an annotation in a PDF document?
+// What color is used to fill an annotation in a PDF?
 
-// Get the fill color and display the result in a PDF document.
+// Check the background or fill color applied to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

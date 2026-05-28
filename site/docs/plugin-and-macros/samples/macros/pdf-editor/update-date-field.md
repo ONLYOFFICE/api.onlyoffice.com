@@ -4,6 +4,8 @@ description: Set the current date in all date form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Update date field
 
 Sets the current date to all date form fields in the document.
@@ -28,5 +30,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![DateSetter](/assets/images/plugins/update-date-field.png#gh-light-mode-only)
-![DateSetter](/assets/images/plugins/update-date-field.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/update-date-field" dark />

@@ -1,17 +1,17 @@
 # GetDocumentInfo
 
 Returns the document information:
--**Application** - the application the document has been created with.
--**CreatedRaw** - the date and time when the file was created.
--**Created** - the parsed date and time when the file was created.
--**LastModifiedRaw** - the date and time when the file was last modified.
--**LastModified** - the parsed date and time when the file was last modified.
--**LastModifiedBy** - the name of the user who has made the latest change to the document.
--**Authors** - the persons who has created the file.
--**Title** - this property allows you to simplify your documents classification.
--**Tags** - this property allows you to simplify your documents classification.
--**Subject** - this property allows you to simplify your documents classification.
--**Comment** - this property allows you to simplify your documents classification.
+- **Application** - the application the document has been created with.
+- **CreatedRaw** - the date and time when the file was created.
+- **Created** - the parsed date and time when the file was created.
+- **LastModifiedRaw** - the date and time when the file was last modified.
+- **LastModified** - the parsed date and time when the file was last modified.
+- **LastModifiedBy** - the name of the user who has made the latest change to the document.
+- **Authors** - the persons who has created the file.
+- **Title** - this property allows you to simplify your documents classification.
+- **Tags** - this property allows you to simplify your documents classification.
+- **Subject** - this property allows you to simplify your documents classification.
+- **Comment** - this property allows you to simplify your documents classification.
 
 ## Syntax
 
@@ -31,12 +31,12 @@ object
 
 ## Example
 
-Get the document info represented as an object and paste the application name into the document.
+Retrieve document metadata information.
 
 ```javascript editor-pptx
-// How to get a document info from the presentation.
+// Access document info properties like application name.
 
-// Get current document info.
+// Display the application name on a slide shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

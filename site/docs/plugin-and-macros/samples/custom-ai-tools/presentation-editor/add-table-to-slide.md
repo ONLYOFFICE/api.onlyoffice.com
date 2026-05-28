@@ -3,6 +3,8 @@ description: Add a table to a presentation slide.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add table to slide
 
 This function adds a table to the specified or the current slide. By default, the table is 194x97 mm and centered.
@@ -151,12 +153,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-table-to-slide.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-table-to-slide.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/presentation-editor/add-table-to-slide" dark />

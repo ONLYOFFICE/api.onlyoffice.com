@@ -25,12 +25,12 @@ number \| string
 
 ## Example
 
-Return an index of a complex numbers in a spreadsheet.
+Get a value from a specific row and column in a table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an index of a complex numbers in a spreadsheet.
+// How do I retrieve a value at a specific position in a table in a spreadsheet?
 
-// Use a function to get the index in a spreadsheet.
+// Access a cell's value using row and column numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

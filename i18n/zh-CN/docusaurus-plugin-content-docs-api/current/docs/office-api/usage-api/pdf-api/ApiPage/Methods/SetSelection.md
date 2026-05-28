@@ -14,8 +14,8 @@ expression.SetSelection(startPoint, endPoint);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| startPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
-| endPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
+| startPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 选区的起始点。 |
+| endPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 选区的结束点。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-选中页面上的文本。
+在 PDF 的页面上将特定文本区域标记为已选中。
 
 ```javascript editor-pdf
-// How can I set selection using a page in a PDF document?
+// How do I highlight a range of text on a page in a PDF?
 
-// Set selection for a page in a PDF document.
+// Define and activate a text selection within given coordinates in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

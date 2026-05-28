@@ -15,7 +15,7 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | paragraph | 必需 | string \| [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 文本或段落。 |
-| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的「之前」或「之后」）。 |
+| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的“之前”或“之后”）。 |
 | beRNewPara | 必需 | boolean |  | 定义此方法是返回新段落（true）还是当前段落（false）。 |
 
 ## 返回值
@@ -27,9 +27,9 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 在演示文稿中的指定位置插入段落。
 
 ```javascript editor-pptx
-// How can I insert the paragraph using a paragraph in a presentation?
+// How do I add a new paragraph before or after an existing one in a presentation?
 
-// Insert the paragraph for a paragraph in a presentation.
+// Add a paragraph at a specific location in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

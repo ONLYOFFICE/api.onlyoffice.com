@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellBorderLeft(fSize, oApiFill);
+expression.SetCellBorderLeft(borderWidth, fill);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetCellBorderLeft(fSize, oApiFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
+| borderWidth | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格左边框及其填充颜色。
+在 PDF 中为表格单元格添加左边框。
 
 ```javascript editor-pdf
-// Create table and set its cell left border.
+// How do I create a border on the left edge of a cell in a PDF?
 
-// Use table cell to set cell border left.
+// Draw a styled line along the left side of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

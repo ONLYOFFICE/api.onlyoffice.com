@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCheckStyle(sStyle);
+expression.SetCheckStyle(style);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCheckStyle(sStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyle | 必需 | [CheckStyle](../../Enumeration/CheckStyle.md) |  | 未提供描述。 |
+| style | 必需 | [CheckStyle](../../Enumeration/CheckStyle.md) |  | 复选框样式。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件的选中样式。
+更改 PDF 中复选框控件的勾选符号外观。
 
 ```javascript editor-pdf
-// How can I set check style using a checkbox widget in a PDF document?
+// How do I customize what symbol appears inside a checked checkbox in a PDF?
 
-// Set check style for a checkbox widget in a PDF document.
+// Apply a visual style to a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

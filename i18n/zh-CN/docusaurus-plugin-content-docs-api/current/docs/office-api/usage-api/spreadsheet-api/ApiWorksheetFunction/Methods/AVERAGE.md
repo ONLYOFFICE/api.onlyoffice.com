@@ -14,7 +14,7 @@ expression.AVERAGE(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | 最多 255 个数值，将返回这些数值的平均值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | 最多 255 个数值，将返回其平均值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称或数字数组。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数据点与其平均值的绝对偏差的平均值。
+计算电子表格中一组数字的算术平均值。
 
 ```javascript editor-xlsx
-// How to get an average of the absolute deviations in a spreadsheet.
+// Find the average of several values in a spreadsheet.
 
-// Use function to get the average of the absolute deviations of data points from their mean in a spreadsheet.
+// Add up all numbers and divide by their count to get a central value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

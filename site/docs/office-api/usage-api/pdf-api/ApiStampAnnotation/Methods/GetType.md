@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get type of stamp annotation in a PDF document.
+Find out the category of a stamp annotation in a PDF
 
 ```javascript editor-pdf
-// How do I get the type in a PDF document?
+// What kind of stamp annotation is being used in a PDF?
 
-// Get the type using a stamp annotation object in a PDF document.
+// Look up and print the identifier type assigned to a stamp annotation in a PDF
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

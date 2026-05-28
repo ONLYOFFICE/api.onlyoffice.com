@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-替换文档中的当前句子。
+用新文本替换文档中光标位置处的句子。
 
 ```javascript editor-docx
-// How to change the text to another one in a document.
+// How do I substitute a whole sentence based on cursor placement in a document?
 
-// Add the new run instead of another sentence in a document.
+// Position the cursor mid-paragraph and overwrite that sentence with a replacement string in a document.
 
 let doc = Api.GetDocument();
 

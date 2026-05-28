@@ -15,7 +15,7 @@ expression.SetTableCellMarginBottom(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格底部范围下方的空间量值，以磅的二十分之一（1/1440 英寸）为单位。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格底部下方的空间量值，以二十分之一磅（1/1440 英寸）为单位。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定单元格内容底部边缘与父表格中所有表格单元格边框之间保留的间距。
+设置文档中每个表格单元格内容与底部边缘之间的间距。
 
 ```javascript editor-docx
-// How to add margin to the bottom of the cell.
+// How do I control how much space appears below the text inside table cells in a document?
 
-// Create a 3x3 table and add the bottom cell margin.
+// Push cell content away from the bottom border of each table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -25,9 +25,9 @@ number
 在 PDF 文档中将派卡转换为磅。
 
 ```javascript editor-pdf
-// How can I convert picas to points in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert picas to points in a PDF document.
+// The result is displayed in a shape text element.
 
 const picas = 100;
 const points = Api.PicasToPoints(picas);

@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | 必需 | string |  | 未提供描述。 |
+| hexString | 必需 | string |  | 表示颜色的十六进制字符串。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.HexColor(hexString);
 
 ## 示例
 
-在文档中创建十六进制颜色并将其用作字体颜色。
+将十六进制代码定义的自定义颜色应用于文档中的文本。
 
 ```javascript editor-docx
-// How do I hex color in a document?
+// How do I set a font color using a hex value in a document?
 
-// Hex color and display the result in a document.
+// Color paragraph text with a specific hex color in a document.
 
 const doc = Api.GetDocument();
 const color = Api.HexColor('#DECADE');

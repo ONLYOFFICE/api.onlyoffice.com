@@ -14,7 +14,7 @@ expression.SetCallout(callout);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| callout | 必需 | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | 未提供描述。 |
+| callout | 必需 | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | 定义标注线的 3 个点的数组。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为自由文本注释设置标注。
+设置 PDF 中文本注释的标注形状样式。
 
 ```javascript editor-pdf
-// How can I set callout using a free text annotation in a PDF document?
+// How do I change what the comment box looks like in a PDF?
 
-// Set callout for a free text annotation in a PDF document.
+// Assign a callout appearance to an annotation element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

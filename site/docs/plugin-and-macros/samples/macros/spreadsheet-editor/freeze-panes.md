@@ -4,6 +4,8 @@ description: Freeze rows and columns in a spreadsheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Freeze panes
 
 Unfreezes panes, navigates the viewport to a target cell (A10), then refreezes panes at a different cell (D10).
@@ -40,4 +42,4 @@ End Sub
 
 ## Result
 
-![Freeze panes](/assets/images/plugins/freeze-panes.png#gh-light-mode-only)![Freeze panes](/assets/images/plugins/freeze-panes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/freeze-panes" dark />

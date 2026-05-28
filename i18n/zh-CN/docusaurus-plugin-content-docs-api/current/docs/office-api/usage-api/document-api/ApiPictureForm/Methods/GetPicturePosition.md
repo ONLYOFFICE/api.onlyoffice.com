@@ -20,12 +20,12 @@ expression.GetPicturePosition();
 
 ## 示例
 
-获取文档中当前表单内的图片位置。
+检索文档中图片在其表单框架内的偏移量。
 
 ```javascript editor-docx
-// How to get a picture position in a document.
+// How do I find out where a picture is positioned inside a form in a document?
 
-// Get the image position in the picture form and display it in the document.
+// Inspect the horizontal and vertical shift of an image inside a picture form in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});

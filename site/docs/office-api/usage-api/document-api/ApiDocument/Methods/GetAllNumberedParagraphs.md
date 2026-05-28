@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all numbered paragraphs from the current document in a document.
+Retrieve all numbered paragraphs in a document.
 
 ```javascript editor-docx
-// Get all paragraphs with numbering added to the document.
+// How do I collect every paragraph that has numbering applied in a document?
 
-// How to retrieve all paragraphs with numbering and make the first one bold in a document.
+// Make the first numbered paragraph bold to draw attention to the opening list item.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Return an array of all paragraphs from the document content.
+Access all text blocks within a shape in a PDF.
 
 ```javascript editor-pdf
-// How can I get all paragraphs using a document content in a PDF document?
+// How do I list every paragraph inside a shape in a PDF?
 
-// Get all paragraphs for a document content in a PDF document.
+// Retrieve all text sections and modify one of them in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

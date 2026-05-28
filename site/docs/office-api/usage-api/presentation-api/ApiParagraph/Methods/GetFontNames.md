@@ -20,12 +20,12 @@ string[]
 
 ## Example
 
-Get all font names from all elements inside the paragraph in a presentation.
+Retrieve all font names used in a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I get the font names in a presentation?
+// How do I get the list of fonts used in a paragraph in a presentation?
 
-// Get the font names using a paragraph object in a presentation.
+// Collect and display all font families from text elements within a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

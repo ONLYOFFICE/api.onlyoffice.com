@@ -23,12 +23,12 @@ expression.SetShd(type, color);
 
 ## Example
 
-Specify the shading applied to the contents of the current text run in a document.
+Apply a background shading color to a text run in a document.
 
 ```javascript editor-docx
-// How to add shading to the text in a document.
+// How do I shade the background behind a run of text in a document?
 
-// Create a new text run and apply shading to it in a document.
+// Color the area behind words to make them stand out in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

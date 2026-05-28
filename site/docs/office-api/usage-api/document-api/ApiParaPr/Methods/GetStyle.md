@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph style in a document.
+Retrieve the style applied to a paragraph and display its name in a document.
 
 ```javascript editor-docx
-// How to get the style of the paragraph in a document.
+// How do I get the current style of a paragraph in a document?
 
-// Get the paragraph style and display its name in a document.
+// Confirm which named style is active on a paragraph by reading and printing the style name in a document.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

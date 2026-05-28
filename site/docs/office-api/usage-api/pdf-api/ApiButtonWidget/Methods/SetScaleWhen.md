@@ -5,7 +5,7 @@ Sets button widget scale when type
 ## Syntax
 
 ```javascript
-expression.SetScaleWhen(sType);
+expression.SetScaleWhen(scaleWhen);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetScaleWhen(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | button widget scale when type |
+| scaleWhen | Required | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | The condition that controls when the icon is scaled. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ boolean
 Set button widget scale when type in a PDF document.
 
 ```javascript editor-pdf
-// How to set scale when for a button widget in a PDF document?
+// Configure when to scale the button icon using scale when property.
 
-// Set scale when and display the result in a PDF document.
+// Display the set scale when value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

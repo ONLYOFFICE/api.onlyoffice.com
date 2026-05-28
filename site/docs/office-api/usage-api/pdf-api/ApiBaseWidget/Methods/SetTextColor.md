@@ -14,7 +14,7 @@ expression.SetTextColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The text color. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get all field widgets and set text color for them in a PDF document.
+Apply a text color to all field widgets in a PDF.
 
 ```javascript editor-pdf
-// How can I set text color using a widget in a PDF document?
+// How do I set the text color for widgets in a PDF?
 
-// Set text color for a widget in a PDF document.
+// Change the text display color for widget content in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

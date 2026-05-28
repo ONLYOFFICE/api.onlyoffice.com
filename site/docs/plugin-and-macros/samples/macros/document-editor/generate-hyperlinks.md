@@ -4,6 +4,8 @@ description: Generate hyperlinks from URLs found in text.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Generate hyperlinks
 
 Generates and inserts hyperlinks instead of text URLs.
@@ -47,4 +49,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-hyperlinks" dark />

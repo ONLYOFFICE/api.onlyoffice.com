@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中 RGB 颜色的类类型。
+了解 PDF 中 RGB 颜色是哪种颜色对象类型。
 
 ```javascript editor-pdf
-// How to identify the class type of a RGB color in a PDF document?
+// How do I check the category of an RGB color in a PDF?
 
-// Obtain the class type identifier of a RGB color object in a PDF document.
+// Determine the classification of a red-green-blue color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

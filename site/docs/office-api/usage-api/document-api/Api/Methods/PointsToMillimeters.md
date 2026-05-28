@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to millimeters in a document.
+Convert a measurement from points to millimeters in a document.
 
 ```javascript editor-docx
-// How to convert points to millimeters in a document?
+// How do I convert points to millimeters in a document?
 
-// Convert points to millimeters using the document API.
+// Display the millimeter equivalent of a point value as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

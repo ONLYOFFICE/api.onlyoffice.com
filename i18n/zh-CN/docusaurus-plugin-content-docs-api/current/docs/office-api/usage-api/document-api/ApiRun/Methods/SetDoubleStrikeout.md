@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-指定在文档中当前 run 的内容以每个字符上显示两条水平线的方式显示。
+在文档中为文本运行的字符绘制双删除线。
 
 ```javascript editor-docx
-// How to strike out a text with two lines in a document.
+// How do I apply a double strikethrough to a piece of text in a document?
 
-// Create a new text run and set double strikeout to it in a document.
+// Cross out text with a double line to indicate deletion or emphasis in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,17 +1,17 @@
 # SetToggleToOff
 
-Sets field toggle to off prop.
+Sets whether the checked state can be toggled off.
 
 Inherited from [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md).
 
 ## Example
 
-Set toggle to off property for checkbox field in a PDF document.
+Enable or disable toggle-off behavior for a checkbox in a PDF.
 
 ```javascript editor-pdf
-// How can I set toggle to off using a checkbox field in a PDF document?
+// How do I make a checkbox uncheck when clicked if already checked in a PDF?
 
-// Set toggle to off for a checkbox field in a PDF document.
+// Control whether a checked checkbox deselects on a second click in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

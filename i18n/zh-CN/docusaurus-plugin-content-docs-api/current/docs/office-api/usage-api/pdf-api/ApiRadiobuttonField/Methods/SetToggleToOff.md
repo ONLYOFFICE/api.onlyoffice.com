@@ -1,17 +1,17 @@
 # SetToggleToOff
 
-设置字段的切换为关闭属性。
+设置选中状态是否可以取消。
 
 继承自 [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md)。
 
 ## 示例
 
-在 PDF 文档中为复选框字段设置切换为关闭属性。
+启用或禁用 PDF 中复选框的取消切换行为。
 
 ```javascript editor-pdf
-// How can I set toggle to off using a checkbox field in a PDF document?
+// How do I make a checkbox uncheck when clicked if already checked in a PDF?
 
-// Set toggle to off for a checkbox field in a PDF document.
+// Control whether a checked checkbox deselects on a second click in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

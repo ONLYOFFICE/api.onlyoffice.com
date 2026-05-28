@@ -24,7 +24,7 @@ let data = [
   ["4%", "15%", "27%", "-14%", "0%", "25%", "-64%", "45%", "-0.5%"],
 ];
 
-let table = Api.CreateTable(6, 10);
+let table = Api.CreateTable(10, 6);
 table.SetWidth("percent", 100);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

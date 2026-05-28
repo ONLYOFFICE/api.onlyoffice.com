@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除幻灯片
 
 根据幻灯片标题删除演示文稿中的指定幻灯片。
@@ -53,5 +55,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除幻灯片](/assets/images/plugins/remove-slides.png#gh-light-mode-only)
-![删除幻灯片](/assets/images/plugins/remove-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-slides" dark />

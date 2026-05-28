@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get width of shape and insert it into the presentation.
+Get the width of a shape in a presentation.
 
 ```javascript editor-pptx
-// How to find a shape's width and display it on the slide.
+// How do I find the size of an object from left to right in a presentation?
 
-// Get a slide shape's width.
+// Read and display a shape's width in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

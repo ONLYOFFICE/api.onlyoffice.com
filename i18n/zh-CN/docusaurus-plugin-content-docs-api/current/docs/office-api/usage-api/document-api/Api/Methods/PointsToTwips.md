@@ -27,7 +27,7 @@ number
 ```javascript editor-docx
 // How do I convert points to twips in a document?
 
-// Convert points to twips and display the result in a document.
+// Display the twip equivalent of a point value as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

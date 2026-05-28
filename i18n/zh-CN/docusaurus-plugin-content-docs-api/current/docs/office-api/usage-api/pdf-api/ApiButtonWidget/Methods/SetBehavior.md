@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBehavior(sType);
+expression.SetBehavior(behavior);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBehavior(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | 未提供描述。 |
+| behavior | 必需 | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | 单击按钮时的高亮行为。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ boolean
 在 PDF 文档中设置按钮控件的行为类型。
 
 ```javascript editor-pdf
-// How do I set behavior in a PDF document?
+// Apply behavior type such as 'outline' to a button widget.
 
-// Set behavior using a button widget object in a PDF document.
+// Display the set behavior value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

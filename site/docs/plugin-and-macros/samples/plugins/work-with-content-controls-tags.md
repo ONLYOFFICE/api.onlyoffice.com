@@ -3,6 +3,8 @@ description: Get a list of content control tags in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Work with content controls tags
 
 Gets the list of content controls tags.
@@ -11,9 +13,7 @@ Gets the list of content controls tags.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-tags" />
 
 ## Installation
 

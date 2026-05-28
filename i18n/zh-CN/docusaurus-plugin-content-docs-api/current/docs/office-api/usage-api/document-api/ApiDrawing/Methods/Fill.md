@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前图形对象设置填充格式属性。
+在文档中为复制的形状应用径向渐变填充。
 
 ```javascript editor-docx
-// How to color a drawing with a radiant fill in a document.
+// How do I set a gradient fill on a drawing object in a document?
 
-// Change the background color of the shape in a document.
+// Differentiate two identical shapes by filling the duplicate with a radial gradient while leaving the original solid.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

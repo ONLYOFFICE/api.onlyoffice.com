@@ -22,12 +22,12 @@ expression.SetBarColor(oColor);
 
 ## 示例
 
-设置数据条条件格式规则的条形颜色。
+为电子表格中用于条件格式的数据条应用自定义填充颜色。
 
 ```javascript editor-xlsx
-// How to change the bar color of a data bar in a spreadsheet.
+// How do I change the color of data bars shown inside cells in a spreadsheet?
 
-// Set the bar color of a data bar conditional formatting rule.
+// Make data bars stand out by assigning them a specific color that fits your design in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

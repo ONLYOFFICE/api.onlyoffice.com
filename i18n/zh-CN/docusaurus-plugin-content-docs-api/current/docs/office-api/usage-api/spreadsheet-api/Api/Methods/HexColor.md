@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | 必需 | string |  | 未提供描述。 |
+| hexString | 必需 | string |  | 表示颜色的十六进制字符串。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.HexColor(hexString);
 
 ## 示例
 
-在电子表格中创建十六进制颜色并将其用作形状填充。
+从十六进制代码定义颜色并将其作为电子表格中的形状填充应用。
 
 ```javascript editor-xlsx
-// How do I hex color in a spreadsheet?
+// How do I use a hex color code to fill a shape in a spreadsheet?
 
-// Hex color and display the result in a spreadsheet.
+// Paint a shape with a custom hex color in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.HexColor('#DECADE');

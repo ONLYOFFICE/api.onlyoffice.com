@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取演示文稿中 XML 管理器中自定义 XML 部件的数量。
+获取演示文稿中 XML 部件的数量。
 
 ```javascript editor-pptx
-// How to get the count of custom XML parts in a presentation.
+// How do I count XML parts stored in a presentation?
 
-// Get the count of XML parts in a presentation.
+// Retrieve the number of custom XML entries in the presentation's XML manager.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

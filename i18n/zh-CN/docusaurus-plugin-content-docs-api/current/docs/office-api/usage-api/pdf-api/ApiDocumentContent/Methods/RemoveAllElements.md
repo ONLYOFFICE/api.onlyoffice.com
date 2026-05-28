@@ -21,12 +21,12 @@ boolean
 
 ## 示例
 
-从 PDF 文档中的形状移除所有元素。
+删除 PDF 中形状内容的所有段落。
 
 ```javascript editor-pdf
-// How to remove all elements from the page shape.
+// How do I clear all text blocks from inside a shape in a PDF?
 
-// Get a page shape's content and remove all elements from it.
+// Erase every paragraph and line from a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

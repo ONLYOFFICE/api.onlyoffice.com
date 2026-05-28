@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 替换文档中的单词
 
 在整个文档中搜索指定单词，并将其替换为给定的替换词。
@@ -39,4 +41,4 @@ End Sub
 
 ## 结果
 
-![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/replace-words-in-document" dark />

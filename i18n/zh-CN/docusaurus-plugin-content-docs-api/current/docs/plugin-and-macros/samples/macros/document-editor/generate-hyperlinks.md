@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成超链接
 
 生成并插入超链接，替代文本形式的 URL。
@@ -45,4 +47,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-hyperlinks" dark />

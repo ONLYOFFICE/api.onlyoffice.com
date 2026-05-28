@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 添加缩略语全称
 
 自动识别文档中的所有缩略语，并在注释中添加其全称。
@@ -44,5 +46,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![添加缩略语全称](/assets/images/plugins/acronym-full-forms.png#gh-light-mode-only)
-![添加缩略语全称](/assets/images/plugins/acronym-full-forms.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/acronym-full-forms" dark />

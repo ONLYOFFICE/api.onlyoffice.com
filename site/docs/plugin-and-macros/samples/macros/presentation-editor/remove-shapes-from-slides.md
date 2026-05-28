@@ -4,6 +4,8 @@ description: Remove all shapes from presentation slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove shapes from slides
 
 Removes shapes from slides in a presentation.
@@ -32,4 +34,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![Remove shapes](/assets/images/plugins/remove-shapes.png#gh-light-mode-only)![Remove shapes](/assets/images/plugins/remove-shapes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-shapes-from-slides" dark />

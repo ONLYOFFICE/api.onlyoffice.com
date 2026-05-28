@@ -14,7 +14,7 @@ expression.SetRect(rect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | Required | [Rect](../../Enumeration/Rect.md) |  | No description provided. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the annotation. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set rect to twice the initial size in a PDF document.
+Resize an annotation by changing its boundaries in a PDF.
 
 ```javascript editor-pdf
-// How can I set rect using an annotation in a PDF document?
+// Expand or shrink an annotation's size in a PDF.
 
-// Set rect for an annotation in a PDF document.
+// Adjust the rectangular area covered by an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

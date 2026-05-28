@@ -6,7 +6,7 @@
 ## 语法
 
 ```javascript
-expression.SetTextSize(nSize);
+expression.SetTextSize(size);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -15,7 +15,7 @@ expression.SetTextSize(nSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | 必需 | [pt](../../Enumeration/pt.md) |  | 未提供描述。 |
+| size | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的字体大小。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中的所有字段控件并为其设置文本颜色。
+设置 PDF 中输入字段控件的文本大小。
 
 ```javascript editor-pdf
-// How can I set text size using a widget in a PDF document?
+// How do I change the font size of text in form fields in a PDF?
 
-// Set text size for a widget in a PDF document.
+// Adjust the text display size for all widgets in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

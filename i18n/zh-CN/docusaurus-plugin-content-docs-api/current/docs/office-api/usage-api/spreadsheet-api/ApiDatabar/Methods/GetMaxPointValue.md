@@ -20,12 +20,12 @@ string \| number \| null
 
 ## 示例
 
-从数据条条件格式规则获取最大点值。
+读取电子表格中数据条规则使用的上边界值。
 
 ```javascript editor-xlsx
-// How to retrieve the value of the maximum condition in a spreadsheet.
+// How do I find out the number or threshold at the top end of a data bar in a spreadsheet?
 
-// Get the maximum point value of a data bar conditional formatting rule.
+// Check what value marks the longest bar to understand the data bar scale in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

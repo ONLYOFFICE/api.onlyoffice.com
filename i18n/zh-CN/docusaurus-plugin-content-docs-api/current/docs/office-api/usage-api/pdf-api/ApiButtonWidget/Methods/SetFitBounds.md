@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFitBounds(bFit);
+expression.SetFitBounds(fit);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetFitBounds(bFit);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bFit | 必需 | boolean |  | 未提供描述。 |
+| fit | 必需 | boolean |  | 指定图标是否缩放以适应按钮边界。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ boolean
 在 PDF 文档中设置按钮控件的适合边界属性。
 
 ```javascript editor-pdf
-// How to set fit bounds for a button widget in a PDF document?
+// Enable or disable the fit bounds behavior for a button widget.
 
-// Set fit bounds and display the result in a PDF document.
+// Display the fit bounds status using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

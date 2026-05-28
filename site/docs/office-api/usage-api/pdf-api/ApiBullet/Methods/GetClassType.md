@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a bullet in a PDF document.
+Identify the class type of a bullet in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a bullet object is in a PDF document?
+// How do I determine what type a bullet object is in a PDF?
 
-// Retrieve and output the class type string for a bullet in a PDF document.
+// Find the object type identifier for a bullet in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

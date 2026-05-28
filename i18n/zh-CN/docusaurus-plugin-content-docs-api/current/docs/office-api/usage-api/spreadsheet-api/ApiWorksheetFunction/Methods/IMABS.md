@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的绝对值（模）。
+获取电子表格中复数的绝对值。
 
 ```javascript editor-xlsx
-// How to get the absolute value of the complex number in a spreadsheet.
+// How do I find the magnitude of a complex number in a spreadsheet?
 
-// Use a function to get a modulus of the complex number in a spreadsheet.
+// Calculate the modulus of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

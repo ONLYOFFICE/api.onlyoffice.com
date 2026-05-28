@@ -1,3 +1,10 @@
+---
+description: "Insert 'Hello world!' text on button click."
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # Hello world
 
 当用户按下按钮时，插入 *Hello world!* 这句话。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/hello-world.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/hello-world" />
 
 ## 安装
 

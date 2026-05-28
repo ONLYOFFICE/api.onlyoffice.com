@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the parent range of conditional formatting rules.
+Find the cell range that owns a set of formatting rules in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the range that contains conditional formatting rules.
+// How do I identify which cells a group of highlight conditions belongs to in a spreadsheet?
 
-// Get parent range of conditional formatting rules.
+// Trace formatting rules back to the range they were applied to in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

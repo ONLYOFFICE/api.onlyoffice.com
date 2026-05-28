@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 调整缩进
 
 调整演示文稿中所有段落的首行缩进量。
@@ -45,5 +47,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![调整缩进](/assets/images/plugins/adjust-indentation.png#gh-light-mode-only)
-![调整缩进](/assets/images/plugins/adjust-indentation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/adjust-indentation" dark />

@@ -1,9 +1,9 @@
 # SetVertAlign
 
 指定将应用于当前文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+- **“baseline”** - 当前文本块中的字符将按默认文本基线对齐。
+- **“subscript”** - 当前文本块中的字符将对齐到默认文本基线下方。
+- **“superscript”** - 当前文本块中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在 PDF 文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+在 PDF 中将文本定位在基线的上方或下方。
 
 ```javascript editor-pdf
-// How to change a vertical alignment of a text run in a PDF document.
+// Can text be raised or lowered relative to normal text in a PDF?
 
-// Create a new text run and make it subscript, baseline or superscript in a PDF document.
+// Align text vertically as superscript or subscript in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

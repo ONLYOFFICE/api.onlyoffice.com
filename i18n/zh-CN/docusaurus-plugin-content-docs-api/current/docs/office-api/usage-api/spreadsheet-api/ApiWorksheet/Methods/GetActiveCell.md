@@ -20,12 +20,12 @@ expression.GetActiveCell();
 
 ## 示例
 
-获取表示电子表格中活动单元格的对象。
+读取当前选定的单元格并在电子表格中向其写入值。
 
 ```javascript editor-xlsx
-// How to get selected active cell.
+// How do I find out which cell is active and put content into it in a spreadsheet?
 
-// Get an active cell and insert data to it.
+// Target the focused cell and populate it with custom text.
 
 let worksheet = Api.GetActiveSheet();
 let activeCell = worksheet.GetActiveCell();

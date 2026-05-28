@@ -4,6 +4,8 @@ description: Auto-fill placeholders with predefined text.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Autoplaceholder
 
 Automatically fills empty text boxes on slides with placeholder content and arranges texts in a structured format.
@@ -75,4 +77,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![AutoPlaceholder](/assets/images/plugins/auto-placeholder.png#gh-light-mode-only)![AutoPlaceholder](/assets/images/plugins/auto-placeholder.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/auto-placeholder" dark />

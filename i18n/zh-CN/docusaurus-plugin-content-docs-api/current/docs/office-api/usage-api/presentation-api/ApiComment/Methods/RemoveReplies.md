@@ -27,9 +27,9 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 从演示文稿中的批注移除回复。
 
 ```javascript editor-pptx
-// How to delete specified comment reply in a presentation.
+// Delete specified comment replies while keeping others intact.
 
-// Get all comments from the presentation and remove a reply from the first one's.
+// Add multiple replies to a comment, then remove selected ones by index.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

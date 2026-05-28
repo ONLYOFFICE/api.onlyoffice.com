@@ -11,7 +11,7 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | Date | object | 当前日期和时间。 |
-| DateFormat | string | 日期显示的格式。例如：*"MM/DD/YYYY"、"dddd\,\ mmmm\ dd\,\ yyyy"、"DD\ MMMM\ YYYY"、"MMMM\ DD\,\ YYYY"、"DD-MMM-YY"、"MMMM\ YY"、"MMM-YY"、"MM/DD/YYYY\ hh:mm\ AM/PM"、"MM/DD/YYYY\ hh:mm:ss\ AM/PM"、"hh:mm"、"hh:mm:ss"、"hh:mm\ AM/PM"、"hh:mm:ss:\ AM/PM"*。 |
+| DateFormat | string | 日期的显示格式。例如：*"MM/DD/YYYY"、"dddd\,\ mmmm\ dd\,\ yyyy"、"DD\ MMMM\ YYYY"、"MMMM\ DD\,\ YYYY"、"DD-MMM-YY"、"MMMM\ YY"、"MMM-YY"、"MM/DD/YYYY\ hh:mm\ AM/PM"、"MM/DD/YYYY\ hh:mm:ss\ AM/PM"、"hh:mm"、"hh:mm:ss"、"hh:mm\ AM/PM"、"hh:mm:ss:\ AM/PM"*。 |
 
 ## 示例
 

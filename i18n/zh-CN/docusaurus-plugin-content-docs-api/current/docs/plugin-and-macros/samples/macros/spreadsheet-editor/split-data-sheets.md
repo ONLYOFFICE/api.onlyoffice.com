@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 拆分数据工作表
 
 当工作表数据量超过指定行数限制时，自动将其拆分为多个新工作表，以便高效管理大型数据集。
@@ -85,5 +87,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![拆分数据工作表](/assets/images/plugins/split-data-sheets.png#gh-light-mode-only)
-![拆分数据工作表](/assets/images/plugins/split-data-sheets.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/split-data-sheets" dark />

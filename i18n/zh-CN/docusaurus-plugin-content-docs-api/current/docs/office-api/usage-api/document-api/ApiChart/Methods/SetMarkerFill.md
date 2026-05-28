@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置文档中指定图表系列中标记的填充。
+在文档中用纯色填充图表系列的数据点标记。
 
 ```javascript editor-docx
-// How to set a fill to the marker in a document.
+// How do I change the background color of chart markers in a document?
 
-// Create a chart, set its properties and its marker color in a document.
+// Distinguish a data series visually by applying a custom fill to its markers in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

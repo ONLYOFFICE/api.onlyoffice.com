@@ -5,7 +5,7 @@ Sets the height to the current table row.
 ## Syntax
 
 ```javascript
-expression.SetHeight(nValue);
+expression.SetHeight(height);
 ```
 
 `expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
@@ -14,7 +14,7 @@ expression.SetHeight(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Optional | [EMU](../../Enumeration/EMU.md) |  | The row height in English measure units. |
+| height | Required | [EMU](../../Enumeration/EMU.md) |  | The row height in English measure units. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-How to set a height of the row in a PDF document.
+Set the height of a table row in a PDF.
 
 ```javascript editor-pdf
-// Create a table and change its rows height in a PDF document.
+// How do I make a row taller or shorter in a PDF?
 
-// Set height using a table row object in a PDF document.
+// Change the row dimensions to a specific measurement in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

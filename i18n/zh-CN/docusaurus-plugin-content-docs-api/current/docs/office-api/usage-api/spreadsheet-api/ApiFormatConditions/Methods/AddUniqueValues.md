@@ -20,12 +20,12 @@ expression.AddUniqueValues();
 
 ## 示例
 
-向范围添加唯一值条件格式。
+在电子表格中将包含唯一条目的单元格与重复条目区别标记。
 
 ```javascript editor-xlsx
-// How to add unique values conditional formatting rules to highlight unique or duplicate values.
+// How do I visually separate unique items from duplicates across a data range in a spreadsheet?
 
-// Add unique values conditional formatting to cells.
+// Color-code cells so repeated and distinct values are easy to tell apart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

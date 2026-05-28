@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中统一颜色对象的类类型。
+了解您在 PDF 中使用的颜色对象类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a uni color in a PDF document?
+// How do I identify the type of color being used in a PDF?
 
-// Get the class type of a uni color and display it in the PDF.
+// Determine what color system defines a color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

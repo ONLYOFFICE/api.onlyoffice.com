@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中前 10 条件的百分比模式。
+读取电子表格中前 10 项规则是高亮显示百分比值还是固定数量。
 
 ```javascript editor-xlsx
-// How to check if the condition uses percentage values instead of count values in a spreadsheet.
+// How do I check if a top 10 conditional formatting rule works by percentage in a spreadsheet?
 
-// Get the percentage mode setting for the top 10 rule in a spreadsheet.
+// Confirm whether the highlight threshold is expressed as a percent or an item count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

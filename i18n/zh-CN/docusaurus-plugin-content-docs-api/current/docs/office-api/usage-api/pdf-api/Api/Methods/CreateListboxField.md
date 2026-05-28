@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateListboxField(aRect);
+expression.CreateListboxField(rect);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateListboxField(aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
 
 ## 返回值
 
@@ -22,10 +22,10 @@ expression.CreateListboxField(aRect);
 
 ## 示例
 
-如何创建列表框字段并添加到文档。
+创建并向文档添加列表框字段。
 
 ```javascript editor-pdf
-// How do I create the listbox field in a PDF document?
+// Create the listbox field in a PDF document.
 
 // Create the listbox field and display the result in a PDF document.
 

@@ -20,12 +20,12 @@ string \| string[][]
 
 ## Example
 
-Get the value without format of the specified range in a spreadsheet.
+Read the unformatted raw value from a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a cell raw value.
+// How do I get the number stored in a cell without any formatting in a spreadsheet?
 
-// Get a range, get its raw value without format and show it in the worksheet.
+// Extract the underlying value from a formatted cell to use it elsewhere in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let format = Api.Format("123456", "$#,##0");

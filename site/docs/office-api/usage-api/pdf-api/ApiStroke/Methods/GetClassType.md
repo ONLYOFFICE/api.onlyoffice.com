@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a stroke in a PDF document.
+Find the object type label for a border line in a PDF
 
 ```javascript editor-pdf
-// How to identify the class type of a stroke in a PDF document?
+// What class identifier does a border line report in a PDF?
 
-// Obtain the class type identifier of a stroke object in a PDF document.
+// Print the type classification of a border line in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

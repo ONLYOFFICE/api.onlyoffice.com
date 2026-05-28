@@ -5,14 +5,16 @@ Gets field by it's name.
 ## Syntax
 
 ```javascript
-expression.GetFieldByName();
+expression.GetFieldByName(name);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
-This method doesn't have any parameters.
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | the full name parameter. |
 
 ## Returns
 
@@ -20,12 +22,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get field by name in document.
+Find a specific form field by its name in a PDF.
 
 ```javascript editor-pdf
-// How can I get the field by name using a document in a PDF document?
+// How do I search for a field using its assigned name in a PDF?
 
-// Get the field by name for a document in a PDF document.
+// Retrieve a field and set its value by name in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

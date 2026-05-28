@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a scheme color object in a document.
+Read the type label assigned to a scheme color in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a scheme color in a document?
+// How do I find out what kind of object a scheme color is in a document?
 
-// Get the class type of a scheme color and display it in the document.
+// Confirm the category of a color object by checking its type identifier in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

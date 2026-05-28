@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改验证规则
 
 修改文档中数字和邮箱字段的验证规则。
@@ -37,5 +39,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![修改验证规则](/assets/images/plugins/change-validation-rules.png#gh-light-mode-only)
-![修改验证规则](/assets/images/plugins/change-validation-rules.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/change-validation-rules" dark />

@@ -5,7 +5,7 @@ Creates a table.
 ## Syntax
 
 ```javascript
-expression.CreateTable(nCols, nRows);
+expression.CreateTable(rows, cols);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,8 +14,8 @@ expression.CreateTable(nCols, nRows);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCols | Required |  |  | Number of columns. |
-| nRows | Required |  |  | Number of rows. |
+| rows | Required | number |  | Number of rows. |
+| cols | Required | number |  | Number of columns. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.CreateTable(nCols, nRows);
 
 ## Example
 
-How to create new table with two rows and four columns in a PDF document.
+Insert a table with multiple rows and columns in a PDF.
 
 ```javascript editor-pdf
-// Add a table to the pdf document.
+// How do I add a table to a PDF page?
 
-// Create the table using the PDF document API.
+// Create and place a table with specific dimensions in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.CreateFreeTextAnnot(rect);
 
 ## Example
 
-Create a freeText annotation and add it to the page.
+Add a text box annotation to a PDF.
 
 ```javascript editor-pdf
-// How do I create the free text annot in a PDF document?
+// How do I add a free text annotation in a PDF?
 
-// Create the free text annot and display the result in a PDF document.
+// Display a note with text content in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([10, 10, 160, 32]);

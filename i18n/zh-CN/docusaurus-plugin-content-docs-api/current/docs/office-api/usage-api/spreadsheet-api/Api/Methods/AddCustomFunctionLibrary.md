@@ -1,8 +1,8 @@
 # AddCustomFunctionLibrary
 
-注册新的自定义函数库（请参阅 -**SetCustomFunctions** 插件方法）。
+注册新的自定义函数库（参见 **SetCustomFunctions** 插件方法）。
 函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。
-参数和结果可以指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。
+参数和结果可指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。
 参数可以是必需的或可选的。用户还可以设置默认值。
 
 ## 语法
@@ -26,12 +26,12 @@ expression.AddCustomFunctionLibrary(sName, Func);
 
 ## 示例
 
-在电子表格中计算自定义函数结果。
+将相关的自定义函数捆绑到命名库中并在电子表格的单元格中使用。
 
 ```javascript editor-xlsx
-// A custom function library groups related functions under a single namespace.
+// How do I group custom functions under a shared library name in a spreadsheet?
 
-// Add cell values using a custom function library.
+// Organize reusable calculation logic inside a function library in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
 	/**

@@ -23,12 +23,12 @@ expression.SetDisplayFieldsInReportFilterArea(type, fields);
 
 ## 示例
 
-在电子表格中设置表格报表筛选区域的显示字段值。
+在电子表格中跨多列或多行排列报表筛选区域中的筛选字段。
 
 ```javascript editor-xlsx
-// How to set a display fields in report filter area of a table in a spreadsheet.
+// How do I control how many filter fields appear per row above a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set a display fields in report filter area in a spreadsheet.
+// Adjust the layout of the filter section so it wraps after a set number of fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

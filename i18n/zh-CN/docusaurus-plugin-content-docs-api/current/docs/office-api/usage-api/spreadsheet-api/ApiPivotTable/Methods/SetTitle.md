@@ -22,12 +22,12 @@ expression.SetTitle(title);
 
 ## 示例
 
-在电子表格中设置数据透视表的标题。
+为电子表格中的数据透视表分配自定义标题。
 
 ```javascript editor-xlsx
-// How to set table title in a spreadsheet.
+// How do I give a pivot table its own name in a spreadsheet?
 
-// Create a pivot table, add data to it then set its table title in a spreadsheet.
+// Label a pivot table with a meaningful title so it is easy to identify in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

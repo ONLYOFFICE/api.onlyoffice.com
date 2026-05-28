@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-在文档中为当前段落设置文本颜色。
+更改文档中段落的文本颜色。
 
 ```javascript editor-docx
-// Color the paragraph text with orange in a document.
+// How do I apply a specific color to the text of a paragraph in a document?
 
-// Get the first paragraph and make its font color orange in a document.
+// Give paragraph text a custom color to make it visually distinct in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);

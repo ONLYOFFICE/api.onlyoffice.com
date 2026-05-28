@@ -3,6 +3,8 @@ description: Copy content between content controls.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Work with content controls content
 
 Inserts the content of one content control into another.
@@ -11,9 +13,7 @@ Inserts the content of one content control into another.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-content.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-content" />
 
 ## Installation
 

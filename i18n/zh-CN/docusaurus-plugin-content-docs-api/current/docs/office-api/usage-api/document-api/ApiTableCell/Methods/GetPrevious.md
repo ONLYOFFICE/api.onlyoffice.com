@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取文档中的上一个单元格。
+导航到文档中给定表格单元格之前的单元格。
 
 ```javascript editor-docx
-// How to get previous cell.
+// How do I move to the cell before a specific table cell in a document?
 
-// Retrieve the cell from the table and get the previous one.
+// Step backward from one table cell to the adjacent one in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

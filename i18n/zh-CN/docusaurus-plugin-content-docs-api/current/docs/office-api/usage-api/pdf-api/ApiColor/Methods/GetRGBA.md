@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取 PDF 文档中形状填充颜色的 RGBA 分量。
+从 PDF 中的颜色获取包含透明度的 RGBA 值。
 
 ```javascript editor-pdf
-// How to get the r g b a for a color in a PDF document?
+// How do I extract red, green, blue, and alpha from a color in a PDF?
 
-// Get the r g b an and display the result in a PDF document.
+// Retrieve all four color components and display them in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

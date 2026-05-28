@@ -4,6 +4,8 @@ description: Clear specific default values from text form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove default values
 
 Automatically removes a specific default value from all text fields in the entire document.
@@ -26,5 +28,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![RemoveDefaultValues](/assets/images/plugins/remove-default-values.png#gh-light-mode-only)
-![RemoveDefaultValues](/assets/images/plugins/remove-default-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/remove-default-values" dark />

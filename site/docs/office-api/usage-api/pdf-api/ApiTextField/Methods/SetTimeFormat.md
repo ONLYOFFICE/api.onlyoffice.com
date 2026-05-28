@@ -5,7 +5,7 @@ Sets time format for field.
 ## Syntax
 
 ```javascript
-expression.SetTimeFormat(sFormat);
+expression.SetTimeFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetTimeFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
+| format | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set time format for it.
+Display times in a consistent format like hours and minutes in a PDF.
 
 ```javascript editor-pdf
-// How do I set time format in a PDF document?
+// How do I show time input in a specific format in a PDF?
 
-// Set time format using a text field object.
+// Configure time display patterns for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-获取幻灯片母版中所有 OLE 对象的数组。
+从演示文稿中的幻灯片母版检索所有 OLE 对象。
 
 ```javascript editor-pptx
-// How to get all OLE objects from the master of presentation.
+// How do I find all OLE objects on a slide master in a presentation?
 
-// Get all OLE objects from the presentation slide master as an array.
+// List every embedded object in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -5,7 +5,7 @@ Sets special format for field.
 ## Syntax
 
 ```javascript
-expression.SetSpecialFormat(sFormat);
+expression.SetSpecialFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetSpecialFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
+| format | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set special format for it.
+Format field values as phone numbers in a PDF.
 
 ```javascript editor-pdf
-// How to set special format for a combobox field?
+// Can I make phone numbers display correctly in a PDF?
 
-// Set special format and display the result in a PDF document.
+// Apply phone number formatting to a field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

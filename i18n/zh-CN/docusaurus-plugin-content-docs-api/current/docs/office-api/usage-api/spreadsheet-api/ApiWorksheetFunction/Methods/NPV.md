@@ -15,7 +15,7 @@ expression.NPV(arg1, args);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 贴现率。 |
-| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个表示未来付款（负值）和收入（正值）的参数。第一个参数是必需的，后续值是可选的。参数可以是数字、区域、数字数组。 |
+| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个参数，表示未来的付款（负值）和收入（正值）。第一个参数是必需的，后续值是可选的。参数可以是数字、区域或数字数组。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中基于贴现率和一系列未来付款（负值）及收入（正值）返回投资的净现值。
+使用折现率计算电子表格中投资的净现值。
 
 ```javascript editor-xlsx
-// How to get the net present value of an investment in a spreadsheet.
+// How do I find the net present value of future cash flows in a spreadsheet?
 
-// Use a function to get the net present value of an investment based on different parameters in a spreadsheet.
+// Evaluate an investment by discounting future payments and income in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

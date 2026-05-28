@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-在演示文稿中创建文本属性并使用它。
+在演示文稿中使用自定义样式属性格式化文本。
 
 ```javascript editor-pptx
-// How to change text style, size and font in a presentation.
+// How do I make text bold and change its size in a presentation?
 
-// Create the text pr and display the result in a presentation.
+// Apply bold formatting and set a custom font size for text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

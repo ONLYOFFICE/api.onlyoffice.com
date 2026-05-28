@@ -176,7 +176,7 @@ const config = {
 
 **示例**: `true`
 
-![审阅文档](/assets/images/editor/review.png)
+![审阅文档](/assets/images/editor/review.png#gh-light-mode-only)![审阅文档](/assets/images/editor/review.dark.png#gh-dark-mode-only)
 
 ## reviewGroups
 

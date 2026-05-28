@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析演示文稿形状中的弧线命令参数。获取并显示弧线半径和角度信息。
+获取演示文稿中弧形的宽度半径。
 
 ```javascript editor-pptx
-// How can I get the w r using a path command in a presentation?
+// How do I read the arc width radius in a presentation?
 
-// Get the w r for a path command in a presentation.
+// Extract arc dimensions to display size information in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

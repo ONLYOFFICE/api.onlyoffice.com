@@ -14,7 +14,7 @@ expression.SetCallout(callout);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| callout | Required | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | No description provided. |
+| callout | Required | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | An array of 3 points defining the callout line. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set callout for freeText annotation in a PDF document.
+Set the callout shape style for a text annotation in a PDF.
 
 ```javascript editor-pdf
-// How can I set callout using a free text annotation in a PDF document?
+// How do I change what the comment box looks like in a PDF?
 
-// Set callout for a free text annotation in a PDF document.
+// Assign a callout appearance to an annotation element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中重命名图表系列。
+更改 PDF 中图表数据系列的标签。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series names in a PDF document.
+// How do I rename a data series in a chart in a PDF?
 
-// Set seria name using a chart object in a PDF document.
+// Give a custom name to a data series to display in the chart legend in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

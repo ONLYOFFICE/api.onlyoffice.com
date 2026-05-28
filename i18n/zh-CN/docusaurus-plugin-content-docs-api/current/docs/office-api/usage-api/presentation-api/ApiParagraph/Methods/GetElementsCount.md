@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取演示文稿中当前段落的元素数量。
+计算演示文稿中段落内的元素数。
 
 ```javascript editor-pptx
-// Find out how many elements a paragraph has in a presentation.
+// How do I find the number of elements in a paragraph in a presentation?
 
-// Return a number of elements from the paragraph object in a presentation.
+// Display the total count of text runs and other elements within a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-推入 5 个段落以将其实际添加到文档内容。
+向电子表格中形状内容的末尾追加新段落。
 
 ```javascript editor-xlsx
-// How to insert paragraphs into a document.
+// How do I add a paragraph to the bottom of a shape's text area in a spreadsheet?
 
-// Add text to a newly created paragraph and add this paragraph into document.
+// Build a paragraph separately and place it at the end of a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

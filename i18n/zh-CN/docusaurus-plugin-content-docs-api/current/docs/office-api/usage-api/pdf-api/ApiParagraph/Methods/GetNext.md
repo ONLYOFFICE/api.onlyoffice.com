@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-获取 PDF 文档中的下一个段落。
+导航到 PDF 中当前段落之后的段落。
 
 ```javascript editor-pdf
-// How to get the next paragraph of the current one in a PDF document.
+// How do I access the following paragraph after the current one in a PDF?
 
-// Return the next paragraph on the page and make its text bold.
+// Move forward to the next paragraph and apply formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

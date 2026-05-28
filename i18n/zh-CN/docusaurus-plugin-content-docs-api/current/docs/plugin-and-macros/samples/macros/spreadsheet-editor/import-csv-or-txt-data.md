@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 导入 CSV/TXT 数据
 
 从远程 CSV/TXT 文件导入数据到电子表格中。
@@ -13,12 +15,14 @@ hide_table_of_contents: true
 ```ts
 (function() 
 {
+    //Load the file from the URL
     function LoadFile() {
         $.ajax({
             url: 'your url',
             dataType: 'text',
         }).done(successFunction);
     }
+    // Process the data
     function successFunction(data) {
         let arrAllRows = data.split(/\r?\n|\r/);
         let worksheet = Api.GetActiveSheet();
@@ -36,16 +40,15 @@ hide_table_of_contents: true
             i = i + 1;
             j = 1;
         }
+        let usedRange = worksheet.GetUsedRange();
+        usedRange.AutoFit(true, true);
     }
     LoadFile();
-    let reload = setInterval(function(){
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-    });
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 ## 结果
 
-![Import CSV/text data](/assets/images/plugins/import-csv-macro.png#gh-light-mode-only)![Import CSV/text data](/assets/images/plugins/import-csv-macro.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/import-csv-or-txt-data" dark />

@@ -33,12 +33,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格锁定。
+控制应用于文档中表格的样式格式带和高亮显示。
 
 ```javascript editor-docx
-// How to set the table look in a document.
+// How do I choose which parts of a table style are shown in a document?
 
-// Create a table and indicate its look properties in a document.
+// Enable or disable banded rows, banded columns, and corner highlights on a table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

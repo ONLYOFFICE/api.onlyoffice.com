@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return the Weibull distribution in a spreadsheet.
+Calculate the Weibull distribution for statistical analysis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the Weibull distribution in a spreadsheet.
+// How do I compute the Weibull distribution for probability calculations in a spreadsheet?
 
-// Use a function to calculate the Weibull distribution in a spreadsheet.
+// Determine the cumulative or probability density for Weibull distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

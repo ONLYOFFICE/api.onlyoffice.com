@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在文档中设置以磅的二十分之一为单位的文本间距。
+调整文档中选定文本范围内的字符间距。
 
 ```javascript editor-docx
-// How to set the range text spacing size in a document.
+// How do I spread out or tighten the letters within a highlighted portion of text in a document?
 
-// Get a range text, update its spacing in a document.
+// Control the gap between individual characters to improve readability or achieve a design effect in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

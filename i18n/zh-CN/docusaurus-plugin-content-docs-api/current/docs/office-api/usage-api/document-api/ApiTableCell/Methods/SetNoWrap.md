@@ -7,12 +7,12 @@
 
 ## 示例
 
-指定在文档中显示父表格时表格单元格的布局方式。
+防止文本在文档中的表格单元格内换行。
 
 ```javascript editor-docx
-// Create a table cell where text is not wrapped when we try to change table width.
+// How do I stop text from breaking onto multiple lines inside a table cell in a document?
 
-// Set no wrap property to the table cell.
+// Keep table cell content on a single line regardless of column width in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

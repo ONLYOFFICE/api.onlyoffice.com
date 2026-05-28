@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetIconYPos(nPosY);
+expression.SetIconYPos(posY);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetIconYPos(nPosY);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosY | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
+| posY | 必需 | [percentage](../../Enumeration/percentage.md) |  | 图标的垂直位置，以按钮高度的百分比表示。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中将带有图像的字段图标 Y 位置设置为 0。
+设置 PDF 文档中字段图像图标的 Y 位置。
 
 ```javascript editor-pdf
-// How do I set icon y pos in a PDF document?
+// Configure the vertical position of an icon in an image field.
 
-// Set icon y pos using a button widget object in a PDF document.
+// Apply the Y position value to a button widget.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

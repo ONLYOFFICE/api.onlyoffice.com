@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+读取文档中水印的透明度级别。
 
 ```javascript editor-docx
-// How to get the opacity of the watermark in a document.
+// How do I find out how transparent the watermark is in a document?
 
-// Get the percent of the watermark opacity from its settings in a document.
+// Check how visible or faded the watermark appears in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

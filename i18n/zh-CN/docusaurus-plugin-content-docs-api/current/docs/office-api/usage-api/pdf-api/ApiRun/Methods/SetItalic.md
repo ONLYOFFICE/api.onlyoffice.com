@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在 PDF 文档中为文本字符设置斜体属性。
+在 PDF 中使文本倾斜。
 
 ```javascript editor-pdf
-// How to make text run italic in a PDF document.
+// How do I add italic style to text in a PDF?
 
-// Create a new text run and make its style italic in a PDF document.
+// Apply slanted formatting to characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

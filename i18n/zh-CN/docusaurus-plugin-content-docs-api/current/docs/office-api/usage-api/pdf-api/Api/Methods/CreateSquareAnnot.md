@@ -22,12 +22,12 @@ expression.CreateSquareAnnot(rect);
 
 ## 示例
 
-创建方形注释并将其添加到页面。
+在 PDF 页面添加方形边框注释。
 
 ```javascript editor-pdf
-// How do I create the square annot in a PDF document?
+// How do I mark a region with a square box in a PDF?
 
-// Create the square annot and display the result in a PDF document.
+// Display a square annotation at specified coordinates in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

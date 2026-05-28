@@ -22,12 +22,12 @@ expression.SetFill(sFill);
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+在文档中为自定义形状的绘图路径应用填充设置。
 
 ```javascript editor-docx
-// How do I set fill in a document?
+// How do I control whether the interior of a custom shape's path is filled in a document?
 
-// Set fill using a geometry path object in a document.
+// Enable or disable the fill on a path to change how the shape's interior appears in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

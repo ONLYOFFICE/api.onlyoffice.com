@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的拖动到列属性。
+控制电子表格中的透视字段是否可以拖动到列区域。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to column in a spreadsheet.
+// How do I prevent a pivot field from being moved to the columns area in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to column of a specified pivot using boolean value in a spreadsheet.
+// Lock a pivot field so users cannot reposition it as a column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

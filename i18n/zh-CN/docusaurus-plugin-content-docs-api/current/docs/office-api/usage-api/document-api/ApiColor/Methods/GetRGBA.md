@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取文档中颜色的 RGBA 分量。
+提取文档中颜色的红、绿、蓝和透明度通道值。
 
 ```javascript editor-docx
-// How to get the r g b a for a color in a document?
+// How do I read the RGBA components of a color in a document?
 
-// Get the r g b an and display the result in a document.
+// Inspect opacity alongside color channels for theme, auto, and hex color types in a document.
 
 const doc = Api.GetDocument();
 

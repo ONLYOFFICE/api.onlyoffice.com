@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置书签名称。
+将文档中的现有书签重命名为新标识符。
 
 ```javascript editor-docx
-// How to rename a bookmark in a document.
+// How do I change the name of a bookmark already placed in a document?
 
-// Get a bookmark from the document by its name then set a new name to it.
+// Update a bookmark's label so it can be referenced under a different name in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

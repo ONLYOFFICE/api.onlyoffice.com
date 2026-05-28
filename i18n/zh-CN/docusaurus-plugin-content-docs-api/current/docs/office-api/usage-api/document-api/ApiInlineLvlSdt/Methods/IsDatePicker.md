@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中的内容控件是否为日期选择器。
+确定文档中的内联内容控件是否为日期选择器。
 
 ```javascript editor-docx
-// How do I is date picker in a document?
+// How do I verify that a content control is a date picker in a document?
 
-// Is date picker using an inline content control object in a document.
+// Identify date picker controls to handle date input fields separately from other control types in a document.
 
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();

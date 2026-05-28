@@ -22,12 +22,12 @@ expression.SetFill(sFill);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+控制电子表格中自定义形状路径的内部是否填充颜色。
 
 ```javascript editor-xlsx
-// How do I set fill in a spreadsheet?
+// How do I turn on the fill for a custom shape path in a spreadsheet?
 
-// Set fill using a geometry path object in a spreadsheet.
+// Define the fill rule for a drawn path so its enclosed area receives a color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

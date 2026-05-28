@@ -27,7 +27,7 @@ The button color is chosen by the developer. The darker the button, the more imp
 
 ### btn-text-default
 
-`Type: class`
+**type:** `class`
 
 Adds the default white button style to your plugin.
 
@@ -56,7 +56,7 @@ Adds the default white button style to your plugin.
 
 ### btn-text-default.submit.primary
 
-`Type: class`
+**type:** `class`
 
 Adds the primary dark grey button style to your plugin. Used to confirm actions and send results.
 
@@ -79,7 +79,7 @@ Adds the primary dark grey button style to your plugin. Used to confirm actions 
 
 ### btn-text-default.submit
 
-`Type: class`
+**type:** `class`
 
 Adds the light grey button style to your plugin.
 
@@ -103,7 +103,7 @@ Adds the light grey button style to your plugin.
 
 ### btn-edit
 
-`Type: class`
+**type:** `class`
 
 Adds the edit button icon to your plugin.
 
@@ -132,7 +132,7 @@ Input components for user data entry.
 
 ### textarea
 
-`Type: element`
+**type:** `element`
 
 Adds a text area input field to your plugin.
 
@@ -154,7 +154,7 @@ textarea.form-control {
 
 ### input[type="text"]
 
-`Type: element`
+**type:** `element`
 
 Adds a text field input to your plugin.
 
@@ -188,7 +188,7 @@ Adds a text field input to your plugin.
 
 ### input[type="checkbox"]
 
-`Type: element`
+**type:** `element`
 
 Adds a checkbox input to your plugin.
 
@@ -215,7 +215,7 @@ Label components for text display.
 
 ### label.header
 
-`Type: class`
+**type:** `class`
 
 Adds a bold header label to your plugin.
 
@@ -235,7 +235,7 @@ label.header {
 
 ### label.link
 
-`Type: class`
+**type:** `class`
 
 Adds a link-styled label to your plugin.
 
@@ -256,7 +256,7 @@ label.link {
 
 ## ComboBox
 
-`Type: function`
+**type:** `function`
 
 Adds a combo box dropdown to your plugin using the [select2](https://select2.org/) library.
 
@@ -275,7 +275,7 @@ $('#select_example').select2({
 
 ## Loader
 
-`Type: class`
+**type:** `class`
 
 Adds a loader container to your plugin for displaying loading states.
 

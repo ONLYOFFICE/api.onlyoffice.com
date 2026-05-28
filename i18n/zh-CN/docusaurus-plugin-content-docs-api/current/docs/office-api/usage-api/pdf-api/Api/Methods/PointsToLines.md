@@ -25,9 +25,9 @@ number
 在 PDF 文档中将磅转换为行。
 
 ```javascript editor-pdf
-// How to convert points to lines in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert points to lines using the PDF document API.
+// The result is displayed in a shape text element.
 
 const points = 100;
 const lines = Api.PointsToLines(points);

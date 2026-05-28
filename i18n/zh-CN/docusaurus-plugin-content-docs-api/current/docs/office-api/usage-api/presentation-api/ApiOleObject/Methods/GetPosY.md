@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取绘图对象在幻灯片上的 y 位置。
+获取演示文稿中形状的垂直位置。
 
 ```javascript editor-pptx
-// How to get the pos y for a drawing object in a presentation?
+// How do I find the top edge coordinate of an object in a presentation?
 
-// Get the pos y and display the result in a presentation.
+// Read and display the Y position of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

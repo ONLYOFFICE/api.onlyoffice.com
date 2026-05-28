@@ -26,7 +26,7 @@ sidebar_position: 1
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -157,13 +157,13 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 ### 参数
 
-| 名称     | 类型     | 描述                                                                                                                                                                                                                                                                                                                                                                      |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| command  | function | 用JavaScript编写的命令，其目的是形成可插入结果文档文件（格式化段落、表格、文本部分和单独单词等）的结构化数据。然后将数据发送给编辑器。该命令必须与 [Office JavaScript API](../../../office-api/get-started/overview.md) 语法兼容。|
-| callback | function | 方法返回的结果。这是一个可选参数。                                                                                                                                                                                                                                                                                                                 |
-| isNoCalc | boolean  | 是否可以重新计算文档。**true** 值不会重新计算文档（仅当您的编辑肯定不需要重新计算文档时才使用它）。**false** 值用于在执行 *command* 参数中的函数后重新计算文档。默认值为 **false**。                                    |
+| 名称      | 类型     | 必需     | 描述                                                                                                                                                                                                                                                     |
+| --------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commandFn | function | 必需     | 包含 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令的函数，用于操作文档。                                                                                                                                                     |
+| callback  | function | 可选     | 接收 `commandFn` 返回值的函数。支持原始类型、普通对象、数组和 TypedArray（最多 10 层嵌套）。如果返回值包含函数或超过嵌套限制，回调将收到 `undefined`。                                                                                                   |
+| isNoCalc  | boolean  | 可选     | 是否跳过文档重新计算。仅当您的编辑肯定不需要重新计算时，才设置为 `true`。默认值：`false`。                                                                                                                                                               |
 
-此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
+`commandFn` 函数在与其他 JavaScript 数据隔离的独立上下文中执行。如果需要将某些参数或其他数据传递给它，请使用 [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
 ### 示例
 
@@ -184,7 +184,7 @@ connector.callCommand(() => {
 调用该函数将连接器连接到编辑器。
 
 :::note
-请注意，只有在您已经使用了[disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](../methods.md#createconnector) 方法一起自动被调用。
+请注意，只有在您已经使用了 [disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](../methods.md#createconnector) 方法一起自动被调用。
 :::
 
 ### 示例

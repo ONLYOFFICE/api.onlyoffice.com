@@ -22,12 +22,12 @@ expression.GetPath(nIndex);
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+从演示文稿中形状的几何图形访问路径。
 
 ```javascript editor-pptx
-// How can I get the path using a geometry in a presentation?
+// How do I get a drawing path from a shape in a presentation?
 
-// Get the path for a geometry in a presentation.
+// Retrieve a specific path object from a preset or custom shape in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

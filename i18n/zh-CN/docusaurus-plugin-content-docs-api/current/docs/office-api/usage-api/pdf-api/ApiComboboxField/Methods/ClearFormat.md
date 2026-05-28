@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置数字格式，然后清除格式。
+从 PDF 中的组合框字段移除数字格式。
 
 ```javascript editor-pdf
-// How do I clear format in a PDF document?
+// How do I clear the formatting applied to a combobox field in a PDF?
 
-// Clear format using a combobox field object.
+// Set a number format on a field, then remove the formatting completely.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

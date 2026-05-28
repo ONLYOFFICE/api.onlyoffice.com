@@ -20,12 +20,12 @@ expression.GetParentMaster();
 
 ## 示例
 
-获取绘图对象的父幻灯片母版。
+查找演示文稿中包含形状的幻灯片母版。
 
 ```javascript editor-pptx
-// How to get a parent master of a slide shape.
+// How do I access the master slide a shape belongs to in a presentation?
 
-// Get a slide shape's parent master.
+// Retrieve the parent master for a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

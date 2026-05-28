@@ -4,6 +4,8 @@ description: Align text content within slide text boxes.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Content alignment tool
 
 Consistently aligns text boxes and images throughout the entire presentation.
@@ -51,4 +53,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.png#gh-light-mode-only)![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/content-alignment-tool" dark />

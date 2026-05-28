@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的关键词字符串（使用核心属性）。
+读取电子表格工作簿属性中存储的关键词。
 
 ```javascript editor-xlsx
-// How do I get the keywords in a spreadsheet?
+// How do I find the search keywords associated with a workbook in a spreadsheet?
 
-// Get the keywords using a core properties object in a spreadsheet.
+// Extract and display the tag words saved with the workbook in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

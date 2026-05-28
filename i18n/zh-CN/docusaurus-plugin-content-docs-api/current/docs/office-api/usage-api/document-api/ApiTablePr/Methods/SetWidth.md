@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格的首选宽度。
+定义文档中表格相对于页面的宽度。
 
 ```javascript editor-docx
-// How to change the width of the table in a document.
+// How do I make a table span a specific percentage of the available page width in a document?
 
-// Set the table width in percentage in a document.
+// Control the overall horizontal size of a table by specifying its width in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

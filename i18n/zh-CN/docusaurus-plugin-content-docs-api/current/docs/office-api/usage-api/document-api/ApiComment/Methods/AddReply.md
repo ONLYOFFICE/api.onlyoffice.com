@@ -25,12 +25,12 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## 示例
 
-在文档中添加批注并进行回复。
+向文档中的批注添加回复。
 
 ```javascript editor-docx
-// How to reply to the comment in a document.
+// How do I add a reply to a comment in a document?
 
-// Create a comment from a paragraph and add a reply to its first one in a document.
+// Respond to an existing comment on a paragraph to continue a review thread in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -14,7 +14,7 @@ expression.SetModDate(timeStamp);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| timeStamp | 必需 | number |  | 未提供描述。 |
+| timeStamp | 必需 | number |  | 批注最后修改日期，以数字时间戳表示。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置修改日期。
+记录 PDF 中注释的最后修改日期。
 
 ```javascript editor-pdf
-// How can I set mod date using an annotation in a PDF document?
+// Update the modification timestamp of an annotation in a PDF.
 
-// Set mod date for an annotation in a PDF document.
+// Set the last-changed date for an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

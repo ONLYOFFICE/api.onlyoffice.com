@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取 PDF 文档中颜色的 RGB 分量。
+从 PDF 中的颜色提取 RGB 分量。
 
 ```javascript editor-pdf
-// How do I get the r g b in a PDF document?
+// How do I get the red, green, and blue values from a color in a PDF?
 
-// Get the r g b using a color object in a PDF document.
+// Retrieve the RGB values and display them as comma-separated numbers.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

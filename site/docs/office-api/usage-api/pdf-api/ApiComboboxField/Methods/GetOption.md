@@ -6,12 +6,12 @@ Inherited from [ApiBaseListField.GetOption](../../ApiBaseListField/Methods/GetOp
 
 ## Example
 
-Get option from field with list of options in a PDF document.
+Retrieve a specific choice from a dropdown field in a PDF.
 
 ```javascript editor-pdf
-// How to get the option for a list field in a PDF document?
+// How do I access an individual option from a dropdown in a PDF?
 
-// Get the option and display the result in a PDF document.
+// Display a selected choice from a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

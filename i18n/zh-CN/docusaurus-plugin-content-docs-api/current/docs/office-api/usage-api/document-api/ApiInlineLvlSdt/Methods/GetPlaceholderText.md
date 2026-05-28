@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中内容控件的占位符文本。
+检索文档中内联内容控件上设置的占位符文本。
 
 ```javascript editor-docx
-// How to display the placeholder text of the inline text control in a document.
+// How do I read the placeholder text of an inline content control in a document?
 
-// Get the inline content control and show its placeholder text in a document.
+// Confirm the placeholder message is stored correctly before displaying it to users in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

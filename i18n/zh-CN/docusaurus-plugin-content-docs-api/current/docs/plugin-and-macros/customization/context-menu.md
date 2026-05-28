@@ -45,7 +45,7 @@ sidebar_position: -6
 
    右键菜单选项。
 
-   `类型： object`
+   **类型：** `object`
 
    **属性**:
 
@@ -61,16 +61,16 @@ sidebar_position: -6
 
    右键菜单类型：
 
-   - **None** — 未使用，
-   - **Target** — 无选中内容，
-   - **Selection** — 选中文本，
-   - **Image** — 选中图片，
-   - **Shape** — 选中形状，
-   - **OleObject** — 选中 OLE 对象。
+   - `None` — 未使用，
+   - `Target` — 无选中内容，
+   - `Selection` — 选中文本，
+   - `Image` — 选中图片，
+   - `Shape` — 选中形状，
+   - `OleObject` — 选中 OLE 对象。
 
    根据选中类型，可以添加不同的右键菜单项。
 
-   `类型： "None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
+   **类型：** `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 2. 如有必要，使用 **AddContextMenuItem** 方法向右键菜单添加按钮。
 
@@ -86,7 +86,7 @@ sidebar_position: -6
 
    右键菜单项。
 
-   `类型： object`
+   **类型：** `object`
 
    **属性**:
 

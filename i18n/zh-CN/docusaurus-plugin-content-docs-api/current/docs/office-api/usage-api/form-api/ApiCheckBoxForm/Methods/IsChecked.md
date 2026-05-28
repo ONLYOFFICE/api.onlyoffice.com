@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取文档中复选框的状态。
+读取文档中复选框表单当前是否已选中。
 
 ```javascript editor-forms
-// How to know whether the checkbox form is checked.
+// How do I find out if a checkbox form is checked in a document?
 
-// Get a boolean value representing whether a current form is checked or not.
+// Confirm the checked state of a specific radio button after programmatically selecting it in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

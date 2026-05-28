@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在电子表格中当前 run 的内容以通过行中心的单条水平线显示。
+在电子表格中为文本运行绘制删除线以标记为已删除。
 
 ```javascript editor-xlsx
-// How to strike out a text with one line in a spreadsheet.
+// How do I put a line through text to show it has been removed or cancelled in a spreadsheet?
 
-// Create a text run object, cross out it in a spreadsheet.
+// Strike through selected words to visually indicate deleted or outdated content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

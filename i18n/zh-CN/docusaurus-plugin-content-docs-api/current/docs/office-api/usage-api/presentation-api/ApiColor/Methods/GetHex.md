@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿中形状填充颜色的十六进制字符串。
+从颜色对象提取十六进制颜色值。
 
 ```javascript editor-pptx
-// How can I get the hex using a color in a presentation?
+// Convert color representation to hex string format for display.
 
-// Get the hex for a color in a presentation.
+// Get the hex value of a color and display it within a shape text element.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

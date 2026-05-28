@@ -14,7 +14,7 @@ expression.SetScaleFlag(sScaleFlag);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sScaleFlag | 必需 | [ScaleFlag](../../Enumeration/ScaleFlag.md) |  | 图片缩放条件："always"、"never"、"tooBig" 或 "tooSmall"。 |
+| sScaleFlag | 必需 | [ScaleFlag](../../Enumeration/ScaleFlag.md) |  | 图片缩放条件：“always”、“never”、“tooBig” 或 “tooSmall”。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前图片表单设置缩放条件。
+选择何时自动调整图像大小以适应文档中的图片字段。
 
 ```javascript editor-forms
-// How to set the image scale flag of the form.
+// How do I control whether an image shrinks or grows to match the size of a picture field in a document?
 
-// Make the picture scalable in a document.
+// Decide the conditions under which an image adjusts its size inside a picture field in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

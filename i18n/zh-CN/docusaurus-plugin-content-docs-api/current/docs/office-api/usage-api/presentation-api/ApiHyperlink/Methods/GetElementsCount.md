@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-返回演示文稿中当前超链接的元素数量。
+计算演示文稿中超链接内的元素数。
 
 ```javascript editor-pptx
-// How do I get the elements count in a presentation?
+// How do I determine the number of child elements within a hyperlink in a presentation?
 
 // Get the elements count using a hyperlink object in a presentation.
 

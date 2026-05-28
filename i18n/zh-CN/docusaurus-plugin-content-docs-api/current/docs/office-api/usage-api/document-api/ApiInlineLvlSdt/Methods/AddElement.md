@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中向容器添加 run。
+在文档中将文本运行插入到内联内容控件的特定位置。
 
 ```javascript editor-docx
-// How to add text run to the inline text element in a document.
+// How do I add a run element to an inline content control in a document?
 
-// Add text to the inline control indicating the starting index in a document.
+// Populate an inline content control by placing a run at a chosen index in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

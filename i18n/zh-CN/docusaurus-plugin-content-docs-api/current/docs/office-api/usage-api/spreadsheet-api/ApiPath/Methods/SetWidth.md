@@ -22,12 +22,12 @@ expression.SetWidth(nWidth);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+在添加到电子表格之前定义自定义形状路径的水平大小。
 
 ```javascript editor-xlsx
-// How can I set width using a geometry path in a spreadsheet?
+// How do I control how wide a custom shape path is in a spreadsheet?
 
-// Set width for a geometry path in a spreadsheet.
+// Assign a specific width to a drawn path so it scales correctly within the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中设置表格顶部显示的边框。
+在文档中为表格应用顶部边框。
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the top 4 point black border in a document.
+// How do I add a border along the top edge of a table in a document?
 
-// Add top border to the table in a document.
+// Style the upper edge of a table with a visible border line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

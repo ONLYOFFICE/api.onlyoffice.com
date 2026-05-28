@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的布局分页符。
+在电子表格中打印时在每个透视字段组后插入分页符。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout page break.
+// How do I make each pivot field group start on a new page in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout page break of a specified pivot.
+// Ensure every group in a pivot field prints on its own page by enabling page breaks in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

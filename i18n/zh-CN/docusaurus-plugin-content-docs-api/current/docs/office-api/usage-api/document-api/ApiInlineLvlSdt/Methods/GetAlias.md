@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中容器的别名属性。
+读取文档中内联内容控件的别名。
 
 ```javascript editor-docx
-// How to get an alias of the inline text element in a document.
+// How do I get the alias assigned to an inline content control in a document?
 
-// Retrieve the alias of the text element and display it in the document.
+// Display the alias label of a named content control to verify its identity in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

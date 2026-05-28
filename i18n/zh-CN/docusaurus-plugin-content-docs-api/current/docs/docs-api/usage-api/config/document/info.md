@@ -10,7 +10,7 @@ info 部分定义文档信息参数。
 
 **示例**: `true`
 
-![收藏](/assets/images/editor/favorite.png)
+![收藏](/assets/images/editor/favorite.png#gh-light-mode-only)![收藏](/assets/images/editor/favorite.dark.png#gh-dark-mode-only)
 
 ## 文件夹
 

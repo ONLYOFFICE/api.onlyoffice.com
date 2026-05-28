@@ -1,7 +1,7 @@
 # STDEVPA
 
-根据整个总体计算标准差，包括逻辑值和文本。
-文本和 -**false** 逻辑值的值为 0；-**true** 逻辑值的值为 1。
+基于整个总体计算标准偏差，包括逻辑值和文本。
+文本和 **false** 逻辑值的值为 0；**true** 逻辑值的值为 1。
 
 ## 语法
 
@@ -15,7 +15,7 @@ expression.STDEVPA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个将计算标准差的值。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、文本字符串、名称、区域或数组。 |
+| args | 必需 | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，用于计算标准偏差。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、文本字符串、名称、区域或数组。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中基于整个总体计算标准差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
+计算包含逻辑值和文本的总体的标准差。
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population considering logical and text data types in a spreadsheet.
+// The STDEVPA function treats text as 0 and logical values as 0 (false) or 1 (true) in population calculations.
 
-// Use a function to get the standard deviation in a spreadsheet.
+// Get the population standard deviation including logical and text values, and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 

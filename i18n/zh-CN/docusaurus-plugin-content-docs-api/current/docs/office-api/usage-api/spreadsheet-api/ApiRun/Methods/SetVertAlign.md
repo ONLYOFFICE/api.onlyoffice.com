@@ -1,9 +1,9 @@
 # SetVertAlign
 
 指定将应用于当前文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+- **“baseline”** - 当前文本块中的字符将按默认文本基线对齐。
+- **“subscript”** - 当前文本块中的字符将对齐到默认文本基线下方。
+- **“superscript”** - 当前文本块中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在电子表格中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+在电子表格中将形状内的文本定位在基线的上方、下方或上面。
 
 ```javascript editor-xlsx
-// How to set vertical alignment of a text object in a spreadsheet.
+// How do I control whether text appears as superscript or subscript in a spreadsheet?
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a spreadsheet.
+// Raise or lower individual text runs relative to the normal line height in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -1,7 +1,7 @@
 # GetCharLimit
 
 获取文本字段的字符限制。
-&lt;note&gt; 字符限制为 0 表示字段没有字符限制
+&lt;note&gt; 字符限制为 0 表示该字段没有字符限制
 
 ## 语法
 
@@ -21,12 +21,12 @@ number
 
 ## 示例
 
-获取文本字段并显示其在 PDF 文档中的字符限制属性。
+检查 PDF 中文本字段的最大字符限制。
 
 ```javascript editor-pdf
-// How can I get the char limit using a text field in a PDF document?
+// How do I find out how many characters a text field accepts in a PDF?
 
-// Get the char limit for a text field in a PDF document.
+// Read the character limit restriction of a text input field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

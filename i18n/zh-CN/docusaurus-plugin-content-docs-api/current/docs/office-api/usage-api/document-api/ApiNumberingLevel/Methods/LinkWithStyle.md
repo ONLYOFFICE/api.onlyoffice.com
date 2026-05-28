@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中将编号级别与指定的标题样式关联。
+在文档中将编号级别链接到标题样式。
 
 ```javascript editor-docx
-// How to link the numbering with the style of another element in a document.
+// How do I connect a list numbering level to a paragraph heading style in a document?
 
-// Apply the style of the element to the numbering in a document.
+// Combine custom numbered lists with styled headings to create a formatted outline in a document.
 
 const doc = Api.GetDocument();
 const headings = [];

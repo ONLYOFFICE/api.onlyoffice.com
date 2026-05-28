@@ -45,7 +45,7 @@ ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotFiel
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the parent object for the current field. |
 | [GetPivotField](./Methods/GetPivotField.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | Returns the pivot field from which the data field was created. |
 | [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | Returns the collection of pivot filters applied to the specified pivot field. |
-| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
+| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | Returns an object that represents either a single pivot table item (the ApiPivotItem object) |
 | [GetPosition](./Methods/GetPosition.md) | number | Returns a value that represents the data field position within a category. |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | Returns the setting which specifies whether to repeat items labels at each row. |
 | [GetShowAllItems](./Methods/GetShowAllItems.md) | boolean | Returns the setting which specifies whether to show items with no data. |
@@ -71,7 +71,7 @@ ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotFiel
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | None | Sets the setting which specifies whether to show subtotals. |
 | [SetName](./Methods/SetName.md) | None | Sets a value representing the object name. |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Sets a value that represents the format code for the object. |
-| [SetOrientation](./Methods/SetOrientation.md) | None | Sets a pivot field orientation value that represents the location of the field in the specified pivot table report. |
+| [SetOrientation](./Methods/SetOrientation.md) | None | Sets a pivot field orientation value that represents the location |
 | [SetPosition](./Methods/SetPosition.md) | None | Sets a value that represents the data field position within a category. |
 | [SetRepeatLabels](./Methods/SetRepeatLabels.md) | None | Sets the setting which specifies whether to repeat items labels at each row. |
 | [SetShowAllItems](./Methods/SetShowAllItems.md) | None | Sets the setting which specifies whether to show items with no data. |

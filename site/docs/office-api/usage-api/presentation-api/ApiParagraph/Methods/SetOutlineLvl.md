@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.m
 
 ## Example
 
-Set the outline level for the specified paragraph via paragraph properties in a presentation.
+Assign an outline level to a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How can I set outline lvl using a paragraph properties in a presentation?
+// How do I set the outline hierarchy level of a paragraph in a presentation?
 
-// Set outline lvl for a paragraph properties in a presentation.
+// Configure the outline depth of a paragraph using paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

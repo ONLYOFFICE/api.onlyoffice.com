@@ -180,3 +180,19 @@ if (window.Asc.plugin.info.resize === true) {
   window.Asc.plugin.button(0);
 }
 ```
+
+## Debugging
+
+To log all `callCommand` and [`executeMethod`](how-to-call-methods.md) calls to the browser console, set the `asc_plugin_commands_log` key in the browser's local storage:
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+To disable logging, remove the key:
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
+The setting persists across page reloads.

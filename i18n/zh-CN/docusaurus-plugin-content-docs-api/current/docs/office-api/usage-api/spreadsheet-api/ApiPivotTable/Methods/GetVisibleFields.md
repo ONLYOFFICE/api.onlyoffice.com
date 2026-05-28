@@ -20,12 +20,12 @@ expression.GetVisibleFields();
 
 ## 示例
 
-获取电子表格中数据透视表的可见字段。
+列出电子表格中数据透视表中当前显示的字段。
 
 ```javascript editor-xlsx
-// How to get an unhidden fields of a table in a spreadsheet.
+// How do I find out which fields are visible in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its visible fields in a spreadsheet.
+// Collect the names of all unhidden pivot table fields to display them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the ID of the container in a document.
+Assign a unique identifier to a content control in a document.
 
 ```javascript editor-docx
-// How do I set id in a document?
+// How do I give a content control a specific ID in a document?
 
-// Set id using a block-level content control object in a document.
+// Label a content control with a custom ID and verify it was applied in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

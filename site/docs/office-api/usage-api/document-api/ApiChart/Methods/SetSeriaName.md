@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set a name for a seria of a chart in a document.
+Rename a data series in a chart in a document.
 
 ```javascript editor-docx
-// How to rename a chart seria in a document.
+// How do I change the label of a chart series in a document?
 
-// Create a chart, set its properties and its series names in a document.
+// Replace an existing series label with a custom name so the legend reflects the correct meaning in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

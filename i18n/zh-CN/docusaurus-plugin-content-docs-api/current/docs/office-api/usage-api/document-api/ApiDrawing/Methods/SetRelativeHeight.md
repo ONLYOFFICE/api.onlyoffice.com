@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRelativeHeight(sRelativeFrom, nPercent);
+expression.SetRelativeHeight(relativeFrom, percent);
 ```
 
 `expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetRelativeHeight(sRelativeFrom, nPercent);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | 可选 | [RelFromV](../../Enumeration/RelFromV.md) | "page" | 将作为对象高度参考点的文档元素。 |
-| nPercent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
+| relativeFrom | 可选 | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | 将作为对象高度参考点的文档元素。 |
+| percent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 对象高度占指定元素的百分比。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-相对于页面尺寸的形状相对高度调整。
+将文档中形状的高度设置为页面的百分比。
 
 ```javascript editor-docx
-// How to set shape width and height as percentages of the page.
+// How do I make a shape's height scale proportionally with the page in a document?
 
-// Create a responsive rectangle that scales with page size.
+// Stretch a rectangle to fill a quarter of the page height so it adapts to different page sizes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

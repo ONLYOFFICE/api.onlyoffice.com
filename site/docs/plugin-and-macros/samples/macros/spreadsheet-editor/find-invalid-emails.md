@@ -4,6 +4,8 @@ description: Find and highlight invalid email addresses in cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Find invalid emails
 
 Detects and highlights invalid email addresses within a specified column or across the entire spreadsheet.
@@ -59,5 +61,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![FindInvalidEmails](/assets/images/plugins/find-invalid-emails.png#gh-light-mode-only)
-![FindInvalidEmails](/assets/images/plugins/find-invalid-emails.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-invalid-emails" dark />

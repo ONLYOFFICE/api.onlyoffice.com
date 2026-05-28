@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的标识符（使用核心属性）。
+读取电子表格工作簿属性中存储的唯一标识符。
 
 ```javascript editor-xlsx
-// How do I get the identifier in a spreadsheet?
+// How do I look up the identifier assigned to a workbook in a spreadsheet?
 
-// Get the identifier using a core properties object in a spreadsheet.
+// Extract and display the workbook's unique ID from the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

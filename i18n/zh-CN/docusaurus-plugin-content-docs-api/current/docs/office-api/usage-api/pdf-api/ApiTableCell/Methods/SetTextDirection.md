@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTextDirection(sType);
+expression.SetTextDirection(textDirection);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 文本流动方向的类型。 |
+| textDirection | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 文本流方向。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何设置表格单元格的文本方向。
+设置 PDF 中表格单元格内文本的流动方向。
 
 ```javascript editor-pdf
-// Create a table and set the text direction for the table cell object.
+// How do I rotate text direction in a table cell in a PDF?
 
-// Set text direction using a table cell object.
+// Change the text orientation inside your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

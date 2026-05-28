@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Count a number of cells in a range that are not empty in a spreadsheet.
+Count all occupied cells regardless of content type in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a number of non-empty cells.
+// What is the total number of filled cells in a range in a spreadsheet?
 
-// Use function to get non-empty cells count.
+// Tally cells containing any data, whether text or numbers, in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let numbersArr = [45, 6, 8];

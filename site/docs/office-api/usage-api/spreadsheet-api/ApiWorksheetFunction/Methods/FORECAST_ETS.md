@@ -1,6 +1,6 @@
 # FORECAST_ETS
 
-Сalculates or predicts a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm.
+Calculates or predicts a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm.
 
 ## Syntax
 
@@ -27,12 +27,12 @@ number
 
 ## Example
 
-Calculate or predict a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm in a spreadsheet.
+Predict a future value based on historical data patterns in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate or predict a future value based on existing (historical) values in a spreadsheet.
+// How do I forecast the next data point using past values in a spreadsheet?
 
-// Use an AAA version of the Exponential Smoothing (ETS) algorithm to calculate or predict a future value based on existing values in a spreadsheet.
+// Use trend analysis to estimate an upcoming value from existing data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

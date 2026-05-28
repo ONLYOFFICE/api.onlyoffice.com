@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查电子表格中图标集是否使用百分位值。
+了解电子表格中图标集规则是否使用基于百分位的阈值。
 
 ```javascript editor-xlsx
-// How to determine if percentile values are used for icon set thresholds in a spreadsheet.
+// How do I check if an icon set rule measures thresholds as percentiles in a spreadsheet?
 
-// Check if the icon set rule uses percentile values for criteria in a spreadsheet.
+// Verify that the icon set rule distributes icons according to percentile values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -23,9 +23,9 @@ number
 获取并显示演示文稿中的切换持续时间。
 
 ```javascript editor-pptx
-// How to get the duration for a slide show transition?
+// Retrieve the duration value from a slide show transition object.
 
-// Get the duration and display the result in a presentation.
+// Display the retrieved duration as milliseconds in a shape on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

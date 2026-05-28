@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中将实部和虚部系数转换为复数。
+在电子表格中从各部分创建复数。
 
 ```javascript editor-xlsx
-// How to create a complex number using coefficients in a spreadsheet.
+// What is a complex number made from two values in a spreadsheet?
 
-// Use function to convert real and imaginary coefficients into a complex number in a spreadsheet.
+// Combine regular and imaginary parts to build a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

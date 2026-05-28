@@ -1,7 +1,7 @@
 # GetText
 
 返回当前节点及其子节点的内部文本。
-例如：`&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` 返回 `"1234"`。
+例如：`&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` 返回 `“1234”`。
 
 ## 语法
 
@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-获取演示文稿中自定义 XML 节点的文本内容。
+从演示文稿中的 XML 元素提取文本。
 
 ```javascript editor-pptx
-// How to get text content from an XML node in a presentation.
+// How do I read the text inside an XML node in a presentation?
 
-// Get the text for a custom XML node in a presentation.
+// Retrieve the string content of an XML element in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为形状内的超链接设置工具提示。
+为电子表格中的超链接分配工具提示消息。
 
 ```javascript editor-xlsx
-// How do I set screen tip text in a spreadsheet?
+// How do I add a hover hint to a hyperlink in a spreadsheet?
 
-// Set screen tip text using a hyperlink object in a spreadsheet.
+// Attach a short description that appears when a user points at the hyperlink in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

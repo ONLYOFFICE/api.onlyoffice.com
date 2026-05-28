@@ -10,7 +10,7 @@ ApiSquareAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/Ap
 | [Delete](./Methods/Delete.md) | boolean | Removes annotation from document. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Gets annotation author name. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation border color. |
-| [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | boolean | Gets annotation border effect intensity. |
+| [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | number | Gets annotation border effect intensity. |
 | [GetBorderEffectStyle](./Methods/GetBorderEffectStyle.md) | [AnnotBorderEffectStyle](../Enumeration/AnnotBorderEffectStyle.md) | Gets annotation border effect style. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [AnnotBorderStyle](../Enumeration/AnnotBorderStyle.md) | Gets annotation border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [pt](../Enumeration/pt.md) | Gets annotation border width. |
@@ -20,6 +20,7 @@ ApiSquareAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/Ap
 | [GetDashPattern](./Methods/GetDashPattern.md) | number[] | Gets annotation dash pattern. |
 | [GetDisplay](./Methods/GetDisplay.md) | [DisplayType](../Enumeration/DisplayType.md) | Gets annotation display type. |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation fill color. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current annotation. |
 | [GetModDate](./Methods/GetModDate.md) | number | Gets annotation last modification date. |
 | [GetOpacity](./Methods/GetOpacity.md) | string | Gets annotation opacity. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets annotation position. |
@@ -30,13 +31,13 @@ ApiSquareAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/Ap
 | [GetUniqueName](./Methods/GetUniqueName.md) | string | Gets annotation unique name. |
 | [SetAuthorName](./Methods/SetAuthorName.md) | boolean | Sets annotation author name. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets annotation border color. |
-| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | Sets annotation border effect intensity. 💡  Can be applied to circle, square, freeText and polygon annotations  |
-| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | Sets annotation border effect style. 💡  Can be applied to circle, square, freeText and polygon annotations  |
+| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | Sets annotation border effect intensity. |
+| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | Sets annotation border effect style. |
 | [SetBorderStyle](./Methods/SetBorderStyle.md) | boolean | Sets annotation border style. |
 | [SetBorderWidth](./Methods/SetBorderWidth.md) | boolean | Sets annotation border width. |
 | [SetContents](./Methods/SetContents.md) | boolean | Sets annotation contents. |
 | [SetCreationDate](./Methods/SetCreationDate.md) | boolean | Sets annotation creation date. |
-| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | Sets annotation dash pattern. 💡  The border style property must be set to "dashed".  |
+| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | Sets annotation dash pattern. |
 | [SetDisplay](./Methods/SetDisplay.md) | boolean | Sets annotation display type. |
 | [SetFillColor](./Methods/SetFillColor.md) | boolean | Sets annotation fill color. |
 | [SetModDate](./Methods/SetModDate.md) | boolean | Sets annotation last modification date. |

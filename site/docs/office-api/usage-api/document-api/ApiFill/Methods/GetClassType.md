@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a fill in a document.
+Read the class type of a fill object and display it in a document.
 
 ```javascript editor-docx
-// How do I check what type a fill object is in a document?
+// How do I identify the class type of a fill in a document?
 
-// Retrieve and output the class type string for a fill in a document.
+// Distinguish a fill object from other object types by checking its class identifier in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

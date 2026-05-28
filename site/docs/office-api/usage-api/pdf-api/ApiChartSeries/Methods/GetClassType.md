@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a chart series in a PDF document.
+Identify the type of a chart series object in a PDF.
 
 ```javascript editor-pdf
-// How to identify the class type of a chart series in a PDF document?
+// How do I determine the object type of a chart series in a PDF?
 
-// Obtain the class type identifier of a chart series object in a PDF document.
+// Display the classification of a chart series as text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

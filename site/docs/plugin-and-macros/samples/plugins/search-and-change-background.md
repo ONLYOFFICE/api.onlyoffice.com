@@ -3,6 +3,8 @@ description: Search for text and change its background color.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Search and change background
 
 Searches for target text and changes its background color.
@@ -11,9 +13,7 @@ Searches for target text and changes its background color.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-change-background-text.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-change-background-text" />
 
 ## Installation
 

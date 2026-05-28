@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get a number of elements in the hyperlink in a PDF document.
+Count the number of elements within a hyperlink in a PDF.
 
 ```javascript editor-pdf
-// How to get the number of elements of the hyperlink in a PDF document.
+// How many parts make up a hyperlink in a PDF?
 
-// Add a hyperlink to the paragraph and show its elements count in a PDF document.
+// Display the total element count for a hyperlink in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

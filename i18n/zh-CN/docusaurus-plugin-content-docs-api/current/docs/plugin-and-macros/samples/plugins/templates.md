@@ -1,3 +1,10 @@
+---
+description: Insert document templates from Document Builder scripts.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 模板
 
 插入由 Document Builder 脚本生成的文档模板。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/templates.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/templates" />
 
 ## 安装
 

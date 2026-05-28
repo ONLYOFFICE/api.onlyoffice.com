@@ -1,7 +1,7 @@
 # GetRange
 
-Returns an object that represents the selected range of the current sheet. Can be a single cell - -**A1**, or cells
-from a single row - -**A1:E1**, or cells from a single column - -**A1:A10**, or cells from several rows and columns - -**A1:E10**.
+Returns an object that represents the selected range of the current sheet. Can be a single cell - - **A1**, or cells
+from a single row - - **A1:E1**, or cells from a single column - - **A1:A10**, or cells from several rows and columns - - **A1:E10**.
 
 ## Syntax
 
@@ -24,12 +24,12 @@ expression.GetRange(Range1, Range2);
 
 ## Example
 
-Get an object that represents the selected range of the sheet in a spreadsheet.
+Select cells by typing their address in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range using address in a spreadsheet.
+// Find and modify a specific block of cells using its coordinates in a spreadsheet?
 
-// Get range and set its horizontal alignment in a spreadsheet.
+// Reference any rectangular group to style all cells at once in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

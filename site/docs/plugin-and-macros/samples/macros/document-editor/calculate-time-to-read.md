@@ -4,6 +4,8 @@ description: Calculate the estimated reading time of a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Calculate time to read
 
 Analyzes the text content of the entire document, counts the number of words, adjusts for the text complexity, and calculates how long it would take an average adult to read it.
@@ -82,5 +84,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![TimeToRead](/assets/images/plugins/time-to-read.png#gh-light-mode-only)
-![TimeToRead](/assets/images/plugins/time-to-read.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/calculate-time-to-read" dark />

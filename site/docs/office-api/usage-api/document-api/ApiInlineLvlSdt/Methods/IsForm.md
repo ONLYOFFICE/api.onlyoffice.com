@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Check if the content control is a form.
+Determine whether an inline content control belongs to a form in a document.
 
 ```javascript editor-docx
-// How to know whether the inline text control is a form or not.
+// How do I find out whether an inline content control is part of a form in a document?
 
-// Check whether the inline text control is a fomrm and display it in a document.
+// Separate form-bound controls from standalone controls to apply different processing rules in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

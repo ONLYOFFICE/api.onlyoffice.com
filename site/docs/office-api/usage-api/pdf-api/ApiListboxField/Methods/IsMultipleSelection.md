@@ -1,6 +1,6 @@
 # IsMultipleSelection
 
-Checks if field is multiselect.
+Checks if the field supports multiple selection.
 
 ## Syntax
 
@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Get multiple selection property from listbox field in a PDF document.
+Check if a list selection field allows picking multiple items in a PDF.
 
 ```javascript editor-pdf
-// How to is multiple selection for a listbox field in a PDF document?
+// How do I know if multiple choices are allowed in a PDF?
 
-// Is multiple selection and display the result in a PDF document.
+// Verify the selection mode for this field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

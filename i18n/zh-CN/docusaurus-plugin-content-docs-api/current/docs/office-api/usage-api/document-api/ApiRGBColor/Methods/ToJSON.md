@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的 RGB 颜色对象转换为 JSON 对象。
+将自定义颜色值保存为文档中的可移植数据结构。
 
 ```javascript editor-docx
-// How to get a JSON from the color object in a document.
+// How do I export a custom color so it can be restored later in a document?
 
-// Convert the RGB color object to json and add it to the document.
+// Preserve a custom color value by serializing it for later reuse in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

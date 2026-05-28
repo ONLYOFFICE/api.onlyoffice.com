@@ -15,7 +15,7 @@ expression.GetHeader(sType, isCreate);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | 必需 | [HdrFtrType](../../Enumeration/HdrFtrType.md) |  | 要获取内容的页眉类型。 |
-| isCreate | 可选 | boolean | false | 指定在当前节中找不到指定类型的页眉时是否创建具有该类型的新页眉。 |
+| isCreate | 可选 | boolean | false | 指定在当前节中找不到指定类型的页眉时，是否创建新的页眉。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.GetHeader(sType, isCreate);
 
 ## 示例
 
-获取文档中指定页眉类型的内容。
+访问文档中节的页眉区域。
 
 ```javascript editor-docx
-// How to get the header of the page.
+// How do I retrieve the header from a specific section in a document?
 
-// Get the default header from the final section in a document.
+// Open the header region to add or inspect text that appears at the top of pages in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

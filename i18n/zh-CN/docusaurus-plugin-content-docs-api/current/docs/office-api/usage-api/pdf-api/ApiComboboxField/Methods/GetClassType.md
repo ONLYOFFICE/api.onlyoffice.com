@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中组合框字段返回的类类型。
+识别 PDF 中组合框字段的类类型。
 
 ```javascript editor-pdf
-// How do I check what type a combobox field object is in a PDF document?
+// What is the class type of a combobox field object in a PDF?
 
-// Retrieve and output the class type string for a combobox field in a PDF document.
+// Retrieve the class type and show it as the field value in the PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

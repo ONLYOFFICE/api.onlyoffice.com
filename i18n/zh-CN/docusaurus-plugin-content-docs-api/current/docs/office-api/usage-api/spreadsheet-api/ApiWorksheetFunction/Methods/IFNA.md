@@ -23,12 +23,12 @@ number \| string \| boolean
 
 ## 示例
 
-检查第一个参数中的公式是否有错误。如果公式返回 N/A 错误值则返回指定的值，否则返回公式的结果。
+当电子表格中的公式返回 N/A 错误时显示自定义值。
 
 ```javascript editor-xlsx
-// How to check whether a formula result is N/A.
+// How do I handle missing values in lookup results with a fallback message in a spreadsheet?
 
-// Use a function to get a result from a formula if an error occurs show specified error message.
+// Replace N/A errors with a specified value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

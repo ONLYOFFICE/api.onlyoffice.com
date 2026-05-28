@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert lines to points in a spreadsheet.
+Turn a line count into a point measurement in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert lines to points in a spreadsheet?
+// How do I convert a number of lines into points in a spreadsheet?
 
-// Convert lines to points using the spreadsheet API.
+// Show the point equivalent of a given number of lines in a spreadsheet.
 
 const lines = 100;
 const points = Api.LinesToPoints(lines);

@@ -27,9 +27,9 @@ boolean
 在演示文稿中向自定义 XML 部件插入新的 XML 元素。
 
 ```javascript editor-pptx
-// How to insert the element for a custom XML part in a presentation?
+// How do I add a new element to an existing XML structure in a presentation?
 
-// Insert the element and display the result in a presentation.
+// Display the updated XML with the inserted element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

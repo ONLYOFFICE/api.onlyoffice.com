@@ -12,7 +12,7 @@ let button = new Asc.ButtonContentControl();
 
 ## icons
 
-`类型： string`
+**类型：** `string`
 
 设置按钮上显示的图标路径。
 
@@ -24,7 +24,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 ## attachOnClick
 
-`类型： function`
+**类型：** `function`
 
 按钮被点击时需要执行的操作。
 

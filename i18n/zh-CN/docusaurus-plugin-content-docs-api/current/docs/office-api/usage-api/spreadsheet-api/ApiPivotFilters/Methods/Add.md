@@ -18,7 +18,7 @@ expression.Add(filterType, dataField, value1, value2, wholeDayFilter);
 | filterType | 必需 | [XlPivotFilterType](../../Enumeration/XlPivotFilterType.md) |  | 要添加的筛选器类型。必须与 VBA XlPivotFilterType 枚举值匹配。 |
 | dataField | 可选 | [ApiPivotDataField](../../ApiPivotDataField/ApiPivotDataField.md) |  | 用于筛选的数据字段对象。值筛选器（xlValue* 类型）和顶部/底部筛选器需要此参数。 |
 | value1 | 可选 | string \| number \| Date |  | 筛选条件的第一个值。比较、介于和顶部/底部计数筛选器需要此参数。 |
-| value2 | 可选 | string \| number \| Date |  | 「介于」条件的第二个值（xlCaptionIsBetween、xlCaptionIsNotBetween、xlValueIsBetween）。 |
+| value2 | 可选 | string \| number \| Date |  | “介于”条件的第二个值（xlCaptionIsBetween、xlCaptionIsNotBetween、xlValueIsBetween）。 |
 | wholeDayFilter | 可选 | boolean |  | 指定是否按整天筛选日期筛选器。保留供将来使用，目前未实现。 |
 
 ## 返回值
@@ -27,12 +27,12 @@ expression.Add(filterType, dataField, value1, value2, wholeDayFilter);
 
 ## 示例
 
-全面测试 ApiPivotFilters.Add 方法。在电子表格中创建一个综合数据集和 15 个具有不同筛选器类型的数据透视表，测试所有主要筛选器类别：标签、值、上/下限和日期筛选器。
+对电子表格中的数据透视表字段应用筛选器以缩小报表中显示的项目范围。
 
 ```javascript editor-xlsx
-// Pivot filters support label, value, top/bottom, and date filter types.
+// How do I add a label, value, top-bottom, or date filter to a pivot table field in a spreadsheet?
 
-// Add using a pivot filters object in a spreadsheet.
+// Restrict pivot data to only the rows that meet a specific condition or ranking criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

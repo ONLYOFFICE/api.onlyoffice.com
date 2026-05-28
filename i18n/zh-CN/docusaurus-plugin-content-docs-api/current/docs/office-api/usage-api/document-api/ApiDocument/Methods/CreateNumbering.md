@@ -22,12 +22,12 @@ expression.CreateNumbering(sType);
 
 ## 示例
 
-在文档中创建 "bullet" 类型的抽象多级编号。
+在文档中添加跨越八个缩进级别的多级项目符号列表。
 
 ```javascript editor-docx
-// How to add a paragraph with numbering in a document.
+// How do I create a numbered or bulleted list with multiple levels in a document?
 
-// Add a text to the paragraph, make it bulleted in a document.
+// Apply a consistent bullet style to every level so readers can follow nested structure at a glance in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

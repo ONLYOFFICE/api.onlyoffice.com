@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（上标文本）或负值（下标文本）的度量值。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在电子表格中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
+相对于电子表格中周围文本基线升高或降低文本运行。
 
 ```javascript editor-xlsx
-// How to set an inline position of a text in a spreadsheet.
+// How do I shift text up or down without changing its font size in a spreadsheet?
 
-// Create a text run object, specify its position to move down or up in a spreadsheet.
+// Adjust the vertical offset of a word or phrase to create superscript or subscript-like effects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

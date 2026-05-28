@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中形状内文档内容元素的内部标识符。
+读取分配给电子表格中形状文本区域的唯一标识符。
 
 ```javascript editor-xlsx
-// How can I get the internal id using a document content in a spreadsheet?
+// How do I obtain the internal identifier of a shape's text area in a spreadsheet?
 
-// Get the internal id for a document content in a spreadsheet.
+// Store the text area identifier in a cell for reference in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));

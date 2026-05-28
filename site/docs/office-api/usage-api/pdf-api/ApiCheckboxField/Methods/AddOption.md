@@ -5,7 +5,7 @@ Adds options to checkbox group.
 ## Syntax
 
 ```javascript
-expression.AddOption(nPage, aRect, sExportValue);
+expression.AddOption(pageIndex, rect, exportValue);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxField](../ApiCheckboxField.md) class.
@@ -14,9 +14,9 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | page to add option |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | rect of new option |
-| sExportValue | Optional | string |  | option checked value |
+| pageIndex | Required | number |  | The page where the option will be added. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The option rectangle. |
+| exportValue | Optional | string |  | The option checked value. |
 
 ## Returns
 
@@ -24,12 +24,12 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 ## Example
 
-Add an option for checkbox field group in a PDF document.
+Add a selectable option to a checkbox field in a PDF.
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How do I create multiple choices for a checkbox field in a PDF?
 
-// Add the option using a checkbox field object in a PDF document.
+// Create an additional choice that users can select in a checkbox field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中将数字从一种度量单位系统转换为另一种。
+在电子表格中在不同单位之间切换测量值。
 
 ```javascript editor-xlsx
-// How to convert a number from one measurement system to another in a spreadsheet.
+// How do you change pounds to kilograms in a spreadsheet?
 
-// Use function to convert a number from one measurement system to another in a spreadsheet.
+// Transform a value from one measurement standard to another in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

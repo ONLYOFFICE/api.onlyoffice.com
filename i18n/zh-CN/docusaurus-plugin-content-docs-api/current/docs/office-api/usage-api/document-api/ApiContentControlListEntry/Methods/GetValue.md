@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取表示文档中下拉列表或组合框内容控件的列表项显示文本的字符串。
+读取文档中为下拉列表或组合框列表条目存储的底层值。
 
 ```javascript editor-docx
-// How can I get the value using a content control list entry in a document?
+// How do I get the value assigned to a list item in a document?
 
-// Get the value for a content control list entry in a document.
+// Extract the programmatic value of an entry when the display label alone is not enough in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

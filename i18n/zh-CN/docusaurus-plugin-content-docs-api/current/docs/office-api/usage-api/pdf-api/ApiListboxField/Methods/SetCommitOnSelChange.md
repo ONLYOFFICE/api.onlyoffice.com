@@ -1,17 +1,17 @@
 # SetCommitOnSelChange
 
-设置字段在选择更改时提交的属性。
+设置字段是否在选择更改后立即提交更改。
 
 继承自 [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md)。
 
 ## 示例
 
-在 PDF 文档中为带有选项列表的字段设置选择更改时提交属性。
+当 PDF 中下拉选择更改时启用自动提交。
 
 ```javascript editor-pdf
-// How can I set commit on sel change using a list field in a PDF document?
+// How do I make a field auto-submit when the selection changes in a PDF?
 
-// Set commit on sel change for a list field in a PDF document.
+// Configure a dropdown to trigger form submission on selection in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

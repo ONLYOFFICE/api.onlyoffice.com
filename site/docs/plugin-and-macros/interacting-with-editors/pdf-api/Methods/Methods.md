@@ -18,6 +18,7 @@ Represents the Api class.
 | [GetPageImage](./GetPageImage.md) | canvas | Returns the page image. |
 | [GetSelectedText](./GetSelectedText.md) | string | Returns the selected text from the document. |
 | [GetVersion](./GetVersion.md) | string | Returns the editor version. |
+| [GoToPage](./GoToPage.md) | boolean | Moves to specified page. |
 | [InstallPlugin](./InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
@@ -27,7 +28,7 @@ Represents the Api class.
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplacePageContent](./ReplacePageContent.md) | boolean | Replaces the page content with the specified parameters. |
 | [SetMacros](./SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
 | [SetProperties](./SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./ShowError.md) | None | Shows an error/warning message. |

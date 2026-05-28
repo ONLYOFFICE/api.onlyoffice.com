@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array with all the image objects from the slide.
+Find all images on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to get all images from the slide.
+// How do I access all the images in a slide in a presentation?
 
-// Get all images from the slide as an array.
+// Retrieve the image objects and read their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格环绕样式。
+控制文档中周围文本是环绕表格还是另起一行。
 
 ```javascript editor-docx
-// How to set the wrapping to the table in a document.
+// How do I make text wrap around a table or keep a table on its own line in a document?
 
-// Resize table by making its the width 100 percent in a document.
+// Place one table inline with text and another on a separate line to compare wrapping behavior in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

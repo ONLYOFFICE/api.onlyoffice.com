@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取 PDF 文档中的段落属性。
+访问 PDF 中段落的格式设置。
 
 ```javascript editor-pdf
-// How to get a paragraph properties and set its spacing size in a PDF document.
+// How do I retrieve the properties of a paragraph in a PDF?
 
-// Change paragraph properties in a PDF document.
+// Modify paragraph spacing and other settings in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

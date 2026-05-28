@@ -29,6 +29,9 @@ Represents the Api class.
 | [GetVersion](./GetVersion.md) | string | Returns the editor version. |
 | [InputText](./InputText.md) | None | Inserts text into the document. |
 | [InstallPlugin](./InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
+| [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
+| [IsFillingFormMode](./IsFillingFormMode.md) | boolean | Checks if the document is in the filling form mode. |
+| [IsFillingOFormMode](./IsFillingOFormMode.md) | boolean | Checks if the document is in the filling OForm mode. |
 | [IsFormSigned](./IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
@@ -36,12 +39,12 @@ Represents the Api class.
 | [OnEncryption](./OnEncryption.md) | None | Encrypts the document. |
 | [PasteHtml](./PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
-| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
+| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SetFormValue](./SetFormValue.md) | None | Sets a value to the specified form. |
 | [SetMacros](./SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
 | [SetProperties](./SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./ShowError.md) | None | Shows an error/warning message. |

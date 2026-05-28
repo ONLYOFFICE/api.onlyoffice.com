@@ -25,9 +25,9 @@ number
 在电子表格中返回基于总体的分布偏度：分布围绕其均值的不对称程度的表征。
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution based on a population in a spreadsheet.
+// Calculate the population skewness of a distribution using the SKEW_P function.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
+// Place values in cells and apply the function to display the asymmetry result.
 
 const worksheet = Api.GetActiveSheet();
 

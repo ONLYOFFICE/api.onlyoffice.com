@@ -1,28 +1,47 @@
 # Copy
 
-复制当前图形对象。
+复制当前绘图组。
 
-继承自 [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md)。
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
+:::
+
+## 语法
+
+```javascript
+expression.Copy();
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiGroup](../../ApiGroup/ApiGroup.md)
 
 ## 示例
 
-复制文档中的当前图形对象。
+复制绘图组并将副本添加到文档中的同一段落。
 
 ```javascript editor-docx
-// How to create a duplicate of a drawing in a document.
+// How do I make a copy of a grouped set of objects in a document?
 
-// Add two similar shapes into the document.
+// Clone a group of shapes so that the duplicate appears alongside the original in a document.
 
 let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
-paragraph.AddDrawing(drawing);
-let copyDrawing = drawing.Copy();
-let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
-fill = Api.CreateRadialGradientFill([gs1, gs2]);
-copyDrawing.Fill(fill);
-paragraph.AddDrawing(copyDrawing);
+let shape1 = Api.CreateShape("rect", 60 * 36000, 60 * 36000, fill, stroke);
+let shape2 = Api.CreateShape("ellipse", 60 * 36000, 60 * 36000, fill, stroke);
+shape1.SetWrappingStyle("inFront");
+shape2.SetWrappingStyle("inFront");
+let group = Api.CreateGroup([shape1, shape2]);
+let paragraph = doc.GetElement(0);
+paragraph.AddDrawing(group);
+
+let copyGroup = group.Copy();
+paragraph.AddDrawing(copyGroup);
 ```

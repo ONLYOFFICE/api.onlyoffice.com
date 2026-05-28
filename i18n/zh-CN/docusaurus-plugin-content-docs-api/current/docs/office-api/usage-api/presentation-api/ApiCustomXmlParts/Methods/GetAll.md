@@ -23,9 +23,9 @@ expression.GetAll();
 获取演示文稿中的所有自定义 XML 部件。
 
 ```javascript editor-pptx
-// How to retrieve all custom XML parts from the presentation.
+// How do I retrieve all custom XML parts from a presentation?
 
-// Get all XML parts using the custom XML parts API in a presentation.
+// Display the count and content of each XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

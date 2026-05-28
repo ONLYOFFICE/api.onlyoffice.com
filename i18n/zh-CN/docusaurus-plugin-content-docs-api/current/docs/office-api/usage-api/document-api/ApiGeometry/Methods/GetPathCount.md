@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+计算构成文档中形状几何图形的路径数量。
 
 ```javascript editor-docx
-// How to get the path count for a geometry in a document?
+// How do I find out how many paths a shape's geometry contains in a document?
 
-// Get the path count and display the result in a document.
+// Verify the total path count before iterating over a shape's geometry paths in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

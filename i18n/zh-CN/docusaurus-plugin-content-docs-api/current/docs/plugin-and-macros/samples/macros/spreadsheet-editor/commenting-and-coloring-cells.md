@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 批注与单元格着色
 
 为所选单元格添加批注，也可以更改单元格的背景颜色。
@@ -37,4 +39,4 @@ End Sub
 
 ## 结果
 
-![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/commenting-and-coloring-cells" dark />

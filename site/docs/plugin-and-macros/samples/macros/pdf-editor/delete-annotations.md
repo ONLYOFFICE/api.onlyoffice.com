@@ -4,6 +4,8 @@ description: Remove annotations containing a specified keyword.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Delete annotations
 
 Iterates through all pages in the PDF document and removes annotations which contain a specified keyword.
@@ -39,5 +41,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-![Delete Annotations](/assets/images/plugins/delete-annotations.png#gh-light-mode-only)
-![Delete Annotations](/assets/images/plugins/delete-annotations.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/delete-annotations" dark />

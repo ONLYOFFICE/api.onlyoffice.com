@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-指定在指定段落周围页面左侧显示的边框。
+在文档中为段落的左侧添加边框。
 
 ```javascript editor-docx
-// How to add border to the left side of the paragraph in a document.
+// How do I place a visible border on the left edge of a paragraph in a document?
 
-// Set left border for a paragraph properties in a document.
+// Decorate a paragraph with a colored left-side border to make it stand out visually.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

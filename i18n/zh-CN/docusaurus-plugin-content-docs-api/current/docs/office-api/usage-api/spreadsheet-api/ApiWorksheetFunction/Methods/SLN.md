@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回一个期间资产的直线折旧。
+计算资产一个期间的直线折旧。
 
 ```javascript editor-xlsx
-// How to return the straight-line depreciation of an asset in a spreadsheet.
+// The SLN function returns depreciation based on initial cost, salvage value, and asset life.
 
-// Use a function to get the straight-line depreciation of an asset in a spreadsheet.
+// Get the depreciation amount and place it in cell A1.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the subject of the current workbook in a spreadsheet.
+Read the subject field from the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I get the subject using a core properties in a spreadsheet?
+// How do I find out what subject is recorded for a workbook in a spreadsheet?
 
-// Get the subject for a core properties in a spreadsheet.
+// Fetch the subject text stored in the metadata of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

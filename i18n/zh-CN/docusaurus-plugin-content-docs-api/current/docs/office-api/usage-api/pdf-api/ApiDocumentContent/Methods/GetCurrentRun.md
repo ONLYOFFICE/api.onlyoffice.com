@@ -20,12 +20,12 @@ expression.GetCurrentRun();
 
 ## 示例
 
-返回文档内容中的当前 run。
+访问 PDF 中形状内当前活动的文本段。
 
 ```javascript editor-pdf
-// How to get current run for a document content?
+// How do I find the text segment being edited in a PDF?
 
-// Get current run and display the result in a PDF document.
+// Retrieve the most recent text portion that was added to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

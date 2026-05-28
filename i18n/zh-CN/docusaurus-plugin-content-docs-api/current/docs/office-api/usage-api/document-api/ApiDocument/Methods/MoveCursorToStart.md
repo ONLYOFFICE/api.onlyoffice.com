@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中将光标移动到文档开头。
+将光标移动到文档的最开头。
 
 ```javascript editor-docx
-// How can I move cursor to start using a document in a document?
+// How do I place the cursor at the first position in a document?
 
-// Move cursor to start for a document in a document.
+// Prepend text before all existing content by jumping the cursor to the start in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

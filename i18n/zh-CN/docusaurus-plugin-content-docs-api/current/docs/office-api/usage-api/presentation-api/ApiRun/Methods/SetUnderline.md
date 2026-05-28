@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在演示文稿中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
+在演示文稿中显示带有下划线的文本。
 
 ```javascript editor-pptx
-// How to create a new text and underline it in a presentation.
+// Add underline formatting to emphasize or highlight text content.
 
-// Create a new text run and underline it in a presentation.
+// Create a text run and apply underline formatting.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

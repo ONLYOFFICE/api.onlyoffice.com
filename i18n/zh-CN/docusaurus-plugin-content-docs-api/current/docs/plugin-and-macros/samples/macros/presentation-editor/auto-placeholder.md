@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动占位符填充
 
 自动将幻灯片中的空文本框填充为占位符内容，并以结构化格式排列文本。
@@ -73,4 +75,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![AutoPlaceholder](/assets/images/plugins/auto-placeholder.png#gh-light-mode-only)![AutoPlaceholder](/assets/images/plugins/auto-placeholder.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/auto-placeholder" dark />

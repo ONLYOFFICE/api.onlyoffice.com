@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中设置图表刻度标签相对于主水平标签或图表数据值的可能位置值。
+将分类标签移动到相对于电子表格中图表水平轴的不同位置。
 
 ```javascript editor-xlsx
-// How to change position of the tick label of horizontal axis in a spreadsheet.
+// How do I control where the tick labels sit along the horizontal axis of a chart in a spreadsheet?
 
-// Set position of the tick label from horizontal axis in a spreadsheet.
+// Reposition the axis labels above, below, or beside the horizontal axis of a chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

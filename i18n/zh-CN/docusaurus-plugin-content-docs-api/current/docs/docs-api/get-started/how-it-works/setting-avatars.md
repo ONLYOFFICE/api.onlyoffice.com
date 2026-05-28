@@ -36,9 +36,9 @@ sidebar_position: -3
 
 3. 在初始化脚本中，指定用于请求用户头像的事件处理程序。当用户打开评论或共同编辑者列表时，将触发 [`onRequestUsers`](../../usage-api/config/events.md#onrequestusers) 事件。事件的 `data.c` 参数设置为 `"info"`，`data.id` 包含需要头像的用户 ID。
 
-   <img alt="评论里的头像" src="/assets/images/editor/avatars-comments.png" width="295px" />
+   ![评论里的头像](/assets/images/editor/avatars-comments.png#gh-light-mode-only)![评论里的头像](/assets/images/editor/avatars-comments.dark.png#gh-dark-mode-only)
 
-   <img alt="共同编辑头像" src="/assets/images/editor/avatars-coediting.png" width="298px" />
+   ![共同编辑头像](/assets/images/editor/avatars-coediting.png#gh-light-mode-only)![共同编辑头像](/assets/images/editor/avatars-coediting.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {

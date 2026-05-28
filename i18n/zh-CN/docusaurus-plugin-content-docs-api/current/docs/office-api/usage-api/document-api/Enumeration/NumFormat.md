@@ -39,7 +39,7 @@
 
 ## 示例
 
-将 "0.00" 数字格式设置到图表数据点。
+将 “0.00” 数字格式设置到图表数据点。
 
 ```javascript editor-docx
 // How to use the specified numeric format for the ApiChart object.

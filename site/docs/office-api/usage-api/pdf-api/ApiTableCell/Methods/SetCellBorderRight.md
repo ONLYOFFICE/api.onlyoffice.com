@@ -5,7 +5,7 @@ Sets the border which shall be displayed at the right of the current table cell.
 ## Syntax
 
 ```javascript
-expression.SetCellBorderRight(fSize, oApiFill);
+expression.SetCellBorderRight(borderWidth, fill);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -14,8 +14,8 @@ expression.SetCellBorderRight(fSize, oApiFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | Required | [mm](../../Enumeration/mm.md) |  | The width of the current border. |
-| oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the current border. |
+| borderWidth | Required | [mm](../../Enumeration/mm.md) |  | The width of the current border. |
+| fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the current border. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to set cell right border with its fill color.
+Set the right border of a table cell with a fill color in a PDF.
 
 ```javascript editor-pdf
-// Create table and set its cell right border.
+// How do I customize the appearance of the right edge of a cell in a PDF?
 
-// Use table cell to set cell border right.
+// Style the border on the right side of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

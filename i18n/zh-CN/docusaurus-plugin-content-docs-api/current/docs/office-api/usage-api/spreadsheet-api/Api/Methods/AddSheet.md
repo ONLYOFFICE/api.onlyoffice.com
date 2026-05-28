@@ -18,16 +18,16 @@ expression.AddSheet(sName);
 
 ## 返回值
 
-此方法不返回任何数据。
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
 
 ## 示例
 
-创建新的工作表。
+在电子表格中插入具有自定义名称的新工作表。
 
 ```javascript editor-xlsx
-// How to create a new worksheet.
+// How do I add a new worksheet to an existing file in a spreadsheet?
 
-// Add the sheet and display the result in a spreadsheet.
+// Expand the workbook by creating an additional sheet in a spreadsheet.
 
 Api.AddSheet("New sheet");
 ```

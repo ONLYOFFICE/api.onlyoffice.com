@@ -22,12 +22,12 @@ expression.GetContent(getCopies);
 
 ## Example
 
-Get all elements from rich content in a PDF document.
+Retrieve all paragraphs stored in formatted text in a PDF.
 
 ```javascript editor-pdf
-// How do I get the content in a PDF document?
+// How do I access all text elements in rich content in a PDF?
 
-// Get the content using a rich content object in a PDF document.
+// Read the complete list of paragraphs from formatted text in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

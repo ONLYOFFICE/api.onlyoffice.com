@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将 run 元素推送到电子表格中形状内的段落。
+向电子表格中形状内段落的末尾追加新的文本运行。
 
 ```javascript editor-xlsx
-// How do I push in a spreadsheet?
+// How do I add text to the end of an existing paragraph in a spreadsheet?
 
-// Push using a paragraph object in a spreadsheet.
+// Extend a paragraph with extra content by inserting a run after all existing elements in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 100, 160));

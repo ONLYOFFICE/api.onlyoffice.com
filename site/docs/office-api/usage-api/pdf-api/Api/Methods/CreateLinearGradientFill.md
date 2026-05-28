@@ -26,7 +26,7 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 Create a linear gradient fill to apply to the object using the selected linear gradient as the object background in a PDF document.
 
 ```javascript editor-pdf
-// How to create a linear gradient fill to set it as a drawing background in a PDF document.
+// Create a linear gradient fill to set it as a drawing background in a PDF document.
 
 // Change a drawing background using gradient fill in a PDF document.
 

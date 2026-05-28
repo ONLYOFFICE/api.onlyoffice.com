@@ -14,7 +14,7 @@ expression.Push(richRun);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| richRun | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | No description provided. |
+| richRun | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The element to add at the end of the paragraph. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Pushes new element to rich paragraph in a PDF document.
+Add a new element to the end of a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I push in a PDF document?
+// How do I insert a new element into a paragraph in a PDF?
 
-// Push using a rich paragraph object in a PDF document.
+// Append an additional element to a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

@@ -4,6 +4,8 @@ description: Reset text formatting to default properties.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Reset text properties
 
 Resets the text properties of all the paragraphs in a document to the default settings.
@@ -35,5 +37,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![ResetTextProperties](/assets/images/plugins/reset-text-properties.png#gh-light-mode-only)
-![ResetTextProperties](/assets/images/plugins/reset-text-properties.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/reset-text-properties" dark />

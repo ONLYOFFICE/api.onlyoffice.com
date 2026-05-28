@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定当前文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
+在电子表格中将文本运行的小写字母显示为大写。
 
 ```javascript editor-xlsx
-// How to make text characters capitalized in a spreadsheet.
+// How do I make all letters in a text run appear as uppercase in a spreadsheet?
 
-// Create a text run object, update its style by making its letters capitalized in a spreadsheet.
+// Force a visual all-caps style on a run without changing the underlying text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

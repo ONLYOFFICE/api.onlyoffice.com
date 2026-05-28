@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将 EMU（英制度量单位）转换为磅。
+在文档中将 EMU 转换为磅。
 
 ```javascript editor-docx
-// How can I convert emus to points in a document?
+// How do I convert EMUs to points in a document?
 
-// Convert emus to points in a document.
+// Display the equivalent point value for a given number of EMUs in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

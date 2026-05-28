@@ -20,12 +20,12 @@ expression.GetPrevShape();
 
 ## 示例
 
-获取文档中的上一个内联形状。
+检索文档中出现在当前形状之前的形状。
 
 ```javascript editor-docx
-// How to get previous shape from the current one in a document.
+// How do I access the shape positioned just before another shape in a document?
 
-// Color the previous shape with a solid fill in a document.
+// Navigate backward through stacked shapes to find the preceding element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,3 +1,10 @@
+---
+description: Search and replace text automatically on document open.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 启动时搜索并替换
 
 在重新打开文档时搜索并替换文本。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文本文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-replace-on-start.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-replace-on-start" />
 
 ## 安装
 

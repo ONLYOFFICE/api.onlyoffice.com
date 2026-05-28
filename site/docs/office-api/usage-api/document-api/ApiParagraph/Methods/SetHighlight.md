@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-Set highlight color "lightGray" for the paragraph in a document.
+Add a background highlight color to paragraph text in a document.
 
 ```javascript editor-docx
-// How to set highlight to the text in a document.
+// How do I highlight the text of a paragraph with a color in a document?
 
-// Create a new paragraph and highlight it in a document.
+// Draw attention to paragraph content by painting its background with a chosen color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

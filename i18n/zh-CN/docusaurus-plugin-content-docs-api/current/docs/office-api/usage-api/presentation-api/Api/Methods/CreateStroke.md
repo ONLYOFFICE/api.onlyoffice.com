@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-在演示文稿中创建笔触。
+在演示文稿中为形状添加轮廓。
 
 ```javascript editor-pptx
-// How to add a stroke to the shape in a presentation.
+// How do I draw a border around a shape in a presentation?
 
-// Add solid fill and stroke to the shape properties in a presentation.
+// Create a stroke with a custom width and fill color for a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

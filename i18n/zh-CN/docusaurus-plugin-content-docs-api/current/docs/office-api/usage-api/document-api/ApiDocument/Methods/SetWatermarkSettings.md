@@ -22,12 +22,12 @@ expression.SetWatermarkSettings(Settings);
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+在文档中应用具有自定义字体和颜色设置的样式文字水印。
 
 ```javascript editor-docx
-// How to specify the watermark settings such as text and type in a document.
+// How do I add a watermark with specific text and formatting to a document?
 
-// Set watermark settings for the document with text properties.
+// Brand or protect pages by stamping them with a formatted watermark that uses bold, italic, and underline styles.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

@@ -6,12 +6,12 @@
 
 ## 示例
 
-取消选择文档中的当前图形对象。
+从当前选区中移除形状，同时保持文档中其他形状的选定状态。
 
 ```javascript editor-docx
-// How to unselect drawing objects with the cursor in a document.
+// How do I deselect a single drawing without clearing the whole selection in a document?
 
-// Create three shapes, select all of them, then unselect the second shape in a document.
+// Fine-tune a multi-shape selection by excluding one specific shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

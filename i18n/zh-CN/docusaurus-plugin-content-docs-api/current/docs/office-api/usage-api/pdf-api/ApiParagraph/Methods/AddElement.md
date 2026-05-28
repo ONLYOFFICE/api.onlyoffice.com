@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向段落添加 run。
+在 PDF 中向段落插入文本内容。
 
 ```javascript editor-pdf
-// Insert a text run to the paragraph object in a PDF document.
+// How do I add text to a paragraph in a PDF?
 
-// How to add the text run object to the page.
+// Place a text element within a paragraph to display content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

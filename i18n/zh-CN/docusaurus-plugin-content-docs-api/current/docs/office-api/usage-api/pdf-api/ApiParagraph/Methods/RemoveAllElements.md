@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从 PDF 文档中的段落移除所有元素。
+从 PDF 中的段落移除所有内容。
 
 ```javascript editor-pdf
-// How to delete all elements from the paragraph in a PDF document.
+// How do I clear a paragraph completely in a PDF?
 
-// Clear all elements from the paragraph in a PDF document.
+// Delete every element in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

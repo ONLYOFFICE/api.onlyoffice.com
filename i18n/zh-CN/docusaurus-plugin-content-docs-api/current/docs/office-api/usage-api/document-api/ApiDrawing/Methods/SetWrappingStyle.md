@@ -1,14 +1,14 @@
 # SetWrappingStyle
 
 设置当前对象（图像、形状、图表）的环绕类型。可以设置以下环绕样式类型之一：
--**"inline"** - 对象被视为文本的一部分，像字符一样，因此当文本移动时，对象也会移动。在这种情况下，定位选项不可访问。
+- **“inline”** - 对象被视为文本的一部分，像字符一样，因此当文本移动时，对象也会移动。在这种情况下，定位选项不可访问。
 如果选择以下样式之一，则对象可以独立于文本移动并精确定位在页面上：
--**"square"** - 文本环绕对象的矩形边界框。
--**"tight"** - 文本环绕对象的实际边缘。
--**"through"** - 文本环绕对象边缘并填充对象内的开放空白区域。
--**"topAndBottom"** - 文本仅位于对象的上方和下方。
--**"behind"** - 文本覆盖在对象上方。
--**"inFront"** - 对象覆盖在文本上方。
+- **“square”** - 文本环绕对象的矩形边界框。
+- **“tight”** - 文本环绕对象的实际边缘。
+- **“through”** - 文本环绕对象边缘并填充对象内的开放空白区域。
+- **“topAndBottom”** - 文本仅位于对象的上方和下方。
+- **“behind”** - 文本覆盖在对象上方。
+- **“inFront”** - 对象覆盖在文本上方。
 
 ## 语法
 
@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-在文档中创建环绕样式为"square"的形状。
+在文档中使用四周环绕样式使文本环绕形状。
 
 ```javascript editor-docx
-// How to wrap the shape with squared style in a document.
+// How do I control how text flows around a drawing in a document?
 
-// Create a drawing, add its properties and set its wrapping style in a document.
+// Keep a fixed gap between surrounding text and all sides of a floating shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

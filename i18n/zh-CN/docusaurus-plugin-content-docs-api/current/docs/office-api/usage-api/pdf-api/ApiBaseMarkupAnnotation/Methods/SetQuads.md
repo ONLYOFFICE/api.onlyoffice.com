@@ -14,7 +14,7 @@ expression.SetQuads(quads);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| quads | 必需 | [Quad](../../Enumeration/Quad.md)[] |  | 未提供描述。 |
+| quads | 必需 | [Quad](../../Enumeration/Quad.md)[] |  | 定义高亮区域的四边形数组。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为标记注释设置四边形。
+指定 PDF 中标记注释的高亮区域。
 
 ```javascript editor-pdf
-// How do I set quads in a PDF document?
+// How do I define the highlighted region in a PDF?
 
-// Set quads using a markup annotation object in a PDF document.
+// Assign new coordinates to the marked area of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);

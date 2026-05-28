@@ -1,9 +1,9 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text:
--**"baseline"** - the characters in the current text Range will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text Range will be aligned below the default text baseline.
--**"superscript"** - the characters in the current text Range will be aligned above the default text baseline.
+- **"baseline"** - the characters in the current text Range will be aligned by the default text baseline.
+- **"subscript"** - the characters in the current text Range will be aligned below the default text baseline.
+- **"superscript"** - the characters in the current text Range will be aligned above the default text baseline.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-Set vertical alignment "superscript" for a text range.
+Position selected text above or below the normal line as superscript or subscript in a document.
 
 ```javascript editor-docx
-// Set the vertical alignment of a text in a document.
+// How do I align a range of characters vertically as raised or lowered text in a document?
 
-// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
+// Mark a word or symbol to sit above or below the baseline of surrounding text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

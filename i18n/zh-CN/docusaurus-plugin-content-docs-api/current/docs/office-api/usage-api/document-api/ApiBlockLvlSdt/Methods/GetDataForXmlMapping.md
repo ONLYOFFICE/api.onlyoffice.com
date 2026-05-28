@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取控件数据，如同其在文档中映射的 XML 中被填充一样。
+读取文档中内容控件的文本，与其在导出的 XML 中显示的完全一样。
 
 ```javascript editor-docx
-// How can I get the data for xml mapping using a block-level content control in a document?
+// How do I get the text from a content control in the form used for XML export in a document?
 
-// Get the data for xml mapping for a block-level content control in a document.
+// Extract the plain text value of a content control for use in XML mapping in a document.
 
 let doc = Api.GetDocument();
 let contentControl = Api.CreateBlockLvlSdt();

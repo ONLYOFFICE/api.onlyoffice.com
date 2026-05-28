@@ -15,8 +15,8 @@ expression.GetRange(cell1, cell2);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| cell1 | 必需 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个单元格地址（例如「A1」或「A1:B2」）。 |
-| cell2 | 可选 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个单元格地址（可选，与「cell1」一起定义角落）。 |
+| cell1 | 必需 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个单元格地址（例如“A1”或“A1:B2”）。 |
+| cell2 | 可选 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个单元格地址（可选，与“cell1”一起定义角落）。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ expression.GetRange(cell1, cell2);
 
 ## 示例
 
-从电子表格中现有范围获取子范围。
+从电子表格中较大的范围内选择较小的单元格范围。
 
 ```javascript editor-xlsx
-// How to get a range within a range in a spreadsheet.
+// How do I pick out a subset of cells from an existing range in a spreadsheet?
 
-// Get a range, access subranges and fill them with different colors in a spreadsheet.
+// Highlight distinct sections of a range by filling each sub-selection with a different color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let parentRange = worksheet.GetRange("B2:F6");

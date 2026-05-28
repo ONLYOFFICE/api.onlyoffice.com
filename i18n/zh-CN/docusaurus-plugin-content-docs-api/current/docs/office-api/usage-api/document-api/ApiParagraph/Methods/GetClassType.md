@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中段落对象的类类型。
+识别文档中段落对象的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of a paragraph in a document?
+// How do I determine what type of object a paragraph is in a document?
 
-// Get the class type of a paragraph and display it in the document.
+// Confirm an object is a paragraph before applying paragraph-specific operations in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

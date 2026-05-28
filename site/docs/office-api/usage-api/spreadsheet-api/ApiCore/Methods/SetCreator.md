@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the creator of the current workbook using the core properties in a spreadsheet.
+Assign an author name to a workbook's document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set creator for a core properties in a spreadsheet?
+// How do I record who created a workbook in a spreadsheet?
 
-// Set creator and display the result in a spreadsheet.
+// Store the author's identity in the workbook metadata in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

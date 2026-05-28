@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字之和的阶乘与阶乘之积的比率。
+计算电子表格中一组数字的多项式系数。
 
 ```javascript editor-xlsx
-// How to get a result from the ratio of the factorial of a sum of numbers to the product of factorials in a spreadsheet.
+// What is the multinomial coefficient value for a group of numbers in a spreadsheet?
 
-// Use a function to find the ratio of the factorial of a sum of numbers to the product of factorials in a spreadsheet.
+// Find the ratio of combined factorial to individual factorials in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

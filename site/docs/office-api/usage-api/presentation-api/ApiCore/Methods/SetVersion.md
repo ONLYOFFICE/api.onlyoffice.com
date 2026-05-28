@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set and get the version of the current presentation in a presentation.
+Store a version number for the presentation in a presentation.
 
 ```javascript editor-pptx
-// How to set version for a core properties in a presentation?
+// How do I track the version of my presentation?
 
-// Set version and display the result in a presentation.
+// Write and retrieve the version identifier for a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 货币转换
 
 将基础货币转换为多个目标货币。也可以获取指定日期的历史货币汇率。使用来自 [currencyapi](https://app.currencyapi.com/) 的货币转换 API。
@@ -85,4 +87,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/currency-conversion" dark />

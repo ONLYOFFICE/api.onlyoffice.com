@@ -30,7 +30,7 @@ Adds a request for the anonymous name.
 }
 ```
 
-![Anonymous](/assets/images/editor/anonymous.png)
+![Anonymous](/assets/images/editor/anonymous.png#gh-light-mode-only)![Anonymous](/assets/images/editor/anonymous.dark.png#gh-dark-mode-only)
 
 ### anonymous.request
 
@@ -110,18 +110,6 @@ It will only be available if the [onRequestClose](../../events.md#onrequestclose
 **Example**: `"Close file"`
 
 ![Cross button in the header](/assets/images/editor/cross-button.png#gh-light-mode-only)![Cross button in the header](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
-
-## commentAuthorOnly
-
-**type:** `boolean` | **default:** `false`
-
-Whether the user can edit and delete only their comments.
-
-:::danger[Deprecated]
-Starting from version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
-:::
-
-**Example**: `true`
 
 ## comments
 
@@ -397,7 +385,7 @@ The settings for the **Feedback & Support** menu button. If set to `false`, the 
 }
 ```
 
-![Feedback](/assets/images/editor/feedback.png)
+![Feedback](/assets/images/editor/feedback.png#gh-light-mode-only)![Feedback](/assets/images/editor/feedback.dark.png#gh-dark-mode-only)
 
 ### feedback.url
 
@@ -658,7 +646,7 @@ It will only be available for the comments if the [onRequestSendNotify](../../ev
 
 **Example**: `true`
 
-<img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mention share](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mention share](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
 
 ## mobile
 
@@ -943,8 +931,8 @@ The **Complete & Submit** button settings. If set to `false`, the button is hidd
 }
 ```
 
-![Submit button](/assets/images/editor/submitForm.png)
-![Submit button](/assets/images/editor/submitForm-message.png)
+![Submit button](/assets/images/editor/submitForm.png#gh-light-mode-only)![Submit button](/assets/images/editor/submitForm.dark.png#gh-dark-mode-only)
+![Submit button](/assets/images/editor/submitForm-message.png#gh-light-mode-only)![Submit button](/assets/images/editor/submitForm-message.dark.png#gh-dark-mode-only)
 
 ### submitForm.visible
 

@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## Example
 
-Set the text color to the text run in a presentation.
+Apply a color to text characters in a presentation.
 
 ```javascript editor-pptx
-// How to change a color of a text in a presentation.
+// What color options are available for text in a presentation?
 
-// Get the text properties of the run and color its font in a presentation.
+// Create a solid color fill and apply it to the text formatting in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

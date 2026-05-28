@@ -4,6 +4,8 @@ description: Format a cell range as a styled table.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Format range as table
 
 Formats the range of cells **A1:D10** as a table.
@@ -27,4 +29,4 @@ End Sub
 
 ## Result
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/format-range-as-a-table" dark />

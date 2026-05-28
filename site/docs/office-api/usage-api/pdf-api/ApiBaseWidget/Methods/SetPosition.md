@@ -14,7 +14,7 @@ expression.SetPosition(position);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| position | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| position | Required | [Point](../../Enumeration/Point.md) |  | The new position of the widget. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a new field and set new position to its widget in a PDF document.
+Move a widget to a new position in a PDF.
 
 ```javascript editor-pdf
-// How can I set position using a widget in a PDF document?
+// How do I change the position of a widget in a PDF?
 
-// Set position for a widget in a PDF document.
+// Reposition a field widget using coordinate values in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

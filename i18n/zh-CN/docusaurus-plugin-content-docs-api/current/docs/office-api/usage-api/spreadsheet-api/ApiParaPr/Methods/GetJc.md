@@ -20,12 +20,12 @@ expression.GetJc();
 
 ## 示例
 
-获取电子表格中段落内容的对齐方式。
+读取电子表格中段落的文本对齐设置。
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph in a spreadsheet.
+// How do I find out whether a paragraph's text is centered, left-aligned, or right-aligned in a spreadsheet?
 
-// Create a paragraph set justification type, get it and display in the worksheet.
+// Confirm the justification applied to a paragraph after changing its alignment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

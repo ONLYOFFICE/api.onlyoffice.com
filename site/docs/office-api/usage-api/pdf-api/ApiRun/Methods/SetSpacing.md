@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-Set the text spacing measured in twentieths of a point in a PDF document.
+Adjust the space between characters in text in a PDF.
 
 ```javascript editor-pdf
-// How to resize spacing between words in a text run in a PDF document.
+// What is the way to modify character spacing in text in a PDF?
 
-// Create a new text run and set its spacing size (point * 20) in a PDF document.
+// Control the distance between letters in your text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

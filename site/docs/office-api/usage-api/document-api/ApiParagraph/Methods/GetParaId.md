@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get the paragraph ID in a document.
+Retrieve the unique identifier assigned to a paragraph in a document.
 
 ```javascript editor-docx
-// How can I get the para id using a paragraph in a document?
+// How do I read the ID of a paragraph in a document?
 
-// Get the para id for a paragraph in a document.
+// Identify each paragraph by its numeric ID to distinguish them in a document.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-设置将显示在表格单元格顶部的边框。
+在文档中为表格单元格的顶部添加边框。
 
 ```javascript editor-docx
-// How to add border to the top of the cell.
+// How do I apply a border to the top edge of a table cell in a document?
 
-// Create a 3x3 table and add the top 4 point black border to cell #1.
+// Style a table cell with a visible top-side border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

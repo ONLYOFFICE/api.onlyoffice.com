@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入到文档中。
+读取并显示文档中特定数据系列的图表类型。
 
 ```javascript editor-docx
-// How to get a chart type and show it on the slide.
+// How do I find out what chart type a data series is using in a document?
 
-// Change a chart type to the "area" type in a document.
+// Verify the visual style assigned to a series before deciding whether to change it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set a category name for chart in a document.
+Rename a category label on a chart in a document.
 
 ```javascript editor-docx
-// How to rename category of the chart in a document.
+// How do I change the name of a specific category on a chart in a document?
 
-// Create a chart and set a name for its first category in a document.
+// Update a category label to reflect revised data ranges or corrected axis names in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

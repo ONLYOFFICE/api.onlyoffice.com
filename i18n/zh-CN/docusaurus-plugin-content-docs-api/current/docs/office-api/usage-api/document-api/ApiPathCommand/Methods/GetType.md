@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+读取文档中形状内路径段使用的绘图指令类型。
 
 ```javascript editor-docx
-// How to get the type for a path command in a document?
+// How do I find out what type of move a specific step in a shape's outline represents in a document?
 
-// Get the type and display the result in a document.
+// Identify the category of a drawing step within a shape's outline path in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

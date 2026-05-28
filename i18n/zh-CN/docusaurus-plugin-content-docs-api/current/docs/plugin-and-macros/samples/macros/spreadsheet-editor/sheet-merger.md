@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 工作表合并
 
 通过复制每个工作表的已用区域并追加，将所有工作表的数据合并到当前活动工作表。
@@ -41,4 +43,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sheet-merger" dark />

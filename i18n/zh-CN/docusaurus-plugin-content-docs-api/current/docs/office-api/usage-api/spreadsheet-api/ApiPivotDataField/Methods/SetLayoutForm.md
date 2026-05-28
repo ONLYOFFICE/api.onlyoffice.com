@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的布局形式。
+将电子表格中透视字段的显示格式更改为表格、大纲或紧凑。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout form.
+// How do I choose the layout style for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout form of a specified pivot.
+// Apply a tabular presentation to a pivot field for a cleaner row-by-row view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

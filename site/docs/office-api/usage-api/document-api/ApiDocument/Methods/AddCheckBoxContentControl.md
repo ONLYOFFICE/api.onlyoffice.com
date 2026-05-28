@@ -22,12 +22,12 @@ expression.AddCheckBoxContentControl(checkBoxPr);
 
 ## Example
 
-Add a checkbox content control to a document: in a document.
+Add a checkbox content control to a document.
 
 ```javascript editor-docx
-// How to add the check box content control for a document?
+// How do I insert a checkbox content control in a document?
 
-// Add the check box content control and display the result in a document.
+// Embed a pre-checked checkbox field to capture boolean input in a document.
 
 let doc = Api.GetDocument();
 doc.AddCheckBoxContentControl({checked : true});

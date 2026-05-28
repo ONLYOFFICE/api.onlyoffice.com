@@ -20,12 +20,12 @@ expression.GetRectDiff();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的矩形差异。
+计算 PDF 中注释边框之间的间距。
 
 ```javascript editor-pdf
-// How do I get the rect diff in a PDF document?
+// How do I measure the padding around a comment box in a PDF?
 
-// Get the rect diff using a free text annotation object in a PDF document.
+// Get the inner border margins of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

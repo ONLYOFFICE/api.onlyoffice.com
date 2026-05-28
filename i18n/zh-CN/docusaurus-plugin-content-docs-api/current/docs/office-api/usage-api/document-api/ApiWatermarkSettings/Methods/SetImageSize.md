@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+控制文档中水印图像的尺寸。
 
 ```javascript editor-docx
-// How to set the image size of the watermark in a document.
+// How do I change how large the watermark image appears in a document?
 
-// Resize the image using the watermark settings in a document.
+// Scale the watermark image to a specific size in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

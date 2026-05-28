@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除批注
 
 从活动工作表中指定的单元格范围删除批注。
@@ -35,5 +37,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![DeleteComments](/assets/images/plugins/delete-comments.png#gh-light-mode-only)
-![DeleteComments](/assets/images/plugins/delete-comments.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/delete-comments" dark />

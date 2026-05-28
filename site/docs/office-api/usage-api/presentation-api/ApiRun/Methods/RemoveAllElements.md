@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Remove all the elements from the run in a presentation.
+Remove all elements from a text run in a presentation.
 
 ```javascript editor-pptx
-// How to remove all elements from the text run object in a presentation.
+// Delete content stored in a text run in a presentation?
 
-// Delete text from the slide.
+// Clear a text run before adding new text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

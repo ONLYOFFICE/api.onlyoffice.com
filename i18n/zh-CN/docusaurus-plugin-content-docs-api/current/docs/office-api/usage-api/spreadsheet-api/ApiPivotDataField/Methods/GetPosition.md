@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中数据字段的位置。
+读取电子表格中数据透视表值区域内数据字段的位置。
 
 ```javascript editor-xlsx
-// How to get a table element position in a spreadsheet.
+// How do I find out where a data field sits among other value fields in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's position in a spreadsheet.
+// Check the order a data field appears relative to other summarized columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

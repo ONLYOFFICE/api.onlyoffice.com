@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其不透明度。
+检索 PDF 中注释的透明度级别。
 
 ```javascript editor-pdf
-// How to get the opacity for an annotation in a PDF document?
+// How transparent is an annotation in a PDF?
 
-// Get the opacity and display the result in a PDF document.
+// Check the opacity value that controls how see-through an annotation appears in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -6,7 +6,7 @@ ApiImage 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 创建指定绘图对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiImage](../ApiImage/ApiImage.md) | 创建指定图像的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 从父对象中删除指定的绘图对象。 |
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetClassType](./Methods/GetClassType.md) | "image" | 返回 ApiImage 类的类型。 |
@@ -30,9 +30,9 @@ ApiImage 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [Select](./Methods/Select.md) | boolean | 选择当前图形对象。 |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | 设置当前绘图的水平翻转。 |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | 设置当前绘图的垂直翻转。 |
-| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | 为当前绘图对象（形状或图像）设置超链接。传递 null 以删除超链接。 |
+| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | 为当前绘图对象（形状或图像）设置超链接。 |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | 设置当前绘图的指定锁定类型的锁定值。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。 |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | 设置指定图形对象的轮廓属性。 |
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | 将指定的占位符设置到当前绘图对象。 |
 | [SetPosX](./Methods/SetPosX.md) | boolean | 设置绘图在幻灯片上的 x 位置。 |

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的反双曲余切值。
+计算电子表格中数字的反双曲余切。
 
 ```javascript editor-xlsx
-// How to get an inverse hyperbolic cotangent of a number and display it in the worksheet.
+// Compute the ACOTH value for mathematical analysis in a spreadsheet.
 
-// Get a function that gets inverse hyperbolic cotangent of a number in a spreadsheet.
+// Output the inverse hyperbolic cotangent to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

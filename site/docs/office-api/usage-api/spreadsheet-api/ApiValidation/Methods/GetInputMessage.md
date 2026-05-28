@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the input message text in a spreadsheet.
+Read the guidance message that appears when a user selects a validated cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation input message in a spreadsheet.
+// How do I find out what instruction text is shown when clicking on a cell with a validation rule in a spreadsheet?
 
-// Get the input message using the validation API in a spreadsheet.
+// Retrieve the tooltip message displayed to guide users entering data into a restricted cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

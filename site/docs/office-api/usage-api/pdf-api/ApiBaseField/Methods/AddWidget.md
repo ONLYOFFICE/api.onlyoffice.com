@@ -5,7 +5,7 @@ Adds new widget - visual representation for field
 ## Syntax
 
 ```javascript
-expression.AddWidget(nPage, aRect);
+expression.AddWidget(pageIndex, rect);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,8 +14,8 @@ expression.AddWidget(nPage, aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | page to add widget |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
+| pageIndex | Required | number |  | page index to add widget |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.AddWidget(nPage, aRect);
 
 ## Example
 
-Add new widget - visual representation for field.
+Add a visual representation for a form field in a PDF.
 
 ```javascript editor-pdf
-// How to add the widget for a base field in a PDF document?
+// How do I create a visual instance of a form field in a PDF?
 
-// Add the widget and display the result in a PDF document.
+// Display a form field's widget at a specific location in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

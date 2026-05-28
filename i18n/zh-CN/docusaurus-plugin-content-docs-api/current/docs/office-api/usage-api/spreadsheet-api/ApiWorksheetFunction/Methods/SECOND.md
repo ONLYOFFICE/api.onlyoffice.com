@@ -14,7 +14,7 @@ expression.SECOND(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 日期时间代码中的数字，或时间格式的文本（如 "16:48:00" 或 "4:48:00 PM"），或其他公式或函数的结果。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 日期时间代码中的数字，或时间格式的文本（如 “16:48:00” 或 “4:48:00 PM”），或其他公式或函数的结果。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ number
 在电子表格中返回秒数，0 到 59 的数字。
 
 ```javascript editor-xlsx
-// How to get seconds from time in a spreadsheet.
+// Extract the seconds component from a time value using the SECOND function.
 
-// Use a function to return seconds from time object in a spreadsheet.
+// Apply the function to retrieve and display the seconds in a cell.
 
 const worksheet = Api.GetActiveSheet();
 

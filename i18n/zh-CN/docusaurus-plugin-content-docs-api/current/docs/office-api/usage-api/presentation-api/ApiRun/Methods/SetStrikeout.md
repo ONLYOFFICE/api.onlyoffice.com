@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在演示文稿中当前 run 的内容以通过行中心的单条水平线显示。
+在演示文稿中显示带有中间水平线的文本。
 
 ```javascript editor-pptx
-// How to strike out a text run in a presentation.
+// Apply strikeout formatting to indicate deleted or revised content.
 
-// Create a new text run and set cross it out in a presentation.
+// Create a text run and apply strikeout formatting.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a comment reply object in a document.
+Read the class type of a comment reply object in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a comment reply in a document?
+// How do I confirm the object type of a comment reply in a document?
 
-// Get the class type of a comment reply and display it in the document.
+// Verify that a retrieved object is a comment reply before performing type-specific operations.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

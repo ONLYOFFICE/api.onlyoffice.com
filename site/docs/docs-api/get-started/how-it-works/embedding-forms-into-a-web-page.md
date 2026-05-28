@@ -74,7 +74,7 @@ The complete HTML page:
 
 After editing, click **Start filling** to switch the form to filling mode.
 
-![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png)
+![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
 ## Filling forms
 
@@ -131,4 +131,4 @@ The complete HTML page:
 
 After filling in all required fields, click **Complete & Submit** to submit the data.
 
-![Embed pdf form](/assets/images/editor/embed-pdf.png)
+![Embed pdf form](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![Embed pdf form](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)

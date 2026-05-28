@@ -14,7 +14,7 @@ expression.SetSubject(subject);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| subject | 必需 | string |  | 未提供描述。 |
+| subject | 必需 | string |  | 批注主题文本。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置主题。
+在 PDF 中为注释添加主题或话题标签。
 
 ```javascript editor-pdf
-// How can I set subject using an annotation in a PDF document?
+// Categorize an annotation with a subject line in a PDF.
 
-// Set subject for an annotation in a PDF document.
+// Assign a subject title to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

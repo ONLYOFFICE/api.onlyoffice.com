@@ -22,4 +22,4 @@
 | [GetParent](./Methods/GetParent.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | 返回数据透视项的父级。 |
 | [GetValue](./Methods/GetValue.md) | string | 返回数据透视表字段中指定项的名称。 |
 | [GetVisible](./Methods/GetVisible.md) | boolean | 返回数据透视项的可见性。 |
-| [SetVisible](./Methods/SetVisible.md) | 无 | 设置数据透视项的可见性。💡 隐藏其他项时，至少必须保留一个可见项。 |
+| [SetVisible](./Methods/SetVisible.md) | 无 | 设置数据透视项目的可见性。 |

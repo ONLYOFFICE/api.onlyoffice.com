@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+读取文档中应用于形状绘图路径的填充设置。
 
 ```javascript editor-docx
-// How do I get the fill in a document?
+// How do I check whether a shape's path has a fill applied in a document?
 
-// Get the fill using a geometry path object in a document.
+// Confirm the current fill mode on a path before making further changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

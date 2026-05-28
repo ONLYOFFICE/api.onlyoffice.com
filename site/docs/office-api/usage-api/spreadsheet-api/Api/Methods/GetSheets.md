@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a sheet collection that represents all the sheets in the active workbook in a spreadsheet.
+Collect all sheet tabs into a list and display their names in cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// Get all sheets as an array in a spreadsheet.
+// How do I loop through every sheet in the workbook and read their names in a spreadsheet?
 
-// How to get array of sheets in a spreadsheet.
+// Build an inventory of all tabs by gathering their titles and writing them out in a spreadsheet.
 
 Api.AddSheet("new_sheet_name");
 let sheets = Api.GetSheets();

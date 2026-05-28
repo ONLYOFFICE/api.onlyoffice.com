@@ -20,12 +20,12 @@ expression.GetAllContentControls();
 
 ## 示例
 
-获取文档中当前内容控件中的内容控件对象集合。
+收集文档中内容控件内的所有嵌套内容控件。
 
 ```javascript editor-docx
-// Create three block content controls, nests two of them inside one, and return all the inner containers in an array in a document.
+// How do I get a list of all content controls contained within another content control in a document?
 
-// How to return an array of the block-level content control objects from the specified block content control in a document.
+// Nest multiple content controls inside a parent control and retrieve them all at once in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

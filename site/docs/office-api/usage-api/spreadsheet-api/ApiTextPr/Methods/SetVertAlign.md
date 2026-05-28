@@ -1,9 +1,9 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
--**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
+- **"baseline"** - the characters in the current text run will be aligned by the default text baseline.
+- **"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+- **"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-Specify the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run in a spreadsheet.
+Raise text to superscript position inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change vertical alignment of a text in a spreadsheet.
+// How do I position text above or below the normal line in a spreadsheet?
 
-// Make text superscript using the text properties API in a spreadsheet.
+// Lift characters above the baseline to create a superscript effect in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

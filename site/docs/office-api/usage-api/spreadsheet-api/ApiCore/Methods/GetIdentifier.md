@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the identifier of the current workbook using the core properties in a spreadsheet.
+Read the unique identifier stored in the workbook properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I get the identifier in a spreadsheet?
+// How do I look up the identifier assigned to a workbook in a spreadsheet?
 
-// Get the identifier using a core properties object in a spreadsheet.
+// Extract and display the workbook's unique ID from the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

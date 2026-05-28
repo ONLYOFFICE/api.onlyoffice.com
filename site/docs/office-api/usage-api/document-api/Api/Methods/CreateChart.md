@@ -2,6 +2,10 @@
 
 Creates a chart with the parameters specified.
 
+:::note
+Values of *styleIndex* outside - **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+:::
+
 ## Syntax
 
 ```javascript
@@ -29,12 +33,12 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## Example
 
-Create a chart and paste it into the document.
+Insert a 3D bar chart with colored data series into a document.
 
 ```javascript editor-docx
-// Create a "bar3D" chart, add it to the paragraph class, and fill its series with the created solid fills in a document.
+// How do I add a bar chart with custom series colors to a document?
 
-// How to create the chart object and add it to the first paragraph of the document.
+// Visualize revenue and cost data for multiple years as a colored 3D bar chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

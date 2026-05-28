@@ -14,7 +14,7 @@ expression.AddObject(object);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| object | 必需 | [FloatObject](../../Enumeration/FloatObject.md) |  | 未提供描述。 |
+| object | 必需 | [FloatObject](../../Enumeration/FloatObject.md) |  | 要添加到页面的批注、字段或绘图。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.AddObject(object);
 
 ## 示例
 
-向当前 PDF 页面添加对象（图像、形状或图表）。
+在 PDF 的页面上插入视觉元素。
 
 ```javascript editor-pdf
-// How to add an element to the page.
+// How do I add content to the page in a PDF?
 
-// Create a chart and add it to the page object.
+// Place a chart or shape on the current page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

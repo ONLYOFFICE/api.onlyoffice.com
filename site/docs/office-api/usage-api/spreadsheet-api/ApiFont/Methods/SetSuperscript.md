@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the superscript property to the specified font in a spreadsheet.
+Raise selected text characters above the baseline as superscript in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a regular text to a superscript in a spreadsheet.
+// How do I format part of the text as superscript in a spreadsheet?
 
-// Get a font object of characters and make it superscript in a spreadsheet.
+// Lift a run of characters upward to create superscript notation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const range = worksheet.GetRange("B1");

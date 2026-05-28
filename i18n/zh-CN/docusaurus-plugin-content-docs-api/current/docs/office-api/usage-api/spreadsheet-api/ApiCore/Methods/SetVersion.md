@@ -22,12 +22,12 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-在电子表格中设置工作簿的版本。
+设置电子表格核心属性中存储的文档版本。
 
 ```javascript editor-xlsx
-// How to set version for a core properties in a spreadsheet?
+// How do I record a version number in the document metadata in a spreadsheet?
 
-// Set version and display the result in a spreadsheet.
+// Store a custom version label alongside the file's built-in properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

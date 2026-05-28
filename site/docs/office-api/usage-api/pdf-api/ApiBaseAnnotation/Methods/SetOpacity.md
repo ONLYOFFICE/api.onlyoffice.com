@@ -5,7 +5,7 @@ Sets annotation opacity.
 ## Syntax
 
 ```javascript
-expression.SetOpacity(name);
+expression.SetOpacity(value);
 ```
 
 `expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
@@ -14,7 +14,7 @@ expression.SetOpacity(name);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| value | Required | [percentage](../../Enumeration/percentage.md) |  | The opacity value from 0 (transparent) to 100 (opaque). |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set opacity to it in a PDF document.
+Make an annotation transparent or opaque in a PDF.
 
 ```javascript editor-pdf
-// How do I set opacity in a PDF document?
+// Adjust the transparency level of an annotation in a PDF.
 
-// Set opacity using an annotation object in a PDF document.
+// Control how solid or see-through an annotation appears in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

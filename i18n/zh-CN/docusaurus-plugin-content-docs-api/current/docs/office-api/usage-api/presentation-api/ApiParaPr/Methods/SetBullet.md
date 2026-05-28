@@ -22,12 +22,12 @@ expression.SetBullet(oBullet);
 
 ## 示例
 
-在演示文稿中为当前段落设置项目符号或编号。
+在演示文稿中为段落添加项目符号。
 
 ```javascript editor-pptx
-// How to set a bullet type to the paragraph properties in a presentation.
+// How do I apply a bullet style to a paragraph in a presentation?
 
-// Create a bulleted paragraph setting its bullet type in a presentation.
+// Format a paragraph to display with a custom bullet character in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的指数。
+获取电子表格中复数的指数。
 
 ```javascript editor-xlsx
-// How to get the exponential of a comlex numbers in a spreadsheet.
+// How do I calculate the exponential function for a complex number in a spreadsheet?
 
-// Use a function to get the exponential in a spreadsheet.
+// Apply the exponential function to a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

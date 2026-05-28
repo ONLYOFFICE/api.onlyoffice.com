@@ -23,12 +23,12 @@ expression.AddProtectedRange(sTitle, sDataRange);
 
 ## 示例
 
-在电子表格中添加新的受保护范围。
+锁定单元格范围使其在电子表格中未经许可无法编辑。
 
 ```javascript editor-xlsx
-// How to add the protected cell range object.
+// How do I protect a specific group of cells from changes in a spreadsheet?
 
-// Insert a protected range to the worksheet.
+// Restrict editing on a named cell range by marking it as protected.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

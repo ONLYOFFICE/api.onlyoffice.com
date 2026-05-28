@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定一个从 1 开始的索引，用于确定文档中编号级别何时应重新开始为其起始值。
+控制文档中嵌套编号级别是否在每个父项之后重新开始。
 
 ```javascript editor-docx
-// How to restart the numbering in a document.
+// How do I prevent a child list level from resetting its counter when the parent list continues in a document?
 
-// Reset the numbering of the bulleted text in a document.
+// Keep a sub-list counting continuously across multiple parent list items in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

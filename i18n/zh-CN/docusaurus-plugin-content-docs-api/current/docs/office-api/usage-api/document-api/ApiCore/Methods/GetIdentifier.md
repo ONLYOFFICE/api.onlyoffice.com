@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的标识符。
+读取文档核心属性中存储的唯一标识符。
 
 ```javascript editor-docx
-// How do I get the identifier in a document?
+// How do I get the identifier value from the core properties in a document?
 
-// Get the identifier using a core properties object in a document.
+// Look up a document's assigned ID to reference it in an external system in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入计算
 
 对表单中的指定字段执行自动计算并插入结果。
@@ -61,5 +63,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![插入计算结果](/assets/images/plugins/insert-calculations.png#gh-light-mode-only)
-![插入计算结果](/assets/images/plugins/insert-calculations.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/insert-calculations" dark />

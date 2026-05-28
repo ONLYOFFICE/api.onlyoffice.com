@@ -14,7 +14,7 @@ expression.AddReply(textAnnot);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| textAnnot | 必需 | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | 未提供描述。 |
+| textAnnot | 必需 | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | 用作回复的文本批注。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并向其添加回复。
+在 PDF 中为注释添加回复。
 
 ```javascript editor-pdf
-// How to add the reply for an annotation in a PDF document?
+// How can I reply to an annotation comment in a PDF?
 
-// Add the reply and display the result in a PDF document.
+// Attach a text response to an existing annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

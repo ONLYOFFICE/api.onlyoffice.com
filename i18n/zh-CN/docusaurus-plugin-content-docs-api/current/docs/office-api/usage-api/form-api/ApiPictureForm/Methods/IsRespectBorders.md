@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查表单边框宽度是否被遵循。
+检查文档中图片表单是否将图像保持在其边框范围内。
 
 ```javascript editor-forms
-// How to find out whether the borders of the image are respected in a document.
+// How do I find out if a picture form prevents the image from overlapping its borders in a document?
 
-// Find out whether the borders of the picture form in this document are respected when scaling the image.
+// Verify that the image inside a picture form stays within its frame when scaled in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "shiftX": 50, "shiftY": 50});

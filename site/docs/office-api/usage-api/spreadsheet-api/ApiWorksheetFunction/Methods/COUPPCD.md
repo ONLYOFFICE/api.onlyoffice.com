@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return the previous coupon date before the settlement date in a spreadsheet.
+Find the last coupon payment date before a bond settles in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the previous coupon date before the settlement date in a spreadsheet.
+// What was the previous coupon date in a spreadsheet?
 
-// Use function to get the previous coupon date in a spreadsheet.
+// Calculate the coupon period date that comes before settlement in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

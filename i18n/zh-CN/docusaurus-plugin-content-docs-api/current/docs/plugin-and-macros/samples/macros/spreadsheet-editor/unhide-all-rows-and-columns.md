@@ -2,9 +2,11 @@
 hide_table_of_contents: true
 ---
 
-# 显示所有行和列
+import Video from '@site/src/components/Video/Video';
 
-在当前表格中显示所有隐藏的行和列。
+# 显示所有行
+
+在当前表格中显示所有隐藏的行。
 
 ```ts
 (function()
@@ -17,7 +19,7 @@ hide_table_of_contents: true
         n++;
     }
     let newRange = activeSheet.GetRange("A1");
-    newRange.SetValue("All the rows and columns are unhidden now");
+    newRange.SetValue("All rows are unhidden now");
 })();
 ```
 
@@ -25,4 +27,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Unhide all rows](/assets/images/plugins/unhide-all-rows.png#gh-light-mode-only)![Unhide all rows](/assets/images/plugins/unhide-all-rows.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/unhide-all-rows-and-columns" dark />

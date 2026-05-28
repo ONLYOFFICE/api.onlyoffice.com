@@ -22,12 +22,12 @@ expression.GetFormsByKey(key);
 
 ## 示例
 
-获取文档中具有指定键的所有表单列表。
+检索共享相同键的所有表单字段并报告其数量。
 
 ```javascript editor-forms
-// How do I get the forms by key in a document?
+// How do I find every form field that uses a given key in a document?
 
-// Get the forms by key using a document object.
+// Locate duplicate-keyed form fields across multiple paragraphs in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "FirstName", "tip": "Enter your first name", "tag": "form_1", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

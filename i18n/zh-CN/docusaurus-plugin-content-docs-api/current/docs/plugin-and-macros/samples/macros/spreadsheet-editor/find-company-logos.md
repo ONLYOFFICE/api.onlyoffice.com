@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 查找公司徽标
 
 通过使用 [API Ninjas](https://api-ninjas.com) 提供的 [Logo API](https://api-ninjas.com/api/logo)，在整个表格中搜索公司徽标。
@@ -64,4 +66,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Find Company Logos](/assets/images/plugins/find-company-logos.png#gh-light-mode-only)![Find Company Logos](/assets/images/plugins/find-company-logos.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-company-logos" dark />

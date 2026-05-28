@@ -20,12 +20,12 @@ expression.ClearAllFilters();
 
 ## 示例
 
-清除电子表格中数据透视表的所有筛选器。
+从电子表格中的数据透视表移除每个活动筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot table filters in a spreadsheet.
+// How do I reset all filters on a pivot table at once in a spreadsheet?
 
-// Create a pivot table, add data to it then delete all filters from it in a spreadsheet.
+// Restore the full unfiltered view of a pivot table without removing it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

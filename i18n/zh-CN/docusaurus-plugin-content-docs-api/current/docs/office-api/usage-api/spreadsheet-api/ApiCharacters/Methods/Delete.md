@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-删除电子表格中的字符对象。
+从电子表格中单元格的文本移除特定字符序列。
 
 ```javascript editor-xlsx
-// How to delete characters from an array in a spreadsheet.
+// How do I erase a portion of text inside a cell by position in a spreadsheet?
 
-// Delete and display the result in a spreadsheet.
+// Trim unwanted characters out of a cell value without replacing the entire contents in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

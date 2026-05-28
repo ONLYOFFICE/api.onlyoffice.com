@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a block-level content control in a document.
+Read the object type of a content control and display it in a document.
 
 ```javascript editor-docx
-// How do I check what type a block-level content control object is in a document?
+// How do I find out what type of object a content control is in a document?
 
-// Retrieve and output the class type string for a block-level content control in a document.
+// Identify a content control by its type label and write the result as text in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何为图表系列设置 "0.00" 数字格式。
+更改 PDF 中图表数据系列中值的数字格式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series numeric format.
+// How do I format the numbers displayed in a data series in a chart in a PDF?
 
-// Use chart to set seria num format.
+// Apply a number format like "0.00" to all values in a data series in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

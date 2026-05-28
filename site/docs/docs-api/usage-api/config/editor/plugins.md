@@ -10,6 +10,14 @@ The plugin identifiers from the [config.json](../../../../plugin-and-macros/stru
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
+## disable
+
+**type:** `string[]`
+
+The plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file for plugins that will be disabled on load. The specified plugins will be blocked and unavailable in the editor interface.
+
+**Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+
 ## options
 
 **type:** `object`
@@ -71,20 +79,6 @@ The absolute URLs to the plugin [config.json](../../../../plugin-and-macros/stru
 
 ![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
-## Plugin command logging
-
-To enable logging of plugin commands in the browser console, set the `asc_plugin_commands_log` key in the browser's local storage to `"true"`:
-
-```js
-localStorage.setItem("asc_plugin_commands_log", "true");
-```
-
-To disable logging, remove the key or set it to any other value:
-
-```js
-localStorage.removeItem("asc_plugin_commands_log");
-```
-
 ## Example
 
 ```ts
@@ -95,6 +89,9 @@ const config = {
     plugins: {
       autostart: [
         "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
+      ],
+      disable: [
+        "asc.{CFE4BE46-3F85-4B79-B96E-B5AAF0EC9BC3}",
       ],
       options: {
         "all": {

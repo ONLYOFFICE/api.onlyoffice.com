@@ -2,10 +2,14 @@
 
 使用指定的参数创建图表。
 
+:::note
+*nStyleIndex* 超出 **1 - 48** 范围的值将被解释为来自 *cs:chartStyle* 元素的图表样式 ID（例如 201、215、284），且仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+:::
+
 ## 语法
 
 ```javascript
-expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight, nStyleIndex, aNumFormats);
+expression.CreateChart(chartType, series, seriesNames, categoryNames, width, height, styleIndex, numFormats);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,14 +18,14 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "bar" | 用于图表显示的图表类型。 |
-| aSeries | 必需 | number[][] |  | 用于构建图表的数据数组。 |
-| aSeriesNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表列名）。 |
-| aCatNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表行名）。 |
-| nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表宽度。 |
-| nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表高度。 |
-| nStyleIndex | 必需 | number |  | 图表颜色样式索引（可以是 **1 - 48**，如 OOXML 规范所述）。 |
-| aNumFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。默认数字格式为"常规"。 |
+| chartType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "bar" | 用于图表显示的图表类型。 |
+| series | 必需 | number[][] |  | 用于构建图表的数据数组。 |
+| seriesNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表列名）。 |
+| categoryNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表行名）。 |
+| width | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表宽度。 |
+| height | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表高度。 |
+| styleIndex | 必需 | number |  | 图表颜色样式索引（可以是 **1 - 48**，如 OOXML 规范所述）。 |
+| numFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。默认数字格式为 "General"。 |
 
 ## 返回值
 
@@ -29,12 +33,12 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## 示例
 
-如何向 PDF 文档添加图表。
+向 PDF 添加 3D 条形图。
 
 ```javascript editor-pdf
-// Create a 3D bar chart, set its size, position, color and other properties in a PDF document.
+// How do I insert a chart in a PDF?
 
-// Create the chart in a PDF document.
+// Configure a chart's size, position, and styling in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

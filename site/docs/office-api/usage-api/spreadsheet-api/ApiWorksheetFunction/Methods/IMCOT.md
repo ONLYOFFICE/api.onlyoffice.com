@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the cotangent of a complex number in a spreadsheet.
+Get the cotangent of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the cotangent in a spreadsheet.
+// How do I calculate the cotangent of a complex number in a spreadsheet?
 
-// Use a function to get the cotangent of a complex number in a spreadsheet.
+// Apply the cotangent function to a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

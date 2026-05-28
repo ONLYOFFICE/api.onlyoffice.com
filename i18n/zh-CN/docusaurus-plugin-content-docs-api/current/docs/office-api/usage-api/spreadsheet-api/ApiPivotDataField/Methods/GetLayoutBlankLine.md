@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的布局空白行。
+检查电子表格中透视字段的每组之后是否插入空行。
 
 ```javascript editor-xlsx
-// How to get a blank line layout of a pivot field in a spreadsheet.
+// How do I find out if a pivot field is set to add a blank line between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout blank line of a specified pivot field in a spreadsheet.
+// Confirm the blank-line spacing setting for a pivot field's row layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

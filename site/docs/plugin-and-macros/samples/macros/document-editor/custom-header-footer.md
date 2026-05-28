@@ -4,6 +4,8 @@ description: Generate custom headers and footers for a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Custom header and footer
 
 Applies predefined headers and footers to all pages in the document.
@@ -42,4 +44,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/custom-header-footer" dark />

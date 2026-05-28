@@ -21,12 +21,12 @@ boolean
 
 ## 示例
 
-将表单转换为内联表单。
+在文档中将固定大小的表单字段转换回内联表单。
 
 ```javascript editor-docx
-// How to make the form inline.
+// How do I switch a form field from fixed size to inline positioning in a document?
 
-// Create a text form and make its position inline.
+// Allow a form field to flow with surrounding text instead of occupying a fixed block.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-指定在电子表格中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+为文本运行分配语言，使电子表格中的拼写和语法检查使用正确的规则。
 
 ```javascript editor-xlsx
-// How to set a language to the text for grammar checking in a spreadsheet.
+// How do I set the proofreading language for a piece of text in a spreadsheet?
 
-// Create a text run object, change its language to English for grammar check in a spreadsheet.
+// Mark text with a specific locale so the editor checks it against the right dictionary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

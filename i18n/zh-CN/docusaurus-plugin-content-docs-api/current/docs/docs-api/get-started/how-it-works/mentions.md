@@ -20,7 +20,7 @@ sidebar_position: -17
 
 2. 在编辑器初始化配置中，定义 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 事件处理程序。当用户在评论中输入 `+` 或 `@` 时，编辑器会调用此处理程序，并将 `event.data.c` 设置为 `"mention"`。您的代码必须调用 [setUsers](../../usage-api/methods.md#setusers) 方法来返回可提及的用户列表：
 
-   <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
+   ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {
@@ -123,4 +123,4 @@ docEditor.setSharingSettings({
 
 如果 [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) 未向被提及的用户授予文件访问权限，请将 [`mentionShare`](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) 设置为 `false` 以隐藏评论中的共享界面。
 
-<img alt="Mentions" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mentions](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mentions](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)

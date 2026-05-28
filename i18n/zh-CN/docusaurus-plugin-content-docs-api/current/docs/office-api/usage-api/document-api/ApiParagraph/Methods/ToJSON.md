@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-在文档中将段落对象转换为 JSON 对象。
+将段落序列化为可移植的数据格式以便在文档中存储或传输。
 
 ```javascript editor-docx
-// How to get a JSON from the inline text control in a document.
+// How do I export a paragraph's structure and content as a JSON object in a document?
 
-// Convert the inline text control to json and add it to the paragraph in a document.
+// Save a paragraph's formatting and text as structured data so it can be reconstructed later in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

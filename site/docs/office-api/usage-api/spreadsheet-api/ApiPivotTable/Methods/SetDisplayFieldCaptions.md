@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set a display field captions of a table in a spreadsheet.
+Toggle the visibility of field header captions in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a display field captions of a table in a spreadsheet.
+// How do I hide or show the field label row at the top of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set a display field captions in a spreadsheet.
+// Remove or restore the column and row header labels displayed in a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

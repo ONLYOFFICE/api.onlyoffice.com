@@ -2,9 +2,9 @@
 
 指定当前段落的阅读顺序。
 可能的值有：
--**null** - 使用标准方向参数；
--**"ltr"** - 从左到右的文本方向；
--**"rtl"** - 从右到左的文本方向。
+- **null** - 使用标准方向参数；
+- **“ltr”** - 从左到右的文本方向；
+- **“rtl”** - 从右到左的文本方向。
 
 ## 语法
 
@@ -26,12 +26,12 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-在文档中设置指定段落的文本阅读方向。
+在文档中将段落的阅读方向设置为从左到右或从右到左。
 
 ```javascript editor-docx
-// How do I set reading order in a document?
+// How do I make a paragraph display text in a right-to-left reading order in a document?
 
-// Set reading order using a paragraph object in a document.
+// Switch a paragraph's text flow to match a language that reads from right to left in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

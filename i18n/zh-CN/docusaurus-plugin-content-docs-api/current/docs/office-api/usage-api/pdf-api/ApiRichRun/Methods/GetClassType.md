@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中富文本 run 对象的类类型。
+识别 PDF 中文本运行的类型类别。
 
 ```javascript editor-pdf
-// How can I get the class type of a rich text run in a PDF document?
+// How do I determine what type of object a text run is in a PDF?
 
-// Get the class type of a rich text run and display it in the PDF.
+// Check the classification of a text element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

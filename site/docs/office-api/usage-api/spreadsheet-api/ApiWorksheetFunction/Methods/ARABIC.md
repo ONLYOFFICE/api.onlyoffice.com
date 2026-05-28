@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert a Roman numeral to Arabic in a spreadsheet.
+Convert Roman numerals to regular numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert numbers to Arabic numerical in a spreadsheet.
+// Transform text Roman numerals using the ARABIC function in a spreadsheet.
 
-// Use function to convert numbers to Arabic numerical in a spreadsheet.
+// Place the converted number into a cell for calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

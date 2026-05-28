@@ -20,12 +20,12 @@ expression.GetAllContentControls();
 
 ## 示例
 
-获取文档中所有内容控件的列表。
+从文档中检索所有内容控件并将第一个内容控件内的文本设为粗体。
 
 ```javascript editor-docx
-// Get all content controls added to the document.
+// How do I get every content control in a document so I can read or modify their contents in a document?
 
-// How to retrieve all content controls and display the class type of the first one in a document.
+// Apply bold formatting to the run inside a content control after collecting all controls from the document in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置动画效果的持续时间。
+设置演示文稿中动画效果完成所需的时间。
 
 ```javascript editor-pptx
-// How do I set duration in a presentation?
+// How do I control the speed of an animation in a presentation?
 
-// Set duration using an animation effect object in a presentation.
+// Adjust the time span for an animation to run from start to finish in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

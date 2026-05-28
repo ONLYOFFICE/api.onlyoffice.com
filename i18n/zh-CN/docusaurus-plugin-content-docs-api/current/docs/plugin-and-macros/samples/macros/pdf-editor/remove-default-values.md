@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 移除默认值
 
 自动删除文档中所有文本字段内的特定默认值。
@@ -24,5 +26,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![移除默认值](/assets/images/plugins/remove-default-values.png#gh-light-mode-only)
-![移除默认值](/assets/images/plugins/remove-default-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/remove-default-values" dark />

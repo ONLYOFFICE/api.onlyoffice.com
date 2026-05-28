@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the outline to the chart legend in a spreadsheet.
+Draw a visible border around the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the outline of the chart legend using a stoke in a spreadsheet.
+// How do I add an outline to the chart legend in a spreadsheet?
 
-// Outline the chart legend creating a solid stroke in a spreadsheet.
+// Frame the legend with a colored border to separate it from the rest of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

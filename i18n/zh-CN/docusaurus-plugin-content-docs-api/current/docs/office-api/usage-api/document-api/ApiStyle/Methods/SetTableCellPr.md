@@ -22,12 +22,12 @@ expression.SetTableCellPr(tableCellPr);
 
 ## 示例
 
-设置样式的表格单元格属性。
+在表格样式中存储单元格级格式，以便文档中的每个单元格继承这些设置。
 
 ```javascript editor-docx
-// How to create table cell properties for style and add shading to it.
+// How do I add background shading to all table cells by defining it once in a shared style in a document?
 
-// Update the table cell properties in the style.
+// Centralize cell appearance settings in a reusable style rather than formatting each cell individually in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

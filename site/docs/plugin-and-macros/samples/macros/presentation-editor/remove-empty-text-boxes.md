@@ -4,6 +4,8 @@ description: Remove empty text boxes from slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove empty text boxes
 
 Deletes all empty text box shapes throughout the entire presentation.
@@ -56,5 +58,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![RemoveEmptyTextBoxes](/assets/images/plugins/remove-empty-text-boxes.png#gh-light-mode-only)
-![RemoveEmptyTextBoxes](/assets/images/plugins/remove-empty-text-boxes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-empty-text-boxes" dark />

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定文本字段是否应为具有相同单元格宽度的字符梳。
+在文档中将文本字段分割为等宽字符框。
 
 ```javascript editor-forms
-// How to specify the comb property of the text form.
+// How do I split a text field into evenly spaced individual character cells in a document?
 
-// Set the comb property of the text form.
+// Give a text field a structured grid appearance by enabling its comb layout in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "maxCharacters": 10, "multiLine": false, "autoFit": false});

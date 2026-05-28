@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中当前样式的名称。
+读取文档中分配给表格样式的名称。
 
 ```javascript editor-docx
-// How to get name of the table style in a document.
+// How do I find out what a table style is called in a document?
 
-// Display the table style name in a document.
+// Display the label attached to the active table style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

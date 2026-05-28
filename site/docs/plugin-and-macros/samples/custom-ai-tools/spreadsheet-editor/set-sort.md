@@ -3,6 +3,8 @@ description: Sort a selected range by column.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Set sort
 
 This function sorts a given range (or the active/selected range) by up to three columns, using either cell references, column indices, named ranges, or column headers. Supports ascending/descending order and optional header detection.
@@ -248,12 +250,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/set-sort.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/set-sort.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/spreadsheet-editor/set-sort" dark />

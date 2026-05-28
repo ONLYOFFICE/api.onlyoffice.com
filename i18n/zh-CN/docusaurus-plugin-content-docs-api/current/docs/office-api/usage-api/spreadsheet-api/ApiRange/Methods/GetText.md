@@ -20,12 +20,12 @@ string \| string[][]
 
 ## 示例
 
-获取电子表格中指定范围的文本。
+从电子表格中的单元格范围读取原始文本内容。
 
 ```javascript editor-xlsx
-// How to get a cell raw text value.
+// How do I extract the text stored in a range of cells in a spreadsheet?
 
-// Get a range, get its text value and show it in the worksheet.
+// Pull the displayed text from a range and write it into another cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("text1");

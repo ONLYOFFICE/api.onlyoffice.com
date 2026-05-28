@@ -22,12 +22,12 @@ expression.Find(oSearchData);
 
 ## Example
 
-Find specific information in the range.
+Search for a specific value within a range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to search throughout the range in a spreadsheet.
+// How do I locate a cell that contains a particular value using detailed search options in a spreadsheet?
 
-// Get a range, search information using value, position, order, etc.
+// Scan a data range for matching content and highlight the first cell found in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

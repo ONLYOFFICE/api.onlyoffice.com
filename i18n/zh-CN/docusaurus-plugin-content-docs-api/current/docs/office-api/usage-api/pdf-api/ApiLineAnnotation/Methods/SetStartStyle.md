@@ -14,7 +14,7 @@ expression.SetStartStyle(style);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | 必需 | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | 未提供描述。 |
+| style | 必需 | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | 线条起始端点的样式。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为线条注释设置起始线条样式。
+自定义 PDF 中线条注释的起始外观。
 
 ```javascript editor-pdf
-// How do I set start style in a PDF document?
+// How do I change the start style in a PDF?
 
-// Set start style using a line annotation object in a PDF document.
+// Apply a specific line beginning to the annotation in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});

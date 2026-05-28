@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add a run to the paragraph in a presentation.
+Insert a text element into a paragraph in a presentation.
 
 ```javascript editor-pptx
-// Insert a text run to the paragraph object in a presentation.
+// How do I add styled text to a paragraph in a presentation?
 
-// How to add the text run object to the slide.
+// Add a run with specific formatting to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

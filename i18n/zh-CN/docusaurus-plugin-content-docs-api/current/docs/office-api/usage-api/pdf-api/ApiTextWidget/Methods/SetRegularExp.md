@@ -1,11 +1,11 @@
 # SetRegularExp
 
-设置文本控件的正则验证表达式。
+设置文本小部件的正则验证表达式。
 
 ## 语法
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | 必需 | string |  | 字段正则表达式 |
+| regularExpression | 必需 | string |  | 验证正则表达式。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本控件设置正则表达式。
+定义 PDF 文本字段中允许的文本模式。
 
 ```javascript editor-pdf
-// How can I set regular exp using a text widget in a PDF document?
+// How do I set a pattern that text must match in a text field in a PDF?
 
-// Set regular exp for a text widget in a PDF document.
+// Restrict text input to a specific format in a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -74,7 +74,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 编辑完成后，点击**开始填写**按钮切换到填写模式。
 
-![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png)
+![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
 ## 填写表单
 
@@ -131,4 +131,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 填写完所有必填字段后，点击**完成并提交**按钮提交数据。
 
-![嵌入pdf表格](/assets/images/editor/embed-pdf.png)
+![嵌入pdf表格](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![嵌入pdf表格](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)

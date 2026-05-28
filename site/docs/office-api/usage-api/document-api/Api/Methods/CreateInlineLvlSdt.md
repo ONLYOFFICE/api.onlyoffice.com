@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add an inline container to the document.
+Insert an inline text container with editable content into a document.
 
 ```javascript editor-docx
-// How to create an inline text content control, add a text run to it, and add this container to the document.
+// How do I add an inline text box that sits inside a paragraph in a document?
 
-// Create an inline container and add it to the paragraph class in a document.
+// Wrap typed text inside an inline field that flows with the surrounding paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

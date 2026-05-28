@@ -4,6 +4,8 @@ description: Remove empty paragraphs from slide text boxes.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove empty paragraphs
 
 Deletes all unnecessary blank paragraphs across the entire presentation.
@@ -57,5 +59,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![RemoveEmptyParagraphs](/assets/images/plugins/remove-empty-paragraphs.png#gh-light-mode-only)
-![RemoveEmptyParagraphs](/assets/images/plugins/remove-empty-paragraphs.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-empty-paragraphs" dark />

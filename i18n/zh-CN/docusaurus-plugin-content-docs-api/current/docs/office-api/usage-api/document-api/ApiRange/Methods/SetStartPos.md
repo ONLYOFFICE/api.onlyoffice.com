@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置给定范围对象的起始位置。
+将文本选区的起始位置移动到文档中的不同位置。
 
 ```javascript editor-docx
-// How to change the starting index of the range in a document.
+// How do I change where a text range starts without altering where it ends in a document?
 
-// Resize the range by setting new start position in a document.
+// Trim or expand the leading edge of a selected region to cover a different set of words in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

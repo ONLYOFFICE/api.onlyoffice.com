@@ -23,12 +23,12 @@ expression.GetPivotData(dataField, fieldItemsArray);
 
 ## 示例
 
-获取电子表格中数据透视表的透视数据。
+按字段和项目从电子表格中的数据透视表提取特定汇总值。
 
 ```javascript editor-xlsx
-// How to get table pivot data in a spreadsheet.
+// How do I look up a single aggregated number for a particular row or column intersection in a spreadsheet?
 
-// Create a pivot table, add data to it then get its pivot data in a spreadsheet.
+// Pull a targeted data point out of a pivot table using a field name and a category filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

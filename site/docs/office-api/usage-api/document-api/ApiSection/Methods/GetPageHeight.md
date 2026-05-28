@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the page height in a document.
+Read the height of the pages defined by a section in a document.
 
 ```javascript editor-docx
-// How to get the page height.
+// How do I find out the page height for a section in a document?
 
-// Get the final section of the page and get its height.
+// Retrieve the vertical page size to verify or display layout dimensions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

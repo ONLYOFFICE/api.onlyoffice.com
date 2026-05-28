@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 部件的 XML 内容。
+读取电子表格中自定义块存储的完整原始 XML 文本。
 
 ```javascript editor-xlsx
-// How to get the XML content of an XML part in a spreadsheet.
+// How do I retrieve the complete XML string from a stored block of data in a spreadsheet?
 
-// Get XML content using the custom XML part API in a spreadsheet.
+// Export the current XML content of a stored block so it can be inspected or reused in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

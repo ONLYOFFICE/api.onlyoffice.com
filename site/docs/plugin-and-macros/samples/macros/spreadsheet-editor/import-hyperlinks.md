@@ -4,6 +4,8 @@ description: Import hyperlinks into spreadsheet cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Import hyperlinks
 
 Imports hyperlinks between different worksheets in the spreadsheet.
@@ -25,7 +27,7 @@ Imports hyperlinks between different worksheets in the spreadsheet.
   worksheetA.SetActive();
   worksheetA.GetRange("A1").SetValue("title1");
   worksheetA.GetRange("A2").SetValue("title2");
-  worksheetA.GetRange("A3").SetValue("title2");
+  worksheetA.GetRange("A3").SetValue("title3");
   worksheetA.GetRange("B1").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/spreadsheet-api/");
   worksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/document-api/");
   worksheetA.GetRange("B3").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/presentation-api/");
@@ -101,4 +103,4 @@ End Sub
 
 ## Result
 
-![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/import-hyperlinks" dark />

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中当前文档内容的元素数量。
+计算文档中文档内容容器内的所有元素数量。
 
 ```javascript editor-docx
-// How to get elements count and push it to the paragraph in a document.
+// How do I get the total number of elements in a document content in a document?
 
-// Count the number of elements in the document.
+// Check how many elements a shape holds after modifying its content programmatically.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

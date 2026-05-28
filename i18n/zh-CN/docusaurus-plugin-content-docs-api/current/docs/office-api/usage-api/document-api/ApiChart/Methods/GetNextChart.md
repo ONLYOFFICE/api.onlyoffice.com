@@ -20,12 +20,12 @@ expression.GetNextChart();
 
 ## 示例
 
-获取文档中的下一个图表。
+为文档中当前图表之后的图表应用网格线样式。
 
 ```javascript editor-docx
-// How to update minor horizontal gridlines of the next chart in a document.
+// How do I access the next chart and change its gridlines in a document?
 
-// Get the next chart and set its horizontal lines as a stroke in a document.
+// Style minor horizontal gridlines on a sibling chart without selecting it directly in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

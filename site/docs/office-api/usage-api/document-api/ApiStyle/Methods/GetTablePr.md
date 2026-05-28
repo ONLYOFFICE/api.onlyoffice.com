@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the table properties of the style in a document.
+Adjust the spacing inside table cells through a shared style in a document.
 
 ```javascript editor-docx
-// How to get table properties and set its cells margins.
+// How do I set padding around content inside table cells using a style in a document?
 
-// Update the table cell margin sizes.
+// Control the inner margins of every cell in a table by modifying the style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

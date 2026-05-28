@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateComboboxField(aRect);
+expression.CreateComboboxField(rect);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateComboboxField(aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.CreateComboboxField(aRect);
 
 ## 示例
 
-如何创建组合框字段并添加到文档。
+在 PDF 中创建具有多个选项的下拉字段。
 
 ```javascript editor-pdf
-// How do I create the combobox field in a PDF document?
+// How do I add a combobox to a form in a PDF?
 
-// Create the combobox field and display the result in a PDF document.
+// Populate a dropdown list with selectable choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

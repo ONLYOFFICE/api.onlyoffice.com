@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Recalculates all formulas in the active workbook.
+Recalculate all formula results after changing cell values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to recalculate all formulas in a worksheet.
+// How do I force all formulas to update their results after editing data in a spreadsheet?
 
-// Reset all values calculated by formulas.
+// Refresh every computed value to reflect the latest input changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);

@@ -24,12 +24,12 @@ expression.GetRange(Start, End);
 
 ## Example
 
-Get a Range object that represents the part of the doc contained in the specified paragraph in a document.
+Select a range of characters within a paragraph in a document.
 
 ```javascript editor-docx
-// How to get the range where the paragraph is located in a document.
+// How do I get a specific character range from a paragraph in a document?
 
-// Get the paragraph range and make it bold in a document.
+// Bold a chosen slice of text by extracting it as a range from a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

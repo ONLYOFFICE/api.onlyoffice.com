@@ -20,12 +20,12 @@ expression.GetImage();
 
 ## 示例
 
-从文档中的图片表单获取 base64 格式的图像。
+提取文档中图片表单内存储的图像。
 
 ```javascript editor-forms
-// How to get an image from the picture form.
+// How do I read back the image data from a picture form in a document?
 
-// Get the image of the picture form and display it in the document.
+// Access the visual content embedded within a picture form in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

@@ -6,12 +6,12 @@
 
 ## 示例
 
-设置文档中浮动对象水平定位的绝对度量值。
+在文档中将浮动形状定位在特定的水平位置。
 
 ```javascript editor-docx
-// How to set the horizontal position property of the shape in a document.
+// How do I place a shape next to a page margin in a document?
 
-// Create a drawing, add text to it and set its horizontal position in a document.
+// Place two shapes at different horizontal offsets relative to page and margin anchors in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

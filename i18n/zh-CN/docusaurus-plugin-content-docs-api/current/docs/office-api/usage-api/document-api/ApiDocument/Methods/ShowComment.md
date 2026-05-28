@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-通过 ID 在文档中显示批注。
+通过 ID 使文档中的特定批注可见。
 
 ```javascript editor-docx
-// How can I show comment using a document in a document?
+// How do I display a comment attached to a text range in a document?
 
-// Show comment for a document in a document.
+// Reveal a reviewer's comment programmatically so it appears in the comment panel without manual interaction.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档内容中获取 OLE 对象集合。
+检索文档内容中嵌入的所有 OLE 对象。
 
 ```javascript editor-docx
-// Get all OLE objects added to the document.
+// How do I access every OLE object inside a content container in a document?
 
-// How to retrieve all OLE objects and display the application ID of the first one in a document.
+// Read the application ID of the first OLE object and print it as a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

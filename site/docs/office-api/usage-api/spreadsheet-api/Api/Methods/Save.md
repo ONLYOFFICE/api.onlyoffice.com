@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Save changes to the specified document.
+Persist all unsaved edits to disk in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to save changes of the spreadsheets.
+// How do I make sure all recent changes are written and not lost in a spreadsheet?
 
-// Save all applied changes in a spreadsheet.
+// Commit the current state of the document so no work is discarded in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("This sample text is saved to the worksheet.");

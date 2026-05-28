@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的紧凑行布局。
+在电子表格中切换透视字段的紧凑和展开行显示。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout compact row in a spreadsheet.
+// How do I turn off the compact row layout for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout compact row of a specified pivot in a spreadsheet.
+// Spread pivot field rows across individual columns by disabling compact mode in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -1,6 +1,6 @@
 # ISLOGICAL
 
-Checks whether a value is a logical value (-**true** or -**false**), and returns -**true** or -**false**.
+Checks whether a value is a logical value (- **true** or - **false**), and returns - **true** or - **false**.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Check whether a value is a logical value (true or false), and return true or false in a spreadsheet.
+Test whether a cell contains a logical value (true or false) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if the cell contains a logical value.
+// How do I determine if a cell holds a boolean value in a spreadsheet?
 
-// Use a function to check whether a range data is a logical value in a spreadsheet.
+// Use a function to distinguish between logical values and other data types in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B3").SetValue("66");

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中转到书签并选中。
+将光标跳转到文档中命名书签的位置。
 
 ```javascript editor-docx
-// Get a bookmark by its name and then jump to it in a document.
+// How do I navigate directly to a bookmark by name in a document?
 
-// Select a bookmark from the documnet by going to it in a document.
+// Move focus to a specific marked position so the reader lands at the right spot in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

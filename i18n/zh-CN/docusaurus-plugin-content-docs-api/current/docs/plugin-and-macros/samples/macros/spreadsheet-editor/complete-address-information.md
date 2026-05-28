@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 补全地址信息
 
 完善基础地址数据，补充详细地址信息并插入到表格中。
@@ -89,4 +91,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Write data](/assets/images/plugins/complete-address-information.png#gh-light-mode-only)![Write data](/assets/images/plugins/complete-address-information.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/complete-address-information" dark />

@@ -17,7 +17,7 @@ Create a document with a borderless table for structured information display:
 let doc = Api.GetDocument();
 
 // Create a 5x2 table for company information
-let table = Api.CreateTable(2, 5);
+let table = Api.CreateTable(5, 2);
 table.SetWidth("percent", 100);
 
 // Remove all table borders

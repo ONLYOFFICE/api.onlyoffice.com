@@ -4,6 +4,8 @@ description: Remove duplicate slides from a presentation.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove duplicate slides
 
 Remove duplicate slides across the entire presentation.
@@ -90,5 +92,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![RemoveDuplicateSlides](/assets/images/plugins/remove-duplicate-slides.png#gh-light-mode-only)
-![RemoveDuplicateSlides](/assets/images/plugins/remove-duplicate-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-duplicate-slides" dark />

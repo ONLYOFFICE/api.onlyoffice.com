@@ -20,12 +20,12 @@ expression.AddTop10();
 
 ## 示例
 
-向范围添加前 10 项条件格式。
+在电子表格中用特殊颜色高亮显示排名靠前的值。
 
 ```javascript editor-xlsx
-// How to add top 10 conditional formatting rules to highlight highest values.
+// How do I automatically mark the highest entries in a list of numbers in a spreadsheet?
 
-// Add top 10 conditional formatting to cells.
+// Apply color-based ranking to stand out the best-performing cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

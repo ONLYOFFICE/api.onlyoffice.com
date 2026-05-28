@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中容器的背景颜色。
+在文档中为内联内容控件应用背景颜色。
 
 ```javascript editor-docx
-// How can I set background color using an inline content control in a document?
+// How do I highlight an inline content control with a custom background color in a document?
 
-// Set background color for an inline content control in a document.
+// Shade a content control with a semi-transparent fill to make it stand out visually in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -4,6 +4,8 @@ description: Insert a unique ID into the document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Insert unique id
 
 Inserts a unique id into a form document.
@@ -34,4 +36,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Insert id](/assets/images/plugins/insert-id.png#gh-light-mode-only)![Insert id](/assets/images/plugins/insert-id.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-unique-id" dark />

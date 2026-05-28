@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all series of chart class and insert their types into the document.
+List every data series in a chart along with their types in a document.
 
 ```javascript editor-docx
-// How to get all series from the chart and show each one's type in the document.
+// How do I retrieve all series from a chart and inspect each one's type in a document?
 
-// Display each chart series type in the document.
+// Audit a combo chart's composition by printing the type of each data series in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -18,6 +18,7 @@
 | [GetPageImage](./GetPageImage.md) | canvas | 返回页面图像。 |
 | [GetSelectedText](./GetSelectedText.md) | string | 返回文档中的所选文本。 |
 | [GetVersion](./GetVersion.md) | string | 返回编辑器版本。 |
+| [GoToPage](./GoToPage.md) | boolean | 移动到指定页面。 |
 | [InstallPlugin](./InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [MouseMoveWindow](./MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
@@ -27,7 +28,7 @@
 | [RemovePlugin](./RemovePlugin.md) | object | 删除具有指定 GUID 的插件。 |
 | [ReplacePageContent](./ReplacePageContent.md) | boolean | 使用指定的参数替换页面内容。 |
 | [SetMacros](./SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetPluginsOptions](./SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。例如，此方法可用于向插件传递授权令牌。此方法只能与连接器类一起使用。 |
+| [SetPluginsOptions](./SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
 | [SetProperties](./SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./ShowError.md) | 无 | 显示错误/警告消息。 |

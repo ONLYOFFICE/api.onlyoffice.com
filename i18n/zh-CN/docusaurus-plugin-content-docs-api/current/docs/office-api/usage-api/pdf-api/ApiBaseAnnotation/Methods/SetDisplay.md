@@ -14,7 +14,7 @@ expression.SetDisplay(display);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| display | 必需 | [DisplayType](../../Enumeration/DisplayType.md) |  | 未提供描述。 |
+| display | 必需 | [DisplayType](../../Enumeration/DisplayType.md) |  | 批注的显示类型。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置显示方式。
+控制 PDF 中注释的可见性。
 
 ```javascript editor-pdf
-// How to set display for an annotation in a PDF document?
+// Toggle whether an annotation appears or stays hidden in a PDF.
 
-// Set display and display the result in a PDF document.
+// Set the display mode to show or conceal an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

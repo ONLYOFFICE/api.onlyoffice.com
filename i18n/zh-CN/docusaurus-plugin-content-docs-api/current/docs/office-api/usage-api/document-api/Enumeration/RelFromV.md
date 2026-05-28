@@ -9,8 +9,10 @@
 ## 值
 
 - "bottomMargin"
+- "insideMargin"
 - "topMargin"
 - "margin"
+- "outsideMargin"
 - "page"
 - "line"
 - "paragraph"

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中为文本字符设置粗体属性。
+在文档中为默认文本字符应用粗体格式。
 
 ```javascript editor-docx
-// How to make a text bold in a document.
+// How do I make text appear heavier and bolder throughout a document?
 
-// Get a font object of characters and make it bold in a document.
+// Change the weight of the default font so that all text renders with a bold appearance in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

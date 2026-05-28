@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取并显示 PDF 文档中字段控件的边框样式。
+读取 PDF 中表单字段控件的边框样式。
 
 ```javascript editor-pdf
-// How can I get the border style using a widget in a PDF document?
+// How do I get the border style of a widget in a PDF?
 
-// Get the border style for a widget in a PDF document.
+// Retrieve the outline appearance setting of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

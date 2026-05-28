@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查演示文稿中的文本是否有轮廓。
+检查演示文稿中的文本是否应用了轮廓效果。
 
 ```javascript editor-pptx
-// How to know whether an outline is set to the text in a presentation.
+// How do I find out if text has an outline in a presentation?
 
-// Get the text properties of the run and find whether it is outlined or not in a presentation.
+// Read the outline property of text to see if a stroke style is applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

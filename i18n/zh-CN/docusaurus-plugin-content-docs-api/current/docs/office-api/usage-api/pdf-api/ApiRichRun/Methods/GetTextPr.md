@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-从 PDF 文档中的富文本 run 对象获取富文本属性并为其设置一些属性。
+访问 PDF 中文本运行的格式属性。
 
 ```javascript editor-pdf
-// How can I get the text pr using a rich text run in a PDF document?
+// How do I get the formatting options for a text run in a PDF?
 
-// Get the text pr for a rich text run in a PDF document.
+// Work with the style settings of a text element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

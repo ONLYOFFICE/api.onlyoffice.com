@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the next inline shape in a document.
+Navigate from one shape to the following shape in a document.
 
 ```javascript editor-docx
-// How to get next shape from the current one in a document.
+// How do I reach the shape that comes immediately after a given shape in a document?
 
-// Color the next shape with a solid fill in a document.
+// Apply a fill to a shape by stepping to its neighbor in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

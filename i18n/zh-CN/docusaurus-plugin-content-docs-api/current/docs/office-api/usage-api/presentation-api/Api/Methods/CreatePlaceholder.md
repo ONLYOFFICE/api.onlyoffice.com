@@ -14,7 +14,7 @@ expression.CreatePlaceholder(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | string |  | 占位符类型（"body"、"chart"、"clipArt"、"ctrTitle"、"diagram"、"date"、"footer"、"header"、"media"、"object"、"picture"、"sldImage"、"sldNumber"、"subTitle"、"table"、"title"）。 |
+| sType | 必需 | string |  | 占位符类型（“body”、“chart”、“clipArt”、“ctrTitle”、“diagram”、“date”、“footer”、“header”、“media”、“object”、“picture”、“sldImage”、“sldNumber”、“subTitle”、“table”、“title”）。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.CreatePlaceholder(sType);
 
 ## 示例
 
-在演示文稿中为形状创建占位符。
+在演示文稿中将形状标记为内容占位符。
 
 ```javascript editor-pptx
-// How to change a placeholder type of an object in a presentation.
+// How do I assign a placeholder type to a shape in a presentation?
 
-// Add a placeholder to the shape in a presentation.
+// Designate a shape as a picture placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

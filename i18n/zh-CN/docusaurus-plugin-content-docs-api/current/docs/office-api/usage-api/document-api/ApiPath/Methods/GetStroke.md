@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+读取文档中应用于形状绘图路径的描边设置。
 
 ```javascript editor-docx
-// How can I get the stroke using a geometry path in a document?
+// How do I check whether a shape's path has a visible border in a document?
 
-// Get the stroke for a geometry path in a document.
+// Verify the outline state of a path before adjusting its appearance in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

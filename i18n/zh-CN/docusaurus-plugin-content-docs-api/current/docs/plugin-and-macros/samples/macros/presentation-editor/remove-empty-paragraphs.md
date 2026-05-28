@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除空段落
 
 删除演示文稿中所有不必要的空白段落。
@@ -55,5 +57,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.png#gh-light-mode-only)
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-empty-paragraphs" dark />

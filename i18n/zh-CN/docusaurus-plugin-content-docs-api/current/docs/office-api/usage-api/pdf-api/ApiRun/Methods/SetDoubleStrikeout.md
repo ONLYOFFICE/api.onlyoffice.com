@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-指定在 PDF 文档中当前 run 的内容以每个字符上显示两条水平线的方式显示。
+在 PDF 中应用双删除线格式。
 
 ```javascript editor-pdf
-// How to strike out a text with two lines in a PDF document.
+// How do I add a strikethrough effect to text in a PDF?
 
-// Create a new text run and set double strikeout to it in a PDF document.
+// Create text with two lines crossed through in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

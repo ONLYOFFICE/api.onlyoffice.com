@@ -1,7 +1,7 @@
 # GetRange
 
-返回表示当前工作表选定区域的对象。可以是单个单元格 - -**A1**，或单行中的单元格
-- -**A1:E1**，或单列中的单元格 - -**A1:A10**，或多行多列中的单元格 - -**A1:E10**。
+返回表示当前工作表所选范围的对象。可以是单个单元格 - **A1**，或
+单行中的单元格 - **A1:E1**，或单列中的单元格 - **A1:A10**，或多行多列中的单元格 - **A1:E10**。
 
 ## 语法
 
@@ -24,12 +24,12 @@ expression.GetRange(Range1, Range2);
 
 ## 示例
 
-获取表示电子表格中工作表选定范围的对象。
+通过输入地址在电子表格中选择单元格。
 
 ```javascript editor-xlsx
-// How to get a range using address in a spreadsheet.
+// Find and modify a specific block of cells using its coordinates in a spreadsheet?
 
-// Get range and set its horizontal alignment in a spreadsheet.
+// Reference any rectangular group to style all cells at once in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

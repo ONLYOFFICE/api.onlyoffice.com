@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在指定段落周围页面右侧显示的边框。
+在文档中为段落的右侧添加边框。
 
 ```javascript editor-docx
-// How to add border to the right side of the paragraph in a document.
+// How do I place a visible border on the right edge of a paragraph in a document?
 
-// Add right single border using the paragraph properties API in a document.
+// Highlight a paragraph by drawing a colored line along its right margin.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

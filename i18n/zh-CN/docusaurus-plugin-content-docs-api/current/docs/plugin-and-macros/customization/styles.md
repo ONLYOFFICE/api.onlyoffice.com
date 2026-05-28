@@ -27,7 +27,7 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加默认的白色按钮样式。
 
@@ -56,7 +56,7 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default.submit.primary
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加主要的深灰色按钮样式。用于确认操作并提交结果。
 
@@ -79,7 +79,7 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default.submit
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加浅灰色按钮样式。
 
@@ -103,7 +103,7 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-edit
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加编辑按钮图标。
 
@@ -132,7 +132,7 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### textarea
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加文本区域输入字段。
 
@@ -154,7 +154,7 @@ textarea.form-control {
 
 ### input[type="text"]
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加文本输入字段。
 
@@ -188,7 +188,7 @@ textarea.form-control {
 
 ### input[type="checkbox"]
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加复选框输入。
 
@@ -215,7 +215,7 @@ input[type='checkbox '].form-control {
 
 ### label.header
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加加粗标题标签。
 
@@ -235,7 +235,7 @@ label.header {
 
 ### label.link
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加链接样式的标签。
 
@@ -256,7 +256,7 @@ label.link {
 
 ## 下拉组合框
 
-`类型： function`
+**类型：** `function`
 
 使用 [select2](https://select2.org/) 库为您的插件添加下拉组合框。
 
@@ -275,7 +275,7 @@ $('#select_example').select2({
 
 ## 加载器
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加加载器容器，用于显示加载状态。
 

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom shape and add it to a slide. Applies custom geometry with specific fill and stroke properties.
+Apply an outline to a custom shape's path in a presentation.
 
 ```javascript editor-pptx
-// How do I set stroke in a presentation?
+// What options are available for the outline of a shape in a presentation?
 
-// Set stroke using a geometry path object in a presentation.
+// Configure the stroke settings for a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

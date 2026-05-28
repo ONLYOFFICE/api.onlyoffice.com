@@ -21,7 +21,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | bExludeLabel | 可选 | boolean | false | 指定是否从题注中排除标签。 |
 | sNumberingFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | bBefore | 可选 | boolean | false | 指定是在当前表格之前（true）还是之后（false）插入题注（如果位于形状中，则在形状之前/之后）。 |
-| nHeadingLvl | 可选 | Number |  | 标题级别（如果要指定章节号时使用）。💡 如果要指定「标题 1」，则 nHeadingLvl === 0，以此类推。 |
+| nHeadingLvl | 可选 | Number |  | 标题级别（用于指定章节编号时使用）。💡 如果要指定 "Heading 1"，则 nHeadingLvl === 0，依此类推。 |
 | sCaptionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值
@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-在文档中在当前表格后添加题注段落。
+在文档中表格下方插入标记的题注以标识它。
 
 ```javascript editor-docx
-// How to add caption to the table in a document.
+// How do I add a numbered caption beneath a table so readers can reference it in a document?
 
-// Add text as a table caption specifying its properties in a document.
+// Attach a descriptive label with a sequence number to a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

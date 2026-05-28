@@ -4,6 +4,8 @@ description: Search for a keyword in document comments.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Search for keyword in comments
 
 Marks comments containing a specific keyword as solved in a document.
@@ -44,5 +46,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CommentWordSearch](/assets/images/plugins/comment-word-search.png#gh-light-mode-only)
-![CommentWordSearch](/assets/images/plugins/comment-word-search.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/search-for-keyword-in-comments" dark />

@@ -14,7 +14,7 @@ expression.SetBackgroundColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get all field widgets and set background color for them in a PDF document.
+Apply a background color to all field widgets in a PDF.
 
 ```javascript editor-pdf
-// How do I set background color in a PDF document?
+// How do I set the background color for widgets in a PDF?
 
-// Set background color using a widget object in a PDF document.
+// Change the fill color of widget backgrounds in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

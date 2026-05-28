@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-更新文档中自定义 XML 节点的属性值。
+使用 XPath 查询从文档中的自定义 XML 部件选择 XML 节点。
 
 ```javascript editor-docx
-// How can I get the nodes using a custom XML part in a document?
+// How do I retrieve specific nodes from a custom XML part in a document?
 
-// Get the nodes for a custom XML part in a document.
+// Extract node text and attributes to read structured data stored in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

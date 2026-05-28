@@ -22,12 +22,12 @@ expression.Add(xml);
 
 ## 示例
 
-在文档中添加新的自定义 XML 部件并访问它。
+向文档附加新的自定义 XML 部件。
 
 ```javascript editor-docx
-// How to add for a custom XML parts in a document?
+// How do I add a custom XML part with specific content to a document?
 
-// Add and display the result in a document.
+// Embed structured XML data into a document to store metadata alongside the content in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

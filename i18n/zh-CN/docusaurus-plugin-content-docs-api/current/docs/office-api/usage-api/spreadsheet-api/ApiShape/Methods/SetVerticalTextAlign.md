@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为可以插入段落或文本 run 的形状内容设置垂直对齐方式。
+在电子表格中将形状内的文本垂直对齐。
 
 ```javascript editor-xlsx
-// How to specify a vertical alignment of a shape content in a spreadsheet.
+// How do I position text at the top, middle, or bottom of a shape in a spreadsheet?
 
-// Set text vertical alignment of a shape to bottom in a spreadsheet.
+// Control where text sits vertically within a shape's boundaries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

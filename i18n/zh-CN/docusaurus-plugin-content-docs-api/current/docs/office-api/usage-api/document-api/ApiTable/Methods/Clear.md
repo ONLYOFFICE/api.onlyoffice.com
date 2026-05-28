@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中表格的内容。
+清除文档中表格的所有内容。
 
 ```javascript editor-docx
-// How to clear a content of a table in a document.
+// How do I wipe all the text and data out of a table in a document?
 
-// Get a table and remove everything from it in a document.
+// Reset a table to empty by removing everything it contains in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

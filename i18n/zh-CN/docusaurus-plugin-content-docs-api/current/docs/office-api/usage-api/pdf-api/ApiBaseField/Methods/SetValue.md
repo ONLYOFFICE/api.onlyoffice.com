@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetValue(sValue);
+expression.SetValue(value);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetValue(sValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sValue | 必需 | string |  | 未提供描述。 |
+| value | 必需 | string |  | 字段的新值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本字段设置值。
+在 PDF 中向表单字段输入文本。
 
 ```javascript editor-pdf
-// How can I set value using a base field in a PDF document?
+// How do I fill in a form field in a PDF?
 
-// Set value for a base field in a PDF document.
+// Set a text value for a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中文本的大写属性。
+检查电子表格中的文本是否应用了小型大写字母格式。
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not in a spreadsheet.
+// How do I find out if text is displayed in small capital letters in a spreadsheet?
 
-// Find whether a text characters are in small caps or not in a spreadsheet.
+// Confirm if a text run uses small caps style instead of normal lowercase letters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

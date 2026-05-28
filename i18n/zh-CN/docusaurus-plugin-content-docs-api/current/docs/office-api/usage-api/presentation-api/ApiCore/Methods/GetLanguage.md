@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的语言。
+设置和确定演示文稿的语言设置。
 
 ```javascript editor-pptx
-// How do I get the language in a presentation?
+// How do I find the language used in a presentation?
 
-// Get the language using a core properties object in a presentation.
+// Retrieve the language code defined for a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

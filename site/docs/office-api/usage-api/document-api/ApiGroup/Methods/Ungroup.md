@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Ungroup a group drawing element in a document.
+Separate grouped shapes back into individual drawings in a document.
 
 ```javascript editor-docx
-// How to remove grouping from the two shapes in a document.
+// How do I ungroup shapes that were combined into a group in a document?
 
-// Ungroup for a group in a document.
+// Release a group so each shape can be moved or edited independently in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

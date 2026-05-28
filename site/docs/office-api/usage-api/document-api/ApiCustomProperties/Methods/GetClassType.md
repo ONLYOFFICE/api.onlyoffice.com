@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a custom properties in a document.
+Get the class type of the custom properties object in a document.
 
 ```javascript editor-docx
-// How to identify the class type of a custom properties in a document?
+// How do I identify the type of a custom properties object at runtime in a document?
 
-// Obtain the class type identifier of a custom properties object in a document.
+// Confirm the object type before calling type-specific methods on custom properties in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

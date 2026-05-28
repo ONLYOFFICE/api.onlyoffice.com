@@ -1,11 +1,10 @@
 import { useCallback, useEffect, useRef } from "react";
 import { usePlaygroundRootContext } from "@site/src/components/Playground";
 import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview";
-import { getFullUrl } from "@site/src/utils/url";
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, modeType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, fileType } = usePlaygroundRootContext();
+    const { theme, scriptValue, modeType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, fileType, dispatch } = usePlaygroundRootContext();
 
     const editorRef = useRef<EditorPreviewRef>(null);
     const initialScriptExecutedRef = useRef(!hasInitialScript);
@@ -14,6 +13,16 @@ export const PlaygroundPreview = () => {
     scriptValueRef.current = scriptValue;
     const scriptTypeRef = useRef(scriptType);
     scriptTypeRef.current = scriptType;
+    const pluginInstalledRef = useRef(false);
+
+    const installPlugin = useCallback(() => {
+        if (pluginInstalledRef.current || !window.connector) return;
+        const pluginConfigUrl = `${window.location.origin}/playground/plugin/config.json`;
+        window.connector.callCommand(
+            new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+        );
+        pluginInstalledRef.current = true;
+    }, []);
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -85,19 +94,14 @@ export const PlaygroundPreview = () => {
             events: {
                 onDocumentReady: () => {
                     try {
-                        const pluginConfigUrl = getFullUrl("/plugin/config.json");
-
-                        const installPluginShim: Record<string, string> = {
-                            word: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
-                            pdf: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
-                            cell: "zi.je.Xok=zi.je.installDeveloperPlugin;",
-                            slide: "$g.le.Prj=$g.le.installDeveloperPlugin;",
-                        };
-
                         window.connector = window.docEditor.createConnector();
-                        window.connector.callCommand(
-                            new Function(`${installPluginShim[fileConfig.docType] || ""}Api.installDeveloperPlugin("${pluginConfigUrl}");`)
-                        );
+                        pluginInstalledRef.current = false;
+
+                        if (scriptTypeRef.current === 'plugin') {
+                            installPlugin();
+                        }
+
+                        dispatch({type: 'SET_EDITOR_READY', payload: true});
 
                         if (!initialScriptExecutedRef.current) {
                             initialScriptExecutedRef.current = true;
@@ -113,9 +117,10 @@ export const PlaygroundPreview = () => {
 
     const initEditorWithConfig = useCallback(() => {
         if (!isApiReadyRef.current || !editorRef.current) return;
+        dispatch({type: 'SET_EDITOR_READY', payload: false});
         const config = buildConfig();
         editorRef.current.initEditor(config);
-    }, [buildConfig]);
+    }, [buildConfig, dispatch]);
 
     const handleApiReady = useCallback(() => {
         isApiReadyRef.current = true;
@@ -125,6 +130,12 @@ export const PlaygroundPreview = () => {
     useEffect(() => {
         initEditorWithConfig();
     }, [theme, modeType, editorType, initEditorWithConfig]);
+
+    useEffect(() => {
+        if (scriptType === 'plugin') {
+            installPlugin();
+        }
+    }, [scriptType, installPlugin]);
 
     useEffect(() => {
         const handleRefresh = () => {

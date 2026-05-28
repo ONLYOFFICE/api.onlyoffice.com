@@ -84,7 +84,7 @@ Whether to allow changing the co-editing mode in the editor interface.
 
 **Example**: `true`
 
-![Coediting mode](/assets/images/editor/coediting-mode.png)
+![Coediting mode](/assets/images/editor/coediting-mode.png#gh-light-mode-only)![Coediting mode](/assets/images/editor/coediting-mode.dark.png#gh-dark-mode-only)
 
 ## createUrl
 
@@ -98,7 +98,7 @@ If not specified, the **Create** button will not be displayed. Instead of this p
 
 **Example**: `"https://example.com/url-to-create-document"`
 
-![Create URL](/assets/images/editor/create.png)
+![Create URL](/assets/images/editor/create.png#gh-light-mode-only)![Create URL](/assets/images/editor/create.dark.png#gh-dark-mode-only)
 
 ## fileChoiceUrl
 
@@ -256,7 +256,7 @@ The absolute URL to the document where it is stored.
 
 **Example**: `"https://example.com/exampledocument1.docx"`
 
-![Recent documents](/assets/images/editor/recent.png)
+![Recent documents](/assets/images/editor/recent.png#gh-light-mode-only)![Recent documents](/assets/images/editor/recent.dark.png#gh-dark-mode-only)
 
 ## region
 
@@ -390,7 +390,7 @@ The absolute URL to the document where it will be created and available after cr
 
 **Example**: `"https://example.com/url-to-create-template1"`
 
-![Templates](/assets/images/editor/templates.png)
+![Templates](/assets/images/editor/templates.png#gh-light-mode-only)![Templates](/assets/images/editor/templates.dark.png#gh-dark-mode-only)
 
 ## user
 

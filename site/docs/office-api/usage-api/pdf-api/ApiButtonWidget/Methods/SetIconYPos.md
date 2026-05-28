@@ -5,7 +5,7 @@ Sets button widget icon y position.
 ## Syntax
 
 ```javascript
-expression.SetIconYPos(nPosY);
+expression.SetIconYPos(posY);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetIconYPos(nPosY);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosY | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| posY | Required | [percentage](../../Enumeration/percentage.md) |  | The vertical position of the icon as a percentage of the button height. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set field with image icon position Y to 0 in a PDF document.
+Set field image icon Y position in a PDF document.
 
 ```javascript editor-pdf
-// How do I set icon y pos in a PDF document?
+// Configure the vertical position of an icon in an image field.
 
-// Set icon y pos using a button widget object in a PDF document.
+// Apply the Y position value to a button widget.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

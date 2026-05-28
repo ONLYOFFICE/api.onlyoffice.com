@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph right side indentation in a document.
+Read the right indentation value set on a paragraph in a document.
 
 ```javascript editor-docx
-// Get the right indentation of the paragraph and show it in the document.
+// How do I find out how far a paragraph is indented from the right margin in a document?
 
-// How to know the number of inches of the right indentation in a document.
+// Check the right indent size before synchronizing paragraph layout across multiple styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

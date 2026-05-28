@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置文档中数据点的轮廓。
+在文档中为图表上的单个数据点添加边框轮廓。
 
 ```javascript editor-docx
-// How to set a numeric format of the data points.
+// How do I apply a custom stroke to a single data point on a chart in a document?
 
-// Create a chart and set its data points number format to round to two decimal places.
+// Make a specific bar or marker stand out by giving it a colored border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

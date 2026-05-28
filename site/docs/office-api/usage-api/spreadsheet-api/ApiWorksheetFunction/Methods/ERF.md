@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the error function integrated between the specified lower and upper limits in a spreadsheet.
+Calculate the error function for a specified value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an error function in a spreadsheet.
+// How do I compute the error function between limits in a spreadsheet?
 
-// Use function to get an error function set between upper and lower limits in a spreadsheet.
+// Evaluate the integral of the error function within a range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取元素数量并将该值插入 PDF 文档。
+计算 PDF 中形状内的段落数。
 
 ```javascript editor-pdf
-// How to get a number of elements a page shape contains.
+// How do I find out how many text blocks are in a shape in a PDF?
 
-// Get a page shape's content and display its elements count.
+// Determine the total of content sections that a shape holds in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the color scale criteria collection in a spreadsheet.
+Access the list of threshold criteria that define a color scale rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to access and display color scale criteria information.
+// How do I retrieve the individual breakpoints and colors that make up a color scale rule in a spreadsheet?
 
-// Get the collection of color scale criteria from a color scale conditional formatting rule.
+// Count the criteria entries of a color scale rule and display the total in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

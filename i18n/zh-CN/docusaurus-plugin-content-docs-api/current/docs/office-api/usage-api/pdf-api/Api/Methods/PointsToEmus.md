@@ -25,9 +25,9 @@ number
 在 PDF 文档中将磅转换为 EMU。
 
 ```javascript editor-pdf
-// How do I convert points to emus in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert points to emus and display the result in a PDF document.
+// The result is displayed in a shape text element.
 
 const points = 1000;
 const emus = Api.PointsToEmus(points);

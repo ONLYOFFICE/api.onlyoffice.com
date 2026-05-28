@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Select the text on the page and return it.
+Extract the text that has been highlighted on a page in a PDF.
 
 ```javascript editor-pdf
-// How to get selected text for a page?
+// How do I capture the text I've selected in a PDF?
 
-// Get selected text and display the result in a PDF document.
+// Retrieve what text is currently marked on a page in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of an underline annotation object in a PDF document.
+Check what type of markup is applied to text in a PDF.
 
 ```javascript editor-pdf
-// How can I get the class type of an underline annotation in a PDF document?
+// How do I find out what type of annotation mark has been used in a PDF?
 
-// Get the class type of an underline annotation and display it in the PDF.
+// Determine the kind of highlight or underline effect on text in a PDF.
 
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);

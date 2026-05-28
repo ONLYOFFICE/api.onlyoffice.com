@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.GetAllParagraphs](../../ApiDocumentContent/Me
 
 ## Example
 
-Get an array of all paragraphs from the document content in a document.
+Retrieve all paragraphs from a content container in a document.
 
 ```javascript editor-docx
-// Get all paragraphs added to the document.
+// How do I get every paragraph inside a shape or content area in a document?
 
-// How to retrieve all paragraphs and make the first one bold in a document.
+// Bold the first paragraph found inside a shape to highlight it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

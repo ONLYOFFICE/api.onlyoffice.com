@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 创建自定义页眉
 
 创建一个包含图像和标题的自定义页眉。图像在代码中以 base64 字符串的形式表示，可根据需要进行自定义或替换。
@@ -41,5 +43,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![CustomHeader](/assets/images/plugins/create-custom-header.png#gh-light-mode-only)
-![CustomHeader](/assets/images/plugins/create-custom-header.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/create-custom-header" dark />

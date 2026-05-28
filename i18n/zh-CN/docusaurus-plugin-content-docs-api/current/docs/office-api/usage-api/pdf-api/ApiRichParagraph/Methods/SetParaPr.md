@@ -14,7 +14,7 @@ expression.SetParaPr(paraPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| paraPr | 必需 | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | 未提供描述。 |
+| paraPr | 必需 | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | 要应用的段落属性。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为富文本段落设置富文本段落属性。
+在 PDF 中为段落应用格式设置。
 
 ```javascript editor-pdf
-// How do I set para pr in a PDF document?
+// How do I configure paragraph appearance in a PDF?
 
-// Set para pr using a rich paragraph object in a PDF document.
+// Assign custom formatting rules to a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

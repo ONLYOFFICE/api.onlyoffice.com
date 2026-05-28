@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为幻灯片母版设置主题。设置主题对象的副本。
+创建自定义主题并将其应用于幻灯片母版。
 
 ```javascript editor-pptx
-// How to set a theme of a slide master.
+// Define color, format, and font schemes, then create a complete theme object.
 
-// Create a theme, set its properties and apply it to a slide master.
+// Set the theme on the master and display the result using a styled chart.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

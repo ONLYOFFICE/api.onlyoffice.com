@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中的段落 ID。
+检索分配给文档中段落的唯一标识符。
 
 ```javascript editor-docx
-// How can I get the para id using a paragraph in a document?
+// How do I read the ID of a paragraph in a document?
 
-// Get the para id for a paragraph in a document.
+// Identify each paragraph by its numeric ID to distinguish them in a document.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

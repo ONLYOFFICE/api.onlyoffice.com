@@ -24,12 +24,12 @@ expression.CreateImage(imageSrc, width, height);
 
 ## 示例
 
-创建图像并将其粘贴到文档中。
+将 URL 图像插入到文档的段落中。
 
 ```javascript editor-docx
-// Create the image object and add it to the paragraph class in a document.
+// How do I add an image with a specific width and height to a document?
 
-// How to create the image object using the URL to the image, its width and height in a document.
+// Place a remotely hosted picture at a fixed size inside a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

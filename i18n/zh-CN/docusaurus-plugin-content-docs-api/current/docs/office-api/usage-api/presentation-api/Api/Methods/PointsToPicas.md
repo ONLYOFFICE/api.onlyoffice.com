@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在演示文稿中将磅转换为派卡。
+将磅转换为派卡并在演示文稿中显示结果。
 
 ```javascript editor-pptx
-// How can I convert points to picas in a presentation?
+// Use Api.PointsToPicas to convert measurement units.
 
-// Convert points to picas in a presentation.
+// Display the converted value in a shape text.
 
 const points = 42;
 const picas = Api.PointsToPicas(points);

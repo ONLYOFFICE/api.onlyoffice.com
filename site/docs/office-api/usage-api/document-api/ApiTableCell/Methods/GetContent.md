@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the current cell content in a document.
+Access the text content stored inside a table cell in a document.
 
 ```javascript editor-docx
-// How to get the value from the cell.
+// How do I read the content from a table cell in a document?
 
-// Retrieve the content of the table cell.
+// Extract what is written inside a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

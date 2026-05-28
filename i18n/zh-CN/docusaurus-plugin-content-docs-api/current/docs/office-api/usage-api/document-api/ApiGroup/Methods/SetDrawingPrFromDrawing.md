@@ -7,12 +7,12 @@
 
 ## 示例
 
-将另一个绘图对象的属性设置到文档中的绘图对象。
+在文档中将布局属性从一个绘图复制到另一个绘图。
 
 ```javascript editor-docx
-// How to apply the properties of one shape to another in a document.
+// How do I make two shapes share the same wrapping and alignment settings in a document?
 
-// Create the second drawing with the same style in a document.
+// Reuse the position, wrapping, and spacing configuration of an existing shape on a new shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

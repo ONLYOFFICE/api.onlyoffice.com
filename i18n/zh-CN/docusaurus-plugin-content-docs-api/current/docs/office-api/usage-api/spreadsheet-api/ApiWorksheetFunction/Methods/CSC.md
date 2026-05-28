@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取角度的余割值。
+计算电子表格中角度的余割（正弦的倒数）。
 
 ```javascript editor-xlsx
-// How to return cosecant in a spreadsheet.
+// What is the cosecant value in a spreadsheet?
 
-// Use function to get the cosecant of an angle in a spreadsheet.
+// Determine the trigonometric cosecant ratio in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

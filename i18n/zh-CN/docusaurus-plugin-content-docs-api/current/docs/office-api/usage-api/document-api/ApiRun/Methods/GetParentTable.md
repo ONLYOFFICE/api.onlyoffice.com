@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含 run 的表格。
+定位文档中包含文本运行的表格。
 
 ```javascript editor-docx
-// Get a parent table of the text in a document.
+// How do I find the table that a specific piece of text belongs to in a document?
 
-// How to remove the row of the table that contains a text run in a document.
+// Navigate from a text run up to its parent table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

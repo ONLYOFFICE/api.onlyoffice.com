@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（上标文本）或负值（下标文本）的度量值。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在演示文稿中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
+调整演示文稿中文本相对于基线的位置。
 
 ```javascript editor-pptx
-// How to change inline position of the text in a presentation.
+// Raise or lower text to create superscript or subscript effects.
 
-// Create a new text run and make its position lower or higher in a presentation.
+// Create text runs and position them above or below the baseline.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

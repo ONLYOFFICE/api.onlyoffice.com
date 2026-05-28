@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Return the current paragraph from the document content.
+Access the paragraph that is currently active in a shape in a PDF.
 
 ```javascript editor-pdf
-// How to get current paragraph for a document content?
+// How do I find the paragraph being edited in a PDF?
 
-// Get current paragraph and display the result in a PDF document.
+// Retrieve the most recent paragraph that was added to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

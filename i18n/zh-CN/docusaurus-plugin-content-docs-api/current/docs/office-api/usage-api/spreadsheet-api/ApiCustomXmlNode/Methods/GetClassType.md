@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的类类型。
+检查电子表格中表示自定义 XML 节点的对象类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of a custom XML node in a spreadsheet?
+// How do I confirm the category of an XML node object before processing it in a spreadsheet?
 
-// Obtain the class type identifier of a custom XML node object in a spreadsheet.
+// Verify the identity of an XML node to ensure it is the expected kind before using it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

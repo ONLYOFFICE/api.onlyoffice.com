@@ -18,16 +18,16 @@ expression.SetLocale(LCID);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-为文档设置区域设置。
+在电子表格中为文档应用特定的区域语言设置。
 
 ```javascript editor-xlsx
-// How to set a region to the document.
+// How do I change the language and region used for dates, numbers, and text in a spreadsheet?
 
-// Set or change the locale of the document.
+// Switch the document locale to match the target audience's region in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 Api.SetLocale("en-CA");

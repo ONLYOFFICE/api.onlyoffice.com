@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Change the icon of a criterion in a spreadsheet.
+Assign a specific icon to a criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the icon assigned to an icon set criterion in a spreadsheet.
+// How do I replace the default icon for one of the thresholds in an icon set rule in a spreadsheet?
 
-// Set a custom icon for this criterion threshold in a spreadsheet.
+// Override the automatically chosen icon with a custom one for a selected criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

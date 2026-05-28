@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回一组值中的最小值。不忽略逻辑值和文本。
+查找电子表格中包含文本和逻辑值的列表中的最小值。
 
 ```javascript editor-xlsx
-// How to get a minimum from a list including text and logical values in a spreadsheet.
+// What is the minimum value across mixed data types in a spreadsheet?
 
-// Use a function to find a minimum from a list of objects in a spreadsheet.
+// Compare different value types to find the lowest one in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

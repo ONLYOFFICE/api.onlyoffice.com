@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取文档中容器的内容。
+访问内容控件的内部内容以在文档中向其添加文本。
 
 ```javascript editor-docx
-// How to get the content for a block-level content control in a document?
+// How do I add text to the inside of a content control in a document?
 
-// Get the content and display the result in a document.
+// Write additional text into an existing content control by reading its contents in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

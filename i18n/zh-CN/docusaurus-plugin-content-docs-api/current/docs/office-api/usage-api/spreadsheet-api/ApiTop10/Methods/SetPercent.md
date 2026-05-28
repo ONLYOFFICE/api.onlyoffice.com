@@ -22,12 +22,12 @@ expression.SetPercent(percent);
 
 ## 示例
 
-设置电子表格中前 10 条件的百分比模式。
+将电子表格中的前 10 项规则从计数项目切换为使用百分比阈值。
 
 ```javascript editor-xlsx
-// How to configure if the condition uses percentage values instead of count values in a spreadsheet.
+// How do I highlight the top percentage of values instead of a fixed count in a spreadsheet?
 
-// Set the percentage mode for the top 10 rule in a spreadsheet.
+// Target the top portion of data by enabling percentage mode on a highlight rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

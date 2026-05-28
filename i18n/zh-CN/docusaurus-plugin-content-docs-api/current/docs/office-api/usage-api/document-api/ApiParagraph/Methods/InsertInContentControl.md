@@ -22,12 +22,12 @@ expression.InsertInContentControl(nType);
 
 ## 示例
 
-在文档中用富文本内容控件包装段落对象。
+在文档中将段落包裹在富文本内容控件内。
 
 ```javascript editor-docx
-// How to insert the paragraph object into the another element in a document.
+// How do I place a paragraph into a content control in a document?
 
-// Add paragraph to the content control in a document.
+// Convert a standalone paragraph into a protected content control block in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

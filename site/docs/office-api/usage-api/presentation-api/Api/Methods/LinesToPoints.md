@@ -25,9 +25,9 @@ number
 Convert lines to points in a presentation.
 
 ```javascript editor-pptx
-// How can I convert lines to points in a presentation?
+// Use the Api object to convert measurement units.
 
-// Convert lines to points in a presentation.
+// Display the conversion result in a shape on the slide.
 
 const lines = 100;
 const points = Api.LinesToPoints(lines);

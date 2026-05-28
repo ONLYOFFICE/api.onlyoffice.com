@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取节的起始页码。
+读取分配给文档中节第一页的编号。
 
 ```javascript editor-docx
-// How to get the start page number for the current section.
+// How do I find out which page number a section begins on in a document?
 
-// Get a section from the paragraph and its first page number.
+// Check where a section's page numbering starts within a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

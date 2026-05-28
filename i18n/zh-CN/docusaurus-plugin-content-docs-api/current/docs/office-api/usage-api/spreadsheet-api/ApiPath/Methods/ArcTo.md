@@ -25,12 +25,12 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用不同的贝塞尔和弧线命令创建复杂的曲线形状。在电子表格中的单条路径中组合多种曲线类型。
+作为电子表格中自定义形状路径的一部分绘制弧段。
 
 ```javascript editor-xlsx
-// How can I arc to using a geometry path in a spreadsheet?
+// How do I add a curved arc to a custom shape outline in a spreadsheet?
 
-// Arc to for a geometry path in a spreadsheet.
+// Extend a shape's path with a sweeping arc to round off corners or form circular sections in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

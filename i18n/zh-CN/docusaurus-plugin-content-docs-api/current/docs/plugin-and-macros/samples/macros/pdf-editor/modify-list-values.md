@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改列表选项值
 
 从包含特定键值的所有组合框中删除指定的列表选项。
@@ -33,5 +35,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![修改列表选项值](/assets/images/plugins/modify-list-values.png#gh-light-mode-only)
-![修改列表选项值](/assets/images/plugins/modify-list-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/modify-list-values" dark />

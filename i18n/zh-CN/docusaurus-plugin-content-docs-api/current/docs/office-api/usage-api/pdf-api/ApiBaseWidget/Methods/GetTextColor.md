@@ -20,12 +20,12 @@ expression.GetTextColor();
 
 ## 示例
 
-获取字段控件并显示其在 PDF 文档中的文本颜色。
+读取 PDF 中表单字段控件的文本颜色。
 
 ```javascript editor-pdf
-// How to get the text color for a widget in a PDF document?
+// How do I get the text color of a widget in a PDF?
 
-// Get the text color and display the result in a PDF document.
+// Retrieve and display the font color of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

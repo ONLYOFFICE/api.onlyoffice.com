@@ -20,12 +20,12 @@ expression.Close();
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+通过将最后绘制的点连接回起始点来封闭文档中形状的轮廓。
 
 ```javascript editor-docx
-// How do I close in a document?
+// How do I finish drawing an open path so its start and end points are joined in a document?
 
-// Close using a geometry path object in a document.
+// Complete a custom shape by closing the gap between the final segment and the path's origin in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

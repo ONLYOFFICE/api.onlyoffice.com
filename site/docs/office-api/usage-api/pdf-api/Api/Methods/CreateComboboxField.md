@@ -5,7 +5,7 @@ Creates a combobox field.
 ## Syntax
 
 ```javascript
-expression.CreateComboboxField(aRect);
+expression.CreateComboboxField(rect);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateComboboxField(aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.CreateComboboxField(aRect);
 
 ## Example
 
-How to create and add a combobox field to document.
+Create a dropdown field with multiple options in a PDF.
 
 ```javascript editor-pdf
-// How do I create the combobox field in a PDF document?
+// How do I add a combobox to a form in a PDF?
 
-// Create the combobox field and display the result in a PDF document.
+// Populate a dropdown list with selectable choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

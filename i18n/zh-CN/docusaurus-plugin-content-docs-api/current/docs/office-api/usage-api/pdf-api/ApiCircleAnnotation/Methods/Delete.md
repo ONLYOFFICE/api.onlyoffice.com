@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档中移除方形注释。
+从 PDF 移除注释。
 
 ```javascript editor-pdf
-// How to delete for an annotation in a PDF document?
+// How do I delete an annotation in a PDF?
 
-// Delete and display the result in a PDF document.
+// Erase an annotation that no longer needs to be in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

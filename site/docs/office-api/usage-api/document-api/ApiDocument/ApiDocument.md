@@ -11,20 +11,24 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [AddComboBoxContentControl](./Methods/AddComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new combo box content control to the document. |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current document selection, or to the current word if no text is selected. |
 | [AddDatePickerContentControl](./Methods/AddDatePickerContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new date picker content control to the document. |
-| [AddDrawingToPage](./Methods/AddDrawingToPage.md) | boolean | Adds a drawing to the specified page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
+| [AddDrawingToPage](./Methods/AddDrawingToPage.md) | boolean | Adds a drawing to the specified page. |
 | [AddDropDownListContentControl](./Methods/AddDropDownListContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new drop-down list content control to the document. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the document content. |
 | [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds an endnote for the selected text (or the current position if the selection doesn't exist). |
 | [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds a footnote for the selected text (or the current position if the selection doesn't exist). |
 | [AddMathEquation](./Methods/AddMathEquation.md) | boolean | Adds a math equation to the current document. |
+| [AddParagraph](./Methods/AddParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph and appends it to the end of the document content. |
 | [AddPictureContentControl](./Methods/AddPictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new picture content control to the document. |
-| [AddTableOfContents](./Methods/AddTableOfContents.md) | boolean | Adds a table of content to the current document. 💡 Please note that the new table of contents replaces the existing table of contents. |
+| [AddTableOfContents](./Methods/AddTableOfContents.md) | boolean | Adds a table of content to the current document. |
 | [AddTableOfFigures](./Methods/AddTableOfFigures.md) | boolean | Adds a table of figures to the current document. |
+| [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | Appends the specified text to the end of the document content. |
 | [ClearAllFields](./Methods/ClearAllFields.md) | boolean | Clears all forms in the document. |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | Creates a new history point. |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | Creates an abstract multilevel numbering with a specified type. |
-| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current section - page size, footer, header, columns, etc. |
-| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Creates a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one. |
+| [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new empty paragraph. |
+| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current |
+| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Creates a new style with the specified type and name. If a style with the specified name already exists, it will be returned without creating a new one. |
+| [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a new table with a specified number of rows and columns. |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | Removes a bookmark from the document, if one exists. |
 | [EnterText](./Methods/EnterText.md) | boolean | Add text to the document on the cursor position. |
 | [GetAllBookmarksNames](./Methods/GetAllBookmarksNames.md) | string[] | Returns an array with names of all bookmarks in the current document. |
@@ -42,7 +46,7 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns a collection of shape objects from the document content. |
 | [GetAllStyles](./Methods/GetAllStyles.md) | [ApiStyle](../ApiStyle/ApiStyle.md)[] | Returns all styles of the current document. |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array of all tables from the current document content. |
-| [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
+| [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. |
 | [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) | Returns a bookmark by its name from the current document. |
 | [GetBookmarkRange](./Methods/GetBookmarkRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a bookmark range. |
 | [GetClassType](./Methods/GetClassType.md) | "document" | Returns a type of the ApiDocument class. |
@@ -50,7 +54,8 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [GetCommentsReport](./Methods/GetCommentsReport.md) | [CommentReport](../Enumeration/CommentReport.md) | Returns a report about all the comments added to the document. |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | Returns an array of document elements from the current ApiDocumentContent object. |
 | [GetContentControlsByTag](./Methods/GetContentControlsByTag.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a list of all content controls in the document with the specified tag name. |
-| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Retrieves the core properties interface for the current document. This method is used to view or modify standard metadata such as title, author, and keywords. |
+| [GetControlsHighlight](./Methods/GetControlsHighlight.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the highlight color of the content controls in the current document. |
+| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Retrieves the core properties interface for the current document. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
 | [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null. |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | Returns the index of the current page. |
@@ -60,11 +65,11 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [GetCurrentVisiblePages](./Methods/GetCurrentVisiblePages.md) | number[] | Returns the indexes of the currently visible pages. |
 | [GetCurrentWord](./Methods/GetCurrentWord.md) | string | Returns the current word or part of the current word. |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | Retrieves the custom properties from the document. |
-| [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the document. This manager allows manipulation and access to custom XML parts within the document. |
+| [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the document. |
 | [GetDefaultParaPr](./Methods/GetDefaultParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Returns a set of default paragraph properties in the current document. |
 | [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Returns the default style parameters for the specified document element. |
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns a set of default properties for the text run in the current document. |
-| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: **Application** - the application the document was created with. **CreatedRaw** - the date and time when the file was created. **Created** - the parsed date and time when the file was created. **LastModifiedRaw** - the date and time when the file was last modified. **LastModified** - the parsed date and time when the file was last modified. **LastModifiedBy** - the name of the user who made the latest change to the document. **Authors** - the persons who created the file. **Title** - the document title (this property allows you to simplify your documents classification). **Tags** - the document tags (this property allows you to simplify your documents classification). **Subject** - the document subject (this property allows you to simplify your documents classification). **Comment** - the comment to the document (this property allows you to simplify your documents classification). |
+| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: |
 | [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
 | [GetDrawingsByName](./Methods/GetDrawingsByName.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | Returns a collection of drawing objects from the document filtered by their names. |
 | [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
@@ -77,16 +82,17 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [GetFormsByKey](./Methods/GetFormsByKey.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified key. |
 | [GetFormsByRole](./Methods/GetFormsByRole.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified role name. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified tag name. |
-| [GetFormsData](./Methods/GetFormsData.md) | [FormData](../Enumeration/FormData.md)[] | Returns the data from all forms present in the current document. If a form was created and not assigned to any part of the document, it won't appear in this list. |
+| [GetFormsData](./Methods/GetFormsData.md) | [FormData](../Enumeration/FormData.md)[] | Returns the data from all forms present in the current document. |
+| [GetFormsHighlight](./Methods/GetFormsHighlight.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the highlight color of the forms in the document. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current document content. |
-| [GetPageCount](./Methods/GetPageCount.md) | number | Returns a number of pages in the current document. 💡 This method can be slow for large documents because it runs the document calculation process before the full recalculation. |
+| [GetPageCount](./Methods/GetPageCount.md) | number | Returns a number of pages in the current document. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified document. |
 | [GetRangeBySelect](./Methods/GetRangeBySelect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a range object by the current selection. |
 | [GetReviewReport](./Methods/GetReviewReport.md) | [ReviewReport](../Enumeration/ReviewReport.md) | Returns a report about every change which was made to the document in the review mode. |
 | [GetSections](./Methods/GetSections.md) | [ApiSection](../ApiSection/ApiSection.md)[] | Returns a collection of section objects in the document. |
-| [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [ApiShape](../ApiShape/ApiShape.md)[] \| [ApiImage](../ApiImage/ApiImage.md)[] \| [ApiChart](../ApiChart/ApiChart.md)[] \| [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | Returns all the selected drawings in the current document. |
-| [GetStatistics](./Methods/GetStatistics.md) | object | Returns the document statistics represented as an object with the following parameters: **PageCount** - number of pages; **WordsCount** - number of words; **ParagraphCount** - number of paragraphs; **SymbolsCount** - number of symbols; **SymbolsWSCount** - number of symbols with spaces. |
-| [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Returns a style by its name. |
+| [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns all the selected drawings in the current document. |
+| [GetStatistics](./Methods/GetStatistics.md) | object | Returns the document statistics represented as an object with the following parameters: |
+| [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null | Returns a style by its name. |
 | [GetTagsOfAllContentControls](./Methods/GetTagsOfAllContentControls.md) | String[] | Returns a list of all tags that are used for all content controls in the document. |
 | [GetTagsOfAllForms](./Methods/GetTagsOfAllForms.md) | String[] | Returns a list of all tags that are used for all forms in the document. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
@@ -105,12 +111,13 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves the cursor to the left. |
 | [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves the cursor to the right. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
-| [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. If there is any selection in the document, it will be removed. |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. If this document content is not a footnote/endnote, does nothing. |
+| [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
 | [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves the cursor up. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | Rejects all changes made in review mode. |
-| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) method. |
+| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified. |
 | [RemoveSelection](./Methods/RemoveSelection.md) | boolean | Removes the current selection. |
 | [RemoveWatermark](./Methods/RemoveWatermark.md) | boolean | Removes a watermark from the current document. |
@@ -124,9 +131,10 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing. |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | Enables or disables AI-assisted change tracking in the document. |
 | [SetControlsHighlight](./Methods/SetControlsHighlight.md) | boolean | Sets the highlight to the content controls from the current document. |
-| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and odd pages (one header/footer for odd pages and another header/footer for even pages). |
+| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and |
 | [SetFormsData](./Methods/SetFormsData.md) | boolean | Sets the data to the specified forms. |
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | Sets the highlight to the forms in the document. |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | Sets the change tracking mode. |
 | [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Sets the watermark settings in the current document. |
 | [ShowComment](./Methods/ShowComment.md) | boolean | Shows a comment by its ID. |

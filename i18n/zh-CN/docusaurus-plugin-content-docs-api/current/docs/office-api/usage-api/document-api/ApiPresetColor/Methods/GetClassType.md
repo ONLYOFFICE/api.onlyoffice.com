@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中预设颜色对象的类类型。
+检查文档中命名颜色属于哪个类别。
 
 ```javascript editor-docx
-// How can I get the class type of a preset color in a document?
+// How do I find out the type of a named color used for a shape fill in a document?
 
-// Get the class type of a preset color and display it in the document.
+// Confirm the color category before reusing a named color value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

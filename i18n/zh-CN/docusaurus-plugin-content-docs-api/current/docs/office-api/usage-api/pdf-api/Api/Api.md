@@ -7,6 +7,7 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
 | [CreateCaretAnnot](./Methods/CreateCaretAnnot.md) | [ApiCaretAnnotation](../ApiCaretAnnotation/ApiCaretAnnotation.md) | 创建插入符号批注。 |
@@ -56,12 +57,13 @@
 | [CreateUnderlineAnnot](./Methods/CreateUnderlineAnnot.md) | [ApiUnderlineAnnotation](../ApiUnderlineAnnotation/ApiUnderlineAnnotation.md) | 创建下划线批注。 |
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
+| [GetByInternalId](./Methods/GetByInternalId.md) | object | 通过内部 ID 返回对象。 |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | 使用指定的文本字段属性创建文本字段。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
 | [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 从十六进制字符串创建颜色。 |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
-| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。结果为整数值。 |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | 将派卡转换为磅。 |

@@ -26,12 +26,12 @@ expression.Add(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## 示例
 
-向单元格范围添加数据验证规则。
+在电子表格中为单元格范围附加数据验证规则。
 
 ```javascript editor-xlsx
-// How to apply data validation to a range of cells.
+// How do I restrict what values a user can enter into a cell range in a spreadsheet?
 
-// Get a range from the worksheet and add data validation to it.
+// Enforce an input constraint on specific cells to prevent invalid entries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Data Validation for decimal to be more than 10");

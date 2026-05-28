@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为幻灯片设置幻灯片放映切换效果。
+为幻灯片应用幻灯片放映过渡效果。
 
 ```javascript editor-pptx
-// How do I set slide show transition in a presentation?
+// Configure the transition with entry effect and speed settings.
 
-// Set slide show transition using a slide object.
+// Set the advance on click property for the transition.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-移除包含指定单元格的表格行。
+从文档中的表格删除行。
 
 ```javascript editor-docx
-// How to remove the row from the table in a document.
+// How do I remove a specific row from a table in a document?
 
-// Create a table, get one of its cells and delete the row.
+// Shorten a table by eliminating an unwanted row in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

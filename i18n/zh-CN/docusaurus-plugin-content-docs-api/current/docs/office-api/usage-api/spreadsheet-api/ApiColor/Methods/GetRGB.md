@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取颜色的 RGB 格式并将其插入表格。
+提取电子表格中颜色的红、绿、蓝分量。
 
 ```javascript editor-xlsx
-// How to get a RGB color format.
+// How do I read the individual RGB channel values of a color object in a spreadsheet?
 
-// Convert a color to the RGB values in a spreadsheet.
+// Break down a color into its numeric channel values and write the result to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorFromRGB(255, 111, 61);

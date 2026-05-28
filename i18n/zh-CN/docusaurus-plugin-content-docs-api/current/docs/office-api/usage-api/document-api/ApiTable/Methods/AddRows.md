@@ -14,9 +14,9 @@ expression.AddRows(oCell, nCount, isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在该单元格之后添加新行。如果未指定，将在表格末尾添加新行。 |
+| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 在其后添加新行的单元格。如果未指定，新行将添加到表格末尾。 |
 | nCount | 必需 | Number |  | 要添加的行数。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新行。如果未指定单元格，则将忽略此参数。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新行。如果未指定单元格，则此参数将被忽略。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ expression.AddRows(oCell, nCount, isBefore);
 
 ## 示例
 
-在文档中向表格添加新行（多行）。
+在文档中一次向表格插入多行。
 
 ```javascript editor-docx
-// How to add rows to the table in a document.
+// How do I add several rows to a table in a document?
 
-// Get a table cell and insert two new rows after it.
+// Grow a table by placing a batch of new rows after a selected cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

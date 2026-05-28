@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向段落添加 run。
+在演示文稿中将文本元素插入段落。
 
 ```javascript editor-pptx
-// Insert a text run to the paragraph object in a presentation.
+// How do I add styled text to a paragraph in a presentation?
 
-// How to add the text run object to the slide.
+// Add a run with specific formatting to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## Example
 
-Create a radial gradient fill in a presentation.
+Fill a shape with colors that blend from center outward in a presentation.
 
 ```javascript editor-pptx
-// How to create a radial gradient fill in a presentation.
+// How do I apply a radial gradient to a shape in a presentation?
 
-// Add a radial gradient fill in a presentation.
+// Create a gradient that fades from one color at the center to another at the edges in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

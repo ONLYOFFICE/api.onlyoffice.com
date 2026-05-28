@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get button widget behavior type and display it in a PDF document.
+Retrieve the behavior type of a button widget in a PDF.
 
 ```javascript editor-pdf
-// How to get the behavior for a button widget in a PDF document?
+// How do I find the button behavior setting in a PDF?
 
-// Get the behavior and display the result in a PDF document.
+// Display the behavior configuration for a button widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

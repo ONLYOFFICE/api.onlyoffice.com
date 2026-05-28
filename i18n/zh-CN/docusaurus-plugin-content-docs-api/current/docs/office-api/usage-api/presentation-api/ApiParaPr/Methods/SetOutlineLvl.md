@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetOutlineLvl(nLvl);
+expression.SetOutlineLvl(lvl);
 ```
 
 `expression` - 表示 [ApiParaPr](../ApiParaPr.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetOutlineLvl(nLvl);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLvl | 可选 | Number |  | 大纲级别。可能的值：1-9。如果需要设置无大纲级别，请不带参数使用此方法。 |
+| lvl | 可选 | Number \| null \| undefined |  | 大纲级别。可能的值：1-9。要取消大纲级别，请不带参数使用此方法。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中通过段落属性设置指定段落的大纲级别。
+在演示文稿中为段落分配大纲级别。
 
 ```javascript editor-pptx
-// How can I set outline lvl using a paragraph properties in a presentation?
+// How do I set the outline hierarchy level of a paragraph in a presentation?
 
-// Set outline lvl for a paragraph properties in a presentation.
+// Configure the outline depth of a paragraph using paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

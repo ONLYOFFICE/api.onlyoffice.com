@@ -20,12 +20,12 @@ expression.GetPosition();
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其位置。
+获取 PDF 中注释的位置坐标。
 
 ```javascript editor-pdf
-// How do I get the position in a PDF document?
+// What are the horizontal and vertical coordinates of an annotation in a PDF?
 
-// Get the position using an annotation object in a PDF document.
+// Retrieve the X and Y position values from an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

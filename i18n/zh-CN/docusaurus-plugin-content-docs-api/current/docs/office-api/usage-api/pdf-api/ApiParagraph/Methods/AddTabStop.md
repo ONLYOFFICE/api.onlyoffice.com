@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-在 PDF 文档中向段落添加制表位。
+在 PDF 中插入间距停靠点以对齐段落中的文本。
 
 ```javascript editor-pdf
-// How to add a tab after a sentence in a paragraph in a PDF document.
+// How do I indent text using tabs in a paragraph in a PDF?
 
-// How to split a text string with a tab in a PDF document.
+// Add tab positions to organize and position text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

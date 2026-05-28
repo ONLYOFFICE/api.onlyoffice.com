@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 从幻灯片中移除形状
 
 移除演示文稿中幻灯片上的形状。
@@ -30,4 +32,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Remove shapes](/assets/images/plugins/remove-shapes.png#gh-light-mode-only)![Remove shapes](/assets/images/plugins/remove-shapes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-shapes-from-slides" dark />

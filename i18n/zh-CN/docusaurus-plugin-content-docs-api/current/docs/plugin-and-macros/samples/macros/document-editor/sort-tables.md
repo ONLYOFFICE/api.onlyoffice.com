@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 表格排序
 
 根据选定列自动按字母或数字顺序对表格行进行排序。
@@ -100,5 +102,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![表格排序](/assets/images/plugins/sort-tables.png#gh-light-mode-only)
-![表格排序](/assets/images/plugins/sort-tables.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/sort-tables" dark />

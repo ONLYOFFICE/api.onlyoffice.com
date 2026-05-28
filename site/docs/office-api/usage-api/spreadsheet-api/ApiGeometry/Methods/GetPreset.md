@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve geometry information from a star shape in a spreadsheet. Displays preset type and custom status in cells.
+Read the built-in shape template name assigned to a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I get the preset in a spreadsheet?
+// How do I find out which standard shape template a shape is based on in a spreadsheet?
 
-// Get the preset using a geometry object in a spreadsheet.
+// Identify the predefined outline category that describes a shape's form in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在 PDF 文档中将形状填充颜色转换为 JSON。
+在 PDF 中将颜色转换为 JSON 格式。
 
 ```javascript editor-pdf
-// The color is obtained from the first shape fill in the document.
+// How do I serialize a color object into JSON in a PDF?
 
-// Convert the color to a JSON string and display the result.
+// Transform the color into a JSON string and display it in the document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

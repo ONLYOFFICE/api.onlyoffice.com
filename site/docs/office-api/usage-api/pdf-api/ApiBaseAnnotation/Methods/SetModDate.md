@@ -14,7 +14,7 @@ expression.SetModDate(timeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| timeStamp | Required | number |  | No description provided. |
+| timeStamp | Required | number |  | The annotation last modification date as a numeric timestamp. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set mod date to it in a PDF document.
+Record the date when an annotation was last modified in a PDF.
 
 ```javascript editor-pdf
-// How can I set mod date using an annotation in a PDF document?
+// Update the modification timestamp of an annotation in a PDF.
 
-// Set mod date for an annotation in a PDF document.
+// Set the last-changed date for an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

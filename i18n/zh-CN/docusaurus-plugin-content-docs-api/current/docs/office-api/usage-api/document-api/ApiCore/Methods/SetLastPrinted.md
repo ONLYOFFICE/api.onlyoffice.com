@@ -22,12 +22,12 @@ expression.SetLastPrinted(oLastPrinted);
 
 ## 示例
 
-设置文档中当前文档的最后打印日期。
+在文档中存储文档最后打印的日期。
 
 ```javascript editor-docx
-// How can I set last printed using a core properties in a document?
+// How do I record the last print date for a document?
 
-// Set last printed for a core properties in a document.
+// Keep an audit trail of printing activity by saving the most recent print timestamp in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

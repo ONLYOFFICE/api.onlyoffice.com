@@ -25,12 +25,12 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-在电子表格中创建 RGBA 颜色并将其用作形状填充。
+从红、绿、蓝和透明度值创建颜色并将其作为电子表格中的形状填充应用。
 
 ```javascript editor-xlsx
-// How to r g b an in a spreadsheet?
+// How do I define a semi-transparent custom color using RGBA components in a spreadsheet?
 
-// R g b an using the spreadsheet API.
+// Fill a shape with a color that has a specific opacity level set via alpha in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGBA(110, 160, 180, 127);

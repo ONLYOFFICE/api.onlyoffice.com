@@ -5,7 +5,7 @@ Sets the fill properties to the current shape.
 ## Syntax
 
 ```javascript
-expression.SetFill(oFill);
+expression.SetFill(fill);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetFill(oFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the shape. |
+| fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the shape. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a solid fill color to a shape. Creates a rectangle and apply a red fill to it in a PDF document.
+Change the interior color of a shape in a PDF.
 
 ```javascript editor-pdf
-// How do I set fill in a PDF document?
+// How do I apply a background color to a shape in a PDF?
 
-// Set fill using a shape object in a PDF document.
+// Modify a shape's background to use a specific color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中所选单元格的列号。
+查找电子表格中特定单元格的列号。
 
 ```javascript editor-xlsx
-// How to get a cell column index.
+// How do I find which column number a cell belongs to in a spreadsheet?
 
-// Get a range and display its column number in a spreadsheet.
+// Read a cell's column position and print that number onto the sheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("D9").GetCol();

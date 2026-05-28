@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetSpecialFormat(sFormat);
+expression.SetSpecialFormat(format);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetSpecialFormat(sFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | 必需 | [PsfFormat](../../Enumeration/PsfFormat.md) |  | 应用于值的格式样式 |
+| format | 必需 | [PsfFormat](../../Enumeration/PsfFormat.md) |  | 应用于值的格式样式 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置特殊格式。
+在 PDF 中将字段值格式化为电话号码。
 
 ```javascript editor-pdf
-// How to set special format for a combobox field?
+// Can I make phone numbers display correctly in a PDF?
 
-// Set special format and display the result in a PDF document.
+// Apply phone number formatting to a field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

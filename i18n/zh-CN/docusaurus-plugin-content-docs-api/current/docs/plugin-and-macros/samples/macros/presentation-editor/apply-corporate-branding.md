@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 应用企业品牌样式
 
 将企业品牌样式应用到演示文稿中，包括文本颜色、字体和标志位置。
@@ -73,5 +75,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![应用企业品牌样式](/assets/images/plugins/apply-corporate-branding.png#gh-light-mode-only)
-![应用企业品牌样式](/assets/images/plugins/apply-corporate-branding.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/apply-corporate-branding" dark />

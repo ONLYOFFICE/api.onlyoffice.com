@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定单元格内容顶部边缘与父表格中所有表格单元格顶边框之间保留的间距。
+设置文档中每个表格单元格内容与顶部边缘之间的间距。
 
 ```javascript editor-docx
-// How to add margin to the top of the cell.
+// How do I control how much space appears above the text inside table cells in a document?
 
-// Create a 3x3 table and add the top cell margin.
+// Push cell content away from the top border of each table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -26,12 +26,12 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 
 ## 示例
 
-在文档中使用 'rect' 预设创建形状。
+在文档的段落中插入矩形形状。
 
 ```javascript editor-docx
-// Create the "rect" shape and add it to the first paraghraph of the document.
+// How do I add a shape to a paragraph in a document?
 
-// How to create the shape object and add it to the paragraph class in a document.
+// Place a colored gradient-filled rectangle inside existing text content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

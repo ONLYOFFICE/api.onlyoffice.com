@@ -5,7 +5,7 @@ Removes a table row with the specified cell.
 ## Syntax
 
 ```javascript
-expression.RemoveRow(oCell);
+expression.RemoveRow(rowCell);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,7 +14,7 @@ expression.RemoveRow(oCell);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The table cell from the row which will be removed. |
+| rowCell | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | A cell from the row to remove. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-How to delete a row from the table in a PDF document.
+Delete a row from a table in a PDF.
 
 ```javascript editor-pdf
-// Create a table, create cells and remove the whole row by its cell.
+// How do I remove an unwanted row from a table in a PDF?
 
-// Remove the row for a table in a PDF document.
+// Take out a horizontal row of cells from your table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

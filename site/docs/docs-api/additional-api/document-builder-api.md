@@ -234,7 +234,6 @@ curl -X POST "https://documentserver/docbuilder" \
 }
 ```
 
-<!--
 ### Comparing documents
 
 You can compare two documents and generate a result file with tracked changes. The script uses [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) to open the second document for comparison:
@@ -242,7 +241,7 @@ You can compare two documents and generate a result file with tracked changes. T
 ```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
-AscCommonWord.CompareDocuments(Api, file, null);
+AscCommonWord.CompareDocuments(Api, file);
 file.Close();
 builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
@@ -270,7 +269,6 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 See [Comparing documents](../../document-builder/using-cli/comparing-documents.md) for more details about document comparison.
--->
 
 ## Possible error codes and their description
 

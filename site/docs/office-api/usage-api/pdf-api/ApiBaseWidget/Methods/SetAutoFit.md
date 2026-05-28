@@ -5,7 +5,7 @@ Sets text autofit.
 ## Syntax
 
 ```javascript
-expression.SetAutoFit(bAuto);
+expression.SetAutoFit(auto);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetAutoFit(bAuto);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bAuto | Required | boolean |  | No description provided. |
+| auto | Required | boolean |  | Specifies whether text autofit is enabled. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get all field widgets and set text autofit for them in a PDF document.
+Enable automatic text fitting for all field widgets in a PDF.
 
 ```javascript editor-pdf
-// How do I set auto fit in a PDF document?
+// How do I set autofit for field widgets in a PDF?
 
-// Set auto fit using a widget object in a PDF document.
+// Apply autofit to scale text to fit widget boundaries in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

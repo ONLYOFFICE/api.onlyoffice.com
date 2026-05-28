@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成目录
 
 通过扫描文档中的标题来生成目录。
@@ -47,4 +49,4 @@ End Sub
 
 ## 结果
 
-![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.png#gh-light-mode-only)![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-table-of-contents" dark />

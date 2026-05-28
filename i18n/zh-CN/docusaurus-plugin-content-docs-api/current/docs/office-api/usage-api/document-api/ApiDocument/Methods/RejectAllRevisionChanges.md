@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-拒绝文档中在审阅模式下所做的所有更改。
+一次性拒绝文档中的所有跟踪修订更改。
 
 ```javascript editor-docx
-// How to reset all changes after review in a document.
+// How do I discard every pending edit from review mode in a document?
 
-// Do not apply edited text in the review mode in a document.
+// Restore the original content after a review session by dismissing all proposed changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入水印
 
 在文档的每一页插入或移除自定义水印。
@@ -39,5 +41,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-watermark" dark />

@@ -27,9 +27,9 @@ boolean
 Update the value of an attribute in a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How can I update attribute using a custom XML part in a presentation?
+// How do I modify an existing attribute in an XML element in a presentation?
 
-// Update attribute for a custom XML part in a presentation.
+// Display the updated XML with the new attribute value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

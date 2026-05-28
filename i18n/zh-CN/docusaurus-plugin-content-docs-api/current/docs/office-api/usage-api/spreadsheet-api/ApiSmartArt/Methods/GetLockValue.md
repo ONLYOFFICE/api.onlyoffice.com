@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中绘图对象指定锁定类型的锁定值。
+检索电子表格中绘图的保护设置。
 
 ```javascript editor-xlsx
-// How to know a lock type of a drawing in a spreadsheet.
+// How do I check whether a specific restriction is enabled on a drawing in a spreadsheet?
 
-// Set a drawing's lock type and display it in the worksheet.
+// Verify that a drawing is locked against a particular action in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

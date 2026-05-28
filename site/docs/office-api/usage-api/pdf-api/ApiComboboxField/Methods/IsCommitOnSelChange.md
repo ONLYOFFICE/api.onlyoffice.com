@@ -6,12 +6,12 @@ Inherited from [ApiBaseListField.IsCommitOnSelChange](../../ApiBaseListField/Met
 
 ## Example
 
-Get commit on selection change prop from field with list of options in a PDF document.
+Check if a dropdown field auto-submits when a selection changes in a PDF.
 
 ```javascript editor-pdf
-// How can I is commit on sel change using a list field in a PDF document?
+// How do I determine if a field triggers submission on selection change in a PDF?
 
-// Is commit on sel change for a list field in a PDF document.
+// Verify the auto-commit setting for a dropdown list in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

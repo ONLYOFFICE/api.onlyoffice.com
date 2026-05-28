@@ -20,12 +20,12 @@ expression.GetUsedRange();
 
 ## 示例
 
-获取表示电子表格中指定工作表上已使用范围的单元格范围对象。
+查找电子表格工作表上哪些单元格实际包含数据。
 
 ```javascript editor-xlsx
-// How to get used ranges from the worksheet.
+// Detect the exact boundaries of content without empty rows or columns in a spreadsheet?
 
-// Get used ranges and fill it with color in a spreadsheet.
+// Shade all populated cells with a background color to visualize data extent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let usedRange = worksheet.GetUsedRange();

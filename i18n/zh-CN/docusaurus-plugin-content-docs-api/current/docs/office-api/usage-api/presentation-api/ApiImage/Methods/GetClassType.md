@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中图像对象的类类型。
+获取演示文稿中图像的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of an image in a presentation?
+// How do I identify the object type of an image in a presentation?
 
-// Get the class type of an image and display it in the presentation.
+// Retrieve the class type identifier of an image in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

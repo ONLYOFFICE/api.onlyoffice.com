@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取弧线参数，包括半径和角度。在单元格中显示弧线宽度半径、高度半径、起始角和扫掠角。
+读取弧围绕其中心扫过的角度并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// How can I get the sweep angle using a path command in a spreadsheet?
+// How do I find the total rotation span of an arc path command in a spreadsheet?
 
-// Get the sweep angle for a path command in a spreadsheet.
+// Verify the angular extent of a curved segment on a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

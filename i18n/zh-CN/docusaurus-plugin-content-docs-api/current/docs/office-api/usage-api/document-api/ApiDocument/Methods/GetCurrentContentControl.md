@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中当前选中的内容控件。
+检索文档中当前选定的内容控件。
 
 ```javascript editor-docx
-// How to get current content control for a document content?
+// How do I get the content control that is active at the cursor position in a document?
 
-// Get current content control and display the result in a document.
+// Verify which control is selected before applying conditional formatting or reading its contents.
 
 const doc = Api.GetDocument();
 

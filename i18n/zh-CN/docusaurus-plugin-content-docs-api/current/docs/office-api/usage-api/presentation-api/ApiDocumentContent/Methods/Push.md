@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-向演示文稿添加段落。
+向演示文稿中形状文本内容的末尾添加新段落。
 
 ```javascript editor-pptx
-// How to insert an element into a slide shape.
+// How do I append a new paragraph to a shape's existing content in a presentation?
 
-// Get a slide shape's content and add a text to it.
+// Get a shape, clear its existing text, and add a new paragraph with text to it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

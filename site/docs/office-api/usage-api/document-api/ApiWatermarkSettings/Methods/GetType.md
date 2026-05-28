@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a watermark type and paste it into the document.
+Read whether the watermark is text or an image in a document.
 
 ```javascript editor-docx
-// How to get type of the watermark in a document.
+// How do I find out what kind of watermark is applied in a document?
 
-// Display the name of the watermark style in a document.
+// Determine the category of the watermark currently used in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

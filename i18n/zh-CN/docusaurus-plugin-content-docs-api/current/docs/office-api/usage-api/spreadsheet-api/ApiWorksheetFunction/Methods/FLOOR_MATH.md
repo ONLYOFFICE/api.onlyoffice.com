@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中将数字向下舍入到最接近的整数或有效数字倍数。
+在电子表格中将数字向下舍入到最近的整数或倍数。
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest integer in a spreadsheet.
+// How do I round down a negative or positive number in a spreadsheet?
 
-// Use function to round down a number with specified decimal points in a spreadsheet.
+// Decrease a number to the nearest whole number or custom increment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

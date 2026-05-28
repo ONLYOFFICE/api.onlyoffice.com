@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置段落右侧缩进。
+设置演示文稿中段落的右边距。
 
 ```javascript editor-pptx
-// How to set a right side indentation using a paragraph properties in a presentation.
+// How do I indent text from the right side in a presentation?
 
-// Create a paragraph setting its right side indentation property in a presentation.
+// Adjust the right indentation of a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

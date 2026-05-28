@@ -22,12 +22,12 @@ expression.GetReply(nIndex);
 
 ## 示例
 
-获取文档中指定的批注回复。
+通过索引访问文档中批注的特定回复。
 
 ```javascript editor-docx
-// Get a comment reply by knowing its index in a document.
+// How do I retrieve a particular reply from a comment thread in a document?
 
-// How to get the first comment reply text and display it in the document.
+// Read a reply's text to display or process individual responses in a comment thread.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

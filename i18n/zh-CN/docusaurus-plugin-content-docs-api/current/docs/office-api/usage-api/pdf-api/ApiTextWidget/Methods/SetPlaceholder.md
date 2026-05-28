@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPlaceholder(sPlaceholder);
+expression.SetPlaceholder(placeholder);
 ```
 
 `expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetPlaceholder(sPlaceholder);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPlaceholder | 必需 | string |  | 字段占位符 |
+| placeholder | 必需 | string |  | 占位符文本。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本控件设置占位符。
+在 PDF 中添加在文本字段中输入前显示的提示文本。
 
 ```javascript editor-pdf
-// How do I set placeholder in a PDF document?
+// How do I add a hint text to an empty text field in a PDF?
 
-// Set placeholder using a text widget object in a PDF document.
+// Configure what example text shows when a text field is empty in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

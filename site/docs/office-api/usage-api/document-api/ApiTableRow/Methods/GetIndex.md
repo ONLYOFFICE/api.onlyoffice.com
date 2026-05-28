@@ -20,12 +20,12 @@ Number
 
 ## Example
 
-Get the row index in a document.
+Find the position of a row within a table in a document.
 
 ```javascript editor-docx
-// Display the row index in a document.
+// How do I determine which row number a specific row occupies in a document?
 
-// Get the index of the table row in a document.
+// Retrieve the numeric position of a table row to reference it by order in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

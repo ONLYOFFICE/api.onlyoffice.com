@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-在演示文稿中创建标识符为 'dk1' 的方案颜色。
+在演示文稿中使用主题标识符创建配色方案颜色。
 
 ```javascript editor-pptx
-// How to create a new scheme color in a presentation.
+// How do I apply a theme color to a shape in a presentation?
 
-// Add a scheme color to create a solid fill in a presentation.
+// Use a scheme color to fill a shape with a color from the presentation theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

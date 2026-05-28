@@ -5,7 +5,7 @@ Sets the outline properties to the current shape.
 ## Syntax
 
 ```javascript
-expression.SetLine(oStroke);
+expression.SetLine(stroke);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetLine(oStroke);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the shape outline. |
+| stroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the shape outline. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the outline properties to a shape. Creates a rectangle and change its outline to a thick blue line in a PDF document.
+Add a border to a shape in a PDF.
 
 ```javascript editor-pdf
-// How to set line for a shape in a PDF document?
+// How do I customize the outline of a shape in a PDF?
 
-// Set line and display the result in a PDF document.
+// Give a shape a colored border with specific thickness in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

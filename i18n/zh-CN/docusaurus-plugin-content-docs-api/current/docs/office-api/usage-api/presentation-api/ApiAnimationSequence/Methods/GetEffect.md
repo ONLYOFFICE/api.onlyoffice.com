@@ -22,12 +22,12 @@ expression.GetEffect(index);
 
 ## 示例
 
-从演示文稿中的动画序列获取指定索引处的效果。
+按位置从演示文稿中的序列获取动画效果。
 
 ```javascript editor-pptx
-// How do I get the effect in a presentation?
+// How do I access a specific animation from a list of animations in a presentation?
 
-// Get the effect using an animation sequence object in a presentation.
+// Retrieve an animation effect at a given index in a sequence in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

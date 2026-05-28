@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 合并单元格区域
 
 合并选定的单元格区域。
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Merge cells](/assets/images/plugins/merge-cells.png#gh-light-mode-only)![Insert text](/assets/images/plugins/merge-cells.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/merge-cell-range" dark />

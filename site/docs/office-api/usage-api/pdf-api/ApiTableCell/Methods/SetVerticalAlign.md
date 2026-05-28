@@ -5,7 +5,7 @@ Specifies the vertical alignment for text within the current table cell.
 ## Syntax
 
 ```javascript
-expression.SetVerticalAlign(sType);
+expression.SetVerticalAlign(verticalAlign);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -14,7 +14,7 @@ expression.SetVerticalAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment. |
+| verticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The vertical alignment type. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-How to set the cell text vertical alignment.
+Set vertical alignment of text within a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create a table and set the text alignment of its cell from the row.
+// How do I position text vertically within a cell in a PDF?
 
-// Use table cell to set vertical align.
+// Align content to the top, middle, or bottom of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

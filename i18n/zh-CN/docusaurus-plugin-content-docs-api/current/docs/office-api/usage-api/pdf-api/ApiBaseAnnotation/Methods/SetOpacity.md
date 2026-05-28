@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetOpacity(name);
+expression.SetOpacity(value);
 ```
 
 `expression` - 表示 [ApiBaseAnnotation](../ApiBaseAnnotation.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetOpacity(name);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
+| value | 必需 | [percentage](../../Enumeration/percentage.md) |  | 不透明度值，从 0（透明）到 100（不透明）。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置不透明度。
+在 PDF 中使注释透明或不透明。
 
 ```javascript editor-pdf
-// How do I set opacity in a PDF document?
+// Adjust the transparency level of an annotation in a PDF.
 
-// Set opacity using an annotation object in a PDF document.
+// Control how solid or see-through an annotation appears in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

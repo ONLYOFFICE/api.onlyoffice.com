@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the quotient of two complex numbers in a spreadsheet.
+Divide one complex number by another in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the quotient of two comlex numbers in a spreadsheet.
+// How do I divide two complex numbers in a spreadsheet?
 
-// Use a function to get the quotient in a spreadsheet.
+// Get the quotient of complex numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

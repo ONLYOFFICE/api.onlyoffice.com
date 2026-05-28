@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中渐变光圈返回的类类型。
+确定 PDF 中渐变光圈对象的类型。
 
 ```javascript editor-pdf
-// How do I check what type a gradient stop object is in a PDF document?
+// How can I find the object type of a gradient stop in a PDF?
 
-// Retrieve and output the class type string for a gradient stop in a PDF document.
+// Retrieve the class type information for a gradient color stop in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

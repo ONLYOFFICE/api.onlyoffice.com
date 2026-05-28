@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-Select a pivot table in a spreadsheet.
+Highlight the entire pivot table range as the active selection in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select a table in a spreadsheet.
+// How do I programmatically select a whole pivot table at once in a spreadsheet?
 
-// Create a pivot table, add data to it then select it in a spreadsheet.
+// Focus the cursor on a pivot table so it becomes the current selection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

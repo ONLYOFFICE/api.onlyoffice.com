@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+读取文档中为形状绘图路径设置的高度值。
 
 ```javascript editor-docx
-// How to get the height for a geometry path in a document?
+// How do I find out the height of a shape's path area in a document?
 
-// Get the height and display the result in a document.
+// Confirm the vertical size of a path before scaling or repositioning a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

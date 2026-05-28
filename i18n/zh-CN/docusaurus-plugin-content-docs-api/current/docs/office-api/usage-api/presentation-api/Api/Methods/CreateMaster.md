@@ -22,12 +22,12 @@ expression.CreateMaster(oTheme);
 
 ## 示例
 
-在演示文稿中创建幻灯片母版。
+向演示文稿添加幻灯片母版布局。
 
 ```javascript editor-pptx
-// How to add master to the slide.
+// How do I create a slide master in a presentation?
 
-// Create new slide master and apply it to the slide.
+// Apply a new master to a presentation at a specific position.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

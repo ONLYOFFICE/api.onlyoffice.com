@@ -1,6 +1,6 @@
 # GetRangeByNumber
 
-返回使用 -**行/列** 坐标进行单元格选择的当前工作表选定区域的对象。
+使用 **行/列** 坐标返回表示当前工作表所选范围的对象。
 
 ## 语法
 
@@ -23,12 +23,12 @@ expression.GetRangeByNumber(nRow, nCol);
 
 ## 示例
 
-使用行/列坐标获取表示电子表格中工作表选定范围的对象。
+使用行号和列号而非字母在电子表格中定位单元格。
 
 ```javascript editor-xlsx
-// How to get a range using its coordinates in a spreadsheet.
+// Pick cells by their numeric positions without using address notation in a spreadsheet?
 
-// Get range by number and set its value in a spreadsheet.
+// Enter data into a cell when you know only its row and column count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRangeByNumber(1, 2).SetValue("42");

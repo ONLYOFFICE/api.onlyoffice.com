@@ -3,6 +3,8 @@ description: Insert a new page into a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Insert page
 
 This function inserts a new page into the document at a specified location.
@@ -109,11 +111,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/insert-page.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/insert-page.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/document-editor/insert-page" dark />

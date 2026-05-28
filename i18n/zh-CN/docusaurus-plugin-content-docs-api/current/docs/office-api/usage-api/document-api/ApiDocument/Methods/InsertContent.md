@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档的当前位置插入元素数组。
+在文档中当前位置插入元素集合。
 
 ```javascript editor-docx
-// How to insert the paragraph to the document.
+// How do I add multiple paragraphs at once to a document?
 
-// Create a paragraph and show it in a document.
+// Programmatically place pre-built content blocks into the document without appending them one by one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

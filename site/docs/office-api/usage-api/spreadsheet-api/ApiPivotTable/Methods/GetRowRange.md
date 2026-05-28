@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get row range of a pivot table in a spreadsheet.
+Read the row area of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table row range in a spreadsheet.
+// How do I find which cells make up the row section of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its row range and select it in a spreadsheet.
+// Select the row band of a pivot table to highlight or inspect it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

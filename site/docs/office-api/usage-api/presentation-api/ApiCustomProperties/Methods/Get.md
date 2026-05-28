@@ -22,12 +22,12 @@ string \| number \| Date \| boolean \| null
 
 ## Example
 
-Get the value of a custom property by its name in a presentation.
+Retrieve a custom property value by name in a presentation.
 
 ```javascript editor-pptx
-// Return null for properties that do not exist.
+// How do I read a custom property from a presentation?
 
-// Get using a custom properties object in a presentation.
+// Access custom metadata and handle missing properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();

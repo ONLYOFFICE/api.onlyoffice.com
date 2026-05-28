@@ -22,12 +22,12 @@ object
 
 ## 示例
 
-将段落转换为 JSON，然后从 JSON 恢复。
+从 JSON 表示恢复段落并将其插入到文档中。
 
 ```javascript editor-docx
-// Create a paragraph, convert it to the JSON object, and then converts it back to the paragraph object in a document.
+// How do I recreate a paragraph from a JSON object in a document?
 
-// How to convert the specified JSON object into the Document Builder object of the corresponding type.
+// Save a paragraph as JSON and then rebuild it as a bold paragraph in a document.
 
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("This is a new paragraph");

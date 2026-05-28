@@ -20,12 +20,12 @@ expression.GetMinPointType();
 
 ## 示例
 
-从数据条条件格式规则获取最小点类型。
+读取电子表格中数据条下边界的定义方式。
 
 ```javascript editor-xlsx
-// How to check the type of the minimum condition value in a spreadsheet.
+// How do I find out what method sets the minimum end of a data bar in a spreadsheet?
 
-// Get the minimum point type of a data bar conditional formatting rule.
+// Identify whether the bottom limit of a data bar uses a fixed value, percentage, or automatic setting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -1,6 +1,6 @@
 # EmusToMillimeters
 
-Converts English measure units (EMU) to millimeters.
+Converts English Metric Units (EMUs) to millimeters.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.EmusToMillimeters(emu);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| emu | Required | [EMU](../../Enumeration/EMU.md) |  | No description provided. |
+| emu | Required | [EMU](../../Enumeration/EMU.md) |  | The value in English Metric Units (EMUs). |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.EmusToMillimeters(emu);
 
 ## Example
 
-Convert emus to millimeters in a PDF document.
+Convert measurement units from emus to millimeters in a PDF.
 
 ```javascript editor-pdf
-// How do I convert emus to millimeters in a PDF document?
+// How do I convert emus to millimeters for layout in a PDF?
 
-// Convert emus to millimeters and display the result in a PDF document.
+// Translate emu values to millimeter measurements and display the conversion in a PDF.
 
 const emus = 780000;
 const millimeters = Api.EmusToMillimeters(emus);

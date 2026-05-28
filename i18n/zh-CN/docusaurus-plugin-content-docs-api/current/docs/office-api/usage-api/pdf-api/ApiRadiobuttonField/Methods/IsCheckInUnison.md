@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中单选按钮字段的统一选中属性。
+了解 PDF 中单选按钮选项是否已链接。
 
 ```javascript editor-pdf
-// How do I is check in unison in a PDF document?
+// How do I check if radio button choices work together in a PDF?
 
-// Is check in unison using a radio button field object in a PDF document.
+// Verify the unified selection setting for radio buttons in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

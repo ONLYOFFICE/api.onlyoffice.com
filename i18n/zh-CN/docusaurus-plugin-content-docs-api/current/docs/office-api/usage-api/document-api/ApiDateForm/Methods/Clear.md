@@ -6,12 +6,12 @@
 
 ## 示例
 
-清除当前表单。
+清除文档中文本表单字段的输入值。
 
 ```javascript editor-docx
-// How to remove texy from the form.
+// How do I clear the content of a form in a document?
 
-// Clear answer from the text form.
+// Reset a filled-in form field to blank so it is ready for new input in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

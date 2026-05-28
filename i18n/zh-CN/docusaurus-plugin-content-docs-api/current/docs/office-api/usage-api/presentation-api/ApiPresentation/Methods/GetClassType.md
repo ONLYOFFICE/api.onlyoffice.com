@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿的类类型。
+识别演示文稿中的对象类型。
 
 ```javascript editor-pptx
-// How to identify the class type of a presentation?
+// How do I verify that an object is a presentation in a presentation?
 
-// Obtain the class type identifier of a presentation object.
+// Display the class type identifier for a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

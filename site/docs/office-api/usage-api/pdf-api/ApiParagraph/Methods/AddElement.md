@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add a run to the paragraph in a PDF document.
+Insert text content into a paragraph in a PDF.
 
 ```javascript editor-pdf
-// Insert a text run to the paragraph object in a PDF document.
+// How do I add text to a paragraph in a PDF?
 
-// How to add the text run object to the page.
+// Place a text element within a paragraph to display content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

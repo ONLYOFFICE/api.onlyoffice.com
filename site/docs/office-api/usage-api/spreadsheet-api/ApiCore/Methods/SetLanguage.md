@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the language of the workbook using the core properties in a spreadsheet.
+Record the primary language of a workbook in its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I set language using a core properties in a spreadsheet?
+// How do I specify the language used in a workbook's metadata in a spreadsheet?
 
-// Set language for a core properties in a spreadsheet.
+// Mark the workbook with a locale code so readers know which language it targets in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

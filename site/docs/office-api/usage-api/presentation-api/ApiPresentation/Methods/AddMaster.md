@@ -5,7 +5,7 @@ Adds the slide master to the presentation slide masters collection.
 ## Syntax
 
 ```javascript
-expression.AddMaster(nPos, oApiMaster);
+expression.AddMaster(pos, apiMaster);
 ```
 
 `expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
@@ -14,8 +14,8 @@ expression.AddMaster(nPos, oApiMaster);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Optional | number | ApiPresentation.GetMastersCount() | No description provided. |
-| oApiMaster | Required | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | The slide master to be added. |
+| pos | Optional | number | ApiPresentation.GetMastersCount() | The position where the slide master will be added. |
+| apiMaster | Required | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | The slide master to be added. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add the slide master to the presentation slide masters collection.
+Add a new master slide to a presentation.
 
 ```javascript editor-pptx
-// How to add a presentation master.
+// How do I create and add a master slide to a presentation?
 
-// Create a shape and set its placeholder type to "chart" in a presentation.
+// Create a master slide and add it to the presentation's master collection.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

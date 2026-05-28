@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的拖动到行属性。
+允许或阻止透视字段被拖动到电子表格中的行区域。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to row in a spreadsheet.
+// How do I control whether a pivot field can be moved to the row section in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to row of a specified pivot in a spreadsheet.
+// Lock a pivot field's position to stop users from repositioning it as a row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

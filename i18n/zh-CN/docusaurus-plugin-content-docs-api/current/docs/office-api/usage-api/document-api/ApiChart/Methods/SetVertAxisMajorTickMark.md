@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中垂直轴的主要刻度线。
+设置文档中图表垂直轴上主刻度线的样式。
 
 ```javascript editor-docx
-// How to set a major tick mark using predefined symbols in a document.
+// How do I choose the shape of the main interval markers on the vertical axis in a document?
 
-// Create a chart, set its properties and major tick mark for vertical axis in a document.
+// Use major tick marks to help readers trace values across a chart grid in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

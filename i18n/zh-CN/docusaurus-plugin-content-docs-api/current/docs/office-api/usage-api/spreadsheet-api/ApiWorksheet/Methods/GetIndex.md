@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中工作表的左边距。
+查找电子表格中工作表在所有工作表中的位置。
 
 ```javascript editor-xlsx
-// How to get margin of the sheet's left side in a spreadsheet.
+// How do I get the tab number of the active sheet in a spreadsheet?
 
-// Get the size of the left margin of the sheet in a spreadsheet.
+// Identify the sheet order index and display it in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let leftMargin = worksheet.GetLeftMargin();

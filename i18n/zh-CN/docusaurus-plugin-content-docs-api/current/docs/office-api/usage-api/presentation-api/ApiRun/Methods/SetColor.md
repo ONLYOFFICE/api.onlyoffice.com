@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-以 RGB 格式为当前文本 run 设置文本颜色。
+设置演示文稿中的文本颜色。
 
 ```javascript editor-pptx
-// How to change text color in a presentation.
+// What colors can be applied to text in a presentation?
 
-// Create a new text run and change its font color in a presentation.
+// Change the font color of text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -14,7 +14,7 @@ expression.SetStartStyle(style);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | No description provided. |
+| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | The style of the line start endpoint. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set start line style to line annotation in a PDF document.
+Customize the start appearance of a line annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I set start style in a PDF document?
+// How do I change the start style in a PDF?
 
-// Set start style using a line annotation object in a PDF document.
+// Apply a specific line beginning to the annotation in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});

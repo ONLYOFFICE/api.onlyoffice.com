@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a document object.
+Read the class type identifier of a document object in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a document?
+// How do I check what class type a document object belongs to in a document?
 
-// Get the class type of a document and display it in the document.
+// Confirm the object kind before processing it by reading its class type in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

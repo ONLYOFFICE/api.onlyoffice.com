@@ -18,16 +18,16 @@ expression.SetHidden(isHidden);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-设置电子表格中的值隐藏属性。
+隐藏行使其内容在电子表格中不可见。
 
 ```javascript editor-xlsx
-// How to hide cells from a range.
+// How do I make certain rows disappear from view in a spreadsheet?
 
-// Get a range and make specified cells invisible.
+// Keep data in place but prevent specific rows from showing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRows("1:3");

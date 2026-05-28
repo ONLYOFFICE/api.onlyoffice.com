@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中第一页的页面索引并在文本字段中显示。
+检索 PDF 中页面的顺序位置。
 
 ```javascript editor-pdf
-// How can I get the index using a page in a PDF document?
+// How do I find which page number I'm on in a PDF?
 
-// Get the index for a page in a PDF document.
+// Access the page position to identify its location in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

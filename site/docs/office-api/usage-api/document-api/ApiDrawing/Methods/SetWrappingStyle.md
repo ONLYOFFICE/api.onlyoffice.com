@@ -1,14 +1,14 @@
 # SetWrappingStyle
 
 Sets the wrapping type of the current object (image, shape, chart). One of the following wrapping style types can be set:
--**"inline"** - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.
+- **"inline"** - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.
 If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly:
--**"square"** - the text wraps the rectangular box that bounds the object.
--**"tight"** - the text wraps the actual object edges.
--**"through"** - the text wraps around the object edges and fills in the open white space within the object.
--**"topAndBottom"** - the text is only above and below the object.
--**"behind"** - the text overlaps the object.
--**"inFront"** - the object overlaps the text.
+- **"square"** - the text wraps the rectangular box that bounds the object.
+- **"tight"** - the text wraps the actual object edges.
+- **"through"** - the text wraps around the object edges and fills in the open white space within the object.
+- **"topAndBottom"** - the text is only above and below the object.
+- **"behind"** - the text overlaps the object.
+- **"inFront"** - the object overlaps the text.
 
 ## Syntax
 
@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-Create a shape with wrapping style "square" in a document.
+Make text wrap around a shape using the square wrapping style in a document.
 
 ```javascript editor-docx
-// How to wrap the shape with squared style in a document.
+// How do I control how text flows around a drawing in a document?
 
-// Create a drawing, add its properties and set its wrapping style in a document.
+// Keep a fixed gap between surrounding text and all sides of a floating shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

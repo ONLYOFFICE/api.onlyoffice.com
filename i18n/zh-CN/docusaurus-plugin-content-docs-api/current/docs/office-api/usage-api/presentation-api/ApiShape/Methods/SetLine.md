@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。在演示文稿中创建矩形并将其轮廓更改为粗蓝线。
+将形状的轮廓从无边框更改为粗蓝线。
 
 ```javascript editor-pptx
-// How to set line for a shape in a presentation?
+// Create a rectangle with no stroke and display the initial state.
 
-// Set line and display the result in a presentation.
+// Apply a 3-point blue line and show the updated appearance.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

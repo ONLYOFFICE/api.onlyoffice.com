@@ -1,17 +1,35 @@
 # Copy
 
-Creates a copy of the specified drawing object.
+Creates a copy of the specified shape.
 
-Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
+:::
+
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiShape](../../ApiShape/ApiShape.md)
 
 ## Example
 
-How to create the same page shape.
+Duplicate a shape and place the copy on another page in a PDF.
 
 ```javascript editor-pdf
-// Get a page shape, add it to the page and create its copy.
+// How do I make a copy of a shape in a PDF?
 
-// Copy using a drawing object object in a PDF document.
+// Create an exact duplicate of a shape and add it to a new page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -20,7 +38,6 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-shape.SetSize(150 * 36000, 65 * 36000);
 page.AddObject(shape);
 
 const copyShape = shape.Copy();

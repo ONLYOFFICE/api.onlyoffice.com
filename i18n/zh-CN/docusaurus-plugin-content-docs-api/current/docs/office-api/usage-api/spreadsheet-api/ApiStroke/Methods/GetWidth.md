@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-获取笔触的宽度（EMU）。在电子表格中创建具有不同边框宽度的形状并显示其宽度。
+读取电子表格中形状的边框厚度。
 
 ```javascript editor-xlsx
-// How to get the width for a stroke in a spreadsheet?
+// How do I find out how wide a shape border is in a spreadsheet?
 
-// Get the width and display the result in a spreadsheet.
+// Measure the exact border width and display it as a readable value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

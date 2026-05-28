@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBorderWidth(sBorderWidth);
+expression.SetBorderWidth(borderWidth);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBorderWidth(sBorderWidth);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 未提供描述。 |
+| borderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 要设置的边框宽度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段控件的边框宽度。
+设置 PDF 中字段控件的边框粗细。
 
 ```javascript editor-pdf
-// How do I set border width in a PDF document?
+// How do I change the border width for widgets in a PDF?
 
-// Set border width using a widget object in a PDF document.
+// Apply different border thicknesses to widget outlines in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

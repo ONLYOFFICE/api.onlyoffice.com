@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetRow(nIndex);
+expression.GetRow(rowIndex);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetRow(nIndex);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nIndex | 必需 | number |  | 表格中的行索引（位置）。 |
+| rowIndex | 必需 | number |  | 表格中从零开始的行索引。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.GetRow(nIndex);
 
 ## 示例
 
-如何从 PDF 文档中的表格获取行对象。
+从 PDF 中的表格访问特定行。
 
 ```javascript editor-pdf
-// Create a table, add rows and columns, then get its row by index in a PDF document.
+// How do I select a table row by its position in a PDF?
 
-// Get the row for a table in a PDF document.
+// Extract the row you need from a table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

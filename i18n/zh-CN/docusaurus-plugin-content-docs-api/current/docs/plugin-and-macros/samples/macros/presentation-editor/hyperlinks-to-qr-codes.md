@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 将超链接转换为二维码
 
 使用外部 API 将演示文稿中的所有超链接转换为二维码。
@@ -62,4 +64,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.png#gh-light-mode-only)![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes" dark />

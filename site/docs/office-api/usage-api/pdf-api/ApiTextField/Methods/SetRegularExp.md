@@ -5,7 +5,7 @@ Sets regular expression validate string for field.
 ## Syntax
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | Required | string |  | field regular expression (e.g. "\\S+@\\S+\\.\\S+") |
+| regularExpression | Required | string |  | The validation regular expression (e.g. "\\S+@\\S+\\.\\S+") |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set regular expression validate for it in a PDF document.
+Validate text entries using pattern matching rules in a PDF text field.
 
 ```javascript editor-pdf
-// How can I set regular exp using a text field in a PDF document?
+// How do I check that users enter valid email addresses or specific formats in a PDF?
 
-// Set regular exp for a text field in a PDF document.
+// Apply validation rules to ensure text matches a required pattern in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

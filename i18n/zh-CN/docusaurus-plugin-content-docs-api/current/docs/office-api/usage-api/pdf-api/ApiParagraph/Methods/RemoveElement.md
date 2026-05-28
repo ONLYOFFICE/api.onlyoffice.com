@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中使用指定位置移除元素。
+从 PDF 中的段落删除特定元素。
 
 ```javascript editor-pdf
-// How to remove an element from the paragraph using its position index in a PDF document.
+// How do I remove an element by its position in a paragraph in a PDF?
 
-// Delete an element from the paragraph in a PDF document.
+// Eliminate an element at a given index from a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

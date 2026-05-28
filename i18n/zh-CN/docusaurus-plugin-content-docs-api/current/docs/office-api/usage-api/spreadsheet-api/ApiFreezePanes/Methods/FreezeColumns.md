@@ -22,12 +22,12 @@ expression.FreezeColumns(count);
 
 ## 示例
 
-在电子表格中冻结第一列。
+锁定一个或多个最左列使其在向右滚动时保持可见。
 
 ```javascript editor-xlsx
-// How to freeze columns using their indices in a spreadsheet.
+// How do I stop columns from moving out of view when scrolling horizontally in a spreadsheet?
 
-// Get freeze panes and freeze a column using its index in a spreadsheet.
+// Pin the leading columns in place to keep key labels visible at all times in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

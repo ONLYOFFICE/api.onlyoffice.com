@@ -27,9 +27,9 @@ number
 在电子表格中返回国库券每 $100 面值的价格。
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value for a Treasury bill in a spreadsheet.
+// Calculate the price based on Treasury bill settlement, maturity, and discount rate.
 
-// Use a function to calculate the price per $100 face value in a spreadsheet.
+// Apply the TBILLPRICE function with date and discount parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

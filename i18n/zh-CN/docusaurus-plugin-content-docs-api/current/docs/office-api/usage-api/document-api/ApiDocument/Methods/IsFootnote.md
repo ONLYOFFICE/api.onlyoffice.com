@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查文档内容是否为脚注。
+检测文档中的注释是否为脚注。
 
 ```javascript editor-docx
-// How to add footnote to the document.
+// How do I check if a note content block belongs to a footnote in a document?
 
-// Is footnote using a document content object.
+// Verify note type to decide whether to display bottom-of-page or end-of-document reference text.
 
 let doc = Api.GetDocument();
 let footnote = doc.AddFootnote();

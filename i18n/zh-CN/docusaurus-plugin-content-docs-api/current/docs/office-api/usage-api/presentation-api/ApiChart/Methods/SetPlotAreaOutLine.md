@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表绘图区域设置轮廓。
+在演示文稿中为图表绘图区添加边框。
 
 ```javascript editor-pptx
-// How to set an outline color for the plot area in a presentation.
+// How do I add a border around the area where the chart data is displayed in a presentation?
 
-// Create a chart, set its properties and its plot area outline in a presentation.
+// Apply a custom color and thickness to the plot area border in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

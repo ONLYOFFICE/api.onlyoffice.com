@@ -4,6 +4,8 @@ description: Set tip text for all checkboxes with a specified key.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Set checkbox tip text
 
 Sets the desired tip text to all checkboxes with a certain key.
@@ -28,5 +30,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.png#gh-light-mode-only)
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-checkbox-tip-text" dark />

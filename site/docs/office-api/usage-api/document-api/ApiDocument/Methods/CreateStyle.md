@@ -1,11 +1,11 @@
 # CreateStyle
 
-Creates a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.
+Creates a new style with the specified type and name. If a style with the specified name already exists, it will be returned without creating a new one.
 
 ## Syntax
 
 ```javascript
-expression.CreateStyle(sStyleName, sType);
+expression.CreateStyle(styleName, type);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,8 +14,8 @@ expression.CreateStyle(sStyleName, sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | Required | string |  | The name of the style which will be created. |
-| sType | Optional | [StyleType](../../Enumeration/StyleType.md) | "paragraph" | The document element which the style will be applied to. |
+| styleName | Required | string |  | The name of the style which will be created. |
+| type | Optional | [StyleType](../../Enumeration/StyleType.md) | "paragraph" | The document element which the style will be applied to. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.CreateStyle(sStyleName, sType);
 
 ## Example
 
-Create a new style with the "Heading 1" type and "paragraph" name in a document.
+Define a custom paragraph style with a specific font, color, and spacing in a document.
 
 ```javascript editor-docx
-// How to create a paragraph and set its style as a heading in a document.
+// How do I create a reusable heading style and apply it to a paragraph in a document?
 
-// Set style of the paragraph in a document.
+// Give a heading a unique color and size so it stands out visually from body text in a document.
 
 let doc = Api.GetDocument();
 let heading1Style = doc.CreateStyle("Heading 1", "paragraph");

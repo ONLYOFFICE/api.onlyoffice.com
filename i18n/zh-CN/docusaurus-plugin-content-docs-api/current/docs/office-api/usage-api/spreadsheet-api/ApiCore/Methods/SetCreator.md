@@ -22,12 +22,12 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-在电子表格中使用核心属性设置当前工作簿的创建者。
+为电子表格工作簿的文档属性分配作者姓名。
 
 ```javascript editor-xlsx
-// How to set creator for a core properties in a spreadsheet?
+// How do I record who created a workbook in a spreadsheet?
 
-// Set creator and display the result in a spreadsheet.
+// Store the author's identity in the workbook metadata in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

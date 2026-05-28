@@ -14,7 +14,7 @@ expression.ISNUMBER(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。该值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查值是否为数字，并返回 true 或 false。
+验证电子表格中的单元格是否包含数值。
 
 ```javascript editor-xlsx
-// How to check if the cell contains a number.
+// How do I check if a cell holds a number in a spreadsheet?
 
-// Use a function to check whether a range data is a numerical value in a spreadsheet.
+// Use a function to filter cells by numeric content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

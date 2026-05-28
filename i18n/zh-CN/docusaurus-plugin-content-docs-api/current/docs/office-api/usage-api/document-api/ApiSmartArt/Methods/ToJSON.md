@@ -6,12 +6,12 @@
 
 ## 示例
 
-将文档中的绘图对象转换为 JSON 对象。
+将绘图序列化为 JSON 并在文档中恢复为新形状。
 
 ```javascript editor-docx
-// How to get a JSON object from the drawing in a document.
+// How do I convert a drawing object to JSON in a document?
 
-// Convert the shape to json and add it to the paragraph in a document.
+// Duplicate a shape by exporting it to JSON and rebuilding it from that data in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

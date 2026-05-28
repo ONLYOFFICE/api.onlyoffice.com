@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-取消文档中组绘图元素的分组。
+在文档中将分组的形状分离回各个独立绘图。
 
 ```javascript editor-docx
-// How to remove grouping from the two shapes in a document.
+// How do I ungroup shapes that were combined into a group in a document?
 
-// Ungroup for a group in a document.
+// Release a group so each shape can be moved or edited independently in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

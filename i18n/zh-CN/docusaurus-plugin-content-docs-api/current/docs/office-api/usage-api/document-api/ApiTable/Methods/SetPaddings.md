@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格内边距。
+设置文档中表格单元格内容与单元格边缘之间的间距。
 
 ```javascript editor-docx
-// How to set paddings of the table in a document.
+// How do I add inner spacing to all cells of a table in a document?
 
-// Create a table and specify its paddings in a document.
+// Control how much breathing room text has inside each table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

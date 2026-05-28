@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取电子表格中指定字体的父字符对象。
+检索电子表格中字体设置所属的字符对象。
 
 ```javascript editor-xlsx
-// How to determine a font object's parent in a spreadsheet.
+// How do I get back to the characters object from a font so I can change its text in a spreadsheet?
 
-// Get a parent of a font and add text to it in a spreadsheet.
+// Navigate from a font up to its owning characters object to update the displayed text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

@@ -15,7 +15,7 @@ expression.SetBorderEffectIntensity(value);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| value | 必需 | number |  | 未提供描述。 |
+| value | 必需 | number |  | 边框效果强度。必须大于或等于 0。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并设置边框效果强度。
+控制 PDF 中注释上边框效果的强度。
 
 ```javascript editor-pdf
-// How to set border effect intensity for an annotation in a PDF document?
+// How strong should a border effect appear on an annotation in a PDF?
 
-// Set border effect intensity and display the result in a PDF document.
+// Adjust the intensity level of a visual effect applied to an annotation's border in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPercentageFormat(nDemical, sSepStyle);
+expression.SetPercentageFormat(decimalPlaces, separatorStyle);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetPercentageFormat(nDemical, sSepStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDemical | 必需 | number |  | 小数位数 |
-| sSepStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔样式 |
+| decimalPlaces | 必需 | number |  | 小数点后的位数。 |
+| separatorStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔符样式。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置百分比格式。
+在 PDF 文本字段中将数字转换并显示为百分比。
 
 ```javascript editor-pdf
-// How to set percentage format for a text field?
+// How do I show decimal values as percentages in a PDF?
 
-// Set percentage format and display the result in a PDF document.
+// Apply percentage formatting to text input in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

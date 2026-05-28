@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中应用于段落内容的底纹。
+在文档中为段落应用背景底纹颜色。
 
 ```javascript editor-docx
-// How to add shading to the paragraph in a document.
+// How do I fill the background of a paragraph with a color in a document?
 
-// Apply the clear shading to the paragraph in a document.
+// Highlight a paragraph by setting its shading to make it visually distinct from surrounding text.
 
 let doc = Api.GetDocument();
 

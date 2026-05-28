@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return a number from 1 to 7 identifying the day of the week of the specified date in a spreadsheet.
+Get the day of the week as a number from 1 to 7 for a given date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return a weekday in a spreadsheet.
+// How do I identify which day of the week a specific date falls on in a spreadsheet?
 
-// Use a function to get a weekday using numbers in a spreadsheet.
+// Determine the numeric weekday value for any date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

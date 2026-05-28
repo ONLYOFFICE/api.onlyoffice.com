@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Specify the minor tick mark for the horizontal axis in a presentation.
+Set the style of minor tick marks on a chart's horizontal axis in a presentation.
 
 ```javascript editor-pptx
-// How to set a minor tick mark using predefined symbols in a presentation.
+// How do I customize the appearance of minor tick marks on a chart in a presentation?
 
-// Create a chart, set its properties and minor tick mark for horizontal axis in a presentation.
+// Create a chart and apply a specific minor tick mark style to the horizontal axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

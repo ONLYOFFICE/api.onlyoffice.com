@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-获取幻灯片母版中所有图表对象的数组。
+从演示文稿中的幻灯片母版检索所有图表。
 
 ```javascript editor-pptx
-// How to get all charts from the master of presentation.
+// How do I find all charts on a slide master in a presentation?
 
-// Get all charts from the presentation as an array.
+// List every chart object in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

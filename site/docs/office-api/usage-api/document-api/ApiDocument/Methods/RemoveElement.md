@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.RemoveElement](../../ApiDocumentContent/Metho
 
 ## Example
 
-Remove an element using the position specified in a document.
+Delete a specific paragraph from a shape's content by its position in a document.
 
 ```javascript editor-docx
-// Remove the element using its index in a document.
+// How do I remove one paragraph at a given index from a shape's content in a document?
 
-// Remove the element for a document content in a document.
+// Prune a numbered list of paragraphs inside a shape by targeting the unwanted entry's position.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

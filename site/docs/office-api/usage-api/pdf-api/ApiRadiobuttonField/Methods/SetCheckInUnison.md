@@ -5,7 +5,7 @@ Sets field in unison prop.
 ## Syntax
 
 ```javascript
-expression.SetCheckInUnison(bInUnison);
+expression.SetCheckInUnison(checkInUnison);
 ```
 
 `expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
@@ -14,7 +14,7 @@ expression.SetCheckInUnison(bInUnison);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bInUnison | Required | boolean |  | will fields with the same export value be checked at the same time |
+| checkInUnison | Required | boolean |  | Specifies whether fields with the same export value are checked together. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set radiobutton field check in unison property in a PDF document.
+Link radio button options so only one can be selected at a time in a PDF.
 
 ```javascript editor-pdf
-// How to set check in unison for a radio button field in a PDF document?
+// How do I make radio buttons work together in a PDF?
 
-// Set check in unison and display the result in a PDF document.
+// Enable synchronized selection across radio button choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

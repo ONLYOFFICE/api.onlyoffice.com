@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置表单数据。
+使用键为文档中的表单字段填充数据值。
 
 ```javascript editor-docx
-// How to set forms data in the document.
+// How do I fill in form fields programmatically in a document?
 
-// Set forms answers using their keys.
+// Pre-fill checkboxes and text fields by matching each field's key to a corresponding value.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

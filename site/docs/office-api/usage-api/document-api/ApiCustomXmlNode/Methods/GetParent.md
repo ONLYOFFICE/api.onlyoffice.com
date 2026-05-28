@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the parent of a custom XML node and display its value in a document.
+Navigate to the parent of a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I get the parent in a document?
+// How do I get the parent node of a custom XML node in a document?
 
-// Get the parent using a custom XML node object in a document.
+// Move up the XML tree from a child element to find its containing node in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

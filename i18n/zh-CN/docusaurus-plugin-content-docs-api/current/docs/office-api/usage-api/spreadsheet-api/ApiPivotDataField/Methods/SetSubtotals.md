@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的小计。
+选择哪些汇总计算作为电子表格中数据透视表字段的小计显示。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotals in a spreadsheet.
+// How do I control which subtotal types a pivot field displays, such as count or sum, in a spreadsheet?
 
-// Create a pivot table, add data to it then set subtotals of a specified pivot in a spreadsheet.
+// Enable specific aggregation functions on a field to give readers the breakdown they need in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

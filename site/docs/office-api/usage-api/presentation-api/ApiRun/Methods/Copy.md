@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a copy of the run in a presentation.
+Duplicate a text run in a presentation.
 
 ```javascript editor-pptx
-// How to copy a text run object and insert it to the paragraph in a presentation.
+// How do I copy a text run and add it to a paragraph in a presentation?
 
-// Create a duplicate of a text in a presentation.
+// Reuse text formatting and content by copying a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

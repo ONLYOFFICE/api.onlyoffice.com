@@ -23,12 +23,12 @@ expression.SetSuperscript(isSuperscript);
 
 ## 示例
 
-在电子表格中为指定字体设置上标属性。
+在电子表格中将选定的文本字符提升到基线以上作为上标。
 
 ```javascript editor-xlsx
-// How to change a regular text to a superscript in a spreadsheet.
+// How do I format part of the text as superscript in a spreadsheet?
 
-// Get a font object of characters and make it superscript in a spreadsheet.
+// Lift a run of characters upward to create superscript notation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const range = worksheet.GetRange("B1");

@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-创建具有可调参数和参考线的形状。在文档中为自定义几何图形设置文本矩形和连接点。
+定义文档中自定义几何图形形状的文本边界矩形。
 
 ```javascript editor-docx
-// How can I set text rect using a geometry in a document?
+// How do I set the area where text appears inside a custom shape in a document?
 
-// Set text rect for a geometry in a document.
+// Constrain text to a specific region within a non-rectangular custom shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

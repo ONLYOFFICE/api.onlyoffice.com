@@ -22,12 +22,12 @@ expression.GetParagraph(nPos);
 
 ## 示例
 
-从文档范围中的所有段落中获取段落。
+按位置从文档中文本选区内的段落中选取特定段落。
 
 ```javascript editor-docx
-// Get a paragraph using its index position in a document.
+// How do I access a particular paragraph inside a highlighted region in a document?
 
-// Make bold the second paragraph of the range in a document.
+// Target one paragraph among several in a selected area to apply formatting in a document.
 
 let doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);

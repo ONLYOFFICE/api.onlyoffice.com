@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除空文本框
 
 删除演示文稿中所有空的文本框形状。
@@ -54,5 +56,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除空文本框](/assets/images/plugins/remove-empty-text-boxes.png#gh-light-mode-only)
-![删除空文本框](/assets/images/plugins/remove-empty-text-boxes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-empty-text-boxes" dark />

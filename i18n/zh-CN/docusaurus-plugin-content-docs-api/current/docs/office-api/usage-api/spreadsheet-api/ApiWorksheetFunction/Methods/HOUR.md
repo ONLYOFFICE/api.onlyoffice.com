@@ -14,7 +14,7 @@ expression.HOUR(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 日期时间代码中的数字，或时间格式的文本（如 "16:48:00" 或 "4:48:00 PM"），或其他公式或函数的结果。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 日期时间代码中的数字，或时间格式的文本（如 “16:48:00” 或 “4:48:00 PM”），或其他公式或函数的结果。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取小时数，从 0（12:00 A.M.）到 23（11:00 P.M.）。
+从电子表格中的时间值提取小时。
 
 ```javascript editor-xlsx
-// How to get an hour in a spreadsheet.
+// How do I get the hour component from a time in a spreadsheet?
 
-// Use a function to get an hour from a time in a spreadsheet.
+// Return the hour portion of a time as a number from 0 to 23 in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ expression.SetTextDirection(sType);
 
 ## 示例
 
-指定当前表格单元格的文本流方向。
+更改演示文稿中表格单元格内的文本流动方向。
 
 ```javascript editor-pptx
-// How to set text direction of the table cell.
+// How do I rotate text vertically in a table cell in a presentation?
 
-// Create a table and set the text direction for the table cell object.
+// Set the text orientation to flow from top to bottom in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

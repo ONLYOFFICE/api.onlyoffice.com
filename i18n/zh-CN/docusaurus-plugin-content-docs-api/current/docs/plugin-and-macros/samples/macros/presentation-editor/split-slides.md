@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 拆分幻灯片
 
 将包含超过 100 个单词的幻灯片拆分为多张幻灯片。
@@ -92,5 +94,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![拆分幻灯片](/assets/images/plugins/split-slides.png#gh-light-mode-only)
-![拆分幻灯片](/assets/images/plugins/split-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/split-slides" dark />

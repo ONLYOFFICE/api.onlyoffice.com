@@ -5,7 +5,7 @@ Creates ink annotation.
 ## Syntax
 
 ```javascript
-expression.CreateInkAnnot(rect, pathList);
+expression.CreateInkAnnot(rect, inkPaths);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -15,7 +15,7 @@ expression.CreateInkAnnot(rect, pathList);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | rect | Required | [Rect](../../Enumeration/Rect.md) |  | annotation rect. |
-| pathList | Required | [PathList](../../Enumeration/PathList.md) |  | ink path list |
+| inkPaths | Required | [PathList](../../Enumeration/PathList.md) |  | The ink path list. |
 
 ## Returns
 
@@ -26,7 +26,7 @@ expression.CreateInkAnnot(rect, pathList);
 Create an ink annotation and add it to the page.
 
 ```javascript editor-pdf
-// How to create the ink annot in a PDF document?
+// Create the ink annot in a PDF document.
 
 // Create the ink annot using the PDF document API.
 

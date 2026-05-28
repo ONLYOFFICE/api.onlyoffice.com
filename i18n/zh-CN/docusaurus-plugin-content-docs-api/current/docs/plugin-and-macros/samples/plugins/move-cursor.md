@@ -1,3 +1,10 @@
+---
+description: Move the cursor to the document start or end.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 移动光标
 
 将文本光标移动到文档的开头或结尾。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/move-cursor" />
 
 ## 安装
 

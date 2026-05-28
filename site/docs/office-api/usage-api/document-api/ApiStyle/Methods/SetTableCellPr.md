@@ -22,12 +22,12 @@ expression.SetTableCellPr(tableCellPr);
 
 ## Example
 
-Set the table cell properties for the style.
+Store cell-level formatting inside a table style so every cell inherits those settings in a document.
 
 ```javascript editor-docx
-// How to create table cell properties for style and add shading to it.
+// How do I add background shading to all table cells by defining it once in a shared style in a document?
 
-// Update the table cell properties in the style.
+// Centralize cell appearance settings in a reusable style rather than formatting each cell individually in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

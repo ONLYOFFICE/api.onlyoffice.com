@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Specify an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
+Set the spacing between text and the bottom edge of a table cell in a presentation.
 
 ```javascript editor-pptx
-// How to set the cell bottom margin for the current table cell.
+// How do I add space below text in a table cell in a presentation?
 
-// Specify the bottom margin value for the table cell object.
+// Adjust the bottom margin to control padding in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

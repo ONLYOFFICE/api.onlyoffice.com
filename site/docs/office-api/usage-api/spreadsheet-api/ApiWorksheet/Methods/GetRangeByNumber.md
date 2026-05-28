@@ -1,6 +1,6 @@
 # GetRangeByNumber
 
-Returns an object that represents the selected range of the current sheet using the -**row/column** coordinates for the cell selection.
+Returns an object that represents the selected range of the current sheet using the - **row/column** coordinates for the cell selection.
 
 ## Syntax
 
@@ -23,12 +23,12 @@ expression.GetRangeByNumber(nRow, nCol);
 
 ## Example
 
-Get an object that represents the selected range of the sheet using the row/column coordinates for the cell selection in a spreadsheet.
+Locate a cell using row and column numbers instead of letters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range using its coordinates in a spreadsheet.
+// Pick cells by their numeric positions without using address notation in a spreadsheet?
 
-// Get range by number and set its value in a spreadsheet.
+// Enter data into a cell when you know only its row and column count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRangeByNumber(1, 2).SetValue("42");

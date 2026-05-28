@@ -5,7 +5,7 @@ Sets the border which shall be displayed at the bottom of the current table cell
 ## Syntax
 
 ```javascript
-expression.SetCellBorderBottom(fSize, oApiFill);
+expression.SetCellBorderBottom(borderWidth, fill);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -14,8 +14,8 @@ expression.SetCellBorderBottom(fSize, oApiFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | Required | [mm](../../Enumeration/mm.md) |  | The width of the current border. |
-| oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the current border. |
+| borderWidth | Required | [mm](../../Enumeration/mm.md) |  | The width of the current border. |
+| fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the current border. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to set cell bottom border with its fill color.
+Add a bottom border to a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create table and set its cell bottom border.
+// How do I create a border on the bottom edge of a cell in a PDF?
 
-// Set cell border bottom using a table cell object.
+// Draw a styled line along the bottom of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

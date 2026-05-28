@@ -1,7 +1,7 @@
 # GetText
 
 返回当前节点及其子节点的内部文本。
-例如：`&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` 返回 `"1234"`。
+例如：`&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` 返回 `“1234”`。
 
 ## 语法
 
@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的文本内容。
+读取电子表格中 XML 元素内存储的纯文本。
 
 ```javascript editor-xlsx
-// How to retrieve text content from custom XML node elements in a spreadsheet.
+// How do I extract readable text from an XML node in a spreadsheet?
 
-// Get text from message node in a spreadsheet.
+// Pull out the human-readable content of an XML entry in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

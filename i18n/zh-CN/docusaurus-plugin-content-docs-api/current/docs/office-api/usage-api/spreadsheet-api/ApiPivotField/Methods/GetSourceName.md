@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中透视字段的源名称。
+读取电子表格中透视字段的原始数据源名称。
 
 ```javascript editor-xlsx
-// How to get a pivot field's source name in a spreadsheet.
+// How do I find out what column a pivot field was built from in a spreadsheet?
 
-// Create a pivot table, add data to it then get source name of a specified pivot field in a spreadsheet.
+// Distinguish a field's display name from its underlying source column name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

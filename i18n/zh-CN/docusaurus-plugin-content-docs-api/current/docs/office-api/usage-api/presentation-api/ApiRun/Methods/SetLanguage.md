@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-指定在演示文稿中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+设置文本运行的拼写检查和语法验证语言。
 
 ```javascript editor-pptx
-// How to change language of the text for grammar check in a presentation.
+// Configure the language for grammar checking on text content in a presentation.
 
-// Create a new text run and change its language in a presentation.
+// Create a text run and assign a language code for grammar processing.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

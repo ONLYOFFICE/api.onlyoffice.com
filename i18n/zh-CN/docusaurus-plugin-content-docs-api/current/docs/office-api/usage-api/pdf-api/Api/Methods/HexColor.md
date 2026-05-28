@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | 必需 | string |  | 未提供描述。 |
+| hexString | 必需 | string |  | 表示颜色的十六进制字符串。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.HexColor(hexString);
 
 ## 示例
 
-在 PDF 文档中创建十六进制颜色并将其用作形状填充。
+在 PDF 中用十六进制代码定义的颜色填充形状。
 
 ```javascript editor-pdf
-// How to hex color in a PDF document?
+// How do I apply a hex color to a shape in a PDF?
 
-// Hex color using the PDF document API.
+// Create a color from a hex value and use it to fill a rectangle in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

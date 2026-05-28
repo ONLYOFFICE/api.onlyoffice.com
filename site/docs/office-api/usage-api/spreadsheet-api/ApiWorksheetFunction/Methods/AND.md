@@ -1,6 +1,6 @@
 # AND
 
-Checks whether all conditions in a test are -**true**.
+Checks whether all conditions in a test are - **true**.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Check whether all conditions in a test are true in a spreadsheet.
+Test whether all conditions are true at the same time in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to apply logical AND operation for a list of conditions in a spreadsheet.
+// Use the AND function to verify multiple criteria are met in a spreadsheet.
 
-// Use logical AND to evaluate an expression in a spreadsheet.
+// Validate that every condition passes together to get a true/false result in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

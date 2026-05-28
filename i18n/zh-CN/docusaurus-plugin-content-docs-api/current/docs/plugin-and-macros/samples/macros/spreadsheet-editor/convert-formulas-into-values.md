@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 公式转换数值
 
 将当前工作表中的所有公式转换为数值。
@@ -43,4 +45,4 @@ End Sub
 
 ## 结果
 
-![公式转换数值](/assets/images/plugins/convert-formulas-into-values.png#gh-light-mode-only)![公式转换数值](/assets/images/plugins/convert-formulas-into-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values" dark />

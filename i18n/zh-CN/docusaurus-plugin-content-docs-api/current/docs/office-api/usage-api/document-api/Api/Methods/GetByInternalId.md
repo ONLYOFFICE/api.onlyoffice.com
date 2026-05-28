@@ -22,12 +22,12 @@ object
 
 ## 示例
 
-通过内部 ID 获取文档中的对象。
+通过唯一 ID 查找段落并在文档中显示其内容。
 
 ```javascript editor-docx
-// How to get the by internal id in a document?
+// How do I find a specific element by its ID in a document?
 
-// Get the by internal id using the document API.
+// Retrieve a paragraph using its identifier and show its type and text in a document.
 
 const doc = Api.GetDocument();
 

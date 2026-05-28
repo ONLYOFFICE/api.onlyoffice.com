@@ -20,12 +20,12 @@ expression.GetCurrentRun();
 
 ## 示例
 
-获取 PDF 文档中富文本内容的当前段落。
+访问您在 PDF 中当前正在编辑的文本段。
 
 ```javascript editor-pdf
-// How to get current run for a rich content in a PDF document?
+// How do I get the text run I am working on in rich content in a PDF?
 
-// Get current run and display the result in a PDF document.
+// Retrieve the text segment being modified in formatted content in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

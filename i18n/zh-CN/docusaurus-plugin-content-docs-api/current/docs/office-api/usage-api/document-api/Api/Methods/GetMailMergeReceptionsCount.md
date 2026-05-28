@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中的邮件合并收件人计数。
+计算邮件合并中的收件人数量并在文档中生成个性化段落。
 
 ```javascript editor-docx
-// Wrap the text runs in the mail merge fields, loads the mail merge data into the document and counts the mail merge receptions.
+// How do I find out the number of mail merge recipients in a document?
 
-// Return a number of the mail merge receptions in a document.
+// Run a mail merge for each recipient and collect the resulting paragraphs in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -14,7 +14,7 @@ expression.MEDIAN(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个将计算中位数的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个数值，用于计算中位数。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回一组给定数字的中位数。
+从电子表格中一组数字查找中间值。
 
 ```javascript editor-xlsx
-// How to get a median from the list in a spreadsheet.
+// What is the median number in a list in a spreadsheet?
 
-// Use a function to get a value that located in the middle of the list in a spreadsheet.
+// Extract the median value from a range of values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

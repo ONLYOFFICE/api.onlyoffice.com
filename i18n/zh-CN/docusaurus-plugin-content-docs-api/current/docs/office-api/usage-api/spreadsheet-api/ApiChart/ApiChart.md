@@ -8,6 +8,8 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | ------ | ------- | ----------- |
 | [AddSeria](./Methods/AddSeria.md) | 无 | 向当前图表添加新系列。 |
 | [ApplyChartStyle](./Methods/ApplyChartStyle.md) | boolean | 通过样式 ID 为当前图表设置样式。 |
+| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | 创建指定图表的副本。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除指定的绘图对象。 |
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | 返回图表对象的类型。 |
@@ -47,11 +49,11 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetMarkerOutLine](./Methods/SetMarkerOutLine.md) | boolean | 设置指定图表系列中标记的轮廓。 |
 | [SetMinorHorizontalGridlines](./Methods/SetMinorHorizontalGridlines.md) | boolean | 指定次要水平网格线的视觉属性。 |
 | [SetMinorVerticalGridlines](./Methods/SetMinorVerticalGridlines.md) | boolean | 指定次要垂直网格线的视觉属性。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。 |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | 设置指定图形对象的轮廓属性。 |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | 设置图表绘图区域的填充。 |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | 设置图表绘图区域的轮廓。 |
-| [SetPosition](./Methods/SetPosition.md) | 无 | 更改绘图对象的位置。💡 请注意，水平和垂直偏移量仅在指定的列和行单元格的限制范围内计算。如果此值超出单元格宽度或高度，将设置另一个垂直/水平位置。 |
+| [SetPosition](./Methods/SetPosition.md) | 无 | 更改绘图对象的位置。 |
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置当前绘图对象的旋转角度。 |
 | [SetSeriaName](./Methods/SetSeriaName.md) | boolean | 设置指定系列的名称。 |
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | 将指定范围的值设置到指定系列。 |

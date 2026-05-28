@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the category of the workbook using the core properties in a spreadsheet.
+Assign a category label to the workbook through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I set category in a spreadsheet?
+// How do I set a category for a workbook in a spreadsheet?
 
-// Set category using a core properties object in a spreadsheet.
+// Store a descriptive category in the metadata fields of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

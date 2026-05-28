@@ -27,12 +27,12 @@ number
 
 ## Example
 
-Return the requested statistic for the forecast in a spreadsheet.
+Return the requested statistic for the forecast.
 
 ```javascript editor-xlsx
-// How to return the requested forecast statistic in a spreadsheet.
+// Retrieve forecast statistics from time series data using dates and values arrays.
 
-// Use function to return the forecast in a spreadsheet.
+// Calculate the forecast statistic using FORECAST_ETS_STAT.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

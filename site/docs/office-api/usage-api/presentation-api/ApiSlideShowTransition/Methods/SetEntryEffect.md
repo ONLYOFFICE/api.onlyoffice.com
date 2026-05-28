@@ -25,9 +25,9 @@ boolean
 Set the entry effect for a slide show transition.
 
 ```javascript editor-pptx
-// How to set entry effect for a slide show transition?
+// Configure the entry effect property of a slide show transition object.
 
-// Set entry effect and display the result in a presentation.
+// Apply the transition and display the entry effect value on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

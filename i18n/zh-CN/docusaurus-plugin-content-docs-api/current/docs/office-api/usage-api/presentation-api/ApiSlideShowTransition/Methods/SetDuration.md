@@ -25,9 +25,9 @@ boolean
 在演示文稿中将切换持续时间设置为 2000 毫秒。
 
 ```javascript editor-pptx
-// How do I set duration in a presentation?
+// Configure the duration property of a slide show transition object.
 
-// Set duration using a slide show transition object.
+// Apply the transition and display the set duration on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

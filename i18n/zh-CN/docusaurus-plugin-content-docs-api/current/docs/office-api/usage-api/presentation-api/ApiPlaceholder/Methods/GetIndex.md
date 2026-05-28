@@ -20,12 +20,12 @@ number \| undefined
 
 ## 示例
 
-获取演示文稿中的占位符索引。
+读取演示文稿中占位符的位置索引。
 
 ```javascript editor-pptx
-// How to get the index for a placeholder in a presentation?
+// How do I find the index number assigned to a placeholder in a presentation?
 
-// Get the index and display the result in a presentation.
+// Set a placeholder's index and then retrieve it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

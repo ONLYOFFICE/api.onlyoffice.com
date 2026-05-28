@@ -6,12 +6,12 @@
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取所有选项。
+检索 PDF 中下拉字段中所有可用的选项。
 
 ```javascript editor-pdf
-// How can I get the options using a list field in a PDF document?
+// How do I get all options from a list field in a PDF?
 
-// Get the options for a list field in a PDF document.
+// List all items in a dropdown or list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

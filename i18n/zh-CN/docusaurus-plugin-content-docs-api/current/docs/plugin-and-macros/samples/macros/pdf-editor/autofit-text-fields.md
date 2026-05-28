@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动调整文本框
 
 自动调整文档中的所有文本框大小。
@@ -25,5 +27,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![自动填写表单](/assets/images/plugins/autofit-text-fields.png#gh-light-mode-only)
-![自动填写表单](/assets/images/plugins/autofit-text-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/autofit-text-fields" dark />

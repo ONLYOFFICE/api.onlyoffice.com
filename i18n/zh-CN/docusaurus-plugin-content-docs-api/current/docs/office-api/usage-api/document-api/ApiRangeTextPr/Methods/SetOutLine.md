@@ -6,12 +6,12 @@
 
 ## 示例
 
-为文档中的艺术字文本设置文本轮廓。
+在文档中为装饰性文本添加彩色轮廓。
 
 ```javascript editor-docx
-// How to set an outline to the text in a document.
+// How do I put a visible border around large styled text in a document?
 
-// Create a text run object, change its property by outlining it with a color in a document.
+// Give artistic text a distinct edge by applying a stroke outline in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

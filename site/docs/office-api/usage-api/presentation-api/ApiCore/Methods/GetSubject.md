@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Set and get the subject of the current presentation in a presentation.
+Set and retrieve the topic or title field of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How do I get the subject in a presentation?
+// How do I access the subject information in a presentation?
 
-// Get the subject using a core properties object in a presentation.
+// Display the subject metadata stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

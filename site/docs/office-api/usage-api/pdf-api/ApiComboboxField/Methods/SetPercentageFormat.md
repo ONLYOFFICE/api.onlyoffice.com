@@ -5,7 +5,7 @@ Sets percentage format for field.
 ## Syntax
 
 ```javascript
-expression.SetPercentageFormat(nDemical, sSepStyle);
+expression.SetPercentageFormat(decimalPlaces, separatorStyle);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,8 +14,8 @@ expression.SetPercentageFormat(nDemical, sSepStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDemical | Required | number |  | number of decimals |
-| sSepStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | number separate style |
+| decimalPlaces | Required | number |  | The number of digits after the decimal point. |
+| separatorStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | The number separator style. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Get text field and set percentage format for it.
+Present values as percentages in a field in a PDF.
 
 ```javascript editor-pdf
-// How to set percentage format for a combobox field?
+// Can I show numbers as percentages in a PDF?
 
-// Set percentage format and display the result in a PDF document.
+// Convert numerical input to percentage display in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

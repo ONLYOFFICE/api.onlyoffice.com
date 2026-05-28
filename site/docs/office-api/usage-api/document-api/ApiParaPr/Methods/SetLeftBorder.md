@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-Specify the border which will be displayed at the left side of the page around the specified paragraph.
+Add a border to the left side of a paragraph in a document.
 
 ```javascript editor-docx
-// How to add border to the left side of the paragraph in a document.
+// How do I place a visible border on the left edge of a paragraph in a document?
 
-// Set left border for a paragraph properties in a document.
+// Decorate a paragraph with a colored left-side border to make it stand out visually.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中更改图表的样式。
+在 PDF 中为图表应用预设样式。
 
 ```javascript editor-pdf
-// Update chart style in a PDF document.
+// How do I change the visual appearance of a chart in a PDF?
 
-// Apply chart style for a chart in a PDF document.
+// Use a style preset to update a chart's formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetImageWidth();
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+读取文档中水印图像的宽度。
 
 ```javascript editor-docx
-// How to get the width of the image in a document.
+// How do I find out how wide the watermark image is in a document?
 
-// Get the watermark image width in a document.
+// Check the horizontal size of a watermark image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

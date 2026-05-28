@@ -16,8 +16,8 @@ expression.LOGEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | *y = b*m^x* 方程中的 y 值集。 |
 | arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | *y = b*m^x* 方程中的可选 x 值集。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，则常数 *b* 正常计算；如果参数为 **false**，则 *b* 设为 1。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，则返回附加的回归统计；如果参数为 **false** 或省略，则返回 m 系数和常数 *b*。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，则常数 *b* 正常计算；如果参数为 **false**，则 *b* 设置为 1。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，则返回附加回归统计信息；如果参数为 **false** 或省略，则返回 m 系数和常数 *b*。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回描述与已知数据点匹配的指数曲线的统计信息。
+计算描述电子表格中数据点指数曲线的统计信息。
 
 ```javascript editor-xlsx
-// How to get the statistics of exponential curve matching the data points in a spreadsheet.
+// How do I analyze the trend of exponentially growing data in a spreadsheet?
 
-// Use a function to return the statistics of exponential curve matching the data points in a spreadsheet.
+// Use curve statistics to predict future values based on exponential growth patterns in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

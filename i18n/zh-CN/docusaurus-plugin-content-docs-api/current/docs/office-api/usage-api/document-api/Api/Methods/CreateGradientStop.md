@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## 示例
 
-在文档中创建用于不同类型渐变的渐变光圈。
+定义渐变填充的颜色点并将其应用于文档中的形状。
 
 ```javascript editor-docx
-// Create two gradient stops of the specified RGB colors, create a linear gradient fill with them, and use it to create a shape in the current document.
+// How do I set specific colors at positions along a gradient used on a shape in a document?
 
-// How to create the gradient stop objects for the linear gradient fill in a document.
+// Build a two-color gradient by placing color markers at the start and end of the fill range in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set the preferred width to the current table cell.
+Set a fixed minimum width for a table cell in a document.
 
 ```javascript editor-docx
-// Resize the width of the cell.
+// How do I control how wide a cell appears in a document?
 
-// Change the width of the cell.
+// Enforce a consistent cell size across all columns in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

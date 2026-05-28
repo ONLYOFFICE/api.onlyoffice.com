@@ -27,12 +27,12 @@ number
 
 ## Example
 
-Return the cumulative beta probability density function in a spreadsheet.
+Calculate cumulative or probability density for beta distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from cumulative beta probability density function in a spreadsheet.
+// How do I determine what percentage of outcomes fall within a range in a spreadsheet?
 
-// Use function to get the cumulative beta probability density function in a spreadsheet.
+// Evaluate the distribution curve to understand probability across different values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

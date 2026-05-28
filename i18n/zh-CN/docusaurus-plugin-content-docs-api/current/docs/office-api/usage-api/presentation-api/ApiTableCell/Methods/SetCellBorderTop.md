@@ -23,12 +23,12 @@ expression.SetCellBorderTop(fSize, oApiFill);
 
 ## 示例
 
-设置表格单元格顶部显示的边框。
+在演示文稿中为表格单元格顶部添加彩色边框。
 
 ```javascript editor-pptx
-// How to set cell top border with its fill color.
+// How do I add a colored border to the top of a table cell in a presentation?
 
-// Create table and set its cell top border.
+// Create a table and apply a top border with a solid color fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

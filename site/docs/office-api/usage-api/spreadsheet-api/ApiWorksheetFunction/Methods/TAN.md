@@ -25,9 +25,9 @@ number
 Return the tangent of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return a tangent of an angle in a spreadsheet.
+// Calculate the tangent of an angle using the TAN function.
 
-// Use a function to calculate angle's tangent in a spreadsheet.
+// Returns the tangent value of the specified angle in radians.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

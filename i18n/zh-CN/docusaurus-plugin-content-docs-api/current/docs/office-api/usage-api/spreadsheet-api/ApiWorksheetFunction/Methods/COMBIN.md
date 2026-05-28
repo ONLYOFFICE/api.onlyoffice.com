@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回给定项数的组合数。
+计算电子表格中一组项目的可能组合数。
 
 ```javascript editor-xlsx
-// How to find a number of combinations in a spreadsheet.
+// How many different ways can you select items in a spreadsheet?
 
-// Use function to count possible combinations for a given number of items in a spreadsheet.
+// Calculate the total number of unique selections you can make in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

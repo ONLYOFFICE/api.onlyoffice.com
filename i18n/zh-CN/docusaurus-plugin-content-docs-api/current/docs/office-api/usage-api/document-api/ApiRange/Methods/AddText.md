@@ -15,7 +15,7 @@ expression.AddText(text, position);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | text | 必需 | String |  | 将要添加的文本。 |
-| position | 可选 | "after" \| "before" | "after" | 将添加文本的位置（在指定范围"之前"或"之后"）。 |
+| position | 可选 | "after" \| "before" | "after" | 将添加文本的位置（在指定范围“之前”或“之后”）。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中向指定位置添加文本。
+在文档中文本选区的前面或后面直接插入附加文字。
 
 ```javascript editor-docx
-// How to add raw text to the range in a document.
+// How do I place new text immediately before or after an existing passage in a document?
 
-// Change content of the range by adding a text in a document.
+// Expand the content of a selection by injecting text at either end in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

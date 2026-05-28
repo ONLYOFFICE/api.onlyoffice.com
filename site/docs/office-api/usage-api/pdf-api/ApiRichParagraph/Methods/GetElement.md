@@ -22,12 +22,12 @@ expression.GetElement(pos);
 
 ## Example
 
-Get element from rich paragraph in a PDF document.
+Access an element from a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to get the element for a rich paragraph in a PDF document?
+// How can I retrieve items from a paragraph in a PDF?
 
-// Get the element and display the result in a PDF document.
+// Extract a specific element from a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

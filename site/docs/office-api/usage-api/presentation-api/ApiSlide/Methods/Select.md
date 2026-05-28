@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-Select the current slide.
+Select a slide in the presentation.
 
 ```javascript editor-pptx
-// How to select for a slide?
+// Create multiple slides with different content.
 
-// Select and display the result in a presentation.
+// Select the second slide to make it active.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);

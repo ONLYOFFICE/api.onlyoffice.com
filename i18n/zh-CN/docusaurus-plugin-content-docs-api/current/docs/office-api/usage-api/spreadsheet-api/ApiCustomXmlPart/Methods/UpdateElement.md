@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-更新电子表格中自定义 XML 部件中的 XML 元素。
+用新数据替换电子表格中存储的 XML 元素的内容。
 
 ```javascript editor-xlsx
-// How do I update element in a spreadsheet?
+// How do I change the value inside a saved XML structure in a spreadsheet?
 
-// Update element using a custom XML part object in a spreadsheet.
+// Overwrite an existing XML node to keep embedded data current in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

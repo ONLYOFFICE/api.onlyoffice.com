@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 冻结窗格
 
 取消冻结窗格，将视口导航到目标单元格 (A10)，然后在不同单元格 (D10) 处重新冻结窗格。
@@ -38,4 +40,4 @@ End Sub
 
 ## 结果
 
-![冻结窗格](/assets/images/plugins/freeze-panes.png#gh-light-mode-only)![冻结窗格](/assets/images/plugins/freeze-panes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/freeze-panes" dark />

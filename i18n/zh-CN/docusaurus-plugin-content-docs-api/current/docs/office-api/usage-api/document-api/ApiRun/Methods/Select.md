@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中选中当前 run。
+将文本运行高亮显示为文档中的活动选区。
 
 ```javascript editor-docx
-// How to select a text with a cursor in a document.
+// How do I programmatically select a piece of text in a document?
 
-// Select and display the result in a document.
+// Mark a run so it appears selected for the user in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

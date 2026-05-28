@@ -6,12 +6,12 @@
 
 ## 示例
 
-在演示文稿中取消选中当前图形对象。
+取消选择演示文稿中的当前图形对象。
 
 ```javascript editor-pptx
-// How to unselect drawing objects of the slide.
+// Unselecting removes focus from a shape without deleting it.
 
-// Create three shapes, select all of them, then unselect the second shape in a presentation.
+// Create three shapes, select all of them, then unselect the second shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

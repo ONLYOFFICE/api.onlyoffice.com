@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Display preset type and custom status in a text shape in a PDF document.
+Find out the drawing pattern details of a shape in a PDF.
 
 ```javascript editor-pdf
-// How do I get the geometry in a PDF document?
+// How do I check the shape's drawing pattern in a PDF?
 
-// Get the geometry using a shape object in a PDF document.
+// Access the shape's built-in or custom drawing design in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

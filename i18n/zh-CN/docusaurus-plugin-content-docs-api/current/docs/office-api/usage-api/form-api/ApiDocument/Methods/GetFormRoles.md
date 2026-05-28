@@ -20,12 +20,12 @@ expression.GetFormRoles();
 
 ## 示例
 
-获取表单文档中的角色管理器。
+检索文档中分配给表单字段的用户角色列表。
 
 ```javascript editor-forms
-// How can I get the form roles using a document in a form document?
+// How do I see what roles have access to form fields in a document?
 
-// Get the form roles for a document in a form document.
+// Access the role management system to view form permissions in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

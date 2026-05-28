@@ -3,6 +3,8 @@ description: Generate a headline from document content.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Smart headline generator
 
 This function generates a clear and relevant headline from the currently selected text (paragraph, slide, or section). This headline is meant to accurately represent the content, not be overly catchy.
@@ -178,11 +180,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/smart-headline-generator.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/smart-headline-generator.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/document-editor/smart-headline-generator" dark />

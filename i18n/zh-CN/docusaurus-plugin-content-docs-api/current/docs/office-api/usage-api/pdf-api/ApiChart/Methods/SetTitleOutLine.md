@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表标题设置轮廓。
+在 PDF 中为图表标题添加边框。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title outline in a PDF document.
+// How do I add a stroke to the title of a chart in a PDF?
 
-// Set title out line for a chart in a PDF document.
+// Apply an outline to the chart title text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by an OLE object in a document.
+Read the class type of an embedded OLE object in a document.
 
 ```javascript editor-docx
-// How do I check what type an OLE object object is in a document?
+// How do I find out the class type of an OLE object in a document?
 
-// Retrieve and output the class type string for an OLE object in a document.
+// Identify what kind of embedded object is inserted by checking its class type string in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

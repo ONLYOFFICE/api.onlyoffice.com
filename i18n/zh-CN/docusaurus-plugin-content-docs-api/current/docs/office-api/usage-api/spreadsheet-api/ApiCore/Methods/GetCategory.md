@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中工作簿的类别（使用核心属性）。
+读取电子表格中分配给工作簿的类别。
 
 ```javascript editor-xlsx
-// How to get the category for a core properties in a spreadsheet?
+// How do I find out what category a workbook belongs to in a spreadsheet?
 
-// Get the category and display the result in a spreadsheet.
+// Display the workbook category stored in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

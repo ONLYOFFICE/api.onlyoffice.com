@@ -22,12 +22,12 @@ expression.SetTextPr(textPr);
 
 ## Example
 
-Set rich text properties to rich run object in a PDF document.
+Apply rich text formatting to text content in a PDF.
 
 ```javascript editor-pdf
-// How can I set text pr using a rich text run in a PDF document?
+// How do I add text styling to PDF annotations in a PDF?
 
-// Set text pr for a rich text run in a PDF document.
+// Configure multiple text properties at once in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

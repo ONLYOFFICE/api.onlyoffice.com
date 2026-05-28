@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 段落转表格
 
 将编号的段落列表转换为表格格式。
@@ -56,5 +58,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![段落转表格](/assets/images/plugins/paragraphs-to-table.png#gh-light-mode-only)
-![段落转表格](/assets/images/plugins/paragraphs-to-table.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/paragraphs-to-table" dark />

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中日期表单的日期语言。
+读取文档中日期表单的语言设置。
 
 ```javascript editor-forms
-// How to know which language is used for a date form.
+// How do I find out which language is set on a date form in a document?
 
-// Create a date form and diplay its language info in the document.
+// Verify the locale after updating it to confirm the change was applied.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});

@@ -23,12 +23,12 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-在文档中进行搜索。
+搜索单词的所有出现位置并在文档中将其中一个结果设为粗体。
 
 ```javascript editor-docx
-// How to search all paragraph objects in a document.
+// How do I find every match of a string and format a specific result in a document?
 
-// Search paragraphs and make the second one bold in a document.
+// Collect search results by keyword and style the second match to highlight it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

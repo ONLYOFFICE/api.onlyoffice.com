@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中指定集合的父对象。
+从区域集合追溯到其在电子表格中所属的原始范围。
 
 ```javascript editor-xlsx
-// How to get a parent of the collection in a spreadsheet.
+// How do I find the range that owns an areas collection in a spreadsheet?
 
-// Find a collection parent of the selected range in a spreadsheet.
+// Navigate up from a group of areas to the single range that contains them all in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");

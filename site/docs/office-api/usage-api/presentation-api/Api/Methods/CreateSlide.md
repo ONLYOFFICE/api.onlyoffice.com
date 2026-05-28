@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create slide and insert it into the presentation.
+Create a new slide and add it to the presentation.
 
 ```javascript editor-pptx
-// How to add a new slide.
+// How do I insert a slide with a custom background in a presentation?
 
-// Add new slides to the presentation.
+// Apply a gradient fill background to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();

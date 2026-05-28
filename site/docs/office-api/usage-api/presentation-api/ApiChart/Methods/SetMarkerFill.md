@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-Set the fill to the marker in the specified chart series in a presentation.
+Apply a background color to data point markers in a chart in a presentation.
 
 ```javascript editor-pptx
-// How to set a fill to the marker in a presentation.
+// How do I change the color of the data point symbols in a chart in a presentation?
 
-// Create a chart, set its properties and its marker color in a presentation.
+// Set marker colors for different data series to make them visually distinct in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

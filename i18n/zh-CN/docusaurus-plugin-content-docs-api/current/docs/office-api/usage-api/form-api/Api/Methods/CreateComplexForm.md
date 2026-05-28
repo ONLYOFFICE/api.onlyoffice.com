@@ -22,12 +22,12 @@ expression.CreateComplexForm(formPr);
 
 ## 示例
 
-使用通用复合表单属性创建复合表单。
+在文档中将多个输入字段合并为单个复杂表单字段。
 
 ```javascript editor-forms
-// How to create a complex form and add it to the paragraph.
+// How do I create a form field that contains multiple parts in a document?
 
-// Add a complex form with the state options to the document object.
+// Build a composite field that allows users to enter different types of data together in a document.
 
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({

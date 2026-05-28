@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档中用指定的图像替换当前图像。
+通过 URL 将文档中的选定图像替换为不同的图像。
 
 ```javascript editor-docx
-// How to change the image to another one in a document.
+// How do I swap out an image for another one in a document?
 
-// Add the new image instead of another using the URL in a document.
+// Insert an image, select it, then substitute it with a new source to update visuals in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

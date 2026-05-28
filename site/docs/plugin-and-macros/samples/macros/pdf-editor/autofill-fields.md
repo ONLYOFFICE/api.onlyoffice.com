@@ -4,6 +4,8 @@ description: Auto-fill text fields that share the same placeholder text.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Autofill fields
 
 Automatically fills in all text fields in the document that have the same placeholder or tip text.
@@ -32,5 +34,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AutofillFields](/assets/images/plugins/autofill-fields.png#gh-light-mode-only)
-![AutofillFields](/assets/images/plugins/autofill-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/autofill-fields" dark />

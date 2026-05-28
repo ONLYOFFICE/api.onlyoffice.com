@@ -5,7 +5,7 @@ Returns a row by its index.
 ## Syntax
 
 ```javascript
-expression.GetRow(nIndex);
+expression.GetRow(rowIndex);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,7 +14,7 @@ expression.GetRow(nIndex);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nIndex | Required | number |  | The row index (position) in the table. |
+| rowIndex | Required | number |  | The zero-based row index in the table. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.GetRow(nIndex);
 
 ## Example
 
-How to get a row object from the table in a PDF document.
+Access a specific row from a table in a PDF.
 
 ```javascript editor-pdf
-// Create a table, add rows and columns, then get its row by index in a PDF document.
+// How do I select a table row by its position in a PDF?
 
-// Get the row for a table in a PDF document.
+// Extract the row you need from a table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

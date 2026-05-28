@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-向工作表添加新名称。
+在电子表格中为单元格范围分配自定义名称。
 
 ```javascript editor-xlsx
-// How to change a name of the worksheet range.
+// How do I label a group of cells so I can refer to them by name in a spreadsheet?
 
-// Name a range from a worksheet.
+// Give a range a memorable label instead of using raw cell addresses.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

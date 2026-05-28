@@ -20,12 +20,12 @@ expression.GetFont();
 
 ## 示例
 
-获取条件格式规则应用的字体。
+访问电子表格中条件格式规则应用于匹配单元格的字体设置。
 
 ```javascript editor-xlsx
-// How to retrieve font settings from conditional formatting rules.
+// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule font.
+// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

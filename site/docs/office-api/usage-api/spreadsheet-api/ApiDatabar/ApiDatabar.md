@@ -65,7 +65,7 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | [SetBorders](./Methods/SetBorders.md) | None | Sets the border style for the conditional formatting rule. |
 | [SetDateOperator](./Methods/SetDateOperator.md) | None | Sets the date operator for time period conditions. |
 | [SetDirection](./Methods/SetDirection.md) | None | Sets the direction for the data bar. |
-| [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the format condition with the previously created color object. Sets 'No Fill' when previously created color object is null. |
+| [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the format condition with the previously created color object. |
 | [SetFirstPriority](./Methods/SetFirstPriority.md) | None | Sets the priority value for the current conditional formatting rule to "1" so that it will be evaluated before all other rules on the worksheet. |
 | [SetLastPriority](./Methods/SetLastPriority.md) | None | Sets the evaluation order for the current conditional formatting rule so it is evaluated after all other rules on the worksheet. |
 | [SetMaxPointType](./Methods/SetMaxPointType.md) | None | Sets the type for the maximum value condition for the data bar. |

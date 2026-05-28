@@ -23,12 +23,12 @@ sidebar_position: -3
    | 名称                     | 类型            | 示例                                                                                                            | 描述                                                                                                                                                                                                                                                               |
    | ------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | variations             | `object`        |                                                                                                                    | 设置                                                                                                                                                                                                                                        |
-   | variations.url         | `string`        | "settings.html"                                                                                                    | 模态窗口 / 面板的入口文件，即连接 *plugin.js* 文件（用于插件运行的基础文件）并启动插件代码的 HTML 页面。详见 [index.html](../structure/entry-point.md)。 |
+   | variations.url         | `string`        | "settings.html"                                                                                                    | 模态窗口 / 面板的入口文件，即连接 `plugin.js` 文件（用于插件运行的基础文件）并启动插件代码的 HTML 页面。详见 [index.html](../structure/entry-point.md)。 |
    | variations.description | `string`        | "Description"                                                                                                      | 模态窗口 / 面板的描述文本。                                                                                                                                                                                                                            |
-   | variations.type        | `string`        | "window"                                                                                                           | 插件的[type](../structure/configuration/configuration.md#variationstype)。使用 **"window"** 调取模态窗口，**"panel"** 调取左侧面板，**"panelRight"** 调取右侧面板。                                                                                     |
+   | variations.type        | `string`        | "window"                                                                                                           | 插件的[type](../structure/configuration/configuration.md#variationstype)。使用 `"window"` 调取模态窗口，`"panel"` 调取左侧面板，`"panelRight"` 调取右侧面板。                                                                                     |
    | variations.size        | `number[]`      | [343, 122]                                                                                                         | 模态窗口的尺寸。该参数仅适用于模态窗口。                                                                                                                                                                                                     |
    | variations.buttons     | `Button[]`      | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | 模态窗口中可皮肤化的插件按钮列表。该参数仅适用于模态窗                                                                                                                                                            |
-   | variations.isActivated | `boolean`       | false                                                                                                              | 指定创建的面板是否默认为折叠（**false**）或展开（**true**）。默认值为 **true**。仅当 `variations.type` 为 *"panel"* 或 *"panelRight"*，并且插件版本为 8.3 及以上时该参数才有效。                        |
+   | variations.isActivated | `boolean`       | false                                                                                                              | 指定创建的面板是否默认为折叠（`false`）或展开（`true`）。默认值为 `true`。仅当 `variations.type` 为 `"panel"` 或 `"panelRight"`，并且插件版本为 8.3 及以上时该参数才有效。                        |
 
    **示例**:
 
@@ -87,7 +87,7 @@ sidebar_position: -3
 newWindow.show(variation)
 ```
 
-你也可以使用 *window.Asc.plugin.executeMethod* 的 **ShowWindow** 方法。
+你也可以使用 `window.Asc.plugin.executeMethod` 的 **ShowWindow** 方法。
 
 **参数说明**:
 
@@ -144,7 +144,7 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 
 ### MouseMoveWindow
 
-当鼠标在插件的 iframe 内移动时，可以使用 **MouseMoveWindow** 方法（来自*window.Asc.plugin.executeMethod*）向插件发送事件。
+当鼠标在插件的 iframe 内移动时，可以使用 **MouseMoveWindow** 方法（来自`window.Asc.plugin.executeMethod`）向插件发送事件。
 
 **参数说明**:
 
@@ -164,7 +164,7 @@ window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4
 
 ### MouseUpWindow
 
-当鼠标按钮在插件的 iframe 内被松开时，可以使用 **MouseUpWindow** 方法（来自*window.Asc.plugin.executeMethod*）向插件发送事件。
+当鼠标按钮在插件的 iframe 内被松开时，可以使用 **MouseUpWindow** 方法（来自`window.Asc.plugin.executeMethod`）向插件发送事件。
 
 **参数说明**:
 
@@ -184,7 +184,7 @@ window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-484
 
 ### ResizeWindow
 
-你可以通过调用 *window.Asc.plugin.executeMethod* 的 **ResizeWindow** 方法来调整插件模态窗口的大小。
+你可以通过调用 `window.Asc.plugin.executeMethod` 的 **ResizeWindow** 方法来调整插件模态窗口的大小。
 
 **参数说明**:
 
@@ -268,7 +268,7 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
 
 ### SendToWindow
 
-你可以通过调用 *window.Asc.plugin.executeMethod* 的 **SendToWindow** 方法向插件模态窗口或面板发送消息。
+你可以通过调用 `window.Asc.plugin.executeMethod` 的 **SendToWindow** 方法向插件模态窗口或面板发送消息。
 
 **参数说明**:
 
@@ -309,7 +309,7 @@ Asc.plugin.attachEvent("messageName", (message) => {
 
 ## 关闭窗口 {#closing-a-window}
 
-要关闭插件窗口或面板，请使用 *window.Asc.plugin.executeMethod* 的 **CloseWindow** 方法。
+要关闭插件窗口或面板，请使用 `window.Asc.plugin.executeMethod` 的 **CloseWindow** 方法。
 
 **参数说明**:
 

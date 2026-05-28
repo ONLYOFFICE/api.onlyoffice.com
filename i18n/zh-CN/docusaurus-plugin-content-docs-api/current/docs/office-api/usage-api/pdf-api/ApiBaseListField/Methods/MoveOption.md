@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.MoveOption(nCurPos, nNewPos);
+expression.MoveOption(currentIndex, newIndex);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,8 +14,8 @@ expression.MoveOption(nCurPos, nNewPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCurPos | 必需 | number |  | 被移动选项的索引 |
-| nNewPos | 必需 | number |  | 选项的新位置 |
+| currentIndex | 必需 | number |  | 要移动的选项的当前索引。 |
+| newIndex | 必需 | number |  | 选项的目标索引。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中移动带有选项列表的字段中的选项。
+在 PDF 中重新排序下拉字段中的选项。
 
 ```javascript editor-pdf
-// How can I move option using a list field in a PDF document?
+// How do I rearrange the order of options in a dropdown in a PDF?
 
-// Move option for a list field in a PDF document.
+// Change the position of an item in a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

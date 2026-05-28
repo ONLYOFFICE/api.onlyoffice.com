@@ -20,12 +20,12 @@ expression.GetScopeType();
 
 ## 示例
 
-获取条件格式规则的范围类型。
+读取控制电子表格中条件格式规则应用位置的范围类型。
 
 ```javascript editor-xlsx
-// How to retrieve the scope type from conditional formatting rules.
+// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
 
-// Get conditional formatting rule scope type.
+// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -1,10 +1,10 @@
 # SetLock
 
 设置当前内联文本内容控件的锁定：
--**"unlocked"** - 内容可以编辑，容器可以删除。
--**"contentLocked"** - 内容无法编辑。
--**"sdtContentLocked"** - 内容无法编辑，容器无法删除。
--**"sdtLocked"** - 容器无法删除。
+- **“unlocked”** - 内容可以编辑，容器可以删除。
+- **“contentLocked”** - 内容无法编辑。
+- **“sdtContentLocked”** - 内容无法编辑，容器无法删除。
+- **“sdtLocked”** - 容器无法删除。
 
 ## 语法
 
@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-为文档中的内联文本内容控件设置锁定。
+锁定文档中内联文本内容控件的内容。
 
 ```javascript editor-docx
-// How to set lock type for the inline content control in a document.
+// How do I prevent users from editing the content of an inline content control in a document?
 
-// Display the lock type set for inline text element in a document.
+// Verify the active lock type on a content control by reading it back in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

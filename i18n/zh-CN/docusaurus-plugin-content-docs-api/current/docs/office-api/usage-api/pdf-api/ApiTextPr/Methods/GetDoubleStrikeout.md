@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查 PDF 文档中的文本是否有双删除线。
+检查 PDF 中的文本是否有双删除线效果。
 
 ```javascript editor-pdf
-// How to know whether a text is crossed with two horizontal lines in a PDF document.
+// How do I see if text is crossed out with two lines in a PDF?
 
-// Get the text properties of the run and find whether it has a double strikethrough in a PDF document.
+// Retrieve the double strikethrough property from text formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充颜色。在文档中创建矩形并为其应用红色填充。
+在文档中为形状应用纯色填充。
 
 ```javascript editor-docx
-// How to set fill for a shape in a document?
+// How do I change the background color of a shape in a document?
 
-// Set fill and display the result in a document.
+// Give a shape a distinct appearance by filling it with a chosen color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

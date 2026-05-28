@@ -5,7 +5,7 @@ Sets regular expression for field.
 ## Syntax
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | Required | string |  | field regular expression (e.g. "\\S+@\\S+\\.\\S+") |
+| regularExpression | Required | string |  | The validation regular expression (e.g. "\\S+@\\S+\\.\\S+") |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set regular expression validate for it in a PDF document.
+Validate field input with a pattern rule in a PDF.
 
 ```javascript editor-pdf
-// How do I set regular exp in a PDF document?
+// Can I check that data matches a pattern in a PDF?
 
-// Set regular exp using a combobox field object in a PDF document.
+// Ensure text follows a specific format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

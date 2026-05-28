@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中块级内容控件返回的类类型。
+读取内容控件的对象类型并在文档中显示。
 
 ```javascript editor-docx
-// How do I check what type a block-level content control object is in a document?
+// How do I find out what type of object a content control is in a document?
 
-// Retrieve and output the class type string for a block-level content control in a document.
+// Identify a content control by its type label and write the result as text in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

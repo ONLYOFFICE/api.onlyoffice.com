@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个日期之间的完整工作日数。
+计算电子表格中两个日期之间的工作日数。
 
 ```javascript editor-xlsx
-// How to get the number of whole workdays between two dates in a spreadsheet.
+// Calculate business days, excluding weekends in a spreadsheet.
 
-// Use a function to get number of days between two dates in a spreadsheet.
+// Determine workdays for project scheduling in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

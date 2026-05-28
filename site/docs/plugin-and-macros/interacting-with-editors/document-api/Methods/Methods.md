@@ -7,7 +7,7 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AcceptReviewChanges](./AcceptReviewChanges.md) | None | Accepts review changes. |
-| [AddAddinField](./AddAddinField.md) | None | Creates a new addin field with the data specified in the request. |
+| [AddAddinField](./AddAddinField.md) | [AddinFieldData](../Enumeration/AddinFieldData.md) | Creates a new addin field with the data specified in the request. |
 | [AddComment](./AddComment.md) | string \| null | Adds a comment to the document. |
 | [AddContentControl](./AddContentControl.md) | [ContentControl](../Enumeration/ContentControl.md) | Adds an empty content control to the document. |
 | [AddContentControlCheckBox](./AddContentControlCheckBox.md) | None | Adds an empty content control checkbox to the document. |
@@ -30,7 +30,7 @@ Represents the Api class.
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetAllContentControls](./GetAllContentControls.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the content controls that have been added to the page. |
 | [GetAllForms](./GetAllForms.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document. |
-| [GetAllOleObjects](./GetAllOleObjects.md) | [OLEObjectData](../Enumeration/OLEObjectData.md)[] | Returns all OLE object data for objects which can be opened by the specified plugin. If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document. |
+| [GetAllOleObjects](./GetAllOleObjects.md) | [OLEObjectData](../Enumeration/OLEObjectData.md)[] | Returns all OLE object data for objects which can be opened by the specified plugin. |
 | [GetCurrentAddinField](./GetCurrentAddinField.md) | [AddinFieldData](../Enumeration/AddinFieldData.md) | Returns the current addin field from the document. |
 | [GetCurrentBookmark](./GetCurrentBookmark.md) | string \| null | Returns the current bookmark. |
 | [GetCurrentContentControl](./GetCurrentContentControl.md) | string | Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned). |
@@ -63,9 +63,11 @@ Represents the Api class.
 | [IsFormSigned](./IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
+| [MoveCursorOutsideField](./MoveCursorOutsideField.md) | None | Moves the cursor outside a field to the position before or after it. |
 | [MoveCursorToContentControl](./MoveCursorToContentControl.md) | None | Moves a cursor to the specified content control. |
-| [MoveCursorToEnd](./MoveCursorToEnd.md) | None | Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the **Ctrl + End** keyboard shortcut. |
-| [MoveCursorToStart](./MoveCursorToStart.md) | None | Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the **Ctrl + Home** keyboard shortcut. |
+| [MoveCursorToEnd](./MoveCursorToEnd.md) | None | Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape). |
+| [MoveCursorToField](./MoveCursorToField.md) | None | Moves the cursor to the beginning or end of a field. |
+| [MoveCursorToStart](./MoveCursorToStart.md) | None | Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape). |
 | [MoveToComment](./MoveToComment.md) | None | Moves a cursor to the specified comment. |
 | [MoveToNextReviewChange](./MoveToNextReviewChange.md) | None | Navigates through the review changes. |
 | [OnDropEvent](./OnDropEvent.md) | None | Implements the external drag&drop emulation. |
@@ -73,7 +75,7 @@ Represents the Api class.
 | [OpenFile](./OpenFile.md) | None | Opens a file with fields. |
 | [PasteHtml](./PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
-| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
+| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. |
 | [Redo](./Redo.md) | None | Reverts the user's last undone action. |
 | [RejectReviewChanges](./RejectReviewChanges.md) | None | Rejects review changes. |
 | [RemoveAddinField](./RemoveAddinField.md) | None | Removes the specified add-in field. |
@@ -99,7 +101,8 @@ Represents the Api class.
 | [SetEditingRestrictions](./SetEditingRestrictions.md) | None | Sets the document editing restrictions. |
 | [SetFormValue](./SetFormValue.md) | None | Sets a value to the specified form. |
 | [SetMacros](./SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetParagraphHtml](./SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. |
+| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
 | [SetProperties](./SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./ShowError.md) | None | Shows an error/warning message. |

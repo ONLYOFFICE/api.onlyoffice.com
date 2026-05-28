@@ -21,12 +21,12 @@ expression.GetCore();
 
 ## 示例
 
-使用核心属性管理电子表格中的电子表格元数据。
+读取和写入电子表格中的内置文档属性，如作者和标题。
 
 ```javascript editor-xlsx
-// How to get the core in a spreadsheet?
+// How do I set or retrieve metadata like creator, subject, and keywords in a spreadsheet?
 
-// Get the core using the spreadsheet API.
+// Store descriptive information about the document itself in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array with all the OLE objects from the slide layout in a presentation.
+Get all OLE objects from a slide layout as an array.
 
 ```javascript editor-pptx
-// How to get all OLE objects from the layout of presentation.
+// OLE objects in layouts can be accessed and their application IDs retrieved.
 
-// Get all OLE objects from the presentation as an array.
+// Display the application ID of the first OLE object in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);

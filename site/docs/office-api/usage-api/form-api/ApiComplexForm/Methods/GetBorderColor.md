@@ -6,12 +6,12 @@ Inherited from [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderC
 
 ## Example
 
-Get the border color of a form in a document.
+Read the border color of a form field in a document.
 
 ```javascript editor-forms
-// How to get the border color of a text form.
+// How do I get the border color of a form field in a document?
 
-// Retrieve the border color of a created text form and display it.
+// Verify a custom border color by reading its RGB values back after applying it.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

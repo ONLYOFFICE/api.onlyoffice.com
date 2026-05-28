@@ -4,6 +4,8 @@ description: Split slide content into multiple slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Split slides
 
 Splits slides in a presentation that contain more than 100 words into multiple slides.
@@ -94,5 +96,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![SplitSlides](/assets/images/plugins/split-slides.png#gh-light-mode-only)
-![SplitSlides](/assets/images/plugins/split-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/split-slides" dark />

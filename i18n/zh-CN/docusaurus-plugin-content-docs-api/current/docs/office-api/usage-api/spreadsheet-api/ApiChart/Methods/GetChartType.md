@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-获取电子表格中图表的图表类型。
+读取现有图表的图表类型并在电子表格的标题中显示。
 
 ```javascript editor-xlsx
-// How to get the chart type for a chart in a spreadsheet?
+// How do I find out what kind of chart has been inserted on a sheet in a spreadsheet?
 
-// Get the chart type and display the result in a spreadsheet.
+// Confirm the chart variety programmatically to use its name as a label in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

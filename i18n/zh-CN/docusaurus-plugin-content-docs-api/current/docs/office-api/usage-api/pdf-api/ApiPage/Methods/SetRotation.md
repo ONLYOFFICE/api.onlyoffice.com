@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRotation(nAngle);
+expression.SetRotation(angle);
 ```
 
 `expression` - 表示 [ApiPage](../ApiPage.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRotation(nAngle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAngle | 必需 | number |  | 未提供描述。 |
+| angle | 必需 | number |  | 以度为单位的旋转角度。必须是 90 的倍数。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中第一页的旋转。
+在 PDF 中将页面旋转到特定角度。
 
 ```javascript editor-pdf
-// How can I set rotation using a page in a PDF document?
+// How do I turn a page to face the right direction in a PDF?
 
-// Set rotation for a page in a PDF document.
+// Apply a rotation transformation to change the page orientation in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

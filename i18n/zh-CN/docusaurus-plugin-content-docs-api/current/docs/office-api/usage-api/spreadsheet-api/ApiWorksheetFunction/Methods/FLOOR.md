@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将数字向下舍入到最接近的有效数字倍数。
+在电子表格中将数字向下舍入到指定值的最近倍数。
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest multiple of significance in a spreadsheet.
+// How do I round a number down to a specific increment in a spreadsheet?
 
-// Use function to round down in a spreadsheet.
+// Decrease a number to the nearest multiple of a given significance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

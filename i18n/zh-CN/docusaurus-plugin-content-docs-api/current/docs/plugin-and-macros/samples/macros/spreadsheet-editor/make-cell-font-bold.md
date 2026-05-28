@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置单元格字体加粗
 
 将单元格 A2 的字体设置为加粗。
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold" dark />

@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-在文档中创建标识符为 'dk1' 的配色方案颜色。
+使用文档活动主题调色板中的颜色填充形状。
 
 ```javascript editor-docx
-// Create a complex color scheme using the 'dk1' scheme identifier in a document.
+// How do I use one of the document's theme colors as the solid fill for a shape in a document?
 
-// How to create the scheme color object and use it as a background for the shape object in a document.
+// Apply a theme-aware color to a shape so it updates automatically when the theme changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

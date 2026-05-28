@@ -23,12 +23,12 @@ number \| string \| null
 
 ## 示例
 
-使用位置获取电子表格中的透视值单元格。
+按行和列位置从电子表格中的数据透视表读取特定数据单元格。
 
 ```javascript editor-xlsx
-// How to get a pivot value cell.
+// How do I look up a single numeric result inside a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its value cell.
+// Extract a particular summary value from a pivot table to use elsewhere in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -1,17 +1,17 @@
 # GetDocumentInfo
 
 返回文档信息：
--**Application** - 创建文档的应用程序。
--**CreatedRaw** - 文件创建的日期和时间。
--**Created** - 解析后的文件创建日期和时间。
--**LastModifiedRaw** - 文件最后修改的日期和时间。
--**LastModified** - 解析后的文件最后修改日期和时间。
--**LastModifiedBy** - 对文档进行最新更改的用户名。
--**Authors** - 创建文件的人员。
--**Title** - 文档标题（此属性可帮助您简化文档分类）。
--**Tags** - 文档标签（此属性可帮助您简化文档分类）。
--**Subject** - 文档主题（此属性可帮助您简化文档分类）。
--**Comment** - 文档批注（此属性可帮助您简化文档分类）。
+- **Application** - 创建文档的应用程序。
+- **CreatedRaw** - 文件创建的日期和时间。
+- **Created** - 解析后的文件创建日期和时间。
+- **LastModifiedRaw** - 文件最后修改的日期和时间。
+- **LastModified** - 解析后的文件最后修改日期和时间。
+- **LastModifiedBy** - 对文档进行最新更改的用户名。
+- **Authors** - 创建文件的人员。
+- **Title** - 文档标题（此属性可帮助您简化文档分类）。
+- **Tags** - 文档标签（此属性可帮助您简化文档分类）。
+- **Subject** - 文档主题（此属性可帮助您简化文档分类）。
+- **Comment** - 文档批注（此属性可帮助您简化文档分类）。
 
 ## 语法
 
@@ -31,12 +31,12 @@ object
 
 ## 示例
 
-获取以对象形式表示的文档信息，并将应用程序名称粘贴到文档的最后一个段落中。
+检索文档元数据并在文档中显示应用程序名称。
 
 ```javascript editor-docx
-// How to get information such as application with which the document was created.
+// How do I read document properties like the creating application in a document?
 
-// Display the document information.
+// Add a paragraph showing which application produced the document in a document.
 
 let doc = Api.GetDocument();
 let docInfo = doc.GetDocumentInfo();

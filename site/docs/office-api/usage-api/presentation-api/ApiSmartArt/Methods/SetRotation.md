@@ -9,7 +9,7 @@ Inherited from [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md)
 Set the rotation angle to the drawing in a presentation.
 
 ```javascript editor-pptx
-// How to set rotation for a drawing object in a presentation?
+// Rotation transforms a shape's orientation on the slide.
 
 // Set rotation and display the result in a presentation.
 

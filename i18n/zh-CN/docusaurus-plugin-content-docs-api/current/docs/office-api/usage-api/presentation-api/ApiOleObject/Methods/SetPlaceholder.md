@@ -6,12 +6,12 @@
 
 ## 示例
 
-在演示文稿中为形状设置占位符。
+在演示文稿中将形状标记为占位符。
 
 ```javascript editor-pptx
-// How to set a placeholder for a shape in a presentation.
+// How do I designate a shape as a placeholder for content in a presentation?
 
-// Select a shape object from a slide and change its placeholder.
+// Create a shape and define what type of content it will accept in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

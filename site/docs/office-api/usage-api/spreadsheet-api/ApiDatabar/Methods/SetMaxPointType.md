@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the maximum point type of a data bar conditional formatting rule.
+Define how the upper boundary of a data bar scale is calculated in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the type of the maximum condition value in a spreadsheet.
+// How do I choose what determines the longest possible data bar in a spreadsheet?
 
-// Set the maximum point type of a data bar conditional formatting rule.
+// Anchor the top of a data bar range to a percentage, fixed number, or automatic value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

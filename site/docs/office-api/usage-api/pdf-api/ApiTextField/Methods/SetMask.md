@@ -1,11 +1,11 @@
 # SetMask
 
-Sets mask for entered text for field.
+Sets the input mask for entered text.
 
 ## Syntax
 
 ```javascript
-expression.SetMask(sMask);
+expression.SetMask(inputMask);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetMask(sMask);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sMask | Required | string |  | field mask (e.g. "(999)999-9999") |
+| inputMask | Required | string |  | The input mask (e.g. "(999)999-9999"). |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set mask for entered text for it in a PDF document.
+Require text input to follow a specific pattern in a PDF text field.
 
 ```javascript editor-pdf
-// How do I set mask in a PDF document?
+// How do I enforce a phone number or ID format when users type in a PDF?
 
-// Set mask using a text field object in a PDF document.
+// Set an input pattern that users must follow in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -4,6 +4,8 @@ description: Convert a table on a slide to a chart.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Table to chart
 
 Generates a chart based on the selected table data.
@@ -136,5 +138,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![TableToChart](/assets/images/plugins/table-to-chart.png#gh-light-mode-only)
-![TableToChart](/assets/images/plugins/table-to-chart.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/table-to-chart" dark />

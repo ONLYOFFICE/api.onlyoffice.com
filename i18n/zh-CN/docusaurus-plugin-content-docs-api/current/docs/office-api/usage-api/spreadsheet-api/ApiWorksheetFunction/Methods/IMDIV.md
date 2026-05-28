@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个复数的商。
+在电子表格中将一个复数除以另一个。
 
 ```javascript editor-xlsx
-// How to get the quotient of two comlex numbers in a spreadsheet.
+// How do I divide two complex numbers in a spreadsheet?
 
-// Use a function to get the quotient in a spreadsheet.
+// Get the quotient of complex numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

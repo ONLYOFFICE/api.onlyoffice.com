@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to lines in a document.
+Convert a typographic point value to lines and display the result in a document.
 
 ```javascript editor-docx
-// How can I convert points to lines in a document?
+// How do I find the line equivalent of a measurement given in points in a document?
 
-// Convert points to lines in a document.
+// Show how many lines correspond to a specific number of points as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

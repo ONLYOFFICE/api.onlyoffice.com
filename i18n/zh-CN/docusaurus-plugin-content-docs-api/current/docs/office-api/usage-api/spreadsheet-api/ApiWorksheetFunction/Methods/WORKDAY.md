@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定工作日数之前或之后的日期序列号。
+查找电子表格中给定日期之前或之后指定工作日数的日期。
 
 ```javascript editor-xlsx
-// How to return the serial number of the date adding some workdays in a spreadsheet.
+// How do I calculate a new date by adding or subtracting workdays in a spreadsheet?
 
-// Use a function to calculate the serial number of the date in a spreadsheet.
+// Determine a future or past workday date based on a number of working days in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

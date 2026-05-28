@@ -22,12 +22,12 @@ expression.GetLayout(nPos);
 
 ## 示例
 
-通过位置获取演示文稿中指定幻灯片母版的版式。
+按索引位置从幻灯片母版检索布局。
 
 ```javascript editor-pptx
-// How to get a master layout knowing its index in a presentation.
+// Access the master and create a layout object to apply to a slide.
 
-// Get a layout object from the master in a presentation.
+// Add the layout to the master and apply it to the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

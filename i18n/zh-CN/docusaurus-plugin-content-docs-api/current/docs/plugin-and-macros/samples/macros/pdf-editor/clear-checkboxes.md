@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 清除复选框
 
 清除文档中的所有复选框。
@@ -17,12 +19,11 @@ hide_table_of_contents: true
         form.SetChecked(false);
       }
     });
-})();
+  })();
 ```
 
 使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/GetFormType.md), [IsChecked](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md), [SetChecked](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md)
 
 ## 结果
 
-![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.png#gh-light-mode-only)
-![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/clear-checkboxes" dark />

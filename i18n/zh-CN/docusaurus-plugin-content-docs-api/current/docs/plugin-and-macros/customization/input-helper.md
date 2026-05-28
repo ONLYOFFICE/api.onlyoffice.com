@@ -51,16 +51,16 @@ window.Asc.plugin.init = (text) => {
 
 ## 显示输入辅助 {#showing-an-input-helper}
 
-要显示输入辅助，请使用 *window.Asc.plugin.executeMethod* 的 **ShowInputHelper** 方法。
+要显示输入辅助，请使用 `window.Asc.plugin.executeMethod` 的 **ShowInputHelper** 方法。
 
 **参数**：
 
 | 名称             | 类型      | 描述                                                             |
 |------------------|-----------|------------------------------------------------------------------|
-| *guid*           | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
+| *guid*           | `string`  | 一个字符串值，指定插件标识符，必须是 `asc.{UUID}` 类型。       |
 | *w*              | `number`  | 一个数字，指定窗口宽度，单位为毫米。                             |
 | *h*              | `number`  | 一个数字，指定窗口高度，单位为毫米。                             |
-| *isKeyboardTake* | `boolean` | 键盘是否被捕获（**true**）或未捕获（**false**）。                |
+| *isKeyboardTake* | `boolean` | 键盘是否被捕获（`true`）或未捕获（`false`）。                |
 
 **返回值**：此方法不返回任何数据。
 
@@ -72,14 +72,14 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 
 ## 隐藏输入辅助 {#unshowing-an-input-helper}
 
-要隐藏输入辅助，使用 *window.Asc.plugin.executeMethod* 的 **UnShowInputHelper** 方法。
+要隐藏输入辅助，使用 `window.Asc.plugin.executeMethod` 的 **UnShowInputHelper** 方法。
 
 **参数**：
 
 | 名称      | 类型      | 描述                                                             |
 |-----------|-----------|------------------------------------------------------------------|
-| *guid*    | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
-| *isclear* | `boolean` | 输入上下文是否会被清除（**true**）或不清除（**false**）。        |
+| *guid*    | `string`  | 一个字符串值，指定插件标识符，必须是 `asc.{UUID}` 类型。       |
+| *isclear* | `boolean` | 输入上下文是否会被清除（`true`）或不清除（`false`）。        |
 
 **返回值**：此方法不返回任何数据。
 
@@ -168,7 +168,7 @@ const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().
 
 **参数**：此方法不接受任何参数。
 
-**返回值**：object（具有 *w* 和 *h* 属性）
+**返回值**：object（具有 `w` 和 `h` 属性）
 
 **示例**：
 
@@ -235,7 +235,7 @@ window.Asc.plugin.getInputHelper().show(sizes.w, sizes.h, true);
 |---------------------|-----------|--------------------------------------------------------|
 | *width*             | `number`  | 输入辅助窗口宽度，单位为毫米。                         |
 | *height*            | `number`  | 输入辅助窗口高度，单位为毫米。                         |
-| *isCaptureKeyboard* | `boolean` | 是否捕获键盘（**true**）或不捕获（**false**）。        |
+| *isCaptureKeyboard* | `boolean` | 是否捕获键盘（`true`）或不捕获（`false`）。        |
 
 **返回值**：此方法无返回值。
 

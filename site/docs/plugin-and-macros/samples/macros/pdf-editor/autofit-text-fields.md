@@ -4,6 +4,8 @@ description: Enable auto-fit for all text form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Autofit text fields
 
 Autofits all the text fields in the document.
@@ -27,5 +29,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AutofitTextForms](/assets/images/plugins/autofit-text-fields.png#gh-light-mode-only)
-![AutofitTextForms](/assets/images/plugins/autofit-text-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/autofit-text-fields" dark />

@@ -22,12 +22,12 @@ expression.SetWidth(nWidth);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。应用具有特定填充和笔触属性的自定义几何图形。
+定义演示文稿中自定义形状绘图区域的水平尺寸。
 
 ```javascript editor-pptx
-// How do I set width in a presentation?
+// How do I control the horizontal size of a shape path in a presentation?
 
-// Set width using a geometry path object in a presentation.
+// Adjust the width value of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

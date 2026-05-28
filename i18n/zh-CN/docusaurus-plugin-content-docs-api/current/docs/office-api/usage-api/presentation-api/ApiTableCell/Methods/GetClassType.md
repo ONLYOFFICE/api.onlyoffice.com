@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中表格单元格的类类型。
+获取表格单元格的类类型标识符。
 
 ```javascript editor-pptx
-// How to identify the class type of a table cell?
+// Retrieve the class type to identify the cell object's type.
 
-// Obtain the class type identifier of a table cell object.
+// Create a table cell and obtain its class type identifier.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

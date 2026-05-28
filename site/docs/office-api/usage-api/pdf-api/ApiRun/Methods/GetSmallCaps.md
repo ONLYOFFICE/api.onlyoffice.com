@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)
 
 ## Example
 
-Find out whether a text is uncapitalized in a PDF document.
+Check if text is displayed in small capitals in a PDF.
 
 ```javascript editor-pdf
-// How to know whether the text letters are lowercase or not in a PDF document.
+// How do I determine if text has small capital formatting in a PDF?
 
-// Get the text properties of the run and find whether it is uncapitalized or not in a PDF document.
+// Retrieve and verify the small capitals setting applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

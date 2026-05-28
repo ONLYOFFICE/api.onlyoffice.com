@@ -5,7 +5,7 @@ Creates a image field.
 ## Syntax
 
 ```javascript
-expression.CreateImageField(aRect);
+expression.CreateImageField(rect);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateImageField(aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
 
 ## Returns
 
@@ -22,10 +22,10 @@ expression.CreateImageField(aRect);
 
 ## Example
 
-How to create and add a field with image to document.
+Create and add a field with image to document.
 
 ```javascript editor-pdf
-// How do I create the image field in a PDF document?
+// Create the image field in a PDF document.
 
 // Create the image field and display the result in a PDF document.
 

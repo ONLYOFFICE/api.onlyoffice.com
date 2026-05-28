@@ -14,7 +14,7 @@ expression.SetBorderWidth(width);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| width | 必需 | [pt](../../Enumeration/pt.md) |  | 未提供描述。 |
+| width | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的边框宽度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置粗边框宽度。
+更改 PDF 中注释边框的粗细。
 
 ```javascript editor-pdf
-// How to set border width for an annotation in a PDF document?
+// How thick should an annotation border be in a PDF?
 
-// Set border width and display the result in a PDF document.
+// Set the width of the border outline on an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

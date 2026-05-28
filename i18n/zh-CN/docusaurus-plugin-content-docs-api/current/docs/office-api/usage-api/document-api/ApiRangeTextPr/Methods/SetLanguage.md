@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中处理文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+为文档中的文本分配拼写检查语言。
 
 ```javascript editor-docx
-// How to set a language to the text for grammar checking in a document.
+// How do I tell the editor which language to use when checking text in a document?
 
-// Create a text run object, change its language to English for grammar check in a document.
+// Ensure correct spelling and grammar rules by setting the text language in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

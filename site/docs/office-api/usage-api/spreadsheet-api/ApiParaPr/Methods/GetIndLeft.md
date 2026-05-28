@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph left side indentation in a spreadsheet.
+Read the left-side indent distance applied to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a left indent of a paragraph in a spreadsheet.
+// How do I check how far a paragraph is pushed in from the left margin in a spreadsheet?
 
-// Get the left paragraph indent by the side in a spreadsheet.
+// Inspect the left margin offset of a paragraph to verify its horizontal position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

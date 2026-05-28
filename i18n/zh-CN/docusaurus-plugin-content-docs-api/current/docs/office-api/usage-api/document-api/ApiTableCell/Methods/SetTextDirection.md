@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定此表格单元格的文本流方向。
+更改文档中表格单元格内文本的流动方向。
 
 ```javascript editor-docx
-// Set the direction of the cell text.
+// How do I rotate or reorient the text inside a table cell in a document?
 
-// Get the cell from the table and set its direction.
+// Display text vertically rather than horizontally within a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,12 +20,12 @@ String[]
 
 ## 示例
 
-获取文档中所有内容控件使用的所有标签列表。
+收集文档中分配给所有内容控件的标签。
 
 ```javascript editor-docx
-// How to get the style of the heading in a document.
+// How do I list every content control tag present in a document?
 
-// Display the style name of the "Heading 6" in a document.
+// Identify and display the tag values of both inline and block-level content controls for auditing purposes.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

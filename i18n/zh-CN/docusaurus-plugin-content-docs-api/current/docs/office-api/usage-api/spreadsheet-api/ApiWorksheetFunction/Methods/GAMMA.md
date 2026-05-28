@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回 Gamma 函数值。
+返回伽马函数值。
 
 ```javascript editor-xlsx
-// How to calculate the gamma function value in a spreadsheet.
+// Calculate the gamma function for the given parameter value.
 
-// Use a function to get the result from a gamma function value in a spreadsheet.
+// Determine gamma function result using GAMMA with numeric input.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

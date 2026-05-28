@@ -20,10 +20,10 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中不受支持的注释返回的类类型。
+读取文档中无法识别的批注对象的类型标识符。
 
 ```javascript editor-docx
-// How do I check what type an unsupported annotation object is in a document?
+// How do I find out what kind of unsupported element I have encountered in a document?
 
-// Retrieve and output the class type string for an unsupported annotation in a document.
+// Confirm the category of an unknown annotation by retrieving its type label in a document.
 ```

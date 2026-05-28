@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中设置表格右侧显示的边框。
+在文档中为表格的右侧应用边框。
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the right 4 point black border in a document.
+// How do I add a border along the right edge of a table in a document?
 
-// Add right border to the table in a document.
+// Outline the right side of a table with a visible border line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

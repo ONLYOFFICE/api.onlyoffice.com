@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中具有相同段落边框设置的一组段落之间显示的边框。
+在文档中连续的同样式段落之间添加边框。
 
 ```javascript editor-docx
-// How to set the border between paragraphs in a document.
+// How do I draw a dividing line between paragraphs that share the same style in a document?
 
-// Create a paragraph, add text to it and the single border between the text in a document.
+// Apply a uniform visual separator across a group of related paragraphs using a shared style.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

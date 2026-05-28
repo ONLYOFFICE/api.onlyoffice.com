@@ -19,16 +19,16 @@ expression.SetOffset(nRow, nCol);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Set the cell offset.
+Shift a cell reference by a given number of rows and columns in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an offset of cells.
+// How do I move a range reference to a different position in a spreadsheet?
 
-// Get a range and specify its cells offset.
+// Target a new location relative to the original range without selecting it manually in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B3").SetValue("Old Range");

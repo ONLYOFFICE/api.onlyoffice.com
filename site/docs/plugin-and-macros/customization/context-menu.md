@@ -45,7 +45,7 @@ The plugin can be accessed via the context menu.
 
    The context menu options.
 
-   `Type: object`
+   **type:** `object`
 
    **Properties**:
 
@@ -61,16 +61,16 @@ The plugin can be accessed via the context menu.
 
    The context menu type:
 
-   - **None** - not used,
-   - **Target** - nothing is selected,
-   - **Selection** - text is selected,
-   - **Image** - image is selected,
-   - **Shape** - shape is selected,
-   - **OleObject** - OLE object is selected.
+   - `None` - not used,
+   - `Target` - nothing is selected,
+   - `Selection` - text is selected,
+   - `Image` - image is selected,
+   - `Shape` - shape is selected,
+   - `OleObject` - OLE object is selected.
 
    Depending on the selection type, different context menu items can be added.
 
-   `Type: "None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
+   **type:** `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 2. Specify the **AddContextMenuItem** method to add a button to the context menu if necessary.
 
@@ -86,7 +86,7 @@ The plugin can be accessed via the context menu.
 
    The context menu item.
 
-   `Type: object`
+   **type:** `object`
 
    **Properties**:
 

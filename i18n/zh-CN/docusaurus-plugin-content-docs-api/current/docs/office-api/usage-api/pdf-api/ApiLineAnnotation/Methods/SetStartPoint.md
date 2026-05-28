@@ -14,7 +14,7 @@ expression.SetStartPoint(point);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
+| point | 必需 | [Point](../../Enumeration/Point.md) |  | 线条的起始点。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为线条注释设置起点。
+重新定位 PDF 中线条注释的起始位置。
 
 ```javascript editor-pdf
-// How do I set start point in a PDF document?
+// How do I move the starting position of a line in a PDF?
 
-// Set start point using a line annotation object in a PDF document.
+// Update the coordinates for the line's starting location in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});

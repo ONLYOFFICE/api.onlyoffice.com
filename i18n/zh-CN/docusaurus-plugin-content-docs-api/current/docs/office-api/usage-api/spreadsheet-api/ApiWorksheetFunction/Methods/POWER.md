@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的幂的结果。
+在电子表格中将数字提升到幂。
 
 ```javascript editor-xlsx
-// How to raise a number to a power in a spreadsheet.
+// What is the result of raising a number to a power in a spreadsheet?
 
-// Use a function to calculate the result after raising a number to the power in a spreadsheet.
+// Calculate an exponential value using a specific base and exponent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

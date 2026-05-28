@@ -24,12 +24,12 @@ number
 
 ## Example
 
-Calculate the Poisson distribution in a spreadsheet.
+Calculate event probability using the Poisson statistical distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution in a spreadsheet.
+// How do I find the probability of events occurring at a given rate in a spreadsheet?
 
-// Use a function to calculate the Poisson distribution in a spreadsheet.
+// Determine cumulative or individual event probabilities from a Poisson distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

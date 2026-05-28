@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置段落内容对齐方式。
+控制文档中段落文本的水平对齐方式。
 
 ```javascript editor-docx
-// How to set justification of the paragraph content in a document.
+// How do I apply left, right, center, or justified alignment to paragraphs in a document?
 
-// Change the justification of the paragraph in a document.
+// Demonstrate multiple alignment styles side by side to choose the right layout for content.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");

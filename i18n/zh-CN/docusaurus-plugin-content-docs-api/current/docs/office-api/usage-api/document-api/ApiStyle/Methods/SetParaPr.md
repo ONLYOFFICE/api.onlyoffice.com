@@ -22,12 +22,12 @@ expression.SetParaPr(paraPr);
 
 ## 示例
 
-将段落设置应用于文档中的指定样式。
+将段落格式规则应用于命名样式，以便文档中所有匹配的段落共享这些设置。
 
 ```javascript editor-docx
-// Create a paragraph, add a text to it, and set the line spacing and justify in a document.
+// How do I change the line spacing and alignment for all paragraphs that use a particular style in a document?
 
-// Specify the text properties object and apply its settings to the style object in a document.
+// Control indentation and spacing across multiple paragraphs at once by updating their shared style in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

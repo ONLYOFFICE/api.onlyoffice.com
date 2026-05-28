@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中色阶条件的类型。
+读取分配给电子表格中色阶规则点的阈值类型。
 
 ```javascript editor-xlsx
-// How to check the type of a color scale criterion in a spreadsheet.
+// How do I find out what kind of threshold is set for a color scale rule point in a spreadsheet?
 
-// Get the type of a color scale criterion in a spreadsheet.
+// Inspect the threshold category of a color scale rule entry to understand how its boundary is defined in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

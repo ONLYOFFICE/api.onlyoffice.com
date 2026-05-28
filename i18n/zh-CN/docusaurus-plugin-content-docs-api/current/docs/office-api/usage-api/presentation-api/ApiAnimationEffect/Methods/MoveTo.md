@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中将动画效果移动到不同位置。
+在演示文稿中重新排序序列内的动画效果。
 
 ```javascript editor-pptx
-// How do I move to in a presentation?
+// How do I change the position of an animation in a list of animations in a presentation?
 
-// Move to using an animation effect object in a presentation.
+// Rearrange when an animation plays relative to other animations in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

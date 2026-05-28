@@ -14,7 +14,7 @@ expression.SetQuads(quads);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | No description provided. |
+| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | An array of quadrilaterals defining the highlighted regions. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set quads for markup annotation in a PDF document.
+Specify the highlight area for a markup annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I set quads in a PDF document?
+// How do I define the highlighted region in a PDF?
 
-// Set quads using a markup annotation object in a PDF document.
+// Assign new coordinates to the marked area of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);

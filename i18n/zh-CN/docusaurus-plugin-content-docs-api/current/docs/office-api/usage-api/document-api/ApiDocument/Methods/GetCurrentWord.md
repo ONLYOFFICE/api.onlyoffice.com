@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-获取文档中的当前单词。
+读取文档中光标位置处的单词，包括光标前后的文本。
 
 ```javascript editor-docx
-// How to get a word where the cursor is set in a document.
+// How do I get the word the cursor is currently placed on in a document?
 
-// Display the parts of the word before or after the cursor in a document.
+// Split the word at the cursor to inspect its left and right portions separately in a document.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);

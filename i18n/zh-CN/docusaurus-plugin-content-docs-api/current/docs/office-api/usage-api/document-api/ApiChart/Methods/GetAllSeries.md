@@ -20,12 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-获取图表类的所有系列并将其类型插入到文档中。
+列出文档中图表中的每个数据系列及其类型。
 
 ```javascript editor-docx
-// How to get all series from the chart and show each one's type in the document.
+// How do I retrieve all series from a chart and inspect each one's type in a document?
 
-// Display each chart series type in the document.
+// Audit a combo chart's composition by printing the type of each data series in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

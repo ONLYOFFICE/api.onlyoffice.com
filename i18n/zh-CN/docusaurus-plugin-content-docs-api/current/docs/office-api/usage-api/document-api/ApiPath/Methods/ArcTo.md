@@ -25,12 +25,12 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用三次贝塞尔、二次贝塞尔和圆弧命令创建复杂曲线。在文档中演示不同类型的曲线绘制方法。
+沿自定义形状路径绘制弧段以在文档中创建曲线几何图形。
 
 ```javascript editor-docx
-// How do I arc to in a document?
+// How do I add a curved arc portion to a shape's outline path in a document?
 
-// Arc to using a geometry path object in a document.
+// Extend a shape's boundary with a smooth elliptical arc connecting two points in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

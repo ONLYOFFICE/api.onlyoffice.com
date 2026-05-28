@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## 示例
 
-在演示文稿中创建图案填充，使用所选图案作为对象背景应用于对象。
+在演示文稿中将重复图案应用为形状的背景。
 
 ```javascript editor-pptx
-// How to apply pattern to the background of a drawing in a presentation.
+// How do I fill a shape with a pattern in a presentation?
 
-// Change color of an element using a pattern fill in a presentation.
+// Set a two-color pattern fill on a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 统计形状数量
 
 通过遍历所有幻灯片，统计演示文稿中的形状总数，并在一张新建幻灯片上显示该数量。
@@ -67,4 +69,4 @@ End Sub
 
 ## 结果
 
-![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.png#gh-light-mode-only)![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/count-number-of-shapes" dark />

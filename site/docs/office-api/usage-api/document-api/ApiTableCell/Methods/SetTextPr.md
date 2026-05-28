@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Apply the text settings to the entire contents of the cell.
+Apply uniform text formatting to all content inside a table cell in a document.
 
 ```javascript editor-docx
-// Set text properties to the table cell.
+// How do I change the font style and size of all text in a table cell in a document?
 
-// Make the table cell bold and with bigger font.
+// Style every character in a table cell at once by setting shared text properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

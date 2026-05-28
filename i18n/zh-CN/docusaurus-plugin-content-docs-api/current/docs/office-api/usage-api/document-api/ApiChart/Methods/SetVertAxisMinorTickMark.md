@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中垂直轴的次要刻度线。
+设置文档中图表垂直轴上次刻度线的样式。
 
 ```javascript editor-docx
-// How to set a minor tick mark using predefined symbols in a document.
+// How do I add small subdivision markers between major intervals on the vertical axis in a document?
 
-// Create a chart, set its properties and minor tick mark for vertical axis in a document.
+// Increase axis precision by displaying minor tick marks at sub-interval positions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

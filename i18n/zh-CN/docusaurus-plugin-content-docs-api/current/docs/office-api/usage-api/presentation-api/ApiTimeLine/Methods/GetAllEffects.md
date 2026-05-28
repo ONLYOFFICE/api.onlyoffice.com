@@ -20,12 +20,12 @@ expression.GetAllEffects();
 
 ## 示例
 
-从演示文稿中的时间线获取所有动画效果。
+检索演示文稿中幻灯片上的所有动画效果。
 
 ```javascript editor-pptx
-// How do I get all effects in a presentation?
+// How do I access the list of all animations on a slide in a presentation?
 
-// Get all effects using a timeline object in a presentation.
+// Collect every animation effect that has been added to a presentation slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

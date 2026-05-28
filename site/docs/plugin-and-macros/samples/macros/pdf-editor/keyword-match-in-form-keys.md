@@ -4,6 +4,8 @@ description: Highlight form fields matching a keyword in their key.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Keyword match in form keys
 
 Highlights form fields based on a keyword match in the form key.
@@ -31,5 +33,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![KeywordMatch](/assets/images/plugins/keyword-match.png#gh-light-mode-only)
-![KeywordMatch](/assets/images/plugins/keyword-match.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/keyword-match-in-form-keys" dark />

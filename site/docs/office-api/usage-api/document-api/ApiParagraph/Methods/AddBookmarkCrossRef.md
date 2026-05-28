@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-Add a bookmark cross-reference to the paragraph in a document.
+Insert a cross-reference that links to a bookmark in a document.
 
 ```javascript editor-docx
-// How to create a bookmark reference to the paragraph in a document.
+// How do I add a navigable reference pointing to a named bookmark in a document?
 
-// Add a cross-reference to the bookmark of the paragraph in a document.
+// Connect one paragraph to another location by referencing a bookmark by name in a document.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a text form.
+Identify what kind of object a text field is in a document.
 
 ```javascript editor-docx
-// How do I check what type a text form object is?
+// How do I find out what type of element a text entry area represents in a document?
 
-// Retrieve and output the class type string for a text form.
+// Confirm the category of a text field to distinguish it from other elements in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

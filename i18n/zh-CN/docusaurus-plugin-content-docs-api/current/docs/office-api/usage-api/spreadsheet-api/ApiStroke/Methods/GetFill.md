@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-获取笔触的填充颜色。在电子表格中创建具有彩色边框的形状并获取其填充属性。
+读取电子表格中应用于形状边框的填充颜色。
 
 ```javascript editor-xlsx
-// How can I get the fill using a stroke in a spreadsheet?
+// How do I find out what color a border is filled with in a spreadsheet?
 
-// Get the fill for a stroke in a spreadsheet.
+// Inspect the color stored inside a border object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

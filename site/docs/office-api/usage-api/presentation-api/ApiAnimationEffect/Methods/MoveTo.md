@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Move an animation effect to a different position in a presentation.
+Reorder an animation effect within a sequence in a presentation.
 
 ```javascript editor-pptx
-// How do I move to in a presentation?
+// How do I change the position of an animation in a list of animations in a presentation?
 
-// Move to using an animation effect object in a presentation.
+// Rearrange when an animation plays relative to other animations in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

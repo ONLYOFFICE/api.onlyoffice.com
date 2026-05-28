@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create and use the paragraph properties in a document.
+Apply custom paragraph alignment to a table row style in a document.
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style in a document.
+// How do I center-align text in the first row of a table style in a document?
 
-// Create the para pr in a document.
+// Set up a reusable table style with centered paragraph formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

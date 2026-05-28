@@ -5,7 +5,7 @@ Sets new field partial name.
 ## Syntax
 
 ```javascript
-expression.SetPartialName(sName);
+expression.SetPartialName(name);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetPartialName(sName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | Required | string |  | No description provided. |
+| name | Required | string |  | The new partial name for the field. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set field partial name and display it in a PDF document.
+Assign a local name to a form field in a PDF.
 
 ```javascript editor-pdf
-// How can I set partial name using a base field in a PDF document?
+// How do I set the local name for a form field in a PDF?
 
-// Set partial name for a base field in a PDF document.
+// Define the partial name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

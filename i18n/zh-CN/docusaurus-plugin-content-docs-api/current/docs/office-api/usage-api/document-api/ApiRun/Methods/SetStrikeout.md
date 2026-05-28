@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在文档中当前 run 的内容以通过行中心的单条水平线显示。
+在文档中为文本运行绘制删除线。
 
 ```javascript editor-docx
-// How to strike out a text run in a document.
+// How do I cross out a word or phrase to show it has been removed in a document?
 
-// Create a new text run and set cross it out in a document.
+// Mark text as deleted or negated by adding a strikethrough line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

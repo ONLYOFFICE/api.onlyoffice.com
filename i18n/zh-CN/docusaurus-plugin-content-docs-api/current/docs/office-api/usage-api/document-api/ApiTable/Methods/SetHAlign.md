@@ -14,7 +14,7 @@ expression.SetHAlign(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | String |  | 水平对齐类型：可以是 "left"、"center" 或 "right"。 |
+| sType | 必需 | String |  | 水平对齐类型：可以是 “left”、“center” 或 “right”。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格的水平对齐方式。
+在文档中将表格水平定位在页面上。
 
 ```javascript editor-docx
-// How to set alignment of the text to the center in a document.
+// How do I align a table to the left, center, or right in a document?
 
-// Create a table and set its horizontal alignment in a document.
+// Control where a table sits across the width of the page in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

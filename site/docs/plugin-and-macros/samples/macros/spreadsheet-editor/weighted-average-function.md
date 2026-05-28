@@ -4,6 +4,8 @@ description: Calculate a weighted average from cell values.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Weighted average function
 
 Creates a [custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md) to calculate a weighted average.
@@ -65,4 +67,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.png#gh-light-mode-only)![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/weighted-average-function" dark />

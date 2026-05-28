@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the type of an icon set conditional formatting rule in a spreadsheet.
+Read the type identifier of an icon set conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I get the type using an icon set condition in a spreadsheet?
+// How do I find out what type an icon set formatting rule is in a spreadsheet?
 
-// Get the type for an icon set condition in a spreadsheet.
+// Distinguish an icon set rule from other formatting rule types in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

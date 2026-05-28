@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 条件格式规则
 
 对所选区域应用多个条件格式规则。
@@ -41,4 +43,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.png#gh-light-mode-only)![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/conditional-formatting-rules" dark />

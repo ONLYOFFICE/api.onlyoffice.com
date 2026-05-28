@@ -1,6 +1,6 @@
 # GetCharLimit
 
-Gets text field chars limit.
+Gets the text field character limit.
 &lt;note&gt; Char limit 0 means field doesn't have char limit
 
 ## Syntax
@@ -21,12 +21,12 @@ number
 
 ## Example
 
-Get text field and display char limit property in a PDF document.
+Check the maximum character limit for a text field in a PDF.
 
 ```javascript editor-pdf
-// How can I get the char limit using a text field in a PDF document?
+// How do I find out how many characters a text field accepts in a PDF?
 
-// Get the char limit for a text field in a PDF document.
+// Read the character limit restriction of a text input field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

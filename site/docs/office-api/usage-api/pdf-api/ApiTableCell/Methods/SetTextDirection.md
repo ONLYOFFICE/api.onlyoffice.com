@@ -5,7 +5,7 @@ Specifies the direction of the text flow for the current table cell.
 ## Syntax
 
 ```javascript
-expression.SetTextDirection(sType);
+expression.SetTextDirection(textDirection);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The type of the text flow direction. |
+| textDirection | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The text flow direction. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-How to set text direction of the table cell.
+Set the direction that text flows inside a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create a table and set the text direction for the table cell object.
+// How do I rotate text direction in a table cell in a PDF?
 
-// Set text direction using a table cell object.
+// Change the text orientation inside your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

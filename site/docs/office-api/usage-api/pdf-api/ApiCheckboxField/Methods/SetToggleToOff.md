@@ -1,11 +1,11 @@
 # SetToggleToOff
 
-Sets field toggle to off prop.
+Sets whether the checked state can be toggled off.
 
 ## Syntax
 
 ```javascript
-expression.SetToggleToOff(bToggle);
+expression.SetToggleToOff(allowToggleOff);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxField](../ApiCheckboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetToggleToOff(bToggle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | Required | boolean |  | can toggle to off |
+| allowToggleOff | Required | boolean |  | Specifies whether the checked state can be toggled off. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set toggle to off property for checkbox field in a PDF document.
+Enable or disable toggle-off behavior for a checkbox in a PDF.
 
 ```javascript editor-pdf
-// How can I set toggle to off using a checkbox field in a PDF document?
+// How do I make a checkbox uncheck when clicked if already checked in a PDF?
 
-// Set toggle to off for a checkbox field in a PDF document.
+// Control whether a checked checkbox deselects on a second click in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

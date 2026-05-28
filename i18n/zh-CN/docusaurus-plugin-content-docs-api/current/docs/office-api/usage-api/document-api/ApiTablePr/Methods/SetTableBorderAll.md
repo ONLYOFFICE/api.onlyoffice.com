@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-在文档中为整个表格设置边框。
+在文档中为表格的每个边缘周围和内部应用统一边框。
 
 ```javascript editor-docx
-// How can I set table border all using a table properties in a document?
+// How do I add borders to all sides of every cell in a table in a document?
 
-// Set table border all for a table properties in a document.
+// Draw consistent lines along all internal and external table edges in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

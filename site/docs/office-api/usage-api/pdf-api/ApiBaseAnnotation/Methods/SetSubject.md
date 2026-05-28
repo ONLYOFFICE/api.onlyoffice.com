@@ -14,7 +14,7 @@ expression.SetSubject(subject);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| subject | Required | string |  | No description provided. |
+| subject | Required | string |  | The annotation subject text. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set subject to it in a PDF document.
+Add a subject or topic label to an annotation in a PDF.
 
 ```javascript editor-pdf
-// How can I set subject using an annotation in a PDF document?
+// Categorize an annotation with a subject line in a PDF.
 
-// Set subject for an annotation in a PDF document.
+// Assign a subject title to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

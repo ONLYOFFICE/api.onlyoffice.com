@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the top/bottom direction for top 10 condition in a spreadsheet.
+Switch a top 10 conditional formatting rule between highlighting highest and lowest values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to configure whether the condition evaluates top or bottom values in a spreadsheet.
+// How do I make a formatting rule mark the bottom values instead of the top ones in a spreadsheet?
 
-// Set the top/bottom direction for the top 10 rule in a spreadsheet.
+// Redirect attention to underperformers by flipping a highlight rule to bottom mode in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

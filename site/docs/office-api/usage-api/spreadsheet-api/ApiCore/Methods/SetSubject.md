@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the subject of the workbook in a spreadsheet.
+Define the subject of a workbook by writing it to the document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I set subject using a core properties in a spreadsheet?
+// How do I set a subject line for a workbook's metadata in a spreadsheet?
 
-// Set subject for a core properties in a spreadsheet.
+// Categorize the workbook's content by assigning it a subject in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

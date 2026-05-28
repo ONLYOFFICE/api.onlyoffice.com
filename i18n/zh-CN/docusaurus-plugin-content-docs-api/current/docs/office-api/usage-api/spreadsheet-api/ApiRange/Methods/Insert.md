@@ -14,7 +14,7 @@ expression.Insert(shift);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shift | 可选 | string |  | 指定移动单元格的方向（「right」、「down」）。 |
+| shift | 可选 | string |  | 指定移动单元格的方向（“right”、“down”）。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.Insert(shift);
 
 ## 示例
 
-向工作表或宏表中插入一个单元格或单元格范围，并移动其他单元格以腾出空间。
+在电子表格中添加新单元格或范围并将现有单元格推到一边腾出空间。
 
 ```javascript editor-xlsx
-// How to insert a range or a cell into a worksheet.
+// How do I insert a blank cell into a filled area and shift the surrounding data in a spreadsheet?
 
-// Insert a range or a cell into a worksheet specifying its shift direction.
+// Make space for new data by inserting a cell and choosing which direction the neighbors move in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B4").SetValue("1");

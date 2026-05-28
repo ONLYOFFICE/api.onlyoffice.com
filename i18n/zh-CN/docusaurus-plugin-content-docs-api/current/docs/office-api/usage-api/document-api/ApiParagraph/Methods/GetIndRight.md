@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中的段落右侧缩进。
+读取文档中段落设置的右缩进值。
 
 ```javascript editor-docx
-// Get the right indentation of the paragraph and show it in the document.
+// How do I find out how far a paragraph is indented from the right margin in a document?
 
-// How to know the number of inches of the right indentation in a document.
+// Check the right indent size before synchronizing paragraph layout across multiple styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

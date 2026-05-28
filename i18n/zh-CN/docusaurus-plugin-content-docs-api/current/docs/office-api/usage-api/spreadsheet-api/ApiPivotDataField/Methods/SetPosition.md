@@ -22,12 +22,12 @@ expression.SetPosition(position);
 
 ## 示例
 
-在电子表格中设置数据字段的位置。
+将值字段移动到电子表格中数据透视表的特定位置。
 
 ```javascript editor-xlsx
-// How to change a position of a table element in a spreadsheet.
+// How do I reorder data fields in the values area of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then move a custom data field chnaging its position in a spreadsheet.
+// Place a pivot field at a chosen index to control the column order in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

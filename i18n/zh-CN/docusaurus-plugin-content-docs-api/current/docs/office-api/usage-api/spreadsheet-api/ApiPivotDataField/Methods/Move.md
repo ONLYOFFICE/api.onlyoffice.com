@@ -14,7 +14,7 @@ expression.Move(type, index);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向，或透视字段方向类型。 |
+| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向，或数据透视字段方向类型。 |
 | index | 可选 | number |  | 数据字段在新类别中的索引。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ expression.Move(type, index);
 
 ## 示例
 
-在电子表格中移动数据字段。
+通过上移或下移在电子表格中重新排序数据透视表数据字段。
 
 ```javascript editor-xlsx
-// How to change a table element position by moving it by rows in a spreadsheet.
+// How do I change the position of a value field within a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then move data field's by rows in a spreadsheet.
+// Rearrange which summarized column appears first by moving a data field to a new spot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,12 +61,6 @@ pivotTable.AddFields({
 pivotTable.AddDataField('Price');
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
-
-pivotWorksheet.GetRange('A16').SetValue('Sum of Price will be moved soon');
-
-setTimeout(function() {
-    dataField.Move("Rows");
-}, 5000);
+dataField.Move("Rows");
 ```

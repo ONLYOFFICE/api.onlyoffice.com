@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取表格单元格对象的类类型。
+识别 PDF 中表格单元格的类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a table cell?
+// How can I determine the type classification of a cell in a PDF?
 
-// Get the class type of a table cell and display it in the PDF.
+// Retrieve the object type information for a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

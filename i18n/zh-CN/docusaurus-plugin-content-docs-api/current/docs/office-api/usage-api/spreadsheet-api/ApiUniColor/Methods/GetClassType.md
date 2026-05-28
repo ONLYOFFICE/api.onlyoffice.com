@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查电子表格中统一颜色返回的类类型。
+读取电子表格中形状中使用的颜色对象的类类型。
 
 ```javascript editor-xlsx
-// How do I check what type a uni color object is in a spreadsheet?
+// How do I identify what type of color object is applied to a shape in a spreadsheet?
 
-// Retrieve and output the class type string for a uni color in a spreadsheet.
+// Confirm the color category by checking its type label in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const presetColor = Api.CreatePresetColor("peachPuff");

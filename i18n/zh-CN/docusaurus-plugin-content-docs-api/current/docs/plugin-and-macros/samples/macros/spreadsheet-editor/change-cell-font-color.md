@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 更改单元格字体颜色
 
 将单元格 **B4** 的字体颜色设置为红色。
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Font color](/assets/images/plugins/font-color.png#gh-light-mode-only)![Font color](/assets/images/plugins/font-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-font-color" dark />

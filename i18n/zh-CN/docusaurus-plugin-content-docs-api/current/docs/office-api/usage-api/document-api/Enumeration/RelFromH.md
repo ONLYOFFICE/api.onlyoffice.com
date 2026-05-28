@@ -10,9 +10,11 @@
 
 - "character"
 - "column"
+- "insideMargin"
 - "leftMargin"
 - "rightMargin"
 - "margin"
+- "outsideMargin"
 - "page"
 
 ## 示例

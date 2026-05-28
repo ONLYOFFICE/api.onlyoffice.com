@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayo
 
 ## Example
 
-Get a layout form of a pivot field in a spreadsheet.
+Read the layout form style applied to a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a layout form of a pivot field.
+// How do I find out which layout form a pivot field is using in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout form of a specified pivot field.
+// Identify whether a pivot field is displayed in tabular, outline, or compact form in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

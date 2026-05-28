@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从三次贝塞尔曲线命令提取控制点。在电子表格单元格中显示所有贝塞尔控制点坐标。
+读取电子表格中三次贝塞尔曲线段的结束垂直坐标。
 
 ```javascript editor-xlsx
-// How to get the y2 for a path command in a spreadsheet?
+// How do I find the final Y point of a curve path command in a spreadsheet?
 
-// Get the y2 and display the result in a spreadsheet.
+// Confirm the destination height of a drawn curve by checking its last vertical point in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

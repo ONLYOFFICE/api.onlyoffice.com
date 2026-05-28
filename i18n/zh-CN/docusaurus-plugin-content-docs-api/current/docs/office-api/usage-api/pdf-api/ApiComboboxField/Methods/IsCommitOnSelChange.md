@@ -6,12 +6,12 @@
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取选择更改时提交属性。
+检查 PDF 中下拉字段在选择更改时是否自动提交。
 
 ```javascript editor-pdf
-// How can I is commit on sel change using a list field in a PDF document?
+// How do I determine if a field triggers submission on selection change in a PDF?
 
-// Is commit on sel change for a list field in a PDF document.
+// Verify the auto-commit setting for a dropdown list in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

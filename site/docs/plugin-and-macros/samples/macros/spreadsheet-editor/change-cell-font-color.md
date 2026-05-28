@@ -4,6 +4,8 @@ description: Change the font color of specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change cell font color
 
 Sets the font color of the cell **B4** to red.
@@ -27,4 +29,4 @@ End Sub
 
 ## Result
 
-![Font color](/assets/images/plugins/font-color.png#gh-light-mode-only)![Font color](/assets/images/plugins/font-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-font-color" dark />

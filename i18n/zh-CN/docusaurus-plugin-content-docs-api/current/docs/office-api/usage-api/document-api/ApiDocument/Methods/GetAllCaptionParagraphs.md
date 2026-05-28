@@ -14,7 +14,7 @@ expression.GetAllCaptionParagraphs(sCaption);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（「公式」、「图」、「表」或其他题注标签）。 |
+| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（“公式”、“图”、“表”或其他题注标签）。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.GetAllCaptionParagraphs(sCaption);
 
 ## 示例
 
-从文档中获取当前文档中指定类型的所有题注段落。
+收集所有图形题注段落并在文档中将第一个设为大写格式。
 
 ```javascript editor-docx
-// Get all caption paragraphs with the name 'Figure' and make the first one capitalized in a document.
+// How do I find every caption of a given type and modify its text style in a document?
 
-// Make the caption text letters uppercase in a document.
+// Emphasize a specific caption by converting its letters to uppercase after inserting an image in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-将文档中的表格行属性对象转换为 JSON 对象。
+将表格行格式设置导出为文档中的 JSON 表示。
 
 ```javascript editor-docx
-// How to get a JSON from the table row properties in a document.
+// How do I save the formatting settings of a table row as reusable data in a document?
 
-// Convert the table row properties to json and add it to the document.
+// Preserve row formatting by converting its properties to a JSON string in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

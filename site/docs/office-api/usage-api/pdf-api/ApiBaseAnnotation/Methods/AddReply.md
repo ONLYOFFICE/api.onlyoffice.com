@@ -14,7 +14,7 @@ expression.AddReply(textAnnot);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| textAnnot | Required | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | No description provided. |
+| textAnnot | Required | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | The text annotation to use as a reply. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and add reply to it in a PDF document.
+Add a response to an annotation in a PDF.
 
 ```javascript editor-pdf
-// How to add the reply for an annotation in a PDF document?
+// How can I reply to an annotation comment in a PDF?
 
-// Add the reply and display the result in a PDF document.
+// Attach a text response to an existing annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

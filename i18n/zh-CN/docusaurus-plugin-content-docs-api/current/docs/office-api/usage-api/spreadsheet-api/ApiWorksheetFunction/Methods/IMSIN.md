@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的正弦值。
+计算电子表格中复数的正弦。
 
 ```javascript editor-xlsx
-// How to get the sine in a spreadsheet.
+// How do I find the sine value of a complex number in a spreadsheet?
 
-// Use a function to get the sine of a complex number in a spreadsheet.
+// Get the sine result for complex number trigonometric operations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

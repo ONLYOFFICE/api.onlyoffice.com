@@ -17,7 +17,7 @@ expression.VLOOKUP(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要在表的第一列中查找的值。可以是值、引用或文本字符串。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 从中检索数据的文本、数字或逻辑值表。可以是单元格区域。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 应从中返回匹配值的数据表中的列号。表中值的第一列是第 1 列。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是在第一列中查找最接近的匹配项（按升序排序）（**true** 或省略）还是查找精确匹配项（**false**）的逻辑值。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是在首列（按升序排列）中查找最接近的匹配（**true** 或省略）还是查找精确匹配（**false**）的逻辑值。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-在电子表格中在表格最左列中查找值，然后从指定列返回同一行中的值。默认情况下，表格必须按升序排序。
+在电子表格中搜索表格列中的值并从另一列检索匹配值。
 
 ```javascript editor-xlsx
-// How to look for a value in the leftmost column of a table in a spreadsheet.
+// How do I find a value in a table and return related data from the same row in a spreadsheet?
 
-// Use a find a value in the leftmost column of a table and display it in the row in a spreadsheet.
+// Match a lookup value against a table and display the corresponding row data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

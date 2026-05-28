@@ -1,3 +1,10 @@
+---
+description: Search for text and change its background color.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 搜索并更改背景颜色
 
 搜索目标文本并更改其背景颜色。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文本文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-change-background-text.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-change-background-text" />
 
 ## 安装
 

@@ -4,6 +4,8 @@ description: Set all date form fields to the USA date format.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Set USA date format
 
 Sets all date form formats to USA one.
@@ -28,4 +30,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-usa-date-format" dark />

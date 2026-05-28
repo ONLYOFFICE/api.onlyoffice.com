@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿主题的名称。
+检索电子表格中活动工作簿主题的名称。
 
 ```javascript editor-xlsx
-// How to get the name for a theme in a spreadsheet?
+// How do I find out what the current theme is called in a spreadsheet?
 
-// Get the name and display the result in a spreadsheet.
+// Read the theme name and write it to a cell in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const theme = workbook.GetTheme();

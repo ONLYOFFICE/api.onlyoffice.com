@@ -16,7 +16,7 @@ expression.POISSON_DIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 事件数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 期望的数值，一个正数。 |
-| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积泊松概率。如果为 **false**，则函数返回泊松概率质量函数。 |
+| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，函数返回累积泊松概率。如果为 **false**，函数返回泊松概率质量函数。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中计算泊松分布。
+使用泊松统计分布在电子表格中计算事件概率。
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution in a spreadsheet.
+// How do I find the probability of events occurring at a given rate in a spreadsheet?
 
-// Use a function to calculate the Poisson distribution in a spreadsheet.
+// Determine cumulative or individual event probabilities from a Poisson distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

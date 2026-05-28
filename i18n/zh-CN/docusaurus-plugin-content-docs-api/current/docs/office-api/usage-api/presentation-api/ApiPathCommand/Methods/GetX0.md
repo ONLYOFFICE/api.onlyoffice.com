@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从演示文稿中的三次贝塞尔曲线提取控制点。在文本形状中显示所有控制点坐标。
+获取演示文稿中曲线第一个控制点的 x 坐标。
 
 ```javascript editor-pptx
-// How to get the x0 for a path command in a presentation?
+// How do I find the starting control point position of a curve in a presentation?
 
-// Get the x0 and display the result in a presentation.
+// Read curve control points to verify bezier path geometry in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中组合框/列表框值列表的项目数量。
+计算文档中下拉列表内容控件中的条目数量。
 
 ```javascript editor-docx
-// How do I get the elements count in a document?
+// How do I find out how many items are in a combo box list in a document?
 
-// Get the elements count using a content control list object in a document.
+// Check the total number of selectable options available in a list control in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

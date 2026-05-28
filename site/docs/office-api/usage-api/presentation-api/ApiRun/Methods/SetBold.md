@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## Example
 
-Set the bold property to the text character in a presentation.
+Make text bold in a presentation.
 
 ```javascript editor-pptx
-// How to make a text bold in a presentation.
+// What is bold text formatting in a presentation?
 
-// Create a new text run and set it bold in a presentation.
+// Add bold formatting to a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

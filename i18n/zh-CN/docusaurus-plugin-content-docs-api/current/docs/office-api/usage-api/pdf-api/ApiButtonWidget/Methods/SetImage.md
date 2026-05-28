@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetImage(sImageUrl, sApType);
+expression.SetImage(imageUrl, appearance);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetImage(sImageUrl, sApType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageUrl | 可选 | string | '' | 图像 URL |
-| sApType | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | 为哪种状态设置图片 |
+| imageUrl | 可选 | string | "" | 图像 URL。 |
+| appearance | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | 外观状态。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为带有图像的字段设置图像。
+设置 PDF 文档中按钮控件的图像。
 
 ```javascript editor-pdf
-// How do I set image in a PDF document?
+// Assign an image resource to an image field with normal state.
 
-// Set image using a button widget object in a PDF document.
+// Add the image field to a PDF page.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

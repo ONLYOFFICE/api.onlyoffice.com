@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为当前段落设置项目符号或编号。
+在 PDF 中为段落添加项目符号。
 
 ```javascript editor-pdf
-// How to set a bullet type to the paragraph properties in a PDF document.
+// How do I add a bullet to a paragraph in a PDF?
 
-// Create a bulleted paragraph setting its bullet type in a PDF document.
+// Create a bulleted list item in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

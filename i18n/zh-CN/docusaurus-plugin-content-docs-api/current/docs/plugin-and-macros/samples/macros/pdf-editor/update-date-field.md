@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 更新日期字段
 
 将当前日期设置到文档中的所有日期表单字段中。
@@ -26,5 +28,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![DateSetter](/assets/images/plugins/update-date-field.png#gh-light-mode-only)
-![DateSetter](/assets/images/plugins/update-date-field.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/update-date-field" dark />

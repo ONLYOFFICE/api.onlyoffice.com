@@ -22,12 +22,12 @@ expression.GroupDrawings(aDrawings);
 
 ## Example
 
-Group drawings on layout in a presentation.
+Combine multiple shapes into a single group on a layout in a presentation.
 
 ```javascript editor-pptx
-// How to group drawings in a presentation.
+// How do I group shapes together on a layout in a presentation?
 
-// Create two shapes and group them in a presentation.
+// Create two shapes and combine them into one grouped object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

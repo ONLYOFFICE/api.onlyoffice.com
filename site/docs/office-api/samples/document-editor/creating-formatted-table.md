@@ -26,7 +26,7 @@ let employeeData = [
 ];
 
 // Create table with 5 columns and 4 rows (1 header + 3 data rows)
-let table = Api.CreateTable(5, 4);
+let table = Api.CreateTable(4, 5);
 table.SetWidth("percent", 100);
 
 // Style the header row

@@ -1,20 +1,20 @@
 # SetVertAlign
 
 指定将应用于文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+- **“baseline”** - 当前文本块中的字符将按默认文本基线对齐。
+- **“subscript”** - 当前文本块中的字符将对齐到默认文本基线下方。
+- **“superscript”** - 当前文本块中的字符将对齐到默认文本基线上方。
 
 继承自 [ApiTextPr.SetVertAlign](../../ApiTextPr/Methods/SetVertAlign.md)。
 
 ## 示例
 
-指定在文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+在文档中将段落内的文本定位为下标、基线或上标。
 
 ```javascript editor-docx
-// How to set vertical alignment of a text object in a document.
+// How do I raise or lower a portion of text relative to the surrounding line in a document?
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
+// Distinguish chemical formulas or footnote markers by adjusting vertical text placement in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

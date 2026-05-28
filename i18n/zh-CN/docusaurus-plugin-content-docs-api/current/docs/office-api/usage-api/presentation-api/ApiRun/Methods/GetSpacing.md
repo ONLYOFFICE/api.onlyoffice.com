@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取演示文稿中的文本间距大小。
+读取演示文稿中文本的字符间距值。
 
 ```javascript editor-pptx
-// How to know a text spacing in a presentation.
+// How do I check the spacing between characters in text in a presentation?
 
-// Get the text properties of the run and display its spacing size in a presentation.
+// Get the spacing property of text to see the current character spacing in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

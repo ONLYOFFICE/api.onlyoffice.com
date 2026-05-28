@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the subject of the current document in a document.
+Set the subject field in the core properties of a document in a document.
 
 ```javascript editor-docx
-// How can I set subject using a core properties in a document?
+// How do I define a subject for a document's metadata?
 
-// Set subject for a core properties in a document.
+// Categorize or describe document content by writing a subject string to its metadata in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

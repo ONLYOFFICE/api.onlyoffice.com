@@ -20,12 +20,12 @@ expression.GetAll();
 
 ## 示例
 
-获取文档中的所有自定义 XML 部件并显示。
+列出文档中存储的每个自定义 XML 部件。
 
 ```javascript editor-docx
-// How do I get all in a document?
+// How do I retrieve all custom XML parts at once in a document?
 
-// Get all using a custom XML parts object in a document.
+// Iterate over every embedded XML part to audit or process stored data in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

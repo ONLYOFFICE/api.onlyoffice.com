@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get an index of the row in a document.
+Find the row position of a table cell in a document.
 
 ```javascript editor-docx
-// How to get row index of the table cell.
+// How do I determine which row a table cell is located in in a document?
 
-// Retrieve the cell from the table and add a text showing its row index.
+// Look up the row number that a table cell occupies in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -1,12 +1,14 @@
 ---
 hide_table_of_contents: true
-description: Validate and highlight empty required form fields.
+description: Validate and highlight empty optional form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Validate form fields
 
-Highlights empty or unrequired text fields in a document with desired colors.
+Highlights empty optional text fields in a document with the specified colors.
 
 ```ts
 (function () {
@@ -44,5 +46,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.png#gh-light-mode-only)
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/validate-form-fields" dark />

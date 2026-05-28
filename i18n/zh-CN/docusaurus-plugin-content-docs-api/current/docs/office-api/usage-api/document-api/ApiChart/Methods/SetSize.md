@@ -6,12 +6,12 @@
 
 ## 示例
 
-设置文档中形状边界框的大小。
+在文档中将形状调整为特定的宽度和高度尺寸。
 
 ```javascript editor-docx
-// How to resize the drawing in a document.
+// How do I change the size of a drawing in a document?
 
-// Set the height and the width of the shape in a document.
+// Adjust a shape's bounding box after it has already been placed on the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

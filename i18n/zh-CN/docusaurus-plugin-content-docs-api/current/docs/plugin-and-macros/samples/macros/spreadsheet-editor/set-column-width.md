@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置列宽
 
 设置 **B** 列的宽度。
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Column width](/assets/images/plugins/column-width.png#gh-light-mode-only)![Column width](/assets/images/plugins/column-width.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/set-column-width" dark />

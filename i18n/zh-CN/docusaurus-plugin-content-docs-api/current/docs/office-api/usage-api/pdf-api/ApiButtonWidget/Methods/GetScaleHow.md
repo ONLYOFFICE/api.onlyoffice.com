@@ -20,12 +20,12 @@ expression.GetScaleHow();
 
 ## 示例
 
-获取并显示 PDF 文档中按钮控件的缩放方式类型。
+确定 PDF 中按钮图标的缩放方式。
 
 ```javascript editor-pdf
-// How do I get the scale how in a PDF document?
+// How do I check the icon scaling method for a button in a PDF?
 
-// Get the scale how using a button widget object in a PDF document.
+// Retrieve the icon scaling option for a button widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

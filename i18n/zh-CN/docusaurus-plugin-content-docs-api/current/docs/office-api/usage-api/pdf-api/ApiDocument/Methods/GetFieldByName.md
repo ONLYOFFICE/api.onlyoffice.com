@@ -5,14 +5,16 @@
 ## 语法
 
 ```javascript
-expression.GetFieldByName();
+expression.GetFieldByName(name);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 完整名称参数。 |
 
 ## 返回值
 
@@ -20,12 +22,12 @@ expression.GetFieldByName();
 
 ## 示例
 
-通过名称获取文档中的字段。
+按名称在 PDF 中查找特定表单字段。
 
 ```javascript editor-pdf
-// How can I get the field by name using a document in a PDF document?
+// How do I search for a field using its assigned name in a PDF?
 
-// Get the field by name for a document in a PDF document.
+// Retrieve a field and set its value by name in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

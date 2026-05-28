@@ -4,6 +4,8 @@ description: Convert cell formulas into their computed values.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Convert formulas into values
 
 Converts all formulas in the active worksheet into values.
@@ -45,4 +47,4 @@ End Sub
 
 ## Result
 
-![Convert formulas into values](/assets/images/plugins/convert-formulas-into-values.png#gh-light-mode-only)![Convert formulas into values](/assets/images/plugins/convert-formulas-into-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values" dark />

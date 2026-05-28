@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中工作表的右边距。
+检查电子表格中页面布局的右边距大小。
 
 ```javascript editor-xlsx
-// How to get margin of the sheet's right side in a spreadsheet.
+// Measure the empty space on the right edge of a printed page in a spreadsheet?
 
-// Get the size of the right margin of the sheet in a spreadsheet.
+// Show margin values in cells to understand your document boundaries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let rightMargin = worksheet.GetRightMargin();

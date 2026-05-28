@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddMaster(nPos, oApiMaster);
+expression.AddMaster(pos, apiMaster);
 ```
 
 `expression` - 表示 [ApiPresentation](../ApiPresentation.md) 类的变量。
@@ -14,8 +14,8 @@ expression.AddMaster(nPos, oApiMaster);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 可选 | number | ApiPresentation.GetMastersCount() | 未提供描述。 |
-| oApiMaster | 必需 | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | 要添加的幻灯片母版。 |
+| pos | 可选 | number | ApiPresentation.GetMastersCount() | 将添加幻灯片母版的位置。 |
+| apiMaster | 必需 | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | 要添加的幻灯片母版。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-将幻灯片母版添加到演示文稿的幻灯片母版集合。
+向演示文稿添加新的母版幻灯片。
 
 ```javascript editor-pptx
-// How to add a presentation master.
+// How do I create and add a master slide to a presentation?
 
-// Create a shape and set its placeholder type to "chart" in a presentation.
+// Create a master slide and add it to the presentation's master collection.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

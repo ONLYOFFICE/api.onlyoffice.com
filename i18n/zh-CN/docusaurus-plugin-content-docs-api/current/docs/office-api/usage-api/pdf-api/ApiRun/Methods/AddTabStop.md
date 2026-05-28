@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向 run 添加制表位。
+在 PDF 中使用制表符在文本之间插入间距。
 
 ```javascript editor-pdf
-// How to add a tab after a string in a text run in a PDF document.
+// How do I add a tab space in text within a PDF?
 
-// How to split a text with a tab in a PDF document.
+// Place a tab character in text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

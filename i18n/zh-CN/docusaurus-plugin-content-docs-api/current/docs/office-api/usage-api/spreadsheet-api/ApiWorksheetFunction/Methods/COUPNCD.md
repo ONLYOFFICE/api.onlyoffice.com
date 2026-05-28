@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回结算日期之后的下一个息票日期。
+查找电子表格中下一次票息支付的日期。
 
 ```javascript editor-xlsx
-// How to find the next coupon date in a spreadsheet.
+// What is the upcoming coupon maturity after settlement in a spreadsheet?
 
-// Use function to get the next coupon date after the settlement date in a spreadsheet.
+// Identify when your next coupon interest becomes payable in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

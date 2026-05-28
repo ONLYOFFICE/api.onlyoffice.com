@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a document object.
+Identify the type of a PDF document object.
 
 ```javascript editor-pdf
-// How can I get the class type of a document?
+// What kind of object am I working with in a PDF?
 
-// Get the class type of a document and display it in the PDF.
+// Display the classification of a PDF document in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

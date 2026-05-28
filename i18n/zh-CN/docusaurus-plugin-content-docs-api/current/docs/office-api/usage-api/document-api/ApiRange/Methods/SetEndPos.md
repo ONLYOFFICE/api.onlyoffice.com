@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置给定范围对象的结束位置。
+通过设置文档中的最后一个字符位置来调整文本范围的结束位置。
 
 ```javascript editor-docx
-// Get the end index of the range and display it in a document.
+// How do I change the ending boundary of a selected text range in a document?
 
-// Retrieve a range of the paragraph and show its last position in a document.
+// Shorten or extend a range by moving its closing edge to a new position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

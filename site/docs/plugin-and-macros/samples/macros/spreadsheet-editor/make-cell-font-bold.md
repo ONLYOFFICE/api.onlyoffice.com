@@ -4,6 +4,8 @@ description: Make the font bold for specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Make cell font bold
 
 Sets the font of the cell **A2** to bold.
@@ -27,4 +29,4 @@ End Sub
 
 ## Result
 
-![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold" dark />

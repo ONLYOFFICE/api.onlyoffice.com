@@ -20,12 +20,12 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-返回文档内容中的当前段落。
+访问演示文稿中形状文本内容中的当前段落。
 
 ```javascript editor-pptx
-// How can I get current paragraph using a document content in a presentation?
+// How do I get the paragraph where the cursor is positioned in a shape in a presentation?
 
-// Get current paragraph for a document content in a presentation.
+// Retrieve the active paragraph from a shape and append additional text to it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

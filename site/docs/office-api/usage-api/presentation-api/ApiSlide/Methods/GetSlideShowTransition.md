@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get the slide show transition from a slide.
 
 ```javascript editor-pptx
-// How to get the slide show transition for a slide?
+// Retrieve the transition settings using GetSlideShowTransition after setting a transition.
 
-// Get the slide show transition and display the result in a presentation.
+// Display the transition effect and speed on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -2,9 +2,11 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 验证表单字段
 
-使用指定颜色高亮显示文档中为空或非必填的文本字段。
+使用指定颜色高亮显示文档中为空的可选文本字段。
 
 ```ts
 (function () {
@@ -42,5 +44,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.png#gh-light-mode-only)
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/validate-form-fields" dark />

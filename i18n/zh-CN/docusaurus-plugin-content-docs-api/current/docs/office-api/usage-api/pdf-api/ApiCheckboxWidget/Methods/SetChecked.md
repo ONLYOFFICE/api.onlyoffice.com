@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetChecked(bChecked);
+expression.SetChecked(checked);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetChecked(bChecked);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | 必需 | boolean |  | 未提供描述。 |
+| checked | 必需 | boolean |  | 指定复选框是否被选中。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件组中的复选框控件为选中状态。
+在 PDF 中将复选框标记为选中或取消选中。
 
 ```javascript editor-pdf
-// How can I set checked using a checkbox widget in a PDF document?
+// How do I toggle a checkbox widget between checked and unchecked in a PDF?
 
-// Set checked for a checkbox widget in a PDF document.
+// Set the checked state of a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

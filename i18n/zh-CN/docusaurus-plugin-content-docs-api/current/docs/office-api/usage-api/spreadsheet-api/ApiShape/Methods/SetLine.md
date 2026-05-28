@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。在电子表格中创建矩形并将其轮廓更改为粗蓝线。
+在矩形放置到电子表格的工作表后将其边框更改为粗蓝线。
 
 ```javascript editor-xlsx
-// How to set line for a shape in a spreadsheet?
+// How do I update the border style and color of a shape in a spreadsheet?
 
-// Set line and display the result in a spreadsheet.
+// Swap out a shape's existing border for a new stroke with a different thickness and color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

@@ -14,7 +14,7 @@ expression.SetRect(rect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | Required | [Rect](../../Enumeration/Rect.md) |  | No description provided. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the widget. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a new field and set new rect to its widget in a PDF document.
+Resize and reposition a widget using rectangular boundaries in a PDF.
 
 ```javascript editor-pdf
-// How do I set rect in a PDF document?
+// How do I set the size and position of a widget in a PDF?
 
-// Set rect using a widget object in a PDF document.
+// Define a widget's location and dimensions with boundary coordinates in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetRectDiff();
 
 ## 示例
 
-获取 PDF 文档中圆形注释的矩形差异。
+读取 PDF 中圆形注释的边框宽度差异。
 
 ```javascript editor-pdf
-// How do I get the rect diff in a PDF document?
+// How do I check the border thickness offset of a circle annotation in a PDF?
 
-// Get the rect diff using a circle annotation object in a PDF document.
+// Retrieve the rect difference values for a circle annotation in a PDF.
 
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);

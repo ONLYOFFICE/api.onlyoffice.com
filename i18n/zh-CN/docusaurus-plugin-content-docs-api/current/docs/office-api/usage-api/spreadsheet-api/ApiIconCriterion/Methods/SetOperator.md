@@ -14,7 +14,7 @@ expression.SetOperator(operator);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| operator | 必需 | string |  | 要设置的运算符（"xlGreaterEqual" 或 "xlGreater"）。 |
+| operator | 必需 | string |  | 要设置的运算符（“xlGreaterEqual” 或 “xlGreater”）。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetOperator(operator);
 
 ## 示例
 
-在电子表格中设置图标条件的比较运算符。
+定义电子表格中图标条件的比较运算符。
 
 ```javascript editor-xlsx
-// How do I set operator in a spreadsheet?
+// How do I control whether an icon criterion triggers on values greater than or equal to a threshold in a spreadsheet?
 
-// Set operator using an icon criterion object in a spreadsheet.
+// Choose between greater-than and other comparison rules to decide when an icon appears in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Results');

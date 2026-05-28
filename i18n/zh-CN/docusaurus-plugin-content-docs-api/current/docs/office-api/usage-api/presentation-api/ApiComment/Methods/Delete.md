@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除演示文稿中的批注。
+从演示文稿中移除批注。
 
 ```javascript editor-pptx
-// How to remove a comment in a presentation.
+// How do I delete a comment in a presentation?
 
-// Get all comments from the presentation and remove the first one.
+// Erase an existing comment and all its replies in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

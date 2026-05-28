@@ -14,7 +14,7 @@ expression.SetCreationDate(timeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| timeStamp | Required | number |  | No description provided. |
+| timeStamp | Required | number |  | The annotation creation date as a numeric timestamp. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set creation date to it in a PDF document.
+Record the date when an annotation was created in a PDF.
 
 ```javascript editor-pdf
-// How do I set creation date in a PDF document?
+// Timestamp an annotation with its creation date in a PDF.
 
-// Set creation date using an annotation object in a PDF document.
+// Set the creation date metadata for an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

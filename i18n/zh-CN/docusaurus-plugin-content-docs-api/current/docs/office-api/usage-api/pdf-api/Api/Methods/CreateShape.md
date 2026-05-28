@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
+expression.CreateShape(shapeType, width, height, fill, stroke);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,11 +14,11 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。 |
-| nWidth | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状宽度。 |
-| nHeight | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状高度。 |
-| oFill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | 用于填充形状的颜色或图案。 |
-| oStroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | 用于创建元素阴影的笔触。 |
+| shapeType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。 |
+| width | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状宽度。 |
+| height | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状高度。 |
+| fill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | 用于填充形状的颜色或图案。 |
+| stroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | 用于创建元素阴影的笔触。 |
 
 ## 返回值
 
@@ -26,12 +26,12 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-如何在 PDF 文档中添加新的流程图形状。
+在 PDF 中插入带有文本和颜色的流程图形状。
 
 ```javascript editor-pdf
-// Add a new shape indicating its properties in a PDF document.
+// How do I add a shape and populate it with text in a PDF?
 
-// Create the shape in a PDF document.
+// Create a shape with colored background and multiple text runs in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

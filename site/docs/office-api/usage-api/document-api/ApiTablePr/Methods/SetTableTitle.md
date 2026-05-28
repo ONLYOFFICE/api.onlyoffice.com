@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the table title in a document.
+Assign a descriptive title to a table in a document.
 
 ```javascript editor-docx
-// How to rename the table title in a document.
+// How do I give a table a named title so it can be identified in a document?
 
-// Create a table and indicate its title in a document.
+// Label a table with a title string to make it easier to reference in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

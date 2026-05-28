@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 重置所有表单
 
 在需要时（例如打印文档后），清除所有字段内容。
@@ -21,4 +23,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Reset All Forms](/assets/images/plugins/reset-all-forms.png#gh-light-mode-only)![Reset All Forms](/assets/images/plugins/reset-all-forms.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/reset-all-forms" dark />

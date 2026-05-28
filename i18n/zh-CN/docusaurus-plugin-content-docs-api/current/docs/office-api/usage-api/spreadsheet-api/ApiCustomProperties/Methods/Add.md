@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在电子表格中添加布尔自定义属性。
+向电子表格添加各种类型的命名自定义属性。
 
 ```javascript editor-xlsx
-// Custom properties support string, boolean, number, and date value types.
+// How do I attach extra metadata such as text, numbers, dates, and flags to a spreadsheet?
 
-// Add using a custom properties object in a spreadsheet.
+// Extend a file with user-defined fields that store business data alongside the content in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();

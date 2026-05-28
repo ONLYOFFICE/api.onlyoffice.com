@@ -20,12 +20,12 @@ expression.CreateParagraph();
 
 ## 示例
 
-创建新段落并将其插入文档。
+向文档末尾添加带有文本的新段落。
 
 ```javascript editor-docx
-// Create the paragraph object, add a text to it, and insert it into the document class.
+// How do I create a blank paragraph, fill it with text, and append it to a document?
 
-// How to create a paragraph with the specified text and add it to the current document.
+// Build a paragraph from scratch and place it at the bottom of a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

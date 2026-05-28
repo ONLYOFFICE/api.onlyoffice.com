@@ -4,6 +4,8 @@ description: Delete all comments from a spreadsheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Delete comments
 
 Deletes comments from a specified range of cells in the active worksheet.
@@ -37,5 +39,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![DeleteComments](/assets/images/plugins/delete-comments.png#gh-light-mode-only)
-![DeleteComments](/assets/images/plugins/delete-comments.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/delete-comments" dark />

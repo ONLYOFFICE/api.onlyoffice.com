@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中文本 run 的类类型。
+识别文档中文本运行的对象类型。
 
 ```javascript editor-docx
-// How to identify the class type of a text run in a document?
+// How do I find out what kind of object a text run is in a document?
 
-// Obtain the class type identifier of a text run object in a document.
+// Confirm the category a text run belongs to in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

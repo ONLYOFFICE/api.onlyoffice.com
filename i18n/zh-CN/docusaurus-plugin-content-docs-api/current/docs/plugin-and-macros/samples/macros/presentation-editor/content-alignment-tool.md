@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 内容对齐工具
 
 在整个演示文稿中统一对齐文本框和图像。
@@ -49,4 +51,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.png#gh-light-mode-only)![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/content-alignment-tool" dark />

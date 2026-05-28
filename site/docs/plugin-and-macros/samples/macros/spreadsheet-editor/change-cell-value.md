@@ -4,6 +4,8 @@ description: Change the value of specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change cell value
 
 Changes the selected cell value.
@@ -38,4 +40,4 @@ End Sub
 
 ## Result
 
-![Change cell value](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![Change cell value](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-value" dark />

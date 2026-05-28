@@ -22,12 +22,12 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-设置文档中当前文档的版本。
+在文档核心属性中存储版本字符串。
 
 ```javascript editor-docx
-// How do I set version in a document?
+// How do I tag a document with a version number in its metadata?
 
-// Set version using a core properties object in a document.
+// Track release stages by embedding a version label directly in a document's properties in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

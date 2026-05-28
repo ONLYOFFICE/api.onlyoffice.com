@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查演示文稿中的文本是否为小型大写字母。
+检查演示文稿中的文本是否使用了小型大写字母格式。
 
 ```javascript editor-pptx
-// How to know whether the text letters are lowercase or not in a presentation.
+// How do I determine if text is displayed as small capitals in a presentation?
 
-// Get the text properties of the run and find whether it is uncapitalized or not in a presentation.
+// Read the small capitals property to see if the style is enabled for text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

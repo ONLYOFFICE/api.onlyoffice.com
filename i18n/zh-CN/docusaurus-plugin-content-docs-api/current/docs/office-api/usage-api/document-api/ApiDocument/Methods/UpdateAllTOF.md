@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更新当前文档中的所有图表目录。
+在插入新绘图后刷新文档中的所有图表目录。
 
 ```javascript editor-docx
-// How to update all table of figures in a document.
+// How do I keep tables of figures current when new images or shapes are added in a document?
 
-// Edit document content, add drawings and update the table of figures.
+// Synchronize figure captions and page numbers across every table of figures in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

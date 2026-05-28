@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetRow(nPos);
+expression.GetRow(rowIndex);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,20 +14,20 @@ expression.GetRow(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 行在表格中的位置。 |
+| rowIndex | 必需 | number |  | 表格中的行索引。 |
 
 ## 返回值
 
-[ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| null
+[ApiTableRow](../../ApiTableRow/ApiTableRow.md)
 
 ## 示例
 
-通过索引获取文档中的行。
+按位置从文档中的表格检索特定行。
 
 ```javascript editor-docx
-// How to get a second row from the table in a document.
+// How do I access a particular row of a table by its index in a document?
 
-// Add a row from the another one in a document.
+// Use an existing row as a reference point to insert a new row in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

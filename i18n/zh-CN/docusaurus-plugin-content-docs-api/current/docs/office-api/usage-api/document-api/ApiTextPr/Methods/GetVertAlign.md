@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中文本的垂直对齐方式。
+读取文档中文本运行相对于基线的垂直位置。
 
 ```javascript editor-docx
-// How to know whether a text is subscript, superscript or baseline in a document.
+// How do I check whether text is raised, lowered, or sitting on the baseline in a document?
 
-// Get the text properties of the run and find its vertical alignment in a document.
+// Inspect the vertical alignment of a text run to confirm whether it is subscript, superscript, or normal in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

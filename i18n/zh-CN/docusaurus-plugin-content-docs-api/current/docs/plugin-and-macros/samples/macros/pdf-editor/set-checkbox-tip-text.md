@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置复选框提示文本
 
 为所有具有特定键值的复选框设置所需的提示文本。
@@ -26,5 +28,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.png#gh-light-mode-only)
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-checkbox-tip-text" dark />

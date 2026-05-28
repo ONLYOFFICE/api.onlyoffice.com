@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom shape and add it to a slide. Applies custom geometry with specific fill and stroke properties.
+Draw straight line segments connecting points in a custom shape's path in a presentation.
 
 ```javascript editor-pptx
-// How can I line to using a geometry path in a presentation?
+// How do I create connected lines in a custom shape in a presentation?
 
-// Line to for a geometry path in a presentation.
+// Add line segments between coordinates in a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

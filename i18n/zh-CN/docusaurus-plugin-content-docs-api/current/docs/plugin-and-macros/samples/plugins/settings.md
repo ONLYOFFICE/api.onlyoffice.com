@@ -1,3 +1,10 @@
+---
+description: Protect documents with a watermark overlay.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 设置
 
 使用水印保护文档。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/settings.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/settings" />
 
 ## 安装方式
 

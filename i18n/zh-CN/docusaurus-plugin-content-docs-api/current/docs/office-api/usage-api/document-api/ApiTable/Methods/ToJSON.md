@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-在文档中将表格对象转换为 JSON 对象。
+将表格序列化为可移植格式并在文档中恢复为新表格。
 
 ```javascript editor-docx
-// How to get a JSON from the table object in a document.
+// How do I save a table's structure and recreate it from saved data in a document?
 
-// Convert the table to json and add it to the document.
+// Duplicate a table by converting it to data and rebuilding it with custom borders in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(3, 3);

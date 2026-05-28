@@ -27,9 +27,9 @@ boolean
 在演示文稿中向自定义 XML 节点插入属性。
 
 ```javascript editor-pptx
-// How to insert the attribute for a custom XML part in a presentation?
+// How do I add a new attribute to an XML element in a presentation?
 
-// Insert the attribute and display the result in a presentation.
+// Show the updated XML with the new attribute in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

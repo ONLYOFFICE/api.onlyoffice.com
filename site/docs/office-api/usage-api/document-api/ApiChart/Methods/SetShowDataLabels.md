@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-Specify which chart data labels are shown for the chart in a document.
+Control which data label elements are visible on a chart in a document.
 
 ```javascript editor-docx
-// How to show specific chart data labels in a document.
+// How do I choose which parts of data labels appear on a chart in a document?
 
-// Create a chart, set its properties and its specific data labels visibility in a document.
+// Hide or reveal values, percentages, and category names on chart data labels in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

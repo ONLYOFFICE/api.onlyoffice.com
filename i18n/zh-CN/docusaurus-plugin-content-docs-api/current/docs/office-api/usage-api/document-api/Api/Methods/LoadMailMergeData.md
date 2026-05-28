@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中加载邮件合并的数据。
+加载收件人数据并在文档中运行邮件合并。
 
 ```javascript editor-docx
-// Wrap the text runs in the mail merge fields, loads the mail merge data into the document, and start the mail merge process.
+// How do I supply data to mail merge fields and start the merge in a document?
 
-// How to load the data source for mail merge into the document.
+// Fill merge fields with names and greetings, then produce the merged result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

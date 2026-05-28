@@ -14,7 +14,7 @@ expression.SetNumberFormat(NumberFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | 必需 | string |  | 数字格式代码（例如 "General"、"#,##0.00" 等） |
+| NumberFormat | 必需 | string |  | 数字格式代码（例如 “General”、“#,##0.00” 等） |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetNumberFormat(NumberFormat);
 
 ## 示例
 
-设置条件格式规则的数字格式。
+控制电子表格中触发格式规则时数字的显示方式。
 
 ```javascript editor-xlsx
-// How to apply number formatting to conditional formatting rules.
+// How do I apply a custom number display pattern to a conditional formatting rule in a spreadsheet?
 
-// Set conditional formatting rule number format.
+// Ensure highlighted cells show values with a specific currency or decimal style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

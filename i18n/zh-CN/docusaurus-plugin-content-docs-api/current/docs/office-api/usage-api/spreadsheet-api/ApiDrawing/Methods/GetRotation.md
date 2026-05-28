@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中绘图对象的旋转角度。
+检索电子表格中绘图的旋转角度。
 
 ```javascript editor-xlsx
-// How can I get the rotation using a drawing object in a spreadsheet?
+// How do I find out by how many degrees a drawing has been turned in a spreadsheet?
 
-// Get the rotation for a drawing object in a spreadsheet.
+// Confirm the angle at which a shape is oriented after it has been rotated in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

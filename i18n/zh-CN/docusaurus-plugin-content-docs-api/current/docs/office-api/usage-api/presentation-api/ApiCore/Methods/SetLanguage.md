@@ -22,12 +22,12 @@ expression.SetLanguage(sLanguage);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的语言。
+设置和检索演示文稿的语言。
 
 ```javascript editor-pptx
-// How can I set language using a core properties in a presentation?
+// How do I set the language of a presentation in a presentation?
 
-// Set language for a core properties in a presentation.
+// Retrieve and display the language as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

@@ -6,7 +6,7 @@ Sets validate range for field.
 ## Syntax
 
 ```javascript
-expression.SetValidateRange(bGreaterThan, nGreaterThan, bLessThan, nLessThan);
+expression.SetValidateRange(greaterThan, greaterThanValue, lessThan, lessThanValue);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -15,10 +15,10 @@ expression.SetValidateRange(bGreaterThan, nGreaterThan, bLessThan, nLessThan);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGreaterThan | Optional | boolean | false | If true, enables minimum value check using `nGreaterThan`. |
-| nGreaterThan | Required | number |  | Minimum allowed value (inclusive or exclusive based on implementation). |
-| bLessThan | Optional | boolean | false | If true, enables maximum value check using `nLessThan`. |
-| nLessThan | Required | number |  | Maximum allowed value (inclusive or exclusive based on implementation). |
+| greaterThan | Optional | boolean | false | If true, enables minimum value validation using `greaterThanValue`. |
+| greaterThanValue | Required | number |  | The minimum allowed value. |
+| lessThan | Optional | boolean | false | If true, enables maximum value validation using `lessThanValue`. |
+| lessThanValue | Required | number |  | The maximum allowed value. |
 
 ## Returns
 
@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-Get text field and set validate range for it in a PDF document.
+Limit field values to a numeric range in a PDF.
 
 ```javascript editor-pdf
-// How to set validate range for a combobox field in a PDF document?
+// Can I restrict numbers to a minimum and maximum in a PDF?
 
-// Set validate range and display the result in a PDF document.
+// Accept only numbers within specified bounds in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

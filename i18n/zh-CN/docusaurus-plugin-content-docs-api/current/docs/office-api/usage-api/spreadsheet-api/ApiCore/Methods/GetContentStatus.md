@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中工作簿的内容状态（使用核心属性）。
+读取电子表格工作簿属性中存储的内容状态。
 
 ```javascript editor-xlsx
-// How to get the content status for a core properties in a spreadsheet?
+// How do I check the current content status of a workbook in a spreadsheet?
 
-// Get the content status and display the result in a spreadsheet.
+// Retrieve and display the publication or review status of a workbook in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

@@ -22,12 +22,12 @@ expression.CreateCaretAnnot(rect);
 
 ## 示例
 
-创建插入符注释并将其添加到页面。
+在 PDF 中添加插入符号注释以标记文本插入位置。
 
 ```javascript editor-pdf
-// How do I create the caret annot in a PDF document?
+// How do I mark where text should be added in a PDF?
 
-// Create the caret annot and display the result in a PDF document.
+// Create an insertion point indicator in a PDF.
 
 let doc = Api.GetDocument();
 let caretAnnot = Api.CreateCaretAnnot([[85.04985826771654,56.70000000000001,229.27237795275593,56.70000000000001,85.04985826771654,70.9988031496063,229.27237795275593,70.9988031496063]]);

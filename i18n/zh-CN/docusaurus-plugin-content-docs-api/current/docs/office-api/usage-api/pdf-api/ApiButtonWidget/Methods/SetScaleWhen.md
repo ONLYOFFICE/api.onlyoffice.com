@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetScaleWhen(sType);
+expression.SetScaleWhen(scaleWhen);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScaleWhen(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | 按钮控件缩放时机类型 |
+| scaleWhen | 必需 | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | 控制图标何时缩放的条件。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ boolean
 在 PDF 文档中设置按钮控件的缩放条件类型。
 
 ```javascript editor-pdf
-// How to set scale when for a button widget in a PDF document?
+// Configure when to scale the button icon using scale when property.
 
-// Set scale when and display the result in a PDF document.
+// Display the set scale when value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

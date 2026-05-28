@@ -15,11 +15,11 @@ expression.AddCaptionCrossRef(sCaption, sRefType, oParaTo, bLink, bAboveBelow);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（「公式」、「图」、「表」或其他题注标签）。 |
+| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（“公式”、“图”、“表”或其他题注标签）。 |
 | sRefType | 必需 | [captionRefTo](../../Enumeration/captionRefTo.md) |  | 要插入的题注引用的文本或数值。 |
 | oParaTo | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 要引用的题注段落（必须在文档中）。 |
 | bLink | 可选 | boolean | true | 指定引用是否作为超链接插入。 |
-| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的「上方/下方」字样（仅与 "pageNum" sRefType 一起使用）。 |
+| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的“上方/下方”字样（仅与 “pageNum” sRefType 一起使用）。 |
 
 ## 返回值
 
@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加题注交叉引用。
+在文档中插入链接到图形题注的交叉引用。
 
 ```javascript editor-docx
-// How to create a caption reference to the paragraph in a document.
+// How do I add a reference to a numbered caption from another paragraph in a document?
 
-// Add a cross-reference to the caption of the paragraph in a document.
+// Point readers to a specific captioned figure using an automated cross-reference link in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

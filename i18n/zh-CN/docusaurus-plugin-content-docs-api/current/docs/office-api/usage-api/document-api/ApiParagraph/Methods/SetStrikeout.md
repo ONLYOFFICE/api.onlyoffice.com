@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在文档中此段落的内容以通过行中心的单条水平线显示。
+在文档中为段落文本绘制删除线。
 
 ```javascript editor-docx
-// How to cross the paragraph with onle line in a document.
+// How do I display paragraph text with a line crossed through it in a document?
 
-// Create a paragraph with the text struck out with a single line in a document.
+// Mark paragraph content as struck through with a single line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

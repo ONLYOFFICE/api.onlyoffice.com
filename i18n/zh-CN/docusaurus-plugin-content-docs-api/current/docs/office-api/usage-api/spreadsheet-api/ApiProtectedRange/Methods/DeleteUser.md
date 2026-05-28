@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中删除用户受保护范围。
+撤销用户对电子表格中受保护范围的访问权限。
 
 ```javascript editor-xlsx
-// How to close an access for the protected range to user specifing user id, name and access type in a spreadsheet.
+// How do I remove a person's permission to edit a locked range in a spreadsheet?
 
-// Get an active sheet, add protected range to it, add users with rights then delete one of them in a spreadsheet.
+// Take away an existing user's rights to a protected range by removing them from the access list in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1");

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中填充的类类型。
+识别填充的内部类别以了解其在电子表格中是何种对象。
 
 ```javascript editor-xlsx
-// How to identify the class type of a fill in a spreadsheet?
+// How do I check what category a fill object belongs to in a spreadsheet?
 
-// Obtain the class type identifier of a fill object in a spreadsheet.
+// Confirm the class a fill belongs to by reading its type label and displaying it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

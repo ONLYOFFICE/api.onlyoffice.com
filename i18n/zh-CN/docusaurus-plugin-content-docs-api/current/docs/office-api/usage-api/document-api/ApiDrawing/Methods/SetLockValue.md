@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中当前绘图对象的指定锁定类型设置锁定值。
+防止文档中的绘图被选中。
 
 ```javascript editor-docx
-// How to set the lock value to "noSelect" of the drawing in a document.
+// How do I lock a shape so users cannot click or select it in a document?
 
-// Create a drawing and lock it in a document.
+// Apply a selection lock to a shape and confirm the restriction is active in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

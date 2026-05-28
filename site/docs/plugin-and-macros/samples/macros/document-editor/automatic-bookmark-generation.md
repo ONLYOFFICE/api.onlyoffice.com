@@ -4,6 +4,8 @@ description: Auto-generate bookmarks from document headings.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Automatic bookmark generation
 
 Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.
@@ -28,4 +30,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/automatic-bookmark-generation" dark />

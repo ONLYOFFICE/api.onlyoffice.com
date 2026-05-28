@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-Get the paragraph contents justification in a document.
+Read the text justification setting applied to a paragraph in a document.
 
 ```javascript editor-docx
-// Get the justification of the paragraph and show it in the document.
+// How do I find out how a paragraph's text is aligned in a document?
 
-// How to know the justification type of the paragraph in a document.
+// Confirm the alignment type before deciding whether to unify or override it across styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

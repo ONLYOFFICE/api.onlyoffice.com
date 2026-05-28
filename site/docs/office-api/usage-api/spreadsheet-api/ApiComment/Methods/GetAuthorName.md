@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the comment author's name in a spreadsheet.
+Read the name of the person who wrote a cell comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove a comment from a range in a spreadsheet.
+// How do I find out who authored a comment attached to a cell in a spreadsheet?
 
-// Get a range, add a comment to it and then remove it in a spreadsheet.
+// Identify the contributor behind a cell annotation by retrieving the author name stored with the comment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

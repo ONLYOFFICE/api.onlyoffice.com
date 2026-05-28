@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a text run in a document.
+Identify the object type of a text run in a document.
 
 ```javascript editor-docx
-// How to identify the class type of a text run in a document?
+// How do I find out what kind of object a text run is in a document?
 
-// Obtain the class type identifier of a text run object in a document.
+// Confirm the category a text run belongs to in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除包含该单元格的行。
+通过定位其中一个单元格来删除文档中的整个行。
 
 ```javascript editor-docx
-// How to delete the row with Cell 1.
+// How do I remove a row from a table using a cell reference in a document?
 
-// Get the first cell and remove its rowd.
+// Erase a whole table row by selecting any cell within it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -22,12 +22,12 @@ expression.IntersectWith(oRange);
 
 ## Example
 
-Return a new range as the intersection of the current range with another range in a document.
+Produce a new text selection from the overlapping portion of two highlighted regions in a document.
 
 ```javascript editor-docx
-// How to intersect two ranges into the new one in a document.
+// How do I find the shared content between two text selections in a document?
 
-// Create a range by intersection of two and make its text bold in a document.
+// Combine two overlapping spans into their common area for focused formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

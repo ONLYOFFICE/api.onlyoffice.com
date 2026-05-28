@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-检查文档中复选框内容控件的状态。
+读取文档中复选框内容控件的选中状态。
 
 ```javascript editor-docx
-// How can I is check box checked using an inline content control in a document?
+// How do I find out whether a checkbox content control is checked in a document?
 
-// Is check box checked for an inline content control in a document.
+// Conditionally display text based on whether a checkbox is ticked or unticked in a document.
 
 let doc = Api.GetDocument();
 let checkBox = doc.AddCheckBoxContentControl();

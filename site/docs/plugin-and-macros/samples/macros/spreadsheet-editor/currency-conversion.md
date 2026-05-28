@@ -4,6 +4,8 @@ description: Convert currency values between different currencies.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Currency conversion
 
 Converts a base currency into multiple desired target currencies. It can also fetch historical currency values for a specific date. Uses the Currency Conversion API from [currencyapi](https://app.currencyapi.com/).
@@ -87,4 +89,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/currency-conversion" dark />

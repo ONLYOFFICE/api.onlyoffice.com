@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置唯一名称。
+为 PDF 中的注释分配唯一标识符。
 
 ```javascript editor-pdf
-// How do I set unique name in a PDF document?
+// Give an annotation a distinct name for reference in a PDF.
 
-// Set unique name using an annotation object in a PDF document.
+// Set a unique name to distinguish an annotation from others in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

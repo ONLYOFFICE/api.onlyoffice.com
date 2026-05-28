@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的描述。
+读取文档核心属性中存储的描述。
 
 ```javascript editor-docx
-// How can I get the description using a core properties in a document?
+// How do I retrieve the description text from the core properties in a document?
 
-// Get the description for a core properties in a document.
+// Display a document's summary text to give readers context about its contents in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

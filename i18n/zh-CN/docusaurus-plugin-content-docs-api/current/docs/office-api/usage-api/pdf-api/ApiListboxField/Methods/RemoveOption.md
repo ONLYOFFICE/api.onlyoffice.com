@@ -6,12 +6,12 @@
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段移除选项。
+从 PDF 中的下拉字段删除选项。
 
 ```javascript editor-pdf
-// How can I remove the option using a list field in a PDF document?
+// How do I remove an option from a list field in a PDF?
 
-// Remove the option for a list field in a PDF document.
+// Take out an item from a dropdown's available choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

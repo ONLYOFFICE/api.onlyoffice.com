@@ -4,6 +4,8 @@ description: Find and highlight overused words in a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Identify overused words
 
 Analyzes the frequency of words in a document and identifies overused words based on specified thresholds.
@@ -123,5 +125,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![IdentifyOverusedWords](/assets/images/plugins/identify-overused-words.png#gh-light-mode-only)
-![IdentifyOverusedWords](/assets/images/plugins/identify-overused-words.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/identify-overused-words" dark />

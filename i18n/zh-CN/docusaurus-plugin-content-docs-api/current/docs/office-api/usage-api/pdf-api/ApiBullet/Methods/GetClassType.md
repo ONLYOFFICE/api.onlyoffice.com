@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中项目符号返回的类类型。
+识别 PDF 中项目符号的类类型。
 
 ```javascript editor-pdf
-// How do I check what type a bullet object is in a PDF document?
+// How do I determine what type a bullet object is in a PDF?
 
-// Retrieve and output the class type string for a bullet in a PDF document.
+// Find the object type identifier for a bullet in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

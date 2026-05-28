@@ -23,12 +23,12 @@ expression.LineTo(x, y);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+在电子表格中从当前位置到自定义形状的新点绘制直线。
 
 ```javascript editor-xlsx
-// How can I line to using a geometry path in a spreadsheet?
+// How do I add a straight segment to a custom shape path in a spreadsheet?
 
-// Line to for a geometry path in a spreadsheet.
+// Extend a shape outline by connecting the current drawing position to a target coordinate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

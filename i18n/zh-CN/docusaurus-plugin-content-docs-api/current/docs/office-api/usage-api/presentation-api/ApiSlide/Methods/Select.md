@@ -20,12 +20,12 @@ expression.Select();
 
 ## 示例
 
-选中当前幻灯片。
+在演示文稿中选择幻灯片。
 
 ```javascript editor-pptx
-// How to select for a slide?
+// Create multiple slides with different content.
 
-// Select and display the result in a presentation.
+// Select the second slide to make it active.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);

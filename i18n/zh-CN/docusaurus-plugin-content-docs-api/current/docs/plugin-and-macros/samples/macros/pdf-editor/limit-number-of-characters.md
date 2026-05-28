@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 字符数限制
 
 对键值包含特定关键词的文本字段设置允许输入的字符数限制。
@@ -31,5 +33,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![文本表单字符数限制](/assets/images/plugins/limit-number-of-characters.png#gh-light-mode-only)
-![文本表单字符数限制](/assets/images/plugins/limit-number-of-characters.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/limit-number-of-characters" dark />

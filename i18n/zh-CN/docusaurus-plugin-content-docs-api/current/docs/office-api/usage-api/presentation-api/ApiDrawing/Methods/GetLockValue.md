@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取形状的锁定值并将其插入演示文稿。
+获取演示文稿中形状的锁定设置。
 
 ```javascript editor-pptx
-// How to get a slide shape's lock value and display it in the slide.
+// How do I find the lock status of an object in a presentation?
 
-// Get a slide shape's lock value.
+// Retrieve and display the lock value of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

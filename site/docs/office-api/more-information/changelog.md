@@ -2,6 +2,234 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.4
+
+### Document methods
+
+- Added the [Api/MergeDocuments](../usage-api/document-api/Api/Methods/MergeDocuments.md) method to Document API.
+
+### Color methods
+
+- Added the [Api/Color](../usage-api/document-api/Api/Methods/Color.md) method to Document API.
+- Added the [Api/Color](../usage-api/spreadsheet-api/Api/Methods/Color.md) method to Spreadsheet API.
+- Added the [Api/Color](../usage-api/presentation-api/Api/Methods/Color.md) method to Presentation API.
+- Added the [Api/Color](../usage-api/pdf-api/Api/Methods/Color.md) method to PDF API.
+
+### Signature form
+
+- Added the [ApiSignatureForm](../usage-api/document-api/ApiSignatureForm/ApiSignatureForm.md) class to Document API.
+- Added the [ApiSignatureForm/GetValue](../usage-api/document-api/ApiSignatureForm/Methods/GetValue.md) method to Document API.
+- Added the [ApiSignatureForm/SetValue](../usage-api/document-api/ApiSignatureForm/Methods/SetValue.md) method to Document API.
+
+- Added the [ApiSignatureForm](../usage-api/form-api/ApiSignatureForm/ApiSignatureForm.md) class to Form API.
+- Added the [Api/CreateSignatureForm](../usage-api/form-api/Api/Methods/CreateSignatureForm.md) method to Form API.
+- Added the [ApiSignatureForm/GetValue](../usage-api/form-api/ApiSignatureForm/Methods/GetValue.md) method to Form API.
+- Added the [ApiSignatureForm/SetValue](../usage-api/form-api/ApiSignatureForm/Methods/SetValue.md) method to Form API.
+
+### Form methods
+
+- Added the [ApiFormBase/IsFilled](../usage-api/document-api/ApiFormBase/Methods/IsFilled.md) method to Document API.
+- Added the [ApiFormBase/IsFilled](../usage-api/form-api/ApiFormBase/Methods/IsFilled.md) method to Form API.
+
+### Highlight methods
+
+- Added the [ApiDocument/GetFormsHighlight](../usage-api/document-api/ApiDocument/Methods/GetFormsHighlight.md) method to Document API.
+- Added the [ApiDocument/GetControlsHighlight](../usage-api/document-api/ApiDocument/Methods/GetControlsHighlight.md) method to Document API.
+- Added the [ApiDocument/GetFormsHighlight](../usage-api/form-api/ApiDocument/Methods/GetFormsHighlight.md) method to Form API.
+
+### List object methods
+
+- Added the [ApiWorksheet/AddListObject](../usage-api/spreadsheet-api/ApiWorksheet/Methods/AddListObject.md) method to Spreadsheet API.
+- Added the [ApiWorksheet/GetListObjects](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetListObjects.md) method to Spreadsheet API.
+
+- Added the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) class to Spreadsheet API.
+- Added the [ApiListObject/GetActive](../usage-api/spreadsheet-api/ApiListObject/Methods/GetActive.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetName](../usage-api/spreadsheet-api/ApiListObject/Methods/GetName.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetName](../usage-api/spreadsheet-api/ApiListObject/Methods/SetName.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetDisplayName](../usage-api/spreadsheet-api/ApiListObject/Methods/GetDisplayName.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetDisplayName](../usage-api/spreadsheet-api/ApiListObject/Methods/SetDisplayName.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetAlternativeText](../usage-api/spreadsheet-api/ApiListObject/Methods/GetAlternativeText.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetAlternativeText](../usage-api/spreadsheet-api/ApiListObject/Methods/SetAlternativeText.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetComment](../usage-api/spreadsheet-api/ApiListObject/Methods/GetComment.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetComment](../usage-api/spreadsheet-api/ApiListObject/Methods/SetComment.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetSummary](../usage-api/spreadsheet-api/ApiListObject/Methods/GetSummary.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetSummary](../usage-api/spreadsheet-api/ApiListObject/Methods/SetSummary.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetParent](../usage-api/spreadsheet-api/ApiListObject/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetRange](../usage-api/spreadsheet-api/ApiListObject/Methods/GetRange.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetHeaderRowRange](../usage-api/spreadsheet-api/ApiListObject/Methods/GetHeaderRowRange.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetDataBodyRange](../usage-api/spreadsheet-api/ApiListObject/Methods/GetDataBodyRange.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetTotalsRowRange](../usage-api/spreadsheet-api/ApiListObject/Methods/GetTotalsRowRange.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetSourceType](../usage-api/spreadsheet-api/ApiListObject/Methods/GetSourceType.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetTableStyle](../usage-api/spreadsheet-api/ApiListObject/Methods/GetTableStyle.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetTableStyle](../usage-api/spreadsheet-api/ApiListObject/Methods/SetTableStyle.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowHeaders](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowHeaders.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowHeaders](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowHeaders.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowTotals](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowTotals.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowTotals](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowTotals.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowAutoFilter](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowAutoFilter.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowAutoFilter](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowAutoFilter.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowAutoFilterDropDown](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowAutoFilterDropDown.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowAutoFilterDropDown](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowAutoFilterDropDown.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowTableStyleColumnStripes](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowTableStyleColumnStripes.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowTableStyleColumnStripes](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowTableStyleColumnStripes.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowTableStyleFirstColumn](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowTableStyleFirstColumn.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowTableStyleFirstColumn](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowTableStyleFirstColumn.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowTableStyleLastColumn](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowTableStyleLastColumn.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowTableStyleLastColumn](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowTableStyleLastColumn.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetShowTableStyleRowStripes](../usage-api/spreadsheet-api/ApiListObject/Methods/GetShowTableStyleRowStripes.md) method to Spreadsheet API.
+- Added the [ApiListObject/SetShowTableStyleRowStripes](../usage-api/spreadsheet-api/ApiListObject/Methods/SetShowTableStyleRowStripes.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetAutoFilter](../usage-api/spreadsheet-api/ApiListObject/Methods/GetAutoFilter.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetListColumns](../usage-api/spreadsheet-api/ApiListObject/Methods/GetListColumns.md) method to Spreadsheet API.
+- Added the [ApiListObject/AddListColumn](../usage-api/spreadsheet-api/ApiListObject/Methods/AddListColumn.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetListRows](../usage-api/spreadsheet-api/ApiListObject/Methods/GetListRows.md) method to Spreadsheet API.
+- Added the [ApiListObject/AddListRow](../usage-api/spreadsheet-api/ApiListObject/Methods/AddListRow.md) method to Spreadsheet API.
+- Added the [ApiListObject/GetSort](../usage-api/spreadsheet-api/ApiListObject/Methods/GetSort.md) method to Spreadsheet API.
+- Added the [ApiListObject/Resize](../usage-api/spreadsheet-api/ApiListObject/Methods/Resize.md) method to Spreadsheet API.
+- Added the [ApiListObject/Unlist](../usage-api/spreadsheet-api/ApiListObject/Methods/Unlist.md) method to Spreadsheet API.
+- Added the [ApiListObject/Delete](../usage-api/spreadsheet-api/ApiListObject/Methods/Delete.md) method to Spreadsheet API.
+- Added the *Active* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Name* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *DisplayName* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *AlternativeText* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Comment* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Summary* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Parent* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Range* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *HeaderRowRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *DataBodyRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *TotalsRowRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *SourceType* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *TableStyle* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowHeaders* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowTotals* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowAutoFilter* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowAutoFilterDropDown* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowTableStyleColumnStripes* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowTableStyleFirstColumn* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowTableStyleLastColumn* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *ShowTableStyleRowStripes* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *AutoFilter* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the *Sort* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+
+- Added the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) class to Spreadsheet API.
+- Added the [ApiListColumn/GetName](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetName.md) method to Spreadsheet API.
+- Added the [ApiListColumn/SetName](../usage-api/spreadsheet-api/ApiListColumn/Methods/SetName.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetIndex](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetIndex.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetParent](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetRange](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetRange.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetDataBodyRange](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetDataBodyRange.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetTotalsCalculation](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetTotalsCalculation.md) method to Spreadsheet API.
+- Added the [ApiListColumn/SetTotalsCalculation](../usage-api/spreadsheet-api/ApiListColumn/Methods/SetTotalsCalculation.md) method to Spreadsheet API.
+- Added the [ApiListColumn/GetTotal](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetTotal.md) method to Spreadsheet API.
+- Added the [ApiListColumn/Delete](../usage-api/spreadsheet-api/ApiListColumn/Methods/Delete.md) method to Spreadsheet API.
+- Added the *Name* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *Index* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *Parent* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *Range* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *DataBodyRange* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *TotalsCalculation* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the *Total* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+
+- Added the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) class to Spreadsheet API.
+- Added the [ApiListRow/GetIndex](../usage-api/spreadsheet-api/ApiListRow/Methods/GetIndex.md) method to Spreadsheet API.
+- Added the [ApiListRow/GetParent](../usage-api/spreadsheet-api/ApiListRow/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiListRow/GetRange](../usage-api/spreadsheet-api/ApiListRow/Methods/GetRange.md) method to Spreadsheet API.
+- Added the [ApiListRow/Delete](../usage-api/spreadsheet-api/ApiListRow/Methods/Delete.md) method to Spreadsheet API.
+- Added the *Index* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+- Added the *Parent* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+- Added the *Range* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+
+- Added the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) class to Spreadsheet API.
+- Added the [ApiSort/GetSortFields](../usage-api/spreadsheet-api/ApiSort/Methods/GetSortFields.md) method to Spreadsheet API.
+- Added the [ApiSort/GetMatchCase](../usage-api/spreadsheet-api/ApiSort/Methods/GetMatchCase.md) method to Spreadsheet API.
+- Added the [ApiSort/SetMatchCase](../usage-api/spreadsheet-api/ApiSort/Methods/SetMatchCase.md) method to Spreadsheet API.
+- Added the [ApiSort/GetHeader](../usage-api/spreadsheet-api/ApiSort/Methods/GetHeader.md) method to Spreadsheet API.
+- Added the [ApiSort/GetOrientation](../usage-api/spreadsheet-api/ApiSort/Methods/GetOrientation.md) method to Spreadsheet API.
+- Added the [ApiSort/SetOrientation](../usage-api/spreadsheet-api/ApiSort/Methods/SetOrientation.md) method to Spreadsheet API.
+- Added the [ApiSort/GetSortMethod](../usage-api/spreadsheet-api/ApiSort/Methods/GetSortMethod.md) method to Spreadsheet API.
+- Added the [ApiSort/SetSortMethod](../usage-api/spreadsheet-api/ApiSort/Methods/SetSortMethod.md) method to Spreadsheet API.
+- Added the [ApiSort/GetParent](../usage-api/spreadsheet-api/ApiSort/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiSort/GetRng](../usage-api/spreadsheet-api/ApiSort/Methods/GetRng.md) method to Spreadsheet API.
+- Added the [ApiSort/Apply](../usage-api/spreadsheet-api/ApiSort/Methods/Apply.md) method to Spreadsheet API.
+- Added the *SortFields* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *MatchCase* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *Header* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *Orientation* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *SortMethod* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *Parent* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the *Rng* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+
+- Added the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) class to Spreadsheet API.
+- Added the [ApiSortFields/GetParent](../usage-api/spreadsheet-api/ApiSortFields/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiSortFields/GetCount](../usage-api/spreadsheet-api/ApiSortFields/Methods/GetCount.md) method to Spreadsheet API.
+- Added the [ApiSortFields/Item](../usage-api/spreadsheet-api/ApiSortFields/Methods/Item.md) method to Spreadsheet API.
+- Added the [ApiSortFields/Add](../usage-api/spreadsheet-api/ApiSortFields/Methods/Add.md) method to Spreadsheet API.
+- Added the [ApiSortFields/Add2](../usage-api/spreadsheet-api/ApiSortFields/Methods/Add2.md) method to Spreadsheet API.
+- Added the [ApiSortFields/Clear](../usage-api/spreadsheet-api/ApiSortFields/Methods/Clear.md) method to Spreadsheet API.
+- Added the *Parent* property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
+- Added the *Count* property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
+
+- Added the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) class to Spreadsheet API.
+- Added the [ApiSortField/GetParent](../usage-api/spreadsheet-api/ApiSortField/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiSortField/GetKey](../usage-api/spreadsheet-api/ApiSortField/Methods/GetKey.md) method to Spreadsheet API.
+- Added the [ApiSortField/GetSortOn](../usage-api/spreadsheet-api/ApiSortField/Methods/GetSortOn.md) method to Spreadsheet API.
+- Added the [ApiSortField/SetSortOn](../usage-api/spreadsheet-api/ApiSortField/Methods/SetSortOn.md) method to Spreadsheet API.
+- Added the [ApiSortField/GetOrder](../usage-api/spreadsheet-api/ApiSortField/Methods/GetOrder.md) method to Spreadsheet API.
+- Added the [ApiSortField/SetOrder](../usage-api/spreadsheet-api/ApiSortField/Methods/SetOrder.md) method to Spreadsheet API.
+- Added the [ApiSortField/GetPriority](../usage-api/spreadsheet-api/ApiSortField/Methods/GetPriority.md) method to Spreadsheet API.
+- Added the [ApiSortField/SetPriority](../usage-api/spreadsheet-api/ApiSortField/Methods/SetPriority.md) method to Spreadsheet API.
+- Added the [ApiSortField/GetSortOnValue](../usage-api/spreadsheet-api/ApiSortField/Methods/GetSortOnValue.md) method to Spreadsheet API.
+- Added the [ApiSortField/SetSortOnColor](../usage-api/spreadsheet-api/ApiSortField/Methods/SetSortOnColor.md) method to Spreadsheet API.
+- Added the [ApiSortField/ModifyKey](../usage-api/spreadsheet-api/ApiSortField/Methods/ModifyKey.md) method to Spreadsheet API.
+- Added the [ApiSortField/Delete](../usage-api/spreadsheet-api/ApiSortField/Methods/Delete.md) method to Spreadsheet API.
+- Added the *Parent* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the *Key* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the *SortOn* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the *Order* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the *Priority* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the *SortOnValue* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+
+### Spreadsheet methods
+
+- Added the [Api/GetDefNames](../usage-api/spreadsheet-api/Api/Methods/GetDefNames.md) method to Spreadsheet API.
+- Added the [ApiRange/FillDown](../usage-api/spreadsheet-api/ApiRange/Methods/FillDown.md) method to Spreadsheet API.
+- Added the [ApiRange/FillUp](../usage-api/spreadsheet-api/ApiRange/Methods/FillUp.md) method to Spreadsheet API.
+- Added the [ApiRange/FillRight](../usage-api/spreadsheet-api/ApiRange/Methods/FillRight.md) method to Spreadsheet API.
+- Added the [ApiRange/FillLeft](../usage-api/spreadsheet-api/ApiRange/Methods/FillLeft.md) method to Spreadsheet API.
+- Added the [ApiRange/SetFormula](../usage-api/spreadsheet-api/ApiRange/Methods/SetFormula.md) method to Spreadsheet API.
+
+### Text form methods
+
+- Added the [ApiTextForm/GetFormat](../usage-api/document-api/ApiTextForm/Methods/GetFormat.md) method to Document API.
+- Added the [ApiTextForm/SetFormat](../usage-api/document-api/ApiTextForm/Methods/SetFormat.md) method to Document API.
+- Added the [ApiTextForm/GetAllowedSymbols](../usage-api/document-api/ApiTextForm/Methods/GetAllowedSymbols.md) method to Document API.
+- Added the [ApiTextForm/SetAllowedSymbols](../usage-api/document-api/ApiTextForm/Methods/SetAllowedSymbols.md) method to Document API.
+
+- Added the [ApiTextForm/GetFormat](../usage-api/form-api/ApiTextForm/Methods/GetFormat.md) method to Form API.
+- Added the [ApiTextForm/SetFormat](../usage-api/form-api/ApiTextForm/Methods/SetFormat.md) method to Form API.
+- Added the [ApiTextForm/GetAllowedSymbols](../usage-api/form-api/ApiTextForm/Methods/GetAllowedSymbols.md) method to Form API.
+- Added the [ApiTextForm/SetAllowedSymbols](../usage-api/form-api/ApiTextForm/Methods/SetAllowedSymbols.md) method to Form API.
+
+### Paragraph properties methods
+
+- Added the [ApiParaPr/GetTopBorder](../usage-api/document-api/ApiParaPr/Methods/GetTopBorder.md) method to Document API.
+- Added the [ApiParaPr/GetLeftBorder](../usage-api/document-api/ApiParaPr/Methods/GetLeftBorder.md) method to Document API.
+- Added the [ApiParaPr/GetRightBorder](../usage-api/document-api/ApiParaPr/Methods/GetRightBorder.md) method to Document API.
+- Added the [ApiParaPr/GetBottomBorder](../usage-api/document-api/ApiParaPr/Methods/GetBottomBorder.md) method to Document API.
+- Added the [ApiParaPr/GetBetweenBorder](../usage-api/document-api/ApiParaPr/Methods/GetBetweenBorder.md) method to Document API.
+- Added the [ApiParaPr/GetKeepLines](../usage-api/document-api/ApiParaPr/Methods/GetKeepLines.md) method to Document API.
+- Added the [ApiParaPr/GetKeepNext](../usage-api/document-api/ApiParaPr/Methods/GetKeepNext.md) method to Document API.
+- Added the [ApiParaPr/GetNumPr](../usage-api/document-api/ApiParaPr/Methods/GetNumPr.md) method to Document API.
+- Added the [ApiParaPr/GetPageBreakBefore](../usage-api/document-api/ApiParaPr/Methods/GetPageBreakBefore.md) method to Document API.
+- Added the [ApiParaPr/GetTabs](../usage-api/document-api/ApiParaPr/Methods/GetTabs.md) method to Document API.
+- Added the [ApiParaPr/GetWidowControl](../usage-api/document-api/ApiParaPr/Methods/GetWidowControl.md) method to Document API.
+- Added the [ApiParaPr/GetContextualSpacing](../usage-api/document-api/ApiParaPr/Methods/GetContextualSpacing.md) method to Document API.
+
+### Content control methods
+
+- Added the [ApiInlineLvlSdt/SetColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetColor.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetColor.md) method to Document API.
+
 ## Version 9.3
 
 ### Autofilter methods

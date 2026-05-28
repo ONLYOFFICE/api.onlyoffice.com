@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 重置文本属性
 
 将文档中所有段落的文本属性重置为默认设置。
@@ -33,5 +35,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![重置文本属性](/assets/images/plugins/reset-text-properties.png#gh-light-mode-only)
-![重置文本属性](/assets/images/plugins/reset-text-properties.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/reset-text-properties" dark />

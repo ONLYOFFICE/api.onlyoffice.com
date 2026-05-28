@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-在文档中将段落属性对象转换为 JSON 对象。
+在文档中将段落属性序列化为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the paragraph properties in a document.
+// How do I export paragraph formatting settings as JSON in a document?
 
-// Convert the paragraph properties to json and add it to the paragraph in a document.
+// Restore paragraph properties from a JSON representation and verify the class type in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

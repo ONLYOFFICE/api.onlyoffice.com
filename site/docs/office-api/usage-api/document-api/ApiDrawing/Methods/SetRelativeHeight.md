@@ -5,7 +5,7 @@ Sets the relative height of the object (image, shape, chart) bounding box.
 ## Syntax
 
 ```javascript
-expression.SetRelativeHeight(sRelativeFrom, nPercent);
+expression.SetRelativeHeight(relativeFrom, percent);
 ```
 
 `expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
@@ -14,8 +14,8 @@ expression.SetRelativeHeight(sRelativeFrom, nPercent);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | Optional | [RelFromV](../../Enumeration/RelFromV.md) | "page" | The document element which will be taken as a countdown point for the object height. |
-| nPercent | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| relativeFrom | Optional | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | The document element which will be taken as a countdown point for the object height. |
+| percent | Required | [percentage](../../Enumeration/percentage.md) |  | The height of the object as a percentage of the specified element. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Relative height shape sizing to page dimensions.
+Size a shape's height as a percentage of the page in a document.
 
 ```javascript editor-docx
-// How to set shape width and height as percentages of the page.
+// How do I make a shape's height scale proportionally with the page in a document?
 
-// Create a responsive rectangle that scales with page size.
+// Stretch a rectangle to fill a quarter of the page height so it adapts to different page sizes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

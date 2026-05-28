@@ -5,7 +5,7 @@ Sets the relative width of the object (image, shape, chart) bounding box.
 ## Syntax
 
 ```javascript
-expression.SetRelativeWidth(sRelativeFrom, nPercent);
+expression.SetRelativeWidth(relativeFrom, percent);
 ```
 
 `expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
@@ -14,8 +14,8 @@ expression.SetRelativeWidth(sRelativeFrom, nPercent);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | Optional | [RelFromV](../../Enumeration/RelFromV.md) | "page" | The document element which will be taken as a countdown point for the object width. |
-| nPercent | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| relativeFrom | Optional | [SizeRelFromH](../../Enumeration/SizeRelFromH.md) | "page" | The document element which will be taken as a countdown point for the object width. |
+| percent | Required | [percentage](../../Enumeration/percentage.md) |  | The width of the object as a percentage of the specified element. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Relative width shape sizing to page dimensions.
+Size a shape's width as a percentage of the page in a document.
 
 ```javascript editor-docx
-// How to set shape width and height as percentages of the page.
+// How do I make a shape's width span a fixed fraction of the page in a document?
 
-// Create a responsive rectangle that scales with page size.
+// Stretch a rectangle to half the page width so its layout stays consistent across page sizes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

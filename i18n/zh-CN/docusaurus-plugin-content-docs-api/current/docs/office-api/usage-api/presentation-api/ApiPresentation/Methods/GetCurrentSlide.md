@@ -20,12 +20,12 @@ expression.GetCurrentSlide();
 
 ## 示例
 
-获取演示文稿中的当前幻灯片。
+获取当前正在编辑的幻灯片对象。
 
 ```javascript editor-pptx
-// How to get a current slide as an object.
+// Access the active slide as an ApiSlide object.
 
-// Get current working slide and update its content.
+// Add content to the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentSlide();

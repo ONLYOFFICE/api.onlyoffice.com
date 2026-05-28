@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中当前文档的版本。
+从文档核心属性提取版本字符串。
 
 ```javascript editor-docx
-// How to get the version for a core properties in a document?
+// How do I retrieve the version recorded in a document's metadata in a document?
 
-// Get the version and display the result in a document.
+// Confirm the stored version value is accessible by writing it into the document body in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

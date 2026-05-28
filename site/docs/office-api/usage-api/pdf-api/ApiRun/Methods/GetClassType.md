@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a text run object in a PDF document.
+Identify the type of a text element in a PDF.
 
 ```javascript editor-pdf
-// How can I get the class type of a text run in a PDF document?
+// How do I learn what kind of text object I'm working with in a PDF?
 
-// Get the class type of a text run and display it in the PDF.
+// Display the classification of a text element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

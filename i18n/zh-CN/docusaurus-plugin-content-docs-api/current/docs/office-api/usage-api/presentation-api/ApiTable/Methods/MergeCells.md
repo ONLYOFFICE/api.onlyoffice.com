@@ -1,7 +1,7 @@
 # MergeCells
 
-合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 "null"。
--**警告**：任何行中的单元格数量和当前表格中的行数可能会更改。
+合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 “null”。
+- **警告**：任何行中的单元格数量和当前表格中的行数可能会更改。
 
 ## 语法
 
@@ -23,12 +23,12 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-合并一组单元格。
+将一组单元格合并为一个。
 
 ```javascript editor-pptx
-// How to get two cells by their position index and merge them into one.
+// Get two cells by their position index and merge them.
 
-// Create a table, create cells and merge them into one.
+// Create a table, obtain two cells, and merge them together.
 
 const presentation = Api.GetPresentation();
 

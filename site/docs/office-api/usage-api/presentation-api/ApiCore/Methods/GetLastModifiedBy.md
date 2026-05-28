@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Set and get the name of the last user who modified the current presentation in a presentation.
+Set and view the name of the last person to edit a presentation in a presentation.
 
 ```javascript editor-pptx
-// How can I get last modified by using a core properties in a presentation?
+// How do I find who last modified a presentation?
 
-// Get last modified by for a core properties in a presentation.
+// Retrieve the name of the user who made the most recent changes in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

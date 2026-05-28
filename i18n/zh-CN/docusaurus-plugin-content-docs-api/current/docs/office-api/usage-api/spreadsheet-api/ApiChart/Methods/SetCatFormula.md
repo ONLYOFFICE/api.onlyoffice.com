@@ -14,7 +14,7 @@ expression.SetCatFormula(sRange);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | 必需 | string |  | 包含类别名称的工作表单元格范围。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列。 |
+| sRange | 必需 | string |  | 工作表中包含类别名称的单元格区域。例如："'sheet 1'!$A$2:$A$5" - 必须是单个单元格、行或列，"A1:A5" - 必须是单个单元格、行或列。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetCatFormula(sRange);
 
 ## 示例
 
-在电子表格中为当前图表设置包含类别值的范围。
+将单元格范围分配为电子表格中图表分类标签的来源。
 
 ```javascript editor-xlsx
-// How to apply range category formula for the chart.
+// How do I point a chart to a different range for its category labels in a spreadsheet?
 
-// Set category formula for the chart by sheet number and range.
+// Update the category data driving the horizontal labels of a chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

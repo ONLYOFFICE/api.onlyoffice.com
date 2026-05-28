@@ -6,6 +6,8 @@ ApiSmartArt is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a copy of the specified drawing object. |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "smartArt" | Returns a type of the ApiSmartArt class. |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | Get horizontal flip of current drawing. |
@@ -20,9 +22,9 @@ ApiSmartArt is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
-| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
+| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
 | [SetSize](./Methods/SetSize.md) | None | Sets a size of the object (image, shape, chart) bounding box. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current drawing from the selection. |

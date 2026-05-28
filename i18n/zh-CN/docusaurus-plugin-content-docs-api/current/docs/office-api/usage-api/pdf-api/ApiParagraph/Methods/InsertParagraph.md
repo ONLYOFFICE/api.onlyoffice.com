@@ -15,7 +15,7 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | paragraph | 必需 | string \| [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 文本或段落。 |
-| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的「之前」或「之后」）。 |
+| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的“之前”或“之后”）。 |
 | beRNewPara | 必需 | boolean |  | 定义此方法是返回新段落（true）还是当前段落（false）。 |
 
 ## 返回值
@@ -24,12 +24,12 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-在 PDF 文档中的指定位置插入段落。
+在 PDF 中将新段落放在现有段落旁边。
 
 ```javascript editor-pdf
-// How can I insert the paragraph using a paragraph in a PDF document?
+// How do I add a paragraph at a specific location relative to another paragraph in a PDF?
 
-// Insert the paragraph for a paragraph in a PDF document.
+// Position a paragraph before or after an existing one in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

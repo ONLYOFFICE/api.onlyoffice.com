@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中是否显示输入消息。
+检查电子表格中已验证的单元格是否开启了输入提示。
 
 ```javascript editor-xlsx
-// How to check if validation shows an input message in a spreadsheet.
+// How do I find out if a guidance message appears when someone selects a restricted cell in a spreadsheet?
 
-// Get the ShowInput setting in a spreadsheet.
+// Confirm that a prompt will be shown to guide users before they enter a value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

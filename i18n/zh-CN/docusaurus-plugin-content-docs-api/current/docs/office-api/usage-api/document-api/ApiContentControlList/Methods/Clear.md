@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中组合框/列表框的值列表。
+从文档中的组合框下拉列表移除所有条目。
 
 ```javascript editor-docx
-// How to clear for a content control list in a document?
+// How do I clear every option from a dropdown list content control in a document?
 
-// Clear and display the result in a document.
+// Reset a combo box to an empty state by wiping its list of selectable values in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

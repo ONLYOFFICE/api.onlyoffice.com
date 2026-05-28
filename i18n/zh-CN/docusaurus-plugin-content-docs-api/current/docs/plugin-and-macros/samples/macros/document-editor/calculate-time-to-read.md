@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 阅读时间计算
 
 分析文档全文，统计词数并考虑文本复杂度，计算普通成年人阅读所需时间。
@@ -80,5 +82,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![阅读时间计算](/assets/images/plugins/time-to-read.png#gh-light-mode-only)
-![阅读时间计算](/assets/images/plugins/time-to-read.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/calculate-time-to-read" dark />

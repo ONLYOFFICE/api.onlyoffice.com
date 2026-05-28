@@ -22,12 +22,12 @@ expression.SetRepeatAllLabels(repeat);
 
 ## 示例
 
-在电子表格中设置数据透视表的重复所有标签。
+在电子表格中数据透视表的每行上重复行和列标签。
 
 ```javascript editor-xlsx
-// How to set repeat all labels of a table in a spreadsheet.
+// How do I make category labels appear on every row in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its repeat all labels in a spreadsheet.
+// Fill in blank label cells so each row clearly shows its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

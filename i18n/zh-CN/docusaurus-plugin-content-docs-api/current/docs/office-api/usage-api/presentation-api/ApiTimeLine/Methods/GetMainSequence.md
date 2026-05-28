@@ -20,12 +20,12 @@ expression.GetMainSequence();
 
 ## 示例
 
-从演示文稿中的时间线获取主动画序列。
+访问演示文稿中幻灯片上的主要动画序列。
 
 ```javascript editor-pptx
-// How can I get the main sequence using a timeline in a presentation?
+// How do I get the default animation list for a slide in a presentation?
 
-// Get the main sequence for a timeline in a presentation.
+// Retrieve the main timeline sequence where automatic animations are placed in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

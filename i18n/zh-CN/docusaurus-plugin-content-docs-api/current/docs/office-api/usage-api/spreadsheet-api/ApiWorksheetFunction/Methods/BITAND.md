@@ -1,6 +1,6 @@
 # BITAND
 
-返回两个数字的按位"与"运算结果。
+返回两个数字的按位“与”运算结果。
 
 ## 语法
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数字的按位 "AND"。
+在电子表格中使用按位与比较两个数字。
 
 ```javascript editor-xlsx
-// How to get a two numbers bitwise AND in a spreadsheet.
+// What do two numbers share at the binary level in a spreadsheet?
 
-// Use function to calculate bitwise AND opertation in a spreadsheet.
+// Get the common bits between two values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

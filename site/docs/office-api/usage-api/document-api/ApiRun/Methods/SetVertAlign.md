@@ -1,9 +1,9 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
--**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
+- **"baseline"** - the characters in the current text run will be aligned by the default text baseline.
+- **"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+- **"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-Specify the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run in a document.
+Position a text run above, below, or on the baseline of surrounding text in a document.
 
 ```javascript editor-docx
-// How to change a vertical alignment of a text run in a document.
+// How do I make text appear as a superscript or subscript in a document?
 
-// Create a new text run and make it subscript, baseline or superscript in a document.
+// Raise or lower a portion of text relative to the normal line height in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

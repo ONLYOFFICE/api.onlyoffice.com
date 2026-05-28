@@ -15,7 +15,7 @@ expression.SetTemplateType(sType, sSymbol);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | 必需 | "none" \| "bullet" \| "1)" \| "1." \| "I." \| "A." \| "a)" \| "a." \| "i." |  | 预定义的编号模板。 |
-| sSymbol | 可选 | string | "" | 用于列表编号的符号。此参数仅在预定义的编号模板为 "bullet" 时有意义。 |
+| sSymbol | 可选 | string | "" | 用于列表编号的符号。此参数仅在预定义的编号模板为 “bullet” 时有意义。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中设置一个现有的预定义编号模板。
+在文档中为列表级别应用预定义的编号模板。
 
 ```javascript editor-docx
-// How to set template type of the numbering in a document.
+// How do I switch a list to use an alphabetic "A., B., C." numbering template in a document?
 
-// Set "A." template to the numbering in a document.
+// Choose from built-in list styles to quickly format a numbered list without defining a custom type in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

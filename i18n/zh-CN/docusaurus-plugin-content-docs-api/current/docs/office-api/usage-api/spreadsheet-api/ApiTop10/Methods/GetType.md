@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中前 10 条件格式规则的类型。
+从电子表格中的前 10 项条件格式规则读取规则类型。
 
 ```javascript editor-xlsx
-// How to get the type for a top 10 conditional format?
+// How do I find out what kind of conditional formatting rule is applied in a spreadsheet?
 
-// Get the type and display the result in a spreadsheet.
+// Confirm the rule category after creating a top 10 condition in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

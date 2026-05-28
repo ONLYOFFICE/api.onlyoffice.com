@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-指定在文档中作为范围内容背景应用的突出显示颜色。
+在文档中为文本范围添加背景高亮颜色。
 
 ```javascript editor-docx
-// How to color a range background in a document.
+// How do I highlight a portion of text with a colored background in a document?
 
-// Create a range and add color to its background in a document.
+// Draw attention to specific words by painting a color behind them in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

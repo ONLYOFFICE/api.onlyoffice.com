@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定当前段落引用当前文档中的编号定义实例。
+将编号定义附加到段落以使其成为文档中列表的一部分。
 
 ```javascript editor-docx
-// How to add numbering to the paragraph in a document.
+// How do I apply a bullet or numbered list style to a paragraph in a document?
 
-// Make the paragraph bulleted in a document.
+// Format a paragraph as a bulleted list item using a shared numbering definition.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-从基于文本的条件格式规则获取文本值。
+读取电子表格中条件格式规则匹配的文本字符串。
 
 ```javascript editor-xlsx
-// How to retrieve text values from text-based conditional formatting rules.
+// How do I find out what word or phrase a text-based formatting rule is looking for in a spreadsheet?
 
-// Get conditional formatting rule text value.
+// Retrieve the search term stored inside a text-matching formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

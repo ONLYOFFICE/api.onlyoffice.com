@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 高亮单元格求和
 
 计算电子表格中所有高亮单元格的数值总和。
@@ -61,4 +63,4 @@ End Sub
 
 ## 结果
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells" dark />

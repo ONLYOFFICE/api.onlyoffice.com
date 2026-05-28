@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中批注的引用文本。
+检索文档中与批注关联的引用文本。
 
 ```javascript editor-docx
-// How to retrieve a quote text from a comment in a document.
+// How do I get the text passage that a comment refers to in a document?
 
-// Get all comments from the presentation and the first one's quote text.
+// Extract the exact excerpt a reviewer highlighted when leaving a comment.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

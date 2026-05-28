@@ -23,12 +23,12 @@ expression.GetDataFields(field);
 
 ## 示例
 
-获取电子表格中的数据字段。
+从电子表格中的数据透视表检索所有值字段。
 
 ```javascript editor-xlsx
-// How to get data fields from a pivot table in a spreadsheet.
+// How do I access every data field in a pivot table to rename or reconfigure them in a spreadsheet?
 
-// Create a pivot table, add data to it then get data fields from it in a spreadsheet.
+// Loop through the value fields of a pivot table and update their names and summary functions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

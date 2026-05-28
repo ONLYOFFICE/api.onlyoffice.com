@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the first formula in data validation.
+Read the primary boundary value set in a cell's validation rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation formula.
+// How do I find out what the first condition value is for a validated cell in a spreadsheet?
 
-// Get the formula1 for a validation in a spreadsheet.
+// Verify the lower limit or single threshold defined in a cell's data validation rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

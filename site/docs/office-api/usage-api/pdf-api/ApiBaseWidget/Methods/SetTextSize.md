@@ -6,7 +6,7 @@ Sets widget text size.
 ## Syntax
 
 ```javascript
-expression.SetTextSize(nSize);
+expression.SetTextSize(size);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -15,7 +15,7 @@ expression.SetTextSize(nSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | Required | [pt](../../Enumeration/pt.md) |  | No description provided. |
+| size | Required | [pt](../../Enumeration/pt.md) |  | The font size in points. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Get all field widgets and set text color for them in a PDF document.
+Set text size for input field widgets in a PDF.
 
 ```javascript editor-pdf
-// How can I set text size using a widget in a PDF document?
+// How do I change the font size of text in form fields in a PDF?
 
-// Set text size for a widget in a PDF document.
+// Adjust the text display size for all widgets in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

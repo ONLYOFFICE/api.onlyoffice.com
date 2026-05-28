@@ -4,6 +4,8 @@ description: Find and replace words throughout a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Replace words in document
 
 Searches for a word throughout the document and replaces it with the given replacement word.
@@ -41,4 +43,4 @@ End Sub
 
 ## Result
 
-![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/replace-words-in-document" dark />

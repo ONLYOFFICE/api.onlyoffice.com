@@ -1,11 +1,11 @@
 # SetScrollLongText
 
-设置文本字段可滚动长文本的属性。
+设置文本字段是否可以滚动长文本。
 
 ## 语法
 
 ```javascript
-expression.SetScrollLongText(bScroll);
+expression.SetScrollLongText(allowScroll);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScrollLongText(bScroll);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bScroll | 必需 | boolean |  | 字段是否可滚动长文本 |
+| allowScroll | 必需 | boolean |  | 指定长文本是否可以滚动。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置长文本滚动属性。
+当文本超过 PDF 中字段宽度时允许水平滚动。
 
 ```javascript editor-pdf
-// How to set scroll long text for a text field in a PDF document?
+// How do I make a narrow text field scrollable for longer content in a PDF?
 
-// Set scroll long text and display the result in a PDF document.
+// Enable scrolling for text that overflows the field boundary in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

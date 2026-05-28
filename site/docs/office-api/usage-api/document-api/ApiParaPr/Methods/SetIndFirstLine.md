@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the paragraph first line indentation in a document.
+Indent the first line of a paragraph in a document.
 
 ```javascript editor-docx
-// How to set the indentation size for the paragraph first line in a document.
+// How do I set a first-line indent for paragraphs using a paragraph style in a document?
 
-// Create a new paragraph and set its first line indentation in a document.
+// Give paragraphs a classic indented opening line to improve readability and visual structure.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

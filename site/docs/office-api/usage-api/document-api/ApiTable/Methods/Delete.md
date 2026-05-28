@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Delete the table in a document.
+Remove a table entirely from a document.
 
 ```javascript editor-docx
-// How to remove a table from the document.
+// How do I delete a table from a document?
 
-// Get a table and delete it in a document.
+// Eliminate an unwanted table so it no longer appears in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

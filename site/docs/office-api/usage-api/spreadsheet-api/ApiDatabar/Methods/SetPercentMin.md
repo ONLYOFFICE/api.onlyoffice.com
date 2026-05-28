@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the minimum percentage length of a data bar conditional formatting rule.
+Set the shortest bar in a data bar rule to a minimum percentage of the column width in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the minimum length setting of a data bar in a spreadsheet.
+// How do I ensure that even the smallest data bar is still visible inside a cell in a spreadsheet?
 
-// Set the minimum percentage length of a data bar conditional formatting rule.
+// Keep low-value bars from disappearing entirely by enforcing a lower percentage limit in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

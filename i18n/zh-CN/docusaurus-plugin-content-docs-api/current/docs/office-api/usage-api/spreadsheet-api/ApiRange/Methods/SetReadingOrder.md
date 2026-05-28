@@ -22,12 +22,12 @@ expression.SetReadingOrder(direction);
 
 ## 示例
 
-设置电子表格中单元格范围内文本的阅读顺序。
+设置电子表格中单元格范围内文本的阅读方向。
 
 ```javascript editor-xlsx
-// How to set reading order for a cell range?
+// How do I switch text to read right-to-left in a spreadsheet?
 
-// Set reading order and display the result in a spreadsheet.
+// Support languages like Arabic or Hebrew by adjusting the text flow direction in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B2").SetValue("Hello, أهلاً, 你好");

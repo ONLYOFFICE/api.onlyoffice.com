@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的关键词字符串。
+设置和显示演示文稿中的搜索关键词。
 
 ```javascript editor-pptx
-// How to get the keywords for a core properties in a presentation?
+// How do I retrieve keywords associated with a presentation?
 
-// Get the keywords and display the result in a presentation.
+// Access the keyword list stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

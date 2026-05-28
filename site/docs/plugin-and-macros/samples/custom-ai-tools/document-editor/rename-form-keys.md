@@ -3,6 +3,8 @@ description: Rename form field keys in a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Rename form keys
 
 This function collects all form fields (keys/placeholders), renames the fields to UPPER_SNAKE_CASE, and optionally updates placeholders.
@@ -272,11 +274,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/rename-form-keys.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/rename-form-keys.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/document-editor/rename-form-keys" dark />

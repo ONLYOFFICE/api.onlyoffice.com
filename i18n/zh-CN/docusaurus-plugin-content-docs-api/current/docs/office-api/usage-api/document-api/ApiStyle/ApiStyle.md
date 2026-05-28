@@ -7,7 +7,7 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "style" | 返回 ApiStyle 类的类型。 |
-| [GetConditionalTableStyle](./Methods/GetConditionalTableStyle.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | 返回一组格式属性，这些属性将有条件地应用于符合 sType 参数中指定要求的表格部分。 |
+| [GetConditionalTableStyle](./Methods/GetConditionalTableStyle.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | 返回将条件应用于与 |
 | [GetName](./Methods/GetName.md) | string | 返回当前样式的名称。 |
 | [GetParaPr](./Methods/GetParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 返回当前样式的段落属性。 |
 | [GetTableCellPr](./Methods/GetTableCellPr.md) | [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) | 返回当前样式的表格单元格属性。 |

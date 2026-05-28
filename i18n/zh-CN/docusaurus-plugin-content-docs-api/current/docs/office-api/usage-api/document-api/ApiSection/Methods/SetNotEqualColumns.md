@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-指定文档中当前节的所有列具有不同的宽度。
+在文档中将节分为不同宽度的列。
 
 ```javascript editor-docx
-// How to split the text into 3 columns with different sizes in a document.
+// How do I create columns that each have a different width in a document?
 
-// Get the final section and divide it to columns in a document.
+// Lay out a section with unevenly sized columns to suit a custom design in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

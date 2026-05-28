@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回修正贝塞尔函数 In(x)。
+计算电子表格中给定值和阶数的第一类修正贝塞尔函数。
 
 ```javascript editor-xlsx
-// How to get a resutl from Bessel function In(x) in a spreadsheet.
+// Evaluate the modified Bessel function I at a specific order in a spreadsheet.
 
-// Use function to get the modified Bessel function In(x) in a spreadsheet.
+// Calculate an engineering Bessel value used in wave and heat-diffusion problems in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

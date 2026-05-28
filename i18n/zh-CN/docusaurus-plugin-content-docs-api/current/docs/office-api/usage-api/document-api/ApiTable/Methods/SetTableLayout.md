@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中用于布局表格内容的算法。
+选择文档中的表格是自动调整列大小还是保持固定宽度。
 
 ```javascript editor-docx
-// How to set the table layout in a document.
+// How do I prevent table columns from changing size when content is added in a document?
 
-// Create a table and make its layout fixed in a document.
+// Lock column widths so the table structure stays consistent regardless of content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

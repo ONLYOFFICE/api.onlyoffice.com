@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 取消合并单元格
 
 取消当前工作表中所有已合并的单元格。
@@ -43,4 +45,4 @@ End Sub
 
 ## 结果
 
-![取消合并单元格前](/assets/images/plugins/unmerge-before.png#gh-light-mode-only)![取消合并单元格前](/assets/images/plugins/unmerge-before.dark.png#gh-dark-mode-only) ![取消合并单元格后](/assets/images/plugins/unmerge-after.png#gh-light-mode-only)![取消合并单元格后](/assets/images/plugins/unmerge-after.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells" dark />

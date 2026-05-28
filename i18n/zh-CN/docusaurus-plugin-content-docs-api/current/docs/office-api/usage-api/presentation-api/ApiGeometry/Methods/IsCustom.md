@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从演示文稿幻灯片上的星形获取几何图形信息。在文本形状中显示预设类型和自定义状态。
+检查演示文稿中的形状是否使用自定义几何图形。
 
 ```javascript editor-pptx
-// How do I is custom in a presentation?
+// How do I determine if a shape has custom geometry in a presentation?
 
-// Is custom using a geometry object in a presentation.
+// Verify whether a shape's outline is custom-defined or preset in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

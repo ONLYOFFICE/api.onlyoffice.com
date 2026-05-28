@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom triangle shape and add it to the worksheet. Applies custom geometry to a shape with specific fill and stroke.
+Enable the visible border on a custom shape path before adding it to a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set stroke for a geometry path in a spreadsheet?
+// How do I make the outline of a custom shape path visible in a spreadsheet?
 
-// Set stroke and display the result in a spreadsheet.
+// Turn on the stroke for a drawn path so its edges are rendered with a border in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

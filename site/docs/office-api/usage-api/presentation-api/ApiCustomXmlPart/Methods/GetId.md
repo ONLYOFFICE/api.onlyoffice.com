@@ -23,9 +23,9 @@ string
 Get the ID of a custom XML part in a presentation.
 
 ```javascript editor-pptx
-// How to get the ID of an XML part in a presentation.
+// Retrieve the unique identifier for a custom XML part in a presentation.
 
-// Get the id and display the result in a presentation.
+// Access the ID value of a custom XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

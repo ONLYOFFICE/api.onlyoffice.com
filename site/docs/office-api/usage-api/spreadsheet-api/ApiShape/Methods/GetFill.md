@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the fill properties from a shape and display detailed information. Creates a shape with gradient fill, retrieve it and show fill details.
+Read the fill applied to a shape and report its type in a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the fill for a shape in a spreadsheet?
+// How do I check what fill a shape is using in a spreadsheet?
 
-// Get the fill and display the result in a spreadsheet.
+// Retrieve the color or gradient covering a shape and display the fill type on the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

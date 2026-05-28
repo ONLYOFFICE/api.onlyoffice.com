@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/
 
 ## Example
 
-Set borders for a conditional formatting rule.
+Add colored borders to cells that match a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to apply border formatting to conditional formatting rules.
+// How do I make matching cells show a border when a formatting condition is met in a spreadsheet?
 
-// Set conditional formatting rule borders.
+// Highlight qualifying cells with edge lines through a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

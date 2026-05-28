@@ -31,12 +31,12 @@
 | [GetSubscript](./Methods/GetSubscript.md) | boolean \| null | 返回指定字体的下标属性。 |
 | [GetSuperscript](./Methods/GetSuperscript.md) | boolean \| null | 返回指定字体的上标属性。 |
 | [GetUnderline](./Methods/GetUnderline.md) | [XlUnderlineStyle](../Enumeration/XlUnderlineStyle.md) \| null | 返回应用于指定字体的下划线类型。 |
-| [SetBold](./Methods/SetBold.md) | 无 | 设置指定字体的粗体属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetColor](./Methods/SetColor.md) | 无 | 设置指定字体的颜色属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetItalic](./Methods/SetItalic.md) | 无 | 设置指定字体的斜体属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetName](./Methods/SetName.md) | 无 | 设置指定字体的名称属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetSize](./Methods/SetSize.md) | 无 | 设置指定字体的大小属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetStrikethrough](./Methods/SetStrikethrough.md) | 无 | 设置指定字体的删除线属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetSubscript](./Methods/SetSubscript.md) | 无 | 设置指定字体的下标属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetSuperscript](./Methods/SetSuperscript.md) | 无 | 设置指定字体的上标属性。💡 此方法仅适用于单元格的文本格式。 |
-| [SetUnderline](./Methods/SetUnderline.md) | 无 | 为当前字体设置请求中指定类型的下划线。💡 此方法仅适用于单元格的文本格式。 |
+| [SetBold](./Methods/SetBold.md) | 无 | 为指定字体设置粗体属性。 |
+| [SetColor](./Methods/SetColor.md) | 无 | 为指定字体设置字体颜色属性。 |
+| [SetItalic](./Methods/SetItalic.md) | 无 | 为指定字体设置斜体属性。 |
+| [SetName](./Methods/SetName.md) | 无 | 为指定字体设置字体名称属性。 |
+| [SetSize](./Methods/SetSize.md) | 无 | 为指定字体设置字体大小属性。 |
+| [SetStrikethrough](./Methods/SetStrikethrough.md) | 无 | 为指定字体设置删除线属性。 |
+| [SetSubscript](./Methods/SetSubscript.md) | 无 | 为指定字体设置下标属性。 |
+| [SetSuperscript](./Methods/SetSuperscript.md) | 无 | 为指定字体设置上标属性。 |
+| [SetUnderline](./Methods/SetUnderline.md) | 无 | 为当前字体设置请求中指定类型的下划线。 |

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+设置文档中的水印文本并为其应用样式格式。
 
 ```javascript editor-docx
-// How to set the text of the watermark in a document.
+// How do I assign custom text to a watermark in a document?
 
-// Add text to the watermark using its settings in a document.
+// Customize the watermark label with bold, italic, and colored text in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

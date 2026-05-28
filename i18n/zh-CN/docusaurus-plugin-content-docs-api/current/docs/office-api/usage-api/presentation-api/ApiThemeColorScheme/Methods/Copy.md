@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在演示文稿中创建当前主题配色方案的副本。
+在演示文稿中复制主题的配色方案。
 
 ```javascript editor-pptx
-// How to create a copy of a color scheme in a presentation.
+// How do I make a copy of a color scheme to reuse it elsewhere?
 
-// Get color scheme and create its copy in a presentation.
+// Access a color scheme and create a duplicate copy in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);

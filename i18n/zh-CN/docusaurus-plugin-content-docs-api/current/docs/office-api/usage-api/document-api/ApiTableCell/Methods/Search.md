@@ -23,12 +23,12 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-在文档的表格单元格中进行搜索。
+在文档中的表格单元格内搜索特定文本。
 
 ```javascript editor-docx
-// Search the word from the cell.
+// How do I find a particular word within a table cell in a document?
 
-// Get the first cell from the table and search a word from it.
+// Locate matching text in a cell and apply formatting to the results in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

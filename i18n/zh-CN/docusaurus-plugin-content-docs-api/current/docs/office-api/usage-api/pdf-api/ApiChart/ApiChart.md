@@ -7,12 +7,13 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [ApplyChartStyle](./Methods/ApplyChartStyle.md) | boolean | 通过样式 ID 为当前图表设置样式。 |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 创建指定绘图对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | 创建指定图表的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 从父对象中删除指定的绘图对象。 |
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | 返回图表对象的类型。 |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | 返回 ApiChart 类的类型。 |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的高度。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前绘图的内部 ID。 |
 | [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | 返回 ApiDrawing 类的类型。 |
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 x 位置。 |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 y 位置。 |

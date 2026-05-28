@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中指定垂直轴上数据的显示方向。
+反转电子表格中图表垂直轴上的值方向。
 
 ```javascript editor-xlsx
-// How to indicate the direction of values of the chart vertical axis in a spreadsheet.
+// How do I flip the order in which values are displayed on the vertical axis in a spreadsheet?
 
-// Specify the vertical axis orientation in a spreadsheet.
+// Control whether the vertical axis counts upward or downward in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

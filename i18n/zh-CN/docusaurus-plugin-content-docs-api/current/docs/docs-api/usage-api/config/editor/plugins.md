@@ -10,6 +10,14 @@ plugins 部分定义运行时插件参数。
 
 **示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
+## disable
+
+**类型：** `string[]`
+
+[config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件中在加载时将被禁用的插件标识符。指定的插件将被阻止加载，并且在编辑器界面中不可用。
+
+**示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+
 ## options
 
 **类型：** `object`
@@ -71,20 +79,6 @@ plugins 部分定义运行时插件参数。
 
 ![插件](/assets/images/editor/plugins.png#gh-light-mode-only)![插件](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
-## 插件命令日志 {#plugin-command-logging}
-
-要在浏览器控制台中启用插件命令日志，请将浏览器本地存储中的 `asc_plugin_commands_log` 键设置为 `"true"`：
-
-```js
-localStorage.setItem("asc_plugin_commands_log", "true");
-```
-
-要禁用日志，请删除该键或将其设置为任意其他值：
-
-```js
-localStorage.removeItem("asc_plugin_commands_log");
-```
-
 ## 示例
 
 ```ts
@@ -95,6 +89,9 @@ const config = {
     plugins: {
       autostart: [
         "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
+      ],
+      disable: [
+        "asc.{CFE4BE46-3F85-4B79-B96E-B5AAF0EC9BC3}",
       ],
       options: {
         "all": {

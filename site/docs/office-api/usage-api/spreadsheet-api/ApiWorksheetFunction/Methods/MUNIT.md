@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the unit matrix for the specified dimension in a spreadsheet.
+Generate a unit matrix for a specific size in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an unit matrix in a spreadsheet.
+// Create a unit matrix and place it in a cell in a spreadsheet.
 
-// Use a function to get an unit matrix specifying dimension in a spreadsheet.
+// Insert a matrix of ones and zeros into your spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

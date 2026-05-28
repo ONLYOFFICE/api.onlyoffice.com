@@ -1,20 +1,20 @@
 # SetSpacingLine
 
 设置段落行距。如果 sLineRule 参数的值为
-"atLeast" 或 "exact"，则 nLine 的值将被解释为磅的二十分之一。如果
-sLineRule 参数的值为 "auto"，则
+“atLeast” 或 “exact”，则 nLine 的值将被解释为磅的二十分之一。如果
+sLineRule 参数的值为 “auto”，则
 nLine 参数的值将被解释为行的 240 分之一。
 
 继承自 [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md)。
 
 ## 示例
 
-在 PDF 文档中设置段落行距。
+调整 PDF 中文本行之间的间距。
 
 ```javascript editor-pdf
-// How to set the size of a spacing line from a paragraph properties in a PDF document.
+// How do I change the line spacing in a PDF?
 
-// Change a spacing line size property of a paragraph properties in a PDF document.
+// Modify the distance between text lines in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

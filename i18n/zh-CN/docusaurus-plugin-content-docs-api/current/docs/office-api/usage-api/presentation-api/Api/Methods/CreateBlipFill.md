@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## 示例
 
-在演示文稿中创建位图填充，使用所选图像作为对象背景应用于对象。
+在演示文稿中用图像填充形状。
 
 ```javascript editor-pptx
-// How to set an image as a background in a presentation.
+// How do I set an image as the background of a shape in a presentation?
 
-// Use blip fill to fill a background with an image in a presentation.
+// Apply an image to a shape's background using a tiled fill pattern in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

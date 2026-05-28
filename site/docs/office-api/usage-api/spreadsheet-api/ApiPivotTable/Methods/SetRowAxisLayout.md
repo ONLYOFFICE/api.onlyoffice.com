@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set row axis layout of a pivot table in a spreadsheet.
+Choose how row fields are arranged in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set row axis layout of a table in a spreadsheet.
+// How do I switch a pivot table to tabular or outline layout in a spreadsheet?
 
-// Create a pivot table, add data to it then set its row axis layout in a spreadsheet.
+// Change the visual structure of row categories to match a preferred report format in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

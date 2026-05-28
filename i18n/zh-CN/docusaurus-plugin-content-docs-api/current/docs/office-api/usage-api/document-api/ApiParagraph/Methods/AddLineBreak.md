@@ -20,12 +20,12 @@ expression.AddLineBreak();
 
 ## 示例
 
-在文档中向当前位置添加换行符并从新行开始下一个元素。
+在不开始新段落的情况下强制文本在文档中换行。
 
 ```javascript editor-docx
-// How to split the text of the paragraph in a document.
+// How do I break a line mid-paragraph so the next text begins on a fresh line in a document?
 
-// Add a line break to the text in a document.
+// Keep two lines inside the same paragraph block while visually separating them with a hard line break in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -5,29 +5,27 @@ Gets annotation border effect intensity.
 ## Syntax
 
 ```javascript
-expression.GetBorderEffectIntensity(value);
+expression.GetBorderEffectIntensity();
 ```
 
 `expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| value | Required | number |  | No description provided. |
+This method doesn't have any parameters.
 
 ## Returns
 
-boolean
+number
 
 ## Example
 
-Create a square annotation and get its border effect intensity in a PDF document.
+Retrieve the intensity level of a border effect on an annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I get the border effect intensity in a PDF document?
+// What is the border effect intensity value for an annotation in a PDF?
 
-// Get the border effect intensity using an annotation object in a PDF document.
+// Check the strength of a cloud or other border effect applied to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

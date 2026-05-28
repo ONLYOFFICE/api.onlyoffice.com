@@ -1,12 +1,12 @@
 # SetCharLimit
 
-Sets text field chars limit.
-&lt;note&gt; Char limit 0 means field doesn't have char limit
+Sets the text field character limit.
+&lt;note&gt; Character limit 0 means the field doesn't have a character limit.
 
 ## Syntax
 
 ```javascript
-expression.SetCharLimit(nChars);
+expression.SetCharLimit(charLimit);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -15,7 +15,7 @@ expression.SetCharLimit(nChars);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nChars | Required | number |  | chars limit number |
+| charLimit | Required | number |  | The maximum number of characters allowed in the field. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add text field and set char limit for it in a PDF document.
+Limit the number of characters that can be entered into a text field in a PDF.
 
 ```javascript editor-pdf
-// How to set char limit for a text field in a PDF document?
+// How do I prevent users from typing beyond a certain character count in a PDF?
 
-// Set char limit and display the result in a PDF document.
+// Control how many characters a text field will accept in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

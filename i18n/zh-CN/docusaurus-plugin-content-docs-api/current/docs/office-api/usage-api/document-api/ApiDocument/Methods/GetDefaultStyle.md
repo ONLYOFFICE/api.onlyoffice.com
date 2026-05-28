@@ -22,12 +22,12 @@ expression.GetDefaultStyle(sStyleType);
 
 ## 示例
 
-获取文档中指定文档元素的默认样式参数。
+检索并更新文档中特定元素类型的默认样式。
 
 ```javascript editor-docx
-// How to get default style of a document element indicating its name.
+// How do I look up the built-in style applied to paragraphs by default in a document?
 
-// Update the default style of the paragraph element in a document.
+// Override paragraph spacing and alignment at the default style level so every matching element is affected in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

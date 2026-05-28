@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-添加分页符并从新页面开始下一个元素。
+在文本运行内插入分页符以在文档的下一页继续文本。
 
 ```javascript editor-docx
-// How to start a sentence from the new page.
+// How do I make part of a text run appear on the following page in a document?
 
-// Break two lines of a text run with a page break.
+// Force the remaining text in a run to start at the top of a new page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

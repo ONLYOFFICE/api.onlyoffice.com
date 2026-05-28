@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档内容元素获取文本。
+从文档内容容器中提取所有文本作为纯字符串。
 
 ```javascript editor-docx
-// Get the text of the document content as a string.
+// How do I read the full text stored inside a document content object in a document?
 
-// Display all content using the document content API in a document.
+// Verify the text inside a content control by reading it back as a single string.
 
 const doc = Api.GetDocument();
 

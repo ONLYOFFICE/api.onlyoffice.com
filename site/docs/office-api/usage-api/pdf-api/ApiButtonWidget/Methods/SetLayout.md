@@ -5,7 +5,7 @@ Sets button widget layout type
 ## Syntax
 
 ```javascript
-expression.SetLayout(sType);
+expression.SetLayout(layout);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetLayout(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonLayout](../../Enumeration/ButtonLayout.md) |  | button layout type |
+| layout | Required | [ButtonLayout](../../Enumeration/ButtonLayout.md) |  | The button layout. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ boolean
 Set button widget layout type in a PDF document.
 
 ```javascript editor-pdf
-// How do I set layout in a PDF document?
+// Apply layout type such as 'iconTextV' to a button widget.
 
-// Set layout using a button widget object in a PDF document.
+// Display the set layout value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

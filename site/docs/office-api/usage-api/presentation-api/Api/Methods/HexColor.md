@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | Required | string |  | No description provided. |
+| hexString | Required | string |  | The HEX string representing a color. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ expression.HexColor(hexString);
 Create a hex color and use it as a shape fill in a presentation.
 
 ```javascript editor-pptx
-// How to hex color in a presentation?
+// Create a hex color using the presentation API.
 
-// Hex color using the presentation API.
+// Apply the hex color to a shape fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

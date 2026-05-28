@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the axis color of a data bar conditional formatting rule.
+Apply a custom color to the center axis line of data bars in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the axis color of a data bar in a spreadsheet.
+// How do I change the color of the axis that divides positive and negative data bars in a spreadsheet?
 
-// Set the axis color of a data bar conditional formatting rule.
+// Give the data bar axis a distinct color to make the zero line stand out in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

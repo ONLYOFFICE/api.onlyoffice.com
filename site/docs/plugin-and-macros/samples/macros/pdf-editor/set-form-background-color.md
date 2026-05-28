@@ -4,6 +4,8 @@ description: Change the background color of all form fields.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Set form background color
 
 Changes the background color of all form fields on focus.
@@ -31,5 +33,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![BackgroundColorSetter](/assets/images/plugins/set-form-background-color.png#gh-light-mode-only)
-![BackgroundColorSetter](/assets/images/plugins/set-form-background-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-form-background-color" dark />

@@ -16,16 +16,16 @@ expression.GetValue();
 
 ## 返回值
 
-string \| string[][]
+string \| number \| boolean \| (string \| number \| boolean)[][]
 
 ## 示例
 
-获取电子表格中指定范围的值。
+读取电子表格中单元格存储的值。
 
 ```javascript editor-xlsx
-// How to get a cell value.
+// How do I retrieve what a cell contains in a spreadsheet?
 
-// Get a range, get its value and show it in the worksheet.
+// Display the contents of a cell in another location in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -8,7 +8,7 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | ------ | ------- | ----------- |
 | [AddBreak](./Methods/AddBreak.md) | boolean | 在主文档的指定位置插入分隔符。 |
 | [ApplyChartStyle](./Methods/ApplyChartStyle.md) | boolean | 通过样式 ID 为当前图表设置样式。 |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 复制当前图形对象。 |
+| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | 复制当前图表。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除当前图形对象。 |
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
@@ -43,8 +43,8 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | 设置指定图表系列中数据点的填充。 |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | 将指定的数字格式设置为图表数据点。 |
 | [SetDataPointOutLine](./Methods/SetDataPointOutLine.md) | boolean | 设置指定图表系列中数据点的轮廓。 |
-| [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象的边缘和任何后续文本之间保持的最小距离。 |
-| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | 将另一个绘图的属性设置到当前绘图。将复制以下属性：水平和垂直对齐方式、当前绘图对象边缘与任何后续文本之间的距离、环绕样式、绘图名称、标题和描述。 |
+| [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象边缘与任何 |
+| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | 将另一个绘图的属性设置到当前绘图。 |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | 设置当前绘图的水平翻转。 |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | 设置当前绘图的垂直翻转。 |
 | [SetHorAlign](./Methods/SetHorAlign.md) | boolean | 指定浮动对象的水平对齐方式。 |
@@ -67,7 +67,7 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetMarkerOutLine](./Methods/SetMarkerOutLine.md) | boolean | 设置指定图表系列中标记的轮廓。 |
 | [SetMinorHorizontalGridlines](./Methods/SetMinorHorizontalGridlines.md) | boolean | 指定次要水平网格线的视觉属性。 |
 | [SetMinorVerticalGridlines](./Methods/SetMinorVerticalGridlines.md) | boolean | 指定次要垂直网格线的视觉属性。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。 |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | 设置指定图形对象的轮廓属性。 |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | 设置图表绘图区域的填充。 |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | 设置图表绘图区域的轮廓。 |
@@ -94,7 +94,7 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetVertAxisMinorTickMark](./Methods/SetVertAxisMinorTickMark.md) | boolean | 指定纵轴的次刻度线。 |
 | [SetVertAxisTickLabelPosition](./Methods/SetVertAxisTickLabelPosition.md) | boolean | 指定纵轴刻度标签的位置。 |
 | [SetVertFlip](./Methods/SetVertFlip.md) | boolean | 垂直翻转当前绘图。 |
-| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | 设置当前对象（图像、形状、图表）的环绕类型。可以设置以下环绕样式类型之一：**"inline"** - 对象被视为文本的一部分，像字符一样，因此当文本移动时，对象也会移动。在这种情况下，定位选项不可访问。如果选择以下样式之一，则对象可以独立于文本移动并精确定位在页面上：**"square"** - 文本环绕对象的矩形边界框。**"tight"** - 文本环绕对象的实际边缘。**"through"** - 文本环绕对象边缘并填充对象内的开放空白区域。**"topAndBottom"** - 文本仅位于对象的上方和下方。**"behind"** - 文本覆盖在对象上方。**"inFront"** - 对象覆盖在文本上方。 |
+| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | 设置当前对象（图像、形状、图表）的环绕类型。可以设置以下环绕样式类型之一： |
 | [SetXValues](./Methods/SetXValues.md) | boolean | 将 x 轴值设置为所有图表系列。仅用于散点图。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDrawing 对象转换为 JSON 对象。 |
 | [Unselect](./Methods/Unselect.md) | boolean | 从选择中移除当前图形对象。 |

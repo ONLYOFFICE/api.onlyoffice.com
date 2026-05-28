@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Find out how a text is aligned vertically in a document.
+Read the vertical position of a text run relative to the baseline in a document.
 
 ```javascript editor-docx
-// How to know whether a text is subscript, superscript or baseline in a document.
+// How do I check whether text is raised, lowered, or sitting on the baseline in a document?
 
-// Get the text properties of the run and find its vertical alignment in a document.
+// Inspect the vertical alignment of a text run to confirm whether it is subscript, superscript, or normal in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

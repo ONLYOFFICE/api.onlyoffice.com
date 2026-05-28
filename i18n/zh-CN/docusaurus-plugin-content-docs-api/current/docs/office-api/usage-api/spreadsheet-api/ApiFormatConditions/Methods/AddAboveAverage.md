@@ -20,12 +20,12 @@ expression.AddAboveAverage();
 
 ## 示例
 
-向范围添加高于平均值条件格式。
+高亮显示电子表格中值超过范围平均值的单元格。
 
 ```javascript editor-xlsx
-// How to add above average conditional formatting rules to highlight cells.
+// How do I automatically mark cells that are above the group average in a spreadsheet?
 
-// Add above average conditional formatting to cells.
+// Draw attention to standout high values by coloring them relative to the mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

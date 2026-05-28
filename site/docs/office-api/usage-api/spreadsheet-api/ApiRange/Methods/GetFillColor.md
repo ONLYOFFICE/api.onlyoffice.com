@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the background color for the cell range in a spreadsheet.
+Read the background color of a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a range background color in a spreadsheet.
+// How do I find out what background color a cell has in a spreadsheet?
 
-// Get a range get, set its background color using RGB value and show it in the worksheet.
+// Copy a cell's fill color and apply it to another cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 60);

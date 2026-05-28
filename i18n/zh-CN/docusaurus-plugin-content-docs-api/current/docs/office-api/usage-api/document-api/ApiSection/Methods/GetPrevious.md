@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取文档中的上一个节。
+访问文档中当前节之前的节。
 
 ```javascript editor-docx
-// How to get prevoius section from the current one in a document.
+// How do I retrieve the section preceding the one I am working with in a document?
 
-// Update the margins of the next section in a document.
+// Navigate backward through sections to reach an earlier part of a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

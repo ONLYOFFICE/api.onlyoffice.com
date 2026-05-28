@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在 PDF 文档中将磅转换为派卡。
+在 PDF 中将磅转换为派卡。
 
 ```javascript editor-pdf
-// How do I convert points to picas in a PDF document?
+// How can I convert one unit of measurement to another in a PDF?
 
-// Convert points to picas and display the result in a PDF document.
+// Change point values to picas and add text showing the conversion in a PDF.
 
 const points = 42;
 const picas = Api.PointsToPicas(points);

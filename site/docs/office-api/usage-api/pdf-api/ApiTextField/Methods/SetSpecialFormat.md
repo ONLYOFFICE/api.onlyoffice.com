@@ -5,7 +5,7 @@ Sets special format for field.
 ## Syntax
 
 ```javascript
-expression.SetSpecialFormat(sFormat);
+expression.SetSpecialFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetSpecialFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
+| format | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set special format for it.
+Apply predefined formats like phone numbers to text fields in a PDF.
 
 ```javascript editor-pdf
-// How do I set special format in a PDF document?
+// How do I automatically format phone numbers and social security numbers in a PDF?
 
-// Set special format using a text field object.
+// Use built-in formats to style user input in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

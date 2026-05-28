@@ -1,6 +1,6 @@
 # MergeCells
 
-合并单元格数组。如果合并成功，将返回合并后的单元格，否则结果为 "null"。
+合并单元格数组。如果合并成功，将返回合并后的单元格，否则结果为 “null”。
 💡 任何行中的单元格数和当前表格中的行数可能会更改。
 
 ## 语法
@@ -23,12 +23,12 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-合并一组单元格。
+在文档中将多个表格单元格合并为单个单元格。
 
 ```javascript editor-docx
-// How to merge cells of the table into one.
+// How do I merge several cells together into one in a document?
 
-// Create a table and merge cells into another one.
+// Reduce cell count by joining adjacent cells into a unified area in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

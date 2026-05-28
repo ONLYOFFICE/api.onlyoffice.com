@@ -5,7 +5,7 @@ Sets text field placeholder.
 ## Syntax
 
 ```javascript
-expression.SetPlaceholder(sPlaceholder);
+expression.SetPlaceholder(placeholder);
 ```
 
 `expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetPlaceholder(sPlaceholder);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPlaceholder | Required | string |  | field placeholder |
+| placeholder | Required | string |  | The placeholder text. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set placeholder for text widget in a PDF document.
+Add a hint text that appears before you type in a text field in a PDF.
 
 ```javascript editor-pdf
-// How do I set placeholder in a PDF document?
+// How do I add a hint text to an empty text field in a PDF?
 
-// Set placeholder using a text widget object in a PDF document.
+// Configure what example text shows when a text field is empty in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

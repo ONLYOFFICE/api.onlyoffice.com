@@ -30,12 +30,12 @@ number
 
 ## 示例
 
-在电子表格中返回首期不规则证券的收益率。
+计算电子表格中不规则首次付款期的证券收益率。
 
 ```javascript editor-xlsx
-// How to get the yield of a security in a spreadsheet.
+// How do I find the yield of a bond with an odd first period in a spreadsheet?
 
-// Use a function to return a security yield in a spreadsheet.
+// Determine the annual return rate of a security when the first coupon period is irregular in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

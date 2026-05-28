@@ -23,12 +23,12 @@ expression.AddComment(sText, sAuthor);
 
 ## 示例
 
-向文档添加批注。
+在电子表格中向单元格附加带有作者名称的批注。
 
 ```javascript editor-xlsx
-// How to add comments in a worksheet.
+// How do I add a comment to a cell in a spreadsheet?
 
-// Insert a comment into a cell.
+// Annotate a cell with reviewer notes and display the comment text in a spreadsheet.
 
 Api.AddComment("Comment 1", "Bob");
 Api.AddComment("Comment 2");

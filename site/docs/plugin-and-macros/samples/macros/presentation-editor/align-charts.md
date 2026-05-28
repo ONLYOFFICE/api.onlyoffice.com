@@ -4,6 +4,8 @@ description: Align chart positions across presentation slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Align charts
 
 Aligns charts and text boxes on every slide.
@@ -33,5 +35,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![ChartAligner](/assets/images/plugins/chart-aligner.png#gh-light-mode-only)
-![ChartAligner](/assets/images/plugins/chart-aligner.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/align-charts" dark />

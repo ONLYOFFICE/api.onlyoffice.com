@@ -3,6 +3,8 @@ description: Extract action items from selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Extract action items
 
 This function analyzes selected text, meeting notes, or a document section and extracts clear action items or to-dos, formatting them as a structured list. It can optionally remove the original text.
@@ -217,11 +219,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/extract-action-items.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/extract-action-items.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/document-editor/extract-action-items" dark />

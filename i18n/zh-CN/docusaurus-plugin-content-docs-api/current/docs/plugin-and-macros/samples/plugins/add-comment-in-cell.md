@@ -1,3 +1,10 @@
+---
+description: Add comments to spreadsheet cells.
+tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 在单元格中添加评论
 
 向电子表格的单元格中添加评论。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 电子表格。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-comment-in-cell.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-comment-in-cell" />
 
 ## 安装
 

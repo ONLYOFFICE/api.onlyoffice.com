@@ -22,12 +22,12 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-在电子表格中设置批注作者名称。
+为电子表格中批注的作者分配显示名称。
 
 ```javascript editor-xlsx
-// How to add author's name to the comment in a spreadsheet.
+// How do I change or set the name shown as the author of a comment in a spreadsheet?
 
-// Add a comment and author name to it, then show author name in the worksheet.
+// Update who a comment appears to be written by so the correct name is displayed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

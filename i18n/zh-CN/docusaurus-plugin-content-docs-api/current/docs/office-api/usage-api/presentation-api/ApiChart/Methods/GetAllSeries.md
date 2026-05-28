@@ -20,12 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-获取图表类的所有系列并将其类型插入演示文稿。
+访问图表中的所有数据系列并在演示文稿中显示其类型。
 
 ```javascript editor-pptx
-// How to get types of all series of a chart in a presentation.
+// How do I retrieve all the data series from a chart in a presentation?
 
-// Get all series from a chart in a presentation.
+// Get each series from a chart and show their chart type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

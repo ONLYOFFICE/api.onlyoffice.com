@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在使用分页视图呈现文档时，当前段落的内容在文档的新页面开头呈现。
+强制文档中的段落从新页面顶部开始。
 
 ```javascript editor-docx
-// How to set a page break before the current paragraph.
+// How do I insert a page break before a paragraph in a document?
 
-// Move the paragraph to the new page while rendering.
+// Push a section of text onto a fresh page so it always begins on its own page.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

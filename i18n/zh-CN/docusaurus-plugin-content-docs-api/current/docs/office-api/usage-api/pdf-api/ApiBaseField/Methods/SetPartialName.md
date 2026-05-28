@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPartialName(sName);
+expression.SetPartialName(name);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetPartialName(sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | 必需 | string |  | 未提供描述。 |
+| name | 必需 | string |  | 字段的新部分名称。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段部分名称并显示。
+在 PDF 中为表单字段分配本地名称。
 
 ```javascript editor-pdf
-// How can I set partial name using a base field in a PDF document?
+// How do I set the local name for a form field in a PDF?
 
-// Set partial name for a base field in a PDF document.
+// Define the partial name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

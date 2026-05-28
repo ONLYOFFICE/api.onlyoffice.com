@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中更改绘图对象的 X 位置。
+在 PDF 中向左或向右移动形状。
 
 ```javascript editor-pdf
-// Get a shape object from a page and move by X axis.
+// How do I adjust the horizontal position of a shape in a PDF?
 
-// Set pos x using a drawing object object in a PDF document.
+// Change the X coordinate of an object in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中创建内联内容控件并选择它。
+选择文档中的内联内容控件使其获得焦点。
 
 ```javascript editor-docx
-// How do I select in a document?
+// How do I programmatically select an inline content control in a document?
 
-// Select using an inline content control object in a document.
+// Highlight a content control so the cursor lands on it when navigating in a document.
 
 let doc = Api.GetDocument();
 let checkbox = doc.AddCheckBoxContentControl();

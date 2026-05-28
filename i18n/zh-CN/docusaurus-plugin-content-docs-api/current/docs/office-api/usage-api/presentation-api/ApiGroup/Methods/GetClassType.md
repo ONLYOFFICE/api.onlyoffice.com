@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中组返回的类类型。
+获取演示文稿中分组形状的类型。
 
 ```javascript editor-pptx
-// How do I check what type a group object is in a presentation?
+// How do I identify what type a grouped shape is in a presentation?
 
-// Retrieve and output the class type string for a group in a presentation.
+// Retrieve the class name for a group object in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

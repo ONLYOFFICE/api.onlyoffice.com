@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中笔触的类类型。
+读取附加到电子表格中形状的边框对象的类型标签。
 
 ```javascript editor-xlsx
-// How to identify the class type of a stroke in a spreadsheet?
+// How do I find out what kind of object a shape's border is in a spreadsheet?
 
-// Obtain the class type identifier of a stroke object in a spreadsheet.
+// Check the category name of a stroke to confirm it is the expected border type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

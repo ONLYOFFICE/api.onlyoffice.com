@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为当前文本 run 设置文本轮廓。
+在 PDF 中为文本添加边框。
 
 ```javascript editor-pdf
-// How to make a text outlined in a PDF document.
+// How do I create an outline effect on text in a PDF?
 
-// Get the text properties of the run and outline it with a stroke in a PDF document.
+// Draw a stroke around characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

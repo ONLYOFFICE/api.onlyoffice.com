@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其内容。
+检索 PDF 中注释内的文本或消息。
 
 ```javascript editor-pdf
-// How to get the contents for an annotation in a PDF document?
+// What text is stored in an annotation in a PDF?
 
-// Get the contents and display the result in a PDF document.
+// Read the content or description that was added to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -45,11 +45,11 @@
 | [BINOM_DIST](./Methods/BINOM_DIST.md) | number | 返回单项二项分布概率。 |
 | [BINOM_DIST_RANGE](./Methods/BINOM_DIST_RANGE.md) | number | 使用二项分布返回试验结果的概率。 |
 | [BINOM_INV](./Methods/BINOM_INV.md) | number | 返回累积二项分布大于或等于条件值的最小值。 |
-| [BITAND](./Methods/BITAND.md) | number | 返回两个数字的按位"与"运算结果。 |
+| [BITAND](./Methods/BITAND.md) | number | 返回两个数字的按位“与”运算结果。 |
 | [BITLSHIFT](./Methods/BITLSHIFT.md) | number | 返回按指定位数左移后的数字。 |
-| [BITOR](./Methods/BITOR.md) | number | 返回两个数字的按位"或"运算结果。 |
+| [BITOR](./Methods/BITOR.md) | number | 返回两个数字的按位“或”运算结果。 |
 | [BITRSHIFT](./Methods/BITRSHIFT.md) | number | 返回按指定位数右移后的数字。 |
-| [BITXOR](./Methods/BITXOR.md) | number | 返回两个数字的按位"异或"运算结果。 |
+| [BITXOR](./Methods/BITXOR.md) | number | 返回两个数字的按位“异或”运算结果。 |
 | [CEILING](./Methods/CEILING.md) | number | 将数字向上舍入到最接近的基数倍数。 |
 | [CEILING_MATH](./Methods/CEILING_MATH.md) | number | 将数字向上舍入到最接近的整数或最接近的基数倍数。 |
 | [CEILING_PRECISE](./Methods/CEILING_PRECISE.md) | number | 返回向上舍入到最接近的整数或最接近的基数倍数的数字。无论数字的符号如何，都始终向上舍入。 |
@@ -151,7 +151,7 @@
 | [FLOOR](./Methods/FLOOR.md) | number | 将数字向下舍入到最接近的基数倍数。 |
 | [FLOOR_MATH](./Methods/FLOOR_MATH.md) | number | 将数字向下舍入到最接近的整数或最接近的基数倍数。 |
 | [FLOOR_PRECISE](./Methods/FLOOR_PRECISE.md) | number | 返回向下舍入到最接近的整数或最接近的基数倍数的数字。无论数字的符号如何，都始终向下舍入。 |
-| [FORECAST_ETS](./Methods/FORECAST_ETS.md) | number | 使用指数平滑 (ETS) 算法的 AAA 版本，根据现有（历史）值计算或预测未来值。 |
+| [FORECAST_ETS](./Methods/FORECAST_ETS.md) | number | 使用指数平滑 (ETS) 算法的 AAA 版本根据现有（历史）值计算或预测未来值。 |
 | [FORECAST_ETS_CONFINT](./Methods/FORECAST_ETS_CONFINT.md) | number | 返回指定目标日期预测值的置信区间。 |
 | [FORECAST_ETS_SEASONALITY](./Methods/FORECAST_ETS_SEASONALITY.md) | number | 返回应用程序为指定时间序列检测到的重复模式的长度。 |
 | [FORECAST_ETS_STAT](./Methods/FORECAST_ETS_STAT.md) | number | 返回预测的请求统计量。 |
@@ -226,7 +226,7 @@
 | [ISNUMBER](./Methods/ISNUMBER.md) | boolean | 检查值是否为数字，并返回 **true** 或 **false**。 |
 | [ISODD](./Methods/ISODD.md) | boolean | 如果数字为奇数，则返回 **true**。 |
 | [ISOWEEKNUM](./Methods/ISOWEEKNUM.md) | number | 返回给定日期在年份中的 ISO 周数。 |
-| [ISO_CEILING](./Methods/ISO_CEILING.md) | number | 返回向上舍入到最接近的整数或最接近的基数倍数的数字，与数字的符号无关。无论数字的符号如何，都始终向上舍入。 |
+| [ISO_CEILING](./Methods/ISO_CEILING.md) | number | 返回一个向上舍入到最接近的整数或最接近的有效倍数的数字，而不考虑数字的符号。 |
 | [ISPMT](./Methods/ISPMT.md) | number | 返回投资在特定期间支付的利息。 |
 | [ISREF](./Methods/ISREF.md) | boolean | 检查值是否为引用，并返回 **true** 或 **false**。 |
 | [ISTEXT](./Methods/ISTEXT.md) | boolean | 检查值是否为文本，并返回 **true** 或 **false**。 |
@@ -265,7 +265,7 @@
 | [MULTINOMIAL](./Methods/MULTINOMIAL.md) | number | 返回数字之和的阶乘与阶乘乘积的比率。 |
 | [MUNIT](./Methods/MUNIT.md) | number | 返回指定维度的单位矩阵。 |
 | [N](./Methods/N.md) | number | 将值转换为数字，日期转换为序列号，**true** 转换为 1，错误转换为 [ErrorValue](../Enumeration/ErrorValue.md)，其他转换为 0。 |
-| [NA](./Methods/NA.md) | string | 返回 *#N/A* 错误值，表示"无可用值"。 |
+| [NA](./Methods/NA.md) | string | 返回 *#N/A* 错误值，表示“无可用值”。 |
 | [NEGBINOMDIST](./Methods/NEGBINOMDIST.md) | number | 返回负二项分布，即在最后一次成功之前有指定次数失败的概率，以及指定的成功概率。 |
 | [NEGBINOM_DIST](./Methods/NEGBINOM_DIST.md) | number | 返回负二项分布，即在最后一次成功之前有指定次数失败的概率，以及指定的成功概率。 |
 | [NETWORKDAYS](./Methods/NETWORKDAYS.md) | number | 返回两个日期之间的完整工作日数。 |
@@ -359,7 +359,7 @@
 | [STDEV](./Methods/STDEV.md) | number | 基于样本估算标准偏差（忽略样本中的逻辑值和文本）。 |
 | [STDEVA](./Methods/STDEVA.md) | number | 基于样本估算标准偏差，包括逻辑值和文本。文本和 **false** 逻辑值为 0；**true** 逻辑值为 1。 |
 | [STDEVP](./Methods/STDEVP.md) | number | 基于作为参数给出的整体总体计算标准偏差（忽略逻辑值和文本）。 |
-| [STDEVPA](./Methods/STDEVPA.md) | number | 基于整体总体计算标准偏差，包括逻辑值和文本。文本和 **false** 逻辑值为 0；**true** 逻辑值为 1。 |
+| [STDEVPA](./Methods/STDEVPA.md) | number | 基于整个总体计算标准偏差，包括逻辑值和文本。 |
 | [STDEV_P](./Methods/STDEV_P.md) | number | 基于作为参数给出的整体总体计算标准偏差（忽略逻辑值和文本）。 |
 | [STDEV_S](./Methods/STDEV_S.md) | number | 基于样本估算标准偏差（忽略样本中的逻辑值和文本）。 |
 | [SUBSTITUTE](./Methods/SUBSTITUTE.md) | string | 在文本字符串中用新文本替换现有文本。 |

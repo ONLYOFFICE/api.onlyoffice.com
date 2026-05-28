@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回累积二项分布大于或等于准则值的最小值。
+查找电子表格中满足概率阈值的最小数字。
 
 ```javascript editor-xlsx
-// How to return the minimum value for which the cumulative binomial distribution >= criterion value in a spreadsheet.
+// What is the minimum value where cumulative probability exceeds your target in a spreadsheet?
 
-// Use function to the minimum value for which the cumulative binomial distribution >= criterion value in a spreadsheet.
+// Identify the threshold value for a binomial distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

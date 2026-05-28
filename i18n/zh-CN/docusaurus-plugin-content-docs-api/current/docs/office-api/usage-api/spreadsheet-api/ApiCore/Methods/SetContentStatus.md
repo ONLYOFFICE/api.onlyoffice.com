@@ -22,12 +22,12 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-在电子表格中使用核心属性设置当前工作簿的内容状态。
+在电子表格的工作簿文档属性中记录内容状态值。
 
 ```javascript editor-xlsx
-// How to set content status for a core properties in a spreadsheet?
+// How do I mark the content status of a workbook in a spreadsheet?
 
-// Set content status and display the result in a spreadsheet.
+// Save a status label such as "Final" or "Draft" in the file metadata in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

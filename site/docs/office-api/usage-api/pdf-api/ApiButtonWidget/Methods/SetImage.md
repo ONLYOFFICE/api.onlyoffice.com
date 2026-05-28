@@ -5,7 +5,7 @@ Sets image to button widget field.
 ## Syntax
 
 ```javascript
-expression.SetImage(sImageUrl, sApType);
+expression.SetImage(imageUrl, appearance);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,8 +14,8 @@ expression.SetImage(sImageUrl, sApType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageUrl | Optional | string | '' | image url |
-| sApType | Optional | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | for what state is the picture set |
+| imageUrl | Optional | string | "" | The image URL. |
+| appearance | Optional | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | The appearance state. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set image for field with image in a PDF document.
+Set image for button widget in a PDF document.
 
 ```javascript editor-pdf
-// How do I set image in a PDF document?
+// Assign an image resource to an image field with normal state.
 
-// Set image using a button widget object in a PDF document.
+// Add the image field to a PDF page.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

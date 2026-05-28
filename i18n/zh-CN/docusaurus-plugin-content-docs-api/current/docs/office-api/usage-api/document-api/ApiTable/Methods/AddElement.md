@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-使用单元格中的位置添加段落。
+将段落放入文档中表格的特定单元格。
 
 ```javascript editor-docx
-// How to add text to the cell.
+// How do I insert content into a particular cell of a table in a document?
 
-// Insert a paragraph object to the table cell.
+// Populate a table cell with a text block at a given position in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

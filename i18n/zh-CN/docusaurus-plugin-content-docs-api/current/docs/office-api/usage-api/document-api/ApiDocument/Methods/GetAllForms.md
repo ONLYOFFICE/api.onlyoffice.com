@@ -20,12 +20,12 @@ expression.GetAllForms();
 
 ## 示例
 
-获取文档中所有现有的表单。
+检索文档中的所有表单字段。
 
 ```javascript editor-docx
-// Get all forms added to the document.
+// How do I access every form field present in a document?
 
-// How to retrieve all forms, set the text to the first one and select an answer to the second one.
+// Pre-fill a text field and select a combo box value when automating document completion.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Name", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

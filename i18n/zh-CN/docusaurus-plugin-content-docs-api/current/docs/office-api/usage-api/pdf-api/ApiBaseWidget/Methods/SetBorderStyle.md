@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBorderStyle(sBorderStyle);
+expression.SetBorderStyle(borderStyle);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBorderStyle(sBorderStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderStyle | 必需 | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | 未提供描述。 |
+| borderStyle | 必需 | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | 边框样式。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段控件的边框样式。
+在 PDF 中为字段控件应用边框样式。
 
 ```javascript editor-pdf
-// How can I set border style using a widget in a PDF document?
+// How do I set the border style for widgets in a PDF?
 
-// Set border style for a widget in a PDF document.
+// Change the appearance of widget borders with preset styles in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

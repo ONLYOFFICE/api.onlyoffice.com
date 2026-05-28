@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的容器设置别名属性。
+为文档中的内联内容控件分配人类可读的别名。
 
 ```javascript editor-docx
-// How to set a "№1" alias to the inline content control in a document.
+// How do I label an inline content control with an alias in a document?
 
-// Display the alias set for inline text element in a document.
+// Give a content control a friendly name so it can be identified easily by alias in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

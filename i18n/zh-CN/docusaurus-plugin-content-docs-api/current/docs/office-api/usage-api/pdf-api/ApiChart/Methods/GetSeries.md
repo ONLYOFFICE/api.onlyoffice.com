@@ -22,12 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-如何在 PDF 文档中通过索引从图表获取系列。
+按位置从 PDF 中的图表访问特定数据系列。
 
 ```javascript editor-pdf
-// Find a chart seria in a PDF document.
+// How do I select one series from a chart in a PDF?
 
-// Use chart to get the series in a PDF document.
+// Retrieve a chart series at a specific index in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a custom geometry in a document.
+Draw a shape with a fully custom outline and color in a document.
 
 ```javascript editor-docx
-// How to create custom geometry in a document?
+// How do I insert a shape drawn with a hand-defined path in a document?
 
-// Create custom geometry using the document API.
+// Build an airplane silhouette from scratch using lines and curves and add it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

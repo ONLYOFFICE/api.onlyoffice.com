@@ -25,12 +25,12 @@ void
 
 ## 示例
 
-在电子表格中数据更改后重新应用现有的自动筛选。
+重新应用当前筛选规则以刷新电子表格中可见的行。
 
 ```javascript editor-xlsx
-// How to reuse filter criteria without redefining them in a spreadsheet.
+// How do I update the filtered view after data has changed in a spreadsheet?
 
-// Reapply an AutoFilter using ApiAutoFilter.ApplyFilter() in a spreadsheet.
+// Refresh the visible rows without changing or removing the filter conditions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -4,6 +4,8 @@ description: Set a placeholder for combo box fields with a specified key.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Set placeholder
 
 Sets a specific placeholder for all the combo boxes that have a certain key.
@@ -24,5 +26,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![SetPlaceholder](/assets/images/plugins/set-placeholder.png#gh-light-mode-only)
-![SetPlaceholder](/assets/images/plugins/set-placeholder.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-placeholder" dark />

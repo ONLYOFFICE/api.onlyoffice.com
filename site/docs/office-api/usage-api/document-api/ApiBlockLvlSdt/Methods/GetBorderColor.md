@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the border color of the block-level container in a document.
+Read the border color of a content control in a document.
 
 ```javascript editor-docx
-// How do I get the border color in a document?
+// How do I get the border color set on a content control in a document?
 
-// Get the border color using a block-level content control object in a document.
+// Check what border color a content control has and display its hex value in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-指定在 PDF 文档中作为背景应用于 run 内容的突出显示颜色。
+在 PDF 中为文本应用背景高亮。
 
 ```javascript editor-pdf
-// How to set highlight to the text run in a PDF document.
+// How do I mark text with color in a PDF?
 
-// Create a new text run and highlight it in a PDF document.
+// Add a highlight background behind text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

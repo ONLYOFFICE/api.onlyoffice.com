@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在演示文稿中为当前文本 run 的字符设置字体大小。
+更改演示文稿中文本的字体大小。
 
 ```javascript editor-pptx
-// How to set font size to the text run in a presentation.
+// What font sizes can be set for text in a presentation?
 
-// Create a new text run and change resize its font in a presentation.
+// Resize text by adjusting the font size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

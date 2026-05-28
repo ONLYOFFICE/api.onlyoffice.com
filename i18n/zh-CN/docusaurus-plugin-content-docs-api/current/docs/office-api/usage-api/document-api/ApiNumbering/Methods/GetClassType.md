@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中编号的类类型。
+检索文档中编号对象的类类型。
 
 ```javascript editor-docx
-// How to identify the class type of a numbering in a document?
+// How do I identify the class type of a numbering definition in a document?
 
-// Obtain the class type identifier of a numbering object in a document.
+// Confirm the object type of a numbering list before processing it programmatically in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

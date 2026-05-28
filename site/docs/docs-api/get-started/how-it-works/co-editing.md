@@ -14,7 +14,7 @@ The figure and steps below explain how a document is co-edited in ONLYOFFICE Doc
 4. The **document editing service** sends the changes made by **user 1** to the **user 2** **document editor**.
 5. Now these changes become visible to **user 2**.
 
-![Co-editing view](/assets/images/editor/coedit-view.png)
+![Co-editing view](/assets/images/editor/coedit-view.png#gh-light-mode-only)![Co-editing view](/assets/images/editor/coedit-view.dark.png#gh-dark-mode-only)
 
 ## How this can be done in practice
 
@@ -261,7 +261,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **Fast** mode is the default. All changes are sent to other users in real time — you see their cursors and name tooltips as they edit the document. Changes are saved automatically, and redo is not available.
 
-![Fast mode](/assets/images/editor/fast-mode.png)
+![Fast mode](/assets/images/editor/fast-mode.png#gh-light-mode-only)![Fast mode](/assets/images/editor/fast-mode.dark.png#gh-dark-mode-only)
 
 ### Strict mode
 
@@ -269,4 +269,4 @@ In **Strict** mode, each user works in an isolated session. Changes made by othe
 
 After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
 
-![Strict mode](/assets/images/editor/strict-mode.png)
+![Strict mode](/assets/images/editor/strict-mode.png#gh-light-mode-only)![Strict mode](/assets/images/editor/strict-mode.dark.png#gh-dark-mode-only)

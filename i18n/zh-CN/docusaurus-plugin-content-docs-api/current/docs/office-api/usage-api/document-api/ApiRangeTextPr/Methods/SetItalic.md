@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中为文本字符设置斜体属性。
+使文档中的文本以斜体样式显示。
 
 ```javascript editor-docx
-// How to make a text italic in a document.
+// How do I format text to display in italics in a document?
 
-// Create a text run object, change its properties by making it italic in a document.
+// Emphasize words by switching the default text style to italicized letters in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

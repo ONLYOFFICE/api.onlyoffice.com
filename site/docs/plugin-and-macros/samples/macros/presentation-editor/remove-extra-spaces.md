@@ -4,6 +4,8 @@ description: Remove extra spaces from text on slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove extra spaces
 
 Removes extra spaces from all text in all slides of a presentation.
@@ -42,5 +44,4 @@ Methods used: [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlid
 
 ## Result
 
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.png#gh-light-mode-only)
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-extra-spaces" dark />

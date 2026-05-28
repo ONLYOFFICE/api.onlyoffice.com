@@ -22,12 +22,12 @@ expression.CreateDatePickerContentControl(datePickerPr);
 
 ## 示例
 
-在文档中创建日期选择器内容控件。
+向文档添加日期选择器字段。
 
 ```javascript editor-docx
-// How to create the date picker content control in a document?
+// How do I insert a date picker field into a document?
 
-// Create the date picker content control using the document API.
+// Let readers pick a date from a calendar by inserting a date picker control in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateDatePickerContentControl({format: 'yyyy.mm.dd'});

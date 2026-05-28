@@ -22,16 +22,16 @@ expression.SetColumnWidth(nColumn, nWidth, bWithotPaddings);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Set the width of the specified column in a spreadsheet.
+Assign a specific width to one or more columns in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a column width in a spreadsheet.
+// How do I change the width of a column in a spreadsheet?
 
-// Resize column width using the worksheet API in a spreadsheet.
+// Widen or narrow columns to control how much content fits in each cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 10);

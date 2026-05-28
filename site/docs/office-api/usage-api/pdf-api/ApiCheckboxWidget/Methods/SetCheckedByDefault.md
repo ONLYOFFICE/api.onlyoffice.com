@@ -5,7 +5,7 @@ Sets widget checked by default.
 ## Syntax
 
 ```javascript
-expression.SetCheckedByDefault(bChecked);
+expression.SetCheckedByDefault(checked);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetCheckedByDefault(bChecked);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | Required | boolean |  | No description provided. |
+| checked | Required | boolean |  | Specifies whether the checkbox is checked by default. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set checkbox widget checked by default property in a PDF document.
+Make a checkbox appear selected when the PDF form first opens in a PDF.
 
 ```javascript editor-pdf
-// How to set checked by default for a checkbox widget in a PDF document?
+// How do I configure a checkbox to be pre-selected by default in a PDF?
 
-// Set checked by default and display the result in a PDF document.
+// Set the initial checked state for a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -5,7 +5,7 @@ Sets time format for field.
 ## Syntax
 
 ```javascript
-expression.SetTimeFormat(sFormat);
+expression.SetTimeFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetTimeFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
+| format | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set time format for it.
+Display time with hour, minute, and second in a PDF.
 
 ```javascript editor-pdf
-// How do I set time format in a PDF document?
+// Can I control the time display format in a PDF?
 
-// Set time format using a combobox field object.
+// Show times using a 12-hour or 24-hour format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

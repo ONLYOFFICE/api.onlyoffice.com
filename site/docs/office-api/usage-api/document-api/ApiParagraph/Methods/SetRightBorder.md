@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetRightBorder](../../ApiParaPr/Methods/SetRightBorder
 
 ## Example
 
-Specify the border which will be displayed at the right side of the page around the specified paragraph.
+Add a border to the right side of a paragraph in a document.
 
 ```javascript editor-docx
-// How to add border to the right side of the paragraph in a document.
+// How do I place a visible border on the right edge of a paragraph in a document?
 
-// Add right single border using the paragraph properties API in a document.
+// Highlight a paragraph by drawing a colored line along its right margin.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

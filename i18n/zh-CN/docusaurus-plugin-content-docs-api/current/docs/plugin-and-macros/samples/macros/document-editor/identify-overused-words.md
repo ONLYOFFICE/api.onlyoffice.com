@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 识别过度重复使用词汇
 
 分析文档中词汇使用频率，根据设定的阈值识别过度重复使用的词汇。
@@ -121,5 +123,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![识别过度重复使用词汇](/assets/images/plugins/identify-overused-words.png#gh-light-mode-only)
-![识别过度重复使用词汇](/assets/images/plugins/identify-overused-words.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/identify-overused-words" dark />

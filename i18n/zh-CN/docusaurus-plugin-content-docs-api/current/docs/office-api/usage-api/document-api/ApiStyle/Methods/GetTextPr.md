@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取文档中当前样式的文本属性。
+通过样式更改文档中所有文本的默认字体、大小和颜色。
 
 ```javascript editor-docx
-// How to update text properties in a document.
+// How do I update the text appearance for the entire document using a style in a document?
 
-// Get the default style text properties of the paragraph in a document.
+// Adjust typeface, color, and size globally by modifying the shared text style in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

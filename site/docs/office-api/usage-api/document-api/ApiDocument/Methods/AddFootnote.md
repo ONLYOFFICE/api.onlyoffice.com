@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add footnote fot the document.
+Add a footnote to a paragraph in a document.
 
 ```javascript editor-docx
-// How to add footnote to the document.
+// How do I attach a footnote to text in a document?
 
-// Get all footnotes first paragraphs and make the first one bold in a document.
+// Collect all footnote paragraphs and style the first one as bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

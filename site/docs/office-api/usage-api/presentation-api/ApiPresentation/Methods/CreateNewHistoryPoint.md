@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a new history point in a presentation.
+Create a checkpoint for undo-redo in a presentation.
 
 ```javascript editor-pptx
-// How to add a new history point to the presentation.
+// How do I save the current state as a point I can undo from in a presentation?
 
-// Create a presentation history point.
+// Add a new checkpoint to the presentation's edit history.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetCustomProperties();
 
 ## 示例
 
-获取电子表格中工作簿的自定义属性对象。
+访问与工作簿一起存储的自定义属性并在电子表格中读取其中一个值。
 
 ```javascript editor-xlsx
-// How can I get custom properties using a workbook in a spreadsheet?
+// How do I store and retrieve my own metadata on a workbook in a spreadsheet?
 
-// Get custom properties for a workbook in a spreadsheet.
+// Add a named string property to the workbook and display its value in a cell in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const customProps = workbook.GetCustomProperties();

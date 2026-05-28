@@ -14,7 +14,7 @@ expression.SetRect(rect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 未提供描述。 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件的新边界矩形。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建新字段并为其控件设置新矩形。
+在 PDF 中使用矩形边界调整控件大小和位置。
 
 ```javascript editor-pdf
-// How do I set rect in a PDF document?
+// How do I set the size and position of a widget in a PDF?
 
-// Set rect using a widget object in a PDF document.
+// Define a widget's location and dimensions with boundary coordinates in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

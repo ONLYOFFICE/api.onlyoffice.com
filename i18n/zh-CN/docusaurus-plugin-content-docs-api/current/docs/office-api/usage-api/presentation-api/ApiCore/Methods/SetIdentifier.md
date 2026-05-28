@@ -22,12 +22,12 @@ expression.SetIdentifier(sIdentifier);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的标识符。
+设置和检索演示文稿的标识符。
 
 ```javascript editor-pptx
-// How to set identifier for a core properties in a presentation?
+// How do I set the identifier of a presentation in a presentation?
 
-// Set identifier and display the result in a presentation.
+// Retrieve and display the identifier as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

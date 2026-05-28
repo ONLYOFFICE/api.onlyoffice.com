@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中下划线注释对象的类类型。
+检查 PDF 中应用于文本的标记类型。
 
 ```javascript editor-pdf
-// How can I get the class type of an underline annotation in a PDF document?
+// How do I find out what type of annotation mark has been used in a PDF?
 
-// Get the class type of an underline annotation and display it in the PDF.
+// Determine the kind of highlight or underline effect on text in a PDF.
 
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);

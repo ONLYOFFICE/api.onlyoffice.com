@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## Example
 
-Create a pattern fill and apply it to the object using the selected pattern as the object background in a document.
+Fill a shape with a patterned background using two colors in a document.
 
 ```javascript editor-docx
-// Create the fill object using the "dashDnDiag" pattern type and apply it to the created shape in a document.
+// How do I apply a diagonal dash pattern as the background of a shape in a document?
 
-// How to create a pattern fill for the shape object background in a document.
+// Give a shape a decorative patterned fill instead of a solid color in a document.
 
 const bgColor = Api.HexColor('#abcdef');
 const fgColor = Api.ThemeColor('accent3');

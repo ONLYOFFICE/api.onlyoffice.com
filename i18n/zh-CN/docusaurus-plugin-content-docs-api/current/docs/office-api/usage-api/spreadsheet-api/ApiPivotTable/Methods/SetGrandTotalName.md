@@ -22,12 +22,12 @@ expression.SetGrandTotalName(name);
 
 ## 示例
 
-在电子表格中设置表格的总计名称。
+重命名电子表格中数据透视表中显示的总计标签。
 
 ```javascript editor-xlsx
-// How to set a grand total name of a table in a spreadsheet.
+// How do I replace the default "Grand Total" caption with a custom name in a spreadsheet?
 
-// Create a pivot table, add data to it then set a grand total name in a spreadsheet.
+// Give the totals row or column a meaningful title instead of the built-in label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

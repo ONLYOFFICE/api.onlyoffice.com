@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档中的文档内容获取当前段落。
+从文档内容中检索当前光标位置的段落。
 
 ```javascript editor-docx
-// How do I get current paragraph in a document?
+// How do I get the active paragraph inside a document content container in a document?
 
-// Get current paragraph using a document content object.
+// Append text to whichever paragraph is focused without referencing it by index.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

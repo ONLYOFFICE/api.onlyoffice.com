@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中预设颜色对象的类类型。
+识别演示文稿中预设颜色的类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a preset color in a presentation?
+// How do I determine what type a preset color is in a presentation?
 
-// Get the class type of a preset color and display it in the presentation.
+// Display the color type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

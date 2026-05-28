@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取表单文档中按填写顺序排列的所有角色列表。
+查看文档中为表单定义的所有用户角色。
 
 ```javascript editor-forms
-// How can I get all roles using a form roles in a form document?
+// How do I see every role that can access form fields in a document?
 
-// Get all roles for a form roles in a form document.
+// List all the role names available for controlling form permissions in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

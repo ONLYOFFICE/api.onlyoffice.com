@@ -20,12 +20,12 @@ expression.GetAllComments();
 
 ## 示例
 
-获取电子表格中工作表的所有批注。
+将所有工作表的每个批注收集到电子表格中的一个列表中。
 
 ```javascript editor-xlsx
-// How to get all comments from the worksheet.
+// How do I retrieve all comments that exist anywhere in a spreadsheet?
 
-// Get all cell comments using the editor API in a spreadsheet.
+// Gather every annotation added by any author in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();Api.AddComment("Comment 1", "John Smith");
 worksheet.GetRange("A4").AddComment("Comment 2", "Mark Potato");

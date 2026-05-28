@@ -9,8 +9,10 @@ Enumeration
 ## Values
 
 - "bottomMargin"
+- "insideMargin"
 - "topMargin"
 - "margin"
+- "outsideMargin"
 - "page"
 - "line"
 - "paragraph"

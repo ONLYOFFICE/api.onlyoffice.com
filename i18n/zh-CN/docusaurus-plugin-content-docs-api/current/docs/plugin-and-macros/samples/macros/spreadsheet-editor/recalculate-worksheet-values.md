@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 重新计算工作表数值
 
 以一秒间隔重复重新计算工作表单元格的数值。
@@ -22,4 +24,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png#gh-light-mode-only)![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/recalculate-worksheet-values" dark />

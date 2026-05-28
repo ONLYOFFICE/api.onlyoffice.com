@@ -1,3 +1,10 @@
+---
+description: Navigate and select content controls in a document.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 内容控件导航操作
 
 插入内容控件（自动或手动）、导航并选择内容控件，同时支持向内容控件粘贴文本。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-navigation" />
 
 ## 安装
 

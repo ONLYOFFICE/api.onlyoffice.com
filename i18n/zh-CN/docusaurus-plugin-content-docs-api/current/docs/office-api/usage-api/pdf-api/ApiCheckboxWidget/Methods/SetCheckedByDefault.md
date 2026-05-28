@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCheckedByDefault(bChecked);
+expression.SetCheckedByDefault(checked);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCheckedByDefault(bChecked);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | 必需 | boolean |  | 未提供描述。 |
+| checked | 必需 | boolean |  | 指定复选框是否默认被选中。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件的默认选中属性。
+使复选框在 PDF 表单首次打开时显示为已选中。
 
 ```javascript editor-pdf
-// How to set checked by default for a checkbox widget in a PDF document?
+// How do I configure a checkbox to be pre-selected by default in a PDF?
 
-// Set checked by default and display the result in a PDF document.
+// Set the initial checked state for a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

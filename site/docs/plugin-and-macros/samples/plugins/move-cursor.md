@@ -3,6 +3,8 @@ description: Move the cursor to the document start or end.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Move cursor
 
 Moves the text cursor to the document start/end.
@@ -11,9 +13,7 @@ Moves the text cursor to the document start/end.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/move-cursor" />
 
 ## Installation
 

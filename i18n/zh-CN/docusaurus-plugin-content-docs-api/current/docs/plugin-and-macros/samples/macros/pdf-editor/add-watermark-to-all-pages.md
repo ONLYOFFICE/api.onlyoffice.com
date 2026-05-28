@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 为所有页面添加水印
 
 为 PDF 文档的每一页添加对角线水印形状。水印为旋转 -45 度的灰色矩形，带有白色粗体文字。您可以根据需要修改水印文字、颜色、大小和位置。
@@ -53,5 +55,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![为所有页面添加水印](/assets/images/plugins/add-watermark-to-all-pages.png#gh-light-mode-only)
-![为所有页面添加水印](/assets/images/plugins/add-watermark-to-all-pages.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/add-watermark-to-all-pages" dark />

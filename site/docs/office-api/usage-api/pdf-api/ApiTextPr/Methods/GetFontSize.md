@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out a text font size in a PDF document.
+Read the text size value from a PDF.
 
 ```javascript editor-pdf
-// How to know font size of a text run in a PDF document.
+// How do I check what font size is used for text in a PDF?
 
-// Get the text properties of the run and display its font size in a PDF document.
+// Retrieve the font size measurement from text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

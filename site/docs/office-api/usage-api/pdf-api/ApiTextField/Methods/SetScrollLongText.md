@@ -1,11 +1,11 @@
 # SetScrollLongText
 
-Sets text field can scroll long text prop.
+Sets whether the text field can scroll long text.
 
 ## Syntax
 
 ```javascript
-expression.SetScrollLongText(bScroll);
+expression.SetScrollLongText(allowScroll);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetScrollLongText(bScroll);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bScroll | Required | boolean |  | can the field scroll long text |
+| allowScroll | Required | boolean |  | Specifies whether long text can be scrolled. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Add text field and set scroll long text property for it in a PDF document.
+Let text scroll horizontally when it exceeds the field width in a PDF.
 
 ```javascript editor-pdf
-// How to set scroll long text for a text field in a PDF document?
+// How do I make a narrow text field scrollable for longer content in a PDF?
 
-// Set scroll long text and display the result in a PDF document.
+// Enable scrolling for text that overflows the field boundary in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

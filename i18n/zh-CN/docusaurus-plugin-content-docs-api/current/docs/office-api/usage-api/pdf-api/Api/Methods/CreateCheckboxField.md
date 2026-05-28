@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateCheckboxField(aRect);
+expression.CreateCheckboxField(rect);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateCheckboxField(aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.CreateCheckboxField(aRect);
 
 ## 示例
 
-如何创建复选框字段并添加到文档。
+在 PDF 中创建复选框表单字段。
 
 ```javascript editor-pdf
-// How to create the checkbox field in a PDF document?
+// How do I add a checkbox to a form in a PDF?
 
-// Create the checkbox field using the PDF document API.
+// Set the initial value of a checkbox in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

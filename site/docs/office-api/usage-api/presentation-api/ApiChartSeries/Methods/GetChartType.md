@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the first series of chart class and insert its type into the presentation.
+Retrieve the chart series type identifier from a combo chart.
 
 ```javascript editor-pptx
-// How to get a chart type and show it on the slide.
+// Extract and display chart series type information in a presentation.
 
-// Change a chart type to the "area" type in a presentation.
+// Get the chart type of the first series and show it as slide title text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

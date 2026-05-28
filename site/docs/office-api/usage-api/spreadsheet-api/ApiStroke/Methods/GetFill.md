@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the fill color of a stroke. Creates a shape with a colored border and retrieve its fill properties in a spreadsheet.
+Read the fill color applied to a shape border in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I get the fill using a stroke in a spreadsheet?
+// How do I find out what color a border is filled with in a spreadsheet?
 
-// Get the fill for a stroke in a spreadsheet.
+// Inspect the color stored inside a border object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

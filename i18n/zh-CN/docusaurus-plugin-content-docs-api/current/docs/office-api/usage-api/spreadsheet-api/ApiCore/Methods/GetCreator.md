@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的创建者（使用核心属性）。
+读取电子表格工作簿属性中记录的作者姓名。
 
 ```javascript editor-xlsx
-// How to get the creator for a core properties in a spreadsheet?
+// How do I find out who created a workbook in a spreadsheet?
 
-// Get the creator and display the result in a spreadsheet.
+// Retrieve and display the name of the person who originally authored the workbook in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

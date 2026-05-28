@@ -1,31 +1,53 @@
 # Copy
 
-创建指定绘图对象的副本。
+创建指定表格的副本。
 
-继承自 [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md)。
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
+:::
+
+## 语法
+
+```javascript
+expression.Copy();
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTable](../../ApiTable/ApiTable.md)
 
 ## 示例
 
-创建形状的副本并将其插入演示文稿。
+复制表格并将副本放在演示文稿的另一张幻灯片上。
 
 ```javascript editor-pptx
-// How to create the same slide shape.
+// How do I make a copy of a table to reuse in a presentation?
 
-// Get a slide shape, add it to the slide and create its copy.
+// Clone a table and add the duplicate to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
+
+const table = Api.CreateTable(2, 4);
+table.AddRow(1, true);
+const row = table.GetRow(1);
+const cell = row.GetCell(0);
+const content = cell.GetContent();
+const paragraph = Api.CreateParagraph();
+paragraph.AddText("New row was added here.");
+content.Push(paragraph);
+
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
+slide.AddObject(table);
 
-const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-shape.SetSize(300 * 36000, 130 * 36000);
-slide.AddObject(shape);
-
-const copyShape = shape.Copy();
+const copyTable = table.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
-newSlide.AddObject(copyShape);
+newSlide.AddObject(copyTable);
 ```

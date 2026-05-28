@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中的段落首行缩进。
+读取文档中段落设置的首行缩进值。
 
 ```javascript editor-docx
-// How to get the indentation of the first sentence line of the paragraph in a document.
+// How do I find out how far the first line of a paragraph is indented in a document?
 
-// Print the identation of the line of a paragraph in a document.
+// Check the exact indent size before adjusting paragraph alignment or reusing the style elsewhere.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

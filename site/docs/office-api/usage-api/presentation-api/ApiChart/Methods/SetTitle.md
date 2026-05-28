@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Specify the chart title in a presentation.
+Add a heading to identify a chart in a presentation.
 
 ```javascript editor-pptx
-// How to rename a chart in a presentation.
+// Set the name or headline displayed above a chart in a presentation.
 
-// Create a chart, set its properties and its title in a presentation.
+// Change the text that labels and describes a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

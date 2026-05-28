@@ -5,7 +5,7 @@ Returns a cell by its position.
 ## Syntax
 
 ```javascript
-expression.GetCell(nRow, nCell);
+expression.GetCell(rowIndex, cellIndex);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,21 +14,21 @@ expression.GetCell(nRow, nCell);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nRow | Required | number |  | The row position in the current table where the specified cell is placed. |
-| nCell | Required | number |  | The cell position in the current table. |
+| rowIndex | Required | number |  | The row index in the current table. |
+| cellIndex | Required | number |  | The cell index in the specified row. |
 
 ## Returns
 
-[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md)
 
 ## Example
 
-Get a cell by its position in a document.
+Access a specific cell by its row and column position in a document.
 
 ```javascript editor-docx
-// How to get cell from the table.
+// How do I retrieve a particular cell from a table in a document?
 
-// Get the first table cell and add text to it.
+// Target an individual cell using its coordinates to write content in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的标识符。
+设置和查看演示文稿的唯一标识符。
 
 ```javascript editor-pptx
-// How to get the identifier for a core properties in a presentation?
+// How do I retrieve the identifier for a presentation?
 
-// Get the identifier and display the result in a presentation.
+// Read the ID code assigned to a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

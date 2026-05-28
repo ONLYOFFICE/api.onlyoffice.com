@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 隐藏卡号信息
 
 对所有具有指定表单键的表单应用掩码，以隐藏卡号。
@@ -31,4 +33,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/mask-card-numbers" dark />

@@ -1,17 +1,17 @@
 # GetDocumentInfo
 
 Returns the document information:
--**Application** - the application the document was created with.
--**CreatedRaw** - the date and time when the file was created.
--**Created** - the parsed date and time when the file was created.
--**LastModifiedRaw** - the date and time when the file was last modified.
--**LastModified** - the parsed date and time when the file was last modified.
--**LastModifiedBy** - the name of the user who made the latest change to the document.
--**Authors** - the persons who created the file.
--**Title** - the document title (this property allows you to simplify your documents classification).
--**Tags** - the document tags (this property allows you to simplify your documents classification).
--**Subject** - the document subject (this property allows you to simplify your documents classification).
--**Comment** - the comment to the document (this property allows you to simplify your documents classification).
+- **Application** - the application the document was created with.
+- **CreatedRaw** - the date and time when the file was created.
+- **Created** - the parsed date and time when the file was created.
+- **LastModifiedRaw** - the date and time when the file was last modified.
+- **LastModified** - the parsed date and time when the file was last modified.
+- **LastModifiedBy** - the name of the user who made the latest change to the document.
+- **Authors** - the persons who created the file.
+- **Title** - the document title (this property allows you to simplify your documents classification).
+- **Tags** - the document tags (this property allows you to simplify your documents classification).
+- **Subject** - the document subject (this property allows you to simplify your documents classification).
+- **Comment** - the comment to the document (this property allows you to simplify your documents classification).
 
 ## Syntax
 
@@ -31,12 +31,12 @@ object
 
 ## Example
 
-Get the document info represented as an object and paste the application name into the last paragraph in a document.
+Retrieve document metadata and display the application name in a document.
 
 ```javascript editor-docx
-// How to get information such as application with which the document was created.
+// How do I read document properties like the creating application in a document?
 
-// Display the document information.
+// Add a paragraph showing which application produced the document in a document.
 
 let doc = Api.GetDocument();
 let docInfo = doc.GetDocumentInfo();

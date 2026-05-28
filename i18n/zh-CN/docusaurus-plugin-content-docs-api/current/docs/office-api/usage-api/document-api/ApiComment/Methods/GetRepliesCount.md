@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中批注回复的数量。
+计算文档中附加到批注的回复数量。
 
 ```javascript editor-docx
-// How to get a number of replies a comment has in a document.
+// How do I find out how many replies a comment has in a document?
 
-// Get all comments from the presentation and the first one's number of replies.
+// Check the reply count before iterating over a comment thread to avoid out-of-range errors.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

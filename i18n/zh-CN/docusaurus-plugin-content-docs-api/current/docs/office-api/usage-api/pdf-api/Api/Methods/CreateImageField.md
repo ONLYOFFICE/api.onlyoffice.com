@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateImageField(aRect);
+expression.CreateImageField(rect);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateImageField(aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
 
 ## 返回值
 
@@ -22,10 +22,10 @@ expression.CreateImageField(aRect);
 
 ## 示例
 
-如何创建带图像的字段并添加到文档。
+创建并向文档添加带有图像的字段。
 
 ```javascript editor-pdf
-// How do I create the image field in a PDF document?
+// Create the image field in a PDF document.
 
 // Create the image field and display the result in a PDF document.
 

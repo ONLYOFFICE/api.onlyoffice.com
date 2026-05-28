@@ -4,6 +4,8 @@ description: Insert formulas into a row of cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Insert formulas row
 
 Copies formulas and number formats from the row above into the currently active row. Select the desired row and run the macro.
@@ -12,8 +14,8 @@ Copies formulas and number formats from the row above into the currently active 
 (function () {
   let sheet = Api.GetActiveSheet();
   let rowNum = sheet.GetActiveCell().GetRow();
-  let sourceRow = sheet.GetRange(rowNum + ":" + rowNum);
-  let destRow = sheet.GetRange((rowNum + 1) + ":" + (rowNum + 1));
+  let sourceRow = sheet.GetRange((rowNum - 1) + ":" + (rowNum - 1));
+  let destRow = sheet.GetRange(rowNum + ":" + rowNum);
 
   sourceRow.Copy();
 
@@ -38,4 +40,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![Insert formulas row](/assets/images/plugins/insert-formulas-row.png#gh-light-mode-only)![Insert formulas row](/assets/images/plugins/insert-formulas-row.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/insert-formulas-row" dark />

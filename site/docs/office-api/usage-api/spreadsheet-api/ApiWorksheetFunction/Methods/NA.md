@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Return the N/A error value which means "no value is available" in a spreadsheet.
+Insert an N/A error value into a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the N/A in a spreadsheet.
+// Display "no value available" in a spreadsheet using a function.
 
-// Use a function to get a N/A error value in a spreadsheet.
+// Add an error indicator when data is not available in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet(); 
 let func = Api.WorksheetFunction;

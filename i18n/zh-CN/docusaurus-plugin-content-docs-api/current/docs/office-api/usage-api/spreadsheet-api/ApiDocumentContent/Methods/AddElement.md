@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档内容中添加段落。
+在电子表格中放置在工作表上的形状的文本区域中插入新段落。
 
 ```javascript editor-xlsx
-// How to add text to the document using paragraph.
+// How do I append a paragraph to the content inside a drawing or shape in a spreadsheet?
 
-// Update the document content adding a paragraph to it.
+// Populate an empty shape with a text block by adding a paragraph to its content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

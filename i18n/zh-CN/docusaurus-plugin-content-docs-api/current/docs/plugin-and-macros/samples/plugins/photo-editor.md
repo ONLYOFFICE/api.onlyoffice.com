@@ -1,3 +1,10 @@
+---
+description: Edit images using the Toast UI Image Editor.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 图片编辑器
 
 连接 [Toast UI 图片编辑器](https://ui.toast.com/tui-image-editor)，可直接在文档中编辑图像：裁剪、调整大小、应用效果等。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/photo-editor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/photo-editor" />
 
 ## 安装方式
 

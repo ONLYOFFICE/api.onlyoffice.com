@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTimeFormat(sFormat);
+expression.SetTimeFormat(format);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTimeFormat(sFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | 必需 | [TimeFormat](../../Enumeration/TimeFormat.md) |  | 可用时间格式 |
+| format | 必需 | [TimeFormat](../../Enumeration/TimeFormat.md) |  | 可用时间格式 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置时间格式。
+在 PDF 中以一致的格式（如小时和分钟）显示时间。
 
 ```javascript editor-pdf
-// How do I set time format in a PDF document?
+// How do I show time input in a specific format in a PDF?
 
-// Set time format using a text field object.
+// Configure time display patterns for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

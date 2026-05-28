@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中创建新的历史点。
+创建新的历史记录点以标记文档中的撤消边界。
 
 ```javascript editor-docx
-// How to add a history point after adding the text in a document.
+// How do I create a history point between two edits in a document?
 
-// Add a text to the paragraph, create a history point and change its text in a document.
+// Separate text changes into distinct undo steps so each can be reversed independently in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -4,6 +4,8 @@ description: Perform calculations on form field values.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Insert calculations
 
 Performs automatic calculations on the specified fields within the form and inserts the result.
@@ -63,5 +65,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![InsertCalculations](/assets/images/plugins/insert-calculations.png#gh-light-mode-only)
-![InsertCalculations](/assets/images/plugins/insert-calculations.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/insert-calculations" dark />

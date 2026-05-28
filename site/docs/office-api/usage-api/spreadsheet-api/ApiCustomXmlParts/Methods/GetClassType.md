@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a custom XML parts in a spreadsheet.
+Read the type label of the XML storage manager object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to identify the class type of a custom XML parts in a spreadsheet?
+// How do I find out what type of object manages XML data in a spreadsheet?
 
-// Obtain the class type identifier of a custom XML parts object in a spreadsheet.
+// Confirm the category of the XML manager to handle it correctly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

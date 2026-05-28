@@ -25,9 +25,9 @@ number
 Add all the numbers in a range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all values from the list in a spreadsheet.
+// Sum all values using the SUM function with numeric arguments.
 
-// Use a function to estimate a sum from the cells.
+// Returns the total sum of the specified values.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

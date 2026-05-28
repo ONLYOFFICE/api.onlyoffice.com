@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Select the current paragraph in a presentation.
+Select a paragraph for editing in a presentation.
 
 ```javascript editor-pptx
-// How to select for a paragraph in a presentation?
+// How do I highlight a paragraph in a presentation?
 
-// Select and display the result in a presentation.
+// Select the entire paragraph content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

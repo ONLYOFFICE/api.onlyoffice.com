@@ -4,6 +4,8 @@ description: Merge data from multiple sheets into one.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Sheet merger
 
 Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.
@@ -43,4 +45,4 @@ Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods
 
 ## Result
 
-![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sheet-merger" dark />

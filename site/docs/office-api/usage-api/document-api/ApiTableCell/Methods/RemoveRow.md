@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Remove a row containing the cell.
+Delete an entire row by targeting one of its cells in a document.
 
 ```javascript editor-docx
-// How to delete the row with Cell 1.
+// How do I remove a row from a table using a cell reference in a document?
 
-// Get the first cell and remove its rowd.
+// Erase a whole table row by selecting any cell within it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,12 +20,12 @@ expression.GetAttributes();
 
 ## 示例
 
-获取并显示文档中当前 XML 节点的属性列表。
+检索文档中自定义 XML 节点的所有属性。
 
 ```javascript editor-docx
-// How can I get the attributes using a custom XML node in a document?
+// How do I list every attribute on a custom XML node in a document?
 
-// Get the attributes for a custom XML node in a document.
+// Inspect the full set of metadata attached to an XML element by reading all its attributes in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

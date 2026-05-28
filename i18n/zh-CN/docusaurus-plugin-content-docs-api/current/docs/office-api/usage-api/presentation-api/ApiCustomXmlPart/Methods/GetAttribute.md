@@ -26,9 +26,9 @@ string \| null
 从演示文稿中自定义 XML 部件的根元素获取属性。
 
 ```javascript editor-pptx
-// How to get an attribute from an XML part element in a presentation.
+// Read a named property from a custom XML node in a presentation.
 
-// Get an XML attribute using the custom XML part API in a presentation.
+// Retrieve the value of an attribute in an XML element in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

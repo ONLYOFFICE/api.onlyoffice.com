@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除 PDF 文档中 run 的内容。
+从 PDF 中的文本元素删除所有文本。
 
 ```javascript editor-pdf
-// How to delete content from the text run in a PDF document.
+// How do I remove text from a text run in a PDF?
 
-// Remove text from the page.
+// Erase content from text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

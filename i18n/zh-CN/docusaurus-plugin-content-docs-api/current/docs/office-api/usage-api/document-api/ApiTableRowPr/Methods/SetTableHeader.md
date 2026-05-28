@@ -1,7 +1,7 @@
 # SetTableHeader
 
 指定当前表格行将在显示此表格的每个新页面顶部重复显示。
-这使该表格行在每个页面上具有「标题」行的行为。
+这使该表格行在每个页面上具有“标题”行的行为。
 此元素可应用于表格结构顶部的任意数量的行，
 以生成多行表格标题。
 
@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定当前表格行在表格显示时在每个新页面的顶部重复。
+将文档中的表格行标记为在每页重复作为表头。
 
 ```javascript editor-docx
-// Rename the header of the table in a document.
+// How do I make a row appear at the top of a table on each new page in a document?
 
-// How to set table row as a header in a document.
+// Designate a table row as a repeating header across page breaks in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

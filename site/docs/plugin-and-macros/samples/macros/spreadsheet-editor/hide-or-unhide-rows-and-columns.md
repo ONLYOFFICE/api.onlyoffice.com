@@ -4,6 +4,8 @@ description: Hide or unhide rows and columns in a spreadsheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Hide or unhide rows and columns
 
 Hides or unhides the specified rows and/or columns in the spreadsheet.
@@ -43,4 +45,4 @@ End Sub
 
 ## Result
 
-![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png#gh-light-mode-only)![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns" dark />

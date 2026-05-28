@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the user ID to the comment reply author in a spreadsheet.
+Assign a user identifier to the author of a comment reply in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a reply author ID in a spreadsheet.
+// How do I change which user is credited as the author of a comment reply in a spreadsheet?
 
-// Replace a reply author ID to a new one in a spreadsheet.
+// Update the author identity linked to an existing comment reply in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

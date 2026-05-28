@@ -1,18 +1,18 @@
 # SetTabs
 
-指定将用于当前段落中任何制表符的自定义制表位序列。
--**警告**：aPos 数组和 aVal 数组的长度-**必须**相等。
+指定一系列自定义制表位，用于当前段落中的所有制表符。
+- **警告**：aPos 数组和 aVal 数组的长度**必须**相等。
 
 继承自 [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md)。
 
 ## 示例
 
-在演示文稿中设置一系列自定义制表位，用于段落中的所有制表符。
+在演示文稿中定义段落内的自定义制表位位置。
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties in a presentation.
+// How do I add tabs to control text spacing in a presentation?
 
-// Change a tabs size property of a paragraph properties in a presentation.
+// Configure tab stops for text alignment using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

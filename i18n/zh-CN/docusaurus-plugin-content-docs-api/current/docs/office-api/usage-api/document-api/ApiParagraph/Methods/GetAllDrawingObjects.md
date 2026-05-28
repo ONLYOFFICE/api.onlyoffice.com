@@ -20,12 +20,12 @@ expression.GetAllDrawingObjects();
 
 ## 示例
 
-获取文档中段落内的绘图对象集合。
+检索文档中段落内嵌入的所有绘图对象。
 
 ```javascript editor-docx
-// How to retrieve all drawing objects from the document.
+// How do I get every drawing from a paragraph in a document?
 
-// Get all drawings and add color to the first one in a document.
+// Apply bulk visual changes to shapes, images, and charts by collecting all drawings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

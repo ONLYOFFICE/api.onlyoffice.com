@@ -23,12 +23,12 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-Make search in table in a document.
+Find text within a table in a document.
 
 ```javascript editor-docx
-// How to search throughout the table in a document.
+// How do I search for specific text inside a table in a document?
 
-// Get a table, search information using value, position, order, etc.
+// Locate matching words across all table cells and highlight the results in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

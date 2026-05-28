@@ -4,6 +4,8 @@ description: Convert paragraphs into a table structure.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Paragraphs to table
 
 Converts a list of numbered paragraphs into a table.
@@ -58,5 +60,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![ParagraphsToTable](/assets/images/plugins/paragraphs-to-table.png#gh-light-mode-only)
-![ParagraphsToTable](/assets/images/plugins/paragraphs-to-table.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/paragraphs-to-table" dark />

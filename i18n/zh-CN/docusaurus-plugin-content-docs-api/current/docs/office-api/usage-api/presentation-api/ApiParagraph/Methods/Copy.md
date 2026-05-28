@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在演示文稿中创建段落副本。
+在演示文稿中复制段落。
 
 ```javascript editor-pptx
-// How to add a duplicate paragraph in a presentation.
+// How do I copy a paragraph in a presentation?
 
-// Copy a paragraph and add it to the shape in a presentation.
+// Create and add a copy of an existing paragraph to a text box in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

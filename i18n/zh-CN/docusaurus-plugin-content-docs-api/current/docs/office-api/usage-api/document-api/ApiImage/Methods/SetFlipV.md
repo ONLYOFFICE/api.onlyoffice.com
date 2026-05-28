@@ -6,12 +6,12 @@
 
 ## 示例
 
-设置文档中绘图对象的垂直翻转。
+在文档中垂直翻转绘图。
 
 ```javascript editor-docx
-// How to set flip v for a drawing object in a document?
+// How do I invert a shape upside down in a document?
 
-// Set flip v and display the result in a document.
+// Place an original arrow and its vertically mirrored copy side by side in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

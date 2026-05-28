@@ -6,12 +6,12 @@
 
 ## 示例
 
-使用指定系数在文档中缩放图形的高度。
+在文档中按给定比例缩放绘图的高度。
 
 ```javascript editor-docx
-// How to increase the height of the drawing in a document.
+// How do I resize the height of a shape proportionally in a document?
 
-// Scale height and display the result in a document.
+// Create several shapes at different height scales to compare sizes visually in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

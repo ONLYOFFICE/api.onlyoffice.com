@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Reates a copy of the run in a spreadsheet.
+Duplicate a text run and add both the original and the copy to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a text run object and its copy in a spreadsheet.
+// How do I reuse the same styled text run more than once in a spreadsheet?
 
-// Create an text run and its copy and add it into paragraph in a spreadsheet.
+// Clone an existing run so its formatting and content appear twice without rewriting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

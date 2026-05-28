@@ -6,7 +6,7 @@
 ## 语法
 
 ```javascript
-expression.SetValidateRange(bGreaterThan, nGreaterThan, bLessThan, nLessThan);
+expression.SetValidateRange(greaterThan, greaterThanValue, lessThan, lessThanValue);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -15,10 +15,10 @@ expression.SetValidateRange(bGreaterThan, nGreaterThan, bLessThan, nLessThan);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGreaterThan | 可选 | boolean | false | 如果为 true，则使用 `nGreaterThan` 启用最小值检查。 |
-| nGreaterThan | 必需 | number |  | 允许的最小值（根据实现方式为包含或不包含）。 |
-| bLessThan | 可选 | boolean | false | 如果为 true，则使用 `nLessThan` 启用最大值检查。 |
-| nLessThan | 必需 | number |  | 允许的最大值（根据实现方式为包含或不包含）。 |
+| greaterThan | 可选 | boolean | false | 如果为 true，使用 `greaterThanValue` 启用最小值验证。 |
+| greaterThanValue | 必需 | number |  | 允许的最小值。 |
+| lessThan | 可选 | boolean | false | 如果为 true，使用 `lessThanValue` 启用最大值验证。 |
+| lessThanValue | 必需 | number |  | 允许的最大值。 |
 
 ## 返回值
 
@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置验证范围。
+为 PDF 中的文本字段设置值限制。
 
 ```javascript editor-pdf
-// How to set validate range for a text field in a PDF document?
+// How do I restrict what numbers can be entered in a text field in a PDF?
 
-// Set validate range and display the result in a PDF document.
+// Define the minimum and maximum allowed values for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -14,7 +14,7 @@ expression.SetRotation(angle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| angle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 未提供描述。 |
+| angle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 以度为单位的旋转角度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为图章注释设置旋转。
+将 PDF 中的印章注释旋转到特定角度
 
 ```javascript editor-pdf
-// How to set rotation for a stamp annotation in a PDF document?
+// Can I adjust the rotation angle for a stamp annotation in a PDF?
 
-// Set rotation and display the result in a PDF document.
+// Set the turn angle and verify it on a stamp annotation in a PDF
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

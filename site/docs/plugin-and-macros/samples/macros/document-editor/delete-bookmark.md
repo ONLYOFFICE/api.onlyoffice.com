@@ -4,6 +4,8 @@ description: Delete a specified bookmark from a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Delete bookmark
 
 Searches for bookmarks containing a specific word in their text and deletes them from the document.
@@ -34,5 +36,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![DeleteBookmark](/assets/images/plugins/delete-bookmark.png#gh-light-mode-only)
-![DeleteBookmark](/assets/images/plugins/delete-bookmark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/delete-bookmark" dark />

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将正数向上、负数向下舍入到最接近的奇整数。
+在电子表格中将数字舍入到最近的奇数整数。
 
 ```javascript editor-xlsx
-// How to round a number the nearest odd integer in a spreadsheet.
+// How do I round a value to the nearest odd number in a spreadsheet?
 
-// Use a function round a negative/positive number the nearest odd integer in a spreadsheet.
+// Find the closest odd integer above or below a given number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

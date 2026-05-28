@@ -20,12 +20,12 @@ expression.CreateCustomGeometry();
 
 ## 示例
 
-在 PDF 文档中创建预设几何图形。
+在 PDF 中使用几何路径创建自定义形状。
 
 ```javascript editor-pdf
-// How to create custom geometry in a PDF document?
+// How do I draw a custom shape in a PDF?
 
-// Create custom geometry using the PDF document API.
+// Build a complex shape with curves and lines in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -4,6 +4,8 @@ description: Add a chart to a spreadsheet from cell data.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add chart
 
 Adds a new chart to the selected cell range.
@@ -29,4 +31,4 @@ End Sub
 
 ## Result
 
-![Chart](/assets/images/plugins/add-chart.png#gh-light-mode-only)![Chart](/assets/images/plugins/add-chart.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/add-chart" dark />

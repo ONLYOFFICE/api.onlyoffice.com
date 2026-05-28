@@ -24,7 +24,7 @@ let salesData = [
 ];
 
 // Create a 5x3 table (header + column headers + 2 data rows + total)
-let table = Api.CreateTable(3, 5);
+let table = Api.CreateTable(5, 3);
 table.SetWidth("percent", 100);
 
 // Apply table styling

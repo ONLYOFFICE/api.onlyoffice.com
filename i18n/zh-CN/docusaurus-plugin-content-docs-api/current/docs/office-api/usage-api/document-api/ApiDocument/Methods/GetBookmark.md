@@ -22,12 +22,12 @@ expression.GetBookmark(sBookmarkName);
 
 ## 示例
 
-获取文档中的书签。
+从文档中检索命名书签。
 
 ```javascript editor-docx
-// Get a bookmark added by its name in a document.
+// How do I find a bookmark by name in a document?
 
-// How to retrieve a bookmark and display its name in a document.
+// Look up a bookmark to read the text it covers in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

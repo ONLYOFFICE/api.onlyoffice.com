@@ -22,12 +22,12 @@ expression.SetTablePr(oTablePr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有区域的表格属性。
+在文档中为表格样式的条件区域应用整体表格格式。
 
 ```javascript editor-docx
-// How to set table properties to table style and set its bottom border in a document.
+// How do I define the border settings for a specific part of a table style in a document?
 
-// Update the table style table properties in a document.
+// Attach table-level layout properties to a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

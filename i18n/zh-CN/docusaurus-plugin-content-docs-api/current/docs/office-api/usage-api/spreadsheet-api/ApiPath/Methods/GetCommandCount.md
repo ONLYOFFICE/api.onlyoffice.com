@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。在单元格中显示命令总数和第一个命令信息。
+计算电子表格中自定义形状路径中绘图命令的总数。
 
 ```javascript editor-xlsx
-// How can I get the command count using a geometry path in a spreadsheet?
+// How do I find out how many steps make up a shape's outline in a spreadsheet?
 
-// Get the command count for a geometry path in a spreadsheet.
+// Check the length of a path's instruction list to understand the shape's complexity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

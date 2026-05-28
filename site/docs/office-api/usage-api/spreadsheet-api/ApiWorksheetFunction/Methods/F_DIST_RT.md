@@ -24,12 +24,12 @@ number
 
 ## Example
 
-Return the (right-tailed) F probability distribution (degree of diversity) for two data sets in a spreadsheet.
+Return the (right-tailed) F probability distribution for two data sets.
 
 ```javascript editor-xlsx
-// How to get the F probability distribution in a spreadsheet.
+// Calculate the right-tailed probability of F-distributed values.
 
-// Use function to calculate a right-tailed F probability distribution in a spreadsheet.
+// Determine F distribution using F_DIST_RT with specified degrees of freedom.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

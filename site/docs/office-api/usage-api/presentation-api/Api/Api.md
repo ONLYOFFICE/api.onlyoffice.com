@@ -7,6 +7,7 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |
@@ -42,16 +43,19 @@ Represents the Api class.
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | Creates a new theme font scheme. |
 | [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | Creates a new theme format scheme. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | None | Converts the specified JSON object into the Document Builder object of the corresponding type. |
+| [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns the first slide of the presentation. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
+| [GetLastSlide](./Methods/GetLastSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns the last slide of the presentation. |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | Returns the main presentation. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | Returns the selection from the current presentation. |
+| [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns a slide by its position in the presentation. |
 | [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
-| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |

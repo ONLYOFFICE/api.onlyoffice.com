@@ -2,9 +2,9 @@
 
 指定当前段落的阅读顺序。
 可能的值有：
--**null** - 使用标准方向参数；
--**"ltr"** - 从左到右的文本方向；
--**"rtl"** - 从右到左的文本方向。
+- **null** - 使用标准方向参数；
+- **“ltr”** - 从左到右的文本方向；
+- **“rtl”** - 从右到左的文本方向。
 
 ## 语法
 
@@ -26,12 +26,12 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-在 PDF 文档中为富文本段落设置从右到左方向。
+指定 PDF 中段落的文本阅读方向。
 
 ```javascript editor-pdf
-// How do I set reading order in a PDF document?
+// How do I set the reading direction for a paragraph in a PDF?
 
-// Set reading order using a rich paragraph object in a PDF document.
+// Configure how text flows through a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

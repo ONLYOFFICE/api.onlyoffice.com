@@ -4,6 +4,8 @@ description: Recalculate all formulas in a worksheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Recalculate worksheet values
 
 Repeatedly recalculates worksheet cell values within one-second intervals.
@@ -24,4 +26,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png#gh-light-mode-only)![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/recalculate-worksheet-values" dark />

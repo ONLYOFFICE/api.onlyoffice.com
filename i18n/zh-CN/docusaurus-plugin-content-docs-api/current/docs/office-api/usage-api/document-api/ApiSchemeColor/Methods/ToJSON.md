@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的配色方案颜色对象转换为 JSON 对象。
+将配色方案颜色序列化为文档中的可传输数据格式。
 
 ```javascript editor-docx
-// How to get a JSON from the color object in a document.
+// How do I export a scheme color as structured data for later use in a document?
 
-// Convert the RGB color object to json and add it to the document.
+// Capture a color definition as a portable object that can be recreated in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

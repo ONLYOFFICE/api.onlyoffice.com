@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置占位文本
 
 为所有包含特定键值的组合框设置指定的占位文本。
@@ -22,5 +24,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![设置占位文本](/assets/images/plugins/set-placeholder.png#gh-light-mode-only)
-![设置占位文本](/assets/images/plugins/set-placeholder.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-placeholder" dark />

@@ -7,12 +7,12 @@ Inherited from [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSi
 
 ## Example
 
-Get field widget and display it's text size in a PDF document.
+Get the text size of a field widget in a PDF.
 
 ```javascript editor-pdf
-// How can I get the text size using a widget in a PDF document?
+// How do I retrieve the text size for a widget in a PDF?
 
-// Get the text size for a widget in a PDF document.
+// Display the text size value for a widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-在文档中创建预设几何图形。
+在文档中将矩形更改为五角星形状。
 
 ```javascript editor-docx
-// How to create the preset geometry in a document?
+// How do I apply a built-in star shape outline to an existing shape in a document?
 
-// Create the preset geometry using the document API.
+// Replace a plain rectangle with a named preset shape and display its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

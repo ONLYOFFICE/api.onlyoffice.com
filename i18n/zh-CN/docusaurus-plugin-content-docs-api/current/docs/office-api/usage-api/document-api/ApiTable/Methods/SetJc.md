@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中指定表格相对于当前节中文本边距的对齐方式。
+在文档中将表格水平定位在页面边距内。
 
 ```javascript editor-docx
-// How to set justification of the paragraph content in a document.
+// How do I align a table to the center or sides of the page in a document?
 
-// Change the justification of the paragraph in a document.
+// Place a table at a specific horizontal position relative to the surrounding text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

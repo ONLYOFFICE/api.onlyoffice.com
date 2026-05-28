@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入到文档中。
+读取分配给电子表格中特定数据系列的图表类型。
 
 ```javascript editor-xlsx
-// How to find out a chart type in a spreadsheet.
+// How do I find out what chart style a particular series is using in a spreadsheet?
 
-// Display a chart type inserting it in a range in a spreadsheet.
+// Retrieve a series chart type and write the result to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

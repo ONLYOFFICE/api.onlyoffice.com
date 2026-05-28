@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置美国日期格式
 
 将所有日期表单字段的格式设置为美国格式。
@@ -26,4 +28,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-usa-date-format" dark />

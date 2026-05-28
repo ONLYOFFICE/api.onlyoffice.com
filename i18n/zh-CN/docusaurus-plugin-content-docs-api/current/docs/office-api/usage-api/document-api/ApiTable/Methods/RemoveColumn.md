@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-移除包含指定单元格的表格列。
+从文档中的表格删除列。
 
 ```javascript editor-docx
-// How to remove the column from the table in a document.
+// How do I remove a specific column from a table in a document?
 
-// Create a table, get one of its cells and delete the column.
+// Narrow a table by eliminating an unwanted column in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

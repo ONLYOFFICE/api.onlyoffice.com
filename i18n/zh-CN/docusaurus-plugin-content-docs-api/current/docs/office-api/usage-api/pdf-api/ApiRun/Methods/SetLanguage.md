@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-指定在 PDF 文档中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+指定 PDF 中文本的语言。
 
 ```javascript editor-pdf
-// How to change language of the text for grammar check in a PDF document.
+// How do I set text language for spell checking in a PDF?
 
-// Create a new text run and change its language in a PDF document.
+// Configure language detection for text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

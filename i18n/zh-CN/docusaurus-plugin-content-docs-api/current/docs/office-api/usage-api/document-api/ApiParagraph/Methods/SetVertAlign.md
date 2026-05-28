@@ -1,9 +1,9 @@
 # SetVertAlign
 
 指定将应用于此段落内容相对于段落文本默认外观的对齐方式：
--**"baseline"** - 当前段落中的字符将按默认文本基线对齐。
--**"subscript"** - 当前段落中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前段落中的字符将对齐到默认文本基线上方。
+- **“baseline”** - 当前段落中的字符将按默认文本基线对齐。
+- **“subscript”** - 当前段落中的字符将对齐到默认文本基线下方。
+- **“superscript”** - 当前段落中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-在文档中创建两个段落，一个垂直对齐方式为 "subscript"（下标），另一个为 "superscript"（上标）。
+将文档中的段落文本定位在正常书写行的上方或下方。
 
 ```javascript editor-docx
-// How to change a vertical alignment of a text run in a document.
+// How do I raise or lower the text of a paragraph relative to the baseline in a document?
 
-// Create a new text run and make it subscript, baseline or superscript in a document.
+// Distinguish scientific notation or footnote markers by shifting paragraph text vertically in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

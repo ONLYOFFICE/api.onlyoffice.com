@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成单词释义
 
 使用 [API Ninjas](https://api-ninjas.com) 提供的 [API 词典](https://api-ninjas.com/api/dictionary)在文档中生成单词释义。
@@ -37,4 +39,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-word-definitions" dark />

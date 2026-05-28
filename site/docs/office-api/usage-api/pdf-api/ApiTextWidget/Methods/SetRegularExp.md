@@ -1,11 +1,11 @@
 # SetRegularExp
 
-Sets text widget regular validate expression.
+Sets the text widget regular validation expression.
 
 ## Syntax
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | Required | string |  | field regular exp |
+| regularExpression | Required | string |  | The validation regular expression. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set regular expression for text widget in a PDF document.
+Define what pattern of text is allowed in a text field in a PDF.
 
 ```javascript editor-pdf
-// How can I set regular exp using a text widget in a PDF document?
+// How do I set a pattern that text must match in a text field in a PDF?
 
-// Set regular exp for a text widget in a PDF document.
+// Restrict text input to a specific format in a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

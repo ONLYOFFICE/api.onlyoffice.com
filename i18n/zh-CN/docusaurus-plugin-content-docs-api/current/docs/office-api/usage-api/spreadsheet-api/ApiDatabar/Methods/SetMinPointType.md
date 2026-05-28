@@ -22,12 +22,12 @@ expression.SetMinPointType(type);
 
 ## 示例
 
-设置数据条条件格式规则的最小点类型。
+定义电子表格中数据条比例尺下边界的计算方式。
 
 ```javascript editor-xlsx
-// How to change the type of the minimum condition value in a spreadsheet.
+// How do I choose what determines the shortest possible data bar in a spreadsheet?
 
-// Set the minimum point type of a data bar conditional formatting rule.
+// Anchor the bottom of a data bar range to a percentage, fixed number, or automatic value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

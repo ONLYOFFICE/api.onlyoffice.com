@@ -22,12 +22,12 @@ expression.Copy(destination);
 
 ## 示例
 
-在电子表格中将范围复制到指定范围。
+将单元格范围复制到电子表格中的另一个位置。
 
 ```javascript editor-xlsx
-// How to create identical range in a spreadsheet.
+// How do I duplicate a group of cells without retyping the content in a spreadsheet?
 
-// Get a range and create a copy of it in a spreadsheet.
+// Replicate cell content from one place to another without removing the original in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

@@ -21,12 +21,12 @@ expression.GetFormsData();
 
 ## 示例
 
-获取添加到文档的所有表单的数据。
+收集文档中所有表单的当前值。
 
 ```javascript editor-forms
-// How to get form information as a string.
+// How do I export form field data as a JSON string in a document?
 
-// Display the form data in the document.
+// Verify filled-in form values by printing them as text at the end of a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

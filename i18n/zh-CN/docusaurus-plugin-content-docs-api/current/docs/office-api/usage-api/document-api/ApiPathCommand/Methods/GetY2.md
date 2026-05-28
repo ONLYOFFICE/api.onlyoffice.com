@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从三次贝塞尔曲线命令中获取控制点和端点。在文档中显示贝塞尔曲线的所有控制点坐标。
+读取文档中曲线段端点的垂直位置。
 
 ```javascript editor-docx
-// How do I get the y2 in a document?
+// How do I find the vertical coordinate of the endpoint of a curve segment in a document?
 
-// Get the y2 using a path command object in a document.
+// Inspect the curve geometry to confirm the vertical position where the curve lands in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

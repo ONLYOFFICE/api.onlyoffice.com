@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中设置表格标题。
+为文档中的表格分配描述性标题。
 
 ```javascript editor-docx
-// How to rename the table title in a document.
+// How do I give a table a named title so it can be identified in a document?
 
-// Create a table and indicate its title in a document.
+// Label a table with a title string to make it easier to reference in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

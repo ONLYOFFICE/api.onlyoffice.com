@@ -1,6 +1,6 @@
 # OR
 
-检查是否有任何参数为 **true**。仅当所有参数都为 **false** 时才返回 **false**。
+检查是否有任何参数为 **true**。仅当所有参数均为 **false** 时返回 **false**。
 
 ## 语法
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查是否有任何参数为 true。仅当所有参数都为 false 时才返回 false。
+测试电子表格中是否至少有一个条件为真。
 
 ```javascript editor-xlsx
-// How to use OR logical operator in a spreadsheet.
+// How do I check if any value meets a condition in a spreadsheet?
 
-// Use a function to apply OR operation in a spreadsheet.
+// Return false only when all conditions are false in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

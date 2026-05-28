@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的段落行距规则。
+了解 PDF 中行距的测量方式。
 
 ```javascript editor-pdf
-// How to get the size of a spacing line rule of a text from a paragraph in a PDF document.
+// How do I check the line spacing rule for a paragraph in a PDF?
 
-// Return a spacing line rule property of a paragraph in a PDF document.
+// Identify the line spacing rule applied to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

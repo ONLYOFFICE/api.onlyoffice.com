@@ -27,9 +27,9 @@ number
 Return the exponential distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the exponential distribution in a spreadsheet.
+// Calculate exponential distribution values.
 
-// Use function to calculate an exponential distribution in a spreadsheet.
+// Apply EXPONDIST function to get the exponential distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

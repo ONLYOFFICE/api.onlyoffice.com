@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定在文档中使用 [paragraph properties#SetSpacingBefore](./SetSpacingBefore.md) 或 [paragraph properties#SetSpacingAfter](./SetSpacingAfter.md) 间距元素设置的此段落前后间距，当前后段落具有相同的段落样式时不应用，分别影响顶部和底部间距。
+在文档中取消相邻同样式段落之间的间距。
 
 ```javascript editor-docx
-// Set the contextual spacing for paragraph in a document.
+// How do I remove extra space between paragraphs that share the same style in a document?
 
-// Get the first paragraph and set the spacing for its two ends in a document.
+// Keep visually grouped paragraphs compact by ignoring before/after spacing within a style.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

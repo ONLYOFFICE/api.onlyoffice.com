@@ -20,12 +20,12 @@ expression.GetValidation();
 
 ## 示例
 
-获取电子表格中范围的验证对象。
+检索电子表格中设置在单元格范围上的数据验证规则。
 
 ```javascript editor-xlsx
-// How do I get the validation in a spreadsheet?
+// How do I access the validation settings applied to a range in a spreadsheet?
 
-// Get the validation using a cell range object.
+// Inspect and configure input restrictions on a range by reading its validation object in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

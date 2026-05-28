@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 格式化项目符号
 
 为项目符号设定一致的格式设置。
@@ -37,5 +39,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.png#gh-light-mode-only)
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/format-bullet-points" dark />

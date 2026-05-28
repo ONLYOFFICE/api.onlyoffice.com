@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Select a list item from a ComboBox content control in a document.
+Choose an active list item in a combo box content control in a document.
 
 ```javascript editor-docx
-// How to select list item for an inline content control in a document?
+// How do I set the selected value of a combo box or dropdown control in a document?
 
-// Select list item and display the result in a document.
+// Pick a specific entry by value to pre-fill a combo box for the user in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

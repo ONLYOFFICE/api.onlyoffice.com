@@ -1,12 +1,12 @@
 # SetComb
 
-Sets text field comb prop.
-💡  Should have char limit more then 0 
+Sets whether the text field uses comb formatting.
+💡 The character limit must be greater than 0.
 
 ## Syntax
 
 ```javascript
-expression.SetComb(bComb);
+expression.SetComb(comb);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -15,7 +15,7 @@ expression.SetComb(bComb);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bComb | Required | boolean |  | will the field be comb |
+| comb | Required | boolean |  | Specifies whether comb formatting is enabled. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add text field and set comb for it in a PDF document.
+Display text input in individual cells in a text field in a PDF.
 
 ```javascript editor-pdf
-// How can I set comb using a text field in a PDF document?
+// How do I spread out characters into separate boxes in a PDF?
 
-// Set comb for a text field in a PDF document.
+// Enable spaced character input for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

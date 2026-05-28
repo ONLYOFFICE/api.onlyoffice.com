@@ -20,12 +20,12 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
+从 PDF 中的形状检索边框属性。
 
 ```javascript editor-pdf
-// How do I get the line in a PDF document?
+// How do I read the outline details of a shape in a PDF?
 
-// Get the line using a shape object in a PDF document.
+// View the border information including width and color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

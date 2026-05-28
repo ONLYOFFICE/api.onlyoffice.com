@@ -20,12 +20,12 @@ expression.GetPosX();
 
 ## 示例
 
-获取绘图对象在幻灯片上的 x 位置。
+获取演示文稿中形状的水平位置。
 
 ```javascript editor-pptx
-// How can I get the pos x using a drawing object in a presentation?
+// How do I find the left edge coordinate of an object in a presentation?
 
-// Get the pos x for a drawing object in a presentation.
+// Read and display the X position of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

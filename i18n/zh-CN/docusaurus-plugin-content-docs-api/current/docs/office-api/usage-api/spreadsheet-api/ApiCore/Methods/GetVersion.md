@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的版本。
+读取电子表格工作簿文档属性中保存的版本号。
 
 ```javascript editor-xlsx
-// How can I get the version using a core properties in a spreadsheet?
+// How do I find out which version is recorded for a workbook in a spreadsheet?
 
-// Get the version for a core properties in a spreadsheet.
+// Display the version string stored in the metadata of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

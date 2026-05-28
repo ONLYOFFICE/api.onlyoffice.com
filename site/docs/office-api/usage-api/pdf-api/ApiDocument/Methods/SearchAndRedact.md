@@ -14,7 +14,7 @@ expression.SearchAndRedact(props);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| props | Required | [SearchProps](../../Enumeration/SearchProps.md) |  | No description provided. |
+| props | Required | [SearchProps](../../Enumeration/SearchProps.md) |  | The search options. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.SearchAndRedact(props);
 
 ## Example
 
-Search some word in document and add a redact annotation to it.
+Find and hide sensitive text in a PDF.
 
 ```javascript editor-pdf
-// How can I search and redact using a document in a PDF document?
+// How do I black out certain words throughout a PDF?
 
-// Search and redact for a document in a PDF document.
+// Search for a word and apply redaction to all matches in a PDF.
 
 let doc = Api.GetDocument();
 doc.SearchAndRedact({text: "Lorem", matchCase: false, wholeWords: false});

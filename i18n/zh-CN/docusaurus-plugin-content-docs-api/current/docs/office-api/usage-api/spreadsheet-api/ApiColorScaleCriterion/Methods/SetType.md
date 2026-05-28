@@ -22,12 +22,12 @@ expression.SetType(type);
 
 ## 示例
 
-在电子表格中设置色阶条件的类型。
+更改电子表格中色阶规则点的阈值类型。
 
 ```javascript editor-xlsx
-// How to change the type of a color scale criterion in a spreadsheet.
+// How do I update what kind of boundary a color scale rule point uses in a spreadsheet?
 
-// Set the type of a color scale criterion in a spreadsheet.
+// Switch a color scale rule entry from one threshold category to another to adjust how the gradient is anchored in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

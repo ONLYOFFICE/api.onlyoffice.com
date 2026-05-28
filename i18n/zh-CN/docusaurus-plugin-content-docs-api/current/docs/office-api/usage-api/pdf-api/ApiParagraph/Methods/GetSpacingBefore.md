@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中当前段落的段前间距值。
+读取 PDF 中段落上方的空间。
 
 ```javascript editor-pdf
-// How to get the size of a spacing before a text from a paragraph in a PDF document.
+// How do I check the space above a paragraph in a PDF?
 
-// Return a property of the spacing size before a paragraph in a PDF document.
+// Retrieve the space measurement before a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取字段控件并显示其在 PDF 文档中的文本自动适应属性。
+检查 PDF 中控件是否启用了自动文本适配。
 
 ```javascript editor-pdf
-// How to is auto fit for a widget in a PDF document?
+// How do I determine if a widget has autofit enabled in a PDF?
 
-// Is auto fit and display the result in a PDF document.
+// Retrieve and display the autofit status for a widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -25,12 +25,12 @@ expression.RGBA(r, g, b, a);
 
 ## Example
 
-Create RGBA color and use it as content control background color in a document.
+Create a semi-transparent color and apply it as a background of an inline text control in a document.
 
 ```javascript editor-docx
-// How to r g b an in a document?
+// How do I set a translucent background color on an inline text control in a document?
 
-// R g b an using the document API.
+// Use a color with opacity to highlight an inline text area inside a paragraph in a document.
 
 const doc = Api.GetDocument();
 

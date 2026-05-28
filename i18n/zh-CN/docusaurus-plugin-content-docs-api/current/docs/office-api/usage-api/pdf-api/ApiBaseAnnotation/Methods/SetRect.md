@@ -14,7 +14,7 @@ expression.SetRect(rect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 未提供描述。 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 批注的新边界矩形。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并将矩形设置为初始大小的两倍。
+在 PDF 中通过更改边界调整注释大小。
 
 ```javascript editor-pdf
-// How can I set rect using an annotation in a PDF document?
+// Expand or shrink an annotation's size in a PDF.
 
-// Set rect for an annotation in a PDF document.
+// Adjust the rectangular area covered by an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

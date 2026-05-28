@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes cloud shape path properties on a slide. Displays comprehensive path information in a text shape.
+Retrieve the fill color of a custom shape's path in a presentation.
 
 ```javascript editor-pptx
-// How to get the fill for a geometry path in a presentation?
+// What fill color is applied to a shape's outline in a presentation?
 
-// Get the fill and display the result in a presentation.
+// Display the fill color properties of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

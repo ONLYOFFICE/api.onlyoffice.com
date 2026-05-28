@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中计算数据库中与指定条件匹配的记录字段（列）中非空单元格数。
+计算电子表格中匹配筛选器的数据库列中所有已填充的单元格。
 
 ```javascript editor-xlsx
-// How to count the non-empty cells containing numbers in the field (column) of records in the database that match the conditions you specify.
+// How many non-empty entries satisfy the conditions you set in a spreadsheet?
 
-// Use function to count numbers from non-empty database records that met a condition specified in a spreadsheet.
+// Find how many records have any value in your filtered database column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

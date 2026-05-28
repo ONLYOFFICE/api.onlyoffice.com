@@ -16,16 +16,16 @@ expression.Delete();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-删除工作表。
+从电子表格中的工作簿移除工作表。
 
 ```javascript editor-xlsx
-// How to delete sheets in a spreadsheet.
+// How do I delete a worksheet that is no longer needed in a spreadsheet?
 
-// Delete and display the result in a spreadsheet.
+// Permanently discard a sheet and confirm the removal with a message.
 
 Api.AddSheet("New sheet");
 let sheet = Api.GetActiveSheet();

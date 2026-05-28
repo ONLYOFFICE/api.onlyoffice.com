@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中使用指定的字体系列设置所有 4 个字体槽。
+更改文档中应用于文本的字体系列。
 
 ```javascript editor-docx
-// How to change the text font family in a document.
+// How do I apply a different typeface to text in a document?
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it in a document.
+// Switch all text to a specific font by updating the default text properties in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

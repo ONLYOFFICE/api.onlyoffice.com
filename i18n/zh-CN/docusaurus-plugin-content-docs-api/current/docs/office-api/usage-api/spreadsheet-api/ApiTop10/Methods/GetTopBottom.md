@@ -1,6 +1,6 @@
 # GetTopBottom
 
-返回 "XlTopBottom" 常量，指示排名是从顶部还是底部计算。
+返回 “XlTopBottom” 常量，指示排名是从顶部还是底部计算。
 
 ## 语法
 
@@ -20,12 +20,12 @@ expression.GetTopBottom();
 
 ## 示例
 
-获取电子表格中前 10 条件的顶部/底部设置。
+读取电子表格中前 10 项规则是高亮显示最高值还是最低值。
 
 ```javascript editor-xlsx
-// How to determine if the condition evaluates top or bottom values in a spreadsheet.
+// How do I check if a top 10 conditional formatting rule targets top or bottom values in a spreadsheet?
 
-// Get the top/bottom direction setting from the top 10 rule in a spreadsheet.
+// Confirm the direction of a top 10 highlight rule — highest or lowest — in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 查找无效邮箱
 
 检测并高亮显示指定列或整个工作表中的无效邮箱地址。
@@ -57,5 +59,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![查找无效邮箱](/assets/images/plugins/find-invalid-emails.png#gh-light-mode-only)
-![查找无效邮箱](/assets/images/plugins/find-invalid-emails.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-invalid-emails" dark />

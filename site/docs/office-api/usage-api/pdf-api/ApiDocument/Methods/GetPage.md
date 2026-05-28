@@ -5,7 +5,7 @@ Gets page by index from document.
 ## Syntax
 
 ```javascript
-expression.GetPage(nPos);
+expression.GetPage(index);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,7 +14,7 @@ expression.GetPage(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | page position |
+| index | Required | number |  | page index. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.GetPage(nPos);
 
 ## Example
 
-Get first page and set rotate.
+Access a single page from a PDF.
 
 ```javascript editor-pdf
-// How to get the page for a document?
+// How do I work with a specific page in a PDF?
 
-// Get the page and display the result in a PDF document.
+// Retrieve a page and rotate it in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

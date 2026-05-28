@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 从列表项创建幻灯片
 
 根据当前幻灯片中的列表项创建新幻灯片。每个列表项将成为一张幻灯片的标题。
@@ -104,5 +106,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![从列表项创建幻灯片](/assets/images/plugins/create-similar-slides.png#gh-light-mode-only)
-![从列表项创建幻灯片](/assets/images/plugins/create-similar-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/create-slides-from-list-items" dark />

@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get the slide height in English measure units in a presentation.
 
 ```javascript editor-pptx
-// How to find a slide's height and display it on the slide.
+// Retrieve the slide height using GetHeight and display the measurement on the slide.
 
-// Get a height ofthe slide object and show it in the slide.
+// Convert the height value from EMUs to millimeters for display.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

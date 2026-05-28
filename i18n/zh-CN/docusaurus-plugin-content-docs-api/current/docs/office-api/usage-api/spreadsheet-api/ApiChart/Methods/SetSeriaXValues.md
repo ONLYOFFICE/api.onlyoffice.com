@@ -14,7 +14,7 @@ expression.SetSeriaXValues(sRange, nSeria);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | 必需 | string |  | 包含系列 X 轴值的工作表单元格范围。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列，「Example series」。 |
+| sRange | 必需 | string |  | 工作表中包含系列 X 轴值的单元格区域。例如："'sheet 1'!$A$2:$A$5" - 必须是单个单元格、行或列，"A1:A5" - 必须是单个单元格、行或列，"Example series"。 |
 | nSeria | 必需 | number |  | 图表系列的索引。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在电子表格中将指定范围的 x 轴值设置到指定系列。仅用于散点图。
+将单元格范围数据分配为电子表格中散点图系列的水平轴值。
 
 ```javascript editor-xlsx
-// How to add values to the horizontal axis of series for scatter charts from the indicated range using addresses in a spreadsheet.
+// How do I set custom x-axis values for a scatter chart series from a cell range in a spreadsheet?
 
-// Fill seria's x-axis of scatter charts with values from the worksheet cells.
+// Control the horizontal positions of scatter chart points by linking them to a row of cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

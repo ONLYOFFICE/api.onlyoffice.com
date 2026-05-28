@@ -24,12 +24,12 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-在文档中创建 RGB 格式的颜色并将其用作字体颜色。
+从红、绿、蓝值创建自定义颜色并将其应用于文档中的文本。
 
 ```javascript editor-docx
-// How can I r g b in a document?
+// How do I set text color using red, green, and blue values in a document?
 
-// R g b in a document using the editor API in a document.
+// Color paragraph text with a specific RGB combination in a document.
 
 const doc = Api.GetDocument();
 const color = Api.RGB(186, 218, 85);

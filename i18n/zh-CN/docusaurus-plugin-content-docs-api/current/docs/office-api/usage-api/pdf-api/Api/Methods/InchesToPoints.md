@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在 PDF 文档中将英寸转换为磅。
+在 PDF 中将英寸转换为磅。
 
 ```javascript editor-pdf
-// How do I convert inches to points in a PDF document?
+// How do I convert inches to points for sizing in a PDF?
 
-// Convert inches to points and display the result in a PDF document.
+// Translate inch values to point measurements and show the conversion in a PDF.
 
 const inches = 100;
 const points = Api.InchesToPoints(inches);

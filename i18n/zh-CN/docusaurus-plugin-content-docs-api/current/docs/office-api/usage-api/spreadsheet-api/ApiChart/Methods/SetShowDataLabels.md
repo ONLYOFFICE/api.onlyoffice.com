@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定在电子表格中为图表显示哪些数据标签。
+控制电子表格中图表上显示哪些数据标签元素。
 
 ```javascript editor-xlsx
-// How to hide chart data labels in a spreadsheet.
+// How do I choose what information appears in chart data labels in a spreadsheet?
 
-// Show only values as chart lables in a spreadsheet.
+// Show only the numeric values on chart bars while hiding category names and percentages in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

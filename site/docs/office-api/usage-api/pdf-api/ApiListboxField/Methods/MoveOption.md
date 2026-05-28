@@ -6,12 +6,12 @@ Inherited from [ApiBaseListField.MoveOption](../../ApiBaseListField/Methods/Move
 
 ## Example
 
-Move option in field with list of options in a PDF document.
+Reorder choices in a dropdown field in a PDF.
 
 ```javascript editor-pdf
-// How can I move option using a list field in a PDF document?
+// How do I rearrange the order of options in a dropdown in a PDF?
 
-// Move option for a list field in a PDF document.
+// Change the position of an item in a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

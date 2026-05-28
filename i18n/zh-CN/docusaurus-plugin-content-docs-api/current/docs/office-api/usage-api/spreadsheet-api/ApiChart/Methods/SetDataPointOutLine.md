@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在电子表格中为数据点设置轮廓。
+在电子表格中为图表上的单个数据点添加可见边框。
 
 ```javascript editor-xlsx
-// Set the outline to the data point in the specified chart series in a spreadsheet.
+// How do I draw an outline on one specific data point in a chart series in a spreadsheet?
 
-// How to set data point outline using a stroke in a spreadsheet.
+// Distinguish an individual bar or marker by giving it a colored border in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

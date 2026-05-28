@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-将文档中的块级内容控件对象转换为 JSON 对象。
+将内容控件保存为 JSON 并在文档中恢复。
 
 ```javascript editor-docx
-// Create a block content control and convert it into the JSON object in a document.
+// How do I serialize a content control to JSON and recreate it in a document?
 
-// How to create the JSON object from the block-level content control object in a document.
+// Export a content control to JSON format and insert the restored copy into a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

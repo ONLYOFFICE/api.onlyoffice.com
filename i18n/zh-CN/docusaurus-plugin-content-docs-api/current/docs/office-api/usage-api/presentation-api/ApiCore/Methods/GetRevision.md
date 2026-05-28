@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的修订版本。
+设置和显示演示文稿的修订号。
 
 ```javascript editor-pptx
-// How can I get the revision using a core properties in a presentation?
+// How do I check the revision information for a presentation?
 
-// Get the revision for a core properties in a presentation.
+// Read the revision identifier stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

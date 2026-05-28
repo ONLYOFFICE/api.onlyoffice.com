@@ -22,12 +22,12 @@ expression.GetCell(nPos);
 
 ## Example
 
-Get a cell by its position in the row in a presentation.
+Access a specific table cell using its column position in a presentation.
 
 ```javascript editor-pptx
-// How to return a cell using its row index.
+// How do I retrieve a cell from a row by its column index in a presentation?
 
-// Create a table, get its row and get a cell from this row.
+// Select a cell from a table row to read or modify its content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

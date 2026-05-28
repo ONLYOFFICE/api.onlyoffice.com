@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellBorderBottom(fSize, oApiFill);
+expression.SetCellBorderBottom(borderWidth, fill);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetCellBorderBottom(fSize, oApiFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
+| borderWidth | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格底部边框及其填充颜色。
+在 PDF 中为表格单元格添加底部边框。
 
 ```javascript editor-pdf
-// Create table and set its cell bottom border.
+// How do I create a border on the bottom edge of a cell in a PDF?
 
-// Set cell border bottom using a table cell object.
+// Draw a styled line along the bottom of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

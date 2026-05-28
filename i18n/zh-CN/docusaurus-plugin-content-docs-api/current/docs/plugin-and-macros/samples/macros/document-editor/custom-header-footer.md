@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自定义页眉和页脚
 
 将预定义的页眉和页脚应用到文档中的所有页面。
@@ -40,4 +42,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/custom-header-footer" dark />

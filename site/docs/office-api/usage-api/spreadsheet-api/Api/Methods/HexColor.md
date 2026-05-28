@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | Required | string |  | No description provided. |
+| hexString | Required | string |  | The HEX string representing a color. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.HexColor(hexString);
 
 ## Example
 
-Create a hex color and use it as a shape fill in a spreadsheet.
+Define a color from a hex code and apply it as a shape fill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I hex color in a spreadsheet?
+// How do I use a hex color code to fill a shape in a spreadsheet?
 
-// Hex color and display the result in a spreadsheet.
+// Paint a shape with a custom hex color in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.HexColor('#DECADE');

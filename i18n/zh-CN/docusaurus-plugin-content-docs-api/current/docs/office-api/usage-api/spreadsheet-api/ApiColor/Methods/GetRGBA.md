@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取电子表格中形状填充颜色的 RGBA 分量。
+读取电子表格中填充颜色的红、绿、蓝和透明度值。
 
 ```javascript editor-xlsx
-// How to get the r g b a for a color in a spreadsheet?
+// How do I retrieve all four color channel values including transparency for a shape in a spreadsheet?
 
-// Get the r g b an and display the result in a spreadsheet.
+// Capture the full color definition with opacity and display each channel separately in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGBA(110, 160, 180, 127);

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+计算构成 PDF 中形状轮廓的绘图步骤数。
 
 ```javascript editor-pdf
-// How to get the command count for a geometry path in a PDF document?
+// How many drawing steps does a shape have in a PDF?
 
-// Get the command count and display the result in a PDF document.
+// Find out how many commands are used to create a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

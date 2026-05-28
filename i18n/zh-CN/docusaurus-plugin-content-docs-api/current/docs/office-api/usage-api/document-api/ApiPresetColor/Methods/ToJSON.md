@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的预设颜色对象转换为 JSON 对象。
+将命名颜色保存为文档中的可移植数据结构。
 
 ```javascript editor-docx
-// How to get a JSON from the preset color object in a document.
+// How do I export a named color so it can be restored later in a document?
 
-// Convert the preset color element to json and add it to the paragraph in a document.
+// Preserve a named color value by serializing it for later reuse in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

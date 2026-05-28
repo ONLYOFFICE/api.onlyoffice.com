@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Get a text strikeout using its property in a spreadsheet.
+Check whether strikeout formatting is enabled for a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out or not in a spreadsheet.
+// How do I find out if a line is drawn through the text in a spreadsheet?
 
-// Get cross out property of a text in a spreadsheet.
+// Verify if text is marked as crossed out by reading its strikeout property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在表单文档中移除角色。
+从文档中删除角色。
 
 ```javascript editor-forms
-// How to remove for a form roles?
+// How do I remove a role that is no longer needed in a document?
 
-// Remove and display the result in a form document.
+// Eliminate a specific role and show the remaining roles in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

@@ -6,12 +6,12 @@ Inherited from [ApiTableCellPr.SetCellBorderBottom](../../ApiTableCellPr/Methods
 
 ## Example
 
-Set the border which will be displayed at the bottom of the table cell.
+Add a border along the bottom edge of a table cell in a document.
 
 ```javascript editor-docx
-// How to add border to the bottom of the cell.
+// How do I draw a line at the bottom of a table cell in a document?
 
-// Create a 3x3 table and add the bottom 4 point black border to cell #1.
+// Define the style and thickness of the lower border for a table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

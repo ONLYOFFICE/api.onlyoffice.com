@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert twips to points in a document.
+Convert a measurement from twips to points in a document.
 
 ```javascript editor-docx
-// How can I convert twips to points in a document?
+// How do I convert twips to points in a document?
 
-// Convert twips to points in a document.
+// Display the point equivalent of a twip value as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

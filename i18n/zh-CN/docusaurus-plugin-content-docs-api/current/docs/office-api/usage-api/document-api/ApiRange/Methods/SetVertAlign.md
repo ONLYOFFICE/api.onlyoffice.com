@@ -1,9 +1,9 @@
 # SetVertAlign
 
 指定将应用于范围内容的对齐方式，相对于范围文本的默认外观：
--**"baseline"** - 当前文本范围中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本范围中的字符将在默认文本基线下方对齐。
--**"superscript"** - 当前文本范围中的字符将在默认文本基线上方对齐。
+- **“baseline”** - 当前文本范围中的字符将按默认文本基线对齐。
+- **“subscript”** - 当前文本范围中的字符将在默认文本基线下方对齐。
+- **“superscript”** - 当前文本范围中的字符将在默认文本基线上方对齐。
 
 ## 语法
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-为文本范围设置垂直对齐方式 "superscript"（上标）。
+将文档中的选定文本设置为上标或下标，使其位于正常行的上方或下方。
 
 ```javascript editor-docx
-// Set the vertical alignment of a text in a document.
+// How do I align a range of characters vertically as raised or lowered text in a document?
 
-// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
+// Mark a word or symbol to sit above or below the baseline of surrounding text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -14,7 +14,7 @@ expression.SetBackgroundColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 未提供描述。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 背景颜色。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中的所有字段控件并为其设置背景颜色。
+在 PDF 中为所有字段控件应用背景颜色。
 
 ```javascript editor-pdf
-// How do I set background color in a PDF document?
+// How do I set the background color for widgets in a PDF?
 
-// Set background color using a widget object in a PDF document.
+// Change the fill color of widget backgrounds in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

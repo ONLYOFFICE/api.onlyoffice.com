@@ -30,7 +30,7 @@ customization 部分定义编辑器自定义参数。
 }
 ```
 
-![匿名](/assets/images/editor/anonymous.png)
+![匿名](/assets/images/editor/anonymous.png#gh-light-mode-only)![匿名](/assets/images/editor/anonymous.dark.png#gh-dark-mode-only)
 
 ### anonymous.request
 
@@ -110,18 +110,6 @@ customization 部分定义编辑器自定义参数。
 **示例**: `"关闭文件"`
 
 ![标题中的十字按钮](/assets/images/editor/cross-button.png#gh-light-mode-only)![标题中的十字按钮](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
-
-## commentAuthorOnly
-
-**类型：** `boolean` | **默认值：** `false`
-
-用户是否只能编辑和删除自己的评论。
-
-:::danger[Deprecated]
-自 6.3 版起已弃用，请改用 [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) 字段。
-:::
-
-**示例**: `true`
 
 ## 评论 {#comments}
 
@@ -388,7 +376,6 @@ customization 部分定义编辑器自定义参数。
 
 **反馈和支持**菜单按钮的设置。如果设置为 `false`，按钮隐藏。
 
-
 **示例**:
 
 ```ts
@@ -398,7 +385,7 @@ customization 部分定义编辑器自定义参数。
 }
 ```
 
-![反馈](/assets/images/editor/feedback.png)
+![反馈](/assets/images/editor/feedback.png#gh-light-mode-only)![反馈](/assets/images/editor/feedback.dark.png#gh-dark-mode-only)
 
 ### feedback.url
 
@@ -441,8 +428,6 @@ customization 部分定义编辑器自定义参数。
 **类型：** `object`
 
 **打开文件位置**菜单按钮和右上角按钮的设置。
-
-
 
 **示例**:
 
@@ -497,8 +482,6 @@ customization 部分定义编辑器自定义参数。
 **类型：** `boolean` | **默认值：** `true`
 
 **帮助**菜单按钮是显示还是隐藏。
-
-
 
 **示例**: `true`
 
@@ -663,7 +646,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**: `true`
 
-<img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mention share](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mention share](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
 
 ## mobile
 
@@ -949,8 +932,8 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 }
 ```
 
-![提交按钮](/assets/images/editor/submitForm.png)
-![提交按钮](/assets/images/editor/submitForm-message.png)
+![提交按钮](/assets/images/editor/submitForm.png#gh-light-mode-only)![提交按钮](/assets/images/editor/submitForm.dark.png#gh-dark-mode-only)
+![提交按钮](/assets/images/editor/submitForm-message.png#gh-light-mode-only)![提交按钮](/assets/images/editor/submitForm-message.dark.png#gh-dark-mode-only)
 
 ### submitForm.visible
 

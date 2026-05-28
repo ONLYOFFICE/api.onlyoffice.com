@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取字段控件并显示其在 PDF 文档中的背景颜色。
+读取 PDF 中表单字段控件的背景颜色。
 
 ```javascript editor-pdf
-// How do I get the background color in a PDF document?
+// How do I get the background color of a widget in a PDF?
 
-// Get the background color using a widget object in a PDF document.
+// Retrieve and display the fill color of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

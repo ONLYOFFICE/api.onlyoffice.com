@@ -1,6 +1,6 @@
 # ISNONTEXT
 
-Checks whether a value is not text (blank cells are not text), and returns -**true** or -**false**.
+Checks whether a value is not text (blank cells are not text), and returns - **true** or - **false**.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Check whether a value is not text (blank cells are not text), and return true or false in a spreadsheet.
+Determine whether a cell contains something other than text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if the cell contains a non-text value.
+// How do I verify if a cell is not text (includes numbers and blank cells) in a spreadsheet?
 
-// Use a function to check whether a range data is a text or not in a spreadsheet.
+// Use a function to separate text values from numbers and empty cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

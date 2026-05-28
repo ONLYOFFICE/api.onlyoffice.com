@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the outline properties to a shape. Creates a rectangle and change its outline to a thick blue line in a document.
+Change the border style and color of a shape in a document.
 
 ```javascript editor-docx
-// How do I set line in a document?
+// How do I customize the outline stroke around a shape in a document?
 
-// Set line using a shape object in a document.
+// Make a shape stand out by giving its border a specific thickness and color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

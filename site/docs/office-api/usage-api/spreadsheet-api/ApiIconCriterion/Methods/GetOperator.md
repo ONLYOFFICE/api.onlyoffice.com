@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-Get the comparison operator of an icon criterion in a spreadsheet.
+Read the comparison operator from an icon criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I get the operator in a spreadsheet?
+// How do I find out which comparison operator an icon criterion uses in a spreadsheet?
 
-// Get the operator using an icon criterion object in a spreadsheet.
+// Check whether a criterion compares values with greater-than, less-than, or another rule in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Scores');

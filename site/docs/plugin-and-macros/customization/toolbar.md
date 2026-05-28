@@ -10,7 +10,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
 ## AddToolbarMenuItem
 
-`Type: method`
+**type:** `method`
 
 Adds an item to the toolbar menu.
 
@@ -52,7 +52,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 ## ToolbarMenuMainItem
 
-`Type: object`
+**type:** `object`
 
 The main toolbar menu item.
 
@@ -74,7 +74,7 @@ const oToolbarMenuMainItem = {
 
 ## ToolbarMenuTab
 
-`Type: object`
+**type:** `object`
 
 The toolbar menu tab.
 
@@ -98,7 +98,7 @@ const oToolbarMenuTab = {
 
 ## ToolbarMenuItem
 
-`Type: object`
+**type:** `object`
 
 The toolbar menu item.
 
@@ -112,7 +112,7 @@ The toolbar menu item.
 | *hint*           | string                                      | The item hint.                                                                                                                           |
 | *icons*          | string / object                             | The item icons (see the plugins [config](../structure/configuration/configuration.md#variationsicons) documentation).                              |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
-| *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.               |
+| *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when `split == false`) or its top part (when `split == true`) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
 | *separator*      | boolean                                     | Specifies whether a separator is used between the toolbar menu items.                                                                    |
 | *split*          | boolean                                     | Specifies whether the toolbar menu item is split into two parts and includes the drop-down menu.                                         |
@@ -155,9 +155,9 @@ const oToolbarMenuItem = {
 
 ## ToolbarMenuItemType
 
-`Type: "button" | "big-button"`
+**type:** `"button" | "big-button"`
 
-The toolbar menu item type. The *button* and *big-button* values are the same and can be equally used to specify the toolbar button.
+The toolbar menu item type. The `button` and `big-button` values are the same and can be equally used to specify the toolbar button.
 
 ## Standard toolbar tab IDs
 
@@ -291,7 +291,7 @@ A button that can be toggled.
 
 ## onToolbarMenuClick
 
-`Type: event`
+**type:** `event`
 
 The event called when the toolbar menu button has been clicked. [Subscribe](../interacting-with-editors/overview/how-to-attach-events.md) to this event to handle toolbar button clicks.
 
@@ -311,7 +311,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 ## UpdateToolbarMenuItem
 
-`Type: method`
+**type:** `method`
 
 Updates the toolbar menu item.
 
@@ -351,7 +351,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 ## attachToolbarMenuClickEvent
 
-`Type: method`
+**type:** `method`
 
 Adds an event listener, a function that will be called whenever the specified button is clicked in the toolbar menu and triggers an event. For each toolbar menu button, you can specify a separate event listener by its ID.
 

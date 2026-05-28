@@ -6,12 +6,12 @@
 
 ## 示例
 
-如何在 PDF 文档中调整绘图对象的大小。
+在 PDF 中将绘图对象调整为特定尺寸。
 
 ```javascript editor-pdf
-// Get a shape object from a page and set its size.
+// How do I make a shape larger or smaller in a PDF?
 
-// Set size using a drawing object object in a PDF document.
+// Modify the width and height of a drawing element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

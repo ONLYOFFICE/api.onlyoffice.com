@@ -14,7 +14,7 @@ expression.SetIconType(iconType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| iconType | Required | [TextIconType](../../Enumeration/TextIconType.md) |  | No description provided. |
+| iconType | Required | [TextIconType](../../Enumeration/TextIconType.md) |  | The icon type for the text annotation. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set new icon type for text annotation in a PDF document.
+Choose the icon symbol for a text annotation in a PDF.
 
 ```javascript editor-pdf
-// How to set icon type for a text annotation in a PDF document?
+// How do I change which icon a text annotation shows in a PDF?
 
-// Set icon type and display the result in a PDF document.
+// Assign a different icon appearance to an annotation comment in a PDF.
 
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);

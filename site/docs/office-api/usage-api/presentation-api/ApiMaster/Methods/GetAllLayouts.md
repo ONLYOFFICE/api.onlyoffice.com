@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all layouts of the specified slide master in a presentation.
+Retrieve all slide layouts from a master in a presentation.
 
 ```javascript editor-pptx
-// How to get all layouts for a slide master?
+// How do I access all slide layouts in a master in a presentation?
 
-// Get all layouts and display the result in a presentation.
+// List every layout associated with a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

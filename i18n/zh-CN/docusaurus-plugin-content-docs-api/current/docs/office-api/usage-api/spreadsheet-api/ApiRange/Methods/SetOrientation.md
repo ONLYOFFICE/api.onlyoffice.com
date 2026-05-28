@@ -22,12 +22,12 @@ expression.SetOrientation(angle);
 
 ## 示例
 
-为单元格范围设置角度。
+旋转电子表格中单元格范围内的文本。
 
 ```javascript editor-xlsx
-// How to set an orientation of cells.
+// How do I tilt or angle the text in a group of cells in a spreadsheet?
 
-// Get a range and specify its orientation in a spreadsheet.
+// Change the direction text flows within cells to improve layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

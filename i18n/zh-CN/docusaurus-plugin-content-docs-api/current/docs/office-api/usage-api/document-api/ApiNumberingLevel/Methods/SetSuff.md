@@ -1,6 +1,6 @@
 # SetSuff
 
-指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。默认情况下，此值为 "tab"。
+指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。默认情况下，此值为 “tab”。
 
 ## 语法
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定将在给定编号级别文本与文档中引用该编号级别的每个编号段落的文本之间添加的内容。
+设置文档中编号标签与其段落文本之间的分隔字符。
 
 ```javascript editor-docx
-// How to set separating symbol between numbering and numbered text in a document.
+// How do I add a space between the list number and the paragraph content in a document?
 
-// Set space between numbering level text and the text itself in a document.
+// Control what follows the list marker before each item's text begins in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 
 ## 示例
 
-<Tabs groupId="lang">
+<Tabs groupId="lang" queryString="lang">
     <TabItem value="python" label="Python">
         ```py
         import os

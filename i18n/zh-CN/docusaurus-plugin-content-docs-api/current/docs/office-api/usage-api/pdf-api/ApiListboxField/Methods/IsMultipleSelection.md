@@ -1,6 +1,6 @@
 # IsMultipleSelection
 
-检查字段是否为多选。
+检查字段是否支持多选。
 
 ## 语法
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中列表框字段的多选属性。
+检查 PDF 中的列表选择字段是否允许选择多个项目。
 
 ```javascript editor-pdf
-// How to is multiple selection for a listbox field in a PDF document?
+// How do I know if multiple choices are allowed in a PDF?
 
-// Is multiple selection and display the result in a PDF document.
+// Verify the selection mode for this field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

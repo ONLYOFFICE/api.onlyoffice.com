@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（上标文本）或负值（下标文本）的度量值。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在文档中此段落的文本相对于周围非定位文本的默认基线升高或降低的量。
+相对于文档中周围的基线升高或降低段落文本。
 
 ```javascript editor-docx
-// How to set the line position of the text in a document.
+// How do I shift a paragraph's text up or down from its normal vertical position in a document?
 
-// Lower the paragraph by 15 points in a document.
+// Offset a paragraph vertically to achieve a superscript or subscript-like effect in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成演示文稿大纲
 
 根据标题自动生成演示文稿大纲。
@@ -53,5 +55,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.png#gh-light-mode-only)
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/generate-outline" dark />

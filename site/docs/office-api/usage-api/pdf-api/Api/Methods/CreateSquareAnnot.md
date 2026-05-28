@@ -22,12 +22,12 @@ expression.CreateSquareAnnot(rect);
 
 ## Example
 
-Create a square annotation and add it to the page.
+Add a square border annotation to a PDF page.
 
 ```javascript editor-pdf
-// How do I create the square annot in a PDF document?
+// How do I mark a region with a square box in a PDF?
 
-// Create the square annot and display the result in a PDF document.
+// Display a square annotation at specified coordinates in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

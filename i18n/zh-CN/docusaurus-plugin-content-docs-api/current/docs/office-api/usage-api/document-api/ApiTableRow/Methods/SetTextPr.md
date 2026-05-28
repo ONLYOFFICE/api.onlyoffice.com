@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中当前行的文本属性。
+在文档中为表格行的所有单元格应用文本格式。
 
 ```javascript editor-docx
-// Make the row text bold in a document.
+// How do I change the text style for an entire row of a table in a document?
 
-// How to apply new text properties to the table row in a document.
+// Style the text across a full table row uniformly in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

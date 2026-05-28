@@ -4,6 +4,8 @@ description: Insert a text watermark into a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Insert watermark
 
 Inserts or removes a custom watermark on every page of the document.
@@ -41,5 +43,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-watermark" dark />

@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-Set the italic property to the text character in a presentation.
+Display text in italics in a presentation.
 
 ```javascript editor-pptx
-// How to make a text italic in a presentation.
+// Can I slant text to make it italicized in a presentation?
 
-// Get the text properties of the run and set it to italic in a presentation.
+// Enable italic formatting for the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

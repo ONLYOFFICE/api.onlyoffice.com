@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Delete an XML element from a custom XML part in a document.
+Remove an XML element from embedded structured data in a document.
 
 ```javascript editor-docx
-// How do I delete the element in a document?
+// How do I delete a specific element from the XML data stored in a document?
 
-// Delete the element using a custom XML part object in a document.
+// Trim unnecessary child nodes from structured content to keep the stored data lean in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

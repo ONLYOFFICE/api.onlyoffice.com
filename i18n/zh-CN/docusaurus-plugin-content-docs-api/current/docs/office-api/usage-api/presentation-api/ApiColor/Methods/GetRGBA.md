@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取演示文稿中形状填充颜色的 RGBA 分量。
+读取演示文稿中形状填充的颜色通道（红、绿、蓝和不透明度）。
 
 ```javascript editor-pptx
-// How do I get the r g b an in a presentation?
+// How do I access the individual color values from a fill in a presentation?
 
-// Get the r g b an using a color object in a presentation.
+// Extract color channel values from an applied color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

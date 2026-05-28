@@ -14,7 +14,7 @@ expression.SetVAlign(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | String |  | 垂直对齐类型：可以是 "top"、"center" 或 "bottom"。 |
+| sType | 必需 | String |  | 垂直对齐类型：可以是 “top”、“center” 或 “bottom”。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格的垂直对齐方式。
+控制文档中表格每行内单元格内容的垂直位置。
 
 ```javascript editor-docx
-// How to indicate the vertical alignment of the table cell.
+// How do I push text to the bottom of a table cell instead of the top in a document?
 
-// Align the content of the table as bottom in a document.
+// Position content at the bottom edge of every cell to create a cleaner layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.SetConditionalTableStyle(oTableStylePr);
 
 ## 示例
 
-创建并设置格式属性，这些属性将有条件地应用于文档中与 sType 参数指定的要求匹配的表格部分。
+在文档中使用条件规则为表格的特定区域应用不同的格式。
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
+// How do I style individual parts of a table differently depending on their position in a document?
 
-// Create a conditional table style in a document.
+// Target table sections such as the whole table or header row with distinct formatting rules in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

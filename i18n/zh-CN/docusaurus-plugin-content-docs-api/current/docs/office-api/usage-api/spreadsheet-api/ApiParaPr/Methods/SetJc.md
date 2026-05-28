@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置电子表格中段落内容的对齐方式。
+在电子表格中将形状内的段落文本居中对齐。
 
 ```javascript editor-xlsx
-// How to center a paragraph text in a spreadsheet.
+// How do I change the horizontal alignment of a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying its justification type in a spreadsheet.
+// Control whether paragraph text snaps to the left, right, center, or stretches across the full width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

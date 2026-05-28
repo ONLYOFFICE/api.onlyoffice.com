@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the creation date of the workbook using the core properties in a spreadsheet.
+Write a creation date into the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set created for a core properties in a spreadsheet?
+// How do I set the creation date recorded for a workbook in a spreadsheet?
 
-// Set created and display the result in a spreadsheet.
+// Store a specific date as the origin timestamp for the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

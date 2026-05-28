@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-从电子表格中的自定义 XML 节点删除属性。
+从电子表格中存储的 XML 节点移除命名属性。
 
 ```javascript editor-xlsx
-// How to delete the attribute for a custom XML node in a spreadsheet?
+// How do I strip a specific attribute from a custom XML element in a spreadsheet?
 
-// Delete the attribute and display the result in a spreadsheet.
+// Clean up XML metadata by dropping an attribute and confirming the change in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

@@ -20,12 +20,12 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
+读取文档中形状的边框线条属性。
 
 ```javascript editor-docx
-// How do I get the line in a document?
+// How do I inspect the thickness, color, and style of a shape's outline in a document?
 
-// Get the line using a shape object in a document.
+// Extract stroke details from a shape to display its border settings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

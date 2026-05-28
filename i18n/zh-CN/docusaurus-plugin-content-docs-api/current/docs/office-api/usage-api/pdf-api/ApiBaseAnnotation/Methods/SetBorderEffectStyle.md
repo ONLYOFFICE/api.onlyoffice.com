@@ -15,7 +15,7 @@ expression.SetBorderEffectStyle(style);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | 必需 | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | 未提供描述。 |
+| style | 必需 | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | 边框效果样式：**"none"** 或 **"cloud"**。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并设置边框效果样式。
+在 PDF 中为注释的边框应用视觉效果样式。
 
 ```javascript editor-pdf
-// How do I set border effect style in a PDF document?
+// What visual effect should appear on an annotation's border in a PDF?
 
-// Set border effect style using an annotation object in a PDF document.
+// Configure a border effect style on an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

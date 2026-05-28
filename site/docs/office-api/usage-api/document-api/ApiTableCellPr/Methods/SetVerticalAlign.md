@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Specify the vertical alignment for the text contents within the table cell.
+Control where text is positioned vertically inside a table cell in a document.
 
 ```javascript editor-docx
-// Set text vertical alignment to the cell.
+// How do I align text to the top, middle, or bottom of a table cell in a document?
 
-// Align the text to bottom of the cell.
+// Anchor cell content to a specific vertical position within a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

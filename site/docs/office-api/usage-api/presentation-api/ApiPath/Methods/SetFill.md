@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom shape and add it to a slide. Applies custom geometry with specific fill and stroke properties.
+Apply a fill color to a custom shape's interior in a presentation.
 
 ```javascript editor-pptx
-// How can I set fill using a geometry path in a presentation?
+// What options are available for filling a shape in a presentation?
 
-// Set fill for a geometry path in a presentation.
+// Configure the fill settings for a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -15,7 +15,7 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | paragraph | 必需 | string \| [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 文本或段落。 |
-| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的「之前」或「之后」）。 |
+| sPosition | 必需 | string |  | 将插入文本或段落的位置（指定段落的“之前”或“之后”）。 |
 | beRNewPara | 必需 | boolean |  | 定义此方法是返回新段落（true）还是当前段落（false）。 |
 
 ## 返回值
@@ -24,12 +24,12 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-在文档中的指定位置插入段落。
+在文档中相对于现有段落插入新段落。
 
 ```javascript editor-docx
-// How to insert the paragraph object into the another element in a document.
+// How do I add a paragraph after another paragraph in a document?
 
-// Add paragraph to the content control in a document.
+// Place a second paragraph immediately after the first without pushing to the end in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

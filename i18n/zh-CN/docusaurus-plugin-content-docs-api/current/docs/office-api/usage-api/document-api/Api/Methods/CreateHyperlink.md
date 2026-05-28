@@ -24,12 +24,12 @@ expression.CreateHyperlink(link, display, screenTipText);
 
 ## 示例
 
-创建超链接并将其粘贴到文档中。
+在文档中插入带有自定义显示文本的可点击超链接。
 
 ```javascript editor-docx
-// How to create the hyperlink object and add it to the paragraph class in a document.
+// How do I add a hyperlink with a tooltip to a paragraph in a document?
 
-// Create a hyperlink with the specified URL address, display text and tip text and add it to the first paragraph of the document.
+// Embed a named web link that shows a tooltip when hovered, then read back its type in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

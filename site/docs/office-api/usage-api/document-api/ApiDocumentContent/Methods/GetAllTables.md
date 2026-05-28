@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array of all tables from the document content.
+Retrieve all tables from a content container in a document.
 
 ```javascript editor-docx
-// Get all tables added to the document.
+// How do I get every table inside a shape or content area in a document?
 
-// How to retrieve all tables and add a text to its first cell.
+// Write text into the first cell of the first table found inside a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

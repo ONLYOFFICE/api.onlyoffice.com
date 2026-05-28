@@ -22,12 +22,12 @@ expression.SetAppearance(type);
 
 ## 示例
 
-在文档中添加内容控件并更改其外观。
+更改文档中内容控件的视觉外观。
 
 ```javascript editor-docx
-// How do I set appearance in a document?
+// How do I hide the border and frame of a content control in a document?
 
-// Set appearance using a block-level content control object in a document.
+// Make a content control invisible to users while keeping its content visible in a document.
 
 let doc = Api.GetDocument();
 let contentControl = Api.CreateBlockLvlSdt();

@@ -20,12 +20,12 @@ expression.GetSpacingBefore();
 
 ## 示例
 
-获取演示文稿中当前段落的段前间距值。
+检查演示文稿中段落上方的空间。
 
 ```javascript editor-pptx
-// How to get the size of a spacing before a text from a paragraph in a presentation.
+// How do I read the spacing value before a paragraph in a presentation?
 
-// Return a property of the spacing size before a paragraph in a presentation.
+// Retrieve the distance between the previous element and the start of a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

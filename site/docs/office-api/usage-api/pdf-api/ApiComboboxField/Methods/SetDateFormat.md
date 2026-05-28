@@ -5,7 +5,7 @@ Sets date format for field.
 ## Syntax
 
 ```javascript
-expression.SetDateFormat(sFormat);
+expression.SetDateFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetDateFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | string |  | date format (e.g. "dd.mm.yyyy") |
+| format | Required | string |  | date format (e.g. "dd.mm.yyyy") |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set date format for it.
+Format dates in a combobox field in a PDF.
 
 ```javascript editor-pdf
-// How can I set date format using a combobox field in a PDF document?
+// Can I control how dates appear in a PDF?
 
-// Set date format for a combobox field in a PDF document.
+// Display dates with a specific format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

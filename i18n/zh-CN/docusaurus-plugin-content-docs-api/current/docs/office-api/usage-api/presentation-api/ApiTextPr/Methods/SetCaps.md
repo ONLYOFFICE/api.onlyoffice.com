@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
+在演示文稿中将所有文本字母显示为大写。
 
 ```javascript editor-pptx
-// How to make a text capitalized in a presentation.
+// How do I convert text to display as all capitals in a presentation?
 
-// Get the text properties of the run and set its letters uppercase in a presentation.
+// Apply the capitals formatting to text so all characters appear uppercase in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

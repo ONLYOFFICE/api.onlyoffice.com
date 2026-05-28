@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the internal ID of a document content in a document.
+Retrieve the unique internal ID of a document content object in a document.
 
 ```javascript editor-docx
-// How to get the internal id for a document content?
+// How do I get the internal identifier assigned to a document content in a document?
 
-// Get the internal id and display the result in a document.
+// Display the internal ID inside a shape to track or reference that content container later.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

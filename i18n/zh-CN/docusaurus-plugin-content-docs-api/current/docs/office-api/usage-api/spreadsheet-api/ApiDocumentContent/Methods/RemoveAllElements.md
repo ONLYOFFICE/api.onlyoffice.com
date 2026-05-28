@@ -21,12 +21,12 @@ boolean
 
 ## 示例
 
-从当前文档或当前文档内容中移除所有元素。
+清除电子表格中形状文本区域的每个段落。
 
 ```javascript editor-xlsx
-// How to clear a document.
+// How do I wipe all text content out of a shape at once in a spreadsheet?
 
-// Delete all elements from a document.
+// Reset a shape to empty before writing fresh content into it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

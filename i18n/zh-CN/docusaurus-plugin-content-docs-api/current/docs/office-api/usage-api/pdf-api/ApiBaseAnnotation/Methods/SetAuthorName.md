@@ -14,7 +14,7 @@ expression.SetAuthorName(name);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | 必需 | string |  | 未提供描述。 |
+| name | 必需 | string |  | 作者姓名。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置作者名称。
+为 PDF 中的注释分配作者名称。
 
 ```javascript editor-pdf
-// How to set author name for an annotation in a PDF document?
+// Who created or should be credited for an annotation in a PDF?
 
-// Set author name and display the result in a PDF document.
+// Set the author name property of an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

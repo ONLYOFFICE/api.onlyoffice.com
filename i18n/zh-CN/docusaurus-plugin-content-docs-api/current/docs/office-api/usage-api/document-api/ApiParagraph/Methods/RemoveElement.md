@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在文档中使用指定位置移除元素。
+按位置从文档中的段落中删除特定元素。
 
 ```javascript editor-docx
-// How to remove the element at the index from the paragraph in a document.
+// How do I delete one element at a given index from a paragraph in a document?
 
-// Delete a third element from the paragraph in a document.
+// Drop the third run from a paragraph while keeping all surrounding content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

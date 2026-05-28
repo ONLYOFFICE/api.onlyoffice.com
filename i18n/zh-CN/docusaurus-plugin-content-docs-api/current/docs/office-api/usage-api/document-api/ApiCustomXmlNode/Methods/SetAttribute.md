@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-获取文档中自定义 XML 节点的 XPath。
+向文档中嵌入的 XML 节点添加新属性。
 
 ```javascript editor-docx
-// How do I set attribute in a document?
+// How do I attach extra metadata to a node in the XML data stored in a document?
 
-// Set attribute using a custom XML node object in a document.
+// Tag a node with a category or label so it can be filtered or identified later in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

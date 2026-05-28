@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定此文档中的各节是否为奇偶页设置不同的页眉和页脚。
+在文档中为奇数页和偶数页启用不同的页眉和页脚。
 
 ```javascript editor-docx
-// How to make headers and footers different for even and odd pages.
+// How do I set separate headers and footers for odd and even pages in a document?
 
-// Set a boolean value that indicates whether to keep the headers and footers same for odd/even pages or not.
+// Use alternating page headers and footers to meet book-style or professional layout requirements.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

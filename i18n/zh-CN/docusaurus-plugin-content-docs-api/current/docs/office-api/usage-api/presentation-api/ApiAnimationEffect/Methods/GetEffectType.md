@@ -23,9 +23,9 @@ expression.GetEffectType();
 获取演示文稿中动画效果的效果类型。
 
 ```javascript editor-pptx
-// How to get the effect type for an animation effect in a presentation?
+// Effect types categorize animations (entrance, emphasis, exit, motion paths).
 
-// Get the effect type and display the result in a presentation.
+// Retrieve the effect type using GetEffectType() and display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

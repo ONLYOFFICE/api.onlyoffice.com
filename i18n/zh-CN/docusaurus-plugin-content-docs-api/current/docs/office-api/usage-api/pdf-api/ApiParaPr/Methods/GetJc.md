@@ -20,12 +20,12 @@ expression.GetJc();
 
 ## 示例
 
-获取 PDF 文档中的段落内容对齐方式。
+获取 PDF 中段落的文本对齐设置。
 
 ```javascript editor-pdf
-// How to set a justification of a paragraph property in a PDF document.
+// How do I find out how text is aligned in a PDF?
 
-// Change a justification type of a text property from the page.
+// Retrieve the paragraph justification type in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

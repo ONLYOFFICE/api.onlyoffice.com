@@ -17,7 +17,7 @@ expression.NORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将返回分布的值。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分布的算术平均值。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分布的标准差，一个正数。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率质量函数。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，函数返回累积分布函数。如果为 **false**，函数返回概率质量函数。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定均值和标准差的正态分布。
+给定均值和标准差，计算电子表格中某值的正态分布。
 
 ```javascript editor-xlsx
-// How to calculate the normal distribution in a spreadsheet.
+// How do I compute the normal distribution in a spreadsheet?
 
-// Use a function to get the normal distribution knowing the mean and standard deviation in a spreadsheet.
+// Find the probability of a value in a normal distribution with specific mean and standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [36, 6, 7, false];

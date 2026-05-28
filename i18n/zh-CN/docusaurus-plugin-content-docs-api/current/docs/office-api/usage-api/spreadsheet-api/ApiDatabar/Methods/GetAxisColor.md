@@ -20,12 +20,12 @@ expression.GetAxisColor();
 
 ## 示例
 
-从数据条条件格式规则获取轴颜色。
+读取电子表格中条形规则中点轴线的颜色设置。
 
 ```javascript editor-xlsx
-// How to retrieve the axis color of a data bar in a spreadsheet.
+// How do I find out what color the axis line has in a data bar rule in a spreadsheet?
 
-// Get the axis color of a data bar conditional formatting rule.
+// Inspect the axis line color to verify or copy bar formatting settings in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

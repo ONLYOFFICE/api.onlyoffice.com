@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取页面对象的类类型。
+识别 PDF 中页面的对象类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a page?
+// How do I determine what kind of object this is in a PDF?
 
-// Get the class type of a page and display it in the PDF.
+// Retrieve the classification name for this element in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

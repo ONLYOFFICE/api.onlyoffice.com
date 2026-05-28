@@ -14,7 +14,7 @@ expression.SetStartStyle(style);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | No description provided. |
+| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | The style of the polyline start endpoint. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set line start style to polyline annotation in a PDF document.
+Change the line beginning appearance of a polyline marking in a PDF.
 
 ```javascript editor-pdf
-// How do I set start style in a PDF document?
+// How do I update the line beginning style on a polyline marking in a PDF?
 
-// Set start style using a polyline annotation object in a PDF document.
+// Modify the appearance of the starting point shown on a polyline marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

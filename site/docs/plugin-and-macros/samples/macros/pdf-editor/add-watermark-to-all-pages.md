@@ -4,6 +4,8 @@ description: Add a diagonal text watermark to all PDF pages.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add watermark to all pages
 
 Adds a diagonal watermark shape to every page of the PDF document. The watermark is a gray rectangle rotated at -45 degrees with bold white text. You can change the watermark text, color, size, and position to fit your needs.
@@ -55,5 +57,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-![Add Watermark To All Pages](/assets/images/plugins/add-watermark-to-all-pages.png#gh-light-mode-only)
-![Add Watermark To All Pages](/assets/images/plugins/add-watermark-to-all-pages.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/add-watermark-to-all-pages" dark />

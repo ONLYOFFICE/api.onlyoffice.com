@@ -4,6 +4,8 @@ description: Mask credit card numbers showing only first and last digits.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Mask card numbers
 
 Applies the mask to all forms with the specified form key to hide card numbers.
@@ -33,4 +35,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/mask-card-numbers" dark />

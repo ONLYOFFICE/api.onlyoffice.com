@@ -5,7 +5,7 @@ Adds new option to list options.
 ## Syntax
 
 ```javascript
-expression.AddOption(option, nPos);
+expression.AddOption(option, index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -15,7 +15,7 @@ expression.AddOption(option, nPos);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | option | Required | [ListOption](../../Enumeration/ListOption.md) |  | list option to add |
-| nPos | Optional | number | this.GetOptions().lenght | pos to add option |
+| index | Optional | number | this.GetOptions().lenght | index to add option. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add new options to field with list of options in a PDF document.
+Add choices to a dropdown or list field in a PDF.
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How can I add options to a dropdown list in a PDF?
 
-// Add the option using a list field object in a PDF document.
+// Populate a form field with multiple selectable items in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

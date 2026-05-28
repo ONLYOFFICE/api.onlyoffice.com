@@ -4,6 +4,8 @@ description: Bookmark the last viewed position in a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Bookmark last view
 
 Saves the current reading position by adding a bookmark at the first visible page, replacing any existing bookmark for that page.
@@ -41,5 +43,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![BookmarkLastView](/assets/images/plugins/bookmark-last-view-macro.png#gh-light-mode-only)
-![BookmarkLastView](/assets/images/plugins/bookmark-last-view-macro.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/bookmark-last-view" dark />

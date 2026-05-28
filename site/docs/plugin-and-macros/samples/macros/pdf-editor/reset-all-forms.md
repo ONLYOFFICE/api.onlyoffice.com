@@ -4,6 +4,8 @@ description: Reset all form fields to empty values.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Reset all forms
 
 Clears all fields if necessary, for example after printing the document.
@@ -23,4 +25,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Reset All Forms](/assets/images/plugins/reset-all-forms.png#gh-light-mode-only)![Reset All Forms](/assets/images/plugins/reset-all-forms.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/reset-all-forms" dark />

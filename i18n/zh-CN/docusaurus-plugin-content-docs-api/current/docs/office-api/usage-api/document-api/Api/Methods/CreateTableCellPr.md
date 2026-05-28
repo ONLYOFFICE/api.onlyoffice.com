@@ -20,12 +20,12 @@ expression.CreateTableCellPr();
 
 ## 示例
 
-在文档中创建并使用表格单元格属性。
+在文档中为各个表格单元格应用自定义底纹。
 
 ```javascript editor-docx
-// How to create the table cell properties and set it to table style.
+// How do I change the background color of a specific table cell in a document?
 
-// Create the table cell pr using the document API.
+// Style a single cell with gray shading using a custom table style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

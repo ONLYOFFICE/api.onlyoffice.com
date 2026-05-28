@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetLine(oStroke);
+expression.SetLine(stroke);
 ```
 
 `expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetLine(oStroke);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建形状轮廓的笔触。 |
+| stroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建形状轮廓的笔触。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。在 PDF 文档中创建矩形并将其轮廓更改为粗蓝线。
+在 PDF 中为形状添加边框。
 
 ```javascript editor-pdf
-// How to set line for a shape in a PDF document?
+// How do I customize the outline of a shape in a PDF?
 
-// Set line and display the result in a PDF document.
+// Give a shape a colored border with specific thickness in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

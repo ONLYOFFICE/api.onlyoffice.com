@@ -27,7 +27,7 @@ expression.CreateLineAnnot(rect, startPoint, endPoint);
 创建线条注释并将其添加到页面。
 
 ```javascript editor-pdf
-// How do I create the line annot in a PDF document?
+// Create the line annot in a PDF document.
 
 // Create the line annot and display the result in a PDF document.
 

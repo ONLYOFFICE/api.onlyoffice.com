@@ -4,6 +4,8 @@ description: Create a custom header with formatted text.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Create custom header
 
 Creates a custom header with an image and a title. The image is represented as a base64 string in the code, which can be customized or replaced as needed.
@@ -43,5 +45,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CustomHeader](/assets/images/plugins/create-custom-header.png#gh-light-mode-only)
-![CustomHeader](/assets/images/plugins/create-custom-header.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/create-custom-header" dark />

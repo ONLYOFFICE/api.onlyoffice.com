@@ -3,6 +3,8 @@ description: Add comments to spreadsheet cells.
 tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add comment in cell
 
 Adds comments to a cell of the spreadsheet.
@@ -11,9 +13,7 @@ Adds comments to a cell of the spreadsheet.
 
 **Supported editors:** spreadsheets.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-comment-in-cell.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-comment-in-cell" />
 
 ## Installation
 

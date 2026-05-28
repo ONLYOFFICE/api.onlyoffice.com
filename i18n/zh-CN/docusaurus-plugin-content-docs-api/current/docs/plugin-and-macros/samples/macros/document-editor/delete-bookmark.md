@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除书签
 
 查找并删除文档中包含特定文本的书签。
@@ -32,5 +34,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除书签](/assets/images/plugins/delete-bookmark.png#gh-light-mode-only)
-![删除书签](/assets/images/plugins/delete-bookmark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/delete-bookmark" dark />

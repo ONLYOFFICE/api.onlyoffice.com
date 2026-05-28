@@ -22,12 +22,12 @@ expression.FindPrevious(Before);
 
 ## 示例
 
-查找与这些相同条件匹配的上一个单元格。
+在电子表格中向后搜索范围以查找上一个匹配的单元格。
 
 ```javascript editor-xlsx
-// How to get the previous cell from a range that meets search requirements.
+// How do I step back to the previous search result in a spreadsheet?
 
-// Get a range, find the previous cell that satisfies search conditions and fill it with color.
+// Highlight the cell found just before the current match to navigate results in reverse.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

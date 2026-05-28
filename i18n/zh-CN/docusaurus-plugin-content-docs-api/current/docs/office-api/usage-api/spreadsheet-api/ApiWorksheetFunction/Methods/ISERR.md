@@ -14,7 +14,7 @@ expression.ISERR(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
+| arg1 | 必需 | number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。该值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查值是否为 N/A 以外的错误，并返回 true 或 false。
+检查电子表格中的值是否为 N/A 以外的错误。
 
 ```javascript editor-xlsx
-// How to check if the cell contains an error and not N/A value.
+// How do I detect if a cell contains an error in a spreadsheet?
 
-// Use a function to check whether the value is error or not and is not N/A in a spreadsheet.
+// Identify errors in cells while excluding N/A values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

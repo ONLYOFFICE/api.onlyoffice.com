@@ -4,6 +4,8 @@ description: Split data into separate sheets by criteria.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Split data sheets
 
 Splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.
@@ -87,5 +89,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![SplitDataSheets](/assets/images/plugins/split-data-sheets.png#gh-light-mode-only)
-![SplitDataSheets](/assets/images/plugins/split-data-sheets.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/split-data-sheets" dark />

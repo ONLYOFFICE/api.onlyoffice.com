@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.SetLayoutSubtotals](../../ApiPivotField/Methods/Se
 
 ## Example
 
-Set a layout subtotals of a pivot field in a spreadsheet.
+Show or hide subtotals for a pivot field group in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotals in a spreadsheet.
+// How do I turn off subtotals for a specific pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout subtotals of a specified pivot in a spreadsheet.
+// Remove automatic group totals from a pivot field to simplify the summary view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

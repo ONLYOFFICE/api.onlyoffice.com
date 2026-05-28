@@ -15,8 +15,8 @@ expression.GetText(options);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | options | 可选 | object |  | 返回文本的格式选项。 |
-| options.NewLineSeparator | 可选 | string | '\r' | 定义在结果字符串中如何指定行分隔符。可以使用任何符号。默认分隔符为 "\r"。 |
-| options.TabSymbol | 可选 | string | '\t' | 定义在结果字符串中如何指定制表符。可以使用任何符号。默认符号为 "\t"。 |
+| options.NewLineSeparator | 可选 | string | '\r' | 定义在结果字符串中如何指定行分隔符。可以使用任何符号。默认分隔符为 “\r”。 |
+| options.TabSymbol | 可选 | string | '\t' | 定义在结果字符串中如何指定制表符。可以使用任何符号。默认符号为 “\t”。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ string
 
 ## 示例
 
-返回文档中文本 run 的文本。
+从文档中的文本运行提取纯文本内容。
 
 ```javascript editor-docx
-// How to get a raw text value in a document.
+// How do I read the string of characters stored in a text run in a document?
 
-// Get a run, get its text value and show it in the document.
+// Retrieve the readable text from a run and display it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

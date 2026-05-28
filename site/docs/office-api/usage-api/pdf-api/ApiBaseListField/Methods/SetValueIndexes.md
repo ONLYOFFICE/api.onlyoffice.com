@@ -5,7 +5,7 @@ Sets selected value indexes.
 ## Syntax
 
 ```javascript
-expression.SetValueIndexes(aIndexes);
+expression.SetValueIndexes(valueIndexes);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.SetValueIndexes(aIndexes);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | Required | number[] |  | selected indexes |
+| valueIndexes | Required | number[] |  | The indexes of the selected values. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set selected value index to field with list of options in a PDF document.
+Mark items as selected in a dropdown by their position in a PDF.
 
 ```javascript editor-pdf
-// How do I set value indexes in a PDF document?
+// How do I select options by index in a dropdown field in a PDF?
 
-// Set value indexes using a list field object in a PDF document.
+// Choose items from a list using their numeric positions in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

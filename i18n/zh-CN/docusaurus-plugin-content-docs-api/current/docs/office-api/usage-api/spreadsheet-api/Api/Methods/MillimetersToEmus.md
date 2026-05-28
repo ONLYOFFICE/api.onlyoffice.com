@@ -15,7 +15,7 @@ expression.MillimetersToEmus(mm);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| mm | 必需 | [mm](../../Enumeration/mm.md) |  | 未提供描述。 |
+| mm | 必需 | [mm](../../Enumeration/mm.md) |  | 以毫米为单位的值。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.MillimetersToEmus(mm);
 
 ## 示例
 
-在电子表格中将毫米转换为 EMU。
+在电子表格中将毫米测量值转换为 EMU。
 
 ```javascript editor-xlsx
-// How to convert millimeters to emus in a spreadsheet?
+// How do I convert millimeters to EMU units in a spreadsheet?
 
-// Convert millimeters to emus using the spreadsheet API.
+// Show the EMU equivalent of a given millimeter value in a spreadsheet.
 
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);

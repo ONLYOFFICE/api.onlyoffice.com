@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the serial number of the last day of the month before or after the specified number of months in a spreadsheet.
+Find the last day of a month that is a specified number of months away in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a date of the last day of the month before or after specified months in a spreadsheet.
+// How do I get the end date of a month by counting months forward or backward in a spreadsheet?
 
-// Use function to get the serial number of the last day of the month before or after the specified number of months in a spreadsheet.
+// Calculate the final date of a month relative to a starting date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

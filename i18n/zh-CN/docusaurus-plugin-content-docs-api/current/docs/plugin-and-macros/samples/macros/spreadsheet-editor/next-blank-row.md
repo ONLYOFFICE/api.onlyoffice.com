@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 下一空白行
 
 查找工作表中下一个可用的空白行。该宏可帮助你定位数据末尾的空白行（而非数据中间的空白行）。
@@ -46,4 +48,4 @@ End Sub
 
 ## 结果
 
-![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/next-blank-row" dark />

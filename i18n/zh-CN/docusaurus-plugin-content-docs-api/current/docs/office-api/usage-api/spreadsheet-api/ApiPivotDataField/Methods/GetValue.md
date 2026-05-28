@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据字段的值。
+读取电子表格中数据透视表数据字段汇总的源字段名称。
 
 ```javascript editor-xlsx
-// How to use a table element value in a spreadsheet.
+// How do I find the original data column that a pivot value field is built from in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's value in a spreadsheet.
+// Retrieve what a data field represents — the raw column name behind a summarized result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

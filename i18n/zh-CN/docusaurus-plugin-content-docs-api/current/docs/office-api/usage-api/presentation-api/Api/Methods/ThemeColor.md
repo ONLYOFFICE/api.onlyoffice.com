@@ -25,9 +25,9 @@ expression.ThemeColor(name);
 在演示文稿中创建主题颜色并将其用作形状填充。
 
 ```javascript editor-pptx
-// How to theme color in a presentation?
+// Theme colors provide visual consistency across presentations through predefined palettes.
 
-// Theme color using the presentation API.
+// Apply the theme color to a shape's solid fill using the Api object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

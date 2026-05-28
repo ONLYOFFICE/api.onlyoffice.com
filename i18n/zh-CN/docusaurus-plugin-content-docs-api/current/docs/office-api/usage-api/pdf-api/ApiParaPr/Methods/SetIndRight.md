@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落右侧缩进。
+在 PDF 中从右边缘缩进段落。
 
 ```javascript editor-pdf
-// How to set a right side indentation using a paragraph properties in a PDF document.
+// How do I indent a paragraph from the right in a PDF?
 
-// Create a paragraph setting its right side indentation property in a PDF document.
+// Add right margin indentation to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -5,7 +5,7 @@ Creates a new addin field with the data specified in the request.
 ## Syntax
 
 ```javascript
-expression.AddAddinField(data);
+expression.AddAddinField(data, data);
 ```
 
 `expression` - A variable that represents a [Api](Methods.md) class.
@@ -14,11 +14,14 @@ expression.AddAddinField(data);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| data | Required | Object |  | Addin field data. |
+| data.Value | Required | string |  | Field value. |
+| data.Content | Required | string |  | Field text content. |
 | data | Required | [AddinFieldData](../Enumeration/AddinFieldData.md) |  | Addin field data. |
 
 ## Returns
 
-This method doesn't return any data.
+[AddinFieldData](../Enumeration/AddinFieldData.md)
 
 ## Example
 

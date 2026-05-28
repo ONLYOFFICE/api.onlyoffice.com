@@ -4,6 +4,8 @@ description: Sort a cell range by column values.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Sort range
 
 Automatically sorts a selected range or the entire used range in a spreadsheet.
@@ -68,4 +70,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.png#gh-light-mode-only)![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sort-range" dark />

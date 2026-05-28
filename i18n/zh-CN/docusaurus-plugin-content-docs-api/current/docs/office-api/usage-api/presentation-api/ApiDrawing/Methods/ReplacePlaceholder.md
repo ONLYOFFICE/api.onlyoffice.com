@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.ReplacePlaceholder(oDrawing);
+expression.ReplacePlaceholder(drawing);
 ```
 
 `expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
@@ -14,7 +14,7 @@ expression.ReplacePlaceholder(oDrawing);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oDrawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 未提供描述。 |
+| drawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 将替换占位符的绘图对象。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在幻灯片上用绘图对象替换占位符。
+在演示文稿中用图像替换占位符。
 
 ```javascript editor-pptx
-// How can I replace placeholder using a drawing object in a presentation?
+// How do I swap a placeholder for an actual image in a presentation?
 
-// Replace placeholder for a drawing object in a presentation.
+// Insert an image into a shape that has a placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

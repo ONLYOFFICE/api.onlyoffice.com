@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取文档中当前单元格的内容。
+访问文档中表格单元格内存储的文本内容。
 
 ```javascript editor-docx
-// How to get the value from the cell.
+// How do I read the content from a table cell in a document?
 
-// Retrieve the content of the table cell.
+// Extract what is written inside a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

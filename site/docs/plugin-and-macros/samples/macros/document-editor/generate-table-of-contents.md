@@ -4,6 +4,8 @@ description: Generate a table of contents from document headings.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Generate table of contents
 
 Generates a table of contents by scanning the document for headings.
@@ -49,4 +51,4 @@ End Sub
 
 ## Result
 
-![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.png#gh-light-mode-only)![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-table-of-contents" dark />

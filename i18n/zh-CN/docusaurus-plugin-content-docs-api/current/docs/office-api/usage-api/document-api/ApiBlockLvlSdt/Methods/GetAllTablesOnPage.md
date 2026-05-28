@@ -23,12 +23,12 @@ expression.GetAllTablesOnPage(page);
 
 ## 示例
 
-获取文档中给定绝对页面上的表格集合。
+检索文档中内容控件内某页上的所有表格。
 
 ```javascript editor-docx
-// How can I get all tables on page using a block-level content control in a document?
+// How do I get all tables on a specific page inside a content control in a document?
 
-// Get all tables on page for a block-level content control in a document.
+// Collect every table from a content control on a given page to edit them in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

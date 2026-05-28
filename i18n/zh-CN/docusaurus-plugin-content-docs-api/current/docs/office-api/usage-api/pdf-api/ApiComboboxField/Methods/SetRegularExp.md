@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | 必需 | string |  | 字段正则表达式（例如 "\\S+@\\S+\\.\\S+"） |
+| regularExpression | 必需 | string |  | 验证正则表达式（例如 "\\S+@\\S+\\.\\S+"） |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置正则表达式验证。
+在 PDF 中使用模式规则验证字段输入。
 
 ```javascript editor-pdf
-// How do I set regular exp in a PDF document?
+// Can I check that data matches a pattern in a PDF?
 
-// Set regular exp using a combobox field object in a PDF document.
+// Ensure text follows a specific format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

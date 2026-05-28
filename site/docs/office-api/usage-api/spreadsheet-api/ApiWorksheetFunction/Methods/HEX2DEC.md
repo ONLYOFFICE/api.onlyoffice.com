@@ -25,9 +25,9 @@ number
 Convert a hexadecimal number to decimal in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a decimal from hexadecimal number in a spreadsheet.
+// How do I convert hexadecimal values to decimal numbers in a spreadsheet?
 
-// Use a function to convert a hexadecimal number to decimal in a spreadsheet.
+// Transform a hex value into its decimal equivalent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

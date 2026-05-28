@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a uni color in a spreadsheet.
+Read the class type of a color object used in a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I check what type a uni color object is in a spreadsheet?
+// How do I identify what type of color object is applied to a shape in a spreadsheet?
 
-// Retrieve and output the class type string for a uni color in a spreadsheet.
+// Confirm the color category by checking its type label in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const presetColor = Api.CreatePresetColor("peachPuff");

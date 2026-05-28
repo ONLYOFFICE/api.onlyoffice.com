@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中返回贴现证券每 $100 面值的价格。
+查找电子表格中折价债券的价格。
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value for a discounted security in a spreadsheet.
+// What is the price of a discounted security per $100 face value in a spreadsheet?
 
-// Use a function to return the price per $100 face value for a discounted security in a spreadsheet.
+// Determine the cost of a short-term security based on discount rate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -5,7 +5,7 @@ Removes option from list options.
 ## Syntax
 
 ```javascript
-expression.RemoveOption(nPos);
+expression.RemoveOption(index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.RemoveOption(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | pos to remove option |
+| index | Required | number |  | The option index. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Remove option from field with list of options in a PDF document.
+Delete a choice from a dropdown field in a PDF.
 
 ```javascript editor-pdf
-// How can I remove the option using a list field in a PDF document?
+// How do I remove an option from a list field in a PDF?
 
-// Remove the option for a list field in a PDF document.
+// Take out an item from a dropdown's available choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -5,7 +5,7 @@ Sets widget border style.
 ## Syntax
 
 ```javascript
-expression.SetBorderStyle(sBorderStyle);
+expression.SetBorderStyle(borderStyle);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetBorderStyle(sBorderStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderStyle | Required | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | No description provided. |
+| borderStyle | Required | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | The border style. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set field widgets border style in a PDF document.
+Apply a border style to field widgets in a PDF.
 
 ```javascript editor-pdf
-// How can I set border style using a widget in a PDF document?
+// How do I set the border style for widgets in a PDF?
 
-// Set border style for a widget in a PDF document.
+// Change the appearance of widget borders with preset styles in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

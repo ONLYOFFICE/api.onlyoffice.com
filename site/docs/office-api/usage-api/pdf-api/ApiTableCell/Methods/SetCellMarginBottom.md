@@ -6,7 +6,7 @@ of a specific individual table cell within a table.
 ## Syntax
 
 ```javascript
-expression.SetCellMarginBottom(nValue);
+expression.SetCellMarginBottom(margin);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell bottom margin shall be used, otherwise override the table cell bottom margin with specified value for the current cell. |
+| margin | Required | [twips](../../Enumeration/twips.md) |  | The cell margin. If this value is &lt;code&gt;null&lt;/code&gt;, the default margin is used. otherwise override the table cell bottom margin with specified value for the current cell. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to set the cell bottom margin for the current table cell.
+Set the bottom margin of a table cell in a PDF.
 
 ```javascript editor-pdf
-// Specify the bottom margin value for the table cell object.
+// How do I add space below the content inside a cell in a PDF?
 
-// Set cell margin bottom for a table cell in a PDF document.
+// Adjust the spacing at the bottom of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

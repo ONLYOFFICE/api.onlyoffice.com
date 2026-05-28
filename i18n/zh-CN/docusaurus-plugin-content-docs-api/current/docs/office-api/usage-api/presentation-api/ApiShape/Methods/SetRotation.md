@@ -9,7 +9,7 @@
 在演示文稿中为绘图对象设置旋转角度。
 
 ```javascript editor-pptx
-// How to set rotation for a drawing object in a presentation?
+// Rotation transforms a shape's orientation on the slide.
 
 // Set rotation and display the result in a presentation.
 

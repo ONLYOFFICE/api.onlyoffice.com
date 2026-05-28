@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetValueIndexes(aIndexes);
+expression.SetValueIndexes(valueIndexes);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetValueIndexes(aIndexes);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | 必需 | number[] |  | 选定的索引 |
+| valueIndexes | 必需 | number[] |  | 所选值的索引。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为带有选项列表的字段设置选中值的索引。
+按位置在 PDF 中的下拉列表中将项目标记为已选中。
 
 ```javascript editor-pdf
-// How do I set value indexes in a PDF document?
+// How do I select options by index in a dropdown field in a PDF?
 
-// Set value indexes using a list field object in a PDF document.
+// Choose items from a list using their numeric positions in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create complex form with multiple elements, including a text input form and static text.
+Add elements to a complex form in a document.
 
 ```javascript editor-docx
-// A complex form combines multiple elements such as text inputs and static text.
+// How do I add form fields and static text to a complex form in a document?
 
-// Add using a complex form object.
+// Build a multi-part entry field by combining a text input and a suffix label inside one form.
 
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});

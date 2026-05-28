@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回单元格范围中的列数。
+返回电子表格中单元格范围的总列数。
 
 ```javascript editor-xlsx
-// How to find a number of columns from a range in a spreadsheet.
+// Find the column span of a selected data range in a spreadsheet.
 
-// Use function to count range column in a spreadsheet.
+// Determine how many columns wide your data extends in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

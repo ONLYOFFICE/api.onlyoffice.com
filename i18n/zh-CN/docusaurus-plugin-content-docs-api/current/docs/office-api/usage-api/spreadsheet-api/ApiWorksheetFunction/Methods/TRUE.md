@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在电子表格中返回 true 逻辑值。
+在电子表格中返回逻辑真值。
 
 ```javascript editor-xlsx
-// How to get a true value in a spreadsheet.
+// How do I insert the logical true value into a cell in a spreadsheet?
 
-// Use a function to return true value in a spreadsheet.
+// Set a cell to the boolean true value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

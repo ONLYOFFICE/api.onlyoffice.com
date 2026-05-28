@@ -4,6 +4,8 @@ description: Find and insert company logos into spreadsheet cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Find company logos
 
 Searches for a company logo throughout the spreadsheet using the [Logo API](https://api-ninjas.com/api/logo) offered by [API Ninjas](https://api-ninjas.com).
@@ -66,4 +68,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![Find Company Logos](/assets/images/plugins/find-company-logos.png#gh-light-mode-only)![Find Company Logos](/assets/images/plugins/find-company-logos.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-company-logos" dark />

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetLabel(sLabel, sApType);
+expression.SetLabel(label, appearance);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetLabel(sLabel, sApType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLabel | 必需 | string |  | 按钮标签 |
-| sApType | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | 为哪种状态设置标签 |
+| label | 必需 | string |  | 按钮标签。 |
+| appearance | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | 外观状态。 |
 
 ## 返回值
 
@@ -26,9 +26,9 @@ boolean
 在 PDF 文档中设置按钮控件的标签。
 
 ```javascript editor-pdf
-// How to set label for a button widget in a PDF document?
+// Configure labels for different button states: normal, down, and hover.
 
-// Set label and display the result in a PDF document.
+// Apply multiple labels to a button widget with 'push' behavior.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

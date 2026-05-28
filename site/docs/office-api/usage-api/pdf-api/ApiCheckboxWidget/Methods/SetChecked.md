@@ -5,7 +5,7 @@ Sets checkbox widget checked.
 ## Syntax
 
 ```javascript
-expression.SetChecked(bChecked);
+expression.SetChecked(checked);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetChecked(bChecked);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | Required | boolean |  | No description provided. |
+| checked | Required | boolean |  | Specifies whether the checkbox is checked. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set checkbox widget checked in group of checkbox widgets in a PDF document.
+Mark a checkbox as selected or deselected in a PDF.
 
 ```javascript editor-pdf
-// How can I set checked using a checkbox widget in a PDF document?
+// How do I toggle a checkbox widget between checked and unchecked in a PDF?
 
-// Set checked for a checkbox widget in a PDF document.
+// Set the checked state of a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

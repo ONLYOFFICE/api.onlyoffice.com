@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-为文档中的图片内容控件设置图像。
+在文档中将图像插入图片内容控件。
 
 ```javascript editor-docx
-// How to set picture for an inline content control in a document?
+// How do I load an image from a URL into a picture content control in a document?
 
-// Set picture and display the result in a document.
+// Replace the default placeholder of a picture control with an actual image in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

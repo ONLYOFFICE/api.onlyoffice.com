@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定此文档中当前节的首页是否具有不同的页眉和页脚。
+将文档中节的第一页标记为标题页。
 
 ```javascript editor-docx
-// How to make a page a title one.
+// How do I give the first page of a section its own distinct header and footer in a document?
 
-// Create a section and make its set its page as a title one.
+// Suppress the regular footer on the opening page of a section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

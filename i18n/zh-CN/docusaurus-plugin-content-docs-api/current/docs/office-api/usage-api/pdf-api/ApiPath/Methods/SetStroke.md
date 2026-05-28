@@ -22,12 +22,12 @@ expression.SetStroke(bStroke);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
+在 PDF 中绘制形状路径的轮廓。
 
 ```javascript editor-pdf
-// How do I set stroke in a PDF document?
+// How do I add a border to a shape in a PDF?
 
-// Set stroke using a geometry path object in a PDF document.
+// Enable or disable the outline of a custom shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

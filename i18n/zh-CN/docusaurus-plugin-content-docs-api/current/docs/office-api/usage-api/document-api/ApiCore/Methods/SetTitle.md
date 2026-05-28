@@ -22,12 +22,12 @@ expression.SetTitle(sTitle);
 
 ## 示例
 
-设置文档中当前文档的标题。
+设置文档核心属性中的标题。
 
 ```javascript editor-docx
-// How to set title for a core properties in a document?
+// How do I give a document a formal title in its metadata?
 
-// Set title and display the result in a document.
+// Name a document for easier identification in file managers and document management systems in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

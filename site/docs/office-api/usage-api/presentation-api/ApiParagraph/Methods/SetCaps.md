@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-Set all characters in the paragraph to display as capitals in a presentation.
+Convert paragraph text to all capital letters in a presentation.
 
 ```javascript editor-pptx
-// How can I set caps using a paragraph in a presentation?
+// How do I display text in uppercase in a presentation?
 
-// Set caps for a paragraph in a presentation.
+// Format text to show only uppercase characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -23,12 +23,12 @@ expression.MoveTo(x, y);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
+设置 PDF 中绘制形状的起始点。
 
 ```javascript editor-pdf
-// How to move to for a geometry path in a PDF document?
+// Where do I begin drawing a custom shape in a PDF?
 
-// Move to and display the result in a PDF document.
+// Position the cursor before adding lines to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

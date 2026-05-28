@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-从电子表格中的工作簿获取具有指定名称的所有绘图对象。
+按名称在工作簿中查找特定形状并在电子表格中对其应用更改。
 
 ```javascript editor-xlsx
-// Get drawings by their names in a spreadsheet.
+// How do I find shapes by their names and modify them all at once in a spreadsheet?
 
-// How to retrieve drawings by their names and rotate them in a spreadsheet.
+// Rotate only the named shapes while leaving other drawings untouched in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();

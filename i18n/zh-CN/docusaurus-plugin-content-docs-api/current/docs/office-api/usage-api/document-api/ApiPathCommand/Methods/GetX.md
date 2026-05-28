@@ -1,6 +1,6 @@
 # GetX
 
-返回「moveTo」/「lineTo」路径命令的 X 坐标。
+返回“moveTo”/“lineTo”路径命令的 X 坐标。
 
 ## 语法
 
@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+读取文档中形状轮廓路径中点的水平位置。
 
 ```javascript editor-docx
-// How can I get the x using a path command in a document?
+// How do I find the left-right coordinate of a specific point along a shape's outline in a document?
 
-// Get the x for a path command in a document.
+// Retrieve the horizontal coordinate from a drawing step within a shape's path in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

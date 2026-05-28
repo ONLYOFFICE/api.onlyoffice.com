@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 表格转换图表
 
 由选定的表格数据生成图表。
@@ -134,5 +136,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![表格转换图表](/assets/images/plugins/table-to-chart.png#gh-light-mode-only)
-![表格转换图表](/assets/images/plugins/table-to-chart.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/table-to-chart" dark />

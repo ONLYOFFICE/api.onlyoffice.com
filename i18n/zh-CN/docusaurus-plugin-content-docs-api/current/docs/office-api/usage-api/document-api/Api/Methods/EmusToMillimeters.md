@@ -14,7 +14,7 @@ expression.EmusToMillimeters(emu);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| emu | 必需 | [EMU](../../Enumeration/EMU.md) |  | 未提供描述。 |
+| emu | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位 (EMU) 为单位的值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.EmusToMillimeters(emu);
 
 ## 示例
 
-在文档中将 EMU 转换为毫米。
+在文档中显示从内部单位转换为毫米的测量值。
 
 ```javascript editor-docx
-// How do I convert emus to millimeters in a document?
+// How do I show a size value in millimeters inside a document?
 
-// Convert emus to millimeters and display the result in a document.
+// Write the millimeter equivalent of a raw numeric measurement into a paragraph in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

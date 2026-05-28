@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellBorderRight(fSize, oApiFill);
+expression.SetCellBorderRight(borderWidth, fill);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetCellBorderRight(fSize, oApiFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
+| borderWidth | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格右边框及其填充颜色。
+在 PDF 中设置带有填充颜色的表格单元格右边框。
 
 ```javascript editor-pdf
-// Create table and set its cell right border.
+// How do I customize the appearance of the right edge of a cell in a PDF?
 
-// Use table cell to set cell border right.
+// Style the border on the right side of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

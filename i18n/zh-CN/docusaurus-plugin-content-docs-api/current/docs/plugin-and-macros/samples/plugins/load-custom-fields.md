@@ -1,3 +1,10 @@
+---
+description: Load custom fields with questions and dropdowns.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 加载自定义字段（Load custom fields）
 
 从文档中加载自定义字段。
@@ -10,9 +17,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/load-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/load-custom-fields" />
 
 ## 安装
 

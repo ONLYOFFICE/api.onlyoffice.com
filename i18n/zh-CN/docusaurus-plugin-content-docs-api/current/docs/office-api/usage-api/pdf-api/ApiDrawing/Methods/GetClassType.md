@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中绘图对象的类类型。
+检查 PDF 中对象的形状类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a drawing object in a PDF document?
+// How do I identify the category of a drawing object in a PDF?
 
-// Get the class type of a drawing object and display it in the PDF.
+// Determine the kind of object you're working with in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

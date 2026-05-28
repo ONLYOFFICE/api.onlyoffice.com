@@ -5,7 +5,7 @@ Replaces the placeholder by a drawing on the slide.
 ## Syntax
 
 ```javascript
-expression.ReplacePlaceholder(oDrawing);
+expression.ReplacePlaceholder(drawing);
 ```
 
 `expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
@@ -14,7 +14,7 @@ expression.ReplacePlaceholder(oDrawing);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oDrawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | No description provided. |
+| drawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | The drawing object that will replace the placeholder. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Replace the placeholder by a drawing on the slide.
+Replace a placeholder with an image in a presentation.
 
 ```javascript editor-pptx
-// How can I replace placeholder using a drawing object in a presentation?
+// How do I swap a placeholder for an actual image in a presentation?
 
-// Replace placeholder for a drawing object in a presentation.
+// Insert an image into a shape that has a placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

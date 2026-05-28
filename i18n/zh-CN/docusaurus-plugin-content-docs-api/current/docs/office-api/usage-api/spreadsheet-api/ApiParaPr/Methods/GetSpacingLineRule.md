@@ -20,12 +20,12 @@ expression.GetSpacingLineRule();
 
 ## 示例
 
-获取电子表格中的段落行距值。
+读取电子表格中应用于段落的行距规则。
 
 ```javascript editor-xlsx
-// How to get spacing line value between sentences of a paragraph in a spreadsheet.
+// How do I find out whether a paragraph's line height is set to auto or a fixed rule in a spreadsheet?
 
-// Create a paragraph set spacing line between the sentences and retrieve the value in a spreadsheet.
+// Verify the spacing mode of a paragraph after setting its line height to confirm the rule type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

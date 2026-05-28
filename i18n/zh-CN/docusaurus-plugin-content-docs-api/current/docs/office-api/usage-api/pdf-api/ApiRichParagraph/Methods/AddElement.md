@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向 PDF 文档中的富文本段落添加新元素。
+在 PDF 中向段落插入元素。
 
 ```javascript editor-pdf
-// How do I add the element in a PDF document?
+// How do I add items to a paragraph in a PDF?
 
-// Add the element using a rich paragraph object in a PDF document.
+// Place a new element at a specific position in a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

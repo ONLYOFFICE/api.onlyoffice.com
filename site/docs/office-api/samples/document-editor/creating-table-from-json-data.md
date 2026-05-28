@@ -46,7 +46,7 @@ let columnCount = headers.length;
 let rowCount = jsonData.length + 1; // +1 for header row
 
 // Create table with appropriate dimensions
-let table = Api.CreateTable(columnCount, rowCount);
+let table = Api.CreateTable(rowCount, columnCount);
 table.SetWidth("percent", 100);
 
 // Create custom table style

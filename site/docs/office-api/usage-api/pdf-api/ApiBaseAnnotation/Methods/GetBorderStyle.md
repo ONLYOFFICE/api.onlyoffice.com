@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a square annotation and get its border style in a PDF document.
+Retrieve the border style of an annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I get the border style in a PDF document?
+// What style does the border use on an annotation in a PDF?
 
-// Get the border style using an annotation object in a PDF document.
+// Determine whether an annotation's border is solid, dashed, or another style in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

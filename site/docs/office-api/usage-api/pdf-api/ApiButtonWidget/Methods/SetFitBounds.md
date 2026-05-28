@@ -5,7 +5,7 @@ Sets button widget fit bounds.
 ## Syntax
 
 ```javascript
-expression.SetFitBounds(bFit);
+expression.SetFitBounds(fit);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetFitBounds(bFit);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bFit | Required | boolean |  | No description provided. |
+| fit | Required | boolean |  | Specifies whether the icon is scaled to fit the button bounds. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ boolean
 Set button widget fit bounds property in a PDF document.
 
 ```javascript editor-pdf
-// How to set fit bounds for a button widget in a PDF document?
+// Enable or disable the fit bounds behavior for a button widget.
 
-// Set fit bounds and display the result in a PDF document.
+// Display the fit bounds status using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

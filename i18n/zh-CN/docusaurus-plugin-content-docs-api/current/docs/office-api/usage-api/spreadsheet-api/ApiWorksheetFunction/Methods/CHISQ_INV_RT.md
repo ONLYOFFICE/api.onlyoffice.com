@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回卡方分布右尾概率的逆函数。
+在电子表格中将上尾概率转换为匹配的卡方临界值。
 
 ```javascript editor-xlsx
-// How to return the inverse of the right-tailed probability of the chi-squared distribution in a spreadsheet.
+// Determine the boundary value for statistical significance at a given right-tail probability in a spreadsheet.
 
-// Use function to return the inverse of the right-tailed probability of the chi-squared distribution in a spreadsheet.
+// Find the threshold point used to evaluate extreme results in hypothesis testing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

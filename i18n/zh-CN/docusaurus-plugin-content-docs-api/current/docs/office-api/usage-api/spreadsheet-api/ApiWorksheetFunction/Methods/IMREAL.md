@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的实部系数。
+提取电子表格中复数的实部。
 
 ```javascript editor-xlsx
-// How to get the real coefficient in a spreadsheet.
+// How do I get the real coefficient from a complex number in a spreadsheet?
 
-// Use a function to get the real coefficient of a complex number in a spreadsheet.
+// Retrieve the real component for complex number analysis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

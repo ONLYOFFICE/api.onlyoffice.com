@@ -1,8 +1,8 @@
 # SetSpacingLine
 
 设置段落行距。如果 sLineRule 参数的值为
-"atLeast" 或 "exact"，则 nLine 的值将被解释为磅的二十分之一。如果
-sLineRule 参数的值为 "auto"，则
+“atLeast” 或 “exact”，则 nLine 的值将被解释为磅的二十分之一。如果
+sLineRule 参数的值为 “auto”，则
 nLine 参数的值将被解释为行的 240 分之一。
 
 ## 语法
@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置段落行距。
+调整演示文稿中段落内文本行之间的间距。
 
 ```javascript editor-pptx
-// How to set the size of a spacing line from a paragraph properties in a presentation.
+// How do I change the line height in a presentation?
 
-// Change a spacing line size property of a paragraph properties in a presentation.
+// Set the vertical distance between text lines using paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中与图标集条件关联的公式。
+读取与电子表格中图标集条件格式规则关联的公式。
 
 ```javascript editor-xlsx
-// How do I get the formula in a spreadsheet?
+// How do I find out whether an icon set condition uses a formula to determine its thresholds in a spreadsheet?
 
-// Get the formula using an icon set condition object.
+// Check if a formula drives the icon set rule instead of a fixed value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Month');

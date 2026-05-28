@@ -22,12 +22,12 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-在演示文稿中使用核心属性设置演示文稿的类别。
+为演示文稿分配类别。
 
 ```javascript editor-pptx
-// How to set category for a core properties in a presentation?
+// How do I set a category for a presentation in a presentation?
 
-// Set category and display the result in a presentation.
+// Set a category and display it as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a RGB color object in a document.
+Check what category a custom color value belongs to in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a RGB color in a document?
+// How do I find out the type of a custom color used for a shape fill in a document?
 
-// Get the class type of a RGB color and display it in the document.
+// Confirm the color category before reusing a custom color object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

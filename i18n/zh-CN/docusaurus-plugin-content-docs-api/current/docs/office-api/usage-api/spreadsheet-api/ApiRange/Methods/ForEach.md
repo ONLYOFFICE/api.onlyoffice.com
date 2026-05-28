@@ -18,16 +18,16 @@ expression.ForEach(fCallback);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-对每个单元格执行一次提供的函数。
+在电子表格中对范围内的每个单元格运行自定义操作。
 
 ```javascript editor-xlsx
-// How to iterate through each cell from a range.
+// How do I apply the same operation to each cell in a selection in a spreadsheet?
 
-// For Each cycle implementation for cell range in a spreadsheet.
+// Loop over a group of cells and bold any that do not contain a specific value.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

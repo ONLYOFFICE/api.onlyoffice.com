@@ -20,12 +20,12 @@ expression.GetBackgroundColor();
 
 ## 示例
 
-获取文档中容器的边框颜色。
+读取文档中内联内容控件的背景颜色。
 
 ```javascript editor-docx
-// How can I get the background color using an inline content control in a document?
+// How do I get the background color of an inline content control in a document?
 
-// Get the background color for an inline content control in a document.
+// Compare the fill color of multiple content controls to audit their visual styling in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

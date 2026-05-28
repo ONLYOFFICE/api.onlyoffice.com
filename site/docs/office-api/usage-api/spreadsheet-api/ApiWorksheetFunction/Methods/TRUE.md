@@ -1,6 +1,6 @@
 # TRUE
 
-Returns the -**true** logical value.
+Returns the - **true** logical value.
 
 ## Syntax
 
@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Return the true logical value in a spreadsheet.
+Return a logical true value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a true value in a spreadsheet.
+// How do I insert the logical true value into a cell in a spreadsheet?
 
-// Use a function to return true value in a spreadsheet.
+// Set a cell to the boolean true value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

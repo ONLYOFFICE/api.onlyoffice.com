@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在演示文稿中使用指定位置移除元素。
+按位置从演示文稿中的段落移除元素。
 
 ```javascript editor-pptx
-// How to remove an element from the paragraph using its position index in a presentation.
+// How do I delete a specific element from a paragraph in a presentation?
 
-// Delete an element from the paragraph in a presentation.
+// Remove one text element at a given index from the paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

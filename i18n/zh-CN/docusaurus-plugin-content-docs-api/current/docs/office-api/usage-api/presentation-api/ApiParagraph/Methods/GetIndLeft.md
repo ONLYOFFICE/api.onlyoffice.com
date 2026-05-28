@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取演示文稿中的段落左侧缩进。
+检查演示文稿中段落的左边距。
 
 ```javascript editor-pptx
-// How to return a left side identation of a paragraph property in a presentation.
+// How do I read the left indentation value from a paragraph in a presentation?
 
-// Return a left side indentation of a text property from the slide.
+// Retrieve the distance between the left edge and the paragraph text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

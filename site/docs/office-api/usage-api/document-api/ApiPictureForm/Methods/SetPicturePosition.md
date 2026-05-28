@@ -1,9 +1,9 @@
 # SetPicturePosition
 
 Sets the picture position inside the current form:
--**0** - the picture is placed on the left/top;
--**50** - the picture is placed in the center;
--**100** - the picture is placed on the right/bottom.
+- **0** - the picture is placed on the left/top;
+- **50** - the picture is placed in the center;
+- **100** - the picture is placed on the right/bottom.
 
 ## Syntax
 
@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-Set the picture position inside the form.
+Control where the image sits within a picture field in a document.
 
 ```javascript editor-docx
-// How to move the picture inside the form.
+// How do I shift an image to a specific spot inside a picture field in a document?
 
-// Specify the picture position of the form.
+// Reposition the image horizontally and vertically inside a picture field in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});

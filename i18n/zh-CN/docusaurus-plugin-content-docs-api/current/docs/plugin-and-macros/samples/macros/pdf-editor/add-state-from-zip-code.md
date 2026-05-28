@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 根据邮政编码填写州名
 
 如果输入的是加利福尼亚州的邮政编码，本插件会添加“州（State）”标签，并在文本表单中预填“CA（加利福尼亚州的简写）”。您也可以通过 API 扩展功能，实现根据邮政编码自动填写“州”。
@@ -42,4 +44,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.png#gh-light-mode-only)![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/add-state-from-zip-code" dark />

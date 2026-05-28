@@ -1,6 +1,6 @@
 # SearchProps
 
-No description provided.
+Search options used when performing text search operations.
 
 ## Type
 

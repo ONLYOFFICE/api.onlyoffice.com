@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-在 PDF 文档中创建文本属性并使用。
+在 PDF 中使用自定义字体大小和粗体样式格式化文本。
 
 ```javascript editor-pdf
-// How to change text style, size and font in a PDF document.
+// How do I change text style and size in a PDF?
 
-// Change text properties using the editor API in a PDF document.
+// Set bold formatting and increase font size for text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

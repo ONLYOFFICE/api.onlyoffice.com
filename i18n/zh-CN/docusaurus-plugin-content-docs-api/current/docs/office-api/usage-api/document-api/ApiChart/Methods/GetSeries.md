@@ -22,12 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入到文档中。
+从文档中的图表读取特定数据系列的类型。
 
 ```javascript editor-docx
-// How to get first series from the chart and show its type in the document.
+// How do I find out what chart type a particular series uses in a document?
 
-// Display first chart series type in the document.
+// Verify the series type when a chart mixes different visualization styles in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,10 +6,11 @@ ApiImage 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 创建指定绘图对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiImage](../ApiImage/ApiImage.md) | 创建指定图像的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 从父对象中删除指定的绘图对象。 |
 | [GetClassType](./Methods/GetClassType.md) | "image" | 返回 ApiImage 类的类型。 |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的高度。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前绘图的内部 ID。 |
 | [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | 返回 ApiDrawing 类的类型。 |
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 x 位置。 |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 y 位置。 |

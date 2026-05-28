@@ -6,12 +6,12 @@
 
 ## 示例
 
-如何在 PDF 文档中更改绘图对象的 Y 位置。
+在 PDF 中垂直重新定位绘图对象。
 
 ```javascript editor-pdf
-// Get a shape object from a page and move by Y axis.
+// How do I move a shape to a different vertical location in a PDF?
 
-// Set pos y for a drawing object in a PDF document.
+// Adjust the Y coordinate of a drawing element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

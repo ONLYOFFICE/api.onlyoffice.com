@@ -4,6 +4,8 @@ description: Count form fields grouped by type.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Count form fields
 
 Counts the number of form fields in a document and categorizes them by type.
@@ -67,5 +69,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![FormFieldCounter](/assets/images/plugins/count-form-fields.png#gh-light-mode-only)
-![FormFieldCounter](/assets/images/plugins/count-form-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/count-form-fields" dark />

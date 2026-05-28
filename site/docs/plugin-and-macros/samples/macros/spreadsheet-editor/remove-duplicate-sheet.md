@@ -4,6 +4,8 @@ description: Remove duplicate sheets from a workbook.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove duplicate sheet
 
 Identifies and removes duplicate sheets in the spreadsheet.
@@ -56,5 +58,4 @@ Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods
 
 ## Result
 
-![RemoveDuplicateSheet](/assets/images/plugins/remove-duplicate-sheet.png#gh-light-mode-only)
-![RemoveDuplicateSheet](/assets/images/plugins/remove-duplicate-sheet.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/remove-duplicate-sheet" dark />

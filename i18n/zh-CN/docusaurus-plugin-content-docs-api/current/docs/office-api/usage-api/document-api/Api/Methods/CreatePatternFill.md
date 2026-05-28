@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## 示例
 
-在文档中创建图案填充，使用所选图案作为对象背景应用于对象。
+在文档中使用两种颜色的图案背景填充形状。
 
 ```javascript editor-docx
-// Create the fill object using the "dashDnDiag" pattern type and apply it to the created shape in a document.
+// How do I apply a diagonal dash pattern as the background of a shape in a document?
 
-// How to create a pattern fill for the shape object background in a document.
+// Give a shape a decorative patterned fill instead of a solid color in a document.
 
 const bgColor = Api.HexColor('#abcdef');
 const fgColor = Api.ThemeColor('accent3');

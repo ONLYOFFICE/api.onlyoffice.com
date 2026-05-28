@@ -5,7 +5,7 @@ Adds a new column to the end of the current table.
 ## Syntax
 
 ```javascript
-expression.AddColumn(oCell, isBefore);
+expression.AddColumn(referenceCell, before);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,8 +14,8 @@ expression.AddColumn(oCell, isBefore);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | If not specified, a new column will be added to the end of the table. |
-| isBefore | Optional | boolean | false | Add a new column before or after the specified cell. If no cell is specified, then this parameter will be ignored. |
+| referenceCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell used as an insertion reference. |
+| before | Optional | boolean | false | Add a new column before or after the specified cell. If no cell is specified, then this parameter will be ignored. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to insert a column to the table in a PDF document.
+Insert a new column into a table in a PDF
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a column to it in a PDF document.
+// Can I add more columns to an existing table in a PDF?
 
-// Add the column using a table object in a PDF document.
+// Attach a column at a specific position within a table in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

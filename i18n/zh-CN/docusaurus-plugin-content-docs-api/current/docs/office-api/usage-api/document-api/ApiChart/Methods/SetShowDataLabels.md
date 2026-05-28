@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定文档中图表显示的数据标签。
+控制文档中图表上哪些数据标签元素可见。
 
 ```javascript editor-docx
-// How to show specific chart data labels in a document.
+// How do I choose which parts of data labels appear on a chart in a document?
 
-// Create a chart, set its properties and its specific data labels visibility in a document.
+// Hide or reveal values, percentages, and category names on chart data labels in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

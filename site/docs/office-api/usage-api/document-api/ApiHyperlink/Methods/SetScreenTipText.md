@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the screen tip text of the hyperlink in a document.
+Set the tooltip text that appears when hovering over a hyperlink in a document.
 
 ```javascript editor-docx
-// How to specify the hyperlink screen tip text in a document.
+// How do I add a screen tip to a hyperlink in a document?
 
-// Set the screen tip text of the link in a document.
+// Provide a descriptive hover message for a link to guide readers in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

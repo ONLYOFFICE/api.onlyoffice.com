@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取 Fisher 变换。
+在电子表格中对相关值应用 Fisher 变换。
 
 ```javascript editor-xlsx
-// How to get a Fisher transformation.
+// How do I transform a correlation coefficient for analysis in a spreadsheet?
 
-// Use function to find out a Fisher transformation.
+// Convert a correlation value into its Fisher transformation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

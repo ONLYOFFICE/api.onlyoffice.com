@@ -5,7 +5,7 @@ Sets button widget behavior.
 ## Syntax
 
 ```javascript
-expression.SetBehavior(sType);
+expression.SetBehavior(behavior);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetBehavior(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | No description provided. |
+| behavior | Required | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | The highlight behavior when the button is clicked. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ boolean
 Set button widget behavior type in a PDF document.
 
 ```javascript editor-pdf
-// How do I set behavior in a PDF document?
+// Apply behavior type such as 'outline' to a button widget.
 
-// Set behavior using a button widget object in a PDF document.
+// Display the set behavior value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字除以除数后的余数。
+获取电子表格中一个数字除以另一个数字的余数。
 
 ```javascript editor-xlsx
-// How to get the modulo from the division in a spreadsheet.
+// What is the remainder from division in a spreadsheet?
 
-// Use a function to calculate the remainder from the division operation in a spreadsheet.
+// Calculate what is left over after dividing two numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

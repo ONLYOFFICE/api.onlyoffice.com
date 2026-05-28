@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的布局小计位置。
+将小计放置在电子表格中每个透视字段组的顶部或底部。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotal location in a spreadsheet.
+// How do I move the subtotal row above or below a pivot field group in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout subtotal location of a specified pivot in a spreadsheet.
+// Reposition where calculated totals appear within a pivot field's layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

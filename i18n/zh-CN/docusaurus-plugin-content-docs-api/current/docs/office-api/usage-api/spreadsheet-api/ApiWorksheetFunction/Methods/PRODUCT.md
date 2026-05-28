@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将所有作为参数给出的数字相乘。
+在电子表格中将一组数字相乘。
 
 ```javascript editor-xlsx
-// How to return the result after multiplication in a spreadsheet.
+// What is the product of multiple numbers in a spreadsheet?
 
-// Use a function to multiply a list of numbers in a spreadsheet.
+// Calculate the result of multiplying a series of values together in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

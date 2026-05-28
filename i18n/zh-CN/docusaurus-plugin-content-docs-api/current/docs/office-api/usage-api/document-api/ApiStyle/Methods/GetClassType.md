@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中样式对象的类类型。
+识别文档中样式所属的对象类型。
 
 ```javascript editor-docx
-// How can I get the class type of a style in a document?
+// How do I find out what category a style object falls into in a document?
 
-// Get the class type of a style and display it in the document.
+// Read and display the classification label assigned to a style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

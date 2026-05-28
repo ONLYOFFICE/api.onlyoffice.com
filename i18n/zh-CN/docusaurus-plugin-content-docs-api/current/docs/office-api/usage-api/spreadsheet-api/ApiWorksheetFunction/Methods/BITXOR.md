@@ -1,6 +1,6 @@
 # BITXOR
 
-返回两个数字的按位"异或"运算结果。
+返回两个数字的按位“异或”运算结果。
 
 ## 语法
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数字的按位 "XOR"。
+查找电子表格中两个数字之间不同的位。
 
 ```javascript editor-xlsx
-// How to get a result from XOR operation in a spreadsheet.
+// Which bits are active in one number but not the other in a spreadsheet?
 
-// Use function to calculate bitwise "XOR" operation in a spreadsheet.
+// Highlight the unique bits when comparing two values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -5,7 +5,7 @@ Sets widget checkbox style.
 ## Syntax
 
 ```javascript
-expression.SetCheckStyle(sStyle);
+expression.SetCheckStyle(style);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetCheckStyle(sStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyle | Required | [CheckStyle](../../Enumeration/CheckStyle.md) |  | No description provided. |
+| style | Required | [CheckStyle](../../Enumeration/CheckStyle.md) |  | The checkbox style. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set checkbox widget check style in a PDF document.
+Change the check symbol appearance of a checkbox widget in a PDF.
 
 ```javascript editor-pdf
-// How can I set check style using a checkbox widget in a PDF document?
+// How do I customize what symbol appears inside a checked checkbox in a PDF?
 
-// Set check style for a checkbox widget in a PDF document.
+// Apply a visual style to a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

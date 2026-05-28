@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的文本间距大小。
+获取 PDF 中文本字母之间的间距量。
 
 ```javascript editor-pdf
-// How to know a text spacing in a PDF document.
+// How do I find the character spacing setting in a PDF?
 
-// Get the text properties of the run and display its spacing size in a PDF document.
+// Read and display the letter spacing value applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

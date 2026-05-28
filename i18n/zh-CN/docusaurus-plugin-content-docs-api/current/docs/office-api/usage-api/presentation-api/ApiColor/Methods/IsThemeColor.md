@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查演示文稿中形状填充使用的颜色是否为主题颜色。
+确定填充颜色是来自设计主题还是演示文稿中的自定义颜色。
 
 ```javascript editor-pptx
-// How can I is theme color using a color in a presentation?
+// How do I check if a color is a theme color or a standalone color in a presentation?
 
-// Is theme color for a color in a presentation.
+// Verify if a fill uses a theme-based color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

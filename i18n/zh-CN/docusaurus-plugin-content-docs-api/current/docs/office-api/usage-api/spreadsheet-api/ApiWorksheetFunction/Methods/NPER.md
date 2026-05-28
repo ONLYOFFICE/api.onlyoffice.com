@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中基于定期、固定付款和固定利率返回投资的期数。
+计算电子表格中达到储蓄目标所需的支付期数。
 
 ```javascript editor-xlsx
-// How to get the number of periods for an investment in a spreadsheet.
+// How do I find the number of periods needed for an investment in a spreadsheet?
 
-// Use a function to get the number of periods for an investment based on different parameters in a spreadsheet.
+// Determine the time required to pay off a loan or reach an investment target in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

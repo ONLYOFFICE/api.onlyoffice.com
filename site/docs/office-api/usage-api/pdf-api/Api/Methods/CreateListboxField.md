@@ -5,7 +5,7 @@ Creates a listbox field.
 ## Syntax
 
 ```javascript
-expression.CreateListboxField(aRect);
+expression.CreateListboxField(rect);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateListboxField(aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
 
 ## Returns
 
@@ -22,10 +22,10 @@ expression.CreateListboxField(aRect);
 
 ## Example
 
-How to create and add a listbox field to document.
+Create and add a listbox field to document.
 
 ```javascript editor-pdf
-// How do I create the listbox field in a PDF document?
+// Create the listbox field in a PDF document.
 
 // Create the listbox field and display the result in a PDF document.
 

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中的所有表单。
+清除文档中所有表单字段的值。
 
 ```javascript editor-forms
-// How to remove all answers from all forms.
+// How do I reset every form field to its empty state in a document?
 
-// Reset answers from document.
+// Wipe entered data from text forms and content controls to start fresh in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

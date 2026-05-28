@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a table that contains the current content control in a document.
+Find the table that contains a content control in a document.
 
 ```javascript editor-docx
-// How can I get the parent table using a block-level content control in a document?
+// How do I access the table that holds a content control in a document?
 
-// Get the parent table for a block-level content control in a document.
+// Place a content control inside a table cell and then remove a row from that table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

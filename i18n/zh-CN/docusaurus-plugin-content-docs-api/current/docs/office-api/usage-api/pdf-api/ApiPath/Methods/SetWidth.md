@@ -22,12 +22,12 @@ expression.SetWidth(nWidth);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
+设置 PDF 中形状路径的水平大小。
 
 ```javascript editor-pdf
-// How to set width for a geometry path in a PDF document?
+// How wide should my custom shape be in a PDF?
 
-// Set width and display the result in a PDF document.
+// Specify the left-to-right dimension of a drawn path in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -5,7 +5,7 @@ Gets option from list options.
 ## Syntax
 
 ```javascript
-expression.GetOption(nPos);
+expression.GetOption(index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.GetOption(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | option index to get |
+| index | Required | number |  | The option index. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ expression.GetOption(nPos);
 
 ## Example
 
-Get option from field with list of options in a PDF document.
+Retrieve a specific choice from a dropdown field in a PDF.
 
 ```javascript editor-pdf
-// How to get the option for a list field in a PDF document?
+// How do I access an individual option from a dropdown in a PDF?
 
-// Get the option and display the result in a PDF document.
+// Display a selected choice from a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -6,7 +6,7 @@ top edge border of a specific individual table cell within a table.
 ## Syntax
 
 ```javascript
-expression.SetCellMarginTop(nValue);
+expression.SetCellMarginTop(margin);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -15,7 +15,7 @@ expression.SetCellMarginTop(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell top margin shall be used, otherwise override the table cell top margin with specified value for the current cell. |
+| margin | Required | [twips](../../Enumeration/twips.md) |  | The cell margin. If this value is &lt;code&gt;null&lt;/code&gt;, the default margin is used. otherwise override the table cell top margin with specified value for the current cell. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to set the cell top margin for the current table cell.
+Set the top margin of a table cell in a PDF.
 
 ```javascript editor-pdf
-// Specify the top margin value for the table cell object.
+// How do I add space above the content inside a cell in a PDF?
 
-// Set cell margin top using a table cell object.
+// Adjust the spacing at the top of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

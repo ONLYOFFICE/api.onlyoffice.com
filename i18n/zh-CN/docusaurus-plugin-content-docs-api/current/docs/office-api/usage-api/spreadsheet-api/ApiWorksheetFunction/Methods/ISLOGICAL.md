@@ -14,7 +14,7 @@ expression.ISLOGICAL(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。该值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查值是否为逻辑值（true 或 false），并返回 true 或 false。
+测试电子表格中的单元格是否包含逻辑值（true 或 false）。
 
 ```javascript editor-xlsx
-// How to check if the cell contains a logical value.
+// How do I determine if a cell holds a boolean value in a spreadsheet?
 
-// Use a function to check whether a range data is a logical value in a spreadsheet.
+// Use a function to distinguish between logical values and other data types in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B3").SetValue("66");

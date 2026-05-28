@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中自定义 XML 节点的 XML 内容。
+读取文档中存储的特定节点的 XML 标记。
 
 ```javascript editor-docx
-// How can I get the xml using a custom XML node in a document?
+// How do I extract the raw XML content of a node embedded in a document?
 
-// Get the xml for a custom XML node in a document.
+// Inspect or export a node's full markup when working with structured data in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

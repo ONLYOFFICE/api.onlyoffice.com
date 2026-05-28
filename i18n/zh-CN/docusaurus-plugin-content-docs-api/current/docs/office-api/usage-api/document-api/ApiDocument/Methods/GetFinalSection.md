@@ -20,12 +20,12 @@ expression.GetFinalSection();
 
 ## 示例
 
-获取文档中的最后一节。
+访问最后一节并向其默认页眉添加文本。
 
 ```javascript editor-docx
-// How to get the last section of the document.
+// How do I get the last section of a document to modify its header in a document?
 
-// Update the header of the final section in a document.
+// Set default text and paragraph styles while inserting a header into the closing section in a document.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph first line indentation in a PDF document.
+Retrieve the first line indentation value from a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to return the first line identation of a paragraph property in a PDF document.
+// How do I get the first line indent measurement in a PDF?
 
-// Return the first line indentation of a text property from the page.
+// Obtain the starting line offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

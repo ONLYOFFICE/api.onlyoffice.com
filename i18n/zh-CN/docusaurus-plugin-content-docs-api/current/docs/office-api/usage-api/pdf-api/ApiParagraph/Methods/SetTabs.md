@@ -1,18 +1,18 @@
 # SetTabs
 
-指定将用于当前段落中任何制表符的自定义制表位序列。
--**警告**：aPos 数组和 aVal 数组的长度-**必须**相等。
+指定一系列自定义制表位，用于当前段落中的所有制表符。
+- **警告**：aPos 数组和 aVal 数组的长度**必须**相等。
 
 继承自 [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md)。
 
 ## 示例
 
-在 PDF 文档中设置一系列自定义制表位，用于段落中的所有制表符。
+定义 PDF 中用于对齐文本的自定义制表位位置。
 
 ```javascript editor-pdf
-// How to set the size of a spacing tabs from a paragraph properties in a PDF document.
+// How do I set where tabs align text in a PDF?
 
-// Change a tabs size property of a paragraph properties in a PDF document.
+// Configure tab stop locations and alignment styles in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

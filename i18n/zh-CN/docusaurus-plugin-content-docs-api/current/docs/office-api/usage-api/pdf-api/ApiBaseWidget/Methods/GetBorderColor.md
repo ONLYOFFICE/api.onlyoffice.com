@@ -20,12 +20,12 @@ expression.GetBorderColor();
 
 ## 示例
 
-获取字段控件并显示其在 PDF 文档中的边框颜色。
+读取 PDF 中表单字段控件的边框颜色。
 
 ```javascript editor-pdf
-// How to get the border color for a widget in a PDF document?
+// How do I get the border color of a widget in a PDF?
 
-// Get the border color and display the result in a PDF document.
+// Retrieve and display the outline color of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

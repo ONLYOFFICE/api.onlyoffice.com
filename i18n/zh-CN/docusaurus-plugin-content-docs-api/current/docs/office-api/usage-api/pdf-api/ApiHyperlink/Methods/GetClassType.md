@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中超链接的类类型。
+确定 PDF 中超链接对象的类型。
 
 ```javascript editor-pdf
-// How to identify the class type of a hyperlink in a PDF document?
+// What is the class type of a hyperlink in a PDF?
 
-// Obtain the class type identifier of a hyperlink object in a PDF document.
+// Identify the object classification of a hyperlink in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

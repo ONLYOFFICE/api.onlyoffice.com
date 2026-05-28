@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-在电子表格中为当前 run 设置文本属性。
+在电子表格中为文本运行应用完整的格式属性集。
 
 ```javascript editor-xlsx
-// How to create text property for a text object in a spreadsheet.
+// How do I update the font size, weight, and other appearance settings for text in a spreadsheet?
 
-// Create a text run object, add properties like font size, style, color, etc in a spreadsheet.
+// Bundle multiple style choices — such as bold and size — into one step when formatting a text run in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

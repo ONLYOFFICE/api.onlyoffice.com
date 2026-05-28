@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.RemoveColumn(oCell);
+expression.RemoveColumn(columnCell);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,7 +14,7 @@ expression.RemoveColumn(oCell);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将被删除的列中的表格单元格。 |
+| columnCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 要删除的列中的单元格。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何从 PDF 文档中的表格删除列。
+从 PDF 中的表格删除列。
 
 ```javascript editor-pdf
-// Create a table, create cells and remove the whole column by its cell.
+// How do I remove an unwanted column from a table in a PDF?
 
-// Use table to remove the column in a PDF document.
+// Take out a vertical column of cells from your table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

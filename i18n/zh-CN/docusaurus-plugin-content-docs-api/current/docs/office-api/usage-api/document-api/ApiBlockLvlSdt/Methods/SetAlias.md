@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的容器设置别名属性。
+为文档中的内容控件指定自定义别名。
 
 ```javascript editor-docx
-// Create a block content control and set an alias to it in a document.
+// How do I assign an alias to a content control in a document?
 
-// How to set an alias to the block-level content control object in a document.
+// Label a content control with a short name so it can be identified by title in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

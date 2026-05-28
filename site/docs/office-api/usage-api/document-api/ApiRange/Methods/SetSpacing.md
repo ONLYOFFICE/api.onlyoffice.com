@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-Set the text spacing measured in twentieths of a point in a document.
+Adjust the spacing between characters in a selected text range in a document.
 
 ```javascript editor-docx
-// How to set the range text spacing size in a document.
+// How do I spread out or tighten the letters within a highlighted portion of text in a document?
 
-// Get a range text, update its spacing in a document.
+// Control the gap between individual characters to improve readability or achieve a design effect in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

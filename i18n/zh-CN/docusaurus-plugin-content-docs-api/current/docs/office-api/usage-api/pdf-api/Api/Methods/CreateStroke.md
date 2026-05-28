@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-在 PDF 文档中创建笔触。
+在 PDF 中为形状添加彩色边框轮廓。
 
 ```javascript editor-pdf
-// How to add a stroke to the shape in a PDF document.
+// How do I add a stroke to the edge of a shape in a PDF?
 
-// Add solid fill and stroke to the shape properties in a PDF document.
+// Apply a stroke with gradient fill to a shape's outline in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.FreezeRows(count);
 
 ## 示例
 
-在电子表格中冻结第一行。
+锁定一个或多个顶行使其在向下滚动时保持可见。
 
 ```javascript editor-xlsx
-// How to freeze rows using their indices in a spreadsheet.
+// How do I keep header rows from disappearing when scrolling through data in a spreadsheet?
 
-// Get freeze panes and freeze a row using its index in a spreadsheet.
+// Pin the uppermost rows in place so column labels are always on screen in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

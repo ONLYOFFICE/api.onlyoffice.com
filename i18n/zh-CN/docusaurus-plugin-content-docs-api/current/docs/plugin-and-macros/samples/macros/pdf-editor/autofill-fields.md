@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动填充字段
 
 自动填充文档中所有具有相同占位符或提示文本的文本字段。
@@ -30,5 +32,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![自动填充字段](/assets/images/plugins/autofill-fields.png#gh-light-mode-only)
-![自动填充字段](/assets/images/plugins/autofill-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/autofill-fields" dark />

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表标题的填充。
+在文档中为图表标题区域应用背景填充颜色。
 
 ```javascript editor-docx
-// How to color a chart title in a document.
+// How do I change the background color behind a chart title in a document?
 
-// Create a chart, set its properties and its title color in a document.
+// Highlight a chart title with a solid color to make it stand out visually in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

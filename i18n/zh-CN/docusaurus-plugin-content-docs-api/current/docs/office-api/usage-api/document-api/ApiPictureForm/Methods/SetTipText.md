@@ -6,12 +6,12 @@
 
 ## 示例
 
-为表单设置提示文本。
+在文档中为表单字段设置工具提示文本以提供指导。
 
 ```javascript editor-docx
-// Add text as a tip of the form.
+// How do I add a tooltip that appears when hovering over a form field in a document?
 
-// Create a text form and set its tip text (text that appears on hold).
+// Give users helpful instructions that appear when they hover over a field.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

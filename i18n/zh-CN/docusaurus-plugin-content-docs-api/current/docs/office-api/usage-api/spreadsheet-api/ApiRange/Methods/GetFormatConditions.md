@@ -20,12 +20,12 @@ expression.GetFormatConditions();
 
 ## 示例
 
-获取电子表格中范围的格式条件集合。
+检索电子表格中应用于范围的条件格式规则。
 
 ```javascript editor-xlsx
-// How to get the format conditions for a cell range?
+// How do I access the conditional formatting rules on a cell range in a spreadsheet?
 
-// Get the format conditions and display the result in a spreadsheet.
+// Add a data bar rule to a range and check how many rules are active in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Score');

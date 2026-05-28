@@ -20,12 +20,12 @@ expression.GetPageWidth();
 
 ## 示例
 
-获取文档中的页面宽度。
+读取文档中节定义的页面宽度。
 
 ```javascript editor-docx
-// How to get the page width.
+// How do I find out the page width for a section in a document?
 
-// Get the final section of the page and get its width.
+// Retrieve the horizontal page size to verify or display layout dimensions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,3 +1,10 @@
+---
+description: Insert custom text fields and dropdowns into a document.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 添加自定义字段
 
 向文档中插入自定义字段。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：**文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-custom-fields" />
 
 ## 安装
 

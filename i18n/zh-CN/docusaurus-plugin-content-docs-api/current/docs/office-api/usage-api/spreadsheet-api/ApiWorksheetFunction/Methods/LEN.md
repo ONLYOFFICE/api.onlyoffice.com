@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回文本字符串中的字符数。
+计算电子表格中文本的字符数。
 
 ```javascript editor-xlsx
-// How to get a length of a text in a spreadsheet.
+// How do I find out how many letters or characters are in a text string in a spreadsheet?
 
-// Use a function to get length of a string in a spreadsheet.
+// Get the total character count of any text value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落内容对齐方式。
+在 PDF 中对齐段落中的文本。
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties in a PDF document.
+// How do I change the text alignment in a paragraph in a PDF?
 
-// Create a paragraph setting its justification property in a PDF document.
+// Apply text alignment to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

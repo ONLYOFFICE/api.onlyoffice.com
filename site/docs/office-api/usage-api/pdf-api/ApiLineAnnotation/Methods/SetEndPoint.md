@@ -14,7 +14,7 @@ expression.SetEndPoint(point);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| point | Required | [Point](../../Enumeration/Point.md) |  | The end point of the line. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set end point to line annotation in a PDF document.
+Change where a line annotation ends in a PDF.
 
 ```javascript editor-pdf
-// How to set end point for a line annotation in a PDF document?
+// How do I move the endpoint of a line in a PDF?
 
-// Set end point and display the result in a PDF document.
+// Update the ending position of a line annotation in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});

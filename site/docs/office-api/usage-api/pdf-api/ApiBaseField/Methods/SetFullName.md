@@ -5,7 +5,7 @@ Sets new field name if possible.
 ## Syntax
 
 ```javascript
-expression.SetFullName(sName);
+expression.SetFullName(name);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetFullName(sName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | Required | string |  | No description provided. |
+| name | Required | string |  | The new full name for the field. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set field full name and display it in a PDF document.
+Assign a complete name identifier to a form field in a PDF.
 
 ```javascript editor-pdf
-// How do I set full name in a PDF document?
+// How do I name a form field in a PDF?
 
-// Set full name using a base field object in a PDF document.
+// Set the unique full name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

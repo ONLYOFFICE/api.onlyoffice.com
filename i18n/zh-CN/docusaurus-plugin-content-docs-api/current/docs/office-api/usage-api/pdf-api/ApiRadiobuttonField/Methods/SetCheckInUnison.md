@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCheckInUnison(bInUnison);
+expression.SetCheckInUnison(checkInUnison);
 ```
 
 `expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCheckInUnison(bInUnison);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bInUnison | 必需 | boolean |  | 具有相同导出值的字段是否同时选中 |
+| checkInUnison | 必需 | boolean |  | 指定具有相同导出值的字段是否一起选中。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置单选按钮字段的统一选中属性。
+链接单选按钮选项使 PDF 中一次只能选择一个。
 
 ```javascript editor-pdf
-// How to set check in unison for a radio button field in a PDF document?
+// How do I make radio buttons work together in a PDF?
 
-// Set check in unison and display the result in a PDF document.
+// Enable synchronized selection across radio button choices in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

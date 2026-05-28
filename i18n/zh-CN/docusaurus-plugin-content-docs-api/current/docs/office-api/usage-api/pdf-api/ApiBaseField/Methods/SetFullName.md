@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFullName(sName);
+expression.SetFullName(name);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetFullName(sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | 必需 | string |  | 未提供描述。 |
+| name | 必需 | string |  | 字段的新完整名称。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段全名并显示。
+在 PDF 中为表单字段分配完整的名称标识符。
 
 ```javascript editor-pdf
-// How do I set full name in a PDF document?
+// How do I name a form field in a PDF?
 
-// Set full name using a base field object in a PDF document.
+// Set the unique full name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

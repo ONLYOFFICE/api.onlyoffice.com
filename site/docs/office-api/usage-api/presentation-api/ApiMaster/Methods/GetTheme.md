@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a theme of the slide master in a presentation.
+Retrieve the theme from a slide master and modify its color scheme.
 
 ```javascript editor-pptx
-// How to get a theme knowing a slide master and set its color scheme.
+// Access the master theme and create a new color scheme with custom RGB values.
 
-// Get slide master theme using the slide master API in a presentation.
+// Apply the custom color scheme to the master theme and display the result in a chart.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

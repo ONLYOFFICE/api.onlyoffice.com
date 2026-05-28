@@ -4,6 +4,8 @@ description: Add comments to cells and change their background color.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Commenting and coloring cells
 
 Adds comments to the cells in the selection and can also change the background color of the cells.
@@ -39,4 +41,4 @@ End Sub
 
 ## Result
 
-![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/commenting-and-coloring-cells" dark />

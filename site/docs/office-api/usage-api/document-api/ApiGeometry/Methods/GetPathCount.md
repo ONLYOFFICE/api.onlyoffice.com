@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Analyzes path properties of a cloud shape. Retrieves and display path dimensions, stroke and fill information.
+Count the number of paths that make up a shape's geometry in a document.
 
 ```javascript editor-docx
-// How to get the path count for a geometry in a document?
+// How do I find out how many paths a shape's geometry contains in a document?
 
-// Get the path count and display the result in a document.
+// Verify the total path count before iterating over a shape's geometry paths in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

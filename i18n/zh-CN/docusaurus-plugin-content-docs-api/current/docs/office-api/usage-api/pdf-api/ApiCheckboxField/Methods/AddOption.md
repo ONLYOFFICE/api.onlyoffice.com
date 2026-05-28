@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddOption(nPage, aRect, sExportValue);
+expression.AddOption(pageIndex, rect, exportValue);
 ```
 
 `expression` - 表示 [ApiCheckboxField](../ApiCheckboxField.md) 类的变量。
@@ -14,9 +14,9 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | 必需 | number |  | 添加选项的页面 |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 新选项的矩形 |
-| sExportValue | 可选 | string |  | 选项的选中值 |
+| pageIndex | 必需 | number |  | 要添加选项的页面。 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 选项矩形。 |
+| exportValue | 可选 | string |  | 选项的选中值。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 ## 示例
 
-在 PDF 文档中为复选框字段组添加选项。
+在 PDF 中向复选框字段添加可选选项。
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How do I create multiple choices for a checkbox field in a PDF?
 
-// Add the option using a checkbox field object in a PDF document.
+// Create an additional choice that users can select in a checkbox field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

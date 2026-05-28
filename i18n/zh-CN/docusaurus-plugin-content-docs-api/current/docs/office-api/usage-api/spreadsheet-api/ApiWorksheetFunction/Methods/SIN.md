@@ -25,9 +25,9 @@ number
 在电子表格中返回角度的正弦值。
 
 ```javascript editor-xlsx
-// How to calaculate the sine of a number in a spreadsheet.
+// Calculate the sine value of an angle using the SIN function.
 
-// Use a function to get a sine of a number in a spreadsheet.
+// Apply the function to compute and display the result in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

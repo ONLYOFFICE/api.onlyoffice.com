@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a custom shape and add it to a slide. Applies custom geometry with specific fill and stroke properties.
+Create a custom shape and add it to a slide in a presentation.
 
 ```javascript editor-pptx
-// How can I add the path using a geometry in a presentation?
+// Paths define the outline and visual structure of custom geometry shapes.
 
-// Add the path for a geometry in a presentation.
+// Add a path to a geometry and apply it to a shape.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

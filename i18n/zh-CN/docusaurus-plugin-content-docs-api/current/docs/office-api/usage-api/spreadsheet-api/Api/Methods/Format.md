@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-获取根据格式表达式中的指令格式化的类。
+在电子表格中为值应用数字格式模式。
 
 ```javascript editor-xlsx
-// How to set a format for a cell or a range using a format expression.
+// How do I format a number using a custom pattern in a spreadsheet?
 
-// Change a format of a range using an expression.
+// Display a value with a specific formatting style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let format = Api.Format("123456", "$#,##0");

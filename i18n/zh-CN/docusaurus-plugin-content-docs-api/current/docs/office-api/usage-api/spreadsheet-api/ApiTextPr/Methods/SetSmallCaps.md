@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-指定文本 run 中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
+在电子表格中将形状内的小写字母显示为小型大写字母。
 
 ```javascript editor-xlsx
-// How to make text uncapitalized in a spreadsheet.
+// How do I format text so all letters appear as small capitals in a spreadsheet?
 
-// Make all characters of a text as a small letter in a spreadsheet.
+// Render every letter in a reduced capital style without changing the original casing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

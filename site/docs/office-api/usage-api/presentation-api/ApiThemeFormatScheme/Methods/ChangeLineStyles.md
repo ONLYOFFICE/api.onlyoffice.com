@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the line styles to the current theme format scheme.
+Change the line styles of a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change line styles of a format scheme.
+// How do I update the line appearance used by a theme in a presentation?
 
-// Get format scheme and update its line styles.
+// Modify the stroke patterns applied to shapes using a theme format scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中为当前文本 run 的字符设置字体大小。
+调整文档中应用于文本的字体大小。
 
 ```javascript editor-docx
-// How to change the text font size in a document.
+// How do I make text larger or smaller in a document?
 
-// Create a text run object, resize its font in a document.
+// Control how big characters appear by setting a custom font size in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

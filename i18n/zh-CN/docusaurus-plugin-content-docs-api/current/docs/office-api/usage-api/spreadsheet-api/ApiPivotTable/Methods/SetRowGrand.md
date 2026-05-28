@@ -1,6 +1,6 @@
 # SetRowGrand
 
-为数据透视表行设置 -**总计** 设置。
+设置数据透视表行的 **Grand Totals** 设置。
 
 ## 语法
 
@@ -22,12 +22,12 @@ expression.SetRowGrand(show);
 
 ## 示例
 
-在电子表格中设置数据透视表的行总计。
+显示或隐藏电子表格中数据透视表底部的总计行。
 
 ```javascript editor-xlsx
-// How to set row grand of a table in a spreadsheet.
+// How do I remove the grand total row from a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its row grand in a spreadsheet.
+// Toggle the overall row totals to keep the pivot table output focused in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

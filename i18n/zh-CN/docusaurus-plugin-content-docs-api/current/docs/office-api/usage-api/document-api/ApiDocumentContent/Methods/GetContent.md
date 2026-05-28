@@ -22,12 +22,12 @@ expression.GetContent(bGetCopies);
 
 ## 示例
 
-从文档中的文档内容获取文档元素数组。
+从文档中的文档内容容器检索所有元素。
 
 ```javascript editor-docx
-// Retrieve each document element.
+// How do I get an array of all elements stored in a document content in a document?
 
-// Update properties of document elements knowing their order position.
+// Access individual paragraphs, tables, and controls by their position after listing all content elements.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

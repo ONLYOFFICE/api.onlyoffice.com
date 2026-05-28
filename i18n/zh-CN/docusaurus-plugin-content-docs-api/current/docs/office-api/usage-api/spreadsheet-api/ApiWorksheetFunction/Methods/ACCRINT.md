@@ -21,7 +21,7 @@ expression.ACCRINT(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 | arg5 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 证券的面值。 |
 | arg6 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 每年的付息次数。可能的值为：1 表示年付、2 表示半年付、4 表示季付。 |
 | arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要使用的日计数基准：**0** 或省略 - 美国 (NASD) 30/360；**1** - 实际/实际；**2** - 实际/360；**3** - 实际/365；**4** - 欧洲 30/360。 |
-| arg8 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 逻辑值：**true** (1) 或省略返回从发行日到结算日的应计利息。**false** (0) 返回从首次付息日到结算日的应计利息。 |
+| arg8 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 逻辑值：**true** (1) 或省略返回从发行日到结算日的应计利息。**false** (0) 返回从第一个付息日到结算日的应计利息。 |
 
 ## 返回值
 
@@ -29,12 +29,12 @@ number
 
 ## 示例
 
-在电子表格中返回定期付息证券的应计利息。
+确定电子表格中附息债券到结算日的应计利息。
 
 ```javascript editor-xlsx
-// How to get an accrued interest for a security that pays periodic interest in a spreadsheet.
+// How do I calculate accumulated interest on a bond that pays periodic amounts in a spreadsheet?
 
-// Get a function that gets accrued interest for a security in a spreadsheet.
+// Figure out how much interest income a periodic-pay bond has earned by a specific date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

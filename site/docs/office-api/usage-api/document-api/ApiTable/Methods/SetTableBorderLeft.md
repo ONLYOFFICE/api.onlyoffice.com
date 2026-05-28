@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.SetTableBorderLeft](../../ApiTablePr/Methods/SetTable
 
 ## Example
 
-Set the border which will be displayed on the left of the table in a document.
+Apply a border to the left side of a table in a document.
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the left 4 point black border in a document.
+// How do I add a border along the left edge of a table in a document?
 
-// Add left border to the table in a document.
+// Outline the left side of a table with a visible border line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

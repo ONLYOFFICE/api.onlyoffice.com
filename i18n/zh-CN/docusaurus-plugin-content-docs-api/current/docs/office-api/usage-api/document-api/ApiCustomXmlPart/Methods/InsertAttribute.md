@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-向文档中的自定义 XML 节点插入属性。
+在文档中自定义 XML 部件的 XML 节点中添加新属性。
 
 ```javascript editor-docx
-// How to insert the attribute for a custom XML part in a document?
+// How do I attach an attribute to an existing XML element in a document?
 
-// Insert the attribute and display the result in a document.
+// Extend an XML node with extra metadata by inserting a named attribute in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

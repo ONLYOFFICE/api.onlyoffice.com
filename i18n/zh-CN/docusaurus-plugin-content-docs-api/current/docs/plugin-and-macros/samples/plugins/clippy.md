@@ -1,3 +1,10 @@
+---
+description: Add an animated clippy assistant to the editor.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 回形针助手
 
 在文档编辑器中添加一个回形针助手。
@@ -6,9 +13,7 @@
 
 **支持的编辑器：**文档、表格、演示文稿。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/clippy.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/clippy" />
 
 ## 安装
 

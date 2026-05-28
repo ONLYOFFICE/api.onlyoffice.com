@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取 PDF 文档名称并将其插入 PDF 文档。
+检索文档文件名并在 PDF 中显示。
 
 ```javascript editor-pdf
-// How to get a pdf document name.
+// How do I get the file name of a PDF?
 
-// Retrieve name of pdf document.
+// Fetch the document name and insert it as text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

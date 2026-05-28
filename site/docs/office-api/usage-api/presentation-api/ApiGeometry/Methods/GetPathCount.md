@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties on a slide. Displays comprehensive path information in a text shape.
+Count the drawing paths in a shape's geometry in a presentation.
 
 ```javascript editor-pptx
-// How do I get the path count in a presentation?
+// How do I find how many paths a shape has in a presentation?
 
-// Get the path count using a geometry object in a presentation.
+// Determine the number of paths that make up a shape's outline in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

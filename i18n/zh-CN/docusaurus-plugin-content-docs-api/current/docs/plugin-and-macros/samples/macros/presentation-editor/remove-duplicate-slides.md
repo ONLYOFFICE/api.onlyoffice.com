@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除重复幻灯片
 
 删除演示文稿中所有重复的幻灯片。
@@ -88,5 +90,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.png#gh-light-mode-only)
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-duplicate-slides" dark />

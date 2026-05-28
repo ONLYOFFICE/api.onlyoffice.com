@@ -24,12 +24,12 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## 示例
 
-创建图像并将其粘贴到文档中。
+在演示文稿中从 URL 插入图像。
 
 ```javascript editor-pptx
-// How to create an image object using an url and specifying its width and height in a presentation.
+// How do I add an image with specific dimensions to a slide in a presentation?
 
-// Create an image and insert it to the slide.
+// Place an image on a slide by specifying its source and size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

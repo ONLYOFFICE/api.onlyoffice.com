@@ -2,6 +2,10 @@
 
 Remove a specific annotation range from the document.
 
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
+:::
+
 ## Syntax
 
 ```javascript

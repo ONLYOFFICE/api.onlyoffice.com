@@ -4,6 +4,8 @@ description: Check for data mismatches between cells or ranges.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Check data mismatch
 
 Highlights cells with data type mismatches based on column majority vote, starting from B2 by default, with configurable header offsets.
@@ -97,5 +99,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![DataMismatchChecker](/assets/images/plugins/data-mismatch-checker.png#gh-light-mode-only)
-![DataMismatchChecker](/assets/images/plugins/data-mismatch-checker.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/check-data-mismatch" dark />

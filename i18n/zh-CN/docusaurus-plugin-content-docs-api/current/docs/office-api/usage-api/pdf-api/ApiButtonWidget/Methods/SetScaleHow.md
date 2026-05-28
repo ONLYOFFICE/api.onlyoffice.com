@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetScaleHow(sType);
+expression.SetScaleHow(scaleHow);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScaleHow(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | 按钮控件缩放方式类型 |
+| scaleHow | 必需 | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | 图标缩放模式。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ boolean
 在 PDF 文档中设置按钮控件的缩放方式类型。
 
 ```javascript editor-pdf
-// How do I set scale how in a PDF document?
+// Apply scale how type such as 'proportional' to a button widget.
 
-// Set scale how using a button widget object in a PDF document.
+// Display the set scale how value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

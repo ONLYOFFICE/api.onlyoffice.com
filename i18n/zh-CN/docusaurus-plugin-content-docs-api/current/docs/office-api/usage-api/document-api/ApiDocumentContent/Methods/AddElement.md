@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档内容中添加段落。
+在文档中形状内的特定位置插入新段落。
 
 ```javascript editor-docx
-// How to add elements to the document content.
+// How do I add a paragraph to a content container in a document?
 
-// Clear the entire document and add a new paragraph to it.
+// Replace the default content of a shape by clearing it and placing a custom paragraph inside in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

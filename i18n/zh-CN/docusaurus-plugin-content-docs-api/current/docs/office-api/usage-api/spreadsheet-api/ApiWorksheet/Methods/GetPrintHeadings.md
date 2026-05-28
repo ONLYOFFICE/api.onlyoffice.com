@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中指定工作表行/列标题是否必须打印的页面 PrintHeadings 属性。
+检查电子表格中活动工作表是否设置为打印行列标题。
 
 ```javascript editor-xlsx
-// How to find out whether sheet headings should be printed or not in a spreadsheet.
+// How do I find out if row and column labels will appear on printed pages in a spreadsheet?
 
-// Get a boolean value representing whether to print row and column headings or not in a spreadsheet.
+// Confirm the print-headings setting and write the result to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintHeadings(true);

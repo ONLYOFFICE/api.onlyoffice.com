@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 ## Example
 
-Move a pivot field in a spreadsheet.
+Rearrange pivot table fields by moving one to a different area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a position of a field by columns in a spreadsheet.
+// How do I change which area a field appears in (rows, columns, or values) in a spreadsheet?
 
-// Create a pivot table, add data to it then move a field using its name in a spreadsheet.
+// Reorganize a pivot table layout by shifting a field from rows to columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,9 +61,5 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-Api.GetActiveSheet().GetRange('F4').SetValue('Style field will be moved in columns soon');
-
-setTimeout(function () {
-    pivotTable.MoveField('Style', 'Columns');
-}, 5000);
+pivotTable.MoveField('Style', 'Columns');
 ```

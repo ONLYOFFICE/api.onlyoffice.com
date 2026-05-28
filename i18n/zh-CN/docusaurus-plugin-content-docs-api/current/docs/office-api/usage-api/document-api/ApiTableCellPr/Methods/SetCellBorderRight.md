@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-设置将显示在表格单元格右侧的边框。
+在文档中为表格单元格的右侧添加边框。
 
 ```javascript editor-docx
-// How to add margin to the right of the cell.
+// How do I apply a border to the right edge of a table cell in a document?
 
-// Create a 3x3 table and add the right cell margin.
+// Style a table cell with a visible right-side border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

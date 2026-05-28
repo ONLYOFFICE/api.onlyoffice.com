@@ -1,6 +1,6 @@
 # GetY
 
-返回「moveTo」/「lineTo」路径命令的 Y 坐标。
+返回“moveTo”/“lineTo”路径命令的 Y 坐标。
 
 ## 语法
 
@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+从 PDF 中的路径命令检索 y 坐标。
 
 ```javascript editor-pdf
-// How do I get the y in a PDF document?
+// What is the vertical position value in a PDF?
 
-// Get the y using a path command object in a PDF document.
+// Extract the y position of a path command in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

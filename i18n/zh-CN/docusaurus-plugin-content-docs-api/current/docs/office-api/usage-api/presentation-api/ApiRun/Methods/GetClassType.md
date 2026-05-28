@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中文本 run 对象的类类型。
+识别演示文稿中文本运行的类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a text run in a presentation?
+// How do I determine the type of a text run in a presentation?
 
-// Get the class type of a text run and display it in the presentation.
+// Display the text run type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

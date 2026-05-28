@@ -4,6 +4,8 @@ description: Find the next blank row in a spreadsheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Next blank row
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).
@@ -48,4 +50,4 @@ End Sub
 
 ## Result
 
-![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/next-blank-row" dark />

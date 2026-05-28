@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the next inline drawing object if exists in a document.
+Get the next inline drawing object following a shape in a document.
 
 ```javascript editor-docx
-// How to set horizontal flip for the next drawing in a document.
+// How do I access the drawing that comes after a given shape in a document?
 
-// Get the next drawing and update its properties in a document.
+// Traverse sibling drawings and modify the properties of the following shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

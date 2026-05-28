@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a gradient stop in a PDF document.
+Determine the type of a gradient stop object in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a gradient stop object is in a PDF document?
+// How can I find the object type of a gradient stop in a PDF?
 
-// Retrieve and output the class type string for a gradient stop in a PDF document.
+// Retrieve the class type information for a gradient color stop in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

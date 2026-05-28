@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取 PDF 文档中复选框控件的导出（选中）值。
+检索 PDF 中复选框控件的导出值。
 
 ```javascript editor-pdf
-// How can I get the export value using a checkbox widget in a PDF document?
+// How do I read what value is exported when a checkbox is selected in a PDF?
 
-// Get the export value for a checkbox widget in a PDF document.
+// Access the assigned export value for a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

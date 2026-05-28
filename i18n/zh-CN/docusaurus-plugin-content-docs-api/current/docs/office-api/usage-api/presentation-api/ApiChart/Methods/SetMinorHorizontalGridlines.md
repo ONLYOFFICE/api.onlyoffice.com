@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定次要水平网格线的视觉属性。
+格式化演示文稿中图表的次水平网格线。
 
 ```javascript editor-pptx
-// How to set minor horizontal gridlines of the chart in a presentation.
+// How do I customize the appearance of the secondary horizontal lines in a chart in a presentation?
 
-// Create a chart, set its properties and its minor gridlines in a presentation.
+// Apply a custom color and thickness to the minor horizontal gridlines in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

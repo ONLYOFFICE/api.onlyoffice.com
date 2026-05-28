@@ -6,12 +6,12 @@
 
 ## 示例
 
-将表格单元格属性对象转换为 JSON 对象。
+将表格单元格格式导出为文档中的可移植数据快照。
 
 ```javascript editor-docx
-// How to get a JSON from the table cell object.
+// How do I save and reuse the formatting of a table cell in a document?
 
-// Convert the cell to json and add it to the document.
+// Preserve cell styling by converting its properties to a transferable format in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

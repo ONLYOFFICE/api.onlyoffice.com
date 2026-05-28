@@ -6,12 +6,12 @@
 
 ## 示例
 
-在主文档的指定位置插入分隔符。
+在文档中绘图之前插入分页符或换行符。
 
 ```javascript editor-docx
-// How to add some space from the drawing in a document.
+// How do I place a break at a specific position relative to a drawing in a document?
 
-// Insert a drawing and text into document and add a break to them.
+// Force content to start on a new page by adding a break before an existing shape.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

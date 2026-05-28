@@ -4,6 +4,8 @@ description: Apply corporate fonts and colors to all slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Apply corporate branding
 
 Applies corporate branding styles to a presentation, including text color, font, and logo placement.
@@ -75,5 +77,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![ApplyCorporateBranding](/assets/images/plugins/apply-corporate-branding.png#gh-light-mode-only)
-![ApplyCorporateBranding](/assets/images/plugins/apply-corporate-branding.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/apply-corporate-branding" dark />

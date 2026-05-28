@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateRadiobuttonField(aRect);
+expression.CreateRadiobuttonField(rect);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateRadiobuttonField(aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.CreateRadiobuttonField(aRect);
 
 ## 示例
 
-如何创建单选按钮字段并添加到文档。
+向 PDF 表单添加单选按钮字段。
 
 ```javascript editor-pdf
-// How do I create the radiobutton field in a PDF document?
+// How do I create a group of selectable radio buttons in a PDF?
 
-// Create the radiobutton field and display the result in a PDF document.
+// Create a radio button field and configure options in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

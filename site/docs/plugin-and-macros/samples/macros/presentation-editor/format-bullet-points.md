@@ -4,6 +4,8 @@ description: Format bullet point styles on presentation slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Format bullet points
 
 Applies consistent formatting to bullet points.
@@ -39,5 +41,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.png#gh-light-mode-only)
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/format-bullet-points" dark />
