@@ -9,7 +9,7 @@ const DocSpacePlaygroundRoute = () => {
     const location = useLocation();
 
     const params = new URLSearchParams(location.search);
-    const mode = params.get('mode') as DocSpaceMode | undefined;
+    const mode = (params.get('mode') as DocSpaceMode) ?? undefined;
 
     return (
         <ColorModeProvider>

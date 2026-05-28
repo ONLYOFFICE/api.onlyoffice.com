@@ -33,13 +33,13 @@ const PlaygroundRoute = () => {
     const params = new URLSearchParams(location.search);
     const templateUrl = params.get('templateUrl') ?? undefined;
     const props = {
-        editorType: params.get('editor') as EditorType | undefined,
-        scriptType: params.get('script') as ScriptType | undefined,
-        modeType: params.get('mode') as ModeType | undefined,
+        editorType: (params.get('editor') as EditorType) ?? undefined,
+        scriptType: (params.get('script') as ScriptType) ?? undefined,
+        modeType: (params.get('mode') as ModeType) ?? undefined,
         initialScript: params.get('code') ?? undefined,
         documentServerUrl: params.get('documentServerUrl') ?? undefined,
         documentServerSecret: params.get('documentServerSecret') ?? undefined,
-        fileType: params.get('file') as FileType | undefined,
+        fileType: (params.get('file') as FileType) ?? undefined,
     };
 
     return (
