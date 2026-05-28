@@ -3,125 +3,106 @@
  * and scoped locally.
  */
 
+.homepageWrapper {
+  --hp-bg: #fbfaf7;
+  --hp-bg-elev: #ffffff;
+  --hp-bg-tint: #f4f2ee;
+  --hp-fg: #15171a;
+  --hp-fg-muted: #4a4d52;
+  --hp-fg-dim: #6f7278;
+  --hp-border: #e8e6e0;
+  --hp-border-strong: #c9c5bd;
+  --hp-accent: var(--color-foreground-link);
+  --hp-shadow-md: 0 4px 14px rgba(20, 22, 25, 0.07);
+
+  font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system,
+               'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  background: var(--hp-bg);
+}
+
+/* Overrides custom.css `main { background-color: var(--ifm-background-surface-color); }` */
+.homepageWrapper main {
+  background-color: var(--hp-bg);
+}
+
+:global([data-theme='dark']) .homepageWrapper {
+  --hp-bg: #0e0f11;
+  --hp-bg-elev: #16181c;
+  --hp-bg-tint: #1c1e22;
+  --hp-fg: #f3f3f1;
+  --hp-fg-muted: #b4b6ba;
+  --hp-fg-dim: #8a8c91;
+  --hp-border: #24262a;
+  --hp-border-strong: #383b40;
+  --hp-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
 .heroBanner {
-  padding: 7rem 0 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  padding: 96px 2rem 64px;
+  background: var(--hp-bg);
+  color: var(--hp-fg);
+  text-align: left;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heroInner {
+  width: 100%;
+  max-width: var(--temp-home-breakpoint-xlarge, 1300px);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .title {
-    margin-bottom: 12px;
-  }
+/* Chained with .heroBanner for specificity (0,2,0) so it beats Infima's
+   `.hero__title { font-size: 3rem }` (0,1,0) regardless of source order. */
+.heroBanner .title {
+  font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system,
+               'Segoe UI', Roboto, sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--hp-fg);
+  margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .heroBanner {
-    padding-bottom: 2rem;
-  }
+.heroBanner .subtitle {
+  margin: 14px 0 0;
+  max-width: 620px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  color: var(--hp-fg-muted);
 }
 
-@media screen and (max-width: 720px) {
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: 6px;
-  }
-
-  .subtitle {
-    font-size: 22px;
-  }
+@media (max-width: 980px) {
+  .heroBanner .title { font-size: 56px; }
 }
 
-@media screen and (max-width: 640px) {
-  .heroBanner {
-    padding: 6rem 0 1.5rem;
-  }
+@media (max-width: 768px) {
+  .heroBanner { padding: 80px 1.5rem 40px; }
 }
 
-@media screen and (max-width: 600px) {
-  .title {
-    font-size: 2.25rem;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
+@media (max-width: 720px) {
+  .heroBanner .title    { font-size: 42px; }
+  .heroBanner .subtitle { font-size: 17px; }
 }
 
-@media screen and (max-width: 550px) {
-  .title {
-    font-size: 2rem;
-    margin-bottom: 4px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-  }
+@media (max-width: 640px) {
+  .heroInner { padding: 0 1rem; }
 }
 
-@media screen and (max-width: 490px) {
-  .title {
-    font-size: 1.875rem;
-  }
+@media (max-width: 600px) {
+  .heroBanner { padding: 72px 1rem 32px; }
 }
 
-@media screen and (max-width: 480px) {
-  .heroBanner {
-    padding-top: 5.5rem;
-  }
+@media (max-width: 480px) {
+  .heroBanner .title    { font-size: 34px; }
+  .heroBanner .subtitle { font-size: 16px; }
 }
 
-@media screen and (max-width: 470px) {
-  .title {
-    font-size: 1.75rem;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .heroBanner {
-    padding: 5rem 0 1rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .subtitle {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .heroBanner {
-    padding: 4.5rem 0 0.5rem;
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .title {
-    font-size: 22px;
-    margin-bottom: 2px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 334px) {
-  .title {
-    font-size: 21px;
-  }
-
-  .subtitle {
-    font-size: 15px;
-  }
+@media screen and (max-width: 360px) {
+  .heroBanner { padding: 64px 0.5rem 28px; }
+  .heroInner  { padding: 0 0.5rem; }
 }

@@ -79,6 +79,13 @@ const config: Config = {
     locales: ['en', 'zh-CN'],
   },
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap',
+      type: 'text/css',
+    },
+  ],
+
   presets: [
     [
       'classic',

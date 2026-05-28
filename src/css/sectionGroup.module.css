@@ -1,38 +1,52 @@
 .samples {
   display: flex;
   justify-content: center;
-  padding: 0rem 2rem 7rem 2rem;
+  padding: 0 2rem 5rem;
   width: 100%;
+  background: var(--hp-bg, transparent);
 }
 
 .samplesGridWrapper > * {
   display: grid;
-  gap: var(--base-size-24, 1.5rem);
+  gap: var(--base-size-16, 1rem);
   grid-auto-rows: auto;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.buttonWrapper {
-  margin: 40px 0 0;
-  text-align: center;
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: var(--base-size-32);
 }
 
 .samplesButton {
-  background-color: var(--button-bg-color);
-  border: 1px solid var(--button-border-color);
-  border-radius: 12px;
-  color: var(--button-text-color);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  color: var(--hp-accent, var(--color-foreground-link));
+  font-size: 14px;
   font-weight: 600;
-  line-height: 22px;
-  padding: 12px 32px;
-  transition: all 0.3s;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: border-color 0.12s;
+  flex: 0 0 auto;
 
   &:hover {
-    background-color: var(--button-bg-color-hover);
-    border-color: var(--button-border-color-hover);
-    color: var(--button-text-color-hover);
+    border-bottom-color: var(--hp-accent, var(--color-foreground-link));
+    color: var(--hp-accent, var(--color-foreground-link));
     text-decoration: none;
+  }
+
+  & svg {
+    transition: transform 0.18s;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
   }
 }
 
@@ -46,8 +60,22 @@
 }
 
 .samplesHeading {
-  margin-bottom: var(--base-size-40);
-  text-align: center;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--hp-fg, var(--ifm-font-color-base));
+}
+
+.samplesHeading::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 36px;
+  margin-top: 12px;
+  background: var(--hp-accent, var(--color-foreground-link));
+  border-radius: 2px;
 }
 
 .sectionGroup h3 {
@@ -66,18 +94,10 @@
   margin-bottom: 0;
 }
 
-.blogGroup p {
-  font-size: 16px;
-  padding: 0 32px;
-}
 
-.blogGroup h3 {
-  font-size: 18px;
-}
-
-@media (max-width: 1024px) {
-  .blogGroup h3 {
-    font-size: 16px;
+@media (max-width: 980px) {
+  .samplesHeading {
+    font-size: 30px;
   }
 }
 
@@ -87,11 +107,24 @@
   }
 
   .samples {
-    padding: 0rem 1.5rem 6rem 1.5rem;
+    padding: 0 1.5rem 4rem;
   }
- 
+
   .samplesGridWrapper > * {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .sectionHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: var(--base-size-24);
+  }
+
+  .samplesHeading {
+    font-size: 26px;
   }
 }
 
@@ -99,33 +132,15 @@
   .samplesContainer {
     padding: 0 1rem;
   }
-
-  .samplesHeading {
-    margin-bottom: var(--base-size-32);
-  }
-
-  .buttonWrapper {
-    margin-top: 32px;
-  }
 }
 
 @media (max-width: 600px) {
   .samples {
-    padding: 0rem 1rem 5.5rem 1rem;
+    padding: 0 1rem 3.5rem;
   }
 
   .samplesGridWrapper > * {
     gap: var(--base-size-16, 1rem);
-  }
-
-  .samplesHeading {
-    font-size: 1.25rem;
-    margin-bottom: var(--base-size-24);
-  }
-
-  .samplesButton {
-    font-size: 15px;
-    padding: 10px 28px;
   }
 }
 
@@ -133,20 +148,11 @@
   .samplesGridWrapper > * {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
-  .buttonWrapper {
-    margin-top: 28px;
-  }
-
-  .samplesButton {
-    font-size: 14px;
-    padding: 8px 24px;
-  }
 }
 
 @media (max-width: 480px) {
   .samples {
-    padding-bottom: 5rem;
+    padding: 0 0.75rem 3rem;
   }
 
   .samplesContainer {
@@ -154,37 +160,16 @@
   }
 
   .samplesHeading {
-    font-size: 18px;
-    margin-bottom: 18px;
+    font-size: 22px;
   }
 
   .sectionGroup h3 {
     font-size: 0.95rem;
   }
-
-  .buttonWrapper {
-    margin-top: 24px;
-  }
-}
-
-@media (max-width: 425px) {
-  .samples {
-    padding-bottom: 4.5rem;
-  }
 }
 
 @media screen and (max-width: 360px) {
   .samples {
-    padding: 0rem 0.5rem 4.5rem 0.5rem;
-  }
-
-  .samplesHeading {
-    margin-bottom: 16px;
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .samples {
-    padding-bottom: 4rem;
+    padding: 0 0.5rem 2.5rem;
   }
 }

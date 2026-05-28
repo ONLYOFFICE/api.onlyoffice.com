@@ -1,8 +1,9 @@
 .features {
   display: flex;
   justify-content: center;
-  padding: 0rem 2rem 7rem 2rem;
+  padding: 0 2rem 5rem;
   width: 100%;
+  background: var(--hp-bg, transparent);
 }
 
 .featuresGridWrapper > * {
@@ -56,32 +57,63 @@
 
 .featureHeaderTop {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  gap: 24px;
   margin-bottom: var(--base-size-32);
 }
 
 .featureHeaderTop h2 {
   margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--hp-fg, var(--ifm-font-color-base));
+}
+
+.featureHeaderTop h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 36px;
+  margin-top: 12px;
+  background: var(--hp-accent, var(--color-foreground-link));
+  border-radius: 2px;
 }
 
 .tryButton {
-  background-color: var(--button-bg-color);
-  border: 1px solid var(--button-border-color);
-  border-radius: 12px;
-  color: var(--button-text-color);
-  display: inline-block;
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 22px;
-  padding: 12px 32px;
-  transition: all 0.3s;
+  line-height: 1.2;
+  color: var(--hp-bg, #fff);
+  background: var(--hp-fg, #15171a);
+  border: 1px solid var(--hp-fg, #15171a);
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: transform 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
 
   &:hover {
-    background-color: var(--button-bg-color-hover);
-    border-color: var(--button-border-color-hover);
-    color: var(--button-text-color-hover);
+    background: var(--hp-accent, var(--color-foreground-link));
+    border-color: var(--hp-accent, var(--color-foreground-link));
+    color: #fff;
+    transform: translateY(-1px);
     text-decoration: none;
+  }
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 8px;
+    border-color: transparent transparent transparent currentColor;
+    flex: 0 0 auto;
   }
 }
 
