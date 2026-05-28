@@ -15,7 +15,8 @@ export const PlaygroundEditor = () => {
         }
     }, [dispatch]);
 
-    const apiUrl = `${documentServerUrl}web-apps/vendor/monaco/libs/${editorType}/api.js`;
+    const libType = editorType === 'form' ? 'word' : editorType;
+    const apiUrl = `${documentServerUrl}web-apps/vendor/monaco/libs/${libType}/api.js`;
 
     const onMount: OnMount = (_, monaco) => {
         fetch(apiUrl)
