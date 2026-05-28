@@ -70,7 +70,7 @@ examples, just a few are enough:
 | `files`   | `create_file`, `get_file`, `delete_file`       |
 | `folders` | `create_folder`, `get_folder`, `delete_folder` |
 
-### Enable a Tool from unspecified Toolset
+### Enable a tool from unspecified toolset
 
 Configuration:
 
@@ -86,7 +86,7 @@ Result:
 | `files`   | `create_file`, `get_file`, `delete_file` |
 | `folders` | `create_folder`                          |
 
-### Disable a Tool from specified Toolset
+### Disable a tool from specified toolset
 
 Configuration:
 
@@ -103,7 +103,7 @@ Result:
 | `files`   | `create_file`, `delete_file` |
 | `folders` | `create_folder`              |
 
-### Manually specify Tools to be available
+### Manually specify tools to be available
 
 Configuration:
 

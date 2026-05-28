@@ -16,11 +16,11 @@ the outside world.
 
 → See the [official MCP introduction](https://modelcontextprotocol.io/introduction)
 
-### MCP Server
+### MCP server
 A process that exposes capabilities (tools, resources, prompts) to an MCP client
 over a defined transport. For example, the DocSpace MCP Server specifically exposes DocSpace operations like creating rooms, uploading, or deleting files so that AI agents can perform these operations through natural language.
 
-### MCP Client
+### MCP client
 Applications like Claude Desktop, Cursor, and Windsurf that connect to an MCP server and use its tools on behalf of an LLM. The client is responsible for passing tool calls from the LLM to the server and returning the
 results.
 
@@ -49,7 +49,7 @@ A named group of related tools. Toolsets let you enable or disable a whole
 category of functionality at once. For example, enabling the `files` toolset
 gives access to all file-related tools without listing each one individually.
 
-### Meta Tools
+### Meta tools
 A DocSpace MCP Server-specific feature. When enabled, meta tools allow an MCP
 client to dynamically discover and select toolsets at session time, rather than
 having them fixed at server startup. Useful when different clients or users need
