@@ -20,7 +20,6 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 - **[Interactive playground](playground.md)** — Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** — Pre-built components
 - **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Starter projects
-- **[Browser DevTools](/docs/plugins/development-workflow/debugging/browser-devtools-guide)** — Debugging guide
 
 ### Sample code
 

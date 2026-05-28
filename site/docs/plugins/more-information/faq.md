@@ -24,7 +24,7 @@ Further information about the localization can be found [at this page](../fundam
 
 ## How can I create an About window for my plugin?
 
-Use the [plugin variations](../fundamentals/configuration/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index\_about.html* file.
+Use the [plugin variations](../fundamentals/configuration/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index_about.html* file.
 
 ## Where to find the existing plugins available for integration?
 

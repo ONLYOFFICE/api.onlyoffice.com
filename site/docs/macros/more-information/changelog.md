@@ -4,6 +4,6 @@ sidebar_position: 2
 
 # Changelog
 
-The Plugins and Macros API changelog is maintained in the Plugins section.
+The API changelog for plugins and macros is maintained in the Plugins section.
 
-See [Plugins and Macros API changelog](/docs/plugins/more-information/changelog) for the complete list of changes.
+See [Plugins API changelog](/docs/plugins/more-information/changelog) for the complete list of changes.

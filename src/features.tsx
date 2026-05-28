@@ -45,7 +45,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Plugins',
-      link: 'plugins/get-started',
+      link: 'plugins/get-started/get-started',
       description: (
         <>
           Extend the ONLYOFFICE Docs functionality by creating your own plugins.
