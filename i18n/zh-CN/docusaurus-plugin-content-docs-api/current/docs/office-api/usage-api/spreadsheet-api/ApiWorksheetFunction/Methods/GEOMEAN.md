@@ -14,8 +14,7 @@ expression.GEOMEAN(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个数值，将计算这些数值的几何平均值。
-参数可以是数字、名称、范围或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个数值，用于计算几何平均值。参数可以是数字、名称、区域或数字数组。 |
 
 ## 返回值
 

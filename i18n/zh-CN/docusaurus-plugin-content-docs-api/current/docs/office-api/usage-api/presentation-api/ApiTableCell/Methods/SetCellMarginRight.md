@@ -15,8 +15,7 @@ expression.SetCellMarginRight(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认的表格单元格右边距，
-否则使用指定值覆盖当前单元格的右边距。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认表格单元格右边距，否则用指定值覆盖当前单元格的右边距。 |
 
 ## 返回值
 

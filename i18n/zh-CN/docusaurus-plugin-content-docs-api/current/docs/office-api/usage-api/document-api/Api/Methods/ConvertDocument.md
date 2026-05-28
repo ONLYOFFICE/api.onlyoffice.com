@@ -18,8 +18,7 @@ expression.ConvertDocument(convertType, htmlHeadings, base64img, demoteHeadings,
 | htmlHeadings | 可选 | boolean | false | 定义当目标平台的 Markdown 渲染器不处理 Markdown 样式 ID 时，是否生成 HTML 标题和 ID。 |
 | base64img | 可选 | boolean | false | 定义图像是否以 base64 格式创建。 |
 | demoteHeadings | 可选 | boolean | false | 定义文档中的所有标题级别是否将降级以符合以下标准：单个 H1 作为标题，H2 作为正文中的顶级标题。 |
-| renderHTMLTags | 可选 | boolean | false | 定义是否在 Markdown 中保留 HTML 标签。如果只想偶尔使用 HTML 标签，可以通过以下方式避免使用左尖括号：
-\&lt;tag&gt;text\&lt;/tag&gt;。默认情况下，左尖括号将被替换为特殊字符。 |
+| renderHTMLTags | 可选 | boolean | false | 定义是否在 Markdown 中保留 HTML 标签。如果只是偶尔使用 HTML 标签，可以通过以下方式避免使用左尖括号：\&lt;tag&gt;text\&lt;/tag&gt;。默认情况下，左尖括号将被替换为特殊字符。 |
 
 ## 返回值
 

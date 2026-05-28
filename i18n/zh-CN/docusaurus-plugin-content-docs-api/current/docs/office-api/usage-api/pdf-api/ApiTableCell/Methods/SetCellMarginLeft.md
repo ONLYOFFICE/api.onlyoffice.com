@@ -15,8 +15,7 @@ expression.SetCellMarginLeft(margin);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| margin | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格边距。如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认边距，
-否则用指定值覆盖当前单元格的左侧边距。 |
+| margin | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格边距。如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认边距，否则用指定值覆盖当前单元格的左边距。 |
 
 ## 返回值
 

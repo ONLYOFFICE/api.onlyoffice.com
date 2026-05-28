@@ -15,8 +15,7 @@ expression.DOLLAR(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 数字、包含数字的单元格引用或返回数字的公式。 |
-| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 小数点右侧的位数。数字将根据需要进行四舍五入。
-如果省略，函数将假定为 2。 |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 小数点右边的位数。数字将根据需要四舍五入。如果省略，函数将假定为 2。 |
 
 ## 返回值
 

@@ -2,6 +2,10 @@
 
 通过索引或名称将主题应用于演示文稿。
 
+:::note
+此功能在 ONLYOFFICE Docs 付费版本中可用。
+:::
+
 ## 语法
 
 ```javascript

@@ -14,9 +14,7 @@ expression.GetData(items);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| items | 必需 | string[] |  | 描述数据透视表报告中的单个单元格。
-例如，“'Estimated Costs' Tables May”，显示五月份表格的预估成本
-（数据字段 = Costs，产品 = Tables，月份 = May）。 |
+| items | 必需 | string[] |  | 描述数据透视表报告中的单个单元格。例如，"'Estimated Costs' Tables May" 表示五月份表格的估计成本（数据字段 = Costs，产品 = Tables，月份 = May）。 |
 
 ## 返回值
 

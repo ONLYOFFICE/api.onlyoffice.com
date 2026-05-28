@@ -2,6 +2,10 @@
 
 使用给定的注解在文档中选择文本。
 
+:::note
+此功能在 ONLYOFFICE Docs 付费版本中可用。
+:::
+
 ## 语法
 
 ```javascript

@@ -14,8 +14,7 @@ Object
 | key | string | 表单键。如果当前表单是单选按钮，则此字段包含组键。 |
 | label | string | 复选框标签。仅适用于复选框字段。 |
 | lang | string | 日期语言/区域设置名称（例如 **en-US**）。仅适用于日期选择器字段。 |
-| options | [ChoiceOption](../Enumeration/ChoiceOption.md)[] \| [CheckboxOption](../Enumeration/CheckboxOption.md)[] | 字段的可用选项列表。
-适用于复选框、单选按钮组、下拉列表和组合框。 |
+| options | [ChoiceOption](../Enumeration/ChoiceOption.md)[] \| [CheckboxOption](../Enumeration/CheckboxOption.md)[] | 字段的可用选项列表。适用于复选框、单选按钮组、下拉列表和组合框。 |
 | role | string | 表单角色。 |
 | roleColor | string | 十六进制格式的表单角色颜色。 |
 | tag | string | 表单标记。 |

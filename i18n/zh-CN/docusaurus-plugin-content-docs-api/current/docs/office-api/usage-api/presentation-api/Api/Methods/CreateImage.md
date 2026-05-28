@@ -14,8 +14,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageSrc | 必需 | string |  | 要插入的图像的来源（目前仅支持互联网 URL
-或 Base64 编码的图像）。 |
+| sImageSrc | 必需 | string |  | 要插入的图像来源（目前仅支持网络 URL 或 Base64 编码的图像）。 |
 | nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图像宽度。 |
 | nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图像高度。 |
 

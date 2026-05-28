@@ -18,8 +18,7 @@ expression.SetNumberFormat(decimalPlaces, separatorStyle, negativeStyle, currenc
 | separatorStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | The number separator style. |
 | negativeStyle | Required | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | The negative number display style. |
 | currency | Required | string |  | The currency symbol. |
-| currencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56);
-if false, places it after (e.g., 1,234.56$). |
+| currencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56); if false, places it after (e.g., 1,234.56$). |
 
 ## Returns
 

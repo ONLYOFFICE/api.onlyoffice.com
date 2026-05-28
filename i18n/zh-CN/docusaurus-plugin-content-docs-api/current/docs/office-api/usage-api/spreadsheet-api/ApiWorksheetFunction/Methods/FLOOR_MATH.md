@@ -16,8 +16,7 @@ expression.FLOOR_MATH(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向下舍入的数值。 |
 | arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向下舍入到的基数的倍数。如果省略，则使用默认值 1。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是朝零方向还是远离零方向舍入。如果省略或设置为 0，负数远离零方向舍入。
-如果指定任何其他数值，负数朝零方向舍入。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是向零方向还是远离零方向舍入。如果省略或设置为 0，负数远离零方向舍入。如果指定任何其他数值，负数向零方向舍入。 |
 
 ## 返回值
 

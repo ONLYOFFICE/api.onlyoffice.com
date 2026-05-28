@@ -17,8 +17,7 @@ expression.VLOOKUP(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要在表的第一列中查找的值。可以是值、引用或文本字符串。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 从中检索数据的文本、数字或逻辑值表。可以是单元格区域。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 应从中返回匹配值的数据表中的列号。表中值的第一列是第 1 列。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是在第一列（按升序排列）中查找最接近的匹配项（**true** 或省略）
-还是查找精确匹配项（**false**）的逻辑值。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是在首列（按升序排列）中查找最接近的匹配（**true** 或省略）还是查找精确匹配（**false**）的逻辑值。 |
 
 ## 返回值
 

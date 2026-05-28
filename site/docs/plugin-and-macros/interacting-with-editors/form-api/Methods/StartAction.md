@@ -18,12 +18,8 @@ expression.StartAction(type, description);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | "Information" \| "Block" \| "GroupActions" |  | The action type:
-**"Information"** - a non-blocking informational action,
-**"Block"** - a blocking interaction action,
-**"GroupActions"** - groups multiple editor operations into a single undoable step. |
-| description | Optional | string \| Object |  | For **"Information"** and **"Block"** types: a string description displayed during the action.
-For **"GroupActions"** type: an optional object with the following properties: |
+| type | Required | "Information" \| "Block" \| "GroupActions" |  | The action type: **"Information"** - a non-blocking informational action, **"Block"** - a blocking interaction action, **"GroupActions"** - groups multiple editor operations into a single undoable step. |
+| description | Optional | string \| Object |  | For **"Information"** and **"Block"** types: a string description displayed during the action. For **"GroupActions"** type: an optional object with the following properties: |
 | description.lockScroll | Optional | boolean |  | If *true*, the editor scroll position will be locked during the group operation. |
 | description.keepSelection | Optional | boolean |  | If *true*, the cursor position and selection will be preserved after the group operation ends. |
 

@@ -16,8 +16,7 @@ expression.RANK_EQ(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将返回其排名的数字。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | 数字数组或区域。非数字值将被忽略。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定数字排序方式的数值。如果为 0 或省略，列表中的排名将按降序排列。
-任何其他数值表示列表中的排名将按升序排列。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定数字排序方式的数值。如果为 0 或省略，则列表中的排名将按降序排列。任何其他数值表示列表中的排名将按升序排列。 |
 
 ## 返回值
 

@@ -2,6 +2,10 @@
 
 Returns the list of available editor themes.
 
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
+:::
+
 ## Syntax
 
 ```javascript

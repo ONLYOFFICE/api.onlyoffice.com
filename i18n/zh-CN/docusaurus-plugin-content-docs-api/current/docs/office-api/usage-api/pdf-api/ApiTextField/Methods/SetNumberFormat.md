@@ -18,8 +18,7 @@ expression.SetNumberFormat(decimalPlaces, separatorStyle, negativeStyle, currenc
 | separatorStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔符样式。 |
 | negativeStyle | 必需 | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | 负数显示样式。 |
 | currency | 必需 | string |  | 货币符号。 |
-| currencyPrepend | 必需 | boolean |  | 如果为 true，将货币符号放在数字前面（例如 $1,234.56）；
-如果为 false，将其放在数字后面（例如 1,234.56$）。 |
+| currencyPrepend | 必需 | boolean |  | 如果为 true，则将货币符号放在数字前面（例如 $1,234.56）；如果为 false，则放在后面（例如 1,234.56$）。 |
 
 ## 返回值
 

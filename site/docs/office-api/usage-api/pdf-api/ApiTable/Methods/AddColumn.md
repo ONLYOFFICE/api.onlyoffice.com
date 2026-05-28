@@ -15,8 +15,7 @@ expression.AddColumn(referenceCell, before);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | referenceCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell used as an insertion reference. |
-| before | Optional | boolean | false | Add a new column before or after the specified cell. If no cell is specified,
-then this parameter will be ignored. |
+| before | Optional | boolean | false | Add a new column before or after the specified cell. If no cell is specified, then this parameter will be ignored. |
 
 ## Returns
 

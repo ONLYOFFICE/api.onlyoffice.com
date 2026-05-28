@@ -16,8 +16,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在该单元格之后添加新列。如果未指定，将在表格末尾添加新列。 |
 | nCount | 必需 | Number |  | 要添加的列数。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前 (false) 或之后 (true) 添加新列。如果未指定单元格，
-则此参数将被忽略。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新列。如果未指定单元格，则此参数将被忽略。 |
 
 ## 返回值
 

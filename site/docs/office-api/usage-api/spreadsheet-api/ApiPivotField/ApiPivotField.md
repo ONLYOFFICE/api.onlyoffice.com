@@ -27,8 +27,7 @@ Represents the ApiPivotField class.
 | Orientation | number | Returns or sets a pivot field orientation value that represents the location of the field in the specified pivot table report. |
 | Parent | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the parent object for the current field. |
 | PivotFilters | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | Returns an object that represents the filters for the specified field. |
-| PivotItems | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] | Returns an object that represents either a single pivot table item (the ApiPivotItem object)
-or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
+| PivotItems | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] | Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
 | Position | number | Returns or sets a value that represents the position of the field (first, second, third, and so on) among all the fields in its orientation (Rows, Columns, Pages, Data). |
 | RepeatLabels | boolean | Returns or sets the setting which specifies whether to repeat items labels at each row. |
 | ShowAllItems | boolean | Returns or sets the setting which specifies whether to show items with no data. |

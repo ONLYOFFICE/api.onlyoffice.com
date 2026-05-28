@@ -2,6 +2,10 @@
 
 从文档中移除特定的注解范围。
 
+:::note
+此功能在 ONLYOFFICE Docs 付费版本中可用。
+:::
+
 ## 语法
 
 ```javascript

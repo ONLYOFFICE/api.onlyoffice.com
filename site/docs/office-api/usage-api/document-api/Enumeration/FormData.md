@@ -14,8 +14,7 @@ Object
 | key | string | The form key. If the current form is a radio button, then this field contains the group key. |
 | label | string | The checkbox label. Present only for checkbox fields. |
 | lang | string | The date language/locale name (e.g. **en-US**). Present only for date picker fields. |
-| options | [ChoiceOption](../Enumeration/ChoiceOption.md)[] \| [CheckboxOption](../Enumeration/CheckboxOption.md)[] | The list of available options for the field.
-Present for checkboxes, radio button groups, dropdown lists, and combo boxes. |
+| options | [ChoiceOption](../Enumeration/ChoiceOption.md)[] \| [CheckboxOption](../Enumeration/CheckboxOption.md)[] | The list of available options for the field. Present for checkboxes, radio button groups, dropdown lists, and combo boxes. |
 | role | string | The form role. |
 | roleColor | string | The form role color in hex format. |
 | tag | string | The form tag. |
