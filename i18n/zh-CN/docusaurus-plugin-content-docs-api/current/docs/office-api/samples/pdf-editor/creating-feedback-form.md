@@ -41,7 +41,7 @@ function createRatingTable(questionText, radioGroupName) {
   doc.Push(questionPara);
 
   // 创建评分表格（2行：表头 + 单选按钮）
-  let table = Api.CreateTable(5, 2);
+  let table = Api.CreateTable(2, 5);
   table.SetWidth("percent", 100);
   setBorders(table, 150);
   table.SetTableCellMarginTop(80);

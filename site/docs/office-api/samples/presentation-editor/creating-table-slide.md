@@ -51,7 +51,7 @@ titleContent.Push(titleParagraph);
 slide.AddObject(titleShape);
 
 // Create table (4 columns × 5 rows)
-let table = Api.CreateTable(4, 5);
+let table = Api.CreateTable(5, 4);
 table.SetPosition(1_000_000, 1_800_000);
 
 // Define table headers

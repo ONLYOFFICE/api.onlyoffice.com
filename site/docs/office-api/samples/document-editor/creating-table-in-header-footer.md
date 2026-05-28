@@ -20,7 +20,7 @@ let section = doc.GetFinalSection();
 let footer = section.GetFooter("default", true);
 
 // Create a table with 1 row and 3 columns for footer information
-let footerTable = Api.CreateTable(3, 1);
+let footerTable = Api.CreateTable(1, 3);
 footerTable.SetWidth("percent", 100);
 
 // Remove table borders for clean appearance

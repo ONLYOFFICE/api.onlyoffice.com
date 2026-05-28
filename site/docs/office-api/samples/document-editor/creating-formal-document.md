@@ -612,7 +612,7 @@ textPr.SetFontFamily("Segoe UI");
 
 section1.SetTitlePage(true);
 docContent = section1.GetHeader("default", true);
-table = Api.CreateTable(2, 1);
+table = Api.CreateTable(1, 2);
 docContent.AddElement(0, table);
 table.SetWidth("auto");
 table.SetJc("right");
@@ -653,7 +653,7 @@ if (row) {
 }
 
 docContent = section1.GetFooter("default", true);
-table = Api.CreateTable(2, 1);
+table = Api.CreateTable(1, 2);
 docContent.AddElement(0, table);
 table.SetWidth("auto");
 table.SetJc("right");

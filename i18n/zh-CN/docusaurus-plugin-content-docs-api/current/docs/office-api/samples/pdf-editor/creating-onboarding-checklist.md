@@ -56,7 +56,7 @@ function setBorders(table, r, g, b) {
 }
 
 function createTable(rows, cols, borderR, borderG, borderB) {
-  let table = Api.CreateTable(cols, rows);
+  let table = Api.CreateTable(rows, cols);
   table.SetWidth("percent", 100);
   setBorders(table, borderR, borderG, borderB);
   table.SetTableCellMarginTop(50);

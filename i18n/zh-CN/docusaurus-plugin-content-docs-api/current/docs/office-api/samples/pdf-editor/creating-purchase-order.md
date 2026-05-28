@@ -31,7 +31,7 @@ function getCellParagraph(table, row, col) {
 
 // 实用函数：创建全宽表格
 function createTable(rows, cols, borderColor) {
-  let table = Api.CreateTable(cols, rows);
+  let table = Api.CreateTable(rows, cols);
   table.SetWidth("percent", 100);
   setTableBorders(table, borderColor);
   table.SetTableCellMarginTop(50);
