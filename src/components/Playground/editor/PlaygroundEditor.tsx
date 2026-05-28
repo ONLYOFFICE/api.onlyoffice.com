@@ -3,12 +3,11 @@
 import MonacoEditor, {OnMount} from '@monaco-editor/react';
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
-import {getFullUrl} from "@site/src/utils/url";
 import PlayIcon from '@site/static/icons/icon-play.svg';
 import {useCallback} from "react";
 
 export const PlaygroundEditor = () => {
-    const {scriptValue, theme, editorType, scriptType, dispatch} = usePlaygroundRootContext();
+    const {scriptValue, theme, editorType, scriptType, documentServerUrl, dispatch} = usePlaygroundRootContext();
 
     const onChange = useCallback((newValue: string | undefined) => {
         if (newValue !== undefined) {
@@ -16,7 +15,7 @@ export const PlaygroundEditor = () => {
         }
     }, [dispatch]);
 
-    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`);
+    const apiUrl = `${documentServerUrl}web-apps/vendor/monaco/libs/${editorType}/api.js`;
 
     const onMount: OnMount = (_, monaco) => {
         fetch(apiUrl)
