@@ -281,7 +281,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onRequestMailMergeRecipients](../usage-api/config/events.md#onrequestmailmergerecipients) 事件。
 - 添加了 [setMailMergeRecipients](../usage-api/methods.md#setmailmergerecipients) 方法。
 - 添加了 [setSharingSettings](../usage-api/methods.md#setsharingsettings) 方法。
-- 添加了e [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) 事件。
+- 添加了 [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) 事件。
 - 添加了 [setUsers](../usage-api/methods.md#setusers) 方法。
 - 添加了 [events.onRequestSendNotify](../usage-api/config/events.md#onrequestsendnotify) 事件。
 
