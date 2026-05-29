@@ -10,7 +10,7 @@ The **document editor** works with files in the editors' native formats: `.docx`
 
 ## Default behavior
 
-The **document editing service** converts files to the native format automatically when [opening](./opening-file.md) them — the integrator does not need to call the conversion API. When saving, the [`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin) server setting (enabled by default) ensures the file is converted back to its original format. For details, see [saving in original format](./saving-file.md#saving-in-original-format).
+The **document editing service** converts files to the native format automatically when [opening](./opening-file.md) them — the integrator does not need to call the conversion API. When saving, the [`assemblyFormatAsOrigin`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.assemblyFormatAsOrigin) server setting (enabled by default) ensures the file is converted back to its original format. For details, see [saving in original format](./saving-file.md#saving-in-original-format).
 
 ## Converting before editing
 
