@@ -1,7 +1,7 @@
 # SetCharLimit
 
 Sets the text field character limit.
-&lt;note&gt; Character limit 0 means the field doesn't have a character limit.
+\<note\> Character limit 0 means the field doesn't have a character limit.
 
 ## Syntax
 

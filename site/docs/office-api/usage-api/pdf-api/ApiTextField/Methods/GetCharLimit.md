@@ -1,7 +1,7 @@
 # GetCharLimit
 
 Gets the text field character limit.
-&lt;note&gt; Char limit 0 means field doesn't have char limit
+\<note\> Char limit 0 means field doesn't have char limit
 
 ## Syntax
 
