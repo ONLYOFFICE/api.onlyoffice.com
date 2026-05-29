@@ -1,5 +1,23 @@
 # Change log
 
+## 8.8.0
+
+### Improvements
+
+#### Docs API
+
+* Consolidated server configuration documentation into a single page
+
+### Fixes
+
+#### Docs API
+
+* Fixed broken references after server configuration page consolidation
+
+#### Playground
+
+* Fixed Monaco API library loading to use GitHub raw instead of document server
+
 ## 8.7.0
 
 ### New features
