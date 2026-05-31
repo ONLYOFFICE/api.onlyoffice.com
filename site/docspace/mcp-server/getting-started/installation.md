@@ -144,7 +144,7 @@ configuration to your client's configuration file:
 
 Another way to use the DocSpace MCP server is to access it via a public DocSpace MCP Server instance hosted by ONLYOFFICE. This eliminates the need to run your own server infrastructure while providing access to DocSpace functionality through your AI assistant. To do this, provide the DocSpace MCP server public instance URL when [connecting to any of the MCP clients](clients.md). 
 
-## Public Instance
+## Public instance
 
 The public instance is available at two endpoints:
 
@@ -155,11 +155,11 @@ The public instance is available at two endpoints:
 
 The public instance provides access to all available tools by default. Tool selection can be customized using query parameters or custom headers. However, we recommend using the MCP client interface for tool configuration when supported.
 
-## Tool Configuration
+## Tool configuration
 
 Tool selection can be customized using the following options:
 
-- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/configuration/tools-resolution.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
+- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/configuration/tools-resolution.md#enable-a-tool-from-unspecified-toolset). Use this method when your client supports it.
 
 - **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/configuration/request-configuration.md#enabled_tools).
 
@@ -183,7 +183,7 @@ OAuth is the recommended method as it provides the strongest security model by a
   </TabItem>
 </Tabs>
 
-## After Installation
+## After installation
 
 - [Test MCP server-client installation](quickstart.md#step-2-confirm-the-connection)
 - [Start exploring with the MCP server by creating a new room](quickstart.md#step-3-interact-with-your-docspace-using-the-newly-connected-client)
