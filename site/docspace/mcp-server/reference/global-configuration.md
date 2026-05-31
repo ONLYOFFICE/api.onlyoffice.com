@@ -1,6 +1,6 @@
 ---
 sidebar_label: Global configuration
-sidebar_position: 2
+sidebar_position: 8
 title: Global configuration
 ---
 
@@ -109,7 +109,7 @@ User agent sent in the `User-Agent` header for API requests.
 | | |
 |---|---|
 | **Type** | string |
-| **Default** | `@onlyoffice/docspace-mcp v3.1.0` |
+| **Default** | `@onlyoffice/docspace-mcp v3.2.0` |
 | **Attributes** | trimmable |
 | **Transports** | all |
 

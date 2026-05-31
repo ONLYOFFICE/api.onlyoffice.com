@@ -1,6 +1,6 @@
 ---
 sidebar_label: Tools resolution
-sidebar_position: 5
+sidebar_position: 11
 title: Tools resolution
 ---
 

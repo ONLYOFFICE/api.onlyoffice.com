@@ -48,7 +48,16 @@ Insert the following block into the `mcpServers` section of your `.json` configu
     "mcpServers": {
         "onlyoffice-docspace": {
             "command": "docker",
-            "args": ["run", "--interactive", "--rm", "--env", "DOCSPACE_BASE_URL", "--env", "DOCSPACE_API_KEY", "onlyoffice/docspace-mcp"],
+            "args": [
+                "run",
+                "--interactive",
+                "--rm",
+                "--env",
+                "DOCSPACE_BASE_URL",
+                "--env",
+                "DOCSPACE_API_KEY",
+                "onlyoffice/docspace-mcp"
+            ],
             "env": {
                 "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
                 "DOCSPACE_API_KEY": "your-api-key"
@@ -119,7 +128,10 @@ configuration to your client's configuration file:
     "mcpServers": {
         "onlyoffice-docspace": {
             "command": "npx",
-            "args": ["--yes", "@onlyoffice/docspace-mcp"],
+            "args": [
+                "--yes",
+                "@onlyoffice/docspace-mcp"
+            ],
             "env": {
                 "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
                 "DOCSPACE_API_KEY": "your-api-key"
@@ -159,9 +171,9 @@ The public instance provides access to all available tools by default. Tool sele
 
 Tool selection can be customized using the following options:
 
-- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/configuration/tools-resolution.md#enable-a-tool-from-unspecified-toolset). Use this method when your client supports it.
+- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/tools-resolution.md#enable-a-tool-from-unspecified-toolset). Use this method when your client supports it.
 
-- **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/configuration/request-configuration.md#enabled_tools).
+- **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/request-configuration.md#enabled_tools).
 
 ## Authenticating the remote MCP server-client connection
 

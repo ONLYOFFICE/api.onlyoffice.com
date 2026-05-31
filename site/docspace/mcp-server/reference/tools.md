@@ -105,4 +105,4 @@ tools, providing the same level of control over available functionality.
 
 ## Resolving tools
 
-The tools resolution process follows a sequence that starts with toolsets, adds explicitly enabled tools, and removes explicitly disabled tools. For the full flowcharts and worked examples, see [Tools resolution](/docspace/mcp-server/reference/configuration/tools-resolution/).
+The tools resolution process follows a sequence that starts with toolsets, adds explicitly enabled tools, and removes explicitly disabled tools. For the full flowcharts and worked examples, see [Tools resolution](/docspace/mcp-server/reference/tools-resolution/).
