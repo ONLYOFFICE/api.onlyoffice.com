@@ -5,7 +5,27 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/* Wrapper owns scroll; negative margin keeps the table flush while the gutter holds the anchor. */
+.apiTableWrap {
+  overflow-x: auto;
+  margin-left: -1.3rem;
+  padding-left: 1.3rem;
+}
+
+/* Fit table to container; wrap cells instead of scrolling (wrapper scroll is the fallback). */
+.apiTable {
+  width: 100%;
+  overflow: visible;
+}
+
+.apiTable th,
+.apiTable td {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
 .apiTable tbody tr {
+  position: relative;
   scroll-margin-top: 60px;
   transition: box-shadow 0.2s;
 }
@@ -20,4 +40,33 @@
 
 .apiTable code {
   cursor: text;
+}
+
+/* Full-height row anchor spanning the left gutter, so the hover path never breaks. */
+.rowHashLink {
+  position: absolute;
+  left: -1.3rem;
+  top: 0;
+  bottom: 0;
+  width: 1.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity var(--ifm-transition-fast, 0.2s) ease;
+}
+
+.rowHashLink::before {
+  content: "#";
+}
+
+.apiTable tbody tr:hover .rowHashLink,
+.apiTable tbody tr:focus-visible .rowHashLink,
+.rowHashLink:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
