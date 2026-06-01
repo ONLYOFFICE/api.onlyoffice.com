@@ -20,7 +20,7 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
   return (
     <section className={styles.samples}>
       <div className={styles.samplesContainer}>
-        <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
+        <section className={styles.sectionGroup}>
           <div className={styles.sectionHead}>
             <Heading as="h2" className={styles.samplesHeading}>
               Want to know more?
