@@ -27,13 +27,10 @@ const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({ title, link, 
   return (
     <Link to={`/${linkPrefix}/${link}`}>
       <div className={styles.featuresGridItem}>
-        <div className={styles.featuresGridItemIcon}>{icon}</div>
-        <span className={styles.featuresGridItemArrow} aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M7 17L17 7M9 7h8v8" />
-          </svg>
-        </span>
-        <Heading as="h3" className={styles.featuresGridItemTitle}>{title}</Heading>
+        <div className={styles.featuresGridItemHeader}>
+          {icon}
+          <Heading as="h3">{title}</Heading>
+        </div>
         <p className={styles.featuresGridItemDesc}>{description}</p>
       </div>
     </Link>

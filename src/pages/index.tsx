@@ -16,7 +16,7 @@ function HomepageHeader() {
   return (
     <header className={styles.heroBanner}>
       <div className={styles.heroInner}>
-        <Heading as="h1" className={`${styles.title} hero__title`}>
+        <Heading as="h1" className={`hero__title ${styles.title}`}>
           Welcome to {siteConfig.title} API
         </Heading>
         <p className={styles.subtitle}>
