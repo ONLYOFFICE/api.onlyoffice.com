@@ -6,14 +6,14 @@ title: Introducing ONLYOFFICE DocSpace
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
-![DocSpace overview](/assets/images/docspace/docspace-overview.png#gh-light-mode-only)![DocSpace overview](/assets/images/docspace/docspace-overview.dark.png#gh-dark-mode-only)
-
 - creating and customizing [rooms](#step-3-create-a-room) for collaboration;
 - inviting users to [collaborate on files](../samples/basic-samples/invite-users.md) in real time;
 - creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files using the built-in [ONLYOFFICE Docs](../../../../docs/docs-api/);
 - creating and managing [AI agents](../../mcp-server/getting-started/) to automate workflows;
 - extending DocSpace functionality with [plugins](../../plugins-sdk/get-started/get-started.md);
 - integrating DocSpace into your applications using the [Embed SDK](../../javascript-sdk/get-started/get-started.md).
+
+![DocSpace overview](/assets/images/docspace/docspace-overview.png#gh-light-mode-only)![DocSpace overview](/assets/images/docspace/docspace-overview.dark.png#gh-dark-mode-only)
 
 :::info
 The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All resources, like rooms, files, or users, have their own URLs and are designed to be manipulated in isolation.
