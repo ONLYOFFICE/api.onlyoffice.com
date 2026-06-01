@@ -6,9 +6,14 @@ title: Introducing ONLYOFFICE DocSpace
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
-- [creating and customizing rooms for collaboration](#step-3-create-a-room);
-- creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
-- inviting users to collaborate on files in real time.
+![DocSpace overview](/assets/images/docspace/docspace-overview.png#gh-light-mode-only)![DocSpace overview](/assets/images/docspace/docspace-overview.dark.png#gh-dark-mode-only)
+
+- creating and customizing [rooms](#step-3-create-a-room) for collaboration;
+- inviting users to [collaborate on files](../samples/basic-samples/invite-users.md) in real time;
+- creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files using the built-in [ONLYOFFICE Docs](../../../../docs/docs-api/);
+- creating and managing [AI agents](../../mcp-server/getting-started/) to automate workflows;
+- extending DocSpace functionality with [plugins](../../plugins-sdk/get-started/get-started.md);
+- integrating DocSpace into your applications using the [Embed SDK](../../javascript-sdk/get-started/get-started.md).
 
 :::info
 The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All resources, like rooms, files, or users, have their own URLs and are designed to be manipulated in isolation.
@@ -18,9 +23,10 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
-- **Portal:** A secure, web-based gateway that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
-- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/) (Collaboration, Public, Custom, Form filling, Virtual data, and AI rooms) based on your specific needs.
-- **Users:** People with access to your DocSpace portal. Users are split between the owner, and other [members with different access levels](https://helpcenter.onlyoffice.com/docspace/administration/docspace-inviting-users.aspx) on who can access the documents and files in DocSpace. Other user types include the admin and guests.
+- **Portal:** A secure, web-based [gateway](../usage-api/get-portal-information.api.mdx) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
+- **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/) (Collaboration, Public, Custom, Form filling, and Virtual data) based on your specific needs.
+- **AI agents:** Integrations that connect DocSpace to external tools and automate workflows via the [MCP server](../../mcp-server/getting-started/).
+- **Users:** People with access to your DocSpace portal. DocSpace has several [user roles](../usage-api/update-user-type.api.mdx): owner, admin, power user, editor, viewer, and guest, each with different access rights to rooms and files.
 
 ## Quickstart
 
@@ -31,11 +37,12 @@ Follow these steps to get started with ONLYOFFICE DocSpace:
 ONLYOFFICE offers these ways to access and use DocSpace:
 
 - **Cloud version**: This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to get started and access your DocSpace portal. 
-- **Local server**: [ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer) is available for Windows, Linux and Docker. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
+- **Local server**: [ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer) is available for Windows, Linux, Docker, and Amazon AWS. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
 
     - [Get ONLYOFFICE DocSpace for Windows](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-windows.aspx?from=api)
     - [Get ONLYOFFICE DocSpace for Linux](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
     - [Get ONLYOFFICE DocSpace for Docker](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
+    - [Get ONLYOFFICE DocSpace for Amazon AWS](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-amazon.aspx)
 
 ### Step 2: Authenticate your account
 
