@@ -8,7 +8,7 @@ import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
 
 The [ONLYOFFICE DocSpace Embed SDK](https://github.com/ONLYOFFICE/docspace-sdk-js), based on JavaScript, lets you embed DocSpace directly inside your web application. You can integrate a full document workspace, a standalone editor, a file picker, or a background authentication frame — with just a few lines of code.
 
-You can use it as an [npm package](./quick-start.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quick-start.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
+You can use it as an [npm package](./quickstart.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quickstart.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ The SDK supports multiple initialization modes:
 - Selector and system modes do not expose editing capabilities.
 :::
 
-Ready to embed DocSpace? Follow the [Quick Start](./quick-start.md).
+Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).
 
 ## Live demo
 
