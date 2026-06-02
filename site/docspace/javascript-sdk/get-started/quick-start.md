@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Quick Start
 
+:::note
+
+Before you begin, make sure you meet the [prerequisites](./get-started.md#prerequisites).
+
+:::
+
 There are two ways to embed a working DocSpace instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js). Both methods render DocSpace inside a `div` you control.
 
 ## Embedding with a script tag
