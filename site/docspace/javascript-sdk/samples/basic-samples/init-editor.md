@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -73,7 +73,7 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -84,7 +84,7 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. Embed SDK logic

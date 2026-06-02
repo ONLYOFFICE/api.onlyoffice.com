@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <title>Create Room</title>
 
     <!-- Replace {PORTAL_SRC} with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -93,7 +93,7 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger room
     <title>Create Room</title>
 
     <!-- Replace {PORTAL_SRC} with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -124,7 +124,7 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger room
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. Embed SDK logic

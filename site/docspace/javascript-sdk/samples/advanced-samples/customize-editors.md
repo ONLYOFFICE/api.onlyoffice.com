@@ -23,7 +23,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <head>
   <meta charset="UTF-8">
   <title>DocSpace Embed SDK</title>
-  <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+  <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     ...
   </head>
   <body>
@@ -84,7 +84,7 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
   <head>
     <meta charset="UTF-8">
     <title>DocSpace Embed SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     ...
   </head>
   <body>
@@ -95,7 +95,7 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ### 2. Initialize the editors

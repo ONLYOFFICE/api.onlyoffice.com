@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <title>Init Frame</title>
 
     <!-- Replace with your actual DocSpace portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -63,7 +63,7 @@ Add an iframe to your HTML page to embed the DocSpace frame.
     <title>Init Frame</title>
 
     <!-- Replace with your actual DocSpace portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -74,7 +74,7 @@ Add an iframe to your HTML page to embed the DocSpace frame.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. Embed SDK logic

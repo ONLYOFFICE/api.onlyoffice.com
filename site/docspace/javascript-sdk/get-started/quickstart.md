@@ -25,7 +25,7 @@ The fastest way to get DocSpace running in your app is via a script tag. No inst
 **Step 2.** Load the SDK from your DocSpace server:
 
 ```html
-<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
+<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.2.0/api.js"></script>
 ```
 
 **Step 3.** Initialize the frame:
@@ -59,7 +59,7 @@ Below is a basic working example you can save and serve to verify your setup:
   <body>
     <div id="ds-frame"></div>
 
-    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.2.0/api.js"></script>
 
     <script>
       const config = {
