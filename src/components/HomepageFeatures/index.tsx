@@ -31,7 +31,7 @@ const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
     <section className={styles.features}>
       <div className={styles.containerFeatures}>
         <div className={styles.containerInner}>
-          <main>
+          <div>
             {featureGroups.map((group, index) => (
               <section key={index} className={styles.featureGroup}>
                 <div className={styles.featureHeaderTop}>
@@ -59,7 +59,7 @@ const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
                   </div>
               </section>
             ))}
-          </main>
+          </div>
         </div>
       </div>
     </section>
