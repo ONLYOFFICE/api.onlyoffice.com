@@ -8,7 +8,7 @@ ONLYOFFICE offers these ways to access and use DocSpace:
 
 ## Cloud version
 
-This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to get started and access your DocSpace portal.
+This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=docspaceapi) to get started and access your DocSpace portal.
 
 ## Local server
 
