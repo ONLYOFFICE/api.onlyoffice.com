@@ -48,7 +48,7 @@ This parameter defines the capabilities of a third-party application in relation
 | Files & Folders | *files:read* - view all files and folders.                        | *files:write* - view and manage all files and folders.                        |
 | Rooms           | *rooms:read* - view all rooms.                                    | *rooms:write* - view and manage all rooms.                                    |
 | Open ID         | *openid* - view your personal data.                               |                                                                               |
-        
+
 Check **Read** or **Write** options near each scope. When selecting the **Write** capability, the **Read** option is automatically enabled.
 
 For more information about the OpenID Connect and the *openid* scope, view its [documentation](../openid-connect.md).

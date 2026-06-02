@@ -50,7 +50,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 *Automation and scripting for a single user account*
 
-Send credentials to `/api/2.0/authentication` to get a session token, then pass it in the `Authorization` header with every API request. The token is bound to the user account that generated it.
+Send credentials to `/api/2.0/authentication` to get a personal access token, then pass it in the `Authorization` header with every API request. The token is bound to the user account that generated it.
 
 ```sh
 # Step 1: Get token
