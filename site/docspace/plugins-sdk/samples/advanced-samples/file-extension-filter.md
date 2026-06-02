@@ -297,10 +297,10 @@ npm i -g @onlyoffice/docspace-plugin-sdk
    ```
 
 2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage. In this case, set the plugin name to `extsearch` and the `pluginName` will be generated as `Extsearch`.  
-:::note
-This key is used to register the plugin: `window.Plugins.Extsearch = plugin;`.
-See the full example code for more details.
-:::
+   :::note
+   This key is used to register the plugin: `window.Plugins.Extsearch = plugin;`.
+   See the full example code for more details.
+   :::
 3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Context menu`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
 ## Step 2: Confirm plugin configuration
