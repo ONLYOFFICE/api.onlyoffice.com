@@ -40,10 +40,13 @@ The SDK supports multiple initialization modes:
 | Room selector | Room picker dialog | Rooms only | No | No | Yes |
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
+| Uploader | File upload dialog | No | No | Yes (folder) | Yes |
+| Forms | Forms gallery | Yes | No | Yes (room) | Yes |
+| Chat | Chat interface | No | No | Yes (agent) | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
-- Selector and system modes do not expose editing capabilities.
+- Selector, system, uploader, and chat modes do not expose editing capabilities.
 :::
 
 Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).
