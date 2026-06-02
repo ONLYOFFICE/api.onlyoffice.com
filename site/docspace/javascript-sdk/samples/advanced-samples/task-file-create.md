@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Create files in rooms
 
-This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the JavaScript SDK.
+This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/task-file-create.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>

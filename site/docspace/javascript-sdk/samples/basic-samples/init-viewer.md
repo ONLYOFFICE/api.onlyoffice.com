@@ -5,13 +5,13 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Initialize viewer
 
-This example demonstrates how to embed a read-only document viewer using the JavaScript SDK method.
+This example demonstrates how to embed a read-only document viewer using the Embed SDK method.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-viewer.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
@@ -34,7 +34,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <iframe id="ds-frame"></iframe>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     // Called when the viewer is ready
     function onAppReady() {
@@ -87,7 +87,7 @@ Create a simple HTML layout with an `<iframe>` where the document viewer will be
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Use the [initViewer()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initviewer) method to load and display a document in read-only mode. Be sure to pass a valid `id` for the file you want to view.
 

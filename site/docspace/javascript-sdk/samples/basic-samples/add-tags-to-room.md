@@ -11,7 +11,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
@@ -53,7 +53,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <button id="button">Add Tags</button>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     const config = {
       frameId: "ds-frame",
@@ -125,7 +125,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 :::
 
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Create a script block to configure and initialize the SDK. Use the [addTagsToRoom()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#addtagstoroom) method to assign one or more tags to a DocSpace room.
 

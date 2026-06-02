@@ -5,7 +5,7 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Structured room creation
 
-This example demonstrates how to use the DocSpace JavaScript SDK to create a structured workspace for each new client. When a user adds a client, the system:
+This example demonstrates how to use the DocSpace Embed SDK to create a structured workspace for each new client. When a user adds a client, the system:
 
 - Creates a shared room with the clients name
 - Automatically generates a set of predefined folders inside that room
@@ -17,7 +17,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.  
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.  
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
@@ -47,7 +47,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <ul id="clientList"></ul>
     <!-- Step 4: SDK iframe (hidden) -->
     <iframe id="ds-frame" style="display: none;"></iframe>
-    <!-- Step 5: JavaScript SDK Logic -->
+    <!-- Step 5: Embed SDK Logic -->
         <script>
       let docSpace;
 

@@ -11,7 +11,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
@@ -57,7 +57,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       </div>
     </div>
 
-    <!-- Step 4: JavaScript SDK Logic -->
+    <!-- Step 4: Embed SDK Logic -->
     <script>
       let docSpace
       let token

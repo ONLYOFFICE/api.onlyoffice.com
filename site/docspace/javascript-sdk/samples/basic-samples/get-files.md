@@ -5,13 +5,13 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Get files
 
-This example demonstrates how to retrieve a list of files from a room using the JavaScript SDK method.
+This example demonstrates how to retrieve a list of files from a room using the Embed SDK method.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-files.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
@@ -54,7 +54,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <button id="button">Get Files</button>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     const roomId = "71234"; // Replace with your actual Room ID
 
@@ -130,7 +130,7 @@ Create an HTML page with an embedded iframe and a button to fetch the list of fi
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Use the [getFiles()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfiles) method to retrieve files in the current view.
 

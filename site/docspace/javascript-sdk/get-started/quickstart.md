@@ -80,7 +80,7 @@ This example uses the `initManager` mode. Configuration options may change depen
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in your DocSpace settings under the **JavaScript SDK** tab.
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in your DocSpace settings under the **Embed SDK** tab.
 
 :::
 
@@ -138,7 +138,7 @@ Open `http://localhost:5173` in your browser to access your DocSpace instance.
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **JavaScript SDK** tab. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **Embed SDK** tab. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
 
 :::
 
