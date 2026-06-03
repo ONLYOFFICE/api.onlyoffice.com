@@ -9,20 +9,26 @@
   text-decoration: none;
 }
 
+.featuresGridList a:hover {
+  text-decoration: none;
+}
+
 .featuresGridItem {
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--base-size-24);
   padding: var(--base-size-32);
-  background-color: var(--card-background-color);
-  border-radius: 4px;
-  border: 1px solid var(--card-border-color);
-  transition: box-shadow 300ms;
+  background: var(--hp-bg-elev, var(--card-background-color));
+  border: 1px solid var(--hp-border, var(--card-border-color));
+  border-radius: 14px;
+  transition: border-color 0.15s, transform 0.18s, box-shadow 0.18s;
 }
 
 .featuresGridItem:hover {
-  box-shadow: var(--temp-color-shadow-default-small);
+  border-color: var(--hp-border-strong, var(--card-border-color));
+  transform: translateY(-2px);
+  box-shadow: var(--hp-shadow-md, var(--temp-color-shadow-default-small));
 }
 
 .featuresGridItemHeader {
@@ -34,17 +40,29 @@
 .featuresGridItemHeader svg {
   width: 32px;
   height: 32px;
+  color: var(--hp-accent, var(--color-foreground-link));
 }
 
 .featuresGridItemHeader h3 {
   font-size: var(--text-title-font-size-small);
   font-weight: var(--text-title-font-weight-small);
   line-height: var(--text-title-line-height-small);
+  color: var(--hp-fg, var(--ifm-font-color-base));
   margin-block: 0;
 }
 
-.featuresGridItem p {
-  margin-block: 0;
+.featuresGridItemDesc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--hp-fg-muted, var(--ifm-color-emphasis-700));
+  margin: 0;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .featuresGridList {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -63,32 +81,5 @@
   .featuresGridItem {
     gap: var(--base-size-12);
     padding: var(--base-size-16);
-    padding-bottom: 18px;
   }
-}
-
-@media (min-width: 768px) {
-  .featuresGridList {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .featuresGridItemHeader {
-    gap: 24px;
-  }
-
-  /*.featuresGridItemHeader svg {*/
-  /*  width: 48px;*/
-  /*  height: 48px;*/
-  /*}*/
-}
-
-@media (min-width: 1440px) {
-  /*.part__chapter svg[height="64"][width="64"] {*/
-  /*  display: block;*/
-  /*}*/
-
-  /*.featuresGridItemHeader svg {*/
-  /*  width: 64px;*/
-  /*  height: 64px;*/
-  /*}*/
 }

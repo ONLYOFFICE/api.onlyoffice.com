@@ -1,12 +1,12 @@
 ---
 sidebar_label: Global configuration
-sidebar_position: 2
+sidebar_position: 8
 title: Global configuration
 ---
 
 All available configuration options for the DocSpace MCP server provided through environment variables, organized by their functional area.
 
-## MCP Options
+## MCP options
 
 The following options are used to configure the behavior of the MCP server.
 
@@ -98,7 +98,7 @@ Interval for checking HTTP sessions for expiration in milliseconds. Set to `0` t
 | **Attributes** | trimmable |
 | **Transports** | `sse` `streamable-http` `http` |
 
-## API Options
+## API options
 
 The following options are used to configure the behavior for API requests.
 
@@ -109,7 +109,7 @@ User agent sent in the `User-Agent` header for API requests.
 | | |
 |---|---|
 | **Type** | string |
-| **Default** | `@onlyoffice/docspace-mcp v3.1.0` |
+| **Default** | `@onlyoffice/docspace-mcp v3.2.0` |
 | **Attributes** | trimmable |
 | **Transports** | all |
 
@@ -242,7 +242,7 @@ set to `sse`, `streamable-http`, or `http`.
 | **Attributes** | sensitive, trimmable |
 | **Transports** | `sse` `streamable-http` `http` |
 
-## OAuth Options
+## OAuth options
 
 The following options are used to configure the behavior of the OAuth server.
 
@@ -316,7 +316,7 @@ Secret key for signing OAuth state tokens. Used together with `DOCSPACE_OAUTH_ST
 | **Attributes** | sensitive, trimmable |
 | **Transports** | `sse` `streamable-http` `http` |
 
-## Server Options
+## Server options
 
 The following options are used to configure the behavior of the HTTP server.
 
@@ -693,7 +693,7 @@ Time window in milliseconds for the rate limit on the OAuth token endpoint (`/oa
 | **Attributes** | trimmable |
 | **Transports** | `sse`, `streamable-http`, `http` |
 
-## Request Options
+## Request options
 
 The following options are used to configure the behavior of incoming requests.
 
@@ -750,7 +750,7 @@ DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
 ```
 
-### stdio with Custom Tool Selection
+### stdio with custom tool selection
 
 This configuration uses the default stdio transport with API key
 authentication and restricts the available tools to a specific set. In this
@@ -764,7 +764,7 @@ DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
 ```
 
-### Local HTTP Server with Meta Tools
+### Local HTTP server with meta tools
 
 This configuration uses HTTP transport with API key authentication and enables
 meta tools. In this shared authentication model, all requests are associated
@@ -777,7 +777,7 @@ DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
 ```
 
-### Local HTTP Server with Session Management
+### Local HTTP server with session management
 
 This configuration uses HTTP transport with API key authentication and custom
 session management. It configures shorter session lifetimes and more frequent
@@ -792,7 +792,7 @@ DOCSPACE_SESSION_TTL=14400000 # 4 hours
 DOCSPACE_SESSION_INTERVAL=120000 # 2 minutes
 ```
 
-### Network-Accessible HTTP Server with CORS
+### Network-accessible HTTP server with CORS
 
 This configuration uses HTTP transport with API key authentication and custom
 CORS options. It restricts the allowed origins for CORS requests to a specific

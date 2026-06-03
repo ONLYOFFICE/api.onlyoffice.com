@@ -17,16 +17,19 @@ export namespace BlogGrid {
 
 const Feature: FC<BlogGrid.Item> = ({ title, link, imgHref }) => {
   return (
-    <Link to={link}>
-    <div className={styles.blogGridItem}>
-      <img src={imgHref} alt={title} />
-      <div className={styles.blogItemHeader}>
-        <Heading as="h3">{title}</Heading>
+    <Link to={link} className={styles.blogGridItem}>
+      <div className={styles.blogImg}>
+        <img src={imgHref} alt={title} loading="lazy" />
       </div>
-      {/* <p>
-        <Link to={link}>Read more »</Link>
-      </p> */}
-    </div>
+      <div className={styles.blogBody}>
+        <Heading as="h3" className={styles.blogTitle}>{title}</Heading>
+        <span className={styles.blogMeta} aria-hidden="true">
+          Read article
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </span>
+      </div>
     </Link>
   );
 }

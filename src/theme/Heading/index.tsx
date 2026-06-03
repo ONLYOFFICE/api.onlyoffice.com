@@ -4,19 +4,28 @@ import {translate} from '@docusaurus/Translate';
 import {useAnchorTargetClassName} from '@docusaurus/theme-common';
 import Link from '@docusaurus/Link';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import type {Props} from '@theme/Heading';
 import PageActions from '@site/src/components/PageActions';
 import './styles.module.css';
 
+function useIsDocPage(): boolean {
+  try {
+    useDoc();
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 export default function Heading({as: As, id, ...props}: Props): ReactNode {
   const brokenLinks = useBrokenLinks();
   const anchorTargetClassName = useAnchorTargetClassName(id);
+  const shouldShowActions = useIsDocPage();
 
   // H1 headings do not need an id because they don't appear in the TOC.
   if (As === 'h1') {
-    // Disable PageActions for hero headings and other special pages
-    const shouldShowActions = !props.className?.includes('hero__title');
-    const isOpenApiHeading = props.className?.includes('openapi__heading');
+    const isOpenApiHeading = shouldShowActions && props.className?.includes('openapi__heading');
     const Wrapper = isOpenApiHeading ? 'header' : React.Fragment;
 
     return (

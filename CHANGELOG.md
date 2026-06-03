@@ -1,5 +1,45 @@
 # Change log
 
+## 8.8.0
+
+### New features
+
+#### Common
+
+* Added row permalink anchors to API tables
+
+### Improvements
+
+#### Docs API
+
+* Consolidated server configuration documentation into a single page
+
+#### DocSpace
+
+* Updated MCP server documentation with improved formatting and restructured reference section
+
+#### Homepage
+
+* Redesigned homepage with system fonts, design tokens, and theme-aware icons
+
+### Fixes
+
+#### Common
+
+* Fixed PageActions visibility on doc pages
+
+#### Docs API
+
+* Fixed broken references after server configuration page consolidation
+
+#### DocSpace
+
+* Fixed version in MCP server configuration documentation
+
+#### Playground
+
+* Fixed Monaco API library loading to use GitHub raw instead of document server
+
 ## 8.7.0
 
 ### New features
