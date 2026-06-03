@@ -97,13 +97,12 @@
   border: 1px solid var(--hp-fg, #15171a);
   white-space: nowrap;
   flex: 0 0 auto;
-  transition: transform 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
 
   &:hover {
     background: var(--hp-accent, var(--color-foreground-link));
     border-color: var(--hp-accent, var(--color-foreground-link));
     color: #fff;
-    transform: translateY(-1px);
     text-decoration: none;
   }
 
