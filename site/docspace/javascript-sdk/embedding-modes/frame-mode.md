@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 10
 ---
 
 # Frame mode
@@ -33,6 +33,9 @@ The `mode` parameter controls which embedding mode is loaded inside the frame:
 | `"room-selector"` | `initRoomSelector()` | Room picker dialog |
 | `"file-selector"` | `initFileSelector()` | File picker dialog |
 | `"system"` | `initSystem()` | Hidden frame for background operations |
+| `"uploader"` | `initUploader()` | File upload interface (requires `id`) |
+| `"forms"` | `initForms()` | Forms gallery (requires `id`) |
+| `"chat"` | `initChat()` | AI chat interface (requires `agentId`) |
 
 The available methods and events depend on the mode loaded at runtime. See each mode's page for the capabilities and restrictions that apply.
 
@@ -48,3 +51,6 @@ The available parameters, events, and methods depend on the mode loaded at runti
 - [Room selector mode](./room-selector-mode.md)
 - [File selector mode](./file-selector-mode.md)
 - [System mode](./system-mode.md)
+- [Uploader mode](./uploader-mode.md)
+- [Forms mode](./forms-mode.md)
+- [Chat mode](./chat-mode.md)
