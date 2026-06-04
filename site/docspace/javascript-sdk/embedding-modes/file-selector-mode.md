@@ -19,7 +19,7 @@ const docSpace = DocSpace.SDK.initFileSelector({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize file selector](../samples/basic-samples/init-file-selector.md).
 
 ## Configuration, events, and methods
 
@@ -29,7 +29,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ### Attaching a DocSpace file to a form
 
-Let users browse and pick a file, then use the returned data to attach it to a record in your application:
+Let users browse and pick a file, then use the returned data to attach it to a record in your application. See also: [File manager with task attachments](../samples/advanced-samples/file-manager-task-attachments.md).
 
 ```javascript
 const selector = DocSpace.SDK.initFileSelector({

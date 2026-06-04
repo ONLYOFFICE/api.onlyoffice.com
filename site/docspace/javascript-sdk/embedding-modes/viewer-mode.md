@@ -18,7 +18,7 @@ const docSpace = DocSpace.SDK.initViewer({
 
 Only the parameters `frameId`, `src`, and `id` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize viewer](../samples/basic-samples/init-viewer.md).
 
 ## Configuration, events, and methods
 

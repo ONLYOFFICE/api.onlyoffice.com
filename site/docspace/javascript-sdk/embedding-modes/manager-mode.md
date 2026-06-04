@@ -19,7 +19,7 @@ const docSpace = DocSpace.SDK.initManager({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize manager](../samples/basic-samples/init-manager.md).
 
 ## Configuration, events, and methods
 
@@ -60,7 +60,7 @@ const docSpace = DocSpace.SDK.initManager({
 
 ### Creating a room programmatically
 
-Wait for `onAppReady`, then use SDK methods to create rooms or folders without any user interaction:
+Wait for `onAppReady`, then use SDK methods to create rooms or folders without any user interaction. See also: [Create room](../samples/basic-samples/create-room.md).
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
@@ -78,7 +78,7 @@ const docSpace = DocSpace.SDK.initManager({
 
 ### Getting the current selection
 
-Read what the user has selected in the file manager and act on it:
+Read what the user has selected in the file manager and act on it. See also: [Get selection](../samples/basic-samples/get-selection.md).
 
 ```javascript
 const frame = DocSpace.SDK.frames["ds-frame"];
@@ -86,5 +86,39 @@ const frame = DocSpace.SDK.frames["ds-frame"];
 const selection = await frame.getSelection();
 selection.forEach((item) => {
   console.log(item.title, item.id);
+});
+```
+
+### Reacting when a document is opened in the editor
+
+Use `onEditorOpen` to detect when the user opens a file in the editor — for example, to log activity or update your application state:
+
+```javascript
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  events: {
+    onEditorOpen: function (file) {
+      console.log("Opened in editor:", file.title, file.id);
+    },
+  },
+});
+```
+
+### Intercepting file downloads
+
+Set `downloadToEvent: true` to suppress the browser's default download behavior and handle it yourself via `onDownload`:
+
+```javascript
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  downloadToEvent: true,
+  events: {
+    onDownload: function (data) {
+      console.log("Download requested:", data);
+      // handle the download in your application
+    },
+  },
 });
 ```

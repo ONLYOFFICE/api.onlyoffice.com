@@ -20,7 +20,7 @@ const docSpace = DocSpace.SDK.initEditor({
 
 Only the parameters `frameId`, `src`, and `id` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize editor](../samples/basic-samples/init-editor.md).
 
 ## Configuration, events, and methods
 
@@ -30,7 +30,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ### Customizing the editor interface
 
-Use `editorCustomization` to match the editor to your application's branding and hide features your users don't need:
+Use `editorCustomization` to match the editor to your application's branding and hide features your users don't need. See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 ```javascript
 const docSpace = DocSpace.SDK.initEditor({

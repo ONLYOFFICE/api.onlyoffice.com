@@ -17,7 +17,7 @@ const docSpace = DocSpace.SDK.initRoomSelector({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize room selector](../samples/basic-samples/init-room-selector.md).
 
 ## Configuration, events, and methods
 
@@ -27,7 +27,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ### Linking a task or record to a DocSpace room
 
-Let users pick a room from a dialog and associate it with an item in your application:
+Let users pick a room from a dialog and associate it with an item in your application. See also: [Room selector](../samples/advanced-samples/task-room-selector.md).
 
 ```javascript
 const selector = DocSpace.SDK.initRoomSelector({

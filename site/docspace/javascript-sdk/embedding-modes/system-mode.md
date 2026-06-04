@@ -6,7 +6,7 @@ sidebar_position: 6
 
 System mode initializes a lightweight, hidden SDK frame that displays a blank page with a loader. It renders no visible DocSpace UI. Instead, it provides access to a focused set of system-level methods for managing user sessions programmatically, such as authentication, hash generation, and user info retrieval — without embedding a visible interface.
 
-The system mode does not support file operations (getFiles, createFile, createRoom, etc.) — they require a Manager.
+File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` are not processed by the DocSpace server when called from a system frame — use [Manager mode](./manager-mode.md) for those.
 
 ## Initialization
 
@@ -19,7 +19,7 @@ const docSpace = DocSpace.SDK.initSystem({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize system](../samples/basic-samples/init-system.md).
 
 ## Configuration parameters
 
@@ -64,7 +64,7 @@ After initialization, the SDK instance can be accessed by its `frameId`:
 const frame = DocSpace.SDK.frames["ds-frame"];
 ```
 
-System mode supports a focused set of methods for session management. File and room operations such as `getFiles()`, `createRoom()`, and `getRooms()` are not available in this mode.
+System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame is not prevented by the SDK, but the DocSpace server does not process them in this mode.
 
 | Method | Description |
 | -------- | ------------- |
@@ -81,7 +81,7 @@ System mode supports a focused set of methods for session management. File and r
 
 ### Application authentication (SSO Bridge)
 
-Authenticate a user in the background without displaying a login form, for example, from a third-party application:
+Authenticate a user in the background without displaying a login form, for example, from a third-party application. See also: [Authorization](../samples/advanced-samples/authorization.md).
 
 ```javascript
 const sdk = new SDK();
