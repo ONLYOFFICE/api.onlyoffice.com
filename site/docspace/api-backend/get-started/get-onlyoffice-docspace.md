@@ -12,9 +12,9 @@ This method requires no installation. [Sign up to DocSpace](https://www.onlyoffi
 
 ## Local server
 
-[ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer) is available for Windows, Linux, Docker, and Amazon AWS. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
+[ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx?from=api#docspace-developer) is available for Windows, Linux, Docker, and Amazon AWS. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
 
 - [Get ONLYOFFICE DocSpace for Windows](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-windows.aspx?from=api)
 - [Get ONLYOFFICE DocSpace for Linux](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
 - [Get ONLYOFFICE DocSpace for Docker](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
-- [Get ONLYOFFICE DocSpace for Amazon AWS](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-amazon.aspx)
+- [Get ONLYOFFICE DocSpace for Amazon AWS](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-amazon.aspx?from=api)
