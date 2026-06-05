@@ -17,7 +17,7 @@ sidebar_position: -5
 
   - [`customization`](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面：品牌、按钮、链接、徽标和其他 UI 元素；
   - [`embedded`](./config/editor/embedded.md) - 定义嵌入模式控件的行为（当 type 为 embedded 时使用）；
-  - [`plugins`](./config/editor/plugins.md) - 将 [plugins](../../plugin-and-macros/get-started/get-started.md) 连接到 ONLYOFFICE 文档，供所有编辑器用户使用；
+  - [`plugins`](./config/editor/plugins.md) - 将 [plugins](../../plugins/get-started/get-started.md) 连接到 ONLYOFFICE 文档，供所有编辑器用户使用；
 
 - [`events`](./config/events.md) - 文档操作触发的事件处理程序列表（加载、编辑、保存等）。
 

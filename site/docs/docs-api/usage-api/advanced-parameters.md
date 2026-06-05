@@ -17,7 +17,7 @@ The [configuration object](./config/config.md) passed to the [`DocsAPI.DocEditor
 
   - [`customization`](./config/editor/customization/customization-standard-branding.md) - allows you to customize the editor interface: branding, buttons, links, logos, and other UI elements;
   - [`embedded`](./config/editor/embedded.md) - defines the behavior of the embedded mode controls (used when type is embedded);
-  - [`plugins`](./config/editor/plugins.md) - connects [plugins](../../plugin-and-macros/get-started/get-started.md) to ONLYOFFICE Docs for all editor users;
+  - [`plugins`](./config/editor/plugins.md) - connects [plugins](../../plugins/get-started/get-started.md) to ONLYOFFICE Docs for all editor users;
 
 - [`events`](./config/events.md) - the list of event handlers triggered by document actions (loading, editing, saving, etc.).
 

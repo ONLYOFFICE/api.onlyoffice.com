@@ -43,7 +43,7 @@
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | 创建新的主题字体方案。 |
 | [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | 创建新的主题格式方案。 |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 使用指定的参数创建艺术字对象。 |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMUs) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
 | [FromJSON](./Methods/FromJSON.md) | 无 | 将指定的 JSON 对象转换为相应类型的文档生成器对象。 |
 | [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | 返回演示文稿的第一张幻灯片。 |
