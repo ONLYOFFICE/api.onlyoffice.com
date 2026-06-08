@@ -55,7 +55,7 @@
 | [CreateTextField](./Methods/CreateTextField.md) | [ApiTextField](../ApiTextField/ApiTextField.md) | 创建文本字段。 |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 创建空的文本属性。 |
 | [CreateUnderlineAnnot](./Methods/CreateUnderlineAnnot.md) | [ApiUnderlineAnnotation](../ApiUnderlineAnnotation/ApiUnderlineAnnotation.md) | 创建下划线批注。 |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMUs) 转换为毫米。 |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
 | [GetByInternalId](./Methods/GetByInternalId.md) | object | 通过内部 ID 返回对象。 |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | 使用指定的文本字段属性创建文本字段。 |

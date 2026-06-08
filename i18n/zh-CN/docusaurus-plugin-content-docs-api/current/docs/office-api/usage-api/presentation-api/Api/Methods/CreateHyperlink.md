@@ -14,7 +14,7 @@ expression.CreateHyperlink(link, tooltip);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| link | 必需 | string |  | 超链接地址。接受外部 URL（http、https、mailto、ftp）或以下内部幻灯片操作之一：“ppaction://hlinkshowjump?jump=firstslide”、“ppaction://hlinkshowjump?jump=lastslide”、“ppaction://hlinkshowjump?jump=nextslide”、“ppaction://hlinkshowjump?jump=previousslide”、“ppaction://hlinksldjumpslide&#123;N&#125;”（N 是从零开始的幻灯片索引）、“ppaction://hlinkfile?file=&#123;path&#125;”（打开外部文件）。 |
+| link | 必需 | string |  | 超链接地址。接受外部 URL（http、https、mailto、ftp）或以下内部幻灯片操作之一：“ppaction://hlinkshowjump?jump=firstslide”、“ppaction://hlinkshowjump?jump=lastslide”、“ppaction://hlinkshowjump?jump=nextslide”、“ppaction://hlinkshowjump?jump=previousslide”、“ppaction://hlinksldjumpslide\{N\}”（N 是从零开始的幻灯片索引）、“ppaction://hlinkfile?file=\{path\}”（打开外部文件）。 |
 | tooltip | 必需 | string |  | 工具提示文本。 |
 
 ## 返回值

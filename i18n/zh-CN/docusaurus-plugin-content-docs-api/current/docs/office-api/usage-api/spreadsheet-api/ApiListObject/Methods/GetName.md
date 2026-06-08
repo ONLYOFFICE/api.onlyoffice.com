@@ -1,6 +1,6 @@
 # GetName
 
-返回表格的显示名称。
+返回表格的名称。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

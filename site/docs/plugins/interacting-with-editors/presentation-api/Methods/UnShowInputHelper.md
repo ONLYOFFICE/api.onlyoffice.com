@@ -14,7 +14,7 @@ expression.UnShowInputHelper(guid, isclear);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| guid | Required | string |  | A string value which specifies a plugin identifier which must be of the *asc.&#123;UUID&#125;* type. |
+| guid | Required | string |  | A string value which specifies a plugin identifier which must be of the *asc.\{UUID\}* type. |
 | isclear | Required | string |  | Defines if the input context will be cleared (**true**) or not (**false**). |
 
 ## Returns

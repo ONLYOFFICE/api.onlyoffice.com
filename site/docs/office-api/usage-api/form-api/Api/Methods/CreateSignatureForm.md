@@ -1,6 +1,6 @@
 # CreateSignatureForm
 
-Creates a picture form with the specified picture form properties.
+Creates a signature form with the specified form properties.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.CreateSignatureForm(formPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| formPr | Required | [FormPrBase](../../Enumeration/FormPrBase.md) |  | form properties. |
+| formPr | Required | [FormPrBase](../../Enumeration/FormPrBase.md) |  | signature form properties. |
 
 ## Returns
 

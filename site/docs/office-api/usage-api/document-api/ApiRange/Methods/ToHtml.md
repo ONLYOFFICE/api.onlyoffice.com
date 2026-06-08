@@ -18,7 +18,7 @@ expression.ToHtml(options);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| options | Optional | [ToHtmlOptions](../../Enumeration/ToHtmlOptions.md) | &#123;&#125; | The HTML conversion options. |
+| options | Optional | [ToHtmlOptions](../../Enumeration/ToHtmlOptions.md) | \{\} | The HTML conversion options. |
 
 ## Returns
 

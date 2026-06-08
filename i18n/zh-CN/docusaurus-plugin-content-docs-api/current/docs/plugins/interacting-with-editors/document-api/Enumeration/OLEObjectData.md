@@ -10,7 +10,7 @@ Object
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| ApplicationId | string | 可以编辑当前 OLE 对象的插件标识符，必须是 *asc.&#123;UUID&#125;* 类型。 |
+| ApplicationId | string | 可以编辑当前 OLE 对象的插件标识符，必须是 *asc.\{UUID\}* 类型。 |
 | Data | string | OLE 对象数据（内部格式）。 |
 | Height | number | OLE 对象的高度，以毫米为单位。 |
 | HeightPix | number | OLE 对象图像的高度，以像素为单位。 |

@@ -14,7 +14,7 @@ expression.AddContentControlPicture(commonPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| commonPr | 可选 | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | 通用内容控件属性。 |
+| commonPr | 可选 | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | \{\} | 通用内容控件属性。 |
 
 ## 返回值
 

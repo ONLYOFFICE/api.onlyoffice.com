@@ -3,8 +3,8 @@
 Axis-aligned rectangle represented as a tuple.
 
 Invariants:
- - rect[0] &lt; rect[2] (x1 &lt; x2)
- - rect[1] &lt; rect[3] (y1 &lt; y2)
+ - rect[0] \< rect[2] (x1 \< x2)
+ - rect[1] \< rect[3] (y1 \< y2)
 
 ## Type
 

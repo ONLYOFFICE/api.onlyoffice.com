@@ -10,7 +10,7 @@ Object
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| ApplicationId | string | An identifier of the plugin which can edit the current OLE object and must be of the *asc.&#123;UUID&#125;* type. |
+| ApplicationId | string | An identifier of the plugin which can edit the current OLE object and must be of the *asc.\{UUID\}* type. |
 | Data | string | OLE object data (internal format). |
 | Height | number | The OLE object height measured in millimeters. |
 | HeightPix | number | The OLE object image height in pixels. |

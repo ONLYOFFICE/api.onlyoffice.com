@@ -1,7 +1,7 @@
 # SetNoWrap
 
 指定在文档中显示父表格时当前表格单元格的布局方式。此设置
-仅在表格的 [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) 表格布局设置为使用 &lt;code&gt;"autofit"&lt;/code&gt; 算法时影响单元格的行为。
+仅在表格的 [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) 表格布局设置为使用 `"autofit"` 算法时影响单元格的行为。
 
 ## 语法
 

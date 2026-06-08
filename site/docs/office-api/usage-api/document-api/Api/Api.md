@@ -10,6 +10,7 @@ Represents the Api class.
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an auto-color. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
+| [CompareDocuments](./Methods/CompareDocuments.md) | None | Compares the current document with another document opened via builderJS.OpenTmpFile. Tracked changes between the two documents are produced in the current document. |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a new block level container. |

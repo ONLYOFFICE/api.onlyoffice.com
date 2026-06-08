@@ -15,7 +15,7 @@ expression.AddTableOfContents(oTocPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTocPr | Optional | [TocPr](../../Enumeration/TocPr.md) | &#123;&#125; | Table of contents properties. |
+| oTocPr | Optional | [TocPr](../../Enumeration/TocPr.md) | \{\} | Table of contents properties. |
 
 ## Returns
 

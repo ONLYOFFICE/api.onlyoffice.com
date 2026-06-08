@@ -15,7 +15,7 @@ expression.GetPageImage(nPage, oParams);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | nPage | Required | number |  | The page index. |
-| oParams | Optional | object | &#123;&#125; | The image parameters. |
+| oParams | Optional | object | \{\} | The image parameters. |
 | oParams.maxSize | Optional | number |  | The size of the larger image side in pixels. |
 | oParams.annotations | Optional | boolean | false | Specifies whether the annotations will be rendered. |
 | oParams.fields | Optional | boolean | false | Specifies whether the fields will be rendered. |

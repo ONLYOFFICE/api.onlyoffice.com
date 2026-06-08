@@ -14,8 +14,8 @@ expression.AddContentControlCheckBox(checkBoxPr, commonPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| checkBoxPr | Optional | [ContentControlCheckBoxProperties](../Enumeration/ContentControlCheckBoxProperties.md) | &#123;&#125; | The content control checkbox properties. |
-| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | The common content control properties. |
+| checkBoxPr | Optional | [ContentControlCheckBoxProperties](../Enumeration/ContentControlCheckBoxProperties.md) | \{\} | The content control checkbox properties. |
+| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | \{\} | The common content control properties. |
 
 ## Returns
 

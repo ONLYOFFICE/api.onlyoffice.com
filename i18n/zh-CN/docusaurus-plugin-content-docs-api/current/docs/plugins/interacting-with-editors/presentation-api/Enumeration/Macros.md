@@ -11,7 +11,7 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | current | number | 当前宏索引。 |
-| macrosArray | string[] | 宏代码数组（*[&#123;"name": "Macros1", "value": "&#123;macrosCode&#125;"&#125;]*）。 |
+| macrosArray | string[] | 宏代码数组（*[\{"name": "Macros1", "value": "\{macrosCode\}"\}]*）。 |
 
 ## 示例
 

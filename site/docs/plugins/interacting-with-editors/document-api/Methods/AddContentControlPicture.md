@@ -14,7 +14,7 @@ expression.AddContentControlPicture(commonPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | The common content control properties. |
+| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | \{\} | The common content control properties. |
 
 ## Returns
 

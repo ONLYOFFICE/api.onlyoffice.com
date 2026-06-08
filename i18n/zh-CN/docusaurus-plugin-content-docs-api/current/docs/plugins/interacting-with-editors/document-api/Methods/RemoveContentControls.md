@@ -14,7 +14,7 @@ expression.RemoveContentControls(arrDocuments);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrDocuments | 必需 | [ContentControl](../Enumeration/ContentControl.md)[] |  | 内容控件内部 ID 数组。示例：[&#123;"InternalId": "5_556"&#125;]。 |
+| arrDocuments | 必需 | [ContentControl](../Enumeration/ContentControl.md)[] |  | 内容控件内部 ID 数组。示例：[\{"InternalId": "5_556"\}]。 |
 
 ## 返回值
 

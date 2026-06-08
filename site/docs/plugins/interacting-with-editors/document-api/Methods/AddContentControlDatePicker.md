@@ -14,8 +14,8 @@ expression.AddContentControlDatePicker(datePickerPr, commonPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| datePickerPr | Optional | [ContentControlDatePickerProperties](../Enumeration/ContentControlDatePickerProperties.md) | &#123;&#125; | The content control datepicker properties. |
-| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | The common content control properties. |
+| datePickerPr | Optional | [ContentControlDatePickerProperties](../Enumeration/ContentControlDatePickerProperties.md) | \{\} | The content control datepicker properties. |
+| commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | \{\} | The common content control properties. |
 
 ## Returns
 

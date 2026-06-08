@@ -14,7 +14,7 @@ expression.RemovePlugin(guid, backup);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| guid | Required | string |  | The plugin identifier. It must be of the *asc.&#123;UUID&#125;* type. |
+| guid | Required | string |  | The plugin identifier. It must be of the *asc.\{UUID\}* type. |
 | backup | Required | string |  | The plugin backup. This parameter is used when working with the desktop editors. |
 
 ## Returns

@@ -18,7 +18,7 @@ expression.ToHtml(options);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| options | 可选 | [ToHtmlOptions](../../Enumeration/ToHtmlOptions.md) | &#123;&#125; | HTML 转换选项。 |
+| options | 可选 | [ToHtmlOptions](../../Enumeration/ToHtmlOptions.md) | \{\} | HTML 转换选项。 |
 
 ## 返回值
 

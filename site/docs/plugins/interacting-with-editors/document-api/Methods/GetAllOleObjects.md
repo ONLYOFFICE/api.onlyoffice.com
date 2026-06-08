@@ -15,7 +15,7 @@ expression.GetAllOleObjects(sPluginId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPluginId | Required | string |  | Plugin identifier. It must be of the *asc.&#123;UUID&#125;* type. |
+| sPluginId | Required | string |  | Plugin identifier. It must be of the *asc.\{UUID\}* type. |
 
 ## Returns
 

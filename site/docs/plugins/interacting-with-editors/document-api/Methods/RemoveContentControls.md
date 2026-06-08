@@ -14,7 +14,7 @@ expression.RemoveContentControls(arrDocuments);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrDocuments | Required | [ContentControl](../Enumeration/ContentControl.md)[] |  | An array of content control internal IDs. Example: [&#123;"InternalId": "5_556"&#125;]. |
+| arrDocuments | Required | [ContentControl](../Enumeration/ContentControl.md)[] |  | An array of content control internal IDs. Example: [\{"InternalId": "5_556"\}]. |
 
 ## Returns
 
