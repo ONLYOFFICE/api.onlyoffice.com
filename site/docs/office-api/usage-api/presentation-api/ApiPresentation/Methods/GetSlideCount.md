@@ -2,8 +2,8 @@
 
 Returns a number of slides.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

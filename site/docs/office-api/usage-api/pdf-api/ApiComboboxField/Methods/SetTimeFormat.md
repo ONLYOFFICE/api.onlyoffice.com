@@ -5,7 +5,7 @@ Sets time format for field.
 ## Syntax
 
 ```javascript
-expression.SetTimeFormat(sFormat);
+expression.SetTimeFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetTimeFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
+| format | Required | [TimeFormat](../../Enumeration/TimeFormat.md) |  | available time format |
 
 ## Returns
 
@@ -34,6 +34,6 @@ let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
 page.AddObject(comboboxField);
 
-comboboxField.SetTimeFormat("12HR:MM:SS");
+comboboxField.SetTimeFormat("h:MM:ss tt");
 comboboxField.SetValue("8:45:30");
 ```

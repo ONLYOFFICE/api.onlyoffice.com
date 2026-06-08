@@ -14,7 +14,7 @@ expression.SetPageBreakBefore(isPageBreakBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isPageBreakBefore | 必需 | boolean |  | true 值启用将段落内容呈现 |
+| isPageBreakBefore | 必需 | boolean |  | true 值启用在文档新页面开头呈现段落内容的选项。 |
 
 ## 返回值
 

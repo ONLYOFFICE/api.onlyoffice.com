@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetLayout(sType);
+expression.SetLayout(layout);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetLayout(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonLayout](../../Enumeration/ButtonLayout.md) |  | 按钮布局类型 |
+| layout | 必需 | [ButtonLayout](../../Enumeration/ButtonLayout.md) |  | 按钮布局。 |
 
 ## 返回值
 

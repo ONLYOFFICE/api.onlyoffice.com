@@ -2,8 +2,8 @@
 
 返回此排序字段在集合中从 1 开始的优先级。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

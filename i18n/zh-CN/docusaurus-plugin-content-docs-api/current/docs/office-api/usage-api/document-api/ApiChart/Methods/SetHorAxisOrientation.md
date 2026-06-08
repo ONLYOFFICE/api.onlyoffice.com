@@ -14,7 +14,7 @@ expression.SetHorAxisOrientation(bIsMinMax);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bIsMinMax | 必需 | boolean |  | &lt;code&gt;true&lt;/code&gt; 值将设置横轴的正常数据方向（从最小值到最大值）。 |
+| bIsMinMax | 必需 | boolean |  | `true` 值将设置横轴的正常数据方向（从最小值到最大值）。 |
 
 ## 返回值
 

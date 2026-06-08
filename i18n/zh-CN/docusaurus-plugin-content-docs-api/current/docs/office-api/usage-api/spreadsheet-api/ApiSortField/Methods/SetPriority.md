@@ -2,14 +2,14 @@
 
 设置此排序字段从 1 开始的优先级，在集合中重新定位。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
 
 ```javascript
-expression.SetPriority(nPriority);
+expression.SetPriority(priority);
 ```
 
 `expression` - 表示 [ApiSortField](../ApiSortField.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetPriority(nPriority);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPriority | 必需 | number |  | 未提供描述。 |
+| priority | 必需 | number |  | 排序字段新的从 1 开始的优先级。 |
 
 ## 返回值
 

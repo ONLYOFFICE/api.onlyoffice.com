@@ -15,7 +15,7 @@
 
 ## 示例
 
-将 "column" 冻结窗格类型设置到当前工作表。
+将 “column” 冻结窗格类型设置到当前工作表。
 
 ```javascript editor-xlsx
 // Specify the freeze pane type.

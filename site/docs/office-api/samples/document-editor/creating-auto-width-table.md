@@ -17,7 +17,7 @@ Create a document with a table that automatically adjusts column widths based on
 let doc = Api.GetDocument();
 
 // Create a 3-column, 4-row table
-let table = Api.CreateTable(3, 4);
+let table = Api.CreateTable(4, 3);
 
 // Enable auto-width by not setting fixed widths
 // The table will automatically adjust column widths based on content

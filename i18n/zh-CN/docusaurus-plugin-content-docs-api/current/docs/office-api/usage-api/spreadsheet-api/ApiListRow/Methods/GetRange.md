@@ -2,8 +2,8 @@
 
 返回跨表格所有列的整行范围。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

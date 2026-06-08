@@ -6,7 +6,7 @@ Removes page by index from document
 ## Syntax
 
 ```javascript
-expression.RemovePage(pos);
+expression.RemovePage(index);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -15,7 +15,7 @@ expression.RemovePage(pos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| pos | Required | number |  | page position |
+| index | Required | number |  | page index |
 
 ## Returns
 

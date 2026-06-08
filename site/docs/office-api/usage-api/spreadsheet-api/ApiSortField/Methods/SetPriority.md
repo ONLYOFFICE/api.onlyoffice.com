@@ -2,14 +2,14 @@
 
 Sets the 1-based priority of this sort field, repositioning it within the collection.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
 
 ```javascript
-expression.SetPriority(nPriority);
+expression.SetPriority(priority);
 ```
 
 `expression` - A variable that represents a [ApiSortField](../ApiSortField.md) class.
@@ -18,7 +18,7 @@ expression.SetPriority(nPriority);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPriority | Required | number |  | No description provided. |
+| priority | Required | number |  | The new 1-based priority of the sort field. |
 
 ## Returns
 

@@ -1,6 +1,6 @@
 # GetTopBottom
 
-返回 "XlTopBottom" 常量，指示排名是从顶部还是底部计算。
+返回 “XlTopBottom” 常量，指示排名是从顶部还是底部计算。
 
 ## 语法
 

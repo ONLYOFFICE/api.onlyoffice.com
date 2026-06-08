@@ -1,6 +1,6 @@
 # NOT
 
-Checks if the specified logical value is -**true** or -**false**. The function returns -**true** if the argument is -**false** and -**false** if the argument is -**true**.
+Checks if the specified logical value is - **true** or - **false**. The function returns - **true** if the argument is - **false** and - **false** if the argument is - **true**.
 
 ## Syntax
 

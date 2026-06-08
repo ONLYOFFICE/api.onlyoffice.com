@@ -66,8 +66,6 @@ Represents the ApiRange class.
 | [Copy](./Methods/Copy.md) | None | Copies the range to the specified range or to the clipboard. |
 | [Cut](./Methods/Cut.md) | None | Cuts the range and save it to the clipboard or paste it to the specified range. |
 | [Delete](./Methods/Delete.md) | None | Deletes the Range object. |
-| [DeleteColumns](./Methods/DeleteColumns.md) | None | No description provided. |
-| [DeleteRows](./Methods/DeleteRows.md) | None | No description provided. |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the end in the specified direction in the specified range. |
 | [FillDown](./Methods/FillDown.md) | boolean | Copies the contents and formatting of the top row of the range into the remaining rows. |
 | [FillLeft](./Methods/FillLeft.md) | boolean | Copies the contents and formatting of the rightmost column of the range into the remaining columns. |
@@ -113,8 +111,6 @@ Represents the ApiRange class.
 | [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode. |
 | [GetWrapText](./Methods/GetWrapText.md) | boolean | Returns the information about the wrapping cell style. |
 | [Insert](./Methods/Insert.md) | None | Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space. |
-| [InsertColumns](./Methods/InsertColumns.md) | None | No description provided. |
-| [InsertRows](./Methods/InsertRows.md) | None | No description provided. |
 | [Merge](./Methods/Merge.md) | boolean | Merges the selected cell range into a single cell or a cell row. |
 | [Offset](./Methods/Offset.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object offset from the current range. |
 | [Paste](./Methods/Paste.md) | None | Pastes the Range object to the specified range. |

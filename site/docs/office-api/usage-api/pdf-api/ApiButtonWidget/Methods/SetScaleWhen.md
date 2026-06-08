@@ -5,7 +5,7 @@ Sets button widget scale when type
 ## Syntax
 
 ```javascript
-expression.SetScaleWhen(sType);
+expression.SetScaleWhen(scaleWhen);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetScaleWhen(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | button widget scale when type |
+| scaleWhen | Required | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | The condition that controls when the icon is scaled. |
 
 ## Returns
 

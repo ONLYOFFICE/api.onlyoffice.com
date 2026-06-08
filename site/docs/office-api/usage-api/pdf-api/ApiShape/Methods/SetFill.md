@@ -5,7 +5,7 @@ Sets the fill properties to the current shape.
 ## Syntax
 
 ```javascript
-expression.SetFill(oFill);
+expression.SetFill(fill);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetFill(oFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the shape. |
+| fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the shape. |
 
 ## Returns
 

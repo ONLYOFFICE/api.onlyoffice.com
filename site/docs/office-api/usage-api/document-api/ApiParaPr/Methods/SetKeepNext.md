@@ -15,7 +15,7 @@ expression.SetKeepNext(isKeepNext);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same |
+| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same page as the following paragraph. |
 
 ## Returns
 

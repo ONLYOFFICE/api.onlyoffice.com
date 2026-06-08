@@ -5,7 +5,7 @@ Sets percentage format for field.
 ## Syntax
 
 ```javascript
-expression.SetPercentageFormat(nDemical, sSepStyle);
+expression.SetPercentageFormat(decimalPlaces, separatorStyle);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,8 +14,8 @@ expression.SetPercentageFormat(nDemical, sSepStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDemical | Required | number |  | number of decimals |
-| sSepStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | number separate style |
+| decimalPlaces | Required | number |  | The number of digits after the decimal point. |
+| separatorStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | The number separator style. |
 
 ## Returns
 

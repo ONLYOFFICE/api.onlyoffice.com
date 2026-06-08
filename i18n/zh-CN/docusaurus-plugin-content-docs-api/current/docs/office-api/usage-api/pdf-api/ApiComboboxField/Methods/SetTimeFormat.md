@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTimeFormat(sFormat);
+expression.SetTimeFormat(format);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTimeFormat(sFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | 必需 | [TimeFormat](../../Enumeration/TimeFormat.md) |  | 可用时间格式 |
+| format | 必需 | [TimeFormat](../../Enumeration/TimeFormat.md) |  | 可用时间格式 |
 
 ## 返回值
 
@@ -34,6 +34,6 @@ let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
 page.AddObject(comboboxField);
 
-comboboxField.SetTimeFormat("12HR:MM:SS");
+comboboxField.SetTimeFormat("h:MM:ss tt");
 comboboxField.SetValue("8:45:30");
 ```

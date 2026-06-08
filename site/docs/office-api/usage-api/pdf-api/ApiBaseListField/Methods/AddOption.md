@@ -5,7 +5,7 @@ Adds new option to list options.
 ## Syntax
 
 ```javascript
-expression.AddOption(option, nPos);
+expression.AddOption(option, index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -15,7 +15,7 @@ expression.AddOption(option, nPos);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | option | Required | [ListOption](../../Enumeration/ListOption.md) |  | list option to add |
-| nPos | Optional | number | this.GetOptions().lenght | pos to add option |
+| index | Optional | number | this.GetOptions().lenght | index to add option. |
 
 ## Returns
 

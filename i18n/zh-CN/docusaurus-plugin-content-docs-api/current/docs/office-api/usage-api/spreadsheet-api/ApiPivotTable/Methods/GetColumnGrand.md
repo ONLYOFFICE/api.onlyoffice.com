@@ -1,6 +1,6 @@
 # GetColumnGrand
 
-返回数据透视表列的 -**总计** 设置。
+返回数据透视表列的 **Grand Totals** 设置。
 
 ## 语法
 

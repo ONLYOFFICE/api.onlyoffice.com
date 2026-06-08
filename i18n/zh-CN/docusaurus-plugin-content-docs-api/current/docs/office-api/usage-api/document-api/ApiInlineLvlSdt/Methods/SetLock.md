@@ -1,10 +1,10 @@
 # SetLock
 
 设置当前内联文本内容控件的锁定：
--**"unlocked"** - 内容可以编辑，容器可以删除。
--**"contentLocked"** - 内容无法编辑。
--**"sdtContentLocked"** - 内容无法编辑，容器无法删除。
--**"sdtLocked"** - 容器无法删除。
+- **“unlocked”** - 内容可以编辑，容器可以删除。
+- **“contentLocked”** - 内容无法编辑。
+- **“sdtContentLocked”** - 内容无法编辑，容器无法删除。
+- **“sdtLocked”** - 容器无法删除。
 
 ## 语法
 

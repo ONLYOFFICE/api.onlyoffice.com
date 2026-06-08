@@ -6,7 +6,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellMarginBottom(nValue);
+expression.SetCellMarginBottom(margin);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则应使用默认的表格单元格底部边距， |
+| margin | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格边距。如果此值为 `null`，则使用默认边距，否则用指定值覆盖当前单元格的下边距。 |
 
 ## 返回值
 

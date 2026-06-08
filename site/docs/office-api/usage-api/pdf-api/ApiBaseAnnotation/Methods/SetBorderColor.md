@@ -14,7 +14,7 @@ expression.SetBorderColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
 
 ## Returns
 

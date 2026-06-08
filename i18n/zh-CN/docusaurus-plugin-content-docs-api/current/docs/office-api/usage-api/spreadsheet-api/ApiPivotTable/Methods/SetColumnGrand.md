@@ -1,6 +1,6 @@
 # SetColumnGrand
 
-为数据透视表列设置 -**总计** 设置。
+设置数据透视表列的 **Grand Totals** 设置。
 
 ## 语法
 

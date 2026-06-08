@@ -59,7 +59,7 @@ sidebar_position: -21
 - **转换时间** — 将编辑文件转换为编辑器原生格式（`.docx`、`.xlsx`、`.pptx` 或 `.pdf`）。因文件大小、复杂性和服务器性能而异。
 - **转换开始延迟** — 默认为 5 秒。此延迟允许用户在不触发保存的情况下返回编辑会话——例如，在文件仍处于打开状态时重新加载浏览器页面。
 
-在大多数情况下，保存在编辑结束后约 10 秒完成。默认延迟由 [ONLYOFFICE 文档服务器配置](../configuration/server-config/intro.md)中的 [`savetimeoutdelay`](../configuration/server-config/server.md#servicescoauthoringserversavetimeoutdelay) 参数定义。
+在大多数情况下，保存在编辑结束后约 10 秒完成。默认延迟由 [ONLYOFFICE 文档服务器配置](../configuration/server-config/server-config.mdx)中的 [`savetimeoutdelay`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.savetimeoutdelay) 参数定义。
 
 ## 强制保存 {#force-saving}
 
@@ -69,7 +69,7 @@ sidebar_position: -21
 
 - 启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 模式（在编辑器初始化配置中将其设置为 `true`）。每次用户点击**保存**时，都会触发 forcesave，回调处理程序请求中的 `forcesavetype` 参数值为 `1`。
 
-- 通过[自动组装](../configuration/server-config/auto-assembly.md)服务器配置启用自动重复强制保存。回调处理程序请求中的 `forcesavetype` 参数值为 `2`。
+- 通过[自动组装](../configuration/server-config/server-config.mdx#auto-assembly)服务器配置启用自动重复强制保存。回调处理程序请求中的 `forcesavetype` 参数值为 `2`。
 
   :::info
   自动组装功能会保存文件在该时刻的当前状态。如果用户处于严格模式且未点击**保存**，则其更改不会包含在组装的文件中。在 PDF 格式中，严格模式默认启用。
@@ -81,7 +81,7 @@ sidebar_position: -21
 
 ## 以原始格式保存 {#saving-in-original-format}
 
-从 7.0 版本开始，[`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin) 服务器设置默认启用，以便将组装好的文件保存为其原始格式。这用于将 OOXML 转换为 ODF 或保留包含宏的文件。
+从 7.0 版本开始，[`assemblyFormatAsOrigin`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.assemblyFormatAsOrigin) 服务器设置默认启用，以便将组装好的文件保存为其原始格式。这用于将 OOXML 转换为 ODF 或保留包含宏的文件。
 
 此参数的工作原理如下：
 

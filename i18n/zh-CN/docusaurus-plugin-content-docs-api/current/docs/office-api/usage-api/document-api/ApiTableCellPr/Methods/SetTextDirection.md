@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 表格单元格中可用的文字方向类型：&lt;code&gt;"lrtb"&lt;/code&gt; |
+| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 表格单元格中可用的文字方向类型：`"lrtb"` - 从左到右、从上到下的文字方向，`"tbrl"` - 从上到下、从右到左的文字方向，`"btlr"` - 从下到上、从左到右的文字方向。 |
 
 ## 返回值
 

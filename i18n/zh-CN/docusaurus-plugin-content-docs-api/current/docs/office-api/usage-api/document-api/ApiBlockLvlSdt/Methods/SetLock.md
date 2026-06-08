@@ -1,10 +1,10 @@
 # SetLock
 
 设置当前块级文本内容控件的锁定：
--**「unlocked」** - 内容可编辑且容器可删除。
--**「contentLocked」** - 内容不可编辑。
--**「sdtContentLocked」** - 内容不可编辑且容器不可删除。
--**「sdtLocked」** - 容器不可删除。
+- **“unlocked”** - 内容可编辑且容器可删除。
+- **“contentLocked”** - 内容不可编辑。
+- **“sdtContentLocked”** - 内容不可编辑且容器不可删除。
+- **“sdtLocked”** - 容器不可删除。
 
 ## 语法
 

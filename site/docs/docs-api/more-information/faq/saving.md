@@ -49,7 +49,7 @@ There are several ways to initiate forced saving:
   }
   ```
 
-Depending on which type of forced saving you need, you can select the correct implementation. More information about this can be found at [this page](../../get-started/how-it-works/saving-file.md#force-saving).
+Depending on which type of forced saving you need, you can select the correct implementation. For more information, see [force saving](../../get-started/how-it-works/saving-file.md#force-saving).
 
 ## How to save the created document?
 

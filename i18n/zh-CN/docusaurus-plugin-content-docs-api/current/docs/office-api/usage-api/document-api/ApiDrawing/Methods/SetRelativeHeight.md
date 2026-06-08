@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRelativeHeight(sRelativeFrom, nPercent);
+expression.SetRelativeHeight(relativeFrom, percent);
 ```
 
 `expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetRelativeHeight(sRelativeFrom, nPercent);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | 可选 | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | 将作为对象高度参考点的文档元素。 |
-| nPercent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
+| relativeFrom | 可选 | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | 将作为对象高度参考点的文档元素。 |
+| percent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 对象高度占指定元素的百分比。 |
 
 ## 返回值
 

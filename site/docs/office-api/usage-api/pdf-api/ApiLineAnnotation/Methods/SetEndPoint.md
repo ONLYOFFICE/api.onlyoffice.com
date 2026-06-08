@@ -14,7 +14,7 @@ expression.SetEndPoint(point);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| point | Required | [Point](../../Enumeration/Point.md) |  | The end point of the line. |
 
 ## Returns
 

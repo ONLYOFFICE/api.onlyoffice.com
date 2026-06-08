@@ -5,7 +5,7 @@ Gets option from list options.
 ## Syntax
 
 ```javascript
-expression.GetOption(nPos);
+expression.GetOption(index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.GetOption(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | option index to get |
+| index | Required | number |  | The option index. |
 
 ## Returns
 

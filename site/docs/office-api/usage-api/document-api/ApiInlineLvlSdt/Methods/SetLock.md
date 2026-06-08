@@ -1,10 +1,10 @@
 # SetLock
 
 Sets the lock to the current inline text content control:
--**"unlocked"** - content can be edited and the container can be deleted.
--**"contentLocked"** - content cannot be edited.
--**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.
--**"sdtLocked"** - the container cannot be deleted.
+- **"unlocked"** - content can be edited and the container can be deleted.
+- **"contentLocked"** - content cannot be edited.
+- **"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.
+- **"sdtLocked"** - the container cannot be deleted.
 
 ## Syntax
 

@@ -14,7 +14,7 @@ expression.SetFreezePanesType(FreezePaneType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| FreezePaneType | 必需 | [FreezePaneType](../../Enumeration/FreezePaneType.md) |  | 冻结窗格类型（「null」表示取消冻结）。 |
+| FreezePaneType | 必需 | [FreezePaneType](../../Enumeration/FreezePaneType.md) |  | 冻结窗格类型（“null”表示取消冻结）。 |
 
 ## 返回值
 

@@ -2,14 +2,14 @@
 
 Sets the name of the table. Equivalent to SetDisplayName.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
 
 ```javascript
-expression.SetName(sName);
+expression.SetName(name);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetName(sName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | Required | string |  | No description provided. |
+| name | Required | string |  | The new name for the table. |
 
 ## Returns
 

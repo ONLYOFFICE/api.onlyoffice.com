@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.MoveOption(nCurPos, nNewPos);
+expression.MoveOption(currentIndex, newIndex);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,8 +14,8 @@ expression.MoveOption(nCurPos, nNewPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCurPos | 必需 | number |  | 被移动选项的索引 |
-| nNewPos | 必需 | number |  | 选项的新位置 |
+| currentIndex | 必需 | number |  | 要移动的选项的当前索引。 |
+| newIndex | 必需 | number |  | 选项的目标索引。 |
 
 ## 返回值
 

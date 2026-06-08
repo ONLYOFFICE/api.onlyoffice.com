@@ -1,11 +1,11 @@
 # SetMultipleSelection
 
-设置字段的多选属性。
+设置是否可以选择多个值。
 
 ## 语法
 
 ```javascript
-expression.SetMultipleSelection(bMulti);
+expression.SetMultipleSelection(allowMultipleSelection);
 ```
 
 `expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetMultipleSelection(bMulti);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bMulti | 必需 | boolean |  | 允许用户选择多个值 |
+| allowMultipleSelection | 必需 | boolean |  | 指定是否可以选择多个值。 |
 
 ## 返回值
 

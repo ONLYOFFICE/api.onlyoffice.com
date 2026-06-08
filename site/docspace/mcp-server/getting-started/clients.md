@@ -44,7 +44,16 @@ Connect to the locally running MCP server using stdio transport.
     "mcpServers": {
         "onlyoffice-docspace": {
             "command": "docker",
-            "args": ["run", "--interactive", "--rm", "--env", "DOCSPACE_BASE_URL", "--env", "DOCSPACE_API_KEY", "onlyoffice/docspace-mcp"],
+            "args": [
+                "run",
+                "--interactive",
+                "--rm",
+                "--env",
+                "DOCSPACE_BASE_URL",
+                "--env",
+                "DOCSPACE_API_KEY",
+                "onlyoffice/docspace-mcp"
+            ],
             "env": {
                 "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
                 "DOCSPACE_API_KEY": "your-api-key"
@@ -102,7 +111,7 @@ Connect to the locally running MCP server using Claude's Extensions. Before conn
 6. Select the downloaded MCP bundle.
 7. Click "Install".
 
-### Connect via Local MCP
+### Connect via local MCP
 
 Connect to the locally running MCP server using Claude's Local MCP servers.
 

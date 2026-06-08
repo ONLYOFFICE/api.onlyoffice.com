@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetDateFormat(sFormat);
+expression.SetDateFormat(format);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetDateFormat(sFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | 必需 | string |  | 日期格式（例如 "dd.mm.yyyy"） |
+| format | 必需 | string |  | 日期格式（例如 “dd.mm.yyyy”） |
 
 ## 返回值
 

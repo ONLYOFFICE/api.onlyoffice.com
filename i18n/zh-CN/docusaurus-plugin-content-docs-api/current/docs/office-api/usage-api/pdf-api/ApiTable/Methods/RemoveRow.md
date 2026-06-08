@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.RemoveRow(oCell);
+expression.RemoveRow(rowCell);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,7 +14,7 @@ expression.RemoveRow(oCell);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将被删除的行中的表格单元格。 |
+| rowCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 要删除的行中的单元格。 |
 
 ## 返回值
 

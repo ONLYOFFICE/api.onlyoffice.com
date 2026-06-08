@@ -3,6 +3,8 @@ description: Log in to a DocSpace account using email and password hash.
 tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Authorization
 
 This examples logs in to the DocSpace account using the specified email and password hash.
@@ -138,6 +140,4 @@ function onButtonClick() {
 
 Run our HTML file and make sure everything works.
 
-<video autoPlay loop muted playsInline width="720px">
-  <source src="/assets/images/docspace/webm/js-sdk-authorization-sample.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/docspace/webm/js-sdk-authorization-sample" />

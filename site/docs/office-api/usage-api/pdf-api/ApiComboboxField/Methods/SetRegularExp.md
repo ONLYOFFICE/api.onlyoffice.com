@@ -5,7 +5,7 @@ Sets regular expression for field.
 ## Syntax
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | Required | string |  | field regular expression (e.g. "\\S+@\\S+\\.\\S+") |
+| regularExpression | Required | string |  | The validation regular expression (e.g. "\\S+@\\S+\\.\\S+") |
 
 ## Returns
 

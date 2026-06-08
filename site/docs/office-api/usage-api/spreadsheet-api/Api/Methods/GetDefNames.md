@@ -2,8 +2,8 @@
 
 Returns an array of all ApiName objects defined in the workbook, across all scopes (workbook-level and sheet-level).
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

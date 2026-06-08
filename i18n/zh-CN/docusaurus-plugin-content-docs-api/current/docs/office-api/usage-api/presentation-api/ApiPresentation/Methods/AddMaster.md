@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddMaster(nPos, oApiMaster);
+expression.AddMaster(pos, apiMaster);
 ```
 
 `expression` - 表示 [ApiPresentation](../ApiPresentation.md) 类的变量。
@@ -14,8 +14,8 @@ expression.AddMaster(nPos, oApiMaster);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 可选 | number | ApiPresentation.GetMastersCount() | 未提供描述。 |
-| oApiMaster | 必需 | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | 要添加的幻灯片母版。 |
+| pos | 可选 | number | ApiPresentation.GetMastersCount() | 将添加幻灯片母版的位置。 |
+| apiMaster | 必需 | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | 要添加的幻灯片母版。 |
 
 ## 返回值
 

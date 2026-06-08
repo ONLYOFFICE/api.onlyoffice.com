@@ -1,6 +1,6 @@
 # ListOptionTuple
 
-No description provided.
+A tuple representing a list option with a display value and an export value.
 
 ## Type
 
@@ -10,5 +10,5 @@ Object
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| 0 | string | displayed value |
-| 1 | string | exported value |
+| 0 | string | The value displayed to the user. |
+| 1 | string | The value exported when the option is selected. |

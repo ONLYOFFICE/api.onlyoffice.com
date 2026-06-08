@@ -14,7 +14,7 @@ expression.MoveCursorToNoteReference(isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBefore | 必需 | boolean |  | 指定将光标放在注释引用之前（&lt;em&gt;true&lt;/em&gt;）还是之后（&lt;em&gt;false&lt;/em&gt;）。 |
+| isBefore | 必需 | boolean |  | 指定将光标放置在注释引用之前 (*true*) 还是之后 (*false*)。 |
 
 ## 返回值
 

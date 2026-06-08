@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCheckInUnison(bInUnison);
+expression.SetCheckInUnison(checkInUnison);
 ```
 
 `expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCheckInUnison(bInUnison);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bInUnison | 必需 | boolean |  | 具有相同导出值的字段是否同时选中 |
+| checkInUnison | 必需 | boolean |  | 指定具有相同导出值的字段是否一起选中。 |
 
 ## 返回值
 

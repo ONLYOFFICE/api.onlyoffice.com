@@ -14,8 +14,8 @@ expression.CreateTable(rows, cols);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rows | Required |  |  | Number of rows. |
-| cols | Required |  |  | Number of columns. |
+| rows | Required | number |  | Number of rows. |
+| cols | Required | number |  | Number of columns. |
 
 ## Returns
 

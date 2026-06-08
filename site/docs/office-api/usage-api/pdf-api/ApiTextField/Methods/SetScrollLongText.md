@@ -1,11 +1,11 @@
 # SetScrollLongText
 
-Sets text field can scroll long text prop.
+Sets whether the text field can scroll long text.
 
 ## Syntax
 
 ```javascript
-expression.SetScrollLongText(bScroll);
+expression.SetScrollLongText(allowScroll);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetScrollLongText(bScroll);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bScroll | Required | boolean |  | can the field scroll long text |
+| allowScroll | Required | boolean |  | Specifies whether long text can be scrolled. |
 
 ## Returns
 

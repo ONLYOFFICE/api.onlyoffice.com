@@ -14,7 +14,7 @@ expression.AddObject(object);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| object | 必需 | [FloatObject](../../Enumeration/FloatObject.md) |  | 未提供描述。 |
+| object | 必需 | [FloatObject](../../Enumeration/FloatObject.md) |  | 要添加到页面的批注、字段或绘图。 |
 
 ## 返回值
 

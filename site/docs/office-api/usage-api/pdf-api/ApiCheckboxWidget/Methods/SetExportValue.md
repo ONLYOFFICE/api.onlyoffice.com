@@ -5,7 +5,7 @@ Sets widget export value.
 ## Syntax
 
 ```javascript
-expression.SetExportValue(sValue);
+expression.SetExportValue(value);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetExportValue(sValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sValue | Required | string |  | No description provided. |
+| value | Required | string |  | The value to be exported when the checkbox is checked. |
 
 ## Returns
 

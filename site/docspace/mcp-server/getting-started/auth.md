@@ -6,7 +6,7 @@ title: Authentication with the DocSpace MCP Server
 
 The DocSpace MCP server acts as an OAuth proxy between MCP clients and the DocSpace authorization server, handling compatibility gaps in dynamic client registration and scope handling automatically.
 
-## Dynamic Client Registration
+## Dynamic client registration
 
 The DocSpace authorization server does not support OAuth dynamic client registration, which the MCP authorization specification relies on. Without this support, MCP clients cannot register themselves directly with the DocSpace authorization server.
 
@@ -22,7 +22,7 @@ The MCP server addresses this limitation by operating in one of two modes:
 The first mode is optional. The second mode is always available when OAuth
 is enabled.
 
-## Scope Handling
+## Scope handling
 
 The MCP server modifies the OAuth flow to address scope-related compatibility
 issues between MCP clients and the DocSpace authorization server:
@@ -73,5 +73,5 @@ Aside from authenticating with OAuth, the DocSpace MCP server also allows you to
 
 ## Resolving authentication
 
-The authentication resolution process depends on the transport type used and the authentication methods configured. For detailed flowcharts of each scenario, see [Authentication resolution](/docspace/mcp-server/reference/configuration/authentication-resolution/).
+The authentication resolution process depends on the transport type used and the authentication methods configured. For detailed flowcharts of each scenario, see [Authentication resolution](/docspace/mcp-server/reference/authentication-resolution/).
 

@@ -1,9 +1,9 @@
 # GetOrder
 
-返回排序顺序："xlAscending" 或 "xlDescending"。
+返回排序顺序：“xlAscending” 或 “xlDescending”。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

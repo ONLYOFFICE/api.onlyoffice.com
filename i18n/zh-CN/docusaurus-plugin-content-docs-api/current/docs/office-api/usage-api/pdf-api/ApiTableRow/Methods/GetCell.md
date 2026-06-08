@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetCell(nPos);
+expression.GetCell(cellIndex);
 ```
 
 `expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetCell(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 表格行中的单元格位置。 |
+| cellIndex | 必需 | number |  | 表格行中从零开始的单元格索引。 |
 
 ## 返回值
 

@@ -1,6 +1,6 @@
 # IF
 
-Checks whether a condition is met, and returns one value if -**true**, and another value if -**false**.
+Checks whether a condition is met, and returns one value if - **true**, and another value if - **false**.
 
 ## Syntax
 

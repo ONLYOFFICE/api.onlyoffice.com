@@ -23,7 +23,7 @@ ApiBaseListField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
 | [MoveOption](./Methods/MoveOption.md) | boolean | Moves option to specified position in list options. |
 | [RemoveOption](./Methods/RemoveOption.md) | boolean | Removes option from list options. |
-| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets field commit on selection change prop. |
+| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets whether the field commits changes immediately after selection changes. |
 | [SetFullName](./Methods/SetFullName.md) | boolean | Sets new field name if possible. |
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | Sets new field partial name. |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |

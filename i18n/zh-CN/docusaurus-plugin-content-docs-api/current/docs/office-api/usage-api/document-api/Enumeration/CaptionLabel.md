@@ -14,7 +14,7 @@
 
 ## 示例
 
-使用 "Table" 题注标签添加交叉引用。
+使用 “Table” 题注标签添加交叉引用。
 
 ```javascript editor-docx
 // Add a reference to the page with a caption.

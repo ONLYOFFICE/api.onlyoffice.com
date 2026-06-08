@@ -1,6 +1,6 @@
 # SetToggleToOff
 
-Sets field toggle to off prop.
+Sets whether the checked state can be toggled off.
 
 Inherited from [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md).
 

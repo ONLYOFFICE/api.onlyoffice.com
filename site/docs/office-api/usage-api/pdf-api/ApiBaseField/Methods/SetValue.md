@@ -5,7 +5,7 @@ Sets field value
 ## Syntax
 
 ```javascript
-expression.SetValue(sValue);
+expression.SetValue(value);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetValue(sValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sValue | Required | string |  | No description provided. |
+| value | Required | string |  | The new value for the field. |
 
 ## Returns
 

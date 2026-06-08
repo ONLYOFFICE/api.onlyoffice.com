@@ -2,14 +2,14 @@
 
 设置排序是否区分大小写。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
 
 ```javascript
-expression.SetMatchCase(bMatchCase);
+expression.SetMatchCase(matchCase);
 ```
 
 `expression` - 表示 [ApiSort](../ApiSort.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetMatchCase(bMatchCase);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bMatchCase | 必需 | boolean |  | 未提供描述。 |
+| matchCase | 必需 | boolean |  | 指定排序是否区分大小写。 |
 
 ## 返回值
 

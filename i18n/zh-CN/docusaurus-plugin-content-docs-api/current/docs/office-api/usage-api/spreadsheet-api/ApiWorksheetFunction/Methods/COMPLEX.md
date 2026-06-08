@@ -16,7 +16,7 @@ expression.COMPLEX(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 复数的实数系数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 复数的虚数系数。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | 复数虚部的后缀。可以是小写的 "i" 或 "j"。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | 复数虚部的后缀。可以是小写的 "i" 或 "j"。如果省略，函数将假定后缀为 "i"。 |
 
 ## 返回值
 

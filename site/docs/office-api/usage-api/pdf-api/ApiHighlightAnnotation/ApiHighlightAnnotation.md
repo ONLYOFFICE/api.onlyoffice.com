@@ -10,7 +10,7 @@ ApiHighlightAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMark
 | [Delete](./Methods/Delete.md) | boolean | Removes annotation from document. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Gets annotation author name. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation border color. |
-| [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | boolean | Gets annotation border effect intensity. |
+| [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | number | Gets annotation border effect intensity. |
 | [GetBorderEffectStyle](./Methods/GetBorderEffectStyle.md) | [AnnotBorderEffectStyle](../Enumeration/AnnotBorderEffectStyle.md) | Gets annotation border effect style. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [AnnotBorderStyle](../Enumeration/AnnotBorderStyle.md) | Gets annotation border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [pt](../Enumeration/pt.md) | Gets annotation border width. |

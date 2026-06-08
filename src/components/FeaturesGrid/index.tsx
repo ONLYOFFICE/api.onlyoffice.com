@@ -31,7 +31,7 @@ const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({ title, link, 
           {icon}
           <Heading as="h3">{title}</Heading>
         </div>
-        <p>{description}</p>
+        <p className={styles.featuresGridItemDesc}>{description}</p>
       </div>
     </Link>
   );

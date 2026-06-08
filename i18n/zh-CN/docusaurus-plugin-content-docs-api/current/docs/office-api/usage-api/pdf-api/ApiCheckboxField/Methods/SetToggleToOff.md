@@ -1,11 +1,11 @@
 # SetToggleToOff
 
-设置字段的切换为关闭属性。
+设置选中状态是否可以取消。
 
 ## 语法
 
 ```javascript
-expression.SetToggleToOff(bToggle);
+expression.SetToggleToOff(allowToggleOff);
 ```
 
 `expression` - 表示 [ApiCheckboxField](../ApiCheckboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetToggleToOff(bToggle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | 必需 | boolean |  | 可切换为关闭 |
+| allowToggleOff | 必需 | boolean |  | 指定选中状态是否可以取消。 |
 
 ## 返回值
 

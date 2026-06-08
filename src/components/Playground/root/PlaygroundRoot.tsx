@@ -57,6 +57,7 @@ export const PlaygroundRoot = ({
         scriptType,
         scriptValue: initialScriptProp ?? (scriptType !== 'config' ? getDefaultScript(editorType, modeType, scriptType) : ''),
         isScriptModified: false,
+        isEditorReady: false,
         fileType: fileTypeProp,
         documentServerUrl: savedConfig?.url || defaultDocumentServerUrl,
         documentServerSecret: savedConfig?.secret || defaultDocumentServerSecret,

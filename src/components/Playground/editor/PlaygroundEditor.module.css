@@ -22,11 +22,16 @@
     justify-content: center;
 }
 
-.runButton:hover {
+.runButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.runButton:hover:not(:disabled) {
     background: var(--ifm-color-primary-dark);
 }
 
-html[data-theme='dark'] .runButton:hover {
+html[data-theme='dark'] .runButton:hover:not(:disabled) {
     background: var(--ifm-color-primary-light);
 }
 

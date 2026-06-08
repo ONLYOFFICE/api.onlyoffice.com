@@ -5,7 +5,7 @@ Sets new field name if possible.
 ## Syntax
 
 ```javascript
-expression.SetFullName(sName);
+expression.SetFullName(name);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetFullName(sName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | Required | string |  | No description provided. |
+| name | Required | string |  | The new full name for the field. |
 
 ## Returns
 

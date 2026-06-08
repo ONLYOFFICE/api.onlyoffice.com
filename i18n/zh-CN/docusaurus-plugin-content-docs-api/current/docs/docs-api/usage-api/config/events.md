@@ -195,7 +195,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
 | event.data              | `object` | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
 | event.data.action       | `object` | 定义文档中要滚动到的操作对象。 |
-| event.data.action.type  | `string` | 操作类型：`"bookmark"` 或 `"comment"`。 |
+| event.data.action.type  | `"bookmark" \| "comment"` | 文档中的操作类型。 |
 | event.data.action.data  | `string` | 与操作关联的数据：书签名称或评论 ID。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
@@ -1076,12 +1076,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **参数**:
 
-| 参数             | 类型     | 描述               |
-| ---------------- | -------- | ------------------ |
-| event.data.name  | `string` | 角色名称。          |
-| event.data.color | `string` | 十六进制格式的角色颜色（例如 `#FF0000`）。 |
-
-`event.data` 是角色对象的数组。
+| 参数               | 类型       | 描述               |
+| ------------------ | ---------- | ------------------ |
+| event.data         | `object[]` | 角色对象的数组。    |
+| event.data[].name  | `string`   | 角色名称。          |
+| event.data[].color | `string`   | 十六进制格式的角色颜色（例如 `#FF0000`）。 |
 
 ![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
 
@@ -1189,16 +1188,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **Parameters**:
 
-| Parameter             | Type     | Description        |
-| --------------------- | -------- | ------------------ |
-| event.data.color      | `string` | 角色颜色，十六进制格式（例如 `#FF0000`）。 |
-| event.data.name       | `string` | 角色名称。     |
-| event.data.user.email | `string` | 用户电子邮件。    |
-| event.data.user.id    | `string` | 用户 ID。       |
-| event.data.user.image | `string` | 用户头像的 URL。 |
-| event.data.user.name  | `string` | 用户名称。     |
-
-`event.data` 是一个角色对象数组。
+| Parameter               | Type       | Description        |
+| ----------------------- | ---------- | ------------------ |
+| event.data              | `object[]` | 角色对象的数组。    |
+| event.data[].color      | `string`   | 角色颜色，十六进制格式（例如 `#FF0000`）。 |
+| event.data[].name       | `string`   | 角色名称。     |
+| event.data[].user       | `object`   | 分配给该角色的用户。 |
+| event.data[].user.email | `string`   | 用户电子邮件。    |
+| event.data[].user.id    | `string`   | 用户 ID。       |
+| event.data[].user.image | `string`   | 用户头像的 URL。 |
+| event.data[].user.name  | `string`   | 用户名称。     |
 
 **Example**:
 

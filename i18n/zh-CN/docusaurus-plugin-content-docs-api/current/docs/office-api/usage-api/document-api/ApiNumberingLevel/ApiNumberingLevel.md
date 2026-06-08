@@ -15,5 +15,5 @@
 | [SetCustomType](./Methods/SetCustomType.md) | boolean | 设置您自己的自定义编号类型。 |
 | [SetRestart](./Methods/SetRestart.md) | boolean | 指定一个基于 1 的索引，用于确定编号级别何时应重新开始其起始值。当在给定文档内容中使用高于（早于此级别）指定编号级别的实例时，编号级别将重新开始。默认情况下，此值为 true。 |
 | [SetStart](./Methods/SetStart.md) | boolean | 指定在给定编号级别定义中父编号级别使用的编号起始值。默认情况下，此值为 1。 |
-| [SetSuff](./Methods/SetSuff.md) | boolean | 指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。默认情况下，此值为 "tab"。 |
+| [SetSuff](./Methods/SetSuff.md) | boolean | 指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。默认情况下，此值为 “tab”。 |
 | [SetTemplateType](./Methods/SetTemplateType.md) | boolean | 设置现有的预定义编号模板之一。 |

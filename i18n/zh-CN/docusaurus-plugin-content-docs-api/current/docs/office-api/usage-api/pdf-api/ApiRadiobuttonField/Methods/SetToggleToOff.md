@@ -1,6 +1,6 @@
 # SetToggleToOff
 
-设置字段的切换为关闭属性。
+设置选中状态是否可以取消。
 
 继承自 [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md)。
 

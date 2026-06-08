@@ -14,7 +14,7 @@ expression.SetColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | 标签颜色。传入 &lt;em&gt;null&lt;/em&gt; 以移除颜色。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | 标签颜色。传递 *null* 可移除颜色。 |
 
 ## 返回值
 

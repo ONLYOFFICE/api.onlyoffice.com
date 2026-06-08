@@ -11,7 +11,7 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | OutlineLvls | number | 目录中的最大级别数。 |
-| StylesLvls | [TocStyleLvl](../Enumeration/TocStyleLvl.md)[] | 样式级别（例如，[&#123;Name: "Heading 1", Lvl: 2&#125;, &#123;Name: "Heading 2", Lvl: 3&#125;]）。 |
+| StylesLvls | [TocStyleLvl](../Enumeration/TocStyleLvl.md)[] | 样式级别（例如，[\{Name: "Heading 1", Lvl: 2\}, \{Name: "Heading 2", Lvl: 3\}]）。💡 如果 StylesLvls.length \> 0，则 OutlineLvls 属性将被忽略。 |
 
 ## 示例
 

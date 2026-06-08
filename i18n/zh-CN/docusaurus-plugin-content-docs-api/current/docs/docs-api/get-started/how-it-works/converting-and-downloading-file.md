@@ -10,7 +10,7 @@ sidebar_position: -13
 
 ## 默认行为
 
-**文档编辑服务**在[打开](./opening-file.md)文件时会自动将其转换为原生格式——集成商无需调用转换API。保存时，[`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin)服务器设置（默认启用）确保文件被转换回其原始格式。有关详细信息，请参阅[以原始格式保存](./saving-file.md#saving-in-original-format)。
+**文档编辑服务**在[打开](./opening-file.md)文件时会自动将其转换为原生格式——集成商无需调用转换API。保存时，[`assemblyFormatAsOrigin`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.assemblyFormatAsOrigin)服务器设置（默认启用）确保文件被转换回其原始格式。有关详细信息，请参阅[以原始格式保存](./saving-file.md#saving-in-original-format)。
 
 ## 编辑前转换
 

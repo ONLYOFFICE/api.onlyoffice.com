@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetMask(sMask);
+expression.SetMask(inputMask);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetMask(sMask);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sMask | 必需 | string |  | 字段掩码（例如 "(999)999-9999"） |
+| inputMask | 必需 | string |  | 输入掩码（例如 "(999)999-9999"）。 |
 
 ## 返回值
 

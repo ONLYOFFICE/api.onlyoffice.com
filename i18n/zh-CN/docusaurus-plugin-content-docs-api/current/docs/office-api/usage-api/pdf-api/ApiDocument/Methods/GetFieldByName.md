@@ -5,14 +5,16 @@
 ## 语法
 
 ```javascript
-expression.GetFieldByName();
+expression.GetFieldByName(name);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 完整名称参数。 |
 
 ## 返回值
 
@@ -32,7 +34,7 @@ let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
 page.AddObject(textField);
 
-textField.SetName('Text field 1');
+textField.SetFullName('Text field 1');
 textField = doc.GetFieldByName('Text field 1');
 textField.SetValue('Example value');
 ```

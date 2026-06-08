@@ -14,7 +14,7 @@ expression.MoveCursorToNoteReference(isBefore);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBefore | Required | boolean |  | Specifies whether to place the cursor before (&lt;em&gt;true&lt;/em&gt;) or after (&lt;em&gt;false&lt;/em&gt;) the note reference. |
+| isBefore | Required | boolean |  | Specifies whether to place the cursor before (*true*) or after (*false*) the note reference. |
 
 ## Returns
 

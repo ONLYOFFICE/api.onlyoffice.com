@@ -15,7 +15,7 @@ expression.NPV(arg1, args);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 贴现率。 |
-| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个参数，表示未来的付款（负值）和收入（正值）。 |
+| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个参数，表示未来的付款（负值）和收入（正值）。第一个参数是必需的，后续值是可选的。参数可以是数字、区域或数字数组。 |
 
 ## 返回值
 

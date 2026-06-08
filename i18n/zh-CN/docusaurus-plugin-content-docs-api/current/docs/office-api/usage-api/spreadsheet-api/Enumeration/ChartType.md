@@ -50,7 +50,7 @@
 
 ## 示例
 
-创建 "bar3D" 图表。
+创建 “bar3D” 图表。
 
 ```javascript editor-xlsx
 // Specify the "ChartType" property of the ApiChart object.

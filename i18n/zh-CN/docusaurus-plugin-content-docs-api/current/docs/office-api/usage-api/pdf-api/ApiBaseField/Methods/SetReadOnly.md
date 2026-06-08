@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetReadOnly(bRequired);
+expression.SetReadOnly(readOnly);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetReadOnly(bRequired);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | 必需 | boolean |  | 未提供描述。 |
+| readOnly | 必需 | boolean |  | 指定字段是否为只读。 |
 
 ## 返回值
 

@@ -2,14 +2,14 @@
 
 设置是否对表格应用条带列格式。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
 
 ```javascript
-expression.SetShowTableStyleColumnStripes(bShow);
+expression.SetShowTableStyleColumnStripes(show);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetShowTableStyleColumnStripes(bShow);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | 必需 | boolean |  | 未提供描述。 |
+| show | 必需 | boolean |  | 指定是否对表格应用镶边列格式。 |
 
 ## 返回值
 

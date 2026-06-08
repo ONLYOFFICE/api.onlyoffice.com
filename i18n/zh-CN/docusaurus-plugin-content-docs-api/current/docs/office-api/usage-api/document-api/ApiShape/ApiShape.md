@@ -36,7 +36,6 @@ ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [ScaleHeight](./Methods/ScaleHeight.md) | boolean | 使用指定的系数缩放图形的高度。 |
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | 使用指定的系数缩放图形的宽度。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前图形对象。 |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | 无 | 未提供描述。 |
 | [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象边缘与任何 |
 | [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | 将另一个绘图的属性设置到当前绘图。 |
 | [SetFill](./Methods/SetFill.md) | boolean | 设置当前形状的填充属性。 |

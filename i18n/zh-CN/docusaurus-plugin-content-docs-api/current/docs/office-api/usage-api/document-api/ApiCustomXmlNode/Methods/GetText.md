@@ -1,7 +1,7 @@
 # GetText
 
 返回当前节点及其子节点的内部文本。
-例如：`&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` 返回 `"1234"`。
+例如：`\<text\>123\<one\>4\</one\>\</text\>` 返回 `“1234”`。
 
 ## 语法
 

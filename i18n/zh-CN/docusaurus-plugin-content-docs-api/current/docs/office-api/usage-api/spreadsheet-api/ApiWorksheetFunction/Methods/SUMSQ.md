@@ -14,7 +14,7 @@ expression.SUMSQ(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | 最多 255 个数值，将计算这些数值的平方和。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | 最多 255 个数值，用于计算平方和。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、逻辑值或数字的文本表示形式、包含数字的单元格区域或数组。 |
 
 ## 返回值
 

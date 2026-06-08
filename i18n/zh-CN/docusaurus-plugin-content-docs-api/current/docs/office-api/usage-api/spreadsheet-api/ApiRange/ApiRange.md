@@ -66,8 +66,6 @@
 | [Copy](./Methods/Copy.md) | 无 | 将范围复制到指定范围或剪贴板。 |
 | [Cut](./Methods/Cut.md) | 无 | 剪切范围并将其保存到剪贴板或粘贴到指定范围。 |
 | [Delete](./Methods/Delete.md) | 无 | 删除 Range 对象。 |
-| [DeleteColumns](./Methods/DeleteColumns.md) | 无 | 未提供描述。 |
-| [DeleteRows](./Methods/DeleteRows.md) | 无 | 未提供描述。 |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定范围中指定方向末端的 Range 对象。 |
 | [FillDown](./Methods/FillDown.md) | boolean | 将范围顶部行的内容和格式复制到其余行。 |
 | [FillLeft](./Methods/FillLeft.md) | boolean | 将范围最右列的内容和格式复制到其余列。 |
@@ -93,7 +91,7 @@
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | 返回当前范围的 ApiName 对象。 |
 | [GetEntireColumn](./Methods/GetEntireColumn.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整列的 Range 对象。 |
 | [GetEntireRow](./Methods/GetEntireRow.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整行的 Range 对象。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。当单元格/单元格范围的背景颜色为空时返回「No Fill」。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。当单元格/单元格范围的背景颜色为空时返回“No Fill”。 |
 | [GetFormatConditions](./Methods/GetFormatConditions.md) | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | 返回指定范围的公式。 |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | 返回当前范围的数组公式。 |
@@ -113,8 +111,6 @@
 | [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回表示包含指定范围的工作表的 Worksheet 对象。它将以只读模式可用。 |
 | [GetWrapText](./Methods/GetWrapText.md) | boolean | 返回有关单元格自动换行样式的信息。 |
 | [Insert](./Methods/Insert.md) | 无 | 将单元格或单元格范围插入工作表或宏表，并移动其他单元格以腾出空间。 |
-| [InsertColumns](./Methods/InsertColumns.md) | 无 | 未提供描述。 |
-| [InsertRows](./Methods/InsertRows.md) | 无 | 未提供描述。 |
 | [Merge](./Methods/Merge.md) | boolean | 将选定的单元格范围合并为单个单元格或单元格行。 |
 | [Offset](./Methods/Offset.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回从当前范围偏移的 Range 对象。 |
 | [Paste](./Methods/Paste.md) | 无 | 将 Range 对象粘贴到指定范围。 |

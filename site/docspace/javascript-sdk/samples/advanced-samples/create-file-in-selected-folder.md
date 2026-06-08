@@ -3,6 +3,8 @@ description: Create a file in a selected folder and open it in the editor.
 tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Create file in selected folder
 
 This example creates a file in the selected folder and opens it in the editors.
@@ -203,6 +205,4 @@ function onButtonClick() {
 
 Run our HTML file and make sure everything works.
 
-<video autoPlay loop muted playsInline width="720px">
-  <source src="/assets/images/docspace/webm/js-sdk-create-file.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/docspace/webm/js-sdk-create-file" />

@@ -5,7 +5,6 @@ import {useLocation} from "react-router-dom";
 import {EditorType, ModeType, ScriptType, FileType} from "@site/src/components/Playground/root/PlaygroundRootContext";
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import {getSearchParams} from "@site/src/utils/url";
 import { lazy, Suspense } from "react";
 import { SplitPane } from "@site/src/components/SplitPane";
 
@@ -31,25 +30,17 @@ const PlaygroundContent = () => {
 const PlaygroundRoute = () => {
     const location = useLocation();
 
-    const { templateUrl, ...props } = getSearchParams<{
-        editorType: EditorType
-        scriptType: ScriptType
-        modeType: ModeType
-        initialScript: string
-        documentServerUrl: string
-        documentServerSecret: string
-        templateUrl: string
-        fileType: FileType
-    }>(location.search, {
-        editorType: 'editor',
-        scriptType: 'script',
-        modeType: 'mode',
-        initialScript: 'code',
-        documentServerUrl: 'documentServerUrl',
-        documentServerSecret: 'documentServerSecret',
-        templateUrl: 'templateUrl',
-        fileType: 'file'
-    });
+    const params = new URLSearchParams(location.search);
+    const templateUrl = params.get('templateUrl') ?? undefined;
+    const props = {
+        editorType: (params.get('editor') as EditorType) ?? undefined,
+        scriptType: (params.get('script') as ScriptType) ?? undefined,
+        modeType: (params.get('mode') as ModeType) ?? undefined,
+        initialScript: params.get('code') ?? undefined,
+        documentServerUrl: params.get('documentServerUrl') ?? undefined,
+        documentServerSecret: params.get('documentServerSecret') ?? undefined,
+        fileType: (params.get('file') as FileType) ?? undefined,
+    };
 
     return (
         <ColorModeProvider>

@@ -17,7 +17,7 @@ Create a document with nested tables (table within a table) for displaying hiera
 let doc = Api.GetDocument();
 
 // Create main table (3 rows, 2 columns)
-let mainTable = Api.CreateTable(2, 3);
+let mainTable = Api.CreateTable(3, 2);
 mainTable.SetWidth("percent", 100);
 
 // Style the main table

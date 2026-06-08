@@ -5,7 +5,7 @@ Sets button widget icon y position.
 ## Syntax
 
 ```javascript
-expression.SetIconYPos(nPosY);
+expression.SetIconYPos(posY);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetIconYPos(nPosY);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosY | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| posY | Required | [percentage](../../Enumeration/percentage.md) |  | The vertical position of the icon as a percentage of the button height. |
 
 ## Returns
 

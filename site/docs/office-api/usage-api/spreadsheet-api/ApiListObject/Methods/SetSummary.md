@@ -2,14 +2,14 @@
 
 Sets the summary description (alternative text summary) for the table.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
 
 ```javascript
-expression.SetSummary(sSummary);
+expression.SetSummary(summary);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetSummary(sSummary);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sSummary | Required | string |  | No description provided. |
+| summary | Required | string |  | The alternative text summary for the table. |
 
 ## Returns
 

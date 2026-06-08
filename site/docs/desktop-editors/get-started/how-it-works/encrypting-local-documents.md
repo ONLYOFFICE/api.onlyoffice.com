@@ -17,7 +17,7 @@ To build the **Encryption** plugin, you need to create three files:
 - JS file with code,
 - JSON file with config.
 
-More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/configuration/configuration.md).
+For more information about the plugin structure, see [configuration](../../../plugins/fundamentals/configuration/config-json.md).
 
 Let’s have a look at the config:
 
@@ -50,7 +50,7 @@ Let’s have a look at the config:
 }
 ```
 
-All the config parameters are described in the [documentation](../../../plugin-and-macros/structure/configuration/configuration.md).
+All the config parameters are described in the [documentation](../../../plugins/fundamentals/configuration/config-json.md).
 
 After the config file is ready, create the plugin code file with the following contents:
 
@@ -83,7 +83,7 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugins/interacting-with-editors/document-api/Methods/OnEncryption.md), [StartAction](../../../plugins/interacting-with-editors/document-api/Methods/StartAction.md), [EndAction](../../../plugins/interacting-with-editors/document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
 
 :::note
 The *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
@@ -189,7 +189,7 @@ Copy the folders with plugins to the *sdkjs-plugins* directory. The path to the 
 
 It is important that you use plugins GUID as a folder name.
 
-Detailed instructions can be found [here](../../../plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md).
+Detailed instructions can be found [here](../../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md).
 
 ## Step 4. Working with encryption plugins
 

@@ -33,7 +33,6 @@ ApiOleObject 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | 使用指定的系数缩放图形的宽度。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前图形对象。 |
 | [SetApplicationId](./Methods/SetApplicationId.md) | boolean | 设置当前 OLE 对象的应用程序 ID。 |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | 无 | 未提供描述。 |
 | [SetData](./Methods/SetData.md) | boolean | 设置当前 OLE 对象的数据。 |
 | [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象边缘与任何 |
 | [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | 将另一个绘图的属性设置到当前绘图。 |

@@ -5,7 +5,7 @@ Adds options to checkbox group.
 ## Syntax
 
 ```javascript
-expression.AddOption(nPage, aRect, sExportValue);
+expression.AddOption(pageIndex, rect, exportValue);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxField](../ApiCheckboxField.md) class.
@@ -14,9 +14,9 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | page to add option |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | rect of new option |
-| sExportValue | Optional | string |  | option checked value |
+| pageIndex | Required | number |  | The page where the option will be added. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The option rectangle. |
+| exportValue | Optional | string |  | The option checked value. |
 
 ## Returns
 

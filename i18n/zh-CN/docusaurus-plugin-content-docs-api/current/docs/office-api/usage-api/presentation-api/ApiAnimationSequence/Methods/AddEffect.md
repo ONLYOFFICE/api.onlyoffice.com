@@ -15,8 +15,8 @@ expression.AddEffect(drawing, effectType, trigger);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | drawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 要添加动画的绘图对象。 |
-| effectType | 必需 | [AnimationEffectType](../../Enumeration/AnimationEffectType.md) |  | 动画效果类型（例如 "entranceFade"、"entranceFlyIn"、"emphasisPulse"）。 |
-| trigger | 可选 | [AnimationTriggerType](../../Enumeration/AnimationTriggerType.md) | "onclick" | 触发器类型："onclick"、"withprevious" 或 "afterprevious"。 |
+| effectType | 必需 | [AnimationEffectType](../../Enumeration/AnimationEffectType.md) |  | 动画效果类型（例如 “entranceFade”、“entranceFlyIn”、“emphasisPulse”）。 |
+| trigger | 可选 | [AnimationTriggerType](../../Enumeration/AnimationTriggerType.md) | "onclick" | 触发器类型：“onclick”、“withprevious” 或 “afterprevious”。 |
 
 ## 返回值
 

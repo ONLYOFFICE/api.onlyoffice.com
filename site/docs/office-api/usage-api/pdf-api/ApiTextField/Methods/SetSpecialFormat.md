@@ -5,7 +5,7 @@ Sets special format for field.
 ## Syntax
 
 ```javascript
-expression.SetSpecialFormat(sFormat);
+expression.SetSpecialFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetSpecialFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
+| format | Required | [PsfFormat](../../Enumeration/PsfFormat.md) |  | the formatting style to apply to the value |
 
 ## Returns
 

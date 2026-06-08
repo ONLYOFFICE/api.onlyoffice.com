@@ -1,9 +1,9 @@
 # GetHeader
 
-返回标题设置。对于 ListObject 始终为 "xlYes"。
+返回标题设置。对于 ListObject 始终为 “xlYes”。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

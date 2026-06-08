@@ -14,7 +14,7 @@ expression.STDEV_S(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将计算这些数值的标准偏差。 |
+| args | 必需 | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，用于计算标准偏差。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
 
 ## 返回值
 

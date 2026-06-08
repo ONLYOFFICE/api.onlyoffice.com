@@ -33,7 +33,7 @@ function getCellParagraph(table, row, col) {
 
 // Utility function: Create a full-width table
 function createTable(rows, cols, borderColor) {
-  let table = Api.CreateTable(cols, rows);
+  let table = Api.CreateTable(rows, cols);
   table.SetWidth("percent", 100);
   setTableBorders(table, borderColor);
   table.SetTableCellMarginTop(50);

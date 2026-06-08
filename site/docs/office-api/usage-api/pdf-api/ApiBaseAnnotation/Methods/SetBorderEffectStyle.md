@@ -15,7 +15,7 @@ expression.SetBorderEffectStyle(style);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | Required | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | No description provided. |
+| style | Required | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | The border effect style: **"none"** or **"cloud"**. |
 
 ## Returns
 

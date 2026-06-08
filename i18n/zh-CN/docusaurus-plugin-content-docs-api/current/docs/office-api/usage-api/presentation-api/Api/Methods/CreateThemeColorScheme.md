@@ -14,7 +14,7 @@ expression.CreateThemeColorScheme(arrColors, sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrColors | 必需 | [ApiUniColor](../../ApiUniColor/ApiUniColor.md)[] \| [ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)[] \| [ApiColor](../../ApiColor/ApiColor.md)[] |  | 被称为配色方案的颜色集。 |
+| arrColors | 必需 | [ApiUniColor](../../ApiUniColor/ApiUniColor.md)[] \| [ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)[] \| [ApiColor](../../ApiColor/ApiColor.md)[] |  | 一组颜色，称为配色方案。配色方案负责定义十二种颜色的列表。数组应包含以下颜色序列：2 种深色、2 种浅色、6 种主要颜色、1 种超链接颜色和 1 种已访问超链接颜色。 |
 | sName | 必需 | string |  | 主题配色方案名称。 |
 
 ## 返回值

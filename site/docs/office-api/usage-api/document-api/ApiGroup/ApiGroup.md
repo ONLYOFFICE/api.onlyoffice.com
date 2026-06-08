@@ -30,7 +30,6 @@ ApiGroup is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [ScaleHeight](./Methods/ScaleHeight.md) | boolean | Scales the height of the figure using the specified coefficient. |
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | Scales the width of the figure using the specified coefficient. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | None | No description provided. |
 | [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any |
 | [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |

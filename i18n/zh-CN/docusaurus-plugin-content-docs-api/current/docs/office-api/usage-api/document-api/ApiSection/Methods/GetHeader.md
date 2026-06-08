@@ -15,7 +15,7 @@ expression.GetHeader(sType, isCreate);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | 必需 | [HdrFtrType](../../Enumeration/HdrFtrType.md) |  | 要获取内容的页眉类型。 |
-| isCreate | 可选 | boolean | false | 指定在以下情况下是否使用指定的页眉类型创建新页眉 |
+| isCreate | 可选 | boolean | false | 指定在当前节中找不到指定类型的页眉时，是否创建新的页眉。 |
 
 ## 返回值
 

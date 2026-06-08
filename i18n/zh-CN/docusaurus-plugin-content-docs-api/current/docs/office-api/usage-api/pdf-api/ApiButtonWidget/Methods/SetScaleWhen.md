@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetScaleWhen(sType);
+expression.SetScaleWhen(scaleWhen);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScaleWhen(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | 按钮控件缩放时机类型 |
+| scaleWhen | 必需 | [ButtonScaleWhen](../../Enumeration/ButtonScaleWhen.md) |  | 控制图标何时缩放的条件。 |
 
 ## 返回值
 

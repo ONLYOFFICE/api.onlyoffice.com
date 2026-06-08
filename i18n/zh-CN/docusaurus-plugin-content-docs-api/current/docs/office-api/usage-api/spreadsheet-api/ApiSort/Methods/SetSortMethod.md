@@ -2,14 +2,14 @@
 
 设置排序方法。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
 
 ```javascript
-expression.SetSortMethod(sSortMethod);
+expression.SetSortMethod(sortMethod);
 ```
 
 `expression` - 表示 [ApiSort](../ApiSort.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetSortMethod(sSortMethod);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sSortMethod | 必需 | [XlSortMethod](../../Enumeration/XlSortMethod.md) |  | 未提供描述。 |
+| sortMethod | 必需 | [XlSortMethod](../../Enumeration/XlSortMethod.md) |  | 排序方法。 |
 
 ## 返回值
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddPage(nPos, nWidth, nHeight);
+expression.AddPage(index, width, height);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,9 +14,9 @@ expression.AddPage(nPos, nWidth, nHeight);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 添加页面的位置。 |
-| nWidth | 可选 | [pt](../../Enumeration/pt.md) |  | 页面宽度。 |
-| nHeight | 可选 | [pt](../../Enumeration/pt.md) |  | 页面高度。 |
+| index | 必需 | number |  | 要添加页面的索引。 |
+| width | 可选 | [pt](../../Enumeration/pt.md) |  | 页面宽度。 |
+| height | 可选 | [pt](../../Enumeration/pt.md) |  | 页面高度。 |
 
 ## 返回值
 

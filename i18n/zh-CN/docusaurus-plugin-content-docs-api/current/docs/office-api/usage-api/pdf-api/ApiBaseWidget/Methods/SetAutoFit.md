@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetAutoFit(bAuto);
+expression.SetAutoFit(auto);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetAutoFit(bAuto);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bAuto | 必需 | boolean |  | 未提供描述。 |
+| auto | 必需 | boolean |  | 指定是否启用文本自动调整。 |
 
 ## 返回值
 

@@ -14,7 +14,7 @@ expression.SetStartPoint(point);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
+| point | 必需 | [Point](../../Enumeration/Point.md) |  | 线条的起始点。 |
 
 ## 返回值
 
@@ -35,5 +35,5 @@ lineAnnot.SetEndStyle("openArrow");
 lineAnnot.SetStartPoint({x: 20, y: 20});
 let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
-console.log(`Start point set to: ${lineAnnot.GetEndPoint()}`);
+console.log(`Start point set to: ${lineAnnot.GetStartPoint()}`);
 ```

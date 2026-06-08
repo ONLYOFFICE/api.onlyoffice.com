@@ -15,8 +15,8 @@ expression.GetRange(cell1, cell2);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| cell1 | 必需 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个单元格地址（例如「A1」或「A1:B2」）。 |
-| cell2 | 可选 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个单元格地址（可选，与「cell1」一起定义角落）。 |
+| cell1 | 必需 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个单元格地址（例如“A1”或“A1:B2”）。 |
+| cell2 | 可选 | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个单元格地址（可选，与“cell1”一起定义角落）。 |
 
 ## 返回值
 

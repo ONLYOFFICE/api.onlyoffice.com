@@ -2,8 +2,8 @@
 
 返回工作簿中定义的所有 ApiName 对象的数组，涵盖所有作用域（工作簿级和工作表级）。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

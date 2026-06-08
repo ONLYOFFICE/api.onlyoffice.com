@@ -14,7 +14,7 @@ expression.Search(props);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| props | Required | [SearchProps](../../Enumeration/SearchProps.md) |  | No description provided. |
+| props | Required | [SearchProps](../../Enumeration/SearchProps.md) |  | The search options. |
 
 ## Returns
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddRow(oCell, isBefore);
+expression.AddRow(referenceCell, isBefore);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,8 +14,8 @@ expression.AddRow(oCell, isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 如果未指定，将在表格末尾添加新行。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新行。如果未指定单元格， |
+| referenceCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 用作插入参考的单元格。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新行。如果未指定单元格，则此参数将被忽略。 |
 
 ## 返回值
 
@@ -34,7 +34,7 @@ const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
 const table = Api.CreateTable(2, 4);
-table.AddRow(1, true);
+table.AddRow(table.GetRow(1).GetCell(0), true);
 const row = table.GetRow(1);
 const cell = row.GetCell(0);
 const content = cell.GetContent();

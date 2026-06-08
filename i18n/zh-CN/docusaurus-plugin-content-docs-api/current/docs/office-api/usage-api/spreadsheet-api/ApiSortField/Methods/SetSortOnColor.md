@@ -2,8 +2,8 @@
 
 设置基于颜色排序的颜色。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
@@ -19,7 +19,7 @@ expression.SetSortOnColor(oColor, sSortOn);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 排序依据的颜色。 |
-| sSortOn | 可选 | [XlSortOn](../../Enumeration/XlSortOn.md) | "xlSortOnCellColor" | "xlSortOnCellColor" 或 "xlSortOnFontColor"。 |
+| sSortOn | 可选 | [XlSortOn](../../Enumeration/XlSortOn.md) | "xlSortOnCellColor" | “xlSortOnCellColor” 或 “xlSortOnFontColor”。 |
 
 ## 返回值
 

@@ -1,12 +1,12 @@
 # MergeCells
 
-合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 "null"。
--**警告**：任何行中的单元格数量和当前表格中的行数可能会更改。
+合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 “null”。
+- **警告**：任何行中的单元格数量和当前表格中的行数可能会更改。
 
 ## 语法
 
 ```javascript
-expression.MergeCells(aCells);
+expression.MergeCells(cells);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -15,7 +15,7 @@ expression.MergeCells(aCells);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aCells | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md)[] |  | 单元格数组。 |
+| cells | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md)[] |  | 要合并的单元格。 |
 
 ## 返回值
 

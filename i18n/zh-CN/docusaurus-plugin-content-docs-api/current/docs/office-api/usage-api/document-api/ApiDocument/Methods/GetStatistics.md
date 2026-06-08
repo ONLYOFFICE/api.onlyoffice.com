@@ -1,11 +1,11 @@
 # GetStatistics
 
 返回以对象形式表示的文档统计信息，包含以下参数：
--**PageCount** - 页数；
--**WordsCount** - 字数；
--**ParagraphCount** - 段落数；
--**SymbolsCount** - 字符数；
--**SymbolsWSCount** - 含空格的字符数。
+- **PageCount** - 页数；
+- **WordsCount** - 字数；
+- **ParagraphCount** - 段落数；
+- **SymbolsCount** - 字符数；
+- **SymbolsWSCount** - 含空格的字符数。
 
 ## 语法
 

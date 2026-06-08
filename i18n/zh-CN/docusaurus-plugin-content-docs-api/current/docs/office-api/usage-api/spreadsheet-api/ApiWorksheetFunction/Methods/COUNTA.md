@@ -14,7 +14,7 @@ expression.COUNTA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个项或用于计数值的范围。 |
+| args | 必需 | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个项目或用于计数的区域。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、文本字符串、区域、名称或数组。 |
 
 ## 返回值
 

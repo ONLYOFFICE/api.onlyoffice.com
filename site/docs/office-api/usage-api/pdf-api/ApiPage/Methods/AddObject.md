@@ -14,7 +14,7 @@ expression.AddObject(object);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| object | Required | [FloatObject](../../Enumeration/FloatObject.md) |  | No description provided. |
+| object | Required | [FloatObject](../../Enumeration/FloatObject.md) |  | The annotation, field, or drawing to add to the page. |
 
 ## Returns
 

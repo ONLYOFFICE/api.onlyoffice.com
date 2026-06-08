@@ -2,8 +2,8 @@
 
 Sets field tooltip
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
@@ -18,7 +18,7 @@ expression.SetTooltip(tooltip);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| tooltip | Required | string |  | No description provided. |
+| tooltip | Required | string |  | The tooltip text for the field. |
 
 ## Returns
 

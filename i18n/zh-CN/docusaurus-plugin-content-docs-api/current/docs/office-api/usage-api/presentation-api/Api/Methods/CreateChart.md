@@ -1,8 +1,9 @@
 # CreateChart
 
 使用指定的参数创建图表。
+
 :::note
-**1 - 48** 范围之外的 &lt;em&gt;nStyleIndex&lt;/em&gt; 值将被解释为 &lt;em&gt;cs:chartStyle&lt;/em&gt; 元素中的图表样式 ID（例如 201、215、284），仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+*nStyleIndex* 超出 **1 - 48** 范围的值将被解释为来自 *cs:chartStyle* 元素的图表样式 ID（例如 201、215、284），且仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 
 ## 语法
@@ -24,7 +25,7 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 | nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表宽度。 |
 | nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表高度。 |
 | nStyleIndex | 必需 | number |  | 图表颜色样式索引（可以是 **1 - 48**，如 OOXML 规范所述）。 |
-| aNumFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。 |
+| aNumFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。默认数字格式为 "General"。 |
 
 ## 返回值
 

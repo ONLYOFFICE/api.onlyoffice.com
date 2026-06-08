@@ -82,7 +82,8 @@ localStorage.removeItem("asc_plugin_commands_log");
 connector.callCommand(() => {
   try {
     const doc = Api.GetDocument();
-    return {status: "ok"};
+    const stats = doc.GetStatistics();
+    return {status: "ok", pages: stats.PageCount};
   } catch (err) {
     return {status: "fail", error: err.stack};
   }

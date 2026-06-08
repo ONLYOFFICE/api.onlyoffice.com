@@ -14,7 +14,7 @@ expression.Search(props);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| props | 必需 | [SearchProps](../../Enumeration/SearchProps.md) |  | 未提供描述。 |
+| props | 必需 | [SearchProps](../../Enumeration/SearchProps.md) |  | 搜索选项。 |
 
 ## 返回值
 

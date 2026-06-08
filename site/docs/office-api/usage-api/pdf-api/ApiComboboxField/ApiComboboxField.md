@@ -26,9 +26,9 @@ ApiComboboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBase
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
 | [MoveOption](./Methods/MoveOption.md) | boolean | Moves option to specified position in list options. |
 | [RemoveOption](./Methods/RemoveOption.md) | boolean | Removes option from list options. |
-| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets field commit on selection change prop. |
+| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets whether the field commits changes immediately after selection changes. |
 | [SetDateFormat](./Methods/SetDateFormat.md) | boolean | Sets date format for field. |
-| [SetEditable](./Methods/SetEditable.md) | boolean | Sets field editable prop. |
+| [SetEditable](./Methods/SetEditable.md) | boolean | Sets whether custom text can be entered. |
 | [SetFullName](./Methods/SetFullName.md) | boolean | Sets new field name if possible. |
 | [SetMask](./Methods/SetMask.md) | boolean | Sets mask for field. |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | Sets number format for field. |

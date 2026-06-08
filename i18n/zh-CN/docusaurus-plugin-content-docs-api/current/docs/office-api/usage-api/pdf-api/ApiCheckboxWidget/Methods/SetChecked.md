@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetChecked(bChecked);
+expression.SetChecked(checked);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetChecked(bChecked);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | 必需 | boolean |  | 未提供描述。 |
+| checked | 必需 | boolean |  | 指定复选框是否被选中。 |
 
 ## 返回值
 

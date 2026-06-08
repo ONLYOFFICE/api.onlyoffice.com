@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateInkAnnot(rect, pathList);
+expression.CreateInkAnnot(rect, inkPaths);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -15,7 +15,7 @@ expression.CreateInkAnnot(rect, pathList);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 批注矩形。 |
-| pathList | 必需 | [PathList](../../Enumeration/PathList.md) |  | 墨迹路径列表 |
+| inkPaths | 必需 | [PathList](../../Enumeration/PathList.md) |  | 墨迹路径列表。 |
 
 ## 返回值
 

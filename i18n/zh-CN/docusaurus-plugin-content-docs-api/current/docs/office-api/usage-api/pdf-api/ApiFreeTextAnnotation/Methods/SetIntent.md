@@ -14,7 +14,7 @@ expression.SetIntent(intentType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| intentType | 必需 | [FreeTextIntent](../../Enumeration/FreeTextIntent.md) |  | 未提供描述。 |
+| intentType | 必需 | [FreeTextIntent](../../Enumeration/FreeTextIntent.md) |  | 自由文本批注的意图类型。 |
 
 ## 返回值
 

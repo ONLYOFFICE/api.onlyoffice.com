@@ -10,7 +10,7 @@ Object
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| BuildFrom | [CaptionLabel](../Enumeration/CaptionLabel.md) \| string | 指定是否基于指定的题注标签或所用的段落样式名称（例如「标题 1」）生成图表目录。 |
+| BuildFrom | [CaptionLabel](../Enumeration/CaptionLabel.md) \| string | 指定是否基于指定的题注标签或所用的段落样式名称（例如“标题 1”）生成图表目录。 |
 | FormatAsLinks | boolean | 指定是否将图表目录格式化为链接。 |
 | LabelNumber | boolean | 指定是否在图表目录中包含标签和编号。 |
 | LeaderType | [TocLeader](../Enumeration/TocLeader.md) | 图表目录中的前导符类型。 |

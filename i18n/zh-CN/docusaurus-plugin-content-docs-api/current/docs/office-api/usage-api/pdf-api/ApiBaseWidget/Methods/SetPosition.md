@@ -14,7 +14,7 @@ expression.SetPosition(position);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| position | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
+| position | 必需 | [Point](../../Enumeration/Point.md) |  | 控件的新位置。 |
 
 ## 返回值
 

@@ -6,7 +6,7 @@ Sets widget text size.
 ## Syntax
 
 ```javascript
-expression.SetTextSize(nSize);
+expression.SetTextSize(size);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -15,7 +15,7 @@ expression.SetTextSize(nSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | Required | [pt](../../Enumeration/pt.md) |  | No description provided. |
+| size | Required | [pt](../../Enumeration/pt.md) |  | The font size in points. |
 
 ## Returns
 

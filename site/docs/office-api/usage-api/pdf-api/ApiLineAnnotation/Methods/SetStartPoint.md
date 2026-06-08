@@ -14,7 +14,7 @@ expression.SetStartPoint(point);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| point | Required | [Point](../../Enumeration/Point.md) |  | The start point of the line. |
 
 ## Returns
 
@@ -35,5 +35,5 @@ lineAnnot.SetEndStyle("openArrow");
 lineAnnot.SetStartPoint({x: 20, y: 20});
 let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
-console.log(`Start point set to: ${lineAnnot.GetEndPoint()}`);
+console.log(`Start point set to: ${lineAnnot.GetStartPoint()}`);
 ```

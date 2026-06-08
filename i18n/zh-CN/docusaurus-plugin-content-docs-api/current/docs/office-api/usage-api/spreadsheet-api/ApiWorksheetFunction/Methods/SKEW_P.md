@@ -14,7 +14,7 @@ expression.SKEW_P(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将返回其分布的偏度。 |
+| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将返回其分布的偏度。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
 
 ## 返回值
 

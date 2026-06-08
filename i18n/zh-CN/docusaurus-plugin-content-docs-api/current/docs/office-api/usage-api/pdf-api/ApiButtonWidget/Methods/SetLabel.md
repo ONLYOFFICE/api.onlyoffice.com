@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetLabel(sLabel, sApType);
+expression.SetLabel(label, appearance);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetLabel(sLabel, sApType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLabel | 必需 | string |  | 按钮标签 |
-| sApType | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | 为哪种状态设置标签 |
+| label | 必需 | string |  | 按钮标签。 |
+| appearance | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | 外观状态。 |
 
 ## 返回值
 

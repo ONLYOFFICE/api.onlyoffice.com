@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetOption(nPos);
+expression.GetOption(index);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetOption(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 要获取的选项索引 |
+| index | 必需 | number |  | 选项索引。 |
 
 ## 返回值
 

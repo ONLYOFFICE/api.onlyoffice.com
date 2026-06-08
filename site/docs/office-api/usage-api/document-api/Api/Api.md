@@ -10,6 +10,7 @@ Represents the Api class.
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an auto-color. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
+| [CompareDocuments](./Methods/CompareDocuments.md) | None | Compares the current document with another document opened via builderJS.OpenTmpFile. Tracked changes between the two documents are produced in the current document. |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a new block level container. |
@@ -49,7 +50,7 @@ Represents the Api class.
 | [CreateTableStylePr](./Methods/CreateTableStylePr.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | Creates the empty table style properties. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | object | Converts the specified JSON object into the Document Builder object of the corresponding type. |
 | [GetByInternalId](./Methods/GetByInternalId.md) | object | Returns the object by it's internal ID. |

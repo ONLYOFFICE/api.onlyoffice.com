@@ -42,5 +42,4 @@ paragraph.RemoveAllElements();
 run = Api.CreateRun();
 run.AddText("We removed all the paragraph elements and added a new text run inside it.");
 paragraph.AddElement(run);
-content.Push(paragraph);
 ```

@@ -11,7 +11,7 @@ ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotFiel
 | Index | number | Returns an index of the data field. |
 | Name | string | Returns or sets a value representing the object name. |
 | NumberFormat | string \| null | Returns or sets a value that represents the format code for the object. |
-| Orientation | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | Returns a data field orientation value |
+| Orientation | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | Returns a data field orientation value that represents the data field location in the specified pivot table report. |
 | PivotField | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | Returns the pivot field from which the data field was created. |
 | Position | number | Returns or sets a value that represents the data field position within a category. |
 | Value | string | Returns or sets a value representing the name of the specified data field in the pivot table report. |

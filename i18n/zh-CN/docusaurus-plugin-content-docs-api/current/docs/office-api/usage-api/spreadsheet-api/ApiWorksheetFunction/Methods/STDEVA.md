@@ -1,6 +1,6 @@
 # STDEVA
 
-根据样本估算标准差，包括逻辑值和文本。文本和 -**false** 逻辑值的值为 0；-**true** 逻辑值的值为 1。
+基于样本估算标准偏差，包括逻辑值和文本。文本和 **false** 逻辑值的值为 0；**true** 逻辑值的值为 1。
 
 ## 语法
 
@@ -14,7 +14,7 @@ expression.STDEVA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，将计算这些值的标准偏差。 |
+| args | 必需 | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，用于计算标准偏差。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、文本字符串、名称、区域或数组。 |
 
 ## 返回值
 

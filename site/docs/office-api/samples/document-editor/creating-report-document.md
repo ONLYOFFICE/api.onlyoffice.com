@@ -39,7 +39,7 @@ for (let userName in commentsReport) {
 }
 
 let cols = 6;
-let table = Api.CreateTable(cols, rows);
+let table = Api.CreateTable(rows, cols);
 doc.Push(table);
 
 function fillCell(curRow, curCol, text) {
@@ -123,7 +123,7 @@ for (let userName in reviewReport) {
 }
 
 cols = 4;
-table = Api.CreateTable(cols, rows);
+table = Api.CreateTable(rows, cols);
 doc.Push(table);
 
 fillCell(0, 0, "Name");

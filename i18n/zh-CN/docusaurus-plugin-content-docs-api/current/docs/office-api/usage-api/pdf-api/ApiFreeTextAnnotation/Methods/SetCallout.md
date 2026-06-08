@@ -14,7 +14,7 @@ expression.SetCallout(callout);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| callout | 必需 | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | 未提供描述。 |
+| callout | 必需 | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | 定义标注线的 3 个点的数组。 |
 
 ## 返回值
 

@@ -17,7 +17,7 @@ expression.SUMIFS(arg1, arg2, arg3, arg4, arg5);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要计算的单元格区域。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 以数字、表达式或文本形式定义将被相加的单元格的第一个条件或标准。 |
 | arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要求和的第一个区域。如果省略，则使用区域中的单元格。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个附加条件或标准，以数字、表达式或文本的形式定义哪些单元格将被相加。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个附加条件，以数字、表达式或文本形式定义要相加的单元格。这些参数是可选的。 |
 | arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 127 个要相加的实际区域。如果省略，则使用区域中的单元格。这些参数是可选的。 |
 
 ## 返回值

@@ -14,7 +14,7 @@ expression.SetRotation(angle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| angle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 未提供描述。 |
+| angle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 以度为单位的旋转角度。 |
 
 ## 返回值
 

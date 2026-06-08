@@ -82,7 +82,8 @@ Since `commandFn` runs in an isolated context, errors inside it are not propagat
 connector.callCommand(() => {
   try {
     const doc = Api.GetDocument();
-    return {status: "ok"};
+    const stats = doc.GetStatistics();
+    return {status: "ok", pages: stats.PageCount};
   } catch (err) {
     return {status: "fail", error: err.stack};
   }

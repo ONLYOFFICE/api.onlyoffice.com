@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | Required | string |  | No description provided. |
+| hexString | Required | string |  | The HEX string representing a color. |
 
 ## Returns
 

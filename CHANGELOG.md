@@ -1,5 +1,45 @@
 # Change log
 
+## 8.8.0
+
+### New features
+
+#### Common
+
+* Added row permalink anchors to API tables
+
+### Improvements
+
+#### Docs API
+
+* Consolidated server configuration documentation into a single page
+
+#### DocSpace
+
+* Updated MCP server documentation with improved formatting and restructured reference section
+
+#### Homepage
+
+* Redesigned homepage with system fonts, design tokens, and theme-aware icons
+
+### Fixes
+
+#### Common
+
+* Fixed PageActions visibility on doc pages
+
+#### Docs API
+
+* Fixed broken references after server configuration page consolidation
+
+#### DocSpace
+
+* Fixed version in MCP server configuration documentation
+
+#### Playground
+
+* Fixed Monaco API library loading to use GitHub raw instead of document server
+
 ## 8.7.0
 
 ### New features
@@ -9,6 +49,7 @@
 * Added `editorConfig.plugins.disable` parameter documentation
 * Added Croatian language to version 9.4 changelog
 * Removed deprecated `editorConfig.customization.commentAuthorOnly` parameter
+* Added `roles` parameter to `onStartFilling` event and `destroyEditor` memory leak fix for v9.4
 
 #### Office API
 
@@ -19,22 +60,75 @@
 
 * Updated plugins API reference documentation for version 9.4 (text annotations, form methods, comment events)
 * Added version 9.4 changelog
+* Improved `callCommand` documentation and added `asc_plugin_commands_log` debugging guide
+* Added warning against calling API methods in `onTranslate` handler
 
 #### Document Builder
 
 * Published document comparison documentation and fixed CompareDocuments signature
 * Added ability to select a specific sample via link
 
+#### Common
+
+* Added Video component and migrated all raw video tags
+
 ### Improvements
+
+#### Office API
+
+* Updated office-js-api reference documentation
+* Fixed `CreateTable` argument order to match new (rows, cols) signature in samples
 
 #### Docs API
 
 * Updated screenshots with dark theme support across editor, customization, events, permissions, co-editing, reviewing, and other pages
 * Added onRequestStartFilling screenshot to events page
 
+#### Plugins and macros
+
+* Normalized formatting to use backtick references across plugin configuration and customization pages
+* Moved default values to header format on plugin configuration page
+* Replaced static images with webm videos in macro samples
+* Replaced generic "here" links with descriptive anchor text
+
+#### Playground
+
+* Replaced custom URL utilities with native URLSearchParams
+* Loaded Monaco type libraries from Document Server
+
 #### Localization
 
 * Added dark theme support for zh-CN documentation screenshots
+
+### Fixes
+
+#### Docs API
+
+* Fixed `onMakeActionLink` action.type to use string literal union
+* Restructured `event.data` parameter tables on events page
+
+#### Plugins and macros
+
+* Fixed `doc` variable usage in `callCommand` error handling example
+* Aligned `callCommand` parameter table column widths
+
+#### Playground
+
+* Fixed developer plugin installation to only apply for plugin script type
+* Fixed null URL parameters coalesced to undefined
+* Disabled Run button until editor is ready
+* Fixed word type library loading for form editor
+* Removed `installDeveloperPlugin` shim for v9.3.1
+
+#### Localization
+
+* Fixed stray Latin letters in zh-CN changelog
+* Added missing Video import and frontmatter to zh-CN plugin pages
+* Fixed ASCII quotes and spacing in zh-CN pages
+
+#### Common
+
+* Fixed broken anchor link to command logging in changelog
 
 ## 8.6.0
 

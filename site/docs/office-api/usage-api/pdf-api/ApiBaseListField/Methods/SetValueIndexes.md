@@ -5,7 +5,7 @@ Sets selected value indexes.
 ## Syntax
 
 ```javascript
-expression.SetValueIndexes(aIndexes);
+expression.SetValueIndexes(valueIndexes);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.SetValueIndexes(aIndexes);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | Required | number[] |  | selected indexes |
+| valueIndexes | Required | number[] |  | The indexes of the selected values. |
 
 ## Returns
 

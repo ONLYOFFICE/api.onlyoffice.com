@@ -6,7 +6,7 @@ right edge border of a specific individual table cell within a table.
 ## Syntax
 
 ```javascript
-expression.SetCellMarginRight(nValue);
+expression.SetCellMarginRight(margin);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -15,7 +15,7 @@ expression.SetCellMarginRight(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin shall be used, |
+| margin | Required | [twips](../../Enumeration/twips.md) |  | The cell margin. If this value is `null`, the default margin is used. otherwise override the table cell right margin with specified value for the current cell. |
 
 ## Returns
 

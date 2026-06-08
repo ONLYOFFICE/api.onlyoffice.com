@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetRow(nIndex);
+expression.GetRow(rowIndex);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetRow(nIndex);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nIndex | 必需 | number |  | 表格中的行索引（位置）。 |
+| rowIndex | 必需 | number |  | 表格中从零开始的行索引。 |
 
 ## 返回值
 

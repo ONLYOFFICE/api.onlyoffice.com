@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBehavior(sType);
+expression.SetBehavior(behavior);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBehavior(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | 未提供描述。 |
+| behavior | 必需 | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | 单击按钮时的高亮行为。 |
 
 ## 返回值
 

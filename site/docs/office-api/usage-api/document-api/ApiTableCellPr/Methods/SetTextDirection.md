@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The available types of the text direction in the table cell: &lt;code&gt;"lrtb"&lt;/code&gt; |
+| sType | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The available types of the text direction in the table cell: `"lrtb"` - text direction left-to-right moving from top to bottom, `"tbrl"` - text direction top-to-bottom moving from right to left, `"btlr"` - text direction bottom-to-top moving from left to right. |
 
 ## Returns
 

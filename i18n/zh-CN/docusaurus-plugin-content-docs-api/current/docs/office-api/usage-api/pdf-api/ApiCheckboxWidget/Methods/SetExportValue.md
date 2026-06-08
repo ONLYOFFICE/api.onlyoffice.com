@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetExportValue(sValue);
+expression.SetExportValue(value);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetExportValue(sValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sValue | 必需 | string |  | 未提供描述。 |
+| value | 必需 | string |  | 复选框被选中时要导出的值。 |
 
 ## 返回值
 

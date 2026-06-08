@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPlaceholder(sPlaceholder);
+expression.SetPlaceholder(placeholder);
 ```
 
 `expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetPlaceholder(sPlaceholder);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPlaceholder | 必需 | string |  | 字段占位符 |
+| placeholder | 必需 | string |  | 占位符文本。 |
 
 ## 返回值
 

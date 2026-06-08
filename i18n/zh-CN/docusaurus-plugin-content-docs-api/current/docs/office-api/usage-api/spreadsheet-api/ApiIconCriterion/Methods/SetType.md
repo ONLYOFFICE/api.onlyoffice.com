@@ -14,7 +14,7 @@ expression.SetType(type);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [XlConditionValueTypes](../../Enumeration/XlConditionValueTypes.md) |  | 条件值类型。仅支持 "xlConditionValueNumber"、"xlConditionValuePercent"、"xlConditionValuePercentile" 或 "xlConditionValueFormula"。 |
+| type | 必需 | [XlConditionValueTypes](../../Enumeration/XlConditionValueTypes.md) |  | 条件值类型。仅支持 “xlConditionValueNumber”、“xlConditionValuePercent”、“xlConditionValuePercentile” 或 “xlConditionValueFormula”。 |
 
 ## 返回值
 

@@ -14,7 +14,7 @@ expression.SetParaPr(paraPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| paraPr | 必需 | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | 未提供描述。 |
+| paraPr | 必需 | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | 要应用的段落属性。 |
 
 ## 返回值
 

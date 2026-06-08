@@ -5,7 +5,7 @@ Moves option to specified position in list options.
 ## Syntax
 
 ```javascript
-expression.MoveOption(nCurPos, nNewPos);
+expression.MoveOption(currentIndex, newIndex);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,8 +14,8 @@ expression.MoveOption(nCurPos, nNewPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCurPos | Required | number |  | index of moved option |
-| nNewPos | Required | number |  | new positon for option |
+| currentIndex | Required | number |  | The current index of the option to move. |
+| newIndex | Required | number |  | The target index for the option. |
 
 ## Returns
 

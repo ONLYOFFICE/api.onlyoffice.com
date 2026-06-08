@@ -1,11 +1,11 @@
 # SetScrollLongText
 
-设置文本字段可滚动长文本的属性。
+设置文本字段是否可以滚动长文本。
 
 ## 语法
 
 ```javascript
-expression.SetScrollLongText(bScroll);
+expression.SetScrollLongText(allowScroll);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScrollLongText(bScroll);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bScroll | 必需 | boolean |  | 字段是否可滚动长文本 |
+| allowScroll | 必需 | boolean |  | 指定长文本是否可以滚动。 |
 
 ## 返回值
 

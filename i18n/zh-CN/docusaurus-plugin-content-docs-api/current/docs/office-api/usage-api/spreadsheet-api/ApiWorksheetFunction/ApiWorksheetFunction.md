@@ -45,11 +45,11 @@
 | [BINOM_DIST](./Methods/BINOM_DIST.md) | number | 返回单项二项分布概率。 |
 | [BINOM_DIST_RANGE](./Methods/BINOM_DIST_RANGE.md) | number | 使用二项分布返回试验结果的概率。 |
 | [BINOM_INV](./Methods/BINOM_INV.md) | number | 返回累积二项分布大于或等于条件值的最小值。 |
-| [BITAND](./Methods/BITAND.md) | number | 返回两个数字的按位"与"运算结果。 |
+| [BITAND](./Methods/BITAND.md) | number | 返回两个数字的按位“与”运算结果。 |
 | [BITLSHIFT](./Methods/BITLSHIFT.md) | number | 返回按指定位数左移后的数字。 |
-| [BITOR](./Methods/BITOR.md) | number | 返回两个数字的按位"或"运算结果。 |
+| [BITOR](./Methods/BITOR.md) | number | 返回两个数字的按位“或”运算结果。 |
 | [BITRSHIFT](./Methods/BITRSHIFT.md) | number | 返回按指定位数右移后的数字。 |
-| [BITXOR](./Methods/BITXOR.md) | number | 返回两个数字的按位"异或"运算结果。 |
+| [BITXOR](./Methods/BITXOR.md) | number | 返回两个数字的按位“异或”运算结果。 |
 | [CEILING](./Methods/CEILING.md) | number | 将数字向上舍入到最接近的基数倍数。 |
 | [CEILING_MATH](./Methods/CEILING_MATH.md) | number | 将数字向上舍入到最接近的整数或最接近的基数倍数。 |
 | [CEILING_PRECISE](./Methods/CEILING_PRECISE.md) | number | 返回向上舍入到最接近的整数或最接近的基数倍数的数字。无论数字的符号如何，都始终向上舍入。 |
@@ -265,7 +265,7 @@
 | [MULTINOMIAL](./Methods/MULTINOMIAL.md) | number | 返回数字之和的阶乘与阶乘乘积的比率。 |
 | [MUNIT](./Methods/MUNIT.md) | number | 返回指定维度的单位矩阵。 |
 | [N](./Methods/N.md) | number | 将值转换为数字，日期转换为序列号，**true** 转换为 1，错误转换为 [ErrorValue](../Enumeration/ErrorValue.md)，其他转换为 0。 |
-| [NA](./Methods/NA.md) | string | 返回 *#N/A* 错误值，表示"无可用值"。 |
+| [NA](./Methods/NA.md) | string | 返回 *#N/A* 错误值，表示“无可用值”。 |
 | [NEGBINOMDIST](./Methods/NEGBINOMDIST.md) | number | 返回负二项分布，即在最后一次成功之前有指定次数失败的概率，以及指定的成功概率。 |
 | [NEGBINOM_DIST](./Methods/NEGBINOM_DIST.md) | number | 返回负二项分布，即在最后一次成功之前有指定次数失败的概率，以及指定的成功概率。 |
 | [NETWORKDAYS](./Methods/NETWORKDAYS.md) | number | 返回两个日期之间的完整工作日数。 |

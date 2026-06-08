@@ -2,8 +2,8 @@
 
 Returns whether the last column formatting is applied to the table.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

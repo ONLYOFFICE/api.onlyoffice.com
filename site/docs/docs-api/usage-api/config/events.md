@@ -195,7 +195,7 @@ If this event is not declared, the *Get Link* button will not be displayed.
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | event.data          | `object` | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
 | event.data.action   | `object` | The action object that defines what to scroll to in the document. |
-| event.data.action.type | `string` | The type of action: `"bookmark"` or `"comment"`. |
+| event.data.action.type | `"bookmark" \| "comment"` | The type of action in the document. |
 | event.data.action.data | `string` | The data associated with the action: the bookmark name or the comment ID. |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
@@ -1076,12 +1076,11 @@ If this event is not declared, the *Start filling* button will not be displayed.
 
 **Parameters**:
 
-| Parameter        | Type     | Description        |
-| ---------------- | -------- | ------------------ |
-| event.data.name  | `string` | The role name.     |
-| event.data.color | `string` | The role color in hex format (e.g. `#FF0000`). |
-
-The `event.data` is an array of role objects.
+| Parameter          | Type       | Description        |
+| ------------------ | ---------- | ------------------ |
+| event.data         | `object[]` | The array of role objects. |
+| event.data[].name  | `string`   | The role name.     |
+| event.data[].color | `string`   | The role color in hex format (e.g. `#FF0000`). |
 
 ![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
 
@@ -1189,16 +1188,16 @@ The function called when the PDF form is ready for filling, i.e. after the [star
 
 **Parameters**:
 
-| Parameter             | Type     | Description        |
-| --------------------- | -------- | ------------------ |
-| event.data.color      | `string` | The role color in hex format (e.g. `#FF0000`). |
-| event.data.name       | `string` | The role name.     |
-| event.data.user.email | `string` | The user email.    |
-| event.data.user.id    | `string` | The user ID.       |
-| event.data.user.image | `string` | The URL to the user avatar. |
-| event.data.user.name  | `string` | The user name.     |
-
-The `event.data` is an array of role objects.
+| Parameter               | Type       | Description        |
+| ----------------------- | ---------- | ------------------ |
+| event.data              | `object[]` | The array of role objects. |
+| event.data[].color      | `string`   | The role color in hex format (e.g. `#FF0000`). |
+| event.data[].name       | `string`   | The role name.     |
+| event.data[].user       | `object`   | The user assigned to the role. |
+| event.data[].user.email | `string`   | The user email.    |
+| event.data[].user.id    | `string`   | The user ID.       |
+| event.data[].user.image | `string`   | The URL to the user avatar. |
+| event.data[].user.name  | `string`   | The user name.     |
 
 **Example**:
 

@@ -15,7 +15,7 @@ expression.AddMathEquation(sText, sFormat);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sText | 必需 | string |  | 数学公式文本。 |
-| sFormat | 必需 | string |  | 数学公式格式。可能的值为 "unicode"、"latex" 和 "mathml"。 |
+| sFormat | 必需 | string |  | 数学公式格式。可能的值为 “unicode”、“latex” 和 “mathml”。 |
 
 ## 返回值
 

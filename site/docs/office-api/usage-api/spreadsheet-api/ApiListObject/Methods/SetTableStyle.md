@@ -2,14 +2,14 @@
 
 Sets the table style by name.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
 
 ```javascript
-expression.SetTableStyle(sStyleName);
+expression.SetTableStyle(styleName);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetTableStyle(sStyleName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | Required | string |  | No description provided. |
+| styleName | Required | string |  | The name of the table style to apply. |
 
 ## Returns
 

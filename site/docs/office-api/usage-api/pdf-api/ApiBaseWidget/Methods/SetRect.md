@@ -14,7 +14,7 @@ expression.SetRect(rect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | Required | [Rect](../../Enumeration/Rect.md) |  | No description provided. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the widget. |
 
 ## Returns
 

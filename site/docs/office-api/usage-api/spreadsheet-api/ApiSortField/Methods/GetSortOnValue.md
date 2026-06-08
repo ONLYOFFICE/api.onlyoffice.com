@@ -3,8 +3,8 @@
 Returns the value (color or null) by which this sort field is sorted.
 For color-based sorts returns the fill/font color; otherwise returns null.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

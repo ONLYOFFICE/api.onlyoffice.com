@@ -15,7 +15,7 @@ expression.AddTableOfContents(oTocPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTocPr | 可选 | [TocPr](../../Enumeration/TocPr.md) | &#123;&#125; | 目录属性。 |
+| oTocPr | 可选 | [TocPr](../../Enumeration/TocPr.md) | \{\} | 目录属性。 |
 
 ## 返回值
 

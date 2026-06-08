@@ -14,7 +14,7 @@ expression.SetOperator(operator);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| operator | 必需 | string |  | 要设置的运算符（"xlGreaterEqual" 或 "xlGreater"）。 |
+| operator | 必需 | string |  | 要设置的运算符（“xlGreaterEqual” 或 “xlGreater”）。 |
 
 ## 返回值
 

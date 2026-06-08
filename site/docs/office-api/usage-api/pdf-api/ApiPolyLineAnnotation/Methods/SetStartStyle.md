@@ -14,7 +14,7 @@ expression.SetStartStyle(style);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | No description provided. |
+| style | Required | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | The style of the polyline start endpoint. |
 
 ## Returns
 

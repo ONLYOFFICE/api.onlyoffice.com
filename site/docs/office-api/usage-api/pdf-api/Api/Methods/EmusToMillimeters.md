@@ -1,6 +1,6 @@
 # EmusToMillimeters
 
-Converts English measure units (EMU) to millimeters.
+Converts English Metric Units (EMUs) to millimeters.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.EmusToMillimeters(emu);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| emu | Required | [EMU](../../Enumeration/EMU.md) |  | No description provided. |
+| emu | Required | [EMU](../../Enumeration/EMU.md) |  | The value in English Metric Units (EMUs). |
 
 ## Returns
 

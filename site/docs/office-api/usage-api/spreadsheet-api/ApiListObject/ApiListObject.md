@@ -2,8 +2,8 @@
 
 Represents the ApiListObject class.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Properties
@@ -17,7 +17,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 | DataBodyRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the data rows. |
 | DisplayName | string | Returns or sets the display name of the table. |
 | HeaderRowRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the header row. |
-| Name | string | Returns or sets the display name of the table. |
+| Name | string | Returns or sets the name of the table. |
 | Parent | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the parent worksheet. |
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the table. |
 | ShowAutoFilter | boolean | Returns or sets whether the AutoFilter is present. |
@@ -41,7 +41,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 | [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | Adds a new column to the table at the specified 1-based position. |
 | [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | Adds a new data row to the table at the specified 1-based position. |
 | [Delete](./Methods/Delete.md) | None | Deletes the ListObject object and clears the cell formatting. |
-| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active, |
+| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active. |
 | [GetAlternativeText](./Methods/GetAlternativeText.md) | string | Returns the alternative text for the table. |
 | [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | Returns the ApiAutoFilter object representing the autofilter applied to the table. |
 | [GetComment](./Methods/GetComment.md) | string | Returns the comment (summary alternative text) for the table. |
@@ -50,7 +50,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 | [GetHeaderRowRange](./Methods/GetHeaderRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the header row of the table. |
 | [GetListColumns](./Methods/GetListColumns.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md)[] | Returns an array of all columns in the table. |
 | [GetListRows](./Methods/GetListRows.md) | [ApiListRow](../ApiListRow/ApiListRow.md)[] | Returns an array of all data rows in the table, excluding the header and totals rows. |
-| [GetName](./Methods/GetName.md) | string | Returns the display name of the table. |
+| [GetName](./Methods/GetName.md) | string | Returns the name of the table. |
 | [GetParent](./Methods/GetParent.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the ApiWorksheet object that is the parent of the table. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents the range of the table. |
 | [GetShowAutoFilter](./Methods/GetShowAutoFilter.md) | boolean | Returns whether the AutoFilter dropdown buttons are displayed on the header row of the table. |

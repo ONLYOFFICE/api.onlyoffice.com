@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetSpecialFormat(sFormat);
+expression.SetSpecialFormat(format);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetSpecialFormat(sFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | 必需 | [PsfFormat](../../Enumeration/PsfFormat.md) |  | 应用于值的格式样式 |
+| format | 必需 | [PsfFormat](../../Enumeration/PsfFormat.md) |  | 应用于值的格式样式 |
 
 ## 返回值
 

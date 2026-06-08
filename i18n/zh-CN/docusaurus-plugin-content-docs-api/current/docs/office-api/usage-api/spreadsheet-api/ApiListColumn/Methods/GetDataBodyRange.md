@@ -2,8 +2,8 @@
 
 返回列的数据正文范围，不包括标题行和汇总行。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

@@ -1,6 +1,6 @@
 # IsComb
 
-Checks if text field is comb.
+Checks if the text field uses comb formatting.
 
 ## Syntax
 

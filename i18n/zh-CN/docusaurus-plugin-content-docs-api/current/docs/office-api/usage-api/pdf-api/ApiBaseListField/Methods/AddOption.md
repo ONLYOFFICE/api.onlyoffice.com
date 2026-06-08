@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddOption(option, nPos);
+expression.AddOption(option, index);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -15,7 +15,7 @@ expression.AddOption(option, nPos);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | option | 必需 | [ListOption](../../Enumeration/ListOption.md) |  | 要添加的列表选项 |
-| nPos | 可选 | number | this.GetOptions().lenght | 添加选项的位置 |
+| index | 可选 | number | this.GetOptions().lenght | 要添加选项的索引。 |
 
 ## 返回值
 

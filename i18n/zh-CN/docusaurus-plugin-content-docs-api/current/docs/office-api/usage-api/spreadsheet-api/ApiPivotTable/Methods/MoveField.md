@@ -15,7 +15,7 @@ expression.MoveField(identifier, type, index);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | identifier | 必需 | number \| string |  | 字段的索引号或名称。 |
-| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向， |
+| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向，或数据透视字段方向类型。 |
 | index | 可选 | number |  | 新类别中的字段索引。 |
 
 ## 返回值

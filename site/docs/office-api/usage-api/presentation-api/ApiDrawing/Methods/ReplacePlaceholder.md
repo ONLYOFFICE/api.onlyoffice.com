@@ -5,7 +5,7 @@ Replaces the placeholder by a drawing on the slide.
 ## Syntax
 
 ```javascript
-expression.ReplacePlaceholder(oDrawing);
+expression.ReplacePlaceholder(drawing);
 ```
 
 `expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
@@ -14,7 +14,7 @@ expression.ReplacePlaceholder(oDrawing);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oDrawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | No description provided. |
+| drawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | The drawing object that will replace the placeholder. |
 
 ## Returns
 

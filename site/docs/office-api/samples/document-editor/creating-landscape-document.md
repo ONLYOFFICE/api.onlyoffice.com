@@ -44,7 +44,7 @@ let data = [
 ];
 
 // Create table with 7 columns and 5 rows (1 header + 4 data rows)
-let table = Api.CreateTable(7, 5);
+let table = Api.CreateTable(5, 7);
 table.SetWidth("percent", 100);
 table.SetJc("center");
 

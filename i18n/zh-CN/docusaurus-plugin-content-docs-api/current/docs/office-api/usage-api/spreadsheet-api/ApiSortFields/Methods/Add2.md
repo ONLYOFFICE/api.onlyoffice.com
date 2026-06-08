@@ -2,8 +2,8 @@
 
 添加支持链接数据类型（股票、地理）子字段的排序字段。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
@@ -23,7 +23,7 @@ expression.Add2(Key, SortOn, Order, CustomOrder, DataOption, SubField);
 | Order | 可选 | [SortOrder](../../Enumeration/SortOrder.md) | "xlAscending" | 排序顺序。 |
 | CustomOrder | 可选 | number \| string | 0 | 保留。引擎尚不支持自定义顺序排序。 |
 | DataOption | 可选 | [XlSortDataOption](../../Enumeration/XlSortDataOption.md) | "xlSortNormal" | 数据排序选项。 |
-| SubField | 可选 | string |  | 链接数据类型的子字段名称（例如 "Population"、"Volume"）。 |
+| SubField | 可选 | string |  | 链接数据类型的子字段名称（例如 “Population”、“Volume”）。 |
 
 ## 返回值
 

@@ -59,7 +59,7 @@ Once editing is finished, the **document editing service** informs the **documen
 - **Conversion time** — the edited file is converted into one of the editors' native formats (`.docx`, `.xlsx`, `.pptx`, or `.pdf`). This varies with file size, complexity, and server performance.
 - **Conversion start delay** — 5 seconds by default. This delay allows the user to return to the editing session without triggering a save — for example, when reloading the browser page while the file is still open.
 
-In most cases, the save completes about 10 seconds after editing ends. The default delay is defined by the [`savetimeoutdelay`](../configuration/server-config/server.md#servicescoauthoringserversavetimeoutdelay) parameter in the [ONLYOFFICE Docs server configuration](../configuration/server-config/intro.md).
+In most cases, the save completes about 10 seconds after editing ends. The default delay is defined by the [`savetimeoutdelay`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.savetimeoutdelay) parameter in the [ONLYOFFICE Docs server configuration](../configuration/server-config/server-config.mdx).
 
 ## Force saving
 
@@ -69,7 +69,7 @@ The **document editing service** allows you to get the current document state be
 
 - By enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) mode (set it to `true` in the editor initialization config). Each time the user clicks **Save**, a forcesave is triggered, and the `forcesavetype` parameter will be `1` in the callback handler request.
 
-- By enabling automatic repeating forcesave via the [auto assembly](../configuration/server-config/auto-assembly.md) server configuration. The `forcesavetype` parameter will be `2` in the callback handler request.
+- By enabling automatic repeating forcesave via the [auto assembly](../configuration/server-config/server-config.mdx#auto-assembly) server configuration. The `forcesavetype` parameter will be `2` in the callback handler request.
 
   :::info
   The auto assembly feature saves the current state of the file at that moment. If a user is in strict mode and has not clicked **Save**, their changes will not be included in the assembled file. In PDF format, strict mode is enabled by default.
@@ -81,7 +81,7 @@ Document versions created by forcesave do not appear in the document history. ON
 
 ## Saving in original format
 
-Since version 7.0, the [`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin) server setting is enabled by default to save the assembled file in its original format. This is used to convert from OOXML to ODF or to preserve files with macros.
+Since version 7.0, the [`assemblyFormatAsOrigin`](../configuration/server-config/server-config.mdx#services.CoAuthoring.server.assemblyFormatAsOrigin) server setting is enabled by default to save the assembled file in its original format. This is used to convert from OOXML to ODF or to preserve files with macros.
 
 This parameter works as follows:
 

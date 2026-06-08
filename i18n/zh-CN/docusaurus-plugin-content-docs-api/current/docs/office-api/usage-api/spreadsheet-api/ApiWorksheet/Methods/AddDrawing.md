@@ -2,8 +2,8 @@
 
 将分离的绘图对象（例如 ApiDrawing.Copy 返回的副本）添加到工作表的指定锚点。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

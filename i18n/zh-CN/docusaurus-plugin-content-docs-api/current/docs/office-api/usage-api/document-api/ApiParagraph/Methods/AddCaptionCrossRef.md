@@ -15,11 +15,11 @@ expression.AddCaptionCrossRef(sCaption, sRefType, oParaTo, bLink, bAboveBelow);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（「公式」、「图」、「表」或其他题注标签）。 |
+| sCaption | 必需 | [CaptionLabel](../../Enumeration/CaptionLabel.md) \| string |  | 题注标签（“公式”、“图”、“表”或其他题注标签）。 |
 | sRefType | 必需 | [captionRefTo](../../Enumeration/captionRefTo.md) |  | 要插入的题注引用的文本或数值。 |
 | oParaTo | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 要引用的题注段落（必须在文档中）。 |
 | bLink | 可选 | boolean | true | 指定引用是否作为超链接插入。 |
-| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的「上方/下方」字样（仅与 "pageNum" sRefType 一起使用）。 |
+| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的“上方/下方”字样（仅与 “pageNum” sRefType 一起使用）。 |
 
 ## 返回值
 

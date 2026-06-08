@@ -14,7 +14,7 @@ expression.Push(richRun);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| richRun | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | No description provided. |
+| richRun | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The element to add at the end of the paragraph. |
 
 ## Returns
 

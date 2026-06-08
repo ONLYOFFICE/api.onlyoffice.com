@@ -2,8 +2,8 @@
 
 将 ListObject 调整为新范围。不插入或移动单元格。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法
@@ -18,7 +18,7 @@ expression.Resize(Range);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Range | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string |  | 表格的新范围，作为 ApiRange 对象或地址字符串，例如 **"A1:D10"**。 |
+| Range | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string |  | 表格的新范围，作为 ApiRange 对象或地址字符串，例如 **“A1:D10”**。 |
 
 ## 返回值
 

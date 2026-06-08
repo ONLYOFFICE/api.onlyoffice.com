@@ -5,7 +5,7 @@ Sets a custom geometry for the current shape.
 ## Syntax
 
 ```javascript
-expression.SetGeometry(oGeometry);
+expression.SetGeometry(geometry);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetGeometry(oGeometry);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oGeometry | Required | [ApiGeometry](../../ApiGeometry/ApiGeometry.md) |  | The geometry to set. |
+| geometry | Required | [ApiGeometry](../../ApiGeometry/ApiGeometry.md) |  | The geometry to set. |
 
 ## Returns
 

@@ -14,8 +14,8 @@ expression.AddRow(oCell, isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在此单元格之后添加新行。如果未指定，新行将 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前 (false) 或之后 (true) 添加新行。如果未指定单元格，则 |
+| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 在其后添加新行的单元格。如果未指定，新行将添加到表格末尾。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新行。如果未指定单元格，则此参数将被忽略。 |
 
 ## 返回值
 

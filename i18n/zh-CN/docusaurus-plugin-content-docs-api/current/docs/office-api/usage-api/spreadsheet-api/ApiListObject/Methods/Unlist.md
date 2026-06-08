@@ -3,8 +3,8 @@
 从 ListObject 移除列表功能并将其转换为常规数据范围。
 单元格数据、格式和公式保留在工作表上。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

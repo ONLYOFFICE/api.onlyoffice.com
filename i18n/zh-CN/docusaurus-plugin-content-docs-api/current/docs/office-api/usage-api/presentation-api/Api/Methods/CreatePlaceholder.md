@@ -14,7 +14,7 @@ expression.CreatePlaceholder(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | string |  | 占位符类型（"body"、"chart"、"clipArt"、"ctrTitle"、"diagram"、"date"、"footer"、"header"、"media"、"object"、"picture"、"sldImage"、"sldNumber"、"subTitle"、"table"、"title"）。 |
+| sType | 必需 | string |  | 占位符类型（“body”、“chart”、“clipArt”、“ctrTitle”、“diagram”、“date”、“footer”、“header”、“media”、“object”、“picture”、“sldImage”、“sldNumber”、“subTitle”、“table”、“title”）。 |
 
 ## 返回值
 

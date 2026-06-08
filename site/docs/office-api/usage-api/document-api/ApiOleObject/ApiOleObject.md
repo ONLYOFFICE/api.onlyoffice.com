@@ -33,7 +33,6 @@ ApiOleObject is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | Scales the width of the figure using the specified coefficient. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
 | [SetApplicationId](./Methods/SetApplicationId.md) | boolean | Sets the application ID to the current OLE object. |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | None | No description provided. |
 | [SetData](./Methods/SetData.md) | boolean | Sets the data to the current OLE object. |
 | [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any |
 | [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. |
