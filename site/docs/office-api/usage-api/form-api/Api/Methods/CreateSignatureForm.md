@@ -14,7 +14,7 @@ expression.CreateSignatureForm(formPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| formPr | Required | [FormPrBase](../../Enumeration/FormPrBase.md) |  | signature form properties. |
+| formPr | Required | [FormPrBase](../../Enumeration/FormPrBase.md) |  | Signature form properties. |
 
 ## Returns
 
