@@ -115,6 +115,7 @@ export default function App() {
     const instance = sdk.initManager({
       frameId: "ds-frame",
       src: "https://your-docspace.onlyoffice.com",
+      height: "700px",
       showMenu: true,
       // additional configuration options
     });
@@ -124,7 +125,7 @@ export default function App() {
     };
   }, []);
 
-  return <div id="ds-frame" style={{ width: "100%", height: "100%" }} />;
+  return <div id="ds-frame" />;
 }
 ```
 
