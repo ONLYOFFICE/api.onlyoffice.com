@@ -5,14 +5,14 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Initialize system
 
-This example demonstrates how to initialize the DocSpace system interface using the JavaScript SDK.
+This example demonstrates how to initialize the DocSpace system interface using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-system.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Init System</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -34,7 +34,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <iframe id="ds-frame"></iframe>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     const config = {
       frameId: "ds-frame",
@@ -62,7 +62,7 @@ Create an HTML page with a frame element that will load the DocSpace system inte
     <title>Init System</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
   <body>
@@ -73,10 +73,10 @@ Create an HTML page with a frame element that will load the DocSpace system inte
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Configure and initialize the system view using the [initSystem()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initsystem) method.
 

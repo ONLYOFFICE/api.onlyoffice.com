@@ -1,17 +1,33 @@
 ---
 sidebar_position: 1
-sidebar_class_name: hidden
 ---
 
 import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
 
-# Get started
+# Introduction
 
-The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) based on JavaScript allows developers to use all the DocSpace possibilities with *api.js*. You can integrate ONLYOFFICE DocSpace into your own web application, allowing users to create and submit documents directly from your website. For example, you can use the ONLYOFFICE DocSpace [React component](./react-component.md) to integrate ONLYOFFICE DocSpace into React projects.
+The [ONLYOFFICE DocSpace Embed SDK](https://github.com/ONLYOFFICE/docspace-sdk-js), based on JavaScript, lets you embed DocSpace directly inside your web application. You can integrate a full document workspace, a standalone editor, a file picker, or a background authentication frame — with just a few lines of code.
 
-You don't need to be an experienced JavaScript developer to use the DocSpace JavaScript SDK because we provide you with all the basics. You only need a few lines of JavaScript to set up a fully functional integration.
+You can use it as an [npm package](./quickstart.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quickstart.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
 
-## Comparison table
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration.aspx?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer.aspx?from=api#docspace-developer)
+- The URL of your server added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
+- A server environment to serve your files from — opening an HTML file directly in the browser will not work
+- A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
+
+:::info
+
+If your DocSpace instance is served over HTTPS, your embedding page must also be served over HTTPS. Browsers block mixed content (an HTTPS page loading resources from HTTP), which will prevent the SDK from loading correctly.
+
+Additionally, we recommend configuring HTTPS on your server and setting `"SameSite": "None"` in `appsettings.json`. This is to allow cross-domain cookies in stricter browser environments. Without HTTPS, the SDK may still work in some setups, but cross-origin authentication and session handling can fail depending on your browser's cookie policy.
+
+:::
+
+## Embedding modes
 
 The SDK supports multiple initialization modes:
 
@@ -24,90 +40,26 @@ The SDK supports multiple initialization modes:
 | Room selector | Room picker dialog | Rooms only | No | No | Yes |
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
+| Uploader | File upload dialog | No | No | Yes (folder) | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
-- Selector and system modes do not expose editing capabilities.
+- Selector, system, and uploader modes do not expose editing capabilities.
 :::
 
-Follow the steps below to connect DocSpace as a frame to your website.
+Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).
 
-## Step 1. Specifying the DocSpace URL
+## Live demo
 
-For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. Please make sure you are using a server environment.
+To see what the SDK looks like in a real product, explore the [live demo](https://demo-embed.onlyoffice.com/) — a sample conference website with DocSpace embedded across multiple pages, each using a different mode:
 
-You need to add the URL of your server's root directory to the **Developer Tools** section of DocSpace:
-
-1. Go to the DocSpace settings.
-2. Navigate to the **Developer Tools** section.
-3. On the **JavaScript SDK** tab, in the **Enter the address of DocSpace to embed** field, add the URL of your server's root directory.
-
-![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.png#gh-light-mode-only)![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.dark.png#gh-dark-mode-only)
-
-## Step 2. Creating the HTML file
-
-Create the target HTML file which must include a placeholder *div* tag, where all the information about DocSpace parameters will be passed:
-
-``` html
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>DocSpace JavaScript SDK</title>
-        <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
-    </head>
-    <body>
-        <div id="ds-frame"></div>
-    </body>
-</html>
-```
-
-The API JavaScript file can normally be found in the following DocSpace folder:
-
-`{PORTAL\_SRC}/static/scripts/sdk/2.1.0/api.js`
-
-where **\{PORTAL\_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
-
-## Step 3. Getting the base class
-
-When the API JavaScript is connected to the page, get the base class that provides all the basic functionality of *api.js*:
-
-| Class        | Description                                                                                                                               |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| DocSpace.SDK | Defines the DocSpace document manager and allows you to perform operations with rooms, folders, and documents within the DocSpace portal. |
-
-## Step 4. Authorizing
-
-*api.js* uses the active DocSpace application sessions to authenticate users. If the user is logged in to the DocSpace portal that the SDK will connect to, then *api.js* recognizes and uses that active session.
-
-If the users are not authenticated, they will see a page asking them to sign in to DocSpace the first time they use it. Authentication is also possible through the SDK [methods](../usage-sdk/classes/SDKInstance.md#login).
-
-## Step 5. Initializing
-
-:::warning
-When working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
-:::
-
-Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDK.md#initframe) method with the SDK config passed to it:
-
-``` ts
-const docSpace = DocSpace.SDK.initFrame({
-  frameId: "frameId",
-  showMenu: true,
-})
-```
-
-You can use other available [methods](../usage-sdk/classes/SDK.md) to initialize DocSpace.
-
-The full list of [config parameters](../usage-sdk/type-aliases/TFrameConfig.md) can be found here.
-
-## Step 6. Using
-
-After initialization, the current SDK instance can be accessed by using its [frameId](../usage-sdk/type-aliases/TFrameConfig.md#frameid). The list of current SDK instances is available in the *DocSpace.SDK.frames* array. To get the specific SDK instance, use the following string:
-
-``` ts
-DocSpace.SDK.frames[frameId]
-```
+| Page | What's embedded |
+| --- | --- |
+| [Home](https://demo-embed.onlyoffice.com/) | Presentation playing in the Viewer mode |
+| [Program](https://demo-embed.onlyoffice.com/444-2/) | Spreadsheet in the Viewer mode; participant documents in an embedded file list |
+| [Abstract Submission](https://demo-embed.onlyoffice.com/abstract-submission/) | Fillable form open in the Editor mode |
+| [Promotional Toolkit](https://demo-embed.onlyoffice.com/promotional-toolkit/) | Marketing materials browsable in an embedded file list |
+| [Registration](https://demo-embed.onlyoffice.com/registration-2/) | Price list spreadsheet in the Viewer mode |
 
 ## Example
 
