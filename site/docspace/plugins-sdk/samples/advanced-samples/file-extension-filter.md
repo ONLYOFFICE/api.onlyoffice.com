@@ -315,7 +315,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md).The plugin includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (origin, proxy, prefix). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
 
 <details>
   <summary>ExtSearchPlugin class</summary>
@@ -616,7 +616,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Administrator ⋮ → Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 

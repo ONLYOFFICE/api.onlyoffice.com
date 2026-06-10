@@ -375,7 +375,7 @@ This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles 
 ## Step 9: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Administrator ⋮ → Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 

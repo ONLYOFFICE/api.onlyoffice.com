@@ -601,13 +601,13 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Administrator ⋮ → Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 7: Test the plugin
 
-1. Go to **Admin Panel → Settings → Plugins**
+1. Go to **Administrator ⋮ → Settings → Integration → Plugins**
 2. Click ![Settings icon](/assets/images/docspace/settings-icon.png) for your plugin.
 3. Enter test values in the **URL**, **Login**, and **Password** fields.
 4. Click **Save**.
