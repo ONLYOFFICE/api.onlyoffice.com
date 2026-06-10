@@ -9,14 +9,14 @@ tags: ["DocSpace", "Embed SDK", "Integration", "Security"]
 Choosing the right authentication approach depends on who your users are and whether they have DocSpace accounts:
 
 - **Your users already have DocSpace accounts** — rely on the existing browser session. The iframe picks it up automatically. See [Session-based authentication](#session-based-authentication) below.
-- **You control the login UI** — authenticate programmatically using `getHashSettings()` → `createHash()` → `login()` before initializing any frame. See the [Authorization sample](/docspace/javascript-sdk/samples/advanced-samples/authorization.md) and [Login sample](/docspace/javascript-sdk/samples/basic-samples/login.md).
+- **You control the login UI** — authenticate programmatically using `getHashSettings()` → `createHash()` → `login()` before initializing any frame. See the [Authorization sample](../samples/advanced-samples/authorization.md) and [Login sample](../samples/basic-samples/login.md).
 - **Your users have no DocSpace account** — embed a public room using `requestToken`. No login required on the viewer's side. See [Token-based auth for public rooms](#token-based-auth-for-public-rooms) below.
 
 ## Session-based authentication
 
 *api.js* uses the active DocSpace application sessions to authenticate users. If the user is logged in to the DocSpace portal that the SDK will connect to, then *api.js* recognizes and uses that active session.
 
-If the users are not authenticated, they will see a page asking them to sign in to DocSpace whenever they are not already signed in. Authentication is also possible through the SDK [login](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) method.
+If the users are not authenticated, they will see a page asking them to sign in to DocSpace whenever they are not already signed in. Authentication is also possible through the SDK [login](../usage-sdk/classes/SDKInstance.md#login) method.
 
 ## Token-based auth for public rooms
 
