@@ -115,7 +115,7 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
+- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onAddComment](/docs/plugins/interacting-with-editors/document-api/Events/onAddComment.md)
 - [onChangeCommentData](/docs/plugins/interacting-with-editors/document-api/Events/onChangeCommentData.md)
 - [onRemoveComment](/docs/plugins/interacting-with-editors/document-api/Events/onRemoveComment.md)
