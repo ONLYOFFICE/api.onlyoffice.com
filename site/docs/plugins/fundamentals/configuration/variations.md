@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Variations
 
 Plugin variations - subplugins that are created inside the origin plugin for the following purposes:

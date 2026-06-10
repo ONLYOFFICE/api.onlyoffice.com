@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # 配置 Ollama 的 CORS
 
 ## 为本地请求配置 OLLAMA_ORIGINS

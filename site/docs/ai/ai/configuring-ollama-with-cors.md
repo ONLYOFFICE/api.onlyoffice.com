@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Configuring Ollama with CORS
 
 ## Configuring OLLAMA_ORIGINS for local requests

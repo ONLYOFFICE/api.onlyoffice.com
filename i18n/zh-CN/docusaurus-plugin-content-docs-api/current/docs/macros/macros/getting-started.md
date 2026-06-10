@@ -30,8 +30,8 @@ ONLYOFFICE 选择 JavaScript 作为宏的脚本语言的原因有以下几点：
 5. 为你的宏[编写](./writing-macros.md)代码，或者从[宏示例](/samples/?doctype=docs&text=macros)中复制示例宏代码并粘贴到宏编辑器的工作区。
 ![宏窗口](/assets/images/plugins/macro-window.png#gh-light-mode-only)![宏窗口](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
 
-7. 若要重命名宏，请点击宏名称旁边的![三点图标](/assets/images/plugins/dots.svg#gh-light-mode-only)![三点图标](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only)，然后选择**重命名**。输入宏的新名称并点击**确定**。
-8. 准备就绪后，点击![运行图标](/assets/images/plugins/play.svg)在文档中运行你的代码。
+6. 若要重命名宏，请点击宏名称旁边的![三点图标](/assets/images/plugins/dots.svg#gh-light-mode-only)![三点图标](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only)，然后选择**重命名**。输入宏的新名称并点击**确定**。
+7. 准备就绪后，点击![运行图标](/assets/images/plugins/play.svg)在文档中运行你的代码。
 
 
 ![运行宏](/assets/images/plugins/run-macro.png#gh-light-mode-only)![运行宏](/assets/images/plugins/run-macro.dark.png#gh-dark-mode-only)

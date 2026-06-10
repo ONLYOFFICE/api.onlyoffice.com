@@ -1,3 +1,7 @@
+---
+sidebar_position: -1
+---
+
 # Getting started
 
 ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
