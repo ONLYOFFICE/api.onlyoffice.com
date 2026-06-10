@@ -66,7 +66,7 @@ GitHub 仓库：[templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/mas
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

@@ -286,9 +286,9 @@ You can send a message to the plugin modal window / panel by using the **SendToW
 window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
-### attachEvent
+### attachEditorEvent
 
-You can subscribe to the messages from the plugin by using the **attachEvent** method in the window / panel code.
+You can subscribe to the messages from the plugin by using the **attachEditorEvent** method in the window / panel code.
 
 **Parameters**:
 
@@ -302,7 +302,7 @@ You can subscribe to the messages from the plugin by using the **attachEvent** m
 **Example**:
 
 ```ts
-Asc.plugin.attachEvent("messageName", (message) => {
+Asc.plugin.attachEditorEvent("messageName", (message) => {
   console.log(message);
 });
 ```

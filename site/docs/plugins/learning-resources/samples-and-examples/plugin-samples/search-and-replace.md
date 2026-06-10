@@ -105,7 +105,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - executeMethod ("[SearchAndReplace](/docs/plugins/interacting-with-editors/document-api/Methods/SearchAndReplace.md)")
 
 ## Support

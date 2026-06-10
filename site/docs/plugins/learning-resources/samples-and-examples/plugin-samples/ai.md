@@ -154,10 +154,10 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - [executeMethod ("CloseWindow")](/docs/plugins/customization/windows-and-panels.md#closing-a-window)
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#editorType)
-- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

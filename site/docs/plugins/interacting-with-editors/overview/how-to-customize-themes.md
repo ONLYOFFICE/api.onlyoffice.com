@@ -29,10 +29,10 @@ function onThemeChanged(theme) {
 
 There are two ways to attach the theme change event:
 
-**Option 1: Using attachEvent method**
+**Option 1: Using attachEditorEvent method**
 
 ```ts
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 **Option 2: Direct assignment**
@@ -73,7 +73,7 @@ function onThemeChanged(theme) {
 
 // Attach the event handler
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 ### Applying CSS for different themes
@@ -98,7 +98,7 @@ function onThemeChanged(theme) {
 }
 
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 Then define your CSS rules:

@@ -286,9 +286,9 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
 window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}])
 ```
 
-### attachEvent
+### attachEditorEvent
 
-你可以在窗口或面板的代码中使用 **attachEvent** 方法订阅来自插件的消息。
+你可以在窗口或面板的代码中使用 **attachEditorEvent** 方法订阅来自插件的消息。
 
 **参数说明**:
 
@@ -302,7 +302,7 @@ window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 **示例**:
 
 ```ts
-Asc.plugin.attachEvent("messageName", (message) => {
+Asc.plugin.attachEditorEvent("messageName", (message) => {
   console.log(message)
 })
 ```

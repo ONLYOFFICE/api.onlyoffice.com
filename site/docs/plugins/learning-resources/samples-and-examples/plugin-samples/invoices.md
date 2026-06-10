@@ -64,7 +64,7 @@ Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

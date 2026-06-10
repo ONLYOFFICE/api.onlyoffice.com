@@ -89,7 +89,7 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

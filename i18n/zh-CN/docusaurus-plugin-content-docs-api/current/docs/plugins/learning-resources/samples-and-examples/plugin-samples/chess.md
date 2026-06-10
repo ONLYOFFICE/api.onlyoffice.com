@@ -167,14 +167,14 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - onExternalMouseUp
 - [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#objectId)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.height](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.objectId](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.resize](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 
