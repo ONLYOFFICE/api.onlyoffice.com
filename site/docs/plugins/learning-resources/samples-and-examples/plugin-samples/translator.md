@@ -5,7 +5,7 @@ tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presenta
 
 # Translator
 
-Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) for translating the selected text into other languages.
+Connects the [Google Translate API](https://cloud.google.com/translate) for translating the selected text into other languages.
 
 **Plugin type:** visual, non-system.
 
@@ -49,7 +49,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 
    - [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/jQuery.license).
    - [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/Select2.license).
-   - [Google Translate API](https://cloud.google.com/translate?hl=ru) enables translation between languages. License: [MIT License](https://github.com/matheuss/google-translate-api/blob/master/LICENSE).
+   - [Google Translate API](https://cloud.google.com/translate) enables translation between languages. License: [MIT License](https://github.com/matheuss/google-translate-api/blob/master/LICENSE).
 
 ## Config
 
@@ -117,7 +117,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)

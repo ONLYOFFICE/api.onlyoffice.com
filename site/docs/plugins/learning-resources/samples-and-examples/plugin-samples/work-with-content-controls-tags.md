@@ -112,8 +112,8 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
 - executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - executeMethod ("[SelectContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")

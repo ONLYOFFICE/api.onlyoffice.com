@@ -105,8 +105,8 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
 - executeMethod ("[AddContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md)")
 - executeMethod ("[InsertAndReplaceContentControls](/docs/plugins/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 

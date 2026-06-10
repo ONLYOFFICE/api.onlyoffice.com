@@ -21,7 +21,7 @@ Use the `RegisteredFunction` object to define the function's name, expected para
 ```javascript
 let func = new RegisteredFunction();
 func.name = "commentText";
-func.params = [
+func.parameters = [
   "type (string): whether to add as a 'comment' or as a 'footnote' (default is 'comment')",
 ];
 func.examples = [
@@ -38,7 +38,7 @@ func.description = "Use this function if you are asked to comment or explain any
 **Key fields explained:**
 
 - `name` — The function name the AI model will invoke
-- `params` — Parameters the function expects from the AI as a JSON object
+- `parameters` — Parameters the function expects from the AI as a JSON object
 - `examples` — Sample invocations that teach the AI the correct calling syntax
 - `description` — Tells the AI what the function does and when to use it
 

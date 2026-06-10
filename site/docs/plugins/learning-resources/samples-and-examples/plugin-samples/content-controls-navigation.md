@@ -118,8 +118,8 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
 - [onTargetPositionChanged](/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")

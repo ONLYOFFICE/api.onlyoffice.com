@@ -105,7 +105,7 @@ Repository on GitHub: [example_add_comment_in_cell](https://github.com/ONLYOFFIC
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
 - [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 

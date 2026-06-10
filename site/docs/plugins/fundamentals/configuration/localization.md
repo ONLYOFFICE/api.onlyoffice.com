@@ -303,7 +303,8 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
     "de-WRONG-NAME": "Code hervorheben",
     "es": "Resaltar el código",
     "fr": "Code en surbrillance"
-},
+  }
+}
 ```
 
 :::
@@ -318,7 +319,8 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
     "de": "Code hervorheben",
     "es": "Resaltar el código",
     "fr": "Code en surbrillance"
-},
+  }
+}
 ```
 
 :::

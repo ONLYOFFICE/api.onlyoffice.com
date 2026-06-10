@@ -21,7 +21,7 @@ title: 注释文本 — 自定义 AI 工具
 ```javascript
 let func = new RegisteredFunction();
 func.name = "commentText";
-func.params = [
+func.parameters = [
   "type (string): whether to add as a 'comment' or as a 'footnote' (default is 'comment')",
 ];
 func.examples = [
@@ -38,7 +38,7 @@ func.description = "Use this function if you are asked to comment or explain any
 **关键字段说明：**
 
 - `name` — AI 模型调用的函数名称
-- `params` — 函数期望从 AI 接收的 JSON 参数
+- `parameters` — 函数期望从 AI 接收的 JSON 参数
 - `examples` — 帮助 AI 学习正确调用语法的示例调用
 - `description` — 告知 AI 函数的用途及调用时机
 

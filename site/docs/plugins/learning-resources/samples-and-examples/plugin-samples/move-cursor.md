@@ -105,7 +105,7 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
 - executeMethod ("[MoveCursorToStart](/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToStart.md)")
 - executeMethod ("[MoveCursorToEnd](/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToEnd.md)")
 

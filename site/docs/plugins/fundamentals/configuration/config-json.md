@@ -142,7 +142,7 @@ Plugin variations, or subplugins, that are created inside the origin plugin. For
       {
         "text": "Cancel",
         "primary": false,
-        "isviewer": false,
+        "isViewer": false,
         "textLocale": {
           "fr": "Annuler",
           "es": "Cancelar"
@@ -200,7 +200,7 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
   {
     "text": "Cancel",
     "primary": false,
-    "isviewer": false,
+    "isViewer": false,
     "textLocale": {
       "fr": "Annuler",
       "es": "Cancelar"
@@ -234,7 +234,7 @@ The skinnable plugin button used in the plugin interface (used for visual plugin
         {
           "text": "Cancel",
           "primary": false,
-          "isviewer": false,
+          "isViewer": false,
           "textLocale": {
             "fr": "Annuler",
             "es": "Cancelar"
@@ -732,7 +732,7 @@ The plugin version.
         {
           "text": "Cancel",
           "primary": false,
-          "isviewer": false,
+          "isViewer": false,
           "textLocale": {
             "fr": "Annuler",
             "es": "Cancelar"

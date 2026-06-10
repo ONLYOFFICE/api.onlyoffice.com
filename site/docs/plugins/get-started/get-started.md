@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
 
-If you prefer to start coding right away, go directly to the [quick start guides](../../macros/get-started/quick-start/hello-world-macro.md) or try things out in the [interactive playground](playground.md).
+If you prefer to start coding right away, go directly to the [quick start guides](quick-start/hello-world-plugin.md) or try things out in the [interactive playground](playground.md).
 
 ## What you can build {#what-you-can-build}
 
@@ -162,7 +162,9 @@ Answer these questions to find your ideal path:
 
 **Start building:**
 
-- [Quick start guides](../../macros/get-started/quick-start/hello-world-macro.md)
+- [Plugin quick start](quick-start/hello-world-plugin.md)
+- [Macro quick start](../../macros/get-started/quick-start/hello-world-macro.md)
+- [AI quick start](../../ai/get-started/quick-start/comment-text-ai-tool.md)
 - [Plugin tutorial](../fundamentals/getting-started/what-is-a-plugin.md)
 - [Macro tutorial](../../macros/macros/getting-started.md)
 - [AI integration](../../ai/ai/ai-plugin.md)

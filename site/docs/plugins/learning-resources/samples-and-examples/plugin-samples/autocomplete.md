@@ -91,7 +91,7 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 ## Methods and events
 
 - [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugins/interacting-with-editors/overview/overview/#how-it-works)
 - [inputHelper_onSelectItem](/docs/plugins/customization/input-helper.md)
 - [onInputHelperClear](/docs/plugins/customization/input-helper.md)
 - [onInputHelperInput](/docs/plugins/customization/input-helper.md)
