@@ -1,4 +1,4 @@
----
+﻿---
 description: Count paragraphs, words, and characters in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

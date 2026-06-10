@@ -1,4 +1,4 @@
----
+﻿---
 description: Extract text from images using TesseractJS OCR.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -200,7 +200,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

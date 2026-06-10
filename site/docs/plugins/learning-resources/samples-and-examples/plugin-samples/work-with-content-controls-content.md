@@ -1,4 +1,4 @@
----
+﻿---
 description: Copy content between content controls.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

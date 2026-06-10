@@ -1,4 +1,4 @@
-# AI
+﻿# AI
 
 将 AI 提供商（如 OpenAI、DeepSeek）接入 ONLYOFFICE 编辑器，实现智能文本生成、编辑、摘要提取及宏自动创建功能。
 
@@ -149,10 +149,10 @@ GitHub 仓库：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/mas
 - [executeMethod ("CloseWindow")](/docs/plugins/customization/windows-and-panels.md#closing-a-window)
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## 支持
 

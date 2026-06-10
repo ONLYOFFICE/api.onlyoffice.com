@@ -1,4 +1,4 @@
-# 语音朗读
+﻿# 语音朗读
 
 将选中的文本转换为语音。该插件使用 [guessLanguage](https://richtr.github.io/guessLanguage.js/) 来识别语言，并通过 [Web Speech API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Speech_API) 的 [SpeechSynthesis](https://developer.mozilla.org/zh-CN/docs/Web/API/SpeechSynthesis) 接口实现朗读。
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Insert special symbols from a character table.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装方式
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) 下载此插件，并根据以下指南完成安装：[桌面端](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) 下载此插件，并根据以下指南完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -109,11 +109,11 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
 - [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](/docs/plugins/interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## 支持
 

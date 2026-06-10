@@ -157,4 +157,4 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
-- [FAQ](../../../plugins/more-information/faq.md) — Frequently asked questions
+- [FAQ](../../more-information/faq.md) — Frequently asked questions

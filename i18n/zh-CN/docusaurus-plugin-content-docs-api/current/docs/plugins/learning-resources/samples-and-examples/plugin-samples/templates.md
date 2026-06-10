@@ -1,4 +1,4 @@
----
+﻿---
 description: Insert document templates from Document Builder scripts.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/templates) 下载该插件，并根据以下说明进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/templates) 下载该插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -66,7 +66,7 @@ GitHub 仓库：[templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/mas
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## 支持
 

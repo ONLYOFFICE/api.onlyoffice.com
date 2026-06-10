@@ -1,4 +1,4 @@
----
+﻿---
 description: Embed a chess board as an OLE object in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -172,14 +172,14 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.height](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## Support
 

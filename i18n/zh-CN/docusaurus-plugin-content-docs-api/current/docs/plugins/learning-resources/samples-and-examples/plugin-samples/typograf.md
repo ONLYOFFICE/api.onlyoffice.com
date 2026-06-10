@@ -1,4 +1,4 @@
-# Typograf（排版助手）
+﻿# Typograf（排版助手）
 
 连接 [Typograf](https://github.com/typograf/typograf) 助手，以在发布前修正文本文字中的排版错误。该插件可以自动插入不间断空格、删除多余空格、修复轻微拼写错误、插入正确引号、将连字符替换为破折号等。
 
@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 企业版和社区版（文档 + 工作区）中默认提供。
 
-你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/typograf) 下载该插件，并根据以下指南进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/typograf) 下载该插件，并根据以下指南进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -135,7 +135,7 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [executeMethod ("ReplaceTextSmart")](/docs/plugins/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## 支持
 

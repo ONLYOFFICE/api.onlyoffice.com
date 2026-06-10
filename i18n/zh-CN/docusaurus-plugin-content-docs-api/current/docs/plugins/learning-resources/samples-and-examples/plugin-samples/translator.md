@@ -1,4 +1,4 @@
-# 翻译器
+﻿# 翻译器
 
 连接 [Google Translate API](https://cloud.google.com/translate?hl=zh)，用于将选中的文本翻译成其他语言。
 
@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 该插件在 ONLYOFFICE 编辑器的云端、本地部署和桌面版本中默认提供。
 
-如需移除该插件，请参阅以下指南：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+如需移除该插件，请参阅以下指南：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
 
 插件 GUID：`{7327FC95-16DA-41D9-9AF2-0E7F449F6800}`
 
@@ -121,7 +121,7 @@ GitHub 仓库：[translator](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 - [executeMethod ("GetSelectionType")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectionType.md)
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## 支持
 

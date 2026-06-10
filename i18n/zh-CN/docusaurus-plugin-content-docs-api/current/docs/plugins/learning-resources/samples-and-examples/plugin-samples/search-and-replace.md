@@ -1,4 +1,4 @@
----
+﻿---
 description: Search for text and replace it interactively.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

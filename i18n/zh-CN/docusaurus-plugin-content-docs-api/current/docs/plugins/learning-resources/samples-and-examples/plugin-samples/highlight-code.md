@@ -1,4 +1,4 @@
-# 代码高亮
+﻿# 代码高亮
 
 连接 [highlight.js 库](https://highlightjs.org/)实现代码语法高亮，支持必要的语言、样式和背景颜色。
 

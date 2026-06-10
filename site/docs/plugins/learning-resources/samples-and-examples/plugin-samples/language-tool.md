@@ -1,4 +1,4 @@
----
+﻿---
 description: Check grammar, spelling, and style using LanguageTool.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -194,8 +194,8 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [executeMethod ("GetVersion")](/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
 - [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

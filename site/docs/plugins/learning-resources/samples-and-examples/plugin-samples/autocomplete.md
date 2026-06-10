@@ -1,4 +1,4 @@
----
+﻿---
 description: Provide input suggestions from a dictionary while typing.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

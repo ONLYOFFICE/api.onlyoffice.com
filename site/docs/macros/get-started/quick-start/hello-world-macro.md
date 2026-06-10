@@ -11,7 +11,7 @@ Macros are quite simple — pure JavaScript with no installation required.
 ## Step 1: Open the macro editor
 
 1. Open any document in ONLYOFFICE.
-2. Go to **Tools → Macros**.
+2. Open the **View** tab and click **Macros**.
 3. The macro editor will open.
 
 ## Step 2: Write your first macro
@@ -52,7 +52,7 @@ Paste this code into the editor:
 
 1. Click **Save** in the macro editor.
 2. Give it a name like "Insert Blue Text".
-3. Now you can run it anytime from **Tools → Macros → [Your Macro Name]**.
+3. Now you can run it anytime from **View → Macros → [Your Macro Name]**.
 
 ## Practice macros
 
@@ -152,4 +152,4 @@ Try these examples to learn more:
 
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
-- [FAQ](../../../plugins/more-information/faq.md) — Frequently asked questions
+- [FAQ](../../more-information/faq.md) — Frequently asked questions

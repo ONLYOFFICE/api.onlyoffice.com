@@ -1,4 +1,4 @@
-# 国际象棋
+﻿# 国际象棋
 
 在文档编辑器中插入一个国际象棋棋盘对象。该对象支持以 *FEN* 格式编辑和保存棋局。
 
@@ -14,7 +14,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或 [云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或 [云端版](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -167,14 +167,14 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - onExternalMouseUp
 - [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.height](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## 支持
 

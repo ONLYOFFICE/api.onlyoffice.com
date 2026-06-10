@@ -1,4 +1,4 @@
----
+﻿---
 description: Protect documents with a watermark overlay.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

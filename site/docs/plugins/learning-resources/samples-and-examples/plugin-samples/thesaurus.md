@@ -1,4 +1,4 @@
----
+﻿---
 description: Search for word synonyms and antonyms.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

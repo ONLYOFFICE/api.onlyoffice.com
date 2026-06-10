@@ -11,7 +11,7 @@ title: Hello world 宏
 ## 第 1 步：打开宏编辑器
 
 1. 在 ONLYOFFICE 中打开任意文档。
-2. 前往**工具 → 宏**。
+2. 打开**查看**选项卡，点击**宏**。
 3. 宏编辑器将会打开。
 
 ## 第 2 步：编写您的第一个宏
@@ -52,7 +52,7 @@ title: Hello world 宏
 
 1. 点击宏编辑器中的**保存**。
 2. 为其命名，例如"插入蓝色文本"。
-3. 之后可随时从**工具 → 宏 → [您的宏名称]**运行它。
+3. 之后可随时从**查看 → 宏 → [您的宏名称]**运行它。
 
 ## 练习宏
 
@@ -152,4 +152,4 @@ title: Hello world 宏
 
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
-- [常见问题](../../../plugins/more-information/faq.md) — 常见问题解答
+- [常见问题](../../more-information/faq.md) — 常见问题解答

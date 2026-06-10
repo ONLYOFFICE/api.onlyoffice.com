@@ -1,4 +1,4 @@
----
+﻿---
 description: Add an animated clippy assistant to the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

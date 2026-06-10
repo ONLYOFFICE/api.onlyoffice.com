@@ -1,4 +1,4 @@
-# YouTube
+﻿# YouTube
 
 连接 [youtube iframe_api](https://developers.google.com/youtube/iframe_api_reference)，用于将 YouTube 视频作为 OLE 对象嵌入文档，并通过调整大小、旋转和改变位置来管理它们。
 
@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 云端、本地部署及桌面版本中默认可用。
 
-您也可以按照 [桌面](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明，将其移除。
+您也可以按照 [桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)的安装说明，将其移除。
 
 插件 GUID：`{38E022EA-AD92-45FC-B22B-49DF39746DB4}`。
 
@@ -131,14 +131,14 @@ GitHub 仓库：[youtube](https://github.com/ONLYOFFICE/onlyoffice.github.io/tre
 - [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
 - [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.data](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.height](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## 支持
 

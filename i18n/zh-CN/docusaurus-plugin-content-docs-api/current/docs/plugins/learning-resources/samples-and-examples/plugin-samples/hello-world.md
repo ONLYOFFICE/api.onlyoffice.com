@@ -1,4 +1,4 @@
----
+﻿---
 description: "Insert 'Hello world!' text on button click."
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照 [桌面](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照 [桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md) 或[云端](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
 
 ## 使用
 
@@ -89,7 +89,7 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## 支持
 

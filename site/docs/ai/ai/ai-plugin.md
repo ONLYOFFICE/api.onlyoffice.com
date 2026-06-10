@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# Getting started
+# AI plugin
 
 AI is a background plugin that connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
 

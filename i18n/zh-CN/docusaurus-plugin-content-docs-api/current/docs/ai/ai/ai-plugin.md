@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# 入门指南
+# AI 插件
 
 AI 是一个后台插件，它将 AI 提供商（例如 OpenAI、DeepSeek）与 ONLYOFFICE 编辑器相连接，能够实现智能文本生成、编辑、摘要提取以及自动宏创建等功能。
 

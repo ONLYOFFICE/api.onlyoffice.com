@@ -1,4 +1,4 @@
----
+﻿---
 description: Insert special symbols from a character table.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -109,11 +109,11 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
 - [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](/docs/plugins/interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## Support
 

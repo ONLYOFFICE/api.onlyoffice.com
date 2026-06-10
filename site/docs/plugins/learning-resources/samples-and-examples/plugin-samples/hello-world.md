@@ -1,4 +1,4 @@
----
+﻿---
 description: "Insert 'Hello world!' text on button click."
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -89,7 +89,7 @@ Repository on GitHub: [helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

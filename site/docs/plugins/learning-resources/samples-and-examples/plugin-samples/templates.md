@@ -1,4 +1,4 @@
----
+﻿---
 description: Insert document templates from Document Builder scripts.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -66,7 +66,7 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

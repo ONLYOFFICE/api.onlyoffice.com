@@ -1,4 +1,4 @@
----
+﻿---
 description: Edit images using the Toast UI Image Editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
@@ -197,7 +197,7 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - [executeMethod ("PutImageDataToSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
 - [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
 - [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## Support
 

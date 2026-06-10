@@ -157,4 +157,4 @@ func.call = async function (params) {
 
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
-- [常见问题](../../../plugins/more-information/faq.md) — 常见问题解答
+- [常见问题](../../more-information/faq.md) — 常见问题解答

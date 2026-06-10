@@ -1,4 +1,4 @@
----
+﻿---
 description: Insert template fields for invoice information.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices) 下载此插件，并根据以下说明进行安装：[桌面端安装教程](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [本地部署安装教程](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), [云端安装教程](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices) 下载此插件，并根据以下说明进行安装：[桌面端安装教程](../../tutorials/installing/onlyoffice-desktop-editors.md), [本地部署安装教程](../../tutorials/installing/onlyoffice-docs-on-premises.md), [云端安装教程](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -64,7 +64,7 @@ GitHub 仓库地址：[invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - [button](/docs/plugins/customization/custom-buttons.md)
 - [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## 支持
 

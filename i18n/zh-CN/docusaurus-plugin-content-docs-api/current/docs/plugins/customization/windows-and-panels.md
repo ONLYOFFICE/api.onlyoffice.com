@@ -224,7 +224,7 @@ window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 
 ```ts
 window.Asc.plugin.init = () => {
-  this.resizeWindow(392, 147, 392, 147, 392, 147)
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147)
 }
 ```
 
