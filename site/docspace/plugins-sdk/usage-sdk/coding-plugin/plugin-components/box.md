@@ -20,6 +20,22 @@ Example: \[inputComponent]
 
 To set borders to the Box component, use a stroke or the [IBorderProp](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts) interface.
 
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-box"
+
+### id
+
+Sets the HTML id attribute of the component.
+
+Type: string
+
+Example: "main-box"
+
 ## Example
 
 ``` ts

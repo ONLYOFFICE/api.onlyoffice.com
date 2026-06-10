@@ -8,6 +8,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Label](/assets/images/docspace/label.png)
 
+## Extra parameters
+
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-label"
+
 ## Example
 
 ``` ts

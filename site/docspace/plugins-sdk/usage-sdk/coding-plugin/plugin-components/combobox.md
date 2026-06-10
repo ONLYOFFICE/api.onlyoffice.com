@@ -10,6 +10,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts).
 
+## Extra parameters
+
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-combobox"
+
 ## Example
 
 ``` ts

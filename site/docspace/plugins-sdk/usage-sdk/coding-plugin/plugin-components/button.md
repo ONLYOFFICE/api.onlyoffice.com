@@ -92,6 +92,14 @@ Type: boolean
 
 Example: true
 
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-button"
+
 ## Example
 
 ``` ts

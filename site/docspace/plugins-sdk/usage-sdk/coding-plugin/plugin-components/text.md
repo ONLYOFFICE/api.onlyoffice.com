@@ -18,6 +18,14 @@ Type: string
 
 Example: "Sample for text component"
 
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-text"
+
 ## Example
 
 ``` ts

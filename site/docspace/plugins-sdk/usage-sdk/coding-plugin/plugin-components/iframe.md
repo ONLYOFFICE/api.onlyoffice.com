@@ -4,6 +4,16 @@ A component that is used to embed a third-party website into a modal window or t
 
 **Interface**: [IFrame](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts).
 
+## Extra parameters
+
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-iframe"
+
 ## Example
 
 ``` ts

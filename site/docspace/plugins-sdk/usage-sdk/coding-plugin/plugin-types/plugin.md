@@ -26,6 +26,14 @@ Stores callback which will be executed when uploading the plugin to the portal.
 
 Type: func
 
+### language
+
+Stores the current plugin locale.
+
+Type: [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts)
+
+Example: `PluginLocale.EN_US`
+
 ## Methods and their description
 
 ### updateStatus
@@ -50,15 +58,30 @@ Parameters:
 
 | Name     | Type | Example  | Description                                                                      |
 | -------- | ---- | -------- | -------------------------------------------------------------------------------- |
-| callback | fucn | callback | Defines callback which will be executed when uploading the plugin to the portal. |
+| callback | func | callback | Defines callback which will be executed when uploading the plugin to the portal. |
+
+### setLanguage
+
+Sets the plugin language. Called by the portal when the portal language changes.
+
+Parameters:
+
+| Name     | Type                                                                                                     | Example               | Description                      |
+| -------- | -------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------- |
+| language | [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts) | `PluginLocale.EN_US`  | Defines the new plugin language. |
+
+### getLanguage
+
+Gets the current plugin language. Returns a [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts) value.
 
 ## Example
 
 ``` ts
-import {type IPlugin, PluginStatus} from "@onlyoffice/docspace-plugin-sdk"
+import {type IPlugin, PluginLocale, PluginStatus} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IPlugin {
   status: PluginStatus = PluginStatus.active
+  language: PluginLocale = PluginLocale.EN_US
   onLoadCallback = async () => {}
 
   updateStatus = (status: PluginStatus) => {
@@ -71,6 +94,14 @@ class Plugin implements IPlugin {
 
   setOnLoadCallback = (callback: () => Promise<void>) => {
     this.onLoadCallback = callback
+  }
+
+  setLanguage = (language: PluginLocale) => {
+    this.language = language
+  }
+
+  getLanguage = () => {
+    return this.language
   }
 }
 ```

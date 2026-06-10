@@ -10,6 +10,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 To change the input size, use **InputSize** (*base, middle, big, huge, large*), for the input types, use **InputType** (*text* or *password*), and for the autocomplete feature, use **InputAutocomplete** (*on* or *off*). More information can be found [here](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts).
 
+## Extra parameters
+
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-input"
+
 ## Example
 
 ``` ts

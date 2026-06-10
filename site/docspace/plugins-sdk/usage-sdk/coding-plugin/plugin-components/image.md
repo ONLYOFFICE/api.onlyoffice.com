@@ -4,6 +4,16 @@ A component that is used to embed an image not from the *assets* folder into a m
 
 **Interface**: [IImage](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IImage.ts).
 
+## Extra parameters
+
+### className
+
+Sets a CSS class name applied to the component.
+
+Type: string
+
+Example: "my-image"
+
 ## Example
 
 ``` ts
