@@ -202,10 +202,10 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 | `ShowWindow`        | 打开插件窗口或面板。参阅[窗口和面板](../../customization/windows-and-panels.md#showing-a-window)。       |
 | `ActivateWindow`    | 激活插件窗口。参阅[窗口和面板](../../customization/windows-and-panels.md#activating-a-window)。           |
 | `CloseWindow`       | 关闭插件窗口。参阅[窗口和面板](../../customization/windows-and-panels.md#closing-a-window)。               |
-| `ResizeWindow`      | 调整插件窗口大小。参阅[窗口和面板](../../customization/windows-and-panels.md#resizing-a-window)。         |
-| `MouseMoveWindow`   | 向窗口发送鼠标移动事件。参阅[窗口和面板](../../customization/windows-and-panels.md#moving-a-window)。    |
-| `MouseUpWindow`     | 向窗口发送鼠标释放事件。参阅[窗口和面板](../../customization/windows-and-panels.md#moving-a-window)。    |
-| `SendToWindow`      | 向窗口发送消息。参阅[窗口和面板](../../customization/windows-and-panels.md#sending-a-message)。           |
+| `ResizeWindow`      | 调整插件窗口大小。参阅[窗口和面板](../../customization/windows-and-panels.md#resizewindow)。         |
+| `MouseMoveWindow`   | 向窗口发送鼠标移动事件。参阅[窗口和面板](../../customization/windows-and-panels.md#mousemovewindow)。    |
+| `MouseUpWindow`     | 向窗口发送鼠标释放事件。参阅[窗口和面板](../../customization/windows-and-panels.md#mouseupwindow)。    |
+| `SendToWindow`      | 向窗口发送消息。参阅[窗口和面板](../../customization/windows-and-panels.md#sendtowindow)。           |
 
 **输入助手**：
 

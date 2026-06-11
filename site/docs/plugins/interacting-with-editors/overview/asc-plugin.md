@@ -202,10 +202,10 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 | `ShowWindow`        | Opens a plugin window or panel. See [Windows and panels](../../customization/windows-and-panels.md#showing-a-window).       |
 | `ActivateWindow`    | Activates a plugin window. See [Windows and panels](../../customization/windows-and-panels.md#activating-a-window).         |
 | `CloseWindow`       | Closes a plugin window. See [Windows and panels](../../customization/windows-and-panels.md#closing-a-window).               |
-| `ResizeWindow`      | Resizes a plugin window. See [Windows and panels](../../customization/windows-and-panels.md#resizing-a-window).             |
-| `MouseMoveWindow`   | Sends a mouse move event to a window. See [Windows and panels](../../customization/windows-and-panels.md#moving-a-window).  |
-| `MouseUpWindow`     | Sends a mouse up event to a window. See [Windows and panels](../../customization/windows-and-panels.md#moving-a-window).    |
-| `SendToWindow`      | Sends a message to a window. See [Windows and panels](../../customization/windows-and-panels.md#sending-a-message).         |
+| `ResizeWindow`      | Resizes a plugin window. See [Windows and panels](../../customization/windows-and-panels.md#resizewindow).             |
+| `MouseMoveWindow`   | Sends a mouse move event to a window. See [Windows and panels](../../customization/windows-and-panels.md#mousemovewindow).  |
+| `MouseUpWindow`     | Sends a mouse up event to a window. See [Windows and panels](../../customization/windows-and-panels.md#mouseupwindow).    |
+| `SendToWindow`      | Sends a message to a window. See [Windows and panels](../../customization/windows-and-panels.md#sendtowindow).         |
 
 **Input helper**:
 

@@ -112,7 +112,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [ToolbarMenuMainItem](../customization/toolbar.md#toolbarmenumainitem) type to the simple type definitions.
 - Added the [ToolbarMenuTab](../customization/toolbar.md#toolbarmenutab) type to the simple type definitions.
 - Added the [ToolbarMenuItemType](../customization/toolbar.md#toolbarmenuitemtype) type to the simple type definitions.
-- Added the *icons* and *data* parameters to the [ContextMenuItem](../customization/context-menu.md#contextmenuitem) object.
+- Added the *icons* and *data* parameters to the [ContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#contextmenuitem) object.
 - Added the [menu](../fundamentals/configuration/config-json.md#variationsmenu) config parameter.
 
 ## Version 8.0

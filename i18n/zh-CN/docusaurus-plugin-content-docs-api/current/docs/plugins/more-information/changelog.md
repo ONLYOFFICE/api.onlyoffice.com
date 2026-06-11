@@ -75,7 +75,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 在简单类型定义中添加了[工具栏菜单主项](../customization/toolbar.md#toolbarmenumainitem)类型。
 - 在简单类型定义中添加了[工具栏菜单选项卡](../customization/toolbar.md#toolbarmenutab)类型。
 - 在简单类型定义中添加了[工具栏菜单项类型](../customization/toolbar.md#toolbarmenuitemtype)类型。
-- 向[上下文菜单项](../customization/context-menu.md#contextmenuitem)对象中添加了**图标**和**数据**参数。
+- 向[上下文菜单项](../interacting-with-editors/overview/asc-plugin.md#contextmenuitem)对象中添加了**图标**和**数据**参数。
 - 添加了[菜单](../structure/configuration/configuration.md#variationsmenu)配置参数。
 
 ## 版本 8.0
