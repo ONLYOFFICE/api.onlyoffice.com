@@ -19,7 +19,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) and install it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -167,19 +167,19 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [executeMethod ("AddOleObject")](../../../interacting-with-editors/document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](../../../interacting-with-editors/document-api/Methods/EditOleObject.md)
+- [info.data](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.height](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.imgSrc](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.mmToPx](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.objectId](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.resize](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## Support
 

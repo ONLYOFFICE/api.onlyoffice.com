@@ -132,7 +132,7 @@ func.call = async function (params) {
 };
 ```
 
-Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [CreateSolidFill](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateRGBColor](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateGradientStop](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateGradientStop.md), [CreateLinearGradientFill](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateLinearGradientFill.md), [SetBackground](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetPresentation](../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [CreateSolidFill](../../../office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateRGBColor](../../../office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateGradientStop](../../../office-api/usage-api/presentation-api/Api/Methods/CreateGradientStop.md), [CreateLinearGradientFill](../../../office-api/usage-api/presentation-api/Api/Methods/CreateLinearGradientFill.md), [SetBackground](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

@@ -23,7 +23,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/html) and install it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md) or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/html) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md) or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -142,10 +142,10 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [executeMethod ("PasteHtml")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("PasteHtml")](../../../interacting-with-editors/document-api/Methods/PasteHtml.md)
 
 ## Support
 

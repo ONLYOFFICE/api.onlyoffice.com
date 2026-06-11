@@ -146,7 +146,7 @@ let func = new RegisteredFunction({
   return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)  
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](../../../plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)  
 
 ## Result
 

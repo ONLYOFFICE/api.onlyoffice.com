@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+You can remove it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid: `{38E022EA-AD92-45FC-B22B-49DF39746DB4}`.
 
@@ -130,20 +130,20 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.data](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.height](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.imgSrc](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.mmToPx](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.objectId](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.resize](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("AddOleObject")](../../../interacting-with-editors/document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](../../../interacting-with-editors/document-api/Methods/EditOleObject.md)
+- [resizeWindow](../../../customization/windows-and-panels.md#interacting-with-a-window)
+- [info.data](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.guid](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.height](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.imgSrc](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.mmToPx](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.objectId](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.resize](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.width](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
 
 ## Support
 

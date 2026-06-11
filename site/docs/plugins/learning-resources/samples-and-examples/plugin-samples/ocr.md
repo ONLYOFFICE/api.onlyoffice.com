@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+You can remove it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid: `{440EBF13-9B19-4BD8-8621-05200E58140B}`.
 
@@ -196,11 +196,11 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [resizeWindow](../../../customization/windows-and-panels.md#interacting-with-a-window)
+- [info.recalculate](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # Calculate World Bank indicator
 
-Creates an [asynchronous custom function](/docs/macros/macros/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.
+Creates an [asynchronous custom function](../../macros/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.
 
 The following indicators can be calculated:
 

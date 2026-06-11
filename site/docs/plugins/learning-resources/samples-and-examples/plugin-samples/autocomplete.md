@@ -19,7 +19,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/autocomplete) and install it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/autocomplete) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -90,20 +90,20 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [inputHelper_onSelectItem](/docs/plugins/customization/input-helper.md)
-- [onInputHelperClear](/docs/plugins/customization/input-helper.md)
-- [onInputHelperInput](/docs/plugins/customization/input-helper.md)
-- [createInputHelper](/docs/plugins/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugins/interacting-with-editors/document-api/Methods/InputText.md)
-- [getInputHelper](/docs/plugins/customization/input-helper.md#getting-an-input-helper)
-- [InputHelper.createWindow](/docs/plugins/customization/input-helper.md#createwindow)
-- [InputHelper.getItems](/docs/plugins/customization/input-helper.md#getitems)
-- [InputHelper.getScrollSizes](/docs/plugins/customization/input-helper.md#getscrollsizes)
-- [InputHelper.setItems](/docs/plugins/customization/input-helper.md#setitems)
-- [InputHelper.show](/docs/plugins/customization/input-helper.md#show)
-- [InputHelper.unShow](/docs/plugins/customization/input-helper.md#unshow)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [inputHelper_onSelectItem](../../../customization/input-helper.md)
+- [onInputHelperClear](../../../customization/input-helper.md)
+- [onInputHelperInput](../../../customization/input-helper.md)
+- [createInputHelper](../../../customization/input-helper.md#creating-an-input-helper)
+- [executeMethod ("InputText")](../../../interacting-with-editors/document-api/Methods/InputText.md)
+- [getInputHelper](../../../customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](../../../customization/input-helper.md#createwindow)
+- [InputHelper.getItems](../../../customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](../../../customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](../../../customization/input-helper.md#setitems)
+- [InputHelper.show](../../../customization/input-helper.md#show)
+- [InputHelper.unShow](../../../customization/input-helper.md#unshow)
 
 ## Support
 

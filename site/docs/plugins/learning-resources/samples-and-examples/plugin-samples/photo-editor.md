@@ -19,7 +19,7 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+You can remove it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`.
 
@@ -188,16 +188,16 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetImageDataFromSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GerVersion")](/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PutImageDataToSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
-- [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [callCommand](../../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetImageDataFromSelection")](../../../interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
+- [executeMethod ("GerVersion")](../../../interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PutImageDataToSelection")](../../../interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
+- [resizeWindow](../../../customization/windows-and-panels.md#interacting-with-a-window)
+- [Asc.scope](../../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## Support
 

@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -184,18 +184,18 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Methods and events
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onExternalMouseUp](/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onTranslate](/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [button](../../../customization/custom-buttons.md)
+- [init](../../../interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [callCommand](../../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetSelectedText")](../../../interacting-with-editors/document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](../../../interacting-with-editors/document-api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](../../../interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](../../../interacting-with-editors/document-api/Methods/PasteText.md)
+- [Asc.scope](../../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.recalculate](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## Support
 

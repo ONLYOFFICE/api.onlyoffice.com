@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # Weighted average function
 
-Creates a [custom function](/docs/macros/macros/adding-custom-functions.md) to calculate a weighted average.
+Creates a [custom function](../../macros/adding-custom-functions.md) to calculate a weighted average.
 
 ```ts
 (function () {
