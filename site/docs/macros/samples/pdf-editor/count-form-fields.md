@@ -65,7 +65,7 @@ Counts the number of form fields in a document and categorizes them by type.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md)
 
 ## Result
 
