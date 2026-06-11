@@ -218,3 +218,122 @@ The function called when saving the data that was transferred in the [settings](
     settings: tokenInput.value,
   }
   ```
+
+## showMediaViewer
+
+The function called when opening the media viewer. It does not work if the [mediaViewerProps](./plugin-message.md#mediaviewerprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.showMediaViewer],
+    mediaViewerProps: {fileId: "file-123", title: "image.png"},
+  }
+  ```
+
+## updateMediaViewer
+
+The function called when updating the media viewer state. It does not work if the [mediaViewerProps](./plugin-message.md#mediaviewerprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.updateMediaViewer],
+    mediaViewerProps: {fileId: "file-456"},
+  }
+  ```
+
+## closeMediaViewer
+
+The function called when closing the media viewer.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.closeMediaViewer],
+  }
+  ```
+
+## showSelector
+
+The function called when opening the selector. It does not work if the [selectorProps](./plugin-message.md#selectorprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.showSelector],
+    selectorProps: {type: SelectorType.Base, props: selectorProps},
+  }
+  ```
+
+## updateSelector
+
+The function called when updating the currently open selector. It does not work if the [selectorProps](./plugin-message.md#selectorprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.updateSelector],
+    selectorProps: {type: SelectorType.Base, props: updatedSelectorProps},
+  }
+  ```
+
+## closeSelector
+
+The function called when closing the selector.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.closeSelector],
+  }
+  ```
+
+## addFloatingOperationsButton
+
+The function called when adding a floating operations button. It does not work if the [floatingOperationsButtonProps](./plugin-message.md#floatingoperationsbuttonprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.addFloatingOperationsButton],
+    floatingOperationsButtonProps: buttonProps,
+  }
+  ```
+
+## updateFloatingOperationsButton
+
+The function called when updating the floating operations button state. It does not work if the [floatingOperationsButtonProps](./plugin-message.md#floatingoperationsbuttonprops) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.updateFloatingOperationsButton],
+    floatingOperationsButtonProps: updatedButtonProps,
+  }
+  ```
+
+## removeFloatingOperationsButton
+
+The function called when removing the floating operations button. It does not work if the [floatingOperationsButtonPropsId](./plugin-message.md#floatingoperationsbuttonpropsid) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.removeFloatingOperationsButton],
+    floatingOperationsButtonPropsId: "my-upload-button",
+  }
+  ```
+
+## navigate
+
+The function called when navigating to a specific path within the portal. It does not work if the [navigatePath](./plugin-message.md#navigatepath) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.navigate],
+    navigatePath: "/rooms/shared",
+  }
+  ```
+
+## openInfoPanel
+
+The function called when opening the info panel and displaying a specific tab. It does not work if the [infoPanelTab](./plugin-message.md#infopaneltab) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.openInfoPanel],
+    infoPanelTab: "details",
+  }
+  ```
