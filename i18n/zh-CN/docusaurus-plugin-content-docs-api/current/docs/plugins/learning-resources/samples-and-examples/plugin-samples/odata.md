@@ -114,8 +114,8 @@ GitHub 仓库：[odata](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/
 - button
 - init
 - onTranslate
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象
+- [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象
 
 ## 支持
 

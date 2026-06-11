@@ -76,7 +76,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 在简单类型定义中添加了[工具栏菜单选项卡](../customization/toolbar.md#toolbarmenutab)类型。
 - 在简单类型定义中添加了[工具栏菜单项类型](../customization/toolbar.md#toolbarmenuitemtype)类型。
 - 向[上下文菜单项](../interacting-with-editors/overview/asc-plugin.md#contextmenuitem)对象中添加了**图标**和**数据**参数。
-- 添加了[菜单](../structure/configuration/configuration.md#variationsmenu)配置参数。
+- 添加了[菜单](../fundamentals/configuration/config-json.md#variationsmenu)配置参数。
 
 ## 版本 8.0
 
@@ -118,7 +118,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 ## 版本 7.3
 
-- 向[初始化数据类型](../structure/configuration/configuration.md#variationsinitdatatype)配置参数添加了签名类型。
+- 向[初始化数据类型](../fundamentals/configuration/config-json.md#variationsinitdatatype)配置参数添加了签名类型。
 - 向 *window.Asc.plugin.executeMethod* 添加了添加加载项字段方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了获取所有加载项字段方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了[获取 VBA 宏](../interacting-with-editors/document-api/Methods/GetVBAMacros.md)方法。
@@ -137,7 +137,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 向 *window.Asc.plugin.executeMethod* 添加了接受修订更改方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了跳转到下一个修订更改方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了拒绝修订更改方法。
-- 更改了插件的[本地化](../structure/localization.md)方案。
+- 更改了插件的[本地化](../fundamentals/configuration/localization.md)方案。
 - 添加了 [ONLYOFFICE 插件市场](../development-workflow/installing-and-testing/docs-on-premises-installation.md#adding-plugins-through-the-plugin-manager-for-a-single-user)。
 - 向 *window.Asc.plugin.executeMethod* 添加了更改 OLE 对象方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了获取所有表单方法。

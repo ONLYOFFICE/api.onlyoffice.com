@@ -194,8 +194,8 @@ GitHub 仓库：[ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/ma
 - button
 - init
 - onTranslate
-- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
-- [info.recalculate](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [resizeWindow](/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
+- [info.recalculate](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

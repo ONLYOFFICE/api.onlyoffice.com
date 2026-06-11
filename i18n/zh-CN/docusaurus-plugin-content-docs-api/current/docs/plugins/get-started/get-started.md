@@ -142,7 +142,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 ### 文档
 
 - **[API 参考](../interacting-with-editors/overview/overview.md)** — 完整 API 文档
-- **[插件结构](../structure/configuration/configuration.md)** — 配置指南
+- **[插件结构](../fundamentals/configuration/config-json.md)** — 配置指南
 - **[宏指南](../../macros/macros/writing-macros.md)** — 宏开发
 - **[AI 集成](../../ai/ai/ai-plugin.md)** — AI 插件配置
 - **[常见问题](../more-information/faq.md)** — 常见问题解答
@@ -159,7 +159,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 **开始构建：**
 
 - [快速入门指南](../../macros/get-started/quick-start/hello-world-macro.md)
-- [插件教程](../structure/getting-started.md)
+- [插件教程](../fundamentals/getting-started/what-is-a-plugin.md)
 - [宏教程](../../macros/macros/getting-started.md)
 - [AI 集成](../../ai/ai/ai-plugin.md)
 

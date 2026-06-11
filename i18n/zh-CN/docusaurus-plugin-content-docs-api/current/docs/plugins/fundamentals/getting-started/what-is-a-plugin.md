@@ -248,4 +248,4 @@ import TabItem from '@theme/TabItem';
 
    插件将显示在**插件**选项卡中。您可以编辑插件并重新加载以查看变更。
    
-   要在网页版编辑器中进行插件调试，请参阅[此处](../tutorials/developing/for-web-editors.md#debugging)。
+   要在网页版编辑器中进行插件调试，请参阅[此处](../../development-workflow/debugging/for-web-editors.md)。
