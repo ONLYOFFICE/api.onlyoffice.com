@@ -72,7 +72,7 @@ sidebar_position: -5
 
 如果您希望加快生成宏的过程，从 9.0 版本开始，可以使用 ONLYOFFICE 内置的 AI 插件，通过描述自动生成 ONLYOFFICE 宏：
 
-1. 配置 AI 插件。详细的配置步骤可见于[此处](/docs/ai/ai/ai-plugin.md#configuring)。
+1. [配置 AI 插件](../../ai/ai/ai-plugin.md#configuring)。
 2. 打开**视图**选项卡，点击**宏**。
 3. 在**宏**窗口中点击 **AI** 图标，选择**根据描述创建**。
 

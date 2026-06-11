@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 title: 注释文本 — 自定义 AI 工具
 ---
 # 注释文本 — 自定义 AI 工具
@@ -108,6 +108,8 @@ func.call = async function (params) {
     false,
     async function (data) {
       if (!data) return;
+      Asc.scope.data = data;
+      Asc.scope.model = requestEngine.modelUI.name;
       await Asc.Editor.callCommand(function () {
         let range = Api.GetDocument().GetRangeBySelect();
         let comment = range.AddComment(
