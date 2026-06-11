@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-将以下代码分别保存到 *config.json*、*index.html* 和 *code.js* 文件中。从[此插件](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources)下载包含图标的 *resources* 文件夹。将所有文件和该文件夹放入插件目录中，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+将以下代码分别保存到 *config.json*、*index.html* 和 *code.js* 文件中。从[此插件](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources)下载包含图标的 *resources* 文件夹。将所有文件和该文件夹放入插件目录中，并根据以下说明进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 

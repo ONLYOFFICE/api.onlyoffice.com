@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 加权平均函数
 
-创建一个用于计算加权平均值的[自定义函数](../../../macros/adding-custom-functions.md)。
+创建一个用于计算加权平均值的[自定义函数](../../../macros/macros/adding-custom-functions.md)。
 
 ```ts
 (function () {
