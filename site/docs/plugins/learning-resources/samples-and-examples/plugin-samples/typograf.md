@@ -1,4 +1,4 @@
-﻿---
+---
 description: Fix typography and grammar issues in text.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

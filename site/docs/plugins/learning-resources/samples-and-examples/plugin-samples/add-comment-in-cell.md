@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add comments to spreadsheet cells.
 tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
 ---

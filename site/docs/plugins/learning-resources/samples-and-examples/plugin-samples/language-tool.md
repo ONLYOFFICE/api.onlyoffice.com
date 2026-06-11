@@ -1,4 +1,4 @@
-﻿---
+---
 description: Check grammar, spelling, and style using LanguageTool.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

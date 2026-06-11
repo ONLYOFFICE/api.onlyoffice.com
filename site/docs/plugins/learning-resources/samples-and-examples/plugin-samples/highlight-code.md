@@ -1,4 +1,4 @@
-﻿---
+---
 description: Apply syntax highlighting to code snippets.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

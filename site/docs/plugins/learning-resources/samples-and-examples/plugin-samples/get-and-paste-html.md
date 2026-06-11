@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get, modify, and paste back HTML content in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
