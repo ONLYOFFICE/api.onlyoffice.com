@@ -8,8 +8,7 @@ ONLYOFFICE plugins follow a modular architecture that separates the plugin inter
 
 ## How it works
 
-![ONLYOFFICE Plugin Architecture](/assets/images/plugins/plugin-architecture-detailed.svg#gh-light-mode-only)
-![ONLYOFFICE Plugin Architecture](/assets/images/plugins/plugin-architecture-detailed-dark.svg#gh-dark-mode-only)
+![ONLYOFFICE Plugin Architecture](/assets/images/plugins/plugin-architecture-detailed.svg)
 
 The plugin runs in a sandboxed iframe — it cannot directly access the editor's DOM or internal state. All interaction happens through the `window.Asc.plugin` API interface.
 
