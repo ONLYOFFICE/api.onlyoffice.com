@@ -215,12 +215,12 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## 方法与事件
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onTargetPositionChanged](/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- [attachContextMenuClickEvent](/docs/plugins/customization/context-menu.md#clicking-a-context-menu-item)
-- [executeMethod ("AddContextMenuItem")](/docs/plugins/customization/context-menu.md#creating-a-context-menu-item)
-- [executeMethod ("InputText")](/docs/plugins/interacting-with-editors/document-api/Methods/InputText.md)
+- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
+- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](../../../../../../../../../site/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- [attachContextMenuClickEvent](../../../../../../../../../site/docs/plugins/customization/context-menu.md#clicking-a-context-menu-item)
+- [executeMethod ("AddContextMenuItem")](../../../../../../../../../site/docs/plugins/customization/context-menu.md#creating-a-context-menu-item)
+- [executeMethod ("InputText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/InputText.md)
 
 ## 支持
 

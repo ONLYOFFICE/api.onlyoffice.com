@@ -104,10 +104,10 @@ GitHub 仓库：[示例：移动光标](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 方法和事件
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- executeMethod ("[MoveCursorToStart](/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToStart.md)")
-- executeMethod ("[MoveCursorToEnd](/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToEnd.md)")
+- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
+- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[MoveCursorToStart](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToStart.md)")
+- executeMethod ("[MoveCursorToEnd](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToEnd.md)")
 
 ## 支持
 

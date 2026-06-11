@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) 下载此插件，并根据以下方式的说明进行安装：[**桌面端**](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[**本地部署**](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或 [**云端**](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) 下载此插件，并根据以下方式的说明进行安装：[**桌面端**](../../tutorials/installing/onlyoffice-desktop-editors.md)、[**本地部署**](../../tutorials/installing/onlyoffice-docs-on-premises.md) 或 [**云端**](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -104,11 +104,11 @@ GitHub 仓库：[**example_customfields_add**](https://github.com/ONLYOFFICE/sdk
 
 ## 方法和事件
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- executeMethod ("[AddContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/docs/plugins/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
+- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
+- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[AddContentControl](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

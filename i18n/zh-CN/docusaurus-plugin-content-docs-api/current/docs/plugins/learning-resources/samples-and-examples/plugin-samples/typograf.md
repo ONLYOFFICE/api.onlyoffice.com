@@ -130,12 +130,12 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetVersion")](/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- [executeMethod ("ReplaceTextSmart")](/docs/plugins/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
-- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [executeMethod ("GetSelectedText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetVersion")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
+- [executeMethod ("ReplaceTextSmart")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
+- [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
 
 ## 支持
 

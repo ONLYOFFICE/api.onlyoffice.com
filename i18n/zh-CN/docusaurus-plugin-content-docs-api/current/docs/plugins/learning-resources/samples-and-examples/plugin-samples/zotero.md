@@ -170,7 +170,7 @@ GitHub 仓库地址：[zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - button
 - init
 - onTranslate
-- [executeMethod ("PasteHtml")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
 
 ## 支持
 

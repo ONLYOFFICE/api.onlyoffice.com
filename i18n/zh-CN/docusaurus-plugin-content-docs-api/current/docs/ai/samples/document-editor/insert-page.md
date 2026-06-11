@@ -107,7 +107,7 @@ let func = new RegisteredFunction({
 })();
 ```
 
-使用的方法：[GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [InsertBlankPage](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertBlankPage.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetDocument](../../../../../../../../site/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [InsertBlankPage](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertBlankPage.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

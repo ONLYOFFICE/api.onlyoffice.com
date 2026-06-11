@@ -183,14 +183,14 @@ GitHub 仓库：[language tool](https://github.com/ONLYOFFICE/onlyoffice.github.
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
-- [info.recalculate](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [callCommand](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetSelectedText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
+- [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
 
 ## 支持
 

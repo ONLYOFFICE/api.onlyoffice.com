@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
 
 ## 使用方法
 
@@ -117,15 +117,15 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 ## 方法和事件
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- [onTargetPositionChanged](/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
-- executeMethod ("[MoveCursorToContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToContentControl.md)")
-- [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
+- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- [onTargetPositionChanged](../../../../../../../../../site/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- executeMethod ("[GetAllContentControls](../../../../../../../../../site/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- executeMethod ("[GetCurrentContentControl](../../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
+- executeMethod ("[MoveCursorToContentControl](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/MoveCursorToContentControl.md)")
+- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

@@ -103,12 +103,12 @@ GitHub 仓库：[example_work_with_content_controls_content](https://github.com/
 
 ## 方法和事件
 
-- [button](/docs/plugins/customization/custom-buttons.md)
-- [init](/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
-- [Asc.scope](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
+- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[GetAllContentControls](../../../../../../../../../site/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

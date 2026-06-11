@@ -90,15 +90,15 @@ GitHub 仓库： [自动完成](https://github.com/ONLYOFFICE/onlyoffice.github.
 - inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- [createInputHelper](/docs/plugins/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugins/interacting-with-editors/document-api/Methods/InputText.md)
-- [getInputHelper](/docs/plugins/customization/input-helper.md#getting-an-input-helper)
-- [InputHelper.createWindow](/docs/plugins/customization/input-helper.md#createwindow)
-- [InputHelper.getItems](/docs/plugins/customization/input-helper.md#getitems)
-- [InputHelper.getScrollSizes](/docs/plugins/customization/input-helper.md#getscrollsizes)
-- [InputHelper.setItems](/docs/plugins/customization/input-helper.md#setitems)
-- [InputHelper.show](/docs/plugins/customization/input-helper.md#show)
-- [InputHelper.unShow](/docs/plugins/customization/input-helper.md#unshow)
+- [createInputHelper](../../../../../../../../../site/docs/plugins/customization/input-helper.md#creating-an-input-helper)
+- [executeMethod ("InputText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/InputText.md)
+- [getInputHelper](../../../../../../../../../site/docs/plugins/customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](../../../../../../../../../site/docs/plugins/customization/input-helper.md#createwindow)
+- [InputHelper.getItems](../../../../../../../../../site/docs/plugins/customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](../../../../../../../../../site/docs/plugins/customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](../../../../../../../../../site/docs/plugins/customization/input-helper.md#setitems)
+- [InputHelper.show](../../../../../../../../../site/docs/plugins/customization/input-helper.md#show)
+- [InputHelper.unShow](../../../../../../../../../site/docs/plugins/customization/input-helper.md#unshow)
 
 ## 支持
 
