@@ -214,7 +214,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 | `ShowInputHelper`   | 显示输入助手。参阅[输入助手](../../customization/input-helper.md)。                                        |
 | `UnShowInputHelper` | 隐藏输入助手。参阅[输入助手](../../customization/input-helper.md)。                                        |
 
-## 事件
+## 事件 {#events}
 
 事件是分配给 `Asc.plugin` 对象或通过 `attachEditorEvent` 绑定的函数。它们允许插件响应生命周期变化、用户操作和编辑器状态更新。
 
@@ -447,7 +447,7 @@ Asc.plugin.attachEditorEvent("onToolbarMenuClick", (id) => {
 
 有关完整指南，请参阅[工具栏](../../customization/toolbar.md)。
 
-## 最简示例
+## 最简示例 {#minimal-example}
 
 一个完整的 "Hello world" 插件，启动时插入文本：
 
