@@ -15,7 +15,7 @@ ONLYOFFICE macros use JavaScript syntax and [Office JavaScript API](../../office
 3. Click **Macros** to open the macro editor.
 4. Write or paste your macro code, then click ![Play icon](/assets/images/plugins/play.svg) to run it.
 
-For a step-by-step walkthrough, see the [Getting started](../macros/getting-started.md) page.
+For a step-by-step walkthrough, see the [Getting started](../guides/getting-started.md) page.
 
 ## Can macros access the file system or make network requests?
 
@@ -23,13 +23,13 @@ No. Macros run as JavaScript code inside the editor window and have no access to
 
 ## How do I debug a macro?
 
-Use the `debugger` keyword as a breakpoint in your script and open the browser developer console (**F12**). For ONLYOFFICE Desktop Editors, follow the [platform-specific debug instructions](../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md). See the full [Debugging](../macros/debugging.md) page for details.
+Use the `debugger` keyword as a breakpoint in your script and open the browser developer console (**F12**). For ONLYOFFICE Desktop Editors, follow the [platform-specific debug instructions](../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md). See the full [Debugging](../guides/debugging.md) page for details.
 
 ## Can I use my Microsoft Office (VBA) macros in ONLYOFFICE?
 
 Not directly, because ONLYOFFICE macros use JavaScript while Microsoft Office macros use Visual Basic for Applications (VBA). You can convert them in two ways:
 
-- **Automatically** — using the built-in AI plugin converter (recommended). See [Converting VBA macros](../macros/converting-vba-macros.md).
+- **Automatically** — using the built-in AI plugin converter (recommended). See [Converting VBA macros](../guides/converting-vba-macros.md).
 - **Manually** — by rewriting the logic in JavaScript using the Office JavaScript API.
 
 ## Can I make a macro available across all documents?

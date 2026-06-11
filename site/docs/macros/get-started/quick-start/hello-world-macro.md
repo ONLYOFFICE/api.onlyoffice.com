@@ -139,14 +139,14 @@ Try these examples to learn more:
 
 **Learn more:**
 
-- [Complete macro guide](../../macros/writing-macros.md)
-- [Custom spreadsheet functions](../../macros/adding-custom-functions.md)
-- [Debugging macros](../../macros/debugging.md)
+- [Complete macro guide](../../guides/writing-macros.md)
+- [Custom spreadsheet functions](../../guides/adding-custom-functions.md)
+- [Debugging macros](../../guides/debugging.md)
 
 **Explore examples:**
 
 - [Macro samples collection](/samples/?doctype=docs&text=macros)
-- [Converting VBA macros](../../macros/converting-vba-macros.md)
+- [Converting VBA macros](../../guides/converting-vba-macros.md)
 
 **Need help?**
 

@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 Unmerges all the merged cells in the active worksheet.
 
 :::note
-This macro was converted from VBA code using the [AI plugin](../../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
+This macro was converted from VBA code using the [AI plugin](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
 :::
 
 ```ts

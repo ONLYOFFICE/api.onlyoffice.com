@@ -139,14 +139,14 @@ title: Hello world 宏
 
 **深入学习：**
 
-- [完整宏指南](../../macros/writing-macros.md)
-- [自定义电子表格函数](../../macros/adding-custom-functions.md)
-- [调试宏](../../macros/debugging.md)
+- [完整宏指南](../../guides/writing-macros.md)
+- [自定义电子表格函数](../../guides/adding-custom-functions.md)
+- [调试宏](../../guides/debugging.md)
 
 **浏览示例：**
 
 - [宏示例集合](/samples/?doctype=docs&text=macros)
-- [转换 VBA 宏](../../macros/converting-vba-macros.md)
+- [转换 VBA 宏](../../guides/converting-vba-macros.md)
 
 **需要帮助？**
 

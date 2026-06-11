@@ -49,13 +49,13 @@ Automate repetitive tasks without leaving the editor.
 
 - **[Macro examples](/samples/?doctype=docs&text=macros)** — Ready-to-use scripts
 - **[Office API reference](../../office-api/get-started/overview.md)** — Complete API documentation
-- **[Writing macros](../macros/writing-macros.md)** — Macro development guide
+- **[Writing macros](../guides/writing-macros.md)** — Macro development guide
 - **[FAQ](../more-information/faq.md)** — Frequently asked questions
 
 ## Next steps
 
 - [Macro quick start](quick-start/hello-world-macro.md)
-- [Writing macros](../macros/writing-macros.md)
-- [Debugging](../macros/debugging.md)
+- [Writing macros](../guides/writing-macros.md)
+- [Debugging](../guides/debugging.md)
 
 Also available: [Plugins](../../plugins/get-started/get-started.md) | [Custom AI tools](../../ai/get-started/get-started.md)

@@ -49,13 +49,13 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 
 - **[宏示例](/samples/?doctype=docs&text=macros)** — 即用脚本
 - **[Office API 参考](../../office-api/get-started/overview.md)** — 完整 API 文档
-- **[编写宏](../macros/writing-macros.md)** — 宏开发指南
+- **[编写宏](../guides/writing-macros.md)** — 宏开发指南
 - **[常见问题](../more-information/faq.md)** — 常见问题解答
 
 ## 下一步
 
 - [宏快速入门](quick-start/hello-world-macro.md)
-- [编写宏](../macros/writing-macros.md)
-- [调试](../macros/debugging.md)
+- [编写宏](../guides/writing-macros.md)
+- [调试](../guides/debugging.md)
 
 另请参阅：[插件](../../plugins/get-started/get-started.md) | [自定义 AI 工具](../../ai/get-started/get-started.md)
