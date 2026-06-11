@@ -10,7 +10,7 @@ Learn how to read selected text from a document, send it to an external translat
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/development-workflow/developing/for-web-editors.md).
+- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 - The official translator plugin uses the Google Translate widget. If you want to use a different provider (DeepL, Azure, LibreTranslate), you will need an API key.
 

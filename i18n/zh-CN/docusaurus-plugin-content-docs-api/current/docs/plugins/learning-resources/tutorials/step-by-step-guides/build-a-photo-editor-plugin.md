@@ -10,7 +10,7 @@ Learn how to embed an interactive image editor inside ONLYOFFICE and write the r
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/development-workflow/developing/for-web-editors.md).
+- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 
 ## Step 1 — Scaffold the plugin

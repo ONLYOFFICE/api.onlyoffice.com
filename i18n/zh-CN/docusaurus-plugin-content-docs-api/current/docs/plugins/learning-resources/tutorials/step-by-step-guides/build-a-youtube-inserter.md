@@ -10,7 +10,7 @@ Learn how to accept a YouTube URL from the user and embed the video as a live OL
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/development-workflow/developing/for-web-editors.md).
+- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 - A YouTube account is not required; any public video URL will work.
 
