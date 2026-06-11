@@ -42,7 +42,7 @@ ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sd
 
 ## 可以在 ONLYOFFICE 编辑器中使用 Microsoft Office 宏吗？
 
-Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使用 JavaScript。但将宏转换为新格式并不困难。你可以在[此处](../../macros/macros/converting-vba-macros.md)查看 MS VBA 宏的转换示例。
+Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使用 JavaScript。但将宏转换为新格式并不困难。你可以在[此处](../../macros/guides/converting-vba-macros.md)查看 MS VBA 宏的转换示例。
 
 ## 在哪里可以找到编写宏的方法？
 

@@ -28,16 +28,16 @@ Build next-generation document workflows powered by AI.
 
 ## Resources
 
-- **[AI plugin setup](../ai/ai-plugin.md)** — Configure the AI plugin
-- **[Custom providers](../ai/custom-providers.md)** — Add your own AI provider
-- **[Custom AI tools guide](../ai/custom-ai-tools.md)** — Build custom tools
+- **[AI plugin setup](../guides/ai-plugin.md)** — Configure the AI plugin
+- **[Custom providers](../guides/custom-providers.md)** — Add your own AI provider
+- **[Custom AI tools guide](../guides/custom-ai-tools.md)** — Build custom tools
 - **[AI tool examples](/samples/?doctype=ai&text=ai+tools)** — Working examples
 - **[FAQ](../more-information/faq.md)** — Frequently asked questions
 
 ## Next steps
 
 - [AI quick start](quick-start/comment-text-ai-tool.md)
-- [Configure the AI plugin](../ai/ai-plugin.md)
-- [Custom AI tools guide](../ai/custom-ai-tools.md)
+- [Configure the AI plugin](../guides/ai-plugin.md)
+- [Custom AI tools guide](../guides/custom-ai-tools.md)
 
 Also available: [Plugins](../../plugins/get-started/get-started.md) | [Macros](../../macros/get-started/get-started.md)

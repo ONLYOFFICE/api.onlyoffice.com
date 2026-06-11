@@ -31,9 +31,9 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 ## 版本 9.0 {#version-90}
 
-- 添加了使用**宏**插件为电子表格添加[异步自定义函数](../../macros/macros/adding-custom-functions.md#asynchronous-functions)的功能。
-- 添加了使用 AI 插件将 VBA 代码[自动转换](../../macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)为 ONLYOFFICE 宏的功能。
-- 添加了使用 AI 插件[自动生成](../../macros/macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
+- 添加了使用**宏**插件为电子表格添加[异步自定义函数](../../macros/guides/adding-custom-functions.md#asynchronous-functions)的功能。
+- 添加了使用 AI 插件将 VBA 代码[自动转换](../../macros/guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin)为 ONLYOFFICE 宏的功能。
+- 添加了使用 AI 插件[自动生成](../../macros/guides/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
 - 添加了使用插件为内容控件添加自定义[按钮](../customization/content-control-buttons.md)的功能。
 - 为文本文档 API 的 window.Asc.plugin.executeMethod 添加了[获取当前书签](../interacting-with-editors/document-api/Methods/GetCurrentBookmark.md)方法。
 - 为演示文稿 API 的 window.Asc.plugin.executeMethod 添加了[前往幻灯片页面](../interacting-with-editors/presentation-api/Methods/GoToSlide.md)方法。
@@ -56,7 +56,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 ## 版本 8.1
 
-- 添加了通过**宏插件**向电子表格中[添加自定义函数](../../macros/macros/adding-custom-functions.md)的功能。
+- 添加了通过**宏插件**向电子表格中[添加自定义函数](../../macros/guides/adding-custom-functions.md)的功能。
 - 添加了为插件[添加工具栏菜单项](../customization/toolbar.md)的功能。
 - 添加了创建[多个左侧面板](../fundamentals/configuration/variations.md)的功能。
 - 添加了关于插件触发上下文菜单事件时的位置的信息。

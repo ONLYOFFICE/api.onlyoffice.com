@@ -167,9 +167,9 @@ func.call = async function (params) {
 
 **深入学习：**
 
-- [ONLYOFFICE AI 代理入门](../../ai/ai-agent.md)
-- [深入了解自定义 AI 工具](../../ai/custom-ai-tools.md)
-- [文本注释 API 指南](../../ai/text-annotations-guide.md)
+- [ONLYOFFICE AI 代理入门](../../guides/ai-agent.md)
+- [深入了解自定义 AI 工具](../../guides/custom-ai-tools.md)
+- [文本注释 API 指南](../../guides/text-annotations-guide.md)
 
 **浏览示例：**
 

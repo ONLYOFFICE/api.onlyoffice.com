@@ -42,7 +42,7 @@ All the plugin files and subfolders must be at the archive root. To do it, unpac
 
 ## Can I use Microsoft Office macros in ONLYOFFICE editors?
 
-Microsoft Office macros use Visual Basic for Applications (VBA) scripting language, while ONLYOFFICE editors use JavaScript. But this is not difficult to convert your previously used macros into the new format. Some examples of converting MS VBA macros you can see [here](../../macros/macros/converting-vba-macros.md).
+Microsoft Office macros use Visual Basic for Applications (VBA) scripting language, while ONLYOFFICE editors use JavaScript. But this is not difficult to convert your previously used macros into the new format. Some examples of converting MS VBA macros you can see [here](../../macros/guides/converting-vba-macros.md).
 
 ## Where can I find methods for writing macros?
 

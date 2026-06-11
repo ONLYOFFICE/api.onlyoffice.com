@@ -16,7 +16,7 @@ This means that macros created in Microsoft Office are not compatible with ONLYO
 
 Starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically convert VBA code into JavaScript compatible with ONLYOFFICE macros:
 
-1. Configure the AI plugin. See [Configuring the AI plugin](/docs/ai/ai/ai-plugin.md#configuring) for details.
+1. Configure the AI plugin. See [Configuring the AI plugin](/docs/ai/guides/ai-plugin.md#configuring) for details.
 2. Open the **View** tab and click **Macros**.
 3. Click the **AI** icon in the **Macros** window and select **Convert from VBA**.
 
