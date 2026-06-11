@@ -63,7 +63,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetAddress](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [SetHyperlink](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink.md)
+使用方法: [GetSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetRangeByNumber](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetSelection](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetAddress](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [SetHyperlink](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink.md)
 
 ## 参考 Microsoft VBA 宏代码
 

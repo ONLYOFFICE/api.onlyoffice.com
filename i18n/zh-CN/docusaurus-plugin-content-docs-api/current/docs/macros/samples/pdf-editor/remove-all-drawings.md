@@ -34,7 +34,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllDrawings](../../../../office-api/usage-api/pdf-api/ApiPage/Methods/GetAllDrawings.md), [Delete](../../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/Delete.md)
+使用方法: [GetDocument](../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllDrawings](../../../office-api/usage-api/pdf-api/ApiPage/Methods/GetAllDrawings.md), [Delete](../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/Delete.md)
 
 ## 结果
 

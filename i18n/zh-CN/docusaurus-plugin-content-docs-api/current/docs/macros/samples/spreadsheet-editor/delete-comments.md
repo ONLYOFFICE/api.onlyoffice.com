@@ -35,7 +35,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetComment](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetComment.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/GetText.md), [Delete](../../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/Delete.md)
+使用方法: [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetComment](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetComment.md), [GetText](../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/GetText.md), [Delete](../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/Delete.md)
 
 ## 结果
 

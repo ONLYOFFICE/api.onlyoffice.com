@@ -42,7 +42,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllComments](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments.md), [GetText](../../../../office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [SetSolved](../../../../office-api/usage-api/document-api/ApiComment/Methods/SetSolved.md)
+使用方法: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllComments](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments.md), [GetText](../../../office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [SetSolved](../../../office-api/usage-api/document-api/ApiComment/Methods/SetSolved.md)
 
 ## 结果
 

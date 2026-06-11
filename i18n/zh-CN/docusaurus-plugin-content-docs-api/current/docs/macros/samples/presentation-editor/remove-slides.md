@@ -53,7 +53,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
+使用方法: [GetPresentation](../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Delete](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
 
 ## 结果
 
