@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: What is a plugin?
 ---
 
 # What is a plugin?
