@@ -19,20 +19,40 @@ title: 注释文本 — 自定义 AI 工具
 使用 `RegisteredFunction` 对象定义函数名称、期望参数以及帮助 AI 模型学习调用方式的示例：
 
 ```javascript
-let func = new RegisteredFunction();
-func.name = "commentText";
-func.parameters = [
-  "type (string): whether to add as a 'comment' or as a 'footnote' (default is 'comment')",
-];
-func.examples = [
-  "If you need to explain selected text as a comment, respond with:\n" +
-    '[functionCalling (commentText)]: {"prompt" : "Explain this text", "type": "comment"}',
-  "If you need to add a footnote to selected text, respond with:\n" +
-    '[functionCalling (commentText)]: {"prompt" : "Add a footnote to this text", "type": "footnote"}',
-  "If you need to comment selected text, respond with:\n" +
-    '[functionCalling (commentText)]: {"prompt" : "Comment this text"}',
-];
-func.description = "Use this function if you are asked to comment or explain anything.";
+let func = new RegisteredFunction({
+  name: "commentText",
+  description: "Use this function if you are asked to comment or explain anything.",
+  parameters: {
+    type: "object",
+    properties: {
+      prompt: {
+        type: "string",
+        description: "The instruction for what to explain or comment about the text.",
+      },
+      type: {
+        type: "string",
+        enum: ["comment", "footnote"],
+        description: "Whether to add as a comment or as a footnote.",
+        default: "comment",
+      },
+    },
+    required: ["prompt"],
+  },
+  examples: [
+    {
+      prompt: "Explain this text",
+      arguments: { prompt: "Explain this text", type: "comment" },
+    },
+    {
+      prompt: "Add a footnote to selected text",
+      arguments: { prompt: "Add a footnote to this text", type: "footnote" },
+    },
+    {
+      prompt: "Comment on this text",
+      arguments: { prompt: "Comment this text" },
+    },
+  ],
+});
 ```
 
 **关键字段说明：**
