@@ -47,7 +47,7 @@ Asc.plugin.callCommand(() => {
 This method is executed in its own context isolated from other JavaScript data. If some parameters or any additional data (objects, parameters, variables, etc.)  need to be passed to this method, use **Asc.scope** object.
 
 :::note
-The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
+The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
 :::
 
 ### Example
@@ -64,104 +64,7 @@ Asc.plugin.callCommand(() => {
 
 ## info object
 
-This object is used to change the object data and to send additional parameters when executing the **callCommand** method. The **info** object is the auxiliary object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used [editorType](#example-for-the-editortype-parameter) - documents, spreadsheets, presentations, PDFs) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).
-
-For example, if the document content is changed and recalculation is needed, the parameter [recalculate](#example-for-the-recalculate-parameter) must be set to *true*. This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).
-
-See the available *window.Asc.plugin.info* object parameters below to find out more about them.
-
-### Parameters
-
-```mdx-code-block
-<APITable>
-```
-
-| Name        | Type    | Example                 | Description                                                                                              |
-|-------------|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
-| data        | string  | `{data}`                | The OLE object data which need to be sent to the *window.Asc.plugin.info* object and used by the plugin. |
-| editorType  | string  | "word"                  | The editor type where the plugin is currently running.                                                   |
-| guid        | string  | `asc.{UUID}`            | The OLE object GUID in the current document.                                                             |
-| height      | number  | 70                      | The OLE object height measured in millimeters.                                                           |
-| imgSrc      | string  | "./resources/image.png" | The link to the image (its visual representation) stored in the OLE object and used by the plugin.       |
-| mmToPx      | number  | 3                       | Millimeter to pixel conversion ratio for the OLE object vector draw.                                     |
-| objectId    | string  | "1"                     | The OLE object identifier in the current document.                                                       |
-| recalculate | boolean | true                    | Forces the document to recalculate its content data.                                                     |
-| resize      | boolean | true                    | Checks if the OLE object size has been changed.                                                          |
-| width       | number  | 70                      | The OLE object width measured in millimeters.                                                            |
-
-```mdx-code-block
-</APITable>
-```
-
-### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
-
-```ts
-window.Asc.plugin.button = (id) => {
-  const info = window.Asc.plugin.info;
-
-  const method = info.objectId === undefined ? "asc_addOleObject" : "asc_editOleObject";
-
-  if (!info.width) info.width = 70;
-  if (!info.height) info.height = 70;
-
-  info.widthPix = Math.trunc(info.mmToPx * info.width);
-  info.heightPix = Math.trunc(info.mmToPx * info.height);
-  info.imgSrc = window.g_board.getResult(info.widthPix, info.heightPix).image;
-  info.data = window.g_board.getData();
-  const code = `Api.${method}(${JSON.stringify(info)});`
-  window.Asc.plugin.callCommand("close", code);
-}
-```
-
-### Example for the editorType parameter
-
-```ts
-function createScriptFromArray(aSelected) {
-  let sScript = "";
-  if (aSelected.length !== 0) {
-    switch (window.Asc.plugin.info.editorType) {
-      case "word": {
-        sScript = "var oDocument = Api.GetDocument();";
-        sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
-        sScript = `${sScript}\nvar oParagraph, oRun, arrInsertResult = [], oImage;`;
-        sScript = `${sScript}\noDocument.InsertContent(arrInsertResult);`;
-        break;
-      }
-    }
-  }
-  return sScript;
-}
-```
-
-### Example for the guid parameter
-
-```ts
-window.Asc.plugin.init = () => {
-  const plugin_uuid = window.Asc.plugin.info.guid;
-};
-```
-
-### Example for the recalculate parameter
-
-```ts
-window.Asc.plugin.init = () => {
-  let sScript = "var oDocument = Api.GetDocument();";
-  sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
-  sScript = `${sScript}\noParagraph = Api.CreateParagraph();`;
-  sScript = `${sScript}\noParagraph.AddText('Hello world!');`;
-  sScript = `${sScript}\noDocument.InsertContent([oParagraph]);`;
-  window.Asc.plugin.info.recalculate = true;
-  window.Asc.plugin.callCommand("close", sScript);
-};
-```
-
-### Example for the resize parameter
-
-```ts
-if (window.Asc.plugin.info.resize === true) {
-  window.Asc.plugin.button(0);
-}
-```
+The `Asc.plugin.info` object is a property of the [Asc.plugin](./asc-plugin.md) object. See [Asc.plugin > info object](./asc-plugin.md#info-object) for the full list of properties and examples.
 
 ## Debugging
 

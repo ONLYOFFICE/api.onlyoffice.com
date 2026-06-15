@@ -38,4 +38,4 @@ ONLYOFFICE 宏使用 JavaScript 语法和 [Office JavaScript API](../../office-a
 
 ## 在哪里可以找到现成的宏示例？
 
-可在本文档的[示例](../../samples/document-editor)章节以及[示例页面](/samples/?doctype=docs&text=macros)中找到可直接使用的宏示例。
+可在[示例页面](/samples/?doctype=docs&text=macros)中找到可直接使用的宏示例。

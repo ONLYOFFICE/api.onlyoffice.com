@@ -32,4 +32,4 @@ Yes. Any OpenAI-compatible provider can be added by supplying a base URL, model 
 
 ## Where can I find ready-made AI tool examples?
 
-Sample AI tools organized by editor type are available in the [Samples](../../samples/document-editor) section of this documentation.
+Sample AI tools organized by editor type are available on the [samples page](/samples/?doctype=ai&text=ai+tools).

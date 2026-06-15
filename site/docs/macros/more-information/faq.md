@@ -38,4 +38,4 @@ Macros are attached to a specific document and cannot be made global. If you nee
 
 ## Where can I find ready-made macro examples?
 
-Ready-to-use macro samples are listed in the [Samples](../../samples/document-editor) section of this documentation and on the [samples page](/samples/?doctype=docs&text=macros).
+Ready-to-use macro samples are listed on the [samples page](/samples/?doctype=docs&text=macros).

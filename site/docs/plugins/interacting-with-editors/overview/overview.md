@@ -4,9 +4,10 @@ sidebar_position: -1
 
 # Overview
 
-The plugins and macros can interact with the editors using different events, methods, and commands. Here you will find how to use them.
+The plugins and macros can interact with the editors using the [Asc.plugin](asc-plugin.md) object — its [events](asc-plugin.md#events), methods, and commands. Here you will find how to use them.
 
-- [How to attach events](how-to-attach-events.md)
+- [Asc.plugin](asc-plugin.md) — the main plugin object: properties, methods, and events
+- [How to attach events](how-to-attach-events.md) — listening for editor events
 - [How to call methods](how-to-call-methods.md)
 - [How to call commands](how-to-call-commands.md)
 
@@ -14,36 +15,17 @@ The main plugin code is placed to a *.js* file which describes what and how must
 
 ## How it works
 
-Any plugin has *window.Asc.plugin* object which in its turn has several methods for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.
+Any plugin has the [Asc.plugin](asc-plugin.md) object which provides methods and events to interact with ONLYOFFICE document, spreadsheet, presentation, and PDF editors.
 
 :::note
 Starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the plugin command code because the *"use strict"* mode was applied to the plugin scripts. Don't forget to declare variables before using them so that the plugins work correctly.
 :::
 
-For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/CDocBuilder/ExecuteCommand.md) features.
+For the plugin to work the developer must specify two obligatory events for the `Asc.plugin` object: [init](asc-plugin.md#init) and [button](asc-plugin.md#button). After that:
 
-If the plugin operates with an OLE object, [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to manage it.
+- [callCommand](how-to-call-commands.md#callcommand) is used to execute multiple [Office JavaScript API](../../../office-api/get-started/overview.md) commands in a single call.
+- [executeMethod](how-to-call-methods.md#executemethod) is used to run a single editor method (e.g. `AddComment`, `GetSelectedText`).
 
-Let's see how this is done in the *helloworld.js* plugin:
+If the plugin operates with an OLE object, [callCommand](how-to-call-commands.md#callcommand) is used to manage it.
 
-```ts
-window.Asc.plugin.init = function init() {
-  window.Asc.plugin.callCommand(() => {
-    const oDocument = Api.GetDocument();
-    const oParagraph = Api.CreateParagraph();
-    oParagraph.AddText("Hello world!");
-    oDocument.InsertContent([oParagraph]);
-  }, true);
-};
-window.Asc.plugin.button = function button(id) {};
-```
-
-When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method - *window.Asc.plugin.callCommand(function() \{...\})*).
-
-:::note
-All [Office JavaScript API](../../../office-api/get-started/overview.md) features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. In case you want to create documents without any document editors, install the standalone **ONLYOFFICE Document Builder** version.
-:::
-
-The only OK button (*window.Asc.plugin.button = function (id) \{...\}*) is used to create the text and finish the work with the plugin.
-
-More existing open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).
+See the [Asc.plugin](asc-plugin.md#minimal-example) page for a minimal working example, or the [Getting started](../../fundamentals/getting-started/what-is-a-plugin.md) guide for a full walkthrough. More open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).

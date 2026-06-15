@@ -1,8 +1,4 @@
 {
   "label": "文档编辑器",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "slug": "/docs/macros/samples/document-editor"
-  }
+  "position": 1
 }
