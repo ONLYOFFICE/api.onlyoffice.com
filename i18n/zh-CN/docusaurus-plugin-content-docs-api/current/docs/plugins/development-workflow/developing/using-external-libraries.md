@@ -96,7 +96,7 @@ async function initChart() {
 
 ### Lock versions
 
-Always specify an exact version — never use `@latest`:
+Always specify an exact version - never use `@latest`:
 
 ```html
 <!-- Wrong -->

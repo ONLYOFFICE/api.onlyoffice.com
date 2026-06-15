@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # Hot reload and live testing
 
-Traditional plugin development requires repackaging and reinstalling after every change (2–3 minutes per iteration). With hot reload, that drops to 2–3 seconds.
+Traditional plugin development requires repackaging and reinstalling after every change (2-3 minutes per iteration). With hot reload, that drops to 2-3 seconds.
 
 ## Method 1: VS Code Live Server
 
 1. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code.
 2. Open your plugin folder in VS Code.
-3. Click **Go Live** in the status bar — your plugin is served at `http://localhost:5500`.
+3. Click **Go Live** in the status bar - your plugin is served at `http://localhost:5500`.
 4. The browser reloads automatically when you save a file.
 
 ## Method 2: Node.js development server with auto-reload

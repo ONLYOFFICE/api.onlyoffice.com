@@ -166,7 +166,7 @@ func.call = async function (params) {
     "3) If multiple fields share the same meaning, add numeric suffixes (_1, _2, …). " +
     "4) All new keys must be globally unique. " +
     '5) "newValues" must map each new key to a short placeholder (≤60 chars). ' +
-    "Output JSON only — no explanations, no code fences.";
+    "Output JSON only - no explanations, no code fences.";
 
   // Combine system hint with form fields data
   const argPrompt =

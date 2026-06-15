@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # Text annotations API guide
 
-ONLYOFFICE 9.2.0 introduced an API extension for working with text annotations — visual underlines that highlight text sections and allow you to associate metadata with them.
+ONLYOFFICE 9.2.0 introduced an API extension for working with text annotations - visual underlines that highlight text sections and allow you to associate metadata with them.
 
 This guide covers three new API methods and demonstrates their usage through a practical plugin example for an AI assistant that analyzes text.
 
 ## New API methods
 
-1. *[`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md)* — Adds annotations to the specified paragraph.
-2. *[`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md)* — Selects text in the document using the specified annotation.
-3. *[`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md)* — Removes a specific annotation range from the document.
+1. *[`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md)* - Adds annotations to the specified paragraph.
+2. *[`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md)* - Selects text in the document using the specified annotation.
+3. *[`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md)* - Removes a specific annotation range from the document.
 
 ## Learning the new methods through plugin development
 
@@ -20,15 +20,15 @@ Detailed instructions on using the plugin can be found [here](https://github.com
 
 The plugin adds annotations to text, enabling users to create AI assistants that analyze content and highlight sections matching specific criteria defined in the assistant's prompt. There are three options:
 
-1. *Hint* — Displays explanatory text.
-2. *Replace* — Suggests replacement text.
-3. *Replace + Hint* — Suggests replacement text and displays an explanation below (which can include links).
+1. *Hint* - Displays explanatory text.
+2. *Replace* - Suggests replacement text.
+3. *Replace + Hint* - Suggests replacement text and displays an explanation below (which can include links).
 
 The interface for creating or editing an assistant consists of three fields:
 
 1. *Name*
 2. *Type* (Hint, Replace, Replace + Hint)
-3. *Prompt* — The primary field where the user defines the criteria. This should be as specific as possible to achieve accurate results.
+3. *Prompt* - The primary field where the user defines the criteria. This should be as specific as possible to achieve accurate results.
 
 There is also a hidden field containing the assistant's unique ID. The assistant is saved to `localStorage` as a stringified object:
 
@@ -129,9 +129,9 @@ await Asc.Editor.callMethod("AnnotateParagraph", [{
 
 Once annotations are added, user interaction must be handled. Clicking an annotation should trigger a popup displaying the original text, the suggested replacement, and a brief explanation, along with **Accept** and **Reject** buttons. This is managed through three specific events:
 
-1. [`onBlurAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onBlurAnnotation.md) — Triggered when an annotation loses focus.
-2. [`onClickAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onClickAnnotation.md) — Triggered when the user clicks an annotation.
-3. [`onFocusAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onFocusAnnotation.md) — Triggered when an annotation receives focus.
+1. [`onBlurAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onBlurAnnotation.md) - Triggered when an annotation loses focus.
+2. [`onClickAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onClickAnnotation.md) - Triggered when the user clicks an annotation.
+3. [`onFocusAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onFocusAnnotation.md) - Triggered when an annotation receives focus.
 
 All three events return `{name, paragraphId, ranges}`. For this implementation, two events are used: `onClickAnnotation` (to show the popup) and `onBlurAnnotation` (to hide it).
 

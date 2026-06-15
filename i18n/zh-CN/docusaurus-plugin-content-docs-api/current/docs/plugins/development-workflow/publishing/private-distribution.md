@@ -19,7 +19,7 @@ Distribute your plugin within your organization without publishing to the public
 
 Package all plugin files into a `.zip` archive and rename the extension to `.plugin`.
 
-**Important:** All files must be at the archive root — not inside a subfolder:
+**Important:** All files must be at the archive root - not inside a subfolder:
 
 ```
 ✓ Correct archive structure:
@@ -69,7 +69,7 @@ Host your plugin on an internal or public web server and distribute the `config.
 3. Share the URL `https://plugins.yourcompany.com/my-plugin/config.json` with users.
 4. Users install via **Plugins → Plugin Manager → Add plugin from URL**.
 
-Updates are picked up automatically when users reload — no reinstallation required.
+Updates are picked up automatically when users reload - no reinstallation required.
 
 ## Method 4: On-premises admin panel
 
@@ -79,7 +79,7 @@ For ONLYOFFICE Docs on-premises, administrators can deploy a plugin organization
 2. Open the ONLYOFFICE Docs admin panel.
 3. Go to **Plugins** settings.
 4. Add the `config.json` URL.
-5. Save — the plugin is immediately available to all users.
+5. Save - the plugin is immediately available to all users.
 
 ## Security considerations
 

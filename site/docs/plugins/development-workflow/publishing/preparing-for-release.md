@@ -35,7 +35,7 @@ Additional: `translations/` folder, additional HTML files, assets.
 }
 ```
 
-**`guid`** — Must follow `asc.{UUID}` format. Generate at [uuidgenerator.net](https://www.uuidgenerator.net/).
+**`guid`** - Must follow `asc.{UUID}` format. Generate at [uuidgenerator.net](https://www.uuidgenerator.net/).
 
 :::warning[Wrong]
 ```json
@@ -49,9 +49,9 @@ Additional: `translations/` folder, additional HTML files, assets.
 ```
 :::
 
-**`version`** — Semantic versioning (`MAJOR.MINOR.PATCH`). Start at `1.0.0`.
+**`version`** - Semantic versioning (`MAJOR.MINOR.PATCH`). Start at `1.0.0`.
 
-**`variations[].EditorsSupport`** — Only list tested editors: `"word"`, `"cell"`, `"slide"`, `"pdf"`.
+**`variations[].EditorsSupport`** - Only list tested editors: `"word"`, `"cell"`, `"slide"`, `"pdf"`.
 
 Optional recommended fields:
 ```json

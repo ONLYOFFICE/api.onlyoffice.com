@@ -10,11 +10,11 @@ Learn how to accept a YouTube URL from the user and embed the video as a live OL
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 - A YouTube account is not required; any public video URL will work.
 
-## Step 1 — Scaffold the plugin
+## Step 1 - Scaffold the plugin
 
 Create the plugin folder with the standard files:
 
@@ -65,7 +65,7 @@ Key settings to notice:
 | `isUpdateOleOnResize` | `false` | Prevents the editor from re-requesting a new thumbnail when the user resizes the embedded object |
 | `isViewer` | `true` | Allows the plugin to appear in view-only mode (the Cancel button is visible; OK is hidden) |
 
-## Step 2 — Build the dialog UI
+## Step 2 - Build the dialog UI
 
 In `index.html`, create a form with a text input for the URL, a preview button, and a container for the live YouTube player. The YouTube IFrame API script is loaded so the plugin can embed an actual video player inside the dialog:
 
@@ -91,9 +91,9 @@ In `index.html`, create a form with a text input for the URL, a preview button, 
 
 The `size: [350, 90]` in `config.json` keeps the dialog compact initially. When the user clicks **Preview**, the plugin calls `resizeWindow` to expand the dialog and show the embedded player.
 
-## Step 3 — Handle init and OLE round-trip
+## Step 3 - Handle init and OLE round-trip
 
-In `scripts/youtube.js`, implement `window.Asc.plugin.init`. The editor calls `init` both when a user opens the plugin fresh and when they double-click an existing OLE object. The stored OLE data (the YouTube URL) is passed as the `text` parameter — not through `info.data`:
+In `scripts/youtube.js`, implement `window.Asc.plugin.init`. The editor calls `init` both when a user opens the plugin fresh and when they double-click an existing OLE object. The stored OLE data (the YouTube URL) is passed as the `text` parameter - not through `info.data`:
 
 ```js
 window.Asc.plugin.init = function (text) {
@@ -116,9 +116,9 @@ window.Asc.plugin.init = function (text) {
 
 > **Important:** For `initDataType: "ole"`, the stored OLE data string is passed as the `text` argument to `init()`. This is the raw string you set in the `"data"` field when calling `AddOleObject` or `EditOleObject`.
 
-## Step 4 — Extract the video ID and build a thumbnail URL
+## Step 4 - Extract the video ID and build a thumbnail URL
 
-The actual plugin parses the video ID by splitting the URL on `/` and stripping the `watch?v=` prefix and `&` suffix — not with a single regex:
+The actual plugin parses the video ID by splitting the URL on `/` and stripping the `watch?v=` prefix and `&` suffix - not with a single regex:
 
 ```js
 function getVideoId(url) {
@@ -144,7 +144,7 @@ function getThumbnailUrl(videoId) {
 }
 ```
 
-## Step 5 — Embed a live YouTube player in the dialog
+## Step 5 - Embed a live YouTube player in the dialog
 
 When the user clicks the **Preview** button, validate the URL, resize the dialog window, and embed an actual YouTube player using the `YT.Player` API:
 
@@ -182,9 +182,9 @@ document.getElementById("textbox_button").onclick = function () {
 };
 ```
 
-This gives the user a live preview of the video before inserting it — they can play, pause, and verify it's the right video.
+This gives the user a live preview of the video before inserting it - they can play, pause, and verify it's the right video.
 
-## Step 6 — Insert or update the OLE object
+## Step 6 - Insert or update the OLE object
 
 Wire up the OK button via `window.Asc.plugin.button`. Use `info.objectId` with a strict `=== undefined` check to decide between `AddOleObject` (new insert) and `EditOleObject` (update existing). The OLE dimensions are derived from `window.Asc.plugin.info`, not hardcoded:
 
@@ -212,7 +212,7 @@ window.Asc.plugin.button = function (id) {
     if (_id) {
       var _info = window.Asc.plugin.info;
 
-      // Strict undefined check — objectId is undefined for new inserts
+      // Strict undefined check - objectId is undefined for new inserts
       var _method = (_info.objectId === undefined) ? "AddOleObject" : "EditOleObject";
 
       var _param = {
@@ -241,32 +241,32 @@ window.Asc.plugin.button = function (id) {
 
 Key details from the actual source:
 
-- **`imgSrc`** is a property of the OLE params object passed to `AddOleObject`/`EditOleObject` — it is *not* a property of `window.Asc.plugin.info`.
+- **`imgSrc`** is a property of the OLE params object passed to `AddOleObject`/`EditOleObject` - it is *not* a property of `window.Asc.plugin.info`.
 - **`widthPix` / `heightPix`** are computed from `_info.mmToPx * _info.width`, not hardcoded values.
 - **`resize`** is passed through from `_info.resize` to preserve the user's resize state.
 - The plugin always closes via **`executeCommand("close", "")`**, not `plugin.close()`.
 
-## Step 7 — Test the plugin
+## Step 7 - Test the plugin
 
 1. Zip the `youtube/` folder and install it via **Plugins → Plugin Manager → Upload plugin**.
 2. Open the plugin from the **Plugins** tab.
 3. Paste a YouTube URL (e.g. `https://www.youtube.com/watch?v=jHuwwVliZ5Q`) and click **Preview**.
-4. The dialog expands and a live YouTube player appears — verify it's the correct video.
-5. Click **OK** — a thumbnail image is inserted into the document as an embedded OLE object.
-6. Double-click the object — the dialog reopens with the original URL pre-filled and the player loaded.
-7. Change the URL and click **OK** again — the thumbnail updates in place.
+4. The dialog expands and a live YouTube player appears - verify it's the correct video.
+5. Click **OK** - a thumbnail image is inserted into the document as an embedded OLE object.
+6. Double-click the object - the dialog reopens with the original URL pre-filled and the player loaded.
+7. Change the URL and click **OK** again - the thumbnail updates in place.
 
 ## Going further
 
 - Add an `onTranslate` handler to localise the "Paste youtube video URL" label using `window.Asc.plugin.tr()`.
 - Support playlist URLs by detecting `list=` parameters and falling back to a generic thumbnail.
-- Handle the `t=` (timestamp) parameter to start the embedded player at a specific time — the actual plugin already parses this with `getParam(url, "t")`.
+- Handle the `t=` (timestamp) parameter to start the embedded player at a specific time - the actual plugin already parses this with `getParam(url, "t")`.
 
 **Resources:**
 
-1. [YouTube plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/youtube.md) — reference implementation you can run immediately.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) — full `config.json` field reference.
-3. [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md) — inserts a new OLE object.
-4. [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md) — updates an existing OLE object in place.
+1. [YouTube plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/youtube.md) - reference implementation you can run immediately.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+3. [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md) - inserts a new OLE object.
+4. [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md) - updates an existing OLE object in place.
 
 **Key concepts:** OLE objects · `AddOleObject` · `EditOleObject` · `initDataType: "ole"` · YouTube IFrame API · `executeCommand("close", "")`

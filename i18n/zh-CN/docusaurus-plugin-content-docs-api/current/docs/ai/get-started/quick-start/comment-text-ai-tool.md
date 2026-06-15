@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: 注释文本 — 自定义 AI 工具
+title: 注释文本 - 自定义 AI 工具
 ---
-# 注释文本 — 自定义 AI 工具
+# 注释文本 - 自定义 AI 工具
 
 使用 ONLYOFFICE AI 代理为选中文本添加 AI 生成的注释或脚注。
 
@@ -57,10 +57,10 @@ let func = new RegisteredFunction({
 
 **关键字段说明：**
 
-- `name` — AI 模型调用的函数名称
-- `parameters` — 函数期望从 AI 接收的 JSON 参数
-- `examples` — 帮助 AI 学习正确调用语法的示例调用
-- `description` — 告知 AI 函数的用途及调用时机
+- `name` - AI 模型调用的函数名称
+- `parameters` - 函数期望从 AI 接收的 JSON 参数
+- `examples` - 帮助 AI 学习正确调用语法的示例调用
+- `description` - 告知 AI 函数的用途及调用时机
 
 ## 第 3 步：获取选中文本
 
@@ -96,7 +96,7 @@ func.call = async function (params) {
 将提示发送给 AI 模型，并将其响应作为注释或脚注插入文档。
 
 :::info Asc.scope
-`Asc.scope` 是一个共享对象，用于向 `callCommand` 闭包传递数据。由于 `callCommand` 在独立上下文中运行，局部变量无法直接在其中访问 — `Asc.scope` 起到桥接两个上下文的作用。
+`Asc.scope` 是一个共享对象，用于向 `callCommand` 闭包传递数据。由于 `callCommand` 在独立上下文中运行，局部变量无法直接在其中访问 - `Asc.scope` 起到桥接两个上下文的作用。
 :::
 
 以注释形式插入：
@@ -177,6 +177,6 @@ func.call = async function (params) {
 
 **需要帮助？**
 
-- [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
-- [常见问题](../../more-information/faq.md) — 常见问题解答
+- [开发者论坛](https://forum.onlyoffice.com/) - 社区支持
+- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - 报告错误
+- [常见问题](../../more-information/faq.md) - 常见问题解答

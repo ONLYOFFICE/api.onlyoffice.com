@@ -4,17 +4,17 @@ sidebar_position: 2
 
 # Build a custom translator
 
-Learn how to read selected text from a document, send it to an external translation API, and insert the result back — all from inside an ONLYOFFICE plugin panel.
+Learn how to read selected text from a document, send it to an external translation API, and insert the result back - all from inside an ONLYOFFICE plugin panel.
 
 **What you'll build:** A plugin that lives in a side panel, watches for text selection changes, sends the selected text to a translation service, displays the translated result, and lets the user paste or replace text in the document with one click.
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 - The official translator plugin uses the Google Translate widget. If you want to use a different provider (DeepL, Azure, LibreTranslate), you will need an API key.
 
-## Step 1 — Scaffold the plugin
+## Step 1 - Scaffold the plugin
 
 Create the plugin folder:
 
@@ -58,12 +58,12 @@ Key settings to notice:
 | `initDataType` | `"text"` | Editor passes the current selection as the `text` argument to `init()` |
 | `initOnSelectionChanged` | `true` | `init` is called again every time the user changes their selection |
 | `isInsideMode` | `true` | Plugin renders in the side panel rather than a floating window |
-| `isModal` | `false` | Non-blocking — the user can keep editing while the panel is open |
+| `isModal` | `false` | Non-blocking - the user can keep editing while the panel is open |
 | `EditorsSupport` | `["word", "cell", "slide", "pdf"]` | Supports all editor types including PDF |
 
-## Step 2 — Build the panel UI
+## Step 2 - Build the panel UI
 
-`index.html` hosts a container for the translation widget iframe and two action buttons — **Copy** and **Insert**:
+`index.html` hosts a container for the translation widget iframe and two action buttons - **Copy** and **Insert**:
 
 ```html
 <!DOCTYPE html>
@@ -79,9 +79,9 @@ Key settings to notice:
 </html>
 ```
 
-The actual translator loads a Google Translate widget inside `index_widget.html` via an iframe — not a direct REST API call. The widget handles language detection, translation, and display automatically without requiring an API key.
+The actual translator loads a Google Translate widget inside `index_widget.html` via an iframe - not a direct REST API call. The widget handles language detection, translation, and display automatically without requiring an API key.
 
-## Step 3 — Detect selection changes
+## Step 3 - Detect selection changes
 
 In `scripts/translate.js`, implement `window.Asc.plugin.init`. Because `initOnSelectionChanged` is `true` in `config.json`, this function is called every time the selection changes. The currently selected text is passed as the `text` **parameter** to `init()`:
 
@@ -100,7 +100,7 @@ window.Asc.plugin.init = function (text) {
       ExecPlugin();
     });
   } else {
-    // For cell, slide, pdf — use the text parameter directly
+    // For cell, slide, pdf - use the text parameter directly
     prevTxt = txt;
     txt = ProcessText(text);
     ExecPlugin();
@@ -114,14 +114,14 @@ function ProcessText(sText) {
 
 > **Important:** The selected text arrives as the `text` parameter of `init()`, not through `window.Asc.plugin.info.data`. For the `word` editor type, the plugin additionally calls `GetSelectedText` to get cleaner text without numbering artifacts.
 
-## Step 4 — Load the translation widget
+## Step 4 - Load the translation widget
 
 On first initialisation, create an iframe pointing to `index_widget.html` which embeds the Google Translate widget. Subsequent selection changes update the text inside the existing iframe via `postMessage`:
 
 ```js
 function ExecPlugin() {
   if (!isInit) {
-    // First time — create the iframe
+    // First time - create the iframe
     document.getElementById("iframe_parent").innerHTML = "";
     ifr = document.createElement("iframe");
     ifr.name = "google_name";
@@ -143,7 +143,7 @@ function ExecPlugin() {
       createButtons();
     };
   } else if (prevTxt !== txt) {
-    // Text changed — update the iframe
+    // Text changed - update the iframe
     ifr.contentWindow.postMessage(txt, "*");
   }
 }
@@ -151,7 +151,7 @@ function ExecPlugin() {
 
 > **Swapping providers:** To use a different translation API (DeepL, Azure, LibreTranslate), replace `index_widget.html` with your own page that calls the API via `fetch()` and communicates results back via `postMessage`. The rest of the plugin code stays the same.
 
-## Step 5 — Insert the translation back into the document
+## Step 5 - Insert the translation back into the document
 
 The plugin provides two buttons: **Copy** (copies to clipboard) and **Insert** (replaces selection in the document). The Insert button uses `GetVersion` and `GetSelectionType` to decide how to paste:
 
@@ -164,10 +164,10 @@ btnReplace.onclick = function () {
 
   window.Asc.plugin.executeMethod("GetVersion", [], function (version) {
     if (version === undefined) {
-      // Old version — use PasteText
+      // Old version - use PasteText
       window.Asc.plugin.executeMethod("PasteText", [translatedTxt]);
     } else {
-      // New version — check selection type for smarter replacement
+      // New version - check selection type for smarter replacement
       window.Asc.plugin.executeMethod("GetSelectionType", [], function (sType) {
         switch (sType) {
           case "none":
@@ -186,9 +186,9 @@ btnReplace.onclick = function () {
 };
 ```
 
-The plugin uses `PasteText` for empty or drawing selections, and `callCommand` with `Api.ReplaceTextSmart` for text selections — this preserves paragraph structure during replacement.
+The plugin uses `PasteText` for empty or drawing selections, and `callCommand` with `Api.ReplaceTextSmart` for text selections - this preserves paragraph structure during replacement.
 
-## Step 6 — Handle the close button
+## Step 6 - Handle the close button
 
 The panel's close button uses `executeCommand("close", "")`:
 
@@ -198,13 +198,13 @@ window.Asc.plugin.button = function (id) {
 };
 ```
 
-## Step 7 — Test the plugin
+## Step 7 - Test the plugin
 
 1. Zip the `translator/` folder and install it via **Plugins → Plugin Manager → Upload plugin**.
 2. Open any document and type a few sentences.
 3. Select some text and open the **Translator** plugin from the **Plugins** tab.
 4. The translation appears automatically in the side panel.
-5. Change the target language from the dropdown — the panel retranslates immediately.
+5. Change the target language from the dropdown - the panel retranslates immediately.
 6. Click **Copy** to copy the translation to clipboard, or **Insert** to replace the selected text in the document.
 
 ## Going further
@@ -212,13 +212,13 @@ window.Asc.plugin.button = function (id) {
 - Add an `onExternalMouseUp` handler (already used in the actual plugin) to relay mouse events to the iframe for proper scrollbar interaction.
 - Cache recent translations to avoid redundant widget reloads when the user deselects and reselects the same text.
 - Add theme support with `window.Asc.plugin.onThemeChanged` to match the editor's light/dark theme.
-- Support the `pdf` editor type — the config already includes it in `EditorsSupport`.
+- Support the `pdf` editor type - the config already includes it in `EditorsSupport`.
 
 **Resources:**
 
-1. [Translator plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/translator.md) — reference implementation with full Google Translate widget integration.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) — full `config.json` field reference.
-3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md) — retrieve selection with configurable separators.
-4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md) — insert text at the current cursor position.
+1. [Translator plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/translator.md) - reference implementation with full Google Translate widget integration.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md) - retrieve selection with configurable separators.
+4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md) - insert text at the current cursor position.
 
 **Key concepts:** `initDataType: "text"` · `initOnSelectionChanged` · `GetSelectedText` · `PasteText` · `ReplaceTextSmart` · `executeCommand("close", "")` · iframe widget

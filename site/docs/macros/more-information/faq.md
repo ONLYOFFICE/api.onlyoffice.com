@@ -29,8 +29,8 @@ Use the `debugger` keyword as a breakpoint in your script and open the browser d
 
 Not directly, because ONLYOFFICE macros use JavaScript while Microsoft Office macros use Visual Basic for Applications (VBA). You can convert them in two ways:
 
-- **Automatically** — using the built-in AI plugin converter (recommended). See [Converting VBA macros](../guides/converting-vba-macros.md).
-- **Manually** — by rewriting the logic in JavaScript using the Office JavaScript API.
+- **Automatically** - using the built-in AI plugin converter (recommended). See [Converting VBA macros](../guides/converting-vba-macros.md).
+- **Manually** - by rewriting the logic in JavaScript using the Office JavaScript API.
 
 ## Can I make a macro available across all documents?
 

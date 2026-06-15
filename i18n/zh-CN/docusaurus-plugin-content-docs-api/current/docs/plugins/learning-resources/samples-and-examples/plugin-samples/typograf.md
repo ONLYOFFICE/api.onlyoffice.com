@@ -55,9 +55,9 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 
 4. 第三方服务：
 
-   - [jQuery](https://jquery.com) —— 一个快速且简洁的 JavaScript 库，用于简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/jQuery.license)。
-   - [Select2](https://select2.org/) —— 提供可定制的选择框，支持搜索、标签、远程数据集、无限滚动及多种常用选项。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Select2.license)。
-   - [Typograf](https://github.com/typograf/typograf) —— 用于排版文本的屏幕排版工具。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Typograf.license)。
+   - [jQuery](https://jquery.com) -- 一个快速且简洁的 JavaScript 库，用于简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/jQuery.license)。
+   - [Select2](https://select2.org/) -- 提供可定制的选择框，支持搜索、标签、远程数据集、无限滚动及多种常用选项。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Select2.license)。
+   - [Typograf](https://github.com/typograf/typograf) -- 用于排版文本的屏幕排版工具。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Typograf.license)。
 
 ## 配置
 

@@ -8,9 +8,9 @@ ONLYOFFICE macros are different from Microsoft macros because the latter use the
 
 This means that macros created in Microsoft Office are not compatible with ONLYOFFICE macros. You can convert them for use with ONLYOFFICE in two ways:
 
-- [Automatically](#automatic-conversion-using-ai-plugin) — using the AI plugin for ONLYOFFICE (recommended for quick conversion).
+- [Automatically](#automatic-conversion-using-ai-plugin) - using the AI plugin for ONLYOFFICE (recommended for quick conversion).
 
-- [Manually](#manual-conversion-of-vba-macros) — by rewriting the logic in JavaScript using the [ONLYOFFICE Office API](../../office-api/get-started/overview.md).
+- [Manually](#manual-conversion-of-vba-macros) - by rewriting the logic in JavaScript using the [ONLYOFFICE Office API](../../office-api/get-started/overview.md).
 
 ## Automatic conversion using AI plugin
 

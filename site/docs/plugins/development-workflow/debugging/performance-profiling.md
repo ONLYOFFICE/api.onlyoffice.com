@@ -44,14 +44,14 @@ Use `PerformanceObserver` to catch entries automatically:
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     if (entry.duration > 100) {
-      console.warn(`Slow: ${entry.name} — ${entry.duration.toFixed(1)}ms`);
+      console.warn(`Slow: ${entry.name} - ${entry.duration.toFixed(1)}ms`);
     }
   }
 });
 observer.observe({ entryTypes: ['measure'] });
 ```
 
-## Chrome DevTools — Performance tab
+## Chrome DevTools - Performance tab
 
 1. Open DevTools (`F12` / `Ctrl+Shift+I`).
 2. Go to the **Performance** tab.
@@ -60,17 +60,17 @@ observer.observe({ entryTypes: ['measure'] });
 5. Click **Stop**.
 
 **What to look for:**
-- **Long tasks** (yellow blocks > 50 ms) — indicate JS blocking the main thread
-- **Layout shifts** — caused by DOM changes that trigger reflow
-- **Script execution time** — identify functions taking the most time
-- **Memory spikes** — shown in the memory graph at the bottom
+- **Long tasks** (yellow blocks > 50 ms) - indicate JS blocking the main thread
+- **Layout shifts** - caused by DOM changes that trigger reflow
+- **Script execution time** - identify functions taking the most time
+- **Memory spikes** - shown in the memory graph at the bottom
 
-## Chrome DevTools — Memory tab
+## Chrome DevTools - Memory tab
 
 Detect memory leaks by comparing heap snapshots:
 
 1. Open DevTools → **Memory** tab.
-2. Click **Take snapshot** — this is your baseline.
+2. Click **Take snapshot** - this is your baseline.
 3. Use the plugin for a while (open/close panels, trigger actions).
 4. Click **Take snapshot** again.
 5. Select the second snapshot and use **Comparison** view.

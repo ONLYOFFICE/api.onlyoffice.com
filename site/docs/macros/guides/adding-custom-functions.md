@@ -53,8 +53,8 @@ Starting from version 9.0.4, you can access cell address information inside cust
 
 The following properties are available:
 
-- `this.address` — the address of the cell where the custom function is being calculated (e.g., `"C5"`);
-- `this.args` — an array of input arguments. Each argument object includes a `value` field with the argument value and an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
+- `this.address` - the address of the cell where the custom function is being calculated (e.g., `"C5"`);
+- `this.args` - an array of input arguments. Each argument object includes a `value` field with the argument value and an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
 
   ``` ts
   [

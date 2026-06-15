@@ -70,9 +70,9 @@ To create a new assistant:
 1. Open the **AI** tab and click **Create AI assistant**.
 
 2. Fill in the fields:
-   - **Name** — a short name for the assistant, displayed as the button label on the toolbar.
-   - **Prompt** — the instruction sent to the AI when the button is clicked.
-   - **Action** — the action type the assistant performs on the document (Hint, Replace, or Replace + Hint).
+   - **Name** - a short name for the assistant, displayed as the button label on the toolbar.
+   - **Prompt** - the instruction sent to the AI when the button is clicked.
+   - **Action** - the action type the assistant performs on the document (Hint, Replace, or Replace + Hint).
 
 3. Click **Create**.
 
@@ -81,7 +81,7 @@ To create a new assistant:
 The assistant appears as a new button in the **AI** tab and can be used in the document.
 
 :::note
-If the assistant cannot perform the requested action — for example, when the prompt is unrelated to text editing — a warning is displayed and the operation is stopped.
+If the assistant cannot perform the requested action - for example, when the prompt is unrelated to text editing - a warning is displayed and the operation is stopped.
 :::
 
 ## AI assistant example {#create-ai-assistant-example}

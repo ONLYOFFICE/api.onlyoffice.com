@@ -10,10 +10,10 @@ Learn how to embed an interactive image editor inside ONLYOFFICE and write the r
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment — see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file — see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
 
-## Step 1 — Scaffold the plugin
+## Step 1 - Scaffold the plugin
 
 Create the plugin folder with the standard files:
 
@@ -78,9 +78,9 @@ Key settings to notice:
 | `size` | `[10000, 10000]` | Makes the dialog fill the entire screen |
 | `buttons` | OK + Cancel | OK triggers saving; Cancel closes without changes |
 
-## Step 2 — Build the editor page
+## Step 2 - Build the editor page
 
-In `index.html`, embed the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) (MIT-licensed). The entire editor UI lives in this single page — there are no iframes or secondary panels:
+In `index.html`, embed the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) (MIT-licensed). The entire editor UI lives in this single page - there are no iframes or secondary panels:
 
 ```html
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ In `index.html`, embed the [Toast UI Image Editor](https://ui.toast.com/tui-imag
 </html>
 ```
 
-## Step 3 — Detect the selected image
+## Step 3 - Detect the selected image
 
 In `scripts/photoeditor.js`, implement `window.Asc.plugin.init`. Use `executeMethod("GetImageDataFromSelection")` to get the selected image. This method returns an object with `src` (a base64 data URI or URL), `width`, and `height`:
 
@@ -124,7 +124,7 @@ window.Asc.plugin.init = function (sHtml) {
 
 `GetImageDataFromSelection` returns the image data from the first selected drawing. If no drawing is selected, it returns a white rectangle as a fallback.
 
-## Step 4 — Initialise the image editor
+## Step 4 - Initialise the image editor
 
 Create a function that sets up the Toast UI Image Editor with the loaded image:
 
@@ -146,9 +146,9 @@ function CreateImageEditor() {
 }
 ```
 
-The editor provides built-in tools for cropping, rotating, applying filters (grayscale, sepia, blur, sharpen, etc.), drawing shapes, and adding text — all rendered on an HTML5 Canvas.
+The editor provides built-in tools for cropping, rotating, applying filters (grayscale, sepia, blur, sharpen, etc.), drawing shapes, and adding text - all rendered on an HTML5 Canvas.
 
-## Step 5 — Replace the image in the document
+## Step 5 - Replace the image in the document
 
 Wire up the OK button via `window.Asc.plugin.button`. When the user clicks OK (`id == 0`), export the edited canvas as a base64 data URL and call `PutImageDataToSelection` to replace the original image. This method accepts an object with `src`, `width`, and `height`:
 
@@ -183,13 +183,13 @@ window.saveImage = function () {
 
 `PutImageDataToSelection` accepts an `ImageData` object containing a base64-encoded PNG `src` string and the image dimensions. It replaces the currently selected drawing in the document.
 
-## Step 6 — Test the plugin
+## Step 6 - Test the plugin
 
 1. Package the plugin folder as a zip and install it via **Plugins → Plugin Manager → Upload plugin**.
 2. Insert any image into a document.
 3. Click the image to select it, then open the plugin from the **Plugins** tab.
 4. The image opens in the full-screen editor. Crop, rotate, or apply a filter.
-5. Click **OK** — the original image is replaced in place with the edited version.
+5. Click **OK** - the original image is replaced in place with the edited version.
 6. Click **Cancel** to discard changes and close the dialog.
 
 ## Going further
@@ -201,9 +201,9 @@ window.saveImage = function () {
 
 **Resources:**
 
-1. [Photo editor plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/photo-editor.md) — reference implementation you can run immediately.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) — full `config.json` field reference.
-3. [executeMethod ("GetImageDataFromSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md) — retrieves the selected image data.
-4. [executeMethod ("PutImageDataToSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md) — replaces the selected image.
+1. [Photo editor plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/photo-editor.md) - reference implementation you can run immediately.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+3. [executeMethod ("GetImageDataFromSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md) - retrieves the selected image data.
+4. [executeMethod ("PutImageDataToSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md) - replaces the selected image.
 
 **Key concepts:** `GetImageDataFromSelection` · `PutImageDataToSelection` · Toast UI Image Editor · full-screen modal · `executeCommand("close", "")`

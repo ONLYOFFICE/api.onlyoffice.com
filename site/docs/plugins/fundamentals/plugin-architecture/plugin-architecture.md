@@ -10,7 +10,7 @@ ONLYOFFICE plugins follow a modular architecture that separates the plugin inter
 
 ![ONLYOFFICE Plugin Architecture](/assets/images/plugins/plugin-architecture-detailed.svg)
 
-The plugin runs in a sandboxed iframe — it cannot directly access the editor's DOM or internal state. All interaction happens through the `window.Asc.plugin` API interface.
+The plugin runs in a sandboxed iframe - it cannot directly access the editor's DOM or internal state. All interaction happens through the `window.Asc.plugin` API interface.
 
 ## Three architectural layers
 
@@ -18,9 +18,9 @@ The plugin runs in a sandboxed iframe — it cannot directly access the editor's
 
 Each plugin runs in an isolated iframe environment. This provides:
 
-- **Security isolation** — plugins cannot directly access the editor's internal state
-- **Cross-platform compatibility** — plugins work consistently across platforms
-- **Independent execution** — plugin errors don't crash the main editor
+- **Security isolation** - plugins cannot directly access the editor's internal state
+- **Cross-platform compatibility** - plugins work consistently across platforms
+- **Independent execution** - plugin errors don't crash the main editor
 
 ### 2. Communication layer (API bridge)
 
@@ -40,7 +40,7 @@ See [Communication flow](communication-flow.md) for the full event and method mo
 
 ### 3. Configuration (config.json)
 
-`config.json` registers the plugin with the editor — it defines metadata, supported editor types, UI mode, and which HTML file to load. See the [config.json reference](../configuration/config-json.md).
+`config.json` registers the plugin with the editor - it defines metadata, supported editor types, UI mode, and which HTML file to load. See the [config.json reference](../configuration/config-json.md).
 
 ## Plugin types
 
@@ -93,7 +93,7 @@ Plugins can support multiple editor types by listing them in `EditorsSupport`:
 
 ## In this section
 
-- [File structure best practices](file-structure.md) — how to organize plugin files
-- [Communication flow](communication-flow.md) — how the plugin and editor exchange data
-- [Security and sandboxing](security-and-sandboxing.md) — what the iframe sandbox allows and prevents
-- [Performance considerations](performance-considerations.md) — initialization, rendering, and memory patterns
+- [File structure best practices](file-structure.md) - how to organize plugin files
+- [Communication flow](communication-flow.md) - how the plugin and editor exchange data
+- [Security and sandboxing](security-and-sandboxing.md) - what the iframe sandbox allows and prevents
+- [Performance considerations](performance-considerations.md) - initialization, rendering, and memory patterns

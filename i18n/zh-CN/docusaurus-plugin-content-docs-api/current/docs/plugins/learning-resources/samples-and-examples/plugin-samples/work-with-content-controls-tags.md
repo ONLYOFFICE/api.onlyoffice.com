@@ -36,7 +36,7 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 
 3. 第三方服务：  
 
-   - [jQuery](https://jquery.com) — 一款快速简洁的 JavaScript 库，简化了 HTML 文档遍历、事件处理、动画和 Ajax 交互，适合快速 Web 开发。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_work_with_content_controls_tags/licenses/jQuery.license)。
+   - [jQuery](https://jquery.com) - 一款快速简洁的 JavaScript 库，简化了 HTML 文档遍历、事件处理、动画和 Ajax 交互，适合快速 Web 开发。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_work_with_content_controls_tags/licenses/jQuery.license)。
 
 ## 配置
 

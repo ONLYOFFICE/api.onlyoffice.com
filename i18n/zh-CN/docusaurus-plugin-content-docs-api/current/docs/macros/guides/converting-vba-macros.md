@@ -8,9 +8,9 @@ ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual B
 
 如果您此前在 Microsoft Office 中使用了宏功能，可能会遇到一些不便，因为这些宏与 ONLYOFFICE 不兼容。不过，您可以将之前使用的宏转换为适用于新编辑器的版本。
 
-- [自动转换](#automatic-conversion-using-ai-plugin) — 使用 ONLYOFFICE 的 AI 插件进行自动转换（推荐用于快速转换）。
+- [自动转换](#automatic-conversion-using-ai-plugin) - 使用 ONLYOFFICE 的 AI 插件进行自动转换（推荐用于快速转换）。
 
-- [手动转换](#manual-conversion-of-vba-macros) — 使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
+- [手动转换](#manual-conversion-of-vba-macros) - 使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
 
 ## 使用 AI 插件进行自动转换 {#automatic-conversion-using-ai-plugin}
 

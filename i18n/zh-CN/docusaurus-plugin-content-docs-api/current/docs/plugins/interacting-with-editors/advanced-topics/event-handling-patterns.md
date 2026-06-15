@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Event handling patterns
 
-The plugin–editor communication model is event-driven. This page covers patterns for attaching, managing, and cleaning up event listeners.
+The plugin-editor communication model is event-driven. This page covers patterns for attaching, managing, and cleaning up event listeners.
 
 ## Basic event attachment
 

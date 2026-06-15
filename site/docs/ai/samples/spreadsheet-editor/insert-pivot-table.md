@@ -193,7 +193,7 @@ func.call = async function (params) {
     "Rules:",
     "1. Column selection priority:",
     "   a) If mandatory grouping columns are specified and found: use ONLY those matched columns as pivot rows.",
-    "   b) If no mandatory columns or none found: choose 1–2 best column indices for pivot rows (categorical/grouping).",
+    "   b) If no mandatory columns or none found: choose 1-2 best column indices for pivot rows (categorical/grouping).",
     "2. For automatic column selection (when no mandatory columns found):",
     "   a) Contain textual (non-numeric) data.",
     "   b) Prefer columns with at least 2 distinct values.",

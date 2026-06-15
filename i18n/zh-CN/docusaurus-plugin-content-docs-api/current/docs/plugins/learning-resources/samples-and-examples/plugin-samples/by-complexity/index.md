@@ -8,7 +8,7 @@ Filter plugin samples by how much experience you have or how much complexity you
 
 ## Beginner
 
-5 examples — minimal setup, core API usage, no external dependencies.
+5 examples - minimal setup, core API usage, no external dependencies.
 
 | Plugin                                                                                   | What you learn                              |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -20,7 +20,7 @@ Filter plugin samples by how much experience you have or how much complexity you
 
 ## Intermediate
 
-8 examples — external API calls, custom UI panels, multi-step logic.
+8 examples - external API calls, custom UI panels, multi-step logic.
 
 | Plugin                                                                                                                   | What you learn                          |
 | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
@@ -35,7 +35,7 @@ Filter plugin samples by how much experience you have or how much complexity you
 
 ## Advanced
 
-5 examples — service integrations, document automation, complex workflows.
+5 examples - service integrations, document automation, complex workflows.
 
 | Plugin                                                 | What you learn                                 |
 | ------------------------------------------------------ | ---------------------------------------------- |

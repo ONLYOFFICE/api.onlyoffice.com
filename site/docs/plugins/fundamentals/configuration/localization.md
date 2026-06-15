@@ -137,7 +137,7 @@ window.Asc.plugin.onTranslate = () => {
 The _window\.Asc.plugin.onTranslate_ function will be called right after the plugin startup and later in case the plugin language is changed.
 
 :::warning
-Use `onTranslate` only for DOM text localization. Do not call `executeMethod`, `callCommand`, or `PluginWindow.show` inside this handler — these methods may not be available yet because `onTranslate` can fire before `init`.
+Use `onTranslate` only for DOM text localization. Do not call `executeMethod`, `callCommand`, or `PluginWindow.show` inside this handler - these methods may not be available yet because `onTranslate` can fire before `init`.
 :::
 
 If you need to localize more than one word/phrase, the _window\.Asc.plugin.onTranslate_ function can have the following appearance:

@@ -4,11 +4,11 @@ sidebar_position: 4
 
 # Performance considerations
 
-Plugin performance affects the editor experience directly — a slow plugin makes the whole editor feel sluggish. This page covers the key areas where plugins commonly run into performance problems and how to avoid them.
+Plugin performance affects the editor experience directly - a slow plugin makes the whole editor feel sluggish. This page covers the key areas where plugins commonly run into performance problems and how to avoid them.
 
 ## Fast initialization
 
-The `init` function runs when the plugin panel opens. Keep it short — defer anything that doesn't need to happen immediately:
+The `init` function runs when the plugin panel opens. Keep it short - defer anything that doesn't need to happen immediately:
 
 ```javascript
 window.Asc.plugin.init = function (data) {
@@ -26,16 +26,16 @@ Avoid synchronous network requests and large DOM builds in `init`.
 
 ## Efficient DOM updates
 
-Batch DOM reads and writes — alternating between the two forces the browser to recalculate layout repeatedly:
+Batch DOM reads and writes - alternating between the two forces the browser to recalculate layout repeatedly:
 
 ```javascript
-// Bad — interleaves reads and writes
+// Bad - interleaves reads and writes
 items.forEach(function (item) {
-  var height = element.offsetHeight; // read — forces layout
+  var height = element.offsetHeight; // read - forces layout
   element.style.height = height + 10 + "px"; // write
 });
 
-// Better — read all first, then write all
+// Better - read all first, then write all
 var heights = items.map(function (item) {
   return item.offsetHeight;
 });
@@ -135,5 +135,5 @@ window.Asc.plugin.callCommand(function () {
 
 ## See also
 
-- [Communication flow](communication-flow.md) — understanding the API bridge overhead
-- [Plugin lifecycle](../getting-started/plugin-lifecycle.md) — `init`, `onDestroy`, and the full lifecycle
+- [Communication flow](communication-flow.md) - understanding the API bridge overhead
+- [Plugin lifecycle](../getting-started/plugin-lifecycle.md) - `init`, `onDestroy`, and the full lifecycle

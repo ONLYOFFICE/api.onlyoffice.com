@@ -28,7 +28,7 @@ ONLYOFFICE plugins use semantic versioning (`MAJOR.MINOR.PATCH`):
 ```json
 { "version": "1.0.0" }
 ```
-Submitting an update without changing the version — Plugin Manager cannot detect the update.
+Submitting an update without changing the version - Plugin Manager cannot detect the update.
 :::
 
 :::tip[Correct]
@@ -45,7 +45,7 @@ Submitting an update without changing the version — Plugin Manager cannot dete
 
 ## Submitting an update
 
-### Step 1 — Sync your fork with upstream
+### Step 1 - Sync your fork with upstream
 
 ```bash
 git remote add upstream https://github.com/ONLYOFFICE/onlyoffice.github.io.git
@@ -54,20 +54,20 @@ git checkout main
 git merge upstream/main
 ```
 
-### Step 2 — Update your plugin files
+### Step 2 - Update your plugin files
 
 Replace updated files in:
 ```
 sdkjs-plugins/content/your-plugin-name/
 ```
 
-### Step 3 — Increment the version in config.json
+### Step 3 - Increment the version in config.json
 
 ```json
 { "version": "1.1.0" }
 ```
 
-### Step 4 — Commit and push
+### Step 4 - Commit and push
 
 ```bash
 git add sdkjs-plugins/content/your-plugin-name/
@@ -75,7 +75,7 @@ git commit -m "Update your-plugin-name to v1.1.0"
 git push origin main
 ```
 
-### Step 5 — Create a pull request
+### Step 5 - Create a pull request
 
 Include in PR description: what changed, new ONLYOFFICE version requirements, bug fixes or breaking changes.
 
@@ -111,15 +111,15 @@ Check the [Changelog](../../../more-information/changelog) after each ONLYOFFICE
 ```markdown
 # Changelog
 
-## 1.1.0 — 2025-06-01
+## 1.1.0 - 2025-06-01
 - Added support for Spreadsheet Editor
 - Improved performance for large documents
 
-## 1.0.1 — 2025-03-15
+## 1.0.1 - 2025-03-15
 - Fixed icon not appearing on high-DPI displays
 - Fixed plugin not closing when Cancel is clicked
 
-## 1.0.0 — 2025-01-10
+## 1.0.0 - 2025-01-10
 - Initial release
 ```
 

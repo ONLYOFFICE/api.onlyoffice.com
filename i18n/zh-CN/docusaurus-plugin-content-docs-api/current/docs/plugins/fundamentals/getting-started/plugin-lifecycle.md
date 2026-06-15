@@ -21,7 +21,7 @@ The editor calls `window.Asc.plugin.init` with the initial data payload. This is
 
 ```javascript
 window.Asc.plugin.init = function (data) {
-  // Plugin is ready — set up UI and state here
+  // Plugin is ready - set up UI and state here
 };
 ```
 

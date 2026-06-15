@@ -14,7 +14,7 @@ Adding custom AI tools expands the AI agent's capabilities and allows adapting i
 You can find ready-to-use custom AI tools [here](/samples/?doctype=ai&text=ai+tools) or create your own ones.
 
 :::caution Current limitation
-Adding a custom AI tool requires modifying the [AI plugin source code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai) directly — you can then install the modified plugin via a custom [store link](#setup).
+Adding a custom AI tool requires modifying the [AI plugin source code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai) directly - you can then install the modified plugin via a custom [store link](#setup).
 :::
 
 ## How it works {#usage}

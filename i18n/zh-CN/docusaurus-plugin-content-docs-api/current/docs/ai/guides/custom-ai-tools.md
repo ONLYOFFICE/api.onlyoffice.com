@@ -14,7 +14,7 @@ sidebar_position: -1
 你可以在[此处](/samples/?doctype=ai&text=ai+tools)找到现成的自定义 AI 工具，也可以创建自己的工具。
 
 :::caution 当前限制
-添加自定义 AI 工具需要直接修改 [AI 插件源代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)——然后可以通过自定义[商店链接](#setup)安装修改后的插件。
+添加自定义 AI 工具需要直接修改 [AI 插件源代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)--然后可以通过自定义[商店链接](#setup)安装修改后的插件。
 :::
 
 ## 工作原理 {#usage}

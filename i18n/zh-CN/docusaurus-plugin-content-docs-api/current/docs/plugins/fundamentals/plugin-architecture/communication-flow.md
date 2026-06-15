@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Communication flow
 
-Plugins and the ONLYOFFICE editor communicate through a message-passing bridge — there is no shared memory or direct DOM access between them. This page explains the two directions of communication and the event model that drives it.
+Plugins and the ONLYOFFICE editor communicate through a message-passing bridge - there is no shared memory or direct DOM access between them. This page explains the two directions of communication and the event model that drives it.
 
 ## Two directions
 
@@ -56,7 +56,7 @@ Data from the user to the editor follows this path:
 User Action → Plugin UI → JavaScript Handler → executeMethod → Editor
 ```
 
-Example — inserting text on button click:
+Example - inserting text on button click:
 
 ```javascript
 function insertText() {
@@ -73,7 +73,7 @@ Data from the editor to the plugin follows this path:
 Editor Event → API Callback → Plugin Handler → UI Update
 ```
 
-Example — updating the UI when cursor position changes:
+Example - updating the UI when cursor position changes:
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
@@ -93,7 +93,7 @@ window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
 Asc.scope.text = document.getElementById("input").value;
 
 window.Asc.plugin.callCommand(function () {
-  // This runs inside the editor context — Asc.scope is available here
+  // This runs inside the editor context - Asc.scope is available here
   var oParagraph = Api.CreateParagraph();
   oParagraph.AddText(Asc.scope.text);
   Api.GetDocument().InsertContent([oParagraph]);

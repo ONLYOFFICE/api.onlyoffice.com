@@ -21,7 +21,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 **开发概况：**
 
-- **时间：** 2–7 天 | **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
+- **时间：** 2-7 天 | **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
 - **分发方式：** [ONLYOFFICE 应用市场](https://www.onlyoffice.com/app-directory/zh) 或私有部署
 
 [在 ONLYOFFICE 应用市场浏览示例](https://www.onlyoffice.com/app-directory/zh)
@@ -41,7 +41,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 | **外部 API**   | ✅ 支持（REST、GraphQL 等）     | ❌ 不支持                | ✅ 支持（需要 AI 服务）  |
 | **离线使用**   | ⚠️ 取决于功能                  | ✅ 完全离线              | ❌ 需要网络              |
 | **技能要求**   | 中级                            | 入门                     | 高级                     |
-| **开发时间**   | 2–7 天                          | 30 分钟 – 2 小时         | 3–10 天                  |
+| **开发时间**   | 2-7 天                          | 30 分钟 - 2 小时         | 3-10 天                  |
 | **分发方式**   | 应用市场、GitHub、私有          | 复制粘贴、模板           | 应用市场、私有           |
 | **最适合**     | 可复用工具、集成                | 个人自动化               | AI 驱动功能              |
 | **框架支持**   | ✅ React、Vue、Angular          | ❌ 仅限原生 JS           | ✅ 任意框架              |
@@ -70,23 +70,23 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 **需要更多帮助？**
 
-- [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告问题
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) — 问答归档
+- [开发者论坛](https://forum.onlyoffice.com/) - 社区支持
+- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - 报告问题
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) - 问答归档
 
 ## 资源
 
-- **[交互式 Playground](playground.md)** — 无需安装即可测试代码
-- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** — 预构建组件
-- **[插件模板](https://github.com/ONLYOFFICE/sdkjs-plugins)** — 起始项目
-- **[浏览器开发者工具](../development-workflow/debugging/for-web-editors.md)** — 调试指南
-- **[插件示例](/samples/?doctype=docs&text=plugin)** — 可运行示例
-- **[API 参考](../interacting-with-editors/overview/overview.md)** — 完整 API 文档
-- **[插件结构](../fundamentals/configuration/config-json.md)** — 配置指南
-- **[常见问题](../more-information/faq.md)** — 常见问题解答
-- **[论坛](https://forum.onlyoffice.com/)** — 社区支持
-- **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** — 源代码与贡献
-- **[更新日志](../more-information/changelog.md)** — 最新 API 更新
+- **[交互式 Playground](playground.md)** - 无需安装即可测试代码
+- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** - 预构建组件
+- **[插件模板](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 起始项目
+- **[浏览器开发者工具](../development-workflow/debugging/for-web-editors.md)** - 调试指南
+- **[插件示例](/samples/?doctype=docs&text=plugin)** - 可运行示例
+- **[API 参考](../interacting-with-editors/overview/overview.md)** - 完整 API 文档
+- **[插件结构](../fundamentals/configuration/config-json.md)** - 配置指南
+- **[常见问题](../more-information/faq.md)** - 常见问题解答
+- **[论坛](https://forum.onlyoffice.com/)** - 社区支持
+- **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 源代码与贡献
+- **[更新日志](../more-information/changelog.md)** - 最新 API 更新
 
 ## 下一步
 

@@ -17,7 +17,7 @@ This page describes the recommended setup for plugin development.
 
 ## Basic setup
 
-1. Install [ONLYOFFICE Desktop Editors](https://www.onlyoffice.com/download-desktop.aspx) — the fastest way to load and test plugins without a server.
+1. Install [ONLYOFFICE Desktop Editors](https://www.onlyoffice.com/download-desktop.aspx) - the fastest way to load and test plugins without a server.
 
 2. Create a folder for your plugin:
 

@@ -44,7 +44,7 @@ my-plugin/
 ├── feature-a.html
 ├── feature-b.html
 ├── scripts/
-│   ├── code.js              # Entry point — init and lifecycle handlers
+│   ├── code.js              # Entry point - init and lifecycle handlers
 │   ├── feature-a.js         # Logic for feature A
 │   └── feature-b.js         # Logic for feature B
 └── resources/
@@ -101,9 +101,9 @@ For plugins with multiple HTML pages (e.g. a main view and a settings panel), ea
 
 ## What to avoid
 
-- **Inline scripts in HTML** — move all logic to `.js` files for easier debugging
-- **Hardcoded strings across multiple files** — centralize labels and messages
-- **Bundling external libraries without checking size** — large dependencies slow plugin load; see [Performance considerations](performance-considerations.md)
+- **Inline scripts in HTML** - move all logic to `.js` files for easier debugging
+- **Hardcoded strings across multiple files** - centralize labels and messages
+- **Bundling external libraries without checking size** - large dependencies slow plugin load; see [Performance considerations](performance-considerations.md)
 
 ## Icon requirements
 

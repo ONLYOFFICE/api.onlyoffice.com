@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: Comment text — custom AI tool
+title: Comment text - custom AI tool
 ---
-# Comment text — custom AI tool
+# Comment text - custom AI tool
 
 Add an AI-generated comment or footnote to selected text using the ONLYOFFICE AI agent.
 
@@ -57,10 +57,10 @@ let func = new RegisteredFunction({
 
 **Key fields explained:**
 
-- `name` — The function name the AI model will invoke
-- `parameters` — Parameters the function expects from the AI as a JSON object
-- `examples` — Sample invocations that teach the AI the correct calling syntax
-- `description` — Tells the AI what the function does and when to use it
+- `name` - The function name the AI model will invoke
+- `parameters` - Parameters the function expects from the AI as a JSON object
+- `examples` - Sample invocations that teach the AI the correct calling syntax
+- `description` - Tells the AI what the function does and when to use it
 
 ## Step 3: Retrieve the selected text
 
@@ -96,7 +96,7 @@ Combine the user's instruction with the retrieved text, then create a request en
 Send the prompt to the AI model and insert its response into the document as a comment or footnote.
 
 :::info Asc.scope
-`Asc.scope` is a shared object used to pass data into `callCommand` closures. Because `callCommand` runs in a separate context, local variables are not directly accessible inside it — `Asc.scope` bridges the two contexts.
+`Asc.scope` is a shared object used to pass data into `callCommand` closures. Because `callCommand` runs in a separate context, local variables are not directly accessible inside it - `Asc.scope` bridges the two contexts.
 :::
 
 To insert as a comment:
@@ -177,6 +177,6 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 **Need help?**
 
-- [Developer Forum](https://forum.onlyoffice.com/) — Community support
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
-- [FAQ](../../more-information/faq.md) — Frequently asked questions
+- [Developer Forum](https://forum.onlyoffice.com/) - Community support
+- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - Report bugs
+- [FAQ](../../more-information/faq.md) - Frequently asked questions

@@ -8,9 +8,9 @@ ONLYOFFICE macros are different from Microsoft macros due to the reason the latt
 
 This can be the reason for some inconvenience in case you previously used Microsoft Office with macros, as they will become incompatible with ONLYOFFICE macros. You can convert your previously used macros to use them with the new editors in two ways:
 
-- [Automatically](#automatic-conversion-using-ai-plugin) — using the AI plugin for ONLYOFFICE (recommended for quick conversion).
+- [Automatically](#automatic-conversion-using-ai-plugin) - using the AI plugin for ONLYOFFICE (recommended for quick conversion).
 
-- [Manually](#manual-conversion-of-vba-macros) — by rewriting the logic in JavaScript using the [ONLYOFFICE Office API](../../office-api/get-started/overview.md).
+- [Manually](#manual-conversion-of-vba-macros) - by rewriting the logic in JavaScript using the [ONLYOFFICE Office API](../../office-api/get-started/overview.md).
 
 ## Automatic conversion using AI plugin
 

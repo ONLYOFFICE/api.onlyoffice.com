@@ -4,17 +4,17 @@ sidebar_position: 3
 
 # Security and sandboxing
 
-Every plugin runs inside a sandboxed iframe. This is not a restriction to work around — it is what makes plugins safe for end users and stable for the editor. Understanding what the sandbox allows and prevents helps you design plugins that work reliably.
+Every plugin runs inside a sandboxed iframe. This is not a restriction to work around - it is what makes plugins safe for end users and stable for the editor. Understanding what the sandbox allows and prevents helps you design plugins that work reliably.
 
 ## What the sandbox prevents
 
 The iframe sandbox blocks plugins from:
 
-- **Accessing the editor's internal DOM** — a plugin cannot read or modify the editor's markup directly
-- **Reading files from the user's machine** — no local file system access
-- **Accessing other plugins** — plugin iframes are isolated from each other
-- **Injecting scripts into the editor window** — no XSS path from a plugin to the editor UI
-- **Calling editor internals directly** — only API-exposed methods are reachable
+- **Accessing the editor's internal DOM** - a plugin cannot read or modify the editor's markup directly
+- **Reading files from the user's machine** - no local file system access
+- **Accessing other plugins** - plugin iframes are isolated from each other
+- **Injecting scripts into the editor window** - no XSS path from a plugin to the editor UI
+- **Calling editor internals directly** - only API-exposed methods are reachable
 
 ## What the sandbox allows
 
@@ -29,16 +29,16 @@ Plugins can:
 
 Plugins can only perform operations explicitly exposed by the API. Any attempt to reach outside the sandbox has no effect.
 
-:::warning[Wrong — direct DOM manipulation]
+:::warning[Wrong - direct DOM manipulation]
 ```javascript
-// This has no effect on the document — the editor DOM is not accessible
+// This has no effect on the document - the editor DOM is not accessible
 document.querySelector(".editor-content").innerHTML = "New content";
 ```
 :::
 
-:::tip[Correct — API method]
+:::tip[Correct - API method]
 ```javascript
-// This works — it goes through the API bridge
+// This works - it goes through the API bridge
 window.Asc.plugin.executeMethod("PasteText", ["New content"]);
 ```
 :::
@@ -78,9 +78,9 @@ Plugins should treat any data returned from the editor (document content, user i
 
 ## Plugin source integrity
 
-When deploying plugins to a server, serve them over HTTPS to prevent man-in-the-middle modification of plugin files. The editor fetches the plugin by the `baseUrl` defined in `config.json` — if this URL is served over HTTP, the plugin files can be tampered with in transit.
+When deploying plugins to a server, serve them over HTTPS to prevent man-in-the-middle modification of plugin files. The editor fetches the plugin by the `baseUrl` defined in `config.json` - if this URL is served over HTTP, the plugin files can be tampered with in transit.
 
 ## See also
 
-- [Communication flow](communication-flow.md) — the API bridge that enforces the sandbox boundary
-- [config.json reference](../configuration/config-json.md) — `baseUrl` and deployment settings
+- [Communication flow](communication-flow.md) - the API bridge that enforces the sandbox boundary
+- [config.json reference](../configuration/config-json.md) - `baseUrl` and deployment settings

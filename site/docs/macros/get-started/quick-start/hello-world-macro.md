@@ -4,7 +4,7 @@ title: Hello world macro
 ---
 # Hello world macro
 
-Macros are quite simple — pure JavaScript with no installation required.
+Macros are quite simple - pure JavaScript with no installation required.
 
 **Time:** 2 minutes | **Skill level:** Beginner
 
@@ -150,6 +150,6 @@ Try these examples to learn more:
 
 **Need help?**
 
-- [Developer Forum](https://forum.onlyoffice.com/) — Community support
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
-- [FAQ](../../more-information/faq.md) — Frequently asked questions
+- [Developer Forum](https://forum.onlyoffice.com/) - Community support
+- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - Report bugs
+- [FAQ](../../more-information/faq.md) - Frequently asked questions

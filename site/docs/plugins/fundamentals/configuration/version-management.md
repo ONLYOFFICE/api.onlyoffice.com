@@ -18,7 +18,7 @@ The `version` field in [config.json](config-json.md) is a string in `MAJOR.MINOR
 
 | Segment | When to increment |
 |---------|------------------|
-| MAJOR | Breaking changes — plugin behavior or API surface changes incompatibly |
+| MAJOR | Breaking changes - plugin behavior or API surface changes incompatibly |
 | MINOR | New features, backwards-compatible |
 | PATCH | Bug fixes, minor tweaks |
 

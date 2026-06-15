@@ -133,7 +133,7 @@ window.Asc.plugin.attachEditorEvent("onDocumentContentReady", function() {
 ```
 :::
 
-For selection-aware plugins, set `"initOnSelectionChanged": true` in `config.json` — the `init` function then receives the selected data on every selection change instead of only on plugin open.
+For selection-aware plugins, set `"initOnSelectionChanged": true` in `config.json` - the `init` function then receives the selected data on every selection change instead of only on plugin open.
 
 ### Button handler not responding
 

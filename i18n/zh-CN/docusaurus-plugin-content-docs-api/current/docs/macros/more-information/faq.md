@@ -29,8 +29,8 @@ ONLYOFFICE 宏使用 JavaScript 语法和 [Office JavaScript API](../../office-a
 
 不能直接使用，因为 ONLYOFFICE 宏使用 JavaScript，而 Microsoft Office 宏使用 Visual Basic for Applications（VBA）脚本语言。您可以通过以下两种方式进行转换：
 
-- **自动转换** — 使用内置 AI 插件转换器（推荐，速度更快）。详见[转换 VBA 宏](../guides/converting-vba-macros.md)。
-- **手动转换** — 使用 Office JavaScript API，以 JavaScript 重写宏逻辑。
+- **自动转换** - 使用内置 AI 插件转换器（推荐，速度更快）。详见[转换 VBA 宏](../guides/converting-vba-macros.md)。
+- **手动转换** - 使用 Office JavaScript API，以 JavaScript 重写宏逻辑。
 
 ## 能否让宏在所有文档中都可用？
 

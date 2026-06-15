@@ -14,7 +14,7 @@ This function analyzes the currently selected image and generates a title, capti
 - Generate a caption for the selected image
 - Add a short title for the selected chart
 - Provide accessibility‑friendly alt text for this infographic
-- Write a 1–2 sentence description of this photo
+- Write a 1-2 sentence description of this photo
 
 ## Function registration
 
