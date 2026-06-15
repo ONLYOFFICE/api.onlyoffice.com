@@ -315,7 +315,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md).The plugin includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (origin, proxy, prefix). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md). The plugin includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (origin, proxy, prefix). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
 
 <details>
   <summary>ExtSearchPlugin class</summary>
