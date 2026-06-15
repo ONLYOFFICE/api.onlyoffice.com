@@ -64,7 +64,7 @@ GitHub 仓库地址：[invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
 - [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

@@ -189,8 +189,8 @@ GitHub 仓库：[language tool](https://github.com/ONLYOFFICE/onlyoffice.github.
 - [executeMethod ("GetVersion")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
 - [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
-- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

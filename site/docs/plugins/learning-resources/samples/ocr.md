@@ -200,7 +200,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 - [init](../../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [resizeWindow](../../../customization/windows-and-panels.md#interacting-with-a-window)
-- [info.recalculate](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [info.recalculate](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

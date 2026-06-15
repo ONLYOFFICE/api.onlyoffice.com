@@ -135,7 +135,7 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [executeMethod ("ReplaceTextSmart")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
 - [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

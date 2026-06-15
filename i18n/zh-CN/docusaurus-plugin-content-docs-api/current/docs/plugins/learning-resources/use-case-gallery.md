@@ -18,7 +18,7 @@ Automate document-heavy workflows to reduce manual effort and errors.
 
 **Solution:**
 
-1. Use the [Invoices plugin](/docs/plugins/samples/invoices.md) to pull order data and fill a template.
+1. Use the [Invoices plugin](/docs/plugins/learning-resources/samples/invoices.md) to pull order data and fill a template.
 2. Apply spreadsheet macros to calculate totals, taxes, and discounts.
 3. Use PDF editor macros to set validation rules before sending.
 
@@ -30,7 +30,7 @@ Automate document-heavy workflows to reduce manual effort and errors.
 
 **Solution:**
 
-1. Use the [Templates plugin](/docs/plugins/samples/templates.md) to select and populate document templates.
+1. Use the [Templates plugin](/docs/plugins/learning-resources/samples/templates.md) to select and populate document templates.
 2. Apply text document macros to update styles, headers, and footers automatically.
 3. Export the resulting package to PDF.
 
@@ -44,7 +44,7 @@ Build interactive language-learning and study environments inside the editor.
 
 **Solution:**
 
-1. Combine [Translator](/docs/plugins/samples/translator.md), [Thesaurus](/docs/plugins/samples/thesaurus.md), and [Speech](/docs/plugins/samples/speech.md) plugins for vocabulary work.
+1. Combine [Translator](/docs/plugins/learning-resources/samples/translator.md), [Thesaurus](/docs/plugins/learning-resources/samples/thesaurus.md), and [Speech](/docs/plugins/learning-resources/samples/speech.md) plugins for vocabulary work.
 2. Use text document macros to generate reading-comprehension questions from selected passages.
 3. Use custom AI tools to produce differentiated exercises for different proficiency levels.
 
@@ -58,9 +58,9 @@ Build rich content environments for writers, editors, and designers.
 
 **Solution:**
 
-1. Use the [Photo editor plugin](/docs/plugins/samples/photo-editor.md) for inline image editing.
-2. Add the [Symbol table plugin](/docs/plugins/samples/symbol-table.md) for special characters and typography.
-3. Use the [AI plugin](/docs/plugins/samples/ai.md) with custom AI tools for drafting, rewriting, and adding structure to long texts.
+1. Use the [Photo editor plugin](/docs/plugins/learning-resources/samples/photo-editor.md) for inline image editing.
+2. Add the [Symbol table plugin](/docs/plugins/learning-resources/samples/symbol-table.md) for special characters and typography.
+3. Use the [AI plugin](/docs/plugins/learning-resources/samples/ai.md) with custom AI tools for drafting, rewriting, and adding structure to long texts.
 
 ## Team collaboration
 
@@ -72,6 +72,6 @@ Keep discussions and content close together for asynchronous and remote teams.
 
 **Solution:**
 
-1. Use [Extended comments](/docs/plugins/samples/extended-comments.md) to add rich, threaded annotations directly in documents.
-2. Integrate the [Telegram plugin](/docs/plugins/samples/telegram.md) to post document updates and comments to a team channel.
+1. Use [Extended comments](/docs/plugins/learning-resources/samples/extended-comments.md) to add rich, threaded annotations directly in documents.
+2. Integrate the [Telegram plugin](/docs/plugins/learning-resources/samples/telegram.md) to post document updates and comments to a team channel.
 3. Use macros and custom AI tools to generate meeting notes, summaries, and action item lists from edited document content.

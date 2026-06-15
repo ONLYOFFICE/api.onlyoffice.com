@@ -104,7 +104,7 @@ Test after each ONLYOFFICE release:
 - Event handlers fire correctly
 - UI elements render correctly
 
-Check the [Changelog](../../../more-information/changelog) after each ONLYOFFICE release.
+Check the [Changelog](../../more-information/changelog.md) after each ONLYOFFICE release.
 
 ## Keeping a changelog for your plugin
 
@@ -135,7 +135,7 @@ Open an issue at [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](htt
 
 ## Additional resources
 
-- [Changelog](../../../more-information/changelog)
+- [Changelog](../../more-information/changelog.md)
 - [Configuration](../../fundamentals/configuration/configuration.md)
 - [Marketplace repo](https://github.com/ONLYOFFICE/onlyoffice.github.io)
 - [Plugin examples](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)

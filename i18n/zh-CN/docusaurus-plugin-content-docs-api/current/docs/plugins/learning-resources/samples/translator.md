@@ -121,7 +121,7 @@ GitHub 仓库：[translator](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 - [executeMethod ("GetSelectionType")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectionType.md)
 - [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

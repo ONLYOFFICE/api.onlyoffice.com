@@ -193,11 +193,11 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - [onTranslate](../../../../../../../../../site/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetImageDataFromSelection")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GerVersion")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("GetVersion")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetVersion.md)
 - [executeMethod ("PutImageDataToSelection")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
 - [resizeWindow](../../../../../../../../../site/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
 - [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

@@ -140,7 +140,7 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 - [executeMethod ("PasteText")](../../../interacting-with-editors/document-api/Methods/PasteText.md)
 - [executeMethod ("ReplaceTextSmart")](../../../interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
 - [Asc.scope](../../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

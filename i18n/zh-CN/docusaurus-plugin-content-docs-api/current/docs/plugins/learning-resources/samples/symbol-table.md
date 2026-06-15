@@ -113,7 +113,7 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - [onTranslate](../../../../../../../../../site/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

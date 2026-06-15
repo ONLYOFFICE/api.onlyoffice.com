@@ -113,7 +113,7 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](../../../interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](../../../interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-editortype-parameter)
+- [info.editorType](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

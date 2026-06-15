@@ -66,7 +66,7 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - [button](../../../customization/custom-buttons.md)
 - [init](../../../interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [info.recalculate](../../../interacting-with-editors/overview/how-to-call-commands.md#example-for-the-recalculate-parameter)
+- [info.recalculate](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 
