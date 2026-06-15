@@ -45,12 +45,12 @@ jobs:
 
       - name: Start EC2 instance if stopped
         run: |
-          STATE=$(aws ec2 describe-instances --instance-ids i-0d1670a99456ecce2 --query 'Reservations[0].Instances[0].State.Name' --output text)
+          STATE=$(aws ec2 describe-instances --instance-ids i-0de39d5acdb8cc273 --query 'Reservations[0].Instances[0].State.Name' --output text)
           echo "Current instance state: ${STATE}"
           if [ "${STATE}" = "stopped" ]; then
-            echo "Starting instance i-0d1670a99456ecce2..."
-            aws ec2 start-instances --instance-ids i-0d1670a99456ecce2
-            aws ec2 wait instance-running --instance-ids i-0d1670a99456ecce2
+            echo "Starting instance i-0de39d5acdb8cc273..."
+            aws ec2 start-instances --instance-ids i-0de39d5acdb8cc273
+            aws ec2 wait instance-running --instance-ids i-0de39d5acdb8cc273
             echo "Instance started successfully."
           else
             echo "Instance is already in state '${STATE}', skipping start."
