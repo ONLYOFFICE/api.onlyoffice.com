@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-title: Comment text - custom AI tool
+sidebar_position: 2
 ---
-# Comment text - custom AI tool
+
+# Quick start
 
 Add an AI-generated comment or footnote to selected text using the ONLYOFFICE AI agent.
 

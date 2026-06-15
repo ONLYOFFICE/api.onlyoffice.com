@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ONLYOFFICE custom AI tools are editor extensions that combine the plugin framework with an AI provider integration to deliver intelligent, context-aware features directly inside the editors.
 
-If you prefer to start coding right away, go directly to the [quick start guides](quick-start/comment-text-ai-tool.md).
+If you prefer to start coding right away, go directly to the [quick start guides](quick-start.md).
 
 ## What you can build
 
@@ -36,7 +36,7 @@ Build next-generation document workflows powered by AI.
 
 ## Next steps
 
-- [AI quick start](quick-start/comment-text-ai-tool.md)
+- [AI quick start](quick-start.md)
 - [Configure the AI plugin](../guides/ai-plugin.md)
 - [Custom AI tools guide](../guides/custom-ai-tools.md)
 

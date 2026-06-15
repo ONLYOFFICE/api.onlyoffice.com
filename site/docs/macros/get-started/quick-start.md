@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-title: Hello world macro
+sidebar_position: 2
 ---
-# Hello world macro
+
+# Quick start
 
 Macros are quite simple - pure JavaScript with no installation required.
 

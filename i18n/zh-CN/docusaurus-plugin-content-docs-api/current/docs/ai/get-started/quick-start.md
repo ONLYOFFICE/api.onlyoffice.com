@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-title: 注释文本 - 自定义 AI 工具
+sidebar_position: 2
 ---
-# 注释文本 - 自定义 AI 工具
+
+# 快速入门
 
 使用 ONLYOFFICE AI 代理为选中文本添加 AI 生成的注释或脚注。
 

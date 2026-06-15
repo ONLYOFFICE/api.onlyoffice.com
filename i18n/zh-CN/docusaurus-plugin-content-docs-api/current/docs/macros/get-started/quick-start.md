@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-title: Hello world 宏
+sidebar_position: 2
 ---
-# Hello world 宏
+
+# 快速入门
 
 宏非常简单 - 纯 JavaScript，无需安装。
 
