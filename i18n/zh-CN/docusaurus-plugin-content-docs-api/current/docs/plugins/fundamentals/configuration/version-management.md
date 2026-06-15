@@ -8,7 +8,7 @@ Managing plugin versions correctly ensures smooth updates for users and clear co
 
 ## Version field in config.json
 
-The `version` field in [config.json](config-json.md) is a string in `MAJOR.MINOR.PATCH` format:
+The `version` field in [config.json](configuration.md) is a string in `MAJOR.MINOR.PATCH` format:
 
 ```json
 {

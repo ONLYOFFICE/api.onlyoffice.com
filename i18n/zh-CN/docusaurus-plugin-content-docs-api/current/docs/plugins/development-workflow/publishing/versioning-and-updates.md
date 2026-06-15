@@ -136,6 +136,6 @@ Open an issue at [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](htt
 ## Additional resources
 
 - [Changelog](../../../more-information/changelog)
-- [Configuration](../../fundamentals/configuration/config-json.md)
+- [Configuration](../../fundamentals/configuration/configuration.md)
 - [Marketplace repo](https://github.com/ONLYOFFICE/onlyoffice.github.io)
 - [Plugin examples](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)

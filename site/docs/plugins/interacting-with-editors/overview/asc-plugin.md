@@ -20,7 +20,7 @@ Once loaded, the `window.Asc.plugin` object is ready to use.
 
 | Name   | Type     | Description                                                                                      |
 | ------ | -------- | ------------------------------------------------------------------------------------------------ |
-| `guid` | `string` | The plugin GUID from [config.json](../../fundamentals/configuration/config-json.md#guid).       |
+| `guid` | `string` | The plugin GUID from [config.json](../../fundamentals/configuration/configuration.md#guid).       |
 | `info` | `object` | The auxiliary object containing editor and OLE object metadata. See [below](#info-object).       |
 
 ### info object
@@ -154,7 +154,7 @@ The context menu item.
 | `text`     | `string`                   | The item caption.                                                                                                       |
 | `data`     | `string`                   | The item data (this data will be sent to the click event callback).                                                     |
 | `disabled` | `boolean`                  | Specifies whether the current item is disabled or not.                                                                  |
-| `icons`    | `string`                   | The item icons (see the plugins [config](../../fundamentals/configuration/config-json.md) documentation).               |
+| `icons`    | `string`                   | The item icons (see the plugins [config](../../fundamentals/configuration/configuration.md) documentation).               |
 | `items`    | `Array.<`[ContextMenuItem](#contextmenuitem)`>` | An array containing the context menu items for the current item.                                             |
 
 **Example**:
@@ -244,13 +244,13 @@ Asc.plugin.init = (text) => {
 
 ### button
 
-The function called when any of the plugin [buttons](../../fundamentals/configuration/config-json.md#variationsbuttons) is clicked. If `id` is `-1`, the **Close** button (cross icon) was clicked or the plugin operation was interrupted.
+The function called when any of the plugin [buttons](../../fundamentals/configuration/configuration.md#variationsbuttons) is clicked. If `id` is `-1`, the **Close** button (cross icon) was clicked or the plugin operation was interrupted.
 
 **Parameters**:
 
 | Name     | Type     | Description                                                                                                                                               |
 | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id       | `number` | The button index in the [buttons](../../fundamentals/configuration/config-json.md#variationsbuttons) array of config.json. `-1` means the Close button. |
+| id       | `number` | The button index in the [buttons](../../fundamentals/configuration/configuration.md#variationsbuttons) array of config.json. `-1` means the Close button. |
 | windowId | `number` | The identifier of the modal window from which the button was clicked.                                                                                      |
 
 **Example**:

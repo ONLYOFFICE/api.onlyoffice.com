@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-title: Hello world plugin
 ---
-# Hello world plugin
+
+# Quick start
 
 Build the simplest possible plugin — a button that inserts "Hello World" into your document.
 
@@ -110,7 +110,7 @@ Choose your environment:
 3. Browse to your `hello-world-plugin` folder.
 4. Click **OK**.
 
-[Detailed Desktop installation guide](../../development-workflow/installing-and-testing/desktop-editors-installation.md)
+[Detailed Desktop installation guide](../development-workflow/installing-and-testing/desktop-editors-installation.md)
 
 ### For ONLYOFFICE Docs (on-premises)
 
@@ -120,7 +120,7 @@ Choose your environment:
 2. Restart the Document Server.
 3. Refresh your browser.
 
-[Detailed Docs installation guide](../../development-workflow/installing-and-testing/docs-on-premises-installation.md)
+[Detailed Docs installation guide](../development-workflow/installing-and-testing/docs-on-premises-installation.md)
 
 ## Step 4: Test your plugin
 
@@ -181,18 +181,18 @@ function insertFormattedText() {
 
 **Learn more:**
 
-- [Plugin structure and configuration](../../fundamentals/configuration/config-json.md)
-- [Complete API reference](../../interacting-with-editors/overview/overview.md)
-- [UI customization options](../../customization/toolbar.md)
+- [Plugin structure and configuration](../fundamentals/configuration/configuration.md)
+- [Complete API reference](../interacting-with-editors/overview/overview.md)
+- [UI customization options](../customization/toolbar.md)
 
 **Explore examples:**
 
-- [YouTube plugin](../../learning-resources/samples-and-examples/plugin-samples/youtube.md) — Embed videos
-- [Translator plugin](../../learning-resources/samples-and-examples/plugin-samples/translator.md) — Multi-language support
+- [YouTube plugin](../learning-resources/samples/youtube.md) — Embed videos
+- [Translator plugin](../learning-resources/samples/translator.md) — Multi-language support
 - [More examples](/samples/?doctype=docs&text=plugin)
 
 **Need help?**
 
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
-- [FAQ](../../more-information/faq.md) — Frequently asked questions
+- [FAQ](../more-information/faq.md) — Frequently asked questions

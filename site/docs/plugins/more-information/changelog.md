@@ -113,7 +113,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [ToolbarMenuTab](../customization/toolbar.md#toolbarmenutab) type to the simple type definitions.
 - Added the [ToolbarMenuItemType](../customization/toolbar.md#toolbarmenuitemtype) type to the simple type definitions.
 - Added the *icons* and *data* parameters to the [ContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#contextmenuitem) object.
-- Added the [menu](../fundamentals/configuration/config-json.md#variationsmenu) config parameter.
+- Added the [menu](../fundamentals/configuration/configuration.md#variationsmenu) config parameter.
 
 ## Version 8.0
 
@@ -155,7 +155,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 7.3
 
-- Added the *sign* type to the [initDataType](../fundamentals/configuration/config-json.md#variationsinitdatatype) config parameter.
+- Added the *sign* type to the [initDataType](../fundamentals/configuration/configuration.md#variationsinitdatatype) config parameter.
 - Added the [AddAddinField](../interacting-with-editors/document-api/Methods/AddAddinField.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetAllAddinFields](../interacting-with-editors/document-api/Methods/GetAllAddinFields.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetVBAMacros](../interacting-with-editors/document-api/Methods/GetVBAMacros.md) method to *window\.Asc.plugin.executeMethod*.

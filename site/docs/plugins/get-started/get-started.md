@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ONLYOFFICE plugins are interactive tools built with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors. Install them once and make them available to all users.
 
-If you prefer to start coding right away, go directly to the [quick start guides](quick-start/hello-world-plugin.md) or try things out in the [interactive playground](playground.md).
+If you prefer to start coding right away, go directly to the [quick start](quick-start.md) or try things out in the [interactive playground](playground.md).
 
 ## What you can build
 
@@ -14,9 +14,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](../learning-resources/samples-and-examples/plugin-samples/youtube.md), media galleries)
-- Third-party integrations ([Translator](../learning-resources/samples-and-examples/plugin-samples/translator.md), [Zotero](../learning-resources/samples-and-examples/plugin-samples/zotero.md), CRM systems)
-- Advanced processing ([OCR](../learning-resources/samples-and-examples/plugin-samples/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](../learning-resources/samples/youtube.md), media galleries)
+- Third-party integrations ([Translator](../learning-resources/samples/translator.md), [Zotero](../learning-resources/samples/zotero.md), CRM systems)
+- Advanced processing ([OCR](../learning-resources/samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -82,7 +82,7 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 - **[Browser DevTools](../development-workflow/debugging/for-web-editors.md)** - Debugging guide
 - **[Plugin examples](/samples/?doctype=docs&text=plugin)** - Working examples
 - **[API reference](../interacting-with-editors/overview/overview.md)** - Complete API documentation
-- **[Plugin structure](../fundamentals/configuration/config-json.md)** - Configuration guide
+- **[Plugin structure](../fundamentals/configuration/configuration.md)** - Configuration guide
 - **[FAQ](../more-information/faq.md)** - Frequently asked questions
 - **[Forum](https://forum.onlyoffice.com/)** - Community support
 - **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Source code and contributions
@@ -90,7 +90,7 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 
 ## Next steps
 
-- [Plugin quick start](quick-start/hello-world-plugin.md)
+- [Plugin quick start](quick-start.md)
 - [Plugin tutorial](../fundamentals/getting-started/what-is-a-plugin.md)
 - [Best practices](../development-workflow/developing/for-web-editors.md)
 - [Publishing guide](../development-workflow/publishing/marketplace-submission.md)

@@ -8,7 +8,7 @@ sidebar_position: -2
 
 ## 翻译 config.json 部分
 
-首先，你可以翻译 [config.json](config-json.md) 文件。打开该文件，找到其中的所有英文字符串。通常它们位于配置对象的 [name](config-json.md#name)、[variations.description](config-json.md#variationsdescription) 和 [variations.buttons.text](config-json.md#variationsbuttons) 节点中。
+首先，你可以翻译 [config.json](configuration.md) 文件。打开该文件，找到其中的所有英文字符串。通常它们位于配置对象的 [name](configuration.md#name)、[variations.description](configuration.md#variationsdescription) 和 [variations.buttons.text](configuration.md#variationsbuttons) 节点中。
 
 为这些键添加新的以 _Locale_ 结尾的节点，值为一个以语言区域码为键、翻译内容为值的对象。例如，对于 _name_ 键，其本地化对象如下所示：
 
@@ -23,7 +23,7 @@ sidebar_position: -2
 }
 ```
 
-[highlighting 插件代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode)的完整 [config.json](config-json.md) 翻译如下：
+[highlighting 插件代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode)的完整 [config.json](configuration.md) 翻译如下：
 
 ```json
 {

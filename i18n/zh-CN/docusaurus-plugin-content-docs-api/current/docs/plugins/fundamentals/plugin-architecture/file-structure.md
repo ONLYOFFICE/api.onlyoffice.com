@@ -127,6 +127,6 @@ If icons are omitted, the editor uses a default placeholder. See [Icons and bran
 
 ## See also
 
-- [config.json reference](../configuration/config-json.md)
+- [config.json reference](../configuration/configuration.md)
 - [Entry point](../configuration/entry-point.md)
 - [Icons and branding](../configuration/icons-and-branding.md)

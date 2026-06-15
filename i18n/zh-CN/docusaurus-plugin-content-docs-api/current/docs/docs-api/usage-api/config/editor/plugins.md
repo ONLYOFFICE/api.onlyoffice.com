@@ -6,7 +6,7 @@ plugins 部分定义运行时插件参数。
 
 **类型：** `string[]`
 
-在编辑器打开时自动启动的 [config.json](../../../../plugins/fundamentals/configuration/config-json.md#guid) 文件中的插件标识符。插件按列出的顺序依次运行。
+在编辑器打开时自动启动的 [config.json](../../../../plugins/fundamentals/configuration/configuration.md#guid) 文件中的插件标识符。插件按列出的顺序依次运行。
 
 **示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@ plugins 部分定义运行时插件参数。
 
 **类型：** `string[]`
 
-[config.json](../../../../plugins/fundamentals/configuration/config-json.md#guid) 文件中在加载时将被禁用的插件标识符。指定的插件将被阻止加载，并且在编辑器界面中不可用。
+[config.json](../../../../plugins/fundamentals/configuration/configuration.md#guid) 文件中在加载时将被禁用的插件标识符。指定的插件将被阻止加载，并且在编辑器界面中不可用。
 
 **示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -73,7 +73,7 @@ plugins 部分定义运行时插件参数。
 
 **类型：** `string[]`
 
-插件 [config.json](../../../../plugins/fundamentals/configuration/config-json.md) 文件的绝对 URL。
+插件 [config.json](../../../../plugins/fundamentals/configuration/configuration.md) 文件的绝对 URL。
 
 **示例**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

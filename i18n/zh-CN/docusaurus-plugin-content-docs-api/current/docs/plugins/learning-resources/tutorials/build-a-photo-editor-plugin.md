@@ -11,7 +11,7 @@ Learn how to embed an interactive image editor inside ONLYOFFICE and write the r
 ## Prerequisites
 
 - A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 
 ## Step 1 - Scaffold the plugin
 
@@ -201,8 +201,8 @@ window.saveImage = function () {
 
 **Resources:**
 
-1. [Photo editor plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/photo-editor.md) - reference implementation you can run immediately.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+1. [Photo editor plugin sample](/docs/plugins/learning-resources/samples/photo-editor.md) - reference implementation you can run immediately.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md) - full `config.json` field reference.
 3. [executeMethod ("GetImageDataFromSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md) - retrieves the selected image data.
 4. [executeMethod ("PutImageDataToSelection")](/docs/plugins/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md) - replaces the selected image.
 

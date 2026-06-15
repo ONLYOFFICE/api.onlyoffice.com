@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-title: Hello world 插件
 ---
-# Hello world 插件
+
+# 快速入门
 
 构建最简单的插件 — 一个将"Hello World"插入文档的按钮。
 
@@ -110,7 +110,7 @@ New-Guid
 3. 浏览到您的 `hello-world-plugin` 文件夹。
 4. 点击**确定**。
 
-[桌面版安装详细指南](../../development-workflow/installing-and-testing/desktop-editors-installation.md)
+[桌面版安装详细指南](../development-workflow/installing-and-testing/desktop-editors-installation.md)
 
 ### ONLYOFFICE Docs（本地部署）
 
@@ -120,7 +120,7 @@ New-Guid
 2. 重启 Document Server。
 3. 刷新浏览器。
 
-[Docs 安装详细指南](../../development-workflow/installing-and-testing/docs-on-premises-installation.md)
+[Docs 安装详细指南](../development-workflow/installing-and-testing/docs-on-premises-installation.md)
 
 ## 第 4 步：测试插件
 
@@ -181,18 +181,18 @@ function insertFormattedText() {
 
 **深入学习：**
 
-- [插件结构与配置](../../fundamentals/configuration/config-json.md)
-- [完整 API 参考](../../interacting-with-editors/overview/overview.md)
-- [UI 自定义选项](../../customization/toolbar.md)
+- [插件结构与配置](../fundamentals/configuration/configuration.md)
+- [完整 API 参考](../interacting-with-editors/overview/overview.md)
+- [UI 自定义选项](../customization/toolbar.md)
 
 **浏览示例：**
 
-- [YouTube 插件](../../learning-resources/samples-and-examples/plugin-samples/youtube.md) — 嵌入视频
-- [Translator 插件](../../learning-resources/samples-and-examples/plugin-samples/translator.md) — 多语言支持
+- [YouTube 插件](../learning-resources/samples/youtube.md) — 嵌入视频
+- [Translator 插件](../learning-resources/samples/translator.md) — 多语言支持
 - [更多示例](/samples/?doctype=docs&text=plugin)
 
 **需要帮助？**
 
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
-- [常见问题](../../more-information/faq.md) — 常见问题解答
+- [常见问题](../more-information/faq.md) — 常见问题解答

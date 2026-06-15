@@ -50,4 +50,4 @@ Macros use JavaScript language syntax and [Office JavaScript API](../../office-a
 
 ## Can I make a macro global?
 
-Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../fundamentals/configuration/config-json.md) that will be loaded for all the users.
+Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../fundamentals/configuration/configuration.md) that will be loaded for all the users.

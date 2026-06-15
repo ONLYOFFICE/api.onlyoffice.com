@@ -53,7 +53,7 @@ my-plugin/
 
 `config.json` provides metadata (name, unique GUID, supported editors) and tells the editor which HTML file to load. `index.html` contains your UI and calls `window.Asc.plugin` to interact with the document.
 
-See [config.json explained](../configuration/config-json.md) for the full reference.
+See [config.json explained](../configuration/configuration.md) for the full reference.
 
 ## Next steps
 

@@ -54,7 +54,7 @@ This hierarchy allows editor to automatically choose the correct icon based on t
 
 ## Defining the icon in config.json
 
-Inside your [config.json](config-json.md), define your icon using a smart URL pattern that adapts to themes and scaling:
+Inside your [config.json](configuration.md), define your icon using a smart URL pattern that adapts to themes and scaling:
 
 ```json
 {
@@ -134,7 +134,7 @@ import APITable from '@site/src/components/APITable/APITable';
 The following icon format can still be used, but it is deprecated. Please use the new icon string format described above.
 :::
 
-This string generates the objects in the old icon format (the [icon2](config-json.md#variationsicons2) parameter):
+This string generates the objects in the old icon format (the [icon2](configuration.md#variationsicons2) parameter):
 
 ```ts
 [

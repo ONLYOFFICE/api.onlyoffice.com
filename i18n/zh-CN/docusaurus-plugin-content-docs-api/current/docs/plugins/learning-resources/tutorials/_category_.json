@@ -1,6 +1,4 @@
 {
   "position": 2,
-  "collapsed": false,
-  "label": "教程",
-  "link": {"type": "doc", "id": "docs/plugins/learning-resources/tutorials/index"}
+  "label": "教程"
 }

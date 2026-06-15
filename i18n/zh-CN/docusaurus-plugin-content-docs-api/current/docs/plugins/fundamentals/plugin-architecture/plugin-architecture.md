@@ -41,7 +41,7 @@ See [Communication flow](communication-flow.md) for the full event and method mo
 
 ### 3. Configuration (config.json)
 
-`config.json` registers the plugin with the editor - it defines metadata, supported editor types, UI mode, and which HTML file to load. See the [config.json reference](../configuration/config-json.md).
+`config.json` registers the plugin with the editor - it defines metadata, supported editor types, UI mode, and which HTML file to load. See the [config.json reference](../configuration/configuration.md).
 
 ## Plugin types
 

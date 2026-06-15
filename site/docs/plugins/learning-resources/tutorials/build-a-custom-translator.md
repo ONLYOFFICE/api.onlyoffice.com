@@ -11,7 +11,7 @@ Learn how to read selected text from a document, send it to an external translat
 ## Prerequisites
 
 - A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 - The official translator plugin uses the Google Translate widget. If you want to use a different provider (DeepL, Azure, LibreTranslate), you will need an API key.
 
 ## Step 1 - Scaffold the plugin
@@ -108,7 +108,7 @@ window.Asc.plugin.init = function (text) {
 };
 
 function ProcessText(sText) {
-  return sText.replace(/\t/gi, "\n").replace(/\t/gi, "\n");
+  return sText.replace(/\r\n/gi, "\n").replace(/\t/gi, "\n");
 }
 ```
 
@@ -216,8 +216,8 @@ window.Asc.plugin.button = function (id) {
 
 **Resources:**
 
-1. [Translator plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/translator.md) - reference implementation with full Google Translate widget integration.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+1. [Translator plugin sample](/docs/plugins/learning-resources/samples/translator.md) - reference implementation with full Google Translate widget integration.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md) - full `config.json` field reference.
 3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md) - retrieve selection with configurable separators.
 4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md) - insert text at the current cursor position.
 

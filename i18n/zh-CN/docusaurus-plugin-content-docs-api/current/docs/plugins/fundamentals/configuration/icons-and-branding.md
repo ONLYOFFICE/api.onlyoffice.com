@@ -54,7 +54,7 @@ my-plugin/
 
 ## 在 config.json 中定义图标
 
-在您的 [config.json](config-json.md) 中，使用智能 URL 模式定义图标，该模式可适应主题和缩放：
+在您的 [config.json](configuration.md) 中，使用智能 URL 模式定义图标，该模式可适应主题和缩放：
 
 ```json
 {
@@ -134,7 +134,7 @@ import APITable from '@site/src/components/APITable/APITable';
 以下图标格式仍可使用，但已被弃用。请使用上述新的图标字符串格式。
 :::
 
-该字符串会生成旧图标格式的对象（即 [icon2](config-json.md#variationsicons2) 参数）：
+该字符串会生成旧图标格式的对象（即 [icon2](configuration.md#variationsicons2) 参数）：
 
 ```ts
 [

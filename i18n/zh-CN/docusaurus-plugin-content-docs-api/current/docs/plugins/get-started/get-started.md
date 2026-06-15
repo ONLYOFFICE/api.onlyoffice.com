@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，可将原生体验的功能直接嵌入编辑器。安装一次，即可供所有用户使用。
 
-如果您希望直接开始编写代码，请前往[快速入门指南](quick-start/hello-world-plugin.md)，或在[交互式 Playground](playground.md) 中体验。
+如果您希望直接开始编写代码，请前往[快速入门指南](quick-start.md)，或在[交互式 Playground](playground.md) 中体验。
 
 ## 您可以构建什么
 
@@ -14,9 +14,9 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 **适用场景：**
 
-- 嵌入外部内容（[YouTube](../learning-resources/samples-and-examples/plugin-samples/youtube.md)、媒体库）
-- 第三方集成（[Translator](../learning-resources/samples-and-examples/plugin-samples/translator.md)、[Zotero](../learning-resources/samples-and-examples/plugin-samples/zotero.md)、CRM 系统）
-- 高级处理（[OCR](../learning-resources/samples-and-examples/plugin-samples/ocr.md)、图像处理、数据可视化）
+- 嵌入外部内容（[YouTube](../learning-resources/samples/youtube.md)、媒体库）
+- 第三方集成（[Translator](../learning-resources/samples/translator.md)、[Zotero](../learning-resources/samples/zotero.md)、CRM 系统）
+- 高级处理（[OCR](../learning-resources/samples/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
@@ -82,7 +82,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 - **[浏览器开发者工具](../development-workflow/debugging/for-web-editors.md)** - 调试指南
 - **[插件示例](/samples/?doctype=docs&text=plugin)** - 可运行示例
 - **[API 参考](../interacting-with-editors/overview/overview.md)** - 完整 API 文档
-- **[插件结构](../fundamentals/configuration/config-json.md)** - 配置指南
+- **[插件结构](../fundamentals/configuration/configuration.md)** - 配置指南
 - **[常见问题](../more-information/faq.md)** - 常见问题解答
 - **[论坛](https://forum.onlyoffice.com/)** - 社区支持
 - **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 源代码与贡献
@@ -90,7 +90,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 ## 下一步
 
-- [插件快速入门](quick-start/hello-world-plugin.md)
+- [插件快速入门](quick-start.md)
 - [插件教程](../fundamentals/getting-started/what-is-a-plugin.md)
 - [最佳实践](../development-workflow/developing/for-web-editors.md)
 - [发布指南](../development-workflow/publishing/marketplace-submission.md)

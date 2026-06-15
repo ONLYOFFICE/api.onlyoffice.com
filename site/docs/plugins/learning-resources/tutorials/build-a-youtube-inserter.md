@@ -11,7 +11,7 @@ Learn how to accept a YouTube URL from the user and embed the video as a live OL
 ## Prerequisites
 
 - A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 - A YouTube account is not required; any public video URL will work.
 
 ## Step 1 - Scaffold the plugin
@@ -140,7 +140,7 @@ The thumbnail URL uses HTTP (not HTTPS) and the `0.jpg` image from YouTube's CDN
 
 ```js
 function getThumbnailUrl(videoId) {
-  return "http://img.youtube.com/vi/" + videoId + "/0.jpg";
+  return "https://img.youtube.com/vi/" + videoId + "/0.jpg";
 }
 ```
 
@@ -208,7 +208,7 @@ window.Asc.plugin.button = function (id) {
     var _questPos = _id.indexOf("?");
     if (_questPos > 0) _id = _id.substr(0, _questPos);
 
-    var _url = "http://img.youtube.com/vi/" + _id + "/0.jpg";
+    var _url = "https://img.youtube.com/vi/" + _id + "/0.jpg";
     if (_id) {
       var _info = window.Asc.plugin.info;
 
@@ -264,8 +264,8 @@ Key details from the actual source:
 
 **Resources:**
 
-1. [YouTube plugin sample](/docs/plugins/learning-resources/samples-and-examples/plugin-samples/youtube.md) - reference implementation you can run immediately.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md) - full `config.json` field reference.
+1. [YouTube plugin sample](/docs/plugins/learning-resources/samples/youtube.md) - reference implementation you can run immediately.
+2. [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md) - full `config.json` field reference.
 3. [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md) - inserts a new OLE object.
 4. [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md) - updates an existing OLE object in place.
 

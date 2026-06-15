@@ -83,4 +83,4 @@ When deploying plugins to a server, serve them over HTTPS to prevent man-in-the-
 ## See also
 
 - [Communication flow](communication-flow.md) - the API bridge that enforces the sandbox boundary
-- [config.json reference](../configuration/config-json.md) - `baseUrl` and deployment settings
+- [config.json reference](../configuration/configuration.md) - `baseUrl` and deployment settings

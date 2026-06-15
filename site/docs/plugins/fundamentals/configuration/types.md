@@ -4,13 +4,13 @@ sidebar_position: -2
 
 # Types
 
-The plugin type is specified with the [type](config-json.md#variationstype) parameter in the *config.json* file. The available values are **system**, **background**, **window**, **panel**, **panelRight**, and **unvisible**.
+The plugin type is specified with the [type](configuration.md#variationstype) parameter in the *config.json* file. The available values are **system**, **background**, **window**, **panel**, **panelRight**, and **unvisible**.
 
 ## system
 
 The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don't need to run such plugins. And unlike background plugins, they cannot be disabled.
 
-**Samples**: [Settings](../../learning-resources/samples-and-examples/plugin-samples/settings.md), [Search and replace on start](../../learning-resources/samples-and-examples/plugin-samples/search-and-replace-on-start.md)
+**Samples**: [Settings](../../learning-resources/samples/settings.md), [Search and replace on start](../../learning-resources/samples/search-and-replace-on-start.md)
 
 ## background
 
@@ -33,7 +33,7 @@ The plugin operates as a standalone window upon launch.
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-**Samples**: [Highlight code](../../learning-resources/samples-and-examples/plugin-samples/highlight-code.md), [Photo editor](../../learning-resources/samples-and-examples/plugin-samples/photo-editor.md), [OCR](../../learning-resources/samples-and-examples/plugin-samples/ocr.md)
+**Samples**: [Highlight code](../../learning-resources/samples/highlight-code.md), [Photo editor](../../learning-resources/samples/photo-editor.md), [OCR](../../learning-resources/samples/ocr.md)
 
 ## panel
 
@@ -41,7 +41,7 @@ The plugin is opened in the left-side panel. You can run multiple panel plugins 
 
 ![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
-**Samples**: [Translator](../../learning-resources/samples-and-examples/plugin-samples/translator.md), [Thesaurus](../../learning-resources/samples-and-examples/plugin-samples/thesaurus.md), [Zotero](../../learning-resources/samples-and-examples/plugin-samples/zotero.md)
+**Samples**: [Translator](../../learning-resources/samples/translator.md), [Thesaurus](../../learning-resources/samples/thesaurus.md), [Zotero](../../learning-resources/samples/zotero.md)
 
 ## panelRight
 
@@ -49,7 +49,7 @@ The plugin is opened in the right-side panel. You can run multiple panel plugins
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-**Samples**: [Translator](../../learning-resources/samples-and-examples/plugin-samples/translator.md), [Thesaurus](../../learning-resources/samples-and-examples/plugin-samples/thesaurus.md), [Zotero](../../learning-resources/samples-and-examples/plugin-samples/zotero.md)
+**Samples**: [Translator](../../learning-resources/samples/translator.md), [Thesaurus](../../learning-resources/samples/thesaurus.md), [Zotero](../../learning-resources/samples/zotero.md)
 
 ## unvisible
 
@@ -57,7 +57,7 @@ The plugin does not display any windows or panels upon launch but can create the
 
 ![Invisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Invisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 
-**Samples**: [Hello world](../../learning-resources/samples-and-examples/plugin-samples/hello-world.md), [Speech](../../learning-resources/samples-and-examples/plugin-samples/speech.md)
+**Samples**: [Hello world](../../learning-resources/samples/hello-world.md), [Speech](../../learning-resources/samples/speech.md)
 
 :::note
 A plugin of any type can create windows and tabs during its work.

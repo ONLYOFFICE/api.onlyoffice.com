@@ -8,7 +8,7 @@ All the plugins are created in English by default. If you want them to be availa
 
 ## Translating config.json sections
 
-First you can translate the [config.json](config-json.md) file. To do that, open it and find all the strings in English. Usually they are [name](config-json.md#name), [variations.description](config-json.md#variationsdescription) and [variations.buttons.text](config-json.md#variationsbuttons) nodes of the configuration object.
+First you can translate the [config.json](configuration.md) file. To do that, open it and find all the strings in English. Usually they are [name](configuration.md#name), [variations.description](configuration.md#variationsdescription) and [variations.buttons.text](configuration.md#variationsbuttons) nodes of the configuration object.
 
 Add the new nodes with the key name plus _Locale_, equal to an object that will have the language locale as the key and the translation as the value. For example, for the _name_ key the localization object will look like this:
 
@@ -23,7 +23,7 @@ Add the new nodes with the key name plus _Locale_, equal to an object that will 
 }
 ```
 
-The complete translations in the [config.json](config-json.md) for the [highlighting plugin code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode) will look the following way:
+The complete translations in the [config.json](configuration.md) for the [highlighting plugin code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode) will look the following way:
 
 ```json
 {

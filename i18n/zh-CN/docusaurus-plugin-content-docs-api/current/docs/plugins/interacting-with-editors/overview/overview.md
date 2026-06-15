@@ -11,7 +11,7 @@ sidebar_position: -2
 - [如何调用方法](how-to-call-methods.md)
 - [如何调用命令](how-to-call-commands.md)
 
-插件的主代码放在一个 .js 文件中，该文件描述了插件应执行的内容以及如何执行。此文件与 [config.json](../../fundamentals/configuration/config-json.md) 和 [index.html](../../fundamentals/configuration/entry-point.md) 文件一起放置于插件根目录中。
+插件的主代码放在一个 .js 文件中，该文件描述了插件应执行的内容以及如何执行。此文件与 [config.json](../../fundamentals/configuration/configuration.md) 和 [index.html](../../fundamentals/configuration/entry-point.md) 文件一起放置于插件根目录中。
 
 ## 工作原理 {#how-it-works}
 
