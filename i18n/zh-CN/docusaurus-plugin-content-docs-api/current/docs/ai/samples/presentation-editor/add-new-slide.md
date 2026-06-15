@@ -54,7 +54,7 @@ func.call = async function (params) {
       let curLayout = currentSlide.GetLayout();
       master = curLayout.GetMaster();
     } else {
-      master = presentation.GetMasterByIndex(0);
+      master = presentation.GetMaster(0);
     }
 
     if (!master) return;

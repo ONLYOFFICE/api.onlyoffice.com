@@ -17,7 +17,7 @@ To record a macro:
     ![Recording a macro](/assets/images/plugins/record-macros.png#gh-light-mode-only)
     ![Recording a macro](/assets/images/plugins/record-macros.dark.png#gh-dark-mode-only)
 
-3. Once you record all the neccesary steps, click on **Stop Recording** to stop recording and save the macro. The generated macro code will be saved in the **Macros** window.
+3. Once you record all the necessary steps, click on **Stop Recording** to stop recording and save the macro. The generated macro code will be saved in the **Macros** window.
 
     ![Macro Window](/assets/images/plugins/macro-window.png#gh-light-mode-only)
     ![Macro Window](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)

@@ -113,11 +113,15 @@ my-plugin/
 ### Modal/panel configuration issues
 
 :::tip[Correct]
-```json
-// For modal dialog
-{ "type": "window", "buttons": [{"text": "OK", "primary": true}, {"text": "Cancel"}] }
+For modal dialog:
 
-// For side panel
+```json
+{ "type": "window", "buttons": [{"text": "OK", "primary": true}, {"text": "Cancel"}] }
+```
+
+For side panel:
+
+```json
 { "type": "panel" }
 ```
 :::

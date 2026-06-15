@@ -5,11 +5,11 @@ description: Learn how to add and configure icons for your ONLYOFFICE plugins.
 
 # Icons
 
-When building a plugin for editor, adding icons can significantly enhance usability and make your interface more intuitive.
+When building a plugin for the editor, adding icons can significantly enhance usability and make your interface more intuitive.
 
 ## Folder structure
 
-Your plugin should include a */resources* directory to store all images, icons, and other static assets. This folder is automatically accessible to editor when the plugin is loaded.
+Your plugin should include a */resources* directory to store all images, icons, and other static assets. This folder is automatically accessible to the editor when the plugin is loaded.
 
 Here's a recommended layout:
 
@@ -50,7 +50,7 @@ my-plugin/
             `-- screen_6.png
 ```
 
-This hierarchy allows editor to automatically choose the correct icon based on the theme, state, and scale.
+This hierarchy allows the editor to automatically choose the correct icon based on the theme, state, and scale.
 
 ## Defining the icon in config.json
 
@@ -81,7 +81,7 @@ This single line dynamically tells the editor where to look for the icon dependi
 
 ## How it works
 
-When the plugin loads, editor:
+When the plugin loads, the editor:
 
 1. Detects the active editor theme (light/dark).
 2. Checks the screen scale (e.g. 125%).

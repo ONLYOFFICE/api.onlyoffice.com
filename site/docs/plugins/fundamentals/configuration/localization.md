@@ -163,7 +163,7 @@ Now, once the editors are started, the current interface language will be used t
 
 ## Troubleshooting localization
 
-### Javascript file errors
+### JavaScript file errors
 
 **Error name:** Incorrect function names
 
