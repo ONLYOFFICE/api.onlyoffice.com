@@ -119,6 +119,7 @@ Asc.plugin.button = (id) => {
 | [callCommand](./how-to-call-commands.md#callcommand)                                           | 无        | 使用 Office JavaScript API 向编辑器发送命令。                                              |
 | [executeMethod](./how-to-call-methods.md#executemethod)                                        | `boolean` | 执行特定的编辑器方法（如 `AddComment`、`GetSelectedText`）。                               |
 | [attachEditorEvent](./how-to-attach-events.md#option-1-using-the-attacheditorevent-method)     | 无        | 为编辑器事件添加监听器。                                                                     |
+| [detachEditorEvent](./how-to-attach-events.md#detaching-events)                                | 无        | 移除编辑器事件的监听器。                                                                     |
 | [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item) | 无        | 按 ID 为特定上下文菜单项添加点击监听器。                                                   |
 | [attachToolbarMenuClickEvent](../../customization/toolbar.md#attachtoolbarmenuclickevent)       | 无        | 按 ID 为特定工具栏菜单项添加点击监听器。                                                   |
 | `tr`                                                                                             | `string`  | 返回给定键的翻译。参阅[本地化](../../fundamentals/configuration/localization.md)。         |

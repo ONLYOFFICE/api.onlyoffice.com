@@ -20,7 +20,7 @@ For events you only need to respond to once:
 
 ```javascript
 function onceReady() {
-  window.Asc.plugin.detachEvent("onDocumentContentReady", onceReady);
+  window.Asc.plugin.detachEditorEvent("onDocumentContentReady", onceReady);
   // do work
 }
 window.Asc.plugin.attachEditorEvent("onDocumentContentReady", onceReady);
@@ -47,7 +47,7 @@ Always detach event listeners when the plugin is closed to avoid memory leaks:
 
 ```javascript
 window.Asc.plugin.onDestroy = function () {
-  window.Asc.plugin.detachEvent("onChangeContentControl", myHandler);
+  window.Asc.plugin.detachEditorEvent("onChangeContentControl", myHandler);
   clearTimeout(debounceTimer);
 };
 ```

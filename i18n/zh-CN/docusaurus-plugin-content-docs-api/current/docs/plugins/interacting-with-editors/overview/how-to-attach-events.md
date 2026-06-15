@@ -29,6 +29,26 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+## 解绑事件 {#detaching-events}
+
+要移除之前绑定的事件监听器，请使用 **detachEditorEvent** 方法。
+
+### 参数说明
+
+| 名称 | 类型   | 描述       |
+| ---- | ------ | ---------- |
+| *id* | string | 事件名称。 |
+
+### 返回值
+
+此方法无返回值。
+
+### 示例
+
+```ts
+Asc.plugin.detachEditorEvent("onAddComment");
+```
+
 ## 选项 2：使用 attachEvent 方法 {#option-2-using-the-attachevent-method}
 
 :::danger[已废弃]

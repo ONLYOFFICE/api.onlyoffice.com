@@ -29,6 +29,26 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+## Detaching events
+
+To remove a previously attached event listener, use the **detachEditorEvent** method.
+
+### Parameters
+
+| Name | Type   | Description     |
+| ---- | ------ | --------------- |
+| *id* | string | The event name. |
+
+### Returns
+
+This method doesn't return any data.
+
+### Example
+
+```ts
+Asc.plugin.detachEditorEvent("onAddComment");
+```
+
 ## Option 2. Using the attachEvent method
 
 :::danger[Deprecated]

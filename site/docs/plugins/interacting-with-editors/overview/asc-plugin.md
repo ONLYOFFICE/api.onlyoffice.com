@@ -119,6 +119,7 @@ Asc.plugin.button = (id) => {
 | [callCommand](./how-to-call-commands.md#callcommand)                                           | None      | Sends a command to the editor using the Office JavaScript API.                                       |
 | [executeMethod](./how-to-call-methods.md#executemethod)                                        | `boolean` | Executes a specific editor method (e.g. `AddComment`, `GetSelectedText`).                            |
 | [attachEditorEvent](./how-to-attach-events.md#option-1-using-the-attacheditorevent-method)     | None      | Adds a listener for an editor event.                                                                 |
+| [detachEditorEvent](./how-to-attach-events.md#detaching-events)                                | None      | Removes a listener for an editor event.                                                              |
 | [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item) | None      | Adds a click listener for a specific context menu item by ID.                                        |
 | [attachToolbarMenuClickEvent](../../customization/toolbar.md#attachtoolbarmenuclickevent)       | None      | Adds a click listener for a specific toolbar menu item by ID.                                        |
 | `tr`                                                                                             | `string`  | Returns the translation for the given key. See [Localization](../../fundamentals/configuration/localization.md). |
