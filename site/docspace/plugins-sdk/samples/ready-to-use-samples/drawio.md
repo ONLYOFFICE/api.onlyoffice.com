@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to adjust the plugin settings, go to **Developer Tools -> Integration -> Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Draw.io** plugin. You can change the following plugin parameters:
+In case you want to adjust the plugin settings, go to **Administrator ⋮ → Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Draw.io** plugin. You can change the following plugin parameters:
 
 - **Languages** - choose the necessary language from the list. The **Auto** option corresponds to the portal language.
 - **Offline mode** - when this setting is active, all remote operations and features are disabled for security reasons.

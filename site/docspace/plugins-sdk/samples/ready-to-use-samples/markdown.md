@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Developer Tools -> Integration -> Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Markdown** plugin.
+In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Administrator ⋮ → Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Markdown** plugin.
 
 ## Usage
 

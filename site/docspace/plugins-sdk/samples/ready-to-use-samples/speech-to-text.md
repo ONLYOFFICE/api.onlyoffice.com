@@ -20,7 +20,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 To start working with the plugin:
 
 1. Generate the API token using [AssemblyAI](https://www.assemblyai.com/).
-2. Go to **Developer Tools -> Integration -> Plugins**.
+2. Go to **Administrator ⋮ → Settings → Integration → Plugins**.
 3. Click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Speech to text** plugin.
 4. Enter the API token in the corresponding field.
 
