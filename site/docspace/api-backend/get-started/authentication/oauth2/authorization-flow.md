@@ -4,11 +4,11 @@ sidebar_position: -2
 
 # Authorization flow
 
-When a user clicks the authorization link, any of these four scenarios occur: 
+When a user clicks the authorization link, any of these four scenarios can occur:
 
 ## Scenario 1: User authorization
 
-For users not yet authorized on the portal, the authorization link opens into an authorization form to enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
+For users not yet authorized on the portal, the authorization link opens an authorization form where they enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
 
@@ -20,7 +20,7 @@ If the user has more than one portal with the entered personal data, they will b
 
 ## Scenario 3: Consent page
 
-Authorized users are redirected to a consent page that lists all the application abilities while displaying the URLs to the privacy policy and terms of service. This page also provides the possibility to change the user profile. 
+Authorized users are redirected to a consent page that lists all the application abilities while displaying the URLs to the privacy policy and terms of service. This page also provides the possibility to change the user profile.
 
 Click **Allow** or **Deny** to finish the authorization flow.
 
@@ -34,15 +34,15 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 
 ## How it works
 
-1. When the user clicks the **Allow** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) where the code field will be added to the search.
+1. When the user clicks the **Allow** button on the consent page, they will be redirected to [redirect_uri](auth-button.md#redirect_uri) where the code field will be added to the search.
 
    :::note
-   If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
+   If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](auth-button.md#redirect_uri) with an error, without the possibility to get JWT.
    :::
 
-   To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/submit-consent.api.mdx) address.
+   To send a consent request, you can also send a POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/submit-consent.api.mdx) address.
 
-2. The application exchanges the user code for the access token and refresh token, save them to its storage, and use these tokens to get the access to the DocSpace API.
+2. The application exchanges the user code for the access token and refresh token, saves them to its storage, and uses these tokens to get access to the DocSpace API.
 
 3. The application sends the [POST request](../../../../../docspace/api-backend/usage-api/exchange-token.api.mdx):
 
@@ -50,7 +50,7 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 {{docspace_address}}/oauth2/token
 ```
 
-The parameters that must be specified in the request body depends on the client type.
+The parameters that must be specified in the request body depend on the client type.
 
 ### For client_secret_post
 
@@ -74,7 +74,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### For client with PKCE
 
-For the client with PKCE, the parameters are the same as for **client_secret_post**, but the [client_secret](#client_secret) must be replaced with the **code_verifier**.
+For the client with PKCE, the parameters are the same as for **client_secret_post**, but the [client_secret](#client_secret) must be replaced with the `code_verifier`.
 
 ```mdx-code-block
 <APITable>

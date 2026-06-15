@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Follow these steps to generate a PAT and use it to authorize your DocSpace account:
 
-1. Send POST request, containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
+1. Send a POST request containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
 
     <Tabs>
       <TabItem value="request" label="Request">
@@ -26,7 +26,7 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
         ```
 
         :::note
-        You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address. For security purposes, store your username and password in `env` variables and reference them in the request.
+        You have to enter your own portal address to the `Host: yourportal.onlyoffice.com` line instead of `yourportal.onlyoffice.com` address. For security purposes, store your username and password in `env` variables and reference them in the request.
         :::
       </TabItem>
       <TabItem value="response" label="Response">
@@ -56,11 +56,11 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
    GET /api/2.0/people/@self HTTP/1.1
    Host: yourportal.onlyoffice.com
    Accept: application/json
-   Authorization: sdjhfskjdhkqy739459234
+   Authorization: Bearer sdjhfskjdhkqy739459234
    ```
 
    :::note
-   You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   You have to enter your own portal address to the `Host: yourportal.onlyoffice.com` line instead of `yourportal.onlyoffice.com` address.
    :::
 
 ## Authentication request examples
@@ -138,5 +138,5 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
 </Tabs>
 
 :::note
-You have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+You have to enter your own portal address, username and password instead of `yourportal.onlyoffice.com`, `yourusername` and `yourpassword` respectively.
 :::

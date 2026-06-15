@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Using the Auth button
 
-With your OAuth app configured, you can now embed the Auth button on your website to authenticate DocSpace.
+With your OAuth app configured, you can now embed the Auth button on your website to let users sign in with DocSpace.
 
 1. To preview an auth button in your application, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) to open the context menu and choose **Auth button**.
 
@@ -14,7 +14,7 @@ With your OAuth app configured, you can now embed the Auth button on your websit
 
     <img alt="Preview" src="/assets/images/docspace/oauth-auth-button.png#gh-light-mode-only" width="400px" /><img alt="Preview" src="/assets/images/docspace/oauth-auth-button.dark.png#gh-dark-mode-only" width="400px" />
 
-3. Copy the **Authorize link** and assign it to the authorization button. 
+3. Copy the **Authorize link** and assign it to the authorization button.
 
 ## Components of the authorization link
 
@@ -22,7 +22,7 @@ The authorization link contains the following parameters:
 
 ### response_type
 
-The type of the server response after authenticating the user and redirecting them to [redirect_uri](#redirect_uri). Currently, the *code* value is supported.
+The type of the server response after authenticating the user and redirecting them to [redirect_uri](#redirect_uri). Currently, the `code` value is supported.
 
 Example: code
 
@@ -53,7 +53,7 @@ Example: files:write%20accounts:write%20files:read%20openid%20rooms:read%20accou
 
 ### state
 
-The random string to solve the CSRF vulnerability problem. This parameter with the *code* value will be added to [redirect_uri](#redirect_uri). This parameter is optional, but we recommend to specify it for security purposes.
+The random string to solve the CSRF vulnerability problem. This parameter with the `code` value will be added to [redirect_uri](#redirect_uri). This parameter is optional, but we recommend specifying it for security purposes.
 
 Example: OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV
 
@@ -72,7 +72,7 @@ The encoded code verifier. To get it, use the **crypto-js** npm package and the 
 const NUM_OF_BYTES = 36
 
 const codeVerifier = crypto.lib.WordArray.random(NUM_OF_BYTES).toString()
-const codeVerifierHash = sha256(randomVerifier).toString(crypto.enc.Base64)
+const codeVerifierHash = sha256(codeVerifier).toString(crypto.enc.Base64)
 ```
 
 This parameter is used only when the authentication method is not specified (none) and the public client (PKCE) is allowed.

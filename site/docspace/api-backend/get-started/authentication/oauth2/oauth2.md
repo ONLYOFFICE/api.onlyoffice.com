@@ -6,7 +6,7 @@ sidebar_position: -4
 
 The [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authorization protocol enables a third-party application to obtain limited access to an HTTP service.
 
-The **DocSpace OAuth API** allows developers to register a new OAuth application on the portal and use them to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
+The **DocSpace OAuth API** allows developers to register a new OAuth application on the portal and use it to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
 
 This documentation describes:
 

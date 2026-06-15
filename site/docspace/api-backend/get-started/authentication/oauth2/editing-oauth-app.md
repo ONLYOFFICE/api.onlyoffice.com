@@ -4,7 +4,7 @@ sidebar_position: -5
 
 # Editing OAuth app
 
-For security purposes, DocSpace allows you to edit only the **App name**, **App icon**, **Description**, and **Authentication method** variables. Future versions of DocSpace might expand this list to include other variables. 
+For security purposes, DocSpace allows you to edit only the **App name**, **App icon**, **Description**, and **Authentication method** settings. Future versions of DocSpace might expand this list to include other settings.
 
 To edit the application settings:
 
@@ -24,7 +24,7 @@ Edit the desired app parameter (**App name**, **App icon**, **Description**, or 
 
 ## Disabling the app
 
-Disabling the app stops all active sessions. 
+Disabling the app stops all active sessions.
 
 To disable the application:
 
@@ -37,7 +37,6 @@ To disable the application:
 2. Click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) to open the context menu and choose **Disable**.
 
    ![Disable button](/assets/images/docspace/disable-button.png#gh-light-mode-only)![Disable button](/assets/images/docspace/disable-button.dark.png#gh-dark-mode-only)
-
 
 ## Deleting the app
 

@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # Authentication
 
-Interacting with the DocSpace API requires authentication, and ONLYOFFICE DocSpace offers different ways to authenticate your requests to DocSpace. The chosen authentication method depends on your application's purpose, its users, and the features it requires. This page explains the various authentication methods.
+Interacting with the DocSpace API requires authentication. ONLYOFFICE offers several methods to authenticate your requests. The chosen authentication method depends on your application's purpose, its users, and the features it requires.
 
 ## OAuth 2.0
 
@@ -60,7 +60,7 @@ curl -X POST https://yourportal.onlyoffice.com/api/2.0/authentication \
 
 # Step 2: Use token
 curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
-  -H "Authorization: YOUR_TOKEN"
+  -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
 [Learn more about personal access tokens](personal-access-tokens.md)

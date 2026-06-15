@@ -35,7 +35,7 @@ The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user A
     ```
 
     :::note
-    You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    You have to enter your own portal address to the `Host: yourportal.onlyoffice.com` line instead of `yourportal.onlyoffice.com` address.
     :::
   </TabItem>
   <TabItem value="response" label="Response">
@@ -62,9 +62,9 @@ You can also create and manage API keys on your portal from the **Developer Tool
     
     ![API keys](/assets/images/docspace/api-keys.png#gh-light-mode-only)![API keys](/assets/images/docspace/api-keys.dark.png#gh-dark-mode-only)
 
-5. Specify the key name. The name usually contains information that allows the user to quickly understand where the key is used. For example, "LangFlow on a home computer."
-6. Configure the key access rights. You can create a read-only key or grant full access to the data.
-7. Specify the key lifetime in days (maximum 365), after which the key will be automatically deactivated.
+4. Specify the key name. The name usually contains information that allows the user to quickly understand where the key is used. For example, "LangFlow on a home computer."
+5. Configure the key access rights. You can create a read-only key or grant full access to the data.
+6. Specify the key lifetime in days (maximum 365), after which the key will be automatically deactivated.
 
     ![Create API key](/assets/images/docspace/create-api-key.png#gh-light-mode-only)![Create API key](/assets/images/docspace/create-api-key.dark.png#gh-dark-mode-only)
 
@@ -96,6 +96,6 @@ where `ONLYOFFICE_API_KEY` is the API key.
 Here are some best practices to follow when using API keys:
 
 - **Regular audits:** Perform regular audits of your API keys. This enables you to delete or revoke any keys no longer in use. 
-- **Keep API keys secret:** Always treat your API keys as passwords. Since API keys perform actions on your behalf when interacting with the API, avoid hardcoding them directly into your programs. As your application scales, consider using a dedicated secrets management service, such as [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/ru/secrets-manager/), or [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault). These tools offer secure storage, encryption, access control, and auditing capabilities. In containerized environments, solutions like [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) (with encryption enabled) can further enhance security. Additionally, ensure that secrets are loaded into memory at runtime and are never exposed in logs or code repositories.
+- **Keep API keys secret:** Always treat your API keys as passwords. Since API keys perform actions on your behalf when interacting with the API, avoid hardcoding them directly into your programs. As your application scales, consider using a dedicated secrets management service, such as [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), or [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault). These tools offer secure storage, encryption, access control, and auditing capabilities. In containerized environments, solutions like [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) (with encryption enabled) can further enhance security. Additionally, ensure that secrets are loaded into memory at runtime and are never exposed in logs or code repositories.
 
 By implementing these practices, you ensure your API keys remain safe and your application stays secure as it scales.
