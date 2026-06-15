@@ -189,14 +189,14 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 
 **返回值**：此方法不返回任何数据。
 
-**工具栏**：
+### 工具栏
 
 | 方法                     | 描述                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `AddToolbarMenuItem`     | 向工具栏添加项目。参阅[工具栏](../../customization/toolbar.md#addtoolbarmenuitem)。                   |
 | `UpdateToolbarMenuItem`  | 更新工具栏菜单项。参阅[工具栏](../../customization/toolbar.md#updatetoolbarmenuitem)。                |
 
-**窗口和面板**：
+### 窗口和面板
 
 | 方法              | 描述                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -208,7 +208,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 | `MouseUpWindow`     | 向窗口发送鼠标释放事件。参阅[窗口和面板](../../customization/windows-and-panels.md#mouseupwindow)。    |
 | `SendToWindow`      | 向窗口发送消息。参阅[窗口和面板](../../customization/windows-and-panels.md#sendtowindow)。           |
 
-**输入助手**：
+### 输入助手
 
 | 方法              | 描述                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |

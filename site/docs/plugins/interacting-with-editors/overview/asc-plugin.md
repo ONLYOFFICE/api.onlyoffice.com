@@ -189,14 +189,14 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 
 **Returns**: This method doesn't return any data.
 
-**Toolbar**:
+### Toolbar
 
 | Method                   | Description                                                                                           |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `AddToolbarMenuItem`     | Adds an item to the toolbar. See [Toolbar](../../customization/toolbar.md#addtoolbarmenuitem).        |
 | `UpdateToolbarMenuItem`  | Updates a toolbar menu item. See [Toolbar](../../customization/toolbar.md#updatetoolbarmenuitem).     |
 
-**Windows and panels**:
+### Windows and panels
 
 | Method              | Description                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -208,7 +208,7 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 | `MouseUpWindow`     | Sends a mouse up event to a window. See [Windows and panels](../../customization/windows-and-panels.md#mouseupwindow).    |
 | `SendToWindow`      | Sends a message to a window. See [Windows and panels](../../customization/windows-and-panels.md#sendtowindow).         |
 
-**Input helper**:
+### Input helper
 
 | Method              | Description                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |

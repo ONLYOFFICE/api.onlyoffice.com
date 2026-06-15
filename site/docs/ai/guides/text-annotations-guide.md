@@ -10,9 +10,9 @@ This guide covers three new API methods and demonstrates their usage through a p
 
 ## New API methods
 
-1. *[`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md)* - Adds annotations to the specified paragraph.
-2. *[`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md)* - Selects text in the document using the specified annotation.
-3. *[`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md)* - Removes a specific annotation range from the document.
+1. [`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md) - Adds annotations to the specified paragraph.
+2. [`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md) - Selects text in the document using the specified annotation.
+3. [`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md) - Removes a specific annotation range from the document.
 
 ## Learning the new methods through plugin development
 

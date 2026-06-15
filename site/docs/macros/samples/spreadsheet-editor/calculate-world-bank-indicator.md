@@ -85,7 +85,7 @@ For more information, visit the [World Bank documentation](https://data.worldban
 
     // Build a chart
     let chart = worksheet.AddChart("'Sheet1'!$A$1:$B$10", true, "bar", 2, 100 * 36000, 60 * 36000, 0, 0, 10, 0);
-    chart.SetTitle("GDP  2024", 13);
+    chart.SetTitle("GDP 2024", 13);
 })();
 ```
 
