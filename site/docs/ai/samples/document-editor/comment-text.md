@@ -1,6 +1,7 @@
 ---
 description: Add a comment to the selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';

@@ -2,6 +2,9 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Private distribution
 
 Distribute your plugin within your organization without publishing to the public marketplace.
@@ -38,24 +41,25 @@ Share the `.plugin` file directly. Users install it via **Plugins → Plugin Man
 
 ## Method 2: Folder copy
 
-Administrators place the plugin folder directly in the system `sdkjs-plugins` directory.
+Administrators place the plugin folder directly in the `sdkjs-plugins` directory. Use the plugin GUID from `config.json` as the folder name. Restart ONLYOFFICE after placing the folder.
 
-**Windows:**
-```
-%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\{PLUGIN-GUID}\
-```
-
-**macOS:**
-```
-/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/{PLUGIN-GUID}/
-```
-
-**Linux:**
-```
-/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/{PLUGIN-GUID}/
-```
-
-Use the plugin GUID from `config.json` as the folder name. Restart ONLYOFFICE after placing the folder.
+<Tabs>
+  <TabItem value="win" label="Windows">
+      ```
+      %ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\{PLUGIN-GUID}\
+      ```
+  </TabItem>
+  <TabItem value="mac" label="macOS">
+      ```
+      /Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/{PLUGIN-GUID}/
+      ```
+  </TabItem>
+  <TabItem value="lin" label="Linux">
+      ```
+      /opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/{PLUGIN-GUID}/
+      ```
+  </TabItem>
+</Tabs>
 
 ## Method 3: Self-hosted URL
 

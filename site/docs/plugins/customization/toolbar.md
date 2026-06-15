@@ -253,7 +253,7 @@ A button that is split into two parts, each part can be clicked separately, the 
 {
   "text": "caption",
   "split": true,
-  "enableToggle": true,
+  "enableToggle": false,
   "items": []
 }
 ```

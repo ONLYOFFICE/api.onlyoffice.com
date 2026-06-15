@@ -82,13 +82,12 @@ Try these examples to learn more:
     var oDocument = Api.GetDocument();
     var searchText = "important";
 
-    // Search for the keyword
-    oDocument.Search(searchText, true, false, false);
+    // Search for the keyword (returns an array of ApiRange)
+    var aResults = oDocument.Search(searchText, true);
 
-    // Highlight found text
-    var oRange = oDocument.GetRangeBySelect();
-    if (oRange) {
-        oRange.SetHighlight("yellow");
+    // Highlight all found occurrences
+    for (var i = 0; i < aResults.length; i++) {
+        aResults[i].SetHighlight("yellow");
     }
 })();
 ```

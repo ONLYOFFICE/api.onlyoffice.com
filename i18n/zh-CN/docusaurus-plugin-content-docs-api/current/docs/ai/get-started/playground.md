@@ -15,4 +15,4 @@ Playground 是一个互动平台，用户无需注册或安装任何软件，就
 - **多平台支持**：支持桌面、移动端或嵌入式平台。
 - **自定义设置**：可切换主题和界面语言，使用方便。
 
-<PlaygroundCardsRow searchParams={[{testType: "plugin"}]}/>
+<PlaygroundCardsRow searchParams={[{script: "plugin"}]}/>

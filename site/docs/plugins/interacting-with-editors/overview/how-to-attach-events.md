@@ -14,8 +14,8 @@ Starting from version 8.2, in the plugin code, define the **attachEditorEvent** 
 
 | Name     | Type     | Description         |
 | -------- | -------- | ------------------- |
-| *id*     | string   | The event name.     |
-| *action* | function | The event listener. |
+| `id`     | string   | The event name.     |
+| `action` | function | The event listener. |
 
 ### Returns
 
@@ -37,7 +37,7 @@ To remove a previously attached event listener, use the **detachEditorEvent** me
 
 | Name | Type   | Description     |
 | ---- | ------ | --------------- |
-| *id* | string | The event name. |
+| `id` | string | The event name. |
 
 ### Returns
 
@@ -73,8 +73,8 @@ Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-th
 
    | Name     | Type     | Description         |
    | -------- | -------- | ------------------- |
-   | *id*     | string   | The event name.     |
-   | *action* | function | The event listener. |
+   | `id`     | string   | The event name.     |
+   | `action` | function | The event listener. |
 
    ### Returns
 

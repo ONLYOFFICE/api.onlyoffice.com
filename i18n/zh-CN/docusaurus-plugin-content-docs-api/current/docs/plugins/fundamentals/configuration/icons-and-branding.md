@@ -65,9 +65,13 @@ my-plugin/
   "icons": [
     "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
   ],
-  "isVisual": true,
-  "initDataType": "none",
-  "initOnSelectionChanged": false
+  "variations": [
+    {
+      "type": "window",
+      "initDataType": "none",
+      "initOnSelectionChanged": false
+    }
+  ]
 }
 ```
 

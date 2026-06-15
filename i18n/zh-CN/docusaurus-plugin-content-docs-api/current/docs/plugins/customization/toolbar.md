@@ -253,7 +253,7 @@ const oToolbarMenuItem = {
 {
   "text": "caption",
   "split": true,
-  "enableToggle": true,
+  "enableToggle": false,
   "items": []
 }
 ```

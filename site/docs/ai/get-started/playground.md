@@ -15,4 +15,4 @@ The Playground serves as an interactive platform for users to explore and test t
 - **Multi-platform**. Test for desktop, mobile, or embedded platforms.
 - **Customization**. Switch themes and interface languages for convenience.
 
-<PlaygroundCardsRow searchParams={[{testType: "plugin"}]}/>
+<PlaygroundCardsRow searchParams={[{script: "plugin"}]}/>

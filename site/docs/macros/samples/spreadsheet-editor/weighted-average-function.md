@@ -16,7 +16,7 @@ Creates a [custom function](../../guides/adding-custom-functions.md) to calculat
     let worksheet = Api.GetActiveSheet();
 
     // Insert the formula into cell H2.
-    // This calls the custom function 'weightedAverage' that was registered above.
+    // This calls the custom function 'wa' that is registered below.
     worksheet.GetRange("H2").SetValue("=wa(A$2:A$6, B$2:B$6)");
 
     // Optionally, insert a label in cell G2.

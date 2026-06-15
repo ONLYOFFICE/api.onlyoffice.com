@@ -1,6 +1,7 @@
 ---
 description: 更改指定段落的样式。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
