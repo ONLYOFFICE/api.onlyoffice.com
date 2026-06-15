@@ -641,9 +641,9 @@ Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace
 The path to the scalable plugin icons for the light theme. Name the icon files of different scales in the following way:
 
 - 100% - `icon.png`
-- 125% - `icon@1.25.png`
+- 125% - `icon@1.25x.png`
 - 150% - `icon@1.5x.png`
-- 175% - `icon@1.75.png`
+- 175% - `icon@1.75x.png`
 - 200% - `icon@2x.png`
 
 **Example**: `"resources/store/icons"`
@@ -655,9 +655,9 @@ The path to the scalable plugin icons for the light theme. Name the icon files o
 The path to the scalable plugin icons for the dark theme. Name the icon files of different scales in the following way:
 
 - 100% - `icon.png`
-- 125% - `icon@1.25.png`
+- 125% - `icon@1.25x.png`
 - 150% - `icon@1.5x.png`
-- 175% - `icon@1.75.png`
+- 175% - `icon@1.75x.png`
 - 200% - `icon@2x.png`
 
 **Example**: `"resources/store/icons"`

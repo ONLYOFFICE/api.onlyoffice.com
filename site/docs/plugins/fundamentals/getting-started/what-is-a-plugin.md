@@ -45,7 +45,7 @@ Use a **plugin** when you need a persistent tool, a rich UI, or external service
 
 Every plugin needs at least two files:
 
-```
+```text
 my-plugin/
 ├── config.json    # Registers the plugin with ONLYOFFICE
 └── index.html     # The plugin's UI and logic

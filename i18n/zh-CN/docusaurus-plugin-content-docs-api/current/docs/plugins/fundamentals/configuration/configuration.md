@@ -641,9 +641,9 @@ sidebar_position: -5
 浅色主题下可缩放插件图标的路径。不同缩放比例的图标文件命名方式如下：
 
 - 100% - `icon.png`
-- 125% - `icon@1.25.png`
+- 125% - `icon@1.25x.png`
 - 150% - `icon@1.5x.png`
-- 175% - `icon@1.75.png`
+- 175% - `icon@1.75x.png`
 - 200% - `icon@2x.png`
 
 **示例**: `"resources/store/icons"`
@@ -655,9 +655,9 @@ sidebar_position: -5
 深色主题下可缩放插件图标的路径。不同缩放比例的图标文件命名方式如下：
 
 - 100% - `icon.png`
-- 125% - `icon@1.25.png`
+- 125% - `icon@1.25x.png`
 - 150% - `icon@1.5x.png`
-- 175% - `icon@1.75.png`
+- 175% - `icon@1.75x.png`
 - 200% - `icon@2x.png`
 
 **示例**: `"resources/store/icons"`

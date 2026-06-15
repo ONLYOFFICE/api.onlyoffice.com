@@ -21,7 +21,7 @@ This page describes the recommended setup for plugin development.
 
 2. Create a folder for your plugin:
 
-   ```
+   ```text
    my-plugin/
    ├── config.json
    ├── index.html

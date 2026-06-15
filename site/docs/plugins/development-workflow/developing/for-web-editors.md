@@ -23,7 +23,7 @@ To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
 
 3. Open the developer console in any ONLYOFFICE web editor, go to the **Console** tab, choose the `frameEditor` from the drop-down list, and run the following command:
 
-   ``` sh
+   ```js
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json");
    ```
 
