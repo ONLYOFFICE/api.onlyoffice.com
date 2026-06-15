@@ -1,5 +1,5 @@
 ---
-sidebar_position: -1
+sidebar_position: -2
 ---
 
 import Tabs from '@theme/Tabs';
@@ -7,9 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # Personal access tokens
 
-The user needs to perform several easy steps to pass authentication:
+Follow these steps to generate a PAT and use it to authorize your DocSpace account:
 
-1. Send POST request, containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
+1. Send a POST request containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
 
     <Tabs>
       <TabItem value="request" label="Request">
@@ -26,7 +26,7 @@ The user needs to perform several easy steps to pass authentication:
         ```
 
         :::note
-        You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+        You have to enter your own portal address to the `Host: yourportal.onlyoffice.com` line instead of `yourportal.onlyoffice.com` address. For security purposes, store your username and password in `env` variables and reference them in the request.
         :::
       </TabItem>
       <TabItem value="response" label="Response">
@@ -46,7 +46,7 @@ The user needs to perform several easy steps to pass authentication:
       </TabItem>
     </Tabs>
 
-2. In case authentication is successful, a token and its lifetime will be received.
+2. If authentication is successful, you will receive an API response containing a token with its lifetime.
 
 3. Use this token every time you call API methods inserting it to the `Authorization` HTTP header:
 
@@ -56,11 +56,11 @@ The user needs to perform several easy steps to pass authentication:
    GET /api/2.0/people/@self HTTP/1.1
    Host: yourportal.onlyoffice.com
    Accept: application/json
-   Authorization: sdjhfskjdhkqy739459234
+   Authorization: Bearer sdjhfskjdhkqy739459234
    ```
 
    :::note
-   You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   You have to enter your own portal address to the `Host: yourportal.onlyoffice.com` line instead of `yourportal.onlyoffice.com` address.
    :::
 
 ## Authentication request examples
@@ -138,5 +138,5 @@ The user needs to perform several easy steps to pass authentication:
 </Tabs>
 
 :::note
-You have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+You have to enter your own portal address, username and password instead of `yourportal.onlyoffice.com`, `yourusername` and `yourpassword` respectively.
 :::

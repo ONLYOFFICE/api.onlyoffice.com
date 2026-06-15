@@ -24,7 +24,7 @@ The created token has a limited lifetime and will be automatically deprecated wh
 
 ## Revoking the token
 
-The token can be revoked:
+To revoke the token:
 
 1. Click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) to open the context menu and choose **Revoke token**.
 2. Enter your token in the text field.

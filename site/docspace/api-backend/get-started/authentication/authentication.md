@@ -1,37 +1,79 @@
 ---
-sidebar_position: -5
+sidebar_position: -6
 ---
 
 # Authentication
 
-To interact with the API, most requests require authentication. The authentication method you choose depends on your application's purpose, its users, and the features it requires. You can authenticate with the ONLYOFFICE DocSpace API in several ways.
-
-## API keys
-
-API keys are a simple way to authenticate requests, typically used for server-to-server communication or internal services where user context isn't required. They provide a static authentication mechanism without the need for user interaction.
-
-[Learn more about API keys](api-keys.md)
+Interacting with the DocSpace API requires authentication. ONLYOFFICE offers several methods to authenticate your requests. The chosen authentication method depends on your application's purpose, its users, and the features it requires.
 
 ## OAuth 2.0
 
-OAuth 2.0 is recommended when your application needs to access data on behalf of multiple users or when you want users to explicitly authorize your application without sharing their credentials. OAuth is more complex to implement than using API keys, but it offers more features and security.
+*Recommended for apps accessing data on behalf of multiple users*
+
+Register an OAuth app in DocSpace Developer Tools, redirect users to the authorization URL, and use the returned access token to call the API. Users authorize access to their DocSpace data without sharing credentials with your app.
+
+```sh
+curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
 
 [Learn more about OAuth 2.0](oauth2/oauth2.md)
 
 ## OpenID Connect
 
-OpenID Connect (OIDC) is an authentication protocol based on OAuth 2.0, which simplifies the way to verify the identity of users and obtain basic profile information in a secure and standardized way. It is commonly used in scenarios where applications need to authenticate users and establish their identity.
+*User identity verification built on OAuth 2.0*
+
+Use OpenID Connect when your app needs to authenticate users with their DocSpace accounts. The flow follows OAuth 2.0, but also returns a JWT token with the user's identity — no extra profile request needed.
+
+```ts
+res.redirect(
+  `${API_BASE_URL}/oauth2/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=openid`
+);
+```
 
 [Learn more about OpenID Connect](openid-connect.md)
 
-## Basic authentication
+## API keys
 
-Basic authentication involves sending a username and password with each API request, encoded in Base64. While it is easy to implement, it is generally recommended only for testing, quick integrations, or internal applications, as it requires securely storing user credentials and lacks advanced security features.
+*Server-to-server communication without user context*
 
-[Learn more about basic authentication](basic-authentication.md)
+Generate an API key in DocSpace Developer Tools and pass it as a Bearer token. API keys are tied to the application, not to a specific user — suitable for backend integrations and automated services.
+
+```sh
+curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+[Learn more about API keys](api-keys.md)
 
 ## Personal access tokens
 
-Personal access token (PAT) is bounded to a single user account and allows scripts, tools, and integrations to authenticate as a specific user. This method is simple to set up and works well for personal automation or server-side applications running on behalf of a single user.
+*Automation and scripting for a single user account*
+
+Send credentials to `/api/2.0/authentication` to get a personal access token, then pass it in the `Authorization` header with every API request. The token is bound to the user account that generated it.
+
+```sh
+# Step 1: Get token
+curl -X POST https://yourportal.onlyoffice.com/api/2.0/authentication \
+  -H "Content-Type: application/json" \
+  -d '{"userName":"yourusername","password":"yourpassword"}'
+
+# Step 2: Use token
+curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
+  -H "Authorization: Bearer YOUR_TOKEN"
+```
 
 [Learn more about personal access tokens](personal-access-tokens.md)
+
+## Basic authentication
+
+*For testing only, not recommended for production*
+
+Encode your DocSpace username and password in Base64 and pass them in the `Authorization` header. Simple to set up, but credentials are transmitted with every request — use only for local testing or quick integrations.
+
+```sh
+curl -u yourusername:yourpassword \
+  https://yourportal.onlyoffice.com/api/2.0/people/@self
+```
+
+[Learn more about basic authentication](basic-authentication.md)
