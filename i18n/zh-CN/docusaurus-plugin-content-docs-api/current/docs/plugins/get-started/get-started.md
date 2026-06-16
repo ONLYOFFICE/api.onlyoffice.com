@@ -14,9 +14,9 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 **适用场景：**
 
-- 嵌入外部内容（[YouTube](../learning-resources/samples/youtube.md)、媒体库）
-- 第三方集成（[Translator](../learning-resources/samples/translator.md)、[Zotero](../learning-resources/samples/zotero.md)、CRM 系统）
-- 高级处理（[OCR](../learning-resources/samples/ocr.md)、图像处理、数据可视化）
+- 嵌入外部内容（[YouTube](../samples/youtube.md)、媒体库）
+- 第三方集成（[Translator](../samples/translator.md)、[Zotero](../samples/zotero.md)、CRM 系统）
+- 高级处理（[OCR](../samples/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
@@ -33,6 +33,8 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 - 无法绕过 API 执行插件 SDK 未公开的操作
 
 这种沙箱化设计是有意为之的——无论插件做什么，都能保持编辑器的稳定与安全。
+
+![插件架构](/assets/images/plugins/plugin-architecture-detailed.svg#gh-light-mode-only)![插件架构](/assets/images/plugins/plugin-architecture-detailed-dark.svg#gh-dark-mode-only)
 
 ## 方案对比 {#comparing-approaches}
 

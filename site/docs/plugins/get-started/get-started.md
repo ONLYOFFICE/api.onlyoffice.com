@@ -14,9 +14,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](../learning-resources/samples/youtube.md), media galleries)
-- Third-party integrations ([Translator](../learning-resources/samples/translator.md), [Zotero](../learning-resources/samples/zotero.md), CRM systems)
-- Advanced processing ([OCR](../learning-resources/samples/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](../samples/youtube.md), media galleries)
+- Third-party integrations ([Translator](../samples/translator.md), [Zotero](../samples/zotero.md), CRM systems)
+- Advanced processing ([OCR](../samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -33,6 +33,8 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 - Bypass the API to perform operations not exposed by the plugin SDK
 
 This sandboxing is intentional - it keeps the editor stable and secure regardless of what the plugin does.
+
+![Plugin architecture](/assets/images/plugins/plugin-architecture-detailed.svg#gh-light-mode-only)![Plugin architecture](/assets/images/plugins/plugin-architecture-detailed-dark.svg#gh-dark-mode-only)
 
 ## Comparing approaches
 
