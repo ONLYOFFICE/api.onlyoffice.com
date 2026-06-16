@@ -62,6 +62,47 @@ Asc.plugin.callCommand(() => {
 }, true, true, (returnValue) => {})
 ```
 
+## 更多示例 {#more-examples}
+
+### 插入表格 {#insert-a-table}
+
+```ts
+Asc.plugin.callCommand(() => {
+  const oDoc = Api.GetDocument();
+  const oTable = Api.CreateTable(3, 4);
+  oDoc.InsertContent([oTable]);
+}, false);
+```
+
+### 通过 URL 插入图片 {#insert-an-image-from-url}
+
+```ts
+Asc.scope.imageUrl = "https://example.com/image.png";
+
+Asc.plugin.callCommand(() => {
+  const oDoc = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  const oImage = Api.CreateImage(Asc.scope.imageUrl, 100 * 36000, 60 * 36000);
+  oParagraph.AddDrawing(oImage);
+  oDoc.InsertContent([oParagraph]);
+}, false);
+```
+
+### 操作内容控件 {#work-with-content-controls}
+
+```ts
+// 添加带标签的内容控件
+Asc.plugin.executeMethod("AddContentControl", [
+  1, // type: 1 = richText
+  { Tag: "myField", Lock: 0 },
+]);
+
+// 获取所有内容控件
+Asc.plugin.executeMethod("GetAllContentControls", [], (controls) => {
+  controls.forEach((ctrl) => console.log(ctrl.Tag, ctrl.InternalId));
+});
+```
+
 ## info 对象 {#info-object}
 
 `Asc.plugin.info` 对象是 [Asc.plugin](./asc-plugin.md) 对象的属性。有关完整的属性列表和示例，请参阅 [Asc.plugin > info 对象](./asc-plugin.md#info-object)。

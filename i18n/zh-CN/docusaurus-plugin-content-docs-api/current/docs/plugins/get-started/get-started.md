@@ -99,6 +99,6 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 ## 下一步 {#next-steps}
 
 - [插件快速入门](quick-start.md)
-- [插件生命周期](plugin-lifecycle.md)
+- [插件事件](../interacting-with-editors/overview/asc-plugin.md#events)
 - [Web 编辑器开发](../development-workflow/developing/for-web-editors.md)
 - [发布指南](../development-workflow/publishing/submit-to-marketplace.md)

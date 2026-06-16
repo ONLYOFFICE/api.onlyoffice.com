@@ -99,6 +99,6 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 ## Next steps
 
 - [Plugin quick start](quick-start.md)
-- [Plugin lifecycle](plugin-lifecycle.md)
+- [Plugin events](../interacting-with-editors/overview/asc-plugin.md#events)
 - [Developing for web editors](../development-workflow/developing/for-web-editors.md)
 - [Publishing guide](../development-workflow/publishing/submit-to-marketplace.md)

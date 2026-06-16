@@ -29,6 +29,32 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+### Debouncing frequent events
+
+Some events (like selection change) fire rapidly. Debounce to avoid excessive processing:
+
+```ts
+let debounceTimer;
+
+Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    updatePluginUI();
+  }, 150);
+});
+```
+
+### Cleaning up on destroy
+
+Always detach event listeners when the plugin is closed to avoid memory leaks:
+
+```ts
+Asc.plugin.onDestroy = () => {
+  Asc.plugin.detachEditorEvent("onTargetPositionChanged");
+  clearTimeout(debounceTimer);
+};
+```
+
 ## Detaching events
 
 To remove a previously attached event listener, use the **detachEditorEvent** method.

@@ -129,5 +129,5 @@ window.Asc.plugin.executeMethod("GetSelectedText", [], function (result) {
 
 ## See also
 
-- [Plugin lifecycle](../../get-started/plugin-lifecycle.md)
+- [Plugin events](asc-plugin.md#events)
 - [Interacting with editors](overview.md)

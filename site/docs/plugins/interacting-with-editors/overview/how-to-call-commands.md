@@ -62,6 +62,47 @@ Asc.plugin.callCommand(() => {
 }, true, true, (returnValue) => {});
 ```
 
+## More examples
+
+### Insert a table
+
+```ts
+Asc.plugin.callCommand(() => {
+  const oDoc = Api.GetDocument();
+  const oTable = Api.CreateTable(3, 4);
+  oDoc.InsertContent([oTable]);
+}, false);
+```
+
+### Insert an image from URL
+
+```ts
+Asc.scope.imageUrl = "https://example.com/image.png";
+
+Asc.plugin.callCommand(() => {
+  const oDoc = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  const oImage = Api.CreateImage(Asc.scope.imageUrl, 100 * 36000, 60 * 36000);
+  oParagraph.AddDrawing(oImage);
+  oDoc.InsertContent([oParagraph]);
+}, false);
+```
+
+### Work with content controls
+
+```ts
+// Add a tagged content control
+Asc.plugin.executeMethod("AddContentControl", [
+  1, // type: 1 = richText
+  { Tag: "myField", Lock: 0 },
+]);
+
+// Get all content controls
+Asc.plugin.executeMethod("GetAllContentControls", [], (controls) => {
+  controls.forEach((ctrl) => console.log(ctrl.Tag, ctrl.InternalId));
+});
+```
+
 ## info object
 
 The `Asc.plugin.info` object is a property of the [Asc.plugin](./asc-plugin.md) object. See [Asc.plugin > info object](./asc-plugin.md#info-object) for the full list of properties and examples.

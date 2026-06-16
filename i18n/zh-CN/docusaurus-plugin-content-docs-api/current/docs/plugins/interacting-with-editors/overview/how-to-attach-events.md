@@ -29,6 +29,32 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+### 对高频事件进行防抖处理 {#debouncing-frequent-events}
+
+某些事件（如选区变化）会频繁触发。使用防抖避免过度处理：
+
+```ts
+let debounceTimer;
+
+Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    updatePluginUI();
+  }, 150);
+});
+```
+
+### 销毁时清理 {#cleaning-up-on-destroy}
+
+插件关闭时务必解绑事件监听器，以避免内存泄漏：
+
+```ts
+Asc.plugin.onDestroy = () => {
+  Asc.plugin.detachEditorEvent("onTargetPositionChanged");
+  clearTimeout(debounceTimer);
+};
+```
+
 ## 解绑事件 {#detaching-events}
 
 要移除之前绑定的事件监听器，请使用 **detachEditorEvent** 方法。
