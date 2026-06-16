@@ -1,5 +1,5 @@
 ---
-sidebar_position: -1
+sidebar_position: 0
 description: Learn how to style your ONLYOFFICE plugin interface using the provided CSS classes and components.
 ---
 
