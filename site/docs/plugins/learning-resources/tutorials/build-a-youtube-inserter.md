@@ -136,7 +136,7 @@ function getVideoId(url) {
 }
 ```
 
-The thumbnail URL uses HTTP (not HTTPS) and the `0.jpg` image from YouTube's CDN:
+The thumbnail URL uses the `0.jpg` image from YouTube's CDN:
 
 ```js
 function getThumbnailUrl(videoId) {

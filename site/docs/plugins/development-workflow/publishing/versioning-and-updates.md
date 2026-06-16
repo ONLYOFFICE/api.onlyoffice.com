@@ -48,8 +48,8 @@ Submitting an update without changing the version - Plugin Manager cannot detect
 ```bash
 git remote add upstream https://github.com/ONLYOFFICE/onlyoffice.github.io.git
 git fetch upstream
-git checkout main
-git merge upstream/main
+git checkout master
+git merge upstream/master
 ```
 
 ### Step 2 - Update your plugin files
