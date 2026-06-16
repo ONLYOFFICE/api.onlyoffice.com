@@ -44,10 +44,7 @@ python -m http.server 8080
 
 Then point `baseUrl` in `config.json` to `http://localhost:8080/`.
 
-## Hot reload
-
-See [Hot reload and live testing](../../development-workflow/developing/hot-reload-live-testing.md) for workflows that auto-reload your plugin on file changes.
-
 ## Debugging
 
-See the [Debugging section](../../development-workflow/debugging/browser-devtools-guide.md) for how to attach browser DevTools to your plugin iframe.
+- [Debugging for web editors](../../development-workflow/debugging/for-web-editors.md) - attach browser DevTools to your plugin iframe
+- [Debugging for desktop editors](../../development-workflow/debugging/for-desktop-editors.md) - use the debug flag and DevTools in desktop editors

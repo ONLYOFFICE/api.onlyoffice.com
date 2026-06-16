@@ -53,11 +53,7 @@ if (editorType === "word") {
 }
 ```
 
-## Logging errors
-
-For debugging, log errors with context before showing them to the user. See [Logging best practices](../../development-workflow/debugging/logging-best-practices.md).
-
 ## See also
 
 - [Common errors and solutions](../../development-workflow/debugging/common-errors-solutions.md)
-- [Logging best practices](../../development-workflow/debugging/logging-best-practices.md)
+- [Debugging for web editors](../../development-workflow/debugging/for-web-editors.md)

@@ -2,21 +2,21 @@
 sidebar_position: 2
 ---
 
-# Build a custom translator
+# 构建自定义翻译器
 
-Learn how to read selected text from a document, send it to an external translation API, and insert the result back - all from inside an ONLYOFFICE plugin panel.
+了解如何从文档中读取选中文本、将其发送到外部翻译 API 并将结果插入回文档——所有操作都在 ONLYOFFICE 插件面板中完成。
 
-**What you'll build:** A plugin that lives in a side panel, watches for text selection changes, sends the selected text to a translation service, displays the translated result, and lets the user paste or replace text in the document with one click.
+**您将构建的内容：** 一个驻留在侧面板中的插件，监听文本选择变化，将选中的文本发送到翻译服务，显示翻译结果，并允许用户一键粘贴或替换文档中的文本。
 
-## Prerequisites
+## 前提条件
 
-- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
-- The official translator plugin uses the Google Translate widget. If you want to use a different provider (DeepL, Azure, LibreTranslate), you will need an API key.
+- 已搭建好的 ONLYOFFICE 插件开发环境——参见[插件开发教程](/docs/plugins/fundamentals/getting-started/development-environment-setup.md)。
+- 熟悉 `config.json`、`index.html` 和插件 JS 文件的基本知识——参见[插件结构](/docs/plugins/fundamentals/configuration/configuration.md)。
+- 官方翻译器插件使用 Google 翻译小部件。如果您想使用其他提供商（DeepL、Azure、LibreTranslate），则需要 API 密钥。
 
-## Step 1 - Scaffold the plugin
+## 第 1 步 - 搭建插件骨架
 
-Create the plugin folder:
+创建插件文件夹：
 
 ```
 translator/
@@ -27,7 +27,7 @@ translator/
     └── translate.js
 ```
 
-The translator is a **side-panel plugin** (`isInsideMode: true`, `isModal: false`) that re-fires whenever the user changes their text selection (`initOnSelectionChanged: true`). Set `initDataType` to `"text"` so the editor automatically passes the raw selected text to the `init` function.
+翻译器是一个**侧面板插件**（`isInsideMode: true`、`isModal: false`），每当用户更改文本选择时都会重新触发（`initOnSelectionChanged: true`）。将 `initDataType` 设置为 `"text"`，编辑器会自动将原始选中文本传递给 `init` 函数。
 
 ```json
 {
@@ -51,19 +51,19 @@ The translator is a **side-panel plugin** (`isInsideMode: true`, `isModal: false
 }
 ```
 
-Key settings to notice:
+需要注意的关键设置：
 
-| Setting | Value | Why |
+| 设置 | 值 | 原因 |
 |---|---|---|
-| `initDataType` | `"text"` | Editor passes the current selection as the `text` argument to `init()` |
-| `initOnSelectionChanged` | `true` | `init` is called again every time the user changes their selection |
-| `isInsideMode` | `true` | Plugin renders in the side panel rather than a floating window |
-| `isModal` | `false` | Non-blocking - the user can keep editing while the panel is open |
-| `EditorsSupport` | `["word", "cell", "slide", "pdf"]` | Supports all editor types including PDF |
+| `initDataType` | `"text"` | 编辑器将当前选中内容作为 `text` 参数传递给 `init()` |
+| `initOnSelectionChanged` | `true` | 每次用户更改选择时都会再次调用 `init` |
+| `isInsideMode` | `true` | 插件在侧面板中渲染，而不是浮动窗口 |
+| `isModal` | `false` | 非阻塞——用户在面板打开时可以继续编辑 |
+| `EditorsSupport` | `["word", "cell", "slide", "pdf"]` | 支持所有编辑器类型，包括 PDF |
 
-## Step 2 - Build the panel UI
+## 第 2 步 - 构建面板 UI
 
-`index.html` hosts a container for the translation widget iframe and two action buttons - **Copy** and **Insert**:
+`index.html` 包含翻译小部件 iframe 的容器和两个操作按钮——**复制**和**插入**：
 
 ```html
 <!DOCTYPE html>
@@ -79,11 +79,11 @@ Key settings to notice:
 </html>
 ```
 
-The actual translator loads a Google Translate widget inside `index_widget.html` via an iframe - not a direct REST API call. The widget handles language detection, translation, and display automatically without requiring an API key.
+实际的翻译器通过 iframe 在 `index_widget.html` 中加载 Google 翻译小部件——而不是直接调用 REST API。该小部件自动处理语言检测、翻译和显示，无需 API 密钥。
 
-## Step 3 - Detect selection changes
+## 第 3 步 - 检测选择变化
 
-In `scripts/translate.js`, implement `window.Asc.plugin.init`. Because `initOnSelectionChanged` is `true` in `config.json`, this function is called every time the selection changes. The currently selected text is passed as the `text` **parameter** to `init()`:
+在 `scripts/translate.js` 中，实现 `window.Asc.plugin.init`。由于 `config.json` 中 `initOnSelectionChanged` 为 `true`，每次选择变化时都会调用此函数。当前选中的文本作为 `text` **参数**传递给 `init()`：
 
 ```js
 var isInit = false;
@@ -92,7 +92,7 @@ var prevTxt;
 var txt;
 
 window.Asc.plugin.init = function (text) {
-  // For the "word" editor, use GetSelectedText for more control
+  // 对于 "word" 编辑器，使用 GetSelectedText 以获得更多控制
   if (window.Asc.plugin.info.editorType === "word") {
     window.Asc.plugin.executeMethod("GetSelectedText", [{ Numbering: false }], function (data) {
       prevTxt = txt;
@@ -100,7 +100,7 @@ window.Asc.plugin.init = function (text) {
       ExecPlugin();
     });
   } else {
-    // For cell, slide, pdf - use the text parameter directly
+    // 对于 cell、slide、pdf——直接使用 text 参数
     prevTxt = txt;
     txt = ProcessText(text);
     ExecPlugin();
@@ -112,16 +112,16 @@ function ProcessText(sText) {
 }
 ```
 
-> **Important:** The selected text arrives as the `text` parameter of `init()`, not through `window.Asc.plugin.info.data`. For the `word` editor type, the plugin additionally calls `GetSelectedText` to get cleaner text without numbering artifacts.
+> **重要提示：** 选中的文本通过 `init()` 的 `text` 参数传入，而不是通过 `window.Asc.plugin.info.data`。对于 `word` 编辑器类型，插件会额外调用 `GetSelectedText` 以获取不含编号伪影的更纯净文本。
 
-## Step 4 - Load the translation widget
+## 第 4 步 - 加载翻译小部件
 
-On first initialisation, create an iframe pointing to `index_widget.html` which embeds the Google Translate widget. Subsequent selection changes update the text inside the existing iframe via `postMessage`:
+首次初始化时，创建一个指向 `index_widget.html` 的 iframe，其中嵌入了 Google 翻译小部件。后续的选择变化通过 `postMessage` 更新现有 iframe 中的文本：
 
 ```js
 function ExecPlugin() {
   if (!isInit) {
-    // First time - create the iframe
+    // 首次——创建 iframe
     document.getElementById("iframe_parent").innerHTML = "";
     ifr = document.createElement("iframe");
     ifr.name = "google_name";
@@ -134,40 +134,40 @@ function ExecPlugin() {
     isInit = true;
 
     ifr.onload = function () {
-      // Set the initial text in the widget
+      // 在小部件中设置初始文本
       var element = ifr.contentDocument.getElementById("google_translate_element");
       if (element) {
         element.innerHTML = txt;
       }
-      // Create Copy and Insert buttons
+      // 创建复制和插入按钮
       createButtons();
     };
   } else if (prevTxt !== txt) {
-    // Text changed - update the iframe
+    // 文本已更改——更新 iframe
     ifr.contentWindow.postMessage(txt, "*");
   }
 }
 ```
 
-> **Swapping providers:** To use a different translation API (DeepL, Azure, LibreTranslate), replace `index_widget.html` with your own page that calls the API via `fetch()` and communicates results back via `postMessage`. The rest of the plugin code stays the same.
+> **更换翻译提供商：** 要使用其他翻译 API（DeepL、Azure、LibreTranslate），请将 `index_widget.html` 替换为您自己的页面，通过 `fetch()` 调用 API 并通过 `postMessage` 返回结果。插件的其余代码保持不变。
 
-## Step 5 - Insert the translation back into the document
+## 第 5 步 - 将翻译结果插入回文档
 
-The plugin provides two buttons: **Copy** (copies to clipboard) and **Insert** (replaces selection in the document). The Insert button uses `GetVersion` and `GetSelectionType` to decide how to paste:
+插件提供两个按钮：**复制**（复制到剪贴板）和**插入**（替换文档中的选中内容）。插入按钮使用 `GetVersion` 和 `GetSelectionType` 来决定粘贴方式：
 
 ```js
 btnReplace.onclick = function () {
   var translatedTxt = ifr.contentDocument.getElementById("google_translate_element").outerText;
   var allParasTxt = translatedTxt.split(/\n/);
-  // ... parse paragraphs ...
+  // ... 解析段落 ...
   Asc.scope.arr = allParsedParas;
 
   window.Asc.plugin.executeMethod("GetVersion", [], function (version) {
     if (version === undefined) {
-      // Old version - use PasteText
+      // 旧版本——使用 PasteText
       window.Asc.plugin.executeMethod("PasteText", [translatedTxt]);
     } else {
-      // New version - check selection type for smarter replacement
+      // 新版本——检查选择类型以进行更智能的替换
       window.Asc.plugin.executeMethod("GetSelectionType", [], function (sType) {
         switch (sType) {
           case "none":
@@ -186,11 +186,11 @@ btnReplace.onclick = function () {
 };
 ```
 
-The plugin uses `PasteText` for empty or drawing selections, and `callCommand` with `Api.ReplaceTextSmart` for text selections - this preserves paragraph structure during replacement.
+该插件对空选择或图形选择使用 `PasteText`，对文本选择使用 `callCommand` 配合 `Api.ReplaceTextSmart`——这在替换过程中保留了段落结构。
 
-## Step 6 - Handle the close button
+## 第 6 步 - 处理关闭按钮
 
-The panel's close button uses `executeCommand("close", "")`:
+面板的关闭按钮使用 `executeCommand("close", "")`：
 
 ```js
 window.Asc.plugin.button = function (id) {
@@ -198,27 +198,27 @@ window.Asc.plugin.button = function (id) {
 };
 ```
 
-## Step 7 - Test the plugin
+## 第 7 步 - 测试插件
 
-1. Zip the `translator/` folder and install it via **Plugins → Plugin Manager → Upload plugin**.
-2. Open any document and type a few sentences.
-3. Select some text and open the **Translator** plugin from the **Plugins** tab.
-4. The translation appears automatically in the side panel.
-5. Change the target language from the dropdown - the panel retranslates immediately.
-6. Click **Copy** to copy the translation to clipboard, or **Insert** to replace the selected text in the document.
+1. 将 `translator/` 文件夹压缩为 zip，然后通过**插件 → 插件管理器 → 上传插件**进行安装。
+2. 打开任意文档并输入几句话。
+3. 选中一些文本，然后从**插件**选项卡中打开**翻译器**插件。
+4. 翻译结果会自动显示在侧面板中。
+5. 从下拉菜单中更改目标语言——面板会立即重新翻译。
+6. 点击**复制**将翻译复制到剪贴板，或点击**插入**替换文档中选中的文本。
 
-## Going further
+## 进一步扩展
 
-- Add an `onExternalMouseUp` handler (already used in the actual plugin) to relay mouse events to the iframe for proper scrollbar interaction.
-- Cache recent translations to avoid redundant widget reloads when the user deselects and reselects the same text.
-- Add theme support with `window.Asc.plugin.onThemeChanged` to match the editor's light/dark theme.
-- Support the `pdf` editor type - the config already includes it in `EditorsSupport`.
+- 添加 `onExternalMouseUp` 处理程序（实际插件中已使用），将鼠标事件传递到 iframe 以实现正确的滚动条交互。
+- 缓存最近的翻译结果，避免用户取消选择后重新选择相同文本时出现冗余的小部件重新加载。
+- 使用 `window.Asc.plugin.onThemeChanged` 添加主题支持，以匹配编辑器的亮色/暗色主题。
+- 使用 PDF 文档进行测试，验证翻译工作流在 PDF 编辑器中是否正常工作。
 
-**Resources:**
+**资源：**
 
-1. [Translator plugin sample](/docs/plugins/learning-resources/samples/translator.md) - reference implementation with full Google Translate widget integration.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md) - full `config.json` field reference.
-3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md) - retrieve selection with configurable separators.
-4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md) - insert text at the current cursor position.
+1. [翻译器插件示例](/docs/plugins/learning-resources/samples/translator.md)——包含完整 Google 翻译小部件集成的参考实现。
+2. [插件结构](/docs/plugins/fundamentals/configuration/configuration.md)——完整的 `config.json` 字段参考。
+3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)——使用可配置的分隔符获取选中内容。
+4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)——在当前光标位置插入文本。
 
-**Key concepts:** `initDataType: "text"` · `initOnSelectionChanged` · `GetSelectedText` · `PasteText` · `ReplaceTextSmart` · `executeCommand("close", "")` · iframe widget
+**关键概念：** `initDataType: "text"` · `initOnSelectionChanged` · `GetSelectedText` · `PasteText` · `ReplaceTextSmart` · `executeCommand("close", "")` · iframe 小部件

@@ -95,4 +95,4 @@ For ONLYOFFICE Docs on-premises, administrators can deploy a plugin organization
 ## Next steps
 
 - [Versioning and updates](./versioning-and-updates.md)
-- [Marketplace submission](./marketplace-submission.md)
+- [Marketplace submission](./submit-to-marketplace.md)

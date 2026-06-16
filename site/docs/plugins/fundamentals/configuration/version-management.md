@@ -36,7 +36,7 @@ Users on older editors will not be offered the plugin update.
 
 ## Communicating changes
 
-Maintain a `CHANGELOG.md` in your plugin repository. When submitting to the [Plugin Marketplace](../../development-workflow/publishing/marketplace-submission.md), a clear changelog helps reviewers and users understand what changed.
+Maintain a `CHANGELOG.md` in your plugin repository. When submitting to the [Plugin Marketplace](../../development-workflow/publishing/submit-to-marketplace.md), a clear changelog helps reviewers and users understand what changed.
 
 ## See also
 

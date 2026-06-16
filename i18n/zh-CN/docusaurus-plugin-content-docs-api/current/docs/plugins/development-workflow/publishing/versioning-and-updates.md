@@ -129,7 +129,7 @@ Open an issue at [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](htt
 
 ## Next steps
 
-- [Marketplace submission](./marketplace-submission.md)
+- [Marketplace submission](./submit-to-marketplace.md)
 - [Preparing for release](./preparing-for-release.md)
 - [Private distribution](./private-distribution.md)
 

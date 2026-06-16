@@ -212,7 +212,7 @@ window.Asc.plugin.button = function (id) {
 - Add an `onExternalMouseUp` handler (already used in the actual plugin) to relay mouse events to the iframe for proper scrollbar interaction.
 - Cache recent translations to avoid redundant widget reloads when the user deselects and reselects the same text.
 - Add theme support with `window.Asc.plugin.onThemeChanged` to match the editor's light/dark theme.
-- Support the `pdf` editor type - the config already includes it in `EditorsSupport`.
+- Test with PDF documents to verify the translation workflow works correctly in the PDF editor.
 
 **Resources:**
 

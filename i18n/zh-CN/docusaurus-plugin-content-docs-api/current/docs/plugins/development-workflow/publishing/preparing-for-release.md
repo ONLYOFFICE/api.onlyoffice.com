@@ -141,23 +141,9 @@ your-plugin-name/
     └── fr.json
 ```
 
-## Pre-release checklist
-
-- [ ] Plugin loads without errors in ONLYOFFICE Desktop Editors
-- [ ] Plugin loads without errors in the web editor
-- [ ] `config.json`, `index.html`, and icons in `resources/light/` and `resources/dark/` are all present
-- [ ] GUID uses the correct `asc.{UUID}` format and is unique
-- [ ] Version follows `MAJOR.MINOR.PATCH`
-- [ ] `EditorsSupport` only lists tested editors
-- [ ] No `debugger` statements in the code
-- [ ] No excessive `console.log` statements
-- [ ] Icons are present in `resources/light/` and `resources/dark/`
-- [ ] External resources load over HTTPS
-- [ ] Plugin closes correctly when dismissed
-
 ## Next steps
 
-- [Marketplace submission](./marketplace-submission.md)
+- [Marketplace submission](./submit-to-marketplace.md)
 - [Private distribution](./private-distribution.md)
 - [Versioning and updates](./versioning-and-updates.md)
 

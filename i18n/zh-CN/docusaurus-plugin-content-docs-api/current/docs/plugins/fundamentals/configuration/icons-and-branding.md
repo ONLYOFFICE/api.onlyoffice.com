@@ -62,12 +62,12 @@ my-plugin/
   "guid": "asc.{UUID}",
   "version": "1.0.0",
   "description": "Example plugin with adaptive icons",
-  "icons": [
-    "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
-  ],
   "variations": [
     {
       "type": "window",
+      "icons": [
+        "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
+      ],
       "initDataType": "none",
       "initOnSelectionChanged": false
     }
@@ -193,19 +193,16 @@ const config = {
   guid: "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
   version: "1.0.0",
   description: "Example plugin with adaptive icons",
-  icons: [
-    "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
-  ],
-  isVisual: true,
-  initDataType: "none",
-  initOnSelectionChanged: false,
   variations: [
     {
       description: "Example plugin",
       url: "index.html",
+      type: "window",
       icons: [
         "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
       ],
+      initDataType: "none",
+      initOnSelectionChanged: false,
       isViewer: false,
       EditorsSupport: ["word", "cell", "slide"],
     }

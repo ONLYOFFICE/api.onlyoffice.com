@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-# Publishing
+# Submit to marketplace
 
 If you want your plugin to be available to other users in the ONLYOFFICE Plugin Marketplace, suggest it for publishing:
 

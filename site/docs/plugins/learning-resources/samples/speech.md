@@ -32,7 +32,7 @@ You can also download this plugin from the [ONLYOFFICE App Directory](https://ww
 
 ## Known issues
 
-1. Some browsers, e.g. Mozzila, Opera, can only use pre-installed languages on your system for speech generation. So to use new languages, you need to add them to your system.
+1. Some browsers, e.g. Mozilla, Opera, can only use pre-installed languages on your system for speech generation. So to use new languages, you need to add them to your system.
 2. The plugin doesn't work on Safari 15.3 (17612.4.9.1.8). Problem fixed on Safari 15.4 (17614.1.7.7).
 
 ## Plugin structure

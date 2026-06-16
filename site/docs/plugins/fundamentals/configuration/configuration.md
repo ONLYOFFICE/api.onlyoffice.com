@@ -215,7 +215,7 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
 
 **type:** `object`
 
-The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. `isVisual == true` and `isInsideMode == false`).
+The skinnable plugin button used in the plugin interface (used for plugins with their own window only, i.e. `type == "window"`).
 
 | Name       | Type                                | Description                                                                                                                                                              |
 | ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -539,9 +539,9 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 **type:** `number[]`
 
-Plugin window size measured in pixels. This parameter is only used when `type == "window"`.
+Plugin window size as `[width, height]` measured in pixels. This parameter is only used when `type == "window"`.
 
-**Example**: `[600]`
+**Example**: `[600, 700]`
 
 ### variations.store
 

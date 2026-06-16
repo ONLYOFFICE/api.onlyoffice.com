@@ -93,4 +93,4 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 - [Plugin quick start](quick-start.md)
 - [Plugin tutorial](../fundamentals/getting-started/what-is-a-plugin.md)
 - [Best practices](../development-workflow/developing/for-web-editors.md)
-- [Publishing guide](../development-workflow/publishing/marketplace-submission.md)
+- [Publishing guide](../development-workflow/publishing/submit-to-marketplace.md)

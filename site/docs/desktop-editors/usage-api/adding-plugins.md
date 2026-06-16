@@ -43,7 +43,7 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 ![Install plugin manually](/assets/images/plugins/plugin-install-manually.png#gh-light-mode-only)![Install plugin manually](/assets/images/plugins/plugin-install-manually.dark.png#gh-dark-mode-only)
 
-The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
+The plugin will be added to the opened editors and all the editors you will open afterwards and displayed within the **Plugins** tab.
 
 ## Adding plugins through the plugin folder
 
