@@ -10,7 +10,7 @@ sidebar_position: -1
 
 系统插件不会显示在编辑器界面中，它随服务器启动（或桌面编辑器启动）在后台运行，且不会干扰其他插件，使它们能同时工作。此类插件无需用户手动启动。与后台插件不同，系统插件无法被禁用。
 
-**示例**: [Settings](../../learning-resources/samples/settings.md)、[Search and replace on start](../../learning-resources/samples/search-and-replace-on-start.md)
+**示例**: [Settings](../learning-resources/samples/settings.md)、[Search and replace on start](../learning-resources/samples/search-and-replace-on-start.md)
 
 ## background
 
@@ -33,7 +33,7 @@ sidebar_position: -1
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-**示例**: [Highlight code](../../learning-resources/samples/highlight-code.md)、[Photo editor](../../learning-resources/samples/photo-editor.md)、[OCR](../../learning-resources/samples/ocr.md)
+**示例**: [Highlight code](../learning-resources/samples/highlight-code.md)、[Photo editor](../learning-resources/samples/photo-editor.md)、[OCR](../learning-resources/samples/ocr.md)
 
 ## panel
 
@@ -41,7 +41,7 @@ sidebar_position: -1
 
 ![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
-**示例**: [Translator](../../learning-resources/samples/translator.md)、[Thesaurus](../../learning-resources/samples/thesaurus.md)、[Zotero](../../learning-resources/samples/zotero.md)
+**示例**: [Translator](../learning-resources/samples/translator.md)、[Thesaurus](../learning-resources/samples/thesaurus.md)、[Zotero](../learning-resources/samples/zotero.md)
 
 ## panelRight
 
@@ -49,7 +49,7 @@ sidebar_position: -1
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-**示例**: [Translator](../../learning-resources/samples/translator.md)、[Thesaurus](../../learning-resources/samples/thesaurus.md)、[Zotero](../../learning-resources/samples/zotero.md)
+**示例**: [Translator](../learning-resources/samples/translator.md)、[Thesaurus](../learning-resources/samples/thesaurus.md)、[Zotero](../learning-resources/samples/zotero.md)
 
 ## unvisible
 
@@ -57,7 +57,7 @@ sidebar_position: -1
 
 ![Invisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Invisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 
-**示例**: [Hello world](../../learning-resources/samples/hello-world.md)、[Speech](../../learning-resources/samples/speech.md)
+**示例**: [Hello world](../learning-resources/samples/hello-world.md)、[Speech](../learning-resources/samples/speech.md)
 
 :::note
 任何类型的插件在运行过程中都可以创建窗口和选项卡。
