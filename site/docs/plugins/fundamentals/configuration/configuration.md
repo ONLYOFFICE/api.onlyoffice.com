@@ -363,11 +363,11 @@ Plugin event ([onDocumentContentReady](../../interacting-with-editors/form-api/E
 
 ### variations.icons
 
-**type:** `string`
+**type:** `string | string[]`
 
-URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. For more information, see [icons](icons-and-branding.md).
+URL to the plugin icon image file. Accepts either a single icon URL string with smart pattern syntax or an array of explicit icon file paths. For more information, see [icons](icons-and-branding.md).
 
-**Example**: `"url_to_icon"`
+**Example**: `"url_to_icon"` or `["resources/light/icon.png", "resources/light/icon@2x.png"]`
 
 ### variations.icons2
 

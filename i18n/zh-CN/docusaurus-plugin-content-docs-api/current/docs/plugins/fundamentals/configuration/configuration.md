@@ -363,11 +363,11 @@ sidebar_position: -5
 
 ### variations.icons
 
-**类型：** `string`
+**类型：** `string | string[]`
 
-插件图标图片文件的 URL。该 URL 允许你为主题（名称、类型）、样式（普通、悬停、激活）和缩放设置自定义规则。更多信息见[这里](icons-and-branding.md)。
+插件图标图片文件的 URL。接受带有智能模式语法的单个图标 URL 字符串或显式图标文件路径数组。更多信息见[这里](icons-and-branding.md)。
 
-**示例**: `"url_to_icon"`
+**示例**: `"url_to_icon"` 或 `["resources/light/icon.png", "resources/light/icon@2x.png"]`
 
 ### variations.icons2
 
