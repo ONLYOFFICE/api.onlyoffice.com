@@ -107,7 +107,7 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)

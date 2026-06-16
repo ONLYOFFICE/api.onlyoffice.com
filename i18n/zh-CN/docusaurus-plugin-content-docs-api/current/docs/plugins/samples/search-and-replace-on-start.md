@@ -63,7 +63,7 @@ GitHub 仓库：[示例：查找替换](https://github.com/ONLYOFFICE/sdkjs-plug
 ## 方法和事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onDocumentContentReady](../interacting-with-editors/form-api/Events/onDocumentContentReady.md)
 - executeMethod ("[SearchAndReplace](../interacting-with-editors/document-api/Methods/SearchAndReplace.md)")
 

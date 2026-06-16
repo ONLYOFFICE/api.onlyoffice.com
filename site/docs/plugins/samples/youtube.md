@@ -131,7 +131,7 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("AddOleObject")](../interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](../interacting-with-editors/document-api/Methods/EditOleObject.md)

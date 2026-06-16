@@ -63,7 +63,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onDocumentContentReady](../interacting-with-editors/form-api/Events/onDocumentContentReady.md)
 - executeMethod ("[SearchAndReplace](../interacting-with-editors/document-api/Methods/SearchAndReplace.md)")
 

@@ -107,7 +107,7 @@ Repository on GitHub: [example_search_and_change_text_background_color](https://
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 

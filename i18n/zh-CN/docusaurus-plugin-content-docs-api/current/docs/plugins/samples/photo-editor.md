@@ -189,7 +189,7 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 ## 方法和事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetImageDataFromSelection")](../interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)

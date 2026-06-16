@@ -197,7 +197,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [resizeWindow](../customization/windows-and-panels.md#interacting-with-a-window)
 - [info.recalculate](../interacting-with-editors/overview/asc-plugin.md#info-object)

@@ -143,7 +143,7 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](../interacting-with-editors/document-api/Methods/PasteHtml.md)
 

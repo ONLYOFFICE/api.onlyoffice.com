@@ -104,7 +104,7 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
 - executeMethod ("[SelectContentControl](../interacting-with-editors/document-api/Methods/SelectContentControl.md)")

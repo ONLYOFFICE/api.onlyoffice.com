@@ -86,7 +86,7 @@ Repository on GitHub: [helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.recalculate](../interacting-with-editors/overview/asc-plugin.md#info-object)

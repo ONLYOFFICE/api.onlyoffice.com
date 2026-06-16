@@ -58,7 +58,7 @@ sidebar_position: -2
 
 ## 本地化 index.html 和插件代码文件
 
-从 [index.html](./entry-point.md) 和 [pluginCode.js](../../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下：
+从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下：
 
 ```ini
 highlightcode/
@@ -123,7 +123,7 @@ highlightcode/
 <button id="button_new">New</button>
 ```
 
-然后在 [pluginCode.js](../../interacting-with-editors/overview/overview.md) 文件中添加 _window.Asc.plugin.onTranslate_ 函数：
+然后在 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中添加 _window.Asc.plugin.onTranslate_ 函数：
 
 ```ts
 window.Asc.plugin.onTranslate = () => {

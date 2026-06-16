@@ -115,7 +115,7 @@ GitHub 仓库：[example_extended_comments](https://github.com/ONLYOFFICE/sdkjs-
 ## 方法和事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onAddComment](../interacting-with-editors/document-api/Events/onAddComment.md)
 - [onChangeCommentData](../interacting-with-editors/document-api/Events/onChangeCommentData.md)
 - [onRemoveComment](../interacting-with-editors/document-api/Events/onRemoveComment.md)

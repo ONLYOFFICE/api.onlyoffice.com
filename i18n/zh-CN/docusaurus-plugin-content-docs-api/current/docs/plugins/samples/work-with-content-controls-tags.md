@@ -112,7 +112,7 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 ## 方法和事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)

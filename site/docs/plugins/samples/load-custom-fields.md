@@ -110,7 +110,7 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - executeMethod ("[InsertAndReplaceContentControls](../interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")

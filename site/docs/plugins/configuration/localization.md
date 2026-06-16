@@ -58,7 +58,7 @@ The complete translations in the [config.json](configuration.md) for the [highli
 
 ## Localizing index.html and plugin code files
 
-Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../../interacting-with-editors/overview/overview.md) files and create their list. Then create the _translations_ folder in the plugin directory, so that the structure looked like this:
+Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../interacting-with-editors/overview/overview.md) files and create their list. Then create the _translations_ folder in the plugin directory, so that the structure looked like this:
 
 ```ini
 highlightcode/
@@ -123,7 +123,7 @@ Add the _id_ attribute to it, so that it looked like this:
 <button id="button_new">New</button>
 ```
 
-After that add the _window.Asc.plugin.onTranslate_ function to the [pluginCode.js](../../interacting-with-editors/overview/overview.md) file:
+After that add the _window.Asc.plugin.onTranslate_ function to the [pluginCode.js](../interacting-with-editors/overview/overview.md) file:
 
 ```ts
 window.Asc.plugin.onTranslate = () => {

@@ -117,7 +117,7 @@ Repository on GitHub: [odata](https://github.com/ONLYOFFICE/onlyoffice.github.io
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object

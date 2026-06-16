@@ -216,7 +216,7 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [onTargetPositionChanged](../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - [attachContextMenuClickEvent](../customization/context-menu.md#clicking-a-context-menu-item)
 - [executeMethod ("AddContextMenuItem")](../customization/context-menu.md#creating-a-context-menu-item)

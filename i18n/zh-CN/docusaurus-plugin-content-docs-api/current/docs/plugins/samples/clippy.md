@@ -96,7 +96,7 @@ GitHub 仓库：[clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 ## 方法与事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 
 ## 支持
 

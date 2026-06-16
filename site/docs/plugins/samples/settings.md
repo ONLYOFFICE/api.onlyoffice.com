@@ -59,7 +59,7 @@ Repository on GitHub: [settings](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [executeMethod ("SetProperties")](../interacting-with-editors/document-api/Methods/SetProperties.md)
 
 ## Support
