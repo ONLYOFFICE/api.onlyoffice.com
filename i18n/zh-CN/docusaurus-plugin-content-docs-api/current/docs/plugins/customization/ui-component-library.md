@@ -110,8 +110,7 @@ Create modal dialogs and side panels for plugin content.
 
 ```json
 {
-  "isModal": true,
-  "isVisual": true,
+  "type": "window",
   "size": [400, 300],
   "buttons": [
     { "text": "OK", "primary": true },
@@ -124,8 +123,6 @@ Create modal dialogs and side panels for plugin content.
 
 ```json
 {
-  "isModal": false,
-  "isInsideMode": true,
   "type": "panel",
   "size": [350, 600]
 }
