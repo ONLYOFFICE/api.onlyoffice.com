@@ -167,9 +167,9 @@ func.call = async function (params) {
 
 **深入学习：**
 
-- [ONLYOFFICE AI 代理入门](../../guides/ai-agent.md)
-- [深入了解自定义 AI 工具](../../guides/custom-ai-tools.md)
-- [文本注释 API 指南](../../guides/text-annotations-guide.md)
+- [ONLYOFFICE AI 代理入门](../guides/ai-agent.md)
+- [深入了解自定义 AI 工具](../guides/custom-ai-tools.md)
+- [文本注释 API 指南](../guides/text-annotations-guide.md)
 
 **浏览示例：**
 
@@ -179,4 +179,4 @@ func.call = async function (params) {
 
 - [开发者论坛](https://forum.onlyoffice.com/) - 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - 报告错误
-- [常见问题](../../more-information/faq.md) - 常见问题解答
+- [常见问题](../more-information/faq.md) - 常见问题解答

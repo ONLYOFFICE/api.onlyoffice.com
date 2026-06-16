@@ -167,9 +167,9 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 **Learn more:**
 
-- [Getting started with ONLYOFFICE AI agent](../../guides/ai-agent.md)
-- [Learn more about custom AI tools](../../guides/custom-ai-tools.md)
-- [Text annotations API guide](../../guides/text-annotations-guide.md)
+- [Getting started with ONLYOFFICE AI agent](../guides/ai-agent.md)
+- [Learn more about custom AI tools](../guides/custom-ai-tools.md)
+- [Text annotations API guide](../guides/text-annotations-guide.md)
 
 **Explore examples:**
 
@@ -179,4 +179,4 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 - [Developer Forum](https://forum.onlyoffice.com/) - Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - Report bugs
-- [FAQ](../../more-information/faq.md) - Frequently asked questions
+- [FAQ](../more-information/faq.md) - Frequently asked questions

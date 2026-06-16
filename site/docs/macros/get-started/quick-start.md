@@ -138,17 +138,17 @@ Try these examples to learn more:
 
 **Learn more:**
 
-- [Complete macro guide](../../guides/writing-macros.md)
-- [Custom spreadsheet functions](../../guides/adding-custom-functions.md)
-- [Debugging macros](../../guides/debugging.md)
+- [Complete macro guide](../guides/writing-macros.md)
+- [Custom spreadsheet functions](../guides/adding-custom-functions.md)
+- [Debugging macros](../guides/debugging.md)
 
 **Explore examples:**
 
 - [Macro samples collection](/samples/?doctype=docs&text=macros)
-- [Converting VBA macros](../../guides/converting-vba-macros.md)
+- [Converting VBA macros](../guides/converting-vba-macros.md)
 
 **Need help?**
 
 - [Developer Forum](https://forum.onlyoffice.com/) - Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - Report bugs
-- [FAQ](../../more-information/faq.md) - Frequently asked questions
+- [FAQ](../more-information/faq.md) - Frequently asked questions

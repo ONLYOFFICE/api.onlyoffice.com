@@ -139,17 +139,17 @@ sidebar_position: 2
 
 **深入学习：**
 
-- [完整宏指南](../../guides/writing-macros.md)
-- [自定义电子表格函数](../../guides/adding-custom-functions.md)
-- [调试宏](../../guides/debugging.md)
+- [完整宏指南](../guides/writing-macros.md)
+- [自定义电子表格函数](../guides/adding-custom-functions.md)
+- [调试宏](../guides/debugging.md)
 
 **浏览示例：**
 
 - [宏示例集合](/samples/?doctype=docs&text=macros)
-- [转换 VBA 宏](../../guides/converting-vba-macros.md)
+- [转换 VBA 宏](../guides/converting-vba-macros.md)
 
 **需要帮助？**
 
 - [开发者论坛](https://forum.onlyoffice.com/) - 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - 报告错误
-- [常见问题](../../more-information/faq.md) - 常见问题解答
+- [常见问题](../more-information/faq.md) - 常见问题解答
