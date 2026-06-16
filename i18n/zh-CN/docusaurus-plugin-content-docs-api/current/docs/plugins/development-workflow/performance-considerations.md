@@ -135,5 +135,5 @@ window.Asc.plugin.callCommand(function () {
 
 ## See also
 
-- [Communication flow](../interacting-with-editors/overview/communication-flow.md) - understanding the API bridge overhead
+- [How to call commands](../interacting-with-editors/overview/how-to-call-commands.md) - understanding the API bridge overhead
 - [Plugin events](../interacting-with-editors/overview/asc-plugin.md#events) - `init`, `onDestroy`, and the full lifecycle
