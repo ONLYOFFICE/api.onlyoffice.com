@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
 
 Starting from version 9.0.4, the AI plugin was added to the server and desktop distributions built with ONLYOFFICE branding.
 
@@ -146,18 +146,18 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 ## Methods and events
 
 - init
-- [button](../../customization/custom-buttons.md)
-- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
-- [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
+- [button](../customization/custom-buttons.md)
+- [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
+- [attachEditorEvent](../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
 - onThemeChanged
 - onThemeChangedBase
-- [executeMethod ("CloseWindow")](../../customization/windows-and-panels.md#closing-a-window)
-- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
+- [executeMethod ("CloseWindow")](../customization/windows-and-panels.md#closing-a-window)
+- [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.data](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

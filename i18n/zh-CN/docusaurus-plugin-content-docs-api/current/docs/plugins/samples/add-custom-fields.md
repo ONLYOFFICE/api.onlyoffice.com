@@ -104,11 +104,11 @@ GitHub 仓库：[**example_customfields_add**](https://github.com/ONLYOFFICE/sdk
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- executeMethod ("[AddContentControl](../../interacting-with-editors/document-api/Methods/AddContentControl.md)")
-- executeMethod ("[InsertAndReplaceContentControls](../../interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- executeMethod ("[AddContentControl](../interacting-with-editors/document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](../interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

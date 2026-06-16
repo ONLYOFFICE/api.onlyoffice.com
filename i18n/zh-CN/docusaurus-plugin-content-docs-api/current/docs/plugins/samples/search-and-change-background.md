@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) 下载此插件，并按照以下说明进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) 下载此插件，并按照以下说明进行安装：[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -106,10 +106,10 @@ GitHub 仓库：[example_search_and_change_text_background_color](https://github
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

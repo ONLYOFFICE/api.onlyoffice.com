@@ -117,15 +117,15 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- executeMethod ("[GetAllContentControls](../../../office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- executeMethod ("[GetCurrentContentControl](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
-- executeMethod ("[MoveCursorToContentControl](../../interacting-with-editors/document-api/Methods/MoveCursorToContentControl.md)")
-- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](../../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [onTargetPositionChanged](../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- executeMethod ("[GetCurrentContentControl](../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
+- executeMethod ("[MoveCursorToContentControl](../interacting-with-editors/document-api/Methods/MoveCursorToContentControl.md)")
+- [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

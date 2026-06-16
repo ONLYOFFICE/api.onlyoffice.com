@@ -17,7 +17,7 @@ Gets the list of content controls tags.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -111,12 +111,12 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 
 ## Methods and events
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- executeMethod ("[GetAllContentControls](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](../../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
 
 ## Support
 

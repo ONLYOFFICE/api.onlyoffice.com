@@ -188,16 +188,16 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetImageDataFromSelection")](../../interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GetVersion")](../../interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PutImageDataToSelection")](../../interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
-- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
+- [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetImageDataFromSelection")](../interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
+- [executeMethod ("GetVersion")](../interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PutImageDataToSelection")](../interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
+- [resizeWindow](../customization/windows-and-panels.md#interacting-with-a-window)
+- [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

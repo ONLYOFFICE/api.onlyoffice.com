@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-将以下代码分别保存到 *config.json*、*index.html* 和 *code.js* 文件中。从[此插件](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources)下载包含图标的 *resources* 文件夹。将所有文件和该文件夹放入插件目录中，并根据以下说明进行安装：[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+将以下代码分别保存到 *config.json*、*index.html* 和 *code.js* 文件中。从[此插件](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources)下载包含图标的 *resources* 文件夹。将所有文件和该文件夹放入插件目录中，并根据以下说明进行安装：[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -215,12 +215,12 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## 方法与事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item)
-- [executeMethod ("AddContextMenuItem")](../../customization/context-menu.md#creating-a-context-menu-item)
-- [executeMethod ("InputText")](../../interacting-with-editors/document-api/Methods/InputText.md)
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- [attachContextMenuClickEvent](../customization/context-menu.md#clicking-a-context-menu-item)
+- [executeMethod ("AddContextMenuItem")](../customization/context-menu.md#creating-a-context-menu-item)
+- [executeMethod ("InputText")](../interacting-with-editors/document-api/Methods/InputText.md)
 
 ## 支持
 

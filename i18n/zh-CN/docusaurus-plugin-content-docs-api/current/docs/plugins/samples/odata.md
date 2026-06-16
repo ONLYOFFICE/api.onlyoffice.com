@@ -10,7 +10,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) 下载此插件，并根据以下指南完成安装：[桌面端](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) 下载此插件，并根据以下指南完成安装：[桌面端](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用
 

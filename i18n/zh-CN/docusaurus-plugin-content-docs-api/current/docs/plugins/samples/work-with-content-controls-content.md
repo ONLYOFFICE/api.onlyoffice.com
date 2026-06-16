@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content) 下载此插件，并按照[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content) 下载此插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用
 
@@ -103,12 +103,12 @@ GitHub 仓库：[example_work_with_content_controls_content](https://github.com/
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- executeMethod ("[GetAllContentControls](../../../office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](../../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[GetAllContentControls](../../office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

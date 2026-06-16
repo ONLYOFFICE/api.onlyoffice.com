@@ -165,16 +165,16 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - button
 - init
 - onExternalMouseUp
-- [executeMethod ("AddOleObject")](../../interacting-with-editors/document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](../../interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.height](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.imgSrc](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.mmToPx](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.objectId](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.resize](../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [executeMethod ("AddOleObject")](../interacting-with-editors/document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](../interacting-with-editors/document-api/Methods/EditOleObject.md)
+- [info.data](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.height](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.imgSrc](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.mmToPx](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.objectId](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.resize](../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

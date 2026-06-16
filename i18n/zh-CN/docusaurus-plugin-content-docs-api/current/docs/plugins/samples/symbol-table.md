@@ -106,14 +106,14 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onExternalMouseUp](../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
-- [executeMethod ("GetFontList")](../../interacting-with-editors/document-api/Methods/GetFontList.md)
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onMethodReturn](../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("GetFontList")](../interacting-with-editors/document-api/Methods/GetFontList.md)
+- [executeMethod ("PasteHtml")](../interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [info.editorType](../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

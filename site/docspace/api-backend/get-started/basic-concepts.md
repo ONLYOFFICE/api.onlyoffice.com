@@ -9,7 +9,7 @@ title: Introducing ONLYOFFICE DocSpace
 - creating and customizing [rooms](#step-3-create-a-room) for collaboration;
 - inviting users to [collaborate on files](../samples/basic-samples/invite-users.md) in real time;
 - creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files using the built-in [ONLYOFFICE Docs](../../../docs/docs-api/get-started/basic-concepts.md);
-- creating and managing [AI agents](../../mcp-server/getting-started/) to automate workflows;
+- creating and managing [AI agents](../../../mcp-server/getting-started/) to automate workflows;
 - extending DocSpace functionality with [plugins](../../plugins-sdk/get-started/get-started.md);
 - integrating DocSpace into your applications using the [Embed SDK](../../javascript-sdk/get-started/get-started.md).
 
@@ -25,7 +25,7 @@ Before getting started with ONLYOFFICE DocSpace, here are some terms to get fami
 
 - **Portal:** A secure, web-based [gateway](../usage-api/get-portal-information.api.mdx) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources.
 - **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](../usage-api/create-room.api.mdx) (Collaboration, Public, Custom, Form filling, and Virtual data) based on your specific needs.
-- **AI agents:** Integrations that connect DocSpace to external tools and automate workflows via the [MCP server](../../mcp-server/getting-started/).
+- **AI agents:** Integrations that connect DocSpace to external tools and automate workflows via the [MCP server](../../../mcp-server/getting-started/).
 - **Users:** People with access to your DocSpace portal. DocSpace has several [user roles](../usage-api/update-user-type.api.mdx): owner, admin, power user, editor, viewer, and guest, each with different access rights to rooms and files.
 
 ## Quickstart

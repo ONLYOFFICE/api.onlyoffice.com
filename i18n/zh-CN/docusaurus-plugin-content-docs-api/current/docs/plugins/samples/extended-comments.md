@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装方式
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) 下载此插件，并按照以下说明完成安装：[桌面端](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) 下载此插件，并按照以下说明完成安装：[桌面端](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -114,16 +114,16 @@ GitHub 仓库：[example_extended_comments](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- [button](../../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
-- [onAddComment](../../interacting-with-editors/document-api/Events/onAddComment.md)
-- [onChangeCommentData](../../interacting-with-editors/document-api/Events/onChangeCommentData.md)
-- [onRemoveComment](../../interacting-with-editors/document-api/Events/onRemoveComment.md)
-- executeMethod ("[AddComment](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](../../interacting-with-editors/document-api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](../../interacting-with-editors/document-api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](../../interacting-with-editors/document-api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](../../interacting-with-editors/document-api/Methods/RemoveComments.md)")
+- [button](../customization/custom-buttons.md)
+- [init](../interacting-with-editors/overview/#how-it-works)
+- [onAddComment](../interacting-with-editors/document-api/Events/onAddComment.md)
+- [onChangeCommentData](../interacting-with-editors/document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](../interacting-with-editors/document-api/Events/onRemoveComment.md)
+- executeMethod ("[AddComment](../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
+- executeMethod ("[ChangeComment](../interacting-with-editors/document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](../interacting-with-editors/document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](../interacting-with-editors/document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](../interacting-with-editors/document-api/Methods/RemoveComments.md)")
 
 ## 支持
 

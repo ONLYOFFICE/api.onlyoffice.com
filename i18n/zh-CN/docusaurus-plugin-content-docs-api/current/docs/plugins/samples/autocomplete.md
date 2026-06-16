@@ -14,7 +14,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装
 
-从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/autocomplete)下载此插件，并按照[桌面版](../../../development-workflow/installing-and-testing/desktop-editors-installation.md)，[本地部署版](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md)或者[云端版](../../../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/autocomplete)下载此插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)，[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或者[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用方法
 
@@ -90,15 +90,15 @@ GitHub 仓库： [自动完成](https://github.com/ONLYOFFICE/onlyoffice.github.
 - inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- [createInputHelper](../../customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](../../interacting-with-editors/document-api/Methods/InputText.md)
-- [getInputHelper](../../customization/input-helper.md#getting-an-input-helper)
-- [InputHelper.createWindow](../../customization/input-helper.md#createwindow)
-- [InputHelper.getItems](../../customization/input-helper.md#getitems)
-- [InputHelper.getScrollSizes](../../customization/input-helper.md#getscrollsizes)
-- [InputHelper.setItems](../../customization/input-helper.md#setitems)
-- [InputHelper.show](../../customization/input-helper.md#show)
-- [InputHelper.unShow](../../customization/input-helper.md#unshow)
+- [createInputHelper](../customization/input-helper.md#creating-an-input-helper)
+- [executeMethod ("InputText")](../interacting-with-editors/document-api/Methods/InputText.md)
+- [getInputHelper](../customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](../customization/input-helper.md#createwindow)
+- [InputHelper.getItems](../customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](../customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](../customization/input-helper.md#setitems)
+- [InputHelper.show](../customization/input-helper.md#show)
+- [InputHelper.unShow](../customization/input-helper.md#unshow)
 
 ## 支持
 

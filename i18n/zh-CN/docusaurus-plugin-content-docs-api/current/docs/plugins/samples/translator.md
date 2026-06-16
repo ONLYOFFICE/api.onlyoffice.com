@@ -115,13 +115,13 @@ GitHub 仓库：[translator](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetVersion")](../../interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("GetSelectedText")](../../interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](../../interacting-with-editors/document-api/Methods/GetSelectionType.md)
-- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetVersion")](../interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("GetSelectedText")](../interacting-with-editors/document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](../interacting-with-editors/document-api/Methods/GetSelectionType.md)
+- [executeMethod ("PasteText")](../interacting-with-editors/document-api/Methods/PasteText.md)
+- [Asc.scope](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 
