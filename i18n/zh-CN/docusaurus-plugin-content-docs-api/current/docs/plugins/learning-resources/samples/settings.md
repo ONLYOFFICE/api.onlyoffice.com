@@ -58,9 +58,9 @@ GitHub 仓库：[设置](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 方法和事件
 
-- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
-- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [executeMethod ("SetProperties")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/SetProperties.md)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [executeMethod ("SetProperties")](../../interacting-with-editors/document-api/Methods/SetProperties.md)
 
 ## 支持
 

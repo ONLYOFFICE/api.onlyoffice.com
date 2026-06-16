@@ -140,7 +140,7 @@ GitHub 仓库：[html](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 - button
 - init
 - onTranslate
-- [executeMethod ("PasteHtml")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/document-api/Methods/PasteHtml.md)
 
 ## 支持
 

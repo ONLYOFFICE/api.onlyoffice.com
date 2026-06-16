@@ -149,7 +149,7 @@ your-plugin-name/
 
 ## Additional resources
 
-- [Configuration](../../fundamentals/configuration/configuration.md)
-- [Variations](../../fundamentals/configuration/variations.md)
-- [Localization](../../fundamentals/configuration/localization.md)
+- [Configuration](../../configuration/configuration.md)
+- [Variations](../../configuration/variations.md)
+- [Localization](../../configuration/localization.md)
 - [Plugin examples](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)

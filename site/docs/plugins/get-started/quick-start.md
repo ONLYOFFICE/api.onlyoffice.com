@@ -181,7 +181,7 @@ function insertFormattedText() {
 
 **Learn more:**
 
-- [Plugin structure and configuration](../fundamentals/configuration/configuration.md)
+- [Plugin structure and configuration](../configuration/configuration.md)
 - [Complete API reference](../interacting-with-editors/overview/overview.md)
 - [UI customization options](../customization/toolbar.md)
 

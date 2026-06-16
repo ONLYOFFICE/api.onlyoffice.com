@@ -181,7 +181,7 @@ function insertFormattedText() {
 
 **深入学习：**
 
-- [插件结构与配置](../fundamentals/configuration/configuration.md)
+- [插件结构与配置](../configuration/configuration.md)
 - [完整 API 参考](../interacting-with-editors/overview/overview.md)
 - [UI 自定义选项](../customization/toolbar.md)
 

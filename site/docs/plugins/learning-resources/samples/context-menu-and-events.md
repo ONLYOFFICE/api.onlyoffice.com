@@ -17,7 +17,7 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 ## Installation
 
-Copy the code below and save it in the *config.json*, *index.html*, and *code.js* files respectively. Download the *resources* folder with icons from [this plugin](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources). Put all the files and the folder into the plugin folder and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Copy the code below and save it in the *config.json*, *index.html*, and *code.js* files respectively. Download the *resources* folder with icons from [this plugin](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources). Put all the files and the folder into the plugin folder and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -25,7 +25,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 2. Place a cursor anywhere in the document, press the right mouse button, and go to **Item 1 -> Subitem 2**. The *clicked: onClickItem1Sub2* message will be inserted at the cursor position.
 3. Select any text in the document, press the right mouse button, and click **Item 3**. The *clicked: onClickItem3* message will be inserted in place of the selected text.
 4. Select any shape or image in the document, press the right mouse button, and click **Item 4**. The *clicked: onClickItem4* message will appear in the console.
-5. Change the cursor position. The *event: [onTargetPositionChanged](../../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)* message will appear in the console.
+5. Change the cursor position. The *event: [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)* message will appear in the console.
 
 ## Plugin structure
 
@@ -215,12 +215,12 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onTargetPositionChanged](../../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- [attachContextMenuClickEvent](../../../customization/context-menu.md#clicking-a-context-menu-item)
-- [executeMethod ("AddContextMenuItem")](../../../customization/context-menu.md#creating-a-context-menu-item)
-- [executeMethod ("InputText")](../../../interacting-with-editors/document-api/Methods/InputText.md)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item)
+- [executeMethod ("AddContextMenuItem")](../../customization/context-menu.md#creating-a-context-menu-item)
+- [executeMethod ("InputText")](../../interacting-with-editors/document-api/Methods/InputText.md)
 
 ## Support
 

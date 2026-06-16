@@ -110,7 +110,7 @@ const oToolbarMenuTab = {
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 菜单项类型。                                                                                     |
 | *text*           | string                                      | 菜单项标题。如果此字段为""，工具栏按钮仅显示图标，不显示标题。                                   |
 | *hint*           | string                                      | 菜单项提示信息。                                                                                 |
-| *icons*          | string / object                             | 菜单项图标（参见插件的[config](../fundamentals/configuration/configuration.md#variationsicons)文档）。 |
+| *icons*          | string / object                             | 菜单项图标（参见插件的[config](../configuration/configuration.md#variationsicons)文档）。 |
 | *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                       |
 | *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 `split == false`）或其上半部分（当 `split == true`）是否可切换。        |
 | *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                       |

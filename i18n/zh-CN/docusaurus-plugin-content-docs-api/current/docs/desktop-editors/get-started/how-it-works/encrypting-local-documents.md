@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 - 带有代码的 JS 文件，
 - 带有配置的 JSON 文件。
 
-有关插件结构的更多信息可以在[这里](../../../plugins/fundamentals/configuration/configuration.md)找到。
+有关插件结构的更多信息可以在[这里](../../../plugins/configuration/configuration.md)找到。
 
 让我们看一下配置：
 
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-所有配置参数都在[文档](../../../plugins/fundamentals/configuration/configuration.md)中有描述。
+所有配置参数都在[文档](../../../plugins/configuration/configuration.md)中有描述。
 
 配置文件准备好后，创建带有以下内容的插件代码文件：
 

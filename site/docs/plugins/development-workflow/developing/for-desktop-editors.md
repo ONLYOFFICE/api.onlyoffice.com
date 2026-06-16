@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 To develop a plugin for ONLYOFFICE desktop editors, follow the instructions below.
 
-1. Create a folder on your machine and place the [index.html](../../fundamentals/configuration/entry-point.md) and [config.json](../../fundamentals/configuration/configuration.md) files there.
+1. Create a folder on your machine and place the [index.html](../../configuration/entry-point.md) and [config.json](../../configuration/configuration.md) files there.
 
 2. Pack all the plugin files within the plugin folder into a `zip` archive and change its extension to `.plugin` (all the plugin files and subfolders must be at the archive root).
 

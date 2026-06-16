@@ -6,7 +6,7 @@ sidebar_position: -2
 
 To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
 
-1. Create a folder on your machine and place the [index.html](../../fundamentals/configuration/entry-point.md) and [config.json](../../fundamentals/configuration/configuration.md) files there.
+1. Create a folder on your machine and place the [index.html](../../configuration/entry-point.md) and [config.json](../../configuration/configuration.md) files there.
 
 2. Start serving the folder. To do this, open the created folder and run the following commands:
 

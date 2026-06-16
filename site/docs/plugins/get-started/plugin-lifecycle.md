@@ -45,5 +45,5 @@ window.Asc.plugin.onDestroy = function () {
 
 ## See also
 
-- [Plugin architecture](../plugin-architecture/plugin-architecture.md)
+- [Getting started](get-started.md)
 - [Entry point](../configuration/entry-point.md)

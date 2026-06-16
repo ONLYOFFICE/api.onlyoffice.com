@@ -26,6 +26,14 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 [Browse live examples in ONLYOFFICE Marketplace](https://www.onlyoffice.com/app-directory/en)
 
+## What plugins cannot do
+
+- Directly access the editor's internal DOM or JavaScript scope
+- Access the file system on the user's machine
+- Bypass the API to perform operations not exposed by the plugin SDK
+
+This sandboxing is intentional - it keeps the editor stable and secure regardless of what the plugin does.
+
 ## Comparing approaches
 
 Not sure which approach fits your use case? See how plugins compare to macros and custom AI tools.
@@ -82,7 +90,7 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 - **[Browser DevTools](../development-workflow/debugging/for-web-editors.md)** - Debugging guide
 - **[Plugin examples](/samples/?doctype=docs&text=plugin)** - Working examples
 - **[API reference](../interacting-with-editors/overview/overview.md)** - Complete API documentation
-- **[Plugin structure](../fundamentals/configuration/configuration.md)** - Configuration guide
+- **[Plugin structure](../configuration/configuration.md)** - Configuration guide
 - **[FAQ](../more-information/faq.md)** - Frequently asked questions
 - **[Forum](https://forum.onlyoffice.com/)** - Community support
 - **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Source code and contributions
@@ -91,6 +99,6 @@ Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI t
 ## Next steps
 
 - [Plugin quick start](quick-start.md)
-- [Plugin tutorial](../fundamentals/getting-started/what-is-a-plugin.md)
-- [Best practices](../development-workflow/developing/for-web-editors.md)
+- [Plugin lifecycle](plugin-lifecycle.md)
+- [Developing for web editors](../development-workflow/developing/for-web-editors.md)
 - [Publishing guide](../development-workflow/publishing/submit-to-marketplace.md)

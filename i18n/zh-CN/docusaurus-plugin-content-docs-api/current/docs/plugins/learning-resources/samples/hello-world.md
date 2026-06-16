@@ -85,11 +85,11 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 
 ## 方法和事件
 
-- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
-- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [callCommand](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.recalculate](../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

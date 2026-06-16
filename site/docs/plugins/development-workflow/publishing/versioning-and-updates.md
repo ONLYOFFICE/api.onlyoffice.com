@@ -41,6 +41,8 @@ Submitting an update without changing the version - Plugin Manager cannot detect
 { "minVersion": "7.0.0" }
 ```
 
+Users on older editor versions will not be offered the plugin update.
+
 ## Submitting an update
 
 ### Step 1 - Sync your fork with upstream
@@ -134,6 +136,6 @@ Open an issue at [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](htt
 ## Additional resources
 
 - [Changelog](../../more-information/changelog.md)
-- [Configuration](../../fundamentals/configuration/configuration.md)
+- [Configuration](../../configuration/configuration.md)
 - [Marketplace repo](https://github.com/ONLYOFFICE/onlyoffice.github.io)
 - [Plugin examples](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)

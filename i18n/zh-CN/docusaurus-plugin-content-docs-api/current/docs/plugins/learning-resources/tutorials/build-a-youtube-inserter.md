@@ -10,8 +10,8 @@ Learn how to accept a YouTube URL from the user and embed the video as a live OL
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment - see [Development environment setup](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
-- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
+- A working ONLYOFFICE plugin development environment - see [Developing](/docs/plugins/development-workflow/developing/for-web-editors.md).
+- Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/configuration/configuration.md).
 - A YouTube account is not required; any public video URL will work.
 
 ## Step 1 - Scaffold the plugin
@@ -266,7 +266,7 @@ Key details from the actual source:
 **Resources:**
 
 1. [YouTube plugin sample](/docs/plugins/learning-resources/samples/youtube.md) - reference implementation you can run immediately.
-2. [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md) - full `config.json` field reference.
+2. [Plugin structure](/docs/plugins/configuration/configuration.md) - full `config.json` field reference.
 3. [executeMethod ("AddOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md) - inserts a new OLE object.
 4. [executeMethod ("EditOleObject")](/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md) - updates an existing OLE object in place.
 

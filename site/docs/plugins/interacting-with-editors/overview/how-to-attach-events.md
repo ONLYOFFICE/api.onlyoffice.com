@@ -55,7 +55,7 @@ Asc.plugin.detachEditorEvent("onAddComment");
 Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-the-attacheditorevent-method) method instead.
 :::
 
-1. In the *config.json* file, add the [events](../../fundamentals/configuration/configuration.md#variationsevents) parameter with the array of all the available events:
+1. In the *config.json* file, add the [events](../../configuration/configuration.md#variationsevents) parameter with the array of all the available events:
 
    ``` json
    {

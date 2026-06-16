@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 企业版、社区版（文档 + 工作区）及 ONLYOFFICE 云端中默认提供。
 
-您也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/ai)下载该插件，并按照[桌面版](../../../../../../../../../site/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)安装说明进行安装。
+您也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/ai)下载该插件，并按照[桌面版](../../development-workflow/installing-and-testing/desktop-editors-installation.md)安装说明进行安装。
 
 从 9.0.4 版本开始，AI 插件已加入具有 ONLYOFFICE 品牌标识的服务器版和桌面版发行包。
 
@@ -141,18 +141,18 @@ GitHub 仓库：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/mas
 ## 方法和事件
 
 - init
-- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
-- [onTranslate](../../../../../../../../../site/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [attachEditorEvent](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
+- [button](../../customization/custom-buttons.md)
+- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
+- [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
 - onThemeChanged
 - onThemeChangedBase
-- [executeMethod ("CloseWindow")](../../../../../../../../../site/docs/plugins/customization/windows-and-panels.md#closing-a-window)
-- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
+- [executeMethod ("CloseWindow")](../../customization/windows-and-panels.md#closing-a-window)
+- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.data](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

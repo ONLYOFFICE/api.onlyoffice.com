@@ -29,7 +29,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/wordscounter) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md) or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/wordscounter) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md) or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -138,10 +138,10 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onTargetPositionChanged](../../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
 
 ## Support
 

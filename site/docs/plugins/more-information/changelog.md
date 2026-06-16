@@ -95,7 +95,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 - Added the ability to [add custom functions](../../macros/guides/adding-custom-functions.md) to the spreadsheets using the **Macros** plugin.
 - Added the ability to add the plugin [toolbar menu items](../customization/toolbar.md).
-- Added the ability to create [multiple left panels](../fundamentals/configuration/variations.md) for plugins.
+- Added the ability to create [multiple left panels](../configuration/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
 - Added the [ActivateWindow](../customization/windows-and-panels.md#activating-a-window) method to *window\.Asc.plugin.executeMethod*.
@@ -113,7 +113,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [ToolbarMenuTab](../customization/toolbar.md#toolbarmenutab) type to the simple type definitions.
 - Added the [ToolbarMenuItemType](../customization/toolbar.md#toolbarmenuitemtype) type to the simple type definitions.
 - Added the *icons* and *data* parameters to the [ContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#contextmenuitem) object.
-- Added the [menu](../fundamentals/configuration/configuration.md#variationsmenu) config parameter.
+- Added the [menu](../configuration/configuration.md#variationsmenu) config parameter.
 
 ## Version 8.0
 
@@ -155,7 +155,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 7.3
 
-- Added the *sign* type to the [initDataType](../fundamentals/configuration/configuration.md#variationsinitdatatype) config parameter.
+- Added the *sign* type to the [initDataType](../configuration/configuration.md#variationsinitdatatype) config parameter.
 - Added the [AddAddinField](../interacting-with-editors/document-api/Methods/AddAddinField.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetAllAddinFields](../interacting-with-editors/document-api/Methods/GetAllAddinFields.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetVBAMacros](../interacting-with-editors/document-api/Methods/GetVBAMacros.md) method to *window\.Asc.plugin.executeMethod*.
@@ -174,7 +174,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [AcceptReviewChanges](../interacting-with-editors/document-api/Methods/AcceptReviewChanges.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [MoveToNextReviewChange](../interacting-with-editors/document-api/Methods/MoveToNextReviewChange.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [RejectReviewChanges](../interacting-with-editors/document-api/Methods/RejectReviewChanges.md) method to *window\.Asc.plugin.executeMethod*.
-- Changed the plugin [localization](../fundamentals/configuration/localization.md) scheme.
+- Changed the plugin [localization](../configuration/localization.md) scheme.
 - Added the [ONLYOFFICE Plugin Marketplace](../development-workflow/installing-and-testing/docs-on-premises-installation.md#adding-plugins-through-the-plugin-manager-for-a-single-user).
 - Added the [ChangeOleObject](../interacting-with-editors/document-api/Methods/ChangeOleObject.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetAllForms](../interacting-with-editors/document-api/Methods/GetAllForms.md) method to *window\.Asc.plugin.executeMethod*.

@@ -175,8 +175,8 @@ GitHub 仓库地址：[highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("PasteHtml")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [resizeWindow](../../../../../../../../../site/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
 
 ## 支持
 

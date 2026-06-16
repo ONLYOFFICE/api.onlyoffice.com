@@ -376,7 +376,7 @@ Include the ONLYOFFICE plugin SDK in your plugin's `index.html`:
 
 ### Theme support
 
-Apply ONLYOFFICE editor themes to your plugin UI using `onThemeChangedBase`. See [Styles and theming](../fundamentals/configuration/styles-and-theming.md) for the full pattern.
+Apply ONLYOFFICE editor themes to your plugin UI using `onThemeChangedBase`. See [Styles and theming](../configuration/styles-and-theming.md) for the full pattern.
 
 ```javascript
 window.Asc.plugin.onThemeChangedBase = function (theme) {

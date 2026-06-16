@@ -111,12 +111,12 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 
 ## 方法和事件
 
-- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
-- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- executeMethod ("[GetAllContentControls](../../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- executeMethod ("[GetAllContentControls](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](../../interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](../../interacting-with-editors/document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

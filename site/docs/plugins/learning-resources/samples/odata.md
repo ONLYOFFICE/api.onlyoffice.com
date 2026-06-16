@@ -15,7 +15,7 @@ Connects the OData (Open Data Protocol) service for importing external data into
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -116,11 +116,11 @@ Repository on GitHub: [odata](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [callCommand](../../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
+- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support
 

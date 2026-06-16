@@ -2,50 +2,50 @@
 sidebar_position: 4
 ---
 
-# Versioning and updates
+# 版本管理与更新 {#versioning-and-updates}
 
-## Overview
+插件发布到 ONLYOFFICE 插件市场后，您需要发布更新来修复错误、添加功能或保持与新版本 ONLYOFFICE 的兼容性。
 
-Once your plugin is published in the ONLYOFFICE Plugin Marketplace, you will need to release updates to fix bugs, add features, or maintain compatibility with new ONLYOFFICE versions.
+## 版本号规则 {#versioning-scheme}
 
-## Versioning scheme
+ONLYOFFICE 插件使用语义化版本号（`MAJOR.MINOR.PATCH`）：
 
-ONLYOFFICE plugins use semantic versioning (`MAJOR.MINOR.PATCH`):
-
-| Part | When to increment | Example |
-|------|-------------------|---------|
-| `MAJOR` | Breaking changes or major rewrites | `1.0.0` → `2.0.0` |
-| `MINOR` | New features, backwards-compatible | `1.0.0` → `1.1.0` |
-| `PATCH` | Bug fixes, small corrections | `1.0.0` → `1.0.1` |
+| 部分 | 何时递增 | 示例 |
+|------|---------|------|
+| `MAJOR` | 破坏性变更或重大重写 | `1.0.0` → `2.0.0` |
+| `MINOR` | 新增功能，向后兼容 | `1.0.0` → `1.1.0` |
+| `PATCH` | 错误修复，小幅修正 | `1.0.0` → `1.0.1` |
 
 ```json
 { "name": "My Plugin", "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}", "version": "1.2.0" }
 ```
 
-**Always increment the version when submitting an update.**
+**提交更新时务必递增版本号。**
 
-:::warning[Wrong]
+:::warning[错误示例]
 ```json
 { "version": "1.0.0" }
 ```
-Submitting an update without changing the version - Plugin Manager cannot detect the update.
+提交更新时未更改版本号——插件管理器无法检测到更新。
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 ```json
 { "version": "1.0.1" }
 ```
 :::
 
-## Specifying minimum ONLYOFFICE version
+## 指定最低 ONLYOFFICE 版本 {#specifying-minimum-onlyoffice-version}
 
 ```json
 { "minVersion": "7.0.0" }
 ```
 
-## Submitting an update
+使用较旧编辑器版本的用户将不会收到该插件更新。
 
-### Step 1 - Sync your fork with upstream
+## 提交更新 {#submitting-an-update}
+
+### 步骤 1 — 将 fork 与上游同步 {#step-1---sync-your-fork-with-upstream}
 
 ```bash
 git remote add upstream https://github.com/ONLYOFFICE/onlyoffice.github.io.git
@@ -54,20 +54,20 @@ git checkout master
 git merge upstream/master
 ```
 
-### Step 2 - Update your plugin files
+### 步骤 2 — 更新插件文件 {#step-2---update-your-plugin-files}
 
-Replace updated files in:
+替换以下目录中的更新文件：
 ```
 sdkjs-plugins/content/your-plugin-name/
 ```
 
-### Step 3 - Increment the version in config.json
+### 步骤 3 — 在 config.json 中递增版本号 {#step-3---increment-the-version-in-configjson}
 
 ```json
 { "version": "1.1.0" }
 ```
 
-### Step 4 - Commit and push
+### 步骤 4 — 提交并推送 {#step-4---commit-and-push}
 
 ```bash
 git add sdkjs-plugins/content/your-plugin-name/
@@ -75,38 +75,38 @@ git commit -m "Update your-plugin-name to v1.1.0"
 git push origin master
 ```
 
-### Step 5 - Create a pull request
+### 步骤 5 — 创建拉取请求 {#step-5---create-a-pull-request}
 
-Include in PR description: what changed, new ONLYOFFICE version requirements, bug fixes or breaking changes.
+在 PR 描述中说明：变更内容、新的 ONLYOFFICE 版本要求、错误修复或破坏性变更。
 
-## Maintaining backwards compatibility
+## 保持向后兼容 {#maintaining-backwards-compatibility}
 
-- Do not remove existing functionality without a MAJOR version bump.
-- **Do not change the plugin GUID.** It is permanent.
+- 不要在未进行 MAJOR 版本升级的情况下移除现有功能。
+- **不要更改插件 GUID。** 它是永久性的。
 
-:::warning[Wrong]
+:::warning[错误示例]
 ```json
 { "guid": "asc.{NEW-GUID-FOR-UPDATE}" }
 ```
-Changing the GUID causes the marketplace to treat the update as a brand new plugin.
+更改 GUID 会导致市场将该更新视为一个全新的插件。
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 ```json
 { "guid": "asc.{ORIGINAL-GUID-UNCHANGED}" }
 ```
 :::
 
-## Handling ONLYOFFICE version compatibility
+## 处理 ONLYOFFICE 版本兼容性 {#handling-onlyoffice-version-compatibility}
 
-Test after each ONLYOFFICE release:
-- All `executeMethod` calls return expected results
-- Event handlers fire correctly
-- UI elements render correctly
+每次 ONLYOFFICE 发布新版本后进行测试：
+- 所有 `executeMethod` 调用返回预期结果
+- 事件处理程序正确触发
+- UI 元素正确渲染
 
-Check the [Changelog](../../more-information/changelog.md) after each ONLYOFFICE release.
+每次 ONLYOFFICE 发布新版本后，请查阅[更新日志](../../more-information/changelog.md)。
 
-## Keeping a changelog for your plugin
+## 维护插件更新日志 {#keeping-a-changelog-for-your-plugin}
 
 ```markdown
 # Changelog
@@ -123,19 +123,19 @@ Check the [Changelog](../../more-information/changelog.md) after each ONLYOFFICE
 - Initial release
 ```
 
-## Removing a plugin from the marketplace
+## 从市场中移除插件 {#removing-a-plugin-from-the-marketplace}
 
-Open an issue at [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) with the plugin name and reason.
+在 [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 提交 issue，注明插件名称和原因。
 
-## Next steps
+## 后续步骤 {#next-steps}
 
-- [Marketplace submission](./submit-to-marketplace.md)
-- [Preparing for release](./preparing-for-release.md)
-- [Private distribution](./private-distribution.md)
+- [提交到市场](./submit-to-marketplace.md)
+- [发布准备](./preparing-for-release.md)
+- [私有分发](./private-distribution.md)
 
-## Additional resources
+## 其他资源 {#additional-resources}
 
-- [Changelog](../../more-information/changelog.md)
-- [Configuration](../../fundamentals/configuration/configuration.md)
-- [Marketplace repo](https://github.com/ONLYOFFICE/onlyoffice.github.io)
-- [Plugin examples](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)
+- [更新日志](../../more-information/changelog.md)
+- [配置](../../configuration/configuration.md)
+- [市场仓库](https://github.com/ONLYOFFICE/onlyoffice.github.io)
+- [插件示例](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content)

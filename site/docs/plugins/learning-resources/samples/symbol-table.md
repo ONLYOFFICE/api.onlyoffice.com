@@ -17,7 +17,7 @@ Inserts special symbols into the document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -106,14 +106,14 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](../../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
-- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [executeMethod ("GetFontList")](../../../interacting-with-editors/document-api/Methods/GetFontList.md)
-- [executeMethod ("PasteHtml")](../../../interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [info.editorType](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onMethodReturn](../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
+- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("GetFontList")](../../interacting-with-editors/document-api/Methods/GetFontList.md)
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [info.editorType](../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

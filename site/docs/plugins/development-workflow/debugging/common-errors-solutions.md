@@ -114,7 +114,7 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-See [Passing data into callCommand](../../fundamentals/plugin-architecture/communication-flow.md#passing-data-into-callcommand) for details.
+See [Passing data into callCommand](../../interacting-with-editors/overview/communication-flow.md#passing-data-into-callcommand) for details.
 
 ## Configuration errors
 

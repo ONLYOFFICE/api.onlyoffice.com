@@ -66,4 +66,4 @@ For a full list see the API reference for your editor type.
 ## See also
 
 - [How to attach events](../overview/how-to-attach-events.md)
-- [Plugin lifecycle](../../fundamentals/getting-started/plugin-lifecycle.md)
+- [Plugin lifecycle](../../get-started/plugin-lifecycle.md)

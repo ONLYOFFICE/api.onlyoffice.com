@@ -26,7 +26,7 @@ sidebar_position: 1
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugins/fundamentals/configuration/configuration.md#variationsicons) 文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugins/configuration/configuration.md#variationsicons) 文档）。 |
 | *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -77,7 +77,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 项目类型。                                                                                                                           |
 | *text*           | string                                      | 项目标题。如果此字段为""，则工具栏按钮仅显示图标，不显示标题。                             |
 | *hint*           | string                                      | 项目提示。                                                                                                                           |
-| *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../../plugins/fundamentals/configuration/configuration.md#variationsicons) 文档）。 |
+| *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../../plugins/configuration/configuration.md#variationsicons) 文档）。 |
 | *disabled*       | boolean                                     | 当前项目是否已锁定。                                                                                          |
 | *enableToggle*   | boolean                                     | 工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
 | *lockInViewMode* | boolean                                     | 工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |

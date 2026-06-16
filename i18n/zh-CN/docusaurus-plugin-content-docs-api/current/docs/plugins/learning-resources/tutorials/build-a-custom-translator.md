@@ -10,8 +10,8 @@ sidebar_position: 2
 
 ## 前提条件
 
-- 已搭建好的 ONLYOFFICE 插件开发环境——参见[开发环境设置](/docs/plugins/fundamentals/getting-started/development-environment-setup.md)。
-- 熟悉 `config.json`、`index.html` 和插件 JS 文件的基本知识——参见[插件结构](/docs/plugins/fundamentals/configuration/configuration.md)。
+- 已搭建好的 ONLYOFFICE 插件开发环境——参见[开发](/docs/plugins/development-workflow/developing/for-web-editors.md)。
+- 熟悉 `config.json`、`index.html` 和插件 JS 文件的基本知识——参见[插件结构](/docs/plugins/configuration/configuration.md)。
 - 官方翻译器插件使用 Google 翻译小部件。如果您想使用其他提供商（DeepL、Azure、LibreTranslate），则需要 API 密钥。
 
 ## 第 1 步 - 搭建插件骨架
@@ -219,7 +219,7 @@ window.Asc.plugin.button = function (id) {
 **资源：**
 
 1. [翻译器插件示例](/docs/plugins/learning-resources/samples/translator.md)——包含完整 Google 翻译小部件集成的参考实现。
-2. [插件结构](/docs/plugins/fundamentals/configuration/configuration.md)——完整的 `config.json` 字段参考。
+2. [插件结构](/docs/plugins/configuration/configuration.md)——完整的 `config.json` 字段参考。
 3. [executeMethod ("GetSelectedText")](/docs/plugins/interacting-with-editors/document-api/Methods/GetSelectedText.md)——使用可配置的分隔符获取选中内容。
 4. [executeMethod ("PasteText")](/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)——在当前光标位置插入文本。
 

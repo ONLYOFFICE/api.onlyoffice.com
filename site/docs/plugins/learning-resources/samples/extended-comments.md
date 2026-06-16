@@ -17,7 +17,7 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -114,16 +114,16 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onAddComment](../../../interacting-with-editors/document-api/Events/onAddComment.md)
-- [onChangeCommentData](../../../interacting-with-editors/document-api/Events/onChangeCommentData.md)
-- [onRemoveComment](../../../interacting-with-editors/document-api/Events/onRemoveComment.md)
-- executeMethod ("[AddComment](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](../../../interacting-with-editors/document-api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](../../../interacting-with-editors/document-api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](../../../interacting-with-editors/document-api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](../../../interacting-with-editors/document-api/Methods/RemoveComments.md)")
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onAddComment](../../interacting-with-editors/document-api/Events/onAddComment.md)
+- [onChangeCommentData](../../interacting-with-editors/document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](../../interacting-with-editors/document-api/Events/onRemoveComment.md)
+- executeMethod ("[AddComment](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
+- executeMethod ("[ChangeComment](../../interacting-with-editors/document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](../../interacting-with-editors/document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](../../interacting-with-editors/document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](../../interacting-with-editors/document-api/Methods/RemoveComments.md)")
 
 ## Support
 

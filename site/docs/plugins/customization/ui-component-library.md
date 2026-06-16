@@ -107,7 +107,7 @@ Add custom buttons to plugin toolbars for quick actions.
 Create modal dialogs and side panels for plugin content.
 
 :::warning[Deprecated parameters]
-`isModal` and `isInsideMode` are deprecated. Use the `type` field with `"window"` or `"panel"` values instead. See [config.json](../fundamentals/configuration/configuration.md) for the current variation parameters.
+`isModal` and `isInsideMode` are deprecated. Use the `type` field with `"window"` or `"panel"` values instead. See [config.json](../configuration/configuration.md) for the current variation parameters.
 :::
 
 **Modal window example:**
@@ -380,7 +380,7 @@ Include the ONLYOFFICE plugin SDK in your plugin's `index.html`:
 
 ### Theme support
 
-Apply ONLYOFFICE editor themes to your plugin UI using `onThemeChangedBase`. See [Styles and theming](../fundamentals/configuration/styles-and-theming.md) for the full pattern.
+Apply ONLYOFFICE editor themes to your plugin UI using `onThemeChangedBase`. See [Styles and theming](../configuration/styles-and-theming.md) for the full pattern.
 
 ```javascript
 window.Asc.plugin.onThemeChangedBase = function (theme) {

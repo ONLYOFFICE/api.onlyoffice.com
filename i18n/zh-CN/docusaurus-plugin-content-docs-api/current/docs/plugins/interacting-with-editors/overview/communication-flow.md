@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Communication flow
@@ -129,5 +129,5 @@ window.Asc.plugin.executeMethod("GetSelectedText", [], function (result) {
 
 ## See also
 
-- [Plugin lifecycle](../getting-started/plugin-lifecycle.md)
-- [Interacting with editors](../../interacting-with-editors/overview/overview.md)
+- [Plugin lifecycle](../../get-started/plugin-lifecycle.md)
+- [Interacting with editors](overview.md)

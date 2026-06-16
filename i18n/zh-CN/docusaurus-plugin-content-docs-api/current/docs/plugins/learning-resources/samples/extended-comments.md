@@ -114,16 +114,16 @@ GitHub 仓库：[example_extended_comments](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
-- [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onAddComment](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Events/onAddComment.md)
-- [onChangeCommentData](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Events/onChangeCommentData.md)
-- [onRemoveComment](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Events/onRemoveComment.md)
-- executeMethod ("[AddComment](../../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/RemoveComments.md)")
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onAddComment](../../interacting-with-editors/document-api/Events/onAddComment.md)
+- [onChangeCommentData](../../interacting-with-editors/document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](../../interacting-with-editors/document-api/Events/onRemoveComment.md)
+- executeMethod ("[AddComment](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
+- executeMethod ("[ChangeComment](../../interacting-with-editors/document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](../../interacting-with-editors/document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](../../interacting-with-editors/document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](../../interacting-with-editors/document-api/Methods/RemoveComments.md)")
 
 ## 支持
 

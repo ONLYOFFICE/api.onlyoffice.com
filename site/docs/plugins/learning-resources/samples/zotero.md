@@ -23,7 +23,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/zotero) and install it following the [desktop](../../../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instruction.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/zotero) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instruction.
 
 ## Connect ONLYOFFICE to Zotero account
 
@@ -166,10 +166,10 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Methods and events
 
-- [button](../../../customization/custom-buttons.md)
-- [init](../../../interacting-with-editors/overview/#how-it-works)
-- [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
-- [executeMethod ("PasteHtml")](../../../interacting-with-editors/document-api/Methods/PasteHtml.md)
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [onTranslate](../../configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/document-api/Methods/PasteHtml.md)
 
 ## Support
 

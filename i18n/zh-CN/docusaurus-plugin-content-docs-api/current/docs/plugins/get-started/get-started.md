@@ -26,7 +26,15 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 [在 ONLYOFFICE 应用市场浏览示例](https://www.onlyoffice.com/app-directory/zh)
 
-## 方案对比
+## 插件的限制 {#what-plugins-cannot-do}
+
+- 无法直接访问编辑器的内部 DOM 或 JavaScript 作用域
+- 无法访问用户计算机上的文件系统
+- 无法绕过 API 执行插件 SDK 未公开的操作
+
+这种沙箱化设计是有意为之的——无论插件做什么，都能保持编辑器的稳定与安全。
+
+## 方案对比 {#comparing-approaches}
 
 不确定哪种方案适合您的使用场景？了解插件与宏及自定义 AI 工具的对比。
 
@@ -82,15 +90,15 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 - **[浏览器开发者工具](../development-workflow/debugging/for-web-editors.md)** - 调试指南
 - **[插件示例](/samples/?doctype=docs&text=plugin)** - 可运行示例
 - **[API 参考](../interacting-with-editors/overview/overview.md)** - 完整 API 文档
-- **[插件结构](../fundamentals/configuration/configuration.md)** - 配置指南
+- **[插件结构](../configuration/configuration.md)** - 配置指南
 - **[常见问题](../more-information/faq.md)** - 常见问题解答
 - **[论坛](https://forum.onlyoffice.com/)** - 社区支持
 - **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 源代码与贡献
 - **[更新日志](../more-information/changelog.md)** - 最新 API 更新
 
-## 下一步
+## 下一步 {#next-steps}
 
 - [插件快速入门](quick-start.md)
-- [插件教程](../fundamentals/getting-started/what-is-a-plugin.md)
-- [最佳实践](../development-workflow/developing/for-web-editors.md)
+- [插件生命周期](plugin-lifecycle.md)
+- [Web 编辑器开发](../development-workflow/developing/for-web-editors.md)
 - [发布指南](../development-workflow/publishing/submit-to-marketplace.md)
