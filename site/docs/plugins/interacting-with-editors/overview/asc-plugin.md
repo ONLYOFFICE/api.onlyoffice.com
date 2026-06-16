@@ -8,7 +8,7 @@ sidebar_position: -5
 
 ## Availability
 
-The `Asc.plugin` object becomes available after the plugin scripts defined in [index.html](../../fundamentals/configuration/entry-point.md) are loaded. The plugin SDK script must be included in the entry point:
+The `Asc.plugin` object becomes available after the plugin scripts defined in [index.html](../../configuration/entry-point.md) are loaded. The plugin SDK script must be included in the entry point:
 
 ```html
 <script type="text/javascript" src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
@@ -20,7 +20,7 @@ Once loaded, the `window.Asc.plugin` object is ready to use.
 
 | Name   | Type     | Description                                                                                      |
 | ------ | -------- | ------------------------------------------------------------------------------------------------ |
-| `guid` | `string` | The plugin GUID from [config.json](../../fundamentals/configuration/config-json.md#guid).       |
+| `guid` | `string` | The plugin GUID from [config.json](../../configuration/configuration.md#guid).       |
 | `info` | `object` | The auxiliary object containing editor and OLE object metadata. See [below](#info-object).       |
 
 ### info object
@@ -119,9 +119,10 @@ Asc.plugin.button = (id) => {
 | [callCommand](./how-to-call-commands.md#callcommand)                                           | None      | Sends a command to the editor using the Office JavaScript API.                                       |
 | [executeMethod](./how-to-call-methods.md#executemethod)                                        | `boolean` | Executes a specific editor method (e.g. `AddComment`, `GetSelectedText`).                            |
 | [attachEditorEvent](./how-to-attach-events.md#option-1-using-the-attacheditorevent-method)     | None      | Adds a listener for an editor event.                                                                 |
+| [detachEditorEvent](./how-to-attach-events.md#detaching-events)                                | None      | Removes a listener for an editor event.                                                              |
 | [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item) | None      | Adds a click listener for a specific context menu item by ID.                                        |
 | [attachToolbarMenuClickEvent](../../customization/toolbar.md#attachtoolbarmenuclickevent)       | None      | Adds a click listener for a specific toolbar menu item by ID.                                        |
-| `tr`                                                                                             | `string`  | Returns the translation for the given key. See [Localization](../../fundamentals/configuration/localization.md). |
+| `tr`                                                                                             | `string`  | Returns the translation for the given key. See [Localization](../../configuration/localization.md). |
 | `onThemeChangedBase`                                                                             | None      | The base theme handler. Must be called at the start of a custom [onThemeChanged](#onthemechanged) handler. |
 
 ## executeMethod targets
@@ -154,7 +155,7 @@ The context menu item.
 | `text`     | `string`                   | The item caption.                                                                                                       |
 | `data`     | `string`                   | The item data (this data will be sent to the click event callback).                                                     |
 | `disabled` | `boolean`                  | Specifies whether the current item is disabled or not.                                                                  |
-| `icons`    | `string`                   | The item icons (see the plugins [config](../../fundamentals/configuration/config-json.md) documentation).               |
+| `icons`    | `string`                   | The item icons (see the plugins [config](../../configuration/configuration.md) documentation).               |
 | `items`    | `Array.<`[ContextMenuItem](#contextmenuitem)`>` | An array containing the context menu items for the current item.                                             |
 
 **Example**:
@@ -188,14 +189,14 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 
 **Returns**: This method doesn't return any data.
 
-**Toolbar**:
+### Toolbar
 
 | Method                   | Description                                                                                           |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `AddToolbarMenuItem`     | Adds an item to the toolbar. See [Toolbar](../../customization/toolbar.md#addtoolbarmenuitem).        |
 | `UpdateToolbarMenuItem`  | Updates a toolbar menu item. See [Toolbar](../../customization/toolbar.md#updatetoolbarmenuitem).     |
 
-**Windows and panels**:
+### Windows and panels
 
 | Method              | Description                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -207,7 +208,7 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 | `MouseUpWindow`     | Sends a mouse up event to a window. See [Windows and panels](../../customization/windows-and-panels.md#mouseupwindow).    |
 | `SendToWindow`      | Sends a message to a window. See [Windows and panels](../../customization/windows-and-panels.md#sendtowindow).         |
 
-**Input helper**:
+### Input helper
 
 | Method              | Description                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -244,13 +245,13 @@ Asc.plugin.init = (text) => {
 
 ### button
 
-The function called when any of the plugin [buttons](../../fundamentals/configuration/config-json.md#variationsbuttons) is clicked. If `id` is `-1`, the **Close** button (cross icon) was clicked or the plugin operation was interrupted.
+The function called when any of the plugin [buttons](../../configuration/configuration.md#variationsbuttons) is clicked. If `id` is `-1`, the **Close** button (cross icon) was clicked or the plugin operation was interrupted.
 
 **Parameters**:
 
 | Name     | Type     | Description                                                                                                                                               |
 | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id       | `number` | The button index in the [buttons](../../fundamentals/configuration/config-json.md#variationsbuttons) array of config.json. `-1` means the Close button. |
+| id       | `number` | The button index in the [buttons](../../configuration/configuration.md#variationsbuttons) array of config.json. `-1` means the Close button. |
 | windowId | `number` | The identifier of the modal window from which the button was clicked.                                                                                      |
 
 **Example**:
@@ -285,7 +286,7 @@ Asc.plugin.onMethodReturn = (returnValue) => {
 
 ### onTranslate
 
-The function called right after the plugin starts up to apply translations, and again whenever the editor interface language changes. Use it to localize DOM elements with the [`tr`](../../fundamentals/configuration/localization.md) helper.
+The function called right after the plugin starts up to apply translations, and again whenever the editor interface language changes. Use it to localize DOM elements with the [`tr`](../../configuration/localization.md) helper.
 
 **Example**:
 
@@ -470,4 +471,4 @@ Asc.plugin.button = (id) => {
 };
 ```
 
-For the full plugin setup (config.json, index.html, folder structure), see [Getting started](../../fundamentals/getting-started/what-is-a-plugin.md).
+For the full plugin setup (config.json, index.html, folder structure), see [Getting started](../../get-started/get-started.md).

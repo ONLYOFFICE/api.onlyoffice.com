@@ -17,7 +17,7 @@ To build the **Encryption** plugin, you need to create three files:
 - JS file with code,
 - JSON file with config.
 
-For more information about the plugin structure, see [configuration](../../../plugins/fundamentals/configuration/config-json.md).
+For more information about the plugin structure, see [configuration](../../../plugins/configuration/configuration.md).
 
 Let’s have a look at the config:
 
@@ -50,7 +50,7 @@ Let’s have a look at the config:
 }
 ```
 
-All the config parameters are described in the [documentation](../../../plugins/fundamentals/configuration/config-json.md).
+All the config parameters are described in the [documentation](../../../plugins/configuration/configuration.md).
 
 After the config file is ready, create the plugin code file with the following contents:
 

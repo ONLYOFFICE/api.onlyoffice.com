@@ -262,7 +262,7 @@ func.call = async function (params) {
 return func;
 ```
 
-使用的方法：[GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet/), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection/), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange/), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells/), [GetValue2](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2/), [GetAddress](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress/), [AddComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment/), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands/#ascscope-object)
+使用的方法：[GetActiveSheet](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet/), [GetSelection](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection/), [GetRange](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange/), [GetCells](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells/), [GetValue2](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2/), [GetAddress](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress/), [AddComment](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment/), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands/#ascscope-object)
 
 ## 结果
 

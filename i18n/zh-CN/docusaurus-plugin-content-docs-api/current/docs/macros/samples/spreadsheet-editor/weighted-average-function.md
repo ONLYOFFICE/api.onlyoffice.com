@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 加权平均函数
 
-创建一个用于计算加权平均值的[自定义函数](../../../macros/macros/adding-custom-functions.md)。
+创建一个用于计算加权平均值的[自定义函数](../../../guides/guides/adding-custom-functions.md)。
 
 ```ts
 (function () {
@@ -16,7 +16,7 @@ import Video from '@site/src/components/Video/Video';
     let worksheet = Api.GetActiveSheet();
 
     // 在单元格 H2 中插入公式。
-    // 这将调用上面注册的自定义函数 'weightedAverage'。
+    // 这将调用下面注册的自定义函数 'wa'。
     worksheet.GetRange("H2").SetValue("=wa(A$2:A$6, B$2:B$6)");
 
     // 可选：在单元格 G2 中插入标签。

@@ -11,7 +11,7 @@ The plugins and macros can interact with the editors using the [Asc.plugin](asc-
 - [How to call methods](how-to-call-methods.md)
 - [How to call commands](how-to-call-commands.md)
 
-The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../fundamentals/configuration/config-json.md) and [index.html](../../fundamentals/configuration/entry-point.md) files.
+The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../configuration/configuration.md) and [index.html](../../configuration/entry-point.md) files.
 
 ## How it works
 
@@ -28,4 +28,4 @@ For the plugin to work the developer must specify two obligatory events for the 
 
 If the plugin operates with an OLE object, [callCommand](how-to-call-commands.md#callcommand) is used to manage it.
 
-See the [Asc.plugin](asc-plugin.md#minimal-example) page for a minimal working example, or the [Getting started](../../fundamentals/getting-started/what-is-a-plugin.md) guide for a full walkthrough. More open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).
+See the [Asc.plugin](asc-plugin.md#minimal-example) page for a minimal working example, or the [Getting started](../../get-started/get-started.md) guide for a full walkthrough. More open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).

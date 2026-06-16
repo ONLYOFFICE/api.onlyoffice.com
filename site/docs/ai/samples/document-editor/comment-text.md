@@ -1,6 +1,7 @@
 ---
 description: Add a comment to the selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
@@ -215,7 +216,7 @@ let func = new RegisteredFunction({
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](/docs/office-api/usage-api/document-api/ApiRange/Methods/GetText.md), [AddComment](/docs/office-api/usage-api/document-api/ApiRange/Methods/AddComment.md), [GetCurrentWord](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentWord.md), [SelectCurrentWord](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SelectCurrentWord.md), [AddFootnote](/docs/office-api/usage-api/document-api/ApiDocument/Methods/AddFootnote.md), [ShowComment](/docs/office-api/usage-api/document-api/ApiDocument/Methods/ShowComment.md), [GetCommentById](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCommentById.md), [GetId](/docs/office-api/usage-api/document-api/ApiComment/Methods/GetId.md), [SetText](/docs/office-api/usage-api/document-api/ApiComment/Methods/SetText.md), [GetText](/docs/office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [EndAction](/docs/plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](/docs/plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](../../../office-api/usage-api/document-api/ApiRange/Methods/GetText.md), [AddComment](../../../office-api/usage-api/document-api/ApiRange/Methods/AddComment.md), [GetCurrentWord](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentWord.md), [SelectCurrentWord](../../../office-api/usage-api/document-api/ApiDocument/Methods/SelectCurrentWord.md), [AddFootnote](../../../office-api/usage-api/document-api/ApiDocument/Methods/AddFootnote.md), [ShowComment](../../../office-api/usage-api/document-api/ApiDocument/Methods/ShowComment.md), [GetCommentById](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCommentById.md), [GetId](../../../office-api/usage-api/document-api/ApiComment/Methods/GetId.md), [SetText](../../../office-api/usage-api/document-api/ApiComment/Methods/SetText.md), [GetText](../../../office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [EndAction](../../../plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](../../../plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

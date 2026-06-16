@@ -1,6 +1,7 @@
 ---
 description: 更改指定段落的样式。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
@@ -71,7 +72,7 @@ func.call = async function (params) {
 };
 ```
 
-使用的方法：[GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetDocument](../../../../../../../../site/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

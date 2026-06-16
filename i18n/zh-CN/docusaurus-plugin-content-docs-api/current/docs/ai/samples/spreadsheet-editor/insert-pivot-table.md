@@ -193,7 +193,7 @@ func.call = async function (params) {
     "Rules:",
     "1. Column selection priority:",
     "   a) If mandatory grouping columns are specified and found: use ONLY those matched columns as pivot rows.",
-    "   b) If no mandatory columns or none found: choose 1–2 best column indices for pivot rows (categorical/grouping).",
+    "   b) If no mandatory columns or none found: choose 1-2 best column indices for pivot rows (categorical/grouping).",
     "2. For automatic column selection (when no mandatory columns found):",
     "   a) Contain textual (non-numeric) data.",
     "   b) Prefer columns with at least 2 distinct values.",
@@ -342,7 +342,7 @@ func.call = async function (params) {
 return func;
 ```
 
-使用的方法：[GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [InsertPivotNewWorksheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/InsertPivotNewWorksheet.md), [GetParent](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetParent.md), [GetValue2](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetPivotFields](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetPivotFields.md), [GetName](/docs/office-api/usage-api/spreadsheet-api/ApiPivotField/Methods/GetName.md), [AddFields](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddFields.md), [AddDataField](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddDataField.md), [EndAction](/docs/plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](/docs/plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetActiveSheet](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [InsertPivotNewWorksheet](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/InsertPivotNewWorksheet.md), [GetParent](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetParent.md), [GetValue2](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSheet](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetPivotFields](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetPivotFields.md), [GetName](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiPivotField/Methods/GetName.md), [AddFields](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddFields.md), [AddDataField](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddDataField.md), [EndAction](../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

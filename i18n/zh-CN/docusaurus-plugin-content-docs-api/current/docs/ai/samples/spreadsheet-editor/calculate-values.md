@@ -1,6 +1,7 @@
 ---
 description: 对单元格范围执行数学运算。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
@@ -365,7 +366,7 @@ func.call = async function (params) {
 return func;
 ```
 
-使用的方法：[GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetValue2](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [GetAddress](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetActiveSheet](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetValue2](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSelection](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [GetAddress](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [GetUsedRange](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [SetValue](../../../../../../../../site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

@@ -1,0 +1,71 @@
+---
+description: Insert template fields for invoice information.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
+# Invoices
+
+Inserts template fields for invoice information.
+
+**Plugin type:** visual, non-system.
+
+**Supported editors:** documents.
+
+<Video src="/assets/images/plugins/webm/invoices" />
+
+## Installation
+
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices) and install it following the [desktop](../../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+
+## Usage
+
+1. Open the **Plugins** tab and press **Invoices**.
+2. Press the **+** or **Mark** buttons to add template fields into the document.
+
+## Plugin structure
+
+Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices).
+
+1. *config.json*, *index.html*, and *code.js*
+2. Icons
+
+## Config
+
+```json
+{
+  "name": "Invoices",
+  "guid": "asc.{6B6715E5-A558-4F70-8058-40704CD659CF}",
+
+  "variations": [
+    {
+      "description": "invoices",
+      "url": "index.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
+
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "buttons": []
+    }
+  ]
+}
+```
+
+## Methods and events
+
+- [button](../../customization/custom-buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
+- [info.recalculate](../../interacting-with-editors/overview/asc-plugin.md#info-object)
+
+## Support
+
+If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

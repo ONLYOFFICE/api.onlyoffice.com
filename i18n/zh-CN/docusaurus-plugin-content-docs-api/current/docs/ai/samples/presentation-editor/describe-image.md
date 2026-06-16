@@ -14,7 +14,7 @@ import Video from '@site/src/components/Video/Video';
 - 为所选图像生成说明文字
 - 为所选图表添加简短标题
 - 为该信息图提供适合无障碍访问的替代文本
-- 为该照片撰写 1–2 句描述
+- 为该照片撰写 1-2 句描述
 
 ## 函数注册
 
@@ -138,7 +138,7 @@ import Video from '@site/src/components/Video/Video';
   return func;
 ```
 
-使用的方法：[GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetCurrentSlide](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetCurrentSlide.md), [CreateNoFill](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateNoFill.md), [CreateStroke](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateStroke.md), [CreateShape](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateShape.md), [SetPosition](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElement](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement.md), [CreateRun](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateRun.md), [SetFontSize](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetFill](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFill.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/AddText.md), [AddElement](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddElement.md), [AddObject](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
+使用的方法：[GetPresentation](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetCurrentSlide](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetCurrentSlide.md), [CreateNoFill](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/CreateNoFill.md), [CreateStroke](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/CreateStroke.md), [CreateShape](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/CreateShape.md), [SetPosition](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [GetDocContent](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElement](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement.md), [CreateRun](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/CreateRun.md), [SetFontSize](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetFill](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFill.md), [AddText](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiRun/Methods/AddText.md), [AddElement](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddElement.md), [AddObject](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
 
 ## 结果
 

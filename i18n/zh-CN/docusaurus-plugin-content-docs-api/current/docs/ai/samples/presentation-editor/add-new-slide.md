@@ -1,6 +1,7 @@
 ---
 description: 向演示文稿添加新幻灯片。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
+hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
@@ -54,7 +55,7 @@ func.call = async function (params) {
       let curLayout = currentSlide.GetLayout();
       master = curLayout.GetMaster();
     } else {
-      master = presentation.GetMasterByIndex(0);
+      master = presentation.GetMaster(0);
     }
 
     if (!master) return;
@@ -76,7 +77,7 @@ func.call = async function (params) {
 };
 ```
 
-使用的方法：[GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetCurrentSlide](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetCurrentSlide.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetLayout](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetLayout.md), [GetMaster](/docs/office-api/usage-api/presentation-api/ApiLayout/Methods/GetMaster.md), [GetLayoutByType](/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayoutByType.md), [GetLayoutsCount](/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayoutsCount.md), [GetLayout](/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayout.md), [CreateSlide](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateSlide.md), [ApplyLayout](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/ApplyLayout.md), [AddSlide](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md)
+使用的方法：[GetPresentation](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetCurrentSlide](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetCurrentSlide.md), [GetSlideByIndex](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetLayout](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetLayout.md), [GetMaster](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiLayout/Methods/GetMaster.md), [GetLayoutByType](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayoutByType.md), [GetLayoutsCount](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayoutsCount.md), [GetLayout](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiMaster/Methods/GetLayout.md), [CreateSlide](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/CreateSlide.md), [ApplyLayout](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/ApplyLayout.md), [AddSlide](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md)
 
 ## 结果
 

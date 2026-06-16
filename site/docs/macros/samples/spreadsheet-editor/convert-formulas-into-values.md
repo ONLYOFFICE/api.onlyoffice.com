@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 Converts all formulas in the active worksheet into values.
 
 :::note
-This macro was converted from VBA code using the [AI plugin](/docs/macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
+This macro was converted from VBA code using the [AI plugin](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
 :::
 
 ```ts

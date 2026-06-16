@@ -16,16 +16,16 @@ sidebar_position: -3
 
 要为插件创建模态窗口或面板：
 
-1. 在[插件代码](../interacting-with-editors/overview/overview.md)文件中，指定类似于插件配置中 [variations](../fundamentals/configuration/config-json.md#variations) 的模态窗口 / 面板设置。
+1. 在[插件代码](../interacting-with-editors/overview/overview.md)文件中，指定类似于插件配置中 [variations](../configuration/configuration.md#variations) 的模态窗口 / 面板设置。
 
    **参数说明**:
 
    | 名称                     | 类型            | 示例                                                                                                            | 描述                                                                                                                                                                                                                                                               |
    | ------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | variations             | `object`        |                                                                                                                    | 设置                                                                                                                                                                                                                                        |
-   | variations.url         | `string`        | "settings.html"                                                                                                    | 模态窗口 / 面板的入口文件，即连接 `plugin.js` 文件（用于插件运行的基础文件）并启动插件代码的 HTML 页面。详见 [index.html](../fundamentals/configuration/entry-point.md)。 |
+   | variations.url         | `string`        | "settings.html"                                                                                                    | 模态窗口 / 面板的入口文件，即连接 `plugin.js` 文件（用于插件运行的基础文件）并启动插件代码的 HTML 页面。详见 [index.html](../configuration/entry-point.md)。 |
    | variations.description | `string`        | "Description"                                                                                                      | 模态窗口 / 面板的描述文本。                                                                                                                                                                                                                            |
-   | variations.type        | `string`        | "window"                                                                                                           | 插件的[type](../fundamentals/configuration/config-json.md#variationstype)。使用 `"window"` 调取模态窗口，`"panel"` 调取左侧面板，`"panelRight"` 调取右侧面板。                                                                                     |
+   | variations.type        | `string`        | "window"                                                                                                           | 插件的[type](../configuration/configuration.md#variationstype)。使用 `"window"` 调取模态窗口，`"panel"` 调取左侧面板，`"panelRight"` 调取右侧面板。                                                                                     |
    | variations.size        | `number[]`      | [343, 122]                                                                                                         | 模态窗口的尺寸。该参数仅适用于模态窗口。                                                                                                                                                                                                     |
    | variations.buttons     | `Button[]`      | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | 模态窗口中可皮肤化的插件按钮列表。该参数仅适用于模态窗                                                                                                                                                            |
    | variations.isActivated | `boolean`       | false                                                                                                              | 指定创建的面板是否默认为折叠（`false`）或展开（`true`）。默认值为 `true`。仅当 `variations.type` 为 `"panel"` 或 `"panelRight"`，并且插件版本为 8.3 及以上时该参数才有效。                        |
@@ -67,7 +67,7 @@ sidebar_position: -3
    const newWindow = new window.Asc.PluginWindow()
    ```
 
-3. 在[index.html](../fundamentals/configuration/entry-point.md) 文件中指定窗口 / 面板的外观。
+3. 在[index.html](../configuration/entry-point.md) 文件中指定窗口 / 面板的外观。
 
 ## 显示窗口 {#showing-a-window}
 
@@ -224,7 +224,7 @@ window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 
 ```ts
 window.Asc.plugin.init = () => {
-  this.resizeWindow(392, 147, 392, 147, 392, 147)
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147)
 }
 ```
 

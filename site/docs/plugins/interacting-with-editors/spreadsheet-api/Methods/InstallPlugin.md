@@ -14,7 +14,7 @@ expression.InstallPlugin(config);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| config | Optional | object |  | The plugin [config](../../../../../docs/plugins/fundamentals/configuration/config-json.md). |
+| config | Optional | object |  | The plugin [config](../../../../../docs/plugins/configuration/configuration.md). |
 
 ## Returns
 

@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 To develop a plugin for ONLYOFFICE desktop editors, follow the instructions below.
 
-1. Create a folder on your machine and place the [index.html](../../fundamentals/configuration/entry-point.md) and [config.json](../../fundamentals/configuration/config-json.md) files there.
+1. Create a folder on your machine and place the [index.html](../../configuration/entry-point.md) and [config.json](../../configuration/configuration.md) files there.
 
 2. Pack all the plugin files within the plugin folder into a `zip` archive and change its extension to `.plugin` (all the plugin files and subfolders must be at the archive root).
 
@@ -40,3 +40,30 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
    ![Sdkjs-plugins folder](/assets/images/plugins/sdkjs-plugins-folder.png)
 
    You can edit the plugin and reload it to see the changes.
+
+## Using symbolic links
+
+To avoid repackaging after every change, create a symbolic link from the plugin directory to your development folder:
+
+<Tabs>
+   <TabItem value="win" label="Windows">
+      Run as Administrator:
+      ``` bash
+      mklink /D "%LOCALAPPDATA%\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\{YOUR-GUID}" "C:\path\to\your\plugin"
+      ```
+   </TabItem>
+   <TabItem value="mac" label="macOS">
+      ``` bash
+      ln -s /path/to/your/plugin ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/{YOUR-GUID}
+      ```
+   </TabItem>
+   <TabItem value="lin" label="Linux">
+      ``` bash
+      ln -s /path/to/your/plugin ~/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/{YOUR-GUID}
+      ```
+   </TabItem>
+</Tabs>
+
+:::note
+Symbolic links still require reloading the plugin in ONLYOFFICE to pick up changes, but they eliminate the repackaging step.
+:::

@@ -8,7 +8,7 @@ sidebar_position: -5
 
 ## 可用性
 
-在 [index.html](../../fundamentals/configuration/entry-point.md) 中定义的插件脚本加载后，`Asc.plugin` 对象即可使用。入口点中必须包含插件 SDK 脚本：
+在 [index.html](../../configuration/entry-point.md) 中定义的插件脚本加载后，`Asc.plugin` 对象即可使用。入口点中必须包含插件 SDK 脚本：
 
 ```html
 <script type="text/javascript" src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
@@ -20,7 +20,7 @@ sidebar_position: -5
 
 | 名称   | 类型     | 描述                                                                                      |
 | ------ | -------- | ----------------------------------------------------------------------------------------- |
-| `guid` | `string` | 来自 [config.json](../../fundamentals/configuration/config-json.md#guid) 的插件 GUID。  |
+| `guid` | `string` | 来自 [config.json](../../configuration/configuration.md#guid) 的插件 GUID。  |
 | `info` | `object` | 包含编辑器和 OLE 对象元数据的辅助对象。请参阅[下文](#info-object)。                      |
 
 ### info 对象 {#info-object}
@@ -119,9 +119,10 @@ Asc.plugin.button = (id) => {
 | [callCommand](./how-to-call-commands.md#callcommand)                                           | 无        | 使用 Office JavaScript API 向编辑器发送命令。                                              |
 | [executeMethod](./how-to-call-methods.md#executemethod)                                        | `boolean` | 执行特定的编辑器方法（如 `AddComment`、`GetSelectedText`）。                               |
 | [attachEditorEvent](./how-to-attach-events.md#option-1-using-the-attacheditorevent-method)     | 无        | 为编辑器事件添加监听器。                                                                     |
+| [detachEditorEvent](./how-to-attach-events.md#detaching-events)                                | 无        | 移除编辑器事件的监听器。                                                                     |
 | [attachContextMenuClickEvent](../../customization/context-menu.md#clicking-a-context-menu-item) | 无        | 按 ID 为特定上下文菜单项添加点击监听器。                                                   |
 | [attachToolbarMenuClickEvent](../../customization/toolbar.md#attachtoolbarmenuclickevent)       | 无        | 按 ID 为特定工具栏菜单项添加点击监听器。                                                   |
-| `tr`                                                                                             | `string`  | 返回给定键的翻译。参阅[本地化](../../fundamentals/configuration/localization.md)。         |
+| `tr`                                                                                             | `string`  | 返回给定键的翻译。参阅[本地化](../../configuration/localization.md)。         |
 | `onThemeChangedBase`                                                                             | 无        | 基本主题处理程序。必须在自定义 [onThemeChanged](#onthemechanged) 处理程序的开头调用。 |
 
 ## executeMethod 目标方法
@@ -154,7 +155,7 @@ Asc.plugin.button = (id) => {
 | `text`     | `string`                   | 项目标题。                                                                                            |
 | `data`     | `string`                   | 项目数据（该数据将发送到点击事件回调）。                                                              |
 | `disabled` | `boolean`                  | 指定当前项目是否被禁用。                                                                              |
-| `icons`    | `string`                   | 项目图标（参见插件 [config](../../fundamentals/configuration/config-json.md) 文档）。                 |
+| `icons`    | `string`                   | 项目图标（参见插件 [config](../../configuration/configuration.md) 文档）。                 |
 | `items`    | `Array.<`[ContextMenuItem](#contextmenuitem)`>` | 包含当前项目的上下文菜单项数组。                                                     |
 
 **示例**：
@@ -188,14 +189,14 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 
 **返回值**：此方法不返回任何数据。
 
-**工具栏**：
+### 工具栏
 
 | 方法                     | 描述                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `AddToolbarMenuItem`     | 向工具栏添加项目。参阅[工具栏](../../customization/toolbar.md#addtoolbarmenuitem)。                   |
 | `UpdateToolbarMenuItem`  | 更新工具栏菜单项。参阅[工具栏](../../customization/toolbar.md#updatetoolbarmenuitem)。                |
 
-**窗口和面板**：
+### 窗口和面板
 
 | 方法              | 描述                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -207,7 +208,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 | `MouseUpWindow`     | 向窗口发送鼠标释放事件。参阅[窗口和面板](../../customization/windows-and-panels.md#mouseupwindow)。    |
 | `SendToWindow`      | 向窗口发送消息。参阅[窗口和面板](../../customization/windows-and-panels.md#sendtowindow)。           |
 
-**输入助手**：
+### 输入助手
 
 | 方法              | 描述                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -244,13 +245,13 @@ Asc.plugin.init = (text) => {
 
 ### button
 
-当任何插件[按钮](../../fundamentals/configuration/config-json.md#variationsbuttons)被点击时调用的函数。如果 `id` 为 `-1`，表示点击了**关闭**按钮（叉号图标）或插件操作被中断。
+当任何插件[按钮](../../configuration/configuration.md#variationsbuttons)被点击时调用的函数。如果 `id` 为 `-1`，表示点击了**关闭**按钮（叉号图标）或插件操作被中断。
 
 **参数**：
 
 | 名称     | 类型     | 描述                                                                                                                                               |
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id       | `number` | config.json 的 [buttons](../../fundamentals/configuration/config-json.md#variationsbuttons) 数组中的按钮索引。`-1` 表示关闭按钮。 |
+| id       | `number` | config.json 的 [buttons](../../configuration/configuration.md#variationsbuttons) 数组中的按钮索引。`-1` 表示关闭按钮。 |
 | windowId | `number` | 点击按钮的模态窗口的标识符。                                                                                                    |
 
 **示例**：
@@ -285,7 +286,7 @@ Asc.plugin.onMethodReturn = (returnValue) => {
 
 ### onTranslate
 
-插件启动后立即调用以应用翻译的函数，每当编辑器界面语言更改时再次调用。使用它通过 [`tr`](../../fundamentals/configuration/localization.md) 助手本地化 DOM 元素。
+插件启动后立即调用以应用翻译的函数，每当编辑器界面语言更改时再次调用。使用它通过 [`tr`](../../configuration/localization.md) 助手本地化 DOM 元素。
 
 **示例**：
 
@@ -470,4 +471,4 @@ Asc.plugin.button = (id) => {
 };
 ```
 
-有关完整的插件设置（config.json、index.html、文件夹结构），请参阅[入门指南](../../fundamentals/getting-started/what-is-a-plugin.md)。
+有关完整的插件设置（config.json、index.html、文件夹结构），请参阅[入门指南](../../get-started/get-started.md)。

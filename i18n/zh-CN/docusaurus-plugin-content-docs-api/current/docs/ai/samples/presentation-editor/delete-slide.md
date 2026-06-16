@@ -82,7 +82,7 @@ func.call = async function (params) {
 };
 ```
 
-使用的方法：[GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [Delete](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetPresentation](../../../../../../../../site/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [Delete](../../../../../../../../site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

@@ -6,7 +6,7 @@ The plugins section defines the runtime plugin parameters.
 
 **type:** `string[]`
 
-The plugin identifiers from the [config.json](../../../../plugins/fundamentals/configuration/config-json.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
+The plugin identifiers from the [config.json](../../../../plugins/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@ The plugin identifiers from the [config.json](../../../../plugins/fundamentals/c
 
 **type:** `string[]`
 
-The plugin identifiers from the [config.json](../../../../plugins/fundamentals/configuration/config-json.md#guid) file for plugins that will be disabled on load. The specified plugins will be blocked and unavailable in the editor interface.
+The plugin identifiers from the [config.json](../../../../plugins/configuration/configuration.md#guid) file for plugins that will be disabled on load. The specified plugins will be blocked and unavailable in the editor interface.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -73,7 +73,7 @@ The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}`
 
 **type:** `string[]`
 
-The absolute URLs to the plugin [config.json](../../../../plugins/fundamentals/configuration/config-json.md) files.
+The absolute URLs to the plugin [config.json](../../../../plugins/configuration/configuration.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

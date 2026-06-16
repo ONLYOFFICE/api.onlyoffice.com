@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 计算世界银行指标
 
-创建一个[异步自定义函数](/docs/macros/macros/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
+创建一个[异步自定义函数](../../../../../../../../site/docs/macros/guides/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
 
 可计算的指标包括：
 
@@ -85,7 +85,7 @@ import Video from '@site/src/components/Video/Video';
 
     // 创建图表
     let chart = worksheet.AddChart("'Sheet1'!$A$1:$B$10", true, "bar", 2, 100 * 36000, 60 * 36000, 0, 0, 10, 0);
-    chart.SetTitle("GDP  2024", 13);
+    chart.SetTitle("GDP 2024", 13);
 })();
 ```
 

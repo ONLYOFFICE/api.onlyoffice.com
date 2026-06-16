@@ -14,8 +14,8 @@ Starting from version 8.2, in the plugin code, define the **attachEditorEvent** 
 
 | Name     | Type     | Description         |
 | -------- | -------- | ------------------- |
-| *id*     | string   | The event name.     |
-| *action* | function | The event listener. |
+| `id`     | string   | The event name.     |
+| `action` | function | The event listener. |
 
 ### Returns
 
@@ -29,13 +29,59 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+### Debouncing frequent events
+
+Some events (like selection change) fire rapidly. Debounce to avoid excessive processing:
+
+```ts
+let debounceTimer;
+
+Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    updatePluginUI();
+  }, 150);
+});
+```
+
+### Cleaning up on destroy
+
+Always detach event listeners when the plugin is closed to avoid memory leaks:
+
+```ts
+Asc.plugin.onDestroy = () => {
+  Asc.plugin.detachEditorEvent("onTargetPositionChanged");
+  clearTimeout(debounceTimer);
+};
+```
+
+## Detaching events
+
+To remove a previously attached event listener, use the **detachEditorEvent** method.
+
+### Parameters
+
+| Name | Type   | Description     |
+| ---- | ------ | --------------- |
+| `id` | string | The event name. |
+
+### Returns
+
+This method doesn't return any data.
+
+### Example
+
+```ts
+Asc.plugin.detachEditorEvent("onAddComment");
+```
+
 ## Option 2. Using the attachEvent method
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-the-attacheditorevent-method) method instead.
 :::
 
-1. In the *config.json* file, add the [events](../../fundamentals/configuration/config-json.md#variationsevents) parameter with the array of all the available events:
+1. In the *config.json* file, add the [events](../../configuration/configuration.md#variationsevents) parameter with the array of all the available events:
 
    ``` json
    {
@@ -53,8 +99,8 @@ Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-th
 
    | Name     | Type     | Description         |
    | -------- | -------- | ------------------- |
-   | *id*     | string   | The event name.     |
-   | *action* | function | The event listener. |
+   | `id`     | string   | The event name.     |
+   | `action` | function | The event listener. |
 
    ### Returns
 
