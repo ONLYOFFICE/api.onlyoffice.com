@@ -6,7 +6,7 @@ const SOURCES = [
   // Docs
   { dir: 'site/docs/docs-api/samples', routeBase: 'docs/docs-api/samples', output: 'docs-samples.json' },
   { dir: 'site/docs/office-api/samples', routeBase: 'docs/office-api/samples', output: 'docs-office-api-samples.json' },
-  { dir: 'site/docs/plugins/learning-resources/samples-and-examples/plugin-samples', routeBase: 'docs/plugins/learning-resources/samples-and-examples/plugin-samples', output: 'docs-plugins-samples.json' },
+  { dir: 'site/docs/plugins/learning-resources/samples', routeBase: 'docs/plugins/learning-resources/samples', output: 'docs-plugins-samples.json' },
   { dir: 'site/docs/macros/samples', routeBase: 'docs/macros/samples', output: 'docs-macros-samples.json' },
   // docs-builder-samples.json is maintained manually
   // AI - Docs

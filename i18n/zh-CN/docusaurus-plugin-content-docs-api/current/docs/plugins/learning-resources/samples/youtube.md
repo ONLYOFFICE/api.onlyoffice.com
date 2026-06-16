@@ -131,14 +131,14 @@ GitHub 仓库：[youtube](https://github.com/ONLYOFFICE/onlyoffice.github.io/tre
 - [executeMethod ("AddOleObject")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
 - [resizeWindow](../../../../../../../../../site/docs/plugins/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.height](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.imgSrc](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.mmToPx](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.objectId](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.resize](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.height](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.imgSrc](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.mmToPx](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.objectId](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.resize](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

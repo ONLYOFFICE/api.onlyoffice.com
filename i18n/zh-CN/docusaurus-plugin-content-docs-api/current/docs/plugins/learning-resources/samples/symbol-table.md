@@ -109,7 +109,7 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
 - [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](../../../../../../../../../site/docs/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - [onTranslate](../../../../../../../../../site/docs/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteHtml.md)

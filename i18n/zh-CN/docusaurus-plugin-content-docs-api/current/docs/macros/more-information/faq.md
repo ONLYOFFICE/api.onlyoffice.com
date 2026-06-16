@@ -34,7 +34,7 @@ ONLYOFFICE 宏使用 JavaScript 语法和 [Office JavaScript API](../../office-a
 
 ## 能否让宏在所有文档中都可用？
 
-宏与特定文档绑定，无法设为全局可用。如果需要为所有用户提供跨文档可用的功能，请编写[插件](../../plugins/fundamentals/configuration/configuration.md)来实现。
+宏与特定文档绑定，无法设为全局可用。如果需要为所有用户提供跨文档可用的功能，请编写[插件](../../plugins/get-started/get-started.md)来实现。
 
 ## 在哪里可以找到现成的宏示例？
 

@@ -10,7 +10,7 @@ sidebar_position: 2
 
 ## 前提条件
 
-- 已搭建好的 ONLYOFFICE 插件开发环境——参见[插件开发教程](/docs/plugins/fundamentals/getting-started/development-environment-setup.md)。
+- 已搭建好的 ONLYOFFICE 插件开发环境——参见[开发环境设置](/docs/plugins/fundamentals/getting-started/development-environment-setup.md)。
 - 熟悉 `config.json`、`index.html` 和插件 JS 文件的基本知识——参见[插件结构](/docs/plugins/fundamentals/configuration/configuration.md)。
 - 官方翻译器插件使用 Google 翻译小部件。如果您想使用其他提供商（DeepL、Azure、LibreTranslate），则需要 API 密钥。
 
@@ -27,7 +27,7 @@ translator/
     └── translate.js
 ```
 
-翻译器是一个**侧面板插件**（`isInsideMode: true`、`isModal: false`），每当用户更改文本选择时都会重新触发（`initOnSelectionChanged: true`）。将 `initDataType` 设置为 `"text"`，编辑器会自动将原始选中文本传递给 `init` 函数。
+翻译器是一个**侧面板插件**（`type: "panel"`），每当用户更改文本选择时都会重新触发（`initOnSelectionChanged: true`）。将 `initDataType` 设置为 `"text"`，编辑器会自动将原始选中文本传递给 `init` 函数。
 
 ```json
 {
@@ -42,8 +42,7 @@ translator/
       "isViewer": true,
       "EditorsSupport": ["word", "cell", "slide", "pdf"],
       "isVisual": true,
-      "isModal": false,
-      "isInsideMode": true,
+      "type": "panel",
       "initDataType": "text",
       "initOnSelectionChanged": true
     }
@@ -57,8 +56,7 @@ translator/
 |---|---|---|
 | `initDataType` | `"text"` | 编辑器将当前选中内容作为 `text` 参数传递给 `init()` |
 | `initOnSelectionChanged` | `true` | 每次用户更改选择时都会再次调用 `init` |
-| `isInsideMode` | `true` | 插件在侧面板中渲染，而不是浮动窗口 |
-| `isModal` | `false` | 非阻塞——用户在面板打开时可以继续编辑 |
+| `type` | `"panel"` | 插件在侧面板中渲染，而不是浮动窗口 |
 | `EditorsSupport` | `["word", "cell", "slide", "pdf"]` | 支持所有编辑器类型，包括 PDF |
 
 ## 第 2 步 - 构建面板 UI
@@ -112,7 +110,9 @@ function ProcessText(sText) {
 }
 ```
 
-> **重要提示：** 选中的文本通过 `init()` 的 `text` 参数传入，而不是通过 `window.Asc.plugin.info.data`。对于 `word` 编辑器类型，插件会额外调用 `GetSelectedText` 以获取不含编号伪影的更纯净文本。
+:::note
+选中的文本通过 `init()` 的 `text` 参数传入，而不是通过 `window.Asc.plugin.info.data`。对于 `word` 编辑器类型，插件会额外调用 `GetSelectedText` 以获取不含编号伪影的更纯净文本。
+:::
 
 ## 第 4 步 - 加载翻译小部件
 
@@ -149,7 +149,9 @@ function ExecPlugin() {
 }
 ```
 
-> **更换翻译提供商：** 要使用其他翻译 API（DeepL、Azure、LibreTranslate），请将 `index_widget.html` 替换为您自己的页面，通过 `fetch()` 调用 API 并通过 `postMessage` 返回结果。插件的其余代码保持不变。
+:::tip[更换翻译提供商]
+要使用其他翻译 API（DeepL、Azure、LibreTranslate），请将 `index_widget.html` 替换为您自己的页面，通过 `fetch()` 调用 API 并通过 `postMessage` 返回结果。插件的其余代码保持不变。
+:::
 
 ## 第 5 步 - 将翻译结果插入回文档
 

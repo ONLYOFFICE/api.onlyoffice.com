@@ -10,7 +10,7 @@ Learn how to accept a YouTube URL from the user and embed the video as a live OL
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- A working ONLYOFFICE plugin development environment - see [Development environment setup](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 - A YouTube account is not required; any public video URL will work.
 
@@ -26,7 +26,7 @@ youtube/
     └── youtube.js
 ```
 
-The YouTube plugin uses a **modal dialog** (`isModal: true`) with an OLE data type so the editor can round-trip the stored URL whenever the embedded object is double-clicked.
+The YouTube plugin uses a **modal dialog** (`type: "window"`) with an OLE data type so the editor can round-trip the stored URL whenever the embedded object is double-clicked.
 
 ```json
 {
@@ -42,8 +42,7 @@ The YouTube plugin uses a **modal dialog** (`isModal: true`) with an OLE data ty
       "isDisplayedInViewer": false,
       "EditorsSupport": ["word", "cell", "slide"],
       "isVisual": true,
-      "isModal": true,
-      "isInsideMode": false,
+      "type": "window",
       "initDataType": "ole",
       "isUpdateOleOnResize": false,
       "buttons": [
@@ -61,7 +60,7 @@ Key settings to notice:
 | Setting | Value | Why |
 |---|---|---|
 | `initDataType` | `"ole"` | Tells the editor to pass the stored OLE data back to the plugin on re-open |
-| `isModal` | `true` | Opens as a small floating dialog instead of a side panel |
+| `type` | `"window"` | Opens as a standalone window dialog |
 | `isUpdateOleOnResize` | `false` | Prevents the editor from re-requesting a new thumbnail when the user resizes the embedded object |
 | `isViewer` | `true` | Allows the plugin to appear in view-only mode (the Cancel button is visible; OK is hidden) |
 
@@ -114,7 +113,9 @@ window.Asc.plugin.init = function (text) {
 };
 ```
 
-> **Important:** For `initDataType: "ole"`, the stored OLE data string is passed as the `text` argument to `init()`. This is the raw string you set in the `"data"` field when calling `AddOleObject` or `EditOleObject`.
+:::note
+For `initDataType: "ole"`, the stored OLE data string is passed as the `text` argument to `init()`. This is the raw string you set in the `"data"` field when calling `AddOleObject` or `EditOleObject`.
+:::
 
 ## Step 4 - Extract the video ID and build a thumbnail URL
 

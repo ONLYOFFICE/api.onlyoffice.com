@@ -34,7 +34,7 @@ Not directly, because ONLYOFFICE macros use JavaScript while Microsoft Office ma
 
 ## Can I make a macro available across all documents?
 
-Macros are attached to a specific document and cannot be made global. If you need functionality available across all documents for all users, write a [plugin](../../plugins/fundamentals/configuration/configuration.md) instead.
+Macros are attached to a specific document and cannot be made global. If you need functionality available across all documents for all users, write a [plugin](../../plugins/get-started/get-started.md) instead.
 
 ## Where can I find ready-made macro examples?
 

@@ -10,7 +10,7 @@ Learn how to embed an interactive image editor inside ONLYOFFICE and write the r
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- A working ONLYOFFICE plugin development environment - see [Development environment setup](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 
 ## Step 1 - Scaffold the plugin
@@ -25,7 +25,7 @@ photoeditor/
     └── photoeditor.js
 ```
 
-The photo editor uses a **full-screen modal dialog** (`isModal: true`, `isInsideMode: false`) with `initDataType: "html"` so the editor passes the selected image data as HTML to the plugin on initialisation. The `size: [10000, 10000]` ensures the dialog fills the screen:
+The photo editor uses a **full-screen modal dialog** (`type: "window"`) with `initDataType: "html"` so the editor passes the selected image data as HTML to the plugin on initialization. The `size: [10000, 10000]` ensures the dialog fills the screen:
 
 ```json
 {
@@ -41,8 +41,7 @@ The photo editor uses a **full-screen modal dialog** (`isModal: true`, `isInside
       "isViewer": false,
       "EditorsSupport": ["word", "cell", "slide"],
       "isVisual": true,
-      "isModal": true,
-      "isInsideMode": false,
+      "type": "window",
       "initDataType": "html",
       "initData": "",
       "buttons": [
@@ -58,8 +57,7 @@ The photo editor uses a **full-screen modal dialog** (`isModal: true`, `isInside
       "isViewer": false,
       "EditorsSupport": ["word", "cell", "slide"],
       "isVisual": true,
-      "isModal": true,
-      "isInsideMode": false,
+      "type": "window",
       "initDataType": "none",
       "initData": "",
       "size": [392, 147]
@@ -72,8 +70,7 @@ Key settings to notice:
 
 | Setting | Value | Why |
 |---|---|---|
-| `isModal` | `true` | Opens as a full-screen dialog, not a side panel |
-| `isInsideMode` | `false` | The plugin renders in a separate modal window |
+| `type` | `"window"` | Opens as a standalone window dialog |
 | `initDataType` | `"html"` | Editor passes the selected image as HTML to `init` |
 | `size` | `[10000, 10000]` | Makes the dialog fill the entire screen |
 | `buttons` | OK + Cancel | OK triggers saving; Cancel closes without changes |

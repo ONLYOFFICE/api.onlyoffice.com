@@ -150,9 +150,9 @@ GitHub 仓库：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/mas
 - [executeMethod ("PasteText")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
 - [info.editorType](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

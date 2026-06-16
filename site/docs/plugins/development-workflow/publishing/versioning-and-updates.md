@@ -70,7 +70,7 @@ sdkjs-plugins/content/your-plugin-name/
 ```bash
 git add sdkjs-plugins/content/your-plugin-name/
 git commit -m "Update your-plugin-name to v1.1.0"
-git push origin main
+git push origin master
 ```
 
 ### Step 5 - Create a pull request

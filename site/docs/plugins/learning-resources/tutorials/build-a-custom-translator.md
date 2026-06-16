@@ -10,7 +10,7 @@ Learn how to read selected text from a document, send it to an external translat
 
 ## Prerequisites
 
-- A working ONLYOFFICE plugin development environment - see [Plugin development tutorial](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
+- A working ONLYOFFICE plugin development environment - see [Development environment setup](/docs/plugins/fundamentals/getting-started/development-environment-setup.md).
 - Basic familiarity with `config.json`, `index.html`, and the plugin JS file - see [Plugin structure](/docs/plugins/fundamentals/configuration/configuration.md).
 - The official translator plugin uses the Google Translate widget. If you want to use a different provider (DeepL, Azure, LibreTranslate), you will need an API key.
 
@@ -27,7 +27,7 @@ translator/
     └── translate.js
 ```
 
-The translator is a **side-panel plugin** (`isInsideMode: true`, `isModal: false`) that re-fires whenever the user changes their text selection (`initOnSelectionChanged: true`). Set `initDataType` to `"text"` so the editor automatically passes the raw selected text to the `init` function.
+The translator is a **side-panel plugin** (`type: "panel"`) that re-fires whenever the user changes their text selection (`initOnSelectionChanged: true`). Set `initDataType` to `"text"` so the editor automatically passes the raw selected text to the `init` function.
 
 ```json
 {
@@ -42,8 +42,7 @@ The translator is a **side-panel plugin** (`isInsideMode: true`, `isModal: false
       "isViewer": true,
       "EditorsSupport": ["word", "cell", "slide", "pdf"],
       "isVisual": true,
-      "isModal": false,
-      "isInsideMode": true,
+      "type": "panel",
       "initDataType": "text",
       "initOnSelectionChanged": true
     }
@@ -57,8 +56,7 @@ Key settings to notice:
 |---|---|---|
 | `initDataType` | `"text"` | Editor passes the current selection as the `text` argument to `init()` |
 | `initOnSelectionChanged` | `true` | `init` is called again every time the user changes their selection |
-| `isInsideMode` | `true` | Plugin renders in the side panel rather than a floating window |
-| `isModal` | `false` | Non-blocking - the user can keep editing while the panel is open |
+| `type` | `"panel"` | Plugin renders in the side panel rather than a floating window |
 | `EditorsSupport` | `["word", "cell", "slide", "pdf"]` | Supports all editor types including PDF |
 
 ## Step 2 - Build the panel UI
@@ -112,7 +110,9 @@ function ProcessText(sText) {
 }
 ```
 
-> **Important:** The selected text arrives as the `text` parameter of `init()`, not through `window.Asc.plugin.info.data`. For the `word` editor type, the plugin additionally calls `GetSelectedText` to get cleaner text without numbering artifacts.
+:::note
+The selected text arrives as the `text` parameter of `init()`, not through `window.Asc.plugin.info.data`. For the `word` editor type, the plugin additionally calls `GetSelectedText` to get cleaner text without numbering artifacts.
+:::
 
 ## Step 4 - Load the translation widget
 
@@ -149,7 +149,9 @@ function ExecPlugin() {
 }
 ```
 
-> **Swapping providers:** To use a different translation API (DeepL, Azure, LibreTranslate), replace `index_widget.html` with your own page that calls the API via `fetch()` and communicates results back via `postMessage`. The rest of the plugin code stays the same.
+:::tip[Swapping providers]
+To use a different translation API (DeepL, Azure, LibreTranslate), replace `index_widget.html` with your own page that calls the API via `fetch()` and communicates results back via `postMessage`. The rest of the plugin code stays the same.
+:::
 
 ## Step 5 - Insert the translation back into the document
 

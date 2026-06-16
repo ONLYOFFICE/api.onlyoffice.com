@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ONLYOFFICE custom AI tools are editor extensions that combine the plugin framework with an AI provider integration to deliver intelligent, context-aware features directly inside the editors.
 
-If you prefer to start coding right away, go directly to the [quick start guides](quick-start.md).
+If you prefer to start coding right away, go directly to the [quick start guide](quick-start.md).
 
 ## What you can build
 

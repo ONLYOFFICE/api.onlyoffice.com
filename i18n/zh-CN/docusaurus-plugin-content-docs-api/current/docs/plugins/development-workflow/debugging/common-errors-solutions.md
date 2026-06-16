@@ -89,6 +89,35 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
+### Variables undefined inside callCommand
+
+`callCommand` runs in the editor's context, not your plugin's. Local variables are not accessible. Use `Asc.scope` to pass data across the boundary:
+
+:::danger[Wrong]
+```javascript
+var text = document.getElementById("input").value;
+window.Asc.plugin.callCommand(function() {
+  // text is undefined here - different execution context
+  var oParagraph = Api.CreateParagraph();
+  oParagraph.AddText(text);
+  Api.GetDocument().InsertContent([oParagraph]);
+});
+```
+:::
+
+:::tip[Correct]
+```javascript
+Asc.scope.text = document.getElementById("input").value;
+window.Asc.plugin.callCommand(function() {
+  var oParagraph = Api.CreateParagraph();
+  oParagraph.AddText(Asc.scope.text);
+  Api.GetDocument().InsertContent([oParagraph]);
+});
+```
+:::
+
+See [Passing data into callCommand](../../fundamentals/plugin-architecture/communication-flow.md#passing-data-into-callcommand) for details.
+
 ## Configuration errors
 
 ### Icons not displaying

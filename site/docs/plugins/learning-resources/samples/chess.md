@@ -172,14 +172,14 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [executeMethod ("AddOleObject")](../../../interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](../../../interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.height](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.imgSrc](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.mmToPx](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.objectId](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.resize](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.data](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.height](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.imgSrc](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.mmToPx](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.objectId](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.resize](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

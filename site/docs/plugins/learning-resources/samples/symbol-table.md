@@ -109,7 +109,7 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - [button](../../../customization/custom-buttons.md)
 - [init](../../../interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](../../../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onMethodReturn](../../../interacting-with-editors/overview/how-to-call-methods.md)
+- [onMethodReturn](../../../interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - [onTranslate](../../../fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](../../../interacting-with-editors/document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](../../../interacting-with-editors/document-api/Methods/PasteHtml.md)

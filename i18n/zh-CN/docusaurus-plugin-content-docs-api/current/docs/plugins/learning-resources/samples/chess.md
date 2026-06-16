@@ -167,14 +167,14 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - onExternalMouseUp
 - [executeMethod ("AddOleObject")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.height](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.imgSrc](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.mmToPx](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.objectId](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.resize](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.data](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.height](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.imgSrc](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.mmToPx](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.objectId](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.resize](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## 支持
 

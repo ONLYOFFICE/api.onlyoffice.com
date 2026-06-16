@@ -155,9 +155,9 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - [executeMethod ("PasteText")](../../../interacting-with-editors/document-api/Methods/PasteText.md)
 - info.aiPluginSettings
 - [info.editorType](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
-- [info.data](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.guid](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
-- [info.width](../../../interacting-with-editors/overview/how-to-call-commands.md#info-object)
+- [info.data](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.guid](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
+- [info.width](../../../interacting-with-editors/overview/asc-plugin.md#info-object)
 
 ## Support
 

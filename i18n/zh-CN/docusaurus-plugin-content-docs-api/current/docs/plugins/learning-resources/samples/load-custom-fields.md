@@ -111,7 +111,7 @@ GitHub 仓库：[example_customfields_load](https://github.com/ONLYOFFICE/sdkjs-
 
 - [button](../../../../../../../../../site/docs/plugins/customization/custom-buttons.md)
 - [init](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- [onMethodReturn](../../../../../../../../../site/docs/plugins/interacting-with-editors/overview/asc-plugin.md#onmethodreturn)
 - executeMethod ("[GetAllContentControls](../../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - executeMethod ("[InsertAndReplaceContentControls](../../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 

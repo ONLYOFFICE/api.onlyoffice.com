@@ -64,6 +64,7 @@ my-plugin/
   "description": "Example plugin with adaptive icons",
   "variations": [
     {
+      "url": "index.html",
       "type": "window",
       "icons": [
         "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
