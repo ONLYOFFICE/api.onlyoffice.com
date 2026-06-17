@@ -229,6 +229,18 @@ pre code:not(.openapi-explorer__code-block-lines) {
     }
 /* END OPENAPI */
 
+/* START NAVBAR DROPDOWN SEPARATOR */
+.dropdown__menu li:has(> .navbar-dropdown-separator) {
+  padding: 0;
+}
+
+.navbar-dropdown-separator {
+  margin: 4px 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+/* END NAVBAR DROPDOWN SEPARATOR */
+
 /* START NAVBAR GITHUB BUTTON */
 .header-github-link::before {
   content: '';

@@ -221,6 +221,10 @@ const config: Config = {
               docsPluginId: 'api',
             },
             {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
+            },
+            {
               type: 'docSidebar',
               sidebarId: 'docsPlugins',
               label: 'Plugins',
@@ -237,6 +241,10 @@ const config: Config = {
               sidebarId: 'docsAI',
               label: 'AI',
               docsPluginId: 'api',
+            },
+            {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
             },
             {
               type: 'docSidebar',
