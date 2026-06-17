@@ -51,7 +51,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 | `--ascdesktop-support-debug-info-keep=VALUE` | 全平台 | 跨启动持久保存调试模式状态。`VALUE`：`1` — 启用，`0` — 禁用，`default` — 重置。 |
 | `--system-title-bar` | Linux | 使用系统窗口框架，而不使用自定义标题栏。 |
 | `--custom-title-bar` | Linux | 使用 ONLYOFFICE 标题栏；覆盖 `--system-title-bar`。 |
-| `--review=path` | Windows、Linux | 以修订模式打开 DOCX 文件；XLSX 和 PPTX 以只读模式打开。路径含空格时请用双引号括起。 |
+| `--review=path` | Windows、Linux | 以修订模式打开 DOCX 文件且无法禁用修订；XLSX 和 PPTX 以只读模式打开。路径含空格时请用双引号括起。 |
 | `--view=path` | Windows、Linux | 以只读模式打开 DOCX、XLSX 或 PPTX 文件。路径含空格时请用双引号括起。 |
 | `--force-use-tab` | Windows、Linux | 与 `--review` 或 `--view` 一起使用；在新标签页中打开文件，而非单独窗口。 |
 | `--single-window-app` | 全平台 | 作为独立进程启动；防止多实例关闭时产生级联警告。 |
@@ -59,3 +59,64 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 | `--new:word` | 全平台 | 创建并打开新的空白 DOCX 文件。 |
 | `--new:cell` | 全平台 | 创建并打开新的空白 XLSX 文件。 |
 | `--new:slide` | 全平台 | 创建并打开新的空白 PPTX 文件。 |
+
+## 示例
+
+### 以修订模式打开文件
+
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+```
+"%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx"
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```bash
+"/opt/onlyoffice/desktopeditors/DesktopEditors" --review="/home/username/Documents/Document1.docx"
+```
+
+  </TabItem>
+</Tabs>
+
+### 以只读模式打开文件
+
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+```
+"%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --view="C:\Users\username\Documents\Document1.docx"
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```bash
+"/opt/onlyoffice/desktopeditors/DesktopEditors" --view="/home/username/Documents/Document1.docx"
+```
+
+  </TabItem>
+</Tabs>
+
+### 组合标志
+
+以修订模式在新标签页（而非单独窗口）中打开文件：
+
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+```
+"%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx" --force-use-tab
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```bash
+"/opt/onlyoffice/desktopeditors/DesktopEditors" --review="/home/username/Documents/Document1.docx" --force-use-tab
+```
+
+  </TabItem>
+</Tabs>
