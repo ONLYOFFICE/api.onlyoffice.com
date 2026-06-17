@@ -11,7 +11,7 @@ sidebar_position: 3
 ```js
 builderJS.OpenFile("file1.docx");
 const file = builderJS.OpenTmpFile("file2.docx");
-AscCommonWord.CompareDocuments(Api, file);
+Api.CompareDocuments(file);
 file.Close();
 builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
