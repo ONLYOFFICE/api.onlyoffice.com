@@ -4,6 +4,8 @@ import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
 import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
 import OfficeApiIcon from "@site/static/icons/office-api-icon.svg";
 import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
+import MacrosIcon from "@site/static/icons/code-icon.svg";
+import AiIcon from "@site/static/icons/ai-icon.svg";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
 import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
@@ -43,15 +45,34 @@ export const DocsFeatures: Features = {
       icon: <OfficeApiIcon/>,
     },
     {
-      title: 'Plugins and macros',
+      title: 'Plugins',
       link: 'plugins/get-started',
       description: (
         <>
-          Extend the ONLYOFFICE Docs{" "}
-          functionality by creating your own plugins/macros.
+          Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.
         </>
       ),
       icon: <PluginIcon/>,
+    },
+    {
+      title: 'Macros',
+      link: 'macros/get-started',
+      description: (
+        <>
+          Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.
+        </>
+      ),
+      icon: <MacrosIcon/>,
+    },
+    {
+      title: 'AI',
+      link: 'ai/get-started',
+      description: (
+        <>
+          Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.
+        </>
+      ),
+      icon: <AiIcon/>,
     },
     {
       title: 'Document Builder',
