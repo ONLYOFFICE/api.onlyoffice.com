@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 计算世界银行指标
 
-创建一个[异步自定义函数](../../../../../../../../site/docs/macros/guides/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
+创建一个[异步自定义函数](../../guides/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
 
 可计算的指标包括：
 
