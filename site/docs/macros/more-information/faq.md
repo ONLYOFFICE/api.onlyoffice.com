@@ -23,7 +23,7 @@ No. Macros run as JavaScript code inside the editor window and have no access to
 
 ## How do I debug a macro?
 
-Use the `debugger` keyword as a breakpoint in your script and open the browser developer console (**F12**). For ONLYOFFICE Desktop Editors, follow the [platform-specific debug instructions](../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md). See the full [Debugging](../guides/debugging.md) page for details.
+Use the `debugger` keyword as a breakpoint in your script and open the browser developer console (**F12**). For ONLYOFFICE Desktop Editors, follow the [platform-specific debug instructions](../../desktop-editors/usage-api/debugging.md). See the full [Debugging](../guides/debugging.md) page for details.
 
 ## Can I use my Microsoft Office (VBA) macros in ONLYOFFICE?
 

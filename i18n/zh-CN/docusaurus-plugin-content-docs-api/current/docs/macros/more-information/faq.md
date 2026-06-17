@@ -23,7 +23,7 @@ ONLYOFFICE 宏使用 JavaScript 语法和 [Office JavaScript API](../../office-a
 
 ## 如何调试宏？
 
-在脚本中使用 **debugger** 关键字设置断点，然后按 **F12** 键打开浏览器开发者控制台。对于 ONLYOFFICE 桌面编辑器，请参阅[特定平台的调试说明](../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)。完整的调试指南请参见[调试](../guides/debugging.md)页面。
+在脚本中使用 **debugger** 关键字设置断点，然后按 **F12** 键打开浏览器开发者控制台。对于 ONLYOFFICE 桌面编辑器，请参阅[特定平台的调试说明](../../desktop-editors/usage-api/debugging.md)。完整的调试指南请参见[调试](../guides/debugging.md)页面。
 
 ## 我可以在 ONLYOFFICE 中使用 Microsoft Office（VBA）宏吗？
 

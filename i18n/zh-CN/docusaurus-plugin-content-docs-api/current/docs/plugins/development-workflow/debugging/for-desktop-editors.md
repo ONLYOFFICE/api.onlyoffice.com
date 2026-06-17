@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # 桌面编辑器
 
-要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 `--ascdesktop-support-debug-info` 标志。根据您使用的操作系统，按照[此处](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)的说明进行操作。
+要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 `--ascdesktop-support-debug-info` 标志。根据您使用的操作系统，按照[此处](../../../desktop-editors/usage-api/debugging.md)的说明进行操作。
 
 ![Debug](/assets/images/desktop/debugging.png#gh-light-mode-only)![Debug](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 

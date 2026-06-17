@@ -20,7 +20,7 @@ sidebar_position: -3
 3. 用调试模式运行脚本：
 
    - **对于 ONLYOFFICE 文档**：请按 **F12** 键打开开发者控制台。
-   - **对于桌面编辑器**: 请参阅在 ONLYOFFICE 桌面编辑器中的调试[说明](../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)。
+   - **对于桌面编辑器**: 请参阅在 ONLYOFFICE 桌面编辑器中的调试[说明](../../desktop-editors/usage-api/debugging.md)。
 
 4. 点击![Play icon](/assets/images/plugins/play.svg)运行脚本。
 
