@@ -14,7 +14,7 @@ expression.CreateSignatureForm(formPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| formPr | 必需 | [FormPrBase](../../Enumeration/FormPrBase.md) |  | Signature form properties. |
+| formPr | 必需 | [FormPrBase](../../Enumeration/FormPrBase.md) |  | 签名表单属性。 |
 
 ## 返回值
 
