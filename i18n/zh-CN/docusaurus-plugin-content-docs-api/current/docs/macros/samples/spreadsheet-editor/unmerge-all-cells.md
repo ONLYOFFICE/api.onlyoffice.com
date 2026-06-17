@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 取消当前工作表中所有已合并的单元格。
 
 :::note
-该宏由 VBA 代码通过 [AI 插件](../../../../../../../../site/docs/macros/guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
+该宏由 VBA 代码通过 [AI 插件](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
 :::
 
 ```ts
