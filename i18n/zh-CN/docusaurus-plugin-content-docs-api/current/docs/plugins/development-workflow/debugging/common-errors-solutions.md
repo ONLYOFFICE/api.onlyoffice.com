@@ -114,7 +114,7 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-详情请参阅[向 callCommand 传递数据](../../interacting-with-editors/overview/how-to-call-commands.md#asc-scope-object)。
+详情请参阅[向 callCommand 传递数据](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)。
 
 ## 配置错误 {#configuration-errors}
 

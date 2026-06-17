@@ -114,7 +114,7 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-See [Passing data into callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#asc-scope-object) for details.
+See [Passing data into callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) for details.
 
 ## Configuration errors
 
