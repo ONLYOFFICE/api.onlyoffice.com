@@ -53,7 +53,8 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 | `--custom-title-bar` | Linux | Uses the ONLYOFFICE title bar; overrides `--system-title-bar`. |
 | `--review=path` | Windows, Linux | Opens a DOCX in Track Changes mode without the ability to disable it; XLSX and PPTX open in view-only mode. Enclose paths containing spaces in double quotes. |
 | `--view=path` | Windows, Linux | Opens a DOCX, XLSX, or PPTX in view-only mode. Enclose paths containing spaces in double quotes. |
-| `--force-use-tab` | Windows, Linux | Used with `--review` or `--view`; opens the file in a new tab instead of a separate window. |
+| `--edit=path` | Windows, Linux | Opens a file for editing in a separate window without the main application window. Enclose paths containing spaces in double quotes. |
+| `--force-use-tab` | Windows, Linux | Used with `--edit`, `--review`, or `--view`; opens the file in a new tab instead of a separate window. |
 | `--single-window-app` | All | Launches as an independent process; prevents cascading close warnings across instances. |
 | `--ignore-certificate-errors` | All | Disables SSL certificate validation for connections to servers with self-signed certificates. |
 | `--new:word` | All | Creates and opens a new blank DOCX file. |
@@ -76,6 +77,25 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 
 ```bash
 "/opt/onlyoffice/desktopeditors/DesktopEditors" --review="/home/username/Documents/Document1.docx"
+```
+
+  </TabItem>
+</Tabs>
+
+### Open a file for editing in a separate window
+
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+```
+"%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --edit="C:\Users\username\Documents\Document1.docx"
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```bash
+"/opt/onlyoffice/desktopeditors/DesktopEditors" --edit="/home/username/Documents/Document1.docx"
 ```
 
   </TabItem>

@@ -53,7 +53,8 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 | `--custom-title-bar` | Linux | 使用 ONLYOFFICE 标题栏；覆盖 `--system-title-bar`。 |
 | `--review=path` | Windows、Linux | 以修订模式打开 DOCX 文件且无法禁用修订；XLSX 和 PPTX 以只读模式打开。路径含空格时请用双引号括起。 |
 | `--view=path` | Windows、Linux | 以只读模式打开 DOCX、XLSX 或 PPTX 文件。路径含空格时请用双引号括起。 |
-| `--force-use-tab` | Windows、Linux | 与 `--review` 或 `--view` 一起使用；在新标签页中打开文件，而非单独窗口。 |
+| `--edit=path` | Windows、Linux | 在单独窗口中打开文件进行编辑，不显示主应用程序窗口。路径含空格时请用双引号括起。 |
+| `--force-use-tab` | Windows、Linux | 与 `--edit`、`--review` 或 `--view` 一起使用；在新标签页中打开文件，而非单独窗口。 |
 | `--single-window-app` | 全平台 | 作为独立进程启动；防止多实例关闭时产生级联警告。 |
 | `--ignore-certificate-errors` | 全平台 | 禁用 SSL 证书验证，用于连接使用自签名证书的服务器。 |
 | `--new:word` | 全平台 | 创建并打开新的空白 DOCX 文件。 |
@@ -76,6 +77,25 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 
 ```bash
 "/opt/onlyoffice/desktopeditors/DesktopEditors" --review="/home/username/Documents/Document1.docx"
+```
+
+  </TabItem>
+</Tabs>
+
+### 在单独窗口中打开文件进行编辑
+
+<Tabs groupId="os">
+  <TabItem value="windows" label="Windows">
+
+```
+"%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --edit="C:\Users\username\Documents\Document1.docx"
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```bash
+"/opt/onlyoffice/desktopeditors/DesktopEditors" --edit="/home/username/Documents/Document1.docx"
 ```
 
   </TabItem>
