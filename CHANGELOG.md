@@ -4,10 +4,19 @@
 
 ### New features
 
+#### Desktop
+
+* Added command-line flags page for Desktop editors
+
 #### DocSpace
 
 * Added Uploader embedding mode documentation for Embed SDK
 * Added Authentication & Security page to Embed SDK
+
+#### Homepage
+
+* Added icons to navbar dropdowns and split Plugins/Macros/AI sections
+* Added separators between Docs dropdown groups
 
 #### Plugins and macros
 
@@ -16,6 +25,10 @@
 * Added quick-start pages for macros and AI sections
 
 ### Improvements
+
+#### Desktop
+
+* Restructured debugging documentation into per-platform pages
 
 #### DocSpace
 
@@ -36,6 +49,10 @@
 
 ### Fixes
 
+#### Desktop
+
+* Fixed broken links to the moved debugging page
+
 #### DocSpace
 
 * Fixed broken links and formatting issues in Embed SDK documentation
@@ -43,10 +60,12 @@
 #### Plugins and macros
 
 * Fixed broken links, anchor references, and code examples across plugin, macro, and AI docs
+* Fixed broken links to consolidated debugging page in macros and plugin docs
 
 #### Localization
 
 * Fixed broken links in zh-CN translations for plugins, macros, and AI sections
+* Fixed broken custom functions guide link in zh-CN weighted average sample
 
 ## 8.8.0
 
