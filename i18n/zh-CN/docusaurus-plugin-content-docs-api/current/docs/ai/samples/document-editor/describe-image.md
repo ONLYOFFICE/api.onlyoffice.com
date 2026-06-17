@@ -146,7 +146,7 @@ let func = new RegisteredFunction({
   return func;
 ```
 
-使用的方法：[GetDocument](../../../../../../../../site/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](../../../../../../../../site/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)  
+使用的方法：[GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](../../../../../../../../site/docs/plugins/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)  
 
 ## 结果
 

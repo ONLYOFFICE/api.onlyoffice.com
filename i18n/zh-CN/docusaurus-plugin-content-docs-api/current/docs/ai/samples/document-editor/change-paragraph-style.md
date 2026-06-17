@@ -72,7 +72,7 @@ func.call = async function (params) {
 };
 ```
 
-使用的方法：[GetDocument](../../../../../../../../site/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](../../../../../../../../site/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](../../../../../../../../site/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 
