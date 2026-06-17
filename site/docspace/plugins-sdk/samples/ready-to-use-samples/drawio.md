@@ -1,4 +1,4 @@
----
+﻿---
 description: Create diagrams and flowcharts with the Draw.io plugin.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to adjust the plugin settings, go to **Administrator ⋮ → Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Draw.io** plugin. You can change the following plugin parameters:
+In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Draw.io** plugin. You can change the following plugin parameters:
 
 - **Languages** - choose the necessary language from the list. The **Auto** option corresponds to the portal language.
 - **Offline mode** - when this setting is active, all remote operations and features are disabled for security reasons.
@@ -56,7 +56,7 @@ The following plugin interfaces are used:
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service ([Draw.io](https://www.drawio.com/)).
-- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Administrator ⋮ → Settings → Integration → Plugins** to adjust the plugin's parameters.
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings → Integration → Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement a context menu action.
 - [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to implement the main button action. In the **Draw.io** plugin, we use the **Action button -> More** menu elements in the **Documents** section or in the selected room to create `.drawio` diagrams.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md). Used to interact with the specified file types. In this case, with the `.drawio` files.

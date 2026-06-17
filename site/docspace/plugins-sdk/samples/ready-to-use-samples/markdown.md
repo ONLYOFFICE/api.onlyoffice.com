@@ -1,4 +1,4 @@
----
+﻿---
 description: View, edit, and create Markdown files in DocSpace.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Administrator ⋮ → Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **Markdown** plugin.
+In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Markdown** plugin.
 
 ## Usage
 
@@ -32,7 +32,7 @@ To create a new `.md` file:
 3. Select the **Markdown** plugin from the appeared menu.
 4. Change the file name in a pop-up window and click **Create**. A new `.md` file appears in the file list.
 
-To open the created `.md` file, click the file name or do it via the file context menu: **right-click -> Edit markdown (Preview markdown)**. The file will open in the same tab. To get back to the file list, click **Save and close** or ![Cross](/assets/images/docspace/cross.png). If a file is opened by a user with the view rights, only ![Cross](/assets/images/docspace/cross.png) is available. Any changes made by this user will not be saved.
+To open the created `.md` file, click the file name or do it via the file context menu: **right-click -> Edit markdown (Preview markdown)**. The file will open in the same tab. To get back to the file list, click **Save and close** or ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only). If a file is opened by a user with the view rights, only ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only) is available. Any changes made by this user will not be saved.
 
 ### Editing .md files
 
@@ -54,7 +54,7 @@ The following plugin interfaces are used:
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required for requests to the DocSpace portal API (for example, creating and saving files). The plugin also uses [markdown-it](https://markdown-it.github.io/markdown-it/) as a client-side Markdown rendering library.
-- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Administrator ⋮ → Settings → Integration → Plugins** to adjust the plugin's parameters.
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings → Integration → Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement a context menu action.
 - [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to implement the main button action. In the **Markdown** plugin, we use the **Action button -> More** menu elements in the **Documents** section or in the selected room to create `.md` files.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md). Used to interact with the specified file types. In this case, with the `.md` files.
