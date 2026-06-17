@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用方法
 

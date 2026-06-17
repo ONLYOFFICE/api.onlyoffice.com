@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 云端、本地部署及桌面版本中默认可用。
 
-您也可以按照 [桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)的安装说明，将其移除。
+您也可以按照 [桌面](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明，将其移除。
 
 插件 GUID：`{38E022EA-AD92-45FC-B22B-49DF39746DB4}`。
 

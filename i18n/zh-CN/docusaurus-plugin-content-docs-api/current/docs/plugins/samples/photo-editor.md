@@ -19,7 +19,7 @@ import Video from '@site/src/components/Video/Video';
 
 在 ONLYOFFICE 编辑器的云端、本地部署和桌面版本中默认可用。
 
-你可以按照以下说明卸载插件：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+你可以按照以下说明卸载插件：[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)、[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 插件 GUID：`{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`。
 
