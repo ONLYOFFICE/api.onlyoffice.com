@@ -30,7 +30,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetPresentation](../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [Delete](../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetPlaceholder](../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetPlaceholder.md)
+使用方法： [GetPresentation](../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [Delete](../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetPlaceholder](../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetPlaceholder.md)
 
 ## 结果
 

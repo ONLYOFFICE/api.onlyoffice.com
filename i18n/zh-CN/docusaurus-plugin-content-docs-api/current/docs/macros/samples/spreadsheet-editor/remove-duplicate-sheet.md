@@ -54,7 +54,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetSheets](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetUsedRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRangeByNumber](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Delete](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete.md)
+使用方法： [GetSheets](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetUsedRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRangeByNumber](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Delete](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete.md)
 
 ## 结果
 
