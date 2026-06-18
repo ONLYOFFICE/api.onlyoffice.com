@@ -11,6 +11,8 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 
 ## 如何传递标志
 
+在以下命令中，将 `<标志>` 替换为[标志](#标志)表中的某个标志。
+
 <Tabs>
   <TabItem value="windows" label="Windows">
 

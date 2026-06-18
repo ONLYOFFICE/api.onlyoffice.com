@@ -11,6 +11,8 @@ ONLYOFFICE Desktop Editors supports command-line flags that let you control how 
 
 ## How to pass a flag
 
+In the commands below, replace `<flag>` with one of the flags from the [Flags](#flags) table.
+
 <Tabs>
   <TabItem value="windows" label="Windows">
 
