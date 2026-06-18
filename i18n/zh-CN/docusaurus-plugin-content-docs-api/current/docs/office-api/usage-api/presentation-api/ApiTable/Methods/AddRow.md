@@ -33,7 +33,7 @@ expression.AddRow(oCell, isBefore);
 const presentation = Api.GetPresentation();
 
 const table = Api.CreateTable(2, 4);
-table.AddRow(1, true);
+table.AddRow(table.GetRow(1).GetCell(0), true);
 const row = table.GetRow(1);
 const cell = row.GetCell(0);
 const content = cell.GetContent();

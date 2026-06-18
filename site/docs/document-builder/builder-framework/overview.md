@@ -23,6 +23,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
 <Tabs groupId="lang" queryString="lang">
     <TabItem value="python" label="Python">
         ```py
+
         import os
         import docbuilder
 
@@ -47,6 +48,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
     </TabItem>
     <TabItem value="cpp" label="C++">
         ```cpp
+
         #include <string>
         #include "common.h"
         #include "docbuilder.h"
@@ -87,6 +89,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
     </TabItem>
     <TabItem value="com" label="COM">
         ```cpp
+
         #include <comutil.h>
         #include <atlcomcli.h>
         #include "docbuilder_midl.h"
@@ -140,6 +143,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
+
         import docbuilder.*;
 
         public class Program {
@@ -169,6 +173,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
     </TabItem>
     <TabItem value="net" label=".Net">
         ```cs
+
         using docbuilder_net;
 
         using OfficeFileTypes = docbuilder_net.FileTypes;
@@ -213,6 +218,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
     </TabItem>
     <TabItem value="js" label="JS">
         ```js
+
         builder.CreateFile("docx");
 
         var oDocument = Api.GetDocument();

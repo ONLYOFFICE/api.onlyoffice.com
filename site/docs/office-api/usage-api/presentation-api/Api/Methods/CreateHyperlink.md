@@ -14,7 +14,7 @@ expression.CreateHyperlink(link, tooltip);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| link | Required | string |  | The hyperlink address. Accepts an external URL (http, https, mailto, ftp) or one of the internal slide actions: "ppaction://hlinkshowjump?jump=firstslide", "ppaction://hlinkshowjump?jump=lastslide", "ppaction://hlinkshowjump?jump=nextslide", "ppaction://hlinkshowjump?jump=previousslide", "ppaction://hlinksldjumpslide&#123;N&#125;" (N is the zero-based slide index), "ppaction://hlinkfile?file=&#123;path&#125;" (opens an external file). |
+| link | Required | string |  | The hyperlink address. Accepts an external URL (http, https, mailto, ftp) or one of the internal slide actions: "ppaction://hlinkshowjump?jump=firstslide", "ppaction://hlinkshowjump?jump=lastslide", "ppaction://hlinkshowjump?jump=nextslide", "ppaction://hlinkshowjump?jump=previousslide", "ppaction://hlinksldjumpslide\{N\}" (N is the zero-based slide index), "ppaction://hlinkfile?file=\{path\}" (opens an external file). |
 | tooltip | Required | string |  | The tooltip text. |
 
 ## Returns

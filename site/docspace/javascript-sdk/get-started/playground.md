@@ -7,7 +7,7 @@ import {DocSpacePlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
 
 # Playground
 
-The Playground serves as an interactive platform for users to explore and test the capabilities of the ONLYOFFICE DocSpace JavaScript SDK without registration and installing anything. It provides users with various embedding modes, allowing them to experiment with different DocSpace configurations seamlessly.
+The Playground serves as an interactive platform for users to explore and test the capabilities of the ONLYOFFICE DocSpace Embed SDK without registration and installing anything. It provides users with various embedding modes, allowing them to experiment with different DocSpace configurations seamlessly.
 
 ## Features
 

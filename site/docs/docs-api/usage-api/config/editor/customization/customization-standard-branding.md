@@ -712,7 +712,7 @@ Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 
 **type:** `boolean` | **default:** `true`
 
-Whether [plugins](../../../../../plugin-and-macros/get-started/get-started.md) will be launched and available.
+Whether [plugins](../../../../../plugins/get-started/get-started.md) will be launched and available.
 
 **Example**: `true`
 

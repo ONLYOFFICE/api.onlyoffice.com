@@ -43,6 +43,5 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is just a sample text. ");
 paragraph.SetHighlight("lightGray");
-docContent.Push(paragraph);
 page.AddObject(shape);
 ```

@@ -2,6 +2,12 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.4.1
+
+### Document methods
+
+- Added the [Api/CompareDocuments](../usage-api/document-api/Api/Methods/CompareDocuments.md) method to Document API.
+
 ## Version 9.4
 
 ### Document methods

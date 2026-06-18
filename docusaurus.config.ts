@@ -182,7 +182,7 @@ const config: Config = {
       {
         trackingID: 'GTM-5NW47TX'
       },
-    ]
+    ],
   ],
 
   themeConfig: {
@@ -213,30 +213,57 @@ const config: Config = {
               sidebarId: 'docsDocs',
               label: 'Docs API',
               docsPluginId: 'api',
+              className: 'navbar-icon--docs-api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsOffice',
               label: 'Office API',
               docsPluginId: 'api',
+              className: 'navbar-icon--office-api',
+            },
+            {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docsPlugins',
+              label: 'Plugins',
+              docsPluginId: 'api',
+              className: 'navbar-icon--plugins',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugins and macros',
+              label: 'Macros',
               docsPluginId: 'api',
+              className: 'navbar-icon--macros',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docsAI',
+              label: 'AI',
+              docsPluginId: 'api',
+              className: 'navbar-icon--ai',
+            },
+            {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsBuilder',
               label: 'Document Builder',
               docsPluginId: 'api',
+              className: 'navbar-icon--builder',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsDesktop',
               label: 'Desktop Editors',
               docsPluginId: 'api',
+              className: 'navbar-icon--desktop',
             },
           ],
         },
@@ -249,27 +276,31 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
-                label: 'API Reference',
+              label: 'API Reference',
               docsPluginId: 'api',
+              className: 'navbar-icon--docspace-api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceJSSdk',
-                label: 'Embed SDK',
+              label: 'Embed SDK',
               docsPluginId: 'api',
+              className: 'navbar-icon--embed-sdk',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
               docsPluginId: 'api',
-             },
-             {
-               type: 'docSidebar',
-               sidebarId: 'docspaceMCPServer',
-               label: 'MCP Server',
-               docsPluginId: 'api',
-             },
+              className: 'navbar-icon--plugins',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceMCPServer',
+              label: 'MCP Server',
+              docsPluginId: 'api',
+              className: 'navbar-icon--mcp-server',
+            },
           ],
         },
         {

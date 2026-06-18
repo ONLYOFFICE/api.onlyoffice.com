@@ -10,6 +10,7 @@
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建自动颜色。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
+| [CompareDocuments](./Methods/CompareDocuments.md) | 无 | 将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档进行比较。两个文档之间的修订在当前文档中生成。 |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | 将文档转换为 Markdown 或 HTML 文本。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 创建新的块级容器。 |

@@ -713,7 +713,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型：** `boolean` | **默认值：** `true`
 
-[插件](../../../../../plugin-and-macros/get-started/get-started.md)是否将启动并可用。
+[插件](../../../../../plugins/get-started/get-started.md)是否将启动并可用。
 
 **示例**: `true`
 
@@ -1029,8 +1029,8 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 标尺和对话框中使用的测量单位。可以取以下值：
 
-- `cm` - 厘米;
-- `pt` - 点;
+- `cm` - 厘米；
+- `pt` - 点；
 - `inch` - 英寸。
 
 :::note

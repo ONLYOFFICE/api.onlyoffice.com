@@ -4,9 +4,9 @@ sidebar_position: -4
 
 # OAuth 2.0
 
-The [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authorization protocol enables a third-party application to obtain limited access to an HTTP service. You can add OAuth applications to the DocSpace portal and use them to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
+The [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authorization protocol enables a third-party application to obtain limited access to an HTTP service.
 
-**DocSpace OAuth API** allows developers to register a new OAuth application on the portal. 
+The **DocSpace OAuth API** allows developers to register a new OAuth application on the portal and use it to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
 
 This documentation describes:
 
@@ -14,7 +14,7 @@ This documentation describes:
 - How to [edit the application](editing-oauth-app.md)
 - How to preview the [authorization button](auth-button.md) and embed it into your website
 - How to [generate a developer token](developer-token.md)
-- How the [authorization flow](authorization-flow.md) looks like
+- How the [authorization flow](authorization-flow.md) works
 - How to [view active authorizations](viewing-active-authorizations.md)
 
 API methods for working with OAuth 2.0 clients are detailed [in this section](../../../../../docspace/api-backend/usage-api/authorize-o-auth.api.mdx).

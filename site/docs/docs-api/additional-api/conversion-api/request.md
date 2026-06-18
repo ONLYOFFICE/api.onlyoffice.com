@@ -68,7 +68,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | title | string | optional | The converted file name. |
 | token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
 | url | string | required | The absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-| watermark | object | optional | A JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
+| watermark | object | optional | A JSON object containing the [properties](../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | The vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
 | watermark.fill | integer[] \| string | optional | The watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
 | watermark.height | integer | optional | The watermark height measured in millimeters. |

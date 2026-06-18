@@ -229,6 +229,49 @@ pre code:not(.openapi-explorer__code-block-lines) {
     }
 /* END OPENAPI */
 
+/* START NAVBAR DROPDOWN ICONS */
+.dropdown__link[class*="navbar-icon--"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown__link[class*="navbar-icon--"]::before {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.navbar-icon--docs-api::before    { mask-image: url('/icons/docs-api-icon.svg'); }
+.navbar-icon--office-api::before  { mask-image: url('/icons/office-api-icon.svg'); }
+.navbar-icon--plugins::before     { mask-image: url('/icons/plugins-icon.svg'); }
+.navbar-icon--macros::before      { mask-image: url('/icons/code-icon.svg'); }
+.navbar-icon--ai::before          { mask-image: url('/icons/ai-icon.svg'); }
+.navbar-icon--builder::before     { mask-image: url('/icons/document-builder-icon.svg'); }
+.navbar-icon--desktop::before     { mask-image: url('/icons/desktop-editors-icon.svg'); }
+.navbar-icon--docspace-api::before { mask-image: url('/icons/docspace-api-icon.svg'); }
+.navbar-icon--embed-sdk::before   { mask-image: url('/icons/javascript-sdk-icon.svg'); }
+.navbar-icon--mcp-server::before  { mask-image: url('/icons/mcp-server-icon.svg'); }
+/* END NAVBAR DROPDOWN ICONS */
+
+/* START NAVBAR DROPDOWN SEPARATOR */
+.dropdown__menu li:has(> .navbar-dropdown-separator) {
+  padding: 0;
+}
+
+.navbar-dropdown-separator {
+  margin: 4px 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+/* END NAVBAR DROPDOWN SEPARATOR */
+
 /* START NAVBAR GITHUB BUTTON */
 .header-github-link::before {
   content: '';

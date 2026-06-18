@@ -15,7 +15,7 @@ expression.GetRange(Start, End);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Start | Optional | Number | 0 | Start position index in the current range. |
-| End | Optional | Number | -1 | End position index in the current range (if &lt;= 0, then the range is taken to the end). |
+| End | Optional | Number | -1 | End position index in the current range (if \<= 0, then the range is taken to the end). |
 
 ## Returns
 

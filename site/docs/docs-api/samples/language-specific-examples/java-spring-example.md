@@ -123,7 +123,7 @@ Please keep in mind the following security aspects when you are using test examp
         ``` ini
         files.storage=
         server.port=port
-        files.docservice.url.site=https://documentserver/
+        docservice.url=https://documentserver/
         ```
 
         where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
@@ -208,7 +208,7 @@ Please keep in mind the following security aspects when you are using test examp
         ``` ini
         files.storage=
         server.port=port
-        files.docservice.url.site=https://documentserver/
+        docservice.url=https://documentserver/
         ```
 
         where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
@@ -288,7 +288,7 @@ Please keep in mind the following security aspects when you are using test examp
         ``` ini
         files.storage=
         server.port=port
-        files.docservice.url.site=https://documentserver/
+        docservice.url=https://documentserver/
         ```
 
         where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.

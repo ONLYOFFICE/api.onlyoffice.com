@@ -1,0 +1,86 @@
+---
+sidebar_position: -6
+---
+
+# Context menu
+
+The plugin can be accessed via the context menu.
+
+![Context menu item](/assets/images/plugins/context-menu-item.png#gh-light-mode-only)![Context menu item](/assets/images/plugins/context-menu-item.dark.png#gh-dark-mode-only)
+
+## Creating a context menu item
+
+1. Subscribe to the [onContextMenuShow](../interacting-with-editors/overview/asc-plugin.md#oncontextmenushow) event which is called when the context menu has been shown.
+
+   :::note
+   If a plugin is listening for this event, it must call the **AddContextMenuItem** method (synchronously or not), because the editor waits for responses from all plugins before filling the context menu.
+   :::
+
+2. Call the [AddContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#addcontextmenuitem) method to add a button to the context menu.
+
+   **Example**:
+
+   ``` ts
+   Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
+     const items = {
+       guid: Asc.plugin.guid,
+       items: [
+         {
+           id: "onNameClick",
+           text: "Name",
+           items: [],
+         },
+       ],
+     };
+
+     Asc.plugin.executeMethod("AddContextMenuItem", [items]);
+   });
+   ```
+
+## Updating a context menu item
+
+To update the context menu item, call the [UpdateContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#updatecontextmenuitem) method.
+
+**Example**:
+
+```ts
+Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
+  const items = {
+    guid: Asc.plugin.guid,
+    items: [
+      {
+        id: "onNameClick",
+        text: "New name",
+        items: [],
+      },
+    ],
+  };
+
+  Asc.plugin.executeMethod("UpdateContextMenuItem", [items]);
+});
+```
+
+## Clicking a context menu item
+
+1. Subscribe to the [onContextMenuClick](../interacting-with-editors/overview/asc-plugin.md#oncontextmenuclick) event which is called when the context menu button has been clicked.
+
+2. Specify the **attachContextMenuClickEvent** to add an event listener, a function that will be called whenever the specified button is clicked in the context menu and triggers an event. For each context menu button, you can specify a separate event listener by its ID.
+
+   **Parameters**:
+
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | id | `string` | The event name. |
+   | action | `function` | The event listener. |
+
+   **Returns**: This method doesn't return any data.
+
+   **Example**:
+
+   ``` ts
+   Asc.plugin.attachContextMenuClickEvent("onNameClick", (data) => {
+     console.log(data);
+   });
+   ```
+
+For example, you can create your own spellchecker. In this case, the context menu items with words will have the same ID and the same event listener. And the necessary word will be defined with the data from the **attachContextMenuClickEvent** method.

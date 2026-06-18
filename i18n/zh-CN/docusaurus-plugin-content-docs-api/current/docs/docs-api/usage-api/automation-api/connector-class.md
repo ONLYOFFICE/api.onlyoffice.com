@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ## addContextMenuItem
 
-调用该函数将项目添加到上下文菜单。上下文菜单的操作过程与 [plugins](../../../plugin-and-macros/customization/context-menu.md) 相同，但 *onClick* 方法除外，该方法用于代替通过 ID 订阅。
+调用该函数将项目添加到上下文菜单。上下文菜单的操作过程与 [plugins](../../../plugins/customization/context-menu.md) 相同，但 *onClick* 方法除外，该方法用于代替通过 ID 订阅。
 
 ### 参数
 
@@ -26,7 +26,7 @@ sidebar_position: 1
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugins/configuration/configuration.md#variationsicons) 文档）。 |
 | *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -46,7 +46,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 ## addToolbarMenuItem
 
-调用该函数将项目添加到工具栏菜单。使用工具栏菜单的过程与 [plugins](../../../plugin-and-macros/customization/toolbar.md) 相同，除了使用 *onClick* 方法代替通过 ID 订阅。
+调用该函数将项目添加到工具栏菜单。使用工具栏菜单的过程与 [plugins](../../../plugins/customization/toolbar.md) 相同，除了使用 *onClick* 方法代替通过 ID 订阅。
 
 ### 参数
 
@@ -77,7 +77,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 项目类型。                                                                                                                           |
 | *text*           | string                                      | 项目标题。如果此字段为""，则工具栏按钮仅显示图标，不显示标题。                             |
 | *hint*           | string                                      | 项目提示。                                                                                                                           |
-| *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
+| *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../../plugins/configuration/configuration.md#variationsicons) 文档）。 |
 | *disabled*       | boolean                                     | 当前项目是否已锁定。                                                                                          |
 | *enableToggle*   | boolean                                     | 工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
 | *lockInViewMode* | boolean                                     | 工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |
@@ -129,11 +129,11 @@ connector.addToolbarMenuItem({
 
 被调用以添加事件侦听器的函数，该函数将在指定事件传递到目标时被调用。所有可用事件的列表与插件的列表相同：
 
-- [文本文档事件](../../../plugin-and-macros/interacting-with-editors/document-api/Events/Events.md)
-- [电子表格事件](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Events/Events.md)
-- [演示文稿事件](../../../plugin-and-macros/interacting-with-editors/presentation-api/Events/Events.md)
-- [PDF 事件](../../../plugin-and-macros/interacting-with-editors/pdf-api/Events/Events.md)
-- [表单事件](../../../plugin-and-macros/interacting-with-editors/form-api/Events/Events.md)
+- [文本文档事件](../../../plugins/interacting-with-editors/document-api/Events/Events.md)
+- [电子表格事件](../../../plugins/interacting-with-editors/spreadsheet-api/Events/Events.md)
+- [演示文稿事件](../../../plugins/interacting-with-editors/presentation-api/Events/Events.md)
+- [PDF 事件](../../../plugins/interacting-with-editors/pdf-api/Events/Events.md)
+- [表单事件](../../../plugins/interacting-with-editors/form-api/Events/Events.md)
 
 ### 参数
 
@@ -163,7 +163,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 | callback  | function | 可选     | 接收 `commandFn` 返回值的函数。支持原始类型、普通对象、数组和 TypedArray（最多 10 层嵌套）。如果返回值包含函数或超过嵌套限制，回调将收到 `undefined`。                                                                                                   |
 | isNoCalc  | boolean  | 可选     | 是否跳过文档重新计算。仅当您的编辑肯定不需要重新计算时，才设置为 `true`。默认值：`false`。                                                                                                                                                               |
 
-`commandFn` 函数在与其他 JavaScript 数据隔离的独立上下文中执行。如果需要将某些参数或其他数据传递给它，请使用 [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
+`commandFn` 函数在与其他 JavaScript 数据隔离的独立上下文中执行。如果需要将某些参数或其他数据传递给它，请使用 [Asc.scope](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
 ### 示例
 
@@ -237,11 +237,11 @@ connector.disconnect();
 
 调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同：
 
-- [文本文档方法](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/Methods.md)
-- [电子表格方法](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
-- [演示文稿方法](../../../plugin-and-macros/interacting-with-editors/presentation-api/Methods/Methods.md)
-- [PDF 方法](../../../plugin-and-macros/interacting-with-editors/pdf-api/Methods/Methods.md)
-- [表单方法](../../../plugin-and-macros/interacting-with-editors/form-api/Methods/Methods.md)
+- [文本文档方法](../../../plugins/interacting-with-editors/document-api/Methods/Methods.md)
+- [电子表格方法](../../../plugins/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
+- [演示文稿方法](../../../plugins/interacting-with-editors/presentation-api/Methods/Methods.md)
+- [PDF 方法](../../../plugins/interacting-with-editors/pdf-api/Methods/Methods.md)
+- [表单方法](../../../plugins/interacting-with-editors/form-api/Methods/Methods.md)
 
 ### 参数
 

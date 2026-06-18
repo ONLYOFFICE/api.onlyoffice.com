@@ -1,0 +1,32 @@
+---
+hide_table_of_contents: true
+description: 取消合并指定区域中的单元格。
+tags: ["Docs", "Macros", "Spreadsheets"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
+# 取消合并单元格区域
+
+取消选定的单元格区域的合并操作。
+
+```ts
+(function()
+{
+    Api.GetActiveSheet().GetRange("C5:D10").UnMerge();
+})();
+```
+
+使用方法： [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [UnMerge](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md)
+
+## 参考 Microsoft VBA 宏代码
+
+``` vb
+Sub example()
+    Range("C5:D10").UnMerge
+End Sub
+```
+
+## 结果
+
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range" dark />
