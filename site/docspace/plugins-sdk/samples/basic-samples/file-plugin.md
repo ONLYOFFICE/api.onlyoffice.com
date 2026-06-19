@@ -46,7 +46,9 @@ import {
   IPlugin,
   PluginStatus,
   IFilePlugin,
-  IFileItem
+  IFileItem,
+  Devices,
+  File
 } from '@onlyoffice/docspace-plugin-sdk'
 
 class Filesplugin implements IPlugin, IFilePlugin {
@@ -81,27 +83,18 @@ export default plugin;
 Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md) and append it to the end of the script:
 
 ```ts
-const plugin = new Filesplugin();
-
-
-export const fileItem: IFileItem = {
+const fileItem: IFileItem = {
   extension: ".md",
   fileTypeName: "Markdown",
   fileRowIcon: "icon.svg",
   fileTileIcon: "icon.svg",
-  onClick: () => {
-    console.log("Markdown file clicked!")
-  }
+  devices: [Devices.desktop, Devices.mobile, Devices.tablet],
+  onClick: (item: File) => {
+    console.log("Markdown file clicked!", item);
+  },
 }
 
 plugin.addFileItem(fileItem)
-
-
-declare global {
-  interface Window {
-    Plugins: any;
-  }
-}
 ```
 
 ## Step 5: Build the plugin
@@ -117,7 +110,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
@@ -132,3 +125,4 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
 - You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
 - Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.
+- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#devices) (for example, desktop, mobile, and tablet).

@@ -48,6 +48,7 @@ import {
   IContextMenuPlugin,
   IContextMenuItem,
   FilesType,
+  Devices,
   UsersType
 } from '@onlyoffice/docspace-plugin-sdk'
 
@@ -80,7 +81,7 @@ export default plugin;
 
 ## Step 4: Add a context menu item
 
-Create a [content menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md) and append it to the end of the script:
+Create a [context menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md) and append it to the end of the script:
 
 ``` ts
 const contextMenuItem: IContextMenuItem = {
@@ -91,6 +92,7 @@ const contextMenuItem: IContextMenuItem = {
     console.log("Context Menu works!")
   },
   fileType: [FilesType.file],
+  devices: [Devices.desktop, Devices.mobile, Devices.tablet],
   usersTypes: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin],
 };
 
@@ -110,7 +112,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
@@ -124,5 +126,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#devices), and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
 - The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onClick) function receives the selected file's ID.
