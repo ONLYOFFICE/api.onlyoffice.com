@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 配置 Ollama 的 CORS
 
 ## 为本地请求配置 OLLAMA_ORIGINS
@@ -14,7 +17,8 @@ sidebar_position: 2
 环境变量必须在启动 Ollama 服务之前设置。如果 Ollama 已在运行，则必须在设置变量后重新启动它。
 :::
 
-#### Linux (systemd 服务)
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
 
 大多数 Linux 安装将 Ollama 作为 systemd 服务运行。要配置环境变量：
 
@@ -42,7 +46,8 @@ sudo systemctl restart ollama
 systemctl show ollama --property=Environment
 ```
 
-#### Linux (手动启动)
+  </TabItem>
+  <TabItem value="linux-manual" label="Linux (manual)">
 
 如果不使用 systemd 手动运行 Ollama：
 
@@ -51,7 +56,8 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 ollama serve
 ```
 
-#### macOS
+  </TabItem>
+  <TabItem value="macos" label="macOS">
 
 Ollama 在 macOS 上作为独立应用程序运行。有几种设置环境变量的方法：
 
@@ -73,7 +79,8 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 
 然后从新的终端会话重新启动 Ollama 应用程序。
 
-#### Windows
+  </TabItem>
+  <TabItem value="windows" label="Windows">
 
 **PowerShell (仅当前会话)：**
 
@@ -90,7 +97,8 @@ setx OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
 
 使用 `setx` 后，关闭并重新打开 PowerShell，然后启动 Ollama。
 
-#### Docker
+  </TabItem>
+  <TabItem value="docker" label="Docker">
 
 ```bash
 docker run -d \
@@ -99,6 +107,9 @@ docker run -d \
   -v ollama:/root/.ollama \
   ollama/ollama
 ```
+
+  </TabItem>
+</Tabs>
 
 ### 值说明
 
@@ -163,7 +174,8 @@ OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
 
 默认情况下，Ollama 仅监听 localhost。要启用网络访问，请指定：
 
-#### Linux (systemd)
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
 
 ```bash
 sudo systemctl edit ollama
@@ -180,14 +192,25 @@ sudo systemctl daemon-reload
 sudo systemctl restart ollama
 ```
 
-#### Linux (手动) / macOS
+  </TabItem>
+  <TabItem value="linux-manual" label="Linux (manual) / macOS">
 
 ```bash
+export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 export OLLAMA_HOST=0.0.0.0
-export OLLAMA_PORT=11434
 ```
 
-#### Docker
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+$env:OLLAMA_ORIGINS = "http://*,https://*,onlyoffice://*"
+$env:OLLAMA_HOST = "0.0.0.0"
+ollama serve
+```
+
+  </TabItem>
+  <TabItem value="docker" label="Docker">
 
 ```bash
 docker run -d \
@@ -197,6 +220,9 @@ docker run -d \
   -v ollama:/root/.ollama \
   ollama/ollama
 ```
+
+  </TabItem>
+</Tabs>
 
 :::warning
 此配置会将 API 暴露给整个网络。必须采取额外的安全措施 (反向代理、身份验证)。
@@ -226,10 +252,10 @@ export OLLAMA_ORIGINS=https://*
 ollama serve
 ```
 
-或使用显式参数：
+或使用显式主机和端口：
 
 ```bash
-ollama serve --host 0.0.0.0 --port 11434
+OLLAMA_HOST=0.0.0.0:11434 ollama serve
 ```
 
 ### 重要安全说明
@@ -272,7 +298,7 @@ server {
 
     # 处理预检 OPTIONS 请求
     if ($request_method = OPTIONS) {
-        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Origin' $http_origin always;
         add_header 'Access-Control-Allow-Credentials' 'true' always;
         add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
         add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -283,7 +309,7 @@ server {
         proxy_pass http://localhost:11434;
 
         # CORS 头 (always 标志确保为所有响应代码添加头)
-        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Origin' $http_origin always;
         add_header 'Access-Control-Allow-Credentials' 'true' always;
         add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
         add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -320,7 +346,7 @@ location / {
     proxy_pass http://localhost:11434;
 
     # CORS 头
-    add_header 'Access-Control-Allow-Origin' '*' always;
+    add_header 'Access-Control-Allow-Origin' $http_origin always;
     add_header 'Access-Control-Allow-Credentials' 'true' always;
     add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
     add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -373,17 +399,27 @@ sudo systemctl reload nginx
 
 **解决方案：**设置环境变量后必须重新启动 Ollama 服务。
 
-对于 systemd：
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
+
 ```bash
 sudo systemctl restart ollama
 ```
 
-对于 Docker：
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+退出并重新启动 Ollama 应用程序。
+
+  </TabItem>
+  <TabItem value="docker" label="Docker">
+
 ```bash
 docker restart <container_name>
 ```
 
-对于 macOS 应用：退出并重新启动应用程序。
+  </TabItem>
+</Tabs>
 
 ### CORS 在 curl 中有效但在浏览器中无效
 
@@ -400,20 +436,29 @@ docker restart <container_name>
 
 ### 如何检查当前环境变量
 
-**Linux (systemd)：**
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
+
 ```bash
 systemctl show ollama --property=Environment
 ```
 
-**Linux (运行中的进程)：**
+  </TabItem>
+  <TabItem value="linux-process" label="Linux (运行中的进程)">
+
 ```bash
 cat /proc/$(pgrep ollama)/environ | tr '\0' '\n' | grep OLLAMA
 ```
 
-**Docker：**
+  </TabItem>
+  <TabItem value="docker" label="Docker">
+
 ```bash
 docker inspect <container_name> | grep -A 10 "Env"
 ```
+
+  </TabItem>
+</Tabs>
 
 ### 端口 11434 上的连接被拒绝
 

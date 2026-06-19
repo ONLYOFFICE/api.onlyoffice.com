@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Configuring Ollama with CORS
 
 ## Configuring OLLAMA_ORIGINS for local requests
@@ -14,7 +17,8 @@ To enable proper handling of requests from local applications and browsers, you 
 The environment variable must be set before starting Ollama service. If Ollama is already running, you must restart it after setting the variable.
 :::
 
-#### Linux (systemd service)
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
 
 Most Linux installations run Ollama as a systemd service. To configure environment variables:
 
@@ -42,7 +46,8 @@ To verify the variable is set:
 systemctl show ollama --property=Environment
 ```
 
-#### Linux (manual start)
+  </TabItem>
+  <TabItem value="linux-manual" label="Linux (manual)">
 
 If you run Ollama manually without systemd:
 
@@ -51,7 +56,8 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 ollama serve
 ```
 
-#### macOS
+  </TabItem>
+  <TabItem value="macos" label="macOS">
 
 Ollama on macOS runs as a standalone application. There are several ways to set environment variables:
 
@@ -73,7 +79,8 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 
 Then restart the Ollama application from a new terminal session.
 
-#### Windows
+  </TabItem>
+  <TabItem value="windows" label="Windows">
 
 **PowerShell (current session only):**
 
@@ -90,7 +97,8 @@ setx OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
 
 After using `setx`, close and reopen PowerShell, then start Ollama.
 
-#### Docker
+  </TabItem>
+  <TabItem value="docker" label="Docker">
 
 ```bash
 docker run -d \
@@ -99,6 +107,9 @@ docker run -d \
   -v ollama:/root/.ollama \
   ollama/ollama
 ```
+
+  </TabItem>
+</Tabs>
 
 ### Value descriptions
 
@@ -163,7 +174,8 @@ These environment variables must be set before starting Ollama service.
 
 By default, Ollama listens only on localhost. To enable network access, specify:
 
-#### Linux (systemd)
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
 
 ```bash
 sudo systemctl edit ollama
@@ -180,14 +192,25 @@ sudo systemctl daemon-reload
 sudo systemctl restart ollama
 ```
 
-#### Linux (manual) / macOS
+  </TabItem>
+  <TabItem value="linux-manual" label="Linux (manual) / macOS">
 
 ```bash
+export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 export OLLAMA_HOST=0.0.0.0
-export OLLAMA_PORT=11434
 ```
 
-#### Docker
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+$env:OLLAMA_ORIGINS = "http://*,https://*,onlyoffice://*"
+$env:OLLAMA_HOST = "0.0.0.0"
+ollama serve
+```
+
+  </TabItem>
+  <TabItem value="docker" label="Docker">
 
 ```bash
 docker run -d \
@@ -197,6 +220,9 @@ docker run -d \
   -v ollama:/root/.ollama \
   ollama/ollama
 ```
+
+  </TabItem>
+</Tabs>
 
 :::warning
 This configuration exposes the API to the entire network. Additional security measures (reverse proxy, authentication) are mandatory.
@@ -226,10 +252,10 @@ export OLLAMA_ORIGINS=https://*
 ollama serve
 ```
 
-Or with explicit parameters:
+Or with an explicit host and port:
 
 ```bash
-ollama serve --host 0.0.0.0 --port 11434
+OLLAMA_HOST=0.0.0.0:11434 ollama serve
 ```
 
 ### Important security notes
@@ -272,7 +298,7 @@ server {
 
     # Handle preflight OPTIONS requests
     if ($request_method = OPTIONS) {
-        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Origin' $http_origin always;
         add_header 'Access-Control-Allow-Credentials' 'true' always;
         add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
         add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -283,7 +309,7 @@ server {
         proxy_pass http://localhost:11434;
 
         # CORS headers (always flag ensures headers are added for all response codes)
-        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Origin' $http_origin always;
         add_header 'Access-Control-Allow-Credentials' 'true' always;
         add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
         add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -320,7 +346,7 @@ location / {
     proxy_pass http://localhost:11434;
     
     # CORS headers
-    add_header 'Access-Control-Allow-Origin' '*' always;
+    add_header 'Access-Control-Allow-Origin' $http_origin always;
     add_header 'Access-Control-Allow-Credentials' 'true' always;
     add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
     add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS' always;
@@ -373,17 +399,27 @@ sudo systemctl reload nginx
 
 **Solution:** The Ollama service must be restarted after setting environment variables.
 
-For systemd:
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
+
 ```bash
 sudo systemctl restart ollama
 ```
 
-For Docker:
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+Quit and relaunch the Ollama application.
+
+  </TabItem>
+  <TabItem value="docker" label="Docker">
+
 ```bash
 docker restart <container_name>
 ```
 
-For macOS app: Quit and relaunch the application.
+  </TabItem>
+</Tabs>
 
 ### CORS works with curl but not in browser
 
@@ -400,20 +436,29 @@ For macOS app: Quit and relaunch the application.
 
 ### How to check current environment variables
 
-**Linux (systemd):**
+<Tabs>
+  <TabItem value="linux-systemd" label="Linux (systemd)">
+
 ```bash
 systemctl show ollama --property=Environment
 ```
 
-**Linux (running process):**
+  </TabItem>
+  <TabItem value="linux-process" label="Linux (running process)">
+
 ```bash
 cat /proc/$(pgrep ollama)/environ | tr '\0' '\n' | grep OLLAMA
 ```
 
-**Docker:**
+  </TabItem>
+  <TabItem value="docker" label="Docker">
+
 ```bash
 docker inspect <container_name> | grep -A 10 "Env"
 ```
+
+  </TabItem>
+</Tabs>
 
 ### Connection refused on port 11434
 
