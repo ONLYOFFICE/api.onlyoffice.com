@@ -396,7 +396,7 @@ By default, the plugin template includes a basic implementation in the `src/inde
 <details>
   <summary>Settingsplugin class</summary>
 
-```js
+```ts
 // Import interfaces and components from the SDK
 import {
   IPlugin,
@@ -490,7 +490,7 @@ This step defines the full settings interface: input fields, a toggle, a dropdow
 <details>
   <summary>UI components</summary>
 
-```js
+```ts
 // OFFLINE MODE toggle
 const offToggleButtonProps: IToggleButton = {
   isChecked: false,

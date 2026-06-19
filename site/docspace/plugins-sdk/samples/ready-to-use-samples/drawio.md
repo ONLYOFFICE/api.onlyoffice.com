@@ -23,7 +23,7 @@ In case you want to adjust the plugin settings, go to **Settings → Integration
 
 - **Languages** - choose the necessary language from the list. The **Auto** option corresponds to the portal language.
 - **Offline mode** - when this setting is active, all remote operations and features are disabled for security reasons.
-- **Libraries** - turn on the switcher to be able to load custom shape libraries (**File -> New Library / Open Library from** in the **Draw.io** menu).
+- **Libraries** - turn on the switcher to be able to load custom shape libraries (**File → New Library / Open Library from** in the **Draw.io** menu).
 
 There you can also view the plugin metadata, such as the author, version, status, homepage, and description.
 
@@ -34,11 +34,11 @@ There you can also view the plugin metadata, such as the author, version, status
 To create a new `.drawio` diagram:
 
 1. Open the **Documents** section or one of the available rooms.
-2. Click **Actions -> More**.
+2. Click **Actions → More**.
 3. Select the **Draw.io** plugin from the appeared menu.
 4. Change the file name in a pop-up window and click **Create**. A new `.drawio` file appears in the file list.
 
-To open the created diagram, click the file name or do it via the file context menu: **right-click -> Edit diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
+To open the created diagram, click the file name or do it via the file context menu: **right-click → Edit diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
 
 ### Editing an exported diagram
 

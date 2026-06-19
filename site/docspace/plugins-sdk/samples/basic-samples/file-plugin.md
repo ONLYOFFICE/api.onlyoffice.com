@@ -83,7 +83,7 @@ export default plugin;
 Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md) and append it to the end of the script:
 
 ```ts
-export const fileItem: IFileItem = {
+const fileItem: IFileItem = {
   extension: ".md",
   fileTypeName: "Markdown",
   fileRowIcon: "icon.svg",
@@ -95,13 +95,6 @@ export const fileItem: IFileItem = {
 }
 
 plugin.addFileItem(fileItem)
-
-
-declare global {
-  interface Window {
-    Plugins: any;
-  }
-}
 ```
 
 ## Step 5: Build the plugin

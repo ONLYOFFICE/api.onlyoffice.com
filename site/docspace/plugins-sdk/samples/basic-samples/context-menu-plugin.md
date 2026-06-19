@@ -81,7 +81,7 @@ export default plugin;
 
 ## Step 4: Add a context menu item
 
-Create a [content menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md) and append it to the end of the script:
+Create a [context menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md) and append it to the end of the script:
 
 ``` ts
 const contextMenuItem: IContextMenuItem = {

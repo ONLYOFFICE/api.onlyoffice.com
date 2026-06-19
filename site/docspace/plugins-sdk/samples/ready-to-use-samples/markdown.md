@@ -28,11 +28,11 @@ In case you want to view the plugin metadata, such as the author, version, statu
 To create a new `.md` file:
 
 1. Open the **Documents** section or one of the available rooms.
-2. Click **Actions -> More**.
+2. Click **Actions → More**.
 3. Select the **Markdown** plugin from the appeared menu.
 4. Change the file name in a pop-up window and click **Create**. A new `.md` file appears in the file list.
 
-To open the created `.md` file, click the file name or do it via the file context menu: **right-click -> Edit markdown (Preview markdown)**. The file will open in the same tab. To get back to the file list, click **Save and close** or ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only). If a file is opened by a user with the view rights, only ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only) is available. Any changes made by this user will not be saved.
+To open the created `.md` file, click the file name or do it via the file context menu: **right-click → Edit markdown (Preview markdown)**. The file will open in the same tab. To get back to the file list, click **Save and close** or ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only). If a file is opened by a user with the view rights, only ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only) is available. Any changes made by this user will not be saved.
 
 ### Editing .md files
 
