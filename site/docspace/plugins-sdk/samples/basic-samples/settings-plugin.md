@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add a configuration panel to the plugin settings area.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---

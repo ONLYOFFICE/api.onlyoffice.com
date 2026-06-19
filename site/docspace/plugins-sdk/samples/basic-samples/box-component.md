@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure and use the Box layout component.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Convert documents, spreadsheets, and presentations to PDF.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---

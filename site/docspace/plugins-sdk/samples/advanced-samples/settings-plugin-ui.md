@@ -1,4 +1,4 @@
-﻿---
+---
 description: Build an admin settings interface with form controls.
 tags: ["DocSpace", "Plugins", "Advanced"]
 ---
@@ -476,7 +476,7 @@ declare global {
 }
 
 window.Plugins = window.Plugins || {};
-window.Plugins.Extsearch = plugin;
+window.Plugins.Settingsplugin = plugin;
 
 export default plugin;
 ```
@@ -533,6 +533,32 @@ const urlInput: IInput = {
   autoComplete: InputAutocomplete.off
 };
 
+const onLoginChange = (val: string) => {
+  logInInput.value = val;
+  return { actions: [Actions.updateProps], newProps: logInInput };
+};
+const logInInput: IInput = {
+  value: "",
+  onChange: onLoginChange,
+  scale: true,
+  size: InputSize.base,
+  type: InputType.text,
+  autoComplete: InputAutocomplete.off
+};
+
+const onPasswordChange = (val: string) => {
+  passwordInput.value = val;
+  return { actions: [Actions.updateProps], newProps: passwordInput };
+};
+const passwordInput: IInput = {
+  value: "",
+  onChange: onPasswordChange,
+  scale: true,
+  size: InputSize.base,
+  type: InputType.password,
+  autoComplete: InputAutocomplete.off
+};
+
 // SAVE button
 const onClick = () => {
   console.log(offToggleButtonProps.isChecked);
@@ -567,10 +593,16 @@ const parentBox: IBox = {
     { component: Components.text, props: { text: "Password", fontWeight: 600, fontSize: "13px", lineHeight: "20px", noSelect: true } },
     { component: Components.box, props: { marginProp: "0 0 24px", children: [{ component: Components.input, props: passwordInput }] } },
 
-    // Language and Toggle
-    { component: Components.box, props: langGroup.props },
-    { component: Components.box, props: offGroup.props },
-    { component: Components.box, props: offDescriptionBox },
+    // Language
+    { component: Components.text, props: { text: "Language", fontWeight: 600, fontSize: "13px", lineHeight: "20px", noSelect: true } },
+    { component: Components.box, props: { marginProp: "0 0 20px", widthProp: "100%", children: [{ component: Components.comboBox, props: langComboBox }] } },
+
+    // Offline mode
+    { component: Components.box, props: { displayProp: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginProp: "0 0 8px", children: [
+      { component: Components.text, props: { text: "Offline mode", fontWeight: 600, fontSize: "16px", lineHeight: "22px", noSelect: true } },
+      { component: Components.toggleButton, props: offToggleButtonProps },
+    ] } },
+    { component: Components.text, props: { text: 'When the "offline mode" is active, this disables all remote operations and features to protect.', color: "#A3A9AE", fontSize: "12px", fontWeight: 400, lineHeight: "16px", noSelect: true } },
 
     // Save
     { component: Components.button, props: ButtonProps }
@@ -607,7 +639,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 7: Test the plugin
 
-1. Go to **Settings → Integration → Plugins**
+1. Go to **Settings → Integration → Plugins**.
 2. Click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) for your plugin.
 3. Enter test values in the **URL**, **Login**, and **Password** fields.
 4. Click **Save**.

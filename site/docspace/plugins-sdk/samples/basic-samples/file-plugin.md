@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add support for a custom file extension with icons.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---
@@ -83,17 +83,14 @@ export default plugin;
 Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md) and append it to the end of the script:
 
 ```ts
-const plugin = new Filesplugin();
-
-
 export const fileItem: IFileItem = {
   extension: ".md",
   fileTypeName: "Markdown",
   fileRowIcon: "icon.svg",
   fileTileIcon: "icon.svg",
-  devices: [Devices.desktop, Devices.mobile, Devices.tablet,],
+  devices: [Devices.desktop, Devices.mobile, Devices.tablet],
   onClick: (item: File) => {
-    console.log("Markdown file clicked!",item);
+    console.log("Markdown file clicked!", item);
   },
 }
 

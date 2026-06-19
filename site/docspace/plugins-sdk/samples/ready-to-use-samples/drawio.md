@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create diagrams and flowcharts with the Draw.io plugin.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
@@ -58,7 +58,7 @@ The following plugin interfaces are used:
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service ([Draw.io](https://www.drawio.com/)).
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings → Integration → Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement a context menu action.
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to implement the main button action. In the **Draw.io** plugin, we use the **Action button -> More** menu elements in the **Documents** section or in the selected room to create `.drawio` diagrams.
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to implement the main button action. In the **Draw.io** plugin, we use the **Action button → More** menu elements in the **Documents** section or in the selected room to create `.drawio` diagrams.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md). Used to interact with the specified file types. In this case, with the `.drawio` files.
 
 ## Support

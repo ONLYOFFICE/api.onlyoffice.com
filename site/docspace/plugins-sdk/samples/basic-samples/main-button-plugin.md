@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add a custom button to the main toolbar.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Recognize and convert spoken speech into text.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---

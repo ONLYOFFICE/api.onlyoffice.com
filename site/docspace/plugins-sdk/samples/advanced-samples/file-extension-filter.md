@@ -1,4 +1,4 @@
-﻿---
+---
 description: Filter and display files by extension in a modal dialog.
 tags: ["DocSpace", "Plugins", "Advanced"]
 ---
@@ -296,11 +296,12 @@ npm i -g @onlyoffice/docspace-plugin-sdk
    npx create-docspace-plugin
    ```
 
-2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage. In this case, set the plugin name to `extsearch` and the `pluginName` will be generated as `Extsearch`.  
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage. In this case, set the plugin name to `extsearch` and the plugin will be registered globally as `Extsearch`.
+
    :::note
    This key is used to register the plugin: `window.Plugins.Extsearch = plugin;`.
-   See the full example code for more details.
    :::
+
 3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Context menu`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
 ## Step 2: Confirm plugin configuration
@@ -315,12 +316,12 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md). The plugin includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (origin, proxy, prefix). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md). It includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (`origin`, `proxy`, `prefix`). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
 
 <details>
   <summary>ExtSearchPlugin class</summary>
 
-```js
+```ts
 import {
   IPlugin,
   PluginStatus,
@@ -418,7 +419,7 @@ Define a dropdown to choose a file extension and a button to filter and render f
 <details>
   <summary>UI components</summary>
 
-```js
+```ts
 // Store current API base URL and selected room ID
 let apiBaseURL: string = plugin.getAPI().origin;
 let currentRoomId: number | null = null;

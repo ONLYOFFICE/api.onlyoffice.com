@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add a custom item to the file context menu.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---

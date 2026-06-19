@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure and use the ComboBox dropdown component.
 tags: ["DocSpace", "Plugins", "Basic"]
 ---
@@ -96,7 +96,7 @@ const comboBox: IComboBox = {
   modernView: false
 }
 
-// Add text component with props to the modal
+// Add combo box component with props to the modal
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
@@ -333,7 +333,7 @@ const comboBox: IComboBox = {
   modernView: false
 };
 
-// Add text component with props to the modal
+// Add combo box component with props to the modal
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
@@ -411,7 +411,7 @@ This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles 
 ## Step 9: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Go to **Settings → Integration → Plugins**
+2. Go to **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
