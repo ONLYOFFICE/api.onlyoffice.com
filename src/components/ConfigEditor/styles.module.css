@@ -22,10 +22,6 @@
   --ce-radius-sm: 4px;
   --ce-radius-md: 6px;
   
-  /* Transitions */
-  --ce-transition-fast: 150ms ease;
-  --ce-transition-base: 200ms ease;
-
   /* Focus */
   --ce-focus-ring: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
 }
@@ -58,11 +54,11 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ce-radius-sm);
     cursor: pointer;
     color: var(--ifm-color-emphasis-600);
-    transition: all var(--ce-transition-base);
+    transition: all var(--ifm-transition-fast) ease;
 }
 
 .headerButton:hover {
@@ -101,7 +97,7 @@
     border: none;
     border-radius: var(--ce-radius-sm);
     cursor: pointer;
-    transition: all var(--ce-transition-fast);
+    transition: all var(--ifm-transition-fast) ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,9 +145,9 @@
             cursor: pointer;
             border-bottom: 3px solid transparent;
             margin-bottom: -1px;
-            transition: color var(--ce-transition-base),
-            border-color var(--ce-transition-base),
-            background-color var(--ce-transition-base);
+            transition: color var(--ifm-transition-fast) ease,
+            border-color var(--ifm-transition-fast) ease,
+            background-color var(--ifm-transition-fast) ease;
             border-radius: var(--ce-radius-sm) var(--ce-radius-sm) 0 0;
         }
 
@@ -223,14 +219,13 @@
     box-sizing: border-box;
     padding: var(--ce-space-2) var(--ce-space-3);
     font-size: var(--ce-text-sm);
-    line-height: 1.5;
     color: var(--ifm-color-content);
     background: var(--ifm-background-color);
-    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ce-radius-md);
-    transition: border-color var(--ce-transition-base),
-                box-shadow var(--ce-transition-base),
-                background-color var(--ce-transition-base);
+    transition: border-color var(--ifm-transition-fast) ease,
+                box-shadow var(--ifm-transition-fast) ease,
+                background-color var(--ifm-transition-fast) ease;
 }
 
 .field input[type='text']:hover:not(:disabled),
@@ -317,8 +312,8 @@
     background: var(--ifm-color-emphasis-50);
     border-left: 3px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ce-radius-sm);
-    transition: border-color var(--ce-transition-base),
-                background-color var(--ce-transition-base);
+    transition: border-color var(--ifm-transition-fast) ease,
+                background-color var(--ifm-transition-fast) ease;
 }
 
 .arrayItem:hover {
@@ -346,14 +341,14 @@
 .arrayItemHeader button,
 .actionButton {
     background: transparent;
-    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ce-radius-md);
     padding: var(--ce-space-2) var(--ce-space-3);
     font-size: var(--ce-text-sm);
     font-weight: 500;
     color: var(--ifm-color-emphasis-800);
     cursor: pointer;
-    transition: all var(--ce-transition-base);
+    transition: all var(--ifm-transition-fast) ease;
 }
 
 .arrayItemHeader button:hover,
