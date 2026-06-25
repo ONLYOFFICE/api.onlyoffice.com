@@ -65,7 +65,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md)
+使用方法： [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md)
 
 ## 结果
 

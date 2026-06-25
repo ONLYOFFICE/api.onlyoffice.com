@@ -11,8 +11,8 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two-Factor Authentication</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>
@@ -52,7 +52,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
       <iframe id="ds-frame"></iframe>
     </div>
 
-    <!-- Step 5: JavaScript SDK Logic -->
+    <!-- Step 5: Embed SDK Logic -->
     <script>
       const elScreen1 = document.getElementById("screen1");
       const elScreen2 = document.getElementById("screen2");

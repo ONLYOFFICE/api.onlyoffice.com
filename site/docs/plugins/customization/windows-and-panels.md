@@ -16,16 +16,16 @@ You can run multiple panel plugins at the same time. For each plugin, a separate
 
 To create a modal window / panel for the plugin:
 
-1. In the [plugin code](../interacting-with-editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../fundamentals/configuration/config-json.md#variations) in the plugin config.
+1. In the [plugin code](../interacting-with-editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../configuration/configuration.md#variations) in the plugin config.
 
    **Parameters**:
 
    | Name                   | Type       | Example                                                                                                              | Description                                                                                                                                                                                                                                                    |
    | ---------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | variations             | `object`   |                                                                                                                      | The modal window / panel settings.                                                                                                                                                                                                                             |
-   | variations.url         | `string`   | "settings.html"                                                                                                      | The modal window / panel entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../fundamentals/configuration/entry-point.md) section for the detailed information. |
+   | variations.url         | `string`   | "settings.html"                                                                                                      | The modal window / panel entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../configuration/entry-point.md) section for the detailed information. |
    | variations.description | `string`   | "Description"                                                                                                        | The description for the modal window / panel.                                                                                                                                                                                                                  |
-   | variations.type        | `string`   | "window"                                                                                                             | The plugin [type](../fundamentals/configuration/config-json.md#variationstype). Use the `"window"` value for modal windows, `"panel"` for left panels and `"panelRight"` for right panels.                                                                |
+   | variations.type        | `string`   | "window"                                                                                                             | The plugin [type](../configuration/configuration.md#variationstype). Use the `"window"` value for modal windows, `"panel"` for left panels and `"panelRight"` for right panels.                                                                |
    | variations.size        | `number[]` | [343, 122]                                                                                                           | The modal window size. This parameter is used only for modal windows.                                                                                                                                                                                          |
    | variations.buttons     | `Button[]` | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | The list of skinnable plugin buttons used in the modal windows. This parameter is used only for modal windows.                                                                                                                                                 |
    | variations.isActivated | `boolean`  | false                                                                                                                | Specifies whether the created panel will be collapsed (`false`) or expanded (`true`). The default value is `true`. This parameter is only available since version 8.3 and if the `variations.type` parameter is "panel" or "panelRight".                 |
@@ -67,7 +67,7 @@ To create a modal window / panel for the plugin:
    const newWindow = new window.Asc.PluginWindow();
    ```
 
-3. Specify the window / panel appearance in the [index.html](../fundamentals/configuration/entry-point.md) file.
+3. Specify the window / panel appearance in the [index.html](../configuration/entry-point.md) file.
 
 ## Showing a window
 
@@ -286,9 +286,9 @@ You can send a message to the plugin modal window / panel by using the **SendToW
 window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
-### attachEvent
+### attachEditorEvent
 
-You can subscribe to the messages from the plugin by using the **attachEvent** method in the window / panel code.
+You can subscribe to the messages from the plugin by using the **attachEditorEvent** method in the window / panel code.
 
 **Parameters**:
 
@@ -302,7 +302,7 @@ You can subscribe to the messages from the plugin by using the **attachEvent** m
 **Example**:
 
 ```ts
-Asc.plugin.attachEvent("messageName", (message) => {
+Asc.plugin.attachEditorEvent("messageName", (message) => {
   console.log(message);
 });
 ```

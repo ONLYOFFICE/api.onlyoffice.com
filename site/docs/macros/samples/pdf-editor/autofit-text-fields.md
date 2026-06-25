@@ -25,7 +25,7 @@ Autofits all the text fields in the document.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [ToFixed](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/ToFixed.md), [SetAutoFit](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetAutoFit.md)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [ToFixed](../../../office-api/usage-api/form-api/ApiTextForm/Methods/ToFixed.md), [SetAutoFit](../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetAutoFit.md)
 
 ## Result
 

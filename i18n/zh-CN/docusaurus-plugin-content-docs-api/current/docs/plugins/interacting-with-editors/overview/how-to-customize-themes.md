@@ -29,10 +29,10 @@ function onThemeChanged(theme) {
 
 附加主题变更事件有两种方式：
 
-**选项 1：使用 attachEvent 方法**
+**选项 1：使用 attachEditorEvent 方法**
 
 ```ts
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 **选项 2：直接赋值**
@@ -73,7 +73,7 @@ function onThemeChanged(theme) {
 
 // Attach the event handler
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 ### 为不同主题应用 CSS
@@ -98,7 +98,7 @@ function onThemeChanged(theme) {
 }
 
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+window.Asc.plugin.attachEditorEvent("onThemeChanged", onThemeChanged);
 ```
 
 然后定义您的 CSS 规则：

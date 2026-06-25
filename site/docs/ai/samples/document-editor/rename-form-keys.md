@@ -166,7 +166,7 @@ func.call = async function (params) {
     "3) If multiple fields share the same meaning, add numeric suffixes (_1, _2, …). " +
     "4) All new keys must be globally unique. " +
     '5) "newValues" must map each new key to a short placeholder (≤60 chars). ' +
-    "Output JSON only — no explanations, no code fences.";
+    "Output JSON only - no explanations, no code fences.";
 
   // Combine system hint with form fields data
   const argPrompt =
@@ -270,7 +270,7 @@ func.call = async function (params) {
 return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/GetFormKey.md), [GetFormType](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/GetFormType.md), [GetPlaceholderText](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/GetPlaceholderText.md), [GetText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [IsChecked](/docs/office-api/usage-api/document-api/ApiCheckBoxForm/Methods/IsChecked.md), [SetFormKey](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/SetFormKey.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands#ascscope-object)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../office-api/usage-api/document-api/ApiTextForm/Methods/GetFormKey.md), [GetFormType](../../../office-api/usage-api/document-api/ApiTextForm/Methods/GetFormType.md), [GetPlaceholderText](../../../office-api/usage-api/document-api/ApiTextForm/Methods/GetPlaceholderText.md), [GetText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [IsChecked](../../../office-api/usage-api/document-api/ApiCheckBoxForm/Methods/IsChecked.md), [SetFormKey](../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetFormKey.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

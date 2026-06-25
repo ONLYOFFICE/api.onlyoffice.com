@@ -14,7 +14,7 @@ For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc.,
 
 ## How to enable debug mode?
 
-To enable [debug mode](../usage-api/debugging/running-in-debug-mode-on-windows.md), run the desktop editor with *--ascdesktop-support-debug-info* flag.
+To enable [debug mode](../usage-api/debugging.md), run the desktop editor with *--ascdesktop-support-debug-info* flag.
 
 ## How to add plugins to the desktop editors?
 

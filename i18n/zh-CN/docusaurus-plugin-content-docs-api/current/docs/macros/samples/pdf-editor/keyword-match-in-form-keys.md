@@ -29,7 +29,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/SetRequired.md)
+使用方法： [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetRequired](../../../office-api/usage-api/form-api/ApiFormBase/Methods/SetRequired.md)
 
 ## 结果
 

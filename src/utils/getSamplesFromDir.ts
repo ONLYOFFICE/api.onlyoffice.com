@@ -2,6 +2,7 @@ import type { SamplesGrid } from '@site/src/components/SamplesGrid';
 import docsSamplesData from '@site/src/data/docs-samples.json';
 import docsOfficeApiData from '@site/src/data/docs-office-api-samples.json';
 import docsPluginsData from '@site/src/data/docs-plugins-samples.json';
+import docsMacrosData from '@site/src/data/docs-macros-samples.json';
 import docsBuilderData from '@site/src/data/docs-builder-samples.json';
 import docsConnectorsData from '@site/src/data/docs-connectors-samples.json';
 import docspaceSamplesData from '@site/src/data/docspace-samples.json';
@@ -57,6 +58,7 @@ export function getDocsSamples(category: string): SamplesGrid.Item[] {
     ...toItems(docsSamplesData, category),
     ...toItems(docsOfficeApiData, category),
     ...toItems(docsPluginsData, category),
+    ...toItems(docsMacrosData, category),
     ...toItems(docsBuilderData, category),
     ...toItems(docsConnectorsData, category),
   ]);

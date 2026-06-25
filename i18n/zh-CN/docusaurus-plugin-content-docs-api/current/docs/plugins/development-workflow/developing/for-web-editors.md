@@ -6,7 +6,7 @@ sidebar_position: -2
 
 如要为 ONLYOFFICE 网页编辑器开发插件，请按以下步骤操作：
 
-1. 在本地创建一个文件夹，并将 [index.html](../../fundamentals/configuration/entry-point.md) 和 [config.json](../../fundamentals/configuration/config-json.md) 文件放入其中。
+1. 在本地创建一个文件夹，并将 [index.html](../../configuration/entry-point.md) 和 [config.json](../../configuration/configuration.md) 文件放入其中。
 
 2. 启动文件夹的服务。在插件目录下运行以下命令：
 

@@ -8,7 +8,7 @@ sidebar_position: -3
 
 callback 是方法返回的结果，是一个可选参数。如果未传入该参数，则会使用 window.Asc.plugin.onMethodReturn 函数来返回方法执行结果。
 
-## 调用方法
+## 调用方法 {#executemethod}
 
 ### 参数
 

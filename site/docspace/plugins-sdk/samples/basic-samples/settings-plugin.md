@@ -90,14 +90,14 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 5: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 6: Test the plugin
 
-1. Go to **Admin Panel → Integration → Plugins**.
-2. Click ![Settings icon](/assets/images/docspace/settings-icon.png) for your plugin.
+1. Go to **Settings → Integration → Plugins**.
+2. Click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) for your plugin.
 3. The settings panel should open with default behavior.
 4. You can customize this panel further in your plugin frontend if needed.
 

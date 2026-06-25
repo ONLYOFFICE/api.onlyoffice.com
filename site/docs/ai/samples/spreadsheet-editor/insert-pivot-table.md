@@ -193,7 +193,7 @@ func.call = async function (params) {
     "Rules:",
     "1. Column selection priority:",
     "   a) If mandatory grouping columns are specified and found: use ONLY those matched columns as pivot rows.",
-    "   b) If no mandatory columns or none found: choose 1–2 best column indices for pivot rows (categorical/grouping).",
+    "   b) If no mandatory columns or none found: choose 1-2 best column indices for pivot rows (categorical/grouping).",
     "2. For automatic column selection (when no mandatory columns found):",
     "   a) Contain textual (non-numeric) data.",
     "   b) Prefer columns with at least 2 distinct values.",
@@ -213,8 +213,8 @@ func.call = async function (params) {
     "   - If found, use its index as the ONLY pivot value column.",
     "   - Fallback: If no acceptable match is found, choose the best available numeric column (or the most aggregatable one) as the value column.",
     "   - If a fallback is used, still follow all output rules (numbers only, correct braces).",
-    "6. Ordering rule: Within the rows list and within the columns list, place indices in descending order of “grouping potential” (more suitable for grouping first). Use ascending numeric order only to break ties.",
-    "   Definition of “grouping potential”: medium-to-high cardinality (not all identical, not all unique), well-distributed categories, likely to produce useful pivot groups.",
+    "6. Ordering rule: Within the rows list and within the columns list, place indices in descending order of 'grouping potential' (more suitable for grouping first). Use ascending numeric order only to break ties.",
+    "   Definition of 'grouping potential': medium-to-high cardinality (not all identical, not all unique), well-distributed categories, likely to produce useful pivot groups.",
     "7. The answer MUST start with '{' and end with '}'. Missing braces = invalid.",
     "8. No extra text, spaces, or newlines.",
     "9. Output ONLY numbers, no labels like 'rows:' or 'data:'.",
@@ -342,7 +342,7 @@ func.call = async function (params) {
 return func;
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [InsertPivotNewWorksheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/InsertPivotNewWorksheet.md), [GetParent](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetParent.md), [GetValue2](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetPivotFields](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetPivotFields.md), [GetName](/docs/office-api/usage-api/spreadsheet-api/ApiPivotField/Methods/GetName.md), [AddFields](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddFields.md), [AddDataField](/docs/office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddDataField.md), [EndAction](/docs/plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](/docs/plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [InsertPivotNewWorksheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/InsertPivotNewWorksheet.md), [GetParent](../../../office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetParent.md), [GetValue2](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2.md), [GetSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetPivotFields](../../../office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/GetPivotFields.md), [GetName](../../../office-api/usage-api/spreadsheet-api/ApiPivotField/Methods/GetName.md), [AddFields](../../../office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddFields.md), [AddDataField](../../../office-api/usage-api/spreadsheet-api/ApiPivotTable/Methods/AddDataField.md), [EndAction](../../../plugins/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](../../../plugins/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

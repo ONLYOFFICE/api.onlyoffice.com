@@ -26,7 +26,7 @@ The function called to add an item to the context menu. The process of working w
 | *text*     | string                                | The item caption.                                                                                                                             |
 | *data*     | string                                | The item data (this data will be sent to the click event callback).                                                                           |
 | *disabled* | boolean                               | Whether the current item is disabled or not.                                                                                             |
-| *icons*    | string                                | The item icons (see the plugins [config](../../../plugins/fundamentals/configuration/config-json.md#variationsicons) documentation). |
+| *icons*    | string                                | The item icons (see the plugins [config](../../../plugins/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                              | The click event callback. Only available for the [addContextMenuItem](#addcontextmenuitem) method.                                            |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu items for the current item.                                                                              |
 
@@ -77,7 +77,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                                |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                                  |
 | *hint*           | string                                      | The item hint.                                                                                                                                |
-| *icons*          | string \| object                            | The item icons (see the plugins [config](../../../plugins/fundamentals/configuration/config-json.md#variationsicons) documentation). |
+| *icons*          | string \| object                            | The item icons (see the plugins [config](../../../plugins/configuration/configuration.md#variationsicons) documentation). |
 | *disabled*       | boolean                                     | Whether the current item is locked.                                                                                                 |
 | *enableToggle*   | boolean                                     | Whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.                    |
 | *lockInViewMode* | boolean                                     | Whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.).      |

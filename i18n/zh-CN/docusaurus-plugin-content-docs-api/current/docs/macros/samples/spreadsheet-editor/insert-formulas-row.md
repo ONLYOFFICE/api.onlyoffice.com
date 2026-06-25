@@ -36,7 +36,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetActiveCell](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetActiveCell.md), [GetRow](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Copy](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Copy.md), [PasteSpecial](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/PasteSpecial.md)
+使用方法： [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetActiveCell](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetActiveCell.md), [GetRow](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Copy](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Copy.md), [PasteSpecial](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/PasteSpecial.md)
 
 ## 结果
 

@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 计算世界银行指标
 
-创建一个[异步自定义函数](/docs/macros/macros/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
+创建一个[异步自定义函数](../../guides/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
 
 可计算的指标包括：
 
@@ -85,11 +85,11 @@ import Video from '@site/src/components/Video/Video';
 
     // 创建图表
     let chart = worksheet.AddChart("'Sheet1'!$A$1:$B$10", true, "bar", 2, 100 * 36000, 60 * 36000, 0, 0, 10, 0);
-    chart.SetTitle("GDP  2024", 13);
+    chart.SetTitle("GDP 2024", 13);
 })();
 ```
 
-使用方法: [AddCustomFunction](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](../../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
+使用方法： [AddCustomFunction](../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
 
 ## 结果
 

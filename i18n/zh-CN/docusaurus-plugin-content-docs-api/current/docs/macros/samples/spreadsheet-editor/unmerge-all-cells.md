@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 取消当前工作表中所有已合并的单元格。
 
 :::note
-该宏由 VBA 代码通过 [AI 插件](/docs/macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
+该宏由 VBA 代码通过 [AI 插件](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
 :::
 
 ```ts
@@ -35,7 +35,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [UnMerge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)
+使用方法： [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [UnMerge](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)
 
 ## 参考 Microsoft VBA 宏代码
 

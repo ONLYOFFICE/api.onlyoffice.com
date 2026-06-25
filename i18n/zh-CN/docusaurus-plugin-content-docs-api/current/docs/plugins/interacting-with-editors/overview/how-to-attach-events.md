@@ -29,13 +29,59 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
+### 对高频事件进行防抖处理 {#debouncing-frequent-events}
+
+某些事件（如选区变化）会频繁触发。使用防抖避免过度处理：
+
+```ts
+let debounceTimer;
+
+Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    updatePluginUI();
+  }, 150);
+});
+```
+
+### 销毁时清理 {#cleaning-up-on-destroy}
+
+插件关闭时务必解绑事件监听器，以避免内存泄漏：
+
+```ts
+Asc.plugin.onDestroy = () => {
+  Asc.plugin.detachEditorEvent("onTargetPositionChanged");
+  clearTimeout(debounceTimer);
+};
+```
+
+## 解绑事件 {#detaching-events}
+
+要移除之前绑定的事件监听器，请使用 **detachEditorEvent** 方法。
+
+### 参数说明
+
+| 名称 | 类型   | 描述       |
+| ---- | ------ | ---------- |
+| *id* | string | 事件名称。 |
+
+### 返回值
+
+此方法无返回值。
+
+### 示例
+
+```ts
+Asc.plugin.detachEditorEvent("onAddComment");
+```
+
 ## 选项 2：使用 attachEvent 方法 {#option-2-using-the-attachevent-method}
 
 :::danger[已废弃]
 从 8.2 版本开始，请改用 [绑定编辑器事件](#option-1-using-the-attacheditorevent-method) 方法。
 :::
 
-1. 在 config.json 文件中，添加[事件](../../fundamentals/configuration/config-json.md#variationsevents) 参数，其中包含所有可用事件的数组：
+1. 在 config.json 文件中，添加[事件](../../configuration/configuration.md#variationsevents) 参数，其中包含所有可用事件的数组：
 
    ``` json
    {

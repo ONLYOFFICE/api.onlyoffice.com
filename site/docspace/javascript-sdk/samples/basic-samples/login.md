@@ -5,14 +5,14 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Login
 
-This example demonstrates how to log in to DocSpace using the JavaScript SDK by hashing the password.
+This example demonstrates how to log in to DocSpace using the Embed SDK by hashing the password.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/login.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -53,7 +53,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <button id="button">Login</button>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     document.getElementById("button").onclick = async () => {
       let login = "{{LOGIN}}";
@@ -97,7 +97,7 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -127,10 +127,10 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Configure and initialize the system. Then use the [getHashSettings()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#gethashsettings) and [createHash()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) methods to securely hash the password, followed by [login()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) to authenticate the user.
 

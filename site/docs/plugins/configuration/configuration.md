@@ -1,0 +1,780 @@
+---
+sidebar_position: -5
+---
+
+# Configuration
+
+The `config.json` file is a plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
+
+## baseUrl
+
+**type:** `string`
+
+Path to the plugin. All other paths are calculated relative to this path. If `baseUrl == ""`, the path to the plugin in the default `sdkjs-plugins` folder will be used.
+
+**Example**: `""`
+
+## group
+
+**type:** `object`
+
+Plugin group that is separated from other plugins in the **Plugins** tab. The first group usually includes the **Plugin Manager** and **Background plugins**, if they exist. Other plugins are placed after them in the second group. You can add as many groups as you need. If this parameter is omitted, the plugin will be added to the last group.
+
+**Example**:
+
+```json
+{
+  "name": "group name",
+  "rank": 2
+}
+```
+
+### group.name
+
+**type:** `string`
+
+The group name.
+
+**Example**: `"group name"`
+
+### group.rank
+
+**type:** `number`
+
+The group rank in the **Plugins** tab, an integer starting from 1.
+
+**Example**: `2`
+
+![Plugin groups](/assets/images/plugins/plugin-groups.png#gh-light-mode-only)![Plugin groups](/assets/images/plugins/plugin-groups.dark.png#gh-dark-mode-only)
+
+## guid
+
+**type:** `string`
+
+Plugin identifier. It **must** be of the `asc.{UUID}` type.
+
+**Example**: `"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"`
+
+## help
+
+**type:** `string`
+
+Path to the plugin help page. If the parameter is specified, the `help` button is displayed in the plugin window. When the user clicks the button, they follow the link to the plugin help page.
+
+**Example**: `"url_to_help_page"`
+
+![Plugin help](/assets/images/plugins/plugin-help.png#gh-light-mode-only)![Plugin help](/assets/images/plugins/plugin-help.dark.png#gh-dark-mode-only)
+
+## minVersion
+
+**type:** `string`
+
+The minimum editor version which supports the current plugin.
+
+**Example**: `"6.3.0"`
+
+## name
+
+**type:** `string`
+
+Plugin name which will be visible at the plugin toolbar.
+
+**Example**: `"plugin name"`
+
+## nameLocale
+
+**type:** `localeTranslate`
+
+Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
+
+**Example**: `{ "fr": "french plugin name" }`
+
+## localeTranslate
+
+**type:** `object`
+
+The translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language.
+
+**Example**:
+
+```json
+{
+  "variations": [
+    {
+      "name": "plugin name",
+      "nameLocale": {
+        "fr": "french plugin name",
+        "es": "spanish plugin name"
+      }
+    }
+  ]
+}
+```
+
+## offered
+
+**type:** `string`
+
+Plugin author who proposed the plugin for publication.
+
+**Example**: `"John Smith"`
+
+## onlyofficeScheme
+
+**type:** `boolean`
+
+Specifies whether the plugin is included in the server or desktop builds branded as ONLYOFFICE.
+
+**Example**: `true`
+
+## variations
+
+**type:** `object[]`
+
+Plugin variations, or subplugins, that are created inside the origin plugin. For more information, see [variations](variations.md).
+
+**Example**:
+
+```json
+[
+  {
+    "buttons": [
+      {
+        "text": "Cancel",
+        "primary": false,
+        "isViewer": false,
+        "textLocale": {
+          "fr": "Annuler",
+          "es": "Cancelar"
+        }
+      }
+    ],
+    "cryptoDisabledForExternalCloud": "true",
+    "cryptoDisabledForInternalCloud": "true",
+    "cryptoDisabledOnStart": "true",
+    "cryptoMode": "1",
+    "description": "plugin description",
+    "descriptionLocale": {
+      "fr": "french plugin description",
+      "es": "spanish plugin description"
+    },
+    "EditorsSupport": ["word", "cell", "slide", "pdf"],
+    "events": ["onClick"],
+    "icons": "url_to_icon",
+    "initData": "",
+    "initDataType": "ole",
+    "initOnSelectionChanged": true,
+    "isCustomWindow": true,
+    "isDisplayedInViewer": true,
+    "isUpdateOleOnResize": true,
+    "isViewer": true,
+    "size": [600, 700],
+    "store": {
+      "background": {
+        "light": "#F5F5F5",
+        "dark": "#444444"
+      },
+      "categories": ["specAbilities", "work"],
+      "icons": {
+        "light": "resources/store/icons",
+        "dark": "resources/store/icons"
+      },
+      "screenshots": ["resources/store/screenshots/screen_1.png"]
+    },
+    "type": "background",
+    "url": "index.html"
+  }
+]
+```
+
+### variations.buttons
+
+**type:** `Button[]`
+
+The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is `window`, `panel`, or `panelRight`.
+
+**Example**:
+
+```json
+[
+  {
+    "text": "Cancel",
+    "primary": false,
+    "isViewer": false,
+    "textLocale": {
+      "fr": "Annuler",
+      "es": "Cancelar"
+    }
+  }
+]
+```
+
+![Plugin buttons](/assets/images/plugins/plugin-buttons.png#gh-light-mode-only)![Plugin buttons](/assets/images/plugins/plugin-buttons.dark.png#gh-dark-mode-only)
+
+#### Button
+
+**type:** `object`
+
+The skinnable plugin button used in the plugin interface (used for plugins with their own window only, i.e. `type == "window"`).
+
+| Name       | Type                                | Description                                                                                                                                                              |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text       | string                              | The label which is displayed on the button.                                                                                                                              |
+| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                  |
+| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                           |
+| textLocale | [localeTranslate](#localetranslate) | Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language. |
+
+**Example**:
+
+```json
+{
+  "variations": [
+    {
+      "buttons": [
+        {
+          "text": "Cancel",
+          "primary": false,
+          "isViewer": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### variations.cryptoDisabledForExternalCloud
+
+**type:** `string`
+
+Specifies whether the encryption for the third-party clouds is disabled.
+
+**Example**: `"true"`
+
+### variations.cryptoDisabledForInternalCloud
+
+**type:** `string`
+
+Specifies whether the encryption for the local files is disabled.
+
+**Example**: `"true"`
+
+### variations.cryptoDisabledOnStart
+
+**type:** `string`
+
+Specifies whether the encryption is disabled upon startup.
+
+**Example**: `"true"`
+
+![Encryption disabled](/assets/images/plugins/encryption-disabled.png)
+
+### variations.cryptoMode
+
+**type:** `string`
+
+The encryption mode. The available values:
+
+- `0` - none (encryption is disabled);
+- `1` - simple;
+- `2` - advanced.
+
+**Example**: `"1"`
+
+### variations.description
+
+**type:** `string`
+
+The description, i.e. what describes your plugin the best way. It will be displayed in the **ONLYOFFICE Plugin Marketplace**.
+
+**Example**: `"plugin description"`
+
+![Plugin description](/assets/images/plugins/plugin-description.png#gh-light-mode-only)![Plugin description](/assets/images/plugins/plugin-description.dark.png#gh-dark-mode-only)
+
+### variations.descriptionLocale
+
+**type:** `localeTranslate`
+
+Translations for the description field. The object keys are the two letter language codes (fr, de, it, etc.) and the values are the plugin description translation for each language.
+
+**Example**: `{ "fr": "french plugin description" }`
+
+### variations.EditorsSupport
+
+**type:** `editorType[]` | **default:** `[]`
+
+The editors which the plugin is available for (`word`, `cell`, `slide`, or `pdf`).
+
+**Example**: `["word"]`
+
+#### editorType
+
+The editors which the plugin is available for:
+
+- `word` - document editor,
+- `cell` - spreadsheet editor,
+- `slide` - presentation editor,
+- `pdf` - pdf editor.
+
+**Example**:
+
+```json
+{
+  "variations": [
+    {
+      "EditorsSupport": ["word", "cell", "slide"]
+    }
+  ]
+}
+```
+
+### variations.events
+
+**type:** `EventType[]`
+
+:::danger[Deprecated]
+Starting from version 8.2, please use the [attachEditorEvent](../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
+:::
+
+Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../interacting-with-editors/overview/how-to-attach-events.md).
+
+**Example**: `["onClick"]`
+
+#### EventType
+
+**type:** `string`
+
+Plugin event ([onDocumentContentReady](../interacting-with-editors/form-api/Events/onDocumentContentReady.md), [onTargetPositionChanged](../interacting-with-editors/form-api/Events/onTargetPositionChanged.md), [onClick](../interacting-with-editors/form-api/Events/onClick.md), onInputHelperClear, onInputHelperInput, etc.).
+
+**Example**:
+
+```json
+{
+  "variations": [
+    {
+      "events": ["onClick"]
+    }
+  ]
+}
+```
+
+### variations.icons
+
+**type:** `string | string[]`
+
+URL to the plugin icon image file. Accepts either a single icon URL string with smart pattern syntax or an array of explicit icon file paths. For more information, see [icons](icons-and-branding.md).
+
+**Example**: `"url_to_icon"` or `["resources/light/icon.png", "resources/light/icon@2x.png"]`
+
+### variations.icons2
+
+**type:** `object[]`
+
+:::danger[Deprecated]
+Please use the [variations.icons](#variationsicons) parameter instead.
+:::
+
+Scalable icons for plugin extensions. For more information, see [icons](icons-and-branding.md).
+
+**Example**: `[{ "100%": { "normal": "icon.png" } }]`
+
+### variations.initData
+
+**type:** `string` | **default:** `""`
+
+The data which is sent from the editor to the plugin at the plugin start. If `initDataType == "text"`, the plugin will receive the selected text upon launch. It may also be equal to `encryption` in the encryption plugins.
+
+**Example**: `"text"`
+
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
+
+### variations.initDataType
+
+**type:** `initDataType`
+
+The data type selected in the editor and sent to the plugin (`text`, `html`, `ole`, `desktop`, `desktop-external`, `sign`, or `none`).
+
+**Example**: `"ole"`
+
+#### initDataType
+
+The data type selected in the editor and sent to the plugin:
+
+- `text` - the text data,
+- `html` - HTML formatted code,
+- `ole` - OLE object data,
+- `desktop` - the desktop editor data,
+- `desktop-external` - the main page data of the desktop app (system messages),
+- `none` - no data will be sent to the plugin from the editor,
+- `sign` - the sign for the keychain plugin.
+
+**Example**:
+
+```json
+{
+  "variations": [
+    {
+      "initDataType": "ole"
+    }
+  ]
+}
+```
+
+### variations.initOnSelectionChanged
+
+**type:** `boolean`
+
+Specifies if the plugin watches the text selection events in the editor window. This parameter is set to `true` when the plugin works with the selected text and its output changes when the selection changes. For example, the **Translator** plugin displays the translation of the selected text.
+
+**Example**: `true`
+
+### variations.isCustomWindow
+
+**type:** `boolean`
+
+Specifies if the plugin uses a custom window, without standard borders and buttons (used only when `type == "window"`).
+
+**Example**: `true`
+
+### variations.isDisplayedInViewer
+
+**type:** `boolean`
+
+Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (`isDisplayedInViewer == true`) or in the editor mode only (`isDisplayedInViewer == false`).
+
+**Example**: `true`
+
+### variations.isInsideMode
+
+**type:** `boolean`
+
+:::danger[Deprecated]
+Please use the [type](#variationstype) parameter instead.
+:::
+
+Specifies if the plugin must be displayed inside the editor panel instead of its own window.
+
+**Example**: `true`
+
+### variations.isModal
+
+**type:** `boolean`
+
+:::danger[Deprecated]
+Please use the [type](#variationstype) parameter instead.
+:::
+
+Specifies if the opened plugin window is modal (used for visual plugins only, and if `isInsideMode` is not `true`).
+
+**Example**: `true`
+
+### variations.isSystem
+
+**type:** `boolean`
+
+:::danger[Deprecated]
+Please use the [type](#variationstype) parameter instead.
+:::
+
+Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. Such a plugin cannot be disabled in the editor window.
+
+**Example**: `false`
+
+### variations.isUpdateOleOnResize
+
+**type:** `boolean`
+
+Specifies if an OLE object must be redrawn when resized in the editor using the vector object drawing type or not (used for OLE objects only, i.e. `initDataType == "ole"`).
+
+**Example**: `true`
+
+### variations.isViewer
+
+**type:** `boolean` | **default:** `false`
+
+Specifies if the plugin is working when the document is available in the viewer mode only or not.
+
+**Example**: `false`
+
+### variations.isVisual
+
+**type:** `boolean`
+
+:::danger[Deprecated]
+Please use the [type](#variationstype) parameter instead.
+:::
+
+Specifies if the plugin is visual (will open a window for some action, or introduce some additions to the editor panel interface) or non-visual (will provide a button (or buttons) which is going to apply some transformations or manipulations to the document).
+
+**Example**: `true`
+
+### variations.menu
+
+**type:** `string`
+
+:::danger[Deprecated]
+Please use the [type](#variationstype) parameter instead.
+:::
+
+Specifies where the plugin will be placed (on the right or left panel).
+
+**Example**: `"right"`
+
+### variations.screens
+
+**type:** `string[]`
+
+:::danger[Deprecated]
+Please use the [variations.store.screenshots](#variationsstorescreenshots) parameter instead.
+:::
+
+Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for the plugin description.
+
+**Example**: `["resources/store/screenshots/screen_1.png"]`
+
+### variations.size
+
+**type:** `number[]`
+
+Plugin window size as `[width, height]` measured in pixels. This parameter is only used when `type == "window"`.
+
+**Example**: `[600, 700]`
+
+### variations.store
+
+**type:** `object`
+
+Plugin display options in **ONLYOFFICE Plugin Marketplace**.
+
+**Example**:
+
+```json
+{
+  "background": {
+    "light": "#F5F5F5",
+    "dark": "#444444"
+  },
+  "categories": ["specAbilities", "work"],
+  "icons": {
+    "light": "resources/store/icons",
+    "dark": "resources/store/icons"
+  },
+  "screenshots": ["resources/store/screenshots/screen_1.png"]
+}
+```
+
+### variations.store.background
+
+**type:** `object`
+
+Background colors used for plugin icons in **ONLYOFFICE Plugin Marketplace**.
+
+**Example**:
+
+```json
+{
+  "light": "#F5F5F5",
+  "dark": "#444444"
+}
+```
+
+### variations.store.background.light
+
+**type:** `string`
+
+The background color used for the light theme plugin icon.
+
+**Example**: `"#F5F5F5"`
+
+![Light icon](/assets/images/plugins/plugin-icon.png)
+
+### variations.store.background.dark
+
+**type:** `string`
+
+The background color used for the dark theme plugin icon.
+
+**Example**: `"#444444"`
+
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
+
+### variations.store.categories
+
+**type:** `string[]`
+
+Plugin categories in **ONLYOFFICE Plugin Marketplace**:
+
+- `all` - All,
+- `recommended` - Recommended,
+- `devTools` - Developer tools,
+- `work` - Work,
+- `entertainment` - Entertainment,
+- `communication` - Communication,
+- `specAbilities` - Special abilities.
+
+**Example**: `["specAbilities", "work"]`
+
+![Plugin categories](/assets/images/plugins/plugin-categories.png#gh-light-mode-only)![Plugin categories](/assets/images/plugins/plugin-categories.dark.png#gh-dark-mode-only)
+
+### variations.store.icons
+
+**type:** `object`
+
+Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace**.
+
+**Example**:
+
+```json
+{
+  "light": "resources/store/icons",
+  "dark": "resources/store/icons"
+}
+```
+
+### variations.store.icons.light
+
+**type:** `string`
+
+The path to the scalable plugin icons for the light theme. Name the icon files of different scales in the following way:
+
+- 100% - `icon.png`
+- 125% - `icon@1.25x.png`
+- 150% - `icon@1.5x.png`
+- 175% - `icon@1.75x.png`
+- 200% - `icon@2x.png`
+
+**Example**: `"resources/store/icons"`
+
+### variations.store.icons.dark
+
+**type:** `string`
+
+The path to the scalable plugin icons for the dark theme. Name the icon files of different scales in the following way:
+
+- 100% - `icon.png`
+- 125% - `icon@1.25x.png`
+- 150% - `icon@1.5x.png`
+- 175% - `icon@1.75x.png`
+- 200% - `icon@2x.png`
+
+**Example**: `"resources/store/icons"`
+
+### variations.store.screenshots
+
+**type:** `string[]`
+
+Images that are used for the plugin description in the **ONLYOFFICE Plugin Marketplace**.
+
+**Example**: `["resources/store/screenshots/screen_1.png"]`
+
+![Plugin screenshots](/assets/images/plugins/plugin-screenshots.png#gh-light-mode-only)![Plugin screenshots](/assets/images/plugins/plugin-screenshots.dark.png#gh-dark-mode-only)
+
+### variations.type
+
+**type:** `string`
+
+Plugin [type](./types.md). The available values:
+
+- `system` - not displayed in the editor interface and started in the background with the server (or desktop editors start). Cannot be disabled.
+- `background` - runs continuously once started. Its state (enabled / disabled) persists between sessions.
+- `window` - operates as a standalone window upon launch.
+- `panel` - opens in the left-side panel.
+- `panelRight` - opens in the right-side panel.
+- `unvisible` - invisible upon launch but can create windows later.
+
+**Example**: `"background"`
+
+:::note
+A plugin of any type can create windows and tabs during its work.
+:::
+
+### variations.url
+
+**type:** `string`
+
+Plugin entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](entry-point.md) section for the detailed information.
+
+**Example**: `"index.html"`
+
+## version
+
+**type:** `string`
+
+The plugin version.
+
+**Example**: `"1.0"`
+
+## Example
+
+```json
+{
+  "baseUrl": "",
+  "group": {
+    "name": "group name",
+    "rank": 2
+  },
+  "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+  "help": "url_to_help_page",
+  "minVersion": "6.3.0",
+  "name": "plugin name",
+  "nameLocale": {
+    "fr": "french plugin name",
+    "es": "spanish plugin name"
+  },
+  "offered": "John Smith",
+  "onlyofficeScheme": true,
+  "variations": [
+    {
+      "buttons": [
+        {
+          "text": "Cancel",
+          "primary": false,
+          "isViewer": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar"
+          }
+        }
+      ],
+      "cryptoDisabledForExternalCloud": "true",
+      "cryptoDisabledForInternalCloud": "true",
+      "cryptoDisabledOnStart": "true",
+      "cryptoMode": "1",
+      "description": "plugin description",
+      "descriptionLocale": {
+        "fr": "french plugin description",
+        "es": "spanish plugin description"
+      },
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+      "events": ["onClick"],
+      "icons": "url_to_icon",
+      "initData": "",
+      "initDataType": "ole",
+      "initOnSelectionChanged": true,
+      "isCustomWindow": true,
+      "isDisplayedInViewer": true,
+      "isUpdateOleOnResize": true,
+      "isViewer": true,
+      "size": [600, 700],
+      "store": {
+        "background": {
+          "light": "#F5F5F5",
+          "dark": "#444444"
+        },
+        "categories": ["specAbilities", "work"],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "screenshots": ["resources/store/screenshots/screen_1.png"]
+      },
+      "type": "background",
+      "url": "index.html"
+    }
+  ],
+  "version": "1.0"
+}
+```

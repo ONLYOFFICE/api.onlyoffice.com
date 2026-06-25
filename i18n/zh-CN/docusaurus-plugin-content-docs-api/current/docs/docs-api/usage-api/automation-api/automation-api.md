@@ -58,7 +58,7 @@ connector.callCommand(() => {
 
 ## 调试
 
-### 命令日志
+### 命令日志 {#command-logging}
 
 要在浏览器控制台中记录所有 [`callCommand`](./connector-class.md#callcommand) 和 [`executeMethod`](./connector-class.md#executemethod) 调用，请在浏览器本地存储中设置 `asc_plugin_commands_log` 键：
 

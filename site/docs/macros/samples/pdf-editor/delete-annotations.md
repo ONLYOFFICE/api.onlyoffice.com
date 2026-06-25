@@ -37,7 +37,7 @@ Iterates through all pages in the PDF document and removes annotations which con
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](/docs/office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](/docs/office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllAnnots](/docs/office-api/usage-api/pdf-api/ApiPage/Methods/GetAllAnnots.md), [GetContents](/docs/office-api/usage-api/pdf-api/ApiBaseAnnotation/Methods/GetContents.md), [Delete](/docs/office-api/usage-api/pdf-api/ApiBaseAnnotation/Methods/Delete.md)
+Methods used: [GetDocument](../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllAnnots](../../../office-api/usage-api/pdf-api/ApiPage/Methods/GetAllAnnots.md), [GetContents](../../../office-api/usage-api/pdf-api/ApiBaseAnnotation/Methods/GetContents.md), [Delete](../../../office-api/usage-api/pdf-api/ApiBaseAnnotation/Methods/Delete.md)
 
 ## Result
 

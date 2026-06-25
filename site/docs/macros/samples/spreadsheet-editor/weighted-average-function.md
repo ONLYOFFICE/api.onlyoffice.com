@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # Weighted average function
 
-Creates a [custom function](/docs/macros/macros/adding-custom-functions.md) to calculate a weighted average.
+Creates a [custom function](../../guides/adding-custom-functions.md) to calculate a weighted average.
 
 ```ts
 (function () {
@@ -16,7 +16,7 @@ Creates a [custom function](/docs/macros/macros/adding-custom-functions.md) to c
     let worksheet = Api.GetActiveSheet();
 
     // Insert the formula into cell H2.
-    // This calls the custom function 'weightedAverage' that was registered above.
+    // This calls the custom function 'wa' that is registered below.
     worksheet.GetRange("H2").SetValue("=wa(A$2:A$6, B$2:B$6)");
 
     // Optionally, insert a label in cell G2.
@@ -63,7 +63,7 @@ Creates a [custom function](/docs/macros/macros/adding-custom-functions.md) to c
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

@@ -179,8 +179,28 @@ const viewFilesButtonProps: IButton = {
       }
     }));
 
-    // Replace modal content with new list
-    modalBody.children = [...fileBlocks];
+    const backButtonBlock = {
+      component: Components.button,
+      props: {
+        label: "Back",
+        primary: false,
+        size: ButtonSize.normal,
+        scale: false,
+        onClick: (): IMessage => {
+          modalBody.children = [
+            { component: Components.comboBox, props: comboBox },
+            { component: Components.button, props: viewFilesButtonProps }
+          ];
+          return {
+            actions: [Actions.showModal],
+            modalDialogProps: modalProps
+          };
+        }
+      }
+    };
+
+    // Replace modal content with back button + file list
+    modalBody.children = [backButtonBlock, ...fileBlocks];
 
     return {
       actions: [Actions.showModal],
@@ -192,8 +212,10 @@ const viewFilesButtonProps: IButton = {
 // Modal layout combining dropdown and action button
 const modalBody: IBox = {
   widthProp: "700px",
-  heightProp: "150px",
+  heightProp: "300px",
+  overflowProp: "auto",
   marginProp: "0 0 24px",
+  paddingProp: "0 12px 0 0",
   children: [
     {
       component: Components.comboBox,
@@ -226,8 +248,11 @@ const contextMenuItem: IContextMenuItem = {
   label: "Ext Search",
   icon: "icon.svg",
   onClick: (id: number) => {
-    // Store selected room ID and show modal
     currentRoomId = id;
+    modalBody.children = [
+      { component: Components.comboBox, props: comboBox },
+      { component: Components.button, props: viewFilesButtonProps }
+    ];
     return {
       actions: [Actions.showModal],
       modalDialogProps: modalProps
@@ -271,7 +296,11 @@ npm i -g @onlyoffice/docspace-plugin-sdk
    npx create-docspace-plugin
    ```
 
-2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage. In this case, set the plugin name to `extsearch` and the plugin will be registered globally as `Extsearch`.
+
+   :::note
+   This key is used to register the plugin: `window.Plugins.Extsearch = plugin;`.
+   :::
 
 3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Context menu`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
@@ -287,12 +316,12 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md). It includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (`origin`, `proxy`, `prefix`). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
 
 <details>
   <summary>ExtSearchPlugin class</summary>
 
-```js
+```ts
 import {
   IPlugin,
   PluginStatus,
@@ -390,7 +419,7 @@ Define a dropdown to choose a file extension and a button to filter and render f
 <details>
   <summary>UI components</summary>
 
-```js
+```ts
 // Store current API base URL and selected room ID
 let apiBaseURL: string = plugin.getAPI().origin;
 let currentRoomId: number | null = null;
@@ -486,8 +515,28 @@ const viewFilesButtonProps: IButton = {
       }
     }));
 
-    // Replace modal content with new list
-    modalBody.children = [...fileBlocks];
+    const backButtonBlock = {
+      component: Components.button,
+      props: {
+        label: "Back",
+        primary: false,
+        size: ButtonSize.normal,
+        scale: false,
+        onClick: (): IMessage => {
+          modalBody.children = [
+            { component: Components.comboBox, props: comboBox },
+            { component: Components.button, props: viewFilesButtonProps }
+          ];
+          return {
+            actions: [Actions.showModal],
+            modalDialogProps: modalProps
+          };
+        }
+      }
+    };
+
+    // Replace modal content with back button + file list
+    modalBody.children = [backButtonBlock, ...fileBlocks];
 
     return {
       actions: [Actions.showModal],
@@ -499,8 +548,10 @@ const viewFilesButtonProps: IButton = {
 // Modal layout combining dropdown and action button
 const modalBody: IBox = {
   widthProp: "700px",
-  heightProp: "150px",
+  heightProp: "300px",
+  overflowProp: "auto",
   marginProp: "0 0 24px",
+  paddingProp: "0 12px 0 0",
   children: [
     {
       component: Components.comboBox,
@@ -533,8 +584,11 @@ const contextMenuItem: IContextMenuItem = {
   label: "Ext Search",
   icon: "icon.svg",
   onClick: (id: number) => {
-    // Store selected room ID and show modal
     currentRoomId = id;
+    modalBody.children = [
+      { component: Components.comboBox, props: comboBox },
+      { component: Components.button, props: viewFilesButtonProps }
+    ];
     return {
       actions: [Actions.showModal],
       modalDialogProps: modalProps
@@ -563,7 +617,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Navigate to: **Admin Panel → Integration → Plugins**.
+2. Navigate to: **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 

@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # Calculate World Bank indicator
 
-Creates an [asynchronous custom function](/docs/macros/macros/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.
+Creates an [asynchronous custom function](../../guides/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.
 
 The following indicators can be calculated:
 
@@ -85,11 +85,11 @@ For more information, visit the [World Bank documentation](https://data.worldban
 
     // Build a chart
     let chart = worksheet.AddChart("'Sheet1'!$A$1:$B$10", true, "bar", 2, 100 * 36000, 60 * 36000, 0, 0, 10, 0);
-    chart.SetTitle("GDP  2024", 13);
+    chart.SetTitle("GDP 2024", 13);
 })();
 ```
 
-Methods used: [AddCustomFunction](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](/docs/office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
+Methods used: [AddCustomFunction](../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
 
 ## Result
 

@@ -23,7 +23,7 @@ ONLYOFFICE 桌面编辑器 API 的变更列表。
 
 ## 版本 7.1
 
-- 添加了 *--ascdesktop-support-debug-info-keep* 标志用于 [运行](../usage-api/debugging/running-in-debug-mode-on-windows.md#running-the-application) 应用程序。
+- 添加了 *--ascdesktop-support-debug-info-keep* 标志用于 [运行](../usage-api/debugging.md#--ascdesktop-support-debug-info-keep) 应用程序。
 
 ## 版本 7.0
 

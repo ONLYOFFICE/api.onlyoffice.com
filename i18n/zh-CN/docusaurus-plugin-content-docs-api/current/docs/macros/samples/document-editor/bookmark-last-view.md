@@ -39,7 +39,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetCurrentVisiblePages](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages.md), [GoToPage](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GoToPage.md), [GetCurrentParagraph](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetAllBookmarksNames](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [DeleteBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark.md), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark.md)
+使用方法： [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetCurrentVisiblePages](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages.md), [GoToPage](../../../office-api/usage-api/document-api/ApiDocument/Methods/GoToPage.md), [GetCurrentParagraph](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetAllBookmarksNames](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [DeleteBookmark](../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark.md), [GetRange](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark.md)
 
 ## 结果
 

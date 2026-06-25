@@ -34,7 +34,7 @@ Removes all drawing objects (shapes, charts, images) from every page of the PDF 
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](/docs/office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](/docs/office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllDrawings](/docs/office-api/usage-api/pdf-api/ApiPage/Methods/GetAllDrawings.md), [Delete](/docs/office-api/usage-api/pdf-api/ApiDrawing/Methods/Delete.md)
+Methods used: [GetDocument](../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [GetPagesCount](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [GetAllDrawings](../../../office-api/usage-api/pdf-api/ApiPage/Methods/GetAllDrawings.md), [Delete](../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/Delete.md)
 
 ## Result
 

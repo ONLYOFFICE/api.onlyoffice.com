@@ -18,8 +18,8 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md),
-[AddTableOfContents](../../../../office-api/usage-api/document-api/ApiDocument/Methods/AddTableOfContents.md)
+使用方法： [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md),
+[AddTableOfContents](../../../office-api/usage-api/document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## 参考 Microsoft VBA 宏代码
 

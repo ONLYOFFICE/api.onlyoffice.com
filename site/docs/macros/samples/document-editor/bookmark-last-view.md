@@ -39,7 +39,7 @@ Saves the current reading position by adding a bookmark at the first visible pag
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetCurrentVisiblePages](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages.md), [GoToPage](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GoToPage.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetAllBookmarksNames](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [DeleteBookmark](/docs/office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark.md), [GetRange](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](/docs/office-api/usage-api/document-api/ApiRange/Methods/AddBookmark.md)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetCurrentVisiblePages](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages.md), [GoToPage](../../../office-api/usage-api/document-api/ApiDocument/Methods/GoToPage.md), [GetCurrentParagraph](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetAllBookmarksNames](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [DeleteBookmark](../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark.md), [GetRange](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark.md)
 
 ## Result
 

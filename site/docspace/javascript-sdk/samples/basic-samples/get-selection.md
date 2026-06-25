@@ -5,14 +5,14 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Get selection
 
-This example demonstrates how to retrieve the current selection in the DocSpace interface using the JavaScript SDK.
+This example demonstrates how to retrieve the current selection in the DocSpace interface using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-selection.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -26,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -54,7 +54,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <button id="button">Get Selection</button>
   </body>
 
-  <!-- Step 2: JavaScript SDK Logic -->
+  <!-- Step 2: Embed SDK Logic -->
   <script>
     function onAppReady() {
       // When button is clicked, call the getSelection method
@@ -91,7 +91,7 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
       #button {
@@ -122,10 +122,10 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. JavaScript SDK logic
+## Step 2. Embed SDK logic
 
 Use the [getSelection()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getselection) method to fetch selected files or folders currently active in the DocSpace UI. The selection will be printed to the console.
 

@@ -110,7 +110,7 @@ The toolbar menu item.
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
 | *hint*           | string                                      | The item hint.                                                                                                                           |
-| *icons*          | string / object                             | The item icons (see the plugins [config](../fundamentals/configuration/config-json.md#variationsicons) documentation).                              |
+| *icons*          | string / object                             | The item icons (see the plugins [config](../configuration/configuration.md#variationsicons) documentation).                              |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
 | *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when `split == false`) or its top part (when `split == true`) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
@@ -253,7 +253,7 @@ A button that is split into two parts, each part can be clicked separately, the 
 {
   "text": "caption",
   "split": true,
-  "enableToggle": true,
+  "enableToggle": false,
   "items": []
 }
 ```
