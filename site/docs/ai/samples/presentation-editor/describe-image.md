@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Generate a description for images on a slide.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Add a new slide to a presentation.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 hide_table_of_contents: true

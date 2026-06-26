@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Generate a headline from document content.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

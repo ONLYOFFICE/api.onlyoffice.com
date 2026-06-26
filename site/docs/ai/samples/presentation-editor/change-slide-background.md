@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Change the background color of a slide.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

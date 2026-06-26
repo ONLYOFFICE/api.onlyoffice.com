@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Rewrite selected text with AI assistance.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

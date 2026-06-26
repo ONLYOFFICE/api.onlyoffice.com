@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Generate a description for images in a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

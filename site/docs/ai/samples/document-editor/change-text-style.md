@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Modify the style of selected or current text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

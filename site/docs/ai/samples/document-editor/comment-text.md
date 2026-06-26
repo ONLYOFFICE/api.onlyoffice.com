@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Add a comment to the selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 hide_table_of_contents: true

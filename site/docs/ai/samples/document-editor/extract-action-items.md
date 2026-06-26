@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Extract action items from selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

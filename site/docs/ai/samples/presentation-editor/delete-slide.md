@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Delete a specified slide from a presentation.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

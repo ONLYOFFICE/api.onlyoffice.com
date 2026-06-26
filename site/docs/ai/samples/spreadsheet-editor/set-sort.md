@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Sort a selected range by column.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

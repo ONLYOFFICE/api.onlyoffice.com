@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Insert a new page into a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
