@@ -2,7 +2,6 @@
 hide_table_of_contents: true
 description: Perform math operations on a cell range.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
-hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';

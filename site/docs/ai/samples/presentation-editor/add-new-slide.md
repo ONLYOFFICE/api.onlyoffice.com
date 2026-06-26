@@ -2,7 +2,6 @@
 hide_table_of_contents: true
 description: Add a new slide to a presentation.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
-hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';
