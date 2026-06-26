@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 从演示文稿中删除指定的幻灯片。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

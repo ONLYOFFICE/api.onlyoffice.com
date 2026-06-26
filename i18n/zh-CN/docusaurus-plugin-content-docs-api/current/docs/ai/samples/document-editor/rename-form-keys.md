@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 重命名文档中的表单字段键名。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

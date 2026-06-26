@@ -1,7 +1,7 @@
 ---
+hide_table_of_contents: true
 description: 对单元格范围执行数学运算。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
-hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';

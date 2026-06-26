@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 为幻灯片上的图像生成描述。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

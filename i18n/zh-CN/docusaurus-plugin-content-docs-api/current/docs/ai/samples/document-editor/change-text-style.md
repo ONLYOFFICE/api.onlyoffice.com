@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 修改选中文本或当前文本的样式。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

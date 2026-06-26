@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 借助 AI 改写选中的文本。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

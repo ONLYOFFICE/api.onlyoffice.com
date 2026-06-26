@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 向幻灯片占位符添加文本。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

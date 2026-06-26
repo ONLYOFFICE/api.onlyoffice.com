@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 检查并修正当前段落中的拼写错误。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

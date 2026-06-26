@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 在文档中插入新页面。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

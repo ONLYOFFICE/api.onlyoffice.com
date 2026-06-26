@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 对选定范围应用自动筛选。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

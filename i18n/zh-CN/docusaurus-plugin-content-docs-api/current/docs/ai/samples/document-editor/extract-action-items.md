@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 从选中的文本中提取待办事项。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
