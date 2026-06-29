@@ -20,7 +20,7 @@ Example: "Sample for text component"
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -37,5 +37,6 @@ const text: IText = {
   fontSize: "13px",
   lineHeight: "20px",
   noSelect: true,
+  className: "my-text",
 }
 ```

@@ -8,7 +8,7 @@ A component that is used to embed a third-party website into a modal window or t
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -24,5 +24,6 @@ const frameProps: IFrame = {
   height: "100%",
   name: "test",
   src: "",
+  className: "my-iframe",
 }
 ```

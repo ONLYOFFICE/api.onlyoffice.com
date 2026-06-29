@@ -8,7 +8,7 @@ A component that is used to embed an image not from the *assets* folder into a m
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -24,5 +24,6 @@ const imageProps: IImage = {
   height: "64px",
   alt: "sample",
   src: "image.png",
+  className: "my-image",
 }
 ```

@@ -12,7 +12,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -37,5 +37,6 @@ const libToggleButtonProps: IToggleButton = {
   isChecked: false,
   onChange,
   style: {position: "relative", gap: "0px"},
+  className: "my-toggle-button",
 }
 ```

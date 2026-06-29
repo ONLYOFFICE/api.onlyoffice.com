@@ -14,7 +14,7 @@ To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -50,5 +50,6 @@ const comboBox: IComboBox = {
   dropDownMaxHeight: 400,
   directionY: "both",
   scaledOptions: true,
+  className: "my-combobox",
 }
 ```

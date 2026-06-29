@@ -8,7 +8,7 @@ A component that is used to hide components during uploading.
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -22,5 +22,6 @@ import {type ISkeleton} from "@onlyoffice/docspace-plugin-sdk"
 const skeletonProps: ISkeleton = {
   width: "100%",
   height: "100%",
+  className: "my-skeleton",
 }
 ```

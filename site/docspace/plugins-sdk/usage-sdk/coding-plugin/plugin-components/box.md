@@ -22,7 +22,7 @@ To set borders to the Box component, use a stroke or the [IBorderProp](https://g
 
 ### className
 
-Sets a CSS class name applied to the component.
+Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
@@ -30,7 +30,7 @@ Example: "my-box"
 
 ### id
 
-Sets the HTML id attribute of the component.
+Sets a unique HTML `id` attribute of the component. Can be used for CSS styling or to reference the component from other elements.
 
 Type: string
 
@@ -55,6 +55,8 @@ const inputComponent: InputGroup = {
 
 const inputBox: IBox = {
   marginProp: "0 0 24px",
+  className: "my-box",
+  id: "main-box",
   children: [inputComponent],
 }
 ```
