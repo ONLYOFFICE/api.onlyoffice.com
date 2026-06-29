@@ -28,7 +28,7 @@ Type: func
 
 ### language
 
-Stores the current plugin locale.
+Optional. Stores the current plugin locale.
 
 Type: [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts)
 
@@ -62,7 +62,7 @@ Parameters:
 
 ### setLanguage
 
-Sets the plugin language. Called by the portal when the portal language changes.
+Optional. Sets the plugin language. Called by the portal when the portal language changes.
 
 Parameters:
 
@@ -72,7 +72,7 @@ Parameters:
 
 ### getLanguage
 
-Gets the current plugin language. Returns a [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts) value.
+Optional. Gets the current plugin language. Returns a [PluginLocale](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts) value.
 
 ## Example
 

@@ -28,7 +28,7 @@ import {Actions, type IComboBox, type IComboBoxItem, type IMessage} from "@onlyo
 const options: IComboBoxItem[] = [
   {key: "auto", label: "Auto"},
   {key: "en", label: "English"},
-  {key: "es", label: "EspaÃ±ol"},
+  {key: "es", label: "Español"},
   {key: "eu", label: "Euskara"},
 ]
 
