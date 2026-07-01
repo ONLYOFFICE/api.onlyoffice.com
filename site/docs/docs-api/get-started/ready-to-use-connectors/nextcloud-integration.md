@@ -20,7 +20,7 @@ The latest app signed versions are available in the official store for [Nextclou
 ## Features
 
 - Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
-- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TSV, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**, **PDF**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
 
@@ -58,7 +58,7 @@ If the server with the Nextcloud installed does not have the Internet access, or
    git submodule update --init --recursive
    ```
 
-3. Build webpack (only if you chose to clone on the previous step):
+3. Run the build (only if you chose to clone on the previous step):
 
    ``` sh
    npm install
@@ -69,6 +69,9 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
    ``` sh
    composer install
+   composer scope-dependencies
+   rm -rf vendor/firebase
+   composer dump-autoload
    ```
 
 5. Change the owner to update the application right from Nextcloud web interface:
@@ -119,13 +122,25 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
 | `Enable JWT`                                | Enables JWT validation for secure communication.                           |
 | `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
+| `jwt_header`                                | Name of the HTTP header used to send the JWT. Default: `AuthorizationJWT`. |
 | `Advanced server settings`                  | Enables configuration of internal server URLs.                             |
 | `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs (used if advanced settings enabled).   |
 | `StorageUrl`                                | Internal address of Nextcloud (used if advanced settings enabled).         |
+| `verify_peer_off`                           | Disables SSL certificate verification. Default: `false`.                   |
+| `demo`                                      | Connect to demo ONLYOFFICE Docs server.                                    |
+| `enableSharing`                             | Enables sharing. If forcibly enabled via occ, editors open in a new tab even when `sameTab` is `true`. Default: `true`. |
 | `def_formats`                               | Defines default file formats.                                              |
 | `editable`                                  | Enables editing of certain file types.                                     |
 | `review`                                    | Enables review-only mode.                                                  |
 | `forcesave`                                 | Enables force saving documents to storage.                                 |
+| `cronChecker`                               | Enables background connection check to editors. Default: `true`.           |
+| `emailNotifications`                        | Enables e-mail notifications. Default: `true`.                             |
+| `versionHistory`                            | Keeps metadata for each document version. Default: `true`.                 |
+| `protection`                                | Enables document protection. Possible values: `owner`, `all`. Default: `owner`. |
+| `groups`                                    | Allows specific groups to access editors. Example: `["admin", "editors"]`. |
+| `unknownAuthor`                             | Display name for unknown authors. Example: `"Guest User"`.                 |
+| `restrictExternalStorage`                   | Restricts access to ONLYOFFICE for files from external storages. Default: `false`. |
+| `liveViewOnShare`                           | Enables live-viewing mode when a file is accessed via a public link. Default: `false`. |
 | `customizationChat`                         | Enables or disables chat panel.                                            |
 | `customizationFeedback`                     | Enables feedback and support links.                                        |
 | `customizationHelp`                         | Enables help link.                                                         |
@@ -135,6 +150,11 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | `customizationFeedbackSuggestion`           | Allows users to submit suggestions.                                        |
 | `customizationFeedbackBug`                  | Allows users to report bugs.                                               |
 | `customizationAutosave`                     | Enables autosave mode.                                                     |
+| `customizationTheme`                        | Sets the editor color theme. Possible values: `theme-system`, `default-light`, `default-dark`. Default: `theme-system`. |
+| `customizationForcesave`                    | Keeps intermediate versions when editing (forcesave). Default: `false`.    |
+| `customizationReviewDisplay`                | Review mode for viewing. Possible values: `original`, `markup`, `final`. Default: `original`. |
+| `customization_macros`                      | Enables document macros. Default: `false`.                                  |
+| `customization_plugins`                     | Enables plugins. Default: `false`.                                          |
 | `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
 | `preview`                                   | Enables document preview generation.                                       |
 | `about`                                     | Shows About section.                                                       |
@@ -147,6 +167,30 @@ php occ config:app:set onlyoffice customizationChat --value=false
 ```
 :::
 
+#### Watermark settings
+
+Watermark settings (the `watermark_*` keys) are stored under the `files` app, not `onlyoffice`. Use `files` as the app ID when setting them with `occ`:
+
+```sh
+php occ config:app:set files {watermark_setting_key} --value={setting_value}
+```
+
+| Parameter                   | Description                                                                                   |
+|----------------------------|-----------------------------------------------------------------------------------------------|
+| `watermark_enabled`         | Enables watermarking. Example: `yes`.                                                         |
+| `watermark_text`            | Watermark text. Supported tags: `{userId}`, `{userDisplayName}`, `{email}`, `{date}`, `{themingName}`. |
+| `watermark_allGroups`       | Enables the watermark for all group members. Example: `yes`.                                 |
+| `watermark_allGroupsList`   | Comma-separated list of groups whose users see the watermark. Example: `admin,editors`.      |
+| `watermark_allTags`         | Enables the watermark for all tagged files. Example: `yes`.                                  |
+| `watermark_allTagsList`     | Comma-separated list of system tag IDs of files that show the watermark. Example: `3,7`.    |
+| `watermark_linkAll`         | Shows the watermark for all link shares. Example: `yes`.                                     |
+| `watermark_shareAll`        | Shows the watermark for all shares. Example: `yes`.                                          |
+| `watermark_shareRead`       | Shows the watermark on read-only shares. Example: `yes`.                                     |
+| `watermark_linkSecure`      | Shows the watermark on password-protected links. Example: `yes`.                             |
+| `watermark_linkRead`        | Shows the watermark on read-only public links. Example: `yes`.                               |
+| `watermark_linkTags`        | Shows the watermark on links with specific system tags. Example: `yes`.                      |
+| `watermark_linkTagsList`    | Comma-separated list of system tag IDs whose link shares show the watermark. Example: `3,7`. |
+
 #### Advanced Configuration (`config/config.php` only)
 
 You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
@@ -158,7 +202,7 @@ You can define the following parameters in the `config/config.php` file to custo
 | `StorageUrl`               | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                              |
 | `jwt_secret`               | Secret key used to generate and validate JWT tokens.                                           |
 | `jwt_secret_path`          | Path to a file containing the JWT secret.                                                      |
-| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `Authorization`.                     |
+| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `AuthorizationJWT`.                  |
 | `jwt_in_body`              | If `true`, the JWT token is sent in the request body instead of the header.                    |
 | `jwt_disable`              | If `true`, disables JWT signature verification.                                                |
 | `jwt_leeway`               | Leeway in seconds to account for clock skew when validating JWT tokens.                        |
@@ -166,7 +210,12 @@ You can define the following parameters in the `config/config.php` file to custo
 | `verify_peer_off`          | If `true`, disables SSL peer verification for connections.                                     |
 | `limit_thumb_size`         | Maximum file size in bytes for which thumbnails will be generated.                             |
 | `disable_download`         | If `true`, disables file download functionality.                                               |
-| `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
+| `editors_check_interval`   | Interval in seconds for checking the availability of ONLYOFFICE Docs using cron. Default is `86400`. |
+| `permissions_modifyFilter` | Applies the spreadsheet filter globally (`true`, affects all users) or locally (`false`). Default: `true`. |
+| `customization_customer`   | Customer information displayed in the editor's "About" section.                                |
+| `customization_logo`       | Logo displayed in the editor header.                                                           |
+| `customization_zoom`       | Default document zoom level in percentage. Default: `100`.                                     |
+| `customization_autosave`   | Enables autosave while editing. Default: `true`.                                               |
 
 The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation:
 
@@ -174,7 +223,7 @@ The following parameters must be added manually to the `config/config.php` file 
 <?php
 'onlyoffice' => array (
     'jwt_secret' => 'your_secret_key',
-    'jwt_header' => 'Authorization',
+    'jwt_header' => 'AuthorizationJWT',
 )
 ?>
 ```
