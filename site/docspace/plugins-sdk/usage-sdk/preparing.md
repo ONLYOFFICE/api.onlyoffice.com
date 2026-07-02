@@ -12,7 +12,7 @@ Install all the necessary packages and programs:
 
 - ONLYOFFICE DocSpace on-premises.
 
-  [Get ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer)
+  [Get ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer?from=api#docspace-developer)
 
   To install it on your local server, follow the [instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
 

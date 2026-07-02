@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 [connector](./automation-api/automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
   ``` ts
@@ -405,7 +405,7 @@ docEditor.insertImage({
 通过指向文件的链接刷新数据, 该链接使用 `referenceData`、`path` 或 `link` 参数指定。 此方法必须在 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件之后调用。
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
 :::note
@@ -565,7 +565,7 @@ docEditor.insertImage({
 :::
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
   ``` ts

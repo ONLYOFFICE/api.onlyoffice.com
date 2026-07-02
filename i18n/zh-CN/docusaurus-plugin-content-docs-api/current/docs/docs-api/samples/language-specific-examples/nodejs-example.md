@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         如需了解如何在Windows系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_nodejs_example)。
 
@@ -61,7 +61,7 @@ import TabItem from '@theme/TabItem';
         }
         ```
 
-        其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storageFolder`和`storagePath`是将创建和存储文件的路径。您可以设置一个绝对路径，例如`D:\\folder`。请注意，在Windows操作系统中，必须使用双反斜杠作为分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
+        其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storageFolder`和`storagePath`是将创建和存储文件的路径。您可以设置一个绝对路径，例如`D:\\folder`。请注意，在Windows操作系统中，必须使用双反斜杠作为分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
 
         如果您想尝试配置编辑器，请修改*views/editor.ejs*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
@@ -126,7 +126,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         如需了解如何在Linux系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_nodejs_example)。
 
@@ -204,7 +204,7 @@ import TabItem from '@theme/TabItem';
            }
            ```
 
-           您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
+           您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
 
         6. 使用Node.js运行项目：
 

@@ -332,7 +332,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
 
 :::note
-This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 :::danger[Deprecated]
 Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.

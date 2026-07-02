@@ -50,7 +50,7 @@ Find the uploaded app on the **Manage apps** page. Click **Configure** and enter
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Jira server. The Jira server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Jira server. The Jira server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** section allows you to set the ONLYOFFICE Docs address for internal requests from Jira and the returning Jira address for internal requests from ONLYOFFICE Docs.
 

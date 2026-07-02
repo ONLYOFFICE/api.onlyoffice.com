@@ -9,7 +9,7 @@ ONLYOFFICE Docs is available for Windows, Linux and Docker.
 
 To install it on your local server:
 
-1. [Download](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
+1. [Download](https://www.onlyoffice.com/download-docs?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
 
    - [Install ONLYOFFICE Docs for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
    - [Install ONLYOFFICE Docs for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
@@ -22,7 +22,7 @@ To install it on your local server:
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 

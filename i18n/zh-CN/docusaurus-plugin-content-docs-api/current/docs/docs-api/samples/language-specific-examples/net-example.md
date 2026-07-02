@@ -26,7 +26,7 @@ sidebar_position: -10
 
 下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
 如需了解如何安装ONLYOFFICE 文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
 
@@ -55,7 +55,7 @@ unzip DotNet.Csharp.MVC.Example.zip
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storage-path`是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storage-path`是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 如果您想尝试配置编辑器，请修改`DocEditor.aspx`文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 

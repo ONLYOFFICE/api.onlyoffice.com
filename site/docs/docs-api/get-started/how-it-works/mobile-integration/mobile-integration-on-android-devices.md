@@ -14,7 +14,7 @@ This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYO
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise?from=api) or [Developer](https://www.onlyoffice.com/developer-edition?from=api).
 
 2. Download the mobile demo sample for Android from [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
 
@@ -29,7 +29,7 @@ This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYO
    Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
    :::tip
-   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
    :::
 
    If `DOCUMENT_SERVER_URL` is empty, the app displays an error dialog instead of loading the **document manager** page:

@@ -138,7 +138,7 @@ ng version
    ></document-editor>
    ```
 
-   将 `http://documentserver/` 行替换为您的服务器的 URL。You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   将 `http://documentserver/` 行替换为您的服务器的 URL。You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### 17.0.0 及更高版本
 
@@ -209,7 +209,7 @@ ng version
    ></document-editor>
    ```
 
-   将 `http://documentserver/` 行替换为您的服务器的 URL。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   将 `http://documentserver/` 行替换为您的服务器的 URL。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 使用 Node.js 开发服务器测试应用程序：
 

@@ -20,7 +20,7 @@ Append the `?preload=placeholder` parameter to the `api.js` URL:
 Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
 :::tip
-Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
 :::
 
 When this script loads, in addition to providing the [`DocsAPI.DocEditor`](../../usage-api/doceditor.md) constructor, it automatically inserts a hidden `<iframe>` into the element with `id="placeholder"` to preload static editor assets in the background.

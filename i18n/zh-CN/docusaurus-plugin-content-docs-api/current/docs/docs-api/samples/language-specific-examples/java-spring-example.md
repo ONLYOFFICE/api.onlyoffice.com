@@ -34,7 +34,7 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
 
         下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于 Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example)的 ONLYOFFICE 文档。
 
@@ -124,7 +124,7 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
         docservice.url=https://documentserver/
         ```
 
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
         您可以设置绝对路径。例如，`D:\\folder`。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。
 
         如果要试验编辑器配置，请修改 `src/main/webapp/editor.jsp` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
@@ -157,14 +157,14 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
 
         如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。
 
-        确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 `example.com`。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+        确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 `example.com`。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
     </TabItem>
     <TabItem value="linux" label="Linux">
         ### 步骤 1. 安装 ONLYOFFICE 文档
 
         下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：
 
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
 
@@ -209,7 +209,7 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
         docservice.url=https://documentserver/
         ```
 
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
         ### 步骤 5. 配置 JWT
 
@@ -250,7 +250,7 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
 
         下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：
 
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于 Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example)的 ONLYOFFICE 文档。
 
@@ -289,7 +289,7 @@ Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自�
         docservice.url=https://documentserver/
         ```
 
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
         ### 步骤 5. 配置 JWT
 

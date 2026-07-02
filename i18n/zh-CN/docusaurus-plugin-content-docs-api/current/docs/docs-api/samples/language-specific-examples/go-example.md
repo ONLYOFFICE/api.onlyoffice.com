@@ -25,7 +25,7 @@ sidebar_position: -7
 
 下载并安装 ONLYOFFICE 文档（文档服务器版本）。
 
-[获取 ONLYOFFICE 文档](https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer)
+[获取 ONLYOFFICE 文档](https://www.onlyoffice.com/zh/download-docs?from=api#docs-developer)
 
 请参阅详细指南，了解如何为 [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-windows.aspx) 安装文档服务器。
 
@@ -57,7 +57,7 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-其中，`documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，`documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 `address` 是服务器的地址，`port` 是服务器端口。
 
 若要试验编辑器配置，请修改 *templates/editor.html* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。

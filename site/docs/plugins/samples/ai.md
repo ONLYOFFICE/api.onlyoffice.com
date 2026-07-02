@@ -51,7 +51,7 @@ To start using the plugin, you need to set up an AI provider:
 4. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.
 5. Click **OK** to save your settings and complete the connection process.
 
-For details on adding a custom provider, refer to this [blog post](https://www.onlyoffice.com/blog/2025/03/how-to-add-a-custom-provider-to-the-onlyoffice-ai-plugin).
+For details on adding a custom provider, refer to this [blog post](https://www.onlyoffice.com/blog/2025/03/how-to-add-a-custom-provider-to-the-onlyoffice-ai-plugin?from=api).
 
 ## Plugin structure
 

@@ -8,7 +8,7 @@ sidebar_label: Standard branding
 The customization section defines the editor customization parameters.
 
 :::info
-Most parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) for additional customization options.
+Most parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) for additional customization options.
 :::
 
 :::note
@@ -160,7 +160,7 @@ Whether to use functionality only compatible with the OOXML format. For example,
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 **Example**:
@@ -293,7 +293,7 @@ Whether to display the tooltips about new editor features on first loading.
 Whether to enable the role settings in the pdf forms. If the parameter is equal to `false`, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 **Example**: `true`
@@ -538,7 +538,7 @@ The mode of embedding editors into the web page. The `embed` value disables scro
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 **Example**:
