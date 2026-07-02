@@ -19,7 +19,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/autocomplete) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
+Download this plugin from the [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest) and install it manually following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 

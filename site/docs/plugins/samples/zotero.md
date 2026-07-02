@@ -23,7 +23,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/zotero) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instruction.
+You can also download this plugin from the [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest) and install it manually following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
 
 ## Connect ONLYOFFICE to Zotero account
 

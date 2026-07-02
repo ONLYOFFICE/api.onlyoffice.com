@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest) and install it manually following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
 
 Starting from version 9.0.4, the AI plugin was added to the server and desktop distributions built with ONLYOFFICE branding.
 

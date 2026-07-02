@@ -22,9 +22,7 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 **Development profile:**
 
 - **Time:** 2-7 days | **Skill:** Intermediate | **Tech:** HTML/CSS/JavaScript
-- **Distribution:** [ONLYOFFICE Marketplace](https://www.onlyoffice.com/app-directory/en) or private deployment
-
-[Browse live examples in ONLYOFFICE Marketplace](https://www.onlyoffice.com/app-directory/en)
+- **Distribution:** [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
 
 ## What plugins cannot do
 
