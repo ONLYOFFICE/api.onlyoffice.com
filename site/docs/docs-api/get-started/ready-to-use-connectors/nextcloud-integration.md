@@ -119,7 +119,6 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | Parameter                                    | Description                                                                 |
 |---------------------------------------------|-----------------------------------------------------------------------------|
 | `DocumentServerUrl`                         | Public address of ONLYOFFICE Docs server (set via UI or `occ`).            |
-| `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
 | `Enable JWT`                                | Enables JWT validation for secure communication.                           |
 | `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
 | `jwt_header`                                | Name of the HTTP header used to send the JWT. Default: `AuthorizationJWT`. |
@@ -155,7 +154,7 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | `customizationReviewDisplay`                | Review mode for viewing. Possible values: `original`, `markup`, `final`. Default: `original`. |
 | `customization_macros`                      | Enables document macros. Default: `false`.                                  |
 | `customization_plugins`                     | Enables plugins. Default: `false`.                                          |
-| `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
+| `sameTab`                                   | Opens files in the same tab.                                               |
 | `preview`                                   | Enables document preview generation.                                       |
 | `about`                                     | Shows About section.                                                       |
 

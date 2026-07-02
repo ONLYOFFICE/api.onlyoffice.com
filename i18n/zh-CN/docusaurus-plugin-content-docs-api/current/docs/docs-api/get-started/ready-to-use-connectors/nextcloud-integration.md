@@ -117,7 +117,6 @@ https://<文档服务器地址>/
 | 参数                                         | 描述                                                                        |
 |---------------------------------------------|-----------------------------------------------------------------------------|
 | `DocumentServerUrl`                         | ONLYOFFICE 文档服务器的公共地址（通过UI或`occ`设置）。                           |
-| `Open in same tab`                          | 定义文档是否在同一浏览器标签页中打开。                                          |
 | `Enable JWT`                                | 启用JWT验证以实现安全通信。                                                    |
 | `Secret key`                                | 用于签名请求的JWT密钥（config中`jwt_secret`的替代方案）。                        |
 | `jwt_header`                                | 用于发送JWT的HTTP头名称。默认为`AuthorizationJWT`。                            |
@@ -153,7 +152,7 @@ https://<文档服务器地址>/
 | `customizationReviewDisplay`                | 查看时的审阅模式。可选值：`original`、`markup`、`final`。默认值：`original`。    |
 | `customization_macros`                      | 启用文档宏。默认值：`false`。                                                  |
 | `customization_plugins`                     | 启用插件。默认值：`false`。                                                    |
-| `SameTab`                                   | 在同一标签页中打开文件（已弃用的UI设置）。                                       |
+| `sameTab`                                   | 在同一标签页中打开文件。                                                       |
 | `preview`                                   | 启用文档预览生成。                                                            |
 | `about`                                     | 显示"关于"部分。                                                              |
 
