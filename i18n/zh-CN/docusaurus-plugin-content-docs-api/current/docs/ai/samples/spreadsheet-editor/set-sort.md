@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 按列对选定范围进行排序。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

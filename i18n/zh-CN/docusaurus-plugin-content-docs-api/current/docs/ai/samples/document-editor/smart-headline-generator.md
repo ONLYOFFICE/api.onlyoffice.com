@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 根据文档内容生成标题。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

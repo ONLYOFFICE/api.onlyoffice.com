@@ -1,7 +1,7 @@
 ---
+hide_table_of_contents: true
 description: 向演示文稿添加新幻灯片。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
-hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';

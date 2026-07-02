@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Insert a formatted list into a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

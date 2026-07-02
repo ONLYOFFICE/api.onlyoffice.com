@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 用自然语言解释单元格错误。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
