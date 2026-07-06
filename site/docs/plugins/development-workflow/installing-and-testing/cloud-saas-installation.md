@@ -31,7 +31,7 @@ You can add a plugin to the **Cloud service** as an **extension**. It can be don
 The `onlyoffice.github.io/store/plugin-dev/extension` folder is a new extension.
 
 :::note
-Please note that when adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the `manifest.json` file. You cannot change them later in the store.
+Please note that when adding a plugin to [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/store/README.md), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the `config.json` file. You cannot change them later in the store.
 :::
 
 ## Step 2. Uploading extensions to the browser

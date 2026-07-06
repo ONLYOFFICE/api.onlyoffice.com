@@ -13,7 +13,7 @@ ONLYOFFICE Document Builder can be installed on various platforms to generate, e
 
 The free version of ONLYOFFICE Document Builder includes a watermark on all generated documents. To remove this limitation and access the full feature set, a commercial license is required.
 
-For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+Document Builder is included in [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api). For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
 
 :::
 

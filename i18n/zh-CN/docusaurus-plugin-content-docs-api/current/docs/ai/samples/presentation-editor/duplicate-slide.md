@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 在演示文稿中复制指定的幻灯片。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

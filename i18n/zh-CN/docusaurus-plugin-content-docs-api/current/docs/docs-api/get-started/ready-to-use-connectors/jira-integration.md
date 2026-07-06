@@ -48,7 +48,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Jira服务器访问。Jira服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Jira服务器访问。Jira服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 有时，您的网络配置可能不允许Jira和ONLYOFFICE 文档之间通过公共地址进行请求。**高级服务器设置**部分允许您设置Jira内部请求的ONLYOFFICE 文档地址，以及ONLYOFFICE 文档内部请求返回的Jira地址。
 

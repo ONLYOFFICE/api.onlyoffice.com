@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Add a chart to a presentation slide.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

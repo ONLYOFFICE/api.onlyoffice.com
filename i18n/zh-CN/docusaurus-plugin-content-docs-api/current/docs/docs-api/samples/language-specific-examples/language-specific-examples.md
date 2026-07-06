@@ -28,7 +28,7 @@ sidebar_label: Docs API 集成
 
 1. 下载ONLYOFFICE 文档并在您的本地服务器上进行设置：
 
-   [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+   [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
 2. 选择编程语言，并下载将在线编辑器集成到您网站的示例代码：
 

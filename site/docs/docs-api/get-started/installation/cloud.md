@@ -7,7 +7,7 @@ sidebar_label: Cloud
 
 To install ONLYOFFICE Docs in the cloud:
 
-1. Deploy ONLYOFFICE Docs Developer solution in the cloud by filling in the registration [form](https://www.onlyoffice.com/docs-registration.aspx?from=api) on our official website.
+1. Deploy ONLYOFFICE Docs Developer solution in the cloud by filling in the registration [form](https://www.onlyoffice.com/docs-registration?from=api) on our official website.
 
 2. In the target HTML file where the editors are to be embedded, specify a placeholder *div* tag, where all the information about the editor parameters will be passed:
 

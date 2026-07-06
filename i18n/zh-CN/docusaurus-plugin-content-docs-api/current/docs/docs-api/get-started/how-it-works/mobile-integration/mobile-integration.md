@@ -19,7 +19,7 @@ const config = {
 用户可以直接在设备上查看和编辑文本文档、电子表格、演示文稿和 PDF。集成架构与[工作原理](../how-it-works.md)页面中描述的相同 — WebView 只是充当托管**文档编辑器**的浏览器，而**文档管理器**和**文档存储服务**仍由您负责，与任何集成方式相同。
 
 :::note
-移动网页编辑器仅在ONLYOFFICE 文档的商业版本中可用：[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)和[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
+移动网页编辑器仅在ONLYOFFICE 文档的商业版本中可用：[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)和[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 :::
 
 有关平台特定的设置说明，请参阅：

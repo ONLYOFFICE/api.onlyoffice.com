@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Create a chart from a spreadsheet data range.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

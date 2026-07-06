@@ -36,7 +36,7 @@ After editing is finished, the document is [saved](./saving-file.md).
    Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed. The `api.js` script is served by the **document editing service**; it loads the **document editor** and connects it to that same service.
 
    :::tip
-   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
    :::
 
 4. Add the script that initializes the **document editor** for the `<div>` element, using the configuration for the document you want to open:

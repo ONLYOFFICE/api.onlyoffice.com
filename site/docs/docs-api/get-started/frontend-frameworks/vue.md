@@ -92,7 +92,7 @@ This procedure creates a [basic Vue.js application](https://cli.vuejs.org/guide/
 
    Replace the following lines with your own data:
 
-   - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
    - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
@@ -232,7 +232,7 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
    }
    ```
 
-   where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 2. Build Storybook with the following command:
 

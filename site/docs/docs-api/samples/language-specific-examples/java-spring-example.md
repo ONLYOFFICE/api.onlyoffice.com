@@ -36,7 +36,7 @@ Please keep in mind the following security aspects when you are using test examp
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example).
 
@@ -126,7 +126,7 @@ Please keep in mind the following security aspects when you are using test examp
         docservice.url=https://documentserver/
         ```
 
-        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
         You can set an absolute path. For example, `D:\\folder`. Please note that on Windows OS the double backslash must be used as a separator.
 
         If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the `src/main/webapp/editor.jsp` file.
@@ -159,14 +159,14 @@ Please keep in mind the following security aspects when you are using test examp
 
         In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-        Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+        Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
     </TabItem>
     <TabItem value="linux" label="Linux">
         ### Step 1. Install ONLYOFFICE Docs
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example).
 
@@ -211,7 +211,7 @@ Please keep in mind the following security aspects when you are using test examp
         docservice.url=https://documentserver/
         ```
 
-        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
         ### Step 5. Configure JWT
 
@@ -252,7 +252,7 @@ Please keep in mind the following security aspects when you are using test examp
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example).
 
@@ -291,7 +291,7 @@ Please keep in mind the following security aspects when you are using test examp
         docservice.url=https://documentserver/
         ```
 
-        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
         ### Step 5. Configure JWT
 

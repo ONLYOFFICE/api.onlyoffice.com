@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # API vs WOPI
 
-You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx) with any cloud service using either API or WOPI.
+You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite?from=api) with any cloud service using either API or WOPI.
 
 The table below will help you find out the difference between these options.
 
@@ -17,7 +17,7 @@ import APITable from '@site/src/components/APITable/APITable';
 |                                             | **API**                                                                                     | **WOPI**                                                                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **General info**                            | [API](../get-started/basic-concepts.md)                                                     | [WOPI](./overview.md)                                                                                                |
-| **Integration**                             | [Ready-to-use connectors](https://www.onlyoffice.com/all-connectors.aspx)                   | WOPI connector                                                                                                       |
+| **Integration**                             | [Ready-to-use connectors](https://www.onlyoffice.com/all-connectors?from=api)                   | WOPI connector                                                                                                       |
 | **Collaboration (modes)**                   | Real-time and paragraph-locking                                                             | Real-time only                                                                                                       |
 | **Customization**                           |                                                                                             |                                                                                                                      |
 | Editor interface language                   | [Yes](../usage-api/config/editor/editor.md#lang)                                            | [Yes](./wopi-discovery.md#ui)                                                                                        |

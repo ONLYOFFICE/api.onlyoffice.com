@@ -53,7 +53,7 @@ To configure the example, you can edit the environment variables in [compose-bas
 
 Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
 Check the detailed guide to learn how to install it on [Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example), [Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example), or [Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example).
 

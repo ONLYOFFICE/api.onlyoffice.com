@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest) and install it manually following the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md) installation instructions.
 
 Starting from version 9.0.4, the AI plugin was added to the server and desktop distributions built with ONLYOFFICE branding.
 
@@ -51,7 +51,7 @@ To start using the plugin, you need to set up an AI provider:
 4. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.
 5. Click **OK** to save your settings and complete the connection process.
 
-For details on adding a custom provider, refer to this [blog post](https://www.onlyoffice.com/blog/2025/03/how-to-add-a-custom-provider-to-the-onlyoffice-ai-plugin).
+For details on adding a custom provider, refer to this [blog post](https://www.onlyoffice.com/blog/2025/03/how-to-add-a-custom-provider-to-the-onlyoffice-ai-plugin?from=api).
 
 ## Plugin structure
 

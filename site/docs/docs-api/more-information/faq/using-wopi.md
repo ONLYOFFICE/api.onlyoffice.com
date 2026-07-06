@@ -37,7 +37,7 @@ Follow the steps [in this section](../../using-wopi/overview.md#ip-filter) to co
 - available document operations in the online office,
 - supported file formats (extensions).
 
-The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 For more information, see [WOPI discovery](../../using-wopi/wopi-discovery.md).
 
@@ -120,6 +120,6 @@ Find out more about access rights [on this page](../../using-wopi/postmessage.md
 
 ## What are the difference between ONLYOFFICE Docs API and WOPI?
 
-You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx) with any cloud service using either API or WOPI.
+You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite?from=api) with any cloud service using either API or WOPI.
 
 The table [on this page](../../using-wopi/api-vs-wopi.md) will help you find out the difference between these options.

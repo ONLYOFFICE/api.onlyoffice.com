@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # API 与 WOPI
 
-您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite.aspx)与任何云服务集成。
+您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api)与任何云服务集成。
 
 下表将帮助您找出这些选项之间的区别。
 
@@ -17,7 +17,7 @@ import APITable from '@site/src/components/APITable/APITable';
 |                  | **API**                                                                                     | **WOPI**                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **基本信息**         | [API](../get-started/basic-concepts.md)                                                     | [WOPI](./overview.md)                                                                                |
-| **集成**           | [即用型连接器](https://www.onlyoffice.com/all-connectors.aspx)                                    | WOPI 连接器                                                                                             |
+| **集成**           | [即用型连接器](https://www.onlyoffice.com/all-connectors?from=api)                                    | WOPI 连接器                                                                                             |
 | **协作（模式）**       | 实时和段落锁定                                                                                     | 仅实时                                                                                                  |
 | **定制**           |                                                                                             |                                                                                                      |
 | 编辑器界面语言          | [Yes](../usage-api/config/editor/editor.md#lang)                                            | [Yes](./wopi-discovery.md#ui)                                                                        |

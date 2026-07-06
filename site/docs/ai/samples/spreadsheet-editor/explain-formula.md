@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Explain a cell formula in natural language.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

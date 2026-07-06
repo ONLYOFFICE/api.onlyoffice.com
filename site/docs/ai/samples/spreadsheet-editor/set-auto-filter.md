@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Apply an auto filter to a selected range.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

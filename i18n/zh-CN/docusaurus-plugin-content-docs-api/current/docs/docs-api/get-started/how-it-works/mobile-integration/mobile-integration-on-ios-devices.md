@@ -14,7 +14,7 @@ sidebar_label: iOS
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
+1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
@@ -29,7 +29,7 @@ sidebar_label: iOS
    其中 `documentserver` 为安装 ONLYOFFICE 文档的服务器名称。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
    :::
 
    若已指定 `DOCUMENT_SERVER_EXAMPLE_URL`，则加载 DMS 主页。否则将出现错误提示：
@@ -172,7 +172,7 @@ func webView(_ webView: WKWebView,
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/developer-edition.aspx)。
+1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
@@ -195,7 +195,7 @@ func webView(_ webView: WKWebView,
    其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
    :::
 
 7. 添加初始化**文档编辑器**的脚本，用于 `<div>` 元素，并配置您要打开的文档。定义通过 `window.webkit.messageHandlers` 将事件转发到原生代码的事件处理函数，并将它们传递给编辑器配置：

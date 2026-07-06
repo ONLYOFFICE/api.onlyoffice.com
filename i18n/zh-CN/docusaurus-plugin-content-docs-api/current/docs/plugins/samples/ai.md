@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 企业版、社区版（文档 + 工作区）及 ONLYOFFICE 云端中默认提供。
 
-您也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/ai)下载该插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)安装说明进行安装。
+您也可以从 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest)下载该插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)安装说明手动安装。
 
 从 9.0.4 版本开始，AI 插件已加入具有 ONLYOFFICE 品牌标识的服务器版和桌面版发行包。
 

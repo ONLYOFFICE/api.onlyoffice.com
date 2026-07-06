@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 从电子表格数据范围创建图表。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

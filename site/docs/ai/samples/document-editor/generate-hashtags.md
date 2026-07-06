@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Generate hashtags from selected text.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

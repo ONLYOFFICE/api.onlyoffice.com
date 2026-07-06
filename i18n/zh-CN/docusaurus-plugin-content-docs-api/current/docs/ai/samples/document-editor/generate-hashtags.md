@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 根据选中的文本生成话题标签。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

@@ -31,7 +31,7 @@ sidebar_position: -1
 `onlyoffice.github.io/store/plugin-dev/extension` 文件夹即为新的扩展。
 
 :::note
-请注意，当您将扩展程序添加至 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh)时，**标题**和 **总结**会根据 `manifest.json` 文件中的**名字**和**介绍**参数自动填写。您之后将无法在商店中修改这些信息。
+请注意，当您将插件添加至 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/store/README.md)时，**标题**和**摘要**会根据 `config.json` 文件中的 **name** 和 **description** 参数自动填写。您之后将无法在商店中修改这些信息。
 :::
 
 ## 第二步：将扩展程序上传到浏览器

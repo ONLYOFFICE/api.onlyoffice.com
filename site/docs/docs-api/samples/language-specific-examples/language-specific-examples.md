@@ -29,7 +29,7 @@ To start integrating document editors into your own website you need to do the f
 
 1. Download ONLYOFFICE Docs and set it up on your local server:
 
-   [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+   [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
 
 2. Select the programming language and download the code for the sample of online editors integration into your website:
 

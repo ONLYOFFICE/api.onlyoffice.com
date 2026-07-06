@@ -19,7 +19,7 @@ ONLYOFFICE Desktop Editors is available for Windows, Linux and macOS. Starting f
 
 The simplest way to install this application on your local computer is to download it from our official website:
 
-[Get Desktop Editors](https://www.onlyoffice.com/download-desktop.aspx?from=api)
+[Get Desktop Editors](https://www.onlyoffice.com/download-desktop?from=api)
 
 For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc., the ONLYOFFICE Desktop Editors package is already pre-installed or available on their official stores.
 

@@ -99,7 +99,7 @@ ONLYOFFICE 文档和Chamilo可以安装在不同的计算机上，也可以安�
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/docs-registration.aspx?from=api)免费的ONLYOFFICE云服务，并使用其公共IP地址或公共DNS，可在云控制台的**实例**部分中找到。
+其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/docs-registration?from=api)免费的ONLYOFFICE云服务，并使用其公共IP地址或公共DNS，可在云控制台的**实例**部分中找到。
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Chamilo的**设置**页面指定您自己的**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 向演示文稿幻灯片添加图表。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

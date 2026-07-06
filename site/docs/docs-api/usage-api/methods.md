@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Create the [connector](./automation-api/connector-class.md) to interact with documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 :::info
-This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
   ``` ts
@@ -405,7 +405,7 @@ Starting from version 7.5, please use [setRequestedSpreadsheet](#setrequestedspr
 Refresh data by a link to a file which is specified with the `referenceData`, `path`, or `link` parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
 :::info
-This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 :::note
@@ -565,7 +565,7 @@ Starting from version 7.5, please use [setRequestedDocument](#setrequesteddocume
 :::
 
 :::info
-This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
   ``` ts

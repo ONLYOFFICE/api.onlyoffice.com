@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Add text to a slide placeholder.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

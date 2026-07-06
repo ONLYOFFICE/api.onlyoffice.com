@@ -13,8 +13,8 @@ function localize(translations: Record<string, string>): string {
 }
 
 const announcementBarContent = localize({
-  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
-  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
+  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
 });
 
 let keyPath = '';
@@ -337,11 +337,11 @@ const config: Config = {
             },
             {
               label: 'For contributors',
-              href: 'https://www.onlyoffice.com/contribute.aspx?from=api',
+              href: 'https://www.onlyoffice.com/contribute?from=api',
             },
             {
               label: 'Legal notice',
-              href: 'https://www.onlyoffice.com/legalterms.aspx?from=api',
+              href: 'https://www.onlyoffice.com/legalterms?from=api',
             },
             {
               label: 'Legacy version',
@@ -362,11 +362,11 @@ const config: Config = {
             },
             {
               label: 'Installation guides',
-              href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api',
+              href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index?from=api',
             },
             {
               label: 'Support contact form',
-              href: 'https://www.onlyoffice.com/support-contact-form.aspx?from=api',
+              href: 'https://www.onlyoffice.com/support-contact-form?from=api',
             },
           ],
         },

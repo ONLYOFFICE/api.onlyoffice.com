@@ -14,7 +14,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装
 
-从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/autocomplete)下载此插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)，[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或者[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest)下载此插件，并按照[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明手动安装。
 
 ## 使用方法
 

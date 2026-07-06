@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 为文档中的图像生成描述。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

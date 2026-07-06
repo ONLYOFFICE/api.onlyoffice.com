@@ -14,7 +14,7 @@ sidebar_label: Android
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
+1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-android) 下载 Android 移动演示示例。
 
@@ -29,7 +29,7 @@ sidebar_label: Android
    其中 `documentserver` 是已安装 ONLYOFFICE 文档的服务器名称。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
    :::
 
    若 `DOCUMENT_SERVER_URL` 为空，应用将显示错误对话框，而非加载**文档管理器**页面：
