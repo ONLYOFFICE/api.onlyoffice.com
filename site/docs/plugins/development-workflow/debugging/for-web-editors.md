@@ -113,7 +113,7 @@ Always ensure the plugin iframe is selected before inspecting variables, setting
 **CORS**
 
 - Start your local server with the `--cors` flag (`http-server --cors`).
-- Ensure [document server](https://www.onlyoffice.com/download-docs?from=api#docs-community) is installed and accessible.
+- Ensure [document server](https://www.onlyoffice.com/download?from=api#docs-community) is installed and accessible.
 - Serve plugin resources over HTTPS when required by the editor.
 
 **JWT**

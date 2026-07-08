@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         如需了解如何在Windows系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_nodejs_example)。
 
@@ -126,7 +126,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         如需了解如何在Linux系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_nodejs_example)。
 

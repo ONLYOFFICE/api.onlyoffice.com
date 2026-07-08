@@ -27,7 +27,7 @@ Please keep in mind the following security aspects when you are using test examp
 
 Download and install ONLYOFFICE Docs (packaged as Document Server).
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 See the detailed guide to learn how to install Document Server [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx).
 

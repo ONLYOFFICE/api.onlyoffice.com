@@ -9,7 +9,7 @@ ONLYOFFICE Docs is available for Windows, Linux and Docker.
 
 To install it on your local server:
 
-1. [Download](https://www.onlyoffice.com/download-docs?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
+1. [Download](https://www.onlyoffice.com/download?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
 
    - [Install ONLYOFFICE Docs on Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
    - [Install ONLYOFFICE Docs on Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
