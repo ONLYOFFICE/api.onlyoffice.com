@@ -11,18 +11,18 @@ To install it on your local server:
 
 1. [Download](https://www.onlyoffice.com/download-docs?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
 
-   - [Install ONLYOFFICE Docs for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
-   - [Install ONLYOFFICE Docs for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
-   - [Install ONLYOFFICE Docs for Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api)
+   - [Install ONLYOFFICE Docs on Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
+   - [Install ONLYOFFICE Docs on Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
+   - [Install ONLYOFFICE Docs using Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api)
 
-2. In the target HTML file where the editors are to be embedded, specify a placeholder *div* tag, where all the information about the editor parameters will be passed:
+2. In the target HTML file where the editors are to be embedded, specify a placeholder `div` tag, where all the information about the editor parameters will be passed:
 
    ```html
    <div id="placeholder"></div>
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of your local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
@@ -52,7 +52,7 @@ To install it on your local server:
    ```
 
 
-   From now the [`docEditor`](/docs/docs-api/usage-api/doceditor.md) object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
+   From now on, the [`docEditor`](/docs/docs-api/usage-api/doceditor.md) object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
 
    The example above includes all the parameters necessary for ONLYOFFICE Docs correct startup.
 
@@ -72,7 +72,7 @@ Before working with ONLYOFFICE Docs API documentation, it is recommended to make
 
 ## Health check
 
-To check if the editors are available, send the GET request to */healthcheck*. This request checks the availability of the databases, message broker, Redis connection, and storage.
+To check if the editors are available, send the GET request to `/healthcheck`. This request checks the availability of the databases, message broker, Redis connection, and storage.
 
 The response must be **true**, which means that the editors are ready to use.
 
