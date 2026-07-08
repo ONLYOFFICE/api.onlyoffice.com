@@ -1,5 +1,39 @@
 # Change log
 
+## 9.1.0
+
+### Improvements
+
+#### DocSpace
+
+* Unified plugin installation paths in ready-to-use samples
+
+### Fixes
+
+#### Common
+
+* Updated download-docs URLs to new /download path
+* Removed .aspx extensions and added ?from=api tracking to onlyoffice.com URLs
+* Fixed text jump in ConfigEditor form inputs
+
+#### Docs API
+
+* Fixed typos, grammar, and identifier formatting in the self-hosted installation page
+
+#### Plugins and macros
+
+* Updated marketplace name, URLs, and CSS filename across plugin documentation
+* Normalized front matter in AI sample pages
+* Fixed invalid environment variables and CORS configuration in the Ollama guide
+
+#### Desktop
+
+* Fixed plugin references and heading in the adding-plugins page
+
+#### DocSpace
+
+* Fixed code errors, formatting, typos, and navigation paths across plugins-sdk samples
+
 ## 9.0.0
 
 ### New features
