@@ -129,7 +129,7 @@ curl -v -X OPTIONS http://localhost:11434/api/tags \
 
 The expected response should contain the following headers:
 
-```
+```text
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: http://localhost:3000
 Access-Control-Allow-Methods: GET, POST, OPTIONS
