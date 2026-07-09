@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change any settings — the Image Editor plugin has no configurable parameters.
 
-If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **image-editor** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
+If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Image Editor** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
 
 ## Usage
 
@@ -47,7 +47,7 @@ After saving, a notification will confirm the successful update, and the file ve
 
 ## Plugin structure
 
-Repository on GitHub: [image-editor](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/image-editor).
+Repository on GitHub: [Image Editor](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/image-editor).
 
 All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plugin-structure.md).
 

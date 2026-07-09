@@ -1,5 +1,5 @@
 ---
-description: Open and extract ZIP archives with the Archives plugin.
+description: Open and extract ZIP archives with the ZIP Archives plugin.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
@@ -17,22 +17,31 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 ## Configuration
 
-To start working with the plugin, you don't need to change any settings — the Archives plugin has no configurable parameters.
+To start working with the plugin, you don't need to change any settings — the ZIP Archives plugin has no configurable parameters.
 
-If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **zip-archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
+If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **ZIP Archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
 
 ## Usage
 
-The plugin enables you to work with ZIP archives directly in DocSpace. To get started, right-click on an archive file,then navigate to the **More options** dropdown menu and choose your preferred option:
+### Working with archive files
+
+The plugin enables you to work with ZIP archives directly in DocSpace. To get started, right-click on an archive file, then navigate to the **More options** dropdown menu and choose your preferred option:
 
 - **Open archive** - view the contents of the archive without extracting it. You can also extract specific files directly from the preview window.
 - **Choose location to unzip** - select a specific folder or room to extract the entire archive.
 - **Unzip here** - extract the archive directly into the current folder or room where it is stored.
 
+### Creating an archive from a folder
+
+To compress a folder into a ZIP archive:
+
+1. Right-click on the folder in the file list.
+2. Select **Zip folder** from the context menu.
+3. The plugin creates a `.zip` file with the same name as the folder in the parent directory.
 
 ## Plugin structure
 
-Repository on GitHub: [archives](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/archives).
+Repository on GitHub: [ZIP Archives](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/archives).
 
 All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plugin-structure.md).
 
