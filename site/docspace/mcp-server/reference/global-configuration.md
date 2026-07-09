@@ -745,7 +745,7 @@ This configuration uses the default stdio transport with API key
 authentication. In this shared authentication model, all requests are
 associated with the API key owner.
 
-```ini
+```text
 DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
 ```
@@ -756,7 +756,7 @@ This configuration uses the default stdio transport with API key
 authentication and restricts the available tools to a specific set. In this
 shared authentication model, all requests are associated with the API key owner.
 
-```ini
+```text
 DOCSPACE_TOOLSETS=files
 DOCSPACE_ENABLED_TOOLS=get_all_people
 DOCSPACE_DISABLED_TOOLS=delete_file,delete_folder
@@ -770,7 +770,7 @@ This configuration uses HTTP transport with API key authentication and enables
 meta tools. In this shared authentication model, all requests are associated
 with the API key owner.
 
-```ini
+```text
 DOCSPACE_TRANSPORT=http
 DOCSPACE_DYNAMIC=1
 DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
@@ -784,7 +784,7 @@ session management. It configures shorter session lifetimes and more frequent
 cleanup intervals. In this shared authentication model, all requests are
 associated with the API key owner.
 
-```ini
+```text
 DOCSPACE_TRANSPORT=http
 DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
@@ -799,7 +799,7 @@ CORS options. It restricts the allowed origins for CORS requests to a specific
 set of domains. In this shared authentication model, all requests are associated
 with the API key owner.
 
-```ini
+```text
 DOCSPACE_TRANSPORT=http
 DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...

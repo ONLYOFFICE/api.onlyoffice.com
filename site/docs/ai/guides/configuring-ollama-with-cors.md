@@ -28,7 +28,7 @@ sudo systemctl edit ollama
 
 Add the following content:
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 ```
@@ -181,7 +181,7 @@ By default, Ollama listens only on localhost. To enable network access, specify:
 sudo systemctl edit ollama
 ```
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 Environment="OLLAMA_HOST=0.0.0.0"

@@ -28,7 +28,7 @@ sudo systemctl edit ollama
 
 添加以下内容：
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 ```
@@ -181,7 +181,7 @@ OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
 sudo systemctl edit ollama
 ```
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 Environment="OLLAMA_HOST=0.0.0.0"
