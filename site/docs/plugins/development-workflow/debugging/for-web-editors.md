@@ -30,7 +30,7 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below,
    :::
    ![Builder debugger](/assets/images/plugins/plugin-debugging.png)
 
-### Debugging overview
+## Debugging overview
 
 When developing ONLYOFFICE plugins, debugging is essential for identifying and resolving issues. The plugin environment has several specific characteristics that make debugging unique:
 
@@ -47,7 +47,7 @@ To effectively debug your plugin, you can use various tools and techniques avail
 - Frame inspection for managing different execution contexts
 - Network monitoring for API calls and resource loading
 
-#### Console output
+### Console output
 
 Use console methods to inspect values and application state:
 
@@ -62,7 +62,7 @@ console.error("Error:", errorObj);
 Select the plugin's frame in the Console drop-down before evaluating expressions so logs and evaluations run in the correct context.
 :::
 
-#### Breakpoints
+### Breakpoints
 
 1.  **Programmatic breakpoints** -
     Insert a debugger statement where you want execution to pause.
@@ -88,7 +88,7 @@ Select the plugin's frame in the Console drop-down before evaluating expressions
 - Find your plugin file
 - Click on the line number to set a breakpoint
 
-#### Frame Management
+### Frame Management
 
 - Plugin runs in a separate iframe
 - Select the appropriate frame in the console to access plugin context:
@@ -101,14 +101,14 @@ Select the plugin's frame in the Console drop-down before evaluating expressions
 Always ensure the plugin iframe is selected before inspecting variables, setting breakpoints, or executing code snippets.
 :::
 
-### Debugging checklist
+## Debugging checklist
 
 1. Confirm the plugin is installed and enabled.
 2. Ensure all files (`index.html`, `config.json`, `assets`) are present and reachable.
 3. Validate `config.json` structure and paths.
 4. Check the console for errors before continuing.
 
-### Common issues
+## Common issues
 
 **CORS**
 
