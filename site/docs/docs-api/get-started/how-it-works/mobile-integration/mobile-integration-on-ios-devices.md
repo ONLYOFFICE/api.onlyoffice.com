@@ -22,7 +22,7 @@ This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYO
 
 4. To display the main page of your DMS, specify the address of the ONLYOFFICE Docs example page in the `DOCUMENT_SERVER_EXAMPLE_URL` property in the `EditorWebViewDemo.xcconfig` configuration file:
 
-   ```
+   ```text
    DOCUMENT_SERVER_EXAMPLE_URL = documentserver
    ```
 
