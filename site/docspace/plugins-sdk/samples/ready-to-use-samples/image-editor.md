@@ -47,7 +47,7 @@ After saving, a notification will confirm the successful update, and the file ve
 
 ## Plugin structure
 
-Repository on GitHub: [Image Editor](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/image-editor).
+Repository on GitHub: [image-editor](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/image-editor).
 
 All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plugin-structure.md).
 

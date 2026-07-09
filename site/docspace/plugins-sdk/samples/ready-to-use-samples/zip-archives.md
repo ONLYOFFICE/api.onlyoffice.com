@@ -41,7 +41,7 @@ To compress a folder into a ZIP archive:
 
 ## Plugin structure
 
-Repository on GitHub: [ZIP Archives](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/archives).
+Repository on GitHub: [archives](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/archives).
 
 All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plugin-structure.md).
 
