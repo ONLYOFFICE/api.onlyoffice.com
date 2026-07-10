@@ -22,8 +22,8 @@ To start working with the plugin, you don't need to change the default settings.
 In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **CodeMirror** plugin. You can change the following plugin parameters:
 
 - **Highlight whitespace** - enable or disable the highlighting of spaces in the code editor.
-- **Highlight trailing spaces** - enable or disable the highlighting of trailing spaces in the code editor.
-- **Auto-close HTML tags** - when enabled, HTML tags will be automatically closed as you type.
+- **Highlight trailing whitespace** - enable or disable the highlighting of trailing whitespace at the end of a line.
+- **Auto close tags** - when enabled, close tags are automatically inserted when a `>` or `/` is typed in HTML-like files.
 
 There you can also view the plugin metadata, such as the author, version, status, homepage, and description.
 
@@ -37,7 +37,7 @@ To create a new code file:
 2. Click **Actions → More**.
 
     ![CreateFile](/assets/images/docspace/codemirror-create-file.png#gh-light-mode-only)![CreateFile](/assets/images/docspace/codemirror-create-file.dark.png#gh-dark-mode-only)
-3. Select the **Text File** option from the appeared menu.
+3. Select the **Text file** option from the appeared menu.
 4. Enter a file name with the appropriate extension (e.g., `style.css`, `script.js`, `app.py`) in the pop-up window and click **Create**.
 5. The CodeMirror code editor opens in a new pop-up window where you can edit the file content.
 
@@ -51,7 +51,11 @@ The newly created file will appear in the file list.
 You can open previously created or downloaded files using the CodeMirror plugin:
 
 - Click on the file name with the CodeMirror icon, or
-- Right-click to open the context menu and select **Edit File with CodeMirror**.
+- Right-click to open the context menu and select **Edit file with Codemirror**.
+
+### Keyboard shortcuts
+
+On desktop devices, the editor includes a keyboard shortcuts side panel. Click the info icon (ℹ️) in the upper-right corner of the editor area to open or close the panel. The panel lists available shortcuts for your operating system (Windows or macOS). This panel is not available on mobile devices.
 
 ### Supported languages
 
@@ -72,7 +76,7 @@ The plugin supports syntax highlighting for the following languages and file for
 | Rust | `.rs` |
 | SCSS/Sass | `.sass`, `.scss` |
 | SQL | `.sql`, `.mysql`, `.pgsql`, `.postgresql`, `.sqlite`, `.db`, `.mssql`, `.cql`, `.plsql`, `.mariadb` |
-| WAST | `.wast` |
+| WAST | `.wast`, `.wat` |
 | YAML | `.yaml`, `.yml` |
 
 ## Plugin structure
@@ -88,8 +92,8 @@ The following plugin interfaces are used:
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required as we implement a code editor service ([CodeMirror](https://codemirror.net/)).
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add a settings block for plugin configuration. Users can access this block from **Settings → Integration → Plugins** to adjust the plugin parameters.
-- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement the **Edit File with CodeMirror** context menu action.
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to add the **Text File** option to the **+** → **More** menu for creating new code files.
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement the **Edit file with Codemirror** context menu action.
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md). Used to add the **Text file** option to the **+** → **More** menu for creating new code files.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md). Used to register supported file types and open them in the CodeMirror editor.
 
 ## Support
