@@ -10,13 +10,13 @@ sidebar_position: -3
 
 - **基础 URL**。发送 API 请求的网络地址。在某些情况下，基础 URL 可能包含指定所使用模型的端点：
 
-  ```ini
+  ```text
   https://ai-provider-base-url
   ```
 
 - **模型版本**。所访问模型的版本。有时，模型版本会包含在基础 URL 中：
 
-  ```ini
+  ```text
   https://ai-provider-base-url/v1
   ```
 
@@ -68,7 +68,7 @@ class Provider extends AI.Provider {
 }
 ```
 
-## 步骤 2. 添加自定义提供商
+## 步骤 2. 在 AI 插件中配置提供商
 
 要将自定义提供商添加到 AI 插件：
 

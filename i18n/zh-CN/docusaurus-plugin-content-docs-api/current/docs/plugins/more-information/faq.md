@@ -10,7 +10,7 @@ sidebar_position: -2
 
 ## 如何将插件调整为 ONLYOFFICE 样式？
 
-ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css)，已连接到 *index.html* 文件。关于将 ONLYOFFICE 样式接入编辑器的详细说明，请参照[此页面](../configuration/styles-and-theming.md)。
+ONLYOFFICE 提供了专用样式表 [plugins.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css)，已连接到 *index.html* 文件。关于将 ONLYOFFICE 样式接入编辑器的详细说明，请参照[此页面](../configuration/styles-and-theming.md)。
 
 ## 如何本地化插件？
 
@@ -28,7 +28,7 @@ ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sd
 
 ## 在哪里可以找到可供集成的现有插件？
 
-所有可用的现成插件都可以在 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh)中找到。
+所有可用的现成插件都可以在 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io)中找到。
 
 更多插件示例列在 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)，你可以自由地复制，并将它们作为创建自定义插件的参考。
 

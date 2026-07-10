@@ -4,7 +4,7 @@ sidebar_position: -8
 
 # 基本概念
 
-[ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。
+[ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer) 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。
 
 本文档详细说明：
 

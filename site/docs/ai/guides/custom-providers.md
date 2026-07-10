@@ -6,17 +6,17 @@ sidebar_position: -3
 
 Any custom provider can be added to the AI plugin. To do this, follow the instructions below.
 
-## Prerequisites {#prerequisites}
+## Prerequisites
 
 - **Base URL**. The web address where API requests are sent. In some cases, the base URL may include an endpoint that specifies the model being used:
 
-    ``` ini
+    ```text
     https://ai-provider-base-url
     ```
 
 - **Model version**. The version of the accessed model. Sometimes, the model version is included in the base URL:
 
-    ``` ini
+    ```text
     https://ai-provider-base-url/v1
     ```
 
@@ -68,7 +68,7 @@ class Provider extends AI.Provider {
 }
 ```
 
-## Step 2. Add the custom provider
+## Step 2. Configure the provider in the AI plugin
 
 To add the custom provider to the AI plugin:
 

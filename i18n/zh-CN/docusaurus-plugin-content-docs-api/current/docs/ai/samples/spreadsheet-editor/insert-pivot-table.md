@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 从选定范围创建数据透视表。
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

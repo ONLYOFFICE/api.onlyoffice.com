@@ -14,7 +14,7 @@ This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYO
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise?from=api) or [Developer](https://www.onlyoffice.com/developer-edition?from=api).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
@@ -22,14 +22,14 @@ This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYO
 
 4. To display the main page of your DMS, specify the address of the ONLYOFFICE Docs example page in the `DOCUMENT_SERVER_EXAMPLE_URL` property in the `EditorWebViewDemo.xcconfig` configuration file:
 
-   ```
+   ```text
    DOCUMENT_SERVER_EXAMPLE_URL = documentserver
    ```
 
    Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
    :::tip
-   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
    :::
 
    If `DOCUMENT_SERVER_EXAMPLE_URL` is specified, the DMS main page is loaded. Otherwise, an error occurs:
@@ -172,7 +172,7 @@ This example shows how to open the ONLYOFFICE editors via WKWebView using the ed
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise?from=api) or [Developer](https://www.onlyoffice.com/developer-edition?from=api).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
@@ -195,7 +195,7 @@ This example shows how to open the ONLYOFFICE editors via WKWebView using the ed
    Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
    :::tip
-   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
    :::
 
 7. Add the script initializing the **Document Editor** for the `<div>` element with the configuration for the document you want to open. Define event handler functions that forward events to native code via `window.webkit.messageHandlers`, and pass them to the editor config:

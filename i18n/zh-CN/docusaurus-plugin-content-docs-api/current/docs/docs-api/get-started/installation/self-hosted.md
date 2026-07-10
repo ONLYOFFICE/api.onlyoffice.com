@@ -9,13 +9,13 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
 要在本地服务器安装：
 
-1. 从官网[下载](https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer) ONLYOFFICE 文档开发者版，并根据帮助中心指引进行安装：
+1. 从官网[下载](https://www.onlyoffice.com/zh/download-docs?from=api#docs-developer) ONLYOFFICE 文档开发者版，并根据帮助中心指引进行安装：
 
-   - [Windows 系统安装指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
-   - [Linux 系统安装指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
-   - [Docker 容器安装指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api)
+   - [在 Windows 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
+   - [在 Linux 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
+   - [使用 Docker 安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api)
 
-2. 在需要嵌入编辑器的目标 HTML 文件中，定义占位符 *div* 标签用于传递编辑器参数：
+2. 在需要嵌入编辑器的目标 HTML 文件中，定义占位符 `div` 标签用于传递编辑器参数：
 
    ```html
    <div id="placeholder"></div>
@@ -73,7 +73,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
 ## 健康检查
 
-向 */healthcheck* 发送 GET 请求可验证编辑器可用性。该请求将检测数据库、消息代理、Redis 连接和存储服务的运行状态。
+向 `/healthcheck` 发送 GET 请求可验证编辑器可用性。该请求将检测数据库、消息代理、Redis 连接和存储服务的运行状态。
 
 正常响应应为 **true**，表示编辑器已就绪。
 

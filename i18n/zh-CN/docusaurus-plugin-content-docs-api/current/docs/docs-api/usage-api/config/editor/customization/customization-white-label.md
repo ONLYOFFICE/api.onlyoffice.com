@@ -7,7 +7,7 @@ sidebar_label: White label
 customization 部分定义编辑器自定义参数。
 
 :::info
-此页面上的参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)的扩展白标许可证。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+此页面上的参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
 :::
 
 ## 关于

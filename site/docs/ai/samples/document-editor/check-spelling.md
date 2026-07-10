@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Check and fix spelling errors in the current paragraph.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---

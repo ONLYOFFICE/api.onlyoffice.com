@@ -96,7 +96,7 @@ const demoBox: IBox = {
 };
 
 
-// Add toggle component with props to the modal
+// Add button component with props to the modal
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
@@ -257,7 +257,7 @@ declare global {
   }
 }
 
-window.Plugins.Boxcomponentplugin = plugin || {};
+window.Plugins.Buttoncomponentplugin = plugin || {};
 
 export default plugin;
 ```
@@ -317,7 +317,7 @@ import {
   ButtonGroup
 } from '@onlyoffice/docspace-plugin-sdk';
 
-const plugin = new Boxcomponentplugin();
+const plugin = new Buttoncomponentplugin();
 
 // Define button behavior and appearance
 const ButtonProps: IButton = {
@@ -403,7 +403,7 @@ This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `di
 ## Step 9: Upload to DocSpace
 
 1. Log in as an administrator.
-2. Go to **Admin Panel → Integration → Plugins**
+2. Go to **Settings → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 

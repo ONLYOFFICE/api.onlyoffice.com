@@ -1,7 +1,7 @@
 ---
+hide_table_of_contents: true
 description: 为选中的文本添加批注。
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
-hide_table_of_contents: true
 ---
 
 import Video from '@site/src/components/Video/Video';

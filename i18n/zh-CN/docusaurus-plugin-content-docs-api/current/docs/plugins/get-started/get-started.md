@@ -22,9 +22,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 **开发概况：**
 
 - **时间：** 2-7 天 | **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
-- **分发方式：** [ONLYOFFICE 应用市场](https://www.onlyoffice.com/app-directory/zh) 或私有部署
-
-[在 ONLYOFFICE 应用市场浏览示例](https://www.onlyoffice.com/app-directory/zh)
+- **分发方式：** [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
 
 ## 插件的限制 {#what-plugins-cannot-do}
 

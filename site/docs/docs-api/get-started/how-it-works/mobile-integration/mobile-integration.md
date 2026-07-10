@@ -19,7 +19,7 @@ const config = {
 Users can view and edit documents, spreadsheets, presentations, and PDFs directly on their devices. The integration architecture is the same as described on the [How it works](../how-it-works.md) page — the WebView simply acts as the browser that hosts the **document editor**, while the **document manager** and **document storage service** remain your responsibility, as in any integration.
 
 :::note
-Mobile web editors are available only in commercial builds of ONLYOFFICE Docs: [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) and [Developer](https://www.onlyoffice.com/developer-edition.aspx).
+Mobile web editors are available only in commercial builds of ONLYOFFICE Docs: [Enterprise](https://www.onlyoffice.com/docs-enterprise?from=api) and [Developer](https://www.onlyoffice.com/developer-edition?from=api).
 :::
 
 For platform-specific setup instructions, see:

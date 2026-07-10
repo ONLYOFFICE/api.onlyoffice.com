@@ -35,7 +35,7 @@ sidebar_position: -20
    其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供；它加载**文档编辑器**并将其连接到该服务。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
    :::
 
 4. 添加初始化**文档编辑器**的脚本，配置要打开的文档：

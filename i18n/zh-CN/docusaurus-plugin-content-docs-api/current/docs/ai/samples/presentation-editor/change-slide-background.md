@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 更改幻灯片的背景颜色。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

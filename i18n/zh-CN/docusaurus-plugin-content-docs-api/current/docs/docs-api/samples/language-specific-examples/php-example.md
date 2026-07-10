@@ -51,7 +51,7 @@ make compose-prod
 
 下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_example)上安装它。
 

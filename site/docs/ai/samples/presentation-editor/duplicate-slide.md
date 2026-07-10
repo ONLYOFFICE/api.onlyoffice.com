@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Duplicate a specified slide in a presentation.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

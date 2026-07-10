@@ -224,7 +224,7 @@ Along with the changed document itself, the **document editing service** sends:
   ```
 
   :::warning
-  The `changesurl` request is made in the browser from the added iframe with the `documentserver` domain, where `documentserver` is the name of the server with ONLYOFFICE Docs installed. For correct operation, cross-origin HTTP requests must be allowed (CORS). This can be achieved using the `Access-Control-Allow-Origin` header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  The `changesurl` request is made in the browser from the added iframe with the `documentserver` domain, where `documentserver` is the name of the server with ONLYOFFICE Docs installed. For correct operation, cross-origin HTTP requests must be allowed (CORS). This can be achieved using the `Access-Control-Allow-Origin` header. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
   :::
 
   ![changesurl](/assets/images/editor/changesurl.png#gh-light-mode-only)![changesurl](/assets/images/editor/changesurl.dark.png#gh-dark-mode-only)

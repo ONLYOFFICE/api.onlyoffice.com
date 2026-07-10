@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Create a pivot table from a selected range.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---

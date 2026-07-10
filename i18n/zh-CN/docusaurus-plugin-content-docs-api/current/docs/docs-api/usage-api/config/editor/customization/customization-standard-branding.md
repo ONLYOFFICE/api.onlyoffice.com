@@ -8,7 +8,7 @@ sidebar_label: Standard branding
 customization 部分定义编辑器自定义参数。
 
 :::info
-本页面上的大多数参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)了解其他自定义选项。
+本页面上的大多数参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)了解其他自定义选项。
 :::
 
 :::note
@@ -160,7 +160,7 @@ customization 部分定义编辑器自定义参数。
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
 **示例**:
@@ -293,7 +293,7 @@ customization 部分定义编辑器自定义参数。
 是否在 pdf 表单中禁用角色设置。如果该参数等于 `false`，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
 **示例**: `true`
@@ -538,7 +538,7 @@ customization 部分定义编辑器自定义参数。
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
 **示例**:

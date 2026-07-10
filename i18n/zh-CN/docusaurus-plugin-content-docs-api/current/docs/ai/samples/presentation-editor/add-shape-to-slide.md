@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 向幻灯片添加带有文本的形状。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---

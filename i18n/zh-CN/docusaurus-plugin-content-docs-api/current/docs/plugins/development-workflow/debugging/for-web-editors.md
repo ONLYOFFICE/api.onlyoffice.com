@@ -30,7 +30,7 @@ sidebar_position: -2
    :::
    ![Builder debugger](/assets/images/plugins/plugin-debugging.png)
 
-### 调试概述
+## 调试概述
 
 在开发 ONLYOFFICE 插件时，调试对于识别和解决问题至关重要。插件环境具有几个特定的特性，使得调试独一无二：
 
@@ -47,7 +47,7 @@ sidebar_position: -2
 - 框架检查，用于管理不同的执行上下文
 - 网络监控，用于 API 调用和资源加载
 
-#### 控制台输出
+### 控制台输出
 
 使用控制台方法检查值和应用程序状态：
 
@@ -62,7 +62,7 @@ console.error("Error:", errorObj);
 在评估表达式之前，在控制台下拉列表中选择插件的框架，以便日志和评估在正确的上下文中运行。
 :::
 
-#### 断点
+### 断点
 
 1.  **编程断点 -**
     在您希望暂停执行的位置插入 debugger 语句。
@@ -88,7 +88,7 @@ console.error("Error:", errorObj);
 - 找到您的插件文件
 - 单击行号以设置断点
 
-#### 框架管理
+### 框架管理
 
 - 插件在单独的 iframe 中运行
 - 在控制台中选择适当的框架以访问插件上下文：
@@ -101,19 +101,19 @@ console.error("Error:", errorObj);
 在检查变量、设置断点或执行代码片段之前，请始终确保选择了插件 iframe。
 :::
 
-### 调试检查清单
+## 调试检查清单
 
 1. 确认插件已安装并启用。
 2. 确保所有文件（`index.html`、`config.json`、`assets`）都存在且可访问。
 3. 验证 `config.json` 结构和路径。
 4. 在继续之前检查控制台是否有错误。
 
-### 常见问题
+## 常见问题
 
 **CORS**
 
 - 使用 `--cors` 标志启动本地服务器（`http-server --cors`）。
-- 确保已安装并可访问 [document server](https://www.onlyoffice.com/zh/download-docs#docs-community)。
+- 确保已安装并可访问 [document server](https://www.onlyoffice.com/zh/download-docs?from=api#docs-community)。
 - 在编辑器要求时，通过 HTTPS 提供插件资源。
 
 **JWT**

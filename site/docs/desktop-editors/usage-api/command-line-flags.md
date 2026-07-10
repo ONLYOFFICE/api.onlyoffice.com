@@ -20,7 +20,7 @@ In the commands below, replace `<flag>` with one of the flags from the [Flags](#
 
 **Via terminal**: press **Win+R**, type `cmd`, then run:
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" <flag>
 ```
 
@@ -70,7 +70,7 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -89,7 +89,7 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --edit="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -108,7 +108,7 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --view="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -129,7 +129,7 @@ Open a file in Track Changes mode in a new tab instead of a separate window:
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx" --force-use-tab
 ```
 

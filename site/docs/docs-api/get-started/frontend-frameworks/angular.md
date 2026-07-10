@@ -138,7 +138,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### Versions 17.0.0 and above
 
@@ -209,7 +209,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Test the application using the Node.js development server:
 
