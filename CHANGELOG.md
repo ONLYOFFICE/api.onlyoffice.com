@@ -29,6 +29,7 @@
 * Fixed invalid environment variables and CORS configuration in the Ollama guide
 * Fixed skipped heading levels in for-web-editors debugging page
 * Fixed code block language identifiers in Ollama and localization pages
+* Fixed code block identifiers and headings in custom-providers page
 
 #### Desktop
 
