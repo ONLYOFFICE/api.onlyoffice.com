@@ -68,7 +68,7 @@ class Provider extends AI.Provider {
 }
 ```
 
-## 步骤 2. 添加自定义提供商
+## 步骤 2. 在 AI 插件中配置提供商
 
 要将自定义提供商添加到 AI 插件：
 
