@@ -1,5 +1,19 @@
 # Change log
 
+## 9.2.0
+
+### New features
+
+#### Docs API
+
+* Added Searching in PDF automation API sample
+
+### Improvements
+
+#### Common
+
+* Updated Docusaurus to 3.10.2 and upgraded search/UI dependencies
+
 ## 9.1.0
 
 ### Improvements
