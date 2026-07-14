@@ -5,3 +5,4 @@ export { default as CommentsExternalToolbar } from "./ExternalToolbars/CommentsE
 export { default as ReviewChangesExternalToolbar } from "./ExternalToolbars/ReviewChangesExternalToolbar/ReviewChangesExternalToolbar";
 export { default as ContentControlsExternalToolbar } from "./ExternalToolbars/ContentControlsExternalToolbar/ContentControlsExternalToolbar";
 export { default as SearchPdfExternalToolbar } from "./ExternalToolbars/SearchPdfExternalToolbar/SearchPdfExternalToolbar";
+export { default as RedactPdfExternalToolbar } from "./ExternalToolbars/RedactPdfExternalToolbar/RedactPdfExternalToolbar";

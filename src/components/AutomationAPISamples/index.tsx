@@ -44,6 +44,12 @@ const AutomationAPISamples = [
     url: 'searching-in-pdf',
     description: 'This example shows how to search for text in a PDF and highlight all matching occurrences from an external interface.',
   },
+  {
+    name: 'Redacting in PDF',
+    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    url: 'redacting-in-pdf',
+    description: 'This example shows how to find and permanently redact sensitive text in a PDF from an external interface.',
+  },
 ];
 
 interface Props {
