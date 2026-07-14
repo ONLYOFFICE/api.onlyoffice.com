@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: 1
 hide_table_of_contents: true
 description: Search and highlight text in a PDF using the Automation API.
 tags: ["PDF", "Integration", "External access", "Automation API"]
