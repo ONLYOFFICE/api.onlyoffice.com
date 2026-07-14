@@ -38,6 +38,12 @@ const AutomationAPISamples = [
     url: 'working-with-content-controls',
     description: 'This example shows how to add different types of content controls and inspect their properties from an external UI.',
   },
+  {
+    name: 'Searching in PDF',
+    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    url: 'searching-in-pdf',
+    description: 'This example shows how to search for text in a PDF and highlight all matching occurrences from an external interface.',
+  },
 ];
 
 interface Props {

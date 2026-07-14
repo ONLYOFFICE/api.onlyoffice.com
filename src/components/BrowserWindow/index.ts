@@ -4,3 +4,4 @@ export { default as FormExternalToolbar } from "./ExternalToolbars/FormExternalT
 export { default as CommentsExternalToolbar } from "./ExternalToolbars/CommentsExternalToolbar/CommentsExternalToolbar";
 export { default as ReviewChangesExternalToolbar } from "./ExternalToolbars/ReviewChangesExternalToolbar/ReviewChangesExternalToolbar";
 export { default as ContentControlsExternalToolbar } from "./ExternalToolbars/ContentControlsExternalToolbar/ContentControlsExternalToolbar";
+export { default as SearchPdfExternalToolbar } from "./ExternalToolbars/SearchPdfExternalToolbar/SearchPdfExternalToolbar";
