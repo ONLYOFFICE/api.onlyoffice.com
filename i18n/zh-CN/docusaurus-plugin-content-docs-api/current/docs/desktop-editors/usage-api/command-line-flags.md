@@ -20,7 +20,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 
 **通过终端**：按下 **Win+R**，键入 `cmd`，然后运行：
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" <标志>
 ```
 
@@ -70,7 +70,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -89,7 +89,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --edit="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -108,7 +108,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --view="C:\Users\username\Documents\Document1.docx"
 ```
 
@@ -129,7 +129,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 <Tabs groupId="os">
   <TabItem value="windows" label="Windows">
 
-```
+```batch
 "%ProgramFiles%\ONLYOFFICE\DesktopEditors\DesktopEditors" --review="C:\Users\username\Documents\Document1.docx" --force-use-tab
 ```
 

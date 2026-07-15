@@ -149,6 +149,10 @@ export const PlaygroundPreview = () => {
         return () => window.removeEventListener('playground-run', handleRefresh);
     }, [scriptValue, scriptType, executeCode]);
 
+    useEffect(() => {
+        return () => { delete window.connector; };
+    }, []);
+
     return <EditorPreview
         ref={editorRef}
         documentServerUrl={documentServerUrl}

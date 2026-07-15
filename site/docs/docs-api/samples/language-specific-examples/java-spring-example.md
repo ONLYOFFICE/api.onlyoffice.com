@@ -36,7 +36,7 @@ Please keep in mind the following security aspects when you are using test examp
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example).
 
@@ -166,7 +166,7 @@ Please keep in mind the following security aspects when you are using test examp
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example).
 
@@ -252,7 +252,7 @@ Please keep in mind the following security aspects when you are using test examp
 
         Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example).
 

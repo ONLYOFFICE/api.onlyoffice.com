@@ -26,7 +26,7 @@ sidebar_position: -10
 
 下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 如需了解如何安装ONLYOFFICE 文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
 

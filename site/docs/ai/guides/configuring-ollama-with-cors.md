@@ -28,7 +28,7 @@ sudo systemctl edit ollama
 
 Add the following content:
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 ```
@@ -129,7 +129,7 @@ curl -v -X OPTIONS http://localhost:11434/api/tags \
 
 The expected response should contain the following headers:
 
-```
+```text
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: http://localhost:3000
 Access-Control-Allow-Methods: GET, POST, OPTIONS
@@ -181,7 +181,7 @@ By default, Ollama listens only on localhost. To enable network access, specify:
 sudo systemctl edit ollama
 ```
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 Environment="OLLAMA_HOST=0.0.0.0"

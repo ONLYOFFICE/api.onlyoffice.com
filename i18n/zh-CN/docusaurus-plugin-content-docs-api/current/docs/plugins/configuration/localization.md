@@ -60,7 +60,7 @@ sidebar_position: -2
 
 从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下：
 
-```ini
+```text
 highlightcode/
 ├── translations/
 ├── scripts/
@@ -94,7 +94,7 @@ highlightcode/
 
 添加完所有本地化文件后，插件文件结构如下：
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-DE.json
@@ -255,7 +255,7 @@ language.innerHTML = window.Asc.plugin.tr("Language");
 
 :::warning[错误示例]
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-WRONG-NAME.json
@@ -272,7 +272,7 @@ highlightcode/
 
 :::tip[正确示例]
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-DE.json

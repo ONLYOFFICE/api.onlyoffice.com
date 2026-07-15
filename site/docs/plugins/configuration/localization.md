@@ -60,7 +60,7 @@ The complete translations in the [config.json](configuration.md) for the [highli
 
 Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../interacting-with-editors/overview/overview.md) files and create their list. Then create the _translations_ folder in the plugin directory, so that the structure looked like this:
 
-```ini
+```text
 highlightcode/
 ├── translations/
 ├── scripts/
@@ -94,7 +94,7 @@ First, the _langs.json_ file will be requested and a full match of the language 
 
 Once all the localization files are added, the plugin file structure will look like this:
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-DE.json
@@ -255,7 +255,7 @@ Error output: Instead of showing an error, the plugin displays the incorrect key
 
 :::warning[Wrong]
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-WRONG-NAME.json
@@ -272,7 +272,7 @@ highlightcode/
 
 :::tip[Correct]
 
-```ini
+```text
 highlightcode/
 ├── translations/
     ├── de-DE.json

@@ -28,7 +28,7 @@ sudo systemctl edit ollama
 
 添加以下内容：
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 ```
@@ -129,7 +129,7 @@ curl -v -X OPTIONS http://localhost:11434/api/tags \
 
 预期响应应包含以下头信息：
 
-```
+```text
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: http://localhost:3000
 Access-Control-Allow-Methods: GET, POST, OPTIONS
@@ -181,7 +181,7 @@ OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
 sudo systemctl edit ollama
 ```
 
-```ini
+```text
 [Service]
 Environment="OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*"
 Environment="OLLAMA_HOST=0.0.0.0"
