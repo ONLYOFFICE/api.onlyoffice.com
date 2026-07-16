@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Building plugin
 
-To build a plugin, you need the *yarn* package manager to be installed. After that, follow the instructions below:
+To build a plugin, you need *npm* (included with Node.js) to be installed. After that, follow the instructions below:
 
 1. Open the terminal and go to the plugin root folder:
 
@@ -15,13 +15,13 @@ To build a plugin, you need the *yarn* package manager to be installed. After th
 2. Install all the necessary dependencies (if this was not done previously when creating the plugin template):
 
    ``` sh
-   yarn install
+   npm install
    ```
 
 3. Build an archive for uploading to the portal:
 
    ``` sh
-   yarn build
+   npm run build
    ```
 
 This command generates the obfuscated code from the entire project and bundles it into the *plugin.js* file using the *webpack* npm package.
