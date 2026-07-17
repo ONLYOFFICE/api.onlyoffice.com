@@ -57,6 +57,8 @@ You can open previously created or downloaded files using the CodeMirror plugin:
 
 On desktop devices, the editor includes a keyboard shortcuts side panel. Click the Shortcuts plugin icon (a circle with an exclamation mark) in the upper-right corner of the editor area to open or close the panel. The panel lists available shortcuts for your operating system (Windows or macOS). This panel is not available on mobile devices.
 
+    ![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.png#gh-light-mode-only)![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.dark.png#gh-dark-mode-only)
+    
 ### Supported languages
 
 The plugin supports syntax highlighting for the following languages and file formats:
