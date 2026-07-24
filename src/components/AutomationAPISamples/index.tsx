@@ -40,7 +40,7 @@ const AutomationAPISamples = [
   },
   {
     name: 'Searching in PDF',
-    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    image: require('@site/static/assets/images/editor/searching-in-pdf.png').default,
     url: 'searching-in-pdf',
     description: 'This example shows how to search for text in a PDF and highlight all matching occurrences from an external interface.',
   },
