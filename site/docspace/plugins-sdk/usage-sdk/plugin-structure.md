@@ -16,19 +16,19 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
 - The context menu plugin uses an [icon](coding-plugin/plugin-items/contextmenuitem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
-  ![Convert to text](/assets/images/docspace/convert-to-text.png)
+  ![Convert to text](/assets/images/docspace/convert-to-text.png#gh-light-mode-only)![Convert to text](/assets/images/docspace/convert-to-text.dark.png#gh-dark-mode-only)
 
   This icon can also be used for the main button icon. For example, in the **Draw.io** plugin, the same icon is used for the context and main button menu.
 
-  ![Main button icon](/assets/images/docspace/main-button-icon.png)
+  ![Main button icon](/assets/images/docspace/main-button-icon.png#gh-light-mode-only)![Main button icon](/assets/images/docspace/main-button-icon.dark.png#gh-dark-mode-only)
 
   The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/plugin-items/fileitem.md#fileRowIcon) is 32x32 px.
 
-  ![File icon](/assets/images/docspace/file-icon.png)
+  ![File icon](/assets/images/docspace/file-icon.png#gh-light-mode-only)![File icon](/assets/images/docspace/file-icon.dark.png#gh-dark-mode-only)
 
   It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/plugin-items/fileitem.md#fileTileIcon).
 
-  ![File icon tile](/assets/images/docspace/file-icon-tile.png)
+  ![File icon tile](/assets/images/docspace/file-icon-tile.png#gh-light-mode-only)![File icon tile](/assets/images/docspace/file-icon-tile.dark.png#gh-dark-mode-only)
 
 ## dist
 
