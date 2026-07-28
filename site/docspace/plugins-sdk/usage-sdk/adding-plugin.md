@@ -26,7 +26,7 @@ By default, system plugins are turned off. But you can enable them by following 
 
 After that, the plugin will function automatically unless additional settings need to be specified.
 
-A list of the system plugins can also be found in the **Developer Tools** section on the **Plugins SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
+A list of the system plugins can also be found in the **Developer Tools** section on the **Plugin SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
 
 ![Plugin samples](/assets/images/docspace/plugin-samples.png#gh-light-mode-only)![Plugin samples](/assets/images/docspace/plugin-samples.dark.png#gh-dark-mode-only)
 
@@ -40,7 +40,7 @@ To set up a plugin:
 
    ![Plugin settings](/assets/images/docspace/plugin-settings.png#gh-light-mode-only)![Plugin settings](/assets/images/docspace/plugin-settings.dark.png#gh-dark-mode-only)
 
-Now the plugin is available to use.
+Now the plugin is available for use.
 
 ## Uploading plugins
 
@@ -54,7 +54,7 @@ To upload your own plugins to the DocSpace portal:
 
 3. Open the **Plugins** tab.
 
-4. Click the **Upload plugin** button.
+4. Click **Upload** in the upload area, or drag and drop the plugin archive there.
 
    ![Plugin uploading](/assets/images/docspace/upload-plugin.png#gh-light-mode-only)![Plugin uploading](/assets/images/docspace/upload-plugin.dark.png#gh-dark-mode-only)
 

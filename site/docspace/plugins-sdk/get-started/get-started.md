@@ -14,7 +14,7 @@ This documentation describes:
 
 Here are some examples of what you can do with ONLYOFFICE DocSpace plugins:
 
-- connect third-party services, like [Draw.io](../samples/ready-to-use-samples/drawio.md), [Markdown](../samples/ready-to-use-samples/markdown.md), [Speech to Text](../samples/ready-to-use-samples/speech-to-text.md), etc.;
+- connect third-party services, like [Draw.io](../samples/ready-to-use-samples/drawio.md), [Markdown](../samples/ready-to-use-samples/markdown.md), [Speech to Text](../samples/ready-to-use-samples/speech-to-text.md), etc.
 - enhance the existing user experience and the editors' functionality: [PDF converter](../samples/ready-to-use-samples/pdf-converter.md).
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
@@ -31,7 +31,7 @@ To create your own plugin, you need to follow a few steps:
 
 ### Step 1. Preparing
 
-[Install](../usage-sdk/preparing.md) the *@onlyoffice/docspace-plugin-sdk* npm package globally:
+[Prepare](../usage-sdk/preparing.md) your environment: make sure you have access to ONLYOFFICE DocSpace (either the on-premises version or a DocSpace SaaS account), then install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -47,9 +47,9 @@ Now, the **npx** command is available, which will be used to create a plugin.
    npx create-docspace-plugin
    ```
 
-2. Configure the plugin in the terminal specifying in the dialog the plugin settings such as name, version, author, logo, etc.
+2. Configure the plugin in the terminal by specifying the plugin settings in the dialog, such as name, version, author, logo, etc.
 
-3. Select the plugin scopes from the list by pressing *Space* on the necessary scopes (API, Settings, Context menu, etc.).
+3. Select the plugin scopes from the list: use the arrow keys to navigate and press *Space* to select the necessary scopes (API, Settings, Context menu, etc.).
 
 For more information about plugin settings and scopes, see [creating a plugin template](../usage-sdk/creating-plugin-template.md).
 
@@ -71,9 +71,9 @@ Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-pl
 
 ### Step 4. Building
 
-To build a plugin, you need *npm* (included with Node.js) to be installed.
+To build a plugin, you need to have *npm* (included with Node.js) installed.
 
-1. Install all the necessary dependencies using the **npm install** command in the plugin root folder (if this was not done previously in step 2).
+1. Install all the necessary dependencies using the **npm install** command in the plugin root folder (if this was not done previously in Step 2).
 
 2. Build a plugin archive by running the **npm run build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. For more information, see [building a plugin](../usage-sdk/building-plugin.md).
 

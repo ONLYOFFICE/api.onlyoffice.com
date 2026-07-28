@@ -10,7 +10,7 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 
 A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
-- The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
+- The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png#gh-light-mode-only" width="300px" /><img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only" width="300px" />
 
@@ -18,7 +18,7 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png)
 
-  This icon can be also used for the main button icon. For example, in the **Draw.io** plugin, the same icon is used for the context and main button menu.
+  This icon can also be used for the main button icon. For example, in the **Draw.io** plugin, the same icon is used for the context and main button menu.
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png)
 
@@ -40,7 +40,7 @@ A folder for the plugin source files.
 
 ### src/index.ts
 
-The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the same parameter from the *package.json* file:
+The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the corresponding parameter from the *package.json* file:
 
 ``` ts
 window.Plugins.PDFConverter = plugin || {}
@@ -48,7 +48,7 @@ window.Plugins.PDFConverter = plugin || {}
 
 ## webpack.config.js
 
-The webpack configuration file. This file can be edited but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
+The webpack configuration file. This file can be edited, but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
 
 ``` ts
 const config = {
@@ -67,6 +67,10 @@ The *TypeScript* configuration file. This file can be edited.
 
 A file with the information about the plugin and dependencies. This file can be edited and the new dependencies can be added.
 
-## .prettierrc
+## .prettierrc.json
 
 The configuration file for the *prettier* npm package. This file can be edited.
+
+## custom.d.ts
+
+The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited.
