@@ -4,7 +4,7 @@
 
 This documentation describes:
 
-- How to [create](../usage-sdk/creating-plugin-template.md), [code](../usage-sdk/coding-plugin/coding-plugin.md), [build](../usage-sdk/building-plugin.md), and [upload](../usage-sdk/adding-plugin.md) a plugin
+- How to [create](../usage-sdk/creating-plugin-template.md), [code](../usage-sdk/coding-plugin/coding-plugin.md), [style](../usage-sdk/styling-plugin.md), [build](../usage-sdk/building-plugin.md), and [upload](../usage-sdk/adding-plugin.md) a plugin
 - What [plugin types](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md) are available
 - What the [plugin structure](../usage-sdk/plugin-structure.md) consists of
 - How to use plugin variables, methods, [messages](../usage-sdk/coding-plugin/plugin-message.md), and [events](../usage-sdk/coding-plugin/events.md)

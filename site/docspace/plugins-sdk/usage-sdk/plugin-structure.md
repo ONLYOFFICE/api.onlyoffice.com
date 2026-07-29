@@ -16,7 +16,7 @@ The configuration file for the *prettier* npm package. This file can be edited.
 
 ### custom.d.ts
 
-The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited.
+The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited. For more information, see [Styling plugin](styling-plugin.md).
 
 ### src
 
