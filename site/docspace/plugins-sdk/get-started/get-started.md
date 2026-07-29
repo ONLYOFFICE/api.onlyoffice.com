@@ -61,7 +61,7 @@ Develop a plugin. Follow the plugin structure described [here](../usage-sdk/plug
 
 - Write code for each [plugin type](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/plugin-types/plugin.md) interface for each plugin to be embedded in the portal.
 
-  ![Plugin structure](/assets/images/docspace/plugin-structure.png)
+  ![Plugin structure](/assets/images/docspace/plugin-structure.png#gh-light-mode-only)![Plugin structure](/assets/images/docspace/plugin-structure.dark.png#gh-dark-mode-only)
 
 - Specify [plugin messages](../usage-sdk/coding-plugin/plugin-message.md) that will be returned by the items. Use the appropriate [events](../usage-sdk/coding-plugin/events.md) that will be processed on the portal side.
 
