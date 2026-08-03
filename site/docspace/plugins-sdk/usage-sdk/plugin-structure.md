@@ -6,9 +6,60 @@ sidebar_position: -5
 
 Each DocSpace plugin is a folder with files. It must contain the following files required for the plugin to work.
 
-## assets
+## Files created automatically
 
-A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
+Running the **npx create-docspace-plugin** command (see [creating a plugin template](creating-plugin-template.md)) creates the following files and folders in the plugin root folder:
+
+### .prettierrc.json
+
+The configuration file for the *prettier* npm package. This file can be edited.
+
+### custom.d.ts
+
+The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited.
+
+### src
+
+A folder for the plugin source files.
+
+#### src/index.ts
+
+The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the corresponding parameter from the *package.json* file:
+
+``` ts
+window.Plugins.PDFConverter = plugin || {}
+```
+
+### package.json
+
+A file with the information about the plugin and dependencies. This file can be edited and the new dependencies can be added.
+
+### tsconfig.json
+
+The *TypeScript* configuration file. This file can be edited.
+
+### webpack.config.js
+
+The webpack configuration file. This file can be edited, but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
+
+``` ts
+const config = {
+  output: {
+    filename: "plugin.js",
+    path: path.resolve(dirname, "dist"),
+  },
+}
+```
+
+## Files added separately
+
+The following folders are not part of the plugin template — one is created by you, the other by the build:
+
+### assets
+
+A folder for storing plugin images. This folder is not created automatically by the **npx create-docspace-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
+
+Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
@@ -30,47 +81,6 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png#gh-light-mode-only)![File icon tile](/assets/images/docspace/file-icon-tile.dark.png#gh-dark-mode-only)
 
-## dist
+### dist
 
-A folder for storing the compiled plugin version.
-
-## src
-
-A folder for the plugin source files.
-
-### src/index.ts
-
-The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the corresponding parameter from the *package.json* file:
-
-``` ts
-window.Plugins.PDFConverter = plugin || {}
-```
-
-## webpack.config.js
-
-The webpack configuration file. This file can be edited, but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
-
-``` ts
-const config = {
-  output: {
-    filename: "plugin.js",
-    path: path.resolve(dirname, "dist"),
-  },
-}
-```
-
-## tsconfig.json
-
-The *TypeScript* configuration file. This file can be edited.
-
-## package.json
-
-A file with the information about the plugin and dependencies. This file can be edited and the new dependencies can be added.
-
-## .prettierrc.json
-
-The configuration file for the *prettier* npm package. This file can be edited.
-
-## custom.d.ts
-
-The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited.
+A folder for storing the compiled plugin version. It is not part of the plugin template — this folder is created automatically when running the **npm run build** command. For more information, see [building a plugin](building-plugin.md).
