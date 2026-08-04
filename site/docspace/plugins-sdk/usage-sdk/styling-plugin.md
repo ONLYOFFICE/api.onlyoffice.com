@@ -8,22 +8,39 @@ You can style your plugin components by importing CSS files directly into the *.
 
 ## CSS Modules
 
-Files with the *.module.css* extension are processed as [CSS Modules](https://github.com/css-modules/css-modules): each class name is scoped locally and exported as a property of the imported object.
+Files with the *.module.css* extension are processed as [CSS Modules](https://github.com/css-modules/css-modules): each class name is scoped locally and exported as a property of the imported object. In practice, this means every class gets a unique generated name in the compiled CSS, such as *.button* becoming *.button__XmfZ_* — and the imported object's property (*styles.button*) holds that generated name, not the literal string *"button"*.
 
-``` ts
-import styles from "./styles/button.module.css";
-
-const className = styles.testClass;
-```
-
-For example, the following styles from *src/styles/button.module.css* are applied to a [Button](coding-plugin/plugin-components/button.md) component through its *className*:
+For example, add the following to *src/styles/button.module.css*:
 
 ``` css
-.testClass {
+.button {
   background: #ff6f3d;
   border-radius: 4px;
   margin-top: 12px;
 }
+
+.label {
+  font-weight: 600;
+}
+```
+
+Then, in *src/index.ts*, import the module and apply the scoped class names to a [Text](coding-plugin/plugin-components/text.md) and a [Button](coding-plugin/plugin-components/button.md) component through their *className* prop:
+
+``` ts
+import { IText, IButton, ButtonSize, Components } from "@onlyoffice/docspace-plugin-sdk";
+import styles from "./styles/button.module.css";
+
+const label: IText = {
+  text: "Your document is ready",
+  className: styles.label,
+};
+
+const button: IButton = {
+  label: "Convert file",
+  size: ButtonSize.normal,
+  onClick: () => {},
+  className: styles.button,
+};
 ```
 
 This produces the following result:
@@ -32,11 +49,46 @@ This produces the following result:
 
 ## Global stylesheets
 
-Regular *.css* files (without the *.module* part) are not processed by CSS Modules, so class names are kept as-is instead of being scoped. Import them for their side effects only, without using the default export:
+Regular *.css* files (without the *.module* part) are not processed by CSS Modules, so class names are kept as-is instead of being scoped. Since a plain *.css* file does not give you a class map like *.module.css* does, import it for its side effects only, without using the default export. Reference class names directly as literal strings when styling a component through its *className* prop.
+
+For example, add the following to *src/styles/card.css*:
+
+``` css
+.my-plugin-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--plugin-bg, #f0f0f0);
+}
+
+.my-plugin-card__title {
+  font-weight: 600;
+  color: #333;
+}
+```
+
+Then, in *src/index.ts*, import the stylesheet and reference the class names directly:
 
 ``` ts
-import "./global.css";
+import { IBox, IText, Components } from "@onlyoffice/docspace-plugin-sdk";
+import "./styles/card.css";
+
+const title: IText = {
+  text: "The report is ready",
+  className: "my-plugin-card__title",
+};
+
+const card: IBox = {
+  className: "my-plugin-card",
+  children: [{
+    component: Components.text,
+    props: title,
+  }],
+};
 ```
+
+This produces the following result:
+
+![Styling with a plain stylesheet](/assets/images/docspace/styling-global-css.png#gh-light-mode-only)![Styling with a plain stylesheet](/assets/images/docspace/styling-global-css.dark.png#gh-dark-mode-only)
 
 Use plain *.css* mainly for third-party stylesheets that rely on fixed, unhashed class names (for example, a vendor library that references specific class names in its own code). For your own styles, prefer *.module.css*: rules such as *:root* or *@font-face* are never scoped by CSS Modules anyway, so they do not require a plain *.css* file either.
 
@@ -103,6 +155,6 @@ The template's *webpack.config.js* only includes loaders for *.ts* and *.css* fi
    };
    ```
 
-Following steps 1–3 produces the following result:
+This produces the following result:
 
 ![Importing an SVG image](/assets/images/docspace/styling-svg-import-result.png#gh-light-mode-only)![Importing an SVG image](/assets/images/docspace/styling-svg-import-result.dark.png#gh-dark-mode-only)
