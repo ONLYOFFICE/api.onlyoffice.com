@@ -426,7 +426,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 The function called when the user is trying to show the document version history by clicking the *Version History* button. To show the document version history, call the [refreshHistory](../methods.md#refreshhistory) method.
 
 :::note
-If this event and the [onRequestHistoryData](#onrequesthistorydata) event are not declared, the *Version History* button will not be displayed.
+If this event is not declared, the *Version History* button will not be displayed.
 :::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
@@ -509,7 +509,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 The function called when the user is trying to click a specific document version in the document version history. To show the changes, call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters.
 
 :::note
-If this event and the [onRequestHistory](#onrequesthistory) event are not declared, the *Version History* button will not be displayed.
+This event is optional. If each version passed to [refreshHistory](../methods.md#refreshhistory) already contains a `url`, the version opens without it. It is still recommended, because the editor requests the data again when a version has no `url` or when its URL is older than 5 minutes.
 :::
 
 **Parameters**:
