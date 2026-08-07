@@ -198,6 +198,7 @@ sudo systemctl restart ollama
 ```bash
 export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 export OLLAMA_HOST=0.0.0.0
+ollama serve
 ```
 
   </TabItem>
@@ -214,7 +215,7 @@ ollama serve
 
 ```bash
 docker run -d \
-  -e OLLAMA_ORIGINS="https://*" \
+  -e OLLAMA_ORIGINS="http://*,https://*,onlyoffice://*" \
   -e OLLAMA_HOST="0.0.0.0" \
   -p 11434:11434 \
   -v ollama:/root/.ollama \
@@ -334,6 +335,32 @@ server {
 }
 ```
 
+:::warning[安全注意事项]
+`$http_origin` 变量会将任何来源反射回去，并带有 `Access-Control-Allow-Credentials: true`，这允许任何网站向您的 Ollama 实例发出经过身份验证的请求。在生产环境中，使用 `map` 块限制允许的来源：
+
+**步骤 1.** 将以下内容添加到 nginx 配置的 **`http {}`** 上下文中（例如 `/etc/nginx/nginx.conf` 或 `/etc/nginx/conf.d/` 中的文件），**位于**任何 `server {}` 块**之外**：
+
+```nginx
+map $http_origin $cors_origin {
+    ~^https://trusted\.example\.com$ $http_origin;
+    ~^https://app\.example\.com$     $http_origin;
+    ~^onlyoffice://                  $http_origin;
+    default "";
+}
+```
+
+**步骤 2.** 在配置中**所有**出现 `add_header 'Access-Control-Allow-Origin' $http_origin always;` 的位置——包括 `if ($request_method = OPTIONS)` 预检块和所有 `location /` 块——**将**该行**替换**为：
+
+```nginx
+add_header 'Access-Control-Allow-Origin' $cors_origin always;
+add_header 'Vary' 'Origin' always;
+```
+
+请勿将这些行与原有行并排添加；请先删除 `$http_origin` 行。
+
+当 `Access-Control-Allow-Origin` 值根据请求变化时，需要 `Vary: Origin` 头以确保正确的缓存行为。
+:::
+
 ### 通过 HTTP 基本身份验证提供额外保护
 
 要限制 API 访问：
@@ -412,6 +439,17 @@ sudo systemctl restart ollama
 退出并重新启动 Ollama 应用程序。
 
   </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+Stop-Process -Name ollama -Force; ollama serve
+```
+
+或通过系统托盘图标退出并重新启动 Ollama 应用程序。
+
+如果您使用 `$env:` 设置了 `OLLAMA_ORIGINS`（仅限当前会话），请在**同一终端会话**中运行此命令。如果您使用了 `setx`，请先打开新终端，再运行 `ollama serve`。
+
+  </TabItem>
   <TabItem value="docker" label="Docker">
 
 ```bash
@@ -444,10 +482,34 @@ systemctl show ollama --property=Environment
 ```
 
   </TabItem>
-  <TabItem value="linux-process" label="Linux (运行中的进程)">
+  <TabItem value="linux-manual" label="Linux (manual)">
 
 ```bash
 cat /proc/$(pgrep ollama)/environ | tr '\0' '\n' | grep OLLAMA
+```
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+```bash
+launchctl getenv OLLAMA_ORIGINS
+launchctl getenv OLLAMA_HOST
+```
+
+这仅显示通过 `launchctl setenv`（方法一）设置的变量。对于添加到 `~/.zshrc` 或 `~/.bash_profile` 的变量（方法二），请打开新终端并运行 `echo $OLLAMA_ORIGINS`。
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+Get-ChildItem Env:OLLAMA*
+```
+
+验证通过 `setx` 设置的变量（直接读取注册表）：
+
+```powershell
+[System.Environment]::GetEnvironmentVariable("OLLAMA_ORIGINS", "User")
+[System.Environment]::GetEnvironmentVariable("OLLAMA_HOST", "User")
 ```
 
   </TabItem>
