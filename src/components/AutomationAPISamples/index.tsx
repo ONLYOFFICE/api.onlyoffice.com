@@ -50,6 +50,12 @@ const AutomationAPISamples = [
     url: 'redacting-in-pdf',
     description: 'This example shows how to find and permanently redact sensitive text in a PDF from an external interface.',
   },
+  {
+    name: 'Changing text in PDF',
+    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    url: 'changing-text-in-pdf',
+    description: 'This example shows how to find and replace text in a PDF by recognizing page content and iterating through objects.',
+  },
 ];
 
 interface Props {
