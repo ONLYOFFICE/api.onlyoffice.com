@@ -150,7 +150,16 @@ export const PlaygroundPreview = () => {
     }, [scriptValue, scriptType, executeCode]);
 
     useEffect(() => {
-        return () => { delete window.connector; };
+        return () => {
+            if (window.connector) {
+                try {
+                    window.connector.disconnect?.();
+                } catch (error) {
+                    console.warn('Failed to disconnect connector:', error);
+                }
+                window.connector = null;
+            }
+        };
     }, []);
 
     return <EditorPreview
