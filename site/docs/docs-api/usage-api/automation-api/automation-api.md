@@ -78,7 +78,7 @@ A connector is bound to the `docEditor` object that created it and remains valid
 - Updating the file with the [refreshFile](../methods.md#refreshfile) method does not invalidate the connector, because the editor is not reinitialized.
 
 :::note
-Commands sent through a connector whose editor no longer exists do not throw an error — the callback is never called. Check that the editor is ready instead of retrying the calls that returned no result.
+A command sent through a connector whose editor no longer exists never returns a result: depending on the state of the editor, the call either fails with a JavaScript error or is dropped without the callback being called. Check that the editor is ready instead of retrying such calls.
 :::
 
 ## Debugging
