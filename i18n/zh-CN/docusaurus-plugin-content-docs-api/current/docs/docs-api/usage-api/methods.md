@@ -18,6 +18,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
+:::note
+请在编辑器准备就绪后调用此方法 — 在 [onDocumentReady](./config/events.md#ondocumentready) 事件处理程序中，或在该事件触发之后的任意时刻。有关重复使用和断开连接器的详细信息，请参阅[连接器生命周期](./automation-api/automation-api.md#connector-lifecycle)。
+:::
+
   ``` ts
   docEditor.createConnector();
   ```

@@ -25,10 +25,21 @@ Explore interactive examples showing real-world use cases:
 
 ## Getting started
 
-To start using Automation API, create a connector using the [createConnector](../methods.md#createconnector) method:
+To start using Automation API, create a connector using the [createConnector](../methods.md#createconnector) method. Create it when the editor is ready — in the [onDocumentReady](../config/events.md#ondocumentready) event handler or at any moment after this event is fired:
 
 ```ts
-const connector = docEditor.createConnector();
+let connector;
+
+const config = {
+  // ...
+  events: {
+    onDocumentReady: () => {
+      connector = docEditor.createConnector();
+    },
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The connector provides methods to execute editor commands, listen to document events, and interact with the editor UI:
@@ -55,6 +66,20 @@ connector.callCommand(() => {
   console.log("Result:", res);
 });
 ```
+
+## Connector lifecycle
+
+A connector is bound to the `docEditor` object that created it and remains valid as long as this object exists:
+
+- **Reuse the created connector instead of creating a new one for each operation.** Each [createConnector](../methods.md#createconnector) call returns a new independent connector with its own identifier, which remains registered in the editor until [disconnect](./connector-class.md#disconnect) is called. Event listeners added with [attachEvent](./connector-class.md#attachevent), toolbar and context menu items, and windows created with [createWindow](./connector-class.md#createwindow) belong to the connector that registered them, and each connector receives the events it is subscribed to separately. Several connectors can work simultaneously, for example, one per module of your application.
+- **Do not create a connector before the [onDocumentReady](../config/events.md#ondocumentready) event is fired.** If the connector is created later than this event, for example when the user interacts with your interface, store the editor state in the `onDocumentReady` handler and check it before using the connector.
+- **Call [disconnect](./connector-class.md#disconnect) when the connector is no longer needed, including before calling [destroyEditor](../methods.md#destroyeditor).** It stops event delivery, removes the interface elements added through this connector, and releases the resources it uses on the page. Call it while the editor still exists.
+- **Create a new connector after reinitializing the editor.** The [destroyEditor](../methods.md#destroyeditor) method and initializing a new `DocsAPI.DocEditor` object invalidate the existing connector. The new editor instance fires its own [onDocumentReady](../config/events.md#ondocumentready) event, where the new connector must be created.
+- Updating the file with the [refreshFile](../methods.md#refreshfile) method does not invalidate the connector, because the editor is not reinitialized.
+
+:::note
+Commands sent through a connector whose editor no longer exists do not throw an error — the callback is never called. Check that the editor is ready instead of retrying the calls that returned no result.
+:::
 
 ## Debugging
 
