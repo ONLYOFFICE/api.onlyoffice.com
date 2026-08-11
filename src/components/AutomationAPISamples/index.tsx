@@ -46,7 +46,7 @@ const AutomationAPISamples = [
   },
   {
     name: 'Redacting in PDF',
-    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    image: require('@site/static/assets/images/editor/redacting-in-pdf.png').default,
     url: 'redacting-in-pdf',
     description: 'This example shows how to find and permanently redact sensitive text in a PDF from an external interface.',
   },
