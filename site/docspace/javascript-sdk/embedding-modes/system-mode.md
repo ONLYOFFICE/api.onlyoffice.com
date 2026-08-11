@@ -128,7 +128,7 @@ try {
 Change the theme and locale without rebooting the DocSpace instance:
 
 ```javascript
-await system.setConfig({ theme: 'Dark', locale: 'de-DE' });
+await system.setConfig({ theme: 'Dark', locale: 'de' });
 ```
 
 ### Custom login UI

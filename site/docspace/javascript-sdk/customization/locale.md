@@ -16,7 +16,9 @@ const docSpace = DocSpace.SDK.initManager({
 
 Accepts either a two-letter language code (`"de"`) or a four-letter language-region code (`"en-US"`). If omitted, the interface follows the language configured on the DocSpace portal (or the signed-in user's own language preference).
 
-For the current, authoritative list of languages your portal supports, call [Get supported languages](../../api-backend/usage-api/get-supported-cultures.api.mdx) (`GET /api/2.0/settings/cultures`) rather than hardcoding a list — supported languages can change between DocSpace versions.
+For the current, authoritative list of languages your portal supports, call [Get supported languages](../../api-backend/usage-api/get-supported-cultures.api.mdx) (`GET /api/2.0/settings/cultures`) rather than hardcoding a list — supported languages can change between DocSpace versions, and not every language has both a two-letter and a region-qualified form (for example, German is only ever `"de"` on most portals — there's no `"de-DE"`).
+
+Full parameter reference: [TFrameConfig#locale](../usage-sdk/type-aliases/TFrameConfig.md#locale).
 
 ## Use cases
 
@@ -28,7 +30,7 @@ Pass through the language your application is already using, converting it to a 
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  locale: navigator.language, // e.g. "en-US", "de-DE"
+  locale: navigator.language, // e.g. "en-US", "de"
 });
 ```
 
@@ -38,5 +40,7 @@ Use `setConfig()` on an existing instance to change the locale without reinitial
 
 ```javascript
 const frame = DocSpace.SDK.frames["ds-frame"];
-await frame.setConfig({ locale: "de-DE" });
+await frame.setConfig({ locale: "de" });
 ```
+
+See also: [Set config](../samples/basic-samples/set-config.md).

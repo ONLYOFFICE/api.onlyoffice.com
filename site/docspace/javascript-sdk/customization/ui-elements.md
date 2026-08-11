@@ -29,11 +29,17 @@ const docSpace = DocSpace.SDK.initManager({
   showMenu: false,
   showTitle: false,
   showSettings: false,
-  viewAs: "table",
+  infoPanelVisible: false,
 });
 ```
 
+:::note
+`showSignOut` and `disableActionButton` control elements that live inside the left menu — they only have a visible effect when `showMenu` is `true`. With `showMenu: false`, the menu itself is gone, so there's nothing for these two parameters to show or hide.
+:::
+
 See also: [Set list view](../samples/basic-samples/set-list-view.md).
+
+Full parameter list: [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md).
 
 ## Room and file selector modes
 
@@ -54,11 +60,13 @@ const selector = DocSpace.SDK.initFileSelector({
   showSelectorHeader: false,
   withSearch: true,
   acceptButtonLabel: "Attach",
-  buttonColor: "#22c55e",
+  withBreadCrumbs: true,
 });
 ```
 
 See also: [Room selector mode](../embedding-modes/room-selector-mode.md), [File selector mode](../embedding-modes/file-selector-mode.md).
+
+Full parameter list: [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md).
 
 ## Editor mode
 
@@ -82,13 +90,17 @@ const docSpace = DocSpace.SDK.initEditor({
   id: "your-file-id",
   editorCustomization: {
     compactHeader: true,
-    toolbarNoTabs: true,
+    compactToolbar: true,
     help: false,
   },
 });
 ```
 
 Also relevant to editor chrome: `editorGoBack` (boolean or a URL string) controls the "Open file location" button shown in the editor and viewer. See [Viewer mode](../embedding-modes/viewer-mode.md#embedding-a-document-preview-in-mobile-layout) for an example.
+
+See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
+
+Full parameter list: [TEditorCustomization](../usage-sdk/type-aliases/TEditorCustomization.md).
 
 ## Frame layout
 
@@ -99,3 +111,7 @@ A few parameters control the frame's own footprint rather than DocSpace's intern
 | `width` / `height` | string | Frame dimensions, in pixels or percentages. |
 | `noLoader` | boolean | Skip the loading spinner while the frame initializes. |
 | `destroyText` | string | Text inserted into the frame's container when `destroyFrame()` is called. |
+
+See also: [Destroy frame](../samples/basic-samples/destroy-frame.md).
+
+Full parameter list: [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md).

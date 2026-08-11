@@ -24,6 +24,8 @@ const docSpace = DocSpace.SDK.initManager({
 | `"Dark"` | The dark theme. |
 | `"System"` | Follows the OS/browser color scheme. |
 
+Full parameter reference: [TFrameConfig#theme](../usage-sdk/type-aliases/TFrameConfig.md#theme), [Theme enum](../usage-sdk/enumerations/Theme.md).
+
 ## Editor theme
 
 Editor mode has its own theme setting, independent of the frame theme, configured via `editorCustomization.uiTheme`:
@@ -40,6 +42,10 @@ const docSpace = DocSpace.SDK.initEditor({
 ```
 
 Accepted values: `"theme-light"`, `"theme-classic-light"`, `"theme-dark"`, `"theme-contrast-dark"`, `"theme-white"`, `"theme-night"`, or `"default-light"` / `"default-dark"` to follow the default light/dark theme. The default is `"theme-classic-light"`.
+
+See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
+
+Full parameter reference: [TEditorCustomization#uiTheme](../usage-sdk/type-aliases/TEditorCustomization.md#uitheme).
 
 ## Header banner
 
@@ -58,6 +64,8 @@ const docSpace = DocSpace.SDK.initManager({
 | `"all"` | Show all header banners. |
 | `"info"` | Show only informational banners. |
 | `"none"` | Hide all header banners. |
+
+Full parameter reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showheaderbanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
 
 ## Use cases
 
@@ -83,3 +91,5 @@ Use `setConfig()` on an existing instance to change the theme without reinitiali
 const frame = DocSpace.SDK.frames["ds-frame"];
 await frame.setConfig({ theme: "Dark" });
 ```
+
+See also: [Set config](../samples/basic-samples/set-config.md).
