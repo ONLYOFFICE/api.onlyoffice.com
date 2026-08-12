@@ -70,6 +70,7 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
      editorConfig: {
        callbackUrl: "https://example.com/url-to-callback",
      },
+     token: "TOKEN_HERE",
    };
 
    function onDocumentReady() {
@@ -99,6 +100,7 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
    - `http://documentserver/` - 替换为您的服务器的 URL；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
    - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `TOKEN_HERE` - 替换为配置的签名。当您的文档服务器启用了 JWT 验证（默认配置）时，此项为必填项。请参阅[签名配置](#signing-the-configuration)。
 
    该文件创建包含 ONLYOFFICE 文档编辑器的 `App` 组件，并配置了基本功能。
 
@@ -117,6 +119,72 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
      该应用程序将在 `http://localhost:5173` 上提供访问。
 
    - 要停止开发服务器，请切换到命令行或命令提示符，然后按 `Ctrl+C`。
+
+## 签名配置 {#signing-the-configuration}
+
+ONLYOFFICE 文档使用 JSON Web Token 校验编辑器配置。JWT 验证默认处于启用状态，因此 `config` 必须包含 [`token`](../how-it-works/security.md)，即配置本身的签名。该令牌不是固定值：每当任何已签名的参数发生变化时，都必须重新生成它。
+
+签名需要使用 ONLYOFFICE 文档的密钥，因此请在您的服务器上生成令牌，并将已就绪的配置发送到浏览器。Vue.js 应用程序无法确保密钥不被泄露。
+
+### 在服务器上签名配置 {#signing-the-configuration-on-the-server}
+
+请在您的后端构建配置、对其进行签名，并通过一个接口将其返回：
+
+```js
+// npm install jsonwebtoken
+import jwt from "jsonwebtoken";
+
+app.get("/api/editor-config", (request, response) => {
+  const config = {
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+  };
+
+  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
+
+  response.json(config);
+});
+```
+
+有关其他语言的签名代码，请参阅[签名](../../additional-api/signature/signature.md)部分。
+
+### 将已签名的配置传递给组件 {#passing-the-signed-configuration-to-the-component}
+
+由于 `config` 属性为必填项，请在组件挂载时请求配置，并在配置到达后渲染编辑器：
+
+```vue
+<template>
+  <DocumentEditor
+    v-if="config"
+    id="docxEditor"
+    documentServerUrl="http://documentserver/"
+    :config="config"
+  />
+</template>
+
+<script setup lang="ts">
+import {onMounted, ref} from "vue";
+import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
+
+const config = ref<IConfig | null>(null);
+
+onMounted(async () => {
+  const response = await fetch("/api/editor-config");
+
+  config.value = await response.json();
+});
+</script>
+```
+
+组件会将 `config` 合并到发送给 ONLYOFFICE 文档的配置中，因此 `token` 字段会原样传递给编辑器。
 
 ## 在 Vue.js 组件中调用编辑器方法 {#calling-editor-methods-in-the-vuejs-component}
 

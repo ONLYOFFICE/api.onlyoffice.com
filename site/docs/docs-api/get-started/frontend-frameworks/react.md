@@ -90,6 +90,7 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
            editorConfig: {
              callbackUrl: "https://example.com/url-to-callback",
            },
+           token: "TOKEN_HERE",
          }}
          events_onDocumentReady={onDocumentReady}
          onLoadComponentError={onLoadComponentError}
@@ -103,6 +104,7 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
    - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
    - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
+   - `TOKEN_HERE` - replace with the signature of the configuration. It is required when JWT validation is enabled on your document server, which is the default configuration. See [Signing the configuration](#signing-the-configuration).
 
    This file creates the `App` component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -117,6 +119,73 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
      The application becomes available at `http://localhost:5173`.
 
    - To stop the development server, switch to the command line or command prompt and press `Ctrl+C`.
+
+## Signing the configuration
+
+ONLYOFFICE Docs validates the editor configuration with a JSON Web Token. JWT validation is enabled by default, so the `config` must include a [`token`](../how-it-works/security.md) — a signature of the configuration itself. The token is not a constant: regenerate it whenever any signed parameter changes.
+
+Signing requires the secret key of your ONLYOFFICE Docs, so generate the token on your server and send the ready configuration to the browser. A React application cannot keep the secret key private.
+
+### Signing the configuration on the server
+
+Build the configuration on your backend, sign it, and return it from an endpoint:
+
+```js
+// npm install jsonwebtoken
+import jwt from "jsonwebtoken";
+
+app.get("/api/editor-config", (request, response) => {
+  const config = {
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+  };
+
+  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
+
+  response.json(config);
+});
+```
+
+See the [Signature](../../additional-api/signature/signature.md) section for the signing code in other languages.
+
+### Passing the signed configuration to the component
+
+Request the configuration when the component mounts and render the editor once it arrives:
+
+```jsx
+import {DocumentEditor} from "@onlyoffice/document-editor-react";
+import {useEffect, useState} from "react";
+
+export default function Editor() {
+  const [config, setConfig] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/editor-config")
+      .then((response) => response.json())
+      .then(setConfig);
+  }, []);
+
+  if (!config) return null;   // the configuration is not loaded yet
+
+  return (
+    <DocumentEditor
+      id="docxEditor"
+      documentServerUrl="http://documentserver/"
+      config={config}
+    />
+  )
+}
+```
+
+The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
 
 ## Calling editor methods in the React component
 
@@ -267,6 +336,7 @@ export default function Editor() {
         editorConfig: {
           callbackUrl: "https://example.com/url-to-callback",
         },
+        token: "TOKEN_HERE",
       }}
       events_onDocumentReady={() => console.log("Document is loaded")}
     />
