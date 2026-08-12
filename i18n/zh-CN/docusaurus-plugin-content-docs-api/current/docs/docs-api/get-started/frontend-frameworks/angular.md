@@ -170,6 +170,72 @@ onDocumentReady = () => {
 };
 ```
 
+## 在 Angular 中使用自动化 API {#using-automation-api-in-angular}
+
+[自动化 API](../../usage-api/automation-api/automation-api.md) 通过连接器从您自己的界面与文档内容进行交互。连接器与创建它的编辑器实例绑定，只要该实例存在，连接器就保持有效。
+
+:::info
+自动化 API 仅适用于 **ONLYOFFICE 文档开发者版**。
+:::
+
+请在 `events_onDocumentReady` 处理程序中使用 [createConnector](../../usage-api/methods.md#createconnector) 方法创建连接器，并重复使用它，而不要为每次操作都创建新的连接器。请将其保存在渲染 `document-editor` 的组件的字段中：
+
+```ts
+import {Component, OnDestroy} from "@angular/core";
+import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+
+@Component({
+  selector: "app-root",
+  imports: [DocumentEditorModule],
+  templateUrl: "./app.html",
+})
+export class App implements OnDestroy {
+  config: IConfig = {
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+  };
+
+  connector: any = null;
+
+  onDocumentReady = () => {
+    const documentEditor = window.DocEditor.instances["docxEditor"];
+
+    this.connector = documentEditor.createConnector();
+  };
+
+  ngOnDestroy() {
+    this.connector?.disconnect();
+    this.connector = null;
+  }
+}
+```
+
+请在渲染 `document-editor` 的组件的 `ngOnDestroy` 钩子中调用 [disconnect](../../usage-api/automation-api/connector-class.md#disconnect) 方法，以便在编辑器仍然存在时断开连接器。
+
+请在通过连接器发送命令之前检查连接器是否已创建，而不是重试失败的调用：
+
+```ts
+getAllComments() {
+  if (!this.connector) return;   // 编辑器尚未准备就绪
+
+  this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
+    console.log("Comments:", comments);
+  });
+}
+```
+
+:::note
+当属性更改导致组件销毁编辑器并加载新的编辑器时（详见[属性](#properties)部分），已销毁编辑器的连接器将失效：请断开该连接器，并在新编辑器的 `events_onDocumentReady` 处理程序中创建新的连接器。
+:::
+
 ## 部署演示 Angular 应用程序
 
 1. 导航到 `onlyoffice-angular-demo` 目录并创建产品版本：
@@ -192,7 +258,7 @@ onDocumentReady = () => {
 
 ## ONLYOFFICE 文档 Angular 组件 API
 
-### 属性
+### 属性 {#properties}
 
 `config` 属性会覆盖组件的各个单独属性。该合并为浅层合并：`config` 的顶层键会完整替换相应的组件属性，而不是与其合并。
 

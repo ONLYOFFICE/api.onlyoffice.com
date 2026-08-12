@@ -170,6 +170,72 @@ onDocumentReady = () => {
 };
 ```
 
+## Using Automation API in Angular
+
+[Automation API](../../usage-api/automation-api/automation-api.md) interacts with the document content from your own interface through a connector. A connector is bound to the editor instance that created it and remains valid as long as this instance exists.
+
+:::info
+Automation API is available only for **ONLYOFFICE Docs Developer**.
+:::
+
+Create the connector with the [createConnector](../../usage-api/methods.md#createconnector) method in the `events_onDocumentReady` handler, and reuse it instead of creating a new one for each operation. Store it in a field of the component that renders `document-editor`:
+
+```ts
+import {Component, OnDestroy} from "@angular/core";
+import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+
+@Component({
+  selector: "app-root",
+  imports: [DocumentEditorModule],
+  templateUrl: "./app.html",
+})
+export class App implements OnDestroy {
+  config: IConfig = {
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+  };
+
+  connector: any = null;
+
+  onDocumentReady = () => {
+    const documentEditor = window.DocEditor.instances["docxEditor"];
+
+    this.connector = documentEditor.createConnector();
+  };
+
+  ngOnDestroy() {
+    this.connector?.disconnect();
+    this.connector = null;
+  }
+}
+```
+
+Call the [disconnect](../../usage-api/automation-api/connector-class.md#disconnect) method in the `ngOnDestroy` hook of the component that renders `document-editor`, so that the connector is disconnected while the editor still exists.
+
+Check that the connector is created before sending commands through it instead of retrying the failed calls:
+
+```ts
+getAllComments() {
+  if (!this.connector) return;   // the editor is not ready yet
+
+  this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
+    console.log("Comments:", comments);
+  });
+}
+```
+
+:::note
+When a property change destroys the editor and loads a new one, as described in the [Properties](#properties) section, the connector of the destroyed editor becomes invalid: disconnect it and create a new one in the `events_onDocumentReady` handler of the new editor.
+:::
+
 ## Deploying the demo Angular application
 
 1. Navigate to the `onlyoffice-angular-demo` directory and create a production build:
