@@ -1,34 +1,34 @@
+---
+description: 使用 ONLYOFFICE 文档 React 组件将 ONLYOFFICE 文档集成到 React 应用程序中。
+sidebar_position: 1
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # React
 
-ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-react) 将ONLYOFFICE 文档集成到 [React](https://react.dev/) 项目。该组件支持 React 16.9 及更高版本，包括 React 19。
+ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-react) 将ONLYOFFICE 文档集成到 [React](https://react.dev/) 项目。该组件支持 React 16.9 及更高版本，包括 React 19。每个版本的更改列表发布在 [Releases](https://github.com/ONLYOFFICE/document-editor-react/releases) 选项卡中。
 
 ## 先决条件
 
-此过程需要 [Node.js (和 npm)](https://nodejs.org/en).
+此过程需要 [Node.js (和 npm)](https://nodejs.org/en) 以及一个正在运行的 ONLYOFFICE 文档实例。如果您还没有，请按照[自托管](../installation/self-hosted.md)部分的说明将其安装在您自己的服务器上，或将其部署在[云端](../installation/cloud.md)。
 
-该组件可用于任何 React 项目。以下步骤使用 [Vite](https://vite.dev/) 从头创建一个项目。
+本页假定您具备 [React](https://react.dev/) 的基本使用知识。该组件可用于任何 React 项目。以下步骤使用 [Vite](https://vite.dev/) 从头创建一个项目。
 
 ## 使用 ONLYOFFICE 文档编辑器创建演示 React 应用程序
 
 此过程创建一个基本 React 应用程序，并在其中安装 ONLYOFFICE 文档编辑器。
 
-1. 创建一个名为 `onlyoffice-react-demo` 的新 React 项目：
+1. 创建一个名为 `onlyoffice-react-demo` 的新 React 项目并安装其依赖项：
 
    ```sh
    npm create vite@latest onlyoffice-react-demo -- --template react
-   ```
-
-2. 进入新创建的目录并安装项目依赖：
-
-   ```sh
    cd onlyoffice-react-demo
    npm install
    ```
 
-3. 安装 ONLYOFFICE 文档 React 组件，并将其保存到 `package.json` 文件中：
+2. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-react) 公共注册表安装 ONLYOFFICE 文档 React 组件，并将其保存到 `package.json` 文件中：
 
    <Tabs>
       <TabItem value="npm" label="npm">
@@ -43,13 +43,13 @@ ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-r
       </TabItem>
    </Tabs>
 
-   TypeScript 类型声明来自 `@onlyoffice/doceditor-types` 对等依赖项。npm 7 及更高版本会自动安装该依赖项。使用 yarn 时，请手动安装：
+   TypeScript 类型声明来自 [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) 对等依赖项。npm 7 及更高版本会自动安装该依赖项。使用 yarn 时，请手动安装：
 
    ```sh
    yarn add -D @onlyoffice/doceditor-types
    ```
 
-4. 打开 `onlyoffice-react-demo` 项目中的 `./src/App.jsx` 文件，并将其内容替换为以下代码：
+3. 打开 `onlyoffice-react-demo` 项目中的 `./src/App.jsx` 文件，并将其内容替换为以下代码：
 
    ```jsx
    import {DocumentEditor} from "@onlyoffice/document-editor-react";
@@ -106,7 +106,7 @@ ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-r
 
    此文件将创建 `App` 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
 
-5. 使用 Vite 开发服务器测试应用程序：
+4. 使用 Vite 开发服务器测试应用程序：
 
    - 要启动开发服务器，请导航到 `onlyoffice-react-demo` 目录并运行：
 
@@ -296,43 +296,43 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| 名称                                 | 类型                                                  | 默认 | 描述                                                                                                                                                |
-| ------------------------------------ | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id\*                                 | string                                                | -       | 组件唯一标识符。                                                                                                                               |
-| documentServerUrl\*                  | string                                                | -       | ONLYOFFICE 文档服务器的地址。                                                                                                                                |
-| config\*                             | object                                                | -       | 用于使用令牌打开文件的通用[配置对象](../../usage-api/config/config.md)。                                                        |
-| shardkey                             | string \| boolean                                     | true    | 添加到 ONLYOFFICE 文档 API 脚本请求查询字符串中的 [shardkey](../configuration/shard-key.md) 参数，用于负载均衡。如果设置为 `true`，则使用 `config` 中的文档 [`key`](../../usage-api/config/document/document.md#key) 作为其值。设置为 `false` 可在发送请求时不带此参数。 |
-| onLoadComponentError                 | (errorCode: number, errorDescription: string) => void | null    | 加载组件时发生错误时调用的函数。                                                                                        |
-| document\_fileType                   | string                                                | null    | 文件的类型。                                                                                                                                      |
-| document\_title                      | string                                                | null    | 文件名。                                                                                                                                             |
-| documentType                         | string                                                | null    | 文档类型。                                                                                                                                         |
-| editorConfig\_lang                   | string                                                | null    | 编辑器界面[语言](../../usage-api/config/editor/editor.md#lang)。                                                                                     |
-| height                               | string                                                | null    | 浏览器窗口中的文档高度。                                                                                                             |
-| type                                 | string                                                | null    | 用于访问文档的平台类型：`desktop`、`mobile` 或 `embedded`。                                                                          |
-| width                                | string                                                | null    | 浏览器窗口中的文档宽度。                                                                                                              |
-| events\_onAppReady                   | (event: object) => void                               | null    | 当应用程序加载到浏览器中时调用的函数。                                                                                       |
-| events\_onDocumentStateChange        | (event: object) => void                               | null    | 修改文档时调用的函数。                                                                                                         |
-| events\_onMetaChange                 | (event: object) => void                               | null    | 通过 meta 命令更改文档的元信息时调用的函数。                                                             |
-| events\_onDocumentReady              | (event: object) => void                               | null    | 将文档加载到文档编辑器时调用的函数。                                                                                  |
-| events\_onInfo                       | (event: object) => void                               | null    | 应用程序打开文件时调用的函数。                                                                                                  |
-| events\_onWarning                    | (event: object) => void                               | null    | 发生警告时调用的函数。                                                                                                                 |
-| events\_onError                      | (event: object) => void                               | null    | 发生错误或其他特定事件时调用的函数。                                                                                     |
-| events\_onRequestSharingSettings     | (event: object) => void                               | null    | 当用户尝试通过单击**更改访问权限**按钮来管理文档访问权限时调用的函数。                                  |
-| events\_onRequestRename              | (event: object) => void                               | null    | 当用户尝试通过单击**重命名...** 按钮重命名文件时调用的函数。                                                       |
-| events\_onMakeActionLink             | (event: object) => void                               | null    | 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。            |
-| events\_onRequestInsertImage         | (event: object) => void                               | null    | 当用户尝试通过单击**来自存储的图像**按钮插入图像时调用的函数。                                              |
-| events\_onRequestSaveAs              | (event: object) => void                               | null    | 当用户尝试通过单击**另存为...**按钮来保存文件时调用的函数。                                                           |
-| events\_onRequestMailMergeRecipients | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectSpreadsheet`。当用户尝试通过单击**邮件合并** 按钮来选择收件人数据时调用的函数。 |
-| events\_onRequestCompareFile         | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectDocument`。当用户尝试通过单击**存储中的文档**按钮来选择要比较的文档时调用的函数。 |
-| events\_onRequestEditRights          | (event: object) => void                               | null    | 当用户尝试通过单击**编辑文档**按钮将文档从查看模式切换到编辑模式时调用的函数。        |
-| events\_onRequestHistory             | (event: object) => void                               | null    | 当用户尝试通过单击**版本历史记录**按钮来显示文档版本历史记录时调用的函数。                               |
-| events\_onRequestHistoryClose        | (event: object) => void                               | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |
-| events\_onRequestHistoryData         | (event: object) => void                               | null    | 当用户试图单击文档版本历史记录中的特定文档版本时调用的函数。                                        |
-| events\_onRequestRefreshFile         | (event: object) => void                               | null    | 当必须在不重新加载页面的情况下更新编辑器中的文件时调用的函数。                                          |
-| events\_onRequestRestore             | (event: object) => void                               | null    | 当用户尝试通过单击版本历史记录中的**恢复**按钮来恢复文件版本时调用的函数。                         |
-| events\_onRequestSelectSpreadsheet   | (event: object) => void                               | null    | 当用户尝试通过单击**邮件合并**按钮来选择收件人数据时调用的函数。                                             |
-| events\_onRequestSelectDocument      | (event: object) => void                               | null    | 当用户尝试选择文档以进行比较、合并或插入文本时调用的函数。                                              |
-| events\_onRequestUsers               | (event: object) => void                               | null    | 当用户可以选择要在评论中提及的其他用户、授予编辑特定工作表区域的访问权限或设置用户头像时调用的函数。 |
+| 名称                                  | 类型                                                  | 默认 | 描述                                                                                                                                                |
+| ------------------------------------- | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`\*                                | string                                                | -       | 组件唯一标识符。                                                                                                                               |
+| `documentServerUrl`\*                 | string                                                | -       | ONLYOFFICE 文档服务器的地址。                                                                                                                                |
+| `config`\*                            | object                                                | -       | 用于打开文件的通用[配置对象](../../usage-api/config/config.md)。                                                        |
+| `shardkey`                            | string \| boolean                                     | true    | 添加到 ONLYOFFICE 文档 API 脚本请求查询字符串中的 [shardkey](../configuration/shard-key.md) 参数，用于负载均衡。如果设置为 `true`，则使用 `config` 中的文档 [`key`](../../usage-api/config/document/document.md#key) 作为其值。设置为 `false` 可在发送请求时不带此参数。 |
+| `onLoadComponentError`                | (errorCode: number, errorDescription: string) => void | null    | 加载组件时发生错误时调用的函数。                                                                                        |
+| `document_fileType`                   | string                                                | null    | 文件的类型。                                                                                                                                      |
+| `document_title`                      | string                                                | null    | 文件名。                                                                                                                                             |
+| `documentType`                        | string                                                | null    | 文档类型。                                                                                                                                         |
+| `editorConfig_lang`                   | string                                                | null    | 编辑器界面[语言](../../usage-api/config/editor/editor.md#lang)。                                                                                     |
+| `height`                              | string                                                | null    | 浏览器窗口中的文档高度。                                                                                                             |
+| `type`                                | string                                                | null    | 用于访问文档的平台类型：`desktop`、`mobile` 或 `embedded`。                                                                          |
+| `width`                               | string                                                | null    | 浏览器窗口中的文档宽度。                                                                                                              |
+| `events_onAppReady`                   | (event: object) => void                               | null    | 当应用程序加载到浏览器中时调用的函数。                                                                                       |
+| `events_onDocumentStateChange`        | (event: object) => void                               | null    | 修改文档时调用的函数。                                                                                                         |
+| `events_onMetaChange`                 | (event: object) => void                               | null    | 通过 meta 命令更改文档的元信息时调用的函数。                                                             |
+| `events_onDocumentReady`              | (event: object) => void                               | null    | 将文档加载到文档编辑器时调用的函数。                                                                                  |
+| `events_onInfo`                       | (event: object) => void                               | null    | 应用程序打开文件时调用的函数。                                                                                                  |
+| `events_onWarning`                    | (event: object) => void                               | null    | 发生警告时调用的函数。                                                                                                                 |
+| `events_onError`                      | (event: object) => void                               | null    | 发生错误或其他特定事件时调用的函数。                                                                                     |
+| `events_onRequestSharingSettings`     | (event: object) => void                               | null    | 当用户尝试通过单击**更改访问权限**按钮来管理文档访问权限时调用的函数。                                  |
+| `events_onRequestRename`              | (event: object) => void                               | null    | 当用户尝试通过单击**重命名...** 按钮重命名文件时调用的函数。                                                       |
+| `events_onMakeActionLink`             | (event: object) => void                               | null    | 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。            |
+| `events_onRequestInsertImage`         | (event: object) => void                               | null    | 当用户尝试通过单击**来自存储的图像**按钮插入图像时调用的函数。                                              |
+| `events_onRequestSaveAs`              | (event: object) => void                               | null    | 当用户尝试通过单击**另存为...**按钮来保存文件时调用的函数。                                                           |
+| `events_onRequestMailMergeRecipients` | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectSpreadsheet`。当用户尝试通过单击**邮件合并** 按钮来选择收件人数据时调用的函数。 |
+| `events_onRequestCompareFile`         | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectDocument`。当用户尝试通过单击**存储中的文档**按钮来选择要比较的文档时调用的函数。 |
+| `events_onRequestEditRights`          | (event: object) => void                               | null    | 当用户尝试通过单击**编辑文档**按钮将文档从查看模式切换到编辑模式时调用的函数。        |
+| `events_onRequestHistory`             | (event: object) => void                               | null    | 当用户尝试通过单击**版本历史记录**按钮来显示文档版本历史记录时调用的函数。                               |
+| `events_onRequestHistoryClose`        | (event: object) => void                               | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |
+| `events_onRequestHistoryData`         | (event: object) => void                               | null    | 当用户试图单击文档版本历史记录中的特定文档版本时调用的函数。                                        |
+| `events_onRequestRefreshFile`         | (event: object) => void                               | null    | 当必须在不重新加载页面的情况下更新编辑器中的文件时调用的函数。                                          |
+| `events_onRequestRestore`             | (event: object) => void                               | null    | 当用户尝试通过单击版本历史记录中的**恢复**按钮来恢复文件版本时调用的函数。                         |
+| `events_onRequestSelectSpreadsheet`   | (event: object) => void                               | null    | 当用户尝试通过单击**邮件合并**按钮来选择收件人数据时调用的函数。                                             |
+| `events_onRequestSelectDocument`      | (event: object) => void                               | null    | 当用户尝试选择文档以进行比较、合并或插入文本时调用的函数。                                              |
+| `events_onRequestUsers`               | (event: object) => void                               | null    | 当用户可以选择要在评论中提及的其他用户、授予编辑特定工作表区域的访问权限或设置用户头像时调用的函数。 |
 
 ```mdx-code-block
 </APITable>

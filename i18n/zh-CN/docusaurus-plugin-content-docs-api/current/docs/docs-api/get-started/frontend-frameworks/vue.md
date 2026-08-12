@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Vue
 
 ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-vue) 集成 ONLYOFFICE 文档到 [Vue.js](https://vuejs.org/) 项目。

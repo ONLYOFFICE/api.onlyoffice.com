@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Vue
 
 The ONLYOFFICE Docs Vue.js [component](https://github.com/ONLYOFFICE/document-editor-vue) integrates ONLYOFFICE Docs into [Vue.js](https://vuejs.org/) projects.

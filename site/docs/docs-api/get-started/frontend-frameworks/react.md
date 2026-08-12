@@ -1,34 +1,34 @@
+---
+description: Integrate ONLYOFFICE Docs into a React application using the ONLYOFFICE Docs React component.
+sidebar_position: 1
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # React
 
-The ONLYOFFICE Docs React [component](https://github.com/ONLYOFFICE/document-editor-react) integrates ONLYOFFICE Docs into [React](https://react.dev/) projects. The component supports React 16.9 and later, including React 19.
+The ONLYOFFICE Docs React [component](https://github.com/ONLYOFFICE/document-editor-react) integrates ONLYOFFICE Docs into [React](https://react.dev/) projects. The component supports React 16.9 and later, including React 19. The list of changes for each version is published on the [Releases](https://github.com/ONLYOFFICE/document-editor-react/releases) tab.
 
 ## Prerequisites
 
-This procedure requires [Node.js (and npm)](https://nodejs.org/en).
+This procedure requires [Node.js (and npm)](https://nodejs.org/en) and a running ONLYOFFICE Docs instance. If you do not have one, install it on your own server as described in the [self-hosted](../installation/self-hosted.md) section, or deploy it in the [cloud](../installation/cloud.md).
 
-The component works in any React project. The steps below use [Vite](https://vite.dev/) to create one from scratch.
+The page assumes a basic working knowledge of [React](https://react.dev/). The component works in any React project. The steps below use [Vite](https://vite.dev/) to create one from scratch.
 
 ## Creating the demo React application with ONLYOFFICE Docs editor
 
 This procedure creates a basic React application and installs an ONLYOFFICE Docs editor in it.
 
-1. Create a new React project named `onlyoffice-react-demo`:
+1. Create a new React project named `onlyoffice-react-demo` and install its dependencies:
 
    ```sh
    npm create vite@latest onlyoffice-react-demo -- --template react
-   ```
-
-2. Go to the newly created directory and install the project dependencies:
-
-   ```sh
    cd onlyoffice-react-demo
    npm install
    ```
 
-3. Install ONLYOFFICE Docs React component and save it to the `package.json` file:
+2. Install the ONLYOFFICE Docs React component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-react) public registry and save it to the `package.json` file:
 
    <Tabs>
       <TabItem value="npm" label="npm">
@@ -43,13 +43,13 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
       </TabItem>
    </Tabs>
 
-   TypeScript declarations come from the `@onlyoffice/doceditor-types` peer dependency. npm 7 and later installs it automatically. With yarn, add it manually:
+   TypeScript declarations come from the [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) peer dependency. npm 7 and later installs it automatically. With yarn, add it manually:
 
    ```sh
    yarn add -D @onlyoffice/doceditor-types
    ```
 
-4. Open the `./src/App.jsx` file in the `onlyoffice-react-demo` project and replace its contents with the following code:
+3. Open the `./src/App.jsx` file in the `onlyoffice-react-demo` project and replace its contents with the following code:
 
    ```jsx
    import {DocumentEditor} from "@onlyoffice/document-editor-react";
@@ -106,7 +106,7 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
 
    This file creates the `App` component containing the ONLYOFFICE Docs editor configured with basic features.
 
-5. Test the application using the Vite development server:
+4. Test the application using the Vite development server:
 
    - To start the development server, navigate to the `onlyoffice-react-demo` directory and run:
 
@@ -296,43 +296,43 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| Name                                 | Type                                                  | Default | Description                                                                                                                                                |
-| ------------------------------------ | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id\*                                 | string                                                | -       | Component unique identifier.                                                                                                                               |
-| documentServerUrl\*                  | string                                                | -       | Address of ONLYOFFICE Docs.                                                                                                                                |
-| config\*                             | object                                                | -       | Generic [configuration object](../../usage-api/config/config.md) for opening a file with token.                                                        |
-| shardkey                             | string \| boolean                                     | true    | The [shardkey](../configuration/shard-key.md) parameter added to the query string of the ONLYOFFICE Docs API script request for load balancing. If set to `true`, the document [`key`](../../usage-api/config/document/document.md#key) from `config` is used as a value. Set to `false` to send the request without this parameter. |
-| onLoadComponentError                 | (errorCode: number, errorDescription: string) => void | null    | The function called when an error occurs while loading a component.                                                                                        |
-| document\_fileType                   | string                                                | null    | The type of the file.                                                                                                                                      |
-| document\_title                      | string                                                | null    | The file name.                                                                                                                                             |
-| documentType                         | string                                                | null    | The document type.                                                                                                                                         |
-| editorConfig\_lang                   | string                                                | null    | The editor interface [language](../../usage-api/config/editor/editor.md#lang).                                                                              |
-| height                               | string                                                | null    | The document height in the browser window.                                                                                                                 |
-| type                                 | string                                                | null    | The platform type used to access the document: `desktop`, `mobile`, or `embedded`.                                                                          |
-| width                                | string                                                | null    | The document width in the browser window.                                                                                                                  |
-| events\_onAppReady                   | (event: object) => void                               | null    | The function called when the application is loaded into the browser.                                                                                       |
-| events\_onDocumentStateChange        | (event: object) => void                               | null    | The function called when the document is modified.                                                                                                         |
-| events\_onMetaChange                 | (event: object) => void                               | null    | The function called when the meta information of the document is changed via the meta command.                                                             |
-| events\_onDocumentReady              | (event: object) => void                               | null    | The function called when the document is loaded into the document editor.                                                                                  |
-| events\_onInfo                       | (event: object) => void                               | null    | The function called when the application opened the file.                                                                                                  |
-| events\_onWarning                    | (event: object) => void                               | null    | The function called when a warning occurs.                                                                                                                 |
-| events\_onError                      | (event: object) => void                               | null    | The function called when an error or some other specific event occurs.                                                                                     |
-| events\_onRequestSharingSettings     | (event: object) => void                               | null    | The function called when the user is trying to manage document access rights by clicking **Change access rights** button.                                  |
-| events\_onRequestRename              | (event: object) => void                               | null    | The function called when the user is trying to rename the file by clicking the **Rename...** button.                                                       |
-| events\_onMakeActionLink             | (event: object) => void                               | null    | The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.            |
-| events\_onRequestInsertImage         | (event: object) => void                               | null    | The function called when the user is trying to insert an image by clicking the **Image from Storage** button.                                              |
-| events\_onRequestSaveAs              | (event: object) => void                               | null    | The function called when the user is trying to save file by clicking **Save Copy as...** button.                                                           |
-| events\_onRequestMailMergeRecipients | (event: object) => void                               | null    | Deprecated since version 7.5, use `events_onRequestSelectSpreadsheet` instead. The function called when the user is trying to select recipients data by clicking the **Mail merge** button. |
-| events\_onRequestCompareFile         | (event: object) => void                               | null    | Deprecated since version 7.5, use `events_onRequestSelectDocument` instead. The function called when the user is trying to select document for comparing by clicking the **Document from Storage** button. |
-| events\_onRequestEditRights          | (event: object) => void                               | null    | The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the **Edit Document** button.        |
-| events\_onRequestHistory             | (event: object) => void                               | null    | The function called when the user is trying to show the document version history by clicking the **Version History** button.                               |
-| events\_onRequestHistoryClose        | (event: object) => void                               | null    | The function called when the user is trying to go back to the document from viewing the document version history by clicking the **Close History** button. |
-| events\_onRequestHistoryData         | (event: object) => void                               | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
-| events\_onRequestRefreshFile         | (event: object) => void                               | null    | The function called when the file must be updated in the editor without reloading the page.                                                                |
-| events\_onRequestRestore             | (event: object) => void                               | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
-| events\_onRequestSelectSpreadsheet   | (event: object) => void                               | null    | The function called when the user is trying to select recipients data by clicking the **Mail merge** button.                                                |
-| events\_onRequestSelectDocument      | (event: object) => void                               | null    | The function called when the user is trying to select a document for comparing, combining, or inserting text.                                              |
-| events\_onRequestUsers               | (event: object) => void                               | null    | The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. |
+| Name                                  | Type                                                  | Default | Description                                                                                                                                                |
+| ------------------------------------- | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`\*                                | string                                                | -       | Component unique identifier.                                                                                                                               |
+| `documentServerUrl`\*                 | string                                                | -       | Address of ONLYOFFICE Docs.                                                                                                                                |
+| `config`\*                            | object                                                | -       | Generic [configuration object](../../usage-api/config/config.md) for opening a file.                                                                   |
+| `shardkey`                            | string \| boolean                                     | true    | The [shardkey](../configuration/shard-key.md) parameter added to the query string of the ONLYOFFICE Docs API script request for load balancing. If set to `true`, the document [`key`](../../usage-api/config/document/document.md#key) from `config` is used as a value. Set to `false` to send the request without this parameter. |
+| `onLoadComponentError`                | (errorCode: number, errorDescription: string) => void | null    | The function called when an error occurs while loading a component.                                                                                        |
+| `document_fileType`                   | string                                                | null    | The type of the file.                                                                                                                                      |
+| `document_title`                      | string                                                | null    | The file name.                                                                                                                                             |
+| `documentType`                        | string                                                | null    | The document type.                                                                                                                                         |
+| `editorConfig_lang`                   | string                                                | null    | The editor interface [language](../../usage-api/config/editor/editor.md#lang).                                                                              |
+| `height`                              | string                                                | null    | The document height in the browser window.                                                                                                                 |
+| `type`                                | string                                                | null    | The platform type used to access the document: `desktop`, `mobile`, or `embedded`.                                                                          |
+| `width`                               | string                                                | null    | The document width in the browser window.                                                                                                                  |
+| `events_onAppReady`                   | (event: object) => void                               | null    | The function called when the application is loaded into the browser.                                                                                       |
+| `events_onDocumentStateChange`        | (event: object) => void                               | null    | The function called when the document is modified.                                                                                                         |
+| `events_onMetaChange`                 | (event: object) => void                               | null    | The function called when the meta information of the document is changed via the meta command.                                                             |
+| `events_onDocumentReady`              | (event: object) => void                               | null    | The function called when the document is loaded into the document editor.                                                                                  |
+| `events_onInfo`                       | (event: object) => void                               | null    | The function called when the application opened the file.                                                                                                  |
+| `events_onWarning`                    | (event: object) => void                               | null    | The function called when a warning occurs.                                                                                                                 |
+| `events_onError`                      | (event: object) => void                               | null    | The function called when an error or some other specific event occurs.                                                                                     |
+| `events_onRequestSharingSettings`     | (event: object) => void                               | null    | The function called when the user is trying to manage document access rights by clicking **Change access rights** button.                                  |
+| `events_onRequestRename`              | (event: object) => void                               | null    | The function called when the user is trying to rename the file by clicking the **Rename...** button.                                                       |
+| `events_onMakeActionLink`             | (event: object) => void                               | null    | The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.            |
+| `events_onRequestInsertImage`         | (event: object) => void                               | null    | The function called when the user is trying to insert an image by clicking the **Image from Storage** button.                                              |
+| `events_onRequestSaveAs`              | (event: object) => void                               | null    | The function called when the user is trying to save file by clicking **Save Copy as...** button.                                                           |
+| `events_onRequestMailMergeRecipients` | (event: object) => void                               | null    | Deprecated since version 7.5, use `events_onRequestSelectSpreadsheet` instead. The function called when the user is trying to select recipients data by clicking the **Mail merge** button. |
+| `events_onRequestCompareFile`         | (event: object) => void                               | null    | Deprecated since version 7.5, use `events_onRequestSelectDocument` instead. The function called when the user is trying to select document for comparing by clicking the **Document from Storage** button. |
+| `events_onRequestEditRights`          | (event: object) => void                               | null    | The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the **Edit Document** button.        |
+| `events_onRequestHistory`             | (event: object) => void                               | null    | The function called when the user is trying to show the document version history by clicking the **Version History** button.                               |
+| `events_onRequestHistoryClose`        | (event: object) => void                               | null    | The function called when the user is trying to go back to the document from viewing the document version history by clicking the **Close History** button. |
+| `events_onRequestHistoryData`         | (event: object) => void                               | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
+| `events_onRequestRefreshFile`         | (event: object) => void                               | null    | The function called when the file must be updated in the editor without reloading the page.                                                                |
+| `events_onRequestRestore`             | (event: object) => void                               | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
+| `events_onRequestSelectSpreadsheet`   | (event: object) => void                               | null    | The function called when the user is trying to select recipients data by clicking the **Mail merge** button.                                                |
+| `events_onRequestSelectDocument`      | (event: object) => void                               | null    | The function called when the user is trying to select a document for comparing, combining, or inserting text.                                              |
+| `events_onRequestUsers`               | (event: object) => void                               | null    | The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. |
 
 ```mdx-code-block
 </APITable>
