@@ -118,7 +118,7 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
    const documentEditor = window.DocEditor.instances["docEditor"]
    ```
 
-2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md)：
+2. 从这个对象中调用任何编辑器的 [方法](../../usage-api/methods.md)：
 
    ```js
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")

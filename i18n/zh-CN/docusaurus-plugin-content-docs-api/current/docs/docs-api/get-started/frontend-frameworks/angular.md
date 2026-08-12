@@ -154,7 +154,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
    该包已声明 `window` 对象的 `DocEditor` 属性，因此无需额外的 TypeScript 声明。
 
-2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md)：
+2. 从这个对象中调用任何编辑器的 [方法](../../usage-api/methods.md)：
 
    ```ts
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
