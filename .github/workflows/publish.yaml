@@ -107,6 +107,7 @@ jobs:
         npm run build -- ${SUB_ARGS} ${LOCALE}
     
     - uses: actions/cache/restore@v3
+      if: env.mode == 'production'
       id: restore-3d
       with:
         path: ./previous_bucket
@@ -115,6 +116,7 @@ jobs:
            ${{ inputs.site_mode }}-bucket-number-
 
     - name: Declare which bucket to use
+      if: env.mode == 'production'
       shell: bash
       run: |
         if [ -f ./previous_bucket ]; then
@@ -152,7 +154,7 @@ jobs:
           echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
           echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_PROD}" >> "$GITHUB_ENV"
         elif [ "${mode}" = "testing" ]; then
-          echo "AWS_BUCKET_URL=s3://${teamlab_s3bucket}${BUCKET_NUMBER}" >> "$GITHUB_ENV"
+          # AWS_BUCKET_URL for testing is declared later from the Terraform state
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_TEST}" >> "$GITHUB_ENV"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_TEST}" >> "$GITHUB_ENV"
           echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_TEST}" >> "$GITHUB_ENV"
@@ -171,6 +173,50 @@ jobs:
         aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
         aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
         aws-region: ${{env.AWS_REGION}}
+
+    # --- Testing mode: origin bucket and CloudFront are managed by Terraform ---
+    - name: Generate GitHub App token
+      if: env.mode == 'testing'
+      id: app-token
+      uses: actions/create-github-app-token@v1
+      with:
+        github-api-url: https://api.github.com
+        app-id: ${{ secrets.GH_APP_ID }}
+        private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+        owner: ${{ secrets.INFRA_REPO_OWNER }}
+        repositories: ${{ secrets.INFRA_REPO_NAME }}
+
+    - name: Checkout infra repo
+      if: env.mode == 'testing'
+      uses: actions/checkout@v4
+      with:
+        github-server-url: https://github.com
+        repository: ${{ secrets.INFRA_REPO_OWNER }}/${{ secrets.INFRA_REPO_NAME }}
+        token: ${{ steps.app-token.outputs.token }}
+        path: infra
+        sparse-checkout: |
+          cloudfront-distributions-test/api-site
+
+    - name: Setup Terraform
+      if: env.mode == 'testing'
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_wrapper: false
+
+    - name: Declare target bucket from Terraform state
+      if: env.mode == 'testing'
+      working-directory: infra/cloudfront-distributions-test/api-site
+      run: |
+        terraform init -input=false
+        CURRENT=$(terraform output -raw api_site_origin_bucket)
+        if [ "$CURRENT" = "${teamlab_s3bucket}1" ]; then
+          TARGET="${teamlab_s3bucket}2"
+        else
+          TARGET="${teamlab_s3bucket}1"
+        fi
+        echo "Current origin bucket: ${CURRENT}, target: ${TARGET}"
+        echo "AWS_BUCKET_URL=s3://${TARGET}" >> "$GITHUB_ENV"
+        echo "TARGET_BUCKET=${TARGET}" >> "$GITHUB_ENV"
 
     - name: Sync AWS Bucket
       id: sync
@@ -262,12 +308,25 @@ jobs:
           done
 
     - uses: actions/cache/save@v3
+      if: env.mode == 'production'
       id: save-3d
       with:
         path: ./previous_bucket
         key: ${{ inputs.site_mode }}-bucket-number-${{ github.run_id }}
 
+    - name: Switch CloudFront origin via Terraform
+      if: env.mode == 'testing'
+      id: cfconf_tf
+      working-directory: infra/cloudfront-distributions-test/api-site
+      run: |
+          # backup current distribution config (attached to the telegram alert)
+          aws cloudfront get-distribution-config --id "${AWS_DISTRIBUTION_ID}" > ../../../cf_config_backup.json
+
+          # wait_for_deployment=true in the module: apply returns when the distribution is Deployed
+          terraform apply -auto-approve -input=false -var "api_site_s3_bucket_name=${TARGET_BUCKET}"
+
     - name: Update AWS CloudFront config
+      if: env.mode == 'production'
       shell: bash
       id: cfconf
       run: |
@@ -332,7 +391,11 @@ jobs:
         BUILD_STATUS: ${{ steps.build.outcome }}
         SYNC_STATUS: ${{ steps.sync.outcome }}
         CF_CONF_STATUS: ${{ steps.cfconf.outcome }}
+        CF_CONF_TF_STATUS: ${{ steps.cfconf_tf.outcome }}
       run: |
+          if [[ "$CF_CONF_TF_STATUS" != 'skipped' ]]; then
+             CF_CONF_STATUS="$CF_CONF_TF_STATUS"
+          fi
           if [[ "$BUILD_STATUS" == 'failure' ]]; then
              echo "BUILD_STATUS=failure🔴" >> $GITHUB_ENV
              echo "SYNC_STATUS=skipped" >> $GITHUB_ENV
