@@ -190,7 +190,7 @@ onDocumentReady = () => {
 
 如需为开发版本和产品版本使用不同的设置（例如不同的文档服务器地址），请按照 Angular [environments](https://angular.dev/tools/cli/environments) 指南配置构建目标。
 
-## ONLYOFFICE 文档 Angular 组件API
+## ONLYOFFICE 文档 Angular 组件 API
 
 ### 属性
 
