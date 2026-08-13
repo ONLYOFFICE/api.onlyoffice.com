@@ -12,10 +12,10 @@ on:
         type: choice
         options:
         - testing
-        #- production
+        - production
 
 concurrency:
-  group: terraform-api-site
+  group: terraform-api-site-${{ github.event.inputs.site_mode }}
 
 env:
   AWS_REGION: us-east-1
@@ -35,8 +35,11 @@ jobs:
             echo "CF_TF_DIR=infra/cloudfront-distributions-test/api-site" >> "$GITHUB_ENV"
             echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_TEST }}" >> "$GITHUB_ENV"
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_KEY_TEST }}" >> "$GITHUB_ENV"
-          # elif [ "${mode}" = "production" ]; then
-          #   production infra is not terraformed yet (lambda-prod dir + prod CF state)
+          elif [ "${mode}" = "production" ]; then
+            echo "LAMBDA_TF_DIR=infra/lambda-prod/api-site-redirects/tf-resources" >> "$GITHUB_ENV"
+            echo "CF_TF_DIR=infra/cloudfront-distributions-com/api-site" >> "$GITHUB_ENV"
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_PROD }}" >> "$GITHUB_ENV"
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_KEY_PROD }}" >> "$GITHUB_ENV"
           else
             echo "Unknown site_mode: ${mode}" >&2
             exit 1
@@ -101,6 +104,8 @@ jobs:
           sparse-checkout: |
             lambda-test/api-site-redirects
             cloudfront-distributions-test/api-site
+            lambda-prod/api-site-redirects
+            cloudfront-distributions-com/api-site
 
       - name: Copy redirects into lambda package source
         run: cp .github/redirects/redirects.json ${LAMBDA_TF_DIR}/../src/redirects.json
