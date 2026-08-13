@@ -12,19 +12,19 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| Parameter          | Type             | Example                                                  | Description                                                                                                                                                                      |
-|--------------------|------------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| author             | string           | `"ONLYOFFICE"`                                           | The plugin author.                                                                                                                                                               |
-| cspDomains         | string[] | `[https://embed.diagrams.net/, https://*.diagrams.net/]` | The list of all third-party resources that are used in the plugin.                                                                                                               |
-| description        | string           | `"plugin description"`                                   | The description, i.e. what describes your plugin in the best way.                                                                                                                |
-| homePage           | string           | `https://example.com/url-to-plugin-repository`           | The plugin homepage. For example, it can be the plugin GitHub repository.                                                                                                        |
-| image              | string           | `"logo.png"`                                             | The name of the logo image. It is equal to the `logo` parameter from the `package.json` file. The required icon size is 48x48 px. Otherwise, it will be compressed to this size. |
-| license            | string           | `"MIT"`                                                  | The plugin license.                                                                                                                                                              |
-| minDocSpaceVersion | string           | `"7.2.0"`                                                | The minimum DocSpace version required by the plugin. It is compared with the current version of the DocSpace client where the plugin is uploaded.                                |
-| name               | string           | `"plugin name"`                                          | The plugin name.                                                                                                                                                                 |
-| pluginName         | string           | `"plugin name"`                                          | The name by which the plugin is registered in the `window` object. It must match the plugin name from the `plugin.js` file.                                                      |
-| scopes             | string           | `"ContextMenu,InfoPanel,MainButton"`                     | The plugin scopes which are converted from an array into a string.                                                                                                               |
-| version            | string           | `"1.0.0"`                                                | The current plugin version.                                                                                                                                                      |
+| Parameter          | Type             | Example                                                  | Description                                                                                                                                                                                                                       |
+|--------------------|------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| author             | string           | `"ONLYOFFICE"`                                           | The plugin author.                                                                                                                                                                                                                |
+| cspDomains         | string           | `"https://embed.diagrams.net/,https://*.diagrams.net/"`  | The list of all third-party resources that are used in the plugin. It is converted from an array into a string.                                                                                                                   |
+| description        | string           | `"plugin description"`                                   | The description, i.e. what describes your plugin in the best way.                                                                                                                                                                 |
+| homePage           | string           | `"https://example.com/url-to-plugin-repository"`         | The plugin homepage. For example, it can be the plugin GitHub repository.                                                                                                                                                         |
+| image              | string           | `"logo.png"`                                             | The name of the logo image. It is equal to the `logo` parameter from the `package.json` file. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.                                                  |
+| license            | string           | `"MIT"`                                                  | The plugin license.                                                                                                                                                                                                               |
+| minDocSpaceVersion | string           | `"3.5.0"`                                                | The minimum DocSpace version supported by the installed SDK. It is substituted automatically when building the plugin, not set by the plugin author. It is compared with the DocSpace portal version when the plugin is uploaded. |
+| name               | string           | `"plugin-name"`                                          | The plugin name.                                                                                                                                                                                                                  |
+| pluginName         | string           | `"Pluginname"`                                           | The name by which the plugin is registered in the `window` object. It must match the `pluginName` parameter from the *package.json* file.                                                                                         |
+| scopes             | string           | `"ContextMenu,InfoPanel,MainButton"`                     | The plugin scopes which are converted from an array into a string.                                                                                                                                                                |
+| version            | string           | `"1.0.0"`                                                | The current plugin version.                                                                                                                                                                                                       |
 
 ```mdx-code-block
 </APITable>
@@ -35,16 +35,13 @@ import APITable from '@site/src/components/APITable/APITable';
 ``` ts
 const config = {
   author: "ONLYOFFICE",
-  cspDomains: [
-    "https://embed.diagrams.net/",
-    "https://*.diagrams.net/",
-  ],
+  cspDomains: "https://embed.diagrams.net/,https://*.diagrams.net/",
   description: "plugin description",
   homePage: "https://example.com/url-to-plugin-repository",
   image: "logo.png",
   license: "MIT",
-  name: "plugin name",
-  pluginName: "plugin name",
+  name: "plugin-name",
+  pluginName: "Pluginname",
   scopes: "ContextMenu,InfoPanel,MainButton",
   version: "1.0.0",
 }
