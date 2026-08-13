@@ -1,0 +1,60 @@
+name: ReBuild docspace-plugin-sdk
+
+run-name: "ReBuild docspace-plugin-sdk"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
+
+      - name: Checkout docspace-plugin-sdk repository (branch)
+        id: checkout_docspace_plugin_sdk
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-plugin-sdk
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: docspace-plugin-sdk
+
+      - name: Checkout docspace-plugin-sdk repository (default)
+        if: steps.checkout_docspace_plugin_sdk.outcome == 'failure'
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-plugin-sdk
+          token: ${{ secrets.READ_PAT }}
+          path: docspace-plugin-sdk
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Build docspace-plugin-sdk
+        run: |
+          cd docspace-plugin-sdk
+          npm install
+          npm run docs:sync
+          cd ..
+
+          cd api.onlyoffice.com
+          if [ -n "$(git status --porcelain)" ]; then
+              git add .
+              git commit -m "Update DocSpace Plugin SDK documentation from GitHub Actions"
+              git push origin ${{ github.ref_name }}
+            else
+              echo "Nothing to commit"
+            fi

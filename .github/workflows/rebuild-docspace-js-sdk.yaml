@@ -1,6 +1,6 @@
-name: ReBuild docspace-sdk-js
+name: ReBuild docspace-js-sdk
 
-run-name: "ReBuild docspace-sdk-js"
+run-name: "ReBuild docspace-js-sdk"
 
 on:
   workflow_dispatch:
@@ -49,7 +49,7 @@ jobs:
           if ! git diff --exit-code; then
               git add .
               git commit -m "Update DocSpace SDK documentation from GitHub Actions"
-              git push origin ${REF}
+              git push origin ${{ github.ref_name }}
             else
               echo "Nothing to commit"
             fi
