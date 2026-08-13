@@ -92,7 +92,7 @@ This produces the following result:
 
 Use plain *.css* mainly for third-party stylesheets that rely on fixed, unhashed class names (for example, a vendor library that references specific class names in its own code). For your own styles, prefer *.module.css*: rules such as *:root* or *@font-face* are never scoped by CSS Modules anyway, so they do not require a plain *.css* file either.
 
-:::caution
+:::warning
 Class selectors in plain *.css* files are not scoped, so they can unintentionally match elements elsewhere on the DocSpace page, not just in your plugin's UI.
 :::
 

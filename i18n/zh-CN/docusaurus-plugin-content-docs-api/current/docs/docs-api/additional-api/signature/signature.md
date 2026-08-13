@@ -24,7 +24,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
   </TabItem>
 </Tabs>
 
-:::caution
+:::warning
 默认值存储在 `default.json` 配置文件中，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 `default.json` 文件的内容。每次重启 Docker 容器或将 ONLYOFFICE 文档升级到新版本时，默认值将被恢复，您所做的所有更改将会丢失。
 :::
 
@@ -89,7 +89,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 
 下面是为初始化设置和请求生成签名的示例。所有示例均使用 HMAC-SHA256 算法，并包含所需的库和导入。它们基于不同编程语言的[测试范例](../../samples/language-specific-examples/language-specific-examples.md)。我们建议您在项目中使用此代码来生成签名。
 
-:::caution
+:::warning
 签名需要使用密钥，因此请在您的服务器上生成签名。任何在浏览器中运行的代码都会将密钥暴露给用户：在客户端应用程序中（例如使用[前端框架](../../get-started/frontend-frameworks/frontend-frameworks.md)构建的应用程序），请在您的后端对配置进行签名，并将已签名的配置发送给客户端。
 :::
 

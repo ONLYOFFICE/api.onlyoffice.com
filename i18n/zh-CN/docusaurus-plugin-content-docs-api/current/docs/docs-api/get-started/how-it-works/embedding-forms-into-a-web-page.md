@@ -13,7 +13,7 @@ ONLYOFFICE 文档支持 PDF 表单——带有可填写字段（如文本输入�
 PDF 表单从 7.0 版本起可用。从 8.0 版本开始，OFORM 格式已被弃用——仅使用 PDF 格式进行填写。从 8.1 版本开始，DOCXF 格式已被弃用——仅使用 PDF 格式创建和编辑表单。
 :::
 
-:::caution
+:::warning
 当您的文档服务器启用了 JWT 验证（默认配置）时，每个 `config` 必须使用匹配的 [`token`](./security.md) 进行签名。请使用您的文档服务器的 JWT 密钥进行签名。有关设置说明和代码示例，请参阅[签名](../../additional-api/signature/signature.md)部分。
 :::
 
