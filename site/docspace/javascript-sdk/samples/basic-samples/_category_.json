@@ -1,5 +1,9 @@
 {
     "position": 1,
     "collapsed": true,
-    "label": "Basic samples"
+    "label": "Basic samples",
+    "link": {
+        "type": "doc",
+        "id": "index"
+    }
 }
