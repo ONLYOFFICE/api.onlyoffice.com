@@ -10,6 +10,10 @@
 * Added Changing text in PDF automation API sample
 * Added Redacting in PDF automation API sample
 
+#### Plugins and macros
+
+* Added Wrap characters with dashes macro sample for the spreadsheet editor
+
 #### DocSpace
 
 * Added Styling plugin page to the Plugins SDK
