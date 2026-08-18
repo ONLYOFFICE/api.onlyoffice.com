@@ -20,13 +20,14 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
 | 组件版本 | Angular 版本 |
 | -------- | ------------ |
+| 9.x      | 22           |
 | 8.x      | 21           |
 | 7.x      | 20           |
 | 6.x      | 19           |
 | 5.x      | 18           |
 | 4.x      | 17           |
 
-请安装与您项目的 Angular 版本相匹配的组件版本。目前尚不支持 Angular 22，因此以下步骤将 Angular CLI 固定为版本 21。
+请安装与您项目的 Angular 版本相匹配的组件版本。
 
 ## 使用 ONLYOFFICE 文档编辑器创建演示 Angular 应用程序
 
@@ -35,7 +36,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 1. 打开命令行或命令提示符并安装 [Angular CLI](https://angular.dev/tools/cli) 包：
 
    ```sh
-   npm install -g @angular/cli@21
+   npm install -g @angular/cli
    ```
 
 2. 创建一个名为 `onlyoffice-angular-demo` 的新 Angular 项目并进入新创建的目录：
@@ -55,7 +56,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
-            yarn add @onlyoffice/document-editor-angular
+            yarn add @onlyoffice/document-editor-angular @onlyoffice/doceditor-types
             ```
       </TabItem>
    </Tabs>
@@ -64,7 +65,8 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
    ```ts
    import {Component} from "@angular/core";
-   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+   import {type Config} from "@onlyoffice/doceditor-types";
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
    @Component({
      selector: "app-root",
@@ -72,7 +74,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
      templateUrl: "./app.html",
    })
    export class App {
-     config: IConfig = {
+     config: Config = {
        document: {
          fileType: "docx",
          key: "Khirz6zTPdfd7",
@@ -188,7 +190,8 @@ app.get("/api/editor-config", (request, response) => {
 
 ```ts
 import {Component, OnInit} from "@angular/core";
-import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+import {type Config} from "@onlyoffice/doceditor-types";
+import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
 @Component({
   selector: "app-root",
@@ -196,7 +199,7 @@ import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-an
   templateUrl: "./app.html",
 })
 export class App implements OnInit {
-  config: IConfig | null = null;
+  config: Config | null = null;
 
   async ngOnInit() {
     const response = await fetch("/api/editor-config");
@@ -258,7 +261,8 @@ onDocumentReady = () => {
 
 ```ts
 import {Component, OnDestroy} from "@angular/core";
-import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+import {type Config} from "@onlyoffice/doceditor-types";
+import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
 @Component({
   selector: "app-root",
@@ -266,7 +270,7 @@ import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-an
   templateUrl: "./app.html",
 })
 export class App implements OnDestroy {
-  config: IConfig = {
+  config: Config = {
     document: {
       fileType: "docx",
       key: "Khirz6zTPdfd7",
