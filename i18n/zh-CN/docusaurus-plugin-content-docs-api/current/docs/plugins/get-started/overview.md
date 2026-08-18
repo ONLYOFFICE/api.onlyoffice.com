@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# 插件入门
+# 概述
 
 ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，可将原生体验的功能直接嵌入编辑器。安装一次，即可供所有用户使用。
 
@@ -54,7 +54,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 | **最适合**     | 可复用工具、集成                | 个人自动化               | AI 驱动功能              |
 | **框架支持**   | ✅ React、Vue、Angular          | ❌ 仅限原生 JS           | ✅ 任意框架              |
 
-另请参阅：[宏](../../macros/get-started/get-started.md) | [自定义 AI 工具](../../ai/get-started/get-started.md)
+另请参阅：[宏](../../macros/get-started/overview.md) | [自定义 AI 工具](../../ai/get-started/overview.md)
 
 ## 故障排除
 

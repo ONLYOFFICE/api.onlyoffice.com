@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 添加插件
 
-**ONLYOFFICE 桌面编辑器** 允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 ONLYOFFICE 插件市场 中的现成插件，也可以参考我们的 [插件和宏 API 文档](../../plugins/get-started/get-started.md) 创建自己的插件。
+**ONLYOFFICE 桌面编辑器** 允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 ONLYOFFICE 插件市场 中的现成插件，也可以参考我们的 [插件和宏 API 文档](../../plugins/get-started/overview.md) 创建自己的插件。
 
 添加插件有两种方式：通过插件管理器和通过插件文件夹。
 

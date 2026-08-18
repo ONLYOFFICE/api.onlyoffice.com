@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Getting started with macros
+# Overview
 
 ONLYOFFICE macros are lightweight JavaScript scripts that run directly inside documents using the [Office JavaScript API](../../office-api/get-started/overview.md). No installation required - write the code, run it, done.
 
@@ -58,4 +58,4 @@ Automate repetitive tasks without leaving the editor.
 - [Writing macros](../guides/writing-macros.md)
 - [Debugging](../guides/debugging.md)
 
-Also available: [Plugins](../../plugins/get-started/get-started.md) | [Custom AI tools](../../ai/get-started/get-started.md)
+Also available: [Plugins](../../plugins/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)

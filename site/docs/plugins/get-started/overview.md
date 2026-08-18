@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Getting started with plugins
+# Overview
 
 ONLYOFFICE plugins are interactive tools built with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors. Install them once and make them available to all users.
 
@@ -54,7 +54,7 @@ Not sure which approach fits your use case? See how plugins compare to macros an
 | **Best for**          | Reusable tools, integrations       | Personal automation          | AI-powered features              |
 | **Framework support** | ✅ React, Vue, Angular              | ❌ Vanilla JS only            | ✅ Any framework                  |
 
-Also available: [Macros](../../macros/get-started/get-started.md) | [Custom AI tools](../../ai/get-started/get-started.md)
+Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)
 
 ## Troubleshooting
 

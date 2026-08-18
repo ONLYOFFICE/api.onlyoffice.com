@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# 宏入门
+# 概述
 
 ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-api/get-started/overview.md) 运行的轻量级 JavaScript 脚本。无需安装--编写代码，运行即可。
 
@@ -58,4 +58,4 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 - [编写宏](../guides/writing-macros.md)
 - [调试](../guides/debugging.md)
 
-另请参阅：[插件](../../plugins/get-started/get-started.md) | [自定义 AI 工具](../../ai/get-started/get-started.md)
+另请参阅：[插件](../../plugins/get-started/overview.md) | [自定义 AI 工具](../../ai/get-started/overview.md)

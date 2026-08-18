@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# 自定义 AI 工具入门
+# 概述
 
 ONLYOFFICE 自定义 AI 工具是编辑器扩展，将插件框架与 AI 提供商集成相结合，直接在编辑器中提供智能的上下文感知功能。
 
@@ -40,4 +40,4 @@ ONLYOFFICE 自定义 AI 工具是编辑器扩展，将插件框架与 AI 提供�
 - [配置 AI 插件](../guides/ai-plugin.md)
 - [自定义 AI 工具指南](../guides/custom-ai-tools.md)
 
-另请参阅：[插件](../../plugins/get-started/get-started.md) | [宏](../../macros/get-started/get-started.md)
+另请参阅：[插件](../../plugins/get-started/overview.md) | [宏](../../macros/get-started/overview.md)

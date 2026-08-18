@@ -3,7 +3,7 @@
   "/docspace/apisystem": "/workspace/for-hosting-providers/get-started/basic-concepts/",
   "/editors/basic": "/docs/docs-api/get-started/basic-concepts/",
   "/officeapi/basic": "/docs/office-api/get-started/overview/",
-  "/plugin/basic": "/docs/plugins/get-started/",
+  "/plugin/basic": "/docs/plugins/get-started/overview/",
   "/docbuilder/basic": "/docs/document-builder/get-started/overview/",
   "/docbuilder/framework": "/docs/document-builder/builder-framework/overview/",
   "/docbuilder/integrationapi/default": "/docs/document-builder/using-cli/overview/",
@@ -2493,7 +2493,7 @@
   "/plugin/localization": "/docs/plugins/configuration/localization/",
   "/plugin/styles": "/docs/plugins/configuration/styles-and-theming/",
   "/plugin/publishing": "/docs/plugins/development-workflow/publishing/submit-to-marketplace/",
-  "/plugin/macros": "/docs/macros/get-started/",
+  "/plugin/macros": "/docs/macros/get-started/overview/",
   "/plugin/writingmacros": "/docs/macros/guides/writing-macros/",
   "/plugin/debugging": "/docs/macros/guides/debugging/",
   "/plugin/convertingvbamacros": "/docs/macros/guides/converting-vba-macros/",
@@ -2879,6 +2879,9 @@
   "/officeapi/presentationapi/apitable/select": "/docs/office-api/usage-api/presentation-api/ApiTable/",
   "/officeapi/formapi/apidocument": "/docs/office-api/usage-api/form-api/",
   "/officeapi/formapi/apidocument/inserttextform": "/docs/office-api/usage-api/form-api/",
-  "/docs/plugin-and-macros/get-started/overview/": "/docs/plugins/get-started/",
-  "/docspace/javascript-sdk/get-started/basic-concepts/": "/docspace/javascript-sdk/get-started/"
+  "/docs/plugin-and-macros/get-started/overview/": "/docs/plugins/get-started/overview/",
+  "/docspace/javascript-sdk/get-started/basic-concepts/": "/docspace/javascript-sdk/get-started/",
+  "/docs/plugins/get-started/": "/docs/plugins/get-started/overview/",
+  "/docs/macros/get-started/": "/docs/macros/get-started/overview/",
+  "/docs/ai/get-started/": "/docs/ai/get-started/overview/"
 }
