@@ -58,7 +58,7 @@ After editing is finished, the document is [saved](./saving-file.md).
 
    Replace `example.com` with the host serving your document file — i.e., your **document storage service**. In this minimal example, the local `.html` file plays the role of the **document manager** — in a real integration, the manager would build this config dynamically for each user and document. For a quick test without hosting a file yourself, use `https://static.onlyoffice.com/assets/docs/samples/demo.docx` as the `url`.
 
-   :::caution
+   :::warning
    When JWT validation is enabled on your document server (the default configuration), the `config` must be signed with a matching [`token`](./security.md). The `token` above matches this exact config but is signed with a throwaway secret — it will not validate on your server, and it must be regenerated whenever the config changes (for example, if you switch `url` to the demo document). Sign with your document server's JWT secret. A token does not bypass network restrictions: if `url` points to a local or private address, the document server must still be able to reach it.
    :::
 

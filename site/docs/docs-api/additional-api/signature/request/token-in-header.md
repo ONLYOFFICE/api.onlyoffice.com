@@ -10,7 +10,7 @@ In the examples below, `example.com` represents the server where your **document
 
 ## Incoming request
 
-:::caution
+:::warning
 It is not recommended to send a signature in the header when performing the HTTP requests to ONLYOFFICE Docs. Send the signature [in the body](./token-in-body.md).
 :::
 

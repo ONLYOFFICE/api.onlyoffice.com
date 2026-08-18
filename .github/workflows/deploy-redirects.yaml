@@ -1,0 +1,158 @@
+name: Deploy Redirects
+
+run-name: "Deploy redirects (site_mode: ${{ github.event.inputs.site_mode }})"
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_mode:
+        description: Site mode
+        required: true
+        default: testing
+        type: choice
+        options:
+        - testing
+        - production
+
+concurrency:
+  group: terraform-api-site-${{ github.event.inputs.site_mode }}
+
+env:
+  AWS_REGION: us-east-1
+  mode: ${{ github.event.inputs.site_mode }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout api repo
+        uses: actions/checkout@v4
+
+      - name: Configure environment
+        run: |
+          if [ "${mode}" = "testing" ]; then
+            echo "LAMBDA_TF_DIR=infra/lambda-test/api-site-redirects/tf-resources" >> "$GITHUB_ENV"
+            echo "CF_TF_DIR=infra/cloudfront-distributions-test/api-site" >> "$GITHUB_ENV"
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_TEST }}" >> "$GITHUB_ENV"
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_KEY_TEST }}" >> "$GITHUB_ENV"
+          elif [ "${mode}" = "production" ]; then
+            echo "LAMBDA_TF_DIR=infra/lambda-prod/api-site-redirects/tf-resources" >> "$GITHUB_ENV"
+            echo "CF_TF_DIR=infra/cloudfront-distributions-com/api-site" >> "$GITHUB_ENV"
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_PROD }}" >> "$GITHUB_ENV"
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_KEY_PROD }}" >> "$GITHUB_ENV"
+          else
+            echo "Unknown site_mode: ${mode}" >&2
+            exit 1
+          fi
+
+      - name: Validate redirects.json
+        run: |
+          python3 - << 'EOF'
+          import json
+          import sys
+
+          with open(".github/redirects/redirects.json", encoding="utf-8") as f:
+              try:
+                  data = json.load(f)
+              except json.JSONDecodeError as e:
+                  print(f"Invalid JSON: {e}")
+                  sys.exit(1)
+
+          errors = []
+          if not isinstance(data, dict):
+              print("Root element must be an object: {\"/from\": \"/to\", ...}")
+              sys.exit(1)
+
+          for key, value in data.items():
+              if not isinstance(value, str):
+                  errors.append(f"value for '{key}' must be a string")
+                  continue
+              if not key.startswith("/"):
+                  errors.append(f"key must start with '/': '{key}'")
+              if not (value.startswith("/") or value.startswith("https://")):
+                  errors.append(f"target must be a path or https URL: '{key}' -> '{value}'")
+              if key.rstrip("/") == value.rstrip("/"):
+                  errors.append(f"self-redirect: '{key}'")
+              if value in data:
+                  errors.append(f"redirect chain: '{key}' -> '{value}' -> '{data[value]}'")
+
+          if errors:
+              print(f"{len(errors)} problem(s) found:")
+              print("\n".join(errors))
+              sys.exit(1)
+
+          print(f"OK: {len(data)} redirects")
+          EOF
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          github-api-url: https://api.github.com
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: ${{ secrets.INFRA_REPO_OWNER }}
+          repositories: ${{ secrets.INFRA_REPO_NAME }}
+
+      - name: Checkout infra repo
+        uses: actions/checkout@v4
+        with:
+          github-server-url: https://github.com
+          repository: ${{ secrets.INFRA_REPO_OWNER }}/${{ secrets.INFRA_REPO_NAME }}
+          token: ${{ steps.app-token.outputs.token }}
+          path: infra
+          sparse-checkout: |
+            lambda-test/api-site-redirects
+            cloudfront-distributions-test/api-site
+            lambda-prod/api-site-redirects
+            cloudfront-distributions-com/api-site
+
+      - name: Copy redirects into lambda package source
+        run: cp .github/redirects/redirects.json ${LAMBDA_TF_DIR}/../src/redirects.json
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy lambda (publish new version)
+        id: lambda
+        working-directory: ${{ env.LAMBDA_TF_DIR }}
+        run: |
+          terraform init -input=false
+          terraform apply -auto-approve -input=false
+          echo "version=$(terraform output -raw lambda_function_version)" >> "$GITHUB_OUTPUT"
+
+      - name: Attach lambda version to CloudFront
+        id: cf
+        working-directory: ${{ env.CF_TF_DIR }}
+        run: |
+          terraform init -input=false
+          # Keep the currently active origin bucket untouched:
+          # feed back the bucket recorded in the state on the last apply.
+          BUCKET=$(terraform output -raw api_site_origin_bucket)
+          echo "Active origin bucket: ${BUCKET}"
+          terraform apply -auto-approve -input=false -var "api_site_s3_bucket_name=${BUCKET}"
+
+      - name: Send alert message
+        if: always()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ${{ github.actor }} triggered redirects deploy (${{ github.event.inputs.site_mode }}, branch ${{ github.ref_name }})
+
+            Repository: ${{ github.repository }}
+            Lambda apply: ${{ steps.lambda.outcome }} (version ${{ steps.lambda.outputs.version }})
+            CloudFront apply: ${{ steps.cf.outcome }}
+
+            See commit changes: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+            See action run logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_number }}

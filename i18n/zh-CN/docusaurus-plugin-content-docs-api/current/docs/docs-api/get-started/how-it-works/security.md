@@ -10,6 +10,6 @@ ONLYOFFICE 文档使用基于令牌的验证来确保服务之间的请求未被
 
 有关设置说明和代码示例，请参阅[签名](../../additional-api/signature/signature.md)部分。
 
-:::caution
+:::warning
 本地链接（指向私有或内部地址的 URL）始终需要令牌。在以下方法中使用本地链接时，请务必包含令牌：[insertImage](../../usage-api/methods.md#insertimage)、[setHistoryData](../../usage-api/methods.md#sethistorydata)、[setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients)、[setReferenceData](../../usage-api/methods.md#setreferencedata)、[setReferenceSource](../../usage-api/methods.md#setreferencesource)、[setRequestedDocument](../../usage-api/methods.md#setrequesteddocument)、[setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet)、[setRevisedFile](../../usage-api/methods.md#setrevisedfile)。为[打开](../../usage-api/config/document/document.md#url)或[转换](../../additional-api/conversion-api/request.md#url)指定本地 URL 时，也需要令牌。
 :::

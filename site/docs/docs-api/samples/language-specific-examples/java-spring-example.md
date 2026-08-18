@@ -15,7 +15,7 @@ This example will help you integrate ONLYOFFICE Docs into your web application w
 
 Spring Boot has a lot of functionality, but its most significant features are: dependency management, auto-configuration, and built-in servlet containers.
 
-:::caution
+:::warning
 It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
 :::
 

@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自动配置和内置的 servlet 容器。
 
-:::caution
+:::warning
 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入生产之前将其禁用。
 :::
 

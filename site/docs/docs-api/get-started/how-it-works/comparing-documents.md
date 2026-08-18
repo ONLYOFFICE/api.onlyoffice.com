@@ -40,7 +40,7 @@ The figure and steps below explain the comparison flow.
    });
    ```
 
-   :::caution
+   :::warning
    The `token` must be signed with your document server's JWT secret — the example token above is signed with a throwaway secret and will not validate on your server. Regenerate it whenever the parameters change. See [security](./security.md) for details.
    :::
 

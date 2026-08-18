@@ -45,10 +45,19 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 ```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
+testConnectorWindow.show({
+  url: "./window/panel.html",
+  type: "panel",
+  isVisual: true,
+});
 testConnectorWindow.dispatchEvent("messageName", {
   prop: "value",
 });
 ```
+
+:::note
+只能向通过 [show](#show) 方法显示的窗口发送事件。
+:::
 
 ## show
 

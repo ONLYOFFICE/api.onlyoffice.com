@@ -10,6 +10,6 @@ Tokens are generated using the [JSON Web Token](https://jwt.io/) (JWT) standard 
 
 See the [Signature](../../additional-api/signature/signature.md) section for setup instructions and code examples.
 
-:::caution
+:::warning
 Local links (URLs pointing to private or internal addresses) always require a token. Include a token when using local links in the following methods: [insertImage](../../usage-api/methods.md#insertimage), [setHistoryData](../../usage-api/methods.md#sethistorydata), [setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients), [setReferenceData](../../usage-api/methods.md#setreferencedata), [setReferenceSource](../../usage-api/methods.md#setreferencesource), [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument), [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet), [setRevisedFile](../../usage-api/methods.md#setrevisedfile). A token is also required when specifying a local URL for [opening](../../usage-api/config/document/document.md#url) or [conversion](../../additional-api/conversion-api/request.md#url).
 :::

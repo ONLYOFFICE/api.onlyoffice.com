@@ -58,13 +58,22 @@ export const EditorPreview = ({
     );
 
     const destroyEditor = useCallback(() => {
+        if (window.connector) {
+            try {
+                window.connector.disconnect?.();
+            } catch (error) {
+                console.warn('Failed to disconnect connector:', error);
+            }
+            window.connector = null;
+        }
+
         if (window.docEditor) {
             try {
                 window.docEditor.destroyEditor();
             } catch (error) {
                 console.warn('Failed to destroy editor:', error);
             }
-            delete window.docEditor;
+            window.docEditor = null;
         }
     }, []);
 

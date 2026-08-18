@@ -32,7 +32,7 @@ DocSpace.SDK.initManager({
 
 The token is scoped to a specific room and grants access to its contents without requiring the viewer to have a DocSpace account. The `requestToken` parameter is supported by all init methods, not just `initManager`.
 
-:::caution
+:::warning
 Never expose admin-level tokens in client-side code. Obtain `requestToken` values server-side and inject them into the page at render time.
 :::
 

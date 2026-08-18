@@ -106,7 +106,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 如果您需要卸载默认插件，请前往 `sdkjs-plugins` 文件夹并从中删除相应的插件文件夹。
 
-:::caution
+:::warning
 请注意，从 macOS 上的 ONLYOFFICE 桌面编辑器中移除默认插件会破坏程序完整性，可能导致应用崩溃。若非绝对必要，请不要这样做。
 :::
 

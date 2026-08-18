@@ -1,6 +1,6 @@
-name: ReBuild docspace-sdk-js
+name: ReBuild docspace-js-sdk
 
-run-name: "ReBuild docspace-sdk-js"
+run-name: "ReBuild docspace-js-sdk"
 
 on:
   workflow_dispatch:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Set up Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - name: Checkout api.onlyoffice.com repository
         uses: actions/checkout@v4
@@ -46,10 +48,10 @@ jobs:
           cp -r docspace-sdk-js/docs/* api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/
           
           cd api.onlyoffice.com
-          if ! git diff --exit-code; then
+          if [ -n "$(git status --porcelain)" ]; then
               git add .
               git commit -m "Update DocSpace SDK documentation from GitHub Actions"
-              git push origin ${REF}
+              git push origin ${{ github.ref_name }}
             else
               echo "Nothing to commit"
             fi

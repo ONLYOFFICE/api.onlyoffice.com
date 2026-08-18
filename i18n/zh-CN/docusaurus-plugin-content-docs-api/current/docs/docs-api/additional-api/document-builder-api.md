@@ -32,7 +32,7 @@ import APITable from '@site/src/components/APITable/APITable';
 `.js` 脚本文件可以包含多个输出文件作为结果。文件生成完成后，它们的 URL 将在请求响应中返回。
 :::
 
-:::caution
+:::warning
 在脚本中使用 `builder.OpenFile()` 时，必须提供文件的绝对 URL（例如 `https://example.com/document.docx`），而不是本地路径。文档服务器需要从可公开访问的位置下载文件。
 :::
 

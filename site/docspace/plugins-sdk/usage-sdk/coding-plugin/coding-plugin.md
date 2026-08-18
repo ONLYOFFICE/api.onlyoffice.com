@@ -8,7 +8,7 @@ Develop a plugin. Follow the plugin structure described [here](../plugin-structu
 
 - Write code for each [plugin type](./plugin-types/plugin-types.md) using the corresponding variables, methods and [items](./plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](plugin-types/plugin.md) interface for each plugin to be embedded in the portal.
 
-  ![Plugin structure](/assets/images/docspace/plugin-structure.png)
+  ![Plugin structure](/assets/images/docspace/plugin-structure.png#gh-light-mode-only)![Plugin structure](/assets/images/docspace/plugin-structure.dark.png#gh-dark-mode-only)
 
 - Specify [plugin messages](plugin-message.md) that will be returned by the items. Use the appropriate [events](events.md) that will be processed on the portal side.
 

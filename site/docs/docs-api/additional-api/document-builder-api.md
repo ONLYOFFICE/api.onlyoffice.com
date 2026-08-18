@@ -32,7 +32,7 @@ The `.js` script file is a JavaScript file that uses the [Office JavaScript API]
 The `.js` script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
 :::
 
-:::caution
+:::warning
 When using `builder.OpenFile()` in your script, you must provide an absolute URL to the file (e.g., `https://example.com/document.docx`), not a local path. The Document Server needs to download the file from a publicly accessible location.
 :::
 

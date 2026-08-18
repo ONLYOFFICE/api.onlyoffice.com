@@ -13,7 +13,7 @@ ONLYOFFICE Docs supports PDF forms — PDF files with fillable fields such as te
 PDF forms are available starting from version 7.0. Starting from version 8.0, the OFORM format is deprecated — only PDF is used for filling. Starting from version 8.1, the DOCXF format is deprecated — only PDF is used for creating and editing forms.
 :::
 
-:::caution
+:::warning
 When JWT validation is enabled on your document server (the default configuration), each `config` must be signed with a matching [`token`](./security.md). Sign with your document server's JWT secret. See the [Signature](../../additional-api/signature/signature.md) section for setup instructions and code examples.
 :::
 

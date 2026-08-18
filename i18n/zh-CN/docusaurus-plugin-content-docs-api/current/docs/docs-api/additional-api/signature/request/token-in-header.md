@@ -10,7 +10,7 @@ JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。
 
 ## 传入请求
 
-:::caution
+:::warning
 在向 ONLYOFFICE 文档执行 HTTP 请求时，不建议在请求头中发送签名。请在[请求体](./token-in-body.md)中发送签名。
 :::
 

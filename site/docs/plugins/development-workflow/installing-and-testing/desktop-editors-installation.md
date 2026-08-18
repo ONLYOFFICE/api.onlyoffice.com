@@ -106,7 +106,7 @@ This option is not available for the default plugins and the plugins added via t
 
 If you need to uninstall the default plugins, go to the `sdkjs-plugins` folder and remove the corresponding plugin folder from this directory.
 
-:::caution
+:::warning
 Please note that removing the default plugins from ONLYOFFICE Desktop Editors on macOS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
 :::
 

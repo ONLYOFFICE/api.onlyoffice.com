@@ -58,7 +58,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 | 名称 | 类型                                      | 描述                                                     |
 | ---- | ----------------------------------------- | --------------------------------------------------------------- |
-| guid | string                                    | 插件 guid。                                                |
+| guid | string                                    | 连接器 guid。与插件不同，连接器会自动设置该值，因此无需指定。 |
 | tabs | [ToolbarMenuTab](#toolbarmenutab)[] | 包含当前工具栏菜单选项卡的数组项。 |
 
 ### ToolbarMenuTab
@@ -141,6 +141,10 @@ connector.addToolbarMenuItem({
 | -------- | -------- | ------------------- |
 | name     | string   | 事件名称。     |
 | callback | function | 事件侦听器。 |
+
+:::note
+每个事件名称只能附加一个侦听器：使用相同名称附加侦听器会替换先前的侦听器。
+:::
 
 ### 示例
 

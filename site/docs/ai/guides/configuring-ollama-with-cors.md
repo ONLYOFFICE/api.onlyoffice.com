@@ -198,6 +198,7 @@ sudo systemctl restart ollama
 ```bash
 export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 export OLLAMA_HOST=0.0.0.0
+ollama serve
 ```
 
   </TabItem>
@@ -214,7 +215,7 @@ ollama serve
 
 ```bash
 docker run -d \
-  -e OLLAMA_ORIGINS="https://*" \
+  -e OLLAMA_ORIGINS="http://*,https://*,onlyoffice://*" \
   -e OLLAMA_HOST="0.0.0.0" \
   -p 11434:11434 \
   -v ollama:/root/.ollama \
@@ -334,6 +335,32 @@ server {
 }
 ```
 
+:::warning[Security consideration]
+The `$http_origin` variable reflects any origin back with `Access-Control-Allow-Credentials: true`, which allows any website to make authenticated requests to your Ollama instance. For production environments, restrict allowed origins using a `map` block:
+
+**Step 1.** Add the following to the **`http {}`** context in your nginx config (e.g. `/etc/nginx/nginx.conf` or a file in `/etc/nginx/conf.d/`), **outside** any `server {}` block:
+
+```nginx
+map $http_origin $cors_origin {
+    ~^https://trusted\.example\.com$ $http_origin;
+    ~^https://app\.example\.com$     $http_origin;
+    ~^onlyoffice://                  $http_origin;
+    default "";
+}
+```
+
+**Step 2.** In **every** location where your config has `add_header 'Access-Control-Allow-Origin' $http_origin always;` — including the `if ($request_method = OPTIONS)` preflight block and all `location /` blocks — **replace** that line with:
+
+```nginx
+add_header 'Access-Control-Allow-Origin' $cors_origin always;
+add_header 'Vary' 'Origin' always;
+```
+
+Do not add these lines alongside the originals; remove the `$http_origin` lines first.
+
+The `Vary: Origin` header is required when the `Access-Control-Allow-Origin` value changes based on the request, to ensure proper caching behavior.
+:::
+
 ### Additional protection via HTTP basic authentication
 
 To restrict API access:
@@ -412,6 +439,17 @@ sudo systemctl restart ollama
 Quit and relaunch the Ollama application.
 
   </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+Stop-Process -Name ollama -Force; ollama serve
+```
+
+Or quit and relaunch the Ollama application via the system tray icon.
+
+If you set `OLLAMA_ORIGINS` using `$env:` (session-only), run this command in the **same terminal session**. If you used `setx`, open a new terminal first, then run `ollama serve`.
+
+  </TabItem>
   <TabItem value="docker" label="Docker">
 
 ```bash
@@ -444,10 +482,34 @@ systemctl show ollama --property=Environment
 ```
 
   </TabItem>
-  <TabItem value="linux-process" label="Linux (running process)">
+  <TabItem value="linux-manual" label="Linux (manual)">
 
 ```bash
 cat /proc/$(pgrep ollama)/environ | tr '\0' '\n' | grep OLLAMA
+```
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+```bash
+launchctl getenv OLLAMA_ORIGINS
+launchctl getenv OLLAMA_HOST
+```
+
+This only shows variables set via `launchctl setenv` (Option 1). For variables added to `~/.zshrc` or `~/.bash_profile` (Option 2), open a new terminal and run `echo $OLLAMA_ORIGINS` instead.
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+Get-ChildItem Env:OLLAMA*
+```
+
+To verify variables set with `setx` (reads the registry directly):
+
+```powershell
+[System.Environment]::GetEnvironmentVariable("OLLAMA_ORIGINS", "User")
+[System.Environment]::GetEnvironmentVariable("OLLAMA_HOST", "User")
 ```
 
   </TabItem>

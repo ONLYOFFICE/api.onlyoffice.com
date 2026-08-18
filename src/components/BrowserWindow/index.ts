@@ -6,3 +6,4 @@ export { default as ReviewChangesExternalToolbar } from "./ExternalToolbars/Revi
 export { default as ContentControlsExternalToolbar } from "./ExternalToolbars/ContentControlsExternalToolbar/ContentControlsExternalToolbar";
 export { default as SearchPdfExternalToolbar } from "./ExternalToolbars/SearchPdfExternalToolbar/SearchPdfExternalToolbar";
 export { default as RedactPdfExternalToolbar } from "./ExternalToolbars/RedactPdfExternalToolbar/RedactPdfExternalToolbar";
+export { default as ChangeTextPdfExternalToolbar } from "./ExternalToolbars/ChangeTextPdfExternalToolbar/ChangeTextPdfExternalToolbar";

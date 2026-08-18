@@ -102,10 +102,6 @@
     "message": "标签：",
     "description": "The label alongside a tag list"
   },
-  "theme.admonition.caution": {
-    "message": "警告",
-    "description": "The default label used for the Caution admonition (:::caution)"
-  },
   "theme.admonition.danger": {
     "message": "危险",
     "description": "The default label used for the Danger admonition (:::danger)"
@@ -123,7 +119,7 @@
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "注意",
+    "message": "警告",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.CodeBlock.copied": {

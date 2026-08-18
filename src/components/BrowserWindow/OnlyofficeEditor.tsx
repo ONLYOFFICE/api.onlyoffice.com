@@ -158,6 +158,15 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   const token = await createJWT(config, secret);
 
   scriptConfig.innerHTML = `
+    if (window.connector) {
+      try {
+        window.connector.disconnect?.();
+      } catch (error) {
+        console.warn("Failed to disconnect connector:", error);
+      }
+      window.connector = null;
+    }
+
     if (window.docEditor) {
       window.docEditor.destroyEditor();
       window.docEditor = null;
