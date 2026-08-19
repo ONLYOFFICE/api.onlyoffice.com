@@ -30,6 +30,7 @@
 * Synced the Nextcloud integration article with upstream README changes
 * Documented Angular 22 support and replaced the removed `IConfig` type with `Config`
 * Explained iframe rendering and styling in the DocEditor
+* Updated the `uiTheme` parameter description with the `theme-system` and `theme-gray` themes, corrected the default light and dark theme IDs, and documented the theme priority order
 
 #### Plugins and macros
 
@@ -48,6 +49,11 @@
 * Replaced deprecated `:::caution` admonitions with `:::warning`
 * Moved site redirects to Terraform management and enabled production deploy
 * Added docspace-plugin-sdk rebuild workflow and pinned Node 22 in SDK rebuilds
+* Updated `@onlyoffice/doceditor-types` to 9.4.1
+
+#### Localization
+
+* Synced the zh-CN `uiTheme` description with the English version
 
 ### Fixes
 
