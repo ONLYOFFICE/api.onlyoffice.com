@@ -28,6 +28,8 @@
 * Documented connector lifecycle in the Automation API
 * Clarified behavior of commands sent to a destroyed editor
 * Synced the Nextcloud integration article with upstream README changes
+* Documented Angular 22 support and replaced the removed `IConfig` type with `Config`
+* Explained iframe rendering and styling in the DocEditor
 
 #### Plugins and macros
 
@@ -70,6 +72,7 @@
 
 * Fixed broken redirect targets and repointed legacy Office API, Document Builder, plugin, filters, and apisystem redirects
 * Fixed the 9.1.0 changelog file name
+* Fixed broken plugins Get started links in earlier changelog entries
 
 #### Localization
 
