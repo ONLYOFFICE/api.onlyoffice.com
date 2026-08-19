@@ -40,9 +40,9 @@ const docSpace = DocSpace.SDK.initUploader({
 });
 ```
 
-### Tracking upload progress
+### Handling an inaccessible or missing folder
 
-Use `onUploadProgress`, `onUploadSuccess`, and `onUploadError` to track each upload:
+Display a fallback UI when the target folder can't be accessed or no longer exists:
 
 ```javascript
 const docSpace = DocSpace.SDK.initUploader({
@@ -50,15 +50,18 @@ const docSpace = DocSpace.SDK.initUploader({
   src: "https://your-docspace.com",
   id: "your-folder-id",
   events: {
-    onUploadProgress: function (progress) {
-      console.log("Progress:", progress);
+    onNoAccess: function () {
+      document.getElementById("ds-uploader").innerHTML =
+        "You do not have permission to upload to this folder.";
     },
-    onUploadSuccess: function (file) {
-      console.log("Uploaded:", file.title);
-    },
-    onUploadError: function (error) {
-      console.error("Upload failed:", error);
+    onNotFound: function () {
+      document.getElementById("ds-uploader").innerHTML =
+        "This folder no longer exists.";
     },
   },
 });
 ```
+
+:::note
+The SDK does not currently expose per-file upload progress/success/error events — `events` only covers frame-level lifecycle events (see [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md) for the full list).
+:::
