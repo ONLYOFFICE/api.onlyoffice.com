@@ -1008,10 +1008,12 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
  编辑器主题设置。可以通过两种方式设置：
 
-- **theme id** - 用户通过其 id 设置主题参数：`theme-light`、`theme-classic-light`、`theme-dark`、`theme-contrast-dark`、`theme-white`、`theme-night`；
-- **default theme** - 将设置默认的深色或浅色主题值：`default-dark`、`default-light`。默认的浅色主题是 `theme-classic-light`。
+- **theme id** - 用户通过其 id 设置主题参数：`theme-system`、`theme-light`、`theme-classic-light`、`theme-dark`、`theme-contrast-dark`、`theme-gray`、`theme-white`、`theme-night`；
+- **default theme** - 将设置默认的深色或浅色主题值：`default-dark`、`default-light`。默认的浅色主题是 `theme-white`，默认的深色主题是 `theme-night`。
 
-第一个选项具有更高的优先级。
+打开编辑器时，主题按以下优先级顺序应用：用户在编辑器中最后选择的主题具有最高优先级，其次是配置中的 `uiTheme` 参数，如果两者均未设置，则应用默认主题。
+
+`theme-system` 值与操作系统的颜色方案偏好（浅色或深色）相匹配。
 
 除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](../../../../get-started/how-it-works/customizing-themes.md)。
 
@@ -1019,7 +1021,9 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.uiTheme` 参数发送的任何值。
 :::
 
-
+:::note
+移动端编辑器仅支持以下主题：`theme-light`、`theme-dark`、`theme-system`、`default-light`、`default-dark`。
+:::
 
 **示例**: `"theme-dark"`
 

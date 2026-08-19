@@ -1006,15 +1006,21 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 The editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id: `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-white`, `theme-night`;
-- **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-classic-light`.
+- **theme id** - the user sets the theme parameter by its id: `theme-system`, `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-gray`, `theme-white`, `theme-night`;
+- **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-white`, the default dark theme is `theme-night`.
 
-The first option has higher priority.
+When the editor is opened, the theme is applied in the following priority order: the theme last selected by the user in the editor takes the highest priority, then the `uiTheme` parameter from the configuration, and the default theme is applied if neither is set.
+
+The `theme-system` value matches the OS color scheme preference (light or dark).
 
 Apart from the available editor themes, the user can also customize their own [color themes](../../../../get-started/how-it-works/customizing-themes.md) for the application interface.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.uiTheme` parameter.
+:::
+
+:::note
+For the mobile editors, only the following themes are currently supported: `theme-light`, `theme-dark`, `theme-system`, `default-light`, `default-dark`.
 :::
 
 **Example**: `"theme-dark"`
