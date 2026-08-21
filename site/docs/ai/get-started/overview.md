@@ -14,7 +14,7 @@ Build next-generation document workflows powered by AI.
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](../samples/document-editor/check-spelling.md) - AI-powered spell checking)
+- Writing assistance ([Rewrite text](../samples/document-editor/rewrite-text.md) - AI-powered text rewriting)
 - Smart styling ([Change text style](../samples/document-editor/change-text-style.md) - AI-powered text styling)
 - Automatic shape generation ([Add shape to slide](../samples/presentation-editor/add-shape-to-slide.md) - AI-powered presentation design)
 - Data insights ([Explain formula](../samples/spreadsheet-editor/explain-formula.md) - AI-powered formula explanations)
