@@ -32,9 +32,14 @@
 * Explained iframe rendering and styling in the DocEditor
 * Updated the `uiTheme` parameter description with the `theme-system` and `theme-gray` themes, corrected the default light and dark theme IDs, and documented the theme priority order
 
+#### Office API
+
+* Added Breaking changes section to the 9.4 changelog
+
 #### Plugins and macros
 
 * Replaced section index pages with overview pages in plugins, macros, and AI sections
+* Marked the Check spelling AI sample as a draft
 
 #### DocSpace
 
@@ -42,6 +47,8 @@
 * Switched Plugins SDK build instructions from yarn to npm
 * Refreshed CLI, folder, and Adding plugin screenshots and added dark theme variants
 * Removed outdated version notes from the Adding plugin page
+* Structured the Plugins SDK sidebar into Get started, SDK usage, Samples, and More information
+* Synced generated Plugins SDK docs and repointed links to the typedoc structure
 
 #### Common
 
@@ -50,6 +57,7 @@
 * Moved site redirects to Terraform management and enabled production deploy
 * Added docspace-plugin-sdk rebuild workflow and pinned Node 22 in SDK rebuilds
 * Updated `@onlyoffice/doceditor-types` to 9.4.1
+* Added a `/docs/document-builder/` redirect to the Get started overview
 
 #### Localization
 
@@ -69,6 +77,7 @@
 #### DocSpace
 
 * Fixed inaccuracies and grammar in the Plugins SDK usage docs
+* Restored Plugins SDK content lost in the typedoc link repoint
 
 #### Playground
 
