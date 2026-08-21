@@ -391,7 +391,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md):
 
 <details>
   <summary>Settingsplugin class</summary>

@@ -39,7 +39,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [profile menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/profilemenuplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [profile menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IProfileMenuPlugin.md):
 
 ``` ts
 import { IPlugin, PluginStatus, IProfileMenuPlugin, IProfileMenuItem } from '@onlyoffice/docspace-plugin-sdk'
@@ -88,7 +88,7 @@ export default plugin;
 
 ## Step 4: Add a profile menu item
 
-Create a [profile menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md) and append it to the end of the script:
+Create a [profile menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IProfileMenuItem.md) and append it to the end of the script:
 
 ``` ts
 // Add this after generating the plugin
@@ -131,6 +131,6 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- You can add multiple items via [`addProfileMenuItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/profilemenuplugin.md#addprofilemenuitem).
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md#onClick) function is a good place to trigger modals, open side panels, or call APIs.
+- You can add multiple items via [`addProfileMenuItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IProfileMenuPlugin.md#addprofilemenuitem).
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IProfileMenuItem.md#onClick) function is a good place to trigger modals, open side panels, or call APIs.
 - You can extend this plugin to support other scopes like `MainButton`, `Settings`, or `ContextMenu` by updating the `package.json` and plugin logic accordingly.

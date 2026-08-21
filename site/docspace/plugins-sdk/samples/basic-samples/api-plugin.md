@@ -39,7 +39,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of an [API plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of an [API plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md):
 
 ```ts
 import { IPlugin, PluginStatus, IApiPlugin } from '@onlyoffice/docspace-plugin-sdk';
@@ -162,7 +162,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Step 6: Test the plugin
 
 1. Reload the DocSpace interface.
-2. The plugin will automatically trigger [`onLoadCallback()`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#onloadcallback).
+2. The plugin will automatically trigger [`onLoadCallback()`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#onLoadCallback).
 3. A new room titled **Plugin-created Room** should be created automatically.
 4. Open the browser console to confirm the plugin sent a request and received a response.
 
@@ -170,8 +170,8 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 - You can access:
 
-  - [`origin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#origin): the base URL of the portal;
-  - [`proxy`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#proxy): the proxy segment if used (e.g. `/ds`);
-  - [`prefix`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#prefix): the API prefix (usually `/api/2.0`).
+  - [`origin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md#origin): the base URL of the portal;
+  - [`proxy`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md#proxy): the proxy segment if used (e.g. `/ds`);
+  - [`prefix`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md#prefix): the API prefix (usually `/api/2.0`).
 
 - You can expand this plugin to support context menus, main buttons, or settings by updating the scope.
