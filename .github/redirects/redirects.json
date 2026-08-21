@@ -2883,5 +2883,6 @@
   "/docspace/javascript-sdk/get-started/basic-concepts/": "/docspace/javascript-sdk/get-started/",
   "/docs/plugins/get-started/": "/docs/plugins/get-started/overview/",
   "/docs/macros/get-started/": "/docs/macros/get-started/overview/",
-  "/docs/ai/get-started/": "/docs/ai/get-started/overview/"
+  "/docs/ai/get-started/": "/docs/ai/get-started/overview/",
+  "/docs/document-builder/": "/docs/document-builder/get-started/overview/"
 }
