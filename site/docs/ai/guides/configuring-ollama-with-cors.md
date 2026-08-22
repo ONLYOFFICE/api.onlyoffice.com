@@ -115,7 +115,7 @@ docker run -d \
 
 - `http://*` - allows requests from any HTTP domains
 - `https://*` - allows requests from any HTTPS domains
-- `onlyoffice://*` - allows requests from ONLYOFFICE embedded WebViews (for AI plugin functionality)
+- `onlyoffice://*` - allows requests from ONLYOFFICE Desktop Editors, where plugins run on the `onlyoffice://` scheme (the AI plugin's origin is `onlyoffice://plugin`)
 
 ### Verifying CORS configuration
 
@@ -275,7 +275,7 @@ This configuration provides secure HTTPS access to Ollama API through Nginx with
 - Valid SSL certificate (Let's Encrypt or other CA)
 - Running Ollama instance on port 11434
 
-### Basic Nginx configuration
+### Basic Nginx configuration {#basic-nginx-configuration}
 
 ```nginx
 # Redirect HTTP to HTTPS

@@ -115,7 +115,7 @@ docker run -d \
 
 - `http://*` - 允许来自任何 HTTP 域的请求
 - `https://*` - 允许来自任何 HTTPS 域的请求
-- `onlyoffice://*` - 允许来自 ONLYOFFICE 嵌入式 WebView 的请求 (用于 AI 插件功能)
+- `onlyoffice://*` - 允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
 
 ### 验证 CORS 配置
 
@@ -275,7 +275,7 @@ OLLAMA_HOST=0.0.0.0:11434 ollama serve
 - 有效的 SSL 证书 (Let's Encrypt 或其他 CA)
 - 运行在 11434 端口的 Ollama 实例
 
-### 基本 Nginx 配置
+### 基本 Nginx 配置 {#basic-nginx-configuration}
 
 ```nginx
 # 将 HTTP 重定向到 HTTPS
