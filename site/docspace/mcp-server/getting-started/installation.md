@@ -4,9 +4,6 @@ sidebar_position: 2
 title: Installing the DocSpace MCP server
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Before interacting with the DocSpace MCP server, you need to install or connect to it. DocSpace offers two ways to do this:
 
 - [Access via a local machine](#access-via-a-local-docspace-mcp-server)
@@ -17,11 +14,8 @@ Before interacting with the DocSpace MCP server, you need to install or connect 
 - Ensure you have a DocSpace Instance. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key.
 - Choose your desired client. You can build a custom client or [choose from the different MCP clients](clients.md) available based on your integration, features, user interface, or security needs.
 
-<Tabs>
-  <TabItem value="local machine" label="Install on local machine" default>
-  
 ## Access via a local DocSpace MCP server
-  
+
 You can configure your local machine to interact with the DocSpace MCP server using:
 
 - [Docker image](#install-with-docker-image)
@@ -149,9 +143,6 @@ configuration to your client's configuration file:
 | `--yes` | Automatically confirms the installation prompt, enabling unattended startup |
 | `@onlyoffice/docspace-mcp` | The official DocSpace MCP server package from npm |
 
-</TabItem>
-<TabItem value="remote server" label="Access via remote server">
-
 ## Access via the remote DocSpace MCP server
 
 Another way to use the DocSpace MCP server is to access it via a public DocSpace MCP Server instance hosted by ONLYOFFICE. This eliminates the need to run your own server infrastructure while providing access to DocSpace functionality through your AI assistant. To do this, provide the DocSpace MCP server public instance URL when [connecting to any of the MCP clients](clients.md). 
@@ -190,10 +181,6 @@ OAuth is the recommended method as it provides the strongest security model by a
 | API Key (Header)               | Connect using an API key and base URL configured via custom headers             | Connection URL, API key                  | [See Le Chat connection](clients.md#connect-to-le-chat)        | Ideal when integrating with platforms that support custom HTTP headers but don't have built-in OAuth support                          |
 | API Key (Authorization header) | Connect using API key in `Authorization` header and base URL in query parameter | Connection URL, API key                  | [See Le Chat connection](clients.md#connect-to-le-chat)       | Ideal when working with clients that support Bearer token authentication but don't allow custom headers                                          |
 | Username & password in URL     | Connect using URL-encoded credentials and base URL in query parameter           | Connection URL, username, password       | [See Claude web connection](clients.md#connect-to-claude-web)    | Ideal for quick setup, testing, or when using clients with limited authentication options                                             |
-
-
-  </TabItem>
-</Tabs>
 
 ## After installation
 
