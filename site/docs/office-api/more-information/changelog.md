@@ -10,6 +10,11 @@ The list of changes for Office JavaScript API.
 
 ## Version 9.4
 
+### Breaking changes
+
+- Updated the [Api/CreateTable](../usage-api/document-api/Api/Methods/CreateTable.md) method in Document API - changed the parameter order from `Api.CreateTable(cols, rows)` to `Api.CreateTable(rows, cols)`.
+- Updated the [Api/CreateTable](../usage-api/presentation-api/Api/Methods/CreateTable.md) method in Presentation API - changed the parameter order from `Api.CreateTable(cols, rows)` to `Api.CreateTable(rows, cols)`.
+
 ### Document methods
 
 - Added the [Api/MergeDocuments](../usage-api/document-api/Api/Methods/MergeDocuments.md) method to Document API.

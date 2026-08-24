@@ -46,7 +46,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Plugins',
-      link: 'plugins/get-started',
+      link: 'plugins/get-started/overview',
       description: (
         <>
           Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.
@@ -56,7 +56,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Macros',
-      link: 'macros/get-started',
+      link: 'macros/get-started/overview',
       description: (
         <>
           Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.
@@ -66,7 +66,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'AI',
-      link: 'ai/get-started',
+      link: 'ai/get-started/overview',
       description: (
         <>
           Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.

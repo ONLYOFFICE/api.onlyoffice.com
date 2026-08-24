@@ -5,7 +5,7 @@ tags: ["DocSpace", "Plugins", "Basic"]
 
 # Button component
 
-This guide demonstrates how to render and configure the [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugins SDK.
+This guide demonstrates how to render and configure the [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IButton) component using the DocSpace Plugins SDK.
 
 <details>
   <summary>Full example</summary>
@@ -196,7 +196,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin):
 
 ```ts
 import {
@@ -264,7 +264,7 @@ export default plugin;
 
 ## Step 4: Add a main button item
 
-Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization:
+Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem) below the plugin initialization:
 
 ```ts
 const plugin = new Buttoncomponentplugin();
@@ -295,7 +295,7 @@ declare global {
 
 ## Step 5: Create a Button component
 
-Define an [IButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside `ButtonGroup`:
+Define an [IButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IButton) instance and wrap it inside `ButtonGroup`:
 
 ```ts
 import {
@@ -353,7 +353,7 @@ const body: IBox = {
 
 ## Step 6: Define the modal dialog behavior
 
-Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body from the previous step:
+Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IModalDialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IBox) body from the previous step:
 
 ```ts
 const modalDialogProps: IModalDialog = {
@@ -372,7 +372,7 @@ const modalDialogProps: IModalDialog = {
 
 ## Step 7: Append the modal dialog to the main button
 
-Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onClick) function with the modal display behavior:
+Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function with the modal display behavior:
 
 ```ts
 const mainButtonItem: IMainButtonItem = {

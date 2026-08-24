@@ -12,6 +12,10 @@ AI 插件支持所有与 OpenAI API 兼容的提供商，包括 OpenAI、DeepSee
 
 可以。您可以使用 [Ollama](../guides/configuring-ollama-with-cors.md) 连接本地运行的模型，所有处理均在您自己的机器上完成，无需将数据发送至外部服务。
 
+## 为什么自定义提供商的模型列表是空的？
+
+最常见的原因是提供商的端点不允许插件的来源，浏览器因此拦截了响应。请参见 [CORS 要求](../guides/custom-providers.md#cors-requirements)。
+
 ## AI 插件和 AI 助手有什么区别？
 
 **AI 插件**是通过顶部工具栏中的 **AI** 标签页提供的完整 AI 集成功能，包括聊天机器人、摘要、翻译和语法和拼写检查等功能。

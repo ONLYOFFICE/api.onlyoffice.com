@@ -39,7 +39,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md):
 
 ``` ts
 import {
@@ -81,7 +81,7 @@ export default plugin;
 
 ## Step 4: Add a context menu item
 
-Create a [context menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md) and append it to the end of the script:
+Create a [context menu item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md) and append it to the end of the script:
 
 ``` ts
 const contextMenuItem: IContextMenuItem = {
@@ -126,5 +126,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#devices), and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onClick) function receives the selected file's ID.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#fileType?), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#devices?), and [`usersTypes`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#usersTypes?) fields to control visibility.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#onClick?) function receives the selected file's ID.

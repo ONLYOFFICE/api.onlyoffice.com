@@ -4,11 +4,11 @@
 
 This documentation describes:
 
-- How to [create](../usage-sdk/creating-plugin-template.md), [code](../usage-sdk/coding-plugin/coding-plugin.md), [style](../usage-sdk/styling-plugin.md), [build](../usage-sdk/building-plugin.md), and [upload](../usage-sdk/adding-plugin.md) a plugin
-- What [plugin types](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md) are available
+- How to [create](../usage-sdk/creating-plugin-template.md), [code](../usage-sdk/coding-plugin.md), [style](../usage-sdk/styling-plugin.md), [build](../usage-sdk/building-plugin.md), and [upload](../usage-sdk/adding-plugin.md) a plugin
+- What [plugin types](../usage-sdk/coding-plugin/interfaces/plugins/index.md) and [items](../usage-sdk/coding-plugin/interfaces/items/index.md) are available
 - What the [plugin structure](../usage-sdk/plugin-structure.md) consists of
-- How to use plugin variables, methods, [messages](../usage-sdk/coding-plugin/plugin-message.md), and [events](../usage-sdk/coding-plugin/events.md)
-- What [plugin components](../usage-sdk/coding-plugin/plugin-components/plugin-components.md) can be used to build a plugin
+- How to use plugin variables, methods, [messages](../usage-sdk/coding-plugin/interfaces/utils.md), and [events](../usage-sdk/coding-plugin/enums/Actions.md)
+- What [plugin components](../usage-sdk/coding-plugin/interfaces/components/index.md) can be used to build a plugin
 
 ## What plugins can do
 
@@ -59,13 +59,13 @@ For more information about plugin settings and scopes, see [creating a plugin te
 
 Develop a plugin. Follow the plugin structure described [here](../usage-sdk/plugin-structure.md).
 
-- Write code for each [plugin type](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/plugin-types/plugin.md) interface for each plugin to be embedded in the portal.
+- Write code for each [plugin type](../usage-sdk/coding-plugin/interfaces/plugins/index.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/interfaces/items/index.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md) interface for each plugin to be embedded in the portal.
 
   ![Plugin structure](/assets/images/docspace/plugin-structure.png#gh-light-mode-only)![Plugin structure](/assets/images/docspace/plugin-structure.dark.png#gh-dark-mode-only)
 
-- Specify [plugin messages](../usage-sdk/coding-plugin/plugin-message.md) that will be returned by the items. Use the appropriate [events](../usage-sdk/coding-plugin/events.md) that will be processed on the portal side.
+- Specify [plugin messages](../usage-sdk/coding-plugin/interfaces/utils.md) that will be returned by the items. Use the appropriate [events](../usage-sdk/coding-plugin/enums/Actions.md) that will be processed on the portal side.
 
-- Learn which [plugin components](../usage-sdk/coding-plugin/plugin-components/plugin-components.md) can be used for the DocSpace plugin interface and add them to your scripts.
+- Learn which [plugin components](../usage-sdk/coding-plugin/interfaces/components/index.md) can be used for the DocSpace plugin interface and add them to your scripts.
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
 

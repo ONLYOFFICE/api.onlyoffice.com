@@ -471,4 +471,4 @@ Asc.plugin.button = (id) => {
 };
 ```
 
-For the full plugin setup (config.json, index.html, folder structure), see [Getting started](../../get-started/get-started.md).
+For the full plugin setup (config.json, index.html, folder structure), see [Getting started](../../get-started/overview.md).

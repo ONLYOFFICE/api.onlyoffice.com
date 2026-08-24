@@ -20,13 +20,14 @@ The component is released as a separate major version for each Angular major ver
 
 | Component version | Angular version |
 | ----------------- | --------------- |
+| 9.x               | 22              |
 | 8.x               | 21              |
 | 7.x               | 20              |
 | 6.x               | 19              |
 | 5.x               | 18              |
 | 4.x               | 17              |
 
-Install the component version that matches the Angular version of your project. Angular 22 is not supported yet, so the steps below pin the Angular CLI to version 21.
+Install the component version that matches the Angular version of your project.
 
 ## Creating the demo Angular application with ONLYOFFICE Docs editor
 
@@ -35,7 +36,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 1. Open a command line or command prompt and install the [Angular CLI](https://angular.dev/tools/cli) package:
 
    ```sh
-   npm install -g @angular/cli@21
+   npm install -g @angular/cli
    ```
 
 2. Create a new Angular project named `onlyoffice-angular-demo` and go to the newly created directory:
@@ -55,7 +56,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
-            yarn add @onlyoffice/document-editor-angular
+            yarn add @onlyoffice/document-editor-angular @onlyoffice/doceditor-types
             ```
       </TabItem>
    </Tabs>
@@ -64,7 +65,8 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 
    ```ts
    import {Component} from "@angular/core";
-   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+   import {type Config} from "@onlyoffice/doceditor-types";
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
    @Component({
      selector: "app-root",
@@ -72,7 +74,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
      templateUrl: "./app.html",
    })
    export class App {
-     config: IConfig = {
+     config: Config = {
        document: {
          fileType: "docx",
          key: "Khirz6zTPdfd7",
@@ -188,7 +190,8 @@ Request the configuration when the component initializes and render the editor o
 
 ```ts
 import {Component, OnInit} from "@angular/core";
-import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+import {type Config} from "@onlyoffice/doceditor-types";
+import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
 @Component({
   selector: "app-root",
@@ -196,7 +199,7 @@ import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-an
   templateUrl: "./app.html",
 })
 export class App implements OnInit {
-  config: IConfig | null = null;
+  config: Config | null = null;
 
   async ngOnInit() {
     const response = await fetch("/api/editor-config");
@@ -258,7 +261,8 @@ Create the connector with the [createConnector](../../usage-api/methods.md#creat
 
 ```ts
 import {Component, OnDestroy} from "@angular/core";
-import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
+import {type Config} from "@onlyoffice/doceditor-types";
+import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
 @Component({
   selector: "app-root",
@@ -266,7 +270,7 @@ import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-an
   templateUrl: "./app.html",
 })
 export class App implements OnDestroy {
-  config: IConfig = {
+  config: Config = {
     document: {
       fileType: "docx",
       key: "Khirz6zTPdfd7",

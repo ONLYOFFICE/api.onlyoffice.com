@@ -35,7 +35,7 @@ Design the way your plugin will work:
    Make sure the service documentation is available, and check its license, API methods availability, etc. For some services, the user must obtain an API key to start using the plugin.
    :::
 
-2. Think about where to implement the plugin, what the plugin's structure will be, how the user will interact with the plugin's components, etc. Make a list of the required plugin types and items depending on this information. For more information, read the [Plugin types](coding-plugin/plugin-types/plugin-types.md) and [Plugin items](coding-plugin/plugin-items/plugin-items.md) sections of the Plugins SDK documentation.
+2. Think about where to implement the plugin, what the plugin's structure will be, how the user will interact with the plugin's components, etc. Make a list of the required plugin types and items depending on this information. For more information, read the [Plugin types](coding-plugin/interfaces/plugins/index.md) and [Plugin items](coding-plugin/interfaces/items/index.md) sections of the Plugins SDK documentation.
 
 3. Come up with the plugin's structure. All the required files are described [here](plugin-structure.md).
 

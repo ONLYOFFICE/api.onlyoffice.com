@@ -24,7 +24,7 @@ For example, add the following to *src/styles/button.module.css*:
 }
 ```
 
-Then, in *src/index.ts*, import the module and apply the scoped class names to a [Text](coding-plugin/plugin-components/text.md) and a [Button](coding-plugin/plugin-components/button.md) component through their *className* prop:
+Then, in *src/index.ts*, import the module and apply the scoped class names to a [Text](coding-plugin/interfaces/components/IText.md) and a [Button](coding-plugin/interfaces/components/IButton.md) component through their *className* prop:
 
 ``` ts
 import { IText, IButton, ButtonSize, Components } from "@onlyoffice/docspace-plugin-sdk";
@@ -139,7 +139,7 @@ The template's *webpack.config.js* only includes loaders for *.ts* and *.css* fi
    }
    ```
 
-3. Reference the imported binding somewhere in your code, for example by passing it to an [Image](coding-plugin/plugin-components/image.md) component's *src* prop:
+3. Reference the imported binding somewhere in your code, for example by passing it to an [Image](coding-plugin/interfaces/components/IImage.md) component's *src* prop:
 
    ``` ts
    import icon from "./images/icon.svg";

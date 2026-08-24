@@ -41,7 +41,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 By default, the plugin template includes a working implementation in the `src/index.ts` file. This works out of the box and does not require modification to appear in the plugin settings.
 
-Here's the default implementation of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md):
+Here's the default implementation of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md):
 
 ``` ts
 import {
@@ -105,4 +105,4 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 - You don't need to define settings items manually unless you want a custom UI.
 - The Plugins SDK handles basic settings persistence for you.
-- You can access or update saved settings using [`getAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md#getadminpluginsettings) and [`setAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md#setadminpluginsettings).
+- You can access or update saved settings using [`getAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md#getadminpluginsettings) and [`setAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md#setadminpluginsettings).

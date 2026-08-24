@@ -12,6 +12,10 @@ The AI plugin supports any provider that is compatible with the OpenAI API, incl
 
 Yes. You can connect a locally running model using [Ollama](../guides/configuring-ollama-with-cors.md). This keeps all processing on your own machine without sending data to an external service.
 
+## Why is the model list empty for my custom provider?
+
+Most often the provider's endpoint does not allow the plugin's origin, so the browser blocks the response. See [CORS requirements](../guides/custom-providers.md#cors-requirements).
+
 ## What is the difference between the AI plugin and the AI agent?
 
 The **AI plugin** is the full AI integration available via the **AI** tab in the top toolbar. It provides features such as Chatbot, Summarization, Translation, and Grammar & Spelling checking.

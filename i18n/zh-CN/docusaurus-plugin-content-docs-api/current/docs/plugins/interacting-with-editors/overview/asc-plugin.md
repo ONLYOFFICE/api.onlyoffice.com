@@ -471,4 +471,4 @@ Asc.plugin.button = (id) => {
 };
 ```
 
-有关完整的插件设置（config.json、index.html、文件夹结构），请参阅[入门指南](../../get-started/get-started.md)。
+有关完整的插件设置（config.json、index.html、文件夹结构），请参阅[入门指南](../../get-started/overview.md)。

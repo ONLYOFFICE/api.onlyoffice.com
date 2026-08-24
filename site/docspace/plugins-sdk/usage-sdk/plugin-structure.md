@@ -65,7 +65,7 @@ Nesting is not supported. The number of icons and their sizes will depend on the
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png#gh-light-mode-only" width="300px" /><img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only" width="300px" />
 
-- The context menu plugin uses an [icon](coding-plugin/plugin-items/contextmenuitem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
+- The context menu plugin uses an [icon](coding-plugin/interfaces/items/IContextMenuItem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png#gh-light-mode-only)![Convert to text](/assets/images/docspace/convert-to-text.dark.png#gh-dark-mode-only)
 
@@ -73,11 +73,11 @@ Nesting is not supported. The number of icons and their sizes will depend on the
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png#gh-light-mode-only)![Main button icon](/assets/images/docspace/main-button-icon.dark.png#gh-dark-mode-only)
 
-  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/plugin-items/fileitem.md#fileRowIcon) is 32x32 px.
+  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/interfaces/items/IFileItem.md#fileRowIcon?) is 32x32 px.
 
   ![File icon](/assets/images/docspace/file-icon.png#gh-light-mode-only)![File icon](/assets/images/docspace/file-icon.dark.png#gh-dark-mode-only)
 
-  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/plugin-items/fileitem.md#fileTileIcon).
+  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/interfaces/items/IFileItem.md#fileTileIcon?).
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png#gh-light-mode-only)![File icon tile](/assets/images/docspace/file-icon-tile.dark.png#gh-dark-mode-only)
 
