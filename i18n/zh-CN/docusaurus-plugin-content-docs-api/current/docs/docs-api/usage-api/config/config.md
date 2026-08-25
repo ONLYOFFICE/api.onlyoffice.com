@@ -36,6 +36,14 @@ config base 部分定义了初始化文档编辑器的顶级参数。
 
 **示例**: `"550px"`
 
+## title
+
+**类型：** `string`
+
+编辑器中打开的内容的标题。它被设置为编辑器框架的 `title` 属性，用于描述框架内容，特别是供屏幕阅读器使用。
+
+**示例**: `"Example Document Title.docx"`
+
 ## token
 
 **类型：** `string`
@@ -50,8 +58,8 @@ config base 部分定义了初始化文档编辑器的顶级参数。
 
 用于访问文档的平台类型：
 
-- `desktop` - 为从台式机或笔记本电脑访问文档而优化;
-- `mobile` - 为从平板电脑或智能手机访问文档而优化;
+- `desktop` - 为从台式机或笔记本电脑访问文档而优化；
+- `mobile` - 为从平板电脑或智能手机访问文档而优化；
 - `embedded` - 为易于嵌入网页而特别设计。
 
 **示例**: `"mobile"`
@@ -90,6 +98,7 @@ const config = {
   type: "mobile",
   height: "550px",
   width: "800px",
+  title: "Example Document Title.docx",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
   document: {
     // ...

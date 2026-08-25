@@ -60,7 +60,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 8.2
 
-- 参数 [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) 已弃用，请改用 [editorConfig.customization.mobile](../usage-api/config/editor/customization/customization-standard-branding.md#mobile) 参数.
+- 参数 [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) 已弃用，请改用 [editorConfig.customization.mobile](../usage-api/config/editor/customization/customization-standard-branding.md#mobile) 参数。
 - 在 [WOPI conversion API](../using-wopi/conversion-api.md) 中新增 *Password* 和 *PasswordToOpen* 请求参数。
 - [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段现用于定义所有编辑器类型的默认度量单位。
 - [editorConfig.location](../usage-api/config/editor/editor.md#location) 字段已弃用，请改用 [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段。
@@ -142,6 +142,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 7.2
 
+- 添加了 [title](../usage-api/config/config.md#title) 参数。
 - 添加了 [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) 参数。
 - 添加了 [Connector](../usage-api/automation-api/automation-api.md) 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
 - 将 *theme-contrast-dark* 主题 id 添加到 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中。

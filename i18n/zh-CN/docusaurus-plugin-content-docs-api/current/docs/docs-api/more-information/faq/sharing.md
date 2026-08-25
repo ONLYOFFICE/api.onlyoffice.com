@@ -276,7 +276,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在禁用*打印*选项的情况下打开文档，请使用 *document.permissions* 参数（请参阅[此处](../../usage-api/advanced-parameters.md))了解 ONLYOFFICE 文档配置对象的完整结构）。
 
-您需要将 *document.permission.print* 设置为 **false**，以便从文档 **文件** 菜单（如果 *document.permission.edit* 参数设置为 **true**）或顶部工具栏（如果 *document.permission.edit* 设置为 **false** 并且该文件仅供查看）移除**打印**选项,并且用户无法从编辑器中打印出该文档。这种情况下的*权限*配置将如下所示：
+您需要将 *document.permission.print* 设置为 **false**，以便从文档 **文件** 菜单（如果 *document.permission.edit* 参数设置为 **true**）或顶部工具栏（如果 *document.permission.edit* 设置为 **false** 并且该文件仅供查看）移除**打印**选项，并且用户无法从编辑器中打印出该文档。这种情况下的*权限*配置将如下所示：
 
 ```ts
 const config = {

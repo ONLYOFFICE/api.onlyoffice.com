@@ -37,7 +37,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 在 iframe 中渲染
 
-构造函数不会在占位符元素内部渲染编辑器，而是用一个从 ONLYOFFICE文档 服务器加载编辑器的 `<iframe>` **替换**该元素：
+构造函数不会在占位符元素内部渲染编辑器，而是用一个从 ONLYOFFICE 文档 服务器加载编辑器的 `<iframe>` **替换**该元素：
 
 ```html
 <!-- 调用构造函数之前 -->
@@ -55,8 +55,8 @@ iframe 路径中的应用程序取决于 [`documentType`](./config/config.md#doc
 ### 为什么使用 iframe
 
 - **隔离性。** 编辑器自带样式表、脚本、字体和 WebAssembly 模块。若将它们渲染到宿主页面的 DOM 中，宿主页面的 CSS 和组件框架会与编辑器的相互冲突。
-- **独立更新。** 编辑器由 ONLYOFFICE文档 提供，因此更新编辑器无需重新构建或重新部署您的应用程序。
-- **安全边界。** 编辑器运行在 ONLYOFFICE文档 的源（origin）上。同源策略使宿主页面与编辑器无法访问彼此的 DOM 和 JavaScript 上下文，跨越该边界的所有数据都通过显式的 `postMessage` 通道传递。
+- **独立更新。** 编辑器由 ONLYOFFICE 文档 提供，因此更新编辑器无需重新构建或重新部署您的应用程序。
+- **安全边界。** 编辑器运行在 ONLYOFFICE 文档 的源（origin）上。同源策略使宿主页面与编辑器无法访问彼此的 DOM 和 JavaScript 上下文，跨越该边界的所有数据都通过显式的 `postMessage` 通道传递。
 
 ### 这对宿主页面意味着什么
 
@@ -72,7 +72,7 @@ iframe 路径中的应用程序取决于 [`documentType`](./config/config.md#doc
 由于宿主页面的 CSS 无法作用于 iframe 内部，编辑器的外观通过[配置对象](./config/config.md)进行配置。编辑器的布局保持不变，但您可以更改其品牌标识、颜色以及向用户显示的界面元素集合：
 
 - [customization](./config/editor/customization/customization-standard-branding.md) - 徽标、页眉颜色以及界面元素的可见性。
-- [uiTheme](./config/editor/customization/customization-standard-branding.md#uitheme) - 界面主题，包括添加到 ONLYOFFICE文档 服务器的[自定义主题](../get-started/how-it-works/customizing-themes.md)。
+- [uiTheme](./config/editor/customization/customization-standard-branding.md#uitheme) - 界面主题，包括添加到 ONLYOFFICE 文档 服务器的[自定义主题](../get-started/how-it-works/customizing-themes.md)。
 - [type](./config/config.md#type) - 界面布局：`desktop`、`mobile` 或 [`embedded`](./config/editor/embedded.md)。
 - [plugins](./config/editor/plugins.md) - 添加到编辑器界面的功能。
 

@@ -17,7 +17,7 @@ sidebar_position: -5
 
 3. 让我们参考 [Office API 文档](../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md)完成这一任务：
 
-   - 首先，使用 [GetActiveSheet](../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md) 方法获取当前工作表:
+   - 首先，使用 [GetActiveSheet](../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md) 方法获取当前工作表：
 
      ``` ts
      let worksheet = Api.GetActiveSheet();

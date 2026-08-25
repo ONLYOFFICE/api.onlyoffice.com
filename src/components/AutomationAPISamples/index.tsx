@@ -52,7 +52,7 @@ const AutomationAPISamples = [
   },
   {
     name: 'Changing text in PDF',
-    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    image: require('@site/static/assets/images/editor/changing-text-in-pdf.png').default,
     url: 'changing-text-in-pdf',
     description: 'This example shows how to find and replace text in a PDF by recognizing page content and iterating through objects.',
   },

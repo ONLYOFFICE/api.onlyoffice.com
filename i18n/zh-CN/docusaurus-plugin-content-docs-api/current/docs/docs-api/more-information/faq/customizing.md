@@ -139,7 +139,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 编辑器有三种主要外观，针对不同用途进行了优化：
 
-- **desktop**, 针对桌面计算机浏览器中的显示进行了优化:
+- **desktop**，针对桌面计算机浏览器中的显示进行了优化：
 
   ``` ts
   const config = {
@@ -149,7 +149,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-- **mobile**, 针对移动设备浏览器中的显示进行了优化:
+- **mobile**，针对移动设备浏览器中的显示进行了优化：
 
   ``` ts
   const config = {
@@ -159,7 +159,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-- **embedded**, 针对将文档嵌入到网页进行了优化:
+- **embedded**，针对将文档嵌入到网页进行了优化：
 
   ``` ts
   const config = {

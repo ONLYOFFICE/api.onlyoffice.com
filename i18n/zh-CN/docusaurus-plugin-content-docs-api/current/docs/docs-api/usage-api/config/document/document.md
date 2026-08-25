@@ -8,11 +8,11 @@
 
 查看或编辑的源文档的文件类型。必须是小写。可用值取决于 [documentType](../config.md#documenttype)：
 
-- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — 用于文本文档;
-- `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — 用于电子表格;
-- `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — 用于演示文稿;
-- `djvu`, `oxps`, `pdf`, `xps` — 用于可移植文档格式;
-- `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — 用于图表文档.
+- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — 用于文本文档；
+- `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — 用于电子表格；
+- `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — 用于演示文稿；
+- `djvu`, `oxps`, `pdf`, `xps` — 用于可移植文档格式；
+- `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — 用于图表文档。
 
 :::info
 如果省略，文件类型将根据 [`documentType`](../config.md#documenttype) 值自动推断。如果同时省略 `fileType` 和 `documentType`，将会出现错误。

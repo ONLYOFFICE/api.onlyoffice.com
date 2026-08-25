@@ -108,7 +108,7 @@
 - [如何将打开的文档保存为另一种文档文件类型？](saving.md#how-to-save-the-opened-document-to-another-document-file-type)
 - [如何启用或禁用'自动保存'选项？](saving.md#how-to-enable-or-disable-the-autosave-option)
 - [什么是转换开始延迟时间，如何更改？](saving.md#what-is-the-conversion-start-delay-time-and-how-can-it-be-changed)
-- [从 csv 或 txt 格式转换时,如何指定编码类型？](saving.md#how-to-specify-the-encoding-type-when-converting-from-the-csv-or-txt-formats)
+- [从 csv 或 txt 格式转换时，如何指定编码类型？](saving.md#how-to-specify-the-encoding-type-when-converting-from-the-csv-or-txt-formats)
 
 [更多](saving.md)
 
