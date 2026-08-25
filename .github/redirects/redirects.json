@@ -2884,5 +2884,11 @@
   "/docs/plugins/get-started/": "/docs/plugins/get-started/overview/",
   "/docs/macros/get-started/": "/docs/macros/get-started/overview/",
   "/docs/ai/get-started/": "/docs/ai/get-started/overview/",
-  "/docs/document-builder/": "/docs/document-builder/get-started/overview/"
+  "/docs/document-builder/": "/docs/document-builder/get-started/overview/",
+  "/docs/docs-api/": "/docs/docs-api/get-started/basic-concepts/",
+  "/docs/office-api/": "/docs/office-api/get-started/overview/",
+  "/docs/plugins/": "/docs/plugins/get-started/overview/",
+  "/docs/macros/": "/docs/macros/get-started/overview/",
+  "/docs/ai/": "/docs/ai/get-started/overview/",
+  "/docs/desktop-editors/": "/docs/desktop-editors/get-started/overview/"
 }
