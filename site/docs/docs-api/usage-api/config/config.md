@@ -36,6 +36,14 @@ The document height in the browser window. Can be set to any CSS-compatible size
 
 **Example**: `"550px"`
 
+## title
+
+**type:** `string`
+
+The title of the content opened in the editor. It is set as the `title` attribute of the editor frame and is used to describe the frame contents, in particular, by screen readers.
+
+**Example**: `"Example Document Title.docx"`
+
 ## token
 
 **type:** `string`
@@ -90,6 +98,7 @@ const config = {
   type: "mobile",
   height: "550px",
   width: "800px",
+  title: "Example Document Title.docx",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
   document: {
     // ...

@@ -142,6 +142,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 7.2
 
+- 添加了 [title](../usage-api/config/config.md#title) 参数。
 - 添加了 [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) 参数。
 - 添加了 [Connector](../usage-api/automation-api/automation-api.md) 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
 - 将 *theme-contrast-dark* 主题 id 添加到 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中。
