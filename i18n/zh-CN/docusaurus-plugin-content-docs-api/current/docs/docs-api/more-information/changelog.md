@@ -60,7 +60,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 8.2
 
-- 参数 [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) 已弃用，请改用 [editorConfig.customization.mobile](../usage-api/config/editor/customization/customization-standard-branding.md#mobile) 参数.
+- 参数 [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) 已弃用，请改用 [editorConfig.customization.mobile](../usage-api/config/editor/customization/customization-standard-branding.md#mobile) 参数。
 - 在 [WOPI conversion API](../using-wopi/conversion-api.md) 中新增 *Password* 和 *PasswordToOpen* 请求参数。
 - [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段现用于定义所有编辑器类型的默认度量单位。
 - [editorConfig.location](../usage-api/config/editor/editor.md#location) 字段已弃用，请改用 [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段。
