@@ -28,4 +28,4 @@ sidebar_position: -2
 
 如果插件涉及 OLE 对象的操作，使用 [callCommand](how-to-call-commands.md#callcommand) 进行处理。
 
-有关最简工作示例，请参阅 [Asc.plugin](asc-plugin.md#minimal-example) 页面；有关完整操作指南，请参阅[入门指南](../../get-started/get-started.md)。更多开源插件示例可在[此处](/samples/?doctype=docs&text=plugin)查看。
+有关最简工作示例，请参阅 [Asc.plugin](asc-plugin.md#minimal-example) 页面；有关完整操作指南，请参阅[入门指南](../../get-started/overview.md)。更多开源插件示例可在[此处](/samples/?doctype=docs&text=plugin)查看。

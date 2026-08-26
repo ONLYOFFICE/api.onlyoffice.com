@@ -71,6 +71,8 @@ for (const source of SOURCES) {
     .map(f => {
       const content = fs.readFileSync(path.join(samplesDir, f), 'utf-8');
       const fm = parseFrontMatter(content);
+      // Drafts are dropped from the production build, unlisted docs are not advertised.
+      if (fm.draft === 'true' || fm.unlisted === 'true') return null;
       const title = fm.title || getTitleFromBody(content) || f.replace(/\.md$/, '').split('/').pop().replace(/-/g, ' ');
       const description = fm.description || '';
       const slug = f.replace(/\.md$/, '');
@@ -82,7 +84,8 @@ for (const source of SOURCES) {
       };
       if (Array.isArray(fm.tags)) item.tags = fm.tags;
       return item;
-    });
+    })
+    .filter(Boolean);
 
   const outputPath = path.join(OUTPUT_DIR, source.output);
   fs.writeFileSync(outputPath, JSON.stringify(items, null, 2));

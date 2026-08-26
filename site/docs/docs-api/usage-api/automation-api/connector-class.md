@@ -58,7 +58,7 @@ The function called to add an item to the toolbar menu. The process of working w
 
 | Name | Type                                | Description                                                     |
 | ---- | ----------------------------------- | --------------------------------------------------------------- |
-| guid | string                              | The plugin guid.                                                |
+| guid | string                              | The connector guid. Unlike plugins, the connector sets this value automatically, so there is no need to specify it. |
 | tabs | [ToolbarMenuTab](#toolbarmenutab)[] | An array containing the toolbar menu tabs for the current item. |
 
 ### ToolbarMenuTab
@@ -141,6 +141,10 @@ The function called to add an event listener, a function that will be called whe
 | -------- | -------- | ------------------- |
 | name     | string   | The event name.     |
 | callback | function | The event listener. |
+
+:::note
+Only one listener can be attached to an event name: attaching a listener with the same name replaces the previous one.
+:::
 
 ### Example
 

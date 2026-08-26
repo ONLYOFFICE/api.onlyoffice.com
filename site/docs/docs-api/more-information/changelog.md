@@ -142,6 +142,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.2
 
+- Added the [title](../usage-api/config/config.md#title) parameter.
 - Added the [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) parameter.
 - Added the [Connector](../usage-api/automation-api/connector-class.md) class to interact with documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.

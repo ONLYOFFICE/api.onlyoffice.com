@@ -286,7 +286,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of the [main button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [API](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md) plugins:
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of the [main button](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [API](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md) plugins:
 
 <details>
   <summary>MainButtonDialog class</summary>
@@ -400,9 +400,9 @@ Ensure that the `currentFolderId` functionality is added. It is required for API
 
 Set up UI components for the modal dialog:
 
-- [Input label](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/label.md)
-- [Input](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/input.md)
-- [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button.md)
+- [Input label](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/ILabel.md)
+- [Input](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IInput.md)
+- [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IButton.md)
 
 <details>
   <summary>UI components</summary>
@@ -480,7 +480,7 @@ const buttonProps: IButton = {
 
 ## Step 5: Build a modal dialog
 
-Create a [modal dialog](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog.md) with a label, input, and button. The modal uses `Actions.showModal` and auto-adjusts width/height:
+Create a [modal dialog](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IModalDialog.md) with a label, input, and button. The modal uses `Actions.showModal` and auto-adjusts width/height:
 
 <details>
   <summary>Modal dialog</summary>
@@ -522,7 +522,7 @@ export const modalDialogProps: IModalDialog = {
 
 ## Step 6: Register a main button
 
-Register a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md) labeled **Create new file** that shows the modal on click:
+Register a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md) labeled **Create new file** that shows the modal on click:
 
 <details>
   <summary>Main button item</summary>

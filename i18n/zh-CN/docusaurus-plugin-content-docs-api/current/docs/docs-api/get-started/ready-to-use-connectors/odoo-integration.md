@@ -73,7 +73,7 @@ https://<documentserver>/
 
 其中，**文档服务器地址**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Odoo服务器访问。Odoo服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-:::caution
+:::warning
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Odoo配置页面指定您自己的**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 :::
 

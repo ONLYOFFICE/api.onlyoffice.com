@@ -39,7 +39,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a base implementation in the `src/index.ts` file. Here's an example of a [file plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) for supporting `.md` (Markdown) files:
+By default, the plugin template includes a base implementation in the `src/index.ts` file. Here's an example of a [file plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) for supporting `.md` (Markdown) files:
 
 ``` ts
 import {
@@ -80,7 +80,7 @@ export default plugin;
 
 ## Step 4: Add a file item
 
-Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md) and append it to the end of the script:
+Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md) and append it to the end of the script:
 
 ```ts
 const fileItem: IFileItem = {
@@ -122,7 +122,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
-- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
-- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.
-- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#devices) (for example, desktop, mobile, and tablet).
+- The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileRowIcon?) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileTileIcon?).
+- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#onClick) logic instead.
+- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#devices?) (for example, desktop, mobile, and tablet).

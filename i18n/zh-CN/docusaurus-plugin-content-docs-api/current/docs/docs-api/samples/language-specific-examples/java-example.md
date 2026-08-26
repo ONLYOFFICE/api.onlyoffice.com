@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
 
-:::caution
+:::warning
 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
 :::
 

@@ -20,7 +20,7 @@ The latest app signed versions are available in the official store for [Nextclou
 ## Features
 
 - Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
-- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TSV, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**, **PDF**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
 
@@ -58,7 +58,7 @@ If the server with the Nextcloud installed does not have the Internet access, or
    git submodule update --init --recursive
    ```
 
-3. Build webpack (only if you chose to clone on the previous step):
+3. Run the build (only if you chose to clone on the previous step):
 
    ``` sh
    npm install
@@ -69,6 +69,9 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
    ``` sh
    composer install
+   composer scope-dependencies
+   rm -rf vendor/firebase
+   composer dump-autoload
    ```
 
 5. Change the owner to update the application right from Nextcloud web interface:
@@ -101,43 +104,53 @@ Enable or disable the **Open file in the same tab** setting.
 
 The **Open in ONLYOFFICE** action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.
 
-### ONLYOFFICE Connector for Nextcloud: Configuration Parameters
+### ONLYOFFICE connector for Nextcloud: configuration parameters
 
-These are all available configuration parameters for the ONLYOFFICE integration app for Nextcloud.
-The parameters are grouped into two categories depending on how they can be configured:
+These are all available configuration parameters for the ONLYOFFICE integration app for Nextcloud, split into three tables below:
 
-- Basic settings: configured via the Nextcloud admin UI or OCC commands.
-- Advanced settings: configured **only via `config/config.php`** file.
+- Basic configuration: parameters configurable via the Nextcloud admin UI or `occ` commands.
+- Watermark settings: also configurable via the UI or `occ`, but stored under the `files` app instead of `onlyoffice`.
+- Advanced configuration: parameters configurable via the `config/config.php` file.
 
-#### Basic Configuration (UI / OCC)
+Some parameters (e.g. `DocumentServerUrl`, `jwt_secret`, `jwt_header`, `verify_peer_off`) can be set both ways, so they appear in both the basic and the advanced table. For these, the connector reads the value from `config/config.php` only if none is set via the UI or an `occ` command.
+
+#### Basic configuration (UI / `occ`)
 
 These settings are available through the Nextcloud admin interface or via `occ` commands.
 
 | Parameter                                    | Description                                                                 |
 |---------------------------------------------|-----------------------------------------------------------------------------|
-| `DocumentServerUrl`                         | Public address of ONLYOFFICE Docs server (set via UI or `occ`).            |
-| `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
-| `Enable JWT`                                | Enables JWT validation for secure communication.                           |
-| `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
-| `Advanced server settings`                  | Enables configuration of internal server URLs.                             |
-| `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs (used if advanced settings enabled).   |
-| `StorageUrl`                                | Internal address of Nextcloud (used if advanced settings enabled).         |
-| `def_formats`                               | Defines default file formats.                                              |
-| `editable`                                  | Enables editing of certain file types.                                     |
-| `review`                                    | Enables review-only mode.                                                  |
-| `forcesave`                                 | Enables force saving documents to storage.                                 |
+| `DocumentServerUrl`                         | Public address of the ONLYOFFICE Docs server.                              |
+| `verify_peer_off`                           | If `true`, disables SSL certificate verification. Default: `false`.        |
+| `jwt_secret`                                | Secret key used to sign and validate JWT tokens.                           |
+| `Advanced server settings`                  | Groups Authorization header and internal server URL settings. Available via UI only. |
+| `jwt_header`                                | Name of the HTTP header used to send the JWT. Must match the header configured in ONLYOFFICE Docs. Default: `Authorization`; `AuthorizationJWT` when the built-in demo server is enabled. |
+| `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs used for server-to-server communication. |
+| `StorageUrl`                                | Internal address of the Nextcloud server used by ONLYOFFICE Docs.          |
+| `demo`                                      | Connects to the built-in demo ONLYOFFICE Docs server. Available via UI only. |
+| `groups`                                    | Allows specific groups to access editors. Example: `["admin", "editors"]`. |
+| `restrictExternalStorage`                   | Restricts access to ONLYOFFICE for files from external storages. Default: `false`. |
+| `preview`                                   | Enables document preview generation.                                       |
+| `sameTab`                                   | Opens files in the same tab. Default: `true`.                              |
+| `enableSharing`                             | Enables sharing. If forcibly enabled via `occ`, editors open in a new tab even when `sameTab` is `true`. Default: `false`. |
+| `advanced`                                  | Enables advanced document permissions. Default: `false`.                   |
+| `versionHistory`                            | Keeps metadata for each document version. Default: `true`.                 |
+| `cronChecker`                               | Enables background connection check to editors. Default: `true`.           |
+| `emailNotifications`                        | Enables e-mail notifications. Default: `true`.                             |
+| `unknownAuthor`                             | Display name for unknown authors. Example: `Guest User`.                   |
+| `defFormats`                                | Formats for which **Open in ONLYOFFICE** is the default action when the file name is clicked. JSON object mapping format names to booleans. Example: `{"docx":true,"xlsx":true}`. |
+| `editFormats`                               | Formats opened for editing instead of viewing. JSON object mapping format names to booleans. Example: `{"csv":true,"txt":true}`. |
+| `customizationForcesave`                    | Keeps intermediate versions when editing (forcesave). Default: `false`.    |
+| `liveViewOnShare`                           | Enables live-viewing mode when a file is accessed via a public link. Default: `false`. |
 | `customizationChat`                         | Enables or disables chat panel.                                            |
+| `customizationCompactHeader`                | Enables compact header mode.                                               |
 | `customizationFeedback`                     | Enables feedback and support links.                                        |
 | `customizationHelp`                         | Enables help link.                                                         |
-| `customizationToolbarNoTabs`                | Shows toolbar without tabs.                                                |
-| `customizationCompactHeader`                | Enables compact header mode.                                               |
-| `customizationToolbarHideSettings`          | Hides the “Settings” menu in the editor.                                   |
-| `customizationFeedbackSuggestion`           | Allows users to submit suggestions.                                        |
-| `customizationFeedbackBug`                  | Allows users to report bugs.                                               |
-| `customizationAutosave`                     | Enables autosave mode.                                                     |
-| `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
-| `preview`                                   | Enables document preview generation.                                       |
-| `about`                                     | Shows About section.                                                       |
+| `customizationReviewDisplay`                | Review mode for viewing. Possible values: `original`, `markup`, `final`. Default: `original`. |
+| `customizationTheme`                        | Sets the editor color theme. Possible values: `theme-system`, `default-light`, `default-dark`. Default: `theme-system`. |
+| `customization_plugins`                     | Enables plugins. Default: `true`.                                           |
+| `customization_macros`                      | Enables document macros. Default: `true`.                                   |
+| `protection`                                | Controls who can protect documents. Possible values: `owner`, `all`. Default: `owner`. |
 
 :::tip
 You can also use the `occ` command-line interface to get/set these parameters:
@@ -147,26 +160,56 @@ php occ config:app:set onlyoffice customizationChat --value=false
 ```
 :::
 
-#### Advanced Configuration (`config/config.php` only)
+#### Watermark settings
+
+Watermark settings (the `watermark_*` keys) are stored under the `files` app, not `onlyoffice`. Use `files` as the app ID when setting them with `occ`:
+
+```sh
+php occ config:app:set files {watermark_setting_key} --value={setting_value}
+```
+
+The switches accept `yes` or `no`.
+
+| Parameter                 | Description                                                                                  | Default              |
+|---------------------------|----------------------------------------------------------------------------------------------|----------------------|
+| `watermark_enabled`       | Enables watermarking.                                                                        | `no`                 |
+| `watermark_text`          | Watermark text. Supported tags: `{userId}`, `{userDisplayName}`, `{email}`, `{date}`, `{themingName}`. | `{userId}, {date}` |
+| `watermark_allGroups`     | Shows the watermark for users of the groups listed in `watermark_allGroupsList`.             | `no`                 |
+| `watermark_allGroupsList` | Comma-separated list of groups whose users see the watermark. Example: `admin,editors`.      | empty                |
+| `watermark_allTags`       | Shows the watermark on files tagged with the tags listed in `watermark_allTagsList`.         | `no`                 |
+| `watermark_allTagsList`   | Comma-separated list of system tag IDs of files that show the watermark. Example: `3,7`.     | empty                |
+| `watermark_linkAll`       | Shows the watermark for all link shares.                                                     | `no`                 |
+| `watermark_shareAll`      | Shows the watermark for all shares received from other users.                                | `no`                 |
+| `watermark_shareRead`     | Shows the watermark on read-only shares.                                                     | `no`                 |
+| `watermark_linkSecure`    | Shows the watermark on link shares that have downloading disabled.                           | `no`                 |
+| `watermark_linkRead`      | Shows the watermark on read-only link shares.                                                | `no`                 |
+| `watermark_linkTags`      | Shows the watermark on link shares tagged with the tags listed in `watermark_linkTagsList`.  | `no`                 |
+| `watermark_linkTagsList`  | Comma-separated list of system tag IDs whose link shares show the watermark. Example: `3,7`. | empty                |
+
+#### Advanced configuration (`config/config.php`)
 
 You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
 
 | Parameter                   | Description                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------|
 | `DocumentServerUrl`         | Public address of the ONLYOFFICE Docs server.                                                  |
-| `DocumentServerInternalUrl`| Internal address of ONLYOFFICE Docs used for server-to-server communication.                   |
-| `StorageUrl`               | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                              |
-| `jwt_secret`               | Secret key used to generate and validate JWT tokens.                                           |
-| `jwt_secret_path`          | Path to a file containing the JWT secret.                                                      |
-| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `Authorization`.                     |
-| `jwt_in_body`              | If `true`, the JWT token is sent in the request body instead of the header.                    |
-| `jwt_disable`              | If `true`, disables JWT signature verification.                                                |
+| `DocumentServerInternalUrl` | Internal address of ONLYOFFICE Docs used for server-to-server communication.                    |
+| `StorageUrl`                | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                               |
+| `jwt_secret`               | Secret key used to sign and validate JWT tokens.                                               |
+| `jwt_header`               | Name of the HTTP header used to send the JWT. Must match the header configured in ONLYOFFICE Docs. Default: `Authorization`; `AuthorizationJWT` when the built-in demo server is enabled. |
 | `jwt_leeway`               | Leeway in seconds to account for clock skew when validating JWT tokens.                        |
 | `jwt_expiration`           | JWT token expiration time in seconds.                                                          |
-| `verify_peer_off`          | If `true`, disables SSL peer verification for connections.                                     |
+| `verify_peer_off`          | If `true`, disables SSL certificate verification. Default: `false`.                            |
 | `limit_thumb_size`         | Maximum file size in bytes for which thumbnails will be generated.                             |
 | `disable_download`         | If `true`, disables file download functionality.                                               |
-| `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
+| `editors_check_interval`   | Interval in seconds for checking the availability of ONLYOFFICE Docs using cron. Default: `86400`. |
+| `permissions_modifyFilter` | Applies the spreadsheet filter globally (`true`, affects all users) or locally (`false`). Default: `true`. |
+| `customization_customer`   | Customer information displayed in the editor's "About" section.                                |
+| `customization_logo`       | Logo displayed in the editor header.                                                           |
+| `customization_loaderLogo` | Logo displayed on the editor loading screen.                                                   |
+| `customization_loaderName` | Text displayed on the editor loading screen.                                                   |
+| `customization_zoom`       | Default document zoom level in percentage. Default: `100`.                                     |
+| `customization_autosave`   | Enables autosave while editing. Default: `true`.                                               |
 
 The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation:
 
@@ -262,12 +305,12 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   This option allows you to avoid issues when the server settings become incorrect and require changes.
 
-  By default, this background task runs once a day. If necessary, you can change the frequency. To do so, open the Nextcloud config file (*\_/nextcloud/config/config.php\_*). Insert the following section and enter the required value in minutes:
+  By default, this background task runs once a day (`86400` seconds). If necessary, you can change the frequency. To do so, open the Nextcloud config file (*\_/nextcloud/config/config.php\_*). Insert the following section and enter the required value in seconds. For example, to run the check hourly:
 
   ``` php
   <?php
   "onlyoffice" => array (
-      "editors_check_interval" => 3624
+      "editors_check_interval" => 3600
   )
   ?>
   ```

@@ -38,6 +38,24 @@ const AutomationAPISamples = [
     url: 'working-with-content-controls',
     description: 'This example shows how to add different types of content controls and inspect their properties from an external UI.',
   },
+  {
+    name: 'Searching in PDF',
+    image: require('@site/static/assets/images/editor/searching-in-pdf.png').default,
+    url: 'searching-in-pdf',
+    description: 'This example shows how to search for text in a PDF and highlight all matching occurrences from an external interface.',
+  },
+  {
+    name: 'Redacting in PDF',
+    image: require('@site/static/assets/images/editor/redacting-in-pdf.png').default,
+    url: 'redacting-in-pdf',
+    description: 'This example shows how to find and permanently redact sensitive text in a PDF from an external interface.',
+  },
+  {
+    name: 'Changing text in PDF',
+    image: require('@site/static/assets/images/editor/changing-text-in-pdf.png').default,
+    url: 'changing-text-in-pdf',
+    description: 'This example shows how to find and replace text in a PDF by recognizing page content and iterating through objects.',
+  },
 ];
 
 interface Props {

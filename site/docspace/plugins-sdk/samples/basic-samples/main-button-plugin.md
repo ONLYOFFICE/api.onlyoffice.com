@@ -39,7 +39,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md):
 
 ``` ts
 import {
@@ -73,7 +73,7 @@ export default plugin;
 
 ## Step 4: Add a main button item
 
-Create a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md) and append it to the end of the script:
+Create a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md) and append it to the end of the script:
 
 ``` ts
 const plugin = new Test();
@@ -134,6 +134,6 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#items) array inside `IMainButtonItem`.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onClick) function can receive an entity context (e.g., room or file ID).
+- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#items?) array inside `IMainButtonItem`.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function can receive an entity context (e.g., room or file ID).
 - You can extend this plugin to support `Settings`, `ContextMenu`, or other scopes by updating `package.json` and logic.

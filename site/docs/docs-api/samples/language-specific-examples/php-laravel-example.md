@@ -10,7 +10,7 @@ tags: ["Docs", "Integration", "PHP"]
 
 This is an example application written in PHP with [Laravel Framework](https://laravel.com/docs/11.x/installation#meet-laravel) that integrates ONLYOFFICE Docs.
 
-:::caution
+:::warning
 It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 :::
 

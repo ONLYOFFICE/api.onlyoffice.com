@@ -426,7 +426,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。要显示文档版本历史记录，请调用 [refreshHistory](../methods.md#refreshhistory) 方法。
 
 :::note
-如果未声明此事件和 [onRequestHistoryData](#onrequesthistorydata) 事件，则不会显示*版本历史*按钮。
+如果未声明此事件，则不会显示*版本历史*按钮。
 :::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
@@ -509,7 +509,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。要显示更改，请调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加 token 来验证参数。
 
 :::note
-如果未声明此事件和 [onRequestHistory](#onrequesthistory) 事件，则不会显示*版本历史*按钮。
+此事件是可选的。如果传递给 [refreshHistory](../methods.md#refreshhistory) 的每个版本都已包含 `url`，则无需此事件即可打开该版本。但仍建议声明此事件，因为当某个版本没有 `url` 或其 URL 已超过 5 分钟时，编辑器会重新请求数据。
 :::
 
 **参数**：

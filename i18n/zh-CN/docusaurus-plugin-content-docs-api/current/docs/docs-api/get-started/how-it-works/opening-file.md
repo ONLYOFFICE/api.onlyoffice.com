@@ -58,7 +58,7 @@ sidebar_position: -22
 
    请将 `example.com` 替换为托管您文档文件的主机，即您的**文档存储服务**。在此最简示例中，本地 `.html` 文件扮演了**文档管理器**的角色 —— 在实际集成中，文档管理器会针对每个用户和每个文档动态生成此 `config`。如果您不想自行托管文件以快速测试，可使用 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 作为 `url`。
 
-   :::caution
+   :::warning
    当文档服务器启用 JWT 校验（默认配置）时，`config` 必须使用与之匹配的 [`token`](./security.md) 进行签名。上方的 `token` 与此精确的 `config` 相匹配，但它使用一次性密钥签名 —— 在您的服务器上将无法通过校验，且每当 `config` 变更时（例如将 `url` 切换为上述示例文档）都必须重新生成。请使用您文档服务器的 JWT 密钥进行签名。令牌不会绕过网络限制：如果 `url` 指向本地或私有地址，文档服务器仍必须能够访问该地址。
    :::
 
