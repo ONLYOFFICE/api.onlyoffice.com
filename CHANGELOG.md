@@ -53,6 +53,7 @@
 * Removed outdated version notes from the Adding plugin page
 * Structured the Plugins SDK sidebar into Get started, SDK usage, Samples, and More information
 * Synced generated Plugins SDK docs and repointed links to the typedoc structure
+* Added a dark theme variant for the plugin structure image on the Coding plugin page
 
 #### Common
 
