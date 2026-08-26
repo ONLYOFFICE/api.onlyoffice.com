@@ -9,10 +9,12 @@
 * Added Searching in PDF automation API sample
 * Added Changing text in PDF automation API sample
 * Added Redacting in PDF automation API sample
+* Documented the `title` config parameter
 
 #### Plugins and macros
 
 * Added Wrap characters with dashes macro sample for the spreadsheet editor
+* Added Adding custom providers guide to the AI section
 
 #### DocSpace
 
@@ -31,6 +33,7 @@
 * Documented Angular 22 support and replaced the removed `IConfig` type with `Config`
 * Explained iframe rendering and styling in the DocEditor
 * Updated the `uiTheme` parameter description with the `theme-system` and `theme-gray` themes, corrected the default light and dark theme IDs, and documented the theme priority order
+* Added a preview image for the Changing text in PDF automation API sample
 
 #### Office API
 
@@ -40,6 +43,7 @@
 
 * Replaced section index pages with overview pages in plugins, macros, and AI sections
 * Marked the Check spelling AI sample as a draft
+* Added a FAQ entry on empty model lists for custom providers
 
 #### DocSpace
 
@@ -58,6 +62,7 @@
 * Added docspace-plugin-sdk rebuild workflow and pinned Node 22 in SDK rebuilds
 * Updated `@onlyoffice/doceditor-types` to 9.4.1
 * Added a `/docs/document-builder/` redirect to the Get started overview
+* Added section root redirects to the Get started pages
 
 #### Localization
 
@@ -78,6 +83,9 @@
 
 * Fixed inaccuracies and grammar in the Plugins SDK usage docs
 * Restored Plugins SDK content lost in the typedoc link repoint
+* Restored Plugins SDK screenshots
+* Fixed wording, heading levels, and a broken link on the MCP server installation page
+* Removed tabs that broke navigation on the MCP server installation page
 
 #### Playground
 
@@ -93,6 +101,7 @@
 
 * Fixed mistranslation of "editor" and a missing space on zh-CN frontend framework pages
 * Added zh-CN translation for the Searching in PDF sample
+* Fixed half-width punctuation, ASCII double hyphens, and product name spacing on zh-CN pages
 
 ## 9.1.0
 
