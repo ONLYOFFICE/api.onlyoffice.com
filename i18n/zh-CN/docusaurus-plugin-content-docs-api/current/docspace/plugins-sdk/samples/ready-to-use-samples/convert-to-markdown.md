@@ -3,11 +3,11 @@ description: 在 DocSpace 中直接将 DOCX、TXT 和 HTML 文件转换为 Markd
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# Convert to Markdown
+# Convert to markdown
 
 用于在 DocSpace 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式的工具。
 
-![Convert to Markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to Markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
+![Convert to markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
 
 ## 安装
 
@@ -19,14 +19,12 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往 **设置 → 集成 → 插件**，然后点击 **Convert to Markdown** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往 **设置 → 集成 → 插件**，然后点击 **Convert to markdown** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 
 ## 使用
 
 :::warning
-
-启用了 **向文档添加水印** 房间设置的文件无法转换。请禁用该设置后重试。
-
+启用了 **向文档添加水印** 房间设置的文件无法转换。请禁用该设置后重试。有关 VDR 的更多信息，请参阅[创建带水印的 VDR](/docspace/api-backend/samples/basic-samples/create-vdr.md)示例。
 :::
 
 要将文件转换为 Markdown：

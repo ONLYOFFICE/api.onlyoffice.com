@@ -3,15 +3,15 @@ description: Convert DOCX, TXT, and HTML files to Markdown format directly in Do
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# Convert to Markdown
+# Convert to markdown
 
 A tool for converting DOCX, TXT, and HTML files to Markdown format directly in DocSpace.
 
-![Convert to Markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to Markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
+![Convert to markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
 
 ## Installation
 
-Available by default in the DocSpace Saas solution.
+Available by default in the DocSpace SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -19,14 +19,12 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Convert to Markdown** plugin.
+In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Convert to markdown** plugin.
 
 ## Usage
 
 :::warning
-
 Files in Virtual Data Room (VDR) with the **Add watermarks to documents** setting enabled cannot be converted. Disable this setting and try again. For more information about VDR, see the [Creating VDR with watermark](/docspace/api-backend/samples/basic-samples/create-vdr.md) example.
-
 :::
 
 To convert a file to Markdown:

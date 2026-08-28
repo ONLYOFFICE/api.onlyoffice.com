@@ -11,7 +11,7 @@ Save external URLs in a file list. When a saved link is opened, the correspondin
 
 ## Installation
 
-Available by default in the DocSpace Saas solution.
+Available by default in the DocSpace SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 

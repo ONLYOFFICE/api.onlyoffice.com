@@ -11,7 +11,7 @@ A tool for viewing EPUB, FB2, and ZIP files in a dedicated reading viewer direct
 
 ## Installation
 
-Available by default in the DocSpace Saas solution.
+Available by default in the DocSpace SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -25,9 +25,9 @@ In case you want to view the plugin metadata, such as the author, version, statu
 
 The plugin supports the following file formats:
 
-- **.epub** — Electronic Publication (EPUB 2.0/3.0)
-- **.fb2** — FictionBook 2.0
-- **.zip** — Archives containing EPUB or FB2 files
+- **.epub** - Electronic Publication (EPUB 2.0/3.0)
+- **.fb2** - FictionBook 2.0
+- **.zip** - Archives containing EPUB or FB2 files
 
 To open a file in the reader:
 
@@ -45,9 +45,9 @@ ZIP files cannot be opened with a single click — since DocSpace has a dedicate
 
 When a ZIP file is opened, the plugin inspects its contents:
 
-- **One supported file found** (a single `.epub`, `.fb2`, or a raw EPUB structure with `META-INF/container.xml`) — the file is extracted and opened in the reader automatically.
-- **Multiple supported files found** — the plugin opens the first one it finds.
-- **No supported files found** — an error notification is shown and the reader does not open.
+- **One supported file found** (a single `.epub`, `.fb2`, or a raw EPUB structure with `META-INF/container.xml`) - the file is extracted and opened in the reader automatically.
+- **Multiple supported files found** - the plugin opens the first one it finds.
+- **No supported files found** - an error notification is shown and the reader does not open.
 
 ## Plugin structure
 

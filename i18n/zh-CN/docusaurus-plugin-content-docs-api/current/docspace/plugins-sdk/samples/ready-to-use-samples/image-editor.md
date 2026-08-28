@@ -1,13 +1,13 @@
 ---
-description: 使用 Image Editor 插件查看和编辑图像。
+description: 使用 Image editor 插件查看和编辑图像。
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# Image Editor
+# Image editor
 
 直接在 DocSpace 中查看和编辑图像。
 
-![Image Editor](/assets/images/docspace/image-editor.png#gh-light-mode-only)![Image Editor](/assets/images/docspace/image-editor.dark.png#gh-dark-mode-only)
+![Image editor](/assets/images/docspace/image-editor.png#gh-light-mode-only)![Image editor](/assets/images/docspace/image-editor.dark.png#gh-dark-mode-only)
 
 ## 安装
 
@@ -17,9 +17,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 ## 配置
 
-要开始使用该插件，您无需更改任何设置 —— Image Editor 插件没有可配置参数。
+要开始使用该插件，您无需更改任何设置 —— Image editor 插件没有可配置参数。
 
-如需查看插件信息，请前往 **设置 → 集成 → 插件**，然后点击 **Image Editor** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
+如需查看插件信息，请前往 **设置 → 集成 → 插件**，然后点击 **Image editor** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
 ## 使用
 

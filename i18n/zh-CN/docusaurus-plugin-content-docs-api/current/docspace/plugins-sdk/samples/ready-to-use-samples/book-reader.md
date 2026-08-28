@@ -25,9 +25,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 该插件支持以下文件格式：
 
-- **.epub** — Electronic Publication（EPUB 2.0/3.0）
-- **.fb2** — FictionBook 2.0
-- **.zip** — 包含 EPUB 或 FB2 文件的压缩包
+- **.epub** - Electronic Publication（EPUB 2.0/3.0）
+- **.fb2** - FictionBook 2.0
+- **.zip** - 包含 EPUB 或 FB2 文件的压缩包
 
 在阅读器中打开文件：
 
@@ -45,9 +45,9 @@ ZIP 文件无法通过单击打开 —— 因为 DocSpace 有专门的压缩包�
 
 打开 ZIP 文件时，插件会检查其内容：
 
-- **找到一个受支持的文件**（单个 `.epub`、`.fb2`，或带有 `META-INF/container.xml` 的原始 EPUB 结构）—— 文件会被提取并自动在阅读器中打开。
-- **找到多个受支持的文件** —— 插件会打开找到的第一个文件。
-- **未找到受支持的文件** —— 显示错误通知，并且不会打开阅读器。
+- **找到一个受支持的文件**（单个 `.epub`、`.fb2`，或带有 `META-INF/container.xml` 的原始 EPUB 结构）- 文件会被提取并自动在阅读器中打开。
+- **找到多个受支持的文件** - 插件会打开找到的第一个文件。
+- **未找到受支持的文件** - 显示错误通知，并且不会打开阅读器。
 
 ## 插件结构
 

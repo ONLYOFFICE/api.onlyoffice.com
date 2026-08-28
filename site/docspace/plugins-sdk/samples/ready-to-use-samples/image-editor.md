@@ -1,13 +1,13 @@
 ---
-description: View and edit images with the Image Editor plugin.
+description: View and edit images with the Image editor plugin.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# Image Editor
+# Image editor
 
 View and edit images directly in DocSpace.
 
-![Image Editor](/assets/images/docspace/image-editor.png#gh-light-mode-only)![Image Editor](/assets/images/docspace/image-editor.dark.png#gh-dark-mode-only)
+![Image editor](/assets/images/docspace/image-editor.png#gh-light-mode-only)![Image editor](/assets/images/docspace/image-editor.dark.png#gh-dark-mode-only)
 
 ## Installation
 
@@ -17,9 +17,9 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 ## Configuration
 
-To start working with the plugin, you don't need to change any settings — the Image Editor plugin has no configurable parameters.
+To start working with the plugin, you don't need to change any settings — the Image editor plugin has no configurable parameters.
 
-If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Image Editor** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
+If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Image editor** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
 
 ## Usage
 

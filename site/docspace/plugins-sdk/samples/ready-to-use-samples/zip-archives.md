@@ -1,13 +1,13 @@
 ---
-description: Open and extract ZIP archives with the ZIP Archives plugin.
+description: Open and extract ZIP archives with the ZIP archives plugin.
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# ZIP Archives
+# ZIP archives
 
 Open and extract ZIP archives directly in DocSpace.
 
-![ZIP Archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP Archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
+![ZIP archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
 
 ## Installation
 
@@ -17,9 +17,9 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 ## Configuration
 
-To start working with the plugin, you don't need to change any settings — the ZIP Archives plugin has no configurable parameters.
+To start working with the plugin, you don't need to change any settings — the ZIP archives plugin has no configurable parameters.
 
-If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **ZIP Archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
+If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **ZIP archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
 
 ## Usage
 

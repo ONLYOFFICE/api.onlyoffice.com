@@ -1,13 +1,13 @@
 ---
-description: 使用 ZIP Archives 插件打开和解压 ZIP 压缩包。
+description: 使用 ZIP archives 插件打开和解压 ZIP 压缩包。
 tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
-# ZIP Archives
+# ZIP archives
 
 直接在 DocSpace 中打开和解压 ZIP 压缩包。
 
-![ZIP Archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP Archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
+![ZIP archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
 
 ## 安装
 
@@ -17,9 +17,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 ## 配置
 
-要开始使用该插件，您无需更改任何设置 —— ZIP Archives 插件没有可配置参数。
+要开始使用该插件，您无需更改任何设置 —— ZIP archives 插件没有可配置参数。
 
-如需查看插件信息，请前往 **设置 → 集成 → 插件**，然后点击 **ZIP Archives** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
+如需查看插件信息，请前往 **设置 → 集成 → 插件**，然后点击 **ZIP archives** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
 ## 使用
 
