@@ -12,7 +12,7 @@ Each ONLYOFFICE Docs instance includes online editors for documents, spreadsheet
 
 The test example is a simple document management system that can be built into your application for testing. The test example included by default is written in Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.
 
-:::caution
+:::warning
 The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
 :::
 
@@ -29,7 +29,7 @@ To start integrating document editors into your own website you need to do the f
 
 1. Download ONLYOFFICE Docs and set it up on your local server:
 
-   [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+   [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 2. Select the programming language and download the code for the sample of online editors integration into your website:
 

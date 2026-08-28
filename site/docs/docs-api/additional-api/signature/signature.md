@@ -24,7 +24,7 @@ For the validation setup, it is necessary to edit the [secret key](https://helpc
   </TabItem>
 </Tabs>
 
-:::caution
+:::warning
 The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
 :::
 
@@ -88,6 +88,10 @@ Restart the services for the config changes to take effect:
 ## Code samples for signature generation
 
 Below you can find examples of signature generation for initialization config and requests. All examples use the HMAC-SHA256 algorithm and include the required library and imports. They are based on [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
+
+:::warning
+Signing requires the secret key, so generate signatures on your server. Any code that runs in the browser exposes the key to the user: in a client-side application, such as one built with a [frontend framework](../../get-started/frontend-frameworks/frontend-frameworks.md), sign the configuration on your backend and send the ready configuration to the client.
+:::
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

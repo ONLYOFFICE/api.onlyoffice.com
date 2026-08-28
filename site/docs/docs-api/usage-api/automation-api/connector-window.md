@@ -45,10 +45,19 @@ The function called to send an event to the modal window frame. The list of all 
 ```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
+testConnectorWindow.show({
+  url: "./window/panel.html",
+  type: "panel",
+  isVisual: true,
+});
 testConnectorWindow.dispatchEvent("messageName", {
   prop: "value",
 });
 ```
+
+:::note
+Events can be sent only to a window that is displayed with the [show](#show) method.
+:::
 
 ## show
 

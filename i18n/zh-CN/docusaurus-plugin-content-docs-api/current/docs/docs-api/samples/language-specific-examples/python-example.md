@@ -8,7 +8,7 @@ sidebar_position: -9
 
 本示例将帮助您把ONLYOFFICE 文档集成到用Python编写的Web应用程序中。
 
-:::caution
+:::warning
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
 :::
 
@@ -51,7 +51,7 @@ make compose-prod
 
 下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example)或[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_python_example)上安装它。
 

@@ -10,7 +10,7 @@ tags: ["Docs", "Integration", "Ruby"]
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Ruby.
 
-:::caution
+:::warning
 It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
 :::
 
@@ -53,7 +53,7 @@ To configure the example, you can edit the environment variables in [compose-bas
 
 Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 Check the detailed guide to learn how to install it on [Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example), [Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example), or [Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example).
 

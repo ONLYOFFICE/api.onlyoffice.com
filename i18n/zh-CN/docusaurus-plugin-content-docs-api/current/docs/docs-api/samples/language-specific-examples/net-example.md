@@ -9,7 +9,7 @@ sidebar_position: -10
 
 本示例将帮助您把ONLYOFFICE 文档集成到用.Net（C#）或.Net（C#MVC）编写的Web应用程序中。
 
-:::caution
+:::warning
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
 :::
 
@@ -26,7 +26,7 @@ sidebar_position: -10
 
 下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
 如需了解如何安装ONLYOFFICE 文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
 

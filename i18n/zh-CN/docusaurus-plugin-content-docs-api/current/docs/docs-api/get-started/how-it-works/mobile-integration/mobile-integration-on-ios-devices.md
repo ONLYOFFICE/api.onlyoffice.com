@@ -22,7 +22,7 @@ sidebar_label: iOS
 
 4. 在 `EditorWebViewDemo.xcconfig` 配置文件中设置 `DOCUMENT_SERVER_EXAMPLE_URL` 属性值为 ONLYOFFICE 文档示例页面的地址：
 
-   ```
+   ```text
    DOCUMENT_SERVER_EXAMPLE_URL = documentserver
    ```
 

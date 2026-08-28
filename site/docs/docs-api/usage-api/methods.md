@@ -18,6 +18,10 @@ Create the [connector](./automation-api/connector-class.md) to interact with doc
 This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
+:::note
+Call this method when the editor is ready — in the [onDocumentReady](./config/events.md#ondocumentready) event handler or at any moment after this event is fired. See [Connector lifecycle](./automation-api/automation-api.md#connector-lifecycle) for details on reusing and disconnecting connectors.
+:::
+
   ``` ts
   docEditor.createConnector();
   ```

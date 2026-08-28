@@ -25,10 +25,21 @@ sidebar_position: -2
 
 ## 快速入门
 
-要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器：
+要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器。请在编辑器准备就绪后创建连接器 — 在 [onDocumentReady](../config/events.md#ondocumentready) 事件处理程序中，或在该事件触发之后的任意时刻：
 
 ```ts
-const connector = docEditor.createConnector();
+let connector;
+
+const config = {
+  // ...
+  events: {
+    onDocumentReady: () => {
+      connector = docEditor.createConnector();
+    },
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 连接器提供执行编辑器命令、监听文档事件和与编辑器 UI 交互的方法：
@@ -55,6 +66,20 @@ connector.callCommand(() => {
   console.log("Result:", res);
 });
 ```
+
+## 连接器生命周期 {#connector-lifecycle}
+
+连接器与创建它的 `docEditor` 对象绑定，只要该对象存在，连接器就保持有效：
+
+- **请重复使用已创建的连接器，而不要为每次操作都创建新的连接器。** 每次调用 [createConnector](../methods.md#createconnector) 都会返回一个具有独立标识符的新连接器，该连接器会一直在编辑器中保持注册状态，直到调用 [disconnect](./connector-class.md#disconnect) 为止。通过 [attachEvent](./connector-class.md#attachevent) 添加的事件监听器、工具栏和右键菜单项以及通过 [createWindow](./connector-class.md#createwindow) 创建的窗口都属于注册它们的那个连接器，并且每个连接器都会单独接收其所订阅的事件。多个连接器可以同时工作，例如应用程序的每个模块使用一个连接器。
+- **请勿在 [onDocumentReady](../config/events.md#ondocumentready) 事件触发之前创建连接器。** 如果连接器在该事件之后才创建（例如在用户与您的界面交互时），请在 `onDocumentReady` 处理程序中保存编辑器状态，并在使用连接器之前检查该状态。
+- **当不再需要连接器时，请调用 [disconnect](./connector-class.md#disconnect)，包括在调用 [destroyEditor](../methods.md#destroyeditor) 之前。** 该方法会停止事件传递，移除通过此连接器添加的界面元素，并释放它在页面上占用的资源。请在编辑器仍然存在时调用该方法。
+- **重新初始化编辑器后，请创建新的连接器。** [destroyEditor](../methods.md#destroyeditor) 方法以及初始化新的 `DocsAPI.DocEditor` 对象都会使现有连接器失效。新的编辑器实例会触发自己的 [onDocumentReady](../config/events.md#ondocumentready) 事件，应在其中创建新的连接器。
+- 使用 [refreshFile](../methods.md#refreshfile) 方法更新文件不会使连接器失效，因为编辑器不会被重新初始化。
+
+:::note
+如果连接器所属的编辑器已不存在，通过该连接器发送的命令永远不会返回结果：根据编辑器的状态，该调用要么引发 JavaScript 错误，要么被丢弃且不调用回调函数。请检查编辑器是否已准备就绪，而不是重试此类调用。
+:::
 
 ## 调试
 

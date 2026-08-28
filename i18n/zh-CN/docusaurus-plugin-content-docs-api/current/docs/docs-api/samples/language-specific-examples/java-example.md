@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
 
-:::caution
+:::warning
 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
 :::
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于 Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
 
@@ -170,7 +170,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example)的 ONLYOFFICE 文档。
 
@@ -286,7 +286,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         请参阅详细指南以了解如何安装[适用于Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example)的 ONLYOFFICE 文档。
 

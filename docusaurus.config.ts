@@ -389,7 +389,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsLight,
       darkTheme: prismThemes.vsDark,
-      additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
+      additionalLanguages: ["bash", "batch", "php", "csharp", "java", "ruby"],
     },
     algolia: {
       appId: '59O6KESY1Y',

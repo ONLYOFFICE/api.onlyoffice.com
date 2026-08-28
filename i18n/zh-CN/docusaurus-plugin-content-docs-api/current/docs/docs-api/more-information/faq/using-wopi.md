@@ -8,13 +8,13 @@ sidebar_position: -1
 
 要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**。
 
-参数:
+参数：
 
 | 名称        | 类型    | 示例 | 描述                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
 | wopi.enable | boolean | true    | 定义是否启用 WOPI。默认值为 **false**。 |
 
-示例:
+示例：
 
   ``` json
   {
@@ -45,14 +45,14 @@ sidebar_position: -1
 
 每个 WOPI 发现操作都有两个属性：
 
-属性:
+属性：
 
 | 名称     | 描述                                                                      |
 | -------- | -------------------------------------------------------------------------------- |
 | requires | 使用操作所需的 WOPI REST 端点。                             |
 | urlsrc   | 为了对特定文件调用操作而导航到的 URL。 |
 
-示例:
+示例：
 
   ``` xml
   <action name="edit" ext="docx" requires="locks,update"

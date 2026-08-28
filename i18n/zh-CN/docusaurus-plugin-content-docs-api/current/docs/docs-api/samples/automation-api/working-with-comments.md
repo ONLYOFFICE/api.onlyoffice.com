@@ -110,7 +110,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     ```
 
 :::note
-请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**.
+请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
 该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

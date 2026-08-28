@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # Creating plugin template
 
-Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings.
+Before starting plugin development, create a plugin template and configure its settings, which will be displayed in the DocSpace plugin settings.
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
@@ -24,15 +24,19 @@ Before starting plugin development, create a plugin template and configure its s
 
    | Parameter              | Description                                                                                                                                                                                                                                                                       |
    | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Name                   | A folder with this name will be created for deploying the plugin. This field is required.                                                                                                                                                                                         |
-   | Version                | The current plugin version will be displayed in the DocSpace plugin settings. When the page is reloaded, the plugin will be updated to match this version. If the portal already has the plugin of the current version uploaded, no action will occur.                            |
+   | Name                   | A folder with this name will be created for deploying the plugin. This field is required. The name may only include lower case letters, *-* and *_*.                                                                                                                             |
+   | Version                | The current plugin version that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                |
    | Author                 | The plugin author that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                         |
-   | Name of the logo image | The name of the plugin logo image that must be uploaded to the *assets* folder. There is no need to specify the path to this file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size. |
+   | Name of the logo image | The name of the plugin logo image that must be uploaded to the *assets* folder. There is no need to specify the path to this file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size. |
    | Description            | The plugin description that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                    |
    | License                | The plugin license.                                                                                                                                                                                                                                                               |
    | Homepage               | The plugin homepage. For example, it can be the plugin GitHub repository. This information will be displayed in the DocSpace plugin settings.                                                                                                                                     |
 
-4. Select the plugin scopes from the list by pressing *Space* on the necessary scopes:
+   :::note
+   Plugins are cached based on their version number. If you upload a plugin with the same version as before, DocSpace will show a warning and skip the update. Increment the version in *package.json* before each re-upload to make sure your changes are applied.
+   :::
+
+4. Select the plugin scopes from the list: use the arrow keys to move through the list, press *Space* to select the necessary scopes, *a* to toggle all, *i* to invert the selection, and *Enter* to proceed:
 
    - **API** - the plugin will be provided with the origin, proxy and prefix to make requests to the portal server.
    - **Settings** - the plugin will be able to manage settings for the administrator or owner.
@@ -40,8 +44,10 @@ Before starting plugin development, create a plugin template and configure its s
    - **Info panel** - the plugin can be embedded as a separate tab in the file info panel.
    - **Main button** - the plugin can be embedded in the main button.
    - **Profile menu** - the plugin can be embedded in the profile menu.
-   - **Event listener** - the plugin will be given the access to the portal events.
-   - **File** - the plugin will be able to interact with the file list, change the file type and image.
+   - **Event listener** - the plugin will be given access to the portal events.
+   - **File action** - the plugin will be able to interact with the file list, change the file type and image.
+   - **Post message** - the plugin will be given access to handle *postMessage* events from embedded iframes.
+   - **Article button** - the plugin can be embedded as a button in the article sidebar.
 
 ![Creating template](/assets/images/docspace/creating-template.png)
 
@@ -49,9 +55,9 @@ All the specified parameters can be changed later in the *package.json* file.
 
 In the *package.json* file, you can also specify the addresses of the third-party websites to add them to the CSP header and prevent these addresses from being blocked.
 
-You can create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as the dependency and specifying all the necessary fields in the *package.json* file.
+You can create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as a dependency and specifying all the necessary fields in the *package.json* file.
 
-### Migration
+## Migration
 
 For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
 
@@ -63,7 +69,7 @@ For plugins created with the old template (SDK 1.1.1), replace the build script 
 
 ``` json
 {
-  "name": "PDF-converter",
+  "name": "pdf-converter",
   "version": "1.0.0",
   "author": "ONLYOFFICE",
   "scopes": [

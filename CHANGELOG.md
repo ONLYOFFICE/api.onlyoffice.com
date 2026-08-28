@@ -1,5 +1,154 @@
 # Change log
 
+## 9.2.0
+
+### New features
+
+#### Docs API
+
+* Added Searching in PDF automation API sample
+* Added Changing text in PDF automation API sample
+* Added Redacting in PDF automation API sample
+* Documented the `title` config parameter
+
+#### Plugins and macros
+
+* Added Wrap characters with dashes macro sample for the spreadsheet editor
+* Added Adding custom providers guide to the AI section
+
+#### DocSpace
+
+* Added Styling plugin page to the Plugins SDK
+
+### Improvements
+
+#### Docs API
+
+* Reworked React, Angular, and Vue component pages and reordered the frontend frameworks section
+* Added Automation API section to the Angular component page
+* Described configuration signing on frontend framework pages
+* Documented connector lifecycle in the Automation API
+* Clarified behavior of commands sent to a destroyed editor
+* Synced the Nextcloud integration article with upstream README changes
+* Documented Angular 22 support and replaced the removed `IConfig` type with `Config`
+* Explained iframe rendering and styling in the DocEditor
+* Updated the `uiTheme` parameter description with the `theme-system` and `theme-gray` themes, corrected the default light and dark theme IDs, and documented the theme priority order
+* Added a preview image for the Changing text in PDF automation API sample
+
+#### Office API
+
+* Added Breaking changes section to the 9.4 changelog
+
+#### Plugins and macros
+
+* Replaced section index pages with overview pages in plugins, macros, and AI sections
+* Marked the Check spelling AI sample as a draft
+* Added a FAQ entry on empty model lists for custom providers
+
+#### DocSpace
+
+* Promoted Migration to a top-level heading in the plugin template page
+* Switched Plugins SDK build instructions from yarn to npm
+* Refreshed CLI, folder, and Adding plugin screenshots and added dark theme variants
+* Removed outdated version notes from the Adding plugin page
+* Structured the Plugins SDK sidebar into Get started, SDK usage, Samples, and More information
+* Synced generated Plugins SDK docs and repointed links to the typedoc structure
+* Added a dark theme variant for the plugin structure image on the Coding plugin page
+
+#### Common
+
+* Updated Docusaurus to 3.10.2 and upgraded search/UI dependencies
+* Replaced deprecated `:::caution` admonitions with `:::warning`
+* Moved site redirects to Terraform management and enabled production deploy
+* Added docspace-plugin-sdk rebuild workflow and pinned Node 22 in SDK rebuilds
+* Updated `@onlyoffice/doceditor-types` to 9.4.1
+* Added a `/docs/document-builder/` redirect to the Get started overview
+* Added section root redirects to the Get started pages
+
+#### Localization
+
+* Synced the zh-CN `uiTheme` description with the English version
+
+### Fixes
+
+#### Docs API
+
+* Corrected onRequestHistory and onRequestHistoryData version history notes
+* Fixed sidebar position of the Searching in PDF sample
+
+#### Plugins and macros
+
+* Improved the Ollama CORS configuration guide
+
+#### DocSpace
+
+* Fixed inaccuracies and grammar in the Plugins SDK usage docs
+* Restored Plugins SDK content lost in the typedoc link repoint
+* Restored Plugins SDK screenshots
+* Fixed wording, heading levels, and a broken link on the MCP server installation page
+* Removed tabs that broke navigation on the MCP server installation page
+
+#### Playground
+
+* Disconnected the connector before editor teardown
+
+#### Common
+
+* Fixed broken redirect targets and repointed legacy Office API, Document Builder, plugin, filters, and apisystem redirects
+* Fixed the 9.1.0 changelog file name
+* Fixed broken plugins Get started links in earlier changelog entries
+
+#### Localization
+
+* Fixed mistranslation of "editor" and a missing space on zh-CN frontend framework pages
+* Added zh-CN translation for the Searching in PDF sample
+* Fixed half-width punctuation, ASCII double hyphens, and product name spacing on zh-CN pages
+
+## 9.1.0
+
+### Improvements
+
+#### DocSpace
+
+* Unified plugin installation paths in ready-to-use samples
+
+### Fixes
+
+#### Common
+
+* Updated download-docs URLs to new /download path
+* Removed .aspx extensions and added ?from=api tracking to onlyoffice.com URLs
+* Fixed text jump in ConfigEditor form inputs
+* Added batch language support to Docusaurus code block highlighting
+
+#### Docs API
+
+* Fixed typos, grammar, and identifier formatting in the self-hosted installation page
+* Fixed code block language identifier in iOS integration page
+
+#### Plugins and macros
+
+* Updated marketplace name, URLs, and CSS filename across plugin documentation
+* Normalized front matter in AI sample pages
+* Fixed invalid environment variables and CORS configuration in the Ollama guide
+* Fixed skipped heading levels in for-web-editors debugging page
+* Fixed code block language identifiers in Ollama and localization pages
+* Fixed code block identifiers and headings in custom-providers page
+
+#### Desktop
+
+* Fixed plugin references and heading in the adding-plugins page
+* Fixed code block language identifiers in command-line-flags page
+
+#### DocSpace
+
+* Fixed code errors, formatting, typos, and navigation paths across plugins-sdk samples
+* Fixed code block language identifier in global-configuration page
+
+#### Playground
+
+* Fixed window.connector cleanup on PlaygroundPreview unmount
+
 ## 9.0.0
 
 ### New features

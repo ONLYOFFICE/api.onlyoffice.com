@@ -5,7 +5,7 @@ tags: ["DocSpace", "Plugins", "Basic"]
 
 # ToggleButton component
 
-This guide demonstrates how to configure and use the [ToggleButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/togglebutton) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.
+This guide demonstrates how to configure and use the [ToggleButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IToggleButton) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.
 
 <details>
   <summary>Full example</summary>
@@ -183,7 +183,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin):
 
 ```ts
 import {
@@ -235,7 +235,7 @@ export default plugin;
 
 ## Step 4: Add a main button item
 
-Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem/) below the plugin initialization:
+Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem/) below the plugin initialization:
 
 ```ts
 const createItem: IMainButtonItem = {
@@ -264,7 +264,7 @@ declare global {
 
 ## Step 5: Define a ToggleButton component
 
-Create a styled [ToggleButton component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/togglebutton) with the `onChange` function, and embed it in a [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization:
+Create a styled [ToggleButton component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IToggleButton) with the `onChange` function, and embed it in a [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IBox) below the plugin initialization:
 
 ```ts
 import {
@@ -311,7 +311,7 @@ const body: IBox = {
 
 ## Step 6: Define the modal dialog behavior
 
-Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body from the previous step:
+Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IModalDialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IBox) body from the previous step:
 
 ```ts
 const body: IBox = {
@@ -346,7 +346,7 @@ export const modalDialogProps: IModalDialog = {
 
 ## Step 7: Append the modal dialog to the main button
 
-Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onClick) function with the modal display behavior:
+Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function with the modal display behavior:
 
 ```ts
 const mainButtonItem: IMainButtonItem = {

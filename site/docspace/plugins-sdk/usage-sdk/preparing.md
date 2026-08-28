@@ -8,13 +8,12 @@ Before you start developing a plugin, you should go through the following prepar
 
 ## Step 1. Prerequisites
 
-Install all the necessary packages and programs:
+Set up the following:
 
-- ONLYOFFICE DocSpace on-premises.
+- ONLYOFFICE DocSpace. Choose one of the following:
 
-  [Get ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer?from=api#docspace-developer)
-
-  To install it on your local server, follow the [instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
+  - **On-premises**: [get ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) and follow the [installation instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
+  - **SaaS**: [register a DocSpace SaaS account](https://onlyoffice.com/docspace-registration?from=api).
 
 - *@onlyoffice/docspace-plugin-sdk* npm package
 
@@ -33,10 +32,10 @@ Design the way your plugin will work:
    For example, [AssemblyAI](https://www.assemblyai.com/), [ConvertAPI](https://www.convertapi.com/), [Draw.io](https://www.drawio.com/).
 
    :::note
-   Make sure that the service documentation is available, check its license, availability of API methods, etc. For some services, the user must obtain an API key to start using the plugin.
+   Make sure the service documentation is available, and check its license, API methods availability, etc. For some services, the user must obtain an API key to start using the plugin.
    :::
 
-2. Think about where to implement the plugin, what the plugin's structure will be, how the user will interact with the plugin's components, etc. Make a list of the required plugin types and items depending on this information. For more information, read the [Plugin types](coding-plugin/plugin-types/plugin-types.md) and [Plugin items](coding-plugin/plugin-items/plugin-items.md) sections of the Plugins SDK documentation.
+2. Think about where to implement the plugin, what the plugin's structure will be, how the user will interact with the plugin's components, etc. Make a list of the required plugin types and items depending on this information. For more information, read the [Plugin types](coding-plugin/interfaces/plugins/index.md) and [Plugin items](coding-plugin/interfaces/items/index.md) sections of the Plugins SDK documentation.
 
 3. Come up with the plugin's structure. All the required files are described [here](plugin-structure.md).
 

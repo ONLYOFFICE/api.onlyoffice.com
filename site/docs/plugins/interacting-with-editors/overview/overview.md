@@ -28,4 +28,4 @@ For the plugin to work the developer must specify two obligatory events for the 
 
 If the plugin operates with an OLE object, [callCommand](how-to-call-commands.md#callcommand) is used to manage it.
 
-See the [Asc.plugin](asc-plugin.md#minimal-example) page for a minimal working example, or the [Getting started](../../get-started/get-started.md) guide for a full walkthrough. More open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).
+See the [Asc.plugin](asc-plugin.md#minimal-example) page for a minimal working example, or the [Getting started](../../get-started/overview.md) guide for a full walkthrough. More open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).

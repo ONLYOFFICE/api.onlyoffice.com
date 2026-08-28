@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Adding plugins
 
-**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from the ONLYOFFICE Plugin Marketplace or create your own ones using our [Plugins and macros API documentation](../../plugins/get-started/get-started.md).
+**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from the ONLYOFFICE Plugin Marketplace or create your own ones using our [Plugins and macros API documentation](../../plugins/get-started/overview.md).
 
 There are two ways to add plugins: through the plugin manager and through the plugin folder.
 

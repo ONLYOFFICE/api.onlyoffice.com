@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 本示例将帮助您把ONLYOFFICE 文档集成到基于Node.js的Web应用程序中。
 
-:::caution
+:::warning
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
 :::
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         如需了解如何在Windows系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_nodejs_example)。
 
@@ -126,7 +126,7 @@ import TabItem from '@theme/TabItem';
 
         下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs?from=api#docs-developer)
+        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
 
         如需了解如何在Linux系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_nodejs_example)。
 

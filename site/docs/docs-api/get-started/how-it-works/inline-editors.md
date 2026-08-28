@@ -76,7 +76,7 @@ Simultaneous work with several editors is available starting from version 5.5.
 
    Replace `example.com` with the host serving your document files — i.e., your **document storage service**.
 
-   :::caution
+   :::warning
    When JWT validation is enabled on your document server (the default configuration), each `config` must be signed with a matching [`token`](./security.md). The tokens above match these exact configs but are signed with a throwaway secret — they will not validate on your server, and they must be regenerated whenever a config changes. Sign with your document server's JWT secret.
    :::
 
