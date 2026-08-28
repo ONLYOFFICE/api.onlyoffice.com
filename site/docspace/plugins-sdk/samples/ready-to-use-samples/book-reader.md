@@ -7,7 +7,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 A tool for viewing EPUB, FB2, and ZIP files in a dedicated reading viewer directly in DocSpace.
 
-![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
+![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
 
 ## Installation
 
@@ -35,7 +35,7 @@ To open a file in the reader:
 2. Click on a supported file, or right-click it and select **Open in Reader** from the context menu.
 3. The file opens in a modal window.
 
-![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
+![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
 
 Use the **‹** and **›** buttons at the bottom to navigate between pages. A progress bar and page counter show your current position in the book.
 

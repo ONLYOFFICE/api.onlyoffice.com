@@ -25,7 +25,7 @@ In case you want to view the plugin metadata, such as the author, version, statu
 
 :::warning
 
-Files that have the **Add watermarks to documents** room setting enabled cannot be converted. Disable this setting and try again.
+Files in Virtual Data Room (VDR) with the **Add watermarks to documents** setting enabled cannot be converted. Disable this setting and try again. For more information about VDR, see the [Creating VDR with watermark](/docspace/api-backend/samples/basic-samples/create-vdr.md) example.
 
 :::
 
