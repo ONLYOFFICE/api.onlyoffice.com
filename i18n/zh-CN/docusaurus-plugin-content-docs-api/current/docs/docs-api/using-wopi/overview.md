@@ -71,8 +71,8 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 默认情况下，所有 IP 地址都被认为是可信的。
 :::
 
-:::caution
-从 ONLYOFFICE 文档 10.0.0 版本开始，即使默认情况下所有 IP 地址都是可信的，在 IP filter 规则中指定您的 WOPI host 也是**必须**的，否则 WOPI 将无法正常工作。通配符规则 `*` 并未指定具体的 host，因此不满足该要求 —— 如果没有明确允许您的 WOPI host 的规则，将无法通过 WOPI 打开文档。
+:::warning
+从 ONLYOFFICE 文档 10.0.0 版本开始，即使默认情况下所有 IP 地址都是可信的，在 IP filter 规则中指定您的 WOPI 主机也是**必须**的，否则 WOPI 将无法正常工作。通配符规则 `*` 并未指定具体的主机，因此不满足该要求 —— 如果没有明确允许您的 WOPI 主机的规则，将无法通过 WOPI 打开文档。
 :::
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):

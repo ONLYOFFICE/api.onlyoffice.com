@@ -71,7 +71,7 @@ ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. The I
 By default, all the IP addresses are considered trusted.
 :::
 
-:::caution
+:::warning
 Starting from ONLYOFFICE Docs version 10.0.0, specifying your WOPI host in the IP filter rules is **mandatory** for WOPI to work, even though all the IP addresses are trusted by default. The catch-all `*` rule does not name a host, so it does not satisfy this requirement — without a rule that explicitly allows your WOPI host, documents cannot be opened via WOPI.
 :::
 
