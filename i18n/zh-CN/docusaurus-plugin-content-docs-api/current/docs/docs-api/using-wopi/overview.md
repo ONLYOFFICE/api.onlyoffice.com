@@ -81,25 +81,29 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
    ``` json
    {
-     "ipfilter": {
-       "rules": [
-         {
-           "address": "ip_address",
-           "allowed": true
-         },
-         {
-           "address": "*",
-           "allowed": false
+     "services": {
+       "CoAuthoring": {
+         "ipfilter": {
+           "rules": [
+             {
+               "address": "example.com",
+               "allowed": true
+             },
+             {
+               "address": "*",
+               "allowed": false
+             }
+           ],
+           "useforrequest": false,
+           "errorcode": 403
          }
-       ],
-       "useforrequest": false,
-       "errorcode": 403
+       }
      }
    }
   
    ```
 
-2. 更改以下默认设置。输入您的 *"ip_address"*，其中可以包含：
+2. 更改以下默认设置。输入您的 *"ip_address"*（或 WOPI host），其中可以包含：
 
    - ipv4 的 XXXX 格式的 IP，
    - ipv6 的 xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx 格式的 IP，
