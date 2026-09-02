@@ -126,3 +126,27 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
           ```
       </TabItem>
     </Tabs>
+
+### 为 WOPI 主机要求显式规则 {#requiring-an-explicit-rule-for-the-wopi-host}
+
+是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信，由以下参数控制：
+
+| 名称                      | 类型    | 示例 | 描述                                                                                                                     |
+| ------------------------- | ------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
+| wopi.requireIpFilterRule  | boolean | true | 是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信。默认值为 **true**。 |
+
+通配符规则 `*` 不算数，因为它并未指定具体的主机。这正是默认规则集（`{"address": "*", "allowed": true}`）不满足该要求的原因：即使 IP filter 本身完全放开，没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。
+
+将 *wopi.requireIpFilterRule* 设置为 **false**，可以在您仍在编写规则期间，作为临时的迁移回退方案允许未列出的 WOPI 目标地址 —— 但这会重新引入服务器端请求伪造（SSRF）风险。无论如何，WOPI 出站请求的其他所有防护仍然生效：请求永远不会被视为可信；云元数据地址、链路本地地址、组播地址以及 *denyIPAddressList* 中的地址仍会被强制拒绝；每一跳重定向都会被校验；*externalRequest* 的路由规则依然适用。
+
+``` json
+{
+  "wopi": {
+    "requireIpFilterRule": false
+  }
+}
+```
+
+:::warning
+对于 WOPI 而言，*allowIPAddressList* 和 *denyIPAddressList* 并不能替代 *services.CoAuthoring.ipfilter.rules*。将某个主机加入 *allowIPAddressList* 并不会放行针对该主机的 WOPI 请求 —— 这完全由 *services.CoAuthoring.ipfilter.rules* 决定。但将某个主机加入 *denyIPAddressList* 则会阻止该请求：deny 规则的优先级高于任何放行规则，即便 *ipfilter.rules* 中存在指定同一地址的允许规则也是如此。
+:::

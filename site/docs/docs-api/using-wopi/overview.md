@@ -126,3 +126,27 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
           ```
       </TabItem>
     </Tabs>
+
+### Requiring an explicit rule for the WOPI host
+
+Whether every WOPI host must be named by a *services.CoAuthoring.ipfilter.rules* entry before the server will contact it is controlled by the following parameter:
+
+| Name                     | Type    | Example | Description                                                                                                                           |
+| ------------------------ | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| wopi.requireIpFilterRule | boolean | true    | Whether every WOPI host must be named by a *services.CoAuthoring.ipfilter.rules* entry before the server will contact it. The default value is **true**. |
+
+The catch-all `*` rule does not count, because it does not name a specific host. This is why the default rule set (`{"address": "*", "allowed": true}`) does not satisfy this requirement: without a rule that explicitly names your WOPI host, WOPI will not work, even though the IP filter itself remains wide open.
+
+Set *wopi.requireIpFilterRule* to **false** to allow unlisted WOPI destinations as a temporary migration fallback while you are still writing the rules — this re-opens server-side request forgery. Every other WOPI egress protection stays active either way: the request is never treated as trusted, cloud metadata, link-local, multicast and *denyIPAddressList* addresses stay hard denied, each redirect hop is validated, and *externalRequest* routing still applies.
+
+``` json
+{
+  "wopi": {
+    "requireIpFilterRule": false
+  }
+}
+```
+
+:::warning
+*allowIPAddressList* and *denyIPAddressList* are not a substitute for *services.CoAuthoring.ipfilter.rules* when it comes to WOPI. Adding a host to *allowIPAddressList* does not permit a WOPI destination — that is decided by *services.CoAuthoring.ipfilter.rules* alone. Adding a host to *denyIPAddressList*, however, does block it: a deny there outranks every permission, including an *ipfilter.rules* entry naming the same address.
+:::
