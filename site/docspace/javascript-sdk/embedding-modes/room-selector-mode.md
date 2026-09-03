@@ -36,7 +36,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   showSelectorHeader: true,
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
+    onSelectCallback: function (rooms) {
+      const room = rooms[0];
       console.log("Selected room:", room.label, room.id);
       linkRoomToTask(currentTaskId, room.id);
       selector.destroyFrame();
@@ -74,8 +75,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   src: "https://your-docspace.com",
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
-      handleRoomSelected(room);
+    onSelectCallback: function (rooms) {
+      handleRoomSelected(rooms[0]);
       dialog.close();
       selector.destroyFrame();
     },

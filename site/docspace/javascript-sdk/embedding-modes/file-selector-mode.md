@@ -42,8 +42,8 @@ const selector = DocSpace.SDK.initFileSelector({
   acceptButtonLabel: "Attach file",
   events: {
     onSelectCallback: function (file) {
-      console.log("File selected:", file.label, file.id);
-      attachFileToRecord(file.id, file.label);
+      console.log("File selected:", file.title, file.id);
+      attachFileToRecord(file.id, file.title);
       selector.destroyFrame();
     },
     onCloseCallback: function () {
@@ -78,7 +78,7 @@ const docSpace = DocSpace.SDK.initFileSelector({
   withSearch: true,
   events: {
     onSelectCallback: function (file) {
-      console.log("Selected:", file.label);
+      console.log("Selected:", file.title);
     },
   },
 });
