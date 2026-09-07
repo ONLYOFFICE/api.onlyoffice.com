@@ -103,7 +103,7 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
   
    ```
 
-2. Change the following default settings. Enter your *"ip\_address"* (or WOPI host) that can contain:
+2. Change the following default settings. Enter your IP address (or WOPI host) that can contain:
 
    - IP in the X.X.X.X format for ipv4,
    - IP in the xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx format for ipv6,
