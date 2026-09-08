@@ -52,25 +52,3 @@ const docSpace = DocSpace.SDK.initViewer({
   editorGoBack: false,
 });
 ```
-
-### Handling access and not found errors
-
-Display a fallback UI when the user cannot access the document or the file no longer exists:
-
-```javascript
-const docSpace = DocSpace.SDK.initViewer({
-  frameId: "ds-frame",
-  src: "https://your-docspace.com",
-  id: "your-file-id",
-  events: {
-    onNoAccess: function () {
-      document.getElementById("ds-frame").innerHTML =
-        "You do not have permission to view this document.";
-    },
-    onNotFound: function () {
-      document.getElementById("ds-frame").innerHTML =
-        "This document no longer exists.";
-    },
-  },
-});
-```

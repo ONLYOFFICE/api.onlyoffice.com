@@ -67,6 +67,20 @@ const docSpace = DocSpace.SDK.initManager({
 
 Full parameter reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showheaderbanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
 
+## Custom stylesheet
+
+`stylesUrl` applies a custom stylesheet inside the frame, on top of the selected theme — use it for fine-grained CSS tweaks that `theme`/`editorCustomization.uiTheme` don't cover:
+
+```javascript
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  stylesUrl: "https://your-app.com/docspace-overrides.css",
+});
+```
+
+Full parameter reference: [TFrameConfig#stylesUrl](../usage-sdk/type-aliases/TFrameConfig.md#stylesurl).
+
 ## Use cases
 
 ### Matching your app's dark mode

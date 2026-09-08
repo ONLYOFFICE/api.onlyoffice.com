@@ -29,26 +29,29 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onAppReady` | All modes | The frame finished initializing successfully. |
 | `onAppError` | All modes | The frame failed to initialize. |
 | `onAuthSuccess` | All modes | The user was authenticated successfully. |
+| `onAuthError` | All modes | The SDK couldn't resolve an access token — only fires with OAuth-based authentication, see below. |
 | `onContentReady` | All modes | The frame's content has loaded. |
 | `onCloseCallback` | Room selector, File selector | The selector was closed or the selection was canceled. |
 | `onSelectCallback` | Room selector, File selector | A room or file was selected. |
 | `onFileManagerClick` | Manager | A file was clicked in the file list — see the note below, this one changes default behavior too. |
-| `onEditorOpen` | Manager | A document was opened in the editor. |
-| `onEditorCloseCallback` | Editor | The document editor was closed. |
-| `onDownload` | Manager | A download was requested (only fires when `downloadToEvent: true` is set). |
-| `onNoAccess` | Viewer, Uploader | The target file/folder exists but isn't accessible to the current user. |
-| `onNotFound` | Viewer, Uploader | The target file/folder doesn't exist. |
+| `onEditorOpen` | Manager | A document was opened in the editor — see the note below, this one changes default behavior too. |
+| `onEditorCloseCallback` | Editor, Viewer | The document editor was closed. |
+| `onDownload` | Manager, Editor, Viewer | A download was requested (only fires when `downloadToEvent: true` is set). |
+| `onNoAccess` | Manager | The target file/folder exists but isn't accessible to the current user. |
+| `onNotFound` | Manager | The target file/folder doesn't exist. |
 | `onSignOut` | All modes | The user signed out. |
 
 Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
 :::note
-`onFileManagerClick` doesn't just notify you that a file was clicked — attaching a handler for it **suppresses the default click behavior** (normally, clicking a file opens it in a new browser tab). With a handler attached, your code decides what to do instead; remove the handler (see [Subscribing and updating handlers](#subscribing-and-updating-handlers) below) and the default open-in-a-new-tab behavior comes back.
+`onFileManagerClick` and `onEditorOpen` don't just notify you that something happened — attaching a handler for either one **suppresses its default behavior** (normally, clicking a file opens it in a new browser tab, and opening a file for editing does the same). With a handler attached, your code decides what to do instead; remove the handler (see [Subscribing and updating handlers](#subscribing-and-updating-handlers) below) and the default behavior comes back.
 :::
+
+`onAuthError` only fires when the frame is configured for OAuth-based authentication — supplying a `getToken` (or `accessToken`) function in the config instead of relying on the session cookie. It fires when that callback throws, rejects, or returns nothing, so your application can re-authenticate or surface the failure. See [Authentication & Security](../get-started/authentication-security.md) for the other supported authentication approaches.
 
 `onContentReady` can fire more than once per frame instance — e.g. after signing out, the frame reloads to show the sign-in page, which triggers `onContentReady` again without a second `onAppReady`. `onAppReady` itself isn't strictly limited to firing once either: signing back in through that sign-in page triggers `onAppReady` a second time. Don't assume either event only fires once at startup.
 
-`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. The frame still initializes normally; whatever "not found" state exists is handled inside the frame's own content, not surfaced as an app error. If you need to react to a missing/inaccessible target specifically, use `onNoAccess`/`onNotFound` (available in Viewer and Uploader mode) rather than `onAppError`.
+`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. The frame still initializes normally; whatever "not found" state exists is handled inside the frame's own content, not surfaced as an app error. If you need to react to a missing/inaccessible target specifically, use `onNoAccess`/`onNotFound` (available in [Manager mode](../embedding-modes/manager-mode.md)) rather than `onAppError`.
 
 ## Subscribing and updating handlers
 
@@ -106,6 +109,7 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onEditorOpen` | The file that was opened — the full file object (see below). |
 | `onFileManagerClick` | The file that was clicked — the full file object (see below). |
 | `onAppError` | An error value — treat it as opaque and log it; no specific shape is documented. |
+| `onAuthError` | `{ code?, message }` — details about why the access token couldn't be resolved. Only fires with OAuth-based authentication. |
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCloseCallback` | An empty object (`{}`) — treat it as a signal only, not a data source. |
@@ -181,21 +185,21 @@ See also: [Editor mode](../embedding-modes/editor-mode.md).
 ### Handling inaccessible or missing content
 
 ```javascript
-const docSpace = DocSpace.SDK.initViewer({
+const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  id: "your-file-id",
+  id: "your-room-id",
   events: {
     onNoAccess: function () {
       document.getElementById("ds-frame").innerHTML =
-        "You do not have permission to view this document.";
+        "You do not have permission to access this room.";
     },
     onNotFound: function () {
       document.getElementById("ds-frame").innerHTML =
-        "This document no longer exists.";
+        "This room no longer exists.";
     },
   },
 });
 ```
 
-See also: [Viewer mode](../embedding-modes/viewer-mode.md), [Uploader mode](../embedding-modes/uploader-mode.md).
+See also: [Manager mode](../embedding-modes/manager-mode.md).

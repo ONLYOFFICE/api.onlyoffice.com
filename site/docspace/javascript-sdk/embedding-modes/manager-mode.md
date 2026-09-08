@@ -105,6 +105,28 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
+### Handling an inaccessible or missing room
+
+Display a fallback UI when the target room or folder can't be accessed or no longer exists:
+
+```javascript
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-room-id",
+  events: {
+    onNoAccess: function () {
+      document.getElementById("ds-frame").innerHTML =
+        "You do not have permission to access this room.";
+    },
+    onNotFound: function () {
+      document.getElementById("ds-frame").innerHTML =
+        "This room no longer exists.";
+    },
+  },
+});
+```
+
 ### Intercepting file downloads
 
 Set `downloadToEvent: true` to suppress the browser's default download behavior and handle it yourself via `onDownload`:

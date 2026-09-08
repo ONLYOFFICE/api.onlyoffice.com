@@ -13,7 +13,6 @@ Most embedding modes expose parameters to hide chrome you don't need — menus, 
 | `showMenu` | boolean | Show or hide the left navigation menu. |
 | `showHeader` | boolean | Show or hide the interface header in the mobile view. |
 | `showTitle` | boolean | Show or hide the title of the current section/room/folder. |
-| `withSubtitle` | boolean | Show or hide a subtitle with additional comments for the current directory. |
 | `showFilter` | boolean | Show or hide the filter controls. |
 | `showSettings` | boolean | Show or hide the "Manage displayed columns" button in the table view. |
 | `showSignOut` | boolean | Show or hide the "Sign out" button. |
@@ -49,6 +48,7 @@ Full parameter list: [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md).
 | `showSelectorCancel` | boolean | Show or hide the "Cancel" button. |
 | `withBreadCrumbs` | boolean | Show or hide breadcrumb navigation. |
 | `withSearch` | boolean | Show or hide the search field. |
+| `withSubtitle` | boolean | Show or hide a subtitle with the folder description. |
 | `acceptButtonLabel` | string | Custom label for the accept button. |
 | `cancelButtonLabel` | string | Custom label for the cancel button. |
 | `buttonColor` | string | HEX color for the accept button. |
@@ -96,7 +96,7 @@ const docSpace = DocSpace.SDK.initEditor({
 });
 ```
 
-Also relevant to editor chrome: `editorGoBack` (boolean or a URL string) controls the "Open file location" button shown in the editor and viewer. See [Viewer mode](../embedding-modes/viewer-mode.md#embedding-a-document-preview-in-mobile-layout) for an example.
+Also relevant to editor chrome: `editorGoBack` (`boolean` or the literal `"event"`) controls the "Open file location" button shown in the editor and viewer. `true` (default) shows the button and clicking it opens the file's portal folder; `"event"` hides the button entirely. See [Viewer mode](../embedding-modes/viewer-mode.md#embedding-a-document-preview-in-mobile-layout) for an example.
 
 See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
@@ -109,7 +109,7 @@ A few parameters control the frame's own footprint rather than DocSpace's intern
 | Parameter | Type | Description |
 | ----------- | ------ | ------------- |
 | `width` / `height` | string | Frame dimensions, in pixels or percentages. |
-| `noLoader` | boolean | Skip the loading spinner while the frame initializes. |
+| `noLoader` | boolean | Skip the loading spinner while the frame initializes. Manager and System modes always show the spinner regardless of this setting. |
 | `destroyText` | string | Text inserted into the frame's container when `destroyFrame()` is called. |
 
 See also: [Destroy frame](../samples/basic-samples/destroy-frame.md).
