@@ -171,7 +171,7 @@ export default function DraggableModal({
       style={{ position: "fixed", top: pos.y, left: pos.x, width: size.width, height: size.height, zIndex }}
       className="bg-white border rounded-2xl shadow-lg overflow-hidden"
       onMouseDown={() => onFocus(id)}
-    />
+    >
       <div
         className="flex items-center justify-between bg-[#2e66f5] text-white px-3 py-2 cursor-move"
         onMouseDown= {(e) => setDrag({ x: e.clientX, y: e.clientY })}
