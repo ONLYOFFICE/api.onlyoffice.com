@@ -103,7 +103,7 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
   
    ```
 
-2. 更改以下默认设置。输入您的 *"ip_address"*（或 WOPI 主机），其中可以包含：
+2. 更改以下默认设置。输入您的 IP 地址（或 WOPI 主机），其中可以包含：
 
    - ipv4 的 XXXX 格式的 IP，
    - ipv6 的 xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx 格式的 IP，
@@ -129,15 +129,15 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
 ### 为 WOPI 主机要求显式规则 {#requiring-an-explicit-rule-for-the-wopi-host}
 
-是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信，由以下参数控制：
+是否要求为 WOPI 主机设置显式规则，由以下参数控制：
 
 | 名称                      | 类型    | 示例 | 描述                                                                                                                     |
 | ------------------------- | ------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
 | wopi.requireIpFilterRule  | boolean | true | 是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信。默认值为 **true**。 |
 
-通配符规则 `*` 不算数，因为它并未指定具体的主机。这正是默认规则集（`{"address": "*", "allowed": true}`）不满足该要求的原因：即使 IP filter 本身完全放开，没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。
+无论该参数如何设置，*services.CoAuthoring.ipfilter.rules* 都会对每一个 WOPI 请求进行检查 —— 如果没有任何 *allowed* 规则与目标主机匹配，请求都会被拒绝。*wopi.requireIpFilterRule* 实际控制的范围更窄：它决定的是，命中通配符规则 `*` 是否足以信任该主机，还是必须命中一条明确指定该主机的规则。通配符规则 `*` 不算作明确匹配 —— 这正是默认规则集（`{"address": "*", "allowed": true}`）不满足该要求的原因：即使 IP filter 本身完全放开，没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。
 
-将 *wopi.requireIpFilterRule* 设置为 **false**，可以在您仍在编写规则期间，作为临时的迁移回退方案允许未列出的 WOPI 目标地址 —— 但这会重新引入服务器端请求伪造（SSRF）风险。无论如何，WOPI 出站请求的其他所有防护仍然生效：请求永远不会被视为可信；云元数据地址、链路本地地址、组播地址以及 *denyIPAddressList* 中的地址仍会被强制拒绝；每一跳重定向都会被校验；*externalRequest* 的路由规则依然适用。
+将 *wopi.requireIpFilterRule* 设置为 **false**，可以在您仍在编写规则期间，作为临时的迁移回退方案，让通配符规则也能替代明确指定的主机规则 —— 但这会重新引入服务器端请求伪造（SSRF）风险。无论如何，WOPI 出站请求的其他所有防护仍然生效：*services.CoAuthoring.ipfilter.rules* 依然会被强制检查；请求永远不会被视为可信；云元数据地址、链路本地地址、组播地址以及 *denyIPAddressList* 中的地址仍会被强制拒绝；每一跳重定向都会被校验；*externalRequest* 的路由规则依然适用。
 
 ``` json
 {

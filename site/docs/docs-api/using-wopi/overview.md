@@ -129,15 +129,15 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 
 ### Requiring an explicit rule for the WOPI host
 
-Whether every WOPI host must be named by a *services.CoAuthoring.ipfilter.rules* entry before the server will contact it is controlled by the following parameter:
+Whether WOPI requires an explicit rule for its host is controlled by the following parameter:
 
 | Name                     | Type    | Example | Description                                                                                                                           |
 | ------------------------ | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | wopi.requireIpFilterRule | boolean | true    | Whether every WOPI host must be named by a *services.CoAuthoring.ipfilter.rules* entry before the server will contact it. The default value is **true**. |
 
-The catch-all `*` rule does not count, because it does not name a specific host. This is why the default rule set (`{"address": "*", "allowed": true}`) does not satisfy this requirement: without a rule that explicitly names your WOPI host, WOPI will not work, even though the IP filter itself remains wide open.
+*services.CoAuthoring.ipfilter.rules* is consulted for every WOPI request regardless of this setting — a host with no matching *allowed* rule at all is refused either way. What *wopi.requireIpFilterRule* controls is narrower: whether a match against the catch-all `*` rule is enough to trust the host, or whether the matched rule must explicitly name it. The catch-all `*` rule does not count as an explicit match — this is why the default rule set (`{"address": "*", "allowed": true}`) does not satisfy this requirement: without a rule that explicitly names your WOPI host, WOPI will not work, even though the IP filter itself remains wide open.
 
-Set *wopi.requireIpFilterRule* to **false** to allow unlisted WOPI destinations as a temporary migration fallback while you are still writing the rules — this re-opens server-side request forgery. Every other WOPI egress protection stays active either way: the request is never treated as trusted, cloud metadata, link-local, multicast and *denyIPAddressList* addresses stay hard denied, each redirect hop is validated, and *externalRequest* routing still applies.
+Set *wopi.requireIpFilterRule* to **false** to let a catch-all rule stand in for a named host as a temporary migration fallback while you are still writing the rules — this re-opens server-side request forgery. Every other WOPI egress protection stays active either way: *services.CoAuthoring.ipfilter.rules* is still enforced, the request is never treated as trusted, cloud metadata, link-local, multicast and *denyIPAddressList* addresses stay hard denied, each redirect hop is validated, and *externalRequest* routing still applies.
 
 ``` json
 {
