@@ -40,6 +40,8 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onNoAccess` | Manager | The target file/folder exists but isn't accessible to the current user. |
 | `onNotFound` | Manager | The target file/folder doesn't exist. |
 | `onSignOut` | All modes | The user signed out. |
+| `onCustomAction` | Forms | A custom context menu action (registered via `setCustomActions()`) was clicked. |
+| `onNavigate` | Forms | The user navigated to a different section. |
 
 Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
@@ -52,6 +54,8 @@ Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 `onContentReady` can fire more than once per frame instance — e.g. after signing out, the frame reloads to show the sign-in page, which triggers `onContentReady` again without a second `onAppReady`. `onAppReady` itself isn't strictly limited to firing once either: signing back in through that sign-in page triggers `onAppReady` a second time. Don't assume either event only fires once at startup.
 
 `onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. The frame still initializes normally; whatever "not found" state exists is handled inside the frame's own content, not surfaced as an app error. If you need to react to a missing/inaccessible target specifically, use `onNoAccess`/`onNotFound` (available in [Manager mode](../embedding-modes/manager-mode.md)) rather than `onAppError`.
+
+`onCustomAction` and `onNavigate` are specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()`/`navigateSection()` usage examples.
 
 ## Subscribing and updating handlers
 
@@ -113,6 +117,8 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCloseCallback` | An empty object (`{}`) — treat it as a signal only, not a data source. |
+| `onCustomAction` | `{ action, type, item }` — `action` is the `key` you registered, `item` is the file/folder it was clicked on. |
+| `onNavigate` | `{ section }` — the section the user navigated to (e.g. `"completed-forms"`). |
 
 `onFileManagerClick` and `onEditorOpen` both pass a large file object — close to the shape returned by the backend API, including `id`, `title`, `fileExst`, `webUrl`, `viewUrl`, `security`, `createdBy`, and dozens more properties. See [Get file information](../../api-backend/usage-api/get-file-info.api.mdx) for the full schema rather than guessing from a partial example. The two payloads aren't identical, though: `onEditorOpen`'s also includes an `action` field (e.g. `"edit"`, describing how the editor was opened) that `onFileManagerClick`'s doesn't have, while dropping a few fields `onFileManagerClick` does have (`contextOptions`, `isFolder`, `icon`, `href`, among others).
 

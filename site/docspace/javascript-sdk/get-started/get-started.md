@@ -41,6 +41,7 @@ The SDK supports multiple initialization modes:
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
 | Uploader | File upload dialog | No | No | Yes (folder) | Yes |
+| Forms | Forms gallery | Yes | Yes | Yes (room) | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
