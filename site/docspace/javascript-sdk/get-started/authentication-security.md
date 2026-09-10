@@ -4,19 +4,52 @@ description: How authentication works in the DocSpace Embed SDK and how to confi
 tags: ["DocSpace", "Embed SDK", "Integration", "Security"]
 ---
 
-# Authentication & Security
+# Authentication and security
 
 Choosing the right authentication approach depends on who your users are and whether they have DocSpace accounts:
 
 - **Your users already have DocSpace accounts** — rely on the existing browser session. The iframe picks it up automatically. See [Session-based authentication](#session-based-authentication) below.
 - **You control the login UI** — authenticate programmatically using `getHashSettings()` → `createHash()` → `login()` before initializing any frame. See the [Authorization sample](../samples/advanced-samples/authorization.md) and [Login sample](../samples/basic-samples/login.md).
+- **Your backend already manages its own access tokens** — skip the DocSpace session and cookies entirely, and authorize API calls with a Bearer token your backend issues. See [OAuth authentication](#oauth-authentication) below.
 - **Your users have no DocSpace account** — embed a public room using `requestToken`. No login required on the viewer's side. See [Token-based auth for public rooms](#token-based-auth-for-public-rooms) below.
 
 ## Session-based authentication
 
-*api.js* uses the active DocSpace application sessions to authenticate users. If the user is logged in to the DocSpace portal that the SDK will connect to, then *api.js* recognizes and uses that active session.
+The simplest option when your users already have DocSpace accounts: *api.js* uses the active DocSpace application session to authenticate them. If the user is logged in to the DocSpace portal that the SDK will connect to, then *api.js* recognizes and uses that active session — no extra configuration needed.
 
 If the users are not authenticated, they will see a page asking them to sign in to DocSpace whenever they are not already signed in. Authentication is also possible through the SDK [login](../usage-sdk/classes/SDKInstance.md#login) method.
+
+## OAuth authentication
+
+A more advanced, cookie-free alternative to session-based authentication: instead of relying on the DocSpace session cookie, the frame authorizes every API call with a Bearer access token that your own backend provides. Reach for this when your host application already has its own OAuth infrastructure and you'd rather manage tokens directly than depend on DocSpace's session/cookie behavior.
+
+Supply a `getToken` callback in the frame config:
+
+``` ts
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.example.com",
+  getToken: async () => {
+    const response = await fetch("/api/docspace-token");
+    const { accessToken } = await response.json();
+    return accessToken;
+  },
+});
+```
+
+Your backend should perform the OAuth authorization-code / refresh-token exchange and return a fresh, minimally-scoped DocSpace access token. `getToken` is called again whenever the frame needs a new token. See [OAuth 2.0](../../api-backend/get-started/authentication/oauth2/oauth2.md) for how to register an application and obtain tokens.
+
+It's recommended to always include the **Profile** scope (`accounts.self:read`) alongside whatever resource scopes you need (`files:*`, `rooms:*`) — the frame fetches your own profile internally regardless of mode, and without this scope that request fails. Some modes tolerate the failure and keep working; Manager mode does not and may fail to render.
+
+:::warning
+Never expose `client_secret` or refresh tokens to the browser. Perform the token exchange on your backend and return only the short-lived access token to `getToken`.
+:::
+
+If you already have a valid token and don't need the SDK to refresh it, pass it directly via `accessToken` instead of a callback — optionally with `tokenExpiresAt` for proactive refresh. The SDK cannot refresh a static `accessToken` on its own, so prefer `getToken` for anything longer-lived than the token's TTL.
+
+If the SDK can't resolve a token — `getToken` throws, rejects, or returns nothing — it fires `onAuthError` instead of `onAuthSuccess`. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events) for details.
+
+Full parameter reference: [TFrameConfig#getToken](../usage-sdk/type-aliases/TFrameConfig.md#gettoken), [TFrameConfig#accessToken](../usage-sdk/type-aliases/TFrameConfig.md#accesstoken).
 
 ## Token-based auth for public rooms
 
