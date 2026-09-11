@@ -22,13 +22,15 @@ The page assumes a basic working knowledge of [Vue.js](https://vuejs.org/). The 
 
 This procedure creates a basic Vue.js application and installs an ONLYOFFICE Docs editor in it.
 
-1. Create a new Vue.js project named `onlyoffice-vue-demo` and install its dependencies. Select **TypeScript** when the tool asks which features to include, as the steps below use it:
+1. Create a new Vue.js project named `onlyoffice-vue-demo` and install its dependencies:
 
    ```sh
-   npm create vue@latest onlyoffice-vue-demo
+   npm create vue@latest onlyoffice-vue-demo -- --ts
    cd onlyoffice-vue-demo
    npm install
    ```
+
+   The `--ts` flag answers the prompts of the Create Vue Tool: the project is created with TypeScript and without the optional features. The steps below use the `vite.config.ts` file that it generates.
 
 2. Install the ONLYOFFICE Docs Vue.js component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) public registry, together with the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package that signs the editor configuration and its type declarations, and save them to the `package.json` file.
 

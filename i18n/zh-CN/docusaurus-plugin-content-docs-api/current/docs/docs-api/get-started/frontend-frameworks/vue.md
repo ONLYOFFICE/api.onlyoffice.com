@@ -22,13 +22,15 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
 
 此过程创建一个基本 Vue.js 应用程序，并在其中安装 ONLYOFFICE 文档编辑器。
 
-1. 创建一个名为 `onlyoffice-vue-demo` 的新 Vue.js 项目并安装其依赖项。当工具询问要包含哪些功能时，请选择 **TypeScript**，因为以下步骤会使用它：
+1. 创建一个名为 `onlyoffice-vue-demo` 的新 Vue.js 项目并安装其依赖项：
 
    ```sh
-   npm create vue@latest onlyoffice-vue-demo
+   npm create vue@latest onlyoffice-vue-demo -- --ts
    cd onlyoffice-vue-demo
    npm install
    ```
+
+   `--ts` 标志会代您回答 Create Vue Tool 的提示：项目将使用 TypeScript 创建，且不包含可选功能。以下步骤将使用它生成的 `vite.config.ts` 文件。
 
 2. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) 公共注册表安装 ONLYOFFICE 文档 Vue.js 组件，以及用于对编辑器配置进行签名的 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) 包及其类型声明，并将它们保存到 `package.json` 文件中。
 
