@@ -138,11 +138,15 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
       签名服务器，它代替您的后端：配置在 Node.js 中构建并签名，只有已签名的配置才会发送到浏览器。
 
+      :::warning
       `callbackUrl` 指向 ONLYOFFICE 文档的 `dummyCallback` 接口，该接口会接收保存请求并将其丢弃，因此该演示应用程序无需自己的回调处理程序。要[保存](../how-it-works/saving-file.md)文档，请将其替换为您的[回调处理程序](../../usage-api/callback-handler.md)的 URL。
+      :::
 
       请将 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 替换为您的文件的 URL，或保留我们示例文档的 URL 以进行测试。
 
+      :::warning
       `key` 标识文档的版本，而不是编辑会话：打开相同 `key` 的所有用户共享同一个会话，并且具有已知 `key` 的文档会直接从缓存中提供。该演示应用程序始终使用同一个 `key`，因为示例文档不会发生变化。每当文档被编辑并保存后，请生成新的 [key](../../usage-api/config/document/document.md#key)，否则编辑器将继续提供缓存中的版本。
+      :::
 
       ```js
       import {createServer} from "node:http";

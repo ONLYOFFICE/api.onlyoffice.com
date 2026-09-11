@@ -138,11 +138,15 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 
       The signing server, which stands in for your backend: the configuration is built and signed in Node.js, and only the signed configuration reaches the browser.
 
+      :::warning
       The `callbackUrl` points to the `dummyCallback` endpoint of ONLYOFFICE Docs, which accepts the save request and discards it, so the demo application needs no callback handler of its own. To [save](../how-it-works/saving-file.md) the document, replace it with the URL of your [callback handler](../../usage-api/callback-handler.md).
+      :::
 
       Replace `https://static.onlyoffice.com/assets/docs/samples/demo.docx` with the URL to your file, or keep the URL of our sample document for testing.
 
+      :::warning
       The `key` identifies the version of the document, not the editing session: everyone who opens the same key shares one session, and a document with a known key is served from the cache. The demo application keeps one key, as the sample document never changes. Generate a new [key](../../usage-api/config/document/document.md#key) whenever the document is edited and saved, or the editor keeps serving the cached version.
+      :::
 
       ```js
       import {createServer} from "node:http";
