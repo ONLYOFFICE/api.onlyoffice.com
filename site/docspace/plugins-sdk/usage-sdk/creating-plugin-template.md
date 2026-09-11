@@ -48,6 +48,7 @@ Before starting plugin development, create a plugin template and configure its s
    - **File action** - the plugin will be able to interact with the file list, change the file type and image.
    - **Post message** - the plugin will be given access to handle *postMessage* events from embedded iframes.
    - **Article button** - the plugin can be embedded as a button in the article sidebar.
+   - **Article navigation** - the plugin can be embedded as a navigation item in the article sidebar.
 
 ![Creating template](/assets/images/docspace/creating-template.png)
 
@@ -59,19 +60,93 @@ You can create a plugin in any project by adding the *@onlyoffice/docspace-plugi
 
 ## Migration
 
-For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
+:::note
+SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. On older versions, plugins install but do not function.
+:::
+
+### Updating a plugin to SDK 3.0.0
+
+For plugins created with an SDK 2.x template:
+
+1. Replace Webpack with Vite. Create a *vite.config.ts* file in the plugin root folder:
+
+   ```ts
+   import { defineConfig } from "vite";
+   import react from "@vitejs/plugin-react";
+   import { fileURLToPath } from "url";
+
+   const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+   export default defineConfig({
+     plugins: [react()],
+     build: {
+       lib: {
+         entry: `${__dirname}src/index.ts`,
+         formats: ["es"],
+         fileName: () => "plugin.js",
+       },
+       rollupOptions: {
+         // Kept out of the bundle: DocSpace supplies its own copies at load
+         // time and rewrites these specifiers to them. A second React or a
+         // second react-dom arrives with its own contexts and its own event
+         // system, and every hook breaks.
+         //
+         // The SDK root is deliberately absent: it holds string enums and types
+         // and no module state, so a bundled copy behaves exactly like the
+         // host's. Only the React entry, which owns the runtime context, has to
+         // be shared.
+         external: [
+           "react",
+           "react-dom",
+           "react/jsx-runtime",
+           "@onlyoffice/docspace-plugin-sdk/react",
+           /^@docspace\/ui-kit(\/.*)?$/,
+         ],
+         output: {
+           assetFileNames: (assetInfo: { name?: string }) =>
+             assetInfo.name?.endsWith(".css") ? "plugin.css" : (assetInfo.name ?? "asset"),
+         },
+       },
+     },
+   });
+   ```
+
+2. Change the build script in *package.json*:
 
    ```json
-   "build": "webpack && npx build-docspace-plugin"
+   "build": "vite build && npx build-docspace-plugin"
+   ```
+
+3. Add `"runtime": "module"` to *package.json*, export the plugin instance as the default export and remove the *window.Plugins* registration from *src/index.ts*.
+
+4. Replace the deprecated `body`, `content`, `settings`, `dialogBody` and `dialogFooter` properties with `component` (`dialogBodyComponent` in *IModalDialog*), and move the work done in `onLoad` into a `useEffect` inside the component.
+
+### Updating from SDK 1.1.1
+
+For plugins created with the old template (SDK 1.1.1):
+
+1. The *createZip* script is no longer required and can be safely removed.
+
+2. Replace the build script in *package.json* with the following:
+
+   ```json
+   "build": "vite build && npx build-docspace-plugin"
    ```
 
 ## Example
+
+
+:::note
+The `react` and `react-dom` dependencies are optional and only needed if your plugin uses React components.
+:::
 
 ``` json
 {
   "name": "pdf-converter",
   "version": "1.0.0",
   "author": "ONLYOFFICE",
+  "private": true,
+  "runtime": "module",
   "scopes": [
     "API",
     "Settings",
@@ -85,6 +160,23 @@ For plugins created with the old template (SDK 1.1.1), replace the build script 
   "cspDomains": [
     "https://embed.diagrams.net/",
     "https://*.diagrams.net/"
-  ]
+  ],
+  "scripts": {
+    "build": "vite build && npx build-docspace-plugin",
+    "format": "npx prettier --write ."
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "@onlyoffice/docspace-plugin-sdk": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }
 ```

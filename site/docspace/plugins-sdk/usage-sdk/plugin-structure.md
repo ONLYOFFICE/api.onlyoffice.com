@@ -14,21 +14,21 @@ Running the **npx create-docspace-plugin** command (see [creating a plugin templ
 
 The configuration file for the *prettier* npm package. This file can be edited.
 
-### custom.d.ts
-
-The *TypeScript* declaration file that allows importing *.css* files in the plugin source files. This file can be edited. For more information, see [Styling plugin](styling-plugin.md).
-
 ### src
 
 A folder for the plugin source files.
 
 #### src/index.ts
 
-The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the corresponding parameter from the *package.json* file:
+The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. The plugin instance is exported as the default ES module export:
 
 ``` ts
-window.Plugins.PDFConverter = plugin || {}
+export default plugin
 ```
+
+:::note
+In SDK versions prior to 3.0.0, plugins were registered in the *window.Plugins.[pluginName]* scope. This is no longer required — the portal imports the plugin as an ES module and uses the default export.
+:::
 
 ### package.json
 
@@ -38,18 +38,15 @@ A file with the information about the plugin and dependencies. This file can be 
 
 The *TypeScript* configuration file. This file can be edited.
 
-### webpack.config.js
+### vite.config.ts
 
-The webpack configuration file. This file can be edited, but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
+The Vite configuration file generated automatically when creating the plugin template. This file configures the build output requirements:
+- The plugin code is bundled into *plugin.js* as an ES module via `build.lib`
+- CSS styles are output to *plugin.css*
+- External dependencies (React, react-dom, SDK React entry) are kept out of the bundle — DocSpace supplies them at load time
 
-``` ts
-const config = {
-  output: {
-    filename: "plugin.js",
-    path: path.resolve(dirname, "dist"),
-  },
-}
-```
+This file can be edited if needed. For more information, see [Updating a plugin to SDK 3.0.0](building-plugin.md#updating-a-plugin-to-sdk-300).
+
 
 ## Files added separately
 
