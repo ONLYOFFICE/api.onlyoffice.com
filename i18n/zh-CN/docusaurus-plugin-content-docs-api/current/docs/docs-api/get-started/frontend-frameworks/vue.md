@@ -116,6 +116,8 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
 
       请将 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 替换为您的文件的 URL，或保留我们示例文档的 URL 以进行测试。
 
+      `key` 标识文档的版本，而不是编辑会话：打开相同 `key` 的所有用户共享同一个会话，并且具有已知 `key` 的文档会直接从缓存中提供。该演示应用程序始终使用同一个 `key`，因为示例文档不会发生变化。每当文档被编辑并保存后，请生成新的 [key](../../usage-api/config/document/document.md#key)，否则编辑器将继续提供缓存中的版本。
+
       读取环境变量需要使用 `defineConfig` 的函数形式。请在返回的对象中保留 Create Vue Tool 生成的其他插件和选项。
 
       ```ts
@@ -223,12 +225,14 @@ function onDocumentReady() {
 
 ```html
 <template>
-  <DocumentEditor
-    id="docxEditor"
-    documentServerUrl="http://documentserver/"
-    :config="config"
-    :events_onDocumentReady="onDocumentReady"
-  />
+  <div style="display: flex; height: 100svh">
+    <DocumentEditor
+      id="docxEditor"
+      documentServerUrl="http://documentserver/"
+      :config="config"
+      :events_onDocumentReady="onDocumentReady"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -264,6 +268,33 @@ watch(connector, (value) => {
     console.log("Comments:", comments);
   });
 });
+```
+
+[executeMethod](../../usage-api/automation-api/connector-class.md#executemethod) 按名称运行单个编辑器方法，如上所示。[callCommand](../../usage-api/automation-api/connector-class.md#callcommand) 在编辑器内部运行一个包含 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令的函数，文档内容正是通过这种方式进行修改的。该函数拥有自身的上下文，无法读取组件状态，因此请通过 `Asc.scope` 对象传递它所需的数据：
+
+```ts
+function insertText(text: string) {
+  if (!connector.value) return;
+
+  Asc.scope.text = text;   // 下面的命令拥有自身的上下文
+
+  connector.value.callCommand(() => {
+    const document = Api.GetDocument();
+    const paragraph = Api.CreateParagraph();
+
+    paragraph.AddText(Asc.scope.text);
+    document.InsertContent([paragraph]);
+  }, () => {
+    console.log("Text is inserted");
+  });
+}
+```
+
+`Asc` 来自 ONLYOFFICE 文档 API 脚本，而 `Api` 仅存在于运行该命令的编辑器内部。请在项目的 `env.d.ts` 文件中声明这两者：
+
+```ts
+declare const Asc: {scope: Record<string, unknown>};
+declare const Api: any;
 ```
 
 :::note

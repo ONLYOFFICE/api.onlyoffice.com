@@ -116,6 +116,8 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
 
       Replace `https://static.onlyoffice.com/assets/docs/samples/demo.docx` with the URL to your file, or keep the URL of our sample document for testing.
 
+      The `key` identifies the version of the document, not the editing session: everyone who opens the same key shares one session, and a document with a known key is served from the cache. The demo application keeps one key, as the sample document never changes. Generate a new [key](../../usage-api/config/document/document.md#key) whenever the document is edited and saved, or the editor keeps serving the cached version.
+
       ```js
       import react from "@vitejs/plugin-react";
       import jwt from "jsonwebtoken";
@@ -238,12 +240,14 @@ export default function Editor({config}) {
   }, []);
 
   return (
-    <DocumentEditor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      config={config}
-      events_onDocumentReady={onDocumentReady}
-    />
+    <div style={{display: "flex", height: "100svh"}}>
+      <DocumentEditor
+        id="docxEditor"
+        documentServerUrl="http://documentserver/"
+        config={config}
+        events_onDocumentReady={onDocumentReady}
+      />
+    </div>
   )
 }
 ```
@@ -260,6 +264,26 @@ useEffect(() => {
     console.log("Comments:", comments);
   });
 }, [connector]);
+```
+
+[executeMethod](../../usage-api/automation-api/connector-class.md#executemethod) runs one editor method by name, as above. [callCommand](../../usage-api/automation-api/connector-class.md#callcommand) runs a function of [Office JavaScript API](../../../office-api/get-started/overview.md) commands inside the editor, which is how the content of the document is changed. That function has a context of its own and cannot read the component state, so pass the data it needs through the `Asc.scope` object:
+
+```jsx
+function insertText(text) {
+  if (!connector) return;
+
+  Asc.scope.text = text;   // the command below has a context of its own
+
+  connector.callCommand(() => {
+    const document = Api.GetDocument();
+    const paragraph = Api.CreateParagraph();
+
+    paragraph.AddText(Asc.scope.text);
+    document.InsertContent([paragraph]);
+  }, () => {
+    console.log("Text is inserted");
+  });
+}
 ```
 
 :::note
@@ -310,12 +334,14 @@ export default function Editor() {
   if (!config) return null;
 
   return (
-    <DocumentEditor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      config={config}
-      events_onDocumentReady={() => console.log("Document is loaded")}
-    />
+    <div style={{display: "flex", height: "100svh"}}>
+      <DocumentEditor
+        id="docxEditor"
+        documentServerUrl="http://documentserver/"
+        config={config}
+        events_onDocumentReady={() => console.log("Document is loaded")}
+      />
+    </div>
   )
 }
 ```
