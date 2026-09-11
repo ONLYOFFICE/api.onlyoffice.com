@@ -14,13 +14,15 @@ The ONLYOFFICE Docs Vue.js [component](https://github.com/ONLYOFFICE/document-ed
 
 This procedure requires [Node.js (and npm)](https://nodejs.org/en) and a running ONLYOFFICE Docs instance. If you do not have one, install it on your own server as described in the [self-hosted](../installation/self-hosted.md) section, or deploy it in the [cloud](../installation/cloud.md).
 
+It also requires the secret key of your ONLYOFFICE Docs. The editor configuration is validated with a JSON Web Token signed with this key, and the validation is enabled by default. See [Signing the configuration](#signing-the-configuration).
+
 The page assumes a basic working knowledge of [Vue.js](https://vuejs.org/). The steps below use the [Create Vue Tool](https://github.com/vuejs/create-vue) to create a project from scratch.
 
 ## Creating the demo Vue.js application with ONLYOFFICE Docs editor
 
 This procedure creates a basic Vue.js application and installs an ONLYOFFICE Docs editor in it.
 
-1. Create a new Vue.js project named `onlyoffice-vue-demo` and install its dependencies:
+1. Create a new Vue.js project named `onlyoffice-vue-demo` and install its dependencies. Select **TypeScript** when the tool asks which features to include, as the steps below use it:
 
    ```sh
    npm create vue@latest onlyoffice-vue-demo
@@ -28,97 +30,162 @@ This procedure creates a basic Vue.js application and installs an ONLYOFFICE Doc
    npm install
    ```
 
-2. Install the ONLYOFFICE Docs Vue.js component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) public registry and save it to the `package.json` file:
+2. Install the ONLYOFFICE Docs Vue.js component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) public registry, together with the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package that signs the editor configuration and its type declarations, and save them to the `package.json` file.
+
+   The `jsonwebtoken` package runs in the development server only, so it is a development dependency of the demo application. In a production application, it belongs to the backend that signs the configuration.
 
    <Tabs>
       <TabItem value="npm" label="npm">
             ```sh
             npm install --save @onlyoffice/document-editor-vue
+            npm install --save-dev jsonwebtoken @types/jsonwebtoken
             ```
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
             yarn add @onlyoffice/document-editor-vue
+            yarn add -D jsonwebtoken @types/jsonwebtoken
             ```
       </TabItem>
    </Tabs>
 
-3. Open the `./src/App.vue` file in the `onlyoffice-vue-demo` project and replace its contents with the following code:
+3. Replace the contents of the `./src/App.vue` file in the `onlyoffice-vue-demo` project, add the `/api/editor-config` endpoint to the `./vite.config.ts` file, and create the `./.env.local` file:
 
-   ```vue
-   <template>
-     <DocumentEditor
-       id="docxEditor"
-       documentServerUrl="http://documentserver/"
-       :config="config"
-       :events_onDocumentReady="onDocumentReady"
-       :onLoadComponentError="onLoadComponentError"
-     />
-   </template>
+   <Tabs>
+      <TabItem value="app" label="src/App.vue">
 
-   <script setup lang="ts">
-   import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
+      The `App` component, which requests the signed configuration when it is mounted and renders the ONLYOFFICE Docs editor once the configuration arrives. The `config` property is required, so `v-if` keeps the editor out of the template until then.
 
-   const config: IConfig = {
-     document: {
-       fileType: "docx",
-       key: "Khirz6zTPdfd7",
-       title: "Example Document Title.docx",
-       url: "https://example.com/url-to-example-document.docx",
-     },
-     documentType: "word",
-     editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback",
-     },
-     token: "TOKEN_HERE",
-   };
+      The editor fills the element it is rendered into, so the wrapper gives it an explicit height.
 
-   function onDocumentReady() {
-     console.log("Document is loaded");
-   }
+      ```html
+      <template>
+        <div style="display: flex; height: 100svh">
+          <DocumentEditor
+            v-if="config"
+            id="docxEditor"
+            :documentServerUrl="documentServerUrl"
+            :config="config"
+            :events_onDocumentReady="onDocumentReady"
+            :onLoadComponentError="onLoadComponentError"
+          />
+        </div>
+      </template>
 
-   function onLoadComponentError(errorCode: number, errorDescription: string) {
-     switch (errorCode) {
-       case -1: // Unknown error loading component
-         console.log(errorDescription);
-         break;
+      <script setup lang="ts">
+      import {onMounted, ref} from "vue";
+      import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
 
-       case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription);
-         break;
+      const documentServerUrl = import.meta.env.VITE_DOCUMENT_SERVER_URL;
+      const config = ref<IConfig | null>(null);
 
-       case -3: // DocsAPI is not defined
-         console.log(errorDescription);
-         break;
-     }
-   }
-   </script>
-   ```
+      onMounted(async () => {
+        const response = await fetch("/api/editor-config");
 
-   Replace the following lines with your own data:
+        config.value = await response.json();
+      });
 
-   - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
-   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
-   - `TOKEN_HERE` - replace with the signature of the configuration. It is required when JWT validation is enabled on your document server, which is the default configuration. See [Signing the configuration](#signing-the-configuration).
+      function onDocumentReady() {
+        console.log("Document is loaded");
+      }
 
-   This file creates the `App` component containing the ONLYOFFICE Docs editor configured with basic features.
+      function onLoadComponentError(errorCode: number, errorDescription: string) {
+        switch (errorCode) {
+          case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+          case -2: // Error load DocsAPI from documentServerUrl
+            console.log(errorDescription);
+            break;
+
+          case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+        }
+      }
+      </script>
+      ```
+
+      </TabItem>
+      <TabItem value="vite" label="vite.config.ts">
+
+      The `/api/editor-config` endpoint of the development server, which stands in for your backend: the configuration is built and signed in Node.js, and only the signed configuration reaches the browser.
+
+      The `callbackUrl` points to the `dummyCallback` endpoint of ONLYOFFICE Docs, which accepts the save request and discards it, so the demo application needs no callback handler of its own. To [save](../how-it-works/saving-file.md) the document, replace it with the URL of your [callback handler](../../usage-api/callback-handler.md).
+
+      Replace `https://static.onlyoffice.com/assets/docs/samples/demo.docx` with the URL to your file, or keep the URL of our sample document for testing.
+
+      Reading the environment variables requires the function form of `defineConfig`. Keep the other plugins and options that the Create Vue Tool generated in the returned object.
+
+      ```ts
+      import vue from "@vitejs/plugin-vue";
+      import jwt from "jsonwebtoken";
+      import {defineConfig, loadEnv, type Plugin} from "vite";
+      import {type IConfig} from "@onlyoffice/document-editor-vue";
+
+      function editorConfigApi(secret: string, documentServerUrl: string): Plugin {
+        return {
+          name: "onlyoffice-editor-config",
+          configureServer(server) {
+            server.middlewares.use("/api/editor-config", (request, response) => {
+              const config: IConfig = {
+                document: {
+                  fileType: "docx",
+                  key: "Khirz6zTPdfd7",
+                  title: "Example Document Title.docx",
+                  url: "https://static.onlyoffice.com/assets/docs/samples/demo.docx",
+                },
+                documentType: "word",
+                editorConfig: {
+                  callbackUrl: documentServerUrl + "dummyCallback",
+                },
+              };
+
+              config.token = jwt.sign(config, secret, {algorithm: "HS256"});
+
+              response.setHeader("Content-Type", "application/json");
+              response.end(JSON.stringify(config));
+            });
+          },
+        };
+      }
+
+      export default defineConfig(({mode}) => {
+        const env = loadEnv(mode, process.cwd(), "");
+
+        return {
+          plugins: [vue(), editorConfigApi(env.DOCUMENT_SERVER_SECRET, env.VITE_DOCUMENT_SERVER_URL)],
+        };
+      });
+      ```
+
+      </TabItem>
+      <TabItem value="env" label=".env.local">
+
+      The address of your ONLYOFFICE Docs and its secret key. `VITE_DOCUMENT_SERVER_URL` carries the `VITE_` prefix, so Vite inlines it into the client bundle, where the component needs it. `DOCUMENT_SERVER_SECRET` has no prefix, so the key stays in Node.js and out of the bundle. The address ends with a slash, as the endpoint appends `dummyCallback` to it.
+
+      Replace `http://documentserver/` with the address of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console. The Create Vue Tool ignores `*.local` files, so the secret key stays out of the repository.
+
+      ```ini
+      VITE_DOCUMENT_SERVER_URL=http://documentserver/
+      DOCUMENT_SERVER_SECRET=your-secret-key
+      ```
+
+      </TabItem>
+   </Tabs>
 
    :::note
-   The steps above use the `<script setup>` syntax, which the Create Vue Tool generates by default. In a component written with the Options API, return the configuration from the `data` option and declare the handlers in the `methods` option.
+   The steps above use the `<script setup>` syntax, which the Create Vue Tool generates by default. In a component written with the Options API, store the configuration in the `data` option, request it in the `mounted` hook, and declare the handlers in the `methods` option.
    :::
 
-4. Test the application using the Vite development server:
+4. Start the Vite development server in the `onlyoffice-vue-demo` directory:
 
-   - To start the development server, navigate to the `onlyoffice-vue-demo` directory and run:
+   ```sh
+   npm run dev
+   ```
 
-     ```sh
-     npm run dev
-     ```
-
-     The application becomes available at `http://localhost:5173`.
-
-   - To stop the development server, switch to the command line or command prompt and press `Ctrl+C`.
+   Open `http://localhost:5173` in the browser. The editor opens the document from the signed configuration, and the `events_onDocumentReady` handler prints `Document is loaded` to the browser console.
 
 ## Signing the configuration
 
@@ -126,81 +193,15 @@ ONLYOFFICE Docs validates the editor configuration with a JSON Web Token. JWT va
 
 Signing requires the secret key of your ONLYOFFICE Docs, so generate the token on your server and send the ready configuration to the browser. A Vue.js application cannot keep the secret key private.
 
-### Signing the configuration on the server
+The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
 
-Build the configuration on your backend, sign it, and return it from an endpoint:
-
-```js
-// npm install jsonwebtoken
-import jwt from "jsonwebtoken";
-
-app.get("/api/editor-config", (request, response) => {
-  const config = {
-    document: {
-      fileType: "docx",
-      key: "Khirz6zTPdfd7",
-      title: "Example Document Title.docx",
-      url: "https://example.com/url-to-example-document.docx",
-    },
-    documentType: "word",
-    editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback",
-    },
-  };
-
-  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
-
-  response.json(config);
-});
-```
+The demo application above signs the configuration in the Vite development server, which exists in development only. In a production application, move the same code to your backend and keep the endpoint path, as the component requests the configuration in the same way.
 
 See the [Signature](../../additional-api/signature/signature.md) section for the signing code in other languages.
 
-### Passing the signed configuration to the component
-
-Request the configuration when the component is mounted and render the editor once it arrives, as the `config` property is required:
-
-```vue
-<template>
-  <DocumentEditor
-    v-if="config"
-    id="docxEditor"
-    documentServerUrl="http://documentserver/"
-    :config="config"
-  />
-</template>
-
-<script setup lang="ts">
-import {onMounted, ref} from "vue";
-import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
-
-const config = ref<IConfig | null>(null);
-
-onMounted(async () => {
-  const response = await fetch("/api/editor-config");
-
-  config.value = await response.json();
-});
-</script>
-```
-
-The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
-
 ## Calling editor methods in the Vue.js component
 
-1. The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`:
-
-   ```js
-   const documentEditor = window.DocEditor.instances["docxEditor"];
-   ```
-
-2. Call any editor [method](../../usage-api/methods.md) from this object:
-
-   ```js
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-   ```
-
-Example:
+The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`, then call any editor [method](../../usage-api/methods.md) from it:
 
 ```js
 function onDocumentReady() {
@@ -220,7 +221,7 @@ Automation API is available only for **ONLYOFFICE Docs Developer**.
 
 Create the connector with the [createConnector](../../usage-api/methods.md#createconnector) method in the `events_onDocumentReady` handler, and reuse it instead of creating a new one for each operation. Store it in a `shallowRef` so that Vue.js does not make the connector reactive:
 
-```vue
+```html
 <template>
   <DocumentEditor
     id="docxEditor"
@@ -271,43 +272,20 @@ When a property change destroys the editor and loads a new one, as described in 
 
 ## Deploying the demo Vue.js application
 
-1. Navigate to the `onlyoffice-vue-demo` directory and create a production build:
+:::note
+The `/api/editor-config` endpoint is a part of the Vite development server, so it does not exist in the production build. Serve the endpoint from your own backend, as described in [Signing the configuration](#signing-the-configuration), and keep the path that `App.vue` requests.
+:::
 
-   ```sh
-   npm run build
-   ```
+Create a production build in the `onlyoffice-vue-demo` directory and check it locally with the Vite preview server:
 
-   The `dist` directory will be created with a production build of your app.
+```sh
+npm run build
+npm run preview
+```
 
-2. Check the build locally using the Vite preview server:
+The build goes to the `dist` directory. To deploy the application to your own web server, copy the contents of this directory to the root directory of the web server.
 
-   ```sh
-   npm run preview
-   ```
-
-3. To serve the build with a standalone static server, install the [serve](https://github.com/vercel/serve) package globally:
-
-   ```sh
-   npm install -g serve
-   ```
-
-4. Serve the `dist` directory on the 3000 port:
-
-   ```sh
-   serve -s dist
-   ```
-
-   Another port can be adjusted using the `-l` or `--listen` flags:
-
-   ```sh
-   serve -s dist -l 4000
-   ```
-
-To deploy the application to your own web server, copy the contents of the `onlyoffice-vue-demo/dist` directory to the root directory of the web server.
-
-## ONLYOFFICE Docs Vue.js component API
-
-### Properties
+## Properties
 
 The `config` property is merged over the separate properties of the component. The merge is shallow: a top-level key of `config` replaces the corresponding component properties entirely instead of merging with them.
 

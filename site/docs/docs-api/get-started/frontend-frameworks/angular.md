@@ -12,7 +12,9 @@ The ONLYOFFICE Docs Angular [component](https://github.com/ONLYOFFICE/document-e
 
 ## Prerequisites
 
-This procedure requires [Node.js (and npm)](https://nodejs.org/en) and a running ONLYOFFICE Docs instance. If you do not have one, install it on your own server as described in the [self-hosted](../installation/self-hosted.md) section, or deploy it in the [cloud](../installation/cloud.md).
+This procedure requires [Node.js (and npm)](https://nodejs.org/en) version 20.6 or later and a running ONLYOFFICE Docs instance. If you do not have one, install it on your own server as described in the [self-hosted](../installation/self-hosted.md) section, or deploy it in the [cloud](../installation/cloud.md).
+
+It also requires the secret key of your ONLYOFFICE Docs. The editor configuration is validated with a JSON Web Token signed with this key, and the validation is enabled by default. See [Signing the configuration](#signing-the-configuration).
 
 The page assumes a basic working knowledge of [Angular](https://angular.dev/).
 
@@ -33,120 +35,199 @@ Install the component version that matches the Angular version of your project.
 
 This procedure creates a basic Angular application and installs an ONLYOFFICE Docs editor in it.
 
-1. Open a command line or command prompt and install the [Angular CLI](https://angular.dev/tools/cli) package:
+1. Open a command line or command prompt, install the [Angular CLI](https://angular.dev/tools/cli) package, and create a new Angular project named `onlyoffice-angular-demo`:
 
    ```sh
    npm install -g @angular/cli
-   ```
-
-2. Create a new Angular project named `onlyoffice-angular-demo` and go to the newly created directory:
-
-   ```sh
    ng new --defaults --skip-git onlyoffice-angular-demo
    cd onlyoffice-angular-demo
    ```
 
-3. Install the ONLYOFFICE Docs Angular component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-angular) public registry and save it to the `package.json` file:
+2. Install the ONLYOFFICE Docs Angular component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-angular) public registry, together with the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package that signs the editor configuration and the [concurrently](https://www.npmjs.com/package/concurrently) package that starts the signing server, and save them to the `package.json` file.
+
+   TypeScript declarations come from the [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) peer dependency, which npm 7 and later installs automatically and yarn does not. The `jsonwebtoken` and `concurrently` packages run in the demo application only, so they are development dependencies. In a production application, `jsonwebtoken` belongs to the backend that signs the configuration.
 
    <Tabs>
       <TabItem value="npm" label="npm">
             ```sh
             npm install --save @onlyoffice/document-editor-angular
+            npm install --save-dev jsonwebtoken concurrently
             ```
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
-            yarn add @onlyoffice/document-editor-angular @onlyoffice/doceditor-types
+            yarn add @onlyoffice/document-editor-angular
+            yarn add -D @onlyoffice/doceditor-types jsonwebtoken concurrently
             ```
       </TabItem>
    </Tabs>
 
-4. Open the `./src/app/app.ts` file in the `onlyoffice-angular-demo` project and replace its contents with the following code:
+3. Replace the contents of the `./src/app/app.ts` and `./src/app/app.html` files in the `onlyoffice-angular-demo` project, and create the remaining files:
 
-   ```ts
-   import {Component} from "@angular/core";
-   import {type Config} from "@onlyoffice/doceditor-types";
-   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
+   <Tabs>
+      <TabItem value="app-ts" label="src/app/app.ts">
 
-   @Component({
-     selector: "app-root",
-     imports: [DocumentEditorModule],
-     templateUrl: "./app.html",
-   })
-   export class App {
-     config: Config = {
-       document: {
-         fileType: "docx",
-         key: "Khirz6zTPdfd7",
-         title: "Example Document Title.docx",
-         url: "https://example.com/url-to-example-document.docx",
-       },
-       documentType: "word",
-       editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback",
-       },
-       token: "TOKEN_HERE",
-     };
+      The `App` component, which requests the signed configuration when it initializes and renders the ONLYOFFICE Docs editor once the configuration arrives.
 
-     onDocumentReady = () => {
-       console.log("Document is loaded");
-     };
+      ```ts
+      import {Component, OnInit} from "@angular/core";
+      import {type Config} from "@onlyoffice/doceditor-types";
+      import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
-     onLoadComponentError = (errorCode: number, errorDescription: string) => {
-       switch (errorCode) {
-         case -1: // Unknown error loading component
-           console.log(errorDescription);
-           break;
+      @Component({
+        selector: "app-root",
+        imports: [DocumentEditorModule],
+        templateUrl: "./app.html",
+      })
+      export class App implements OnInit {
+        config: Config | null = null;
 
-         case -2: // Error load DocsAPI from http://documentserver/
-           console.log(errorDescription);
-           break;
+        async ngOnInit() {
+          const response = await fetch("/api/editor-config");
 
-         case -3: // DocsAPI is not defined
-           console.log(errorDescription);
-           break;
-       }
-     };
-   }
-   ```
+          this.config = await response.json();
+        }
 
-   Replace the following lines with your own data:
+        onDocumentReady = () => {
+          console.log("Document is loaded");
+        };
 
-   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
-   - `TOKEN_HERE` - replace with the signature of the configuration. It is required when JWT validation is enabled on your document server, which is the default configuration. See [Signing the configuration](#signing-the-configuration).
+        onLoadComponentError = (errorCode: number, errorDescription: string) => {
+          switch (errorCode) {
+            case -1: // Unknown error loading component
+              console.log(errorDescription);
+              break;
 
-   This file creates the `App` component containing the ONLYOFFICE Docs editor configured with basic features.
+            case -2: // Error load DocsAPI from documentServerUrl
+              console.log(errorDescription);
+              break;
+
+            case -3: // DocsAPI is not defined
+              console.log(errorDescription);
+              break;
+          }
+        };
+      }
+      ```
+
+      </TabItem>
+      <TabItem value="app-html" label="src/app/app.html">
+
+      The template of the `App` component. The `config` property is required, so `@if` keeps the editor out of the template until the configuration is loaded.
+
+      The editor fills the element it is rendered into, so the wrapper gives it an explicit height.
+
+      Replace `http://documentserver/` with the address of your server, the same address as `DOCUMENT_SERVER_URL` in `.env.local`. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+
+      ```html
+      <div style="display: flex; height: 100svh">
+        @if (config) {
+          <document-editor
+              id="docxEditor"
+              documentServerUrl="http://documentserver/"
+              [config]="config"
+              [events_onDocumentReady]="onDocumentReady"
+              [onLoadComponentError]="onLoadComponentError"
+          ></document-editor>
+        }
+      </div>
+      ```
+
+      </TabItem>
+      <TabItem value="server" label="server.mjs">
+
+      The signing server, which stands in for your backend: the configuration is built and signed in Node.js, and only the signed configuration reaches the browser.
+
+      The `callbackUrl` points to the `dummyCallback` endpoint of ONLYOFFICE Docs, which accepts the save request and discards it, so the demo application needs no callback handler of its own. To [save](../how-it-works/saving-file.md) the document, replace it with the URL of your [callback handler](../../usage-api/callback-handler.md).
+
+      Replace `https://static.onlyoffice.com/assets/docs/samples/demo.docx` with the URL to your file, or keep the URL of our sample document for testing.
+
+      ```js
+      import {createServer} from "node:http";
+      import jwt from "jsonwebtoken";
+
+      const documentServerUrl = process.env.DOCUMENT_SERVER_URL;
+
+      createServer((request, response) => {
+        const config = {
+          document: {
+            fileType: "docx",
+            key: "Khirz6zTPdfd7",
+            title: "Example Document Title.docx",
+            url: "https://static.onlyoffice.com/assets/docs/samples/demo.docx",
+          },
+          documentType: "word",
+          editorConfig: {
+            callbackUrl: documentServerUrl + "dummyCallback",
+          },
+        };
+
+        config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
+
+        response.setHeader("Content-Type", "application/json");
+        response.end(JSON.stringify(config));
+      }).listen(3000);
+      ```
+
+      </TabItem>
+      <TabItem value="proxy" label="proxy.conf.json">
+
+      The proxy configuration, which makes the development server forward the configuration requests to the signing server.
+
+      ```json
+      {
+        "/api/editor-config": {
+          "target": "http://localhost:3000",
+          "secure": false
+        }
+      }
+      ```
+
+      Add the file to the `serve` target of the project in the `./angular.json` file, under `projects` → `onlyoffice-angular-demo` → `architect`:
+
+      ```json
+      "serve": {
+        "options": {
+          "proxyConfig": "proxy.conf.json"
+        }
+      }
+      ```
+
+      </TabItem>
+      <TabItem value="package" label="package.json">
+
+      Replace the `start` script with the following line, which starts the signing server and the Angular CLI development server together.
+
+      ```json
+      "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\""
+      ```
+
+      </TabItem>
+      <TabItem value="env" label=".env.local">
+
+      The address of your ONLYOFFICE Docs and its secret key, both read by `server.mjs`. The address ends with a slash, as the signing server appends `dummyCallback` to it.
+
+      Add the file to `.gitignore`, as the Angular CLI does not ignore it.
+
+      ```ini
+      DOCUMENT_SERVER_URL=http://documentserver/
+      DOCUMENT_SERVER_SECRET=your-secret-key
+      ```
+
+      </TabItem>
+   </Tabs>
 
    :::note
    The steps above use standalone components, which the Angular CLI generates by default. If your project is still based on NgModules, add `DocumentEditorModule` to the `imports` property of the `@NgModule` decorator in the root module file instead of the `@Component` decorator.
    :::
 
-5. Open the `./src/app/app.html` file and replace its contents with the `document-editor` component:
+4. Start the signing server and the Angular CLI development server in the `onlyoffice-angular-demo` directory:
 
-   ```html
-   <document-editor
-       id="docxEditor"
-       documentServerUrl="http://documentserver/"
-       [config]="config"
-       [events_onDocumentReady]="onDocumentReady"
-       [onLoadComponentError]="onLoadComponentError"
-   ></document-editor>
+   ```sh
+   npm run start
    ```
 
-   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
-
-6. Test the application using the Angular CLI development server:
-
-   - To start the development server, navigate to the `onlyoffice-angular-demo` directory and run:
-
-     ```sh
-     npm run start
-     ```
-
-     The application becomes available at `http://localhost:4200`.
-
-   - To stop the development server, switch to the command line or command prompt and press `Ctrl+C`.
+   Open `http://localhost:4200` in the browser. The editor opens the document from the signed configuration, and the `events_onDocumentReady` handler prints `Document is loaded` to the browser console.
 
 ## Signing the configuration
 
@@ -154,92 +235,15 @@ ONLYOFFICE Docs validates the editor configuration with a JSON Web Token. JWT va
 
 Signing requires the secret key of your ONLYOFFICE Docs, so generate the token on your server and send the ready configuration to the browser. An Angular application cannot keep the secret key private.
 
-### Signing the configuration on the server
+The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
 
-Build the configuration on your backend, sign it, and return it from an endpoint:
-
-```js
-// npm install jsonwebtoken
-import jwt from "jsonwebtoken";
-
-app.get("/api/editor-config", (request, response) => {
-  const config = {
-    document: {
-      fileType: "docx",
-      key: "Khirz6zTPdfd7",
-      title: "Example Document Title.docx",
-      url: "https://example.com/url-to-example-document.docx",
-    },
-    documentType: "word",
-    editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback",
-    },
-  };
-
-  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
-
-  response.json(config);
-});
-```
+The demo application above signs the configuration in a Node.js server that runs next to the development server. In a production application, move the same code to your backend and keep the endpoint path, as the component requests the configuration in the same way.
 
 See the [Signature](../../additional-api/signature/signature.md) section for the signing code in other languages.
 
-### Passing the signed configuration to the component
-
-Request the configuration when the component initializes and render the editor once it arrives:
-
-```ts
-import {Component, OnInit} from "@angular/core";
-import {type Config} from "@onlyoffice/doceditor-types";
-import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
-
-@Component({
-  selector: "app-root",
-  imports: [DocumentEditorModule],
-  templateUrl: "./app.html",
-})
-export class App implements OnInit {
-  config: Config | null = null;
-
-  async ngOnInit() {
-    const response = await fetch("/api/editor-config");
-
-    this.config = await response.json();
-  }
-}
-```
-
-Render the editor only when the configuration is loaded, as the `config` property is required:
-
-```html
-@if (config) {
-  <document-editor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      [config]="config"
-  ></document-editor>
-}
-```
-
-The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
-
 ## Calling editor methods in the Angular component
 
-1. The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`:
-
-   ```ts
-   const documentEditor = window.DocEditor.instances["docxEditor"];
-   ```
-
-   The package declares the `DocEditor` property of the `window` object, so no additional TypeScript declaration is required.
-
-2. Call any editor [method](../../usage-api/methods.md) from this object:
-
-   ```ts
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-   ```
-
-Example:
+The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`, then call any editor [method](../../usage-api/methods.md) from it:
 
 ```ts
 onDocumentReady = () => {
@@ -248,6 +252,8 @@ onDocumentReady = () => {
   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
 };
 ```
+
+The package declares the `DocEditor` property of the `window` object, so no additional TypeScript declaration is required.
 
 ## Using Automation API in Angular
 
@@ -318,27 +324,22 @@ When a property change destroys the editor and loads a new one, as described in 
 
 ## Deploying the demo Angular application
 
-1. Navigate to the `onlyoffice-angular-demo` directory and create a production build:
+:::note
+The `proxy.conf.json` file configures the development server only, so the production build does not reach the signing server. Serve the `/api/editor-config` endpoint from your own backend, as described in [Signing the configuration](#signing-the-configuration), and keep the path that `app.ts` requests.
+:::
 
-   ```sh
-   ng build
-   ```
+Create a production build in the `onlyoffice-angular-demo` directory and check it locally with the production configuration of the development server:
 
-   The `dist/onlyoffice-angular-demo/browser` directory will be created with a production build of your app.
+```sh
+ng build
+ng serve --configuration production
+```
 
-2. Check the build locally using the production configuration of the development server:
-
-   ```sh
-   ng serve --configuration production
-   ```
-
-To deploy the application to your own web server, copy the contents of the `dist/onlyoffice-angular-demo/browser` directory to the root directory of the web server.
+The build goes to the `dist/onlyoffice-angular-demo/browser` directory. To deploy the application to your own web server, copy the contents of this directory to the root directory of the web server.
 
 To use different settings for the development and production builds, such as separate document server addresses, configure the build targets as described in the Angular [environments](https://angular.dev/tools/cli/environments) guide.
 
-## ONLYOFFICE Docs Angular component API
-
-### Properties
+## Properties
 
 The `config` property is merged over the separate properties of the component. The merge is shallow: a top-level key of `config` replaces the corresponding component properties entirely instead of merging with them.
 

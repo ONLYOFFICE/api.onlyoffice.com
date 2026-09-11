@@ -12,7 +12,9 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
 ## 先决条件
 
-此过程需要 [Node.js (和 npm)](https://nodejs.org/en) 以及一个正在运行的 ONLYOFFICE 文档实例。如果您还没有，请按照[自托管](../installation/self-hosted.md)部分的说明将其安装在您自己的服务器上，或将其部署在[云端](../installation/cloud.md)。
+此过程需要 [Node.js (和 npm)](https://nodejs.org/en) 20.6 或更高版本，以及一个正在运行的 ONLYOFFICE 文档实例。如果您还没有，请按照[自托管](../installation/self-hosted.md)部分的说明将其安装在您自己的服务器上，或将其部署在[云端](../installation/cloud.md)。
+
+此过程还需要您的 ONLYOFFICE 文档的密钥。编辑器配置将使用以该密钥签名的 JSON Web Token 进行校验，并且该校验默认处于启用状态。请参阅[签名配置](#signing-the-configuration)。
 
 本页假定您具备 [Angular](https://angular.dev/) 的基本使用知识。
 
@@ -33,120 +35,199 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
 此过程创建一个基本 Angular 应用程序，并在其中安装 ONLYOFFICE 文档编辑器。
 
-1. 打开命令行或命令提示符并安装 [Angular CLI](https://angular.dev/tools/cli) 包：
+1. 打开命令行或命令提示符，安装 [Angular CLI](https://angular.dev/tools/cli) 包，并创建一个名为 `onlyoffice-angular-demo` 的新 Angular 项目：
 
    ```sh
    npm install -g @angular/cli
-   ```
-
-2. 创建一个名为 `onlyoffice-angular-demo` 的新 Angular 项目并进入新创建的目录：
-
-   ```sh
    ng new --defaults --skip-git onlyoffice-angular-demo
    cd onlyoffice-angular-demo
    ```
 
-3. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-angular) 公共注册表安装 ONLYOFFICE 文档 Angular 组件，并将其保存到 `package.json` 文件中：
+2. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-angular) 公共注册表安装 ONLYOFFICE 文档 Angular 组件，以及用于对编辑器配置进行签名的 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) 包和用于启动签名服务器的 [concurrently](https://www.npmjs.com/package/concurrently) 包，并将它们保存到 `package.json` 文件中。
+
+   TypeScript 类型声明来自 [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) 对等依赖项，npm 7 及更高版本会自动安装该依赖项，而 yarn 不会。`jsonwebtoken` 和 `concurrently` 包仅在演示应用程序中运行，因此它们都是开发依赖项。在生产应用程序中，`jsonwebtoken` 属于对配置进行签名的后端。
 
    <Tabs>
       <TabItem value="npm" label="npm">
             ```sh
             npm install --save @onlyoffice/document-editor-angular
+            npm install --save-dev jsonwebtoken concurrently
             ```
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
-            yarn add @onlyoffice/document-editor-angular @onlyoffice/doceditor-types
+            yarn add @onlyoffice/document-editor-angular
+            yarn add -D @onlyoffice/doceditor-types jsonwebtoken concurrently
             ```
       </TabItem>
    </Tabs>
 
-4. 打开 `onlyoffice-angular-demo` 项目中的 `./src/app/app.ts` 文件，并将其内容替换为以下代码：
+3. 替换 `onlyoffice-angular-demo` 项目中 `./src/app/app.ts` 和 `./src/app/app.html` 文件的内容，并创建其余文件：
 
-   ```ts
-   import {Component} from "@angular/core";
-   import {type Config} from "@onlyoffice/doceditor-types";
-   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
+   <Tabs>
+      <TabItem value="app-ts" label="src/app/app.ts">
 
-   @Component({
-     selector: "app-root",
-     imports: [DocumentEditorModule],
-     templateUrl: "./app.html",
-   })
-   export class App {
-     config: Config = {
-       document: {
-         fileType: "docx",
-         key: "Khirz6zTPdfd7",
-         title: "Example Document Title.docx",
-         url: "https://example.com/url-to-example-document.docx",
-       },
-       documentType: "word",
-       editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback",
-       },
-       token: "TOKEN_HERE",
-     };
+      `App` 组件，该组件在初始化时请求已签名的配置，并在配置到达后渲染 ONLYOFFICE 文档编辑器。
 
-     onDocumentReady = () => {
-       console.log("Document is loaded");
-     };
+      ```ts
+      import {Component, OnInit} from "@angular/core";
+      import {type Config} from "@onlyoffice/doceditor-types";
+      import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
 
-     onLoadComponentError = (errorCode: number, errorDescription: string) => {
-       switch (errorCode) {
-         case -1: // Unknown error loading component
-           console.log(errorDescription);
-           break;
+      @Component({
+        selector: "app-root",
+        imports: [DocumentEditorModule],
+        templateUrl: "./app.html",
+      })
+      export class App implements OnInit {
+        config: Config | null = null;
 
-         case -2: // Error load DocsAPI from http://documentserver/
-           console.log(errorDescription);
-           break;
+        async ngOnInit() {
+          const response = await fetch("/api/editor-config");
 
-         case -3: // DocsAPI is not defined
-           console.log(errorDescription);
-           break;
-       }
-     };
-   }
-   ```
+          this.config = await response.json();
+        }
 
-   将以下行替换为您自己的数据：
+        onDocumentReady = () => {
+          console.log("Document is loaded");
+        };
 
-   - `https://example.com/url-to-example-document.docx` - 替换为您文件的 URL。您可以使用我们的示例文档 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-   - `https://example.com/url-to-callback` - 替换为您的回调 URL（保存功能需要此项才能正常工作）。
-   - `TOKEN_HERE` - 替换为配置的签名。当您的文档服务器启用了 JWT 验证（默认配置）时，此项为必填项。请参阅[签名配置](#signing-the-configuration)。
+        onLoadComponentError = (errorCode: number, errorDescription: string) => {
+          switch (errorCode) {
+            case -1: // Unknown error loading component
+              console.log(errorDescription);
+              break;
 
-   该文件创建包含 ONLYOFFICE 文档编辑器的 `App` 组件，并配置了基本功能。
+            case -2: // Error load DocsAPI from documentServerUrl
+              console.log(errorDescription);
+              break;
+
+            case -3: // DocsAPI is not defined
+              console.log(errorDescription);
+              break;
+          }
+        };
+      }
+      ```
+
+      </TabItem>
+      <TabItem value="app-html" label="src/app/app.html">
+
+      `App` 组件的模板。`config` 属性为必填项，因此 `@if` 会在配置加载完成之前将编辑器排除在模板之外。
+
+      编辑器会填满其渲染所在的元素，因此外层容器为其设置了明确的高度。
+
+      请将 `http://documentserver/` 替换为您的服务器的地址，该地址与 `.env.local` 中的 `DOCUMENT_SERVER_URL` 相同；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+
+      ```html
+      <div style="display: flex; height: 100svh">
+        @if (config) {
+          <document-editor
+              id="docxEditor"
+              documentServerUrl="http://documentserver/"
+              [config]="config"
+              [events_onDocumentReady]="onDocumentReady"
+              [onLoadComponentError]="onLoadComponentError"
+          ></document-editor>
+        }
+      </div>
+      ```
+
+      </TabItem>
+      <TabItem value="server" label="server.mjs">
+
+      签名服务器，它代替您的后端：配置在 Node.js 中构建并签名，只有已签名的配置才会发送到浏览器。
+
+      `callbackUrl` 指向 ONLYOFFICE 文档的 `dummyCallback` 接口，该接口会接收保存请求并将其丢弃，因此该演示应用程序无需自己的回调处理程序。要[保存](../how-it-works/saving-file.md)文档，请将其替换为您的[回调处理程序](../../usage-api/callback-handler.md)的 URL。
+
+      请将 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 替换为您的文件的 URL，或保留我们示例文档的 URL 以进行测试。
+
+      ```js
+      import {createServer} from "node:http";
+      import jwt from "jsonwebtoken";
+
+      const documentServerUrl = process.env.DOCUMENT_SERVER_URL;
+
+      createServer((request, response) => {
+        const config = {
+          document: {
+            fileType: "docx",
+            key: "Khirz6zTPdfd7",
+            title: "Example Document Title.docx",
+            url: "https://static.onlyoffice.com/assets/docs/samples/demo.docx",
+          },
+          documentType: "word",
+          editorConfig: {
+            callbackUrl: documentServerUrl + "dummyCallback",
+          },
+        };
+
+        config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
+
+        response.setHeader("Content-Type", "application/json");
+        response.end(JSON.stringify(config));
+      }).listen(3000);
+      ```
+
+      </TabItem>
+      <TabItem value="proxy" label="proxy.conf.json">
+
+      代理配置，它使开发服务器将配置请求转发到签名服务器。
+
+      ```json
+      {
+        "/api/editor-config": {
+          "target": "http://localhost:3000",
+          "secure": false
+        }
+      }
+      ```
+
+      请将该文件添加到 `./angular.json` 文件中该项目的 `serve` 目标下，路径为 `projects` → `onlyoffice-angular-demo` → `architect`：
+
+      ```json
+      "serve": {
+        "options": {
+          "proxyConfig": "proxy.conf.json"
+        }
+      }
+      ```
+
+      </TabItem>
+      <TabItem value="package" label="package.json">
+
+      请将 `start` 脚本替换为以下内容，它会同时启动签名服务器和 Angular CLI 开发服务器。
+
+      ```json
+      "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\""
+      ```
+
+      </TabItem>
+      <TabItem value="env" label=".env.local">
+
+      您的 ONLYOFFICE 文档的地址及其密钥，二者均由 `server.mjs` 读取。该地址以斜杠结尾，因为签名服务器会在其后追加 `dummyCallback`。
+
+      请将该文件添加到 `.gitignore`，因为 Angular CLI 不会忽略它。
+
+      ```ini
+      DOCUMENT_SERVER_URL=http://documentserver/
+      DOCUMENT_SERVER_SECRET=your-secret-key
+      ```
+
+      </TabItem>
+   </Tabs>
 
    :::note
    以上步骤使用独立组件，Angular CLI 默认生成此类组件。如果您的项目仍然基于 NgModule，请改为将 `DocumentEditorModule` 添加到根模块文件中 `@NgModule` 装饰器的 `imports` 属性，而不是 `@Component` 装饰器。
    :::
 
-5. 打开 `./src/app/app.html` 文件，并将其内容替换为 `document-editor` 组件：
+4. 在 `onlyoffice-angular-demo` 目录中同时启动签名服务器和 Angular CLI 开发服务器：
 
-   ```html
-   <document-editor
-       id="docxEditor"
-       documentServerUrl="http://documentserver/"
-       [config]="config"
-       [events_onDocumentReady]="onDocumentReady"
-       [onLoadComponentError]="onLoadComponentError"
-   ></document-editor>
+   ```sh
+   npm run start
    ```
 
-   将 `http://documentserver/` 行替换为您的服务器的 URL。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-
-6. 使用 Angular CLI 开发服务器测试应用程序：
-
-   - 要启动开发服务器，请导航到 `onlyoffice-angular-demo` 目录并运行：
-
-     ```sh
-     npm run start
-     ```
-
-     该应用程序将在 `http://localhost:4200` 上提供访问。
-
-   - 要停止开发服务器，请切换到命令行或命令提示符，然后按 `Ctrl+C`。
+   在浏览器中打开 `http://localhost:4200`。编辑器将打开已签名配置中的文档，并且 `events_onDocumentReady` 处理程序会在浏览器控制台中输出 `Document is loaded`。
 
 ## 签名配置 {#signing-the-configuration}
 
@@ -154,92 +235,15 @@ ONLYOFFICE 文档使用 JSON Web Token 校验编辑器配置。JWT 验证默认�
 
 签名需要使用 ONLYOFFICE 文档的密钥，因此请在您的服务器上生成令牌，并将已就绪的配置发送到浏览器。Angular 应用程序无法确保密钥不被泄露。
 
-### 在服务器上签名配置 {#signing-the-configuration-on-the-server}
+组件会将 `config` 合并到发送给 ONLYOFFICE 文档的配置中，因此 `token` 字段会原样传递给编辑器。
 
-请在您的后端构建配置、对其进行签名，并通过一个接口将其返回：
-
-```js
-// npm install jsonwebtoken
-import jwt from "jsonwebtoken";
-
-app.get("/api/editor-config", (request, response) => {
-  const config = {
-    document: {
-      fileType: "docx",
-      key: "Khirz6zTPdfd7",
-      title: "Example Document Title.docx",
-      url: "https://example.com/url-to-example-document.docx",
-    },
-    documentType: "word",
-    editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback",
-    },
-  };
-
-  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
-
-  response.json(config);
-});
-```
+上述演示应用程序在与开发服务器并行运行的 Node.js 服务器中对配置进行签名。在生产应用程序中，请将相同的代码移至您的后端，并保留该接口路径，因为组件请求配置的方式完全相同。
 
 有关其他语言的签名代码，请参阅[签名](../../additional-api/signature/signature.md)部分。
 
-### 将已签名的配置传递给组件 {#passing-the-signed-configuration-to-the-component}
+## 在 Angular 组件中调用编辑器方法 {#calling-editor-methods-in-the-angular-component}
 
-请在组件初始化时请求配置，并在配置到达后渲染编辑器：
-
-```ts
-import {Component, OnInit} from "@angular/core";
-import {type Config} from "@onlyoffice/doceditor-types";
-import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
-
-@Component({
-  selector: "app-root",
-  imports: [DocumentEditorModule],
-  templateUrl: "./app.html",
-})
-export class App implements OnInit {
-  config: Config | null = null;
-
-  async ngOnInit() {
-    const response = await fetch("/api/editor-config");
-
-    this.config = await response.json();
-  }
-}
-```
-
-由于 `config` 属性为必填项，请仅在配置加载完成后渲染编辑器：
-
-```html
-@if (config) {
-  <document-editor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      [config]="config"
-  ></document-editor>
-}
-```
-
-组件会将 `config` 合并到发送给 ONLYOFFICE 文档的配置中，因此 `token` 字段会原样传递给编辑器。
-
-## 在 Angular 组件中调用编辑器方法
-
-1. 组件会将每个编辑器实例存储在 `window.DocEditor.instances` 对象中。通过组件 `id` 获取实例：
-
-   ```ts
-   const documentEditor = window.DocEditor.instances["docxEditor"];
-   ```
-
-   该包已声明 `window` 对象的 `DocEditor` 属性，因此无需额外的 TypeScript 声明。
-
-2. 从这个对象中调用任何编辑器的 [方法](../../usage-api/methods.md)：
-
-   ```ts
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-   ```
-
-示例：
+组件会将每个编辑器实例存储在 `window.DocEditor.instances` 对象中。请通过组件 `id` 获取实例，然后从该实例调用任何编辑器[方法](../../usage-api/methods.md)：
 
 ```ts
 onDocumentReady = () => {
@@ -248,6 +252,8 @@ onDocumentReady = () => {
   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
 };
 ```
+
+该包已声明 `window` 对象的 `DocEditor` 属性，因此无需额外的 TypeScript 声明。
 
 ## 在 Angular 中使用自动化 API {#using-automation-api-in-angular}
 
@@ -318,27 +324,22 @@ getAllComments() {
 
 ## 部署演示 Angular 应用程序
 
-1. 导航到 `onlyoffice-angular-demo` 目录并创建产品版本：
+:::note
+`proxy.conf.json` 文件仅配置开发服务器，因此生产版本无法访问签名服务器。请按照[签名配置](#signing-the-configuration)中的说明，从您自己的后端提供 `/api/editor-config` 接口，并保留 `app.ts` 所请求的路径。
+:::
 
-   ```sh
-   ng build
-   ```
+在 `onlyoffice-angular-demo` 目录中创建生产版本，并使用开发服务器的生产配置在本地检查该版本：
 
-   `dist/onlyoffice-angular-demo/browser` 目录将使用您的应用程序的产品版本创建。
+```sh
+ng build
+ng serve --configuration production
+```
 
-2. 使用开发服务器的产品配置在本地检查该版本：
+生产版本将生成在 `dist/onlyoffice-angular-demo/browser` 目录中。要将应用程序部署到您自己的 Web 服务器，请将该目录的内容复制到 Web 服务器的根目录。
 
-   ```sh
-   ng serve --configuration production
-   ```
+如需为开发版本和生产版本使用不同的设置（例如不同的文档服务器地址），请按照 Angular [environments](https://angular.dev/tools/cli/environments) 指南配置构建目标。
 
-要将应用程序部署到您自己的 Web 服务器，请将 `dist/onlyoffice-angular-demo/browser` 目录的内容复制到 Web 服务器的根目录。
-
-如需为开发版本和产品版本使用不同的设置（例如不同的文档服务器地址），请按照 Angular [environments](https://angular.dev/tools/cli/environments) 指南配置构建目标。
-
-## ONLYOFFICE 文档 Angular 组件 API
-
-### 属性 {#properties}
+## 属性 {#properties}
 
 `config` 属性会覆盖组件的各个单独属性。该合并为浅层合并：`config` 的顶层键会完整替换相应的组件属性，而不是与其合并。
 

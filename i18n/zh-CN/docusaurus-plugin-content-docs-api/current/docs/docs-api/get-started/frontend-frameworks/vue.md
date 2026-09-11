@@ -14,13 +14,15 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
 
 此过程需要 [Node.js (和 npm)](https://nodejs.org/en) 以及一个正在运行的 ONLYOFFICE 文档实例。如果您还没有，请按照[自托管](../installation/self-hosted.md)部分的说明将其安装在您自己的服务器上，或将其部署在[云端](../installation/cloud.md)。
 
+此过程还需要您的 ONLYOFFICE 文档的密钥。编辑器配置将使用以该密钥签名的 JSON Web Token 进行校验，并且该校验默认处于启用状态。请参阅[签名配置](#signing-the-configuration)。
+
 本页假定您具备 [Vue.js](https://vuejs.org/) 的基本使用知识。以下步骤使用[创建 Vue 工具](https://github.com/vuejs/create-vue)从头创建一个项目。
 
 ## 使用 ONLYOFFICE 文档编辑器创建演示 Vue.js 应用程序
 
 此过程创建一个基本 Vue.js 应用程序，并在其中安装 ONLYOFFICE 文档编辑器。
 
-1. 创建一个名为 `onlyoffice-vue-demo` 的新 Vue.js 项目并安装其依赖项：
+1. 创建一个名为 `onlyoffice-vue-demo` 的新 Vue.js 项目并安装其依赖项。当工具询问要包含哪些功能时，请选择 **TypeScript**，因为以下步骤会使用它：
 
    ```sh
    npm create vue@latest onlyoffice-vue-demo
@@ -28,97 +30,162 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
    npm install
    ```
 
-2. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) 公共注册表安装 ONLYOFFICE 文档 Vue.js 组件，并将其保存到 `package.json` 文件中：
+2. 从 [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-vue) 公共注册表安装 ONLYOFFICE 文档 Vue.js 组件，以及用于对编辑器配置进行签名的 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) 包及其类型声明，并将它们保存到 `package.json` 文件中。
+
+   `jsonwebtoken` 包仅在开发服务器中运行，因此它是演示应用程序的开发依赖项。在生产应用程序中，它属于对配置进行签名的后端。
 
    <Tabs>
       <TabItem value="npm" label="npm">
             ```sh
             npm install --save @onlyoffice/document-editor-vue
+            npm install --save-dev jsonwebtoken @types/jsonwebtoken
             ```
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
             yarn add @onlyoffice/document-editor-vue
+            yarn add -D jsonwebtoken @types/jsonwebtoken
             ```
       </TabItem>
    </Tabs>
 
-3. 打开 `onlyoffice-vue-demo` 项目中的 `./src/App.vue` 文件，并将其内容替换为以下代码：
+3. 替换 `onlyoffice-vue-demo` 项目中 `./src/App.vue` 文件的内容，向 `./vite.config.ts` 文件添加 `/api/editor-config` 接口，并创建 `./.env.local` 文件：
 
-   ```vue
-   <template>
-     <DocumentEditor
-       id="docxEditor"
-       documentServerUrl="http://documentserver/"
-       :config="config"
-       :events_onDocumentReady="onDocumentReady"
-       :onLoadComponentError="onLoadComponentError"
-     />
-   </template>
+   <Tabs>
+      <TabItem value="app" label="src/App.vue">
 
-   <script setup lang="ts">
-   import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
+      `App` 组件，它在挂载时请求已签名的配置，并在配置到达后渲染 ONLYOFFICE 文档编辑器。`config` 属性为必填项，因此 `v-if` 会在配置到达之前将编辑器排除在模板之外。
 
-   const config: IConfig = {
-     document: {
-       fileType: "docx",
-       key: "Khirz6zTPdfd7",
-       title: "Example Document Title.docx",
-       url: "https://example.com/url-to-example-document.docx",
-     },
-     documentType: "word",
-     editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback",
-     },
-     token: "TOKEN_HERE",
-   };
+      编辑器会填满其渲染所在的元素，因此外层容器为其设置了明确的高度。
 
-   function onDocumentReady() {
-     console.log("Document is loaded");
-   }
+      ```html
+      <template>
+        <div style="display: flex; height: 100svh">
+          <DocumentEditor
+            v-if="config"
+            id="docxEditor"
+            :documentServerUrl="documentServerUrl"
+            :config="config"
+            :events_onDocumentReady="onDocumentReady"
+            :onLoadComponentError="onLoadComponentError"
+          />
+        </div>
+      </template>
 
-   function onLoadComponentError(errorCode: number, errorDescription: string) {
-     switch (errorCode) {
-       case -1: // Unknown error loading component
-         console.log(errorDescription);
-         break;
+      <script setup lang="ts">
+      import {onMounted, ref} from "vue";
+      import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
 
-       case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription);
-         break;
+      const documentServerUrl = import.meta.env.VITE_DOCUMENT_SERVER_URL;
+      const config = ref<IConfig | null>(null);
 
-       case -3: // DocsAPI is not defined
-         console.log(errorDescription);
-         break;
-     }
-   }
-   </script>
-   ```
+      onMounted(async () => {
+        const response = await fetch("/api/editor-config");
 
-   将以下行替换为您自己的数据：
+        config.value = await response.json();
+      });
 
-   - `http://documentserver/` - 替换为您的服务器的 URL；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
-   - `TOKEN_HERE` - 替换为配置的签名。当您的文档服务器启用了 JWT 验证（默认配置）时，此项为必填项。请参阅[签名配置](#signing-the-configuration)。
+      function onDocumentReady() {
+        console.log("Document is loaded");
+      }
 
-   该文件创建包含 ONLYOFFICE 文档编辑器的 `App` 组件，并配置了基本功能。
+      function onLoadComponentError(errorCode: number, errorDescription: string) {
+        switch (errorCode) {
+          case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+          case -2: // Error load DocsAPI from documentServerUrl
+            console.log(errorDescription);
+            break;
+
+          case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+        }
+      }
+      </script>
+      ```
+
+      </TabItem>
+      <TabItem value="vite" label="vite.config.ts">
+
+      开发服务器的 `/api/editor-config` 接口，它代替您的后端：配置在 Node.js 中构建并签名，只有已签名的配置才会发送到浏览器。
+
+      `callbackUrl` 指向 ONLYOFFICE 文档的 `dummyCallback` 接口，该接口会接收保存请求并将其丢弃，因此该演示应用程序无需自己的回调处理程序。要[保存](../how-it-works/saving-file.md)文档，请将其替换为您的[回调处理程序](../../usage-api/callback-handler.md)的 URL。
+
+      请将 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 替换为您的文件的 URL，或保留我们示例文档的 URL 以进行测试。
+
+      读取环境变量需要使用 `defineConfig` 的函数形式。请在返回的对象中保留 Create Vue Tool 生成的其他插件和选项。
+
+      ```ts
+      import vue from "@vitejs/plugin-vue";
+      import jwt from "jsonwebtoken";
+      import {defineConfig, loadEnv, type Plugin} from "vite";
+      import {type IConfig} from "@onlyoffice/document-editor-vue";
+
+      function editorConfigApi(secret: string, documentServerUrl: string): Plugin {
+        return {
+          name: "onlyoffice-editor-config",
+          configureServer(server) {
+            server.middlewares.use("/api/editor-config", (request, response) => {
+              const config: IConfig = {
+                document: {
+                  fileType: "docx",
+                  key: "Khirz6zTPdfd7",
+                  title: "Example Document Title.docx",
+                  url: "https://static.onlyoffice.com/assets/docs/samples/demo.docx",
+                },
+                documentType: "word",
+                editorConfig: {
+                  callbackUrl: documentServerUrl + "dummyCallback",
+                },
+              };
+
+              config.token = jwt.sign(config, secret, {algorithm: "HS256"});
+
+              response.setHeader("Content-Type", "application/json");
+              response.end(JSON.stringify(config));
+            });
+          },
+        };
+      }
+
+      export default defineConfig(({mode}) => {
+        const env = loadEnv(mode, process.cwd(), "");
+
+        return {
+          plugins: [vue(), editorConfigApi(env.DOCUMENT_SERVER_SECRET, env.VITE_DOCUMENT_SERVER_URL)],
+        };
+      });
+      ```
+
+      </TabItem>
+      <TabItem value="env" label=".env.local">
+
+      您的 ONLYOFFICE 文档的地址及其密钥。`VITE_DOCUMENT_SERVER_URL` 带有 `VITE_` 前缀，因此 Vite 会将其内联到客户端包中，组件需要在其中使用该地址。`DOCUMENT_SERVER_SECRET` 没有前缀，因此密钥会保留在 Node.js 中，不会进入客户端包。该地址以斜杠结尾，因为接口会在其后追加 `dummyCallback`。
+
+      请将 `http://documentserver/` 替换为您的服务器的地址；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。Create Vue Tool 会忽略 `*.local` 文件，因此密钥不会进入代码仓库。
+
+      ```ini
+      VITE_DOCUMENT_SERVER_URL=http://documentserver/
+      DOCUMENT_SERVER_SECRET=your-secret-key
+      ```
+
+      </TabItem>
+   </Tabs>
 
    :::note
-   以上步骤使用 `<script setup>` 语法，创建 Vue 工具默认生成此类语法。如果组件使用选项式 API 编写，请从 `data` 选项返回配置，并在 `methods` 选项中声明处理程序。
+   以上步骤使用 `<script setup>` 语法，创建 Vue 工具默认生成此类语法。如果组件使用选项式 API 编写，请在 `data` 选项中存储配置，在 `mounted` 钩子中请求配置，并在 `methods` 选项中声明处理程序。
    :::
 
-4. 使用 Vite 开发服务器测试应用程序：
+4. 在 `onlyoffice-vue-demo` 目录中启动 Vite 开发服务器：
 
-   - 要启动开发服务器，请导航到 `onlyoffice-vue-demo` 目录并运行：
+   ```sh
+   npm run dev
+   ```
 
-     ```sh
-     npm run dev
-     ```
-
-     该应用程序将在 `http://localhost:5173` 上提供访问。
-
-   - 要停止开发服务器，请切换到命令行或命令提示符，然后按 `Ctrl+C`。
+   在浏览器中打开 `http://localhost:5173`。编辑器将打开已签名配置中的文档，并且 `events_onDocumentReady` 处理程序会在浏览器控制台中输出 `Document is loaded`。
 
 ## 签名配置 {#signing-the-configuration}
 
@@ -126,81 +193,15 @@ ONLYOFFICE 文档使用 JSON Web Token 校验编辑器配置。JWT 验证默认�
 
 签名需要使用 ONLYOFFICE 文档的密钥，因此请在您的服务器上生成令牌，并将已就绪的配置发送到浏览器。Vue.js 应用程序无法确保密钥不被泄露。
 
-### 在服务器上签名配置 {#signing-the-configuration-on-the-server}
+组件会将 `config` 合并到发送给 ONLYOFFICE 文档的配置中，因此 `token` 字段会原样传递给编辑器。
 
-请在您的后端构建配置、对其进行签名，并通过一个接口将其返回：
-
-```js
-// npm install jsonwebtoken
-import jwt from "jsonwebtoken";
-
-app.get("/api/editor-config", (request, response) => {
-  const config = {
-    document: {
-      fileType: "docx",
-      key: "Khirz6zTPdfd7",
-      title: "Example Document Title.docx",
-      url: "https://example.com/url-to-example-document.docx",
-    },
-    documentType: "word",
-    editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback",
-    },
-  };
-
-  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
-
-  response.json(config);
-});
-```
+上述演示应用程序在 Vite 开发服务器中对配置进行签名，而该服务器仅存在于开发环境中。在生产应用程序中，请将相同的代码移至您的后端，并保留该接口路径，因为组件请求配置的方式完全相同。
 
 有关其他语言的签名代码，请参阅[签名](../../additional-api/signature/signature.md)部分。
 
-### 将已签名的配置传递给组件 {#passing-the-signed-configuration-to-the-component}
-
-由于 `config` 属性为必填项，请在组件挂载时请求配置，并在配置到达后渲染编辑器：
-
-```vue
-<template>
-  <DocumentEditor
-    v-if="config"
-    id="docxEditor"
-    documentServerUrl="http://documentserver/"
-    :config="config"
-  />
-</template>
-
-<script setup lang="ts">
-import {onMounted, ref} from "vue";
-import {DocumentEditor, type IConfig} from "@onlyoffice/document-editor-vue";
-
-const config = ref<IConfig | null>(null);
-
-onMounted(async () => {
-  const response = await fetch("/api/editor-config");
-
-  config.value = await response.json();
-});
-</script>
-```
-
-组件会将 `config` 合并到发送给 ONLYOFFICE 文档的配置中，因此 `token` 字段会原样传递给编辑器。
-
 ## 在 Vue.js 组件中调用编辑器方法 {#calling-editor-methods-in-the-vuejs-component}
 
-1. 组件会将每个编辑器实例存储在 `window.DocEditor.instances` 对象中。通过组件 `id` 获取实例：
-
-   ```js
-   const documentEditor = window.DocEditor.instances["docxEditor"];
-   ```
-
-2. 从这个对象中调用任何编辑器的 [方法](../../usage-api/methods.md)：
-
-   ```js
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-   ```
-
-示例：
+组件会将每个编辑器实例存储在 `window.DocEditor.instances` 对象中。请通过组件 `id` 获取实例，然后从该实例调用任何编辑器[方法](../../usage-api/methods.md)：
 
 ```js
 function onDocumentReady() {
@@ -220,7 +221,7 @@ function onDocumentReady() {
 
 请在 `events_onDocumentReady` 处理程序中使用 [createConnector](../../usage-api/methods.md#createconnector) 方法创建连接器，并重复使用它，而不要为每次操作都创建新的连接器。请将其保存在 `shallowRef` 中，以免 Vue.js 将连接器变为响应式对象：
 
-```vue
+```html
 <template>
   <DocumentEditor
     id="docxEditor"
@@ -271,43 +272,20 @@ watch(connector, (value) => {
 
 ## 部署演示 Vue.js 应用程序
 
-1. 导航到 `onlyoffice-vue-demo` 目录并创建产品版本：
+:::note
+`/api/editor-config` 接口是 Vite 开发服务器的一部分，因此它不存在于生产版本中。请按照[签名配置](#signing-the-configuration)中的说明，从您自己的后端提供该接口，并保留 `App.vue` 所请求的路径。
+:::
 
-   ```sh
-   npm run build
-   ```
+在 `onlyoffice-vue-demo` 目录中创建生产版本，并使用 Vite 预览服务器在本地检查该版本：
 
-   `dist` 目录将使用您的应用程序的产品版本创建。
+```sh
+npm run build
+npm run preview
+```
 
-2. 使用 Vite 预览服务器在本地检查该版本：
+生产版本将生成在 `dist` 目录中。要将应用程序部署到您自己的 Web 服务器，请将该目录的内容复制到 Web 服务器的根目录。
 
-   ```sh
-   npm run preview
-   ```
-
-3. 要使用独立的静态服务器提供该版本，请全局安装 [serve](https://github.com/vercel/serve) 包：
-
-   ```sh
-   npm install -g serve
-   ```
-
-4. 在 3000 端口上为 `dist` 目录提供服务：
-
-   ```sh
-   serve -s dist
-   ```
-
-   可以使用 `-l` 或 `--listen` 标志调整其他端口：
-
-   ```sh
-   serve -s dist -l 4000
-   ```
-
-要将应用程序部署到您自己的 Web 服务器，请将 `onlyoffice-vue-demo/dist` 目录的内容复制到 Web 服务器的根目录。
-
-## ONLYOFFICE 文档 Vue.js 组件 API
-
-### 属性 {#properties}
+## 属性 {#properties}
 
 `config` 属性会覆盖组件的各个单独属性。该合并为浅层合并：`config` 的顶层键会完整替换相应的组件属性，而不是与其合并。
 
