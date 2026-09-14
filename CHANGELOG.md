@@ -2,6 +2,12 @@
 
 ## 9.3.0
 
+### New features
+
+#### Common
+
+* Added llms.txt generation for the English docs
+
 ### Improvements
 
 #### Docs API
