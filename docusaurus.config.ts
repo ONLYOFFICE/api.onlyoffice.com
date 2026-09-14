@@ -183,6 +183,20 @@ const config: Config = {
         trackingID: 'GTM-5NW47TX'
       },
     ],
+    ...(locale === 'en' ? [[
+      'docusaurus-plugin-llms',
+      {
+        docsDir: [
+          {path: 'site/docs', routeBasePath: '/', label: 'ONLYOFFICE Docs'},
+          {path: 'site/docspace', routeBasePath: '/', label: 'ONLYOFFICE DocSpace'},
+        ],
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: false,
+        title: 'ONLYOFFICE API Documentation',
+        description: 'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
+        rootContent: 'Each entry links to a single documentation page. Chinese translations of the ONLYOFFICE Docs pages are served at the same paths under /zh-CN/.',
+      },
+    ]] : []),
   ],
 
   themeConfig: {
