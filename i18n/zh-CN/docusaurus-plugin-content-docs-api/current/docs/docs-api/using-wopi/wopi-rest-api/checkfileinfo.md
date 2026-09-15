@@ -1,4 +1,4 @@
-﻿import APITable from '@site/src/components/APITable/APITable';
+import APITable from '@site/src/components/APITable/APITable';
 
 # CheckFileInfo
 

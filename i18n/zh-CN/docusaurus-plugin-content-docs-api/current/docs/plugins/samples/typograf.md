@@ -1,4 +1,4 @@
-﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # Typograf（排版助手）
 

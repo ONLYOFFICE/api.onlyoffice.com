@@ -1,4 +1,4 @@
-﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # 统计字词和字符数
 

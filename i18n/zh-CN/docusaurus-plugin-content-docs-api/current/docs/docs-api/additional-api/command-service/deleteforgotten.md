@@ -1,4 +1,4 @@
-﻿# deleteForgotten
+# deleteForgotten
 
 删除被遗忘的文件。
 

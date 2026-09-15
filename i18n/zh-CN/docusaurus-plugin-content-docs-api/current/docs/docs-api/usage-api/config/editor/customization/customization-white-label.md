@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_label: White label
 ---
 

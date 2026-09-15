@@ -1,4 +1,4 @@
-﻿---
+---
 description: Insert special symbols from a character table.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

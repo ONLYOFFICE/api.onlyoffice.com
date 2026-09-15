@@ -1,4 +1,4 @@
-﻿# getForgottenList
+# getForgottenList
 
 请求被遗忘文件的列表。
 

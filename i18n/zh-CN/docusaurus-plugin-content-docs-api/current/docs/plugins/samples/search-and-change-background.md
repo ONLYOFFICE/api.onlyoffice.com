@@ -1,4 +1,4 @@
-﻿---
+---
 description: Search for text and change its background color.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Insert document templates from Document Builder scripts.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
