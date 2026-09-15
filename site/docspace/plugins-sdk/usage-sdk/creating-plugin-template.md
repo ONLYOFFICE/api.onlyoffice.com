@@ -17,7 +17,7 @@ Before starting plugin development, create a plugin template and configure its s
 2. To create a plugin template, run the following command:
 
    ``` sh
-   npx create-docspace-plugin
+   npx create-onlyoffice-plugin
    ```
 
 3. Configure the plugin in the terminal specifying the following settings in the dialog:
@@ -61,7 +61,7 @@ You can create a plugin in any project by adding the *@onlyoffice/docspace-plugi
 ## Migration
 
 :::note
-SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. On older versions, plugins install but do not function.
+SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 require `minDocSpaceVersion: "4.0.0"` in *package.json*. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
 ### Updating a plugin to SDK 3.0.0
@@ -72,7 +72,7 @@ For detailed migration instructions, see [Updating a plugin to SDK 3.0.0](buildi
 
 For plugins created with the old template (SDK 1.1.1):
 
-- The build process is now handled by `npx build-docspace-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
+- The build process is now handled by `npx build-onlyoffice-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
 - Update the build script to use Vite as described in the [migration guide](building-plugin.md#updating-a-plugin-to-sdk-300).
 
 ## Example
@@ -114,7 +114,7 @@ If you are not using React, also remove the `react()` plugin call from *vite.con
     "https://*.diagrams.net/"
   ],
   "scripts": {
-    "build": "vite build && npx build-docspace-plugin",
+    "build": "vite build && npx build-onlyoffice-plugin",
     "format": "npx prettier --write ."
   },
   "devDependencies": {
@@ -154,7 +154,7 @@ Use this configuration if your plugin renders React components:
     "https://*.diagrams.net/"
   ],
   "scripts": {
-    "build": "vite build && npx build-docspace-plugin",
+    "build": "vite build && npx build-onlyoffice-plugin",
     "format": "npx prettier --write ."
   },
   "devDependencies": {

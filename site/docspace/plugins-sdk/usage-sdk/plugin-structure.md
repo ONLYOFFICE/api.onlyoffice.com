@@ -8,7 +8,7 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 
 ## Files created automatically
 
-Running the **npx create-docspace-plugin** command (see [creating a plugin template](creating-plugin-template.md)) creates the following files and folders in the plugin root folder:
+Running the **npx create-onlyoffice-plugin** command (see [creating a plugin template](creating-plugin-template.md)) creates the following files and folders in the plugin root folder:
 
 ### .prettierrc.json
 
@@ -36,7 +36,34 @@ A file with the information about the plugin and dependencies. This file can be 
 
 ### tsconfig.json
 
-The *TypeScript* configuration file. This file can be edited.
+The *TypeScript* configuration file. Key compiler options:
+
+- `target: ES2017` — compiles TypeScript to ES2017 JavaScript
+- `module: ESNext` — uses the latest ECMAScript module syntax
+- `lib: ["ES2017", "DOM"]` — includes ES2017 and DOM type definitions
+- `jsx: react-jsx` — enables React JSX transformation
+- `moduleResolution: bundler` — uses bundler-compatible module resolution
+- `strict: true` — enables all strict type-checking options
+- `skipLibCheck: true` — skips type checking of declaration files for faster builds
+
+This file can be edited if needed.
+
+### custom.d.ts
+
+A TypeScript declaration file that enables importing CSS files into TypeScript source files. By default, TypeScript does not recognize *.css* imports, so this file provides the necessary type declarations:
+
+``` ts
+declare module "*.css" {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+```
+
+This allows you to import both CSS Modules (*.module.css*) and regular stylesheets (*.css*) in your plugin code. For more information on styling plugins, see [Styling plugin](styling-plugin.md).
+
+:::note
+Make sure *custom.d.ts* is included in the *tsconfig.json* file's *include* array, otherwise TypeScript will not apply these declarations.
+:::
 
 ### vite.config.ts
 
@@ -53,7 +80,7 @@ The following folders are not part of the plugin template — one is created by 
 
 ### assets
 
-A folder for storing plugin images. This folder is not created automatically by the **npx create-docspace-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
+A folder for storing plugin images. This folder is not created automatically by the **npx create-onlyoffice-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
 
 Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
