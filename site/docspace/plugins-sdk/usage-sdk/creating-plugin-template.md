@@ -66,79 +66,71 @@ SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. On older versions, plugin
 
 ### Updating a plugin to SDK 3.0.0
 
-For plugins created with an SDK 2.x template:
-
-1. Replace Webpack with Vite. Create a *vite.config.ts* file in the plugin root folder:
-
-   ```ts
-   import { defineConfig } from "vite";
-   import react from "@vitejs/plugin-react";
-   import { fileURLToPath } from "url";
-
-   const __dirname = fileURLToPath(new URL(".", import.meta.url));
-
-   export default defineConfig({
-     plugins: [react()],
-     build: {
-       lib: {
-         entry: `${__dirname}src/index.ts`,
-         formats: ["es"],
-         fileName: () => "plugin.js",
-       },
-       rollupOptions: {
-         // Kept out of the bundle: DocSpace supplies its own copies at load
-         // time and rewrites these specifiers to them. A second React or a
-         // second react-dom arrives with its own contexts and its own event
-         // system, and every hook breaks.
-         //
-         // The SDK root is deliberately absent: it holds string enums and types
-         // and no module state, so a bundled copy behaves exactly like the
-         // host's. Only the React entry, which owns the runtime context, has to
-         // be shared.
-         external: [
-           "react",
-           "react-dom",
-           "react/jsx-runtime",
-           "@onlyoffice/docspace-plugin-sdk/react",
-           /^@docspace\/ui-kit(\/.*)?$/,
-         ],
-         output: {
-           assetFileNames: (assetInfo: { name?: string }) =>
-             assetInfo.name?.endsWith(".css") ? "plugin.css" : (assetInfo.name ?? "asset"),
-         },
-       },
-     },
-   });
-   ```
-
-2. Change the build script in *package.json*:
-
-   ```json
-   "build": "vite build && npx build-docspace-plugin"
-   ```
-
-3. Add `"runtime": "module"` to *package.json*, export the plugin instance as the default export and remove the *window.Plugins* registration from *src/index.ts*.
-
-4. Replace the deprecated `body`, `content`, `settings`, `dialogBody` and `dialogFooter` properties with `component` (`dialogBodyComponent` in *IModalDialog*), and move the work done in `onLoad` into a `useEffect` inside the component.
+For detailed migration instructions, see [Updating a plugin to SDK 3.0.0](building-plugin.md#updating-a-plugin-to-sdk-300).
 
 ### Updating from SDK 1.1.1
 
 For plugins created with the old template (SDK 1.1.1):
 
-1. The *createZip* script is no longer required and can be safely removed.
-
-2. Replace the build script in *package.json* with the following:
-
-   ```json
-   "build": "vite build && npx build-docspace-plugin"
-   ```
+- The build process is now handled by `npx build-docspace-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
+- Update the build script to use Vite as described in the [migration guide](building-plugin.md#updating-a-plugin-to-sdk-300).
 
 ## Example
 
+The following examples show complete `package.json` configurations for plugins.
+
+Key fields:
+
+- `"private": true` — prevents accidental publication to npm registry
+- `"runtime": "module"` — required for SDK 3.0.0; tells DocSpace to load the plugin as an ES module
+
+### Default Example
+
+Use this configuration if your plugin does not use React:
 
 :::note
-The `react` and `react-dom` dependencies are optional and only needed if your plugin uses React components.
+If you are not using React, also remove the `react()` plugin call from *vite.config.ts*.
 :::
+
+``` json
+{
+  "name": "pdf-converter",
+  "version": "1.0.0",
+  "author": "ONLYOFFICE",
+  "private": true,
+  "runtime": "module",
+  "scopes": [
+    "API",
+    "Settings",
+    "ContextMenu"
+  ],
+  "description": "Sample description",
+  "pluginName": "PDFConverter",
+  "license": "MIT",
+  "logo": "logo.png",
+  "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter",
+  "cspDomains": [
+    "https://embed.diagrams.net/",
+    "https://*.diagrams.net/"
+  ],
+  "scripts": {
+    "build": "vite build && npx build-docspace-plugin",
+    "format": "npx prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "@onlyoffice/docspace-plugin-sdk": "^3.0.0"
+  }
+}
+```
+
+### React Example
+
+Use this configuration if your plugin renders React components:
 
 ``` json
 {

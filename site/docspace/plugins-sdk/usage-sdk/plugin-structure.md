@@ -20,7 +20,7 @@ A folder for the plugin source files.
 
 #### src/index.ts
 
-The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. The plugin instance is exported as the default ES module export:
+The entry point for building the plugin instance. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. The plugin instance is exported as the default ES module export:
 
 ``` ts
 export default plugin
@@ -46,7 +46,6 @@ The Vite configuration file generated automatically when creating the plugin tem
 - External dependencies (React, react-dom, SDK React entry) are kept out of the bundle — DocSpace supplies them at load time
 
 This file can be edited if needed. For more information, see [Updating a plugin to SDK 3.0.0](building-plugin.md#updating-a-plugin-to-sdk-300).
-
 
 ## Files added separately
 
