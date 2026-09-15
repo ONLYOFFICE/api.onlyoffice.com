@@ -7,14 +7,11 @@ sidebar_custom_props:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # Alfresco integration
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="pQPm00oUqOE"/>
-```
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-alfresco) enables users to edit office documents from [Alfresco](https://www.alfresco.com/) Share using ONLYOFFICE Docs.
 

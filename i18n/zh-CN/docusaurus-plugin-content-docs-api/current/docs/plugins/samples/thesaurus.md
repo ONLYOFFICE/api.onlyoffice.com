@@ -1,4 +1,6 @@
-﻿# 同义词典
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 同义词典
 
 连接 [Big Huge Thesaurus](https://words.bighugelabs.com/)，用于查找单词的同义词和反义词。
 
@@ -6,11 +8,7 @@
 
 **支持的编辑器：** 文本文档、电子表格、演示文稿。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="3r0CCY5HNbQ"/>
-```
 
 ## 安装
 

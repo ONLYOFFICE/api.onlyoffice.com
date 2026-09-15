@@ -1,4 +1,6 @@
-﻿# 自动完成
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 自动完成
 
 帮助用户快速输入文本。
 
@@ -6,11 +8,7 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="DhyqzMsyirM"/>
-```
 
 ## 安装
 

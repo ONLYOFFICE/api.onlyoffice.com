@@ -3,6 +3,8 @@ description: Count paragraphs, words, and characters in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Count words and characters
 
 Counts paragraphs, words, and characters with or without spaces in the selected part of the document.
@@ -19,11 +21,7 @@ The following elements are not included in the word count:
 
 **Supported editors:** documents.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="b2vrRO6Us6g" />
-```
 
 ## Installation
 

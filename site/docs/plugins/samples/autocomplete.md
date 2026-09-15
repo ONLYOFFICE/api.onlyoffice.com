@@ -3,6 +3,8 @@ description: Provide input suggestions from a dictionary while typing.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Autocomplete
 
 Helps the user to input text quickly.
@@ -11,11 +13,7 @@ Helps the user to input text quickly.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="DhyqzMsyirM"/>
-```
 
 ## Installation
 

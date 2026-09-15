@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 响应
 
 请求结果以 XML 格式返回。要接收 JSON 格式的响应，您需要在 HTTP 请求中使用 `application/json` 值指定 `Accept` 标头。在形成结果文件的链接时，使用与转换请求相同的服务器名称。
@@ -12,11 +14,7 @@ JSON 响应格式从 4.3 版开始提供。
 
 ## 响应参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
@@ -26,9 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | 到已转换文档的链接。仅当 `endConvert` 参数设置为 `true` 时才会接收到此参数。 |
 | percent | integer | `100` | 文件转换的百分比。如果 `endConvert` 参数设置为 `true`，则 `percent` 等于 `100`。 |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 响应示例
 

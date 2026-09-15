@@ -4,6 +4,7 @@ sidebar_position: -1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # 添加DMS提供商
 
@@ -39,11 +40,7 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 
 ### 参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 参数                  | 类型                   | 示例                                                                                                      | 描述                                                                                                                                                                                  |
 |-----------------------|------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,9 +57,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 连接列表图标的路径。                                                                                                                                                                 |
 | icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 当门户列表为空时，连接页面上提供商按钮的图标路径。此参数适用于9.0以下版本。                                                                                                            |
 
-```mdx-code-block
 </APITable>
-```
 
 ### 示例
 

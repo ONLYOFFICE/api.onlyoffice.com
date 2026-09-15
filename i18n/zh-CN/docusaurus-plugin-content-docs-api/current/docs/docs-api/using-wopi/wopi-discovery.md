@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # WOPI发现
 
 [WOPI discovery](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公软件请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公软件进行交互。请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
@@ -15,11 +17,7 @@ sidebar_position: -8
 
 ### WOPI 操作 {#wopi-actions}
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称       | 描述                                                                                                                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,9 +30,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | mobileView | 呈现文档的不可编辑视图，该视图已针对智能手机等移动设备上的查看进行了优化。此操作从版本 7.4 开始可用。                                                                                |
 | mobileEdit | 允许用户在智能手机等移动设备上编辑文档。此操作从版本 7.4 开始可用。                                                                                                                        |
 
-```mdx-code-block
 </APITable>
-```
 
 ### 属性
 
@@ -57,9 +53,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 ### 参数
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称       | 示例                                                          | 描述                                                                                                                                                                                                                                                |
 | ---------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,9 +65,7 @@ ui=en-us&amp;thm=1&amp;"/>
 | wopisrc    | https\://\<host\_address>/ wopi/files/(file\_id)                 | 指示 WOPI 服务器包含 [WOPISrc](./key-concepts.md#wopisrc) 值。它告诉 WOPI 客户端在对文件运行 WOPI 操作时回调到哪个 URL。此参数是必需的。                                     |
 | favIconUrl | "/web-apps/apps/ documenteditor/main/ resources/img/favicon.ico" | 表示WOPI服务器包括所有在线office应用程序的适当收藏夹的URL。主机应该使用此URL作为其主机页面的收藏夹图标，以便在使用在线office时显示相应的应用程序图标。 |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Nextcloud 特性
 

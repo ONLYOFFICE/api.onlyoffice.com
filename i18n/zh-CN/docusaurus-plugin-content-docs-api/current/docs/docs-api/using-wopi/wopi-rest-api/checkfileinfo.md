@@ -1,4 +1,6 @@
-﻿# CheckFileInfo
+﻿import APITable from '@site/src/components/APITable/APITable';
+
+# CheckFileInfo
 
 `GET /wopi/files/(file_id)`
 
@@ -28,11 +30,7 @@
 请注意，任何响应字符串值的默认值都是空字符串。
 :::
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称         | 类型   | 示例                  | 描述                                                                                                                                                                     |
 | ------------ | ------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,15 +38,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | Size         | integer | 100                      | 文件的大小（以字节为单位，64位有符号整数）。                                                                                                                          |
 | Version      | string | "Khirz6zTPdfd7"          | 基于服务器文件版本架构的文件的当前版本。每次编辑和保存文档时，都必须更改版本。给定文件的版本号不得重复。 |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 面包屑导航属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                 | 类型   | 示例                                                | 描述                                                                                                                                                          |
 | -------------------- | ------ | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,15 +52,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | BreadcrumbFolderName | string | "Example Folder Name"                                  | 包含文件的容器的名称。                                                                                                                    |
 | BreadcrumbFolderUrl  | string | `https://example.com/url-to-breadcrumb-brand-folder`   | 当用户单击显示 [BreadcrumbFolderName](#BreadcrumbFolderName) 的 UI 时，WOPI 客户端导航到的网页的 URL。                 |
 
-```mdx-code-block
 </APITable>
-```
 
 ## PostMessage 属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                        | 类型    | 示例                     | 描述                                                                                                                                                                                                                                                                                                  |
 | --------------------------- | ------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -77,15 +67,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | FileVersionPostMessage      | boolean | true                        | 当在线办公软件中的 *Previous Versions* UI 激活时，主机是否期望接收 [UI\_FileVersions](../postmessage.md#UI_FileVersions) PostMessage。                                                                                                                   |
 | PostMessageOrigin           | string  | `https://exampledomain.com` | [host page](../host-page.md) 正在向其发送和接收 PostMessage 的域。在线办公软件仅向此域发送传出的 PostMessage，并且仅监听来自此域的 PostMessage。                                                                           |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 文件 URL 属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称           | 类型   | 示例                                                | 描述                                                                                                                         |
 | -------------- | ------ | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -94,15 +80,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | FileVersionUrl | string | `https://example.com/url-to-previous-version-page.com` | 指向允许用户查看文件版本历史记录的位置的 URI。                                                      |
 | HostEditUrl    | string | `https://example.com/url-to-host-page.com`             | 指向加载编辑 WOPI 操作的主机页面的 URI。                                                                               |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 其他杂项属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                  | 类型    | 示例                        | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------------- | ------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,15 +94,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | FileNameMaxLength     | integer | 20                             | WOPI 主机支持的文件名的最大长度，不包括文件扩展名。默认值为 250。请注意，如果省略该属性或将其明确设置为 0，WOPI 客户端将使用此默认值。                                                                                                                                                                                                                                                                                           |
 | LastModifiedTime      | string  | "2009-06-15T13:45:30.0000000Z" | 上次修改文件的时间。此时间必须始终为 UTC 时间，并且必须采用 ISO 8601 往返格式。此属性可以指定为 [Version](#Version) 属性的替代。                                                                                                                                                                                                                                                                                  |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 用户元数据属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称             | 类型    | 示例      | 描述                                                                                                                                                                          |
 | ---------------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -128,15 +106,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | UserFriendlyName | string  | "John Smith" | 用户的名称，适合在 UI 中显示。                                                                                                                                 |
 | UserId           | string  | "uid-1"      | 唯一标识当前访问文件的用户的值。                                                                                                                  |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 用户权限属性 {#user-permissions-properties}
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                    | 类型    | 示例 | 描述                                                                                                                                                                                                                                                                                                              |
 | ----------------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -146,15 +120,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | UserCanReview           | boolean | true    | 用户是否有权查看当前文件。                                                                                                                                                                                                                                                        |
 | UserCanWrite            | boolean | true    | 用户是否有权更改文件。                                                                                                                                                                                                                                                                 |
 
-```mdx-code-block
 </APITable>
-```
 
 ## WOPI 主机功能属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称              | 类型    | 示例 | 描述                                                                                                                                       |
 | ----------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -163,35 +133,25 @@ import APITable from '@site/src/components/APITable/APITable';
 | SupportsReviewing | boolean | true    | 主机是否支持查看权限。                                                                                             |
 | SupportsUpdate    | boolean | true    | 主机是否支持 [PutFile](./putfile.md) 和 [PutRelativeFile](./putrelativefile.md) 操作。                  |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Nextcloud/Collabora/Seafile properties
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                    | 类型    | 示例 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EnableInsertRemoteImage | boolean | true    | 是否启用调用 [UI\_InsertGraphic](../postmessage.md#UI_InsertGraphic) 消息的菜单项和工具栏项。此属性用于显示用户界面元素（例如，对话框），允许用户从集成中选择图像。该集成应该提供一个可下载一次的临时 URL，并通过 [Action\_InsertGraphic](../postmessage.md#Action_InsertGraphic) 消息将其返回，并将 *Values* 设置为临时 URL。 |
 | HidePrintOption         | boolean | false   | WOPI 服务器是否隐藏 UI 中文件菜单栏的打印选项。                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Collabora 属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称               | 类型    | 示例 | 描述                                             |
 |--------------------|---------|---------|------------------------------------------------------|
 | UserCanOnlyComment | boolean | true    | 用户是否只能向文档添加评论。 |
 
-```mdx-code-block
 </APITable>
-```

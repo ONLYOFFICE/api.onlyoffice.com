@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Sending notifications
 
 The desktop app can send text messages to be displayed to the user. To do so, declare the function:
@@ -20,11 +22,7 @@ The `e` object has the following structure:
 }
 ```
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter   | Type    | Description                                                                                                                                                                             |
 |-------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,9 +31,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | e.opMessage | string  | The message that will be displayed to the user.                                                                                                                                 |
 | e.opType    | integer | The message by the operation type if the `opMessage` parameter is undefined. Set it to **0** to inform the user about file upload, or to **1** to inform about file encryption. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Example
 

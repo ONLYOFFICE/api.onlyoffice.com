@@ -3,6 +3,8 @@ description: Embed a chess board as an OLE object in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Chess
 
 Inserts a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the *FEN* format.
@@ -11,11 +13,7 @@ Inserts a Chess Board object into the document editor. The object makes it possi
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="PV5TSRvKKU0" />
-```
 
 ## Installation
 

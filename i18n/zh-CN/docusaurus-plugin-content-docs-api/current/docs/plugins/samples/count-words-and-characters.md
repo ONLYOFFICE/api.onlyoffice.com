@@ -1,4 +1,6 @@
-﻿# 统计字词和字符数
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 统计字词和字符数
 
 统计文档选中部分的段落数、单词数以及带空格和不带空格的字符数。
 
@@ -14,11 +16,7 @@
 
 **支持的编辑器：**文档编辑器。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="b2vrRO6Us6g" />
-```
 
 ## 安装方式
 

@@ -3,6 +3,8 @@ sidebar_position: -3
 description: Learn how to add and configure icons for your ONLYOFFICE plugins.
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Icons
 
 When building a plugin for the editor, adding icons can significantly enhance usability and make your interface more intuitive.
@@ -115,11 +117,7 @@ This allows you to add interactive buttons directly inside your document content
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter  | Type   | Example     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |------------|--------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -129,9 +127,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | scale      | string | `"default"` | All the supported scaling types for the plugin icons. The default value means the same as `100\|125\|150\|175\|200`. The `*` value means all other scales.<br /><br />The document editor chooses the necessary icons in the following way:<br /><br />1. get the information about the current scaling and find an icon for it;<br /><br />2. if there is no such an icon in the `config`, take the one which is the closest to the required size and round it up (150% instead of 140%). |
 | extension  | string | `"svg"`     | The icon extension. If there is the `svg` extension in the options, it will be used for all unspecified scales and for the `*` value. For the specified extensions, the last of all the listed "non-svg" extensions will be used. If there are no other extensions in the options, then the `svg` extension will be used as well.                                                                                                                                                          |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Deprecated icon format
 

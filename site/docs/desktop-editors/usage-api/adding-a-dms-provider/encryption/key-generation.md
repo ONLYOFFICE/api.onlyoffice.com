@@ -1,8 +1,6 @@
-# Key generation
-
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
-```
+
+# Key generation
 
 To check if the desktop app supports encryption, call the following command:
 
@@ -32,18 +30,14 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    }
    ```
 
-   ```mdx-code-block
    <APITable>
-   ```
     | Name       | Type   | Example                       | Description                                       |
     | ---------- | ------ | ----------------------------- | ------------------------------------------------- |
     | domain     | string | `"https://exampledomain.com"` | The cloud name and the cloud entry point. |
     | emailInput | string | `"john@example.com"`          | The user email entered on the login page. |
     | pwdInput   | string | `"123456"`                    | The password entered on the login page.   |
 
-   ```mdx-code-block
    </APITable>
-   ```
 
    ## Example
 
@@ -69,9 +63,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    }
    ```
 
-   ```mdx-code-block
    <APITable>
-   ```
 
    | Name           |  Type   | Example                                    | Description                           |
    |----------------|---------|--------------------------------------------|---------------------------------------|
@@ -79,9 +71,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    | privateKeyEnc  | string  | `"xxx"`                                    | The encrypted private key.    |
    | publicKey      |  string | `"yyy"`                                    | The public key.               |
 
-   ```mdx-code-block
    </APITable>
-   ```
 
    ## Example
 

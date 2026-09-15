@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 请求
 
  对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
@@ -20,11 +22,7 @@ sidebar_position: -4
 
 ## 请求参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter | Type | Presence | Description |
 | --------- | ---- | -------- | ----------- |
@@ -93,9 +91,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.type | string | optional | 指定当前水印的预设形状几何形状的[形状类型](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md)。 |
 | watermark.width | integer | optional | 以毫米为单位测量的水印宽度。 |
 
-```mdx-code-block
 </APITable>
-```
 
 :::warning
 如果是同步转换，文件转换时间比较长，可能会出现 web 请求超时错误。虽然最终可以完成转换，但只有用相同的 key 再次发送请求才能得到结果。

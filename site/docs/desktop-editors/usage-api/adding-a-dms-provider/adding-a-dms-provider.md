@@ -4,6 +4,7 @@ sidebar_position: -1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # Adding a DMS provider
 
@@ -39,11 +40,7 @@ Create a *config.json* file to specify the integration parameters.
 
 ### Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter             | Type                   | Example                                                                                                     | Description                                                                                                                                                                       |
 |-----------------------|------------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,9 +57,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                   | The path to the icon for the connection list.                                                                                                                                     |
 | icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | The path to the icon for the provider button on the connection page when the portal list is empty. This parameter is used for versions below 9.0.                                 |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example
 

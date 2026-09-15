@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # PostMessage
 
 [PostMessage](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage) is the [HTML5 Web Messaging](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages) protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. It allows the online office frame to communicate with its parent host page.
@@ -12,11 +14,7 @@ otherWindow.postMessage(msg, targetOrigin)
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name          | Type                  | Example                     | Description                                                                                                                                                                                                                                                                                        |
 | ------------- | --------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,17 +24,13 @@ import APITable from '@site/src/components/APITable/APITable';
 | msg.Values    | JSON object           | `{"key": "value"}`          | The message properties.                                                                                                                                                                                                                                                                            |
 | targetOrigin  | string                | `https://exampledomain.com` | The *otherWindow* origin that must be for the event to be dispatched. It will be set to the [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) property provided in *CheckFileInfo*.<br /><br />**otherWindow* is a reference to another window that *msg* will be posted to. |
 
-```mdx-code-block
 </APITable>
-```
 
 Here you can find the messages that are available for ONLYOFFICE Docs to send to the host page. The process of receiving messages by the online office will be available later.
 
 ## Available messages
 
-```mdx-code-block
 <APITable>
-```
 
 | Name                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,24 +45,18 @@ Here you can find the messages that are available for ONLYOFFICE Docs to send to
 | UI\_FileVersions       | This message is posted when the user activates the *Previous Versions* UI in the online office. The host should use this message to trigger any custom file version history UI. To send this message, the [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#FileVersionPostMessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.                    |
 | UI\_Sharing            | This message is posted when the user activates the *Share* UI in the online office. The host should use this message to trigger any custom sharing UI. To send this message, the [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#FileSharingPostMessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.                                             |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Collabora specific
 
-```mdx-code-block
 <APITable>
-```
 
 | Name                  | Description                                                                                                                                                                                                                                                                                                                                               |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Action\_InsertGraphic | This message is posted to download an image from the URL and insert it into the document.                                                                                                                                                                                                                                                                 |
 | UI\_InsertGraphic     | This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration. The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the [Action_InsertGraphic](#Action_InsertGraphic) message with *Values* set to the temporary URL. |
 
-```mdx-code-block
 </APITable>
-```
 
 :::note
 The PostMessage messages have the higher priority than the [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) properties provided in *CheckFileInfo*.

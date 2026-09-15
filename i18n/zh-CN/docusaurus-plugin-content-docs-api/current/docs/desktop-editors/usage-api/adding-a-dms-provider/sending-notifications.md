@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 发送通知
 
 桌面应用可以发送文本消息给用户显示。为此，需声明以下函数：
@@ -20,11 +22,7 @@ window.onSystemMessage = function onSystemMessage(e) {};
 }
 ```
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 参数        | 类型   | 描述                                                                                                                     |
 |-------------|--------|-------------------------------------------------------------------------------------------------------------------------|
@@ -33,9 +31,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | e.opMessage | string  | 将向用户显示的消息。                                                                                                  |
 | e.opType    | integer | 如果 `opMessage` 参数未定义，则根据操作类型确定消息。设置为 **0** 用于通知用户文件上传，设置为 **1** 用于通知用户文件加密。     |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 示例
 

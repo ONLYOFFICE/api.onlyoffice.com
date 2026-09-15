@@ -1,4 +1,6 @@
-﻿# Zotero
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# Zotero
 
 连接 Zotero 账户，用于根据所选引用格式指南将参考文献添加到文档中。
 
@@ -8,11 +10,7 @@
 
 **类似插件：** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley)，[EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib)。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="y6RKGiBHiG8" />
-```
 
 ## 安装
 

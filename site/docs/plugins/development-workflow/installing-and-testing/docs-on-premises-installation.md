@@ -4,14 +4,11 @@ sidebar_position: -2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # ONLYOFFICE Docs on-premises
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="R7gvhLvGL44"/>
-```
 
 There are three ways to add plugins: through the plugin manager, through the `sdkjs-plugins` folder, or through the `config.json` file.
 

@@ -1,4 +1,6 @@
-﻿# Typograf（排版助手）
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# Typograf（排版助手）
 
 连接 [Typograf](https://github.com/typograf/typograf) 助手，以在发布前修正文本文字中的排版错误。该插件可以自动插入不间断空格、删除多余空格、修复轻微拼写错误、插入正确引号、将连字符替换为破折号等。
 
@@ -8,11 +10,7 @@
 
 **支持的编辑器：** 文本文档。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="Pr1TAstlj7E"/>
-```
 
 ## 安装
 

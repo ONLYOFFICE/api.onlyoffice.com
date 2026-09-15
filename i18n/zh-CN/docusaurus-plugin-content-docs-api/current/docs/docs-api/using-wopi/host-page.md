@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 主机页面
 
 为了在您的应用程序中创建一个online office会话，主机必须创建一个 HTML 页面，该页面将在其中嵌入一个指向特定 [WOPI 操作 URL](./wopi-discovery.md#wopi-actions)的 iframe 元素。
@@ -87,11 +89,7 @@ f
 
 ## 参数 {#parameters}
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称               | 类型    | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,8 +97,6 @@ import APITable from '@site/src/components/APITable/APITable';
 | access\_token\_ttl | integer | [访问令牌过期](./key-concepts.md#the-access_token_ttl-property)的时间，表示为自1970年1月1日 UTC 以来的毫秒数。建议将此参数设置为 10 小时。此参数也可以设置为 0。对于客户端来说，这意味着令牌的有效期是无限的或未知的。在这种情况下，客户端可能会禁用任何提示用户刷新会话的 UI。这可能会导致访问令牌过期而导致意外的数据丢失。因此，强烈建议为 *access_token_ttl* 指定一个值。 |
 | docs\_api\_config  | string  | 可选的 [config](../usage-api/config/config.md) 参数，用来通过 Docs API 打开编辑器，这些参数不受 WOPI 协议支持。例如，要通过单击**保存**按钮启用 [forcesaving](../get-started/how-it-works/saving-file.md#force-saving) 功能，必须在此对象中传递 [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 参数。                                                                                                           |
 
-```mdx-code-block
 </APITable>
-```
 
 可以在 [这里](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage)找到有关构建主机页面的更多信息。

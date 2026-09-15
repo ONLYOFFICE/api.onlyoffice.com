@@ -3,6 +3,8 @@ description: Convert selected text to speech using Web Speech API.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Speech
 
 Converts the selected text into speech. The plugin uses [guessLanguage](https://richtr.github.io/guessLanguage.js/) to recognize the language and the [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) interface of the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API).
@@ -11,11 +13,7 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 **Supported editors:** documents.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="ZALRpPomZrA" />
-```
 
 ## Installation
 

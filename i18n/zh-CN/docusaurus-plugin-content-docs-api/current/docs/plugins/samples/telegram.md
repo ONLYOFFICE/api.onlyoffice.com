@@ -1,4 +1,6 @@
-﻿# Telegram
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# Telegram
 
 将 Telegram 即时通讯应用集成到 ONLYOFFICE 编辑器中。
 
@@ -12,11 +14,7 @@
 
 **类似插件：** [Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow)、[Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi)
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="8nj6smmCLis" />
-```
 
 ## 安装方式
 

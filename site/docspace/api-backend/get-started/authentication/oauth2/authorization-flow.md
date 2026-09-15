@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Authorization flow
 
 When a user clicks the authorization link, any of these four scenarios can occur:
@@ -54,11 +56,7 @@ The parameters that must be specified in the request body depend on the client t
 
 ### For client_secret_post
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter     | Type   | Example                                                                                                                            | Description                                                                                |
 |---------------|--------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -68,22 +66,16 @@ import APITable from '@site/src/components/APITable/APITable';
 | code          | string | `OENBaHXhZStQ9eDVIq-1NlHu6luruKqJtCp6Rhg-OFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318mihPflIpV` | A temporary authorization code that is sent to the client to be exchanged for a token.     |
 | redirect_uri  | string | `https://redirect-url.com`                                                                                                         | The URL where the user will be redirected after successful or unsuccessful authentication. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### For client with PKCE
 
 For the client with PKCE, the parameters are the same as for **client_secret_post**, but the [client_secret](#client_secret) must be replaced with the `code_verifier`.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter     | Type   | Example                                                                    | Description                                                                              |
 |---------------|--------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | code_verifier | string | `a50883696b67d1e91-e52be26d8b78ae902b354-a4b3a8965affbe30f-c8056c89afa066` | The code verifier, a cryptographically random string between 43 and 128 characters long. |
 
-```mdx-code-block
 </APITable>
-```

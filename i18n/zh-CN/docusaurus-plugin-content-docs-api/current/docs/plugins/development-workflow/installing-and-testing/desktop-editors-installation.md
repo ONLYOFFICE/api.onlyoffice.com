@@ -4,14 +4,11 @@ sidebar_position: -3
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # ONLYOFFICE 桌面编辑器
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="bHTia-F0K3w"/>
-```
 
 添加插件有两种方式：通过插件管理器或通过插件文件夹。
 

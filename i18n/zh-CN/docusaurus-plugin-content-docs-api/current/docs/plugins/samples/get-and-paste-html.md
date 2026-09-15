@@ -1,4 +1,6 @@
-﻿# 获取并粘贴 HTML
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 获取并粘贴 HTML
 
 获取文档内容的 HTML 代码，对其进行修改后再粘贴回文档中。
 
@@ -8,11 +10,7 @@
 
 **类似插件：** [Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md)。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="ZoY0CMfcPyk"/>
-```
 
 ## 安装方式
 

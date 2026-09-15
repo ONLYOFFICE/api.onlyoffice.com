@@ -5,13 +5,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/confluence.svg
 ---
 
-# Confluence integration
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Confluence integration
+
 <YoutubeVideo videoId="pGd06HLkWU4"/>
-```
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-confluence) enables users to edit office documents from [Confluence](https://www.atlassian.com/software/confluence/) using ONLYOFFICE Docs.
 

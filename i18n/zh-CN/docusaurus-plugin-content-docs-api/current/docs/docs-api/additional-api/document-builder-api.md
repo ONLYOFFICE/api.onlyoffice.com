@@ -10,9 +10,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 请求参数
 
-```mdx-code-block
 <APITable>
-```
 
 | 参数      | 类型    | 是否必填       | 描述                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -22,9 +20,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | token     | string  | 配置要求       | 以[令牌](./signature/request/token-in-body.md#document-builder)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                     |
 | url       | string  | 必填           |  `.js` 脚本文件的绝对 URL。                                                                                                                                                                                                                                                                                                            |
 
-```mdx-code-block
 </APITable>
-```
 
 `.js` 脚本文件是一个 JavaScript 文件，使用 [Office JavaScript API](../../office-api/get-started/overview.md) 来生成输出文档文件（文本文档、电子表格或演示文稿）。它使用 `builder.CreateFile()` 创建文档，使用 Office API 类来操作内容，使用 `builder.SaveFile()` 指定输出格式和名称，使用 `builder.CloseFile()` 完成文档处理。您可以在[此处](../../document-builder/using-cli/script-file.md)找到有关脚本文件语法的更多信息。一旦文档生成完成，将返回带有结果文件绝对 URL 的响应（见下文）。
 
@@ -40,9 +36,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 请求结果以 JSON 格式返回。
 
-```mdx-code-block
 <APITable name="response">
-```
 
 | 参数      | 类型    | 示例                                            | 描述                                                                                                                                                                                                                                                 |
 | --------- | ------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,9 +45,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | key       | string  | `af86C7e71Ca8`                                  | 文档生成任务的唯一标识符。如果请求中提供了 `key` 参数，则返回相同的值。如果在第一个异步请求中未提供 `key` 参数，则由**文档生成器服务**生成新的 key。请在所有后续轮询请求中使用此值。                                                              |
 | urls      | object  | `{"output.docx": "https://documentserver/..."}` | 包含生成的输出文件绝对 URL 的对象。对象键是 `.js` 脚本中指定的输出文件名。此参数仅在 `end` 值为 `true` 时存在。                                                                                                                                   |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 示例脚本
 

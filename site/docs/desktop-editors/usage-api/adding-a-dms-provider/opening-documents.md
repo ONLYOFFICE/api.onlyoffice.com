@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Opening documents
 
 After [registering](./login-and-logout.md) in the cloud, you can start working on documents stored there.
@@ -29,20 +31,14 @@ To open a document in a new window / tab correctly:
 } 
 ```
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 | Parameter | Type   | Example                                            | Description                                                                                                                                    |
 | --------- | ------ | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | url       | string | `https://example.com/url-to-example-document.docx` | The absolute URL to the opened document.                                                                                               |
 | type      | string | `"word"`                                           | The type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.                                |
 | provider  | string | `"onlyoffice"`                                     | The provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Example
 

@@ -3,6 +3,8 @@ description: Connect Telegram for instant messaging in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Telegram
 
 Connects the Telegram application for instant messaging within the ONLYOFFICE editors.
@@ -17,11 +19,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
 **Analogues:** [Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow), [Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="8nj6smmCLis" />
-```
 
 ## Installation
 

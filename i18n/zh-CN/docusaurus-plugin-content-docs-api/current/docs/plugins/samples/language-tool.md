@@ -1,4 +1,6 @@
-﻿# 语言工具
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 语言工具
 
 连接 [LanguageTool（语言工具）](https://languagetool.org/) 助手，这是一个多语言语法与风格检查器，可用于检测文本中的语法、风格和拼写错误。
 
@@ -8,11 +10,7 @@
 
 **类似插件：** [Glavred](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/glavred)、[Grammalecte](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/grammalecte)。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="5HaV18VwOgg" />
-```
 
 ## 安装
 

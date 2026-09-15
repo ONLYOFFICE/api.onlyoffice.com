@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # PostMessage
 
 [PostMessage](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage) 是 [HTML5 Web 消息传递](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages)协议，它允许在 iframe 存储和 ONLYOFFICE 文档之间在浏览器中交换消息。它允许online office框架与其父主机页面进行通信。
@@ -12,11 +14,7 @@ otherWindow.postMessage(msg, targetOrigin)
 
 ## 参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称          | 类型                  | 示例                     | 描述                                                                                                                                                                                                                                                                                        |
 |---------------|-----------------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,17 +24,13 @@ import APITable from '@site/src/components/APITable/APITable';
 | msg.Values    | JSON 对象           | `{"key": "value"}`          | 消息属性。                                                                                                                                                                                                                                                                            |
 | targetOrigin  | string                | `https://exampledomain.com` | *otherWindow* 原点必须是要调度的事件。它将被设置为 *CheckFileInfo*中提供的 [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) 属性。<br /><br />**otherWindow* 是对 *msg* 将被发布到的另一个窗口的引用。 |
 
-```mdx-code-block
 </APITable>
-```
 
 在这里，您可以找到可供 ONLYOFFICE 文档发送到主机页面的消息。Online office接收消息的过程将在稍后提供。
 
 ## 可用消息 {#available-messages}
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                   | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,24 +45,18 @@ import APITable from '@site/src/components/APITable/APITable';
 | UI\_FileVersions       | 当用户在online office中激活 *以前的版本* UI 时，会发布此消息。主机应使用此消息来触发任何自定义文件版本历史 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#FileVersionPostMessage) 属性必须设置为 **true**。 否则，online office将不会发送此消息。                    |
 | UI\_Sharing            | 当用户激活online office中的 *共享* UI 时，会发布此消息。主机应使用此消息来触发任何自定义共享 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#FileSharingPostMessage) 属性必须设置为 **true**。否则，online office将不会发送此消息。                                             |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Collabora特性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                  | 描述                                                                                                                                                                                                                                                                                                                                               |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Action\_InsertGraphic | 发布此消息是为了从 URL 下载图像并将其插入到文档中。                                                                                                                                                                                                                                                                 |
 | UI\_InsertGraphic     | 发布此消息以显示用户界面元素（例如，对话框），允许用户从集成中选择图像。该集成应该提供一个可以下载一次的临时 URL，通过 [Action_InsertGraphic](#Action_InsertGraphic) 消息将 *Values* 设置为临时 URL，将其返回。 |
 
-```mdx-code-block
 </APITable>
-```
 
 :::note
 请注意，PostMessage 消息的优先级高于 *CheckFileInfo*中提供的 [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) 属性。

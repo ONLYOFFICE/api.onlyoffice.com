@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Login and logout
 
 Before you start working on documents stored within your cloud, you need to log in to it.
@@ -21,11 +23,7 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 }
 ```
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 | Parameter   | Type   | Example                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ----------- | ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | displayName | string | `"John Smith"`                | The user name displayed on the *Connected clouds* page. **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -35,9 +33,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | uiTheme     | string | `"theme-dark"`                | The editor theme settings. It can be set in two ways:<br /><br />• **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*).<br /><br />• **default theme** – the default dark or light theme value will be set (*default-dark, default-light*).<br /><br />The default light theme is *theme-classic-light*. The first option has higher priority.<br /><br />Apart from the available editor themes, the user can also customize their own color themes for the application interface. |
 | userId      | string | `"78e1e841"`                  | The user id. **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-```mdx-code-block
 </APITable>
-```
 
 #### Example
 
@@ -63,17 +59,13 @@ Use the [execCommand](./execcommand.md) method to remove a cloud from the **Conn
 }
 ```
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type   | Example                     | Description                                       |
 | --------- | ------ | --------------------------- | ------------------------------------------------- |
 | domain    | string | `https://exampledomain.com` | The cloud name and the cloud entry point. |
 
-```mdx-code-block
 </APITable>
-```
 
 #### Example
 

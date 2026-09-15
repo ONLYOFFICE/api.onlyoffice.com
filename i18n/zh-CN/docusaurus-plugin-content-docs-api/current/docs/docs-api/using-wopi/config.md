@@ -4,6 +4,7 @@ sidebar_position: -10
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # 配置
 
@@ -43,11 +44,7 @@ import TabItem from '@theme/TabItem';
 
 ## 参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 参数                      | 类型             | 示例                                                                                                                                                               | Description                                                                                                                                                                                                                                      |
 | ------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -82,9 +79,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | wopi.dummy.enable              | boolean          | false                                                                                                                                                                 | 是否启用虚拟处理程序。                                                                                                                                                                                                |
 | wopi.dummy.<br/>sampleFilePath | string           | ""                                                                                                                                                                    | 示例文件的虚拟路径。                                                                                                                                                                                                           |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 示例
 

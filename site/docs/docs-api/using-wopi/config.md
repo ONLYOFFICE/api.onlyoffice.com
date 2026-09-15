@@ -4,6 +4,7 @@ sidebar_position: -10
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # Config
 
@@ -43,11 +44,7 @@ Restart the services for the config changes to take effect:
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter                      | Type             | Example                                                                                                                                             | Description                                                                                                                                                                                                                                      |
 | ------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -82,9 +79,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | wopi.dummy.enable              | boolean          | false                                                                                                                                               | Whether the dummy handlers are enabled or not.                                                                                                                                                                                                |
 | wopi.dummy.<br/>sampleFilePath | string           | ""                                                                                                                                                  | The dummy path to the sample file.                                                                                                                                                                                                       |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Example
 

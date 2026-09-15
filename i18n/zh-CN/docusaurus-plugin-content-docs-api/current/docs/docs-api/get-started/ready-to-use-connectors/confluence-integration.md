@@ -3,13 +3,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/confluence.svg
 ---
 
-# Confluence 集成
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Confluence 集成
+
 <YoutubeVideo videoId="pGd06HLkWU4"/>
-```
 
 这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-confluence)允许用户在[Confluence](https://www.atlassian.com/software/confluence/)中使用ONLYOFFICE 文档直接编辑办公文档。
 

@@ -3,6 +3,8 @@ description: Use AI models for text generation, editing, and summarization.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations", "PDF"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # AI
 
 Connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
@@ -11,11 +13,7 @@ Connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling
 
 **Supported editors:** documents, spreadsheets, presentations, PDF.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="oQbH8JIe3eE"/>
-```
 
 ## Installation
 

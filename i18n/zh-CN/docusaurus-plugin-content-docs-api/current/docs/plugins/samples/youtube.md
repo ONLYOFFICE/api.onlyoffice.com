@@ -1,4 +1,6 @@
-﻿# YouTube
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# YouTube
 
 连接 [youtube iframe_api](https://developers.google.com/youtube/iframe_api_reference)，用于将 YouTube 视频作为 OLE 对象嵌入文档，并通过调整大小、旋转和改变位置来管理它们。
 
@@ -6,11 +8,7 @@
 
 **支持编辑器：** 文档，电子表格，演示文稿。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="jHuwwVliZ5Q" posterType="hqdefault" />
-```
 
 ## 安装
 

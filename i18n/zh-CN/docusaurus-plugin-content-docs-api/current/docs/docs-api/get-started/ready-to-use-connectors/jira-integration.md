@@ -3,13 +3,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/jira.svg
 ---
 
-# Jira 集成
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Jira 集成
+
 <YoutubeVideo videoId="mQgpkMwwbLE"/>
-```
 
 该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-jira)允许用户借助ONLYOFFICE 文档在[Jira Software](https://www.atlassian.com/software/jira)中编辑办公文档。
 

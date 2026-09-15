@@ -5,6 +5,7 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # React
 
@@ -397,11 +398,7 @@ The `config` property is merged over the separate properties of the component. T
 
 Each `events_on*` property corresponds to the [event](../../usage-api/config/events.md) with the same name in the editor configuration.
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name                                  | Type                                                  | Default | Description                                                                                                                                                |
 | ------------------------------------- | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -441,9 +438,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `events_onRequestSelectDocument`      | (event: object) => void                               | null    | The function called when the user is trying to select a document for comparing, combining, or inserting text.                                              |
 | `events_onRequestUsers`               | (event: object) => void                               | null    | The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. |
 
-```mdx-code-block
 </APITable>
-```
 
 \* *- required field*
 

@@ -4,14 +4,11 @@ sidebar_position: -2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # ONLYOFFICE 文档本地部署版
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="R7gvhLvGL44"/>
-```
 
 可以通过以下三种方式添加插件：插件管理器、`sdkjs-plugins` 文件夹或 `config.json` 文件。
 

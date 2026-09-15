@@ -1,4 +1,6 @@
-﻿# AI
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# AI
 
 将 AI 提供商（如 OpenAI、DeepSeek）接入 ONLYOFFICE 编辑器，实现智能文本生成、编辑、摘要提取及宏自动创建功能。
 
@@ -6,11 +8,7 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿、PDF。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="oQbH8JIe3eE"/>
-```
 
 ## 安装
 

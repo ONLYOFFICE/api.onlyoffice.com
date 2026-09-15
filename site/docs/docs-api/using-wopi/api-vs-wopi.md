@@ -2,17 +2,15 @@
 sidebar_position: -1
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # API vs WOPI
 
 You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite?from=api) with any cloud service using either API or WOPI.
 
 The table below will help you find out the difference between these options.
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 |                                             | **API**                                                                                     | **WOPI**                                                                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -65,6 +63,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | Printing                                    | [Yes](../usage-api/config/document/permissions.md#print)                                    | [Yes](./wopi-rest-api/checkfileinfo.md#HidePrintOption)                                                              |
 | Renaming                                    | No                                                                                          | [Yes](./wopi-rest-api/checkfileinfo.md#UserCanRename)                                                                |
 
-```mdx-code-block
 </APITable>
-```

@@ -3,6 +3,8 @@ description: Embed YouTube videos as OLE objects in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # YouTube
 
 Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_reference) for embedding YouTube videos into documents as OLE objects and managing them by adjusting their size, rotating, and changing position.
@@ -11,11 +13,7 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="jHuwwVliZ5Q" posterType="hqdefault" />
-```
 
 ## Installation
 

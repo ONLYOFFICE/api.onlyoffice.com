@@ -1,4 +1,6 @@
-﻿# 许可证
+﻿import APITable from '@site/src/components/APITable/APITable';
+
+# 许可证
 
 向 ONLYOFFICE 文档请求许可证，并获取有关服务器和用户配额的信息。
 
@@ -65,11 +67,7 @@
 
 ## 响应参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 参数 | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |--------------------------|------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -97,6 +95,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | quota.users_view.userid  | string           | 必填 | 打开文档进行查看的用户 ID。                                                                                                                                                                                                                          |
 | quota.users_view.expire  | string           | 必填 | 该用户的查看权限过期日期。                                                                                                                                                                                                                           |
 
-```mdx-code-block
 </APITable>
-```

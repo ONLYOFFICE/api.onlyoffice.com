@@ -4,14 +4,11 @@ sidebar_position: -3
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # ONLYOFFICE Desktop Editors
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="bHTia-F0K3w"/>
-```
 
 There are two ways to add plugins: through the plugin manager and through the plugin folder.
 

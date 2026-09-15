@@ -4,6 +4,7 @@ sidebar_position: 0
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # Connecting MCP servers
 
@@ -146,11 +147,7 @@ Enter your MCP server configuration in JSON format. The configuration structure 
 
 ### Configuration parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter       | Type   | Description                                                                                         |
 |-----------------|--------|-----------------------------------------------------------------------------------------------------|
@@ -160,9 +157,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | args            | array  | Array of command-line arguments passed to the command.                                              |
 | env             | object | Environment variables required by the MCP server (e.g., API keys, URLs).                            |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Practical examples
 

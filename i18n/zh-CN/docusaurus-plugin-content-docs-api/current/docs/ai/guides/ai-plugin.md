@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # AI 插件
 
 AI 是一个后台插件，它将 AI 提供商（例如 OpenAI、DeepSeek）与 ONLYOFFICE 编辑器相连接，能够实现智能文本生成、编辑、摘要提取以及自动宏创建等功能。
@@ -10,11 +12,7 @@ AI 是一个后台插件，它将 AI 提供商（例如 OpenAI、DeepSeek）与 
 
 **GitHub 仓库**：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="oQbH8JIe3eE"/>
-```
 
 ## 安装
 

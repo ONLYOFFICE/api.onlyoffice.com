@@ -1,4 +1,6 @@
-﻿# 翻译器
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 翻译器
 
 连接 [Google Translate API](https://cloud.google.com/translate?hl=zh)，用于将选中的文本翻译成其他语言。
 
@@ -8,11 +10,7 @@
 
 **同类插件：** [Apertium](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/apertium)、[DeepL](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/deepl)
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="jCciDL48KHE" />
-```
 
 ## 安装
 

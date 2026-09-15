@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Request
 
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
@@ -20,11 +22,7 @@ In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters 
 
 ## Request parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter | Type | Presence | Description |
 | --------- | ---- | -------- | ----------- |
@@ -93,9 +91,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.type | string | optional | The [shape type](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
 | watermark.width | integer | optional | The watermark width measured in millimeters. |
 
-```mdx-code-block
 </APITable>
-```
 
 :::warning
 If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur. Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.

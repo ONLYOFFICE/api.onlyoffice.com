@@ -1,4 +1,6 @@
-﻿# 代码高亮
+﻿import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+# 代码高亮
 
 连接 [highlight.js 库](https://highlightjs.org/)实现代码语法高亮，支持必要的语言、样式和背景颜色。
 
@@ -6,11 +8,7 @@
 
 **支持的编辑器：** 文档、表格、演示文稿。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="almj8Lphrmc" />
-```
 
 ## 安装
 
