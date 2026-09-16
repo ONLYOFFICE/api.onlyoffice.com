@@ -251,13 +251,24 @@ jobs:
                 --delete \
                 $EXCLUDE_STR"
 
-           echo "Step 4: Sync all other files"
+           echo "Step 4: Sync stable-URL text files with short cache"
+           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
+                --exclude \"*\" \
+                --include \"*.txt\" \
+                --include \"*.xml\" \
+                --cache-control \"public, max-age=0, must-revalidate\" \
+                --delete \
+                $EXCLUDE_STR"
+
+           echo "Step 5: Sync all other files"
            eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                 --exclude \"*.html\" \
                 --exclude \"*.js\" \
                 --exclude \"*.css\" \
                 --include \"*\" \
                 --exclude \"*.md\" \
+                --exclude \"*.txt\" \
+                --exclude \"*.xml\" \
                 --cache-control \"public, max-age=86400\" \
                 --delete \
                 $EXCLUDE_STR"
