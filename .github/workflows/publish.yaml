@@ -242,12 +242,22 @@ jobs:
                 --delete \
                 $EXCLUDE_STR"
 
-           echo "Step 3: Sync all other files"
+           echo "Step 3: Sync markdown twins of the doc pages"
+           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
+                --exclude \"*\" \
+                --include \"*.md\" \
+                --cache-control \"public, max-age=0, must-revalidate\" \
+                --content-type \"text/markdown; charset=utf-8\" \
+                --delete \
+                $EXCLUDE_STR"
+
+           echo "Step 4: Sync all other files"
            eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                 --exclude \"*.html\" \
                 --exclude \"*.js\" \
                 --exclude \"*.css\" \
                 --include \"*\" \
+                --exclude \"*.md\" \
                 --cache-control \"public, max-age=86400\" \
                 --delete \
                 $EXCLUDE_STR"
