@@ -6,6 +6,8 @@ sidebar_position: 1
 
 The SDK reports what's happening inside the embedded frame through callbacks — there is no separate `addEventListener()`/`removeEventListener()` API. All events are attached through the `events` key of the frame config, either at initialization or later via `setConfig()`.
 
+[TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md) types every handler the same way — `null | (e?) => void` — with no indication of what the callback actually receives or which embedding modes fire it. This page explains which mode each event is available in and the actual shape of its payload.
+
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
@@ -42,6 +44,11 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onSignOut` | All modes | The user signed out. |
 | `onCustomAction` | Forms | A custom context menu action (registered via `setCustomActions()`) was clicked. |
 | `onNavigate` | Forms | The user navigated to a different section. |
+| `onUploadSuccess` | Uploader, Forms | A file upload completed — only when the file was uploaded via [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog); see the note below. |
+| `onUploadError` | Uploader, Forms | A file upload failed — same `upload()`-only scope as `onUploadSuccess`. |
+| `onUploadProgress` | Uploader | Upload progress update — only fires for an `upload()`-initiated transfer. |
+| `onGetExternalData` | Any mode | The frame asks the host to read a value from its own external storage (e.g. a "tour seen" flag). |
+| `onSetExternalData` | Any mode | The frame asks the host to persist a value in external storage. |
 
 Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
@@ -53,9 +60,19 @@ Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
 `onContentReady` can fire more than once per frame instance — e.g. after signing out, the frame reloads to show the sign-in page, which triggers `onContentReady` again without a second `onAppReady`. `onAppReady` itself isn't strictly limited to firing once either: signing back in through that sign-in page triggers `onAppReady` a second time. Don't assume either event only fires once at startup.
 
-`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. The frame still initializes normally; whatever "not found" state exists is handled inside the frame's own content, not surfaced as an app error. If you need to react to a missing/inaccessible target specifically, use `onNoAccess`/`onNotFound` (available in [Manager mode](../embedding-modes/manager-mode.md)) rather than `onAppError`.
+`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. In [Manager mode](../embedding-modes/manager-mode.md), the frame still initializes normally (`onAppReady` fires) and surfaces the problem via `onNoAccess`/`onNotFound` instead.
+
+:::note
+[Editor mode](../embedding-modes/editor-mode.md) and [Viewer mode](../embedding-modes/viewer-mode.md) have no equivalent fallback: passing a missing or nonexistent `id` there fires neither `onAppError` nor `onAppReady` nor any not-found signal — the frame just never finishes initializing from the host's point of view. Validate the file `id` before calling `initEditor`/`initViewer` if you need to handle this case; the SDK gives you nothing to react to otherwise.
+:::
 
 `onCustomAction` and `onNavigate` are specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()`/`navigateSection()` usage examples.
+
+:::note
+`onUploadSuccess`, `onUploadError`, and `onUploadProgress` only fire for an upload the host itself started with [`instance.upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog). A file added through the frame's own UI — the Uploader dialog, or dragging a file into the Forms gallery — does not trigger them the same way: in Forms mode it doesn't trigger them at all, and in Uploader mode `onUploadSuccess` still fires but with a different, much larger payload (see below) than an `upload()`-initiated one.
+:::
+
+`onGetExternalData` and `onSetExternalData` are driven by the embedded app's own needs, not by anything the host requests — for example, the frame may use them to persist a "tour seen" flag. Return the stored value (or a `Promise` of it) from `onGetExternalData`; if you don't provide a handler, the frame gets `undefined` and may fall back to showing something again on every load.
 
 ## Subscribing and updating handlers
 
@@ -112,13 +129,17 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onSelectCallback` | Depends on the mode: in Room selector, an **array** containing one room object (`{ id, label, title, security, tags, ... }`); in File selector, a **single** file object (`{ id, title, fileExst, fileType, viewUrl, ... }` — no `label` here). |
 | `onEditorOpen` | The file that was opened — the full file object (see below). |
 | `onFileManagerClick` | The file that was clicked — the full file object (see below). |
-| `onAppError` | An error value — treat it as opaque and log it; no specific shape is documented. |
+| `onAppError` | An error message string (e.g. `"The current domain is not set in the Content Security Policy (CSP) settings."` on a CSP rejection). |
 | `onAuthError` | `{ code?, message }` — details about why the access token couldn't be resolved. Only fires with OAuth-based authentication. |
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCloseCallback` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCustomAction` | `{ action, type, item }` — `action` is the `key` you registered, `item` is the file/folder it was clicked on. |
 | `onNavigate` | `{ section }` — the section the user navigated to (e.g. `"completed-forms"`). |
+| `onUploadSuccess` | For an `upload()`-initiated transfer: `{ fileName, fileSize }`. For a file uploaded through the Uploader dialog itself: a much larger, differently-shaped object wrapping the created file's info (`[{ response: { file: {...} }, count, links, status, statusCode }]`) — don't assume one shape covers both cases. |
+| `onUploadProgress` | `{ sessionId, fileName, uploadedChunks, totalChunks, percent }`. |
+| `onGetExternalData` | `{ key, callId }` — return the value stored for `key` (sync or a `Promise`); the SDK correlates the response by `callId`. |
+| `onSetExternalData` | `{ key, value }` — persist `value` under `key`; fire-and-forget, no response expected. |
 
 `onFileManagerClick` and `onEditorOpen` both pass a large file object — close to the shape returned by the backend API, including `id`, `title`, `fileExst`, `webUrl`, `viewUrl`, `security`, `createdBy`, and dozens more properties. See [Get file information](../../api-backend/usage-api/get-file-info.api.mdx) for the full schema rather than guessing from a partial example. The two payloads aren't identical, though: `onEditorOpen`'s also includes an `action` field (e.g. `"edit"`, describing how the editor was opened) that `onFileManagerClick`'s doesn't have, while dropping a few fields `onFileManagerClick` does have (`contextOptions`, `isFolder`, `icon`, `href`, among others).
 

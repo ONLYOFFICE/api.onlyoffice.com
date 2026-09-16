@@ -45,7 +45,7 @@ It's recommended to always include the **Profile** scope (`accounts.self:read`) 
 Never expose `client_secret` or refresh tokens to the browser. Perform the token exchange on your backend and return only the short-lived access token to `getToken`.
 :::
 
-If you already have a valid token and don't need the SDK to refresh it, pass it directly via `accessToken` instead of a callback — optionally with `tokenExpiresAt` for proactive refresh. The SDK cannot refresh a static `accessToken` on its own, so prefer `getToken` for anything longer-lived than the token's TTL.
+If you already have a valid token and don't need the SDK to refresh it, pass it directly via `accessToken` instead of a callback. The config also accepts a `tokenExpiresAt` field, but it's currently reserved and not acted on — setting it does not make the SDK refresh the token proactively before it expires. The SDK cannot refresh a static `accessToken` on its own at all, so use `getToken` instead for anything longer-lived than the token's TTL.
 
 If the SDK can't resolve a token — `getToken` throws, rejects, or returns nothing — it fires `onAuthError` instead of `onAuthSuccess`. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events) for details.
 

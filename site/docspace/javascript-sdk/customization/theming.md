@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Theming
 
-The SDK lets you switch between light and dark UI themes and pick a theme for the document editor. It does not control your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](../../api-backend/usage-api/save-white-label-settings.api.mdx) if you need to customize the DocSpace logo shown across the portal.
+There's one theme setting in this SDK — `theme`, which controls the color scheme of the frame's own chrome (Manager, selectors, and the editor's surrounding UI) — plus two narrower settings that are easy to confuse with theming: `showHeaderBanner` and `stylesUrl`. This page walks through what each one actually controls, plus two runtime patterns: matching your app's dark mode, and switching the theme at runtime.
+
+None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](../../api-backend/usage-api/save-white-label-settings.api.mdx) if you need to customize the DocSpace logo shown across the portal.
 
 ## Frame theme
 
@@ -18,34 +20,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-| Value | Description |
-| ------- | ------------- |
-| `"Base"` | The light theme. |
-| `"Dark"` | The dark theme. |
-| `"System"` | Follows the OS/browser color scheme. |
-
-Full parameter reference: [TFrameConfig#theme](../usage-sdk/type-aliases/TFrameConfig.md#theme), [Theme enum](../usage-sdk/enumerations/Theme.md).
-
-## Editor theme
-
-Editor mode has its own theme setting, independent of the frame theme, configured via `editorCustomization.uiTheme`:
-
-```javascript
-const docSpace = DocSpace.SDK.initEditor({
-  frameId: "ds-frame",
-  src: "https://your-docspace.com",
-  id: "your-file-id",
-  editorCustomization: {
-    uiTheme: "theme-dark",
-  },
-});
-```
-
-Accepted values: `"theme-light"`, `"theme-classic-light"`, `"theme-dark"`, `"theme-contrast-dark"`, `"theme-white"`, `"theme-night"`, or `"default-light"` / `"default-dark"` to follow the default light/dark theme. The default is `"theme-classic-light"`.
-
-See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
-
-Full parameter reference: [TEditorCustomization#uiTheme](../usage-sdk/type-aliases/TEditorCustomization.md#uitheme).
+Accepts `"Base"` (light), `"Dark"`, or `"System"` (follows the OS/browser color scheme). Full reference: [TFrameConfig#theme](../usage-sdk/type-aliases/TFrameConfig.md#theme), [Theme enum](../usage-sdk/enumerations/Theme.md).
 
 ## Header banner
 
@@ -59,17 +34,11 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-| Value | Description |
-| ------- | ------------- |
-| `"all"` | Show all header banners. |
-| `"info"` | Show only informational banners. |
-| `"none"` | Hide all header banners. |
-
-Full parameter reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showheaderbanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
+Accepts `"all"`, `"info"` (informational only), or `"none"`. Full reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showheaderbanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
 
 ## Custom stylesheet
 
-`stylesUrl` applies a custom stylesheet inside the frame, on top of the selected theme — use it for fine-grained CSS tweaks that `theme`/`editorCustomization.uiTheme` don't cover:
+`stylesUrl` applies a custom stylesheet inside the frame, on top of the selected theme — use it for fine-grained CSS tweaks that `theme` alone doesn't cover:
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({

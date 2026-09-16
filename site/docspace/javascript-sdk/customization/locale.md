@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Locale and language
 
-The `locale` parameter sets the language of the DocSpace user interface, independently of the host application's own language.
+There's only one parameter here, so this page isn't about organizing many fields — it's about the practical details: what values a portal actually accepts, what happens when you don't set it, and why hardcoding a list of supported languages breaks over time. The `locale` parameter sets the language of the DocSpace user interface, independently of the host application's own language.
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
