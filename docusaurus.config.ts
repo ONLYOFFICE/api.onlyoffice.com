@@ -204,8 +204,6 @@ const config: Config = {
             '/',
             '/tags/**',
             '/search/**',
-            // TODO: generated OpenAPI pages, pending a usable Markdown rendering.
-            '/docspace/api-backend/usage-api/**',
             '/workspace/**',
           ],
           routeRules: [

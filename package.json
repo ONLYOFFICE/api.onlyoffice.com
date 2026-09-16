@@ -8,6 +8,7 @@
     "generate-schema": "npx ts-json-schema-generator --path node_modules/@onlyoffice/doceditor-types/index.d.ts --type Config --tsconfig tsconfig.json -o src/data/config-schema.json && node .github/scripts/postprocess-schema.js src/data/config-schema.json",
     "start": "npm run generate-samples && npm run generate-schema && docusaurus start",
     "build": "npm run generate-samples && npm run generate-schema && docusaurus build",
+    "postbuild": "node .github/scripts/generate-openapi-md.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
