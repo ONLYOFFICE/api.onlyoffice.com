@@ -200,7 +200,8 @@ const config: Config = {
           includeBlog: false,
           includePages: false,
           excludeRoutes: [
-            // Tag listings and the Algolia search page — navigation, not documentation.
+            // Landing page, tag listings, search — navigation, not documentation.
+            '/',
             '/tags/**',
             '/search/**',
             // TODO: generated OpenAPI pages, pending a usable Markdown rendering.
