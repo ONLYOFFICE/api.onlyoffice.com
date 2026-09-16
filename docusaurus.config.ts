@@ -36,7 +36,7 @@ const config: Config = {
   tagline: 'ONLYOFFICE',
   favicon: 'img/favicon.ico',
 
-  url: 'https://api.onlyoffice.com',
+  url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
   baseUrl: '/',
 
   trailingSlash: true,
