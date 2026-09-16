@@ -188,7 +188,7 @@ const config: Config = {
       {
         siteTitle: 'ONLYOFFICE API Documentation',
         siteDescription: 'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API. Each entry links to a single documentation page, and any page is also available as Markdown by replacing the trailing slash of its URL with .md.',
-        depth: 2,
+        depth: 1,
         enableDescriptions: true,
         onRouteError: 'warn',
         logLevel: 1,
