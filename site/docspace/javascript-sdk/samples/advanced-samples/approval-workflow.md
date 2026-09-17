@@ -7,8 +7,6 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 This example shows how to build a document approval workflow using the DocSpace Embed SDK. When an author submits a document, a room is created for it and tagged **Pending review**, a reviewer is granted review-only access, and the reviewer can then approve the document or request changes. Each decision updates the room's tag so its status stays visible at a glance.
 
-Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/approval-workflow.html)
-
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
