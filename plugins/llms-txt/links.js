@@ -22,8 +22,8 @@ const {
   serializeURLPath,
 } = require('@docusaurus/utils');
 
-/** `](target)` or `](target "title")`. No source uses angle-bracket or parenthesised targets. */
-const INLINE_LINK = /(\]\()([^)\s]+)((?:\s+"[^"]*")?\))/g;
+/** `](target)` or `](target "title")`, but not an escaped `\]`. No parenthesised targets. */
+const INLINE_LINK = /((?<!\\)\]\()([^)\s]+)((?:\s+"[^"]*")?\))/g;
 
 /** A reference definition: `[label]: target`, optionally followed by a title. */
 const REFERENCE_LINK = /^(\s{0,3}\[[^\]]+\]:\s*)(\S+)/;
@@ -67,9 +67,10 @@ function rewriteLinks(source, {sourceFilePath, permalink, resolveMarkdown, urlOf
       return serializeURLPath({...urlPath, pathname: urlOf(resolved)});
     }
 
+    // A bare `#anchor` names a section of this page, so it points at this page's own twin.
     const pathname = urlPath.pathname
       ? normalizeUrl([siteUrl, resolvePathname(urlPath.pathname, permalink)])
-      : `${siteUrl}${permalink}`;
+      : urlOf(permalink);
 
     return serializeURLPath({...urlPath, pathname});
   };
