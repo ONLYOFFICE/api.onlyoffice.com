@@ -1,7 +1,11 @@
 /**
  * Renders one OpenAPI operation as Markdown, from the spec embedded in the page's `api:`
- * frontmatter. Called by `generate-openapi-md.js` beside it, which decodes that blob.
+ * frontmatter. The generated `.api.mdx` pages are `<MethodEndpoint>` / `<ParamsDetails>` /
+ * `<RequestSchema>` and carry no prose of their own, so their twins come from the spec
+ * rather than from the page source.
  */
+
+const zlib = require('zlib');
 
 /** Deeper nesting collapses into a single `…` row rather than exploding the table. */
 const MAX_DEPTH = 5;
@@ -258,4 +262,21 @@ function generateMarkdownFromApiSpec(apiSpec, options = {}) {
   return markdown;
 }
 
-module.exports = {generateMarkdownFromApiSpec};
+/**
+ * The Markdown twin of a generated OpenAPI page, or `null` if the source is not one.
+ *
+ * The blob is zlib deflate, not gzip: `disableCompression` is off, so
+ * `docusaurus-plugin-openapi-docs` writes it with `zlib.deflateSync`. `unzipSync`
+ * autodetects the format, `gunzipSync` would throw.
+ */
+function renderApiPage(source, {title}) {
+  const blob = source.match(/^api:\s*(.+?)\s*$/m)?.[1];
+  if (!blob) {
+    return null;
+  }
+
+  const spec = JSON.parse(zlib.unzipSync(Buffer.from(blob, 'base64')).toString('utf8'));
+  return generateMarkdownFromApiSpec(spec, {title});
+}
+
+module.exports = {renderApiPage};
