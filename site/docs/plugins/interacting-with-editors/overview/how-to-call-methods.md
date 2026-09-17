@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # How to call methods
 
 To execute certain editor methods using the plugin, define the **executeMethod** method.
@@ -12,11 +14,7 @@ The *callback* is the result that the method returns. It is an optional paramete
 
 ### Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name     | Type     | Description                                               |
 |----------|----------|-----------------------------------------------------------|
@@ -24,9 +22,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | params   | array    | The arguments that the method in use has (if it has any). |
 | callback | function | The result that the method returns.                       |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Returns
 

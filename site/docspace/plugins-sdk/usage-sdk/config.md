@@ -2,15 +2,13 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Config
 
 The *config.json* file is generated based on the data from the *package.json* file.
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter          | Type             | Example                                                  | Description                                                                                                                                                                                                                       |
 |--------------------|------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,9 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | scopes             | string           | `"ContextMenu,InfoPanel,MainButton"`                     | The plugin scopes which are converted from an array into a string.                                                                                                                                                                |
 | version            | string           | `"1.0.0"`                                                | The current plugin version.                                                                                                                                                                                                       |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Example
 

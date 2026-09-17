@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 如何调用命令
 
 要调用命令并将数据发送回编辑器，需要定义**调用命令**方法。该方法允许插件发送结构化数据，这些数据可以插入到最终的文档中（如格式化段落、表格、文本片段或单词等）。
@@ -10,11 +12,7 @@ sidebar_position: -2
 
 ### 参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称     | 类型     | 描述                                                                                                                                                                                                                                     |
 | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,9 +21,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | isCalc   | boolean  | 指定在执行 func 参数中的代码后是否重新计算文档内容。值为 true 时将在执行后重新计算文档；值为 false 时不重新计算（仅当您确认所做修改不影响文档计算时使用）。默认值为 true。                                                               |
 | callback | function | 方法返回的结果。仅支持 JavaScript 标准类型（如传入对象将被替换为 undefined）。                                                                                                                                                           |
 
-```mdx-code-block
 </APITable>
-```
 
 ### 返回值
 

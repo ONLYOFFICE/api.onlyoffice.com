@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # How to call commands
 
 To call commands and send the data back to the editor, define the **callCommand** method. It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
@@ -10,11 +12,7 @@ To call commands and send the data back to the editor, define the **callCommand*
 
 ### Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
 |----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,9 +21,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `isCalc`   | boolean  | Whether the document will be recalculated or not. The `true` value is used to recalculate the document after executing the function in the `func` parameter. The `false` value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is `true`.                                              |
 | `callback` | function | The result that the method returns. Only the JS standard types are available (any objects will be replaced with `undefined`).                                                                                                                                                                                                                                                    |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Returns
 
