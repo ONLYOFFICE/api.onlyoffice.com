@@ -27,71 +27,43 @@ export const DocsFeatures: Features = {
     {
       title: 'Docs API',
       link: 'docs-api/get-started/basic-concepts',
-      description: (
-        <>
-          Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.
-        </>
-      ),
+      description: 'Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.',
       icon: <DocsApiIcon/>,
     },
     {
       title: 'Office API',
       link: 'office-api/get-started/overview',
-      description: (
-        <>
-          Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.
-        </>
-      ),
+      description: 'Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.',
       icon: <OfficeApiIcon/>,
     },
     {
       title: 'Plugins',
       link: 'plugins/get-started/overview',
-      description: (
-        <>
-          Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.
-        </>
-      ),
+      description: 'Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.',
       icon: <PluginIcon/>,
     },
     {
       title: 'Macros',
       link: 'macros/get-started/overview',
-      description: (
-        <>
-          Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.
-        </>
-      ),
+      description: 'Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.',
       icon: <MacrosIcon/>,
     },
     {
       title: 'AI',
       link: 'ai/get-started/overview',
-      description: (
-        <>
-          Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.
-        </>
-      ),
+      description: 'Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.',
       icon: <AiIcon/>,
     },
     {
       title: 'Document Builder',
       link: 'document-builder/get-started/overview',
-      description: (
-        <>
-          Integrate Document Builder into your DMS or CRM to generate documents directly within your workflow—no separate document editor required.
-        </>
-      ),
+      description: 'Integrate Document Builder into your DMS or CRM to generate documents directly within your workflow—no separate document editor required.',
       icon: <DocumentBuilderIcon/>,
     },
     {
       title: 'Desktop Editors',
       link: 'desktop-editors/get-started/overview',
-      description: (
-        <>
-          Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.
-        </>
-      ),
+      description: 'Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.',
       icon: <DesktopEditorIcon/>,
     },
   ]
@@ -107,42 +79,25 @@ export const DocSpaceFeatures: Features = {
     {
       title: 'API Reference',
       link: 'api-backend/get-started/basic-concepts',
-      description: (
-        <>
-          Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.
-        </>
-      ),
+      description: 'Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
       icon: <DocSpaceApiIcon/>,
     },
     {
       title: 'Embed SDK',
       link: 'javascript-sdk/get-started',
-      description: (
-        <>
-          Embed DocSpace into your website as a frame using JavaScript APIs—choose to display an entire portal, a specific room, or a single document.
-        </>
-      ),
+      description: 'Embed DocSpace into your website as a frame using JavaScript APIs—choose to display an entire portal, a specific room, or a single document.',
       icon: <SdkIcon/>,
     },
     {
       title: 'Plugins SDK',
       link: 'plugins-sdk/get-started',
-      description: (
-        <>
-          Create your plugins and add them to the DocSpace portal.
-        </>
-      ),
+      description: 'Create your plugins and add them to the DocSpace portal.',
       icon: <PluginIcon/>,
     },
-	{
+    {
       title: 'MCP Server',
       link: 'mcp-server/getting-started',
-      description: (
-        <>
-          Connect AI tools directly to ONLYOFFICE DocSpace to execute actions{" "}
-          through natural language interactions.
-        </>
-      ),
+      description: 'Connect AI tools directly to ONLYOFFICE DocSpace to execute actions through natural language interactions.',
       icon: <MCPServerIcon/>,
     },
   ]
@@ -154,25 +109,13 @@ export const WorkspaceFeatures: Features = {
     {
       title: 'Backend REST API',
       link: 'api-backend/get-started/basic-concepts',
-      description: (
-        <>
-          In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
-          into your own application and interact with its backend using{" "}
-          GET/POST/PUT/DELETE. This solution is provided without editors, you{" "}
-          need to install ONLYOFFICE Docs separately.
-        </>
-      ),
+      description: 'In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.',
       icon: <DocSpaceApiIcon/>
     },
     {
       title: 'For hosting providers',
       link: 'for-hosting-providers/get-started/authentication',
-      description: (
-        <>
-          In this section, you will learn how to provide the Workspace portal as a{" "}
-          SaaS solution on your own servers using our API methods.
-        </>
-      ),
+      description: 'In this section, you will learn how to provide the Workspace portal as a SaaS solution on your own servers using our API methods.',
       icon: <HostingIcon/>
     },
   ]
