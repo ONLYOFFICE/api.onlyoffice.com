@@ -1,27 +1,24 @@
-# Type Alias: TEventReturnData
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TEventReturnData** = `object`
+import APITable from '@site/src/components/APITable/APITable';
 
-Defined in: [types/index.ts:349](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L349)
+# TEventReturnData
 
 The event return data structure.
 
+```ts
+type TEventReturnData = object;
+```
+
 ## Properties
 
-### data?
+<APITable>
 
-> `optional` **data**: `object`
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| `data`? | `object` | The event data payload. |
+| `event` | `string` | The event name. |
 
-Defined in: [types/index.ts:351](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L351)
-
-The event data payload.
-
-***
-
-### event
-
-> **event**: `string`
-
-Defined in: [types/index.ts:353](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L353)
-
-The event name.
+</APITable>

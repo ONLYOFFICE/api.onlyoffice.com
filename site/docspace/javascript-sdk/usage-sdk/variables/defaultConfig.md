@@ -1,7 +1,11 @@
-# Variable: defaultConfig
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts
+---
 
-> `const` **defaultConfig**: [`TFrameConfig`](../type-aliases/TFrameConfig.md)
-
-Defined in: [constants/index.ts:47](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts#L47)
+# defaultConfig
 
 The default configuration object for initializing and embedding a DocSpace frame.
+
+```ts
+const defaultConfig: TFrameConfig;
+```

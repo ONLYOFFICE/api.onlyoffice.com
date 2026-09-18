@@ -1,6 +1,10 @@
-# Class: SDKInstance
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts
+---
 
-Defined in: [instance/index.ts:65](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L65)
+import APITable from '@site/src/components/APITable/APITable';
+
+# SDKInstance
 
 Represents an SDK instance for managing frames and communicating with DocSpace.
 
@@ -31,160 +35,407 @@ console.log('Current user:', userInfo);
 
 ### Constructor
 
-> **new SDKInstance**(`config`): `SDKInstance`
-
-Defined in: [instance/index.ts:73](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L73)
+```ts
+new SDKInstance(config: TFrameConfig): SDKInstance;
+```
 
 #### Parameters
 
-##### config
+<APITable name="Constructor">
 
-[`TFrameConfig`](../type-aliases/TFrameConfig.md)
+| Parameter | Type |
+| ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) |
+
+</APITable>
 
 #### Returns
 
 `SDKInstance`
 
-## Properties
-
-### config
-
-> **config**: [`TFrameConfig`](../type-aliases/TFrameConfig.md)
-
-Defined in: [instance/index.ts:71](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L71)
-
-The iframe configuration options.
-
 ## Methods
 
-### setIsLoaded()
+### addTagsToRoom()
 
-> **setIsLoaded**(): `void`
-
-Defined in: [instance/index.ts:281](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L281)
-
-Manages the frame loading completion process.
-Handles frame finalization, visual transition management, and user event coordination.
-Ensures a smooth switch from initialization to working state
-with animations and resource cleanup for better user experience.
-
-#### Returns
-
-`void`
-
-void - This method performs side effects by updating the frame appearance
-              and triggering events. It does not return values, focusing on
-              state transition and user experience optimization.
-
-#### Examples
-
-```typescript
-sdkInstance.setIsLoaded();
-console.log('Frame loading completed and content is ready');
+```ts
+addTagsToRoom(roomId: string, tags: string[]): Promise<object>;
 ```
 
-```typescript
-try {
-  await customFrameSetup();
-  sdkInstance.setIsLoaded();
-} catch (error) {
-  console.error('Setup failed:', error);
-  sdkInstance.setIsLoaded();
-}
-```
+Adds tags to a specified room for organization and categorization.
 
-#### Throws
-
-May throw an error if frame elements cannot be accessed or if style
-                modifications fail due to browser security restrictions.
-
-#### See
-
- - [initFrame](#initframe) Initializes the frame before the loading process completes.
- - [destroyFrame](#destroyframe) Cleans up resources when the frame is no longer needed.
- - [setConfig](#setconfig) Updates configuration parameters that affect loading behavior.
- - [onContentReady](../type-aliases/TFrameEvents.md#oncontentready) The callback triggered when the frame content is ready.
-
-***
-
-### initFrame()
-
-> **initFrame**(`config`): `HTMLIFrameElement` \| `null`
-
-Defined in: [instance/index.ts:747](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L747)
-
-Initializes an iframe with the given configuration and appends it to the target element.
-
-This is the core method that sets up the DocSpace iframe within your application.
-It handles container creation, iframe setup, event handlers, and frame registration.
-The method supports various DocSpace modes, including viewer, editor, manager, and more.
+This method allows applying multiple tags to a room simultaneously, helping organize
+rooms by project, department, priority, or any custom categorization system. Tags improve
+discoverability and enable advanced filtering and search capabilities.
 
 #### Parameters
 
-##### config
+<APITable name="addTagsToRoom">
 
-[`TFrameConfig`](../type-aliases/TFrameConfig.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `roomId` | `string` | The unique identifier of the room to which tags will be added. |
+| `tags` | `string`[] | An array of tag names to be added to the room. Tags should already exist or will be created automatically. |
 
-The configuration object for the iframe, containing all initialization settings.
+</APITable>
 
 #### Returns
 
-`HTMLIFrameElement` \| `null`
+`Promise`\<`object`\>
 
-The created `HTMLIFrameElement`, or null if initialization fails (e.g., target element not found).
+A promise that resolves to an object containing the result of the operation and updated room metadata.
 
 #### Examples
 
 ```typescript
-const iframe = sdkInstance.initFrame({
-  frameId: 'docspace-frame',
-  src: 'https://your-docspace.com',
-  mode: 'viewer',
-  width: '100%',
-  height: '600px',
-  id: 'document-123'
-});
-
-if (iframe) {
-  console.log('Frame initialized successfully');
-} else {
-  console.error('Failed to initialize frame - target element not found');
-}
+await sdkInstance.addTagsToRoom('room-123', ['Project Alpha', 'High Priority']);
+console.log('Tags added successfully to project room');
 ```
 
 ```typescript
-const iframe = sdkInstance.initFrame({
-  frameId: 'editor-frame',
-  src: 'https://your-docspace.com',
-  mode: 'editor',
-  width: '100%',
-  height: '800px',
-  id: 'document-456',
-  events: {
-    onContentReady: () => console.log('Editor loaded'),
-    onDocumentReady: () => console.log('Document ready for editing'),
-    onAppError: (error) => console.error('Editor error:', error)
-  }
-});
+const projectTags = ['Engineering', 'Development', 'Q1-2024'];
+const result = await sdkInstance.addTagsToRoom('room-456', projectTags);
+console.log('Room organized with tags:', projectTags);
 ```
 
 #### Throws
 
-May throw an error if the configuration contains invalid values or the target element cannot be accessed.
+May throw an error if the room ID is invalid, tags do not exist, or the user lacks permission to modify the room tags.
 
 #### See
 
- - [setConfig](#setconfig) - Updates the configuration after initialization.
- - [getConfig](#getconfig) - Retrieves the current configuration.
- - [destroyFrame](#destroyframe) - Cleans up the frame properly.
+ - [createTag](#createtag) - Creates new tags before applying them.
+ - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
+ - [getRooms](#getrooms) - Retrieves rooms with their current tags.
+
+***
+
+### createFile()
+
+```ts
+createFile(
+   folderId: string, 
+   title: string, 
+   templateId: string, 
+   formId: string
+): Promise<object>;
+```
+
+Creates a new file in the specified folder using templates and forms.
+
+This method allows programmatically creating different file types in DocSpace,
+including documents, spreadsheets, presentations, and custom forms. It is possible to specify
+templates for consistent formatting and associate forms for structured data collection.
+The created file will inherit permissions from the parent folder.
+
+#### Parameters
+
+<APITable name="createFile">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `folderId` | `string` | The ID of the folder where the file will be created. Must be a valid folder ID with write access. |
+| `title` | `string` | The title of the new file. Used as the filename with the appropriate extension based on the template type. |
+| `templateId` | `string` | The ID of the template for the new file. Determines file type and initial content structure. |
+| `formId` | `string` | The ID of the form associated with the new file. Use an empty string if no form is needed. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object representing the created file with properties like id, title, type, and creation date.
+
+#### Examples
+
+```javascript
+const file = await docSpace.createFile(
+  "folder123",
+  "Project Proposal",
+  "template456",
+  "form789"
+);
+console.log('Created file:', file.title, 'ID:', file.id);
+```
+
+```javascript
+try {
+  const document = await docSpace.createFile(
+    "documents-folder-id",
+    "Meeting Notes",
+    "document-template-id",
+    ""
+  );
+  console.log('Document created successfully:', document.id);
+} catch (error) {
+  console.error('File creation failed:', error.message);
+}
+```
+
+#### See
+
+ - [createFolder](#createfolder) - Creates folders to organize files.
+ - [getFiles](#getfiles) - Retrieves created files.
+ - [initFrame](#initframe) - Opens files in editor mode.
+
+***
+
+### createFolder()
+
+```ts
+createFolder(parentFolderId: string, title: string): Promise<object>;
+```
+
+Creates a new folder within the specified parent folder for content organization.
+
+This method allows programmatically creating folders to organize files and other folders
+in a hierarchical structure. Created folders inherit permissions from the parent folder
+and can be used to establish project structures, departmental organization, or any
+custom file management system. The operation respects DocSpace access controls.
+
+#### Parameters
+
+<APITable name="createFolder">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `parentFolderId` | `string` | The ID of the parent folder where the new folder will be created. Must be a valid folder ID with write permissions. |
+| `title` | `string` | The title of the new folder. Should be unique within the parent folder and follow naming conventions. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing the details of the created folder, including id, title, creation date, and access permissions.
+
+#### Examples
+
+```javascript
+const projectFolder = await docSpace.createFolder(
+  "root-folder-id",
+  "Project Alpha"
+);
+console.log('Created folder:', projectFolder.title, 'ID:', projectFolder.id);
+```
+
+```javascript
+try {
+  const newFolder = await docSpace.createFolder(
+    "parent-folder-id",
+    "Marketing Materials"
+  );
+  console.log('Folder created successfully:', newFolder.id);
+} catch (error) {
+  console.error('Folder creation failed:', error.message);
+}
+```
+
+#### See
+
+ - [createFile](#createfile) - Creates files within folders.
+ - [getFolders](#getfolders) - Retrieves folder lists.
+ - [getFolderInfo](#getfolderinfo) - Provides detailed folder information.
+
+***
+
+### createHash()
+
+```ts
+createHash(password: string, hashSettings: object): Promise<object>;
+```
+
+Creates a hash for the given password using the specified hash settings.
+
+This method is typically used before authentication to create a secure hash
+of the user's password that can be safely transmitted and stored.
+
+#### Parameters
+
+<APITable name="createHash">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `password` | `string` | The plaintext password to be hashed. |
+| `hashSettings` | `object` | A configuration object for the hash function, containing algorithm settings. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing the generated password hash.
+
+#### Example
+
+```typescript
+const hashSettings = await sdkInstance.getHashSettings();
+
+const hashResult = await sdkInstance.createHash('userPassword123', hashSettings);
+console.log('Password hash:', hashResult.hash);
+
+await sdkInstance.login('user@example.com', hashResult.hash);
+```
+
+#### Throws
+
+Throws an error if the password is empty or the hash settings are invalid.
+
+#### See
+
+ - [getHashSettings](#gethashsettings) - Retrieves the current hash settings.
+ - [login](#login) - Uses the generated hash for authentication.
+
+***
+
+### createRoom()
+
+```ts
+createRoom(
+   title: string, 
+   roomType: string | number, 
+   quota?: number, 
+   tags?: string[], 
+   color?: string, 
+   cover?: string, 
+   indexing?: boolean, 
+   denyDownload?: boolean
+): Promise<object>;
+```
+
+Creates a new room with the specified parameters and configuration.
+
+This method allows programmatically creating different types of rooms in DocSpace,
+including collaboration rooms, public rooms, and custom rooms. It is possible to configure
+room properties like quotas, tags, branding, and access permissions during creation.
+
+#### Parameters
+
+<APITable name="createRoom">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `title` | `string` | The display name/title for the new room. |
+| `roomType` | `string` \| `number` | The type of room to create (collaboration, public, custom, etc.). |
+| `quota`? | `number` | Optional storage quota limit for the room in bytes. |
+| `tags`? | `string`[] | Optional array of tags to categorize and organize the room. |
+| `color`? | `string` | Optional hex color code for the room's branding theme. |
+| `cover`? | `string` | Optional cover image URL or file path for the room. |
+| `indexing`? | `boolean` | Optional flag to enable ordisable search indexing (VDR rooms only). |
+| `denyDownload`? | `boolean` | Optional flag to prevent file downloads (VDR rooms only). |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing the created room's details.
+
+#### Examples
+
+```typescript
+const room = await sdkInstance.createRoom(
+  'Project Alpha Team',
+  'collaboration'
+);
+
+console.log('Created room:', room.id);
+console.log('Room URL:', room.url);
+```
+
+```typescript
+const projectRoom = await sdkInstance.createRoom(
+  'Q1 Marketing Campaign',
+  'collaboration',
+  5368709120,
+  ['marketing', 'q1-2024', 'campaign'],
+  '#FF6B35',
+  'https://example.com/covers/marketing-cover.jpg'
+);
+
+console.log('Room created with quota:', projectRoom.quota);
+console.log('Room tags:', projectRoom.tags);
+```
+
+#### Throws
+
+Throws an error if room creation fails due to permissions, quota limits, or invalid parameters.
+
+#### See
+
+ - [getRooms](#getrooms) - Retrieves existing rooms.
+ - [addTagsToRoom](#addtagstoroom) - Adds tags to the created room.
+ - [createFolder](#createfolder) - Creates folders within the room.
+
+***
+
+### createTag()
+
+```ts
+createTag(name: string): Promise<object>;
+```
+
+Creates a new tag with the specified name.
+
+Tags provide a powerful way to organize and categorize content across the DocSpace portal.
+They can be used for project management, content categorization, workflow organization,
+and creating custom filtering systems for better content discovery.
+
+#### Parameters
+
+<APITable name="createTag">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `name` | `string` | The name of the tag to be created. It should be descriptive and unique. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object representing the created tag with its ID and metadata.
+
+#### Examples
+
+```typescript
+const tag = await sdkInstance.createTag('Project Alpha');
+console.log('Tag created:', tag.name, 'with ID:', tag.id);
+```
+
+```typescript
+const tagNames = ['High Priority', 'Marketing', 'Review'];
+
+for (const tagName of tagNames) {
+  try {
+    const tag = await sdkInstance.createTag(tagName);
+    console.log(`Created tag: ${tagName}`);
+  } catch (error) {
+    console.error(`Failed to create tag ${tagName}:`, error);
+  }
+}
+```
+
+#### Throws
+
+May throw an error if thetag name is invalid, already exists, or user lacks permission to create tags.
+
+#### See
+
+ - [addTagsToRoom](#addtagstoroom) - Applies created tags to rooms.
+ - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
 
 ***
 
 ### destroyFrame()
 
-> **destroyFrame**(): `void`
-
-Defined in: [instance/index.ts:802](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L802)
+```ts
+destroyFrame(): void;
+```
 
 Destroys the current frame instance and performs comprehensive cleanup operations.
 
@@ -230,73 +481,86 @@ try {
 
 ***
 
-### setConfig()
+### executeInEditor()
 
-> **setConfig**(`config`): `Promise`\<`object`\>
+```ts
+executeInEditor(callback: (instance: object, data?: object) => void, data?: object): void;
+```
 
-Defined in: [instance/index.ts:896](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L896)
+Executes custom functions within the editor context for advanced document manipulation.
 
-Sets the configuration for the instance and applies updates to the active frame.
-
-This method allows dynamically updating the SDK instance configuration
-after initialization. Changes are merged with the existing configuration and
-propagated to the active frame. This is useful for runtime adjustments like
-theme changes, size updates, or mode switching.
+This method allows applications to run custom code directly within the document editor
+environment, enabling advanced programmatic operations, content manipulation, automation
+tasks, and integration with external systems. The callback function receives the editor
+instance and optional data, providing full access to editor APIs and document content.
 
 #### Parameters
 
-##### config
+<APITable name="executeInEditor">
 
-[`TFrameConfig`](../type-aliases/TFrameConfig.md) = `defaultConfig`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `callback` | (`instance`: `object`, `data?`: `object`) => `void` | The function to be executed within the editor context. Receives the editor instance and optional data. |
+| `data`? | `object` | Optional object providing context or configuration for the callback. |
 
-The configuration object with properties to update. Only the provided properties will be changed.
-                Defaults to `defaultConfig` if no parameter is provided.
+</APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the update result.
+`void`
 
 #### Examples
 
 ```typescript
-const result = await sdkInstance.setConfig({
-  theme: 'dark',
-  width: '1200px',
-  height: '800px'
-});
-console.log('Configuration updated:', result);
+const templateData = {
+  customerName: 'Acme Corporation',
+  projectName: 'Digital Transformation',
+  startDate: new Date().toLocaleDateString()
+};
+
+docSpace.executeInEditor((editorInstance, data) => {
+  editorInstance.insertText(`
+    PROJECT PROPOSAL
+    Client: ${data.customerName}
+    Project: ${data.projectName}
+    Date: ${data.startDate}
+  `);
+}, templateData);
 ```
 
 ```typescript
-try {
-  await sdkInstance.setConfig({
-    id: 'new-document-789',
-    editorType: 'word'
-  });
-  console.log('Successfully switched to new document');
-} catch (error) {
-  console.error('Failed to update document:', error);
-}
+docSpace.executeInEditor((editorInstance, data) => {
+  const documentContent = editorInstance.getDocumentContent();
+  
+  if (data.checkSpelling) {
+    const spellCheckResults = editorInstance.runSpellCheck();
+    spellCheckResults.forEach(issue => {
+      if (issue.confidence > 0.8) {
+        editorInstance.replaceText(issue.position, issue.suggestion);
+      }
+    });
+  }
+  
+  editorInstance.saveDocument();
+}, { checkSpelling: true });
 ```
 
 #### Throws
 
-May throw an error if the new configuration contains invalid values or if frame update fails.
+Throws an error if the editor context is not available or callback execution fails.
 
 #### See
 
- - [getConfig](#getconfig) - Retrieves the current configuration.
- - [initFrame](#initframe) - Performs the initial frame setup.
+ - [SDK.initEditor](SDK.md#initeditor) - Initializes the editor before executing custom functions.
+ - [getSelection](#getselection) - Retrieves the selected content to operate on within the editor.
 
 ***
 
 ### getConfig()
 
-> **getConfig**(): [`TFrameConfig`](../type-aliases/TFrameConfig.md)
-
-Defined in: [instance/index.ts:960](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L960)
+```ts
+getConfig(): TFrameConfig;
+```
 
 Retrieves the current configuration object for the SDK instance.
 
@@ -363,11 +627,59 @@ if (!config.src) {
 
 ***
 
+### getFiles()
+
+```ts
+getFiles(): Promise<object>;
+```
+
+Retrieves a list of files from the current context with comprehensive metadata.
+
+This method fetches all files accessible in the current context, providing detailed
+information about each file, including metadata, permissions, and modification history.
+It's essential for building file browsers, dashboards, and file management interfaces.
+The returned data respects user permissions and access controls.
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing an array of file objects. Each file includes properties like id, title, type, extension, size, modified date, permissions, and access metadata.
+
+#### Examples
+
+```javascript
+const files = await docSpace.getFiles();
+console.log(`Found ${files.length} files`);
+
+files.forEach(file => {
+  console.log(`${file.title} (${file.type}) - Modified: ${file.modified}`);
+});
+```
+
+```javascript
+const allFiles = await docSpace.getFiles();
+
+const documents = allFiles.filter(file =>
+  ['docx', 'doc', 'pdf'].includes(file.extension.toLowerCase())
+);
+
+console.log(`Found ${documents.length} document files`);
+```
+
+#### See
+
+ - [getFolders](#getfolders) - Retrieves information about folders.
+ - [getList](#getlist) - Provides a combined listing of files and folders.
+ - [createFile](#createfile) - Creates new files.
+
+***
+
 ### getFolderInfo()
 
-> **getFolderInfo**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1003](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1003)
+```ts
+getFolderInfo(): Promise<object>;
+```
 
 Retrieves comprehensive information about the current or specified folder.
 
@@ -415,11 +727,233 @@ try {
 
 ***
 
+### getFolders()
+
+```ts
+getFolders(): Promise<object>;
+```
+
+Retrieves a list of folders from the current context with detailed information.
+
+This method fetches all folders accessible in the current context, providing comprehensive
+information about folder structure, permissions, and contents. It's crucial for building
+navigation interfaces, folder browsers, and organizational tools. The method respects
+user access permissions and returns only the folders the user can view.
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing an array of folder objects. Each folder includes properties like id, title, parent id, number of files, number of folders, size, permissions, creation date, and sharing status.
+
+#### Examples
+
+```javascript
+const folders = await docSpace.getFolders();
+console.log(`Found ${folders.length} folders`);
+
+folders.forEach(folder => {
+  console.log(`${folder.title} - Files: ${folder.fileCount}, Subfolders: ${folder.folderCount}`);
+});
+```
+
+```javascript
+const folders = await docSpace.getFolders();
+
+const editableFolders = folders.filter(folder => folder.permissions.edit);
+const sharedFolders = folders.filter(folder => folder.shared);
+
+console.log(`Editable: ${editableFolders.length}`);
+console.log(`Shared: ${sharedFolders.length}`);
+```
+
+#### See
+
+ - [getFiles](#getfiles) - Retrieves information about files.
+ - [getFolderInfo](#getfolderinfo) - Provides detailed information for a single folder.
+ - [createFolder](#createfolder) - Creates new folders.
+
+***
+
+### getHashSettings()
+
+```ts
+getHashSettings(): Promise<object>;
+```
+
+Retrieves the server's current password hashing configuration.
+
+This method fetches the cryptographic settings required for secure password hashing.
+These settings should be used with the `createHash()` method to ensure compatibility
+with the server's security requirements.
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing hash algorithm settings.
+
+#### Examples
+
+```typescript
+const hashSettings = await sdkInstance.getHashSettings();
+console.log('Hash algorithm:', hashSettings.algorithm);
+console.log('Salt length:', hashSettings.saltLength);
+console.log('Iterations:', hashSettings.iterations);
+
+const passwordHash = await sdkInstance.createHash('userPassword123', hashSettings);
+
+await sdkInstance.login('user@example.com', passwordHash.hash);
+```
+
+```typescript
+async function authenticateUser(email: string, password: string) {
+  try {
+    const hashSettings = await sdkInstance.getHashSettings();
+
+    const hashResult = await sdkInstance.createHash(password, hashSettings);
+
+    const loginResult = await sdkInstance.login(email, hashResult.hash);
+
+    return loginResult;
+  } catch (error) {
+    console.error('Authentication failed:', error.message);
+    throw error;
+  }
+}
+```
+
+#### Throws
+
+Throws an error if the hash settings cannot be retrieved from the server.
+
+#### See
+
+ - [createHash](#createhash) - Creates password hashes using these settings.
+ - [login](#login) - Authenticates users with hashed passwords.
+
+***
+
+### getList()
+
+```ts
+getList(): Promise<object>;
+```
+
+Retrieves a combined list of files and folders from the current context.
+
+This method provides a unified view of all files and folders in the current location,
+making it ideal for building comprehensive file browsers, search interfaces, and
+content management systems. The returned list includes mixed content types with
+a consistent metadata structure, allowing unified handling and display.
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing an array of mixed file and folder objects. Each item includes common properties like id, title, type ('file' or 'folder'), modified date, and type-specific metadata such as file size and extension or folder contents.
+
+#### Examples
+
+```javascript
+const items = await docSpace.getList();
+
+const files = items.filter(item => item.type === 'file');
+const folders = items.filter(item => item.type === 'folder');
+
+console.log(`Total items: ${items.length}`);
+console.log(`Files: ${files.length}, Folders: ${folders.length}`);
+```
+
+```javascript
+const allItems = await docSpace.getList();
+
+const searchResults = allItems.filter(item =>
+  item.title.toLowerCase().includes('report')
+);
+
+console.log(`Found ${searchResults.length} items matching 'report'`);
+```
+
+#### See
+
+ - [getFiles](#getfiles) - Retrieves a files-only listing.
+ - [getFolders](#getfolders) - Retrieves a folders-only listing.
+ - [getFolderInfo](#getfolderinfo) - Provides information about the current folder.
+
+***
+
+### getRooms()
+
+```ts
+getRooms(filter: TFrameFilter): Promise<object>;
+```
+
+Retrieves a list of rooms based on the provided filter criteria.
+
+This method allows fetching rooms from DocSpace with various filtering options,
+including search terms, sorting, pagination, and room type filtering. It's essential
+for building room browsers, dashboards, and selection interfaces.
+
+#### Parameters
+
+<APITable name="getRooms">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `filter` | [`TFrameFilter`](../type-aliases/TFrameFilter.md) | The criteria used to filter and sort the rooms. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object containing the filtered rooms and metadata.
+
+#### Examples
+
+```typescript
+const roomsResult = await sdkInstance.getRooms({
+  page: 1,
+  pageSize: 20
+});
+
+console.log('Total rooms:', roomsResult.total);
+console.log('Rooms:', roomsResult.rooms);
+```
+
+```typescript
+const searchResults = await sdkInstance.getRooms({
+  filterValue: 'project',
+  roomType: 'collaboration',
+  tags: ['development', 'frontend'],
+  page: 1,
+  pageSize: 50,
+  sortBy: 'title',
+  sortOrder: 'asc'
+});
+
+console.log('Matching rooms:', searchResults.rooms.length);
+```
+
+#### Throws
+
+May throw an error if the filter parameters are invalid or if the user lacks permission to access rooms.
+
+#### See
+
+ - [createRoom](#createroom) - Creates new rooms.
+ - [addTagsToRoom](#addtagstoroom) - Adds tags to existing rooms.
+ - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
+
+***
+
 ### getSelection()
 
-> **getSelection**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1052](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1052)
+```ts
+getSelection(): Promise<object>;
+```
 
 Retrieves the current user selection for context-aware operations and bulk actions.
 
@@ -475,220 +1009,11 @@ Throws an error if unable to retrieve the current selection state.
 
 ***
 
-### getFiles()
-
-> **getFiles**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1091](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1091)
-
-Retrieves a list of files from the current context with comprehensive metadata.
-
-This method fetches all files accessible in the current context, providing detailed
-information about each file, including metadata, permissions, and modification history.
-It's essential for building file browsers, dashboards, and file management interfaces.
-The returned data respects user permissions and access controls.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing an array of file objects. Each file includes properties like id, title, type, extension, size, modified date, permissions, and access metadata.
-
-#### Examples
-
-```javascript
-const files = await docSpace.getFiles();
-console.log(`Found ${files.length} files`);
-
-files.forEach(file => {
-  console.log(`${file.title} (${file.type}) - Modified: ${file.modified}`);
-});
-```
-
-```javascript
-const allFiles = await docSpace.getFiles();
-
-const documents = allFiles.filter(file =>
-  ['docx', 'doc', 'pdf'].includes(file.extension.toLowerCase())
-);
-
-console.log(`Found ${documents.length} document files`);
-```
-
-#### See
-
- - [getFolders](#getfolders) - Retrieves information about folders.
- - [getList](#getlist) - Provides a combined listing of files and folders.
- - [createFile](#createfile) - Creates new files.
-
-***
-
-### getFolders()
-
-> **getFolders**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1130](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1130)
-
-Retrieves a list of folders from the current context with detailed information.
-
-This method fetches all folders accessible in the current context, providing comprehensive
-information about folder structure, permissions, and contents. It's crucial for building
-navigation interfaces, folder browsers, and organizational tools. The method respects
-user access permissions and returns only the folders the user can view.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing an array of folder objects. Each folder includes properties like id, title, parent id, number of files, number of folders, size, permissions, creation date, and sharing status.
-
-#### Examples
-
-```javascript
-const folders = await docSpace.getFolders();
-console.log(`Found ${folders.length} folders`);
-
-folders.forEach(folder => {
-  console.log(`${folder.title} - Files: ${folder.fileCount}, Subfolders: ${folder.folderCount}`);
-});
-```
-
-```javascript
-const folders = await docSpace.getFolders();
-
-const editableFolders = folders.filter(folder => folder.permissions.edit);
-const sharedFolders = folders.filter(folder => folder.shared);
-
-console.log(`Editable: ${editableFolders.length}`);
-console.log(`Shared: ${sharedFolders.length}`);
-```
-
-#### See
-
- - [getFiles](#getfiles) - Retrieves information about files.
- - [getFolderInfo](#getfolderinfo) - Provides detailed information for a single folder.
- - [createFolder](#createfolder) - Creates new folders.
-
-***
-
-### getList()
-
-> **getList**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1170](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1170)
-
-Retrieves a combined list of files and folders from the current context.
-
-This method provides a unified view of all files and folders in the current location,
-making it ideal for building comprehensive file browsers, search interfaces, and
-content management systems. The returned list includes mixed content types with
-a consistent metadata structure, allowing unified handling and display.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing an array of mixed file and folder objects. Each item includes common properties like id, title, type ('file' or 'folder'), modified date, and type-specific metadata such as file size and extension or folder contents.
-
-#### Examples
-
-```javascript
-const items = await docSpace.getList();
-
-const files = items.filter(item => item.type === 'file');
-const folders = items.filter(item => item.type === 'folder');
-
-console.log(`Total items: ${items.length}`);
-console.log(`Files: ${files.length}, Folders: ${folders.length}`);
-```
-
-```javascript
-const allItems = await docSpace.getList();
-
-const searchResults = allItems.filter(item =>
-  item.title.toLowerCase().includes('report')
-);
-
-console.log(`Found ${searchResults.length} items matching 'report'`);
-```
-
-#### See
-
- - [getFiles](#getfiles) - Retrieves a files-only listing.
- - [getFolders](#getfolders) - Retrieves a folders-only listing.
- - [getFolderInfo](#getfolderinfo) - Provides information about the current folder.
-
-***
-
-### getRooms()
-
-> **getRooms**(`filter`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1215](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1215)
-
-Retrieves a list of rooms based on the provided filter criteria.
-
-This method allows fetching rooms from DocSpace with various filtering options,
-including search terms, sorting, pagination, and room type filtering. It's essential
-for building room browsers, dashboards, and selection interfaces.
-
-#### Parameters
-
-##### filter
-
-[`TFrameFilter`](../type-aliases/TFrameFilter.md)
-
-The criteria used to filter and sort the rooms.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the filtered rooms and metadata.
-
-#### Examples
-
-```typescript
-const roomsResult = await sdkInstance.getRooms({
-  page: 1,
-  pageSize: 20
-});
-
-console.log('Total rooms:', roomsResult.total);
-console.log('Rooms:', roomsResult.rooms);
-```
-
-```typescript
-const searchResults = await sdkInstance.getRooms({
-  filterValue: 'project',
-  roomType: 'collaboration',
-  tags: ['development', 'frontend'],
-  page: 1,
-  pageSize: 50,
-  sortBy: 'title',
-  sortOrder: 'asc'
-});
-
-console.log('Matching rooms:', searchResults.rooms.length);
-```
-
-#### Throws
-
-May throw an error if the filter parameters are invalid or if the user lacks permission to access rooms.
-
-#### See
-
- - [createRoom](#createroom) - Creates new rooms.
- - [addTagsToRoom](#addtagstoroom) - Adds tags to existing rooms.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
-
-***
-
 ### getUserInfo()
 
-> **getUserInfo**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1260](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1260)
+```ts
+getUserInfo(): Promise<object>;
+```
 
 Retrieves comprehensive information about the current user profile and session details.
 
@@ -741,510 +1066,91 @@ Throws an error if the user is not authenticated or user information cannot be r
 
 ***
 
-### getHashSettings()
+### initFrame()
 
-> **getHashSettings**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1307](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1307)
-
-Retrieves the server's current password hashing configuration.
-
-This method fetches the cryptographic settings required for secure password hashing.
-These settings should be used with the `createHash()` method to ensure compatibility
-with the server's security requirements.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing hash algorithm settings.
-
-#### Examples
-
-```typescript
-const hashSettings = await sdkInstance.getHashSettings();
-console.log('Hash algorithm:', hashSettings.algorithm);
-console.log('Salt length:', hashSettings.saltLength);
-console.log('Iterations:', hashSettings.iterations);
-
-const passwordHash = await sdkInstance.createHash('userPassword123', hashSettings);
-
-await sdkInstance.login('user@example.com', passwordHash.hash);
+```ts
+initFrame(config: TFrameConfig): HTMLIFrameElement | null;
 ```
 
-```typescript
-async function authenticateUser(email: string, password: string) {
-  try {
-    const hashSettings = await sdkInstance.getHashSettings();
+Initializes an iframe with the given configuration and appends it to the target element.
 
-    const hashResult = await sdkInstance.createHash(password, hashSettings);
-
-    const loginResult = await sdkInstance.login(email, hashResult.hash);
-
-    return loginResult;
-  } catch (error) {
-    console.error('Authentication failed:', error.message);
-    throw error;
-  }
-}
-```
-
-#### Throws
-
-Throws an error if the hash settings cannot be retrieved from the server.
-
-#### See
-
- - [createHash](#createhash) - Creates password hashes using these settings.
- - [login](#login) - Authenticates users with hashed passwords.
-
-***
-
-### openModal()
-
-> **openModal**(`type`, `options`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1356](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1356)
-
-Opens a modal dialog of the specified type with comprehensive configuration options.
-
-This method provides a unified interface for opening various types of modal dialogs
-within DocSpace, including file operations, room management, user settings, and
-administrative functions. Modals are displayed as overlay windows that maintain
-context with the parent application while providing focused interfaces for
-specific tasks.
+This is the core method that sets up the DocSpace iframe within your application.
+It handles container creation, iframe setup, event handlers, and frame registration.
+The method supports various DocSpace modes, including viewer, editor, manager, and more.
 
 #### Parameters
 
-##### type
+<APITable name="initFrame">
 
-`string`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the iframe, containing all initialization settings. |
 
-The type of modal to open (e.g., "upload", "share", "properties", "settings").
-
-##### options
-
-`object`
-
-A configuration object containing modal-specific options and event handlers.
+</APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`HTMLIFrameElement` \| `null`
 
-A promise that resolves to an object containing the result of the modal operation.
+The created `HTMLIFrameElement`, or null if initialization fails (e.g., target element not found).
 
 #### Examples
 
 ```typescript
-const result = await docSpace.openModal('upload', {
-  folderId: 'documents-folder-123',
-  allowedExtensions: ['.pdf', '.docx', '.xlsx'],
-  multiple: true
+const iframe = sdkInstance.initFrame({
+  frameId: 'docspace-frame',
+  src: 'https://your-docspace.com',
+  mode: 'viewer',
+  width: '100%',
+  height: '600px',
+  id: 'document-123'
 });
-console.log('Upload completed:', result.uploadedFiles.length, 'files');
-```
 
-```typescript
-try {
-  const shareResult = await docSpace.openModal('share', {
-    itemId: 'room-456',
-    itemType: 'room',
-    shareMode: 'collaborate',
-    permissions: {
-      canEdit: true,
-      canDownload: true
-    }
-  });
-  console.log('Share completed:', shareResult.sharedWith);
-} catch (error) {
-  console.error('Share failed:', error);
-}
-```
-
-#### Throws
-
-Throws an error if the modal type is not supported or the configuration is invalid.
-
-#### See
-
- - [getSelection](#getselection) - Retrieves currently selected items to use with modals.
- - [setConfig](#setconfig) - Configures global modal behavior and appearance.
-
-***
-
-### createFile()
-
-> **createFile**(`folderId`, `title`, `templateId`, `formId`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1404](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1404)
-
-Creates a new file in the specified folder using templates and forms.
-
-This method allows programmatically creating different file types in DocSpace,
-including documents, spreadsheets, presentations, and custom forms. It is possible to specify
-templates for consistent formatting and associate forms for structured data collection.
-The created file will inherit permissions from the parent folder.
-
-#### Parameters
-
-##### folderId
-
-`string`
-
-The ID of the folder where the file will be created. Must be a valid folder ID with write access.
-
-##### title
-
-`string`
-
-The title of the new file. Used as the filename with the appropriate extension based on the template type.
-
-##### templateId
-
-`string`
-
-The ID of the template for the new file. Determines file type and initial content structure.
-
-##### formId
-
-`string`
-
-The ID of the form associated with the new file. Use an empty string if no form is needed.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object representing the created file with properties like id, title, type, and creation date.
-
-#### Examples
-
-```javascript
-const file = await docSpace.createFile(
-  "folder123",
-  "Project Proposal",
-  "template456",
-  "form789"
-);
-console.log('Created file:', file.title, 'ID:', file.id);
-```
-
-```javascript
-try {
-  const document = await docSpace.createFile(
-    "documents-folder-id",
-    "Meeting Notes",
-    "document-template-id",
-    ""
-  );
-  console.log('Document created successfully:', document.id);
-} catch (error) {
-  console.error('File creation failed:', error.message);
-}
-```
-
-#### See
-
- - [createFolder](#createfolder) - Creates folders to organize files.
- - [getFiles](#getfiles) - Retrieves created files.
- - [initFrame](#initframe) - Opens files in editor mode.
-
-***
-
-### createFolder()
-
-> **createFolder**(`parentFolderId`, `title`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1456](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1456)
-
-Creates a new folder within the specified parent folder for content organization.
-
-This method allows programmatically creating folders to organize files and other folders
-in a hierarchical structure. Created folders inherit permissions from the parent folder
-and can be used to establish project structures, departmental organization, or any
-custom file management system. The operation respects DocSpace access controls.
-
-#### Parameters
-
-##### parentFolderId
-
-`string`
-
-The ID of the parent folder where the new folder will be created. Must be a valid folder ID with write permissions.
-
-##### title
-
-`string`
-
-The title of the new folder. Should be unique within the parent folder and follow naming conventions.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the details of the created folder, including id, title, creation date, and access permissions.
-
-#### Examples
-
-```javascript
-const projectFolder = await docSpace.createFolder(
-  "root-folder-id",
-  "Project Alpha"
-);
-console.log('Created folder:', projectFolder.title, 'ID:', projectFolder.id);
-```
-
-```javascript
-try {
-  const newFolder = await docSpace.createFolder(
-    "parent-folder-id",
-    "Marketing Materials"
-  );
-  console.log('Folder created successfully:', newFolder.id);
-} catch (error) {
-  console.error('Folder creation failed:', error.message);
-}
-```
-
-#### See
-
- - [createFile](#createfile) - Creates files within folders.
- - [getFolders](#getfolders) - Retrieves folder lists.
- - [getFolderInfo](#getfolderinfo) - Provides detailed folder information.
-
-***
-
-### createRoom()
-
-> **createRoom**(`title`, `roomType`, `quota?`, `tags?`, `color?`, `cover?`, `indexing?`, `denyDownload?`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1512](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1512)
-
-Creates a new room with the specified parameters and configuration.
-
-This method allows programmatically creating different types of rooms in DocSpace,
-including collaboration rooms, public rooms, and custom rooms. It is possible to configure
-room properties like quotas, tags, branding, and access permissions during creation.
-
-#### Parameters
-
-##### title
-
-`string`
-
-The display name/title for the new room.
-
-##### roomType
-
-The type of room to create (collaboration, public, custom, etc.).
-
-`string` | `number`
-
-##### quota?
-
-`number`
-
-Optional storage quota limit for the room in bytes.
-
-##### tags?
-
-`string`[]
-
-Optional array of tags to categorize and organize the room.
-
-##### color?
-
-`string`
-
-Optional hex color code for the room's branding theme.
-
-##### cover?
-
-`string`
-
-Optional cover image URL or file path for the room.
-
-##### indexing?
-
-`boolean`
-
-Optional flag to enable ordisable search indexing (VDR rooms only).
-
-##### denyDownload?
-
-`boolean`
-
-Optional flag to prevent file downloads (VDR rooms only).
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the created room's details.
-
-#### Examples
-
-```typescript
-const room = await sdkInstance.createRoom(
-  'Project Alpha Team',
-  'collaboration'
-);
-
-console.log('Created room:', room.id);
-console.log('Room URL:', room.url);
-```
-
-```typescript
-const projectRoom = await sdkInstance.createRoom(
-  'Q1 Marketing Campaign',
-  'collaboration',
-  5368709120,
-  ['marketing', 'q1-2024', 'campaign'],
-  '#FF6B35',
-  'https://example.com/covers/marketing-cover.jpg'
-);
-
-console.log('Room created with quota:', projectRoom.quota);
-console.log('Room tags:', projectRoom.tags);
-```
-
-#### Throws
-
-Throws an error if room creation fails due to permissions, quota limits, or invalid parameters.
-
-#### See
-
- - [getRooms](#getrooms) - Retrieves existing rooms.
- - [addTagsToRoom](#addtagstoroom) - Adds tags to the created room.
- - [createFolder](#createfolder) - Creates folders within the room.
-
-***
-
-### setListView()
-
-> **setListView**(`viewType`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1577](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1577)
-
-Dynamically changes the list view display mode for enhanced user experience.
-
-This method allows applications to programmatically switch between different
-view modes to optimize content presentation based on user preferences, screen
-size, or content type. View changes are applied immediately and persist for
-the user session, providing responsive and adaptive interfaces.
-
-#### Parameters
-
-##### viewType
-
-`string`
-
-The view mode to apply: "row" (compact list), "table" (detailed grid), or "tile" (preview cards).
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object indicating the result of the view change operation.
-
-#### Examples
-
-```typescript
-await docSpace.setListView('table');
-console.log('View changed to table mode');
-```
-
-```typescript
-const screenWidth = window.innerWidth;
-let optimalView;
-
-if (screenWidth < 768) {
-  optimalView = 'row';
-} else if (screenWidth < 1200) {
-  optimalView = 'table';
+if (iframe) {
+  console.log('Frame initialized successfully');
 } else {
-  optimalView = 'tile';
-}
-
-try {
-  await docSpace.setListView(optimalView);
-  console.log('View optimized for screen size:', optimalView);
-} catch (error) {
-  console.error('Failed to change view:', error);
+  console.error('Failed to initialize frame - target element not found');
 }
 ```
-
-#### Throws
-
-Throws an error if the view type is not supported or the operation fails.
-
-#### See
-
- - [getList](#getlist) - Retrieves content displayed in the current view mode.
- - [getConfig](#getconfig) - Gets the current view configuration and defaults.
- - [setConfig](#setconfig) - Updates global default view preferences.
-
-***
-
-### createHash()
-
-> **createHash**(`password`, `hashSettings`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1605](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1605)
-
-Creates a hash for the given password using the specified hash settings.
-
-This method is typically used before authentication to create a secure hash
-of the user's password that can be safely transmitted and stored.
-
-#### Parameters
-
-##### password
-
-`string`
-
-The plaintext password to be hashed.
-
-##### hashSettings
-
-`object`
-
-A configuration object for the hash function, containing algorithm settings.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the generated password hash.
-
-#### Example
 
 ```typescript
-const hashSettings = await sdkInstance.getHashSettings();
-
-const hashResult = await sdkInstance.createHash('userPassword123', hashSettings);
-console.log('Password hash:', hashResult.hash);
-
-await sdkInstance.login('user@example.com', hashResult.hash);
+const iframe = sdkInstance.initFrame({
+  frameId: 'editor-frame',
+  src: 'https://your-docspace.com',
+  mode: 'editor',
+  width: '100%',
+  height: '800px',
+  id: 'document-456',
+  events: {
+    onContentReady: () => console.log('Editor loaded'),
+    onDocumentReady: () => console.log('Document ready for editing'),
+    onAppError: (error) => console.error('Editor error:', error)
+  }
+});
 ```
 
 #### Throws
 
-Throws an error if the password is empty or the hash settings are invalid.
+May throw an error if the configuration contains invalid values or the target element cannot be accessed.
 
 #### See
 
- - [getHashSettings](#gethashsettings) - Retrieves the current hash settings.
- - [login](#login) - Uses the generated hash for authentication.
+ - [setConfig](#setconfig) - Updates the configuration after initialization.
+ - [getConfig](#getconfig) - Retrieves the current configuration.
+ - [destroyFrame](#destroyframe) - Cleans up the frame properly.
 
 ***
 
 ### login()
 
-> **login**(`email`, `passwordHash`, `password?`, `session?`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1655](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1655)
+```ts
+login(
+   email: string, 
+   passwordHash: string, 
+   password?: string, 
+   session?: boolean
+): Promise<object>;
+```
 
 Authenticates a user with the provided credentials.
 
@@ -1253,29 +1159,16 @@ For security reasons, it is recommended to use password hashing via the `createH
 
 #### Parameters
 
-##### email
+<APITable name="login">
 
-`string`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `email` | `string` | The user's email address used for authentication. |
+| `passwordHash` | `string` | The hashed password (recommended) obtained from the `createHash()` method. |
+| `password`? | `string` | Optional plaintext password (not recommended for production). |
+| `session`? | `boolean` | Optional flag to create a persistent session. The default value is `false`. |
 
-The user's email address used for authentication.
-
-##### passwordHash
-
-`string`
-
-The hashed password (recommended) obtained from the `createHash()` method.
-
-##### password?
-
-`string`
-
-Optional plaintext password (not recommended for production).
-
-##### session?
-
-`boolean`
-
-Optional flag to create a persistent session. The default value is `false`.
+</APITable>
 
 #### Returns
 
@@ -1323,9 +1216,9 @@ Throws an error if authentication fails or credentials are invalid.
 
 ### logout()
 
-> **logout**(): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1694](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1694)
+```ts
+logout(): Promise<object>;
+```
 
 Ends the current user session and logs out the user.
 
@@ -1363,125 +1256,81 @@ Throws an error if the logout operation fails.
 
 ***
 
-### createTag()
+### openModal()
 
-> **createTag**(`name`): `Promise`\<`object`\>
+```ts
+openModal(type: string, options: object): Promise<object>;
+```
 
-Defined in: [instance/index.ts:1732](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1732)
+Opens a modal dialog of the specified type with comprehensive configuration options.
 
-Creates a new tag with the specified name.
-
-Tags provide a powerful way to organize and categorize content across the DocSpace portal.
-They can be used for project management, content categorization, workflow organization,
-and creating custom filtering systems for better content discovery.
+This method provides a unified interface for opening various types of modal dialogs
+within DocSpace, including file operations, room management, user settings, and
+administrative functions. Modals are displayed as overlay windows that maintain
+context with the parent application while providing focused interfaces for
+specific tasks.
 
 #### Parameters
 
-##### name
+<APITable name="openModal">
 
-`string`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `type` | `string` | The type of modal to open (e.g., "upload", "share", "properties", "settings"). |
+| `options` | `object` | A configuration object containing modal-specific options and event handlers. |
 
-The name of the tag to be created. It should be descriptive and unique.
+</APITable>
 
 #### Returns
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object representing the created tag with its ID and metadata.
+A promise that resolves to an object containing the result of the modal operation.
 
 #### Examples
 
 ```typescript
-const tag = await sdkInstance.createTag('Project Alpha');
-console.log('Tag created:', tag.name, 'with ID:', tag.id);
+const result = await docSpace.openModal('upload', {
+  folderId: 'documents-folder-123',
+  allowedExtensions: ['.pdf', '.docx', '.xlsx'],
+  multiple: true
+});
+console.log('Upload completed:', result.uploadedFiles.length, 'files');
 ```
 
 ```typescript
-const tagNames = ['High Priority', 'Marketing', 'Review'];
-
-for (const tagName of tagNames) {
-  try {
-    const tag = await sdkInstance.createTag(tagName);
-    console.log(`Created tag: ${tagName}`);
-  } catch (error) {
-    console.error(`Failed to create tag ${tagName}:`, error);
-  }
+try {
+  const shareResult = await docSpace.openModal('share', {
+    itemId: 'room-456',
+    itemType: 'room',
+    shareMode: 'collaborate',
+    permissions: {
+      canEdit: true,
+      canDownload: true
+    }
+  });
+  console.log('Share completed:', shareResult.sharedWith);
+} catch (error) {
+  console.error('Share failed:', error);
 }
 ```
 
 #### Throws
 
-May throw an error if thetag name is invalid, already exists, or user lacks permission to create tags.
+Throws an error if the modal type is not supported or the configuration is invalid.
 
 #### See
 
- - [addTagsToRoom](#addtagstoroom) - Applies created tags to rooms.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
-
-***
-
-### addTagsToRoom()
-
-> **addTagsToRoom**(`roomId`, `tags`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1765](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1765)
-
-Adds tags to a specified room for organization and categorization.
-
-This method allows applying multiple tags to a room simultaneously, helping organize
-rooms by project, department, priority, or any custom categorization system. Tags improve
-discoverability and enable advanced filtering and search capabilities.
-
-#### Parameters
-
-##### roomId
-
-`string`
-
-The unique identifier of the room to which tags will be added.
-
-##### tags
-
-`string`[]
-
-An array of tag names to be added to the room. Tags should already exist or will be created automatically.
-
-#### Returns
-
-`Promise`\<`object`\>
-
-A promise that resolves to an object containing the result of the operation and updated room metadata.
-
-#### Examples
-
-```typescript
-await sdkInstance.addTagsToRoom('room-123', ['Project Alpha', 'High Priority']);
-console.log('Tags added successfully to project room');
-```
-
-```typescript
-const projectTags = ['Engineering', 'Development', 'Q1-2024'];
-const result = await sdkInstance.addTagsToRoom('room-456', projectTags);
-console.log('Room organized with tags:', projectTags);
-```
-
-#### Throws
-
-May throw an error if the room ID is invalid, tags do not exist, or the user lacks permission to modify the room tags.
-
-#### See
-
- - [createTag](#createtag) - Creates new tags before applying them.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
- - [getRooms](#getrooms) - Retrieves rooms with their current tags.
+ - [getSelection](#getselection) - Retrieves currently selected items to use with modals.
+ - [setConfig](#setconfig) - Configures global modal behavior and appearance.
 
 ***
 
 ### removeTagsFromRoom()
 
-> **removeTagsFromRoom**(`roomId`, `tags`): `Promise`\<`object`\>
-
-Defined in: [instance/index.ts:1809](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1809)
+```ts
+removeTagsFromRoom(roomId: string, tags: string[]): Promise<object>;
+```
 
 Removes specified tags from a room for organization and categorization cleanup.
 
@@ -1492,17 +1341,14 @@ operation is atomic: either all specified tags are removed or none are affected.
 
 #### Parameters
 
-##### roomId
+<APITable name="removeTagsFromRoom">
 
-`string`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `roomId` | `string` | The unique identifier of the room from which tags will be removed. |
+| `tags` | `string`[] | An array of tag names to be removed from the room. Only existing tags will be processed. |
 
-The unique identifier of the room from which tags will be removed.
-
-##### tags
-
-`string`[]
-
-An array of tag names to be removed from the room. Only existing tags will be processed.
+</APITable>
 
 #### Returns
 
@@ -1542,78 +1388,191 @@ May throw an error if the room ID is invalid, tags do not exist in the room, or 
 
 ***
 
-### executeInEditor()
+### setConfig()
 
-> **executeInEditor**(`callback`, `data?`): `void`
+```ts
+setConfig(config?: TFrameConfig): Promise<object>;
+```
 
-Defined in: [instance/index.ts:1867](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1867)
+Sets the configuration for the instance and applies updates to the active frame.
 
-Executes custom functions within the editor context for advanced document manipulation.
-
-This method allows applications to run custom code directly within the document editor
-environment, enabling advanced programmatic operations, content manipulation, automation
-tasks, and integration with external systems. The callback function receives the editor
-instance and optional data, providing full access to editor APIs and document content.
+This method allows dynamically updating the SDK instance configuration
+after initialization. Changes are merged with the existing configuration and
+propagated to the active frame. This is useful for runtime adjustments like
+theme changes, size updates, or mode switching.
 
 #### Parameters
 
-##### callback
+<APITable name="setConfig">
 
-(`instance`, `data?`) => `void`
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | `defaultConfig` | The configuration object with properties to update. Only the provided properties will be changed. Defaults to `defaultConfig` if no parameter is provided. |
 
-The function to be executed within the editor context. Receives the editor instance and optional data.
+</APITable>
 
-##### data?
+#### Returns
 
-`object`
+`Promise`\<`object`\>
 
-Optional object providing context or configuration for the callback.
+A promise that resolves to an object containing the update result.
+
+#### Examples
+
+```typescript
+const result = await sdkInstance.setConfig({
+  theme: 'dark',
+  width: '1200px',
+  height: '800px'
+});
+console.log('Configuration updated:', result);
+```
+
+```typescript
+try {
+  await sdkInstance.setConfig({
+    id: 'new-document-789',
+    editorType: 'word'
+  });
+  console.log('Successfully switched to new document');
+} catch (error) {
+  console.error('Failed to update document:', error);
+}
+```
+
+#### Throws
+
+May throw an error if the new configuration contains invalid values or if frame update fails.
+
+#### See
+
+ - [getConfig](#getconfig) - Retrieves the current configuration.
+ - [initFrame](#initframe) - Performs the initial frame setup.
+
+***
+
+### setIsLoaded()
+
+```ts
+setIsLoaded(): void;
+```
+
+Manages the frame loading completion process.
+Handles frame finalization, visual transition management, and user event coordination.
+Ensures a smooth switch from initialization to working state
+with animations and resource cleanup for better user experience.
 
 #### Returns
 
 `void`
 
+void - This method performs side effects by updating the frame appearance
+              and triggering events. It does not return values, focusing on
+              state transition and user experience optimization.
+
 #### Examples
 
 ```typescript
-const templateData = {
-  customerName: 'Acme Corporation',
-  projectName: 'Digital Transformation',
-  startDate: new Date().toLocaleDateString()
-};
-
-docSpace.executeInEditor((editorInstance, data) => {
-  editorInstance.insertText(`
-    PROJECT PROPOSAL
-    Client: ${data.customerName}
-    Project: ${data.projectName}
-    Date: ${data.startDate}
-  `);
-}, templateData);
+sdkInstance.setIsLoaded();
+console.log('Frame loading completed and content is ready');
 ```
 
 ```typescript
-docSpace.executeInEditor((editorInstance, data) => {
-  const documentContent = editorInstance.getDocumentContent();
-  
-  if (data.checkSpelling) {
-    const spellCheckResults = editorInstance.runSpellCheck();
-    spellCheckResults.forEach(issue => {
-      if (issue.confidence > 0.8) {
-        editorInstance.replaceText(issue.position, issue.suggestion);
-      }
-    });
-  }
-  
-  editorInstance.saveDocument();
-}, { checkSpelling: true });
+try {
+  await customFrameSetup();
+  sdkInstance.setIsLoaded();
+} catch (error) {
+  console.error('Setup failed:', error);
+  sdkInstance.setIsLoaded();
+}
 ```
 
 #### Throws
 
-Throws an error if the editor context is not available or callback execution fails.
+May throw an error if frame elements cannot be accessed or if style
+                modifications fail due to browser security restrictions.
 
 #### See
 
- - [SDK.initEditor](SDK.md#initeditor) - Initializes the editor before executing custom functions.
- - [getSelection](#getselection) - Retrieves the selected content to operate on within the editor.
+ - [initFrame](#initframe) Initializes the frame before the loading process completes.
+ - [destroyFrame](#destroyframe) Cleans up resources when the frame is no longer needed.
+ - [setConfig](#setconfig) Updates configuration parameters that affect loading behavior.
+ - [onContentReady](../type-aliases/TFrameEvents.md#onContentReady) The callback triggered when the frame content is ready.
+
+***
+
+### setListView()
+
+```ts
+setListView(viewType: string): Promise<object>;
+```
+
+Dynamically changes the list view display mode for enhanced user experience.
+
+This method allows applications to programmatically switch between different
+view modes to optimize content presentation based on user preferences, screen
+size, or content type. View changes are applied immediately and persist for
+the user session, providing responsive and adaptive interfaces.
+
+#### Parameters
+
+<APITable name="setListView">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `viewType` | `string` | The view mode to apply: "row" (compact list), "table" (detailed grid), or "tile" (preview cards). |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves to an object indicating the result of the view change operation.
+
+#### Examples
+
+```typescript
+await docSpace.setListView('table');
+console.log('View changed to table mode');
+```
+
+```typescript
+const screenWidth = window.innerWidth;
+let optimalView;
+
+if (screenWidth < 768) {
+  optimalView = 'row';
+} else if (screenWidth < 1200) {
+  optimalView = 'table';
+} else {
+  optimalView = 'tile';
+}
+
+try {
+  await docSpace.setListView(optimalView);
+  console.log('View optimized for screen size:', optimalView);
+} catch (error) {
+  console.error('Failed to change view:', error);
+}
+```
+
+#### Throws
+
+Throws an error if the view type is not supported or the operation fails.
+
+#### See
+
+ - [getList](#getlist) - Retrieves content displayed in the current view mode.
+ - [getConfig](#getconfig) - Gets the current view configuration and defaults.
+ - [setConfig](#setconfig) - Updates global default view preferences.
+
+## Properties
+
+<APITable name="SDKInstance">
+
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The iframe configuration options. |
+
+</APITable>

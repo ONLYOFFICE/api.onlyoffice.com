@@ -1,25 +1,20 @@
-# Enumeration: FilterSortOrder
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:96](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L96)
+import APITable from '@site/src/components/APITable/APITable';
+
+# FilterSortOrder
 
 The item sorting order.
 
 ## Enumeration Members
 
-### Ascending
+<APITable>
 
-> **Ascending**: `"ascending"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `Ascending` | `"ascending"` | Ascending order: items sorted from smallest to largest, A–Z, etc. |
+| `Descending` | `"descending"` | Descending order: items sorted from largest to smallest, Z–A, etc. |
 
-Defined in: [enums/index.ts:98](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L98)
-
-Ascending order: items sorted from smallest to largest, A–Z, etc.
-
-***
-
-### Descending
-
-> **Descending**: `"descending"`
-
-Defined in: [enums/index.ts:100](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L100)
-
-Descending order: items sorted from largest to smallest, Z–A, etc.
+</APITable>

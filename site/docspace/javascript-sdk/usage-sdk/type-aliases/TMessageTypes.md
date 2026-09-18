@@ -1,7 +1,11 @@
-# Type Alias: TMessageTypes
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TMessageTypes** = `` `${MessageTypes}` ``
-
-Defined in: [types/index.ts:319](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L319)
+# TMessageTypes
 
 The template literal type for message types.
+
+```ts
+type TMessageTypes = `${MessageTypes}`;
+```

@@ -1,7 +1,11 @@
-# Variable: CSPApiUrl
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts
+---
 
-> `const` **CSPApiUrl**: `"/api/2.0/security/csp"`
-
-Defined in: [constants/index.ts:37](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts#L37)
+# CSPApiUrl
 
 The API endpoint for managing Content Security Policy (CSP) settings.
+
+```ts
+const CSPApiUrl: "/api/2.0/security/csp";
+```

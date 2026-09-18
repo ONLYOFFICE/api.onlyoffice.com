@@ -1,35 +1,21 @@
-# Enumeration: SelectorFilterType
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:48](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L48)
+import APITable from '@site/src/components/APITable/APITable';
+
+# SelectorFilterType
 
 The filter type used in the selector views.
 
 ## Enumeration Members
 
-### All
+<APITable>
 
-> **All**: `"all"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `All` | `"all"` | Shows all available items. |
+| `RoomsOnly` | `"roomsOnly"` | Shows only rooms. |
+| `UserOnly` | `"userFolderOnly"` | Shows only user folders. |
 
-Defined in: [enums/index.ts:50](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L50)
-
-Shows all available items.
-
-***
-
-### RoomsOnly
-
-> **RoomsOnly**: `"roomsOnly"`
-
-Defined in: [enums/index.ts:52](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L52)
-
-Shows only rooms.
-
-***
-
-### UserOnly
-
-> **UserOnly**: `"userFolderOnly"`
-
-Defined in: [enums/index.ts:54](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L54)
-
-Shows only user folders.
+</APITable>

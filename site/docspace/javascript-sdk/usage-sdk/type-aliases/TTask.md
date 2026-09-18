@@ -1,37 +1,25 @@
-# Type Alias: TTask
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TTask** = `object`
+import APITable from '@site/src/components/APITable/APITable';
 
-Defined in: [types/index.ts:359](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L359)
+# TTask
 
 The task object structure.
 
+```ts
+type TTask = object;
+```
+
 ## Properties
 
-### data?
+<APITable>
 
-> `optional` **data**: `object` \| `null`
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| `data`? | `object` \| `null` | The task data payload. |
+| `methodName` | `string` | The method name. |
+| `type` | `string` | The task type. |
 
-Defined in: [types/index.ts:361](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L361)
-
-The task data payload.
-
-***
-
-### methodName
-
-> **methodName**: `string`
-
-Defined in: [types/index.ts:363](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L363)
-
-The method name.
-
-***
-
-### type
-
-> **type**: `string`
-
-Defined in: [types/index.ts:365](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L365)
-
-The task type.
+</APITable>

@@ -1,7 +1,11 @@
-# Variable: FRAME\_NAME
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts
+---
 
-> `const` **FRAME\_NAME**: `"frameDocSpace"`
-
-Defined in: [constants/index.ts:40](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts#L40)
+# FRAME\_NAME
 
 The default name for the DocSpace iframe element.
+
+```ts
+const FRAME_NAME: "frameDocSpace";
+```
