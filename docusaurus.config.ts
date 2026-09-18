@@ -50,7 +50,7 @@ const config: Config = {
   url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
   baseUrl: '/',
 
-  trailingSlash: true,
+  trailingSlash: false,
 
   noIndex: isDev,
 
@@ -199,7 +199,7 @@ const config: Config = {
       {
         docsPluginId: 'api',
         title: 'ONLYOFFICE API Documentation',
-        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by replacing the trailing slash of its URL with `.md`.',
+        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by appending `.md` to its URL.',
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
         sections: llmsTxtSections,

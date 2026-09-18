@@ -21,13 +21,13 @@ const {renderApiPage} = require('./openapi');
 
 const DOCS_PLUGIN = 'docusaurus-plugin-content-docs';
 
-/** Where a page's twin is published: `/docs/x/y/` -> `<outDir>/docs/x/y.md`. */
+/** Where a page's twin is published: `/docs/x/y` -> `<outDir>/docs/x/y.md`. */
 function twinPath(permalink, baseUrl, outDir) {
   const route = permalink.slice(baseUrl.length).replace(/\/$/, '');
   return path.join(outDir, route ? `${route}.md` : 'index.md');
 }
 
-/** The URL of that twin: the page URL with its trailing slash replaced by `.md`. */
+/** The URL of that twin: the page URL with `.md` appended, any trailing slash dropped first. */
 function twinUrl(permalink) {
   return `${permalink.replace(/\/$/, '')}.md`;
 }
