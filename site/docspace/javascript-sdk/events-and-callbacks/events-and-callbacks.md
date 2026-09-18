@@ -35,15 +35,15 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onContentReady` | All modes | The frame's content has loaded. |
 | `onCloseCallback` | Room selector, File selector | The selector was closed or the selection was canceled. |
 | `onSelectCallback` | Room selector, File selector | A room or file was selected. |
-| `onFileManagerClick` | Manager | A file was clicked in the file list — see the note below, this one changes default behavior too. |
-| `onEditorOpen` | Manager | A document was opened in the editor — see the note below, this one changes default behavior too. |
+| `onFileManagerClick` | Manager, Public room | A file was clicked in the file list — see the note below, this one changes default behavior too. |
+| `onEditorOpen` | Manager, Public room | A document was opened in the editor — see the note below, this one changes default behavior too. |
 | `onEditorCloseCallback` | Editor, Viewer | The document editor was closed. |
-| `onDownload` | Manager, Editor, Viewer | A download was requested (only fires when `downloadToEvent: true` is set). |
-| `onNoAccess` | Manager | The target file/folder exists but isn't accessible to the current user. |
-| `onNotFound` | Manager | The target file/folder doesn't exist. |
+| `onDownload` | Manager, Public room, Editor, Viewer | A download was requested (only fires when `downloadToEvent: true` is set). |
+| `onNoAccess` | Manager, Public room, Chat | The target file/folder exists but isn't accessible to the current user (Manager, Public room); in Chat mode, fires when the current user can't use AI Chat (confirmed for AI disabled on the portal). |
+| `onNotFound` | Manager, Public room | The target file/folder doesn't exist. |
 | `onSignOut` | All modes | The user signed out. |
 | `onCustomAction` | Forms | A custom context menu action (registered via `setCustomActions()`) was clicked. |
-| `onNavigate` | Forms | The user navigated to a different section. |
+| `onNavigate` | Forms, Personal | The user navigated to a different section. |
 | `onUploadSuccess` | Uploader, Forms | A file upload completed — only when the file was uploaded via [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog); see the note below. |
 | `onUploadError` | Uploader, Forms | A file upload failed — same `upload()`-only scope as `onUploadSuccess`. |
 | `onUploadProgress` | Uploader | Upload progress update — only fires for an `upload()`-initiated transfer. |
@@ -60,13 +60,17 @@ Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
 `onContentReady` can fire more than once per frame instance — e.g. after signing out, the frame reloads to show the sign-in page, which triggers `onContentReady` again without a second `onAppReady`. `onAppReady` itself isn't strictly limited to firing once either: signing back in through that sign-in page triggers `onAppReady` a second time. Don't assume either event only fires once at startup.
 
-`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. In [Manager mode](../embedding-modes/manager-mode.md), the frame still initializes normally (`onAppReady` fires) and surfaces the problem via `onNoAccess`/`onNotFound` instead.
+`onAppError` is scoped to genuine SDK/init-level failures (bad `src`, CSP rejection, missing required config) — passing a nonexistent `id` (room/file/folder) does **not** trigger it. In [Manager mode](../embedding-modes/manager-mode.md) and [Public room mode](../embedding-modes/public-room-mode.md), the frame still initializes normally (`onAppReady` fires) and surfaces the problem via `onNoAccess`/`onNotFound` instead.
+
+In [Public room mode](../embedding-modes/public-room-mode.md) specifically, `id` isn't just optional room-scoping — it's required config, and *omitting* it is different from passing a nonexistent one: the portal has nothing to render, the frame fails to load properly, and after the method timeout you get a generic `onAppError` rather than `onNoAccess`/`onNotFound`.
 
 :::note
 [Editor mode](../embedding-modes/editor-mode.md) and [Viewer mode](../embedding-modes/viewer-mode.md) have no equivalent fallback: passing a missing or nonexistent `id` there fires neither `onAppError` nor `onAppReady` nor any not-found signal — the frame just never finishes initializing from the host's point of view. Validate the file `id` before calling `initEditor`/`initViewer` if you need to handle this case; the SDK gives you nothing to react to otherwise.
 :::
 
-`onCustomAction` and `onNavigate` are specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()`/`navigateSection()` usage examples.
+[Chat mode](../embedding-modes/chat-mode.md) has a related but different behavior: when the current user can't actually use the chat, the frame shows a no-access state — a chat history control with no composer. `onAppReady` still fires normally either way, but confirmed live for the "AI disabled on the portal" case, `onNoAccess` also fires (with an empty payload) — attach a handler for it rather than trying to infer the no-access state from `onAppReady` alone.
+
+`onCustomAction` is specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()` usage examples. `onNavigate` fires in both [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) — see either page for `navigateSection()` usage examples.
 
 :::note
 `onUploadSuccess`, `onUploadError`, and `onUploadProgress` only fire for an upload the host itself started with [`instance.upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog). A file added through the frame's own UI — the Uploader dialog, or dragging a file into the Forms gallery — does not trigger them the same way: in Forms mode it doesn't trigger them at all, and in Uploader mode `onUploadSuccess` still fires but with a different, much larger payload (see below) than an `upload()`-initiated one.
@@ -134,6 +138,7 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCloseCallback` | An empty object (`{}`) — treat it as a signal only, not a data source. |
+| `onNoAccess` | An empty object (`{}`) — treat it as a signal only, not a data source. |
 | `onCustomAction` | `{ action, type, item }` — `action` is the `key` you registered, `item` is the file/folder it was clicked on. |
 | `onNavigate` | `{ section }` — the section the user navigated to (e.g. `"completed-forms"`). |
 | `onUploadSuccess` | For an `upload()`-initiated transfer: `{ fileName, fileSize }`. For a file uploaded through the Uploader dialog itself: a much larger, differently-shaped object wrapping the created file's info (`[{ response: { file: {...} }, count, links, status, statusCode }]`) — don't assume one shape covers both cases. |
@@ -229,4 +234,4 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-See also: [Manager mode](../embedding-modes/manager-mode.md).
+See also: [Manager mode](../embedding-modes/manager-mode.md), [Public room mode](../embedding-modes/public-room-mode.md).

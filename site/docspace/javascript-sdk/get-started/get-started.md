@@ -14,7 +14,7 @@ You can use it as an [npm package](./quickstart.md#using-the-npm-package) for mo
 
 Before you begin, make sure you have the following:
 
-- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer)
+- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later.
 - The URL of your server added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
 - A server environment to serve your files from — opening an HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
@@ -42,6 +42,8 @@ The SDK supports multiple initialization modes:
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
 | Uploader | File upload dialog | No | No | Yes (folder) | Yes |
 | Forms | Forms gallery | Yes | Yes | Yes (room) | Yes |
+| Chat | AI chat interface | No | No | No | Yes |
+| Personal | Personal file manager (My Documents, Favorites, Recent, Trash) | Yes | Yes | No | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
