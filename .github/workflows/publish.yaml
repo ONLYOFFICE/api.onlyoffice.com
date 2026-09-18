@@ -229,7 +229,7 @@ jobs:
                 --exclude \"*\" \
                 --include \"*.html\" \
                 --cache-control \"public, max-age=0, must-revalidate\" \
-                --content-type \"text/html\" \
+                --content-type \"text/html; charset=utf-8\" \
                 --delete \
                 $EXCLUDE_STR"
 
@@ -255,17 +255,26 @@ jobs:
            eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                 --exclude \"*\" \
                 --include \"*.txt\" \
-                --include \"*.xml\" \
                 --cache-control \"public, max-age=0, must-revalidate\" \
+                --content-type \"text/plain; charset=utf-8\" \
                 --delete \
                 $EXCLUDE_STR"
 
-           echo "Step 5: Sync all other files"
+           echo "Step 5: Sync XML files with short cache"
            eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
+                --exclude \"*\" \
+                --include \"*.xml\" \
+                --cache-control \"public, max-age=0, must-revalidate\" \
+                --content-type \"application/xml; charset=utf-8\" \
+                --delete \
+                $EXCLUDE_STR"
+
+           echo "Step 6: Sync all other files"
+           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
+                --include \"*\" \
                 --exclude \"*.html\" \
                 --exclude \"*.js\" \
                 --exclude \"*.css\" \
-                --include \"*\" \
                 --exclude \"*.md\" \
                 --exclude \"*.txt\" \
                 --exclude \"*.xml\" \
