@@ -229,7 +229,7 @@ const config: Config = {
             sidebar: 'docsBuilder',
             group: 'ONLYOFFICE Docs',
             name: 'Document Builder',
-            description: 'Generate documents directly within your DMS or CRM workflow, with no separate document editor required.',
+            description: 'Add document generation, editing, and conversion to your application: DOCX, XLSX, PPTX, and PDF via the CLI, Python, Java, .NET, or C++.',
           },
           {
             sidebar: 'docsDesktop',
@@ -247,13 +247,13 @@ const config: Config = {
             sidebar: 'docspaceJSSdk',
             group: 'ONLYOFFICE DocSpace',
             name: 'Embed SDK',
-            description: 'Embed DocSpace into your website as a frame using JavaScript APIs: an entire portal, a specific room, or a single document.',
+            description: 'Embed DocSpace in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
           },
           {
             sidebar: 'docspacePlugins',
             group: 'ONLYOFFICE DocSpace',
             name: 'Plugins SDK',
-            description: 'Create your own plugins and add them to the DocSpace portal.',
+            description: 'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
           },
           {
             sidebar: 'docspaceMCPServer',

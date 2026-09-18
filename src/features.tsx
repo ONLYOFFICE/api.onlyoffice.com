@@ -57,7 +57,7 @@ export const DocsFeatures: Features = {
     {
       title: 'Document Builder',
       link: 'document-builder/get-started/overview',
-      description: 'Integrate Document Builder into your DMS or CRM to generate documents directly within your workflow—no separate document editor required.',
+      description: 'Add document generation, editing, and conversion to your application: DOCX, XLSX, PPTX, and PDF via the CLI, Python, Java, .NET, or C++.',
       icon: <DocumentBuilderIcon/>,
     },
     {
@@ -85,13 +85,13 @@ export const DocSpaceFeatures: Features = {
     {
       title: 'Embed SDK',
       link: 'javascript-sdk/get-started',
-      description: 'Embed DocSpace into your website as a frame using JavaScript APIs—choose to display an entire portal, a specific room, or a single document.',
+      description: 'Embed DocSpace in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
       icon: <SdkIcon/>,
     },
     {
       title: 'Plugins SDK',
       link: 'plugins-sdk/get-started',
-      description: 'Create your plugins and add them to the DocSpace portal.',
+      description: 'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
       icon: <PluginIcon/>,
     },
     {
