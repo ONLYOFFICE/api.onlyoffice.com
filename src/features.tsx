@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import SdkIcon from "@site/static/icons/javascript-sdk-icon.svg";
 import PluginIcon from "@site/static/icons/plugins-icon.svg";
 import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
@@ -10,6 +11,13 @@ import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
 import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
 import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
+import {
+  docsSections,
+  docspaceSections,
+  workspaceSections,
+  type SectionGroup,
+  type SectionId,
+} from "@site/src/sections";
 
 export type Features = {
   linkPrefix: string
@@ -17,111 +25,53 @@ export type Features = {
   button?: FeaturesGrid.Button
 };
 
-export const DocsFeatures: Features = {
-  linkPrefix: 'docs',
-  button: {
-    text: "Try Docs Playground",
-    href: "/playground/?script=config",
-  },
-  items: [
-    {
-      title: 'Docs API',
-      link: 'docs-api/get-started/basic-concepts',
-      description: 'Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.',
-      icon: <DocsApiIcon/>,
-    },
-    {
-      title: 'Office API',
-      link: 'office-api/get-started/overview',
-      description: 'Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.',
-      icon: <OfficeApiIcon/>,
-    },
-    {
-      title: 'Plugins',
-      link: 'plugins/get-started/overview',
-      description: 'Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.',
-      icon: <PluginIcon/>,
-    },
-    {
-      title: 'Macros',
-      link: 'macros/get-started/overview',
-      description: 'Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.',
-      icon: <MacrosIcon/>,
-    },
-    {
-      title: 'AI',
-      link: 'ai/get-started/overview',
-      description: 'Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.',
-      icon: <AiIcon/>,
-    },
-    {
-      title: 'Document Builder',
-      link: 'document-builder/get-started/overview',
-      description: 'Add document generation, editing, and conversion to your application: DOCX, XLSX, PPTX, and PDF via the CLI, Python, Java, .NET, or C++.',
-      icon: <DocumentBuilderIcon/>,
-    },
-    {
-      title: 'Desktop Editors',
-      link: 'desktop-editors/get-started/overview',
-      description: 'Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.',
-      icon: <DesktopEditorIcon/>,
-    },
-  ]
+/** The card icon of every section. Add a section to `sections.ts` and this stops compiling. */
+const icons: Record<SectionId, ReactNode> = {
+  'docs-api': <DocsApiIcon/>,
+  'office-api': <OfficeApiIcon/>,
+  'plugins': <PluginIcon/>,
+  'macros': <MacrosIcon/>,
+  'ai': <AiIcon/>,
+  'document-builder': <DocumentBuilderIcon/>,
+  'desktop-editors': <DesktopEditorIcon/>,
+  'docspace-api': <DocSpaceApiIcon/>,
+  'embed-sdk': <SdkIcon/>,
+  'plugins-sdk': <PluginIcon/>,
+  'mcp-server': <MCPServerIcon/>,
+  'workspace-api': <DocSpaceApiIcon/>,
+  'workspace-hosting': <HostingIcon/>,
+};
+
+/** The cards of one group: names and descriptions come from `sections.ts`, icons from here. */
+function toFeatures<Id extends SectionId>(
+  group: SectionGroup<Id>,
+  button?: FeaturesGrid.Button,
+): Features {
+  return {
+    linkPrefix: group.linkPrefix,
+    button,
+    items: group.items.map(({ id, name, link, description }) => ({
+      title: name,
+      link,
+      description,
+      icon: icons[id],
+    })),
+  };
 }
 
-export const DocSpaceFeatures: Features = {
-  linkPrefix: 'docspace',
-  button: {
-    text: "Try DocSpace Playground",
-    href: "/docspace-playground/",
-  },
-  items: [
-    {
-      title: 'API Reference',
-      link: 'api-backend/get-started/basic-concepts',
-      description: 'Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
-      icon: <DocSpaceApiIcon/>,
-    },
-    {
-      title: 'Embed SDK',
-      link: 'javascript-sdk/get-started',
-      description: 'Embed DocSpace in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
-      icon: <SdkIcon/>,
-    },
-    {
-      title: 'Plugins SDK',
-      link: 'plugins-sdk/get-started',
-      description: 'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
-      icon: <PluginIcon/>,
-    },
-    {
-      title: 'MCP Server',
-      link: 'mcp-server/getting-started',
-      description: 'Connect AI tools directly to ONLYOFFICE DocSpace to execute actions through natural language interactions.',
-      icon: <MCPServerIcon/>,
-    },
-  ]
-}
+export const DocsFeatures: Features = toFeatures(docsSections, {
+  text: "Try Docs Playground",
+  href: "/playground/?script=config",
+});
 
-export const WorkspaceFeatures: Features = {
-  linkPrefix: 'workspace',
-  items: [
-    {
-      title: 'Backend REST API',
-      link: 'api-backend/get-started/basic-concepts',
-      description: 'In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.',
-      icon: <DocSpaceApiIcon/>
-    },
-    {
-      title: 'For hosting providers',
-      link: 'for-hosting-providers/get-started/authentication',
-      description: 'In this section, you will learn how to provide the Workspace portal as a SaaS solution on your own servers using our API methods.',
-      icon: <HostingIcon/>
-    },
-  ]
-}
+export const DocSpaceFeatures: Features = toFeatures(docspaceSections, {
+  text: "Try DocSpace Playground",
+  href: "/docspace-playground/",
+});
+
+export const WorkspaceFeatures: Features = toFeatures(workspaceSections);
 
 export const SamplesFeatures: Features = {
   linkPrefix: 'samples',
-  items:[]
+  items: []
 }

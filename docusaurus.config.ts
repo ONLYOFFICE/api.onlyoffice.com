@@ -3,6 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+import {docsSections, docspaceSections} from './src/sections';
 
 // SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
 const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
@@ -16,6 +17,13 @@ const announcementBarContent = localize({
   en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
   'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
 });
+
+// The sections of the llms.txt index, in navbar order, each indexed by its own llms.txt at
+// the route its pages share: the list the landing-page cards are built from, flattened,
+// with each group's name carried onto its sections.
+const llmsTxtSections = [docsSections, docspaceSections].flatMap(({group, items}) =>
+  items.map(({sidebar, name, description}) => ({sidebar, group, name, description})),
+);
 
 let keyPath = '';
 function sidebarRecursive(item) {
@@ -192,76 +200,7 @@ const config: Config = {
         notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by replacing the trailing slash of its URL with `.md`.',
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
-        // One section per sidebar, in navbar order, each indexed by its own llms.txt at
-        // the route its pages share.
-        sections: [
-          {
-            sidebar: 'docsDocs',
-            group: 'ONLYOFFICE Docs',
-            name: 'Docs API',
-            description: 'Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.',
-          },
-          {
-            sidebar: 'docsOffice',
-            group: 'ONLYOFFICE Docs',
-            name: 'Office API',
-            description: 'Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.',
-          },
-          {
-            sidebar: 'docsPlugins',
-            group: 'ONLYOFFICE Docs',
-            name: 'Plugins',
-            description: 'Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.',
-          },
-          {
-            sidebar: 'docsMacros',
-            group: 'ONLYOFFICE Docs',
-            name: 'Macros',
-            description: 'Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.',
-          },
-          {
-            sidebar: 'docsAI',
-            group: 'ONLYOFFICE Docs',
-            name: 'AI',
-            description: 'Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.',
-          },
-          {
-            sidebar: 'docsBuilder',
-            group: 'ONLYOFFICE Docs',
-            name: 'Document Builder',
-            description: 'Add document generation, editing, and conversion to your application: DOCX, XLSX, PPTX, and PDF via the CLI, Python, Java, .NET, or C++.',
-          },
-          {
-            sidebar: 'docsDesktop',
-            group: 'ONLYOFFICE Docs',
-            name: 'Desktop Editors',
-            description: 'Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.',
-          },
-          {
-            sidebar: 'docspaceApiBackend',
-            group: 'ONLYOFFICE DocSpace',
-            name: 'API Reference',
-            description: 'Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
-          },
-          {
-            sidebar: 'docspaceJSSdk',
-            group: 'ONLYOFFICE DocSpace',
-            name: 'Embed SDK',
-            description: 'Embed DocSpace in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
-          },
-          {
-            sidebar: 'docspacePlugins',
-            group: 'ONLYOFFICE DocSpace',
-            name: 'Plugins SDK',
-            description: 'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
-          },
-          {
-            sidebar: 'docspaceMCPServer',
-            group: 'ONLYOFFICE DocSpace',
-            name: 'MCP Server',
-            description: 'Connect AI tools directly to ONLYOFFICE DocSpace to execute actions through natural language interactions.',
-          },
-        ],
+        sections: llmsTxtSections,
       },
     ],
   ],
