@@ -25,7 +25,18 @@ jobs:
         with:
           version: 10
       
-      - name: Checkout docspace-sdk-js repository
+      - name: Checkout docspace-sdk-js repository (branch)
+        id: checkout_docspace_sdk_js
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-sdk-js
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: docspace-sdk-js
+
+      - name: Checkout docspace-sdk-js repository (default)
+        if: steps.checkout_docspace_sdk_js.outcome == 'failure'
         uses: actions/checkout@v4
         with:
           repository: ONLYOFFICE/docspace-sdk-js
