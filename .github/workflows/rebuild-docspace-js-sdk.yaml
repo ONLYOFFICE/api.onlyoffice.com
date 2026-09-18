@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Checkout api.onlyoffice.com repository
         uses: actions/checkout@v4
@@ -23,8 +23,8 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10
-      
+          version: 12
+
       - name: Checkout docspace-sdk-js repository (branch)
         id: checkout_docspace_sdk_js
         continue-on-error: true
@@ -42,7 +42,7 @@ jobs:
           repository: ONLYOFFICE/docspace-sdk-js
           token: ${{ secrets.READ_PAT }}
           path: docspace-sdk-js
-      
+
       - name: Set up Git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -54,10 +54,11 @@ jobs:
           pnpm install
           pnpm run docs
           cd ..
-          
+
+          rm -f docspace-sdk-js/docs/index.md
           rm -rf api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/*
           cp -r docspace-sdk-js/docs/* api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/
-          
+
           cd api.onlyoffice.com
           if [ -n "$(git status --porcelain)" ]; then
               git add .
