@@ -44,7 +44,6 @@ module.exports = function pluginLlmsTxt(context, options) {
     exclude = [],
     sections = [],
     title,
-    description,
     notes,
   } = options;
 
@@ -121,7 +120,7 @@ module.exports = function pluginLlmsTxt(context, options) {
       const byId = new Map(docs.map((doc) => [doc.id, doc]));
       const llmsTxt = buildLlmsTxt({
         title,
-        description,
+        description: siteConfig.tagline,
         notes,
         sections,
         sidebars: version.sidebars,

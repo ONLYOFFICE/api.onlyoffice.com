@@ -40,8 +40,11 @@ function sidebarRecursive(item) {
 }
 
 const config: Config = {
+  // Docusaurus appends this to every page title, so it stays short. The full
+  // name goes to the llms-txt plugin below, which is where it earns its keep.
   title: 'ONLYOFFICE',
-  tagline: 'ONLYOFFICE',
+  tagline:
+    'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
   url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
@@ -196,7 +199,6 @@ const config: Config = {
       {
         docsPluginId: 'api',
         title: 'ONLYOFFICE API Documentation',
-        description: 'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
         notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by replacing the trailing slash of its URL with `.md`.',
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
