@@ -22,7 +22,7 @@ const {
   serializeURLPath,
 } = require('@docusaurus/utils');
 
-/** `](target)` or `](target "title")`, but not an escaped `\]`. No parenthesised targets. */
+/** `](target)` or `](target "title")`, but not `\](`. No source uses `<…>` or nested parens. */
 const INLINE_LINK = /((?<!\\)\]\()([^)\s]+)((?:\s+"[^"]*")?\))/g;
 
 /** A reference definition: `[label]: target`, optionally followed by a title. */

@@ -1,6 +1,7 @@
 /**
  * Publishes a Markdown twin of every doc page beside its HTML — `/docs/x/y/` becomes
- * `/docs/x/y.md` — and an `llms.txt` index of the site.
+ * `/docs/x/y.md` — and the `llms.txt` index: one file at the site root naming the
+ * sections, and one per section covering the pages under its route.
  *
  * The twins are the page sources, not the rendered pages: these docs are written as plain
  * Markdown, so a twin only needs its links made absolute. The generated OpenAPI pages are
@@ -31,6 +32,11 @@ function twinUrl(permalink) {
   return `${permalink.replace(/\/$/, '')}.md`;
 }
 
+/** Where a section's index is published: `/docs/x/` -> `<outDir>/docs/x/llms.txt`. */
+function llmsTxtPath(route, baseUrl, outDir) {
+  return path.join(outDir, route.slice(baseUrl.length), 'llms.txt');
+}
+
 module.exports = function pluginLlmsTxt(context, options) {
   const {siteDir} = context;
   const {
@@ -39,6 +45,7 @@ module.exports = function pluginLlmsTxt(context, options) {
     sections = [],
     title,
     description,
+    notes,
   } = options;
 
   let version = null;
@@ -115,19 +122,33 @@ module.exports = function pluginLlmsTxt(context, options) {
       const llmsTxt = buildLlmsTxt({
         title,
         description,
+        notes,
         sections,
         sidebars: version.sidebars,
         entry: (id) => {
           const doc = byId.get(id);
           return doc
-            ? {title: doc.title, description: doc.description, url: urlOf(doc.permalink)}
+            ? {
+                title: doc.title,
+                description: doc.description,
+                url: urlOf(doc.permalink),
+                route: doc.permalink,
+              }
             : null;
         },
+        siteUrl,
+        baseUrl,
       });
 
-      await fs.promises.writeFile(path.join(outDir, 'llms.txt'), llmsTxt, 'utf8');
+      for (const file of llmsTxt) {
+        const target = llmsTxtPath(file.route, baseUrl, outDir);
+        await fs.promises.mkdir(path.dirname(target), {recursive: true});
+        await fs.promises.writeFile(target, file.content, 'utf8');
+      }
 
-      console.log(`llms-txt: wrote ${written} Markdown twins and llms.txt to ${outDir}`);
+      console.log(
+        `llms-txt: wrote ${written} Markdown twins and ${llmsTxt.length} llms.txt files to ${outDir}`,
+      );
       if (broken.length) {
         // Reported rather than thrown: `onBrokenMarkdownLinks` already governs these, and
         // a twin with one stale link is better than no twins at all.

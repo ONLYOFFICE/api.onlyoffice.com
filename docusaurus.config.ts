@@ -188,24 +188,79 @@ const config: Config = {
       {
         docsPluginId: 'api',
         title: 'ONLYOFFICE API Documentation',
-        description: 'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API. Each entry links to a single documentation page, and any page is also available as Markdown by replacing the trailing slash of its URL with .md.',
+        description: 'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
+        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by replacing the trailing slash of its URL with `.md`.',
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
-        // One section per sidebar, in this order. Office API is 7,358 of the 9,100 entries
-        // and the file runs to ~1.6 MB, so it goes last: a client that truncates keeps the
-        // other ten sections.
+        // One section per sidebar, in navbar order, each indexed by its own llms.txt at
+        // the route its pages share.
         sections: [
-          {sidebar: 'docsDocs', name: 'ONLYOFFICE Docs: Docs API'},
-          {sidebar: 'docsPlugins', name: 'ONLYOFFICE Docs: Plugins'},
-          {sidebar: 'docsMacros', name: 'ONLYOFFICE Docs: Macros'},
-          {sidebar: 'docsAI', name: 'ONLYOFFICE Docs: AI'},
-          {sidebar: 'docsBuilder', name: 'ONLYOFFICE Docs: Document Builder'},
-          {sidebar: 'docsDesktop', name: 'ONLYOFFICE Docs: Desktop Editors'},
-          {sidebar: 'docspaceApiBackend', name: 'ONLYOFFICE DocSpace: API Reference'},
-          {sidebar: 'docspaceJSSdk', name: 'ONLYOFFICE DocSpace: Embed SDK'},
-          {sidebar: 'docspacePlugins', name: 'ONLYOFFICE DocSpace: Plugins SDK'},
-          {sidebar: 'docspaceMCPServer', name: 'ONLYOFFICE DocSpace: MCP Server'},
-          {sidebar: 'docsOffice', name: 'ONLYOFFICE Docs: Office API'},
+          {
+            sidebar: 'docsDocs',
+            group: 'ONLYOFFICE Docs',
+            name: 'Docs API',
+            description: 'Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.',
+          },
+          {
+            sidebar: 'docsOffice',
+            group: 'ONLYOFFICE Docs',
+            name: 'Office API',
+            description: 'Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.',
+          },
+          {
+            sidebar: 'docsPlugins',
+            group: 'ONLYOFFICE Docs',
+            name: 'Plugins',
+            description: 'Build interactive tools with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors.',
+          },
+          {
+            sidebar: 'docsMacros',
+            group: 'ONLYOFFICE Docs',
+            name: 'Macros',
+            description: 'Write lightweight JavaScript scripts that run directly inside documents to automate repetitive tasks.',
+          },
+          {
+            sidebar: 'docsAI',
+            group: 'ONLYOFFICE Docs',
+            name: 'AI',
+            description: 'Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.',
+          },
+          {
+            sidebar: 'docsBuilder',
+            group: 'ONLYOFFICE Docs',
+            name: 'Document Builder',
+            description: 'Generate documents directly within your DMS or CRM workflow, with no separate document editor required.',
+          },
+          {
+            sidebar: 'docsDesktop',
+            group: 'ONLYOFFICE Docs',
+            name: 'Desktop Editors',
+            description: 'Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.',
+          },
+          {
+            sidebar: 'docspaceApiBackend',
+            group: 'ONLYOFFICE DocSpace',
+            name: 'API Reference',
+            description: 'Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
+          },
+          {
+            sidebar: 'docspaceJSSdk',
+            group: 'ONLYOFFICE DocSpace',
+            name: 'Embed SDK',
+            description: 'Embed DocSpace into your website as a frame using JavaScript APIs: an entire portal, a specific room, or a single document.',
+          },
+          {
+            sidebar: 'docspacePlugins',
+            group: 'ONLYOFFICE DocSpace',
+            name: 'Plugins SDK',
+            description: 'Create your own plugins and add them to the DocSpace portal.',
+          },
+          {
+            sidebar: 'docspaceMCPServer',
+            group: 'ONLYOFFICE DocSpace',
+            name: 'MCP Server',
+            description: 'Connect AI tools directly to ONLYOFFICE DocSpace to execute actions through natural language interactions.',
+          },
         ],
       },
     ],
