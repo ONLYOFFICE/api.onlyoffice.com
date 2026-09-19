@@ -6,53 +6,60 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Server configuration
-
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
-```
+
+# Server configuration
 
 ## Introduction {#introduction}
 
-To change any ONLYOFFICE Docs server settings, configure the corresponding parameter in the **ONLYOFFICE Docs** configuration file, which can be found at the following path:
+To change any ONLYOFFICE Docs server settings, configure the corresponding parameter in the **ONLYOFFICE Docs** configuration files, which are stored in the following directory:
 
-- For Linux: `/etc/onlyoffice/documentserver/default.json`
-- For Windows: `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\default.json`
+- For Linux: `/etc/onlyoffice/documentserver/`
+- For Windows: `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\`
 
-If you want to change it, you can use the `local.json` file, where all the edited parameters should be stored. This file is located in the same directory as the `default.json` file, and the whole object structure for the necessary parameter must be retained.
+The base settings are shipped in the `default.json` file located in that directory.
+
+### Configuration files {#configuration-files}
+
+ONLYOFFICE Docs reads its settings through the [node-config](https://github.com/node-config/node-config) library. On startup, node-config loads several configuration files from the directory above and merges them, so that each file overrides the values set by the files loaded before it. The full list of supported file names and their load order is described in the [node-config documentation](https://github.com/node-config/node-config/wiki/Configuration-Files).
+
+In a standard deployment, node-config applies the following files from the lowest priority to the highest (each file overrides the previous one):
+
+- `default.json` - the base settings shipped with ONLYOFFICE Docs.
+- `{NODE_ENV}.json` - the deployment-specific settings, where `{NODE_ENV}` is the value of the `NODE_ENV` environment variable, for example, `production-linux.json` or `production-windows.json`.
+- `local.json` - your own overrides that are applied to every deployment.
+- `local-{NODE_ENV}.json` - your own overrides that are applied to a single deployment only, for example, `local-production-linux.json`.
+
+ONLYOFFICE Docs applies `runtime.json` as an additional configuration layer, separate from the node-config file sequence. Its values override the base configuration above. Runtime-aware consumers can also pick up subsequent changes. In multi-tenant deployments, supported per-tenant settings override the runtime configuration. See [Runtime config](#runtime-config).
+
+Nested objects are merged by key. Arrays are replaced entirely by the value from the higher-priority configuration, including an empty array `[]`; their elements are not merged.
 
 :::warning
-Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version, and all your changes will be lost.
+Do not edit the shipped `default.json` or `{NODE_ENV}.json` files, such as `production-linux.json` and `production-windows.json`: package upgrades and container initialization can replace them. Instead, add your overrides to `local.json` or `local-{NODE_ENV}.json`, keeping the full object structure of each parameter.
 :::
+
+Changes to startup-only settings require a restart. The server monitors `runtime.json`, but reloading that file does not dynamically reconfigure every setting.
 
 ## Admin Panel {#admin-panel}
 
 These parameters configure the Admin Panel properties. For more details on using Admin Panel, you can refer to [this article](https://helpcenter.onlyoffice.com/docs/installation/docs-admin-panel.aspx).
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| adminPanel.passwordValidation | object |  | The password validation requirements. |
-| adminPanel.passwordValidation.minLength | string |  | be at least 8 characters long |
-| adminPanel.passwordValidation.hasDigit | string |  | contain at least one digit |
-| adminPanel.passwordValidation.hasUppercase | string |  | contain at least one uppercase letter |
-| adminPanel.passwordValidation.hasSpecialChar | string |  | contain at least one special character |
-| adminPanel.passwordValidation.allowedCharactersOnly | string |  | contain only uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters (e.g., ! @ # $ % & *) |
+| adminPanel.host | string | `""` | The bind address of the HTTP listener. An empty value listens on all interfaces. |
 | adminPanel.passwordHash | string | `""` | A password hash used to protect a password with the PBKDF2-SHA256 algorithm.<br/><br/>**Note:** The value of this parameter is stored in the *runtime.json* file. E.g., for the Linux version, this file can be found here: `/var/www/onlyoffice/Data/runtime.json` |
 | adminPanel.port | integer | `9000` | The port on which the Admin Panel service is running. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#admin-panel-example}
 
 ```json
 {
   "adminPanel": {
+    "host": "",
     "port": 9000
   }
 }
@@ -62,9 +69,7 @@ These parameters configure the Admin Panel properties. For more details on using
 
 These parameters configure the StatsD server properties, specifying an aggregator of metrics.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -73,9 +78,7 @@ These parameters configure the StatsD server properties, specifying an aggregato
 | statsd.port | string | `"8125"` | The StatsD server port. |
 | statsd.prefix | string | `"ds."` | A string that will be added to the beginning of all the stats automatically. It helps to distinguish different applications using the same StatsD server. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#statsd-example}
 
@@ -90,34 +93,33 @@ These parameters configure the StatsD server properties, specifying an aggregato
 }
 ```
 
-## AI plugin settings {#ai-plugin-settings}
+## AI Tools settings {#ai-tools-settings}
 
-These parameters configure the AI plugin properties.
+These parameters configure the AI Tools properties.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
+| aiSettings.enable | boolean | `true` | Whether AI features are enabled in the editors or not. When disabled, AI Tools is excluded from /plugins.json, its settings are not sent to the editors and /ai-proxy requests are rejected with HTTP 403. |
 | aiSettings.version | integer | `3` | The version of the AI SDK. |
-| aiSettings.timeout | string | `"5m"` | An AI proxy timeout (measured in minutes). |
-| aiSettings.proxy | string | `""` | Supports routing AI requests via proxy. |
+| aiSettings.timeout | string | `"5m"` | An AI proxy timeout as a duration string. |
+| aiSettings.allowBrowserProxy | boolean | `true` | Whether /ai-proxy relays a request whose target matches no configured provider. When enabled, the request is forwarded as the client composed it, so the editors can reach a target configured in the browser, such as an MCP server or a web search service. The server adds no credentials of its own, the caller still needs a valid session token, only absolute http and https targets are accepted, and the request goes out through the usual externalRequest filtering. When disabled, a request with an unmatched target is answered with HTTP 403. |
 | aiSettings.allowedCorsOrigins | string[] | `["https://onlyoffice.github.io","https://onlyoffice-plugins.github.io"]` | The external websites permitted to make cross-origin requests to the server. |
 | aiSettings.actions | object |  | AI actions performed, e.g., Chat, Summarization, Translation, TextAnalyze, ImageGeneration, OCR, Vision. |
 | aiSettings.providers | object |  | AI providers, e.g., OpenAI, Google Gemini, Anthropic, etc. |
 | aiSettings.customProviders | object |  | The custom AI service providers configuration. |
 | aiSettings.models | object[] | `[]` | AI models, e.g., gemini-1.5-pro-latest, llama3.2:latest, etc. |
+| aiSettings.pluginSettings | object |  | Opaque universal AI Tools settings blob (profiles, assignments, mcpServers, webSearch, etc.) owned by AI Tools and round-tripped verbatim. |
 
-```mdx-code-block
 </APITable>
-```
 
-### Example {#ai-plugin-settings-example}
+### Example {#ai-tools-settings-example}
 
 ```json
 {
   "aiSettings": {
+    "enable": true,
     "actions": {},
     "models": [],
     "providers": {},
@@ -127,7 +129,8 @@ These parameters configure the AI plugin properties.
       "https://onlyoffice.github.io",
       "https://onlyoffice-plugins.github.io"
     ],
-    "proxy": ""
+    "allowBrowserProxy": true,
+    "pluginSettings": {}
   }
 }
 ```
@@ -136,9 +139,7 @@ These parameters configure the AI plugin properties.
 
 These parameters configure the logger properties.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -147,9 +148,7 @@ These parameters configure the logger properties.
 | log.options.replaceConsole | boolean | `true` | Whether the log information is printed to the console or not. |
 | log.options.categories.default.level | string |  | The logging level for the application. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#logger-example}
 
@@ -166,11 +165,9 @@ These parameters configure the logger properties.
 
 ## Runtime config {#runtime-config}
 
-These parameters configure the `runtime.json` dynamic config file properties. This file allows you to change parameters without restarting. The file is reread based on a watch event or every 5 minutes.
+These parameters configure the `runtime.json` file and its cache. The server monitors file changes and reloads the cache. An expired cache entry is refreshed on the next read. Settings read only at startup still require a restart.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -180,9 +177,7 @@ These parameters configure the `runtime.json` dynamic config file properties. Th
 | runtimeConfig.cache.checkperiod | integer | `60` | The period used for the automatic delete check interval (measured in seconds). |
 | runtimeConfig.cache.useClones | boolean | `false` | Whether the cached variables will be cloned or not. If `true`, a copy of the cached variable will be created. If `false`, only the reference will be saved. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#runtime-config-example}
 
@@ -203,19 +198,15 @@ These parameters configure the `runtime.json` dynamic config file properties. Th
 
 These parameters configure a queue of messages received from the message-broker.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | queue.type | string | `"rabbitmq"` | The message broker type. |
-| queue.visibilityTimeout | integer | `300` | The conversion timeout (measured in seconds). |
+| queue.visibilityTimeout | integer | `300` | The queue task visibility timeout (measured in seconds). Together with `queue.retentionPeriod`, it contributes to the conversion timeout. |
 | queue.retentionPeriod | integer | `900` | The [TTL](https://www.rabbitmq.com/ttl.html) (time to live) of all the messages in a queue (measured in seconds). |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#queues-example}
 
@@ -233,9 +224,7 @@ These parameters configure a queue of messages received from the message-broker.
 
 These parameters configure the settings of an external mail server, which is used to send [notifications](#notification). To connect to the mail server, use the [nodemailer](https://nodemailer.com/about/) library. Many config settings are passed directly to this library.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -249,12 +238,10 @@ These parameters configure the settings of an external mail server, which is use
 | email.connectionConfiguration.disableFileAccess | boolean | `false` | Whether to allow using files as content. If this parameter is set to **true**, then JSON data from an untrusted source cannot be used as the email.<br/>If an attachment or message node tries to fetch something from a file, the sending returns an error. |
 | email.connectionConfiguration.disableUrlAccess | boolean | `false` | Whether to allow using URLs as content. |
 | email.contactDefaults | object |  | The [email message settings](https://nodemailer.com/message/#common-fields). |
-| email.contactDefaults.from | string | `"from@example.com"` | The email address of the sender. All email addresses can be plain *"sender@server.com"*<br/>or with formatted name *&#x27;"Sender Name" sender@server.com&#x27;*. |
+| email.contactDefaults.from | string | `"from@example.com"` | The email address of the sender. All email addresses can be plain *"sender@server.com"*<br/>or with formatted name *'"Sender Name" sender@server.com'*. |
 | email.contactDefaults.to | string | `"to@example.com"` | The comma separated list or an array of recipients email addresses that will appear on the *To:* field. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#email-example}
 
@@ -303,9 +290,7 @@ Notifications with the following event types and content are sent:
 
   License connection limit warning: *"Attention! Your license expired on September 8, 2024. You are no longer entitled to receive personal technical support and install new Docs versions released after this date. Please contact sales@onlyoffice.com to discuss license renewal."*
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -343,9 +328,7 @@ Notifications with the following event types and content are sent:
 | notification.rules.licenseLimitLiveViewer.policies | object |  | The *licenseLimitLiveViewer* notification sending policy. |
 | notification.rules.licenseLimitLiveViewer.policies.repeatInterval | string | `"1h"` | The time when the *licenseLimitLiveViewer* notification will be sent (not more often than the specified period). |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#notification-example}
 
@@ -414,9 +397,7 @@ Notifications with the following event types and content are sent:
 
 These parameters configure the document storage service configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -435,13 +416,13 @@ These parameters configure the document storage service configuration.
 | storage.commandOptions.s3.putObject | object |  | The parameters of the putObject command type used to upload an object to a specified S3 bucket. |
 | storage.commandOptions.s3.putObject.BucketKeyEnabled | boolean |  | This is an optional setting. Optimizes the cost per request by reducing calls to the KMS API. |
 | storage.commandOptions.s3.putObject.ServerSideEncryption | string |  | The encryption type for the newly uploaded object. The available values are "aws:kms" or "AES256". |
-| storage.commandOptions.s3.putObject.SSEKMSKeyId | string |  | The identifier (ARN or key) of the Customer-Managed Key in AWS KMS that is used to encrypt the object after it&#x27;s uploaded. |
+| storage.commandOptions.s3.putObject.SSEKMSKeyId | string |  | The identifier (ARN or key) of the Customer-Managed Key in AWS KMS that is used to encrypt the object after it's uploaded. |
 | storage.commandOptions.s3.getObject | object |  | The parameters of the getObject command type used to retrieve an object from a specified S3 bucket. |
 | storage.commandOptions.s3.copyObject | object |  | The parameters of the copyObject command type used to create a copy of an object stored in a specified S3 bucket. |
 | storage.commandOptions.s3.copyObject.MetadataDirective | string | `"COPY"` | How Amazon S3 handles the metadata of the destination object during a copy operation. If the value is set to "COPY", the metadata from the source object is copied to the destination object. If the value is set to "REPLACE", the metadata of the destination object is replaced by the metadata provided in the copyObject request and the metadata from the source object is not copied. |
 | storage.commandOptions.s3.copyObject.BucketKeyEnabled | boolean |  | This is an optional setting. Optimizes the cost per request by reducing calls to the KMS API. |
 | storage.commandOptions.s3.copyObject.ServerSideEncryption | string |  | The encryption type for the newly copied object. The available values are "aws:kms" or "AES256". |
-| storage.commandOptions.s3.copyObject.SSEKMSKeyId | string |  | The identifier (ARN or key) of the Customer-Managed Key in AWS KMS that is used to encrypt the object after it&#x27;s copied. |
+| storage.commandOptions.s3.copyObject.SSEKMSKeyId | string |  | The identifier (ARN or key) of the Customer-Managed Key in AWS KMS that is used to encrypt the object after it's copied. |
 | storage.commandOptions.s3.listObjects | object |  | The parameters of the listObjects command type used to retrieve a list of objects within a specified S3 bucket. |
 | storage.commandOptions.s3.listObjects.MaxKeys | integer | `1000` | The maximum number of objects that are returned in a response. |
 | storage.commandOptions.s3.deleteObject | object |  | The parameters of the deleteObject command type used to remove an object from a specified S3 bucket. |
@@ -456,7 +437,7 @@ These parameters configure the document storage service configuration.
 | storage.commandOptions.az.listBlobsFlat | object |  | The parameters of the listBlobsFlat command type used to retrieve a list of all blobs in a container. |
 | storage.commandOptions.az.listBlobsFlat.maxPageSize | integer | `1000` | The maximum number of blobs to return. |
 | storage.commandOptions.az.deleteBlob | object |  | The parameters of the deleteBlob command type used to remove a blob. |
-| storage.urlExpires | integer | `604800` | The time when the URL to the S3 AWS document storage expires (measured in milliseconds). |
+| storage.urlExpires | integer | `604800` | Unused by the current storage backends. Configure `storage.fs.urlExpires` instead, in seconds. |
 | storage.accessKeyId | string | `""` | A key ID to access the S3 AWS document storage or MS Azure Blob Storage. |
 | storage.secretAccessKey | string | `""` | A secret key to access the S3 AWS document storage or MS Azure Blob Storage.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | storage.sslEnabled | boolean | `false` | Whether SSL of the S3 AWS document storage is enabled or not. |
@@ -464,9 +445,7 @@ These parameters configure the document storage service configuration.
 | storage.externalHost | string | `""` | An external host which is used instead of the host specified in the request. |
 | storage.useDirectStorageUrls | boolean | `false` | The issuance of links to an external storage: direct links or links that are proxied through the Document Server. Setting this parameter to `true` enables direct links, while the `false` value allows using internal links (the server proxies requests to the storage). |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#document-storage-service-example}
 
@@ -522,17 +501,13 @@ These parameters configure the document storage service configuration.
 
 These parameters configure the settings of the persistent storage, which is used to separate the settings for the document cache file storage and the storage of the forgotten and error files. Settings that are not specified in this object are inherited from the [storage](#document-storage-service) object. The separation is convenient for server upgrades.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| persistentStorage | object |  | Secondary storage configuration for persistent data (forgotten files, errored files). Deep-merges with the main `storage` configuration — specify only the keys that differ from the primary storage. Useful when persistent documents need a different backend (e.g. S3 bucket) than the temporary conversion cache. |
+| persistentStorage | object |  | Secondary storage configuration for persistent data (forgotten files, errored files). Deep-merges with the main `storage` configuration - specify only the keys that differ from the primary storage. Useful when persistent documents need a different backend (e.g. S3 bucket) than the temporary conversion cache. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#persistent-storage-example}
 
@@ -546,14 +521,12 @@ These parameters configure the settings of the persistent storage, which is used
 
 These parameters configure the RabbitMQ message broker configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | rabbitmq.url | string | `"amqp://localhost:5672"` | The RabbitMQ URL.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
-| rabbitmq.socketOptions | object |  | The [RabbitMQ socket options](https://amqp-node.github.io/amqplib/channel_api.html#connect) that will be passed to the socket library (`net` or `tls`). These options must be fields set on the object supplied. The socket options can be used for the SSL connection and can contain the following fields:<br/>- **cert** - defines a certificate to present to the server (in PEM or pkcs12 format), **type**: string, **example**: "";<br/>- **key** - defines the private key for the certificate (in PEM or pkcs12 format), **type**: string, **example**: "";<br/>- **passphrase** - defines a passphrase for the private key, **type**: string, **example**: "MySecretPassword";<br/>- **ca** - defines a list of the CA certificates in PEM format that we will trust, since we are using a self-signed certificate, **type**: array, **example**: [];<br/>- **noDelay** - defines if TCP_NODELAY (Nagle&#x27;s algorithm) is set on the underlying socket or not, **type**: boolean, **example**: true. |
+| rabbitmq.socketOptions | object |  | The [RabbitMQ socket options](https://amqp-node.github.io/amqplib/channel_api.html#connect) that will be passed to the socket library (`net` or `tls`). These options must be fields set on the object supplied. The socket options can be used for the SSL connection and can contain the following fields:<br/>- **cert** - defines a certificate to present to the server (in PEM or pkcs12 format), **type**: string, **example**: "";<br/>- **key** - defines the private key for the certificate (in PEM or pkcs12 format), **type**: string, **example**: "";<br/>- **passphrase** - defines a passphrase for the private key, **type**: string, **example**: "MySecretPassword";<br/>- **ca** - defines a list of the CA certificates in PEM format that we will trust, since we are using a self-signed certificate, **type**: array, **example**: [];<br/>- **noDelay** - defines if TCP_NODELAY (Nagle's algorithm) is set on the underlying socket or not, **type**: boolean, **example**: true. |
 | rabbitmq.exchangepubsub | object |  | The Publisher Subscriber exchange server. |
 | rabbitmq.exchangepubsub.name | string | `"ds.pubsub"` | A name of the Publisher Subscriber server. |
 | rabbitmq.exchangepubsub.options | object |  | The [settings](https://amqp-node.github.io/amqplib/channel_api.html#channel_assertQueue) of the Publisher Subscriber server. |
@@ -595,9 +568,7 @@ These parameters configure the RabbitMQ message broker configuration.
 | rabbitmq.queuedelayed.options.arguments.x-queue-type | string | `"classic"` | A value of the *x-queue-type* header which specifies the queue type. This setting can be used to set the *quorum* queues. |
 | rabbitmq.queuedelayed.options.durable | boolean | `true` | Whether the queue will survive broker restarts. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#rabbitmq-example}
 
@@ -673,9 +644,7 @@ These parameters configure the RabbitMQ message broker configuration.
 
 These parameters configure the ActiveMQ message broker configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -689,9 +658,7 @@ These parameters configure the ActiveMQ message broker configuration.
 | activemq.queuedelayed | string | `"ds.delayed"` | The delayed queue. |
 | activemq.topicpubsub | string | `"ds.pubsub"` | The Publisher Subscriber topic. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#activemq-example}
 
@@ -716,9 +683,7 @@ These parameters configure the ActiveMQ message broker configuration.
 
 These parameters configure the configuration of the DNS cache which is used for the IP-filter.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -726,9 +691,7 @@ These parameters configure the configuration of the DNS cache which is used for 
 | dnscache.ttl | integer | `300` | The time when the DNS records expire (measured in seconds). |
 | dnscache.cachesize | integer | `1000` | The DNS cache size. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#dns-cache-example}
 
@@ -746,9 +709,7 @@ These parameters configure the configuration of the DNS cache which is used for 
 
 These parameters configure the settings of the AES-256-GCM encryption algorithm used for password protection of the documents.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -756,12 +717,10 @@ These parameters configure the settings of the AES-256-GCM encryption algorithm 
 | aesEncrypt.config.keyByteLength | integer | `32` | The key length measured in bytes. |
 | aesEncrypt.config.saltByteLength | integer | `64` | The salt length measured in bytes. |
 | aesEncrypt.config.initializationVectorByteLength | integer | `16` | The initialization vector length measured in bytes. |
-| aesEncrypt.config.iterationsByteLength | integer | `5` | The iterations length measured in bytes. |
+| aesEncrypt.config.iterationsByteLength | integer | `5` | The number of decimal digits in the random PBKDF2 iteration count. The minimum is 4. |
 | aesEncrypt.secret | string | `"verysecretstring"` | A password which is used for the AES-256-GCM encryption.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#aes-256-gcm-algorithm-example}
 
@@ -783,21 +742,17 @@ These parameters configure the settings of the AES-256-GCM encryption algorithm 
 
 These parameters configure the settings of the OpenPGP protocol, which is used to encrypt the password when opening an encrypted document for editing.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | openpgpjs.config | object |  | The [OpenPGP protocol configuration](https://github.com/openpgpjs/openpgpjs). |
 | openpgpjs.encrypt | object |  | The OpenPGP encryption settings. |
-| openpgpjs.encrypt.passwords | string[] | `["verysecretstring"]` | A password which is used for the OpenPGP encryption. |
+| openpgpjs.encrypt.passwords | string[] | `["verysecretstring"]` | A password which is used for the OpenPGP encryption.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | openpgpjs.decrypt | object |  | The OpenPGP decryption settings. |
-| openpgpjs.decrypt.passwords | string[] | `["verysecretstring"]` | A password which is used for the OpenPGP decryption. |
+| openpgpjs.decrypt.passwords | string[] | `["verysecretstring"]` | A password which is used for the OpenPGP decryption.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#openpgp-protocol-example}
 
@@ -823,28 +778,24 @@ These parameters configure the settings of the OpenPGP protocol, which is used t
 
 These parameters configure the secret key configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.secret.browser | object |  | The parameters of a secret key to generate a token in the client-side browser requests to ONLYOFFICE Docs. |
-| services.CoAuthoring.secret.browser.string | string | `"secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
+| services.CoAuthoring.secret.browser.string | string | `"developer-only-not-a-real-secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
 | services.CoAuthoring.secret.browser.file | string | `""` | Path to a file containing the secret value. Loaded once and cached. Leave empty to use the string value. |
 | services.CoAuthoring.secret.inbox | object |  | The parameters of a secret key to generate a token in the incoming HTTP requests with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**. |
-| services.CoAuthoring.secret.inbox.string | string | `"secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
+| services.CoAuthoring.secret.inbox.string | string | `"developer-only-not-a-real-secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
 | services.CoAuthoring.secret.inbox.file | string | `""` | Path to a file containing the secret value. Loaded once and cached. Leave empty to use the string value. |
 | services.CoAuthoring.secret.outbox | object |  | The parameters of a secret key to generate a token in the outgoing HTTP requests to the `callbackUrl` address by **document editing service**. |
-| services.CoAuthoring.secret.outbox.string | string | `"secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
+| services.CoAuthoring.secret.outbox.string | string | `"developer-only-not-a-real-secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
 | services.CoAuthoring.secret.outbox.file | string | `""` | Path to a file containing the secret value. Loaded once and cached. Leave empty to use the string value. |
 | services.CoAuthoring.secret.session | object |  | The parameters of a secret key to generate the session token. |
-| services.CoAuthoring.secret.session.string | string | `"secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
+| services.CoAuthoring.secret.session.string | string | `"developer-only-not-a-real-secret"` | Inline plaintext secret value. Takes priority over the file option when both are set. |
 | services.CoAuthoring.secret.session.file | string | `""` | Path to a file containing the secret value. Loaded once and cached. Leave empty to use the string value. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#secret-key-example}
 
@@ -854,19 +805,19 @@ These parameters configure the secret key configuration.
     "CoAuthoring": {
       "secret": {
         "browser": {
-          "string": "secret",
+          "string": "developer-only-not-a-real-secret",
           "file": ""
         },
         "inbox": {
-          "string": "secret",
+          "string": "developer-only-not-a-real-secret",
           "file": ""
         },
         "outbox": {
-          "string": "secret",
+          "string": "developer-only-not-a-real-secret",
           "file": ""
         },
         "session": {
-          "string": "secret",
+          "string": "developer-only-not-a-real-secret",
           "file": ""
         }
       }
@@ -877,17 +828,13 @@ These parameters configure the secret key configuration.
 
 ## Bottleneck {#bottleneck}
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | bottleneck.getChanges | object |  | The [constructor options](https://github.com/SGrondin/bottleneck#constructor) to generate limiters for throttling the database requests. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#bottleneck-example}
 
@@ -901,17 +848,13 @@ These parameters configure the secret key configuration.
 
 ## Windows System Root certificates {#windows-system-root-certificates}
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | win-ca.inject | string | `"+"` | The injection mode of the Windows System Root certificates. The "+" means that a new experimental method is used to install certificates. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#windows-system-root-certificates-example}
 
@@ -927,9 +870,7 @@ These parameters configure the secret key configuration.
 
 These parameters configure the WOPI protocol configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -937,6 +878,7 @@ These parameters configure the WOPI protocol configuration.
 | wopi.host | string | `""` | The WOPI host (host name or IP address). |
 | wopi.htmlTemplate | string | `"../../web-apps/apps/api/wopi"` | A path to the WOPI HTML template. |
 | wopi.wopiZone | string | `"external-http"` | The discovery zone advertised by the document server. For SharePoint integrations, this value should match the zone configured with Set-SPWOPIZone. |
+| wopi.requireIpFilterRule | boolean | `true` | Whether every WOPI host must be named by a `services.CoAuthoring.ipfilter.rules` entry before the server will contact it. The catch-all `*` rule does not count, because it names nothing. When the value is false, the server may also contact a host that no rule names. The remaining checks of the WOPI destination apply either way. |
 | wopi.sendAuthorizationHeader | boolean | `false` | The `Authorization: Bearer <token>` header added to WOPI requests. Optional by specification, but may be needed for older SharePoint integrations. |
 | wopi.favIconUrlWord | string | `"/web-apps/apps/documenteditor/main/resources/img/favicon.ico"` | A path to the favicon for the document editor. |
 | wopi.favIconUrlCell | string |  | A path to the favicon for the spreadsheet editor. |
@@ -957,20 +899,18 @@ These parameters configure the WOPI protocol configuration.
 | wopi.diagramEdit | string[] | `[]` | The file types that can be edited in the diagram editor.<br/><br/>**Note:** The value of this parameter is stored in the *onlyoffice-docs-formats.json* file. |
 | wopi.publicKey | string | `""` | The public key that the integrator uses to check the private key.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
 | wopi.modulus | string | `""` | The RSA modulus in the Base64-encoded format that is used to retrieve the public key.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
-| wopi.exponent | integer | `65537` | The RSA exponent in the Base64-encoded format that is used to retrieve the public key. |
+| wopi.exponent | integer | `65537` | The RSA public exponent as an integer. The server Base64-encodes it in discovery. |
 | wopi.privateKey | string | `""` | The private key that signs the Document Server request.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
 | wopi.publicKeyOld | string | `""` | The old public key that the integrator used to check the private key.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
 | wopi.modulusOld | string | `""` | The old RSA modulus in the Base64-encoded format that was used to retrieve the public key.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
-| wopi.exponentOld | integer | `65537` | The old RSA exponent in the Base64-encoded format that was used to retrieve the public key. |
+| wopi.exponentOld | integer | `65537` | The previous RSA public exponent as an integer. The server Base64-encodes it in discovery. |
 | wopi.privateKeyOld | string | `""` | The old private key that signed the Document Server request.<br/><br/>**Note:** Please note that starting from version 8.3, the values of this parameter in the *default.json* and *local.json* files are different. |
-| wopi.refreshLockInterval | string | `"10m"` | The interval time in minutes for refreshing the lock on a file by resetting its automatic expiration timer to 30 minutes. |
+| wopi.refreshLockInterval | string | `"10m"` | The interval time, as a duration string, for refreshing the lock on a file by resetting its automatic expiration timer to 30 minutes. |
 | wopi.dummy | object |  | The properties of dummy handlers for stress testing. |
 | wopi.dummy.enable | boolean | `false` | Whether the dummy handlers are enabled or not. |
 | wopi.dummy.sampleFilePath | string | `""` | The dummy path to the sample file. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#wopi-example}
 
@@ -1008,6 +948,7 @@ These parameters configure the WOPI protocol configuration.
     "modulusOld": "",
     "exponentOld": 65537,
     "privateKeyOld": "",
+    "requireIpFilterRule": true,
     "sendAuthorizationHeader": false,
     "refreshLockInterval": "10m",
     "dummy": {
@@ -1022,9 +963,7 @@ These parameters configure the WOPI protocol configuration.
 
 These parameters configure the tenants properties for working in the multi-tenant mode.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1034,14 +973,13 @@ These parameters configure the tenants properties for working in the multi-tenan
 | tenants.filenameSecret | string | `"secret.key"` | The *.pem* filename where the tenant secret key is stored. |
 | tenants.filenameLicense | string | `"license.lic"` | The filename where the tenant license is stored. |
 | tenants.defaultTenant | string | `"localhost"` | The domain name of the default tenant. |
+| tenants.licenseRevalidateInterval | integer | `5` | The minimal interval between the checks of the tenant license file state (measured in seconds). This is the check rate, not a guaranteed delay: on a network file system the actual delay also depends on the metadata cache of the mount. Set to 0 to disable the checks and rely on the cache TTL only. |
 | tenants.cache | object |  | The cache properties for reading multi-tenant license and secret. |
 | tenants.cache.stdTTL | integer | `300` | The TTL (time to live) for every generated cache element (measured in seconds). |
 | tenants.cache.checkperiod | integer | `60` | The period used for the automatic delete check interval (measured in seconds). |
 | tenants.cache.useClones | boolean | `false` | Whether the cached variables will be cloned or not. If `true`, a copy of the cached variable will be created. If `false`, only the reference will be saved. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#tenants-example}
 
@@ -1054,6 +992,7 @@ These parameters configure the tenants properties for working in the multi-tenan
     "filenameSecret": "secret.key",
     "filenameLicense": "license.lic",
     "defaultTenant": "localhost",
+    "licenseRevalidateInterval": 5,
     "cache": {
       "stdTTL": 300,
       "checkperiod": 60,
@@ -1067,9 +1006,7 @@ These parameters configure the tenants properties for working in the multi-tenan
 
 These parameters configure the configuration of the external requests.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1078,16 +1015,14 @@ These parameters configure the configuration of the external requests.
 | externalRequest.directIfIn.jwtToken | boolean | `true` | Whether the trusted IP addresses are in the JWT or not. |
 | externalRequest.action | object |  | The external request options. |
 | externalRequest.action.allow | boolean | `true` | Whether the external requests are allowed or not. |
-| externalRequest.action.blockPrivateIP | boolean | `true` | Whether the private IP address will be blocked or not. |
+| externalRequest.action.blockPrivateIP | boolean | `true` | Whether the private IP address will be blocked or not. Destination filtering for requests sent through `proxyUrl` must be configured on the proxy. The requests permitted by `externalRequest.directIfIn` are handled separately. |
 | externalRequest.action.proxyUrl | string | `""` | The proxy URL. |
 | externalRequest.action.proxyUser | object |  | The proxy authentication parameters. |
 | externalRequest.action.proxyUser.username | string | `""` | The proxy authentication username. |
 | externalRequest.action.proxyUser.password | string | `""` | The proxy authentication password.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | externalRequest.action.proxyHeaders | object |  | The proxy headers. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#external-request-example}
 
@@ -1116,36 +1051,32 @@ These parameters configure the configuration of the external requests.
 
 These parameters configure the settings for the Document Server services.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring | object |  | The settings for the co-authoring editing session. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Server {#server}
 
 These parameters configure the server configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.server.assemblyFormatAsOrigin | boolean | `true` | Whether the assembled file is saved in its original format or not. |
 | services.CoAuthoring.server.callbackRequestTimeout | object |  | The timeout properties for callback requesting. |
-| services.CoAuthoring.server.callbackRequestTimeout.connectionAndInactivity | string | `"10m"` | A period which specifies two timeouts:<br/>- **read timeout** - time to wait for a server to send response headers (and start the response body) before aborting the request;<br/>- **connection timeout** - sets the socket to timeout after timeout of inactivity. Note that increasing the timeout beyond the OS-wide TCP connection timeout will not have any effect.<br/>This parameter is sent to the **npm** module. |
+| services.CoAuthoring.server.callbackRequestTimeout.connectionAndInactivity | string | `"10m"` | The request timeout as a duration string. `wholeCycle` limits the whole request cycle. |
 | services.CoAuthoring.server.callbackRequestTimeout.wholeCycle | string | `"10m"` | The whole request cycle timeout. |
+| services.CoAuthoring.server.convertServiceEnable | boolean | `true` | Whether the conversion public API endpoints are enabled or not. When disabled, requests to /converter, /converter/from-file and /ConvertService.ashx are rejected with HTTP 403. Conversions initiated by the editors are not affected. |
+| services.CoAuthoring.server.docbuilderEnable | boolean | `true` | Whether the /docbuilder public API endpoints are enabled or not. When disabled, requests to /docbuilder and /docbuilder/from-file are rejected with HTTP 403. |
 | services.CoAuthoring.server.documentFormatsFile | string | `"../../document-formats/onlyoffice-docs-formats.json"` | A path to the "onlyoffice-docs-formats" file. |
 | services.CoAuthoring.server.downloadFileAllowExt | string[] | `["pdf","xlsx"]` | The extensions allowed to be downloaded via the downloadFile handler. |
 | services.CoAuthoring.server.edit_singleton | boolean | `false` | Whether the singleton can be edited or not. |
-| services.CoAuthoring.server.editorDataStorage | string | `"editorDataMemory"` | The editor data storage. The possible values: *"editorDataRedis"*, *""*. |
+| services.CoAuthoring.server.editorDataStorage | string | `"editorDataMemory"` | The editor data storage. The possible values: *"editorDataMemory"*, *"editorDataRedis"*. |
 | services.CoAuthoring.server.editorStatStorage | string | `""` | The editor data storage for license calculation and statistics (local memory or redis). The possible values are *"editorDataMemory"*, *"editorDataRedis"*, or *""*. The default *""* value means that the value of the *editorDataStorage* parameter will be used. This parameter is primarily used for a sharded cluster. |
 | services.CoAuthoring.server.forceSaveUsingButtonWithoutChanges | boolean | `false` | Whether a file without any changes can be forcesaved by clicking the **Save** button. |
 | services.CoAuthoring.server.forgottenfiles | string | `"forgotten"` | A folder name where all the forgotten files are stored. |
@@ -1153,22 +1084,21 @@ These parameters configure the server configuration.
 | services.CoAuthoring.server.healthcheckfilepath | string | `"../public/healthcheck.docx"` | A path where the health check requests will be sent. |
 | services.CoAuthoring.server.isAnonymousSupport | boolean | `true` | Whether the anonymous users have access to the editor or live viewer or not. |
 | services.CoAuthoring.server.limits_image_download_timeout | object |  | The timeout properties for downloading images. |
-| services.CoAuthoring.server.limits_image_download_timeout.connectionAndInactivity | string | `"2m"` | A period which specifies two timeouts:<br/>- **read timeout** - time to wait for a server to send response headers (and start the response body) before aborting the request;<br/>- **connection timeout** - sets the socket to timeout after timeout of inactivity. Note that increasing the timeout beyond the OS-wide TCP connection timeout will not have any effect.<br/>This parameter is sent to the **npm** module. |
+| services.CoAuthoring.server.limits_image_download_timeout.connectionAndInactivity | string | `"2m"` | The request timeout as a duration string. `wholeCycle` limits the whole request cycle. |
 | services.CoAuthoring.server.limits_image_download_timeout.wholeCycle | string | `"2m"` | The whole request cycle - a period from the download start to the full download. |
 | services.CoAuthoring.server.limits_image_size | integer | `26214400` | A maximum size for all the images uploaded in each process (measured in bytes). |
 | services.CoAuthoring.server.limits_tempfile_upload | integer | `104857600` | A maximum size for all the uploaded temporary files used by each process (measured in bytes). |
-| services.CoAuthoring.server.maxRequestChanges | integer | `20000` | A maximum size of the request changes. |
+| services.CoAuthoring.server.maxRequestChanges | integer | `20000` | The maximum number of change records read from the database at once. |
 | services.CoAuthoring.server.mode | string | `"development"` | The server mode. |
+| services.CoAuthoring.server.host | string | `""` | The bind address of the HTTP listener. An empty value listens on all interfaces. |
 | services.CoAuthoring.server.newFileTemplate | string | `"../../document-templates/new"` | A path to the "new" file template if a file of 0 bytes was received from the link for opening. |
 | services.CoAuthoring.server.openProtectedFile | boolean | `true` | Whether the password-protected files can be opened or not. |
 | services.CoAuthoring.server.port | integer | `8000` | The server port. |
 | services.CoAuthoring.server.savetimeoutdelay | integer | `5000` | The conversion start delay time (measured in milliseconds) after the edited file is closed. |
-| services.CoAuthoring.server.tokenRequiredParams | boolean | `true` | Whether the [required token parameters](https://api.onlyoffice.com/docs/docs-api/additional-api/signature/browser/#opening-file) will be validated. This is required for security. For example, the conversion token will not be used to open a document. |
+| services.CoAuthoring.server.tokenRequiredParams | boolean | `true` | Whether the [required token parameters](https://api.onlyoffice.com/docs/docs-api/additional-api/signature/browser/#opening-file) will be validated. |
 | services.CoAuthoring.server.workerpercpu | integer | `1` | A number of worker threads per CPU. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#server-example}
 
@@ -1177,6 +1107,7 @@ These parameters configure the server configuration.
   "services": {
     "CoAuthoring": {
       "server": {
+        "host": "",
         "port": 8000,
         "workerpercpu": 1,
         "mode": "development",
@@ -1208,7 +1139,9 @@ These parameters configure the server configuration.
           "xlsx"
         ],
         "tokenRequiredParams": true,
-        "forceSaveUsingButtonWithoutChanges": false
+        "forceSaveUsingButtonWithoutChanges": false,
+        "docbuilderEnable": true,
+        "convertServiceEnable": true
       }
     }
   }
@@ -1219,9 +1152,7 @@ These parameters configure the server configuration.
 
 These parameters configure the editor configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1232,9 +1163,7 @@ These parameters configure the editor configuration.
 | services.CoAuthoring.editor.reconnection.delay | string | `"2s"` | The attempt delay for reconnecting the editor. |
 | services.CoAuthoring.editor.websocketMaxPayloadSize | string | `"1.5MB"` | A maximum payload size of WebSocket. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#editor-example}
 
@@ -1260,9 +1189,7 @@ These parameters configure the editor configuration.
 
 These parameters configure the database configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1280,8 +1207,8 @@ These parameters configure the database configuration.
 | services.CoAuthoring.sql.damengExtraOptions.loginEncrypt | boolean | `false` | Whether the login encryption is enabled or not. |
 | services.CoAuthoring.sql.damengExtraOptions.poolTimeout | integer | `60` | A number of seconds after which the pool terminates idle connections (unused in the pool). |
 | services.CoAuthoring.sql.damengExtraOptions.queueTimeout | integer | `60000` | A number of milliseconds when messages are retained in the queue before they are discarded. |
-| services.CoAuthoring.sql.damengExtraOptions.socketTimeout | integer | `60000` | A number of milliseconds when a connection request made by a client or a server doesn&#x27;t receive a response from the other end. |
-| services.CoAuthoring.sql.dbPass | string | `"onlyoffice"` | A password set to the database account. |
+| services.CoAuthoring.sql.damengExtraOptions.socketTimeout | integer | `60000` | A number of milliseconds when a connection request made by a client or a server doesn't receive a response from the other end. |
+| services.CoAuthoring.sql.dbPass | string | `"onlyoffice"` | A password set to the database account.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | services.CoAuthoring.sql.dbUser | string | `"onlyoffice"` | A new username with superuser permissions for the database account. |
 | services.CoAuthoring.sql.max_allowed_packet | integer | `1048575` | The maximum size of data that can be sent in one request. |
 | services.CoAuthoring.sql.msSqlExtraOptions | object |  | The MS SQL database parameters. |
@@ -1295,19 +1222,17 @@ These parameters configure the database configuration.
 | services.CoAuthoring.sql.mysqlExtraOptions.queryTimeout | integer | `60000` | A number of milliseconds before a query call times out. |
 | services.CoAuthoring.sql.oracleExtraOptions | object |  | The Oracle database parameters. |
 | services.CoAuthoring.sql.oracleExtraOptions.connectTimeout | integer | `60` | A number of seconds to wait for a connection. |
-| services.CoAuthoring.sql.oracleExtraOptions.thin | boolean | `true` | The connection to Oracle in the Thick Mode using Oracle Instant Client in a cluster. |
+| services.CoAuthoring.sql.oracleExtraOptions.thin | boolean | `true` | Whether to use the Oracle Thin driver. False means Thick mode with Oracle Client libraries. |
 | services.CoAuthoring.sql.pgPoolExtraOptions | object |  | The parameters that can be passed directly to the [node-postgres pool](https://github.com/brianc/node-postgres-docs/blob/master/content/api/1-pool.mdx#new-poolconfig-object) library. |
 | services.CoAuthoring.sql.pgPoolExtraOptions.connectionTimeoutMillis | integer | `60000` | A number of milliseconds to wait for a connection. |
 | services.CoAuthoring.sql.pgPoolExtraOptions.idleTimeoutMillis | integer | `30000` | A number of milliseconds a client must remain idle in the pool and not be checked out before it is disconnected from the backend and discarded. Set to 0 to disable automatic disconnection of idle clients. |
-| services.CoAuthoring.sql.pgPoolExtraOptions.maxLifetimeSeconds | integer | `60000` | A number of seconds that represents the maximum lifetime. |
-| services.CoAuthoring.sql.pgPoolExtraOptions.query_timeout | integer | `60000` | A number of milliseconds before a query call times out. |
-| services.CoAuthoring.sql.pgPoolExtraOptions.statement_timeout | integer | `60000` | A number of milliseconds before the query statement times out. |
+| services.CoAuthoring.sql.pgPoolExtraOptions.maxLifetimeSeconds | integer | `1800` | A number of seconds after which a pooled connection is recycled. A running query is never interrupted: the connection is marked as expired and closed when it is returned to the pool. Recycling lets the pool pick up a database failover or an address change and bounds the lifetime of a backend process. Set to 0 to disable recycling. |
+| services.CoAuthoring.sql.pgPoolExtraOptions.query_timeout | integer | `300000` | A number of milliseconds before a query call times out on the client side. When it fires, the query is reported as failed and the pool destroys the connection, but the query is not cancelled on the server explicitly. While `statement_timeout` is 0, this is the only limit that keeps a stuck query from holding a pool slot forever. Set to 0 to disable. |
+| services.CoAuthoring.sql.pgPoolExtraOptions.statement_timeout | integer | `0` | A number of milliseconds before the query statement times out on the server side. It is passed in the PostgreSQL startup message, so a connection pooler may reject the connection, silently drop the value or forward it to the backend: PgBouncer rejects it unless the parameter is listed in its `ignore_startup_parameters`, and listing it there makes the pooler drop the value instead of applying it. Behind a pooler set the limit on the database itself, for example `ALTER ROLE onlyoffice SET statement_timeout = '60s'`. Set to 0 to disable, which is the default. |
 | services.CoAuthoring.sql.tableChanges | string | `"doc_changes"` | The database table name where all the document changes are stored. |
 | services.CoAuthoring.sql.tableResult | string | `"task_result"` | The database table name where the query result is stored. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#sql-example}
 
@@ -1329,9 +1254,9 @@ These parameters configure the database configuration.
         "max_allowed_packet": 1048575,
         "pgPoolExtraOptions": {
           "idleTimeoutMillis": 30000,
-          "maxLifetimeSeconds": 60000,
-          "statement_timeout": 60000,
-          "query_timeout": 60000,
+          "maxLifetimeSeconds": 1800,
+          "statement_timeout": 0,
+          "query_timeout": 300000,
           "connectionTimeoutMillis": 60000
         },
         "damengExtraOptions": {
@@ -1371,9 +1296,7 @@ These parameters configure the database configuration.
 
 These parameters configure the Redis configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1383,15 +1306,13 @@ These parameters configure the Redis configuration.
 | services.CoAuthoring.redis.iooptionsClusterNodes | string[] | `[]` | A list of nodes of the cluster you want to connect to that can be passed directly to the [ioredis cluster](https://github.com/redis/ioredis#cluster) library<br/>to connect to the redis cluster. This setting has the priority over the *iooptions* parameter for connecting to the single redis. |
 | services.CoAuthoring.redis.iooptionsClusterOptions | object |  | The parameters (clusterRetryStrategy, dnsLookup, scaleReads etc.) that can be passed directly to the [ioredis cluster](https://github.com/redis/ioredis#cluster) library<br/>to connect to the redis cluster. This setting has the priority over the *iooptions* parameter for connecting to the single redis. |
 | services.CoAuthoring.redis.iooptionsClusterOptions.lazyConnect | boolean | `true` | Whether the connection to the server will be delayed until the first command is sent or *redis.connect()* is called explicitly. |
-| services.CoAuthoring.redis.name | string | `"redis"` | The database name, `"redis"` or `"ioredis"`. |
+| services.CoAuthoring.redis.name | string | `"redis"` | The Redis client library, `"redis"` or `"ioredis"`. |
 | services.CoAuthoring.redis.options | object |  | The parameters (username, password, modules etc.) that can be passed directly to the [node-redis createClient](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md) library. |
 | services.CoAuthoring.redis.optionsCluster | object |  | The parameters (rootNodes, defaults, modules etc.) that can be passed directly to the [node-redis clustering](https://github.com/redis/node-redis/blob/master/docs/clustering.md)<br/>library to connect to the redis cluster. This setting has the priority over the *options* parameter for connecting to the single redis. |
 | services.CoAuthoring.redis.port | integer | `6379` | The Redis server port. |
 | services.CoAuthoring.redis.prefix | string | `"ds:"` | The name prefix for all the used structures in Redis. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#redis-example}
 
@@ -1423,19 +1344,18 @@ These parameters configure the Redis configuration.
 
 These parameters configure the token configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.token.browser | object |  | The browser token configuration. |
 | services.CoAuthoring.token.browser.secretFromInbox | boolean | `true` | Whether the browser token is equal to the token from the incoming requests (`true`) or not (`false`). |
 | services.CoAuthoring.token.enable | object |  | Whether the tokens are enabled or not. |
-| services.CoAuthoring.token.enable.browser | boolean | `false` | Whether a token in the client-side browser requests is enabled or not. |
+| services.CoAuthoring.token.enable.browser | boolean | `true` | Whether a token in the client-side browser requests is enabled or not. |
 | services.CoAuthoring.token.enable.request | object |  | Whether the tokens in the HTTP requests are enabled or not. |
-| services.CoAuthoring.token.enable.request.inbox | boolean | `false` | Whether a token in the incoming HTTP requests is enabled or not. |
-| services.CoAuthoring.token.enable.request.outbox | boolean | `false` | Whether a token in the outgoing HTTP requests is enabled or not. |
+| services.CoAuthoring.token.enable.request.inbox | boolean | `true` | Whether a token in the incoming HTTP requests is enabled or not. |
+| services.CoAuthoring.token.enable.request.outbox | boolean | `true` | Whether a token in the outgoing HTTP requests is enabled or not. |
+| services.CoAuthoring.token.purposeCheck | string | `"validate"` | How strictly an inbound token must state what it is for. It governs the compatibility-sensitive checks: the token shape heuristic on the inbox operations (converter, docbuilder, command) and the `operation` claim. `off` - neither of them is applied. `validate` - the heuristic is applied on those operations, a token whose `operation` claim names an operation other than the one the endpoint serves is refused, and an endpoint that serves no named operation refuses a token that carries the claim. `strict` - the claim additionally becomes mandatory at the endpoints that name an operation (converter, docbuilder, command); the browser, editor-session and download endpoints share their tokens with one another and keep accepting tokens without the claim. The from-file endpoints require the claim in every mode, because they have no callers that predate it. An unknown value is treated as an invalid setting, and no integrator token is accepted. The setting does not relax the structural rules that each endpoint applies to the token payload it reads, and a token that ONLYOFFICE Docs issues to itself is always checked strictly. |
 | services.CoAuthoring.token.inbox | object |  | The configuration of a token from the incoming requests. |
 | services.CoAuthoring.token.inbox.header | string | `"Authorization"` | The HTTP header that will be used to send the incoming request token. |
 | services.CoAuthoring.token.inbox.inBody | boolean | `false` | Whether a token is enabled in the incoming request body or not. |
@@ -1453,9 +1373,7 @@ These parameters configure the token configuration.
 | services.CoAuthoring.token.verifyOptions | object |  | The token verifying options. |
 | services.CoAuthoring.token.verifyOptions.clockTolerance | integer | `60` | A number of seconds which is acceptable when dealing with the clock differences among different servers. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#token-example}
 
@@ -1465,12 +1383,13 @@ These parameters configure the token configuration.
     "CoAuthoring": {
       "token": {
         "enable": {
-          "browser": false,
+          "browser": true,
           "request": {
-            "inbox": false,
-            "outbox": false
+            "inbox": true,
+            "outbox": true
           }
         },
+        "purposeCheck": "validate",
         "browser": {
           "secretFromInbox": true
         },
@@ -1504,9 +1423,7 @@ These parameters configure the token configuration.
 
 These parameters configure the expiration settings.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1532,9 +1449,7 @@ These parameters configure the expiration settings.
 | services.CoAuthoring.expire.sessionclosecommand | string | `"2m"` | The time before the `sessionidle` or `sessionabsolute ttl` expires when a warning message is sent. |
 | services.CoAuthoring.expire.updateVersionStatus | string | `"5m"` | The time when the user can open the file again after an error occurs due to opening an already saved file using the old key. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#expiration-example}
 
@@ -1574,19 +1489,15 @@ These parameters configure the expiration settings.
 
 These parameters configure the automatic forcesaving configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| services.CoAuthoring.autoAssembly.step | string | `"1m"` | The delay in minutes between the intervals. |
+| services.CoAuthoring.autoAssembly.step | string | `"1m"` | The interval between automatic force-save checks, as a duration string. |
 | services.CoAuthoring.autoAssembly.enable | boolean | `false` | Whether the automatic forcesaving is enabled or not. |
-| services.CoAuthoring.autoAssembly.interval | string | `"5m"` | The interval time in minutes for initiating the automatic forcesaving. |
+| services.CoAuthoring.autoAssembly.interval | string | `"5m"` | The interval time for initiating the automatic forcesaving, as a duration string. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#auto-assembly-example}
 
@@ -1608,9 +1519,7 @@ These parameters configure the automatic forcesaving configuration.
 
 These parameters configure the [callback backoff options](https://github.com/tim-kos/node-retry#retrytimeoutsoptions).
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1622,9 +1531,7 @@ These parameters configure the [callback backoff options](https://github.com/tim
 | services.CoAuthoring.callbackBackoffOptions.timeout.minTimeout | integer | `1000` | The number of milliseconds before starting the first try. |
 | services.CoAuthoring.callbackBackoffOptions.timeout.randomize | boolean | `false` | Whether the timeouts are randomized by multiplying with a factor between 1 and 2 or not. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#callback-backoff-options-example}
 
@@ -1651,9 +1558,7 @@ These parameters configure the [callback backoff options](https://github.com/tim
 
 These parameters configure the IP filter configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1661,9 +1566,7 @@ These parameters configure the IP filter configuration.
 | services.CoAuthoring.ipfilter.useforrequest | boolean | `false` | Whether the IP filter is used for the request or not. |
 | services.CoAuthoring.ipfilter.errorcode | integer | `403` | An error code for the IP filter. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#ip-filter-example}
 
@@ -1690,18 +1593,14 @@ These parameters configure the IP filter configuration.
 
 These parameters configure the plugins configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| services.CoAuthoring.plugins.autostart | string | `[]` | A list of plugins that run automatically. |
+| services.CoAuthoring.plugins.autostart | string[] | `[]` | A list of plugins that run automatically. |
 | services.CoAuthoring.plugins.uri | string | `"/sdkjs-plugins"` | A path to the folder where all the plugins are stored. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#plugins-example}
 
@@ -1722,17 +1621,13 @@ These parameters configure the plugins configuration.
 
 This parameter configures the PubSub service configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.pubsub.maxChanges | integer | `1000` | The maximum size of changes which can be passed via PubSub. If the size exceeds the specified value, the changes will be read from the database. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#pubsub-service-example}
 
@@ -1752,18 +1647,16 @@ This parameter configures the PubSub service configuration.
 
 These parameters configure the [Request Filtering Agent configuration](https://github.com/azu/request-filtering-agent#api).
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.request-filtering-agent.allowPrivateIPAddress | boolean | `false` | Whether it is allowed to connect private IP address or not. This includes private IP addresses and reserved IP addresses. |
 | services.CoAuthoring.request-filtering-agent.allowMetaIPAddress | boolean | `false` | Whether it is allowed to connect meta IP address or not. Meta address can be `0.0.0.0` (IPv4) or `::` (IPv6) - a meta address that routing another address. |
+| services.CoAuthoring.request-filtering-agent.allowIPAddressList | string[] | `[]` | The IP addresses that are allowed even when they are private. The request-filtering-agent applies this list before its own meta, private and deny checks. It does not make a host a permitted WOPI destination: that is decided by `services.CoAuthoring.ipfilter.rules`. |
+| services.CoAuthoring.request-filtering-agent.denyIPAddressList | string[] | `[]` | The IP addresses that are never allowed. For WOPI destinations this list is applied before `services.CoAuthoring.ipfilter.rules`, so an address listed here is refused even when a rule names it. For the other requests the request-filtering-agent's own precedence applies, where `allowIPAddressList` is checked first. The list covers the requests that go through the filtering agent; see `externalRequest` for the requests that are sent directly. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#request-filtering-agent-example}
 
@@ -1784,20 +1677,17 @@ These parameters configure the [Request Filtering Agent configuration](https://g
 
 These parameters configure the [default request configuration](https://github.com/request/request#requestoptions-callback).
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.requestDefaults.rejectUnauthorized | boolean | `true` | Whether TLS certificates are verified. Set to `false` only for diagnostics with self-signed or invalid certificates. |
+| services.CoAuthoring.requestDefaults.checksumVerification | boolean | `true` | Whether downloaded content is verified against integrity response headers (Content-Length, Repr-Digest, Content-Digest, Digest, x-amz-checksum-*, x-goog-hash, OC-Checksum, Content-MD5) and caller-provided expected digests such as WOPI SHA256. When enabled, the Want-Repr-Digest and Want-Content-Digest headers are added to download requests. |
 | services.CoAuthoring.requestDefaults.headers | object |  | Default HTTP headers added to every outgoing request. |
-| services.CoAuthoring.requestDefaults.headers.User-Agent | string | `"Node.js/6.13"` | HTTP User-Agent header sent with outgoing requests. |
+| services.CoAuthoring.requestDefaults.headers.User-Agent | string | `"DocumentServer"` | HTTP User-Agent header sent with outgoing requests. |
 | services.CoAuthoring.requestDefaults.headers.Connection | string | `"Keep-Alive"` | HTTP Connection header controlling keep-alive behaviour for outgoing requests. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#default-request-example}
 
@@ -1807,10 +1697,11 @@ These parameters configure the [default request configuration](https://github.co
     "CoAuthoring": {
       "requestDefaults": {
         "headers": {
-          "User-Agent": "Node.js/6.13",
+          "User-Agent": "DocumentServer",
           "Connection": "Keep-Alive"
         },
-        "rejectUnauthorized": true
+        "rejectUnauthorized": true,
+        "checksumVerification": true
       }
     }
   }
@@ -1821,9 +1712,7 @@ These parameters configure the [default request configuration](https://github.co
 
 These parameters configure the Socket.IO module configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1834,9 +1723,7 @@ These parameters configure the Socket.IO module configuration.
 | services.CoAuthoring.socketio.connection.pingTimeout | integer | `20000` | The timeout period in milliseconds within which the client must respond with a pong to the server ping.<br/>If there is no response, the server considers that the connection is closed.<br/>The connection between the server and the client is checked every `pingInterval` milliseconds. |
 | services.CoAuthoring.socketio.connection.serveClient | boolean | `false` | Whether the client files will be served or not. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#socket-io-example}
 
@@ -1862,19 +1749,15 @@ These parameters configure the Socket.IO module configuration.
 
 These parameters configure the SockJs configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| services.CoAuthoring.sockjs.disable_cors | boolean | `true` | Whether CORS will be disabled or not. The `true` value prevents the **Access-Control-Allow-Origin** header vulnerability. |
+| services.CoAuthoring.sockjs.disable_cors | boolean | `true` | Whether CORS is disabled for the SockJS endpoints or not. When the value is **true**, the **Access-Control-Allow-Origin** header is not sent. |
 | services.CoAuthoring.sockjs.sockjs_url | string | `""` | A path to the `sockjs.min.js` file. |
 | services.CoAuthoring.sockjs.websocket | boolean | `true` | Whether the WebSocket protocol is enabled or not. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#sockjs-example}
 
@@ -1896,17 +1779,13 @@ These parameters configure the SockJs configuration.
 
 This parameter configures the properties of the custom color themes.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | services.CoAuthoring.themes.uri | string | `"/web-apps/apps/common/main/resources/themes"` | A path to the folder where all the *json* files with the custom color themes are stored. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#themes-example}
 
@@ -1926,9 +1805,7 @@ This parameter configures the properties of the custom color themes.
 
 These parameters configure the utils configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1937,9 +1814,7 @@ These parameters configure the utils configuration.
 | services.CoAuthoring.utils.utils_fonts_search_patterns | string | `"*.ttf;*.ttc;*.otf"` | The patterns for searching font files of the corresponding extensions. |
 | services.CoAuthoring.utils.limits_document_types_upload | string | `"xlsx"` | Semicolon-separated list of document file extensions allowed for upload. Only files matching these extensions are accepted. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#utils-example}
 
@@ -1962,9 +1837,7 @@ These parameters configure the utils configuration.
 
 These parameters configure the license configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -1973,9 +1846,7 @@ These parameters configure the license configuration.
 | license.packageType | integer | `0` | The license package type: 2 - Developer Edition.<br/><br/>**Note:** This parameter is set at the time of version build. You do not have to manually configure it. |
 | license.warning_license_expiration | string | `"30d"` | The time before the license expires when a warning message is sent. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#license-example}
 
@@ -1994,9 +1865,7 @@ These parameters configure the license configuration.
 
 These parameters configure the file converter configuration.
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -2019,7 +1888,7 @@ These parameters configure the file converter configuration.
 | FileConverter.converter.signing.csc.baseUrl | string | `""` | The CSC API base URL. If set, CSC signing is active. |
 | FileConverter.converter.signing.csc.tokenUrl | string | `""` | The OAuth2 token endpoint. |
 | FileConverter.converter.signing.csc.clientId | string | `""` | The OAuth2 client ID. |
-| FileConverter.converter.signing.csc.clientSecret | string | `""` | The OAuth2 client secret. |
+| FileConverter.converter.signing.csc.clientSecret | string | `""` | The OAuth2 client secret.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | FileConverter.converter.signing.csc.grantType | string | `""` | Optional. The OAuth2 grant type: `''` (auto-detect), `'password'`, or `'client_credentials'`. Empty selects based on presence of username/password. |
 | FileConverter.converter.signing.csc.clientAuth | string | `""` | Optional. How the client authenticates to the token endpoint: `''` (body), `'basic'`, `'body'`, or `'both'`. |
 | FileConverter.converter.signing.csc.tokenBodyFormat | string | `""` | Optional. The token request body format: `'form'` (default, RFC 6749) or `'json'`. |
@@ -2030,18 +1899,18 @@ These parameters configure the file converter configuration.
 | FileConverter.converter.signing.csc.scope | string | `"service"` | Optional. The OAuth2 scope (e.g. `'service'`). |
 | FileConverter.converter.signing.csc.audience | string | `""` | Optional. The OAuth2 audience parameter. |
 | FileConverter.converter.spawnOptions | object |  | The parameters that can be passed directly to the [node.js child_process.spawn](https://nodejs.org/api/child_process.html#child_processspawncommand-args-options) library (only for running x2t). |
-| FileConverter.converter.spawnOptions.env.SIGNING_KEYSTORE_PASSPHRASE | string |  | The passphrase for the PKCS#12 keystore file. |
+| FileConverter.converter.spawnOptions.env.SIGNING_KEYSTORE_PASSPHRASE | string |  | The passphrase for the PKCS#12 keystore file.<br/><br/>**Warning:** Do not store sensitive values in version control. Consider using environment variables or a secrets manager. |
 | FileConverter.converter.inputLimits | object[] |  | The limits for input files. |
-| FileConverter.converter.inputLimits.type | string |  | The OOXML file types for which the limits are specified (text documents/spreadsheets/presentations). This does not include other objects, like images. |
+| FileConverter.converter.inputLimits.type | string |  | The OOXML file types for which the limits are specified (text documents/spreadsheets/presentations/diagrams). This does not include other objects, like images. |
 | FileConverter.converter.inputLimits.zip | object |  | The zip archive properties. |
 | FileConverter.converter.inputLimits.zip.template | string | `"*.xml"` | The name template for files which sizes are counted. |
-| FileConverter.converter.inputLimits.zip.uncompressed | string | `"50MB"/"300MB"/"50MB"` | The total uncompressed file size for text documents/spreadsheets/presentations. |
+| FileConverter.converter.inputLimits.zip.uncompressed | string |  | The maximum total uncompressed size of the matching files in the archive. |
 | FileConverter.converter.args | string | `""` | The additional parameters for running x2t. |
 | FileConverter.converter.docbuilderPath | string | `"null"` | A path to the Document Builder application. |
 | FileConverter.converter.downloadAttemptDelay | integer | `1000` | The attempt delay to download the converted file. |
 | FileConverter.converter.downloadAttemptMaxCount | integer | `3` | A maximum number of attempts to download the converted file. |
 | FileConverter.converter.downloadTimeout | object |  | The timeout properties for downloading the converted file. |
-| FileConverter.converter.downloadTimeout.connectionAndInactivity | string | `"2m"` | A period which specifies two timeouts:<br/>- **read timeout** - time to wait for a server to send response headers (and start the response body) before aborting the request;<br/>- **connection timeout** - sets the socket to timeout after timeout of inactivity. Note that increasing the timeout beyond the OS-wide TCP connection timeout will not have any effect.<br/>This parameter is sent to the **npm** module. |
+| FileConverter.converter.downloadTimeout.connectionAndInactivity | string | `"2m"` | The request timeout as a duration string. `wholeCycle` limits the whole request cycle. |
 | FileConverter.converter.downloadTimeout.wholeCycle | string | `"2m"` | The whole request cycle timeout. |
 | FileConverter.converter.errorfiles | string | `""` | A path to the error files. |
 | FileConverter.converter.fontDir | string | `"null"` | A path to the folder with fonts. |
@@ -2051,9 +1920,7 @@ These parameters configure the file converter configuration.
 | FileConverter.converter.streamWriterBufferSize | integer | `8388608` | The StreamWriter buffer size. |
 | FileConverter.converter.x2tPath | string | `"null"` | A path to the x2t file converter. |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Example {#converter-example}
 
