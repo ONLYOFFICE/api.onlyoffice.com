@@ -96,7 +96,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initsystem) mode.
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onAppReady), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
