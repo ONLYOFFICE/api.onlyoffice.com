@@ -328,6 +328,7 @@ saveSettings: "save-settings";
 
 Calls a function to save the data that was transferred in the [`settings`](../interfaces/utils.md#imessage) parameter
 and returns it in the "setAdminPluginSettingsValue" method each time the plugin is requested.
+`IMessage.settings` must be a string produced with `JSON.stringify`, not an object.
 It functions only when the "Save" button is clicked in the "Settings" block.
 
 #### Example
@@ -500,7 +501,7 @@ openInfoPanel: "open-info-panel";
 ```
 
 Calls a function to open the plugin info panel.
-The tab to open is passed in the [`infoPanelTab`](../interfaces/utils.md#imessage) parameter.
+The tab argument must always be passed in the [`infoPanelTab`](../interfaces/utils.md#imessage) parameter.
 
 #### Example
 

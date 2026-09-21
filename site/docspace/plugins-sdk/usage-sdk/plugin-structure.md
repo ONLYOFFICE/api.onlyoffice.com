@@ -8,7 +8,7 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 
 ## Files created automatically
 
-Running the **npx create-onlyoffice-plugin** command (see [creating a plugin template](creating-plugin-template.md)) creates the following files and folders in the plugin root folder:
+Running the **npx create-docspace-plugin** command (see [creating a plugin template](creating-plugin-template.md)) creates the following files and folders in the plugin root folder:
 
 ### .prettierrc.json
 
@@ -84,7 +84,7 @@ The following folders are not part of the plugin template — one is created by 
 
 ### assets
 
-A folder for storing plugin images. This folder is not created automatically by the **npx create-onlyoffice-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
+A folder for storing plugin images. This folder is not created automatically by the **npx create-docspace-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
 
 Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 

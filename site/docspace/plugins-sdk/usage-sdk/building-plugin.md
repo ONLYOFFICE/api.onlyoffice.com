@@ -24,7 +24,7 @@ To build a plugin, you need to have *npm* (included with Node.js) installed. Aft
    npm run build
    ```
 
-   This command bundles the entire project into a `plugin.js` ES module using the `vite` npm package and then packs it with `npx build-onlyoffice-plugin`.
+   This command bundles the entire project into a `plugin.js` ES module using the `vite` npm package and then packs it with `npx build-docspace-plugin`.
 
 :::note
 The maximum size of the plugin archive and each file within it must not exceed 5 MB.
@@ -92,7 +92,7 @@ For plugins created with an SDK 2.x template:
 2. Change the build script in *package.json*:
 
    ```json
-   "build": "vite build && npx build-onlyoffice-plugin"
+   "build": "vite build && npx build-docspace-plugin"
    ```
 
 3. Update *package.json* and *src/index.ts*:
@@ -106,5 +106,5 @@ For plugins created with an SDK 2.x template:
 
 For plugins created with the old template (SDK 1.1.1):
 
-- The build process is now handled by `npx build-onlyoffice-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
+- The build process is now handled by `npx build-docspace-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
 - Follow the same migration steps as SDK 2.x above.

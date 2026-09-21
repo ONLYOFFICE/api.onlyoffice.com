@@ -10,4 +10,4 @@ Settings interfaces:
 
 | Interface | Description |
 | --- | --- |
-| [`ISettings`](ISettings.md) | Defines the administrator or owner settings block that is embedded in the modal window with the plugin description. |
+| [`ISettings`](ISettings.md) | Defines the administrator or owner settings block that is embedded in the plugin's side panel.

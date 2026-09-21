@@ -17,7 +17,7 @@ Before starting plugin development, create a plugin template and configure its s
 2. To create a plugin template, run the following command:
 
    ``` sh
-   npx create-onlyoffice-plugin
+   npx create-docspace-plugin
    ```
 
 3. Configure the plugin in the terminal specifying the following settings in the dialog:
@@ -72,12 +72,12 @@ For detailed migration instructions, see [Updating a plugin to SDK 3.0.0](buildi
 
 For plugins created with the old template (SDK 1.1.1):
 
-- The build process is now handled by `npx build-onlyoffice-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
+- The build process is now handled by `npx build-docspace-plugin`, so the *scripts/createZip.js* file and its reference in *package.json* can be safely removed.
 - Update the build script to use Vite as described in the [migration guide](building-plugin.md#updating-a-plugin-to-sdk-300).
 
 ## Example
 
-The following example shows a complete `package.json` after you run **npx create-onlyoffice-plugin** and fill in the dialog. The CLI always copies the same template, including React dependencies (`react`, `react-dom`, `@types/react`, `@types/react-dom`, and `@vitejs/plugin-react`). Only the dialog fields (`name`, `version`, `scopes`, `author`, `description`, `license`, `logo`, and `homepage`) are updated.
+The following example shows a complete `package.json` after you run **npx create-docspace-plugin** and fill in the dialog. The CLI always copies the same template, including React dependencies (`react`, `react-dom`, `@types/react`, `@types/react-dom`, and `@vitejs/plugin-react`). Only the dialog fields (`name`, `version`, `scopes`, `author`, `description`, `license`, `logo`, and `homepage`) are updated.
 
 Key fields:
 
@@ -106,7 +106,7 @@ Key fields:
     "https://*.diagrams.net/"
   ],
   "scripts": {
-    "build": "vite build && npx build-onlyoffice-plugin",
+    "build": "vite build && npx build-docspace-plugin",
     "format": "npx prettier --write ."
   },
   "devDependencies": {

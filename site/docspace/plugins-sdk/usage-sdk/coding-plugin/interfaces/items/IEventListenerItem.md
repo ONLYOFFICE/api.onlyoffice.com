@@ -97,7 +97,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `key` | `string` | The unique item identifier used by the service to recognize the item |
 | `eventType` | [`Events`](../../enums/Events.md) | The event type which will be executed. Presently the following events are available: CREATE, RENAME, ROOM_CREATE, ROOM_EDIT, CHANGE_COLUMN, CHANGE_USER_TYPE, CREATE_PLUGIN_FILE. |
-| `eventHandler` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | A function that will be executed when the event is triggered. This function can be asynchronous. After the event is executed, only updating the items or displaying toast is possible, other actions are blocked. |
+| `eventHandler` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | A function that will be executed when the event is triggered. This function can be asynchronous. Any action is allowed in the returned message, not just item updates and toasts. |
 | `usersTypes?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who have the access to the current item. Currently the following user types are available: owner, docSpaceAdmin, roomAdmin, collaborator, user. If this parameter is not specified, then the current item will be available for all user types. |
 | `devices?` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current item will be available. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current item will be available in any device types. |
 
