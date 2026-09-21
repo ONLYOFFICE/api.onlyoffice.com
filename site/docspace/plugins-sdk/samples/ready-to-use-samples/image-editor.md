@@ -26,8 +26,8 @@ If you want to view plugin information, go to **Settings → Integration → Plu
 To edit an image:
 
 1. Right-click on an image file in the file list.
-2. Select **Edit image** from the context menu.
-3. An image editor pop-up will open with a toolbar on the right featuring various tools:
+2. Navigate to the **More options** dropdown menu and select **Edit image**.
+3. The image editor opens in a pop-up window with a toolbar on the right featuring various tools:
    - **Resize** - change image dimensions
    - **Crop** - crop the image to a specific area
    - **Flip** - flip the image horizontally or vertically
@@ -37,9 +37,9 @@ To edit an image:
    - **Icon** - add icons to the image
    - **Text** - add text to the image
    - **Mask** - apply masks to the image
-4. Once you've made your edits, click **Save and Exit** to apply the changes.
+4. Once you've made your edits, click **Save and exit** to apply the changes.
 
-After saving, a notification will confirm the successful update, and the file version will be updated accordingly.
+After saving, a notification confirms the successful update, and the file version is updated accordingly.
 
 ### Supported formats
 

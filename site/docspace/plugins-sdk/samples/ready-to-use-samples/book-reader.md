@@ -7,7 +7,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 A tool for viewing EPUB, FB2, and ZIP files in a dedicated reading viewer directly in DocSpace.
 
-![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
+![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
 
 ## Installation
 
@@ -31,11 +31,12 @@ The plugin supports the following file formats:
 
 To open a file in the reader:
 
-1. Open one of the available rooms.
-2. Click on a supported file, or right-click it and select **Open in Reader** from the context menu.
-3. The file opens in a modal window.
+1. Open the **Documents** section or one of the available rooms.
+2. Click on a supported file, or right-click it, navigate to the **More options** dropdown menu, and select **Open in Reader**.
 
-![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
+![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
+
+3. The file opens in a modal window.
 
 Use the **‹** and **›** buttons at the bottom to navigate between pages. A progress bar and page counter show your current position in the book.
 
@@ -46,7 +47,7 @@ ZIP files cannot be opened with a single click — since DocSpace has a dedicate
 When a ZIP file is opened, the plugin inspects its contents:
 
 - **One supported file found** (a single `.epub`, `.fb2`, or a raw EPUB structure with `META-INF/container.xml`) - the file is extracted and opened in the reader automatically.
-- **Multiple supported files found** - the plugin opens the first one it finds.
+- **Multiple supported files found** - the plugin checks for a raw EPUB structure (`META-INF/container.xml`) first, then any `.epub` file, then any `.fb2` file, and opens the first match — EPUB content always takes priority over FB2, regardless of file order.
 - **No supported files found** - an error notification is shown and the reader does not open.
 
 ## Plugin structure

@@ -24,13 +24,13 @@ In case you want to view the plugin metadata, such as the author, version, statu
 ## Usage
 
 :::warning
-Files in Virtual Data Room (VDR) with the **Add watermarks to documents** setting enabled cannot be converted. Disable this setting and try again. For more information about VDR, see the [Creating VDR with watermark](/docspace/api-backend/samples/basic-samples/create-vdr.md) example.
+Files in a room with the **Add watermarks to documents** setting enabled cannot be converted. Disable this setting and try again. This setting is commonly used in Virtual Data Rooms (VDR); for more information, see the [Creating VDR with watermark](/docspace/api-backend/samples/basic-samples/create-vdr.md) example.
 :::
 
 To convert a file to Markdown:
 
 1. Open the **Documents** section or one of the available rooms.
-2. Right-click a `.docx`, `.txt`, or `.html` file to open the context menu.
+2. Right-click a `.docx`, `.txt`, or `.html` file, then navigate to the **More options** dropdown menu.
 3. Click **Convert to Markdown**.
 
 ![Convert File](/assets/images/docspace/convert-to-markdown-convert-file.png#gh-light-mode-only)![Convert File](/assets/images/docspace/convert-to-markdown-convert-file.dark.png#gh-dark-mode-only)

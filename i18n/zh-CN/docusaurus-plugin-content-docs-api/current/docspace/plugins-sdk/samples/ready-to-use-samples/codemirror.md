@@ -19,11 +19,16 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往 **设置 → 集成 → 插件**，然后点击 **CodeMirror** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
+如需调整插件设置，请前往 **设置 → 集成 → 插件**，然后点击 **CodeMirror** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置分为两个分组：
 
-- **Highlight whitespace** - 启用或禁用代码编辑器中的空格高亮显示。
-- **Highlight trailing whitespace** - 启用或禁用行尾空白字符的高亮显示。
-- **Auto close tags** - 启用后，在 HTML 类文件中输入 `>` 或 `/` 时会自动插入闭合标签。
+**常规**
+
+- **高亮显示空白字符**：将空格显示为点，将制表符显示为箭头。
+- **高亮显示末尾空白字符**：高亮显示行末的空白字符。
+
+**HTML**
+
+- **自动关闭标签**：在 HTML 类文件中输入 `>` 或 `/` 时自动插入关闭标签。
 
 您还可以在此查看插件元数据，例如作者、版本、状态、主页和描述。
 
@@ -33,16 +38,16 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要创建新的代码文件：
 
-1. 打开 **文档** 部分或某个可用房间。
-2. 点击 **操作 → 更多**。
+1. 打开**文档**部分或某个可用房间。
+2. 点击 **+** → **更多**。
 
     ![CreateFile](/assets/images/docspace/codemirror-create-file.png#gh-light-mode-only)![CreateFile](/assets/images/docspace/codemirror-create-file.dark.png#gh-dark-mode-only)
-3. 在出现的菜单中选择 **Text file** 选项。
+3. 在出现的菜单中选择**文本文件**选项。
 4. 在弹出窗口中输入带有相应扩展名的文件名（例如 `style.css`、`script.js`、`app.py`），然后点击 **Create**。
 5. CodeMirror 代码编辑器会在新的弹出窗口中打开，您可以在其中编辑文件内容。
 
     ![Editor](/assets/images/docspace/codemirror-editor.png#gh-light-mode-only)![Editor](/assets/images/docspace/codemirror-editor.dark.png#gh-dark-mode-only)
-6. 点击 **Save** 保存更改。要关闭编辑器，请点击弹出窗口右上角的 **X** 图标。
+6. 点击**保存**以保存更改，或点击**取消**放弃更改。要关闭编辑器，请点击弹出窗口右上角的 **X** 图标。
 
 新创建的文件将显示在文件列表中。
 
@@ -51,11 +56,11 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 您可以使用 CodeMirror 插件打开之前创建或下载的文件：
 
 - 点击带有 CodeMirror 图标的文件名，或
-- 右键打开上下文菜单，然后选择 **Edit file with Codemirror**。
+- 右键打开上下文菜单，然后选择**使用 Codemirror 编辑文件**。
 
 ### 键盘快捷键
 
-在桌面设备上，编辑器包含一个键盘快捷键侧边面板。点击编辑器区域右上角的 Shortcuts 插件图标（带感叹号的圆圈）即可打开或关闭该面板。面板会列出适用于您操作系统（Windows 或 macOS）的可用快捷键。移动设备上不提供此面板。
+在桌面设备上，编辑器包含一个键盘快捷键侧边面板。点击编辑器区域右上角的 Shortcuts 插件图标（标准信息图标，圆圈内带 **i**）即可打开或关闭该面板。面板会列出适用于您操作系统（Windows 或 macOS）的可用快捷键。移动设备上不提供此面板。
 
 ![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.png#gh-light-mode-only)![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.dark.png#gh-dark-mode-only)
 
@@ -63,7 +68,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 该插件支持以下语言和文件格式的语法高亮：
 
-| Language | File extensions |
+| 语言 | 文件扩展名 |
 |----------|-----------------|
 | C/C++ | `.cpp`, `.cc`, `.h`, `.hpp` |
 | CSS | `.css` |
@@ -94,8 +99,8 @@ GitHub 仓库：[codemirror](https://github.com/ONLYOFFICE/docspace-plugins/tree
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了代码编辑器服务（[CodeMirror](https://codemirror.net/)）。
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从 **设置 → 集成 → 插件** 访问该块以调整插件参数。
-- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现 **Edit file with Codemirror** 上下文菜单操作。
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于在 **+** → **更多** 菜单中添加 **Text file** 选项以创建新的代码文件。
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现**使用 Codemirror 编辑文件**上下文菜单操作。
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于在 **+** → **更多** 菜单中添加**文本文件**选项以创建新的代码文件。
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于注册支持的文件类型并在 CodeMirror 编辑器中打开它们。
 
 ## 支持

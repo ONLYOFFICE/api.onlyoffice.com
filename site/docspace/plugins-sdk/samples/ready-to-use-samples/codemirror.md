@@ -19,11 +19,16 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **CodeMirror** plugin. You can change the following plugin parameters:
+In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **CodeMirror** plugin. The settings are organized into two groups:
 
-- **Highlight whitespace** - enable or disable the highlighting of spaces in the code editor.
-- **Highlight trailing whitespace** - enable or disable the highlighting of trailing whitespace at the end of a line.
-- **Auto close tags** - when enabled, close tags are automatically inserted when a `>` or `/` is typed in HTML-like files.
+**General**
+
+- **Highlight whitespaces** - display whitespaces as dots and tabs as arrows.
+- **Highlight trailing whitespaces** - highlight whitespaces at the end of a line.
+
+**HTML**
+
+- **Auto close tags** - automatically insert close tags when a `>` or `/` is typed in HTML-like files.
 
 There you can also view the plugin metadata, such as the author, version, status, homepage, and description.
 
@@ -34,7 +39,7 @@ There you can also view the plugin metadata, such as the author, version, status
 To create a new code file:
 
 1. Open the **Documents** section or one of the available rooms.
-2. Click **Actions → More**.
+2. Click **+** → **More**.
 
     ![CreateFile](/assets/images/docspace/codemirror-create-file.png#gh-light-mode-only)![CreateFile](/assets/images/docspace/codemirror-create-file.dark.png#gh-dark-mode-only)
 3. Select the **Text file** option from the appeared menu.
@@ -42,7 +47,7 @@ To create a new code file:
 5. The CodeMirror code editor opens in a new pop-up window where you can edit the file content.
 
     ![Editor](/assets/images/docspace/codemirror-editor.png#gh-light-mode-only)![Editor](/assets/images/docspace/codemirror-editor.dark.png#gh-dark-mode-only)
-6. Click **Save** to save your changes. To close the editor, click the **X** icon in the upper-right corner of the pop-up.
+6. Click **Save** to save your changes, or **Cancel** to discard them. To close the editor, click the **X** icon in the upper-right corner of the pop-up.
 
 The newly created file will appear in the file list.
 
@@ -55,7 +60,7 @@ You can open previously created or downloaded files using the CodeMirror plugin:
 
 ### Keyboard shortcuts
 
-On desktop devices, the editor includes a keyboard shortcuts side panel. Click the Shortcuts plugin icon (a circle with an exclamation mark) in the upper-right corner of the editor area to open or close the panel. The panel lists available shortcuts for your operating system (Windows or macOS). This panel is not available on mobile devices.
+On desktop devices, the editor includes a keyboard shortcuts side panel. Click the Shortcuts plugin icon (a standard info icon — a circle with an **i**) in the upper-right corner of the editor area to open or close the panel. The panel lists available shortcuts for your operating system (Windows or macOS). This panel is not available on mobile devices.
 
 ![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.png#gh-light-mode-only)![Shortcuts](/assets/images/docspace/codemirror-keyboard-shortcuts.dark.png#gh-dark-mode-only)
 

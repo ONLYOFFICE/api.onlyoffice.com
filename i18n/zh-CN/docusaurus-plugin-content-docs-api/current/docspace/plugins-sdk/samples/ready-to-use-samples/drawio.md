@@ -21,9 +21,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 如需调整插件设置，请前往 **设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
 
-- **Languages** - 从列表中选择所需语言。**Auto** 选项对应门户语言。
-- **Offline mode** - 启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
-- **Libraries** - 打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择 **File → New Library / Open Library from**）。
+- **Languages**：从列表中选择所需语言。**Auto** 选项对应门户语言。
+- **Offline mode**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
+- **Libraries**：打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择 **File → New Library / Open Library from**）。
 
 您还可以在此查看插件元数据，例如作者、版本、状态、主页和描述。
 

@@ -30,7 +30,7 @@ To add a link to the file list:
 1. Open the **Documents** section or one of the available rooms.
 2. Click **Actions → More**.
 3. Select **New URL**.
-4. In the dialog box, specify the URL address and the link display name, then click **Create**.
+4. In the dialog box, specify the **URL** and **Title**, then click **Create** (or **Cancel** to discard).
 
 ![Create URL](/assets/images/docspace/url-create.png#gh-light-mode-only)![Create URL](/assets/images/docspace/url-create.dark.png#gh-dark-mode-only)
 
@@ -42,7 +42,7 @@ To change a saved link:
 
 1. Right-click the `.url` item in the file list to open the context menu.
 2. Select **Edit URL**.
-3. Update the URL address and/or the link display name in the dialog box, then click **Save**.
+3. Update the **URL** and/or **Title** fields in the dialog box, then click **Save** (or **Cancel** to discard).
 
 ![Edit URL](/assets/images/docspace/url-edit.png#gh-light-mode-only)![Edit URL](/assets/images/docspace/url-edit.dark.png#gh-dark-mode-only)
 

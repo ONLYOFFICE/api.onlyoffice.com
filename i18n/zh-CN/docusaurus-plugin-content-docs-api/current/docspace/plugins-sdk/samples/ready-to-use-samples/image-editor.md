@@ -17,7 +17,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 ## 配置
 
-要开始使用该插件，您无需更改任何设置 —— Image editor 插件没有可配置参数。
+要开始使用该插件，您无需更改任何设置——Image editor 插件没有可配置参数。
 
 如需查看插件信息，请前往 **设置 → 集成 → 插件**，然后点击 **Image editor** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
@@ -26,18 +26,18 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 要编辑图像：
 
 1. 右键点击文件列表中的图像文件。
-2. 从上下文菜单中选择 **Edit image**。
-3. 将打开图像编辑器弹出窗口，右侧工具栏包含各种工具：
-   - **Resize** - 更改图像尺寸
-   - **Crop** - 将图像裁剪到特定区域
-   - **Flip** - 水平或垂直翻转图像
-   - **Rotate** - 旋转图像
-   - **Draw** - 在图像上自由绘制
-   - **Shape** - 向图像添加形状
-   - **Icon** - 向图像添加图标
-   - **Text** - 向图像添加文本
-   - **Mask** - 向图像应用蒙版
-4. 完成编辑后，点击 **Save and Exit** 以应用更改。
+2. 打开 **More options** 下拉菜单，然后选择**编辑图片**。
+3. 图像编辑器会在弹出窗口中打开，右侧工具栏包含各种工具：
+   - **Resize**：更改图像尺寸
+   - **Crop**：将图像裁剪到特定区域
+   - **Flip**：水平或垂直翻转图像
+   - **Rotate**：旋转图像
+   - **Draw**：在图像上自由绘制
+   - **Shape**：向图像添加形状
+   - **Icon**：向图像添加图标
+   - **Text**：向图像添加文本
+   - **Mask**：向图像应用蒙版
+4. 完成编辑后，点击**保存并退出**以应用更改。
 
 保存后，通知会确认更新成功，并且文件版本会相应更新。
 
@@ -57,7 +57,7 @@ GitHub 仓库：[image-editor](https://github.com/ONLYOFFICE/docspace-plugins/tr
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于与 DocSpace 进行 API 交互。
-- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于为受支持的图像格式实现 **Edit image** 上下文菜单操作。
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于为受支持的图像格式实现**编辑图片**上下文菜单操作。
 
 ## 支持
 

@@ -24,14 +24,14 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ## 使用
 
 :::warning
-启用了 **向文档添加水印** 房间设置的文件无法转换。请禁用该设置后重试。有关 VDR 的更多信息，请参阅[创建带水印的 VDR](/docspace/api-backend/samples/basic-samples/create-vdr.md)示例。
+启用了**为文档添加水印**房间设置的文件无法转换。请禁用该设置后重试。此设置常见于虚拟数据室（Virtual Data Room，VDR）；有关 VDR 的更多信息，请参阅[创建带水印的 VDR](/docspace/api-backend/samples/basic-samples/create-vdr.md)示例。
 :::
 
 要将文件转换为 Markdown：
 
-1. 打开 **文档** 部分或某个可用房间。
-2. 右键点击 `.docx`、`.txt` 或 `.html` 文件以打开上下文菜单。
-3. 点击 **Convert to Markdown**。
+1. 打开**文档**部分或某个可用房间。
+2. 右键点击 `.docx`、`.txt` 或 `.html` 文件，然后打开 **More options** 下拉菜单。
+3. 点击**转换为 Markdown**。
 
 ![Convert File](/assets/images/docspace/convert-to-markdown-convert-file.png#gh-light-mode-only)![Convert File](/assets/images/docspace/convert-to-markdown-convert-file.dark.png#gh-dark-mode-only)
 
@@ -49,7 +49,7 @@ GitHub 仓库：[convert-to-markdown](https://github.com/ONLYOFFICE/docspace-plu
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于访问 DocSpace API，以下载源文件并将转换后的 Markdown 文件上传到同一文件夹。
-- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。该插件会为 `.docx`、`.txt` 和 `.html` 文件添加 **Convert to Markdown** 项目。
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。该插件会为 `.docx`、`.txt` 和 `.html` 文件添加**转换为 Markdown**项目。
 
 ## 支持
 
