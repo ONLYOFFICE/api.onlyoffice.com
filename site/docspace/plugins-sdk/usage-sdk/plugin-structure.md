@@ -42,8 +42,12 @@ The *TypeScript* configuration file. Key compiler options:
 - `module: ESNext` — uses the latest ECMAScript module syntax
 - `lib: ["ES2017", "DOM"]` — includes ES2017 and DOM type definitions
 - `jsx: react-jsx` — enables React JSX transformation
-- `moduleResolution: bundler` — uses bundler-compatible module resolution
 - `strict: true` — enables all strict type-checking options
+- `isolatedModules: true` — enables isolated modules
+- `esModuleInterop: true` — enables interoperability between CommonJS and ES modules
+- `resolveJsonModule: true` — allows importing JSON files as modules
+- `allowSyntheticDefaultImports: true` — allows default imports from modules with no default export
+- `moduleResolution: bundler` — uses bundler-compatible module resolution
 - `skipLibCheck: true` — skips type checking of declaration files for faster builds
 
 This file can be edited if needed.

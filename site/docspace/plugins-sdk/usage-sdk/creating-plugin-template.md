@@ -61,7 +61,7 @@ You can create a plugin in any project by adding the *@onlyoffice/docspace-plugi
 ## Migration
 
 :::note
-SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 require `minDocSpaceVersion: "4.0.0"` in *package.json*. On older versions, plugins install but are flagged as incompatible and do not function.
+SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 require `minDocSpaceVersion: "4.0.0"` in *config.json*. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
 ### Updating a plugin to SDK 3.0.0
@@ -77,60 +77,12 @@ For plugins created with the old template (SDK 1.1.1):
 
 ## Example
 
-The following examples show complete `package.json` configurations for plugins.
+The following example shows a complete `package.json` after you run **npx create-onlyoffice-plugin** and fill in the dialog. The CLI always copies the same template, including React dependencies (`react`, `react-dom`, `@types/react`, `@types/react-dom`, and `@vitejs/plugin-react`). Only the dialog fields (`name`, `version`, `scopes`, `author`, `description`, `license`, `logo`, and `homepage`) are updated.
 
 Key fields:
 
 - `"private": true` — prevents accidental publication to npm registry
 - `"runtime": "module"` — required for SDK 3.0.0; tells DocSpace to load the plugin as an ES module
-
-### Default Example
-
-Use this configuration if your plugin does not use React:
-
-:::note
-If you are not using React, also remove the `react()` plugin call from *vite.config.ts*.
-:::
-
-``` json
-{
-  "name": "pdf-converter",
-  "version": "1.0.0",
-  "author": "ONLYOFFICE",
-  "private": true,
-  "runtime": "module",
-  "scopes": [
-    "API",
-    "Settings",
-    "ContextMenu"
-  ],
-  "description": "Sample description",
-  "pluginName": "PDFConverter",
-  "license": "MIT",
-  "logo": "logo.png",
-  "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter",
-  "cspDomains": [
-    "https://embed.diagrams.net/",
-    "https://*.diagrams.net/"
-  ],
-  "scripts": {
-    "build": "vite build && npx build-onlyoffice-plugin",
-    "format": "npx prettier --write ."
-  },
-  "devDependencies": {
-    "prettier": "^3.0.0",
-    "typescript": "^5.6.0",
-    "vite": "^8.0.0"
-  },
-  "dependencies": {
-    "@onlyoffice/docspace-plugin-sdk": "^3.0.0"
-  }
-}
-```
-
-### React Example
-
-Use this configuration if your plugin renders React components:
 
 ``` json
 {
@@ -172,3 +124,7 @@ Use this configuration if your plugin renders React components:
   }
 }
 ```
+
+:::note
+If your plugin does not use *React*, you can remove `react` and `react-dom` from `dependencies`, remove `@types/react`, `@types/react-dom`, and `@vitejs/plugin-react` from `devDependencies`, and remove the `react()` plugin call from *vite.config.ts*. Do this manually after the template is generated — the CLI does not offer a non-React variant.
+:::

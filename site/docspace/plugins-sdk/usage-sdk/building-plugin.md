@@ -35,7 +35,7 @@ The *dist* folder will be created in the plugin root folder and the plugin archi
 ## Updating a plugin to SDK 3.0.0
 
 :::note
-SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 require `minDocSpaceVersion: "4.0.0"` in *package.json*. On older versions, plugins install but are flagged as incompatible and do not function.
+SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 require `minDocSpaceVersion: "4.0.0"` in *config.json*. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
 For plugins created with an SDK 2.x template:
