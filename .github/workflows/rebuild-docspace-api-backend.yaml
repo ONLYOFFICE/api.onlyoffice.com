@@ -1,0 +1,115 @@
+name: ReBuild docspace-api-backend
+
+run-name: "ReBuild docspace-api-backend"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install openapi-generator-cli
+        run: |
+          command -v mvn >/dev/null || sudo apt-get install -y --no-install-recommends maven
+          npm install -g @openapitools/openapi-generator-cli
+          corepack enable
+
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
+
+      - name: Checkout DocSpace-server repository (branch)
+        id: checkout_docspace_server
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/DocSpace-server
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: server
+
+      - name: Checkout DocSpace-server repository (default)
+        if: steps.checkout_docspace_server.outcome == 'failure'
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/DocSpace-server
+          token: ${{ secrets.READ_PAT }}
+          path: server
+
+      - name: Checkout DocSpace-buildtools repository (branch)
+        id: checkout_docspace_buildtools
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/DocSpace-buildtools
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: buildtools
+
+      - name: Checkout DocSpace-buildtools repository (default)
+        if: steps.checkout_docspace_buildtools.outcome == 'failure'
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/DocSpace-buildtools
+          token: ${{ secrets.READ_PAT }}
+          path: buildtools
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Build the OpenAPI documents
+        working-directory: server
+        run: |
+          dotnet build common/Tools/ASC.Api.Documentation/ASC.Api.Documentation.slnx \
+            -t:Rebuild \
+            -p:GenerateApiDocs=true
+
+      - name: Render the Markdown
+        working-directory: server/common/Tools/ASC.Api.Documentation/ASC.Api.Documentation/bin/Debug/net10.0
+        run: dotnet ASC.Api.Documentation.dll Markdown
+
+      - name: Copy the DocSpace API backend documentation
+        run: |
+          SPEC_DIR=server/sdk/docspace-api-spec/static/docspace/api-backend
+
+          if [ -z "$(ls $SPEC_DIR/usage-api/*.md 2>/dev/null)" ]; then
+            echo "The render produced no Markdown in $SPEC_DIR."
+            exit 1
+          fi
+
+          rm -rf api.onlyoffice.com/site/docspace/api-backend/usage-api
+          mkdir -p api.onlyoffice.com/site/docspace/api-backend/usage-api
+          cp $SPEC_DIR/usage-api/*.md api.onlyoffice.com/site/docspace/api-backend/usage-api/
+
+          rm -f api.onlyoffice.com/site/docspace/api-backend/*.md
+          cp $SPEC_DIR/*.md api.onlyoffice.com/site/docspace/api-backend/
+
+          cd api.onlyoffice.com
+          if [ -n "$(git status --porcelain)" ]; then
+              git add .
+              git commit -m "Update DocSpace API backend documentation from GitHub Actions"
+              git push origin ${{ github.ref_name }}
+            else
+              echo "Nothing to commit"
+            fi

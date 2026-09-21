@@ -1,8 +1,6 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import type * as Plugin from "@docusaurus/types/src/plugin";
-import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import {docsSections, docspaceSections} from './src/sections';
 
 // SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
@@ -158,22 +156,6 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      'docusaurus-plugin-openapi-docs',
-      {
-        id: 'openapi',
-        docsPluginId: "api",
-        config: {
-          docspaceBackend: {
-            specPath: "openapi/docspace/docspace-backend.yaml",
-            outputDir: "site/docspace/api-backend/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tagGroup",
-            },
-          } satisfies OpenApiPlugin.Options,
-        } satisfies Plugin.PluginOptions,
-      },
-    ],
     [
       '@docusaurus/plugin-google-gtag',
       {
