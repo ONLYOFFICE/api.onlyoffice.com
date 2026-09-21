@@ -30,7 +30,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ### Customizing the editor interface
 
-Use `editorCustomization` to adjust the editor's look and hide features your users don't need. See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
+Use `editorCustomization` to adjust the editor's look and hide features your users don't need — for example, strip back editor chrome to leave more room for the document itself. See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 ```javascript
 const docSpace = DocSpace.SDK.initEditor({
@@ -38,9 +38,9 @@ const docSpace = DocSpace.SDK.initEditor({
   src: "https://your-docspace.com",
   id: "your-file-id",
   editorCustomization: {
-    uiTheme: "theme-dark",
     compactHeader: true,
     toolbarNoTabs: true,
+    hideRulers: true,
     help: false,
   },
 });

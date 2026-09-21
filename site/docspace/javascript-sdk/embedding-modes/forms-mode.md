@@ -96,7 +96,7 @@ const docSpace = DocSpace.SDK.initForms({
 
 ### Uploading a file without the picker dialog
 
-Call `upload()` directly with a `File` object — useful when the file comes from your own drop zone or input element rather than the DocSpace UI. Wait for `onAppReady` before the frame will accept the call. `onUploadSuccess`/`onUploadError` fire the same way they do in [Uploader mode](./uploader-mode.md):
+Call `upload()` directly with a `File` object — useful when the file comes from your own drop zone or input element rather than the DocSpace UI. Wait for `onAppReady` before the frame will accept the call. `onUploadSuccess`/`onUploadError` fire for a `upload()`-initiated transfer with a small payload (`{ fileName, fileSize }`) — this is narrower than what [Uploader mode](./uploader-mode.md)'s own native upload dialog produces; see [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#event-payloads) for both shapes:
 
 ```javascript
 const docSpace = DocSpace.SDK.initForms({

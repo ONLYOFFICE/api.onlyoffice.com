@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Theming
 
-There's one theme setting in this SDK — `theme`, which controls the color scheme of the frame's own chrome (Manager, selectors, and the editor's surrounding UI) — plus two narrower settings that are easy to confuse with theming: `showHeaderBanner` and `stylesUrl`. This page walks through what each one actually controls, plus two runtime patterns: matching your app's dark mode, and switching the theme at runtime.
+This page walks through the settings that affect how the embedded frame looks: `theme`, which controls the color scheme of the frame's own chrome (Manager, selectors, and the editor's surrounding UI), plus two narrower settings that are easy to confuse with theming — `showHeaderBanner` and `stylesUrl` — and two runtime patterns: matching your app's dark mode, and switching the theme at runtime.
 
 None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](../../api-backend/usage-api/save-white-label-settings.api.mdx) if you need to customize the DocSpace logo shown across the portal.
 
