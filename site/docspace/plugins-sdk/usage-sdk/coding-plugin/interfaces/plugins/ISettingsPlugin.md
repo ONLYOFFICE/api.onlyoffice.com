@@ -10,8 +10,8 @@ The plugin that can interact with the settings panel.
 ## Example
 
 The plugin class implements `ISettingsPlugin`: `adminPluginSettings` describes the
-settings block (a webhook URL input and a save button) shown in the plugin's
-side panel. DocSpace calls `getAdminPluginSettings` to render the
+settings block (a webhook URL input and a save button) shown in the modal window
+with the plugin description. DocSpace calls `getAdminPluginSettings` to render the
 block and `setAdminPluginSettingsValue` to pass the saved value back to the plugin.
 
 ```typescript
@@ -145,7 +145,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `adminPluginSettings` | [`ISettings`](../settings/ISettings.md) \| `null` | The administrator or owner settings block that is embedded in the plugin's side panel. |
+| `adminPluginSettings` | [`ISettings`](../settings/ISettings.md) \| `null` | The administrator or owner settings block that is embedded in the modal window with the plugin description |
 
 ```mdx-code-block
 </APITable>

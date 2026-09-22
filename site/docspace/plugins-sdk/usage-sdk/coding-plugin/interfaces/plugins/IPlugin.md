@@ -11,8 +11,8 @@ Every plugin class implements `IPlugin` (usually together with one or more
 type-specific interfaces such as `IContextMenuPlugin`). DocSpace reads the
 plugin status via `getStatus` and runs `onLoadCallback` when the plugin is
 uploaded to the portal. The optional `language` field and its `setLanguage`/
-`getLanguage` methods store the portal language: `setLanguage` is called once,
-right before `onLoadCallback`, not on every interface language change.
+`getLanguage` methods let the portal keep the plugin in sync with the current
+portal language.
 
 ```typescript
 import { type IPlugin, PluginStatus, PluginLocale } from "@onlyoffice/docspace-plugin-sdk";
@@ -38,7 +38,7 @@ class Plugin implements IPlugin {
     return this.status;
   };
 
-  // Called by the portal once, right before onLoadCallback
+  // Called by the portal when the portal language changes
   setLanguage = (language: PluginLocale): void => {
     this.language = language;
   };
@@ -116,8 +116,8 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `status` | [`PluginStatus`](../../enums/Plugins.md#pluginstatus) | The plugin status (active or hide) |
 | `language?` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
-| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | Called by the portal once, right before `onLoadCallback`. It is not called on every interface language change. |
-| `getLanguage?` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | Called by the portal to read the current plugin language. |
+| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side when the portal language is changed. |
+| `getLanguage?` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language. |
 | `onLoadCallback` | () => `Promise`\<`void`\> | Callback which will be executed when uploading the plugin to the portal |
 
 ```mdx-code-block

@@ -4,7 +4,7 @@
 
 Describes a plugin that adds custom button items to the article sidebar.
 Article button items appear as custom plugin components above the DevTools section.
-Maximum 5 items can be displayed across all plugins combined.
+Maximum 5 items can be displayed across all plugins.
 
 ## Example
 
