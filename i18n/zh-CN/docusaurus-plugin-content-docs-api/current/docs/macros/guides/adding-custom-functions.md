@@ -50,12 +50,12 @@ sidebar_position: -4
 以下属性可用：
 
 - `this.address` - 自定义函数正在计算的单元格的地址（例如，`"C5"`）；
-- `this.args` - 输入参数的数组。每个参数对象包含一个 `value` 字段（参数值）和一个 `address` 字段（源单元格的地址，例如 `"A1"`）。该数组具有以下结构：
+- `this.args` - 描述输入参数的数组。只有当参数是单元格或区域引用时，对应的数组项才存在，其中仅包含一个 `address` 字段（该单元格或区域的地址，例如 `"A1"`）。以字面值传入的参数，其对应的数组项为空。如需读取参数值，请使用函数的形参。该数组具有以下结构：
 
   ``` ts
   [
-    {"value": "arg1_value", "address": "arg1_address"},
-    {"value": "arg2_value", "address": "arg2_address"},
+    {"address": "arg1_address"},
+    {"address": "arg2_address"},
     ...
   ]
   ```
@@ -74,9 +74,8 @@ sidebar_position: -4
   */
   function CUSTOMFUNC(arg1, arg2) {
     console.log("Function is evaluated in:", this.address);
-    this.args.forEach(arg => {
-      console.log("Argument value:", arg.value, "from cell:", arg.address);
-    });
+    console.log("First argument:", arg1, "from cell:", this.args[0] && this.args[0].address);
+    console.log("Second argument:", arg2, "from cell:", this.args[1] && this.args[1].address);
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();

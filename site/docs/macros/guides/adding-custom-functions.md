@@ -50,12 +50,12 @@ Starting from version 9.0.4, you can access cell address information inside cust
 The following properties are available:
 
 - `this.address` - the address of the cell where the custom function is being calculated (e.g., `"C5"`);
-- `this.args` - an array of input arguments. Each argument object includes a `value` field with the argument value and an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
+- `this.args` - an array describing the input arguments. An entry is present only for an argument that is a cell or range reference, and holds a single `address` field with the address of that cell or range (e.g., `"A1"`). An argument passed as a literal value leaves its entry empty. To read the values themselves, use the function parameters. This array has the following structure:
 
   ``` ts
   [
-    {"value": "arg1_value", "address": "arg1_address"},
-    {"value": "arg2_value", "address": "arg2_address"},
+    {"address": "arg1_address"},
+    {"address": "arg2_address"},
     ...
   ]
   ```
@@ -74,9 +74,8 @@ Example:
   */
   function CUSTOMFUNC(arg1, arg2) {
     console.log("Function is evaluated in:", this.address);
-    this.args.forEach(arg => {
-      console.log("Argument value:", arg.value, "from cell:", arg.address);
-    });
+    console.log("First argument:", arg1, "from cell:", this.args[0] && this.args[0].address);
+    console.log("Second argument:", arg2, "from cell:", this.args[1] && this.args[1].address);
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();
