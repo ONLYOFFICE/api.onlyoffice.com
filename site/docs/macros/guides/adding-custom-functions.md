@@ -4,11 +4,7 @@ sidebar_position: -4
 
 # Adding custom functions
 
-:::note
-
-Starting from version 8.1, you can add custom functions to the spreadsheets using the **Macros** plugin.
-
-:::
+Custom functions are JavaScript functions that you write in the **Macros** plugin and then call in a spreadsheet like any built-in function. They are available in the spreadsheet editor starting from version 8.1.
 
 ## Creating custom functions
 
