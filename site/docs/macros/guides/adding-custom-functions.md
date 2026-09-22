@@ -49,8 +49,8 @@ Starting from version 9.0.4, you can access cell address information inside cust
 
 The following properties are available:
 
-- `this.address` - the address of the cell where the custom function is being calculated (e.g., `"C5"`);
-- `this.args` - an array describing the input arguments. An entry is present only for an argument that is a cell or range reference, and holds a single `address` field with the address of that cell or range (e.g., `"A1"`). An argument passed as a literal value leaves its entry empty. To read the values themselves, use the function parameters. This array has the following structure:
+- `this.address` - the address of the cell where the custom function is being calculated, qualified with the name of the sheet (e.g., `"Sheet1!C5"`). A sheet name that contains spaces or special characters is enclosed in single quotes (e.g., `"'My Sheet'!C5"`);
+- `this.args` - an array describing the input arguments. An entry is present only for an argument that is a cell or range reference, and holds a single `address` field with the address of that cell or range, qualified in the same way (e.g., `"Sheet1!A1"`). An argument passed as a literal value leaves its entry `undefined`. To read the values themselves, use the function parameters. This array has the following structure:
 
   ``` ts
   [
@@ -59,6 +59,8 @@ The following properties are available:
     ...
   ]
   ```
+
+If the function is called as `=CUSTOMFUNC(5, A1)`, the first argument is a literal value and the second one is a cell reference, so `this.args[0]` is `undefined` and `this.args[1]` is `{"address": "Sheet1!A1"}`. Check an entry before reading its `address` field.
 
 Example:
 
