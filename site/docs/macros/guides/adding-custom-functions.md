@@ -68,16 +68,17 @@ Example:
 (function()
 {
   /**
-  * Function that returns the argument
+  * Returns the address of the cell where the function is calculated.
   * @customfunction
   * @param {any} arg1 Any data.
   * @param {any} arg2 Any data.
-  * @returns {any} The argument of the function.
+  * @returns {string} The address of the cell with the function.
   */
   function CUSTOMFUNC(arg1, arg2) {
     console.log("Function is evaluated in:", this.address);
     console.log("First argument:", arg1, "from cell:", this.args[0] && this.args[0].address);
     console.log("Second argument:", arg2, "from cell:", this.args[1] && this.args[1].address);
+    return this.address;
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();
