@@ -47,7 +47,7 @@ Starting from version 9.0.4, you can access cell address information inside cust
 
 :::
 
-The following properties are available:
+Inside a custom function, `this` refers to a context object with the address of the cell being calculated and the addresses of the cells the arguments came from. The following properties are available:
 
 - `this.address` - the address of the cell where the custom function is being calculated, qualified with the name of the sheet (e.g., `"Sheet1!C5"`). A sheet name that contains spaces or special characters is enclosed in single quotes (e.g., `"'My Sheet'!C5"`);
 - `this.args` - an array describing the input arguments. An entry is present only for an argument that is a cell or range reference, and holds a single `address` field with the address of that cell or range, qualified in the same way (e.g., `"Sheet1!A1"`). An argument passed as a literal value leaves its entry `undefined`. To read the values themselves, use the function parameters. This array has the following structure:
@@ -101,6 +101,8 @@ You can also copy your function. To do this, click ![Dots icon](/assets/images/p
 Starting from version 9.0, you can add asynchronous custom functions to manage any request within the function body.
 
 :::
+
+An asynchronous custom function returns a promise instead of a value, so it can make a network request or wait for any other asynchronous operation. The editor recalculates the cell when the promise resolves. If the promise is rejected, the cell shows the `#VALUE!` error.
 
 ```ts
 (function()
