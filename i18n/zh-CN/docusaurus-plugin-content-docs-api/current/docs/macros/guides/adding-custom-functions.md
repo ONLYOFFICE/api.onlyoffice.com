@@ -9,7 +9,7 @@ sidebar_position: -4
 ## 创建自定义函数
 
 1. 打开**视图**选项卡并选择**宏**，宏窗口将会弹出。
-2. 在**自定义函数**区域，点击![Plus icon](/assets/images/plugins/plus.svg)，您将看到一个自定义函数模板：
+2. 在**自定义函数**区域，点击![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only)，您将看到一个自定义函数模板：
 
     ``` ts
     (function()
@@ -84,11 +84,11 @@ sidebar_position: -4
 
 ## 管理自定义函数
 
-如果您想重命名函数，请点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg) 图标并且选择**重命名**。输入新的函数名称后点击**确定**。
+如果您想重命名函数，请点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) 图标并且选择**重命名**。输入新的函数名称后点击**确定**。
 
-要删除不需要的自定义函数，请点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg) 图标然后选择**删除**。
+要删除不需要的自定义函数，请点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) 图标然后选择**删除**。
 
-要复制函数，方法是点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg) 图标然后选择**复制**。
+要复制函数，方法是点击自定义函数名称旁的 ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) 图标然后选择**复制**。
 
 ![自定义功能菜单](/assets/images/plugins/custom-function-menu.png#gh-light-mode-only)![自定义功能菜单](/assets/images/plugins/custom-function-menu.dark.png#gh-dark-mode-only)
 
