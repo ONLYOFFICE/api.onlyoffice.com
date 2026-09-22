@@ -1,6 +1,8 @@
-# IToggleButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToggleButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToggleButton.ts#L98)
+# IToggleButton
 
 Custom toggle button input for binary state controls.
 

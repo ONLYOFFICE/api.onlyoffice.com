@@ -1,6 +1,8 @@
-# IFloatingOperationsButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L174)
+# IFloatingOperationsButton
 
 Configuration for the floating operations button.
 Used to display progress of long-running operations (upload, conversion, backup, etc.)
@@ -181,8 +183,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## FloatingOperationType
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L235)
-
 Determines the icon and visual representation of the operation.
 
 ### Enumeration Members
@@ -294,8 +294,6 @@ Backup operation
 ***
 
 ## IFloatingOperation
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L268)
 
 Represents a single operation in the floating operations button.
 Each operation displays as a row with icon, label, and progress indicator.

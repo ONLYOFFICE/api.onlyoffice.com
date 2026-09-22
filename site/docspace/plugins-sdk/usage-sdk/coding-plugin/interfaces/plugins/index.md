@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Plugins
 
 Core plugin interfaces that define the contract for each plugin type supported by DocSpace. Every plugin must implement `IPlugin` plus one or more type-specific interfaces.

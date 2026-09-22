@@ -1,6 +1,8 @@
-# IPostMessagePlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPostMessagePlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPostMessagePlugin.ts#L88)
+# IPostMessagePlugin
 
 The plugin that is given the access to handle postMessage events from iframe components.
 The plugin listens for window.postMessage events from embedded iframes

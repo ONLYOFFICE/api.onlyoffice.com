@@ -1,6 +1,8 @@
-# IContextMenuItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IContextMenuItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IContextMenuItem.ts#L164)
+# IContextMenuItem
 
 Describes an item that will be embedded in the context menu.
 

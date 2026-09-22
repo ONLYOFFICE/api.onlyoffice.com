@@ -1,6 +1,8 @@
-# IApiPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IApiPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IApiPlugin.ts#L79)
+# IApiPlugin
 
 The plugin that is provided with the origin, proxy, and prefix to make requests to the portal server.
 

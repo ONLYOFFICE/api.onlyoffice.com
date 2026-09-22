@@ -1,6 +1,8 @@
-# Actions
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts#L26)
+# Actions
 
 A collection of events that will be processed on the portal side.
 

@@ -1,6 +1,8 @@
-# ILabel
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILabel.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILabel.ts#L55)
+# ILabel
 
 Field name in the form.
 

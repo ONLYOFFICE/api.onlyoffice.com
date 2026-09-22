@@ -1,6 +1,8 @@
-# IArticleButtonItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IArticleButtonItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IArticleButtonItem.ts#L87)
+# IArticleButtonItem
 
 Describes a button item that will be embedded in the article sidebar.
 Article button items are displayed as custom plugin components above the DevTools section.

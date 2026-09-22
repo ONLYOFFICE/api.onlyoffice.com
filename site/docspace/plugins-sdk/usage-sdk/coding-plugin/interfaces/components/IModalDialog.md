@@ -1,6 +1,8 @@
-# IModalDialog
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts#L184)
+# IModalDialog
 
 Modal dialog.
 
@@ -190,8 +192,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 
 ## ModalDisplayType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts#L265)
 
 The supported modal dialog types.
 

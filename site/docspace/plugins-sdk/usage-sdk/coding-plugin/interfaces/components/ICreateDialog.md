@@ -1,6 +1,8 @@
-# ICreateDialog
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICreateDialog.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICreateDialog.ts#L110)
+# ICreateDialog
 
 Modal dialog for creating certain item (file, folder, etc.).
 The user gets the full access to the functionality but cannot control the layout.

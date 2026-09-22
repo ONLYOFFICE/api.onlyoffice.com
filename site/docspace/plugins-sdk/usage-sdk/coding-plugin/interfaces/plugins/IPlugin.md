@@ -1,6 +1,8 @@
-# IPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPlugin.ts#L73)
+# IPlugin
 
 The default plugin.
 This interface must be implemented in each plugin because without the plugin status it will not be built in.

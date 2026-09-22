@@ -1,6 +1,8 @@
-# IToast
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToast.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToast.ts#L80)
+# IToast
 
 A brief notification that appears on the screen.
 
@@ -76,8 +78,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 
 ## ToastType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToast.ts#L105)
 
 The supported toast types.
 

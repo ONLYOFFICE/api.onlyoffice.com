@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts
+---
+
 # Component
 
 ```ts
@@ -17,8 +21,6 @@ type Component =
   | IconButtonGroup
   | LinkGroup;
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L104)
 
 A component that is used to add components into Box.
 Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).
@@ -94,8 +96,6 @@ type BoxGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L149)
-
 Defines the box component.
 
 ### Example
@@ -155,8 +155,6 @@ type ButtonGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L180)
-
 Defines the button component.
 
 ### Example
@@ -206,8 +204,6 @@ type CheckboxGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L223)
 
 Defines the checkbox component.
 
@@ -271,8 +267,6 @@ type ComboBoxGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L261)
-
 Defines the combo box component.
 
 ### Example
@@ -330,8 +324,6 @@ type IFrameGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L298)
-
 Defines the iframe component.
 
 ### Example
@@ -388,8 +380,6 @@ type ImageGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L335)
-
 Defines the image component.
 
 ### Example
@@ -445,8 +435,6 @@ type InputGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L373)
 
 Defines the input component.
 
@@ -505,8 +493,6 @@ type LabelGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L406)
-
 Defines the label component.
 
 ### Example
@@ -559,8 +545,6 @@ type SkeletonGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L435)
-
 Defines the skeleton component.
 
 ### Example
@@ -608,8 +592,6 @@ type TextGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L470)
 
 Defines the text component.
 
@@ -665,8 +647,6 @@ type TextAreaGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L505)
-
 Defines the textarea component.
 
 ### Example
@@ -721,8 +701,6 @@ type ToggleButtonGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L539)
-
 Defines the toggle button component.
 
 ### Example
@@ -775,8 +753,6 @@ type IconButtonGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L574)
 
 Defines the icon button component.
 
@@ -831,8 +807,6 @@ type LinkGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L607)
 
 Defines the link component.
 

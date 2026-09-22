@@ -1,6 +1,8 @@
-# IContextMenuPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IContextMenuPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IContextMenuPlugin.ts#L77)
+# IContextMenuPlugin
 
 The plugin that is embedded in the context menu of files, folders, rooms, images, video (audio).
 

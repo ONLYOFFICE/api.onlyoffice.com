@@ -1,6 +1,8 @@
-# IIconButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IIconButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IIconButton.ts#L61)
+# IIconButton
 
 A component that displays an interactive icon button with hover and click states.
 

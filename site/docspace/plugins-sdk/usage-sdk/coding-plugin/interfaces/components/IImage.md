@@ -1,6 +1,8 @@
-# IImage
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IImage.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IImage.ts#L62)
+# IImage
 
 A component that is used to embed an image not from the assets folder into a modal window or the settings page.
 

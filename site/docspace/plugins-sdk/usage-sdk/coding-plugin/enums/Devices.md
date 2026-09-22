@@ -1,6 +1,8 @@
-# Devices
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts#L22)
+# Devices
 
 Defines the supported device types.
 

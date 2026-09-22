@@ -1,6 +1,8 @@
-# IProfileMenuPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts#L74)
+# IProfileMenuPlugin
 
 Plugin for embedding items in the profile menu.
 This interface must be implemented in each plugin that adds items to the profile menu.

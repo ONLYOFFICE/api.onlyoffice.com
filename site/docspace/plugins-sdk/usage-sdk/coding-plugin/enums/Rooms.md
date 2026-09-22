@@ -1,10 +1,12 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts
+---
+
 # Rooms
 
 Enumerations for DocSpace room types and search scopes.
 
 ## RoomSearchArea
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts#L9)
 
 Defines the available search scopes for rooms within a room selector.
 
@@ -45,8 +47,6 @@ Search only within room templates.
 ***
 
 ## RoomsType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts#L23)
 
 Defines the different types of rooms available in the system.
 

@@ -1,6 +1,8 @@
-# ISkeleton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ISkeleton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ISkeleton.ts#L60)
+# ISkeleton
 
 A component that is used to hide components during uploading.
 

@@ -1,6 +1,8 @@
-# IInfoPanelItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IInfoPanelItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IInfoPanelItem.ts#L133)
+# IInfoPanelItem
 
 The info panel item that is displayed in the info panel.
 
@@ -119,8 +121,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 
 ## IInfoPanelSubMenu
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IInfoPanelItem.ts#L27)
 
 Describes the item submenu.
 

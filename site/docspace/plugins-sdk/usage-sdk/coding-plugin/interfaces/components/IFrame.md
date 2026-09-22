@@ -1,6 +1,8 @@
-# IFrame
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts#L64)
+# IFrame
 
 A component that is used to embed a third-party website into a modal window or the settings page.
 

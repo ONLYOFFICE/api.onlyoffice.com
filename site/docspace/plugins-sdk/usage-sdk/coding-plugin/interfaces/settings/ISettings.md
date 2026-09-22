@@ -1,6 +1,8 @@
-# ISettings
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts#L186)
+# ISettings
 
 Defines the administrator or owner settings block that is embedded in the modal window with the plugin description.
 

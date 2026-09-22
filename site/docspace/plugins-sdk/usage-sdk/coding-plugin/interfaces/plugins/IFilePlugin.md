@@ -1,6 +1,8 @@
-# IFilePlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IFilePlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IFilePlugin.ts#L75)
+# IFilePlugin
 
 The plugin that can interact with the file list.
 

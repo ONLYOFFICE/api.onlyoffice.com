@@ -1,6 +1,8 @@
-# Security
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts#L22)
+# Security
 
 Defines the supported room/folder security parameters.
 

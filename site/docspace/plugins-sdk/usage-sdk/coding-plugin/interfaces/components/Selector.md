@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts
+---
+
 # TSelector
 
 ```ts
@@ -23,8 +27,6 @@ type TSelector =
   props: TRoomSelector;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts#L58)
 
 Provides selector components for choosing files, rooms, users, and groups within DocSpace.
 
@@ -75,8 +77,6 @@ type TBaseSelector = TSelectorBreadCrumbs & TSelectorPagination & TSelectorHeade
   }) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L98)
 
 Defines the base properties for all selector components.
 
@@ -180,8 +180,6 @@ type TSelectorItem = {
 } & Partial<TSelectorItemFile> & Partial<TSelectorItemInput> & Partial<TSelectorItemNew>;
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L149)
-
 Represents a single item within a selector component.
 
 ### Type Declaration
@@ -209,8 +207,6 @@ type TSelectorItemFile = {
   security: FilesSecurity;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L165)
 
 Defines properties for an item that represents a file.
 
@@ -246,8 +242,6 @@ type TSelectorItemInput = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L187)
-
 Defines properties for an item that functions as an input field.
 
 ### Properties
@@ -278,8 +272,6 @@ type TSelectorItemNew = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L209)
-
 Defines properties for an item that allows creating a new entity.
 
 ### Properties
@@ -308,8 +300,6 @@ type TBreadCrumbItem = {
   isRoom?: boolean;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L223)
 
 Represents a single item in a breadcrumb trail.
 
@@ -341,8 +331,6 @@ type TSelectorBreadCrumbs = {
   onSelectBreadCrumb?: (id: string | number) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L252)
 
 Defines properties for configuring breadcrumbs in a selector.
 
@@ -376,8 +364,6 @@ type TSelectorPagination = {
   totalItems?: number;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L274)
 
 Defines properties for pagination within a selector.
 
@@ -416,8 +402,6 @@ type TSelectorHeader = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L300)
-
 Defines properties for the selector's header.
 
 ### Properties
@@ -452,8 +436,6 @@ type TSelectorCheckbox = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L335)
-
 Defines properties for a checkbox in the selector's footer.
 
 ### Properties
@@ -484,8 +466,6 @@ type TSelectorCancelButton = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L353)
-
 Defines properties for the cancel button in the selector.
 
 ### Properties
@@ -515,8 +495,6 @@ type TSelectorBaseProps = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L371)
-
 Common base properties shared across all selector types.
 
 ### Properties
@@ -544,8 +522,6 @@ type TSelectorLifecycleEvents = {
   onClose?: () => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L385)
 
 Lifecycle callback properties for selectors.
 
@@ -575,8 +551,6 @@ type TSelectorEmptyScreen = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L399)
-
 Empty screen message properties for selectors.
 
 ### Properties
@@ -604,8 +578,6 @@ type TSelectorSearchCreate = {
   withCreate?: boolean;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L413)
 
 Search and create functionality properties for selectors.
 
@@ -639,8 +611,6 @@ type TSelectorSubmitButton = {
   }) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L440)
 
 Defines properties for the submit button in the selector.
 
@@ -709,8 +679,6 @@ type TFilesSelector = TSelectorHeader & TSelectorBaseProps & TSelectorLifecycleE
   onSelect?: (id: string | number | undefined) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IFilesSelector.ts#L96)
 
 Defines the properties for a file and folder selector component.
 
@@ -812,8 +780,6 @@ type TGroupsSelector = TSelectorHeader & TSelectorBaseProps & TSelectorLifecycle
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IGroupsSelector.ts#L57)
-
 Defines the properties for a group selector component.
 
 ### Example
@@ -878,8 +844,6 @@ type TPeopleSelector = TSelectorHeader & TSelectorCancelButton & TSelectorSubmit
   onlyRoomMembers?: boolean;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IPeopleSelector.ts#L84)
 
 Defines the properties for a user and group selector component.
 
@@ -973,8 +937,6 @@ type TRoomSelector = TSelectorHeader & TSelectorCancelButton & TSelectorBaseProp
   onSubmit?: (selectedIds: (string | number)[]) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IRoomSelector.ts#L96)
 
 Defines the properties for a room selector component.
 

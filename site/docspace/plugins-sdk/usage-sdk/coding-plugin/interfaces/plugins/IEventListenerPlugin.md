@@ -1,6 +1,8 @@
-# IEventListenerPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IEventListenerPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IEventListenerPlugin.ts#L68)
+# IEventListenerPlugin
 
 The plugin that is given the access to the portal events.
 
