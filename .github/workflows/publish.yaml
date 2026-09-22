@@ -11,7 +11,7 @@ on:
         default: testing
         type: choice
         options:
-        #- development
+        - development
         - testing
         - production
       chinese:
@@ -33,6 +33,7 @@ env:
   mode: ${{github.event.inputs.site_mode}}
   teamlab_s3bucket: api-site-teamlab-info
   com_s3bucket: api-site-onlyoffice-com
+  dev_s3bucket: api-site-dev
 
 jobs:
   start-runner:
@@ -117,8 +118,11 @@ jobs:
         AWS_ACCESS_KEY_TEST: ${{secrets.AWS_ACCESS_KEY_TEST}}
         AWS_SECRET_KEY_TEST: ${{secrets.AWS_SECRET_KEY_TEST}}
         AWS_DISTRIBUTION_ID_TEST: ${{secrets.AWS_DISTRIBUTION_ID_TEST}}
+        # New secret for the dev CloudFront distribution
+        AWS_DISTRIBUTION_ID_DEV: ${{secrets.AWS_DISTRIBUTION_ID_DEV}}
       run: |
-        # AWS_BUCKET_URL is declared later from the Terraform state
+        # AWS_BUCKET_URL is declared later from the Terraform state (for testing/production).
+        # For development it is set directly here, because Terraform does not manage the dev env.
         if [ "${mode}" = "production" ]; then
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_PROD}" >> "$GITHUB_ENV"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_PROD}" >> "$GITHUB_ENV"
@@ -134,10 +138,18 @@ jobs:
           echo "CF_TF_DIR=infra/cloudfront-distributions-test/api-site" >> "$GITHUB_ENV"
           echo "S3_BASE=${teamlab_s3bucket}" >> "$GITHUB_ENV"
         elif [ "${mode}" = "development" ]; then
-          echo "Development bucket dose not exist"
-          exit 1
+          # Dev env is NOT managed by Terraform: fixed bucket, no origin switch.
+          # Using the TEST account credentials (dev bucket assumed to live in the same account).
+          # If the dev bucket is in another account, replace with dedicated AWS_ACCESS_KEY_DEV / AWS_SECRET_KEY_DEV secrets.
+          echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_TEST}" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_TEST}" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
+          echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_DEV}" >> "$GITHUB_ENV"
+          # Fixed origin bucket, declared right here (no Terraform lookup)
+          echo "AWS_BUCKET_URL=s3://${dev_s3bucket}" >> "$GITHUB_ENV"
+          echo "TARGET_BUCKET=${dev_s3bucket}" >> "$GITHUB_ENV"
         else
-          echo "Invalid site mode: $m"
+          echo "Invalid site mode: $mode"
           exit 1
         fi
 
@@ -148,9 +160,10 @@ jobs:
         aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
         aws-region: ${{env.AWS_REGION}}
 
-    # --- Origin bucket and CloudFront are managed by Terraform ---
+    # --- Origin bucket and CloudFront are managed by Terraform (testing/production only) ---
     - name: Generate GitHub App token
       id: app-token
+      if: github.event.inputs.site_mode != 'development'
       uses: actions/create-github-app-token@v1
       with:
         github-api-url: https://api.github.com
@@ -160,6 +173,7 @@ jobs:
         repositories: ${{ secrets.INFRA_REPO_NAME }}
 
     - name: Checkout infra repo
+      if: github.event.inputs.site_mode != 'development'
       uses: actions/checkout@v4
       with:
         github-server-url: https://github.com
@@ -171,11 +185,13 @@ jobs:
           cloudfront-distributions-com/api-site
 
     - name: Setup Terraform
+      if: github.event.inputs.site_mode != 'development'
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_wrapper: false
 
     - name: Declare target bucket from Terraform state
+      if: github.event.inputs.site_mode != 'development'
       working-directory: ${{ env.CF_TF_DIR }}
       run: |
         terraform init -input=false
@@ -310,6 +326,7 @@ jobs:
 
     - name: Switch CloudFront origin via Terraform
       id: cfconf_tf
+      if: github.event.inputs.site_mode != 'development'
       working-directory: ${{ env.CF_TF_DIR }}
       run: |
           # backup current distribution config (attached to the telegram alert)
@@ -339,6 +356,7 @@ jobs:
              [[ "$SYNC_STATUS" == 'success' ]] && echo "SYNC_STATUS=success🟢" >> $GITHUB_ENV
              [[ "$CF_CONF_STATUS" == 'failure' ]] && echo "CF_CONF_STATUS=failure🔴" >> $GITHUB_ENV
              [[ "$CF_CONF_STATUS" == 'success' ]] && echo "CF_CONF_STATUS=success🟢" >> $GITHUB_ENV
+             [[ "$CF_CONF_STATUS" == 'skipped' ]] && echo "CF_CONF_STATUS=skipped (dev)⚪" >> $GITHUB_ENV
           fi
 
     - name: Send alert message
@@ -347,7 +365,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        document: ./cf_config_backup.json
+        document: ${{ github.event.inputs.site_mode != 'development' && './cf_config_backup.json' || '' }}
         message: |
             ${{ github.actor }} created commit:
             Commit message: ${{ github.event.commits[0].message }}
