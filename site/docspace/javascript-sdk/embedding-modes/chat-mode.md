@@ -25,7 +25,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 `initChat()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md). It forces `mode` to Chat.
 
 :::note
-The page renders a composer (the input box) only when the current user is signed in, isn't a guest, and the portal has AI enabled. Otherwise it shows a no-access state — a chat history control with no way to send a message. Confirmed live: when AI Chat is disabled for the workspace, the frame fires `onNoAccess` (with an empty payload) in addition to `onAppReady` — attach a handler for it if you want to react to this instead of relying on `onAppReady` alone.
+The page renders a composer (the input box) only when the current user is signed in, isn't a guest, and the portal has AI enabled. Otherwise it shows a no-access state — a chat history control with no way to send a message. When AI Chat is disabled for the workspace, the frame fires `onNoAccess` (with an empty payload) in addition to `onAppReady` — attach a handler for it if you want to react to this instead of relying on `onAppReady` alone.
 
 In [OAuth mode](../get-started/authentication-security.md#oauth-authentication), the same no-access state appears if the token can't read the user's profile — make sure the **Profile** scope (`accounts.self:read`) is included.
 :::

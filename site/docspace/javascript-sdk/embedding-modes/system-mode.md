@@ -6,7 +6,11 @@ sidebar_position: 6
 
 System mode initializes a lightweight, hidden SDK frame that displays a blank page with a loader. It renders no visible DocSpace UI. Instead, it provides access to a focused set of system-level methods for managing user sessions programmatically, such as authentication, hash generation, and user info retrieval — without embedding a visible interface.
 
-File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` are not processed by the DocSpace server when called from a system frame — use [Manager mode](./manager-mode.md) for those.
+File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` aren't available from a system frame — use [Manager mode](./manager-mode.md) for those instead.
+
+:::note
+Calling `createRoom()` from a system frame doesn't throw or reject — the returned promise **resolves** with the plain string `"Wrong method for this mode"` instead of a room object, and no room is created. Check the type/shape of what a method call resolves with rather than assuming a resolved promise means success; this SDK's DocSpace-client-side validation (as opposed to mode-guards the SDK itself throws synchronously, like `setCustomActions()`/`upload()`/`navigateSection()`'s `SDKErrorCode.ModeMismatch`) doesn't consistently reject on failure. See [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors).
+:::
 
 ## Initialization
 
@@ -72,7 +76,7 @@ System mode exposes a focused set of methods for session management. Calling fil
 | `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
 | `getHashSettings()` | Returns the DocSpace hash settings used for generating a password hash. |
 | `createHash(password, hashSettings)` | Generates a hash string from a plain-text password using the specified hash settings. |
-| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?, code?)` | Logs in to DocSpace using the specified credentials. See [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md) for the `code` argument. |
 | `logout()` | Logs out the current user. |
 
 ## Use cases
@@ -84,13 +88,11 @@ System mode exposes a focused set of methods for session management. Calling fil
 Authenticate a user in the background without displaying a login form, for example, from a third-party application. See also: [Authorization](../samples/advanced-samples/authorization.md).
 
 ```javascript
-const sdk = new SDK();
-
-const system = sdk.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
+const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
 
 const settings = await system.getHashSettings();
 const hash = await system.createHash("p@ssw0rd", settings);
-await system.login("user@example.com", hash, undefined, true);
+await system.login("user@example.com", hash);
 ```
 
 ### Switching users
@@ -98,6 +100,8 @@ await system.login("user@example.com", hash, undefined, true);
 Log out the current user and authenticate a different account:
 
 ```javascript
+const system = DocSpace.SDK.frames["ds-auth"];
+
 await system.logout();
 const settings = await system.getHashSettings();
 const hash = await system.createHash("otherPassword", settings);
@@ -111,12 +115,12 @@ await system.login("other@example.com", hash);
 Check whether a user is already authenticated before deciding what to display.
 
 ```javascript
-const system = sdk.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
+const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
 
 try {
   const user = await system.getUserInfo();
   // User is authenticated — open Manager
-  sdk.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
+  DocSpace.SDK.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
 } catch {
   // User is not authenticated — show your own login form
   showLoginForm();
@@ -128,6 +132,7 @@ try {
 Change the theme and locale without rebooting the DocSpace instance:
 
 ```javascript
+const system = DocSpace.SDK.frames["ds-auth"];
 await system.setConfig({ theme: 'Dark', locale: 'de' });
 ```
 
@@ -136,7 +141,7 @@ await system.setConfig({ theme: 'Dark', locale: 'de' });
 Hide the system frame visually and use it as a backend for your own login form. The frame can be hidden using `width: 0px` and `height: 0px`.
 
 ```javascript
-const system = sdk.initSystem({
+const system = DocSpace.SDK.initSystem({
   frameId: "ds-auth",
   src: "https://your-docspace.com",
   width: "0px",

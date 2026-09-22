@@ -68,7 +68,7 @@ In [Public room mode](../embedding-modes/public-room-mode.md) specifically, `id`
 [Editor mode](../embedding-modes/editor-mode.md) and [Viewer mode](../embedding-modes/viewer-mode.md) have no equivalent fallback: passing a missing or nonexistent `id` there fires neither `onAppError` nor `onAppReady` nor any not-found signal — the frame just never finishes initializing from the host's point of view. Validate the file `id` before calling `initEditor`/`initViewer` if you need to handle this case; the SDK gives you nothing to react to otherwise.
 :::
 
-[Chat mode](../embedding-modes/chat-mode.md) has a related but different behavior: when the current user can't actually use the chat, the frame shows a no-access state — a chat history control with no composer. `onAppReady` still fires normally either way, but confirmed live for the "AI disabled on the portal" case, `onNoAccess` also fires (with an empty payload) — attach a handler for it rather than trying to infer the no-access state from `onAppReady` alone.
+[Chat mode](../embedding-modes/chat-mode.md) has a related but different behavior: when the current user can't actually use the chat, the frame shows a no-access state — a chat history control with no composer. `onAppReady` still fires normally either way, but for the "AI disabled on the portal" case, `onNoAccess` also fires (with an empty payload) — attach a handler for it rather than trying to infer the no-access state from `onAppReady` alone.
 
 `onCustomAction` is specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()` usage examples. `onNavigate` fires in both [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) — see either page for `navigateSection()` usage examples.
 
@@ -150,6 +150,31 @@ Most events are simple lifecycle signals and are called with no arguments at all
 
 :::note
 Clicking a file in the list only selects it and fires `onFileManagerClick` — it does not open the editor. `onEditorOpen` fires separately, when the file is actually opened (e.g. via the "Edit" context menu action, a double-click, or a hotkey).
+:::
+
+## Method-call errors
+
+Unlike the lifecycle events above, a failing **instance method call** (`setConfig()`, `upload()`, `navigateSection()`, and so on) doesn't go through `events` at all — it rejects its own returned `Promise` with a structured `SDKError`: `{ code, message, recoverable }`. `code` is one of a fixed set of string values — `"TIMEOUT"`, `"DISCONNECTED"`, `"CSP_VIOLATION"`, `"MODE_MISMATCH"`, `"INVALID_CONFIG"`, `"UPLOAD_FAILED"`, `"PARSE_ERROR"`, `"TOKEN_RESOLVE_FAILED"` — branch on `code`, not on `message`, since `message` is a free-text description meant for logging, not for comparison.
+
+```javascript
+const frame = DocSpace.SDK.frames["ds-frame"];
+frame.setConfig({ theme: "Dark" }).catch(function (err) {
+  if (err.code === "TIMEOUT") {
+    console.warn("The frame didn't respond in time — retry?", err.recoverable);
+  } else {
+    console.error(`[${err.code}] ${err.message}`);
+  }
+});
+```
+
+:::note
+If you're using the `<script>`-tag integration (as opposed to the npm package), `SDKError`/`SDKErrorCode` aren't exposed on `window.DocSpace` — only `window.DocSpace.SDK` is. Compare `err.code` against the string literal (as shown above) rather than trying to import the enum.
+:::
+
+A method call also fails if the iframe doesn't respond within `methodTimeout` milliseconds (default `30000`) — that specific call's `Promise` rejects with `{ code: "TIMEOUT", ... }`, and separately fires `onAppError` with the same message as a plain string.
+
+:::warning
+Not every failure follows the `SDKError` rejection pattern above. Mode-guards the SDK enforces itself — `setCustomActions()`/`upload()`/`navigateSection()` called in the wrong mode — do throw a proper `SDKError` with `code: "MODE_MISMATCH"`. But failures the DocSpace client app detects on its own side (an invalid parameter, a call that's meaningless in the current mode) can instead **resolve** the promise with a plain error value rather than rejecting it — this happens with `login()` (resolves with a raw Axios error object on some failures) and `createRoom()` (resolves with a raw Axios error object for an invalid `roomType`, and with the plain string `"Wrong method for this mode"` when called from a [System](../embedding-modes/system-mode.md) frame). `.catch()` alone won't catch these — check what a resolved value actually looks like before treating it as success, especially for methods whose validation happens on the DocSpace app side rather than in the SDK itself.
 :::
 
 ## Common patterns

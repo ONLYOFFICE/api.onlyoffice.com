@@ -69,7 +69,7 @@ const docSpace = DocSpace.SDK.initManager({
   events: {
     onAppReady: async function () {
       const frame = DocSpace.SDK.frames["ds-frame"];
-      const room = await frame.createRoom("Q1 Reports", "collaboration");
+      const room = await frame.createRoom("Q1 Reports", 2); // 2 = Collaboration room
       console.log("Room created:", room.id);
     },
   },

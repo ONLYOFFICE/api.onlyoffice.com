@@ -75,7 +75,7 @@ const docSpace = DocSpace.SDK.initEditor({
   events: {
     onAppReady: function () {
       const frame = DocSpace.SDK.frames["ds-frame"];
-      frame.executeInEditor(function (editor, data) {
+      frame.executeInEditor(function (editor, asc, data) {
         editor.insertText("Hello, " + data.username);
       }, { username: "Alice" });
     },
