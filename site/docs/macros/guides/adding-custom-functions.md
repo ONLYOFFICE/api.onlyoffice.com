@@ -31,13 +31,13 @@ Custom functions are JavaScript functions that you write in the **Macros** plugi
 
 4. Click **Save**.
 
-  ![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
+![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
 
 Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
-You can find a sample of a custom function [here](../samples/spreadsheet-editor/weighted-average-function.md).
+For a complete sample, see [Weighted average function](../samples/spreadsheet-editor/weighted-average-function.md).
 
 ## Accessing cell addresses
 
@@ -116,4 +116,4 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 })();
 ```
 
-You can find a sample of an asynchronous custom function [here](../samples/spreadsheet-editor/calculate-world-bank-indicator.md).
+For a complete sample, see [Calculate World Bank indicator](../samples/spreadsheet-editor/calculate-world-bank-indicator.md).
