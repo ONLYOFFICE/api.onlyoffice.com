@@ -1,0 +1,81 @@
+---
+title: "Get a contact type"
+sidebar_label: "Get a contact type"
+sidebar_class_name: api-method get
+description: "Returns a contact type with the ID specified in the request."
+---
+
+**GET** `/api/2.0/crm/contact/type/{contactTypeid:[0-9]+}`
+
+Returns a contact type with the ID specified in the request.
+
+## Request body
+
+### contactTypeid
+
+**type:** `integer`
+
+Contact type ID
+
+**Example**: `0`
+
+## Request example
+
+```json
+{
+  "contactTypeid": 0
+}
+```
+
+## Returns
+
+Contact type. A request that is not authenticated returns `401`.
+
+### RelativeItemsCount
+
+**type:** `integer`
+
+**Example**: `1`
+
+### Title
+
+**type:** `string`
+
+**Example**: `"Title"`
+
+### Description
+
+**type:** `string`
+
+**Example**: `"Description"`
+
+### Color
+
+**type:** `string`
+
+**Example**: `"#a7fc00"`
+
+### SortOrder
+
+**type:** `integer`
+
+**Example**: `1`
+
+### ID
+
+**type:** `integer`
+
+**Example**: `1234`
+
+## Response example
+
+```json
+{
+  "RelativeItemsCount": 1,
+  "Title": "Title",
+  "Description": "Description",
+  "Color": "#a7fc00",
+  "SortOrder": 1,
+  "ID": 1234
+}
+```

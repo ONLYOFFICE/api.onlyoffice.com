@@ -1,0 +1,90 @@
+---
+title: "Get team members of projects"
+sidebar_label: "Get team members of projects"
+sidebar_class_name: api-method post
+description: "Returns a list of all the users participating in the projects with the ID specified in the request."
+---
+
+**POST** `/api/2.0/project/team`
+
+Returns a list of all the users participating in the projects with the ID specified in the request.
+
+## Request body
+
+### ids
+
+**type:** `integer[]`
+
+List of project IDs
+
+## Request example
+
+```json
+{
+  "ids": [
+    0
+  ]
+}
+```
+
+## Returns
+
+List of team members. A request that is not authenticated returns `401`.
+
+## Response example
+
+```json
+[
+  {
+    "CanReadFiles": true,
+    "CanReadMilestones": true,
+    "CanReadMessages": true,
+    "CanReadTasks": true,
+    "CanReadContacts": true,
+    "IsAdministrator": true,
+    "IsRemovedFromTeam": true,
+    "FirstName": "Mike",
+    "LastName": "Zanyatski",
+    "UserName": "Mike.Zanyatski",
+    "Email": "my@domain.com",
+    "Birthday": "2008-04-10T06-30-00.000Z",
+    "Sex": "male",
+    "Status": 1,
+    "ActivationStatus": 0,
+    "Terminated": "2008-04-10T06-30-00.000Z",
+    "Department": "Marketing",
+    "WorkFrom": "2008-04-10T06-30-00.000Z",
+    "Groups": [
+      {
+        "Name": "Group Name",
+        "Id": "00000000-0000-0000-0000-000000000000",
+        "Manager": "Jake.Zazhitski"
+      }
+    ],
+    "Location": "Palo Alto",
+    "Notes": "Notes to worker",
+    "Lead": "055312F1-1D71-4786-BB5B-D5910316E53C",
+    "AvatarMedium": "url to medium avatar",
+    "Avatar": "url to big avatar",
+    "IsAdmin": false,
+    "IsLDAP": false,
+    "ListAdminModules": [
+      "projects,crm"
+    ],
+    "IsOwner": false,
+    "IsVisitor": false,
+    "CultureName": "en-EN",
+    "IsSSO": false,
+    "QuotaLimit": 0,
+    "UsedSpace": 0,
+    "DocsSpace": 0,
+    "MailSpace": 0,
+    "TalkSpace": 0,
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "DisplayName": "Mike Zanyatski",
+    "Title": "Manager",
+    "AvatarSmall": "url to small avatar",
+    "ProfileUrl": "/Products/People/Profile.aspx?user=administrator"
+  }
+]
+```

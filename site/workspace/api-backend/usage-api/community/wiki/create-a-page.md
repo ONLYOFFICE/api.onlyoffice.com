@@ -1,0 +1,80 @@
+---
+title: "Create a page"
+sidebar_label: "Create a page"
+sidebar_class_name: api-method post
+description: "Creates a new wiki page with the page name and content specified in the request."
+---
+
+**POST** `/api/2.0/community/wiki`
+
+Creates a new wiki page with the page name and content specified in the request.
+
+## Request body
+
+### name
+
+**type:** `string`
+
+Page name
+
+**Example**: `"string"`
+
+### body
+
+**type:** `string`
+
+Page content
+
+**Example**: `"string"`
+
+## Request example
+
+```json
+{
+  "name": "string",
+  "body": "string"
+}
+```
+
+## Returns
+
+Page information. A request that is not authenticated returns `401`.
+
+### Name
+
+**type:** `string`
+
+**Example**: `"Page name"`
+
+### Content
+
+**type:** `string`
+
+**Example**: `"Page content"`
+
+### UpdatedBy
+
+**type:** `EmployeeWraper`
+
+### Updated
+
+**type:** `string`
+
+**Example**: `"2020-12-08T17:37:03.3164965Z"`
+
+## Response example
+
+```json
+{
+  "Name": "Page name",
+  "Content": "Page content",
+  "UpdatedBy": {
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "DisplayName": "Mike Zanyatski",
+    "Title": "Manager",
+    "AvatarSmall": "url to small avatar",
+    "ProfileUrl": "/Products/People/Profile.aspx?user=administrator"
+  },
+  "Updated": "2020-12-08T17:37:03.3164965Z"
+}
+```

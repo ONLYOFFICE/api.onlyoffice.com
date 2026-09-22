@@ -1,0 +1,117 @@
+---
+title: "Set team security"
+sidebar_label: "Set team security"
+sidebar_class_name: api-method put
+description: "Sets the security rights to the user with the ID specified in the request from the selected project."
+---
+
+**PUT** `/api/2.0/project/{projectid:[0-9]+}/team/security`
+
+Sets the security rights to the user with the ID specified in the request from the selected project.
+
+## Request body
+
+### projectid
+
+**type:** `integer`
+
+Project ID
+
+**Example**: `0`
+
+### userId
+
+**type:** `string`
+
+User ID
+
+**Example**: `"string"`
+
+### security
+
+**type:** `integer`
+
+Security rights
+
+**Example**: `0`
+
+### visible
+
+**type:** `boolean`
+
+Specifies if the user security rights will be visible or not
+
+**Example**: `true`
+
+## Request example
+
+```json
+{
+  "projectid": 0,
+  "userId": "string",
+  "security": 0,
+  "visible": true
+}
+```
+
+## Returns
+
+List of team members. A request that is not authenticated returns `401`.
+
+## Response example
+
+```json
+[
+  {
+    "CanReadFiles": true,
+    "CanReadMilestones": true,
+    "CanReadMessages": true,
+    "CanReadTasks": true,
+    "CanReadContacts": true,
+    "IsAdministrator": true,
+    "IsRemovedFromTeam": true,
+    "FirstName": "Mike",
+    "LastName": "Zanyatski",
+    "UserName": "Mike.Zanyatski",
+    "Email": "my@domain.com",
+    "Birthday": "2008-04-10T06-30-00.000Z",
+    "Sex": "male",
+    "Status": 1,
+    "ActivationStatus": 0,
+    "Terminated": "2008-04-10T06-30-00.000Z",
+    "Department": "Marketing",
+    "WorkFrom": "2008-04-10T06-30-00.000Z",
+    "Groups": [
+      {
+        "Name": "Group Name",
+        "Id": "00000000-0000-0000-0000-000000000000",
+        "Manager": "Jake.Zazhitski"
+      }
+    ],
+    "Location": "Palo Alto",
+    "Notes": "Notes to worker",
+    "Lead": "055312F1-1D71-4786-BB5B-D5910316E53C",
+    "AvatarMedium": "url to medium avatar",
+    "Avatar": "url to big avatar",
+    "IsAdmin": false,
+    "IsLDAP": false,
+    "ListAdminModules": [
+      "projects,crm"
+    ],
+    "IsOwner": false,
+    "IsVisitor": false,
+    "CultureName": "en-EN",
+    "IsSSO": false,
+    "QuotaLimit": 0,
+    "UsedSpace": 0,
+    "DocsSpace": 0,
+    "MailSpace": 0,
+    "TalkSpace": 0,
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "DisplayName": "Mike Zanyatski",
+    "Title": "Manager",
+    "AvatarSmall": "url to small avatar",
+    "ProfileUrl": "/Products/People/Profile.aspx?user=administrator"
+  }
+]
+```

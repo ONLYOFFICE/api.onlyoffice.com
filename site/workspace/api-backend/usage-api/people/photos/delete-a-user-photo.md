@@ -1,0 +1,73 @@
+---
+title: "Delete a user photo"
+sidebar_label: "Delete a user photo"
+sidebar_class_name: api-method delete
+description: "Deletes a photo of the user with the ID specified in the request."
+---
+
+**DELETE** `/api/2.0/people/{userid}/photo`
+
+Deletes a photo of the user with the ID specified in the request.
+
+## Path parameters
+
+### userid
+
+**type:** `string`
+
+User ID
+
+**Example**: `"string"`
+
+## Returns
+
+Deleted user photo. A request that is not authenticated returns `401`.
+
+### Original
+
+**type:** `string`
+
+**Example**: `"default_user_photo_size_1280-1280.png"`
+
+### Retina
+
+**type:** `string`
+
+**Example**: `"default_user_photo_size_360-360.png"`
+
+### Max
+
+**type:** `string`
+
+**Example**: `"default_user_photo_size_200-200.png"`
+
+### Big
+
+**type:** `string`
+
+**Example**: `"default_user_photo_size_82-82.png"`
+
+### Medium
+
+**type:** `string`
+
+**Example**: `"\"default_user_photo_size_48-48.png"`
+
+### Small
+
+**type:** `string`
+
+**Example**: `"default_user_photo_size_32-32.png"`
+
+## Response example
+
+```json
+{
+  "Original": "default_user_photo_size_1280-1280.png",
+  "Retina": "default_user_photo_size_360-360.png",
+  "Max": "default_user_photo_size_200-200.png",
+  "Big": "default_user_photo_size_82-82.png",
+  "Medium": "\"default_user_photo_size_48-48.png",
+  "Small": "default_user_photo_size_32-32.png"
+}
+```

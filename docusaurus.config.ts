@@ -164,13 +164,6 @@ const config: Config = {
         id: 'openapi',
         docsPluginId: "api",
         config: {
-          workspaceBackend: {
-            specPath: "openapi/workspace/community-server.yaml",
-            outputDir: "site/workspace/api-backend/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tagGroup",
-            },
-          } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
             specPath: "openapi/docspace/docspace-backend.yaml",
             outputDir: "site/docspace/api-backend/usage-api",

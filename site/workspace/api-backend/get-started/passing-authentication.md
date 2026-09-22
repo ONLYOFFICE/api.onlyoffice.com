@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 The user needs to perform several easy steps to pass authentication:
 
-1. Send POST request, containing the **userName** and **password** parameters to the [api/2.0/authentication](../../../workspace/api-backend/usage-api/authenticate-a-user.api.mdx) address:
+1. Send POST request, containing the **userName** and **password** parameters to the [api/2.0/authentication](../../../workspace/api-backend/usage-api/authentication/authenticate-a-user.md) address:
 
    <Tabs>
       <TabItem value="request" label="Request">
