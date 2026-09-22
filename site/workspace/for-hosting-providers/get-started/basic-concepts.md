@@ -22,19 +22,5 @@ To identify the request and response format, please make sure that both the **Co
 
 ## Possible error codes and their description
 
-| HTTP Status Code | Error code             | Description                                                                                                                                                                            |
-| ---------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 400              | portalNameEmpty        | The required parameter **portalName**, which must be present in the request, is not specified.                                                                                         |
-| 400              | tooShortError          | The **portalName** specified in the request is too short.                                                                                                                              |
-| 400              | portalNameIncorrect    | Invalid characters in the **portalName** parameter.                                                                                                                                    |
-| 400              | portalNameNotFound     | No portal with the portal name specified in the request has been registered.                                                                                                           |
-| 400              | portalNameExist        | Portal with the portal name specified in the request has already been registered.                                                                                                      |
-| 400              | portalsCountTooMuch    | The limit for the number of portals has been reached.                                                                                                                                  |
-| 400              | tooMuchAttempts        | The limit for the number of request attempts has been reached.                                                                                                                         |
-| 400              | passPolicyError        | The password specified in the request does not meet the requirements.                                                                                                                  |
-| 400              | recaptchaInvalid       | Invalid reCAPTCHA value has been entered.                                                                                                                                              |
-| 400              | params                 | An error has been made in the method parameters specified in the request.                                                                                                              |
-| 403              | authorization          | Authorization error, the possible reasons: an unknown authorization scheme is used, or the authorization key is missing, or the authorization key time is out, or a wrong key is used. |
-| 500              | authorization          | Internal server error when decoding the authorization key.                                                                                                                             |
-| 500              | registerNewTenantError | Internal server error when registering a new portal.                                                                                                                                   |
-| 500              | error                  | Internal server error.                                                                                                                                                                 |
+Every code a failed request can return, with the HTTP status it comes with, is listed in
+[Errors](../usage-api/errors.md).

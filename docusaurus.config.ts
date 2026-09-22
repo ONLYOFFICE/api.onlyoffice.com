@@ -171,13 +171,6 @@ const config: Config = {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
-          workspaceHosted: {
-            specPath: "openapi/workspace/hosted-solutions.yaml",
-            outputDir: "site/workspace/for-hosting-providers/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
             specPath: "openapi/docspace/docspace-backend.yaml",
             outputDir: "site/docspace/api-backend/usage-api",
