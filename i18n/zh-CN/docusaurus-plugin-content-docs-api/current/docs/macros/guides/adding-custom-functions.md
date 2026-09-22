@@ -27,7 +27,7 @@ sidebar_position: -4
     })();
     ```
 
-3. 为您的函数编写说明。如有需要，请指定参数和返回值，添加函数脚本，使用 [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) 方法将函数添加到系统中。
+3. 为您的函数编写说明，并指定参数和返回值。JSDoc 注释是必需的：缺少该注释，或参数类型不受支持时，函数将不会被注册；缺少 `@returns` 时，函数会向单元格返回错误值。添加函数脚本，使用 [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) 方法将函数添加到系统中。
 
 4. 点击**保存**。
 

@@ -27,7 +27,7 @@ Custom functions are JavaScript functions that you write in the **Macros** plugi
     })();
     ```
 
-3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
+3. Write a description for your function and specify its parameters and return value. The JSDoc comment is required: a function without it, or with a parameter whose type is not supported, is not registered, and a function without `@returns` returns an error value to the cell. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
 
 4. Click **Save**.
 
