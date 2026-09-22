@@ -101,3 +101,21 @@ See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 A few parameters control the frame's own footprint rather than DocSpace's internal UI: `width`/`height` (pixels or percentages), and `destroyText` (text inserted into the frame's container when `destroyFrame()` is called — see [Destroy frame](../samples/basic-samples/destroy-frame.md)).
 
 `noLoader` skips the loading spinner while the frame initializes — except in Manager and System modes, which always show it regardless of this setting.
+
+`waiting: true` delays the frame entirely: the `<iframe>` isn't added to the page at all (only the loading spinner shows, no request is sent to the portal) until you release it. Useful when several frames share a page and one of them needs to finish authenticating before the rest load.
+
+```javascript
+const docSpace = DocSpace.SDK.initManager({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  waiting: true,
+});
+
+// ...run authentication in a separate frame (see Authorization) or otherwise decide it's safe to proceed...
+
+docSpace.setConfig({ waiting: false }, true);
+```
+
+:::note
+Releasing the frame takes **both** `waiting: false` in the config **and** the second argument `true` (reload). `setConfig({ waiting: false })` alone rejects with "Message bus is not connected with frame" — there's no iframe yet to message. `setConfig({}, true)` (reload without explicitly clearing `waiting`) reinitializes but leaves the frame waiting forever, since the merged config still has `waiting: true`.
+:::

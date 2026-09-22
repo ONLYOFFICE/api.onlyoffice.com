@@ -35,7 +35,7 @@ The `mode` parameter controls which embedding mode is loaded inside the frame:
 | `"system"` | `initSystem()` | Hidden frame for background operations |
 | `"public-room"` | `initPublicRoom()` | Anonymous access to a public room (requires `requestToken` and `id`) |
 | `"uploader"` | `initUploader()` | File upload interface (requires `id`) |
-| `"forms"` | `initForms()` | Forms gallery for a room (requires `id`) |
+| `"forms"` | `initForms()` | Form filling room (requires `id`) |
 | `"chat"` | `initChat()` | AI chat interface |
 | `"personal"` | `initPersonal()` | The current user's personal space |
 

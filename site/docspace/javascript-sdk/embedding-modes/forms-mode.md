@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Forms mode
 
-Forms mode embeds a forms gallery for a specific DocSpace room. Users can browse, fill out, and track forms without leaving your application, and the host page can extend the file/folder context menu with its own custom actions.
+Forms mode embeds the Forms UI for a specific Form filling room. Users can browse, fill out, and track forms without leaving your application, and the host page can extend the file/folder context menu with its own custom actions.
 
 ## Initialization
 

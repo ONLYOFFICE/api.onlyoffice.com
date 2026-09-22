@@ -76,6 +76,10 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
+:::note
+`roomType: 1` (Form filling room) behaves differently from the other room types — it doesn't show up under the portal's regular Rooms section (or inside a Manager frame scoped to Rooms), only under the portal's separate Forms section. If you're creating a room the embedded Manager frame should list, use one of the other room types (`2` for Collaboration, for example).
+:::
+
 ### Getting the current selection
 
 Read what the user has selected in the file manager and act on it. See also: [Get selection](../samples/basic-samples/get-selection.md).
