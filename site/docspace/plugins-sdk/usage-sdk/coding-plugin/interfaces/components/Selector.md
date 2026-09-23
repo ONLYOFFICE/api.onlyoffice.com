@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/Selector/index.ts
 ---
 
 # TSelector
@@ -212,11 +212,9 @@ Defines properties for an item that represents a file.
 
 ### Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -225,9 +223,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `fileType` | [`FilesType`](../../enums/Files.md#filestype) | The general type of the file (e.g., 'text', 'spreadsheet'). |
 | `security` | [`FilesSecurity`](../../enums/Files.md#filessecurity) | The security or access level of the file. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -246,9 +242,7 @@ Defines properties for an item that functions as an input field.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -257,9 +251,7 @@ Defines properties for an item that functions as an input field.
 | `onAcceptInput` | (`value`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user accepts the input value. |
 | `onCancelInput` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user cancels the input. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -276,18 +268,14 @@ Defines properties for an item that allows creating a new entity.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `isCreateNewItem` | `boolean` | If true, this item will be rendered as a 'create new' button. |
 | `onCreateClick` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks the 'create new' button. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -305,9 +293,7 @@ Represents a single item in a breadcrumb trail.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -315,9 +301,7 @@ Represents a single item in a breadcrumb trail.
 | `id` | `string` \| `number` | A unique identifier for the breadcrumb item. |
 | `isRoom?` | `boolean` | If true, indicates that the breadcrumb item represents a room. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -336,9 +320,7 @@ Defines properties for configuring breadcrumbs in a selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -347,9 +329,7 @@ Defines properties for configuring breadcrumbs in a selector.
 | `breadCrumbs?` | [`TBreadCrumbItem`](#tbreadcrumbitem)[] | An array of breadcrumb items to display. |
 | `onSelectBreadCrumb?` | (`id`: `string` \| `number`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when a breadcrumb item is selected. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -369,9 +349,7 @@ Defines properties for pagination within a selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -381,9 +359,7 @@ Defines properties for pagination within a selector.
 | `onLoadNextPage?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered to load the next page of items. |
 | `totalItems?` | `number` | The total number of items available. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -406,9 +382,7 @@ Defines properties for the selector's header.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -420,9 +394,7 @@ Defines properties for the selector's header.
 | `headerProps.withBackButton?` | `boolean` | If true, displays a back button in the header. |
 | `headerProps.onBackClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the back button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -440,9 +412,7 @@ Defines properties for a checkbox in the selector's footer.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -450,9 +420,7 @@ Defines properties for a checkbox in the selector's footer.
 | `footerCheckboxLabel?` | `string` | The label for the footer checkbox. |
 | `isChecked?` | `boolean` | The initial checked state of the footer checkbox. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -470,9 +438,7 @@ Defines properties for the cancel button in the selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -480,9 +446,7 @@ Defines properties for the cancel button in the selector.
 | `cancelButtonLabel?` | `string` | The text label for the cancel button. |
 | `onCancel?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the cancel button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -499,18 +463,14 @@ Common base properties shared across all selector types.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `id?` | `string` | A unique identifier for the selector component. |
 | `className?` | `string` | A CSS class name to apply to the selector component. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -527,18 +487,14 @@ Lifecycle callback properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `onLoad?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is loaded. |
 | `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is closed. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -555,18 +511,14 @@ Empty screen message properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `emptyScreenHeader?` | `string` | The header text to display when there are no items to show. |
 | `emptyScreenDescription?` | `string` | The description text to display when there are no items to show. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -583,18 +535,14 @@ Search and create functionality properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `withSearch?` | `boolean` | If true, displays a search input field. |
 | `withCreate?` | `boolean` | If true, allows users to create new items. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -616,9 +564,7 @@ Defines properties for the submit button in the selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -626,9 +572,7 @@ Defines properties for the submit button in the selector.
 | `disabledSubmitButton?` | `boolean` | If true, the submit button will be disabled. |
 | `onSubmit` | (`params`: \{ `selectedIds`: (`string` \| `number`)[]; `fileName`: `string`; `isFooterCheckboxChecked`: `boolean`; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 

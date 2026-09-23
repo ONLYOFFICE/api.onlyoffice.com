@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IMainButtonItem.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/items/IMainButtonItem.ts
 ---
 
 # IMainButtonItem
@@ -75,11 +75,9 @@ const backupFiles: IMainButtonItem = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -89,9 +87,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | ~~`onClick?`~~ | (`id`: `number`) => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | A function that takes the folder/room id as an argument. This function can be asynchronous. **Deprecated:** Use `onItemClick` instead to support both string and number IDs. This method will be removed in a future major version. |
 | `onItemClick?` | (`id`: `string` \| `number`) => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | Callback invoked when the main button action is triggered. Supports both string and number identifiers. **Remarks:** This is the preferred method over the deprecated `onClick`. |
 | `usersType?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who will see the current item in the main button menu. Currently the following user types are available: owner, docSpaceAdmin, roomAdmin, collaborator, user. If this parameter is not specified, then the current main button item will be displayed for all user types. |
-| `items?` | `IMainButtonItem`[] | The main button items that are added to the current item as a drop-down list. In this case, the `onItemClick` (and the deprecated `onClick`) event does not work. |
+| `items?` | `IMainButtonItem`[] | The main button items that are added to the current item as a drop-down list. In this case, the `onItemClick` (and the deprecated `onClick`) event does not work. **Remarks:** One level deep, and `usersType`/`devices` are read on the parent only — sub-items are copied in as they are. |
 | `devices?` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current item will be displayed in the main button menu. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current main button item will be displayed in any device types. |
 
-```mdx-code-block
 </APITable>
-```

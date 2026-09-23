@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IMainButtonPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IMainButtonPlugin.ts
 ---
 
 # IMainButtonPlugin
@@ -109,16 +109,12 @@ Update an existing main button menu item.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `mainButtonItems` | `Map`\<`string`, [`IMainButtonItem`](../items/IMainButtonItem.md)\> | Stores a collection of elements where the keys are the key parameters from the MainButtonItem objects. A list of main button menu items is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

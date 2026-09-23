@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPostMessagePlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IPostMessagePlugin.ts
 ---
 
 # IPostMessagePlugin
@@ -8,6 +8,14 @@ The plugin that is given the access to handle postMessage events from iframe com
 The plugin listens for window.postMessage events from embedded iframes
 and triggers portal-side actions (such as showing toasts, modals, or updating items)
 by calling the postMessageCallback with an [IPostMessageCallbackMessage](../utils.md#ipostmessagecallbackmessage).
+
+The direction: the portal hands the callback to the plugin through
+`setPostMessageCallback`, and the plugin invokes it to ask the portal for
+something. Receiving the frame's messages is the plugin's own
+`window.addEventListener("message", ...)` — on `window`, not `window.parent`,
+since a module plugin runs in the portal's own window, and inside a component
+effect, where the cleanup runs. Check `event.origin`, and list the frame's
+origin in the manifest's `cspDomains`.
 
 ## Examples
 
@@ -28,8 +36,12 @@ class Plugin implements IPostMessagePlugin {
 
 const plugin = new Plugin();
 
-window.parent.addEventListener("message", (event) => {
+// In a real plugin this subscription belongs in a component effect.
+
+window.addEventListener("message", (event) => {
   try {
+    if (event.origin !== "https://frame.example.com") return;
+
     const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
     if (data?.source !== "my-plugin") return;
 
@@ -49,8 +61,10 @@ window.parent.addEventListener("message", (event) => {
 PostMessage handler with modal dialog
 
 ```typescript
-window.parent.addEventListener("message", (event) => {
+window.addEventListener("message", (event) => {
   try {
+    if (event.origin !== "https://frame.example.com") return;
+
     const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
     if (data?.source !== "my-plugin") return;
 
@@ -118,16 +132,12 @@ The currently registered postMessage callback function
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `postMessageCallback` | (`message`: [`IPostMessageCallbackMessage`](../utils.md#ipostmessagecallbackmessage)) => `void` | A callback function that is called by the plugin to trigger portal-side actions in response to postMessage events received from embedded iframes. The portal sets this callback via [setPostMessageCallback](#setpostmessagecallback). The plugin invokes it with an [IPostMessageCallbackMessage](../utils.md#ipostmessagecallbackmessage) containing the desired actions and their properties. |
 
-```mdx-code-block
 </APITable>
-```

@@ -1,11 +1,15 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/ISettingsPlugin.ts
 ---
 
 # ISettingsPlugin
 
 The plugin that manages settings for the administrator or owner.
 The plugin that can interact with the settings panel.
+
+Everything the plugin saves is serialized into a single string that the portal caps at 255 characters,
+and a longer one is refused rather than truncated. Keep the settings object to a few short scalar fields
+and hold anything bulkier in a file or a portal entity the plugin refers to by ID.
 
 ![settings-block](/assets/images/docspace/settings-block.png#gh-light-mode-only)![settings-block](/assets/images/docspace/settings-block.dark.png#gh-dark-mode-only)
 
@@ -113,7 +117,12 @@ Update the administrator or owner plugin settings
 setAdminPluginSettingsValue(settings: string | null): void;
 ```
 
-Transfer the administrator or owner plugin settings to all the portal users. It functions on the DocSpace side
+Transfer the administrator or owner plugin settings to all the portal
+users. It functions on the DocSpace side: the portal calls it with the
+stored settings while the plugin loads, and again after a save through the
+React settings client, re-reading [`getStatus`](IPlugin.md#getstatus)
+straight after — so a plugin can hide itself according to its own
+configuration.
 
 #### Parameters
 
@@ -139,16 +148,12 @@ Get the administrator or owner plugin settings
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `adminPluginSettings` | [`ISettings`](../settings/ISettings.md) \| `null` | The administrator or owner settings block that is embedded in the modal window with the plugin description |
 
-```mdx-code-block
 </APITable>
-```

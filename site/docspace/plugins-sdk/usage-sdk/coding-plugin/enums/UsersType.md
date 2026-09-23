@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/enums/UsersType.ts
 ---
 
 # UsersType
@@ -14,7 +14,7 @@ Defines the supported user types.
 owner: "Owner";
 ```
 
-System owner with full administrative rights and control over the entire DocSpace instance
+System owner with full administrative rights and control over the entire DocSpace instance — shown as `Owner` in the portal
 
 ### docSpaceAdmin
 
@@ -22,7 +22,7 @@ System owner with full administrative rights and control over the entire DocSpac
 docSpaceAdmin: "DocSpaceAdmin";
 ```
 
-Administrator with system-wide management capabilities but limited compared to owner
+Administrator with system-wide management capabilities but limited compared to owner — shown as `Full admin` in the portal
 
 ### roomAdmin
 
@@ -30,7 +30,7 @@ Administrator with system-wide management capabilities but limited compared to o
 roomAdmin: "RoomAdmin";
 ```
 
-User with administrative rights within specific rooms or workspaces
+User with administrative rights within specific rooms or workspaces — shown as `Room admin` in the portal
 
 ### collaborator
 
@@ -38,7 +38,7 @@ User with administrative rights within specific rooms or workspaces
 collaborator: "Collaborator";
 ```
 
-User with enhanced permissions for content creation and modification
+Member who creates and edits content in the rooms they are invited to, without managing the portal — shown as `User` in the portal
 
 ### user
 
@@ -46,4 +46,4 @@ User with enhanced permissions for content creation and modification
 user: "User";
 ```
 
-Regular user with basic access rights for viewing and interacting with content
+External member with view and interaction rights only — shown as `Guest` in the portal

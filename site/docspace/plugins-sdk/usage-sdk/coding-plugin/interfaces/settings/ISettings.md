@@ -1,186 +1,76 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/settings/ISettings.ts
 ---
 
 # ISettings
 
-Defines the administrator or owner settings block that is embedded in the modal window with the plugin description.
+Defines the administrator or owner settings block that is embedded in the side panel of the plugin.
+
+The portal owns the panel around it: the plugin name in the header, the
+description and metadata below the block, and a Save/Cancel footer.
 
 ![settings-block](/assets/images/docspace/settings-block.png#gh-light-mode-only)![settings-block](/assets/images/docspace/settings-block.dark.png#gh-dark-mode-only)
 
-## Examples
+## Example
 
-Theme customization settings with color picker
+API key settings panel
 
-```typescript
-const themeSettings: ISettings = {
-  settings: {
-    type: "box",
-    children: [
-      {
-        type: "colorPicker",
-        id: "primary-color",
-        label: "Primary Color",
-        value: "#007BFF",
-        onChange: (color) => updateThemeColor(color)
+```tsx
+import { useEffect, useState } from "react";
+import { usePluginSettings } from "@onlyoffice/docspace-plugin-sdk/react";
+import { ISettings, Components, ButtonSize } from "@onlyoffice/docspace-plugin-sdk";
+
+type Config = { apiKey: string };
+
+function ApiKeySettings() {
+  const settings = usePluginSettings();
+  const [apiKey, setApiKey] = useState("");
+  const [savedKey, setSavedKey] = useState("");
+
+  useEffect(() => {
+    settings.load<Config>().then((saved) => {
+      if (saved) {
+        setApiKey(saved.apiKey);
+        setSavedKey(saved.apiKey);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    settings.setSaveButton({
+      component: Components.button,
+      props: {
+        label: "Save",
+        size: ButtonSize.small,
+        isDisabled: apiKey === savedKey || !apiKey.trim(),
+        onClick: async () => {
+          await settings.save({ apiKey });
+          setSavedKey(apiKey);
+        },
       },
-      {
-        type: "toggle",
-        id: "dark-mode",
-        label: "Dark Mode",
-        value: false,
-        onChange: (enabled) => toggleDarkMode(enabled)
-      }
-    ]
-  },
-  saveButton: {
-    type: "button",
-    label: "Save Theme",
-    onClick: async () => {
-      try {
-        await saveThemeSettings();
-        return {
-          actions: [Actions.showToast],
-          toastProps: [{
-            type: ToastType.success,
-            title: "Theme settings saved | Changes applied | Refresh to see updates"
-          }]
-        };
-      } catch (error) {
-        return {
-          actions: [Actions.showToast],
-          toastProps: [{
-            type: ToastType.error,
-            title: "Unable to save theme | Check your changes"
-          }]
-        };
-      }
-    }
-  },
-  isLoading: false,
-  onLoad: async () => {
-    const savedSettings = await loadThemeSettings();
-    return {
-      settings: {
-        type: "box",
-        children: [
-          {
-            type: "colorPicker",
-            id: "primary-color",
-            label: "Primary Color",
-            value: savedSettings.primaryColor
-          },
-          {
-            type: "toggle",
-            id: "dark-mode",
-            label: "Dark Mode",
-            value: savedSettings.darkMode
-          }
-        ]
-      }
-    };
-  }
-};
-```
+    });
+  }, [apiKey, savedKey]);
 
-Language configuration settings with validation
+  return <input type="password" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />;
+}
 
-```typescript
-const languageSettings: ISettings = {
-  settings: {
-    type: "box",
-    children: [
-      {
-        type: "select",
-        id: "default-language",
-        label: "Default Language",
-        options: [
-          { value: "en", label: "English" },
-          { value: "es", label: "Spanish" },
-          { value: "fr", label: "French" }
-        ],
-        value: "en",
-        onChange: (lang) => updateDefaultLanguage(lang)
-      },
-      {
-        type: "toggle",
-        id: "auto-detect",
-        label: "Auto-detect User Language",
-        value: true,
-        onChange: (enabled) => toggleAutoDetect(enabled)
-      }
-    ]
-  },
-  saveButton: {
-    type: "button",
-    label: "Save Language Settings",
-    onClick: async () => {
-      try {
-        await saveLanguageSettings();
-        return {
-          actions: [Actions.showToast],
-          toastProps: [{
-            type: ToastType.success,
-            title: "Language settings saved | Changes applied | Refresh to see updates"
-          }]
-        };
-      } catch (error) {
-        return {
-          actions: [Actions.showToast],
-          toastProps: [{
-            type: ToastType.error,
-            title: "Unable to save language settings | Check your changes"
-          }]
-        };
-      }
-    }
-  },
-  isLoading: false,
-  onLoad: async () => {
-    const savedSettings = await loadLanguageSettings();
-    return {
-      settings: {
-        type: "box",
-        children: [
-          {
-            type: "select",
-            id: "default-language",
-            label: "Default Language",
-            options: [
-              { value: "en", label: "English" },
-              { value: "es", label: "Spanish" },
-              { value: "fr", label: "French" }
-            ],
-            value: savedSettings.defaultLanguage
-          },
-          {
-            type: "toggle",
-            id: "auto-detect",
-            label: "Auto-detect User Language",
-            value: savedSettings.autoDetect
-          }
-        ]
-      }
-    };
-  }
+const apiKeySettings: ISettings = {
+  component: ApiKeySettings,
 };
 ```
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `settings` | [`IBox`](../components/IBox.md) | Defines the administrator or owner settings |
-| `saveButton` | [`ButtonGroup`](../components/Component.md#buttongroup) | Defines the button to save the settings |
+| ~~`settings?`~~ | [`IBox`](../components/IBox.md) | Defines the administrator or owner settings rendered via the IBox component tree. Use either `settings` or `component`, not both. **Deprecated:** Use `component` instead — accepts a React component and supports hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `component?` | `ComponentType` | A React component rendered as the settings UI. Use either `component` or `settings`, not both. The component can use `usePluginActions` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `saveButton?` | [`ButtonGroup`](../components/Component.md#buttongroup) | Defines the button to save the settings |
 | `isLoading?` | `boolean` | Specifies if the settings block will be displayed as a loader icon or not |
-| `onLoad?` | () => `Promise`\<\{ `settings`: [`IBox`](../components/IBox.md); `saveButton?`: [`ButtonGroup`](../components/Component.md#buttongroup); \}\> | Defines a function that is triggered whenever the settings block is loaded. Returns a promise with the updated settings box and optional save button. |
+| ~~`onLoad?`~~ | () => `Promise`\<\{ `settings`: [`IBox`](../components/IBox.md); `saveButton?`: [`ButtonGroup`](../components/Component.md#buttongroup); \}\> | Defines a function that is triggered whenever the settings block is loaded. Returns a promise with the updated settings box and optional save button. **Deprecated:** Use a React component via `component` with `useEffect` for data loading instead. |
 
-```mdx-code-block
 </APITable>
-```

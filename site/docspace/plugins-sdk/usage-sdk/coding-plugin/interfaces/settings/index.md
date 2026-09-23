@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
 ---
 
 # Settings
@@ -14,4 +14,4 @@ Settings interfaces:
 
 | Interface | Description |
 | --- | --- |
-| [`ISettings`](ISettings.md) | Defines the administrator or owner settings block that is embedded in the modal window with the plugin description. |
+| [`ISettings`](ISettings.md) | Defines the administrator or owner settings block that is embedded in the side panel of the plugin. |

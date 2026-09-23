@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
 ---
 
 # Plugins
@@ -16,6 +16,7 @@ Available plugin type interfaces:
 | --- | --- |
 | [`IApiPlugin`](IApiPlugin.md) | The plugin that is provided with the origin, proxy, and prefix to make requests to the portal server. |
 | [`IArticleButtonPlugin`](IArticleButtonPlugin.md) | Describes a plugin that adds custom button items to the article sidebar. |
+| [`IArticleNavigationPlugin`](IArticleNavigationPlugin.md) | Describes a plugin that adds navigation items to the article sidebar. |
 | [`IContextMenuPlugin`](IContextMenuPlugin.md) | The plugin that is embedded in the context menu of files, folders, rooms, images, video (audio). |
 | [`IEventListenerPlugin`](IEventListenerPlugin.md) | The plugin that is given the access to the portal events. |
 | [`IFilePlugin`](IFilePlugin.md) | The plugin that can interact with the file list. |

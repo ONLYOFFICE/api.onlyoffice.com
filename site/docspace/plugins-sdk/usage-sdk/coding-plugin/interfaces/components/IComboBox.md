@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IComboBox.ts
 ---
 
 # IComboBox
@@ -66,11 +66,9 @@ const languageSelector: IComboBox = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -92,9 +90,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `dropDownMaxHeight?` | `number` | Defines the maximum height of the dropdown list |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -117,9 +113,7 @@ const languageOption: IComboBoxItem = {
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -128,6 +122,4 @@ const languageOption: IComboBoxItem = {
 | `icon?` | `string` | The option display icon. The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field. |
 | `disabled?` | `boolean` | Specifies if the combo box option is disabled or not |
 
-```mdx-code-block
 </APITable>
-```
