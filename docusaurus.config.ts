@@ -3,8 +3,17 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {docsSections, docspaceSections} from './src/sections';
 
-// SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
-const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
+// SITE_MODE is set in CI (development/testing/production), NODE_ENV works for local dev.
+const siteMode =
+  process.env.SITE_MODE ?? (process.env.NODE_ENV === 'development' ? 'development' : 'production');
+const isProduction = siteMode === 'production';
+
+const siteUrl =
+  {
+    production: 'https://api.onlyoffice.com',
+    testing: 'https://api.teamlab.info',
+    development: 'https://api.onlyoffice.io',
+  }[siteMode] ?? 'https://api.onlyoffice.com';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
 
 function localize(translations: Record<string, string>): string {
@@ -45,12 +54,12 @@ const config: Config = {
     'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
-  url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
+  url: siteUrl,
   baseUrl: '/',
 
   trailingSlash: false,
 
-  noIndex: isDev,
+  noIndex: !isProduction,
 
   onBrokenLinks: 'throw',
 
@@ -62,8 +71,8 @@ const config: Config = {
   },
 
   customFields: {
-    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
-    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+    documentServer: isProduction ? 'https://api.docs.onlyoffice.com/' : 'https://api.docs.teamlab.info/',
+    documentServerSecret: isProduction ? 'NsOb2yUBaI9yme0wbkGAapi' : 'MYSECRET',
   },
 
   future: {
