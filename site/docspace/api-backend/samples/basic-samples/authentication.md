@@ -132,7 +132,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
 
 ## Step 1: Authenticate a user
 
-A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authenticate-me.api.mdx) to authenticate with `USER_CREDENTIALS`.
+A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authenticate-me.md) to authenticate with `USER_CREDENTIALS`.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -183,7 +183,7 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
 
 ## Step 2: Check authentication
 
-A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/get-is-authentificated.api.mdx) to check authentication success.
+A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/get-is-authentificated.md) to check authentication success.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

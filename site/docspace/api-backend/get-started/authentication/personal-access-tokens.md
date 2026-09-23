@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Follow these steps to generate a PAT and use it to authorize your DocSpace account:
 
-1. Send a POST request containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
+1. Send a POST request containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.md) address:
 
     <Tabs>
       <TabItem value="request" label="Request">

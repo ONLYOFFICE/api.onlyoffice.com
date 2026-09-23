@@ -13,9 +13,9 @@ The triggers for a particular webhook are activated only if the webhook owner ha
 
 Instructions for creating and configuring webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
 
-API methods for working with webhooks are detailed [in this section](../../../../docspace/api-backend/usage-api/get-tenant-webhooks.api.mdx).
+API methods for working with webhooks are detailed [in this section](../../../../docspace/api-backend/usage-api/get-tenant-webhooks.md).
 
-A full list of available triggers can be obtained via [this method](../../../../docspace/api-backend/usage-api/get-webhook-triggers.api.mdx).
+A full list of available triggers can be obtained via [this method](../../../../docspace/api-backend/usage-api/get-webhook-triggers.md).
 
 The Node.js and Python examples demonstrating how to configure and handle events with webhooks can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/webhooks).
 
