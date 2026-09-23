@@ -1,19 +1,16 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/sdk/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # SDK
 
-The SDK class is responsible for managing multiple `SDKInstance` objects.
-It provides methods to initialize instances with different configurations for various DocSpace modes.
+Manages multiple [SDKInstance](SDKInstance.md) objects and provides convenience wrappers
+for each [SDKMode](../enumerations/SDKMode.md).
 
-## Remarks
-
-- If an instance with the same `frameId` already exists, it will be reinitialized.
-- Otherwise, a new instance is created, initialized, and added to the list of instances.
-- All configuration properties, except `frameId` and `src`, have sensible defaults.
+Calling any `init*` method with a `frameId` that already exists reinitializes
+the existing instance; otherwise a new instance is created and stored in [SDK.frames](#SDK-frames).
 
 ## Example
 
@@ -21,9 +18,9 @@ It provides methods to initialize instances with different configurations for va
 import { SDK } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const instance = sdk.init({
-  frameId: 'my-docspace',
-  src: 'https://your-docspace.com'
+const instance = sdk.initManager({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
 });
 ```
 
@@ -47,12 +44,12 @@ new SDK(): SDK;
 init(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes an SDK instance with the provided configuration.
+Core factory method. Creates a new [SDKInstance](SDKInstance.md) for the given config,
+or reinitializes the existing one if `frameId` is already in [SDK.frames](#SDK-frames).
+Stores the result in [SDK.frames](#SDK-frames).
 
-This is the core initialization method that creates or reinitializes SDK instances.
-If an instance with the same `frameId` already exists, it reinitializes that instance.
-Otherwise, it creates a new instance, initializes it, and adds it to the list of instances.
-This method provides the foundation for all DocSpace integrations.
+Prefer the mode-specific wrappers ([SDK.initManager](#initmanager), [SDK.initEditor](#initeditor), etc.)
+which set `mode` automatically.
 
 #### Parameters
 
@@ -60,7 +57,7 @@ This method provides the foundation for all DocSpace integrations.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the SDK instance. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -68,146 +65,76 @@ This method provides the foundation for all DocSpace integrations.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The created or reinitialized [SDKInstance](SDKInstance.md).
 
-#### Examples
-
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const instance = sdk.init({
-  frameId: 'main-docspace',
-  src: 'https://your-docspace.com'
-});
-
-console.log('DocSpace initialized with ID:', instance.config.frameId);
-```
-
-```typescript
-import { SDK, SDKMode, Theme, ManagerViewMode, FilterSortBy, FilterSortOrder } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const managerInstance = sdk.init({
-  frameId: 'file-manager',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.Manager,
-  width: '1200px',
-  height: '800px',
-  theme: Theme.Dark,
-  viewAs: ManagerViewMode.Table,
-  showFilter: true,
-  showMenu: true,
-  viewTableColumns: 'Name,Size,Type,Modified Date,Author',
-  filter: {
-    count: '50',
-    sortBy: FilterSortBy.Name,
-    sortOrder: FilterSortOrder.Ascending,
-    withSubfolders: true
-  },
-  events: {
-    onAppReady: () => {
-      console.log('File manager ready');
-    },
-    onContentReady: () => {
-      console.log('Content loaded successfully');
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, SDKMode, EditorType, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const editorInstance = sdk.init({
-  frameId: 'document-editor',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.Editor,
-  id: 'document-123',
-  width: '100%',
-  height: '100vh',
-  theme: Theme.System,
-  editorType: EditorType.Desktop,
-  editorCustomization: {
-    customer: {
-      name: 'Your Company',
-      logo: 'https://your-company.com/logo.png'
-    },
-    features: {
-      spellcheck: true,
-      chat: true,
-      comments: true
-    },
-    goback: {
-      url: '/documents',
-      text: 'Back to Documents'
-    }
-  },
-  events: {
-    onAppReady: () => {
-      console.log('Editor initialized');
-    },
-    onEditorCloseCallback: () => {
-      console.log('Editor close requested');
-    },
-    onAppError: (error) => {
-      console.error('Editor error:', error);
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, SDKMode, SelectorFilterType } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-
-const manager = sdk.init({
-  frameId: 'main-manager',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.Manager,
-  showHeader: true,
-  showMenu: true,
-  withBreadCrumbs: true
-});
-
-const selector = sdk.init({
-  frameId: 'file-selector',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.FileSelector,
-  selectorType: SelectorFilterType.All,
-  showSelectorHeader: true,
-  showSelectorCancel: true,
-  acceptButtonLabel: 'Select Files',
-  cancelButtonLabel: 'Cancel',
-  width: '800px',
-  height: '600px'
-});
-
-console.log('Active instances:', Object.keys(sdk.frames));
-```
+#### Example
 
 ```typescript
 import { SDK, SDKMode } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
 
-let instance = sdk.init({
-  frameId: 'dynamic-frame',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.Viewer,
-  id: 'document-456'
+// Create a manager instance
+const instance = sdk.init({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  mode: SDKMode.Manager,
 });
 
-instance = sdk.init({
-  frameId: 'dynamic-frame',
-  src: 'https://your-docspace.com',
-  mode: SDKMode.Editor,
-  id: 'document-789'
-});
+// Reinitialize the same frame in a different mode — sdk.frames['ds-frame'] is reused
+sdk.init({ frameId: 'ds-frame', src: 'https://portal.example.com', mode: SDKMode.Editor, id: 42 });
+```
 
-console.log('Frame reinitialized in editor mode');
+***
+
+### initChat()
+
+```ts
+initChat(config: TFrameConfig): SDKInstance;
+```
+
+Initializes a frame in [SDKMode.Chat](../enumerations/SDKMode.md#Chat) mode — a full-page AI chat interface.
+The chat is bound to the AI agent when [TFrameConfig.agentId](../type-aliases/TFrameConfig.md#agentId) is set;
+otherwise it is bound to the current user. Forces `mode` to [SDKMode.Chat](../enumerations/SDKMode.md#Chat).
+
+:::note
+The page renders a composer only when the frame's user is signed in and is not a guest,
+and the portal has AI enabled. Otherwise it shows a no-access state (a "Chat history"
+control without an input) and fires no event — [TFrameEvents.onAppReady](../type-aliases/TFrameEvents.md#onAppReady) still
+arrives. In OAuth mode the token must carry the scopes that read the user's profile;
+a token that cannot load the profile lands in the same no-access state.
+:::
+
+#### Parameters
+
+<APITable name="initChat">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+
+</APITable>
+
+#### Returns
+
+[`SDKInstance`](SDKInstance.md)
+
+The initialized [SDKInstance](SDKInstance.md).
+
+#### Example
+
+```typescript
+import { SDK } from '@onlyoffice/docspace-sdk-js';
+
+const sdk = new SDK();
+const chat = sdk.initChat({
+  frameId: 'ds-chat',
+  src: 'https://portal.example.com',
+  agentId: 123,
+  events: {
+    onAppReady: () => console.log('chat ready'),
+  },
+});
 ```
 
 ***
@@ -218,11 +145,8 @@ console.log('Frame reinitialized in editor mode');
 initEditor(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the editor with the given configuration.
-
-The editor mode provides full document editing capabilities, allowing users to create,
-modify, and collaborate on documents in real-time. This mode supports various document
-types, including text documents, spreadsheets, and presentations with collaborative features.
+Initializes a frame in [SDKMode.Editor](../enumerations/SDKMode.md#Editor) mode — full document editor.
+Forces `mode` to [SDKMode.Editor](../enumerations/SDKMode.md#Editor). Requires [TFrameConfig.id](../type-aliases/TFrameConfig.md#id).
 
 #### Parameters
 
@@ -230,7 +154,7 @@ types, including text documents, spreadsheets, and presentations with collaborat
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the editor. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -238,159 +162,24 @@ types, including text documents, spreadsheets, and presentations with collaborat
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
 
-#### Examples
-
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const editor = sdk.initEditor({
-  frameId: 'document-editor',
-  src: 'https://your-docspace.com',
-  id: 'document-123'
-});
-
-console.log('Document editor initialized');
-```
-
-```typescript
-import { SDK, EditorType, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const collaborativeEditor = sdk.initEditor({
-  frameId: 'team-editor',
-  src: 'https://your-docspace.com',
-  id: 'team-document-456',
-  width: '1200px',
-  height: '900px',
-  editorType: EditorType.Desktop,
-  theme: Theme.System,
-  locale: 'en-US',
-  editorCustomization: {
-    customer: {
-      name: 'Your Company',
-      logo: 'https://your-company.com/logo.png'
-    },
-    features: {
-      spellcheck: true,
-      comments: true,
-      chat: true,
-      review: true
-    },
-    goback: {
-      text: 'Back to Documents',
-      url: '/documents'
-    }
-  },
-  events: {
-    onAppReady: () => {
-      console.log('Collaborative editor ready');
-    },
-    onContentReady: () => {
-      console.log('Document loaded for editing');
-    },
-    onEditorCloseCallback: () => {
-      console.log('Editor close requested');
-    },
-    onAppError: (error) => {
-      console.error('Editor error:', error);
-    }
-  }
-});
-```
+#### Example
 
 ```typescript
 import { SDK, EditorType } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const restrictedEditor = sdk.initEditor({
-  frameId: 'restricted-editor',
-  src: 'https://your-docspace.com',
-  id: 'sensitive-document-789',
-  requestToken: 'restricted-access-token',
-  width: '1000px',
-  height: '700px',
-  editorType: EditorType.Embedded,
-  editorCustomization: {
-    toolbar: {
-      file: {
-        print: false,
-        download: false
-      },
-      plugins: {
-        autostart: [],
-        pluginsData: []
-      }
-    },
-    anonymous: {
-      request: false,
-      label: 'Restricted Editor'
-    },
-    goback: {
-      url: '/documents',
-      text: 'Back to Documents'
-    }
-  },
+const instance = sdk.initEditor({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  id: 42,
+  editorType: EditorType.Desktop,
+  editorCustomization: { autosave: true, forcesave: true },
   events: {
-    onAppReady: () => {
-      console.log('Restricted editor ready');
-    },
-    onEditorCloseCallback: () => {
-      console.log('Editor close requested');
-      window.location.href = '/documents';
-    },
-    onAppError: (error) => {
-      console.error('Restricted editor error:', error);
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, EditorType, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const mobileEditor = sdk.initEditor({
-  frameId: 'mobile-editor',
-  src: 'https://your-docspace.com',
-  id: 'mobile-document-101',
-  width: '100%',
-  height: '100vh',
-  editorType: EditorType.Mobile,
-  theme: Theme.System,
-  locale: navigator.language,
-  editorCustomization: {
-    mobile: {
-      forceView: false,
-      standardView: false
-    },
-    features: {
-      zoom: true,
-      spellcheck: true
-    },
-    customer: {
-      name: 'Mobile App',
-      logo: 'https://example.com/mobile-logo.png'
-    }
+    onAppReady: () => console.log('ready'),
+    onEditorCloseCallback: () => history.back(),
   },
-  events: {
-    onAppReady: () => {
-      console.log('Mobile editor ready');
-      document.body.style.overflow = 'hidden';
-    },
-    onContentReady: () => {
-      console.log('Mobile document loaded');
-    },
-    onEditorCloseCallback: () => {
-      console.log('Mobile editor closing');
-      document.body.style.overflow = 'auto';
-    },
-    onAppError: (error) => {
-      console.error('Mobile editor error:', error);
-    }
-  }
 });
 ```
 
@@ -402,11 +191,9 @@ const mobileEditor = sdk.initEditor({
 initFileSelector(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the file selector with the given configuration.
-
-The file selector mode provides a specialized interface for browsing and selecting
-files and folders within DocSpace. This is perfect for integration scenarios where
-users need to pick specific files for operations, attachments, or imports.
+Initializes a frame in [SDKMode.FileSelector](../enumerations/SDKMode.md#FileSelector) mode — a dialog for selecting a file.
+Forces `mode` to [SDKMode.FileSelector](../enumerations/SDKMode.md#FileSelector).
+The selected file is returned via [TFrameEvents.onSelectCallback](../type-aliases/TFrameEvents.md#onSelectCallback).
 
 #### Parameters
 
@@ -414,7 +201,7 @@ users need to pick specific files for operations, attachments, or imports.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the file selector. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -422,161 +209,78 @@ users need to pick specific files for operations, attachments, or imports.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
 
-#### Examples
-
-```typescript
-import { SDK, SelectorFilterType } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const fileSelector = sdk.initFileSelector({
-  frameId: 'file-selector',
-  src: 'https://your-docspace.com'
-});
-
-console.log('File selector initialized');
-```
+#### Example
 
 ```typescript
 import { SDK, SelectorFilterType } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const documentSelector = sdk.initFileSelector({
-  frameId: 'document-picker',
-  src: 'https://your-docspace.com',
-  width: '900px',
-  height: '600px',
+const instance = sdk.initFileSelector({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
   selectorType: SelectorFilterType.UserOnly,
-  acceptButtonLabel: 'Attach Document',
-  cancelButtonLabel: 'Cancel Attachment',
-  showSelectorHeader: true,
-  showSelectorCancel: true,
-  withSearch: true,
   withBreadCrumbs: true,
-  withSubtitle: true,
-  buttonColor: '#4caf50',
-  events: {
-    onAppReady: () => {
-      console.log('Document selector ready');
-    },
-    onSelectCallback: (fileData) => {
-      console.log('Document selected for attachment:', fileData);
-      attachFileToForm(fileData);
-    },
-    onCloseCallback: () => {
-      console.log('Document selection cancelled');
-    }
-  }
-});
-
-function attachFileToForm(fileData) {
-  console.log('Attaching file:', fileData.name, 'ID:', fileData.id);
-}
-```
-
-```typescript
-import { SDK, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const imageSelector = sdk.initFileSelector({
-  frameId: 'image-gallery-selector',
-  src: 'https://your-docspace.com',
-  width: '1000px',
-  height: '700px',
-  id: 'media-folder-123',
-  theme: Theme.Dark,
-  locale: 'en-US',
-  acceptButtonLabel: 'Select Image',
-  cancelButtonLabel: 'Cancel Selection',
-  showSelectorHeader: true,
-  showSelectorCancel: true,
   withSearch: true,
-  withBreadCrumbs: true,
-  withSubtitle: true,
-  filterParam: 'image',
   events: {
-    onAppReady: () => {
-      console.log('Image selector ready');
-    },
-    onSelectCallback: (imageData) => {
-      console.log('Image selected:', imageData);
-      addImageToGallery(imageData);
-    },
-    onCloseCallback: () => {
-      console.log('Image selection cancelled');
-    },
-    onAppError: (error) => {
-      console.error('Image selector error:', error);
-    }
-  }
+    onSelectCallback: (file) => console.log('selected:', file),
+    onCloseCallback: () => console.log('cancelled'),
+  },
 });
-
-function addImageToGallery(imageData) {
-  console.log('Adding image to gallery:', imageData.name);
-}
-```
-
-```typescript
-import { SDK, SelectorFilterType } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const batchFileSelector = sdk.initFileSelector({
-  frameId: 'batch-file-selector',
-  src: 'https://your-docspace.com',
-  requestToken: 'batch-operation-token',
-  width: '1200px',
-  height: '800px',
-  selectorType: SelectorFilterType.All,
-  acceptButtonLabel: 'Process Selected Files',
-  cancelButtonLabel: 'Cancel Batch Operation',
-  showSelectorHeader: true,
-  showSelectorCancel: true,
-  withSearch: true,
-  withBreadCrumbs: true,
-  destroyText: 'Batch file selector closed',
-  events: {
-    onAppReady: () => {
-      console.log('Batch file selector ready');
-    },
-    onSelectCallback: (selectedFiles) => {
-      console.log('Files selected for batch processing:', selectedFiles);
-      const files = Array.isArray(selectedFiles) ? selectedFiles : [selectedFiles];
-      processBatchFiles(files);
-    },
-    onCloseCallback: () => {
-      console.log('Batch operation cancelled');
-    },
-    onAuthSuccess: (data) => {
-      console.log('Batch operation authentication successful');
-    },
-    onAppError: (error) => {
-      console.error('Batch file selector error:', error);
-    }
-  }
-});
-
-function processBatchFiles(files) {
-  console.log(`Processing ${files.length} files in batch operation`);
-  files.forEach((file, index) => {
-    console.log(`Processing file ${index + 1}:`, file.name);
-  });
-}
 ```
 
 ***
 
-### initFrame()
+### initForms()
+
+```ts
+initForms(config: TFrameConfig): SDKInstance;
+```
+
+Initializes a frame in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode — a forms gallery for the room specified by [TFrameConfig.id](../type-aliases/TFrameConfig.md#id).
+Forces `mode` to [SDKMode.Forms](../enumerations/SDKMode.md#Forms). Sets `showMenu` to `true` by default.
+
+#### Parameters
+
+<APITable name="initForms">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+
+</APITable>
+
+#### Returns
+
+[`SDKInstance`](SDKInstance.md)
+
+The initialized [SDKInstance](SDKInstance.md).
+
+#### Example
+
+```typescript
+import { SDK } from '@onlyoffice/docspace-sdk-js';
+
+const sdk = new SDK();
+const forms = sdk.initForms({
+  frameId: 'ds-forms',
+  src: 'https://portal.example.com',
+  id: 'room-id',
+  showMenu: true,
+  events: {
+    onCustomAction: (data) => console.log('action:', data),
+  },
+});
+```
+
+***
+
+### ~~initFrame()~~
 
 ```ts
 initFrame(config: TFrameConfig): SDKInstance;
 ```
-
-Initializes the frame with the given configuration.
-
-This is a convenience wrapper around the main `init` method that creates or reinitializes
-a DocSpace frame with the specified configuration. It is equivalent to calling `init` directly,
-but provides a more explicit method name for frame initialization use cases.
 
 #### Parameters
 
@@ -584,7 +288,7 @@ but provides a more explicit method name for frame initialization use cases.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the frame. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -592,102 +296,11 @@ but provides a more explicit method name for frame initialization use cases.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The created or reinitialized [SDKInstance](SDKInstance.md).
 
-#### Examples
+#### Deprecated
 
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const frame = sdk.initFrame({
-  frameId: 'main-docspace-frame',
-  src: 'https://your-docspace.com'
-});
-
-console.log('Frame ready:', frame.config.frameId);
-```
-
-```typescript
-import { SDK, Theme, ManagerViewMode } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const customFrame = sdk.initFrame({
-  frameId: 'custom-styled-frame',
-  src: 'https://your-docspace.com',
-  width: '1024px',
-  height: '768px',
-  theme: Theme.Dark,
-  viewAs: ManagerViewMode.Tile,
-  showHeader: true,
-  showMenu: true,
-  buttonColor: '#ff6b35'
-});
-```
-
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-
-const frame = sdk.initFrame({
-  frameId: 'event-driven-frame',
-  src: 'https://your-docspace.com',
-  width: '100%',
-  height: '800px',
-  checkCSP: true,
-  events: {
-    onAppReady: () => {
-      console.log('Frame application ready');
-    },
-    onContentReady: () => {
-      console.log('Frame content loaded');
-    },
-    onAppError: (error) => {
-      console.error('Frame error:', error);
-    },
-    onAuthSuccess: (data) => {
-      console.log('Authentication successful:', data);
-    },
-    onNoAccess: () => {
-      console.warn('Access denied to requested resource');
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-
-try {
-  const secureFrame = sdk.initFrame({
-    frameId: 'secure-frame',
-    src: 'https://your-docspace.com',
-    requestToken: 'your-auth-token-here',
-    width: '100%',
-    height: '100vh',
-    theme: Theme.System,
-    locale: 'en-US',
-    checkCSP: true,
-    showSignOut: false,
-    events: {
-      onAppReady: () => {
-        console.log('Secure frame initialized successfully');
-      },
-      onAuthSuccess: (data) => {
-        console.log('Token authentication successful');
-      },
-      onAppError: (error) => {
-        console.error('Security or initialization error:', error);
-      }
-    }
-  });
-} catch (error) {
-  console.error('Failed to initialize secure frame:', error);
-}
-```
+Use [SDK.init](#init) or a mode-specific wrapper instead.
 
 ***
 
@@ -697,12 +310,9 @@ try {
 initManager(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the manager with the provided configuration.
-
-The manager mode provides a full-featured file management interface for DocSpace,
-allowing users to browse, organize, upload, and manage files and folders.
-This mode is ideal for creating file management dashboards and administrative interfaces.
-Manager mode is the default SDK mode.
+Initializes a frame in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) mode — a file/folder browser
+with full CRUD operations on rooms, folders, and files.
+Forces `mode` to [SDKMode.Manager](../enumerations/SDKMode.md#Manager).
 
 #### Parameters
 
@@ -710,7 +320,7 @@ Manager mode is the default SDK mode.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for initializing the manager. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -718,7 +328,103 @@ Manager mode is the default SDK mode.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
+
+#### Example
+
+```typescript
+import { SDK, ManagerViewMode, FilterSortBy, FilterSortOrder } from '@onlyoffice/docspace-sdk-js';
+
+const sdk = new SDK();
+const instance = sdk.initManager({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  viewAs: ManagerViewMode.Table,
+  showFilter: true,
+  showMenu: true,
+  filter: { sortBy: FilterSortBy.Name, sortOrder: FilterSortOrder.Ascending },
+  events: {
+    onAppReady: () => console.log('ready'),
+    onFileManagerClick: (item) => console.log('clicked:', item),
+  },
+});
+```
+
+***
+
+### initPersonal()
+
+```ts
+initPersonal(config: TFrameConfig): SDKInstance;
+```
+
+Initializes a frame in [SDKMode.Personal](../enumerations/SDKMode.md#Personal) mode — a file/folder manager for the
+user's personal space: My Documents, Favorites, Recent, and Trash. The initial
+section is controlled by [TFrameConfig.personalDestination](../type-aliases/TFrameConfig.md#personalDestination).
+
+Forces `mode` to [SDKMode.Personal](../enumerations/SDKMode.md#Personal). Defaults `showMenu` and `infoPanelVisible` to `true`.
+
+#### Parameters
+
+<APITable name="initPersonal">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+
+</APITable>
+
+#### Returns
+
+[`SDKInstance`](SDKInstance.md)
+
+The initialized [SDKInstance](SDKInstance.md).
+
+#### Example
+
+```typescript
+import { SDK } from '@onlyoffice/docspace-sdk-js';
+
+const sdk = new SDK();
+const personal = sdk.initPersonal({
+  frameId: 'ds-personal',
+  src: 'https://portal.example.com',
+  personalDestination: 'favorites',
+  events: {
+    onAppReady: () => console.log('ready'),
+    onNavigate: (data) => console.log('section:', data.section),
+    onFileManagerClick: (file) => console.log('opened file:', file),
+  },
+});
+```
+
+***
+
+### initPublicRoom()
+
+```ts
+initPublicRoom(config: TFrameConfig): SDKInstance;
+```
+
+Initializes a frame in [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom) mode — anonymous access to view,
+edit, comment on, and review documents in a public room.
+Forces `mode` to [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom). Requires [TFrameConfig.requestToken](../type-aliases/TFrameConfig.md#requestToken).
+
+#### Parameters
+
+<APITable name="initPublicRoom">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+
+</APITable>
+
+#### Returns
+
+[`SDKInstance`](SDKInstance.md)
+
+The initialized [SDKInstance](SDKInstance.md).
 
 #### Examples
 
@@ -726,113 +432,24 @@ The initialized SDK instance.
 import { SDK } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const manager = sdk.initManager({
-  frameId: 'file-manager',
-  src: 'https://your-docspace.com'
-});
-
-console.log('File manager initialized');
-```
-
-```typescript
-import { SDK, ManagerViewMode, FilterSortBy, FilterSortOrder, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const projectManager = sdk.initManager({
-  frameId: 'project-files',
-  src: 'https://your-docspace.com',
-  id: 'project-folder-123',
-  width: '1200px',
-  height: '700px',
-  theme: Theme.Dark,
-  viewAs: ManagerViewMode.Table,
-  showFilter: true,
-  showMenu: true,
-  viewTableColumns: 'Name,Size,Type,Modified Date,Author,Tags',
-  filter: {
-    count: '50',
-    sortBy: FilterSortBy.Name,
-    sortOrder: FilterSortOrder.Ascending,
-    withSubfolders: true,
-    search: 'project'
+const instance = sdk.initPublicRoom({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  requestToken: 'public-room-token',
+  events: {
+    onAppReady: () => console.log('ready'),
   },
-  withSearch: true,
-  withBreadCrumbs: true
 });
 ```
 
+With filter and header options.
 ```typescript
-import { SDK, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const teamManager = sdk.initManager({
-  frameId: 'team-workspace',
-  src: 'https://your-docspace.com',
-  width: '100%',
-  height: '800px',
-  theme: Theme.System,
-  locale: 'en-US',
-  showHeader: true,
-  showMenu: true,
-  showSignOut: false,
-  showSettings: true,
-  infoPanelVisible: true,
-  events: {
-    onAppReady: () => {
-      console.log('Team workspace ready');
-    },
-    onContentReady: () => {
-      console.log('Team workspace content loaded');
-    },
-    onSelectCallback: (data) => {
-      console.log('Item selected:', data);
-    },
-    onDownload: (data) => {
-      console.log('Download initiated:', data);
-    },
-    onAppError: (error) => {
-      console.error('Team workspace error:', error);
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, ManagerViewMode, HeaderBannerDisplaying } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const adminManager = sdk.initManager({
-  frameId: 'admin-panel',
-  src: 'https://your-docspace.com',
-  requestToken: 'admin-auth-token',
-  width: '1400px',
-  height: '900px',
-  viewAs: ManagerViewMode.Tile,
-  showHeader: true,
-  showHeaderBanner: HeaderBannerDisplaying.Info,
-  showMenu: true,
+const instance = sdk.initPublicRoom({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  requestToken: 'public-room-token',
   showFilter: true,
-  showSettings: true,
-  showSignOut: true,
-  buttonColor: '#e74c3c',
-  destroyText: 'Admin panel session has ended',
-  events: {
-    onAppReady: () => {
-      console.log('Admin panel ready');
-    },
-    onContentReady: () => {
-      console.log('Admin content loaded');
-    },
-    onAuthSuccess: (data) => {
-      console.log('Admin authentication successful');
-    },
-    onSignOut: () => {
-      console.log('Admin signed out');
-    },
-    onAppError: (error) => {
-      console.error('Admin panel error:', error);
-    }
-  }
+  showHeader: true,
 });
 ```
 
@@ -844,11 +461,9 @@ const adminManager = sdk.initManager({
 initRoomSelector(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the room selector with the provided configuration.
-
-The room selector mode provides a specialized interface for browsing and selecting
-rooms within DocSpace. This is ideal for applications that need users to choose
-specific rooms for file operations, integrations, or access control.
+Initializes a frame in [SDKMode.RoomSelector](../enumerations/SDKMode.md#RoomSelector) mode — a dialog for selecting a room.
+Forces `mode` to [SDKMode.RoomSelector](../enumerations/SDKMode.md#RoomSelector).
+The selected room is returned via [TFrameEvents.onSelectCallback](../type-aliases/TFrameEvents.md#onSelectCallback).
 
 #### Parameters
 
@@ -856,7 +471,7 @@ specific rooms for file operations, integrations, or access control.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for initializing the room selector. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -864,133 +479,24 @@ specific rooms for file operations, integrations, or access control.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
 
-#### Examples
-
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const roomSelector = sdk.initRoomSelector({
-  frameId: 'room-selector',
-  src: 'https://your-docspace.com'
-});
-
-console.log('Room selector initialized');
-```
+#### Example
 
 ```typescript
 import { SDK } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const customRoomSelector = sdk.initRoomSelector({
-  frameId: 'project-room-selector',
-  src: 'https://your-docspace.com',
-  width: '800px',
-  height: '500px',
-  roomType: 'collaboration',
-  acceptButtonLabel: 'Select Project Room',
-  cancelButtonLabel: 'Cancel Selection',
+const instance = sdk.initRoomSelector({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
   showSelectorHeader: true,
   showSelectorCancel: true,
-  withSearch: true,
-  buttonColor: '#2196f3',
   events: {
-    onSelectCallback: (data) => {
-      console.log('Room selected:', data);
-      handleRoomSelection(data);
-    },
-    onCloseCallback: () => {
-      console.log('Room selector closed');
-    },
-    onAppError: (error) => {
-      console.error('Room selector error:', error);
-    }
-  }
+    onSelectCallback: (room) => console.log('selected:', room),
+    onCloseCallback: () => console.log('cancelled'),
+  },
 });
-
-function handleRoomSelection(roomData) {
-  console.log('Selected room ID:', roomData.id);
-  console.log('Selected room name:', roomData.name);
-}
-```
-
-```typescript
-import { SDK, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const uploadRoomSelector = sdk.initRoomSelector({
-  frameId: 'upload-destination',
-  src: 'https://your-docspace.com',
-  width: '700px',
-  height: '450px',
-  theme: Theme.System,
-  locale: 'en-US',
-  acceptButtonLabel: 'Upload Here',
-  cancelButtonLabel: 'Cancel Upload',
-  showSelectorHeader: true,
-  showSelectorCancel: true,
-  withSearch: true,
-  events: {
-    onAppReady: () => {
-      console.log('Upload room selector ready');
-    },
-    onSelectCallback: (roomData) => {
-      console.log('Upload destination selected:', roomData);
-      initiateFileUpload(roomData.id, roomData.name);
-    },
-    onCloseCallback: () => {
-      console.log('Upload cancelled by user');
-    }
-  }
-});
-
-function initiateFileUpload(roomId, roomName) {
-  console.log(`Starting upload to room: ${roomName} (ID: ${roomId})`);
-}
-```
-
-```typescript
-import { SDK } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const accessControlRoomSelector = sdk.initRoomSelector({
-  frameId: 'access-room-selector',
-  src: 'https://your-docspace.com',
-  requestToken: 'admin-access-token',
-  width: '900px',
-  height: '600px',
-  roomType: 'custom',
-  acceptButtonLabel: 'Grant Access',
-  cancelButtonLabel: 'Deny Access',
-  showSelectorHeader: true,
-  showSelectorCancel: true,
-  withSearch: true,
-  destroyText: 'Access control selector closed',
-  events: {
-    onAppReady: () => {
-      console.log('Access control room selector ready');
-    },
-    onSelectCallback: (roomData) => {
-      console.log('Access granted to room:', roomData);
-      grantUserAccess(roomData.id, roomData.permissions);
-    },
-    onCloseCallback: () => {
-      console.log('Access control cancelled');
-    },
-    onAuthSuccess: (data) => {
-      console.log('Admin authentication successful');
-    },
-    onAppError: (error) => {
-      console.error('Access control error:', error);
-    }
-  }
-});
-
-function grantUserAccess(roomId, permissions) {
-  console.log('Granting access to room:', roomId, 'with permissions:', permissions);
-}
 ```
 
 ***
@@ -1001,11 +507,10 @@ function grantUserAccess(roomId, permissions) {
 initSystem(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the system with the provided configuration.
-
-The system mode provides administrative and system-level functionality for DocSpace.
-This mode is typically used for system configuration, user management, and administrative
-tasks that require elevated permissions and system-wide access.
+Initializes a frame in [SDKMode.System](../enumerations/SDKMode.md#System) mode — a blank page with a loader,
+used to call system methods ([SDKInstance.login](SDKInstance.md#login), [SDKInstance.logout](SDKInstance.md#logout),
+[SDKInstance.getUserInfo](SDKInstance.md#getuserinfo)) without rendering any ONLYOFFICE Apps UI.
+Forces `mode` to [SDKMode.System](../enumerations/SDKMode.md#System).
 
 #### Parameters
 
@@ -1013,7 +518,7 @@ tasks that require elevated permissions and system-wide access.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for initializing the system. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -1021,21 +526,68 @@ tasks that require elevated permissions and system-wide access.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
 
 #### Example
 
 ```typescript
+import { SDK } from '@onlyoffice/docspace-sdk-js';
+
 const sdk = new SDK();
-const systemPanel = sdk.initSystem({
-  frameId: 'system-panel',
-  src: 'https://your-docspace.com',
-  width: '100%',
-  height: '800px',
-  theme: 'auto'
+const system = sdk.initSystem({
+  frameId: 'ds-system',
+  src: 'https://portal.example.com',
+  events: { onAppReady: () => console.log('system ready') },
 });
 
-console.log('System panel initialized');
+system.getUserInfo().then((user) => console.log('current user:', user));
+```
+
+***
+
+### initUploader()
+
+```ts
+initUploader(config: TFrameConfig): SDKInstance;
+```
+
+Initializes a frame in [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader) mode — a file upload interface.
+Forces `mode` to [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader). Requires [TFrameConfig.id](../type-aliases/TFrameConfig.md#id)
+(the target folder ID).
+
+#### Parameters
+
+<APITable name="initUploader">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+
+</APITable>
+
+#### Returns
+
+[`SDKInstance`](SDKInstance.md)
+
+The initialized [SDKInstance](SDKInstance.md).
+
+#### Example
+
+```typescript
+import { SDK } from '@onlyoffice/docspace-sdk-js';
+
+const sdk = new SDK();
+const uploader = sdk.initUploader({
+  frameId: 'ds-uploader',
+  src: 'https://portal.example.com',
+  id: 'folder-id',
+  acceptExtensions: '.docx,.xlsx,.pdf',
+  isMultipleUpload: true,
+  events: {
+    onUploadSuccess: (file) => console.log('uploaded:', file),
+    onUploadError: (err) => console.error('error:', err),
+  },
+});
 ```
 
 ***
@@ -1046,11 +598,8 @@ console.log('System panel initialized');
 initViewer(config: TFrameConfig): SDKInstance;
 ```
 
-Initializes the viewer with the provided configuration.
-
-The viewer mode provides a read-only interface for viewing documents, presentations,
-and other files in DocSpace. This mode is perfect for document preview functionality,
-content review, and read-only document sharing scenarios.
+Initializes a frame in [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer) mode — read-only document viewer.
+Forces `mode` to [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer). Requires [TFrameConfig.id](../type-aliases/TFrameConfig.md#id).
 
 #### Parameters
 
@@ -1058,7 +607,7 @@ content review, and read-only document sharing scenarios.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the viewer. Only `frameId` and `src` are required. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -1066,121 +615,23 @@ content review, and read-only document sharing scenarios.
 
 [`SDKInstance`](SDKInstance.md)
 
-The initialized SDK instance.
+The initialized [SDKInstance](SDKInstance.md).
 
-#### Examples
+#### Example
 
 ```typescript
 import { SDK } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-const viewer = sdk.initViewer({
-  frameId: 'document-viewer',
-  src: 'https://your-docspace.com',
-  id: 'document-123'
-});
-
-console.log('Document viewer initialized');
-```
-
-```typescript
-import { SDK, EditorType, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const presentationViewer = sdk.initViewer({
-  frameId: 'presentation-display',
-  src: 'https://your-docspace.com',
-  id: 'presentation-456',
-  width: '1024px',
-  height: '768px',
-  theme: Theme.Dark,
-  locale: 'en-US',
-  editorType: EditorType.Desktop,
-  showTitle: true,
+const instance = sdk.initViewer({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  id: 42,
   events: {
-    onAppReady: () => {
-      console.log('Presentation viewer ready');
-    },
-    onContentReady: () => {
-      console.log('Presentation content rendered');
-    },
-    onAppError: (error) => {
-      console.error('Viewer error:', error);
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, Theme } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const publicViewer = sdk.initViewer({
-  frameId: 'public-document',
-  src: 'https://your-docspace.com',
-  id: 'shared-document-789',
-  requestToken: 'public-access-token-xyz',
-  width: '100%',
-  height: '700px',
-  theme: Theme.System,
-  showTitle: true,
-  showHeader: false,
-  noLoader: false,
-  destroyText: 'Document viewer has been closed',
-  events: {
-    onAppReady: () => {
-      console.log('Public viewer ready');
-    },
-    onContentReady: () => {
-      console.log('Public document loaded');
-    },
-    onNoAccess: () => {
-      console.warn('Access denied to public document');
-    },
-    onNotFound: () => {
-      console.warn('Public document not found');
-    }
-  }
-});
-```
-
-```typescript
-import { SDK, EditorType } from '@onlyoffice/docspace-sdk-js';
-
-const sdk = new SDK();
-const controlledViewer = sdk.initViewer({
-  frameId: 'controlled-viewer',
-  src: 'https://your-docspace.com',
-  id: 'protected-document-101',
-  width: '900px',
-  height: '800px',
-  editorType: EditorType.Embedded,
-  editorCustomization: {
-    anonymous: {
-      request: false,
-      label: 'Guest Viewer'
-    },
-    goback: {
-      text: 'Close Viewer',
-      url: '/documents'
-    },
-    customer: {
-      name: 'Document Portal',
-      logo: 'https://example.com/logo.png'
-    }
+    onAppReady: () => console.log('ready'),
+    onNoAccess: () => console.warn('access denied'),
+    onNotFound: () => console.warn('document not found'),
   },
-  events: {
-    onAppReady: () => {
-      console.log('Controlled viewer ready');
-    },
-    onEditorCloseCallback: () => {
-      console.log('Viewer close requested');
-      window.location.href = '/documents';
-    },
-    onAppError: (error) => {
-      console.error('Controlled viewer error:', error);
-    }
-  }
 });
 ```
 
@@ -1190,6 +641,6 @@ const controlledViewer = sdk.initViewer({
 
 | Property | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| `frames` | `Record`\<`string`, [`SDKInstance`](SDKInstance.md)\> | `{}` | Maps frame IDs to their corresponding `SDKInstance` objects. Used to track and manage multiple SDK instances across different frames. |
+| `frames` | `Record`\<`string`, [`SDKInstance`](SDKInstance.md)\> | `{}` | Registry of all active instances, keyed by [TFrameConfig.frameId](../type-aliases/TFrameConfig.md#frameId). Updated automatically by every `init*` call. |
 
 </APITable>

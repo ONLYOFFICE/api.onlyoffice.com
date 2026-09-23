@@ -1,15 +1,26 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # TFrameFilter
 
-The frame filter criteria.
+Filter and pagination parameters for the file list in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) mode.
+Passed via [TFrameConfig.filter](TFrameConfig.md#filter).
 
 ```ts
 type TFrameFilter = object;
+```
+
+## Example
+
+```typescript
+sdk.initFrame({
+  mode: "manager",
+  filter: { count: "50", sortBy: "AZ", sortOrder: "ascending" },
+  ...
+});
 ```
 
 ## Properties
@@ -18,12 +29,12 @@ type TFrameFilter = object;
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `count`? | `string` | The number of files and folders displayed on one page. |
-| `folder`? | `string` | The target folder. |
-| `page`? | `string` | The page number to start from. |
-| `search`? | `string` | The query used to search for files and folders. |
-| `sortBy`? | [`TFilterSortBy`](TFilterSortBy.md) | The parameter used to sort the list of files and folders. |
-| `sortOrder`? | [`TFilterSortOrder`](TFilterSortOrder.md) | The sort direction for the list of files and folders. |
-| `withSubfolders`? | `boolean` | Specifies whether to exclude subfolders when searching for files. |
+| `count`? | `string` | Items per page. Default: `"100"`. |
+| `folder`? | `string` | Target folder ID. Set automatically when [TFrameConfig.id](TFrameConfig.md#id) is provided in manager mode. |
+| `page`? | `string` | Page number (1-based). Default: `"1"`. |
+| `search`? | `string` | Search query. Empty string = no search. |
+| `sortBy`? | [`TFilterSortBy`](TFilterSortBy.md) | Sort criterion. See [FilterSortBy](../enumerations/FilterSortBy.md). Default: [FilterSortBy.ModifiedDate](../enumerations/FilterSortBy.md#ModifiedDate). |
+| `sortOrder`? | [`TFilterSortOrder`](TFilterSortOrder.md) | Sort direction. See [FilterSortOrder](../enumerations/FilterSortOrder.md). Default: [FilterSortOrder.Descending](../enumerations/FilterSortOrder.md#Descending). |
+| `withSubfolders`? | `boolean` | Include sub-folder contents in search results. Default: `false`. |
 
 </APITable>

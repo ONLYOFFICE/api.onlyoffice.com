@@ -1,16 +1,16 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/instance/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # SDKInstance
 
-Represents an SDK instance for managing frames and communicating with DocSpace.
+Manages a single ONLYOFFICE Apps iframe, handles postMessage communication,
+and exposes methods for operating on the embedded ONLYOFFICE Apps UI.
 
-The `SDKInstance` class provides methods for initializing, managing, and communicating with
-DocSpace frames. It handles frame creation, message passing, and various operations like
-file management, user authentication, and room management.
+Instances are created and stored by [SDK](SDK.md). Do not construct directly —
+use [SDK.init](SDK.md#init) or any `init*` convenience wrapper.
 
 ## Example
 
@@ -18,17 +18,12 @@ file management, user authentication, and room management.
 import { SDK } from '@onlyoffice/docspace-sdk-js';
 
 const sdk = new SDK();
-
-const instance = sdk.initFrame({
-  frameId: 'docspace-frame',
-  src: 'https://your-docspace-domain.com',
-  width: '100%',
-  height: '600px',
-  mode: 'manager'
+const instance = sdk.initManager({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
 });
 
-const userInfo = await instance.getUserInfo();
-console.log('Current user:', userInfo);
+instance.getUserInfo().then((user) => console.log(user));
 ```
 
 ## Constructors
@@ -43,9 +38,9 @@ new SDKInstance(config: TFrameConfig): SDKInstance;
 
 <APITable name="Constructor">
 
-| Parameter | Type |
-| ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Initial frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -61,11 +56,7 @@ new SDKInstance(config: TFrameConfig): SDKInstance;
 addTagsToRoom(roomId: string, tags: string[]): Promise<object>;
 ```
 
-Adds tags to a specified room for organization and categorization.
-
-This method allows applying multiple tags to a room simultaneously, helping organize
-rooms by project, department, priority, or any custom categorization system. Tags improve
-discoverability and enable advanced filtering and search capabilities.
+Adds the specified tags to a room.
 
 #### Parameters
 
@@ -73,8 +64,8 @@ discoverability and enable advanced filtering and search capabilities.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `roomId` | `string` | The unique identifier of the room to which tags will be added. |
-| `tags` | `string`[] | An array of tag names to be added to the room. Tags should already exist or will be created automatically. |
+| `roomId` | `string` | The room ID. |
+| `tags` | `string`[] | Tag names to add. |
 
 </APITable>
 
@@ -82,30 +73,21 @@ discoverability and enable advanced filtering and search capabilities.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the result of the operation and updated room metadata.
+A promise that resolves with the result of the operation.
 
 #### Examples
 
 ```typescript
-await sdkInstance.addTagsToRoom('room-123', ['Project Alpha', 'High Priority']);
-console.log('Tags added successfully to project room');
+await instance.addTagsToRoom('room-123', ['design', 'q1']);
 ```
 
+Create a new tag with [SDKInstance.createTag](#createtag) and apply it
+to a newly created room via [SDKInstance.createRoom](#createroom).
 ```typescript
-const projectTags = ['Engineering', 'Development', 'Q1-2024'];
-const result = await sdkInstance.addTagsToRoom('room-456', projectTags);
-console.log('Room organized with tags:', projectTags);
+await instance.createTag('design');
+const room = await instance.createRoom('Creative Hub', 'collaboration');
+await instance.addTagsToRoom(room.id, ['design']);
 ```
-
-#### Throws
-
-May throw an error if the room ID is invalid, tags do not exist, or the user lacks permission to modify the room tags.
-
-#### See
-
- - [createTag](#createtag) - Creates new tags before applying them.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
- - [getRooms](#getrooms) - Retrieves rooms with their current tags.
 
 ***
 
@@ -117,15 +99,10 @@ createFile(
    title: string, 
    templateId: string, 
    formId: string
-): Promise<object>;
+): Promise<TFileInfo>;
 ```
 
-Creates a new file in the specified folder using templates and forms.
-
-This method allows programmatically creating different file types in DocSpace,
-including documents, spreadsheets, presentations, and custom forms. It is possible to specify
-templates for consistent formatting and associate forms for structured data collection.
-The created file will inherit permissions from the parent folder.
+Creates a new file in the specified folder.
 
 #### Parameters
 
@@ -133,65 +110,41 @@ The created file will inherit permissions from the parent folder.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `folderId` | `string` | The ID of the folder where the file will be created. Must be a valid folder ID with write access. |
-| `title` | `string` | The title of the new file. Used as the filename with the appropriate extension based on the template type. |
-| `templateId` | `string` | The ID of the template for the new file. Determines file type and initial content structure. |
-| `formId` | `string` | The ID of the form associated with the new file. Use an empty string if no form is needed. |
+| `folderId` | `string` | The ID of the target folder. |
+| `title` | `string` | The file title (without extension). |
+| `templateId` | `string` | The ID of the template to use for the new file. |
+| `formId` | `string` | The ID of the associated form, or an empty string if none. |
 
 </APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFileInfo`](../type-aliases/TFileInfo.md)\>
 
-A promise that resolves to an object representing the created file with properties like id, title, type, and creation date.
+A promise that resolves with [TFileInfo](../type-aliases/TFileInfo.md).
 
 #### Examples
 
-```javascript
-const file = await docSpace.createFile(
-  "folder123",
-  "Project Proposal",
-  "template456",
-  "form789"
-);
-console.log('Created file:', file.title, 'ID:', file.id);
+```typescript
+const file = await instance.createFile('folder-123', 'Project Proposal', 'template-456', '');
+console.log(file);
 ```
 
-```javascript
-try {
-  const document = await docSpace.createFile(
-    "documents-folder-id",
-    "Meeting Notes",
-    "document-template-id",
-    ""
-  );
-  console.log('Document created successfully:', document.id);
-} catch (error) {
-  console.error('File creation failed:', error.message);
-}
+Create a file and immediately open it in the editor using [SDKInstance.setConfig](#setconfig).
+```typescript
+const file = await instance.createFile('folder-123', 'Report', 'template-456', '');
+await instance.setConfig({ id: file.id, mode: SDKMode.Editor }, true);
 ```
-
-#### See
-
- - [createFolder](#createfolder) - Creates folders to organize files.
- - [getFiles](#getfiles) - Retrieves created files.
- - [initFrame](#initframe) - Opens files in editor mode.
 
 ***
 
 ### createFolder()
 
 ```ts
-createFolder(parentFolderId: string, title: string): Promise<object>;
+createFolder(parentFolderId: string, title: string): Promise<TFolderInfo>;
 ```
 
-Creates a new folder within the specified parent folder for content organization.
-
-This method allows programmatically creating folders to organize files and other folders
-in a hierarchical structure. Created folders inherit permissions from the parent folder
-and can be used to establish project structures, departmental organization, or any
-custom file management system. The operation respects DocSpace access controls.
+Creates a new folder inside the specified parent folder.
 
 #### Parameters
 
@@ -199,44 +152,29 @@ custom file management system. The operation respects DocSpace access controls.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `parentFolderId` | `string` | The ID of the parent folder where the new folder will be created. Must be a valid folder ID with write permissions. |
-| `title` | `string` | The title of the new folder. Should be unique within the parent folder and follow naming conventions. |
+| `parentFolderId` | `string` | The ID of the parent folder. |
+| `title` | `string` | The folder title. |
 
 </APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFolderInfo`](../type-aliases/TFolderInfo.md)\>
 
-A promise that resolves to an object containing the details of the created folder, including id, title, creation date, and access permissions.
+A promise that resolves with [TFolderInfo](../type-aliases/TFolderInfo.md).
 
 #### Examples
 
-```javascript
-const projectFolder = await docSpace.createFolder(
-  "root-folder-id",
-  "Project Alpha"
-);
-console.log('Created folder:', projectFolder.title, 'ID:', projectFolder.id);
+```typescript
+const folder = await instance.createFolder('parent-123', 'Archive');
+console.log(folder);
 ```
 
-```javascript
-try {
-  const newFolder = await docSpace.createFolder(
-    "parent-folder-id",
-    "Marketing Materials"
-  );
-  console.log('Folder created successfully:', newFolder.id);
-} catch (error) {
-  console.error('Folder creation failed:', error.message);
-}
+Create a folder and immediately add a file inside it using [SDKInstance.createFile](#createfile).
+```typescript
+const folder = await instance.createFolder('parent-123', 'Q1 Reports');
+await instance.createFile(folder.id, 'Summary', 'template-456', '');
 ```
-
-#### See
-
- - [createFile](#createfile) - Creates files within folders.
- - [getFolders](#getfolders) - Retrieves folder lists.
- - [getFolderInfo](#getfolderinfo) - Provides detailed folder information.
 
 ***
 
@@ -246,10 +184,9 @@ try {
 createHash(password: string, hashSettings: object): Promise<object>;
 ```
 
-Creates a hash for the given password using the specified hash settings.
+Creates a password hash using the provided hash settings.
 
-This method is typically used before authentication to create a secure hash
-of the user's password that can be safely transmitted and stored.
+Obtain `hashSettings` from [SDKInstance.getHashSettings](#gethashsettings) before calling this method.
 
 #### Parameters
 
@@ -257,8 +194,8 @@ of the user's password that can be safely transmitted and stored.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `password` | `string` | The plaintext password to be hashed. |
-| `hashSettings` | `object` | A configuration object for the hash function, containing algorithm settings. |
+| `password` | `string` | The plaintext password to hash. |
+| `hashSettings` | `object` | Hash algorithm settings from [SDKInstance.getHashSettings](#gethashsettings). |
 
 </APITable>
 
@@ -266,27 +203,22 @@ of the user's password that can be safely transmitted and stored.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the generated password hash.
+A promise that resolves with the generated hash.
 
-#### Example
+#### Examples
 
 ```typescript
-const hashSettings = await sdkInstance.getHashSettings();
-
-const hashResult = await sdkInstance.createHash('userPassword123', hashSettings);
-console.log('Password hash:', hashResult.hash);
-
-await sdkInstance.login('user@example.com', hashResult.hash);
+const settings = await instance.getHashSettings();
+const hash = await instance.createHash('p@ssw0rd', settings);
+console.log(hash);
 ```
 
-#### Throws
-
-Throws an error if the password is empty or the hash settings are invalid.
-
-#### See
-
- - [getHashSettings](#gethashsettings) - Retrieves the current hash settings.
- - [login](#login) - Uses the generated hash for authentication.
+Full login flow using [SDKInstance.getHashSettings](#gethashsettings) and [SDKInstance.login](#login).
+```typescript
+const settings = await instance.getHashSettings();
+const hash = await instance.createHash('p@ssw0rd', settings);
+await instance.login('user@example.com', hash, undefined, true);
+```
 
 ***
 
@@ -296,20 +228,11 @@ Throws an error if the password is empty or the hash settings are invalid.
 createRoom(
    title: string, 
    roomType: string | number, 
-   quota?: number, 
-   tags?: string[], 
-   color?: string, 
-   cover?: string, 
-   indexing?: boolean, 
-   denyDownload?: boolean
-): Promise<object>;
+   options?: TCreateRoomOptions
+): Promise<TRoomInfo>;
 ```
 
-Creates a new room with the specified parameters and configuration.
-
-This method allows programmatically creating different types of rooms in DocSpace,
-including collaboration rooms, public rooms, and custom rooms. It is possible to configure
-room properties like quotas, tags, branding, and access permissions during creation.
+Creates a new room with the given type and optional settings.
 
 #### Parameters
 
@@ -317,58 +240,32 @@ room properties like quotas, tags, branding, and access permissions during creat
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `title` | `string` | The display name/title for the new room. |
-| `roomType` | `string` \| `number` | The type of room to create (collaboration, public, custom, etc.). |
-| `quota`? | `number` | Optional storage quota limit for the room in bytes. |
-| `tags`? | `string`[] | Optional array of tags to categorize and organize the room. |
-| `color`? | `string` | Optional hex color code for the room's branding theme. |
-| `cover`? | `string` | Optional cover image URL or file path for the room. |
-| `indexing`? | `boolean` | Optional flag to enable ordisable search indexing (VDR rooms only). |
-| `denyDownload`? | `boolean` | Optional flag to prevent file downloads (VDR rooms only). |
+| `title` | `string` | The room display name. |
+| `roomType` | `string` \| `number` | The room type (e.g. `1` for custom, `2` for filling forms). |
+| `options`? | [`TCreateRoomOptions`](../type-aliases/TCreateRoomOptions.md) | Optional room settings. See [TCreateRoomOptions](../type-aliases/TCreateRoomOptions.md). |
 
 </APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TRoomInfo`](../type-aliases/TRoomInfo.md)\>
 
-A promise that resolves to an object containing the created room's details.
+A promise that resolves with [TRoomInfo](../type-aliases/TRoomInfo.md).
 
 #### Examples
 
 ```typescript
-const room = await sdkInstance.createRoom(
-  'Project Alpha Team',
-  'collaboration'
-);
-
-console.log('Created room:', room.id);
-console.log('Room URL:', room.url);
+const room = await instance.createRoom('Design Team', 1, { tags: ['design'] });
+console.log(room);
 ```
 
+Create a room, then create a new tag and apply it using [SDKInstance.createTag](#createtag)
+and [SDKInstance.addTagsToRoom](#addtagstoroom).
 ```typescript
-const projectRoom = await sdkInstance.createRoom(
-  'Q1 Marketing Campaign',
-  'collaboration',
-  5368709120,
-  ['marketing', 'q1-2024', 'campaign'],
-  '#FF6B35',
-  'https://example.com/covers/marketing-cover.jpg'
-);
-
-console.log('Room created with quota:', projectRoom.quota);
-console.log('Room tags:', projectRoom.tags);
+const room = await instance.createRoom('Marketing', 1);
+await instance.createTag('campaigns');
+await instance.addTagsToRoom(room.id, ['campaigns']);
 ```
-
-#### Throws
-
-Throws an error if room creation fails due to permissions, quota limits, or invalid parameters.
-
-#### See
-
- - [getRooms](#getrooms) - Retrieves existing rooms.
- - [addTagsToRoom](#addtagstoroom) - Adds tags to the created room.
- - [createFolder](#createfolder) - Creates folders within the room.
 
 ***
 
@@ -378,11 +275,7 @@ Throws an error if room creation fails due to permissions, quota limits, or inva
 createTag(name: string): Promise<object>;
 ```
 
-Creates a new tag with the specified name.
-
-Tags provide a powerful way to organize and categorize content across the DocSpace portal.
-They can be used for project management, content categorization, workflow organization,
-and creating custom filtering systems for better content discovery.
+Creates a new tag with the given name.
 
 #### Parameters
 
@@ -390,7 +283,7 @@ and creating custom filtering systems for better content discovery.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `name` | `string` | The name of the tag to be created. It should be descriptive and unique. |
+| `name` | `string` | The tag name. |
 
 </APITable>
 
@@ -398,36 +291,20 @@ and creating custom filtering systems for better content discovery.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object representing the created tag with its ID and metadata.
+A promise that resolves with the created tag data.
 
 #### Examples
 
 ```typescript
-const tag = await sdkInstance.createTag('Project Alpha');
-console.log('Tag created:', tag.name, 'with ID:', tag.id);
+const tag = await instance.createTag('Project Alpha');
+console.log(tag);
 ```
 
+Create a tag and immediately apply it to a room using [SDKInstance.addTagsToRoom](#addtagstoroom).
 ```typescript
-const tagNames = ['High Priority', 'Marketing', 'Review'];
-
-for (const tagName of tagNames) {
-  try {
-    const tag = await sdkInstance.createTag(tagName);
-    console.log(`Created tag: ${tagName}`);
-  } catch (error) {
-    console.error(`Failed to create tag ${tagName}:`, error);
-  }
-}
+await instance.createTag('archived');
+await instance.addTagsToRoom('room-123', ['archived']);
 ```
-
-#### Throws
-
-May throw an error if thetag name is invalid, already exists, or user lacks permission to create tags.
-
-#### See
-
- - [addTagsToRoom](#addtagstoroom) - Applies created tags to rooms.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
 
 ***
 
@@ -437,15 +314,15 @@ May throw an error if thetag name is invalid, already exists, or user lacks perm
 destroyFrame(): void;
 ```
 
-Destroys the current frame instance and performs comprehensive cleanup operations.
+Tears down the iframe and releases all resources associated with this instance.
 
-This method performs a complete teardown of the DocSpace frame and all associated resources,
-ensuring proper memory management and preventing resource leaks in single-page applications.
-It's essential for dynamic applications that create and destroy frames frequently, as well as
-for implementing graceful shutdowns and transitions between different DocSpace instances.
+Replaces the container with a plain `<div>` (preserving the original `frameId` and CSS classes,
+showing [TFrameConfig.destroyText](../type-aliases/TFrameConfig.md#destroyText)), removes the `message` listener, rejects pending
+method calls with [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected), and removes the instance from the global
+`DocSpace.SDK.frames` registry.
 
-After calling this method, the instance will no longer be functional,
-and a new instance should be created if needed.
+The call is synchronous and complete when it returns: the placeholder keeps the `frameId`, so
+an `SDK.init*` call on the same `frameId` may follow immediately — there is nothing to await.
 
 #### Returns
 
@@ -454,45 +331,38 @@ and a new instance should be created if needed.
 #### Examples
 
 ```typescript
-sdkInstance.destroyFrame();
-console.log('Frame destroyed and resources cleaned up');
+instance.destroyFrame();
 ```
 
+Destroy and reinitialize the same frame in a different mode using [SDK.initEditor](SDK.md#initeditor).
 ```typescript
-try {
-  sdkInstance.destroyFrame();
-  
-  const newInstance = new SDKInstance({
-    frameId: 'new-docspace-frame',
-    src: 'https://your-docspace.com',
-    mode: 'editor'
-  });
-  newInstance.initFrame(newInstance.getConfig());
-} catch (error) {
-  console.error('Failed to replace frame:', error);
-}
+instance.destroyFrame();
+sdk.initEditor({ frameId: 'ds-frame', src: 'https://portal.example.com', id: 99 });
 ```
-
-#### See
-
- - [initFrame](#initframe) - Creates new frame instances.
- - [setConfig](#setconfig) - Updates frame configuration before cleanup.
- - [getConfig](#getconfig) - Retrieves the current configuration before destruction.
 
 ***
 
 ### executeInEditor()
 
 ```ts
-executeInEditor(callback: (instance: object, data?: object) => void, data?: object): void;
+executeInEditor(callback: (editor: any, asc: any, data?: any) => void, data?: object): Promise<object>;
 ```
 
-Executes custom functions within the editor context for advanced document manipulation.
+Runs a callback function inside the active document editor.
 
-This method allows applications to run custom code directly within the document editor
-environment, enabling advanced programmatic operations, content manipulation, automation
-tasks, and integration with external systems. The callback function receives the editor
-instance and optional data, providing full access to editor APIs and document content.
+Only meaningful when the frame is in [SDKMode.Editor](../enumerations/SDKMode.md#Editor) or [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer) mode.
+
+The callback is serialized with `Function.prototype.toString` and re-created inside the
+editor frame, so it must not reference outer-scope variables, closures or imports — pass
+everything it needs through `data`. The editor frame invokes it as
+`callback(editor, asc, data)`:
+
+- `editor` — the DocsAPI editor object (`window.DocEditor.instances[...]`). Call
+  `editor.createConnector()` yourself to get a connector with `callCommand` /
+  `executeMethod`; the SDK does not create one for you.
+- `asc` — `window.Asc` of the editor frame. `asc.scope` is serialized into every
+  `connector.callCommand(fn)` and is the way to pass data into Document Builder code.
+- `data` — the `data` argument of this method, JSON-serialized.
 
 #### Parameters
 
@@ -500,59 +370,56 @@ instance and optional data, providing full access to editor APIs and document co
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `callback` | (`instance`: `object`, `data?`: `object`) => `void` | The function to be executed within the editor context. Receives the editor instance and optional data. |
-| `data`? | `object` | Optional object providing context or configuration for the callback. |
+| `callback` | (`editor`: `any`, `asc`: `any`, `data?`: `any`) => `void` | The function to run inside the editor context. Invoked as `callback(editor, asc, data)` — note that `data` is the **third** argument. |
+| `data`? | `object` | Optional JSON-serializable data passed as the third argument to `callback`. |
 
 </APITable>
 
 #### Returns
 
-`void`
+`Promise`\<`object`\>
 
 #### Examples
 
 ```typescript
-const templateData = {
-  customerName: 'Acme Corporation',
-  projectName: 'Digital Transformation',
-  startDate: new Date().toLocaleDateString()
-};
-
-docSpace.executeInEditor((editorInstance, data) => {
-  editorInstance.insertText(`
-    PROJECT PROPOSAL
-    Client: ${data.customerName}
-    Project: ${data.projectName}
-    Date: ${data.startDate}
-  `);
-}, templateData);
+instance.executeInEditor((editor, _asc, data) => {
+  editor.insertText(data.text);
+}, { text: 'Hello, World!' });
 ```
 
+Initialize editor mode with [SDK.initEditor](SDK.md#initeditor) and inject content when the document is ready.
 ```typescript
-docSpace.executeInEditor((editorInstance, data) => {
-  const documentContent = editorInstance.getDocumentContent();
-  
-  if (data.checkSpelling) {
-    const spellCheckResults = editorInstance.runSpellCheck();
-    spellCheckResults.forEach(issue => {
-      if (issue.confidence > 0.8) {
-        editorInstance.replaceText(issue.position, issue.suggestion);
-      }
-    });
-  }
-  
-  editorInstance.saveDocument();
-}, { checkSpelling: true });
+const instance = sdk.initEditor({
+  frameId: 'ds-editor',
+  src: 'https://portal.example.com',
+  id: 42,
+  events: {
+    onEditorOpen: () => {
+      instance.executeInEditor((editor, _asc, data) => {
+        editor.insertText(data.header);
+      }, { header: 'Generated by SDK' });
+    },
+  },
+});
 ```
 
-#### Throws
-
-Throws an error if the editor context is not available or callback execution fails.
-
-#### See
-
- - [SDK.initEditor](SDK.md#initeditor) - Initializes the editor before executing custom functions.
- - [getSelection](#getselection) - Retrieves the selected content to operate on within the editor.
+Fill form fields with the Document Builder API through a connector. Data reaches the
+`callCommand` function via `Asc.scope`; the function itself must be closure-free.
+```typescript
+instance.executeInEditor(function (editor, asc, data) {
+  const connector = editor.createConnector();
+  asc.scope = { values: data.values };
+  connector.callCommand(function () {
+    const doc = Api.GetDocument();
+    for (const form of doc.GetAllForms()) {
+      const value = Asc.scope.values[form.GetFormKey()];
+      if (value === undefined) continue;
+      if (form.GetFormType() === 'checkBoxForm') form.SetChecked(!!value);
+      else form.SetText(String(value));
+    }
+  });
+}, { values: { FullName: 'Jane Doe', Agree: true } });
+```
 
 ***
 
@@ -562,338 +429,190 @@ Throws an error if the editor context is not available or callback execution fai
 getConfig(): TFrameConfig;
 ```
 
-Retrieves the current configuration object for the SDK instance.
-
-This method returns a copy of the current configuration settings that define
-how the DocSpace frame is initialized and behaves. The configuration includes
-settings like frame dimensions, mode, theme, locale, event handlers, and more.
-This is useful for debugging, state management, or creating new instances with
-similar settings.
+Returns the current merged configuration object.
 
 #### Returns
 
 [`TFrameConfig`](../type-aliases/TFrameConfig.md)
 
-The current configuration object containing all active settings.
-  *
+The active [TFrameConfig](../type-aliases/TFrameConfig.md) for this instance.
 
 #### Examples
 
 ```typescript
-const config = sdkInstance.getConfig();
-
-console.log('Current mode:', config.mode);
-console.log('Frame dimensions:', config.width, 'x', config.height);
-console.log('Theme:', config.theme);
-console.log('Locale:', config.locale);
+const config = instance.getConfig();
+console.log(config.mode, config.src);
 ```
 
+Preserve existing settings when making a partial update via [SDKInstance.setConfig](#setconfig).
 ```typescript
-const currentConfig = sdkInstance.getConfig();
-const newConfig = {
-  ...currentConfig,
-  frameId: 'new-frame-id',
-  mode: 'editor',
-  id: 'different-document-id'
-};
-
-const newInstance = new SDKInstance(newConfig);
-newInstance.initFrame(newConfig);
+const config = instance.getConfig();
+await instance.setConfig({ ...config, theme: Theme.Dark });
 ```
-
-```typescript
-const config = sdkInstance.getConfig();
-
-if (config.mode === 'viewer') {
-  console.log('Document is in view-only mode');
-} else if (config.mode === 'editor') {
-  console.log('Document editing is available');
-}
-```
-
-```typescript
-const config = sdkInstance.getConfig();
-console.log('Full configuration:', JSON.stringify(config, null, 2));
-
-if (!config.src) {
-  console.error('Missing source URL in configuration');
-}
-```
-
-#### See
-
- - [setConfig](#setconfig) - Updates the configuration settings.
- - [initFrame](#initframe) - Performs the initial configuration setup.
 
 ***
 
 ### getFiles()
 
 ```ts
-getFiles(): Promise<object>;
+getFiles(): Promise<TFilesResponse>;
 ```
 
-Retrieves a list of files from the current context with comprehensive metadata.
-
-This method fetches all files accessible in the current context, providing detailed
-information about each file, including metadata, permissions, and modification history.
-It's essential for building file browsers, dashboards, and file management interfaces.
-The returned data respects user permissions and access controls.
+Returns the files in the folder currently open in the frame.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
-A promise that resolves to an object containing an array of file objects. Each file includes properties like id, title, type, extension, size, modified date, permissions, and access metadata.
+A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
 
 #### Examples
 
-```javascript
-const files = await docSpace.getFiles();
-console.log(`Found ${files.length} files`);
-
-files.forEach(file => {
-  console.log(`${file.title} (${file.type}) - Modified: ${file.modified}`);
-});
+```typescript
+const files = await instance.getFiles();
+console.log(files);
 ```
 
-```javascript
-const allFiles = await docSpace.getFiles();
-
-const documents = allFiles.filter(file =>
-  ['docx', 'doc', 'pdf'].includes(file.extension.toLowerCase())
-);
-
-console.log(`Found ${documents.length} document files`);
+Open the first file in viewer mode via [SDKInstance.setConfig](#setconfig).
+```typescript
+const files = await instance.getFiles();
+if (files.files[0]) {
+  await instance.setConfig({ id: files.files[0].id, mode: SDKMode.Viewer }, true);
+}
 ```
-
-#### See
-
- - [getFolders](#getfolders) - Retrieves information about folders.
- - [getList](#getlist) - Provides a combined listing of files and folders.
- - [createFile](#createfile) - Creates new files.
 
 ***
 
 ### getFolderInfo()
 
 ```ts
-getFolderInfo(): Promise<object>;
+getFolderInfo(): Promise<TFolderInfo>;
 ```
 
-Retrieves comprehensive information about the current or specified folder.
-
-This method provides detailed metadata about a folder, including its contents, permissions,
-sharing settings, and hierarchical position. It's essential for building detailed folder
-views, property dialogs, and administrative interfaces. The returned information includes
-both folder-specific data and aggregated statistics about contained items.
+Returns metadata about the folder currently open in the frame.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFolderInfo`](../type-aliases/TFolderInfo.md)\>
 
-A promise that resolves to an object containing comprehensive folder information, including id, title, path, parent information, file/folder counts, total size, permissions, sharing status, creation/modification dates, and access metadata.
+A promise that resolves with [TFolderInfo](../type-aliases/TFolderInfo.md).
 
 #### Examples
 
-```javascript
-const folderInfo = await docSpace.getFolderInfo();
-console.log('Folder:', folderInfo.title);
-console.log('Path:', folderInfo.path);
-console.log('Files:', folderInfo.fileCount);
-console.log('Subfolders:', folderInfo.folderCount);
-console.log('Total Size:', formatBytes(folderInfo.totalSize));
+```typescript
+const info = await instance.getFolderInfo();
+console.log(info);
 ```
 
-```javascript
-try {
-  const info = await docSpace.getFolderInfo();
-  
-  const canCreate = info.permissions.includes('create');
-  const canEdit = info.permissions.includes('edit');
-  
-  console.log(`Folder: ${info.title}`);
-  console.log(`Permissions: Create=${canCreate}, Edit=${canEdit}`);
-} catch (error) {
-  console.error('Failed to load folder info:', error);
+Check write access before calling [SDKInstance.createFolder](#createfolder).
+```typescript
+const info = await instance.getFolderInfo();
+if (info.security?.create) {
+  await instance.createFolder(info.id, 'Archive');
 }
 ```
-
-#### See
-
- - [getFolders](#getfolders) - Retrieves information for multiple folders.
- - [getFiles](#getfiles) - Gets the contents of a folder.
- - [createFolder](#createfolder) - Creates subfolders within the specified folder.
 
 ***
 
 ### getFolders()
 
 ```ts
-getFolders(): Promise<object>;
+getFolders(): Promise<TFilesResponse>;
 ```
 
-Retrieves a list of folders from the current context with detailed information.
-
-This method fetches all folders accessible in the current context, providing comprehensive
-information about folder structure, permissions, and contents. It's crucial for building
-navigation interfaces, folder browsers, and organizational tools. The method respects
-user access permissions and returns only the folders the user can view.
+Returns the subfolders of the folder currently open in the frame.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
-A promise that resolves to an object containing an array of folder objects. Each folder includes properties like id, title, parent id, number of files, number of folders, size, permissions, creation date, and sharing status.
+A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
 
 #### Examples
 
-```javascript
-const folders = await docSpace.getFolders();
-console.log(`Found ${folders.length} folders`);
-
-folders.forEach(folder => {
-  console.log(`${folder.title} - Files: ${folder.fileCount}, Subfolders: ${folder.folderCount}`);
-});
+```typescript
+const folders = await instance.getFolders();
+console.log(folders);
 ```
 
-```javascript
-const folders = await docSpace.getFolders();
-
-const editableFolders = folders.filter(folder => folder.permissions.edit);
-const sharedFolders = folders.filter(folder => folder.shared);
-
-console.log(`Editable: ${editableFolders.length}`);
-console.log(`Shared: ${sharedFolders.length}`);
+Navigate into the first subfolder via [SDKInstance.setConfig](#setconfig).
+```typescript
+const folders = await instance.getFolders();
+if (folders.folders[0]) {
+  await instance.setConfig({ id: folders.folders[0].id }, true);
+}
 ```
-
-#### See
-
- - [getFiles](#getfiles) - Retrieves information about files.
- - [getFolderInfo](#getfolderinfo) - Provides detailed information for a single folder.
- - [createFolder](#createfolder) - Creates new folders.
 
 ***
 
 ### getHashSettings()
 
 ```ts
-getHashSettings(): Promise<object>;
+getHashSettings(): Promise<THashSettings>;
 ```
 
-Retrieves the server's current password hashing configuration.
-
-This method fetches the cryptographic settings required for secure password hashing.
-These settings should be used with the `createHash()` method to ensure compatibility
-with the server's security requirements.
+Returns the server's password hash settings needed by [SDKInstance.createHash](#createhash).
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`THashSettings`](../type-aliases/THashSettings.md)\>
 
-A promise that resolves to an object containing hash algorithm settings.
+A promise that resolves with [THashSettings](../type-aliases/THashSettings.md).
 
 #### Examples
 
 ```typescript
-const hashSettings = await sdkInstance.getHashSettings();
-console.log('Hash algorithm:', hashSettings.algorithm);
-console.log('Salt length:', hashSettings.saltLength);
-console.log('Iterations:', hashSettings.iterations);
-
-const passwordHash = await sdkInstance.createHash('userPassword123', hashSettings);
-
-await sdkInstance.login('user@example.com', passwordHash.hash);
+const settings = await instance.getHashSettings();
+console.log(settings);
 ```
 
+Full authentication flow using [SDKInstance.createHash](#createhash) and [SDKInstance.login](#login).
 ```typescript
-async function authenticateUser(email: string, password: string) {
-  try {
-    const hashSettings = await sdkInstance.getHashSettings();
-
-    const hashResult = await sdkInstance.createHash(password, hashSettings);
-
-    const loginResult = await sdkInstance.login(email, hashResult.hash);
-
-    return loginResult;
-  } catch (error) {
-    console.error('Authentication failed:', error.message);
-    throw error;
-  }
-}
+const settings = await instance.getHashSettings();
+const hash = await instance.createHash('p@ssw0rd', settings);
+await instance.login('user@example.com', hash);
 ```
-
-#### Throws
-
-Throws an error if the hash settings cannot be retrieved from the server.
-
-#### See
-
- - [createHash](#createhash) - Creates password hashes using these settings.
- - [login](#login) - Authenticates users with hashed passwords.
 
 ***
 
 ### getList()
 
 ```ts
-getList(): Promise<object>;
+getList(): Promise<TFilesResponse>;
 ```
 
-Retrieves a combined list of files and folders from the current context.
+Returns all files and folders in the folder currently open in the frame.
 
-This method provides a unified view of all files and folders in the current location,
-making it ideal for building comprehensive file browsers, search interfaces, and
-content management systems. The returned list includes mixed content types with
-a consistent metadata structure, allowing unified handling and display.
+Use [SDKInstance.getFiles](#getfiles) or [SDKInstance.getFolders](#getfolders)
+when you need only one content type.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
-A promise that resolves to an object containing an array of mixed file and folder objects. Each item includes common properties like id, title, type ('file' or 'folder'), modified date, and type-specific metadata such as file size and extension or folder contents.
+A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
 
 #### Examples
 
-```javascript
-const items = await docSpace.getList();
-
-const files = items.filter(item => item.type === 'file');
-const folders = items.filter(item => item.type === 'folder');
-
-console.log(`Total items: ${items.length}`);
-console.log(`Files: ${files.length}, Folders: ${folders.length}`);
+```typescript
+const list = await instance.getList();
+console.log(list);
 ```
 
-```javascript
-const allItems = await docSpace.getList();
-
-const searchResults = allItems.filter(item =>
-  item.title.toLowerCase().includes('report')
-);
-
-console.log(`Found ${searchResults.length} items matching 'report'`);
+```typescript
+const list = await instance.getList();
+console.log('Files:', list.files.length, 'Folders:', list.folders.length);
 ```
-
-#### See
-
- - [getFiles](#getfiles) - Retrieves a files-only listing.
- - [getFolders](#getfolders) - Retrieves a folders-only listing.
- - [getFolderInfo](#getfolderinfo) - Provides information about the current folder.
 
 ***
 
 ### getRooms()
 
 ```ts
-getRooms(filter: TFrameFilter): Promise<object>;
+getRooms(filter: TFrameFilter): Promise<TRoomsResponse>;
 ```
 
-Retrieves a list of rooms based on the provided filter criteria.
-
-This method allows fetching rooms from DocSpace with various filtering options,
-including search terms, sorting, pagination, and room type filtering. It's essential
-for building room browsers, dashboards, and selection interfaces.
+Returns a list of rooms, filtered by `filter`.
 
 #### Parameters
 
@@ -901,168 +620,96 @@ for building room browsers, dashboards, and selection interfaces.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `filter` | [`TFrameFilter`](../type-aliases/TFrameFilter.md) | The criteria used to filter and sort the rooms. |
+| `filter` | [`TFrameFilter`](../type-aliases/TFrameFilter.md) | Filter and sort criteria. See [TFrameFilter](../type-aliases/TFrameFilter.md). |
 
 </APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TRoomsResponse`](../type-aliases/TRoomsResponse.md)\>
 
-A promise that resolves to an object containing the filtered rooms and metadata.
+A promise that resolves with [TRoomsResponse](../type-aliases/TRoomsResponse.md).
 
 #### Examples
 
 ```typescript
-const roomsResult = await sdkInstance.getRooms({
-  page: 1,
-  pageSize: 20
+const rooms = await instance.getRooms({
+  search: 'alpha',
+  sortBy: FilterSortBy.Name,
+  sortOrder: FilterSortOrder.Ascending,
 });
-
-console.log('Total rooms:', roomsResult.total);
-console.log('Rooms:', roomsResult.rooms);
+console.log(rooms);
 ```
 
+Find rooms and remove an outdated tag from each using [SDKInstance.removeTagsFromRoom](#removetagsfromroom).
 ```typescript
-const searchResults = await sdkInstance.getRooms({
-  filterValue: 'project',
-  roomType: 'collaboration',
-  tags: ['development', 'frontend'],
-  page: 1,
-  pageSize: 50,
-  sortBy: 'title',
-  sortOrder: 'asc'
-});
-
-console.log('Matching rooms:', searchResults.rooms.length);
+const rooms = await instance.getRooms({ search: 'sprint-22' });
+for (const room of rooms.folders) {
+  await instance.removeTagsFromRoom(room.id, ['in-progress']);
+}
 ```
-
-#### Throws
-
-May throw an error if the filter parameters are invalid or if the user lacks permission to access rooms.
-
-#### See
-
- - [createRoom](#createroom) - Creates new rooms.
- - [addTagsToRoom](#addtagstoroom) - Adds tags to existing rooms.
- - [removeTagsFromRoom](#removetagsfromroom) - Removes tags from rooms.
 
 ***
 
 ### getSelection()
 
 ```ts
-getSelection(): Promise<object>;
+getSelection(): Promise<TFileInfo[]>;
 ```
 
-Retrieves the current user selection for context-aware operations and bulk actions.
-
-This method returns detailed information about all currently selected items in the
-DocSpace interface, enabling applications to perform context-sensitive operations,
-bulk actions, and intelligent user interface updates. The selection includes both
-files and folders, with comprehensive metadata for each selected item.
+Returns the items currently selected in the frame.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TFileInfo`](../type-aliases/TFileInfo.md)[]\>
 
-A promise that resolves to the current selection object, containing selected items and metadata.
+A promise that resolves with an array of [TFileInfo](../type-aliases/TFileInfo.md).
 
 #### Examples
 
 ```typescript
-const selection = await docSpace.getSelection();
-console.log('Current selection:', selection);
-
-if (selection.items && selection.items.length > 0) {
-  const files = selection.items.filter(item => item.type === 'file');
-  const folders = selection.items.filter(item => item.type === 'folder');
-  console.log(`Selected: ${files.length} files, ${folders.length} folders`);
-}
+const selection = await instance.getSelection();
+console.log(selection);
 ```
 
+Pass the selection as context to [SDKInstance.openModal](#openmodal).
 ```typescript
-try {
-  const selection = await docSpace.getSelection();
-  
-  if (!selection.items?.length) {
-    console.log('No items selected');
-    return;
-  }
-  
-  const canDelete = selection.items.every(item => item.permissions.canDelete);
-  console.log('Can delete all selected items:', canDelete);
-} catch (error) {
-  console.error('Failed to get selection:', error);
+const selection = await instance.getSelection();
+if (selection.length > 0) {
+  await instance.openModal('share', { items: selection });
 }
 ```
-
-#### Throws
-
-Throws an error if unable to retrieve the current selection state.
-
-#### See
-
- - [getList](#getlist) - Retrieves all available items in the current context.
- - [openModal](#openmodal) - Opens modals using the selected items as context.
- - [setListView](#setlistview) - Optimizes the view mode based on selection patterns.
 
 ***
 
 ### getUserInfo()
 
 ```ts
-getUserInfo(): Promise<object>;
+getUserInfo(): Promise<TUserInfo>;
 ```
 
-Retrieves comprehensive information about the current user profile and session details.
-
-This method fetches detailed information about the currently authenticated user,
-including profile data, permissions, preferences, and session metadata. The
-information is essential for personalizing user interfaces, implementing role-based
-access controls, and displaying user-specific content and capabilities.
+Returns information about the currently authenticated user.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TUserInfo`](../type-aliases/TUserInfo.md)\>
 
-A promise that resolves to an object containing comprehensive user information and session data.
+A promise that resolves with [TUserInfo](../type-aliases/TUserInfo.md).
 
 #### Examples
 
 ```typescript
-const userInfo = await docSpace.getUserInfo();
-console.log('User information:', userInfo);
-console.log('User name:', userInfo.displayName);
-console.log('Email:', userInfo.email);
-console.log('Role:', userInfo.role);
-console.log('Status:', userInfo.isOnline ? 'Online' : 'Offline');
+const user = await instance.getUserInfo();
+console.log(user);
 ```
 
+Apply the user's preferred locale via [SDKInstance.setConfig](#setconfig).
 ```typescript
-try {
-  const userInfo = await docSpace.getUserInfo();
-  
-  const isAdmin = userInfo.role === 'admin';
-  const canManage = userInfo.role === 'manager' || isAdmin;
-  
-  console.log('User permissions:', { isAdmin, canManage });
-  
-  document.documentElement.setAttribute('data-theme', userInfo.theme || 'light');
-} catch (error) {
-  console.error('Failed to load user info:', error);
+const user = await instance.getUserInfo();
+if (user.cultureName) {
+  await instance.setConfig({ locale: user.cultureName });
 }
 ```
-
-#### Throws
-
-Throws an error if the user is not authenticated or user information cannot be retrieved.
-
-#### See
-
- - [login](#login) - Authenticates users before retrieving their information.
- - [logout](#logout) - Terminates user sessions and clears user data.
- - [setConfig](#setconfig) - Updates user preferences and configuration settings.
 
 ***
 
@@ -1072,11 +719,14 @@ Throws an error if the user is not authenticated or user information cannot be r
 initFrame(config: TFrameConfig): HTMLIFrameElement | null;
 ```
 
-Initializes an iframe with the given configuration and appends it to the target element.
+Inserts the ONLYOFFICE Apps iframe into the DOM element identified by [TFrameConfig.frameId](../type-aliases/TFrameConfig.md#frameId).
 
-This is the core method that sets up the DocSpace iframe within your application.
-It handles container creation, iframe setup, event handlers, and frame registration.
-The method supports various DocSpace modes, including viewer, editor, manager, and more.
+Merges `config` with [defaultConfig](../variables/defaultConfig.md) and the instance's stored config,
+replaces the target `<div>` with a container holding the iframe (and an optional loader),
+attaches the `message` listener, and registers the instance in the global
+`DocSpace.SDK.frames` registry.
+
+Called automatically by [SDK.init](SDK.md#init). Call again to reinitialize in-place.
 
 #### Parameters
 
@@ -1084,7 +734,7 @@ The method supports various DocSpace modes, including viewer, editor, manager, a
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The configuration object for the iframe, containing all initialization settings. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
 
@@ -1092,52 +742,33 @@ The method supports various DocSpace modes, including viewer, editor, manager, a
 
 `HTMLIFrameElement` \| `null`
 
-The created `HTMLIFrameElement`, or null if initialization fails (e.g., target element not found).
+The created `<iframe>` element, or `null` if the target element was not found.
 
 #### Examples
 
 ```typescript
-const iframe = sdkInstance.initFrame({
-  frameId: 'docspace-frame',
-  src: 'https://your-docspace.com',
-  mode: 'viewer',
-  width: '100%',
-  height: '600px',
-  id: 'document-123'
+const iframe = instance.initFrame({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  mode: SDKMode.Viewer,
+  id: 42,
 });
-
-if (iframe) {
-  console.log('Frame initialized successfully');
-} else {
-  console.error('Failed to initialize frame - target element not found');
-}
 ```
 
+With event handlers — see [TFrameEvents](../type-aliases/TFrameEvents.md) for the full list of available events.
 ```typescript
-const iframe = sdkInstance.initFrame({
-  frameId: 'editor-frame',
-  src: 'https://your-docspace.com',
-  mode: 'editor',
-  width: '100%',
-  height: '800px',
-  id: 'document-456',
+const iframe = instance.initFrame({
+  frameId: 'ds-editor',
+  src: 'https://portal.example.com',
+  mode: SDKMode.Editor,
+  id: 42,
   events: {
-    onContentReady: () => console.log('Editor loaded'),
-    onDocumentReady: () => console.log('Document ready for editing'),
-    onAppError: (error) => console.error('Editor error:', error)
-  }
+    onAppReady: () => console.log('ready'),
+    onEditorOpen: () => console.log('document opened'),
+    onEditorCloseCallback: () => history.back(),
+  },
 });
 ```
-
-#### Throws
-
-May throw an error if the configuration contains invalid values or the target element cannot be accessed.
-
-#### See
-
- - [setConfig](#setconfig) - Updates the configuration after initialization.
- - [getConfig](#getconfig) - Retrieves the current configuration.
- - [destroyFrame](#destroyframe) - Cleans up the frame properly.
 
 ***
 
@@ -1148,14 +779,26 @@ login(
    email: string, 
    passwordHash: string, 
    password?: string, 
-   session?: boolean
-): Promise<object>;
+   session?: boolean, 
+   code?: string
+): Promise<TLoginResult>;
 ```
 
-Authenticates a user with the provided credentials.
+Authenticates a user using email and a hashed password.
 
-This method supports both password hash and plaintext password authentication.
-For security reasons, it is recommended to use password hashing via the `createHash()` method.
+Obtain `passwordHash` from [SDKInstance.createHash](#createhash). The portal's SDK dispatcher
+(client 4.0.0) forwards only `email` and `passwordHash` to its sign-in and always requests a
+persistent session; the REST endpoint behind it would also take a plaintext password and a
+session flag, but neither reaches it from the frame.
+
+:::note
+The result is **resolved, never rejected** — see [TLoginResult](../type-aliases/TLoginResult.md). `url === "/"` means a
+session exists; a `url` under `/confirm/` means the account needs a second factor and no
+session was created — call `login` again with the same credentials and the one-time `code`;
+a `status` means the attempt failed. A portal whose SDK dispatcher predates the `code`
+argument ignores it and answers the challenge again; on such a portal the login page remains
+the only way to complete a two-factor sign-in.
+:::
 
 #### Parameters
 
@@ -1163,54 +806,39 @@ For security reasons, it is recommended to use password hashing via the `createH
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `email` | `string` | The user's email address used for authentication. |
-| `passwordHash` | `string` | The hashed password (recommended) obtained from the `createHash()` method. |
-| `password`? | `string` | Optional plaintext password (not recommended for production). |
-| `session`? | `boolean` | Optional flag to create a persistent session. The default value is `false`. |
+| `email` | `string` | The user's email address. |
+| `passwordHash` | `string` | The hashed password (from [SDKInstance.createHash](#createhash)). |
+| `password`? | `string` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); use `passwordHash`. |
+| `session`? | `boolean` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); the session is always persistent. |
+| `code`? | `string` | One-time code from the authenticator app or SMS; finishes a login that answered with a `/confirm/…` url. |
 
 </APITable>
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<[`TLoginResult`](../type-aliases/TLoginResult.md)\>
 
-A promise that resolves to an object containing the authentication result and user data.
+A promise that resolves with the authentication result — see [TLoginResult](../type-aliases/TLoginResult.md).
 
 #### Examples
 
+Login with a pre-hashed password from [SDKInstance.createHash](#createhash).
 ```typescript
-const hashSettings = await sdkInstance.getHashSettings();
-const hashResult = await sdkInstance.createHash('userPassword123', hashSettings);
-
-const loginResult = await sdkInstance.login(
-  'user@example.com',
-  hashResult.hash,
-  undefined,
-  true
-);
-
-console.log('Login successful:', loginResult.success);
-console.log('User data:', loginResult.user);
+const result = await instance.login('user@example.com', passwordHash);
+if (result.status) throw new Error(result.message ?? 'login failed');
 ```
 
+Two-factor sign-in using [SDKInstance.getHashSettings](#gethashsettings) and [SDKInstance.createHash](#createhash).
 ```typescript
-const loginResult = await sdkInstance.login(
-  'user@example.com',
-  '',
-  'userPassword123',
-  false
-);
+const settings = await instance.getHashSettings();
+const hash = await instance.createHash('p@ssw0rd', settings);
+const first = await instance.login('user@example.com', hash);
+if (first.url?.startsWith('/confirm/')) {
+  const code = await askUserForCode();
+  const second = await instance.login('user@example.com', hash, undefined, undefined, code);
+  if (second.status) throw new Error('wrong code');
+}
 ```
-
-#### Throws
-
-Throws an error if authentication fails or credentials are invalid.
-
-#### See
-
- - [createHash](#createhash) - Creates secure password hashes.
- - [getHashSettings](#gethashsettings) - Retrieves hash configuration.
- - [logout](#logout) - Ends the user session.
 
 ***
 
@@ -1220,39 +848,80 @@ Throws an error if authentication fails or credentials are invalid.
 logout(): Promise<object>;
 ```
 
-Ends the current user session and logs out the user.
-
-This method clears the user's authentication state and session data,
-effectively signing them out of the DocSpace application.
+Ends the current user session.
 
 #### Returns
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the logout confirmation.
+A promise that resolves with the logout result.
 
-#### Example
+#### Examples
 
 ```typescript
-const logoutResult = await sdkInstance.logout();
-console.log('Logout successful:', logoutResult.success);
-
-try {
-  await sdkInstance.logout();
-  console.log('User has been logged out successfully');
-  window.location.href = '/login';
-} catch (error) {
-  console.error('Logout failed:', error.message);
-}
+await instance.logout();
 ```
 
-#### Throws
+Log out and immediately authenticate as a different user using [SDKInstance.getHashSettings](#gethashsettings),
+[SDKInstance.createHash](#createhash), and [SDKInstance.login](#login).
+```typescript
+await instance.logout();
+const settings = await instance.getHashSettings();
+const hash = await instance.createHash('newpassword', settings);
+await instance.login('other@example.com', hash);
+```
 
-Throws an error if the logout operation fails.
+***
 
-#### See
+### navigateSection()
 
-[login](#login) - Authenticates a user and starts a session.
+```ts
+navigateSection(section: 
+  | "my-forms"
+  | "in-progress"
+  | "completed-forms"
+  | "library"
+  | "settings"
+  | "my-documents"
+  | "favorites"
+  | "recent"
+| "trash"): Promise<object>;
+```
+
+Navigates the frame to a specific section.
+Works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal) modes.
+
+#### Parameters
+
+<APITable name="navigateSection">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `section` | \| `"my-forms"` \| `"in-progress"` \| `"completed-forms"` \| `"library"` \| `"settings"` \| `"my-documents"` \| `"favorites"` \| `"recent"` \| `"trash"` | Target section. For [SDKMode.Forms](../enumerations/SDKMode.md#Forms) — [TFormsSection](../type-aliases/TFormsSection.md); for [SDKMode.Personal](../enumerations/SDKMode.md#Personal) — [TPersonalSection](../type-aliases/TPersonalSection.md). |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves when the navigation is complete.
+
+#### Examples
+
+Forms mode.
+```typescript
+await instance.navigateSection("completed-forms");
+```
+
+Personal mode.
+```typescript
+const personal = sdk.initPersonal({
+  frameId: 'ds-personal',
+  src: 'https://portal.example.com',
+});
+await personal.navigateSection("trash");
+```
 
 ***
 
@@ -1262,13 +931,7 @@ Throws an error if the logout operation fails.
 openModal(type: string, options: object): Promise<object>;
 ```
 
-Opens a modal dialog of the specified type with comprehensive configuration options.
-
-This method provides a unified interface for opening various types of modal dialogs
-within DocSpace, including file operations, room management, user settings, and
-administrative functions. Modals are displayed as overlay windows that maintain
-context with the parent application while providing focused interfaces for
-specific tasks.
+Opens a modal dialog of the specified type inside the frame.
 
 #### Parameters
 
@@ -1276,8 +939,8 @@ specific tasks.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `type` | `string` | The type of modal to open (e.g., "upload", "share", "properties", "settings"). |
-| `options` | `object` | A configuration object containing modal-specific options and event handlers. |
+| `type` | `string` | The modal type identifier. |
+| `options` | `object` | Modal-specific configuration options. |
 
 </APITable>
 
@@ -1285,44 +948,22 @@ specific tasks.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the result of the modal operation.
+A promise that resolves with the modal result.
 
 #### Examples
 
 ```typescript
-const result = await docSpace.openModal('upload', {
-  folderId: 'documents-folder-123',
-  allowedExtensions: ['.pdf', '.docx', '.xlsx'],
-  multiple: true
-});
-console.log('Upload completed:', result.uploadedFiles.length, 'files');
+const result = await instance.openModal('invite', { roomId: 42 });
+console.log(result);
 ```
 
+Open a share dialog for the items currently selected in the frame using [SDKInstance.getSelection](#getselection).
 ```typescript
-try {
-  const shareResult = await docSpace.openModal('share', {
-    itemId: 'room-456',
-    itemType: 'room',
-    shareMode: 'collaborate',
-    permissions: {
-      canEdit: true,
-      canDownload: true
-    }
-  });
-  console.log('Share completed:', shareResult.sharedWith);
-} catch (error) {
-  console.error('Share failed:', error);
+const selection = await instance.getSelection();
+if (selection.length > 0) {
+  await instance.openModal('share', { items: selection });
 }
 ```
-
-#### Throws
-
-Throws an error if the modal type is not supported or the configuration is invalid.
-
-#### See
-
- - [getSelection](#getselection) - Retrieves currently selected items to use with modals.
- - [setConfig](#setconfig) - Configures global modal behavior and appearance.
 
 ***
 
@@ -1332,12 +973,7 @@ Throws an error if the modal type is not supported or the configuration is inval
 removeTagsFromRoom(roomId: string, tags: string[]): Promise<object>;
 ```
 
-Removes specified tags from a room for organization and categorization cleanup.
-
-This method allows removing multiple tags from a room simultaneously, helping maintain
-clean and accurate room categorization. It is essential for tag management workflows, project
-status updates, archive cleanup, and removing outdated or incorrect categorizations. The
-operation is atomic: either all specified tags are removed or none are affected.
+Removes the specified tags from a room.
 
 #### Parameters
 
@@ -1345,8 +981,8 @@ operation is atomic: either all specified tags are removed or none are affected.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `roomId` | `string` | The unique identifier of the room from which tags will be removed. |
-| `tags` | `string`[] | An array of tag names to be removed from the room. Only existing tags will be processed. |
+| `roomId` | `string` | The room ID. |
+| `tags` | `string`[] | Tag names to remove. |
 
 </APITable>
 
@@ -1354,52 +990,34 @@ operation is atomic: either all specified tags are removed or none are affected.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the result of the operation and updated room metadata.
+A promise that resolves with the result of the operation.
 
 #### Examples
 
 ```typescript
-const result = await sdkInstance.removeTagsFromRoom(
-  'room-456',
-  ['In-Progress', 'Review-Pending', 'Draft']
-);
-console.log('Tags removed successfully:', result);
+await instance.removeTagsFromRoom('room-123', ['draft', 'in-progress']);
 ```
 
+Find rooms by name and clean up a tag from each using [SDKInstance.getRooms](#getrooms).
 ```typescript
-const archivedRooms = await sdkInstance.getRooms({ tags: ['Archived'] });
-const tagsToRemove = ['Active', 'In-Progress', 'Urgent'];
-
-for (const room of archivedRooms.rooms) {
-  await sdkInstance.removeTagsFromRoom(room.id, tagsToRemove);
-  console.log(`Cleaned up tags for: ${room.title}`);
+const rooms = await instance.getRooms({ search: 'sprint-22' });
+for (const room of rooms.folders) {
+  await instance.removeTagsFromRoom(room.id, ['in-progress']);
 }
 ```
-
-#### Throws
-
-May throw an error if the room ID is invalid, tags do not exist in the room, or the user lacks permission to modify room tags.
-
-#### See
-
- - [addTagsToRoom](#addtagstoroom) - Adds tags to a room.
- - [createTag](#createtag) - Creates new tags before applying them.
- - [getRooms](#getrooms) - Retrieves rooms along with their current tags.
 
 ***
 
 ### setConfig()
 
 ```ts
-setConfig(config?: TFrameConfig): Promise<object>;
+setConfig(config?: TFrameConfig, reload?: boolean): Promise<object>;
 ```
 
-Sets the configuration for the instance and applies updates to the active frame.
+Merges `config` into the stored config and sends it to the iframe.
 
-This method allows dynamically updating the SDK instance configuration
-after initialization. Changes are merged with the existing configuration and
-propagated to the active frame. This is useful for runtime adjustments like
-theme changes, size updates, or mode switching.
+When `reload` is `true`, reinitializes the iframe entirely via [SDKInstance.initFrame](#initframe)
+instead of sending a postMessage update.
 
 #### Parameters
 
@@ -1407,7 +1025,8 @@ theme changes, size updates, or mode switching.
 
 | Parameter | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | `defaultConfig` | The configuration object with properties to update. Only the provided properties will be changed. Defaults to `defaultConfig` if no parameter is provided. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | `defaultConfig` | Partial frame configuration to merge. Defaults to [defaultConfig](../variables/defaultConfig.md). |
+| `reload` | `boolean` | `false` | When `true`, reinitializes the frame. Defaults to `false`. |
 
 </APITable>
 
@@ -1415,39 +1034,76 @@ theme changes, size updates, or mode switching.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object containing the update result.
+A promise that resolves with the iframe's response, or with the merged config if `reload` is `true`.
 
 #### Examples
 
 ```typescript
-const result = await sdkInstance.setConfig({
-  theme: 'dark',
-  width: '1200px',
-  height: '800px'
-});
-console.log('Configuration updated:', result);
+await instance.setConfig({ theme: Theme.Dark, locale: 'fr-FR' });
 ```
+
+Switch to a different document while keeping existing settings —
+read them first via [SDKInstance.getConfig](#getconfig).
+```typescript
+const current = instance.getConfig();
+await instance.setConfig({ ...current, id: 99, mode: SDKMode.Editor }, true);
+```
+
+***
+
+### setCustomActions()
+
+```ts
+setCustomActions(config: TCustomActionsConfig): Promise<object>;
+```
+
+Registers custom context menu actions for files and/or folders.
+Only works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode.
+When a custom action is clicked, [TFrameEvents.onCustomAction](../type-aliases/TFrameEvents.md#onCustomAction) fires with the action key and item data.
+
+#### Parameters
+
+<APITable name="setCustomActions">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `config` | [`TCustomActionsConfig`](../type-aliases/TCustomActionsConfig.md) | Custom actions configuration. See [TCustomActionsConfig](../type-aliases/TCustomActionsConfig.md). |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves when actions are registered.
+
+#### Examples
 
 ```typescript
-try {
-  await sdkInstance.setConfig({
-    id: 'new-document-789',
-    editorType: 'word'
-  });
-  console.log('Successfully switched to new document');
-} catch (error) {
-  console.error('Failed to update document:', error);
-}
+await instance.setCustomActions({
+  contextMenu: {
+    file: [
+      { key: "send-to-crm", label: "Send to CRM", icon: "https://example.com/icon.svg" },
+      { key: "export", label: "Export", section: ["completed-forms"] },
+    ],
+  },
+});
 ```
 
-#### Throws
-
-May throw an error if the new configuration contains invalid values or if frame update fails.
-
-#### See
-
- - [getConfig](#getconfig) - Retrieves the current configuration.
- - [initFrame](#initframe) - Performs the initial frame setup.
+Handle the custom action event on the host page.
+```typescript
+const forms = sdk.initForms({
+  frameId: 'ds-forms',
+  src: 'https://portal.example.com',
+  id: 'room-42',
+  events: {
+    onCustomAction: (data) => console.log('action:', data),
+  },
+});
+await forms.setCustomActions({
+  contextMenu: { file: [{ key: "approve", label: "Approve" }] },
+});
+```
 
 ***
 
@@ -1457,62 +1113,46 @@ May throw an error if the new configuration contains invalid values or if frame 
 setIsLoaded(): void;
 ```
 
-Manages the frame loading completion process.
-Handles frame finalization, visual transition management, and user event coordination.
-Ensures a smooth switch from initialization to working state
-with animations and resource cleanup for better user experience.
+Marks the frame as loaded: fades out the loader spinner, reveals the iframe,
+and fires [TFrameEvents.onContentReady](../type-aliases/TFrameEvents.md#onContentReady).
+
+The ONLYOFFICE Apps iframe calls this automatically once its content is ready, so most
+integrations never need to. Call it manually to reveal the frame on your own schedule,
+for example when the host page shows its own loading overlay. Every call re-applies the
+iframe size and visibility and fires [TFrameEvents.onContentReady](../type-aliases/TFrameEvents.md#onContentReady); the loader is
+removed by the first one.
 
 #### Returns
 
 `void`
 
-void - This method performs side effects by updating the frame appearance
-              and triggering events. It does not return values, focusing on
-              state transition and user experience optimization.
-
 #### Examples
 
 ```typescript
-sdkInstance.setIsLoaded();
-console.log('Frame loading completed and content is ready');
+instance.setIsLoaded();
 ```
 
+Reveal the frame from a host-side button instead of waiting for the iframe, then react
+to the completion via [TFrameEvents.onContentReady](../type-aliases/TFrameEvents.md#onContentReady).
 ```typescript
-try {
-  await customFrameSetup();
-  sdkInstance.setIsLoaded();
-} catch (error) {
-  console.error('Setup failed:', error);
-  sdkInstance.setIsLoaded();
-}
+const instance = sdk.initManager({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  events: { onContentReady: () => console.log('Frame is visible') },
+});
+
+document.getElementById('show-frame').onclick = () => instance.setIsLoaded();
 ```
-
-#### Throws
-
-May throw an error if frame elements cannot be accessed or if style
-                modifications fail due to browser security restrictions.
-
-#### See
-
- - [initFrame](#initframe) Initializes the frame before the loading process completes.
- - [destroyFrame](#destroyframe) Cleans up resources when the frame is no longer needed.
- - [setConfig](#setconfig) Updates configuration parameters that affect loading behavior.
- - [onContentReady](../type-aliases/TFrameEvents.md#onContentReady) The callback triggered when the frame content is ready.
 
 ***
 
 ### setListView()
 
 ```ts
-setListView(viewType: string): Promise<object>;
+setListView(viewType: "row" | "table" | "tile"): Promise<object>;
 ```
 
-Dynamically changes the list view display mode for enhanced user experience.
-
-This method allows applications to programmatically switch between different
-view modes to optimize content presentation based on user preferences, screen
-size, or content type. View changes are applied immediately and persist for
-the user session, providing responsive and adaptive interfaces.
+Switches the file list display mode.
 
 #### Parameters
 
@@ -1520,7 +1160,7 @@ the user session, providing responsive and adaptive interfaces.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `viewType` | `string` | The view mode to apply: "row" (compact list), "table" (detailed grid), or "tile" (preview cards). |
+| `viewType` | `"row"` \| `"table"` \| `"tile"` | The view mode: `"row"`, `"table"`, or `"tile"`. |
 
 </APITable>
 
@@ -1528,44 +1168,79 @@ the user session, providing responsive and adaptive interfaces.
 
 `Promise`\<`object`\>
 
-A promise that resolves to an object indicating the result of the view change operation.
+A promise that resolves with the result of the operation.
 
 #### Examples
 
 ```typescript
-await docSpace.setListView('table');
-console.log('View changed to table mode');
+await instance.setListView('table');
 ```
+
+Switch to tile view only when in manager mode — read the current mode via [SDKInstance.getConfig](#getconfig).
+```typescript
+const { mode } = instance.getConfig();
+if (mode === SDKMode.Manager) {
+  await instance.setListView('tile');
+}
+```
+
+***
+
+### upload()
+
+```ts
+upload(file: File): Promise<object>;
+```
+
+Uploads a file into the current room.
+Only works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode.
+The file is transferred to the iframe via zero-copy ArrayBuffer and uploaded
+using the chunked upload API. The form list refreshes automatically when complete.
+
+#### Parameters
+
+<APITable name="upload">
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `file` | `File` | The file to upload. Callers should validate type and size before calling. |
+
+</APITable>
+
+#### Returns
+
+`Promise`\<`object`\>
+
+A promise that resolves with upload result from the iframe,
+  or rejects if the iframe reports an error via `onUploadError`.
+
+:::note
+The entire file is read into memory via `arrayBuffer()` before transfer.
+Callers should validate file size before invoking this method to avoid
+excessive memory usage on the host page. The server-side upload limit
+is configured in ONLYOFFICE Apps and will reject files that exceed it.
+
+The ArrayBuffer is transferred to the iframe (zero-copy). After `upload()`
+returns, the buffer is neutered and cannot be reused.
+:::
+
+#### Examples
 
 ```typescript
-const screenWidth = window.innerWidth;
-let optimalView;
-
-if (screenWidth < 768) {
-  optimalView = 'row';
-} else if (screenWidth < 1200) {
-  optimalView = 'table';
-} else {
-  optimalView = 'tile';
-}
-
-try {
-  await docSpace.setListView(optimalView);
-  console.log('View optimized for screen size:', optimalView);
-} catch (error) {
-  console.error('Failed to change view:', error);
-}
+const input = document.querySelector("input[type=file]");
+const file = input.files[0];
+const result = await instance.upload(file);
 ```
 
-#### Throws
-
-Throws an error if the view type is not supported or the operation fails.
-
-#### See
-
- - [getList](#getlist) - Retrieves content displayed in the current view mode.
- - [getConfig](#getconfig) - Gets the current view configuration and defaults.
- - [setConfig](#setconfig) - Updates global default view preferences.
+Upload with error handling.
+```typescript
+try {
+  await forms.upload(file);
+  console.log("Upload complete");
+} catch (err) {
+  console.error("Upload failed:", err.message);
+}
+```
 
 ## Properties
 
@@ -1573,6 +1248,6 @@ Throws an error if the view type is not supported or the operation fails.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The iframe configuration options. |
+| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | The iframe configuration options. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
 
 </APITable>
