@@ -24,7 +24,7 @@ ApiButtonWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类
 | [GetScaleHow](./Methods/GetScaleHow.md) | [ButtonScaleHow](../Enumeration/ButtonScaleHow.md) | 获取按钮控件缩放时机类型 |
 | [GetScaleWhen](./Methods/GetScaleWhen.md) | [ButtonScaleWhen](../Enumeration/ButtonScaleWhen.md) | 获取按钮控件缩放时机类型 |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件文本颜色。 |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | 获取控件文本大小。 |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | 获取控件文本大小。 |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | 检查文本是否自动适应。 |
 | [IsFitBounds](./Methods/IsFitBounds.md) | boolean | 检查按钮控件是否适应边界。 |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | 设置文本自动适应。 |

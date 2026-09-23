@@ -32,8 +32,8 @@ Obtain a text range that spans part of a hyperlink in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("Api Document Builder");
-let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+paragraph.AddText("Visit ONLYOFFICE for developers");
+let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com");
 let range = hyperlink.GetRange(0, 2);
 range.SetBold(true);
 ```

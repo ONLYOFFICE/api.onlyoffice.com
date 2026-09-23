@@ -5,7 +5,7 @@ Specifies the legend font size.
 ## Syntax
 
 ```javascript
-expression.SetLegendFontSize(nFontSize);
+expression.SetLegendFontSize(fontSize);
 ```
 
 `expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
@@ -14,7 +14,7 @@ expression.SetLegendFontSize(nFontSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 
 ## Returns
 

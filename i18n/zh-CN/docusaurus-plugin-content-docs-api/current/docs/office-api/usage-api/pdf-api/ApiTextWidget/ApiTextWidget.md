@@ -19,7 +19,7 @@ ApiTextWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类�
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | 设置字段矩形。 |
 | [GetRegularExp](./Methods/GetRegularExp.md) | boolean | 获取文本小部件的正则验证表达式。 |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件文本颜色。 |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | 获取控件文本大小。 |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | 获取控件文本大小。 |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | 检查文本是否自动适应。 |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | 设置文本自动适应。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置控件背景颜色。 |

@@ -17,7 +17,7 @@ expression.GetTextSize();
 
 ## 返回值
 
-[pt](../../Enumeration/pt.md)
+[hps](../../Enumeration/hps.md)
 
 ## 示例
 

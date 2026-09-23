@@ -25,7 +25,7 @@ expression.EditOleObject(data);
 ```javascript
 var _param = {
     "data": "{data}",
-    "imgSrc": "https://link-to-the-image.jpg",
+    "imgSrc": "https://example.com/image.png",
     "objectId": "5_556",
     "width": 70,
     "height": 70,

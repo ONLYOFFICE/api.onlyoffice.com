@@ -17,7 +17,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[pt](../../Enumeration/pt.md)
+[hps](../../Enumeration/hps.md)
 
 ## Example
 

@@ -1,6 +1,6 @@
 # GetSize
 
-Returns the font size property of the specified font.
+Returns the font size property of the specified font measured in points.
 
 ## Syntax
 

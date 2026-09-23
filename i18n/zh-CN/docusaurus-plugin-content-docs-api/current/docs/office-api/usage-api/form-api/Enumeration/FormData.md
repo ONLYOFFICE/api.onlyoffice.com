@@ -32,7 +32,7 @@ Object
 
 let formData = {
 	key: "CompanyName",
-	value: "OnlyOffice",
+	value: "ONLYOFFICE",
 	type: "text"
 };
 ```

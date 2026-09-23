@@ -19,7 +19,7 @@ ApiCheckboxWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子�
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | 获取控件位置。 |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | 设置字段矩形。 |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件文本颜色。 |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | 获取控件文本大小。 |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | 获取控件文本大小。 |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | 检查文本是否自动适应。 |
 | [IsChecked](./Methods/IsChecked.md) | boolean | 检查复选框控件是否被选中。 |
 | [IsCheckedByDefault](./Methods/IsCheckedByDefault.md) | boolean | 检查控件是否默认选中。 |

@@ -28,7 +28,7 @@
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回或设置当前单元格范围的背景颜色。 |
 | FontColor | [ApiColor](../ApiColor/ApiColor.md) | 使用先前创建的颜色对象设置当前单元格范围的文本颜色。 |
 | FontName | string | 将指定的字体系列设置为当前单元格范围的字体名称。 |
-| FontSize | number | 设置当前单元格范围中字符的字体大小。 |
+| FontSize | number | 设置当前单元格范围中字符的字体大小（以磅为单位）。 |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
 | Formula | string | 返回指定范围第一个单元格的公式或将其设置到此单元格。 |
 | Height | number | 返回表示以磅为单位测量的范围高度的值。 |

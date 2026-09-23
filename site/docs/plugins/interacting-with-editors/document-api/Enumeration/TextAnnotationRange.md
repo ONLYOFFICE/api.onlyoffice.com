@@ -1,6 +1,6 @@
 # TextAnnotationRange
 
-No description provided.
+Defines a text range within a paragraph to be highlighted as an annotation.
 
 ## Type
 

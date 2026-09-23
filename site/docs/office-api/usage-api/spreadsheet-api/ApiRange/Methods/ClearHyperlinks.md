@@ -28,7 +28,7 @@ Remove all hyperlinks from a cell range while keeping the displayed text in a sp
 // Turn linked cells back into plain text by stripping away their URLs in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-worksheet.GetRange("A1:B1").SetValue("http://example.com");
+worksheet.GetRange("A1:B1").SetValue("https://api.onlyoffice.com");
 let range = worksheet.GetRange("A1");
 range.ClearHyperlinks();
 worksheet.GetRange("A2").SetValue("Result is hyperlinks cleared for A1 cell.");
