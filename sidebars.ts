@@ -129,7 +129,7 @@ const sidebars: SidebarsConfig = {
         {type: "doc", id: "docspace/api-backend/api", label: "Portal"},
         {type: "doc", id: "docspace/api-backend/files", label: "Files"},
         {type: "doc", id: "docspace/api-backend/people", label: "People"},
-        {type: "doc", id: "docspace/api-backend/newai", label: "AI"},
+        {type: "doc", id: "docspace/api-backend/aichat", label: "AI Chat"},
         {type: "doc", id: "docspace/api-backend/oauth", label: "OAuth 2.0"},
         {type: "doc", id: "docspace/api-backend/backup", label: "Backup"},
       ],
