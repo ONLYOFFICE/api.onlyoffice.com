@@ -1,0 +1,42 @@
+# terminateLoginHistoryReport
+
+Referenced types are defined in the [full reference](../api.md).
+
+> terminateLoginHistoryReport()
+
+`DELETE /api/2.0/security/audit/login/report`
+
+Terminate login history report
+
+Cancels the login history report the calling user has running and drops it from the build queue. The caller needs the portal-settings right of a DocSpace administrator plus the audit option of the portal's pricing plan, otherwise the call is answered with 402. Cancellation is handed to the same background service that builds the report, so a successful answer means the request was accepted rather than that the job has already stopped: poll `GET api/2.0/security/audit/login/report` to watch it disappear. The operation returns no content and touches only the caller's own login history report - the audit trail report is cancelled by `DELETE api/2.0/security/audit/events/report`, and no report of another user can be reached from here. It is idempotent: cancelling when nothing is running is not an error. A job stopped before it finished writing leaves nothing in My documents, and a report cancelled by mistake has to be built again with `POST api/2.0/security/audit/login/report`.
+
+## Parameters
+This endpoint does not need any parameter.
+
+## Responses
+
+| Status code | Description | Type | Response headers |
+|------------- | ------------- | ------------- | -------------|
+| **200** | The cancellation of the caller's login history report has been accepted | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | The portal's pricing plan has no audit option, or the login history and audit trail section is not enabled | - | - |
+| **403** | The caller does not have the portal-settings right of a DocSpace administrator | - | - |
+| **401** | Unauthorized | [**ErrorApiResponse**](../api.md#model-errorapiresponse) | - |
+| **429** | Too Many Requests. | [**ErrorApiResponse**](../api.md#model-errorapiresponse) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../api.md#model-errorapiresponse) | - |
+| **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
+| **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
+
+## Return type
+
+null (empty response body)
+
+## Authorization
+
+[Basic](../api.md#basic), [OAuth2](../api.md#oauth2) (scopes: read, write), [ApiKeyBearer](../api.md#apikeybearer), [asc_auth_key](../api.md#asc_auth_key), [Bearer](../api.md#bearer), [OpenId](../api.md#openid)
+
+## HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+## SecurityOAuth2Api
