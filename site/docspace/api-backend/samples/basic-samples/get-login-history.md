@@ -104,6 +104,6 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-- Fetch last login events - The script sends a GET request to [/api/2.0/security/audit/login/last](/docspace/api-backend/usage-api/get-last-login-events).
+- Fetch last login events - The script sends a GET request to [/api/2.0/security/audit/login/last](/docspace/api-backend/usage-api/security/login-history/get-last-login-events).
 - Extract user IDs - It processes the response to collect all user IDs from the login events.
 - Remove duplicates - The script ensures that only unique user IDs are stored using `set()`.

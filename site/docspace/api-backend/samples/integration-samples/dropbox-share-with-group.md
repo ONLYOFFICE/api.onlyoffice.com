@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 ## Step 1: Retrieve DocSpace groups
 
-Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/get-groups) request to retrieve the group ID and the group name for each team.
+Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/group/get-groups) request to retrieve the group ID and the group name for each team.
 
 ```py
 # Step 1: Retrieve DocSpace groups
@@ -145,7 +145,7 @@ if __name__ == '__main__':
 
 ## Step 3: Retrieve DocSpace group members
 
-Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/get-group) request to get a group by ID and extract user names and emails.
+Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/group/get-group) request to get a group by ID and extract user names and emails.
 
 ```py
 # Step 3: Retrieve DocSpace group members

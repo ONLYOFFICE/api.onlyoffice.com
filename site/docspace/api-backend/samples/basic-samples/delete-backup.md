@@ -99,7 +99,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/backup/deletebackup/:id](/docspace/api-backend/usage-api/delete-backup) where:
+A DELETE request is sent to [/api/2.0/backup/deletebackup/:id](/docspace/api-backend/usage-api/backup/delete-backup) where:
 
 - `id` — UUID of the backup to delete (retrievable from /api/2.0/backup/getbackuphistory).
 

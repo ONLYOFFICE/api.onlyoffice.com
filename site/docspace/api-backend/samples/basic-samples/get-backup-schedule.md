@@ -121,7 +121,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/backup/getbackupschedule](/docspace/api-backend/usage-api/get-backup-schedule) with an optional query parameter:
+A GET request is sent to [/api/2.0/backup/getbackupschedule](/docspace/api-backend/usage-api/backup/get-backup-schedule) with an optional query parameter:
 
 - `Dump` — boolean flag indicating whether to return info for a dump-based configuration.
 

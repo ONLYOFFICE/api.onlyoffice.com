@@ -11,11 +11,11 @@ API keys are simple tokens used to authenticate API requests. They act as a uniq
 
 Unlike user-based authentication methods (such as [OAuth](oauth2/oauth2.md) or [personal access tokens](personal-access-tokens.md)), API keys are typically tied to the application itself, not to an individual user.
 
-API methods for working with API keys are detailed [in this section](../../../../docspace/api-backend/usage-api/create-api-key.md).
+API methods for working with API keys are detailed [in this section](../../../../docspace/api-backend/usage-api/api-keys/create-api-key.md).
 
 ## How to create API keys
 
-The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send a POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/create-api-key.md) endpoint:
+The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send a POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/api-keys/create-api-key.md) endpoint:
 
 <Tabs>
   <TabItem value="request" label="Request">

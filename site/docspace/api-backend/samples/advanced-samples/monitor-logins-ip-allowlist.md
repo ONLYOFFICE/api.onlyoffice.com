@@ -465,7 +465,7 @@ This example demonstrates how to monitor login activity in ONLYOFFICE DocSpace a
 
 ## Step 1: Retrieve current IP restrictions
 
-A GET request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/get-ip-restrictions) to retrieve the current portal IP restriction settings.
+A GET request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/settings/ip-restrictions/get-ip-restrictions) to retrieve the current portal IP restriction settings.
 
 This step helps you understand what IP rules are already configured before adding new IP entries.
 
@@ -508,7 +508,7 @@ This step helps you understand what IP rules are already configured before addin
 
 ## Step 2: Update portal IP restrictions (allowlist)
 
-A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/save-ip-restrictions) to enable IP restrictions and store the updated allowlist.
+A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/settings/ip-restrictions/save-ip-restrictions) to enable IP restrictions and store the updated allowlist.
 
 The request body includes:
 - `enable`: Enables or disables IP restrictions for the portal.
@@ -562,7 +562,7 @@ In this example, we add missing user IPs to the portal-wide allowlist.
 
 ## Step 3: Retrieve login events for a selected period
 
-A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/get-login-events-by-filter) to fetch login events for a selected date range.
+A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/security/login-history/get-login-events-by-filter) to fetch login events for a selected date range.
 
 This step is used to monitor authentication activity and detect logins that may violate your IP rules.
 

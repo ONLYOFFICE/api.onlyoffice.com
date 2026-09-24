@@ -174,7 +174,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a user
 
-A POST request is sent to [/api/2.0/people](/docspace/api-backend/usage-api/add-member) with:
+A POST request is sent to [/api/2.0/people](/docspace/api-backend/usage-api/people/profiles/add-member) with:
 
 - `firstName`: The user's first name.
 - `lastName`: The user's last name.
@@ -233,7 +233,7 @@ The API returns a user ID, which is required for further operations.
 
 ## Step 2: Retrieve a user by ID
 
-A GET request is sent to [/api/2.0/people/:userId](/docspace/api-backend/usage-api/get-profile-by-user-id) to fetch user details.
+A GET request is sent to [/api/2.0/people/:userId](/docspace/api-backend/usage-api/people/profiles/get-profile-by-user-id) to fetch user details.
 
 The response includes the user's profile information such as `name`, `email`, and `assigned roles`.
 
@@ -280,7 +280,7 @@ This step ensures that the user exists before making any updates or deletions.
 
 ## Step 3: Update user role
 
-A PUT request is sent to [/api/2.0/people/:userid](/docspace/api-backend/usage-api/update-member).
+A PUT request is sent to [/api/2.0/people/:userid](/docspace/api-backend/usage-api/people/profiles/update-member).
 
 The request updates the user's profile, applying the new role or permissions.
 

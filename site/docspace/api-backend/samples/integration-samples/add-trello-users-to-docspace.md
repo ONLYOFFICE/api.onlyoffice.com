@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
 ## Step 2: Add Trello users to the DocSpace
 
-Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/add-member) request to add new DocSpace users.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add new DocSpace users.
 
 ``` py
 # Step 2: Add Trello users to the DocSpace

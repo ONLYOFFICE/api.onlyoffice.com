@@ -164,7 +164,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Update login settings
 
-A PUT request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/update-login-settings) with:
+A PUT request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/settings/login-settings/update-login-settings) with:
 
 - `attemptCount`: The number of failed login attempts before an account is temporarily blocked.
 - `blockTime`: The duration (in minutes) that an account remains blocked after exceeding the failed login limit.
@@ -216,7 +216,7 @@ Modifies the security settings, such as the number of failed attempts before blo
 
 ## Step 2: Retrieve login settings
 
-A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/get-login-settings).
+A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/settings/login-settings/get-login-settings).
 
 The API response includes:
 
@@ -267,11 +267,11 @@ This step ensures that security policies are correctly configured and applied.
 
 ## Step 3: Reset login security settings to default
 
-A DELETE request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/set-default-login-settings).
+A DELETE request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/settings/login-settings/set-default-login-settings).
 
 The API resets the login security settings to the default configuration.
 
-A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/get-login-settings) again to verify that the settings have been reset.
+A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/api-backend/usage-api/settings/login-settings/get-login-settings) again to verify that the settings have been reset.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

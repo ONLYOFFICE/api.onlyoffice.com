@@ -256,7 +256,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create an empty file
 
-A POST request is sent to [/api/2.0/files/:folderId/file](/docspace/api-backend/usage-api/create-file.md) to create an empty file in a specific folder.
+A POST request is sent to [/api/2.0/files/:folderId/file](/docspace/api-backend/usage-api/files/files/create-file.md) to create an empty file in a specific folder.
 
 You must pass:
 
@@ -311,7 +311,7 @@ You must pass:
 
 ## Step 2: Upload a file
 
-A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backend/usage-api/upload-file.md) to upload a file to a folder.
+A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backend/usage-api/files/folders/upload-file.md) to upload a file to a folder.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -379,7 +379,7 @@ A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backen
 
 ## Step 3: Update an existing file
 
-A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/update-file.md) to update an existing file.
+A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/update-file.md) to update an existing file.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -435,7 +435,7 @@ A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usa
 
 ## Step 4: Delete a file
 
-A DELETE request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/delete-file.md) to remove a file.
+A DELETE request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/delete-file.md) to remove a file.
 
 You must pass:
 

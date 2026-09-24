@@ -108,7 +108,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/group/:id/members](/docspace/api-backend/usage-api/remove-members-from) with the following payload:
+A DELETE request is sent to [/api/2.0/group/:id/members](/docspace/api-backend/usage-api/group/remove-members-from) with the following payload:
 
 - `members`: An array of user UUIDs to remove from the group.
 

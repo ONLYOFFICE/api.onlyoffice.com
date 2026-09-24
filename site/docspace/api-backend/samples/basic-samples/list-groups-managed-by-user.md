@@ -114,7 +114,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/get-group-by-user-id) with the following query parameters:
+A GET request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/group/get-group-by-user-id) with the following query parameters:
 
 - `manager` — set to `true` to filter groups by manager.
 - `userId` — UUID of the user who manages the groups.

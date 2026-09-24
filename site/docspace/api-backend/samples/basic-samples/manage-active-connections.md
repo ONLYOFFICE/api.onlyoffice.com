@@ -253,7 +253,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Retrieve all active connections
 
-Sends a GET request to [/api/2.0/security/activeconnections](/docspace/api-backend/usage-api/get-all-active-connections).
+Sends a GET request to [/api/2.0/security/activeconnections](/docspace/api-backend/usage-api/security/active-connections/get-all-active-connections).
 
 It returns a list of active sessions on the portal.
 
@@ -305,7 +305,7 @@ It returns a list of active sessions on the portal.
 
 ## Step 2: Log out all sessions except the current one
 
-Sends a PUT request to [/api/2.0/security/activeconnections/logoutallexceptthis](/docspace/api-backend/usage-api/log-out-all-except-this-connection).
+Sends a PUT request to [/api/2.0/security/activeconnections/logoutallexceptthis](/docspace/api-backend/usage-api/security/active-connections/log-out-all-except-this-connection).
 
 It terminates all sessions except the current API session.
 
@@ -357,7 +357,7 @@ It terminates all sessions except the current API session.
 
 ## Step 3: Log out a specific session
 
-Sends a PUT request to [/api/2.0/security/activeconnections/logout/:loginEventId](/docspace/api-backend/usage-api/log-out-active-connection).
+Sends a PUT request to [/api/2.0/security/activeconnections/logout/:loginEventId](/docspace/api-backend/usage-api/security/active-connections/log-out-active-connection).
 
 It logs out a session by its login event ID.
 
@@ -409,7 +409,7 @@ def log_out_active_connection(login_event_id):
 
 ## Step 4: Log out all sessions for a specific user
 
-Sends a PUT request to [/api/2.0/security/activeconnections/logoutall/:userId](/docspace/api-backend/usage-api/log-out-all-active-connections-for-user).
+Sends a PUT request to [/api/2.0/security/activeconnections/logoutall/:userId](/docspace/api-backend/usage-api/security/active-connections/log-out-all-active-connections-for-user).
 
 It logs out all active sessions for the provided user ID.
 

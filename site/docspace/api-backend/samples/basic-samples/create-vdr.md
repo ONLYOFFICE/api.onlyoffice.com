@@ -123,7 +123,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room) with:
+A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) with:
 
 - `roomType`: `8` indicating a Virtual Data Room (VDR).
 - `watermark`: Object containing watermark configuration:

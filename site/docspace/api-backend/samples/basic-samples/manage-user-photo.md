@@ -129,7 +129,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Upload a new photo
 
-A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/usage-api/update-member-photo) with:
+A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/usage-api/people/photos/update-member-photo) with:
 
 - `user_id`: The user ID.
 - `files`: The URL to a new photo.
@@ -175,7 +175,7 @@ A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/u
 
 ## Step 2: Delete user photo
 
-A DELETE request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/usage-api/delete-member-photo) with:
+A DELETE request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/usage-api/people/photos/delete-member-photo) with:
 
 - `user_id`: The user ID.
 

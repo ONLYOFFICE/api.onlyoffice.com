@@ -204,7 +204,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Retrieve customer information
 
-A GET request is sent to [/api/2.0/portal/payment/customerinfo](/docspace/api-backend/usage-api/get-customer-info).
+A GET request is sent to [/api/2.0/portal/payment/customerinfo](/docspace/api-backend/usage-api/portal/payment/get-customer-info).
 
 The API response includes:
 
@@ -243,7 +243,7 @@ The API response includes:
 
 ## Step 2: Retrieve customer balance
 
-A GET request is sent to [/api/2.0/portal/payment/customer/balance](/docspace/api-backend/usage-api/get-customer-balance).
+A GET request is sent to [/api/2.0/portal/payment/customer/balance](/docspace/api-backend/usage-api/portal/payment/get-customer-balance).
 
 The API response includes:
 
@@ -288,7 +288,7 @@ The API response includes:
 
 ## Step 3: Retrieve current quota
 
-A GET request is sent to [/api/2.0/portal/payment/quota](/docspace/api-backend/usage-api/get-quota-payment-information).
+A GET request is sent to [/api/2.0/portal/payment/quota](/docspace/api-backend/usage-api/portal/payment/get-quota-payment-information).
 
 The API response includes:
 
@@ -329,7 +329,7 @@ The API response includes:
 
 ## Step 4: Retrieve available quotas
 
-A GET request is sent to [/api/2.0/portal/payment/quotas](/docspace/api-backend/usage-api/get-payment-quotas).
+A GET request is sent to [/api/2.0/portal/payment/quotas](/docspace/api-backend/usage-api/portal/payment/get-payment-quotas).
 
 The API response includes:
 
@@ -375,7 +375,7 @@ The API response includes:
 
 ## Step 5: Retrieve auto top-up settings
 
-A GET request is sent to [/api/2.0/portal/payment/topupsettings](/docspace/api-backend/usage-api/get-tenant-wallet-settings).
+A GET request is sent to [/api/2.0/portal/payment/topupsettings](/docspace/api-backend/usage-api/portal/payment/get-tenant-wallet-settings).
 
 - The API response includes:
 - Auto top-up activation status.
@@ -427,7 +427,7 @@ A GET request is sent to [/api/2.0/portal/payment/topupsettings](/docspace/api-b
 
 ## Step 6: Retrieve supported currencies
 
-A GET request is sent to [/api/2.0/portal/payment/currencies](/docspace/api-backend/usage-api/get-payment-currencies).
+A GET request is sent to [/api/2.0/portal/payment/currencies](/docspace/api-backend/usage-api/portal/payment/get-payment-currencies).
 
 The API response includes:
 

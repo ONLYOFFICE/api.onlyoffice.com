@@ -197,7 +197,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Check if reassignment is necessary
 
-A GET request is sent to [/api/2.0/people/reassign/necessary](/docspace/api-backend/usage-api/necessary-reassign) with query parameters:
+A GET request is sent to [/api/2.0/people/reassign/necessary](/docspace/api-backend/usage-api/people/user-data/necessary-reassign) with query parameters:
 
 `UserId` — UUID of the source user.
 `Type` — target entity type (e.g., User).
@@ -247,7 +247,7 @@ If successful, the API returns a boolean in response indicating whether reassign
 
 ## Step 2: Start reassignment
 
-A POST request is sent to [/api/2.0/people/reassign/start](/docspace/api-backend/usage-api/start-reassign) with the payload:
+A POST request is sent to [/api/2.0/people/reassign/start](/docspace/api-backend/usage-api/people/user-data/start-reassign) with the payload:
 
 - `fromUserId` — UUID of the source user.
 - `toUserId` — UUID of the destination user.
@@ -291,7 +291,7 @@ A POST request is sent to [/api/2.0/people/reassign/start](/docspace/api-backend
 
 ## Step 3: Get reassignment progress
 
-A GET request is sent to [/api/2.0/people/reassign/progress/:userId](/docspace/api-backend/usage-api/get-reassign-progress) where :userId is the source user ID.
+A GET request is sent to [/api/2.0/people/reassign/progress/:userId](/docspace/api-backend/usage-api/people/user-data/get-reassign-progress) where :userId is the source user ID.
 
 The API response typically includes:
 
@@ -349,7 +349,7 @@ The API response typically includes:
 
 ## Step 4: Terminate reassignment
 
-A PUT request is sent to [/api/2.0/people/reassign/terminate](/docspace/api-backend/usage-api/terminate-reassign) with the payload:
+A PUT request is sent to [/api/2.0/people/reassign/terminate](/docspace/api-backend/usage-api/people/user-data/terminate-reassign) with the payload:
 
 `userId` — UUID of the source user whose reassignment task should be terminated.
 

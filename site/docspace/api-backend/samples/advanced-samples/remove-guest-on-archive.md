@@ -445,7 +445,7 @@ The script checks whether `newParentId` equals `ARCHIVE_ROOT_ID`. If the room wa
 
 ## Step 2: Load room details (title/owner) for reporting
 
-A GET request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/get-room-security-info) to retrieve the room sharing entries.
+A GET request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/get-room-security-info) to retrieve the room sharing entries.
 The response can contain the list of entries in different fields (for example, `entries`), so the script extracts participants from the most common structures.
 
 <Tabs>
@@ -480,7 +480,7 @@ The response can contain the list of entries in different fields (for example, `
 
 The script filters guest entries using `is_guest()`.
 
-Then it sends a PUT request to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) with only the remaining participants. This updates the room share settings and removes guest access.
+Then it sends a PUT request to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/set-room-security) with only the remaining participants. This updates the room share settings and removes guest access.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

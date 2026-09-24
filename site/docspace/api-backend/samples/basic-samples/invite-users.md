@@ -176,7 +176,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create users
 
-For each user, a POST request is sent to [/api/2.0/people](/docspace/api-backend/usage-api/add-member) with:
+For each user, a POST request is sent to [/api/2.0/people](/docspace/api-backend/usage-api/people/profiles/add-member) with:
 
 - `firstName`: User's first name.
 - `lastName`: User's last name.
@@ -250,7 +250,7 @@ The API returns users, which are required for further operations.
 
 ## Step 2: Send invitation emails
 
-A POST request is sent to [/api/2.0/people/invite](/docspace/api-backend/usage-api/invite-users)
+A POST request is sent to [/api/2.0/people/invite](/docspace/api-backend/usage-api/people/profiles/invite-users)
 
 The API triggers an invitation email for each newly created user. This ensures that only new users receive an invitation, avoiding duplicate emails to existing users.
 

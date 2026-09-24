@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
 ## Step 2: Check if a user exists in DocSpace
 
-Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/get-profile-by-email) request to check if the user exists in DocSpace.
+Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/people/profiles/get-profile-by-email) request to check if the user exists in DocSpace.
 
 ``` py
 # Step 2: Check if user exists in DocSpace by email
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
 ## Step 3: Add missing users to DocSpace
 
-Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/add-member) request to add missing users to DocSpace using Notion data.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add missing users to DocSpace using Notion data.
 
 ``` py
 # Step 3: Add missing users to DocSpace

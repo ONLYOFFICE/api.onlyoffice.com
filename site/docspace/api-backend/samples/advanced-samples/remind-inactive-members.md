@@ -485,7 +485,7 @@ In this example, `fetch_room_members()` is a placeholder returning static data. 
 
 ## Step 2: Retrieve audit events for the period
 
-A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter) with:
+A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter) with:
 - `from`: start datetime
 - `to`: end datetime
 The response returns a list of audit events (usually under response).

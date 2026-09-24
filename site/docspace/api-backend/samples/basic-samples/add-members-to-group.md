@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/add-members-to) with the following payload:
+A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/add-members-to) with the following payload:
 
 - `membersToAdd`: Array of user UUIDs to add to the group.
 - `groupName` (optional): New display name for the group.

@@ -401,7 +401,7 @@ This approach helps you keep a quick backup of important room files before you r
 
 ## Step 1: Check whether the room is marked for snapshot
 
-A GET request is sent to [/api/2.0/files/rooms/:roomId](/docspace/api-backend/usage-api/get-room-info) to load room details.
+A GET request is sent to [/api/2.0/files/rooms/:roomId](/docspace/api-backend/usage-api/rooms/get-room-info) to load room details.
 The script reads the tag list (for example, `tags` or `tagList`) and checks whether it contains `TAG_MARKER`. If the tag is missing, the room is skipped.
 
 <Tabs>
@@ -430,7 +430,7 @@ The script reads the tag list (for example, `tags` or `tagList`) and checks whet
 
 ## Step 2: Create a snapshot folder
 
-A POST request is sent to [/api/2.0/files/folder/:snapshotRoomId](/docspace/api-backend/usage-api/create-folder) to create a folder inside the Snapshot room.
+A POST request is sent to [/api/2.0/files/folder/:snapshotRoomId](/docspace/api-backend/usage-api/files/folders/create-folder) to create a folder inside the Snapshot room.
 
 The folder title is generated like this:
 - `RoomTitle_YYYY-MM-DD_HH-MM-SS`
@@ -492,7 +492,7 @@ This makes it easy to find a specific snapshot later.
 
 ## Step 3: List top-level files in the source room
 
-Then the script sends a GET request to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/get-room-info) to load the room contents.
+Then the script sends a GET request to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/rooms/get-room-info) to load the room contents.
 It collects only top-level files:
 
 `file ID` — used to copy the file via API
@@ -584,7 +584,7 @@ Subfolders are skipped in this example.
 
 ## Step 4: Copy files to the snapshot folder
 
-Then it sends a POST request to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/copy-file-as) for each file.
+Then it sends a POST request to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/files/files/copy-file-as) for each file.
 Each copied file is placed into the snapshot folder created in Step 2.
 
 <Tabs>

@@ -96,7 +96,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/keys/:keyId](/docspace/api-backend/usage-api/delete-api-key) using the UUID of the key.
+A DELETE request is sent to [/api/2.0/keys/:keyId](/docspace/api-backend/usage-api/api-keys/delete-api-key) using the UUID of the key.
 
 If successful, the API responds with:
 

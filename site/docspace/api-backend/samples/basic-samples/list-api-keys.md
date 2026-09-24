@@ -113,7 +113,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/keys](/docspace/api-backend/usage-api/get-api-keys) to fetch all API keys created by the current user.
+A GET request is sent to [/api/2.0/keys](/docspace/api-backend/usage-api/api-keys/get-api-keys) to fetch all API keys created by the current user.
 
 The response includes:
 

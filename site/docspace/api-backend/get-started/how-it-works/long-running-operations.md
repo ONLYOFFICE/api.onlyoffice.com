@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Long-running operations
 
-The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An [example](../../../../docspace/api-backend/usage-api/archive-room.md) of such a request and response:
+The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An [example](../../../../docspace/api-backend/usage-api/rooms/archive-room.md) of such a request and response:
 
 <Tabs>
   <TabItem value="request" label="Request">
@@ -38,13 +38,13 @@ The user initiates a long-running operation by sending a request to the appropri
 
 The following endpoints return the operation status:
 
-- [`PUT api/2.0/files/rooms/{id}/archive`](../../../../docspace/api-backend/usage-api/archive-room.md)
-- [`PUT api/2.0/files/fileops/delete`](../../../../docspace/api-backend/usage-api/delete-batch-items.md)
-- [`DELETE api/2.0/files/file/{fileid}`](../../../../docspace/api-backend/usage-api/delete-file.md)
+- [`PUT api/2.0/files/rooms/{id}/archive`](../../../../docspace/api-backend/usage-api/rooms/archive-room.md)
+- [`PUT api/2.0/files/fileops/delete`](../../../../docspace/api-backend/usage-api/files/operations/delete-batch-items.md)
+- [`DELETE api/2.0/files/file/{fileid}`](../../../../docspace/api-backend/usage-api/files/files/delete-file.md)
 
 ## Monitoring the operation status
 
-To track the operation progress, you must periodically execute a GET request to the following [endpoint](../../../../docspace/api-backend/usage-api/get-operation-statuses.md):
+To track the operation progress, you must periodically execute a GET request to the following [endpoint](../../../../docspace/api-backend/usage-api/files/operations/get-operation-statuses.md):
 
 ``` http
 GET /api/2.0/files/fileops

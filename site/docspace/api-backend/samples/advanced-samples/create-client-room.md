@@ -393,7 +393,7 @@ This example demonstrates how to onboard a client in ONLYOFFICE DocSpace. The sc
 
 ## Step 1: Create a client room
 
-The script sends a POST request to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room) to create a new collaboration room for the client. This returns the room ID used in the next steps.
+The script sends a POST request to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) to create a new collaboration room for the client. This returns the room ID used in the next steps.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -430,7 +430,7 @@ The script sends a POST request to [/api/2.0/files/rooms](/docspace/api-backend/
 
 ## Step 2: Create the standard folder structure
 
-Then the script sends POST requests to [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/create-folder) to create folders (for example, Invoices, Contracts, Deliverables) inside the room.
+Then the script sends POST requests to [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/files/folders/create-folder) to create folders (for example, Invoices, Contracts, Deliverables) inside the room.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -460,7 +460,7 @@ Then the script sends POST requests to [/api/2.0/files/folder/:parentFolderId](/
 
 ## Step 3: Copy welcome materials into the room
 
-Then the script sends POST requests to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/copy-file-as) to copy template files into the selected destination folder.
+Then the script sends POST requests to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/files/files/copy-file-as) to copy template files into the selected destination folder.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -497,7 +497,7 @@ Then the script sends POST requests to [/api/2.0/files/file/:fileId/copyas](/doc
 
 ## Step 4: Configure room access for manager and client
 
-Then it sends a PUT request to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) with two entries:
+Then it sends a PUT request to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/set-room-security) with two entries:
 - the account manager (full access)
 - the client (read-only)
 This updates the room share settings and ensures the client can only view content.
@@ -546,7 +546,7 @@ This updates the room share settings and ensures the client can only view conten
 
 ## Step 5: Create a room link for the client
 
-Then the script sends a PUT request to [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/set-room-link) to generate a link that can be sent to the client.
+Then the script sends a PUT request to [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/rooms/set-room-link) to generate a link that can be sent to the client.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

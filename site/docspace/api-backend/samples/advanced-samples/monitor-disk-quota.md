@@ -384,7 +384,7 @@ Optionally, it requests files usage statistics (if available) and prints the lar
 
 ## Step 1: Retrieve portal quota
 
-A GET request is sent to [/api/2.0/settings/quota](/docspace/api-backend/usage-api/get-portal-quota) to retrieve the portal quota.
+A GET request is sent to [/api/2.0/settings/quota](/docspace/api-backend/usage-api/portal/quota/get-portal-quota) to retrieve the portal quota.
 
 The response typically includes:
 - total available storage size
@@ -431,7 +431,7 @@ The response typically includes:
 
 ## Step 2: Retrieve portal used space
 
-A GET request is sent to [/api/2.0/portal/usedspace](/docspace/api-backend/usage-api/get-portal-used-space) to retrieve the total used space value.
+A GET request is sent to [/api/2.0/portal/usedspace](/docspace/api-backend/usage-api/portal/quota/get-portal-used-space) to retrieve the total used space value.
 This value is used as a fallback if the quota endpoint does not provide `UsedSize`.
 
 <Tabs>
@@ -475,7 +475,7 @@ This value is used as a fallback if the quota endpoint does not provide `UsedSiz
 
 ## Step 3: Find "heavy" folders and files
 
-A GET request is sent to [/api/2.0/files/filesusedspace](/docspace/api-backend/usage-api/get-files-used-space) to retrieve per-folder usage data.
+A GET request is sent to [/api/2.0/files/filesusedspace](/docspace/api-backend/usage-api/files/folders/get-files-used-space) to retrieve per-folder usage data.
 The script sorts the items by size and prints the top 10 biggest entries.
 
 <Tabs>

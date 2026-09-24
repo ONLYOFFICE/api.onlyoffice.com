@@ -233,7 +233,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a room
 
-A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room.md) to create a new room.
+A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room.md) to create a new room.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -279,7 +279,7 @@ A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api
 
 ## Step 2: Retrieve room details
 
-A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/get-room-info.md) to get room information.
+A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/rooms/get-room-info.md) to get room information.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -319,7 +319,7 @@ A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
 ## Step 3: Rename a room
 
-A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/update-room.md) to rename a room.
+A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/rooms/update-room.md) to rename a room.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -361,7 +361,7 @@ A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
 ## Step 4: Archive a room
 
-A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backend/usage-api/archive-room.md) to archive a room.
+A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backend/usage-api/rooms/archive-room.md) to archive a room.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -396,7 +396,7 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
 
 ## Step 5: Delete a room
 
-A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/delete-room.md) to remove a room.
+A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/rooms/delete-room.md) to remove a room.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

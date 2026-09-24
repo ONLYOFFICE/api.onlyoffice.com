@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # Creating OAuth app
 
-To create a new OAuth application, send a POST request to the [api/2.0/clients](../../../../../docspace/api-backend/usage-api/create-client.md) address.
+To create a new OAuth application, send a POST request to the [api/2.0/clients](../../../../../docspace/api-backend/usage-api/oauth-2-0/client-management/create-client.md) address.
 
 You can also create and manage OAuth clients on your portal from the **Developer Tools** page:
 

@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
 ## Step 1: Retrieve DocSpace users
 
-Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/get-all-profiles) request to retrieve DocSpace users.
+Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/get-all-profiles) request to retrieve DocSpace users.
 
 ```py
 # Step 1: Retrieve DocSpace users

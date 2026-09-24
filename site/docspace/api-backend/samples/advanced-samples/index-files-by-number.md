@@ -290,7 +290,7 @@ This example demonstrates how to assign simple document numbers to files in a sp
 
 ## Step 1: Retrieve folder contents
 
-A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/get-folder-info) to retrieve the folder contents.
+A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-info) to retrieve the folder contents.
 
 The response typically includes:
 - `files`: files stored directly in this folder
@@ -421,7 +421,7 @@ Example:
 
 ## Step 4: Rename the file by adding the prefix
 
-A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/update-file) with:
+A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/update-file) with:
 
 - `title`: the new file title (prefix + original title)
 

@@ -314,7 +314,7 @@ There are no webhooks in this case - it is a batch scan that you can start whene
 
 ## Step 1: List files in the target room (including subfolders)
 
-The script starts from `START_FOLDER_ID` (a room ID or folder ID) and reads its contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id).
+The script starts from `START_FOLDER_ID` (a room ID or folder ID) and reads its contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id).
 
 DocSpace returns two lists:
 
@@ -435,7 +435,7 @@ If a file title contains any keyword (for example, `confidential`), the file is 
 
 ## Step 3: Move matched files to a secure folder
 
-If at least one file matches, the script moves them into SECURE_FOLDER_ID using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items) with body:
+If at least one file matches, the script moves them into SECURE_FOLDER_ID using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items) with body:
 
 `{ "fileIds": [...], "destFolderId": SECURE_FOLDER_ID, "deleteAfter": true }`
 

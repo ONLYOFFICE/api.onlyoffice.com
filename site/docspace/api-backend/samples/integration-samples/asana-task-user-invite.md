@@ -98,7 +98,7 @@ def get_asana_assignee_email(task_gid):
 
 ## Step 2: Send an invitation to DocSpace
 
-Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/invite-users) to invite the user using their email address.
+Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/people/profiles/invite-users) to invite the user using their email address.
 
 ``` py
 # Step 2: Invite user to DocSpace by email

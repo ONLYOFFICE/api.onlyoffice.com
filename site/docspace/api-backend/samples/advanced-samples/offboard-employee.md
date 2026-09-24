@@ -458,7 +458,7 @@ This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
 The script disables the employee account to prevent further access to DocSpace.
 
 
-This is done using PUT [/api/2.0/people/:userId](/docspace/api-backend/usage-api/update-member) with body `{ "disabled": true }`.
+This is done using PUT [/api/2.0/people/:userId](/docspace/api-backend/usage-api/people/profiles/update-member) with body `{ "disabled": true }`.
 
 After this step, the user can no longer sign in, but their files remain available.
 
@@ -493,7 +493,7 @@ After this step, the user can no longer sign in, but their files remain availabl
 
 Before archiving the workspace, the script transfers ownership of the employee's files to an archive owner account.
 
-The reassignment is started using POST [/api/2.0/people/reassign/start](/docspace/api-backend/usage-api/start-reassign).
+The reassignment is started using POST [/api/2.0/people/reassign/start](/docspace/api-backend/usage-api/people/user-data/start-reassign).
 
 The script waits until the reassignment is completed before continuing.
 
@@ -534,7 +534,7 @@ The script waits until the reassignment is completed before continuing.
 
 The employee's personal workspace folder is moved to a dedicated archive location.
 
-This is done using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items) with the destination folder set to the archive folder ID.
+This is done using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items) with the destination folder set to the archive folder ID.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -598,7 +598,7 @@ After the workspace is archived, the script updates access rules so that:
 - the archive owner has full access,
 - other users lose access.
 
-This is applied using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) (or the corresponding folder access method, depending on the workspace type).
+This is applied using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/set-room-security) (or the corresponding folder access method, depending on the workspace type).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -661,7 +661,7 @@ This is applied using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-bac
 
 ## Step 5: Generate an offboarding summary
 
-Finally, the script retrieves recent audit data related to the employee using [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter).
+Finally, the script retrieves recent audit data related to the employee using [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

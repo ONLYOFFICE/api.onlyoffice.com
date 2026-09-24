@@ -98,7 +98,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 </details>
 
 ## How it works
-A GET request is sent to [/api/2.0/keys/permissions](/docspace/api-backend/usage-api/get-all-permissions) to fetch the list of scopes granted to the current token.
+A GET request is sent to [/api/2.0/keys/permissions](/docspace/api-backend/usage-api/api-keys/get-all-permissions) to fetch the list of scopes granted to the current token.
 
 No request body or parameters are required. The response includes permissions such as:
 

@@ -144,7 +144,7 @@ payload = {
 
 ## Step 2: Send a POST request to change ownership
 
-A POST request is sent to [/api/2.0/files/owner](/docspace/api-backend/usage-api/change-file-owner) with the payload.
+A POST request is sent to [/api/2.0/files/owner](/docspace/api-backend/usage-api/files/sharing/change-file-owner) with the payload.
 The API responds with a list of updated items and whether they are still shared.
 
 <Tabs>

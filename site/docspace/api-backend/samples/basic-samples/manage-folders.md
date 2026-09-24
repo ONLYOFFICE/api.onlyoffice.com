@@ -209,7 +209,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a folder
 
-A POST request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/create-folder.md) to create a new folder.
+A POST request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/create-folder.md) to create a new folder.
 
 You must pass:
 
@@ -258,7 +258,7 @@ You must pass:
 
 ## Step 2: Retrieve folder details
 
-A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/get-folder-info.md) to get folder information.
+A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-info.md) to get folder information.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -298,7 +298,7 @@ A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend
 
 ## Step 3: Rename a folder
 
-A PUT request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/rename-folder.md) to rename a folder.
+A PUT request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/rename-folder.md) to rename a folder.
 
 You must pass:
 
@@ -346,7 +346,7 @@ You must pass:
 
 ## Step 4: Delete a folder
 
-A DELETE request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/delete-folder.md) to remove a folder.
+A DELETE request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/delete-folder.md) to remove a folder.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

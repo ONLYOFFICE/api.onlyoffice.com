@@ -17,7 +17,7 @@ This documentation describes:
 - How the [authorization flow](authorization-flow.md) works
 - How to [view active authorizations](viewing-active-authorizations.md)
 
-API methods for working with OAuth 2.0 clients are detailed [in this section](../../../../../docspace/api-backend/usage-api/authorize-o-auth.md).
+API methods for working with OAuth 2.0 clients are detailed [in this section](../../../../../docspace/api-backend/usage-api/oauth-2-0/authorization/authorize-o-auth.md).
 
 The Node.js and Python examples demonstrating OAuth 2.0 integration with ONLYOFFICE DocSpace can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2).
 

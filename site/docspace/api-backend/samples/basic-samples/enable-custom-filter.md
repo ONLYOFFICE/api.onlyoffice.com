@@ -110,7 +110,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/files/file/:fileId/customfilter](/docspace/api-backend/usage-api/get-all-permissions) with the following payload:
+A PUT request is sent to [/api/2.0/files/file/:fileId/customfilter](/docspace/api-backend/usage-api/api-keys/get-all-permissions) with the following payload:
 
 - `enabled: true` — turns on Custom Filter mode for the specified file.
 

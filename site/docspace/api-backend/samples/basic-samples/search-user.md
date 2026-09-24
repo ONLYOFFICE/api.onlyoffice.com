@@ -116,7 +116,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/people/@search/:query](/docspace/api-backend/usage-api/get-search) with:
+A GET request is sent to [/api/2.0/people/@search/:query](/docspace/api-backend/usage-api/people/search/get-search) with:
 
 Path parameter:
 

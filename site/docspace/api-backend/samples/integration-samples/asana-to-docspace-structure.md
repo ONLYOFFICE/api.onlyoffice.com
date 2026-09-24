@@ -138,7 +138,7 @@ def get_asana_project_tasks(project_id):
 
 ## Step 3: Create a room in DocSpace for the project
 
-Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room) to create a collaboration room named after the project.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a collaboration room named after the project.
 
 ```py
 # Step 3: Create a DocSpace room using the project name
@@ -161,7 +161,7 @@ def create_docspace_room(room_title):
 
 ## Step 4: Create a folder for each task in the room
 
-Use [`POST /api/2.0/files/folder/{parent_id}`](/docspace/api-backend/usage-api/create-folder) to create folders for each task under the room.
+Use [`POST /api/2.0/files/folder/{parent_id}`](/docspace/api-backend/usage-api/files/folders/create-folder) to create folders for each task under the room.
 
 ```py
 # Step 4: Create a folder for each Asana task

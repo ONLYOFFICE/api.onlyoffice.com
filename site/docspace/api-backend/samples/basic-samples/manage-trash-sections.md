@@ -166,7 +166,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Retrieve Trash contents
 
-A GET request is sent to [/api/2.0/files/@trash](/docspace/api-backend/usage-api/get-trash-folder) to get files and folders marked for deletion.
+A GET request is sent to [/api/2.0/files/@trash](/docspace/api-backend/usage-api/files/folders/get-trash-folder) to get files and folders marked for deletion.
 
 This operation is useful for checking which items are pending permanent removal.
 
@@ -206,7 +206,7 @@ This operation is useful for checking which items are pending permanent removal.
 
 ## Step 2: Empty the Trash
 
-A PUT request is sent to [/api/2.0/files/fileops/emptytrash](/docspace/api-backend/usage-api/empty-trash).
+A PUT request is sent to [/api/2.0/files/fileops/emptytrash](/docspace/api-backend/usage-api/files/operations/empty-trash).
 
 This operation permanently deletes all files and folders from the Trash.
 
@@ -248,7 +248,7 @@ This operation permanently deletes all files and folders from the Trash.
 
 ## Step 3: Restore files from Trash
 
-A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items) with:
+A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items) with:
 
 - `fileIds`: A list of file IDs to restore.
 - `destFolderId`: Target folder to move the file into.

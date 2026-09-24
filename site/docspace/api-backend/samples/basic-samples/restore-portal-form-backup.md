@@ -116,7 +116,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/backup/startrestore](/docspace/api-backend/usage-api/start-backup-restore) with the following parameters:
+A POST request is sent to [/api/2.0/backup/startrestore](/docspace/api-backend/usage-api/backup/start-backup-restore) with the following parameters:
 
 - `backupId` — ID of the backup to restore (obtained from backup history).
 - `storageType` — source location of the backup (e.g., "Local", "CustomCloud", "DataStore").

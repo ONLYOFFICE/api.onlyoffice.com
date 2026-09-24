@@ -112,7 +112,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/backup/startbackup](/docspace/api-backend/usage-api/start-backup) with a JSON payload:
+A POST request is sent to [/api/2.0/backup/startbackup](/docspace/api-backend/usage-api/backup/start-backup) with a JSON payload:
 
 `storageType` — backup storage target, e.g. "Local", "CustomCloud", "DataStore".
 `dump` — boolean flag to include a full portal dump.
