@@ -52,23 +52,6 @@ The *TypeScript* configuration file. Key compiler options:
 
 This file can be edited if needed.
 
-### custom.d.ts
-
-A TypeScript declaration file that enables importing CSS files into TypeScript source files. By default, TypeScript does not recognize *.css* imports, so this file provides the necessary type declarations:
-
-``` ts
-declare module "*.css" {
-  const classes: { readonly [key: string]: string };
-  export default classes;
-}
-```
-
-This allows you to import both CSS Modules (*.module.css*) and regular stylesheets (*.css*) in your plugin code. For more information on styling plugins, see [Styling plugin](styling-plugin.md).
-
-:::note
-Make sure *custom.d.ts* is included in the *tsconfig.json* file's *include* array, otherwise TypeScript will not apply these declarations.
-:::
-
 ### vite.config.ts
 
 The Vite configuration file generated automatically when creating the plugin template. This file configures the build output requirements:
@@ -77,6 +60,26 @@ The Vite configuration file generated automatically when creating the plugin tem
 - External dependencies (React, react-dom, SDK React entry) are kept out of the bundle — DocSpace supplies them at load time
 
 This file can be edited if needed. For more information, see [Updating a plugin to SDK 3.0.0](building-plugin.md#updating-a-plugin-to-sdk-300).
+
+## Optional files
+
+The following file is not part of the plugin template, but is worth adding manually in most plugins.
+
+### vite-env.d.ts
+
+A TypeScript declaration file, conventionally placed at *src/vite-env.d.ts*. A plain *.css* import (`import "./styles/card.css"`) needs no type declaration — it has no binding to type, so TypeScript does not check whether the module even exists. This file is needed for anything TypeScript does need a type for: a CSS Modules import (`import styles from "./button.module.css"`) or an imported image (`import icon from "./icon.svg"`):
+
+``` ts
+/// <reference types="vite/client" />
+```
+
+This single reference pulls in Vite's own ambient type declarations for CSS, CSS Modules, and common asset extensions (images, fonts, and more) — covering both cases above. It replaces the *custom.d.ts* file from the SDK 2.x, webpack-based template; that file is not part of the SDK 3.0.0 template.
+
+:::note
+Since the file lives under *src/*, it is picked up automatically by the *tsconfig.json* file's *include* array without any extra configuration — unlike the old *custom.d.ts*, which had to be added to *include* by hand.
+:::
+
+For more information and examples, see [Styling plugin](styling-plugin.md).
 
 ## Files added separately
 
@@ -96,7 +99,7 @@ Nesting is not supported. The number of icons and their sizes will depend on the
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png#gh-light-mode-only)![Convert to text](/assets/images/docspace/convert-to-text.dark.png#gh-dark-mode-only)
 
-  This icon can also be used for the main button icon. For example, in the **Draw.io** plugin, the same icon is used for the context and main button menu.
+  This icon can also be used for the main button icon. For example, in the Draw.io plugin, the same icon is used for the context and main button menu.
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png#gh-light-mode-only)![Main button icon](/assets/images/docspace/main-button-icon.dark.png#gh-dark-mode-only)
 

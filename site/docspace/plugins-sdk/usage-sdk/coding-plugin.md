@@ -45,11 +45,11 @@ import {
 | `usePluginAPI` | A typed HTTP client scoped to the current portal. Authentication is applied automatically. See [PluginAPIClient](#pluginapiclient). |
 | `usePluginActions` | Portal-side UI actions such as toasts, modals, navigation, and item updates. When calling `openInfoPanel`, always pass the tab argument. |
 | `usePluginSettings` | Loads, saves, and controls the Save button of the plugin settings side panel. |
-| `useCurrentFile` | Metadata of the file, folder, or room currently selected in the DocSpace UI, or `null` on surfaces without a selection (article navigation, the settings panel, a dialog opened from a class-side callback). |
-| `useCurrentUser` | The profile of the authenticated user, or `null` while it is loading. |
-| `usePluginRuntime` | The full plugin runtime. `currentFile` is `null` on surfaces without a selection (article navigation, the settings panel, a dialog opened from a class-side callback). Prefer the focused hooks when you only need one slice. |
+| `useCurrentFile` | Metadata of the file, folder, or room currently selected in the DocSpace UI, or `null` when nothing is selected (the settings panel, a dialog opened from a class-side callback). |
+| `useCurrentUser` | The profile of the authenticated user, or `null` while it is loading and on surfaces without a selection (the settings panel, a dialog opened from a class-side callback). On an article navigation page it resolves normally. |
+| `usePluginRuntime` | The full plugin runtime, or `null` on surfaces without a selection (the settings panel, a dialog opened from a class-side callback). On an article navigation page it resolves normally. Prefer the focused hooks when you only need one slice. |
 
-`PluginSettingsClient.setSaveButton` (from `usePluginSettings`) should keep Save disabled until the user has changed something. Do not enable it based only on form validity.
+`PluginSettingsClient.setSaveButton` (from `usePluginSettings`) should keep Save disabled until the user has changed something. Do not enable it based only on form validity. Plugin settings are serialized into a single string with a 255-character limit. A value over that limit is not truncated; `PluginSettingsClient.save` and the `saveSettings` action reject it.
 
 ### PluginAPIClient
 
