@@ -127,7 +127,7 @@ Asc.plugin.button = (id) => {
 
 ## executeMethod targets
 
-These methods are called via `Asc.plugin.executeMethod("MethodName", [...])`. For editor-specific methods (`AddComment`, `GetSelectedText`, etc.), see the per-editor method references: [Document](../document-api/Methods/Methods.md), [Spreadsheet](../spreadsheet-api/Methods/Methods.md), [Presentation](../presentation-api/Methods/Methods.md), [PDF](../pdf-api/Methods/Methods.md), [Form](../form-api/Methods/Methods.md).
+These methods are called via `Asc.plugin.executeMethod("MethodName", [...])`. For editor-specific methods (`AddComment`, `GetSelectedText`, etc.), see the per-editor method references: [Document](../document-api/document-api.md#methods), [Spreadsheet](../spreadsheet-api/spreadsheet-api.md#methods), [Presentation](../presentation-api/presentation-api.md#methods), [PDF](../pdf-api/pdf-api.md#methods), [Form](../form-api/form-api.md#methods).
 
 ### AddContextMenuItem
 
@@ -220,7 +220,7 @@ Updates a context menu item. See [Context menu](../../customization/context-menu
 Events are functions assigned to the `Asc.plugin` object or attached with `attachEditorEvent`. They allow the plugin to respond to lifecycle changes, user actions, and editor state updates.
 
 :::note
-These are **plugin-level** events fired on the `Asc.plugin` object itself. For events fired by the editors (comments, content controls, selections, etc.), see the per-editor event references: [Document](../document-api/Events/Events.md), [Spreadsheet](../spreadsheet-api/Events/Events.md), [Presentation](../presentation-api/Events/Events.md), [PDF](../pdf-api/Events/Events.md), [Form](../form-api/Events/Events.md).
+These are **plugin-level** events fired on the `Asc.plugin` object itself. For events fired by the editors (comments, content controls, selections, etc.), see the per-editor event references: [Document](../document-api/document-api.md#events), [Spreadsheet](../spreadsheet-api/spreadsheet-api.md#events), [Presentation](../presentation-api/presentation-api.md#events), [PDF](../pdf-api/pdf-api.md#events), [Form](../form-api/form-api.md#events).
 :::
 
 ### init

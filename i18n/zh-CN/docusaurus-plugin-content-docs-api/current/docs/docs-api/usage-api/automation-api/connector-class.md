@@ -129,11 +129,11 @@ connector.addToolbarMenuItem({
 
 被调用以添加事件侦听器的函数，该函数将在指定事件传递到目标时被调用。所有可用事件的列表与插件的列表相同：
 
-- [文本文档事件](../../../plugins/interacting-with-editors/document-api/Events/Events.md)
-- [电子表格事件](../../../plugins/interacting-with-editors/spreadsheet-api/Events/Events.md)
-- [演示文稿事件](../../../plugins/interacting-with-editors/presentation-api/Events/Events.md)
-- [PDF 事件](../../../plugins/interacting-with-editors/pdf-api/Events/Events.md)
-- [表单事件](../../../plugins/interacting-with-editors/form-api/Events/Events.md)
+- [文本文档事件](../../../plugins/interacting-with-editors/document-api/document-api.md#事件)
+- [电子表格事件](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#事件)
+- [演示文稿事件](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#事件)
+- [PDF 事件](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#事件)
+- [表单事件](../../../plugins/interacting-with-editors/form-api/form-api.md#事件)
 
 ### 参数
 
@@ -241,11 +241,11 @@ connector.disconnect();
 
 调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同：
 
-- [文本文档方法](../../../plugins/interacting-with-editors/document-api/Methods/Methods.md)
-- [电子表格方法](../../../plugins/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
-- [演示文稿方法](../../../plugins/interacting-with-editors/presentation-api/Methods/Methods.md)
-- [PDF 方法](../../../plugins/interacting-with-editors/pdf-api/Methods/Methods.md)
-- [表单方法](../../../plugins/interacting-with-editors/form-api/Methods/Methods.md)
+- [文本文档方法](../../../plugins/interacting-with-editors/document-api/document-api.md#方法)
+- [电子表格方法](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#方法)
+- [演示文稿方法](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#方法)
+- [PDF 方法](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#方法)
+- [表单方法](../../../plugins/interacting-with-editors/form-api/form-api.md#方法)
 
 ### 参数
 

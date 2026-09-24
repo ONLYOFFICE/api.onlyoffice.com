@@ -127,7 +127,7 @@ Asc.plugin.button = (id) => {
 
 ## executeMethod 目标方法
 
-这些方法通过 `Asc.plugin.executeMethod("MethodName", [...])` 调用。有关编辑器特定方法（`AddComment`、`GetSelectedText` 等），请参阅各编辑器方法参考：[文档](../document-api/Methods/Methods.md)、[电子表格](../spreadsheet-api/Methods/Methods.md)、[演示文稿](../presentation-api/Methods/Methods.md)、[PDF](../pdf-api/Methods/Methods.md)、[表单](../form-api/Methods/Methods.md)。
+这些方法通过 `Asc.plugin.executeMethod("MethodName", [...])` 调用。有关编辑器特定方法（`AddComment`、`GetSelectedText` 等），请参阅各编辑器方法参考：[文档](../document-api/document-api.md#方法)、[电子表格](../spreadsheet-api/spreadsheet-api.md#方法)、[演示文稿](../presentation-api/presentation-api.md#方法)、[PDF](../pdf-api/pdf-api.md#方法)、[表单](../form-api/form-api.md#方法)。
 
 ### AddContextMenuItem
 
@@ -220,7 +220,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 事件是分配给 `Asc.plugin` 对象或通过 `attachEditorEvent` 绑定的函数。它们允许插件响应生命周期变化、用户操作和编辑器状态更新。
 
 :::note
-这些是在 `Asc.plugin` 对象本身上触发的**插件级**事件。有关编辑器触发的事件（评论、内容控件、选择等），请参阅各编辑器事件参考：[文档](../document-api/Events/Events.md)、[电子表格](../spreadsheet-api/Events/Events.md)、[演示文稿](../presentation-api/Events/Events.md)、[PDF](../pdf-api/Events/Events.md)、[表单](../form-api/Events/Events.md)。
+这些是在 `Asc.plugin` 对象本身上触发的**插件级**事件。有关编辑器触发的事件（评论、内容控件、选择等），请参阅各编辑器事件参考：[文档](../document-api/document-api.md#事件)、[电子表格](../spreadsheet-api/spreadsheet-api.md#事件)、[演示文稿](../presentation-api/presentation-api.md#事件)、[PDF](../pdf-api/pdf-api.md#事件)、[表单](../form-api/form-api.md#事件)。
 :::
 
 ### init
