@@ -12,7 +12,7 @@ GroupActions 仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.co
 expression.EndAction(type, description, status);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../presentation-api.md) 类的变量。
 
 ## 参数
 

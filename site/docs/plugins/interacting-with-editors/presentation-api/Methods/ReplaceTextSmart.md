@@ -8,7 +8,7 @@ Replaces each paragraph (or text in cell) in the select with the corresponding t
 expression.ReplaceTextSmart(arrString, sParaTab, sParaNewLine);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

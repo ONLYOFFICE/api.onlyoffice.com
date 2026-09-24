@@ -8,7 +8,7 @@ Returns all the installed plugins.
 expression.GetInstalledPlugins();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

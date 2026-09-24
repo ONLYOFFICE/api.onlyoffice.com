@@ -8,7 +8,7 @@ Returns the image data from the first of the selected drawings. If there are no 
 expression.GetImageDataFromSelection();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 

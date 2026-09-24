@@ -8,7 +8,7 @@ Adds an empty content control to the document.
 expression.AddContentControl(type, commonPr);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

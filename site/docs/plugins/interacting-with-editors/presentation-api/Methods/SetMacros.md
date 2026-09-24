@@ -8,7 +8,7 @@ Sets macros to the document.
 expression.SetMacros(data);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

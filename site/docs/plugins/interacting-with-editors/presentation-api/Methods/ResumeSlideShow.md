@@ -8,7 +8,7 @@ Resumes the current slide show.
 expression.ResumeSlideShow();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Removes the OLE object from the document by its internal ID.
 expression.RemoveOleObject(sInternalId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Displays the slide following the current slide in the slide show.
 expression.GoToPreviousSlideInSlideShow();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

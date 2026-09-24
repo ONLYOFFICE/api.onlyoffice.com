@@ -9,7 +9,7 @@ For example, this method can be used to pass an authorization token to the plugi
 expression.SetPluginsOptions(options);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

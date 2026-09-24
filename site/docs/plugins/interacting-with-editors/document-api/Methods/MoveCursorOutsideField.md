@@ -8,7 +8,7 @@ Moves the cursor outside a field to the position before or after it.
 expression.MoveCursorOutsideField(fieldId, isBefore);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

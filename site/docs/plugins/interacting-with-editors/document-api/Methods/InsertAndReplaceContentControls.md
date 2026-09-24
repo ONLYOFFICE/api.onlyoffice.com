@@ -8,7 +8,7 @@ Inserts the content control containing data. The data is specified by the JS cod
 expression.InsertAndReplaceContentControls(arrDocuments);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

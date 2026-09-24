@@ -8,7 +8,7 @@ Sets the active slide in the editor by its index.
 expression.GoToSlide(slideNumber);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

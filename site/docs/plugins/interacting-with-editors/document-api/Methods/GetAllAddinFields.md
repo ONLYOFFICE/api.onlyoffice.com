@@ -8,7 +8,7 @@ Returns all addin fields from the current document.
 expression.GetAllAddinFields();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Removes the OLE object from the workbook by its internal ID.
 expression.RemoveOleObject(internalId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

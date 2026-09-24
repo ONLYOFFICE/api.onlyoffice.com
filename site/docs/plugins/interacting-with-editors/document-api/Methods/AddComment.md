@@ -8,7 +8,7 @@ Adds a comment to the document.
 expression.AddComment(oCommentData);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

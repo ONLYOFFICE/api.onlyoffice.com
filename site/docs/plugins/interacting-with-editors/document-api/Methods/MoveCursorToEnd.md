@@ -9,7 +9,7 @@ This method is similar to pressing the - **Ctrl + End** keyboard shortcut.
 expression.MoveCursorToEnd(isMoveToMainContent);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

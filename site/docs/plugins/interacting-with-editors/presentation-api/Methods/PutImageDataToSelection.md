@@ -9,7 +9,7 @@ If there are no drawings selected, the method inserts the image at the current p
 expression.PutImageDataToSelection(oImageData);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds an OLE object to the current document position.
 expression.AddOleObject(data);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 
