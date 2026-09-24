@@ -3,12 +3,9 @@
 [View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPostMessagePlugin.ts#L88)
 
 The plugin that is given the access to handle postMessage events from iframe components.
-The plugin listens for `window.postMessage` events from embedded iframes
+The plugin listens for window.postMessage events from embedded iframes
 and triggers portal-side actions (such as showing toasts, modals, or updating items)
 by calling the postMessageCallback with an [IPostMessageCallbackMessage](../utils.md#ipostmessagecallbackmessage).
-Attach the listener to `window`. Check `event.origin`
-before handling the message, and call `removeEventListener` when the plugin
-no longer needs the listener.
 
 ## Examples
 
@@ -29,12 +26,7 @@ class Plugin implements IPostMessagePlugin {
 
 const plugin = new Plugin();
 
-// iframeOrigin is the origin of the embedded iframe
-const iframeOrigin = "";
-
-const onMessage = (event: MessageEvent) => {
-  if (event.origin !== iframeOrigin) return;
-
+window.parent.addEventListener("message", (event) => {
   try {
     const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
     if (data?.source !== "my-plugin") return;
@@ -49,20 +41,13 @@ const onMessage = (event: MessageEvent) => {
   } catch {
     // ignore non-JSON messages
   }
-};
-
-window.addEventListener("message", onMessage);
-
-// when the plugin no longer needs the listener:
-window.removeEventListener("message", onMessage);
+});
 ```
 
 PostMessage handler with modal dialog
 
 ```typescript
-const onMessage = (event: MessageEvent) => {
-  if (event.origin !== iframeOrigin) return;
-
+window.parent.addEventListener("message", (event) => {
   try {
     const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
     if (data?.source !== "my-plugin") return;
@@ -78,11 +63,7 @@ const onMessage = (event: MessageEvent) => {
   } catch {
     // ignore non-JSON messages
   }
-};
-
-window.addEventListener("message", onMessage);
-
-window.removeEventListener("message", onMessage);
+});
 ```
 
 ## Methods

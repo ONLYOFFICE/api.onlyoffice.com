@@ -132,11 +132,6 @@ const typedocSidebar = {
         },
         {
           "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IArticleNavigationItem",
-          "label": "IArticleNavigationItem"
-        },
-        {
-          "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem",
           "label": "IContextMenuItem"
         },
@@ -184,11 +179,6 @@ const typedocSidebar = {
           "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleButtonPlugin",
           "label": "IArticleButtonPlugin"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleNavigationPlugin",
-          "label": "IArticleNavigationPlugin"
         },
         {
           "type": "doc",
@@ -289,11 +279,6 @@ const typedocSidebar = {
           "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/Rooms",
           "label": "Rooms"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/Section",
-          "label": "Section"
         },
         {
           "type": "doc",

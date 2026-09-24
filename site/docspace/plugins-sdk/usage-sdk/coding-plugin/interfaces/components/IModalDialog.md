@@ -19,84 +19,146 @@ Components in `dialogFooter` cannot update components in `dialogBody` using
 
 ## Examples
 
-Document preview modal with a React component
+Interactive document preview modal with dynamic content loading
 
-```tsx
-import { useEffect, useState } from "react";
-import { usePluginActions, useCurrentFile } from "@onlyoffice/docspace-plugin-sdk/react";
-import { IModalDialog, ModalDisplayType } from "@onlyoffice/docspace-plugin-sdk";
+```typescript
+import {
+  IModalDialog,
+  ModalDisplayType,
+  Components,
+  ButtonSize,
+  Actions,
+  ToastType,
+} from "@onlyoffice/docspace-plugin-sdk";
 
-function PreviewBody() {
-  const file = useCurrentFile();
-  const { closeModal } = usePluginActions();
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!file) return;
-    fetchPreviewUrl(file.id).then(setPreviewUrl);
-  }, [file?.id]);
-
-  return (
-    <div>
-      {previewUrl
-        ? <iframe src={previewUrl} width="100%" height="500px" />
-        : <p>Loading preview...</p>}
-      <button onClick={closeModal}>Close</button>
-    </div>
-  );
-}
-
-const previewModal: IModalDialog = {
+const filePreviewModal: IModalDialog = {
   displayType: ModalDisplayType.modal,
   dialogHeader: "Document Preview",
-  dialogBodyComponent: PreviewBody,
+  dialogBody: {
+    children: [
+      {
+        component: Components.iFrame,
+        props: {
+          src: "https://example.com/preview/doc.pdf",
+          width: "100%",
+          height: "600px"
+        }
+      }
+    ]
+  },
+  dialogFooter: {
+    children: [
+      {
+        component: Components.button,
+        props: {
+          label: "Close",
+          size: ButtonSize.normal,
+          onClick: () => {
+            return {
+              actions: [Actions.closeModal]
+            };
+          }
+        }
+      }
+    ]
+  },
   autoMaxWidth: true,
   autoMaxHeight: true,
-};
+  withFooterBorder: true,
+  fullScreen: false,
+  eventListeners: [
+    {
+      name: "documentLoaded",
+      onAction: async () => {
+        return {
+          actions: [Actions.showToast],
+          toastProps: [{
+            type: ToastType.success,
+            title: "Document loaded successfully"
+          }]
+        };
+      }
+    }
+  ],
+  onClose: () => {
+    return {
+      actions: [Actions.closeModal]
+    };
+  },
+  onLoad: async () => {
+    const documentDetails = await fetchDocumentDetails();
+    return {
+      newDialogHeader: `Preview: ${documentDetails.name}`,
+      newDialogBody: {
+        children: [
+          {
+            component: Components.iFrame,
+            props: {
+              src: documentDetails.previewUrl,
+              width: "100%",
+              height: "600px"
+            }
+          }
+        ]
+      }
+    };
+  }
+}
 ```
 
-Side panel that lists the files in the current user's folder via API
+Side panel settings dialog with API key configuration
 
-```tsx
-import { useEffect, useState } from "react";
-import { usePluginAPI, usePluginActions } from "@onlyoffice/docspace-plugin-sdk/react";
-import { IModalDialog, ModalDisplayType, ToastType } from "@onlyoffice/docspace-plugin-sdk";
-
-type FileEntry = { id: number; title: string; fileExst?: string };
-
-function FilesListPanel() {
-  const api = usePluginAPI();
-  const { closeModal, showToast } = usePluginActions();
-  const [files, setFiles] = useState<FileEntry[]>([]);
-
-  useEffect(() => {
-    api.get<{ files: FileEntry[] }>("/files/@my").then((folder) => {
-      setFiles(folder.files);
-    });
-  }, []);
-
-  const handleSelect = (file: FileEntry) => {
-    showToast({ type: ToastType.success, title: `Selected: ${file.title}` });
-    closeModal();
-  };
-
-  return (
-    <ul>
-      {files.map((f) => (
-        <li key={f.id} onClick={() => handleSelect(f)} style={{ cursor: "pointer" }}>
-          {f.title}{f.fileExst ? `.${f.fileExst}` : ""}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-const filesPanel: IModalDialog = {
-  displayType: ModalDisplayType.aside,
-  dialogHeader: "My Files",
-  dialogBodyComponent: FilesListPanel,
-  autoMaxHeight: true,
+```typescript
+const apiKeyInput: IInput = {
+  value: "",
+  type: InputType.password,
+  placeholder: "Enter your API key",
+  onChange: (value) => ({
+    actions: [Actions.updateProps],
+    newProps: { ...apiKeyInput, value }
+  })
 };
+
+const settingsPanel: IModalDialog = {
+  displayType: ModalDisplayType.aside,
+  dialogHeader: "Plugin Settings",
+  dialogBody: {
+    children: [
+      {
+        component: Components.label,
+        props: { text: "API Key" }
+      },
+      {
+        component: Components.input,
+        props: apiKeyInput
+      }
+    ]
+  },
+  autoMaxWidth: false,
+  autoMaxHeight: true,
+  withFooterBorder: true,
+  fullScreen: false,
+  onClose: () => ({
+    actions: [Actions.closeModal]
+  }),
+  onLoad: async () => {
+    const settings = await loadSettings();
+    return {
+      newDialogBody: {
+        children: [
+          {
+            component: Components.label,
+            props: { text: "API Key" }
+          },
+          {
+            component: Components.input,
+            props: { ...apiKeyInput, value: settings.apiKey }
+          }
+        ]
+      }
+    };
+  }
+}
 ```
 
 ## Properties
@@ -109,11 +171,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `displayType?` | [`ModalDisplayType`](#modaldisplaytype) | Defines the modal dialog display type |
+| `displayType` | [`ModalDisplayType`](#modaldisplaytype) | Defines the modal dialog display type |
 | `dialogHeader?` | `string` | Defines the modal dialog header |
-| `dialogBodyComponent?` | `ComponentType` | A React component rendered as the modal dialog body. Use either `dialogBodyComponent` or `dialogBody`, not both. The component can use `usePluginActions` and other hooks from *@onlyoffice/docspace-plugin-sdk/react*. |
-| `dialogBody?` | [`IBox`](IBox.md) | **Deprecated.** Use `dialogBodyComponent` instead. Defines the modal dialog body rendered via the IBox component tree. Use either `dialogBody` or `dialogBodyComponent`, not both. |
-| `dialogFooter?` | [`IBox`](IBox.md) | **Deprecated.** Use `dialogBodyComponent` to render footer content within the component instead. Defines the modal dialog footer rendered via the IBox component tree. |
+| `dialogBody` | [`IBox`](IBox.md) | Defines the modal dialog body |
+| `dialogFooter?` | [`IBox`](IBox.md) | Defines the modal dialog footer |
 | `autoMaxWidth?` | `boolean` | Specifies whether the "max-width: auto" property is set |
 | `autoMaxHeight?` | `boolean` | Specifies whether the "max-height: auto" property is set |
 | `withoutBodyPadding?` | `boolean` | Specifies whether the modal dialog body has no paddings |
@@ -121,8 +182,8 @@ import APITable from '@site/src/components/APITable/APITable';
 | `withFooterBorder?` | `boolean` | Specifies whether the border betweeen the body and footer is displayed |
 | `fullScreen?` | `boolean` | Specifies whether to display the modal dialog body in the full screen mode without paddings |
 | `eventListeners?` | \{ `name`: `string`; `onAction`: () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\>; \}[] | Defines the event listeners. |
-| `onClose?` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | Sets a function which is triggered whenever the "Close" button in the modal dialog is clicked |
-| `onLoad?` | () => `Promise`\<\{ `newDialogHeader?`: `string`; `newDialogBody`: [`IBox`](IBox.md); `newDialogFooter?`: [`IBox`](IBox.md); \}\> | **Deprecated.** Use a React component via `dialogBodyComponent` with `useEffect` for data loading instead. Sets a function which is triggered whenever the modal dialog is loaded. |
+| `onClose` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | Sets a function which is triggered whenever the "Close" button in the modal dialog is clicked |
+| `onLoad` | () => `Promise`\<\{ `newDialogHeader?`: `string`; `newDialogBody`: [`IBox`](IBox.md); `newDialogFooter?`: [`IBox`](IBox.md); \}\> | Sets a function which is triggered whenever the modal dialog is loaded. |
 
 ```mdx-code-block
 </APITable>
