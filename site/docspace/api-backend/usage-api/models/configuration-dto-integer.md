@@ -1,0 +1,20 @@
+# ConfigurationDtoInteger
+Everything an editor client needs in order to open one document: the document itself, the editor setup for this caller, and the signature that lets the editors trust both.
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **document** | [**DocumentConfigDto**](document-config-dto.md) | The document as the editors address it: its revision key, title, type, download address and the permissions of this caller on it. | [required] |
+| **documentType** | **String** | The editor family the file opens in - `word`, `cell`, `slide`, `pdf` or `diagram`. It comes back empty for a format no editor handles. | [required] [example: `word`] [nullable] |
+| **editorConfig** | [**EditorConfigurationDto**](editor-configuration-dto.md) | How the editor is set up for this opening: the mode, the language, the interface customization, the callback the editors save through, and the account they attribute changes to. | [required] |
+| **editorType** | [**EditorType**](editor-type.md) | The layout the configuration was actually built for. It echoes the requested one except where the room overruled it, as the templates folder does by forcing the embedded viewer. | [required] [enum: `0`, `1`, `2`] |
+| **editorUrl** | **URI** (uri) | The address of the editor api script the client has to load, with the shard key of this document already appended. Load it as it is given rather than assembling it by hand. | [required] [example: `https://portal.example.com/web-apps/apps/api/documents/api.js?shardkey=1_512_3`] [nullable] |
+| **token** | **String** | Signs this whole configuration so that the editors can trust it; anything a client changes in the configuration invalidates it. It stays empty on a portal that has no signature secret configured for the document service. | [optional] [example: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`] [nullable] |
+| **type** | **String** | The layout spelled as a lowercase word - `desktop`, `mobile` or `embedded` - the same value the editor type carries as a number. | [optional] [example: `desktop`] [nullable] |
+| **file** | [**FileDtoInteger**](file-dto-integer.md) | The file the configuration was built for, in the same shape the file listings report it. | [required] |
+| **errorMessage** | **String** | Filled in when the document could not be prepared for opening; the rest of the configuration should then not be handed to the editors. | [optional] [example: `The file is being converted`] [nullable] |
+| **startFilling** | **Boolean** | Whether this caller may start a filling session on the form from inside the editor. It stays empty when the file is not a form opened where starting is possible at all. | [optional] [example: `false`] [nullable] |
+| **fillingStatus** | **Boolean** | True once the caller holds a role in the running filling session of this form. It stays empty outside a virtual data room, where roles are the only place it is set. | [optional] [example: `false`] [nullable] |
+| **startFillingMode** | [**StartFillingMode**](start-filling-mode.md) | Which filling button the editor offers: none at all, sharing the form out for others to fill, starting a filling session, or starting one inside the form-filling room. | [optional] [enum: `0`, `1`, `2`, `3`] |
+| **fillingSessionId** | **String** | Identifies the filling session this opening belongs to, and is empty when the document is not opened as part of one. Submissions made in the editor are collected under it. | [optional] [example: `a1b2c3d4-0000-0000-0000-000000000000`] [nullable] |
+| **quotaExceededScope** | [**QuotaScope**](quota-scope.md) | Names the quota that ran out - the user, the room or the portal - and is set only when the document had to be opened read-only because of it. | [optional] [enum: `0`, `1`, `2`] |
+| **generationToolCallState** | [**EditorToolCallStateDto**](editor-tool-call-state-dto.md) | The generation the editor should run as soon as the document opens. It is set only for a document an AI agent produced and left waiting for its content, and is empty for every other file. | [optional] |

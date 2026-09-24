@@ -1,0 +1,10 @@
+# TfaRequestsDto
+The portal two-factor policy: which method is in force, who must pass it, and from where it is waived.
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **type** | [**TfaRequestsDtoType**](tfa-requests-dto-type.md) | The second factor the portal demands. The two methods are mutually exclusive, so switching one on switches the other off, and any value outside the defined set is read as switching TFA off rather than refused. | [optional] [enum: `0`, `1`, `2`] |
+| **id** | **UUID** (uuid) | The account the request concerns, by portal user ID. Naming the portal owner is refused unless it is the caller's own account. Where an operation detaches an authenticator application, the empty GUID and the caller's own ID both mean the caller. | [optional] [example: `00000000-0000-0000-0000-000000000000`] |
+| **trustedIps** | **List** | The list of IP addresses that bypass TFA verification. Each entry is a single address, an inclusive from-to range or a CIDR block. This is the whole list that is to hold afterwards, so send the addresses already trusted along with a new one; an entry that cannot be parsed fails the call with 400, and accounts named as mandatory still have to pass the challenge even from a trusted address. | [optional] [example: `[192.0.2.1, 198.51.100.1-198.51.100.20, 203.0.113.0/24]`] [nullable] |
+| **mandatoryUsers** | **List** (uuid) | The accounts that must pass the challenge whatever their address, by portal user ID. This is the whole list that is to hold afterwards - leaving it out clears it rather than keeping it - and naming the portal owner is refused unless the caller is the owner. | [optional] [example: `[00000000-0000-0000-0000-000000000000]`] [nullable] |
+| **mandatoryGroups** | **List** (uuid) | The groups whose members must pass the challenge whatever their address, by group ID. This is the whole list that is to hold afterwards - leaving it out clears it rather than keeping it. | [optional] [example: `[00000000-0000-0000-0000-000000000000]`] [nullable] |
