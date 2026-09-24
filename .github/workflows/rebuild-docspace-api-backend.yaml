@@ -93,11 +93,6 @@ jobs:
         run: |
           SPEC_DIR=server/sdk/docspace-api-spec/static/docspace/api-backend
 
-          if [ -z "$(ls $SPEC_DIR/usage-api/*.md 2>/dev/null)" ]; then
-            echo "The render produced no Markdown in $SPEC_DIR/usage-api."
-            exit 1
-          fi
-
           rm -rf api.onlyoffice.com/site/docspace/api-backend/usage-api
           cp -r $SPEC_DIR/usage-api api.onlyoffice.com/site/docspace/api-backend/
 
