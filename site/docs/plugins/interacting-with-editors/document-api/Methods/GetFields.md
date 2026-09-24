@@ -8,7 +8,7 @@ Returns all fields as a text.
 expression.GetFields();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

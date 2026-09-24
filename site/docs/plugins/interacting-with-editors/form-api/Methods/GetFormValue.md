@@ -8,7 +8,7 @@ Returns a value of the specified form.
 expression.GetFormValue(internalId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 

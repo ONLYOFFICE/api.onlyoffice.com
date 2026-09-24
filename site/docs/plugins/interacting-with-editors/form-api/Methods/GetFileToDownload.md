@@ -8,7 +8,7 @@ Returns the current file to download in the specified format.
 expression.GetFileToDownload(format);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 

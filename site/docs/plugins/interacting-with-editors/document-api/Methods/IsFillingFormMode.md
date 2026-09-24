@@ -8,7 +8,7 @@ Checks if the document is in the filling form mode.
 expression.IsFillingFormMode();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns file content in the HTML format.
 expression.GetFileHTML();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

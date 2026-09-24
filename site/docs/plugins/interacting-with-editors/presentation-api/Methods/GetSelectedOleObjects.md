@@ -8,7 +8,7 @@ Returns an array of the selected OLE objects.
 expression.GetSelectedOleObjects();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

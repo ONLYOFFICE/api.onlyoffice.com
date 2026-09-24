@@ -8,7 +8,7 @@ Moves the cursor to the beginning or end of a field.
 expression.MoveCursorToField(fieldId, isBegin);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

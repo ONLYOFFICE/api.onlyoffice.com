@@ -8,7 +8,7 @@ Inserts text into the document.
 expression.InputText(text, textReplace);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 

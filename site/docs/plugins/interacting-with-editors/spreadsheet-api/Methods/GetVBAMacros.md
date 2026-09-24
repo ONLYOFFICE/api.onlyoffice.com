@@ -8,7 +8,7 @@ Returns all VBA macros from the document.
 expression.GetVBAMacros();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

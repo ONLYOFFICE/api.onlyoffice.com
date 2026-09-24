@@ -8,7 +8,7 @@ Navigates through the review changes.
 expression.MoveToNextReviewChange(isForward);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

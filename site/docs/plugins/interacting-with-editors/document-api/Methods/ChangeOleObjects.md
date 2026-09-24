@@ -8,7 +8,7 @@ Changes multiple OLE objects with the *InternalIds* specified in OLE object data
 expression.ChangeOleObjects(arrObjectData);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

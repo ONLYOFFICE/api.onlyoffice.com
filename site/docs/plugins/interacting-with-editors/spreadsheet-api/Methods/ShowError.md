@@ -8,7 +8,7 @@ Shows an error/warning message.
 expression.ShowError(error, level);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

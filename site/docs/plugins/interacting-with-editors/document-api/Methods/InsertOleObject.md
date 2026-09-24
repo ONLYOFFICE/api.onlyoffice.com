@@ -8,7 +8,7 @@ Inserts the OLE object at the current document position.
 expression.InsertOleObject(NewObject, bSelect);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 
