@@ -358,6 +358,7 @@ jobs:
              [[ "$CF_CONF_STATUS" == 'success' ]] && echo "CF_CONF_STATUS=success🟢" >> $GITHUB_ENV
              [[ "$CF_CONF_STATUS" == 'skipped' ]] && echo "CF_CONF_STATUS=skipped (dev)⚪" >> $GITHUB_ENV
           fi
+          exit 0
 
     - name: Send alert message
       if: always()
