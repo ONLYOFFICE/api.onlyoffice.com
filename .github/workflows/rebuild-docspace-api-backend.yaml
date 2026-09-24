@@ -94,16 +94,12 @@ jobs:
           SPEC_DIR=server/sdk/docspace-api-spec/static/docspace/api-backend
 
           if [ -z "$(ls $SPEC_DIR/usage-api/*.md 2>/dev/null)" ]; then
-            echo "The render produced no Markdown in $SPEC_DIR."
+            echo "The render produced no Markdown in $SPEC_DIR/usage-api."
             exit 1
           fi
 
           rm -rf api.onlyoffice.com/site/docspace/api-backend/usage-api
-          mkdir -p api.onlyoffice.com/site/docspace/api-backend/usage-api
-          cp $SPEC_DIR/usage-api/*.md api.onlyoffice.com/site/docspace/api-backend/usage-api/
-
-          rm -f api.onlyoffice.com/site/docspace/api-backend/*.md
-          cp $SPEC_DIR/*.md api.onlyoffice.com/site/docspace/api-backend/
+          cp -r $SPEC_DIR/usage-api api.onlyoffice.com/site/docspace/api-backend/
 
           cd api.onlyoffice.com
           if [ -n "$(git status --porcelain)" ]; then
