@@ -1,8 +1,10 @@
 # Api
 
-Represents the Api class.
+Base class
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

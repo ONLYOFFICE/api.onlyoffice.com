@@ -1,48 +1,31 @@
 # Copy
 
-Creates a copy of the specified chart.
+Creates a copy of the specified drawing object.
 
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
-
-## Syntax
-
-```javascript
-expression.Copy();
-```
-
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiChart](../../ApiChart/ApiChart.md)
+Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
 ## Example
 
-Duplicate a chart and place the copy on another slide in a presentation.
+Duplicate a shape and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
-// How do I make a copy of a chart in a presentation?
+// How do I make a copy of a shape in a presentation?
 
-// Clone a chart and add the duplicate to a new slide in a presentation.
+// Create an exact duplicate of a shape and add it to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const chart = Api.CreateChart("bar3D", [
-    [200, 240, 280],
-    [250, 260, 280]
-], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595);
-slide.AddObject(chart);
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(300 * 36000, 130 * 36000);
+slide.AddObject(shape);
 
-const copyChart = chart.Copy();
+const copyShape = shape.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
-newSlide.AddObject(copyChart);
+newSlide.AddObject(copyShape);
 ```

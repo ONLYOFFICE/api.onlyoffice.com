@@ -1,8 +1,10 @@
 # ApiNumberingLevel
 
-Represents the ApiNumberingLevel class.
+Class representing a reference to a specified level of the numbering.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,8 +1,10 @@
 # ApiSlideShowTransition
 
-Represents the ApiSlideShowTransition class.
+Class representing a slide show transition.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -9,7 +9,7 @@ Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 Programmatically select one or more drawing objects in a document.
 
 ```javascript editor-docx
-// How do I select a shape or group of shapes in a document?
+// Choose a single shape or build a multi-shape selection in a document.
 
 // Control which shapes are highlighted by combining replace and additive selection modes in a document.
 

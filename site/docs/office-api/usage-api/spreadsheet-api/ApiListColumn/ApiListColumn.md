@@ -1,6 +1,6 @@
 # ApiListColumn
 
-Represents the ApiListColumn class.
+Class representing a single column in a list object (table).
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -19,6 +19,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | TotalsCalculation | [XlTotalsCalculation](../Enumeration/XlTotalsCalculation.md) | Returns or sets the totals row calculation type. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

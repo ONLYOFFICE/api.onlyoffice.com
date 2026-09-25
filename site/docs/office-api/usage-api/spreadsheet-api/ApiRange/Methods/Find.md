@@ -27,7 +27,7 @@ Search for a specific value within a range of cells in a spreadsheet.
 ```javascript editor-xlsx
 // How do I locate a cell that contains a particular value using detailed search options in a spreadsheet?
 
-// Scan a data range for matching content and highlight the first cell found in a spreadsheet.
+// Scan a data range and highlight cells found by an exact value, a wildcard pattern and a regular expression in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -56,5 +56,18 @@ let searchData = {
     MatchCase: true
 };
 let searchRange = range.Find(searchData);
-searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+searchRange.SetFillColor(Api.RGB(255, 213, 191));
+let wildcardRange = range.Find({
+    What: "Cost*",
+    LookIn: "xlValues",
+    LookAt: "xlPart",
+    Wildcards: true
+});
+wildcardRange.SetFillColor(Api.RGB(255, 244, 191));
+let regExpRange = range.Find({
+    What: /price/i,
+    LookIn: "xlValues",
+    LookAt: "xlPart"
+});
+regExpRange.SetFillColor(Api.RGB(213, 255, 191));
 ```

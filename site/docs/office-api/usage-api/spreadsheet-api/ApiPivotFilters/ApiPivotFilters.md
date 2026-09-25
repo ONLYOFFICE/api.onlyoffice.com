@@ -1,8 +1,10 @@
 # ApiPivotFilters
 
-Represents the ApiPivotFilters class.
+Class representing a collection of pivot filters applied to a pivot field.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

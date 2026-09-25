@@ -1,46 +1,27 @@
 # Copy
 
-Creates a copy of the specified chart.
+Creates a copy of the specified drawing object.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
-## Syntax
-
-```javascript
-expression.Copy();
-```
-
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiChart](../../ApiChart/ApiChart.md)
+Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
 ## Example
 
-Duplicate a chart on a worksheet and place the copy next to the original in a spreadsheet.
+Duplicate a drawing on a worksheet and place the copy next to the original in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I make a copy of a chart in a spreadsheet?
+// How do I make a copy of a drawing in a spreadsheet?
 
-// Clone a chart and add the copy to the sheet at a different cell anchor in a spreadsheet.
+// Clone a drawing and add the copy to the sheet at a different cell anchor in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-worksheet.GetRange("B1").SetValue(2014);
-worksheet.GetRange("C1").SetValue(2015);
-worksheet.GetRange("D1").SetValue(2016);
-worksheet.GetRange("A2").SetValue("Projected Revenue");
-worksheet.GetRange("B2").SetValue(200);
-worksheet.GetRange("C2").SetValue(240);
-worksheet.GetRange("D2").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$2", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 2, 3 * 36000);
 
-let copyChart = chart.Copy();
-worksheet.AddDrawing(copyChart, 6, 2 * 36000, 7, 3 * 36000);
+let copyDrawing = shape.Copy();
+worksheet.AddDrawing(copyDrawing, 4, 2 * 36000, 2, 3 * 36000);
 ```

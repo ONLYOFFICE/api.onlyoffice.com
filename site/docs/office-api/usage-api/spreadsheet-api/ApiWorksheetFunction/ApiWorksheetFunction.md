@@ -1,8 +1,10 @@
 # ApiWorksheetFunction
 
-Represents the ApiWorksheetFunction class.
+Class representing a worksheet function.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -27,7 +27,7 @@ boolean
 Add a new attribute to an XML node embedded in a document.
 
 ```javascript editor-docx
-// How do I attach extra metadata to a node in the XML data stored in a document?
+// Attach extra metadata to a node in the XML data stored in a document.
 
 // Tag a node with a category or label so it can be filtered or identified later in a document.
 

@@ -1,6 +1,6 @@
 # ApiComment
 
-Represents the ApiComment class.
+Class representing a comment.
 
 ## Properties
 
@@ -17,6 +17,8 @@ Represents the ApiComment class.
 | UserId | string | Returns or sets the user ID of the comment author. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

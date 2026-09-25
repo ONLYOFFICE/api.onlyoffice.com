@@ -23,7 +23,7 @@ string
 Get the tag name of an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I find the name of an XML node in a presentation?
+// Find the name of an XML node in a presentation.
 
 // Read the element name from an XML node in a presentation.
 

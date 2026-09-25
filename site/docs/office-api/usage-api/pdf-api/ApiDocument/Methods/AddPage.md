@@ -32,5 +32,5 @@ Insert a new page into a document in a PDF.
 // Place additional pages at specific positions in a PDF.
 
 let doc = Api.GetDocument();
-doc.AddPage(1);
+doc.AddPage(0);
 ```

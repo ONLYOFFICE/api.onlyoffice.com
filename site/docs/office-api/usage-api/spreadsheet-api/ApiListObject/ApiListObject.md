@@ -1,6 +1,6 @@
 # ApiListObject
 
-Represents the ApiListObject class.
+Class representing a formatted table.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -35,6 +35,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | TotalsRowRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the totals row; null if not shown. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

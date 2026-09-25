@@ -8,7 +8,7 @@ Returns focus to the editor.
 expression.FocusEditor();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 List all charts in a presentation.
 
 ```javascript editor-pptx
-// How do I access every chart across the entire presentation in a presentation?
+// Access every chart placed on the presentation slides.
 
-// Retrieve and count charts to display their total in a presentation.
+// Retrieve charts from slides and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,7 +49,7 @@ const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelSt
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const chartsCount = presentation.GetAllCharts().length;
-paragraph.AddText('Charts: ' + chartsCount);
+paragraph.AddText('Charts in presentation excluding slide layouts and master slides: ' + chartsCount);
 label.SetPosition(36000, 170 * 36000);
 slide.AddObject(label);
 ```

@@ -8,7 +8,7 @@ Moves a cursor to the specified content control.
 expression.MoveCursorToContentControl(id, isBegin);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

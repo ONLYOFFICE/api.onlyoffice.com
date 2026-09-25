@@ -1,8 +1,10 @@
 # ApiContentControlListEntry
 
-Represents the ApiContentControlListEntry class.
+Class representing an entry of the combo box / drop-down list content control.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -23,7 +23,7 @@ string
 Extract the text value of an inline content control as it appears in XML mapping in a document.
 
 ```javascript editor-docx
-// How do I retrieve the XML-mapped data from an inline content control in a document?
+// Retrieve the XML-mapped data from an inline content control in a document.
 
 // Output the raw control value to verify what would be written to a bound XML store in a document.
 

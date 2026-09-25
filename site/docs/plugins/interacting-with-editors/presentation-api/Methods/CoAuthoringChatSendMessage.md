@@ -8,7 +8,7 @@ Sends a message to the co-authoring chat.
 expression.CoAuthoringChatSendMessage(sText);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

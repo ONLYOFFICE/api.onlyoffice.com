@@ -8,7 +8,7 @@ Adds an OLE object to the current document position.
 expression.AddOleObject(data);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ This method doesn't return any data.
 ```javascript
 var _param = {
     "data": "{data}",
-    "imgSrc": "https://link-to-the-image.jpg",
+    "imgSrc": "https://example.com/image.png",
     "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
     "width": 70,
     "height": 70,

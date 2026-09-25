@@ -5,7 +5,7 @@ Specifies the chart title.
 ## Syntax
 
 ```javascript
-expression.SetTitle(sTitle, nFontSize, bIsBold);
+expression.SetTitle(sTitle, fontSize, bIsBold);
 ```
 
 `expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
@@ -15,7 +15,7 @@ expression.SetTitle(sTitle, nFontSize, bIsBold);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | Required | string |  | The title which will be displayed for the current chart. |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 | bIsBold | Required | boolean |  | Specifies if the chart title is written in bold font or not. |
 
 ## Returns
@@ -46,9 +46,9 @@ chart.SetTitle("Financial Overview", 13);
 chart.SetSize(150 * 36000, 65 * 36000);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```

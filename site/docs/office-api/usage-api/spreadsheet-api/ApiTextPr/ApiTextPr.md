@@ -1,8 +1,10 @@
 # ApiTextPr
 
-Represents the ApiTextPr class.
+Class representing the text properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

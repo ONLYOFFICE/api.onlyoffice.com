@@ -26,11 +26,11 @@ boolean
 Delete a page from a PDF.
 
 ```javascript editor-pdf
-// How do I remove an unwanted page from a PDF?
+// Remove an unwanted page from a PDF.
 
 // Delete a specific page number from a PDF.
 
 let doc = Api.GetDocument();
-doc.AddPage(1);
+doc.AddPage(0);
 doc.RemovePage(0);
 ```

@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Get nodes from a custom XML part using XPath in a presentation.
 
 ```javascript editor-pptx
-// How do I retrieve nodes matching an XPath expression in a presentation?
+// Retrieve nodes matching an XPath expression in a presentation.
 
 // Display matching XML nodes in a shape in a presentation.
 

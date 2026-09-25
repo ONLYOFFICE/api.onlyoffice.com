@@ -1,8 +1,10 @@
 # ApiFormBase
 
-Represents the ApiFormBase class.
+Class representing a document form base.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

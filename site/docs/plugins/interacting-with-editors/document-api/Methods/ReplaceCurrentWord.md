@@ -8,7 +8,7 @@ Replaces the current word with the specified string.
 expression.ReplaceCurrentWord(replaceString, type);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

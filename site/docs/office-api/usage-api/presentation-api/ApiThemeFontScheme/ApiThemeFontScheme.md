@@ -1,8 +1,10 @@
 # ApiThemeFontScheme
 
-Represents the ApiThemeFontScheme class.
+Class representing a theme font scheme.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

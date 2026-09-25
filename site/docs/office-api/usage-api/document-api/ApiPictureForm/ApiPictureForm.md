@@ -1,8 +1,12 @@
 # ApiPictureForm
 
+Class representing a document picture form.
+
 ApiPictureForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

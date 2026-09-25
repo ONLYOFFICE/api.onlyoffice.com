@@ -32,5 +32,5 @@ Access a specific cell within a range by its row and column position in a spread
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
-range.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.GetCells(2, 1).SetFillColor(Api.RGB(255, 213, 191));
 ```

@@ -1,8 +1,10 @@
 # ApiDrawing
 
-Represents the ApiDrawing class.
+Class representing a graphical object.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

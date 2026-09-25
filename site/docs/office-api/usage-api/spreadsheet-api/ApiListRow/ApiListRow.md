@@ -1,6 +1,6 @@
 # ApiListRow
 
-Represents the ApiListRow class.
+Class representing a single data row in a list object (table).
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -15,6 +15,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the entire row spanning all columns. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

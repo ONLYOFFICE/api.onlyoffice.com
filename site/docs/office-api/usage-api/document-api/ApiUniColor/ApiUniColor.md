@@ -1,8 +1,10 @@
 # ApiUniColor
 
-Represents the ApiUniColor class.
+Class representing a base class for color types.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

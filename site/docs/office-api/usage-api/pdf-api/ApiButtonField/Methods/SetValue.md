@@ -1,25 +1,22 @@
 # SetValue
 
-Sets image for all button field widgets
+Sets field value
 
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Inherited from [ApiBaseField.SetValue](../../ApiBaseField/Methods/SetValue.md).
 
-## Syntax
+## Example
 
-```javascript
-expression.SetValue(imageUrl);
+Enter text into a form field in a PDF.
+
+```javascript editor-pdf
+// How do I fill in a form field in a PDF?
+
+// Set a text value for a form field in a PDF.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+textField.SetValue('Name Surname');
 ```
-
-`expression` - A variable that represents a [ApiButtonField](../ApiButtonField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | Required | string |  | The URL of the image to set for the button. |
-
-## Returns
-
-boolean

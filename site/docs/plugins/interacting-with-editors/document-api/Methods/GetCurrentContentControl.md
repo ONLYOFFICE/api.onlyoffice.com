@@ -8,7 +8,7 @@ Returns an identifier of the selected content control (i.e. the content control 
 expression.GetCurrentContentControl();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

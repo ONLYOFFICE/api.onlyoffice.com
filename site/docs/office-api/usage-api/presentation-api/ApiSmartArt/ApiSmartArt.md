@@ -1,8 +1,12 @@
 # ApiSmartArt
 
+Class representing a smart art.
+
 ApiSmartArt is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -25,6 +29,7 @@ ApiSmartArt is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | Gets the x position of the drawing on the slide. |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | Gets the y position of the drawing on the slide. |
 | [GetRotation](./Methods/GetRotation.md) | number | Returns the rotation angle of the current drawing object. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the text of the current drawing, including the drawings nested in a group. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the width of the current drawing. |
 | [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | Replaces the placeholder by a drawing on the slide. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |

@@ -1,6 +1,6 @@
 # ApiPivotField
 
-Represents the ApiPivotField class.
+Class representing a pivot table field.
 
 ## Properties
 
@@ -39,6 +39,8 @@ Represents the ApiPivotField class.
 | Value | string | Returns or sets a value representing the name of the specified field in the pivot table report. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

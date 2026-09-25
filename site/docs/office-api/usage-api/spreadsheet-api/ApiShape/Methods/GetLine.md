@@ -28,8 +28,8 @@ Read the border properties of a shape and list its width, color, and dash style 
 // Pull the outline details from a shape and write each property into a separate cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
-let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 40 * 36000, fill, stroke, 3, 0, 2, 2);
 let retrievedStroke = shape.GetLine();
 if (retrievedStroke) {

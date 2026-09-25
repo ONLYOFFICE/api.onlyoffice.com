@@ -1,6 +1,6 @@
 # ApiRange
 
-Represents the ApiRange class.
+Class representing a range.
 
 ## Properties
 
@@ -28,7 +28,7 @@ Represents the ApiRange class.
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns or sets the background color of the current cell range. |
 | FontColor | [ApiColor](../ApiColor/ApiColor.md) | Sets the text color to the current cell range with the previously created color object. |
 | FontName | string | Sets the specified font family as the font name for the current cell range. |
-| FontSize | number | Sets the font size to the characters of the current cell range. |
+| FontSize | number | Sets the font size (measured in points) to the characters of the current cell range. |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | Returns the collection of conditional formatting rules for the current range. |
 | Formula | string | Returns a formula from the first cell of the specified range or sets it to this cell. |
 | Height | number | Returns a value that represents the range height measured in points. |
@@ -54,6 +54,8 @@ Represents the ApiRange class.
 | WrapText | boolean | Returns the information about the wrapping cell style or specifies whether the words in the cell must be wrapped to fit the cell size or not. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

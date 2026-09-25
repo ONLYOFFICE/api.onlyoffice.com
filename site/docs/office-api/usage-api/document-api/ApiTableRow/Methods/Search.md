@@ -23,12 +23,12 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-Search for a text string within the cells of a table row in a document.
+Find text in a table row by a string and by a regular expression, then bold the matches.
 
 ```javascript editor-docx
-// How do I find specific words inside a table row and work with the results in a document?
+// Look up a keyword across the row cells and match the same word with a RegExp.
 
-// Locate matching text across row cells to apply formatting to the found content in a document.
+// Bold one keyword match, then bold every occurrence found by the /text/g expression.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,6 +40,11 @@ row.GetCell(0).GetContent().GetElement(0).AddText("text");
 row.GetCell(1).GetContent().GetElement(0).AddText("text");
 row.GetCell(2).GetContent().GetElement(0).AddText("text");
 doc.Push(table);
-let rowSearch = row.Search("tex", true);
-rowSearch[1].SetBold("true");
+
+let byKeyword = row.Search("tex", true);
+byKeyword[1].SetBold(true);
+
+let byRegExp = row.Search(/text/g);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

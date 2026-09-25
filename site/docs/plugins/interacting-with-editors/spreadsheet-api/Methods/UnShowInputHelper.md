@@ -8,7 +8,7 @@ Unshows the input helper.
 expression.UnShowInputHelper(guid, isclear);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

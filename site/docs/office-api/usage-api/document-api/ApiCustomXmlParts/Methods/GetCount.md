@@ -23,7 +23,7 @@ number
 Count how many custom XML parts are stored in a document.
 
 ```javascript editor-docx
-// How do I find the total number of custom XML parts in a document?
+// Find the total number of custom XML parts in a document.
 
 // Verify that all expected XML data blocks were added by checking the part count in a document.
 

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Get the class type of a custom XML parts object in a presentation.
 
 ```javascript editor-pptx
-// How do I determine the class type of a custom XML parts manager in a presentation?
+// Determine the class type of a custom XML parts manager in a presentation.
 
 // Display the class type of the XML parts manager in a presentation.
 

@@ -1,8 +1,10 @@
 # ApiMaster
 
-Represents the ApiMaster class.
+Class representing a slide master.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -25,6 +27,7 @@ Represents the ApiMaster class.
 | [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns the layout corresponding to the specified layout type of the slide master. |
 | [GetLayoutsCount](./Methods/GetLayoutsCount.md) | number | Returns a number of layout objects. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the slide master. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings and text of the current slide master and, on request, of its layouts. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide master. |
 | [RemoveLayout](./Methods/RemoveLayout.md) | boolean | Removes the layouts from the current slide master. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide master. |

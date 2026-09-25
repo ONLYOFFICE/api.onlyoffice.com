@@ -15,7 +15,7 @@ expression.SetTextSize(size);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| size | Required | [pt](../../Enumeration/pt.md) |  | The font size in points. |
+| size | Required | [hps](../../Enumeration/hps.md) |  | The font size measured in half-points (1/144 of an inch). |
 
 ## Returns
 

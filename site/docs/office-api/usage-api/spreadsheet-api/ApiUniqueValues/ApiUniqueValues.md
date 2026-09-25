@@ -1,5 +1,7 @@
 # ApiUniqueValues
 
+Class representing a unique values conditional formatting rule.
+
 ApiUniqueValues is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -10,6 +12,8 @@ ApiUniqueValues is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiF
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the unique values conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

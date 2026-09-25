@@ -1,8 +1,10 @@
 # ApiLayout
 
-Represents the ApiLayout class.
+Class representing a slide layout.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -23,6 +25,7 @@ Represents the ApiLayout class.
 | [GetLayoutType](./Methods/GetLayoutType.md) | [LayoutType](../Enumeration/LayoutType.md) | Returns the type of the current layout. |
 | [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | Returns the parent slide master of the current layout. |
 | [GetName](./Methods/GetName.md) | string | Returns a name of the current layout. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings and text of the current slide layout. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current layout. |
 | [MoveTo](./Methods/MoveTo.md) | boolean | Moves the specified layout to a specific location within the same collection. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide layout. |

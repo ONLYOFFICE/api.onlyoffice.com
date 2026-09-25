@@ -1,8 +1,11 @@
 # ApiRange
 
-Represents the ApiRange class.
+Class representing a continuous region in a document. 
+Each Range object is determined by the position of the start and end characters.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -9,7 +9,7 @@ Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 Select and deselect shapes on a slide in a presentation.
 
 ```javascript editor-pptx
-// How do I select multiple shapes and replace the selection in a presentation?
+// Select multiple shapes and replace the selection in a presentation.
 
 // Create several shapes and choose them individually or add them to the selection in a presentation.
 

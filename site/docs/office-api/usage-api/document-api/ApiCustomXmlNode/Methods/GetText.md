@@ -24,7 +24,7 @@ string
 Extract the combined text content of a custom XML node and its descendants in a document.
 
 ```javascript editor-docx
-// How do I get the text from a custom XML node in a document?
+// Get the text from a custom XML node in a document.
 
 // Collect all readable text nested inside an XML element, including child nodes, in a document.
 

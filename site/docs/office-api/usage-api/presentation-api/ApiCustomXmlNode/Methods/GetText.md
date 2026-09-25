@@ -24,7 +24,7 @@ string
 Extract text from an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I read the text inside an XML node in a presentation?
+// Read the text inside an XML node in a presentation.
 
 // Retrieve the string content of an XML element in a presentation.
 

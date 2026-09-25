@@ -12,7 +12,7 @@ GroupActions are available only for [ONLYOFFICE Docs Enterprise](https://www.onl
 expression.EndAction(type, description, status);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../pdf-api.md) class.
 
 ## Parameters
 

@@ -1,12 +1,16 @@
 # ApiGroup
 
+Class representing a group of drawings.
+
 ApiGroup is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Creates a copy of the specified group of drawings. |
+| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a copy of the specified drawing object. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "group" | Returns a type of the ApiGroup class. |

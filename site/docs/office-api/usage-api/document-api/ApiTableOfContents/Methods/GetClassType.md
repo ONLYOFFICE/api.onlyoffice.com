@@ -1,0 +1,44 @@
+# GetClassType
+
+Returns a type of the ApiTableOfContents class.
+
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
+:::
+
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents a [ApiTableOfContents](../ApiTableOfContents.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"tableOfContents"
+
+## Example
+
+Get the class type of a table of contents object.
+
+```javascript editor-docx
+// Insert a table of contents built from the document headings.
+
+// Read the class type string that identifies the table of contents.
+
+let doc = Api.GetDocument();
+let style = doc.GetStyle("Heading 1");
+let paragraph = doc.GetElement(0);
+paragraph.SetStyle(style);
+paragraph.AddText("Chapter 1");
+let toc = doc.AddTableOfContents({"BuildFrom": {"OutlineLvls": 9}});
+let classType = toc.GetClassType();
+let resultParagraph = Api.CreateParagraph();
+resultParagraph.AddText("Class type: " + classType);
+doc.Push(resultParagraph);
+```

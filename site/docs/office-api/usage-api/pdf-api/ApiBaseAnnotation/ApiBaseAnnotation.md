@@ -1,8 +1,10 @@
 # ApiBaseAnnotation
 
-Represents the ApiBaseAnnotation class.
+Class representing a base annotation.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

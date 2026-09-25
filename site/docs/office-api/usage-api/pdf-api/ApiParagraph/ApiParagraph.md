@@ -1,8 +1,12 @@
 # ApiParagraph
 
+Class representing a paragraph.
+
 ApiParagraph is a subclass of [ApiParaPr](../ApiParaPr/ApiParaPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

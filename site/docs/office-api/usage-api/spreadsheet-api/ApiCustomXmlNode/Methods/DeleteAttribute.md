@@ -26,7 +26,7 @@ boolean
 Remove a named attribute from an XML node stored in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I strip a specific attribute from a custom XML element in a spreadsheet?
+// Strip a specific attribute from a custom XML element in a spreadsheet.
 
 // Clean up XML metadata by dropping an attribute and confirming the change in a spreadsheet.
 

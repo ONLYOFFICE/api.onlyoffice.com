@@ -29,6 +29,7 @@ Hide sensitive content permanently in a PDF.
 
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
+doc.AddPage(0);
 let page = doc.GetPage(0);
 page.AddObject(redactAnnot);
 doc.ApplyRedact();

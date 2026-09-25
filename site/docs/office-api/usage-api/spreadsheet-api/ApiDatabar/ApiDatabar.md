@@ -1,5 +1,7 @@
 # ApiDatabar
 
+Class representing a data bar conditional formatting rule.
+
 ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -20,6 +22,8 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the data bar conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

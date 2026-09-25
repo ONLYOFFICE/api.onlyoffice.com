@@ -8,7 +8,7 @@ Finds and selects the next occurrence of the text starting at the current positi
 expression.SearchNext(oProperties, isForward);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

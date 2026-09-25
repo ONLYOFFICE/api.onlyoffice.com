@@ -25,7 +25,7 @@ boolean
 Bind an inline content control to custom XML data in a document.
 
 ```javascript editor-docx
-// How do I link an inline content control to an XML data source in a document?
+// Link an inline content control to an XML data source in a document.
 
 // Populate a content control automatically from structured XML stored inside the document.
 

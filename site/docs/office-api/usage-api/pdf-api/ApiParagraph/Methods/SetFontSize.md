@@ -5,7 +5,7 @@ Sets the font size to the characters of the current paragraph.
 ## Syntax
 
 ```javascript
-expression.SetFontSize(nSize);
+expression.SetFontSize(fontSize);
 ```
 
 `expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
@@ -14,7 +14,7 @@ expression.SetFontSize(nSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 
 ## Returns
 

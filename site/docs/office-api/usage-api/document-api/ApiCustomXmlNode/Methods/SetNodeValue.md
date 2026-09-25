@@ -25,7 +25,7 @@ boolean
 Replace the raw value of an XML node stored in a document.
 
 ```javascript editor-docx
-// How do I overwrite the content of a node in the embedded XML data in a document?
+// Overwrite the content of a node in the embedded XML data in a document.
 
 // Refresh a node's payload with updated markup when the stored data changes in a document.
 

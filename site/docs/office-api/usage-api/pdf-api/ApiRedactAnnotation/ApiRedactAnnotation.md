@@ -1,8 +1,12 @@
 # ApiRedactAnnotation
 
+Class representing a redact annotation.
+
 ApiRedactAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

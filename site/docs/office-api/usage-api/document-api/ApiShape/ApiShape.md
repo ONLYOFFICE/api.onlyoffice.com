@@ -1,13 +1,17 @@
 # ApiShape
 
+Class representing a shape.
+
 ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddBreak](./Methods/AddBreak.md) | boolean | Inserts a break at the specified location in the main document. |
-| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Copies the current shape. |
+| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Copies the current graphic object. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current graphic object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns a type of the ApiShape class. |

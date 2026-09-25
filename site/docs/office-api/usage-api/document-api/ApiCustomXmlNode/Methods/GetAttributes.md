@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Retrieve all attributes of a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I list every attribute on a custom XML node in a document?
+// List every attribute on a custom XML node in a document.
 
 // Inspect the full set of metadata attached to an XML element by reading all its attributes in a document.
 

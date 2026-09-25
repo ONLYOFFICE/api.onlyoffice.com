@@ -9,7 +9,7 @@ If *sPluginId* is not defined, this method returns all OLE objects contained in 
 expression.GetAllOleObjects(sPluginId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

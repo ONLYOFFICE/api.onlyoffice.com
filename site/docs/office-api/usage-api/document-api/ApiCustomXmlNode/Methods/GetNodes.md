@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Select child nodes from a custom XML node using a path query in a document.
 
 ```javascript editor-docx
-// How do I retrieve matching child nodes from a custom XML node in a document?
+// Retrieve matching child nodes from a custom XML node in a document.
 
 // Traverse embedded XML data by querying for a set of elements under a given node in a document.
 

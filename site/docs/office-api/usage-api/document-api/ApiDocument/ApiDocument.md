@@ -1,8 +1,12 @@
 # ApiDocument
 
+Class representing a document.
+
 ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -93,6 +97,8 @@ ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocum
 | [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns all the selected drawings in the current document. |
 | [GetStatistics](./Methods/GetStatistics.md) | object | Returns the document statistics represented as an object with the following parameters: |
 | [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null | Returns a style by its name. |
+| [GetTablesOfContents](./Methods/GetTablesOfContents.md) | [ApiTablesOfContents](../ApiTablesOfContents/ApiTablesOfContents.md) | Returns the collection of all tables of contents in the document. |
+| [GetTablesOfFigures](./Methods/GetTablesOfFigures.md) | [ApiTablesOfFigures](../ApiTablesOfFigures/ApiTablesOfFigures.md) | Returns the collection of all tables of figures in the document. |
 | [GetTagsOfAllContentControls](./Methods/GetTagsOfAllContentControls.md) | String[] | Returns a list of all tags that are used for all content controls in the document. |
 | [GetTagsOfAllForms](./Methods/GetTagsOfAllForms.md) | String[] | Returns a list of all tags that are used for all forms in the document. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |

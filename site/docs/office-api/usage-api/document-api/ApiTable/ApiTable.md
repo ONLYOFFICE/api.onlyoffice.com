@@ -1,8 +1,12 @@
 # ApiTable
 
+Class representing a table.
+
 ApiTable is a subclass of [ApiTablePr](../ApiTablePr/ApiTablePr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

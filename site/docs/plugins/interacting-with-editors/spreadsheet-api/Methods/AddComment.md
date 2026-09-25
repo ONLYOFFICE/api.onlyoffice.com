@@ -8,7 +8,7 @@ Adds a comment to the workbook.
 expression.AddComment(oCommentData);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

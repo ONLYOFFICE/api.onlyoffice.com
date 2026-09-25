@@ -1,8 +1,10 @@
 # ApiSlide
 
-Represents the ApiSlide class.
+Class representing a slide.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -33,6 +35,7 @@ Represents the ApiSlide class.
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) | Returns a theme of the current slide. |
 | [GetTimeLine](./Methods/GetTimeLine.md) | [ApiTimeLine](../ApiTimeLine/ApiTimeLine.md) | Returns the animation timeline for the slide. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the visibility of the current presentation slide. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings, speaker notes and text of the current slide. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the slide width in English measure units. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide. |
 | [MoveTo](./Methods/MoveTo.md) | boolean | Moves the current slide to a specific location within the same collection. |

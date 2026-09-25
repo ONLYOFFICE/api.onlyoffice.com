@@ -8,7 +8,7 @@ Updates a plugin using the specified plugin config.
 expression.UpdatePlugin(config);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../presentation-api.md) class.
 
 ## Parameters
 

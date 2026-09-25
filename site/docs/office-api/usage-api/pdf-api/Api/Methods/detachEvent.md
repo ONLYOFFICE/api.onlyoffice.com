@@ -1,15 +1,11 @@
-# GetByInternalId
+# detachEvent
 
-Returns the object by it's internal ID.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Unsubscribes from the specified event.
 
 ## Syntax
 
 ```javascript
-expression.GetByInternalId(id);
+expression.detachEvent(eventName);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -18,8 +14,8 @@ expression.GetByInternalId(id);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| id | Required | string |  | the object internal ID. |
+| eventName | Required | string |  | The event name. |
 
 ## Returns
 
-object
+This method doesn't return any data.

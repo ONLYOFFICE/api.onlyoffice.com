@@ -1,8 +1,12 @@
 # ApiButtonWidget
 
+Class representing a button widget.
+
 ApiButtonWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -24,7 +28,7 @@ ApiButtonWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.
 | [GetScaleHow](./Methods/GetScaleHow.md) | [ButtonScaleHow](../Enumeration/ButtonScaleHow.md) | Gets button widget scale when type |
 | [GetScaleWhen](./Methods/GetScaleWhen.md) | [ButtonScaleWhen](../Enumeration/ButtonScaleWhen.md) | Gets button widget scale when type |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [IsFitBounds](./Methods/IsFitBounds.md) | boolean | Checks if button widget is fit bounds. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Sets text autofit. |

@@ -1,44 +1,29 @@
 # Copy
 
-Creates a copy of the specified table.
+Creates a copy of the specified drawing object.
 
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
-
-## Syntax
-
-```javascript
-expression.Copy();
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiTable](../../ApiTable/ApiTable.md)
+Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
 ## Example
 
-Duplicate a table and place the copy on another page in a PDF.
+Create a duplicate of a shape on a different page in a PDF.
 
 ```javascript editor-pdf
-// How do I make a copy of a table in a PDF?
+// Copy a shape to another location in a PDF.
 
-// Create an exact duplicate of a table and add it to a new page in a PDF.
+// Make an identical copy of a drawing object in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const table = Api.CreateTable(3, 3);
-table.SetPosition(608400, 1267200);
-page.AddObject(table);
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(150 * 36000, 65 * 36000);
+page.AddObject(shape);
 
-const copyTable = table.Copy();
-const newPage = doc.AddPage(1);
-newPage.AddObject(copyTable);
+const copyShape = shape.Copy();
+const newPage = doc.AddPage(0);
+newPage.AddObject(copyShape);
 ```

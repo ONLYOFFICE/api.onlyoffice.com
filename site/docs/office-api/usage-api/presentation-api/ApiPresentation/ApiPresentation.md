@@ -1,8 +1,10 @@
 # ApiPresentation
 
-Represents the ApiPresentation class.
+Class representing a presentation.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -36,7 +38,9 @@ Represents the ApiPresentation class.
 | [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns a slide by its position in the presentation. |
 | [GetSlideCount](./Methods/GetSlideCount.md) | number | Returns a number of slides. |
 | [GetSlidesCount](./Methods/GetSlidesCount.md) | number | Returns a number of slides. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the slides, layouts, masters, speaker notes, drawings and text of the presentation. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the presentation width in English measure units. |
+| [InsertFromFile](./Methods/InsertFromFile.md) | number | Inserts slides from the specified file into the current presentation. |
 | [RemoveSlide](./Methods/RemoveSlide.md) | boolean | Removes a slide at the specified position from the presentation. |
 | [RemoveSlides](./Methods/RemoveSlides.md) | boolean | Removes a range of slides from the presentation. |
 | [ReplaceCurrentImage](./Methods/ReplaceCurrentImage.md) | None | Replaces the current image with an image specified. |

@@ -1,6 +1,6 @@
 # ApiAutoFilter
 
-Represents the ApiAutoFilter class.
+Class representing worksheet autofilters.
 
 ## Properties
 
@@ -12,6 +12,8 @@ Represents the ApiAutoFilter class.
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents the AutoFilter range; null if no AutoFilter is defined. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

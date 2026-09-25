@@ -32,7 +32,7 @@ Specify the form data that can be used to create the form.
 
 let formData = {
 	key: "CompanyName",
-	value: "OnlyOffice",
+	value: "ONLYOFFICE",
 	type: "text"
 };
 ```

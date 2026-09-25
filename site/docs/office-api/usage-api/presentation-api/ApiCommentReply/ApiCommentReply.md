@@ -1,8 +1,10 @@
 # ApiCommentReply
 
-Represents the ApiCommentReply class.
+Class representing a comment reply.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

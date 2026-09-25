@@ -1,8 +1,10 @@
 # ApiBaseWidget
 
-Represents the ApiBaseWidget class.
+Class representing a base field widget.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -17,7 +19,7 @@ Represents the ApiBaseWidget class.
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Sets text autofit. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets widget background color. |

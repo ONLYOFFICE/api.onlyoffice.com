@@ -1,6 +1,6 @@
 # ApiName
 
-Represents the ApiName class.
+Class representing a name.
 
 ## Properties
 
@@ -11,6 +11,8 @@ Represents the ApiName class.
 | RefersToRange | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object by reference. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

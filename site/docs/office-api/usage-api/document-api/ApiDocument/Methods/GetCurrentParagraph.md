@@ -16,7 +16,7 @@ Retrieve the paragraph at the current cursor position from a document content in
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
-const rgb = Api.CreateRGBColor(100, 150, 200);
+const rgb = Api.RGB(100, 150, 200);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);

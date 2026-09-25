@@ -1,8 +1,10 @@
 # ApiAnimationSequence
 
-Represents the ApiAnimationSequence class.
+Class representing an animation sequence (main sequence or interactive sequence).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

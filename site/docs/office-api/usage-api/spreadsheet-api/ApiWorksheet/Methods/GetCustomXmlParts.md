@@ -24,7 +24,7 @@ This method doesn't have any parameters.
 Access the custom XML storage on a worksheet to add and look up XML parts in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I store and retrieve custom XML data on a sheet in a spreadsheet?
+// Store and retrieve custom XML data on a sheet in a spreadsheet.
 
 // Manage structured XML content attached to a worksheet by adding a part and fetching it by ID in a spreadsheet.
 

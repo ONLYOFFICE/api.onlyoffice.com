@@ -8,7 +8,7 @@ Returns the current page index.
 expression.GetCurrentPage();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../pdf-api.md) class.
 
 ## Parameters
 

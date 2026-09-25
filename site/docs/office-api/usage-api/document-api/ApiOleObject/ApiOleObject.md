@@ -1,13 +1,17 @@
 # ApiOleObject
 
+Class representing an Ole object.
+
 ApiOleObject is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddBreak](./Methods/AddBreak.md) | boolean | Inserts a break at the specified location in the main document. |
-| [Copy](./Methods/Copy.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Copies the current OLE object. |
+| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Copies the current graphic object. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current graphic object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetApplicationId](./Methods/GetApplicationId.md) | string | Returns the application ID from the current OLE object. |

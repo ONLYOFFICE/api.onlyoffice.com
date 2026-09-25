@@ -1,8 +1,10 @@
 # ApiWatermarkSettings
 
-Represents the ApiWatermarkSettings class.
+Class representing the settings which are used to create a watermark.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

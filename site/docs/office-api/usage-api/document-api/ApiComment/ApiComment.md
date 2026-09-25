@@ -1,8 +1,10 @@
 # ApiComment
 
-Represents the ApiComment class.
+Class representing a comment.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

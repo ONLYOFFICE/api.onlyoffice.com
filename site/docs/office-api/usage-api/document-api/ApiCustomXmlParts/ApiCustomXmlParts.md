@@ -1,8 +1,10 @@
 # ApiCustomXmlParts
 
-Represents the ApiCustomXmlParts class.
+Class representing a custom XML manager, which provides methods to manage custom XML parts in the document.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

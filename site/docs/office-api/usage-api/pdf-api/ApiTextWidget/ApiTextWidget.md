@@ -1,8 +1,12 @@
 # ApiTextWidget
 
+Class representing a text field widget.
+
 ApiTextWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -19,7 +23,7 @@ ApiTextWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
 | [GetRegularExp](./Methods/GetRegularExp.md) | boolean | Gets the text widget regular validation expression. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Sets text autofit. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets widget background color. |

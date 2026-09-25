@@ -25,7 +25,7 @@ boolean
 Write a new value into an XML node to update its stored data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I change the value held by an XML node in a spreadsheet?
+// Change the value held by an XML node in a spreadsheet.
 
 // Replace an existing node's content with fresh data in a spreadsheet.
 

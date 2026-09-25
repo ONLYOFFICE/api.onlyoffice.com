@@ -8,7 +8,7 @@ Returns information about all the forms that have been added to the document.
 expression.GetAllForms();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../form-api.md) class.
 
 ## Parameters
 

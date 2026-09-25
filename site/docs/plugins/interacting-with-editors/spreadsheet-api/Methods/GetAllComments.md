@@ -8,7 +8,7 @@ Returns all the comments from the document.
 expression.GetAllComments();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

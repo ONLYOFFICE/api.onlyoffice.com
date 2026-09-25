@@ -8,7 +8,7 @@ Opens a file with fields.
 expression.OpenFile(binaryFile, fields);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 

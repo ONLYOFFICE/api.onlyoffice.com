@@ -1,8 +1,10 @@
 # ApiTableRowPr
 
-Represents the ApiTableRowPr class.
+Class representing the table row properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

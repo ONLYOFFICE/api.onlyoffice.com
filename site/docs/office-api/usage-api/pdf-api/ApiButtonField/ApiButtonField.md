@@ -1,8 +1,12 @@
 # ApiButtonField
 
+Class representing a button field.
+
 ApiButtonField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -22,4 +26,4 @@ ApiButtonField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |
 | [SetTooltip](./Methods/SetTooltip.md) | boolean | Sets field tooltip |
-| [SetValue](./Methods/SetValue.md) | boolean | Sets image for all button field widgets |
+| [SetValue](./Methods/SetValue.md) | boolean | Sets field value |

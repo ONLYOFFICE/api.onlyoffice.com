@@ -1,8 +1,10 @@
 # ApiTableCellPr
 
-Represents the ApiTableCellPr class.
+Class representing the table cell properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

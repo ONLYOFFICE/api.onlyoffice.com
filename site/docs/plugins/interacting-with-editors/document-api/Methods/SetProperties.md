@@ -8,7 +8,7 @@ Sets the properties to the document.
 expression.SetProperties(obj);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents a [Api](../document-api.md) class.
 
 ## Parameters
 
@@ -72,7 +72,7 @@ var initSettings = {
             "111" : {
                 "text" : "Text in form with tag 111",
                 "checkBox" : "true",
-                "picture" : "https://upload.wikimedia.org/wikipedia/commons/9/91/ONLYOFFICE_logo.png",
+                "picture" : "https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png",
                 "comboBox" : "item1"
             },
             "222" : {
@@ -81,7 +81,7 @@ var initSettings = {
                 "comboBox" : "item2"
             },
             "333" : {
-                "text" : "OnlyOffice"
+                "text" : "ONLYOFFICE"
             }
         }
     })

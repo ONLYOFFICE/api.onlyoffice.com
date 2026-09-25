@@ -1,5 +1,7 @@
 # ApiColorScale
 
+Class representing a color scale conditional formatting rule.
+
 ApiColorScale is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -10,6 +12,8 @@ ApiColorScale is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFor
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the color scale conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

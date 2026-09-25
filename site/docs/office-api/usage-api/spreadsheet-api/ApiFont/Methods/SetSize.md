@@ -15,7 +15,7 @@ expression.SetSize(Size);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Size | Required | number |  | Font size. |
+| Size | Required | number |  | The font size value measured in points. |
 
 ## Returns
 
