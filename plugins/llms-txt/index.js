@@ -43,6 +43,7 @@ module.exports = function pluginLlmsTxt(context, options) {
     docsPluginId = 'default',
     exclude = [],
     sections = [],
+    optional = [],
     title,
     notes,
   } = options;
@@ -123,6 +124,7 @@ module.exports = function pluginLlmsTxt(context, options) {
         description: siteConfig.tagline,
         notes,
         sections,
+        optional,
         sidebars: version.sidebars,
         entry: (id) => {
           const doc = byId.get(id);

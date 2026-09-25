@@ -99,6 +99,9 @@ function header(title, summary, details) {
  *   `group` heads the root index's H2 the section is listed under; consecutive sections
  *   sharing one are listed together. `name` titles it there, and `group: name` is the H1
  *   of its own file, where `description` becomes the summary.
+ * @param optional `{name, url, description}`, listed under `## Optional` at the end of the
+ *   root index. A `url` without a scheme is resolved against the site, so a locale build
+ *   links into its own locale; an absolute one is printed as it stands.
  * @param sidebars The loaded sidebars, keyed by name.
  * @param entry Maps a doc id to `{title, description, url, route}`, or null when it has no
  *   twin — a page of a deprecated section, which is left out of the index as well.
@@ -106,7 +109,17 @@ function header(title, summary, details) {
  * @param baseUrl The site's base path, where the root index is written.
  * @returns `[{route, content}]`, the root index first: the route each file belongs at.
  */
-function buildLlmsTxt({title, description, notes, sections, sidebars, entry, siteUrl, baseUrl}) {
+function buildLlmsTxt({
+  title,
+  description,
+  notes,
+  sections,
+  optional = [],
+  sidebars,
+  entry,
+  siteUrl,
+  baseUrl,
+}) {
   const rootUrl = `${siteUrl}${baseUrl}llms.txt`;
   const details = sectionDetails(rootUrl);
   const files = [];
@@ -170,6 +183,15 @@ function buildLlmsTxt({title, description, notes, sections, sidebars, entry, sit
   }
 
   const index = groups.map((group) => `## ${group.name}\n\n${group.entries.join('')}`);
+
+  // `Optional` is the spec's one meaningful section name: a client short of context skips it.
+  const extras = optional.map(({name, url, description}) => {
+    const target = /^[a-z]+:/.test(url) ? url : `${siteUrl}${baseUrl}${url.replace(/^\//, '')}`;
+    return `- [${name}](${target})${describe({title: name, description})}\n`;
+  });
+  if (extras.length) {
+    index.push(`## Optional\n\n${extras.join('')}`);
+  }
   files.unshift({route: baseUrl, content: header(title, description, notes) + index.join('\n')});
 
   return files;

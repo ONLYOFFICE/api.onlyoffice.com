@@ -18,9 +18,7 @@ const announcementBarContent = localize({
   'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
 });
 
-// The sections of the llms.txt index, in navbar order, each indexed by its own llms.txt at
-// the route its pages share: the list the landing-page cards are built from, flattened,
-// with each group's name carried onto its sections.
+// The landing-page cards, flattened for llms-txt: each section carries its group's name.
 const llmsTxtSections = [docsSections, docspaceSections].flatMap(({group, items}) =>
   items.map(({sidebar, name, description}) => ({sidebar, group, name, description})),
 );
@@ -185,10 +183,29 @@ const config: Config = {
       {
         docsPluginId: 'api',
         title: 'ONLYOFFICE API Documentation',
-        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section. Any page is also available as Markdown by appending `.md` to its URL.',
+        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section.',
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
         sections: llmsTxtSections,
+        optional: [
+          {
+            name: 'Changelog',
+            url: 'changelog',
+            description:
+              'Release notes for this documentation and the products it covers, newest first.',
+          },
+          {
+            name: 'Playground',
+            url: 'playground',
+            description:
+              'Interactive browser app for running API scripts against a live editor, not readable as text.',
+          },
+          {
+            name: 'Developer forum',
+            url: 'https://forum.onlyoffice.com/',
+            description: 'Community questions, answers, and announcements.',
+          },
+        ],
       },
     ],
   ],
