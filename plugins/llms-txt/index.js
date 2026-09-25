@@ -3,6 +3,9 @@
  * `/docs/x/y.md` — and the `llms.txt` index: one file at the site root naming the
  * sections, and one per section covering the pages under its route.
  *
+ * A section whose pages would not fit one index is split further: see `split` in
+ * `llms-txt.js`.
+ *
  * The twins are the page sources, not the rendered pages: these docs are written as plain
  * Markdown, so a twin only needs its links made absolute. The generated OpenAPI pages are
  * the exception, since their source is components around a compressed spec; those are
@@ -44,6 +47,7 @@ module.exports = function pluginLlmsTxt(context, options) {
     exclude = [],
     sections = [],
     optional = [],
+    split = [],
     title,
     notes,
   } = options;
@@ -125,6 +129,7 @@ module.exports = function pluginLlmsTxt(context, options) {
         notes,
         sections,
         optional,
+        split,
         sidebars: version.sidebars,
         entry: (id) => {
           const doc = byId.get(id);

@@ -187,6 +187,10 @@ const config: Config = {
         // Workspace is deprecated and absent from the navbar: no twins, no entries.
         exclude: ['workspace/'],
         sections: llmsTxtSections,
+        split: [
+          // One llms.txt per editor.
+          'docs/office-api/usage-api/',
+        ],
         optional: [
           {
             name: 'Changelog',

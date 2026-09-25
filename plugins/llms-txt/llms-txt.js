@@ -12,15 +12,27 @@
  * order and the category labels a reader would recognise. A section's file is written to
  * the route its pages share, so `/docs/office-api/llms.txt` covers `/docs/office-api/`.
  *
+ * A section can still be too big for one file. A category whose pages all lie under one
+ * of the `split` prefixes is given an llms.txt of its own, which the section's file links
+ * to in its place. Inside such a file each subcategory is a heading, and the pages nested
+ * one level further are named after it: `ApiRange.AddComment`, not one `AddComment` among
+ * many.
+ *
  * Each file is laid out the way the spec asks: the H1, a `>` blockquote holding the
  * summary, then plain paragraphs saying how to read what follows. Those are two slots, not
  * one — a parser reads the blockquote as the summary, so the navigation note stays out of
  * it.
  */
 
-const sectionDetails = (rootUrl) =>
-  'Links below point to the Markdown version of each page. For the other sections of this ' +
-  `documentation, see the [index](${rootUrl}).`;
+const sectionDetails = (rootUrl, split) =>
+  'Links below point to the Markdown version of each page' +
+  (split ? ', except those to a further llms.txt: the full index of the pages under that entry' : '') +
+  `. For the other sections of this documentation, see the [index](${rootUrl}).`;
+
+const splitDetails = (sectionUrl, rootUrl) =>
+  'Links below point to the Markdown version of each page. This file covers one part of the ' +
+  `[section index](${sectionUrl}); for the other sections of this documentation, see the ` +
+  `[index](${rootUrl}).`;
 
 /** The entries of a sidebar category, flattened, in the order the sidebar puts them. */
 function* sidebarDocs(items) {
@@ -37,6 +49,56 @@ function* sidebarDocs(items) {
   }
 }
 
+/**
+ * The entries of a sidebar category, in sidebar order: `{id}` for a page, `{category}` for
+ * a category whose pages all lie under one of the `splits` prefixes, which is not entered.
+ */
+function* sidebarEntries(items, splits) {
+  for (const item of items) {
+    if (item.type === 'doc') {
+      yield {id: item.id};
+    } else if (item.type === 'category') {
+      const ids = [...sidebarDocs([item])];
+      if (ids.length && splits.some((prefix) => ids.every((id) => id.startsWith(prefix)))) {
+        yield {category: item};
+        continue;
+      }
+      if (item.link?.type === 'doc') {
+        yield {id: item.link.id};
+      }
+      yield* sidebarEntries(item.items, splits);
+    }
+  }
+}
+
+/**
+ * The headings of a split category's file: its own page and loose pages under `Overview`,
+ * then one per subcategory. A page nested below a subcategory is a member of it, so its
+ * label carries the subcategory's: `ApiRange.AddComment`.
+ */
+function splitCategory(category) {
+  const loose = category.link?.type === 'doc' ? [{id: category.link.id}] : [];
+  const headings = [];
+
+  for (const item of category.items) {
+    if (item.type === 'doc') {
+      loose.push({id: item.id});
+    } else if (item.type === 'category') {
+      const entries = item.link?.type === 'doc' ? [{id: item.link.id}] : [];
+      for (const member of item.items) {
+        if (member.type === 'doc') {
+          entries.push({id: member.id});
+        } else if (member.type === 'category') {
+          entries.push(...[...sidebarDocs([member])].map((id) => ({id, owner: item.label})));
+        }
+      }
+      headings.push({label: item.label, entries});
+    }
+  }
+
+  return [{label: 'Overview', entries: loose}, ...headings];
+}
+
 /** A description worth printing: one line, and not the first sentence repeated as a title. */
 function describe(doc) {
   const description = doc.description?.replace(/\s+/g, ' ').trim();
@@ -48,19 +110,21 @@ function describe(doc) {
  * directly in the sidebar are listed under the section itself, whatever their position,
  * so that a category heading never claims a page that is not in it.
  */
-function splitSidebar(items) {
+function splitSidebar(items, splits) {
   const loose = [];
   const categories = [];
 
   for (const item of items) {
     if (item.type === 'doc') {
-      loose.push(item.id);
+      loose.push({id: item.id});
     } else if (item.type === 'category') {
-      categories.push({label: item.label, ids: [...sidebarDocs([item])]});
+      const entries = item.link?.type === 'doc' ? [{id: item.link.id}] : [];
+      entries.push(...sidebarEntries(item.items, splits));
+      categories.push({label: item.label, entries});
     }
   }
 
-  return {loose, categories};
+  return [{label: 'Overview', entries: loose}, ...categories];
 }
 
 /** The route a section's pages share: `/docs/office-api/` for everything under it. */
@@ -102,6 +166,8 @@ function header(title, summary, details) {
  * @param optional `{name, url, description}`, listed under `## Optional` at the end of the
  *   root index. A `url` without a scheme is resolved against the site, so a locale build
  *   links into its own locale; an absolute one is printed as it stands.
+ * @param split Doc id prefixes. A category below a section's headings whose pages all lie
+ *   under one is written to an llms.txt of its own, at the route its pages share.
  * @param sidebars The loaded sidebars, keyed by name.
  * @param entry Maps a doc id to `{title, description, url, route}`, or null when it has no
  *   twin — a page of a deprecated section, which is left out of the index as well.
@@ -115,13 +181,13 @@ function buildLlmsTxt({
   notes,
   sections,
   optional = [],
+  split = [],
   sidebars,
   entry,
   siteUrl,
   baseUrl,
 }) {
   const rootUrl = `${siteUrl}${baseUrl}llms.txt`;
-  const details = sectionDetails(rootUrl);
   const files = [];
   const groups = [];
 
@@ -133,43 +199,99 @@ function buildLlmsTxt({
 
     // A doc reached twice — a category index also listed as a page — is printed once.
     const seen = new Set();
-    const blocks = [];
     const routes = [];
+    const children = [];
 
-    const list = (label, ids) => {
-      const fresh = ids.filter((id) => !seen.has(id) && seen.add(id));
-
-      const docs = fresh.map((id) => entry(id)).filter(Boolean);
-      if (docs.length) {
-        routes.push(...docs.map((doc) => doc.route));
-        const lines = docs.map((doc) => `- [${doc.title}](${doc.url})${describe(doc)}\n`);
-        blocks.push(`## ${label}\n\n${lines.join('')}`);
+    // `## label` over the entries that resolve, or null when none does. The routes of the
+    // pages listed go to `into`, which decides where the file is written.
+    const block = (label, entries, into) => {
+      const lines = [];
+      for (const item of entries) {
+        if (item.category) {
+          const child = splitFile(item.category);
+          if (child) {
+            children.push(child);
+            into.push(...child.routes);
+            lines.push(`- [${child.label}](${child.url})${child.described}\n`);
+          }
+          continue;
+        }
+        if (seen.has(item.id)) {
+          continue;
+        }
+        seen.add(item.id);
+        const doc = entry(item.id);
+        if (doc) {
+          into.push(doc.route);
+          const name = item.owner ? `${item.owner}.${doc.title}` : doc.title;
+          lines.push(`- [${name}](${doc.url})${describe(doc)}\n`);
+        }
       }
+      return lines.length ? `## ${label}\n\n${lines.join('')}` : null;
     };
 
-    const {loose, categories} = splitSidebar(items);
+    // A split category's own file; its heading and summary are filled in once the
+    // section's own route, which it links back to, is known.
+    const splitFile = (category) => {
+      const own = [];
+      const blocks = splitCategory(category)
+        .map(({label, entries}) => block(label, entries, own))
+        .filter(Boolean);
+      if (!blocks.length) {
+        return null;
+      }
+      const route = commonRoute(own);
+      const doc = category.link?.type === 'doc' ? entry(category.link.id) : null;
+      return {
+        label: category.label,
+        summary: doc?.description,
+        described: describe({title: category.label, description: doc?.description}),
+        url: `${siteUrl}${route}llms.txt`,
+        route,
+        routes: own,
+        blocks,
+      };
+    };
+
     // Loose pages get a heading of their own: the spec lists files under an H2 only.
-    list('Overview', loose);
-    for (const category of categories) {
-      list(category.label, category.ids);
-    }
+    const blocks = splitSidebar(items, split)
+      .map(({label, entries}) => block(label, entries, routes))
+      .filter(Boolean);
 
     if (!blocks.length) {
       continue;
     }
 
     const route = commonRoute(routes);
-    if (!route.startsWith(baseUrl) || route === baseUrl) {
-      throw new Error(
-        `The pages of ${section.sidebar} share no route below ${baseUrl}, so its llms.txt would replace the root index`,
-      );
-    }
-    if (files.some((file) => file.route === route)) {
-      throw new Error(`Two sections share the route ${route}, and so would share one llms.txt`);
-    }
-
     const heading = `${section.group}: ${section.name}`;
-    files.push({route, content: header(heading, section.description, details) + blocks.join('\n')});
+    const sectionUrl = `${siteUrl}${route}llms.txt`;
+
+    const written = [
+      {
+        route,
+        content:
+          header(heading, section.description, sectionDetails(rootUrl, children.length > 0)) +
+          blocks.join('\n'),
+      },
+      ...children.map((child) => ({
+        route: child.route,
+        content:
+          header(`${heading} — ${child.label}`, child.summary, splitDetails(sectionUrl, rootUrl)) +
+          child.blocks.join('\n'),
+      })),
+    ];
+
+    for (const file of written) {
+      if (!file.route.startsWith(baseUrl) || file.route === baseUrl) {
+        throw new Error(
+          `Pages of ${section.sidebar} share no route below ${baseUrl}, so an llms.txt would replace the root index`,
+        );
+      }
+      if (files.some((other) => other.route === file.route)) {
+        throw new Error(`Two llms.txt files share the route ${file.route}`);
+      }
+      files.push(file);
+    }
 
     let group = groups.at(-1);
     if (group?.name !== section.group) {
@@ -177,9 +299,8 @@ function buildLlmsTxt({
       groups.push(group);
     }
 
-    const url = `${siteUrl}${route}llms.txt`;
     const described = describe({title: section.name, description: section.description});
-    group.entries.push(`- [${section.name}](${url})${described}\n`);
+    group.entries.push(`- [${section.name}](${sectionUrl})${described}\n`);
   }
 
   const index = groups.map((group) => `## ${group.name}\n\n${group.entries.join('')}`);
