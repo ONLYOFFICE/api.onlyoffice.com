@@ -1,6 +1,6 @@
 # ApiAreas
 
-Represents the ApiAreas class.
+Class representing the areas.
 
 ## Properties
 
@@ -10,6 +10,8 @@ Represents the ApiAreas class.
 | Parent | [ApiRange](../ApiRange/ApiRange.md) | Returns the parent object for the specified collection. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

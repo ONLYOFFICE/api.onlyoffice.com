@@ -4,6 +4,8 @@ ApiRangeTextPr is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [GetBold](./Methods/GetBold.md) | boolean | Gets the bold property from the current text properties. |

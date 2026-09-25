@@ -1,6 +1,6 @@
 # ApiRange
 
-Represents the ApiRange class.
+Class representing a range.
 
 ## Properties
 
@@ -54,6 +54,8 @@ Represents the ApiRange class.
 | WrapText | boolean | Returns the information about the wrapping cell style or specifies whether the words in the cell must be wrapped to fit the cell size or not. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

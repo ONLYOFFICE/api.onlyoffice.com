@@ -1,8 +1,10 @@
 # ApiNotesPage
 
-Represents the ApiNotesPage class.
+Class representing a notes page.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

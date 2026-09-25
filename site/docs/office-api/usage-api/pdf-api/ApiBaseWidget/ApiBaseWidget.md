@@ -1,8 +1,10 @@
 # ApiBaseWidget
 
-Represents the ApiBaseWidget class.
+Class representing a base field widget.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

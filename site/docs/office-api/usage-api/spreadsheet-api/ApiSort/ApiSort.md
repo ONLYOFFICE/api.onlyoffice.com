@@ -1,6 +1,6 @@
 # ApiSort
 
-Represents the ApiSort class.
+Class representing the sort state of a list object (table).
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -19,6 +19,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | SortMethod | [XlSortMethod](../Enumeration/XlSortMethod.md) | Returns or sets the sort method for Chinese text. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

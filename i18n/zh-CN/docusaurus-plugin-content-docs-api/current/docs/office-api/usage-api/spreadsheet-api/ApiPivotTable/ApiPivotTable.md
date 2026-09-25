@@ -1,6 +1,6 @@
 # ApiPivotTable
 
-表示 ApiPivotTable 类。
+表示数据透视表的类。
 
 ## 属性
 
@@ -39,6 +39,8 @@
 | VisibleFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示数据透视表中所有可见字段的数组。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

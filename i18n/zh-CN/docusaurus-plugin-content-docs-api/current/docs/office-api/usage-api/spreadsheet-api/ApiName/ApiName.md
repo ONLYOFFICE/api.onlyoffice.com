@@ -1,6 +1,6 @@
 # ApiName
 
-表示 ApiName 类。
+表示名称的类。
 
 ## 属性
 
@@ -11,6 +11,8 @@
 | RefersToRange | [ApiRange](../ApiRange/ApiRange.md) | 按引用返回 ApiRange 对象。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

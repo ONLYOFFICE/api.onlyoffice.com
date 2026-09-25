@@ -1,8 +1,10 @@
 # ApiDocument
 
-Represents the ApiDocument class.
+Class representing a document.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

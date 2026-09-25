@@ -1,8 +1,12 @@
 # ApiButtonWidget
 
+表示按钮控件的类。
+
 ApiButtonWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

@@ -1,6 +1,11 @@
 # PDF API
 
+The PDF API contains the methods and events available to a plugin
+in the ONLYOFFICE PDF editor.
+
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

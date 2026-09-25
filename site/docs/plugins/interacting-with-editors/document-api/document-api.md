@@ -1,6 +1,11 @@
 # Document API
 
+The Document API contains the methods and events available to a plugin
+in the ONLYOFFICE Document editor.
+
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

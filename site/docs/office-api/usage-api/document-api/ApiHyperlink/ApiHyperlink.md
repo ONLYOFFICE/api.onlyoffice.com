@@ -1,8 +1,10 @@
 # ApiHyperlink
 
-Represents the ApiHyperlink class.
+Class representing a Paragraph hyperlink.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

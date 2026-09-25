@@ -1,8 +1,10 @@
 # ApiParaPr
 
-Represents the ApiParaPr class.
+Class representing the paragraph properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

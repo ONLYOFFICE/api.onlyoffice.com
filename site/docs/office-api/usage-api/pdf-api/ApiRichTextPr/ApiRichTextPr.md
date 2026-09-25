@@ -1,8 +1,10 @@
 # ApiRichTextPr
 
-Represents the ApiRichTextPr class.
+Class representing the rich text properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,8 +1,10 @@
 # ApiLayout
 
-Represents the ApiLayout class.
+Class representing a slide layout.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

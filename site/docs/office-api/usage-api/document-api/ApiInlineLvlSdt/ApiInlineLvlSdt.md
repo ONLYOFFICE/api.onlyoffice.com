@@ -1,8 +1,10 @@
 # ApiInlineLvlSdt
 
-Represents the ApiInlineLvlSdt class.
+Class representing a container for the paragraph elements.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,6 +1,6 @@
 # ApiFormatCondition
 
-表示 ApiFormatCondition 类。
+表示单个格式条件的类。
 
 ## 属性
 
@@ -27,6 +27,8 @@
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回格式条件类型。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

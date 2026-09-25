@@ -1,8 +1,11 @@
 # ApiTableStylePr
 
-Represents the ApiTableStylePr class.
+Class representing a set of formatting properties which shall be conditionally applied to the parts of a table
+which match the requirement specified on the `Type`.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

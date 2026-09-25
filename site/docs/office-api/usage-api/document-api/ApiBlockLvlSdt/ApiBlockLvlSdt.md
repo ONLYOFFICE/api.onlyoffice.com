@@ -1,8 +1,10 @@
 # ApiBlockLvlSdt
 
-Represents the ApiBlockLvlSdt class.
+Class representing a container for the document content.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

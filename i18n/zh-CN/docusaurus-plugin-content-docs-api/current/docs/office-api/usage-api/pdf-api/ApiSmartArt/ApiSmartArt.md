@@ -1,8 +1,12 @@
 # ApiSmartArt
 
+表示绘图对象组的类。
+
 ApiSmartArt 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

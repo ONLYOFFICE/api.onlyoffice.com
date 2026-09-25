@@ -1,8 +1,10 @@
 # ApiMaster
 
-Represents the ApiMaster class.
+Class representing a slide master.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

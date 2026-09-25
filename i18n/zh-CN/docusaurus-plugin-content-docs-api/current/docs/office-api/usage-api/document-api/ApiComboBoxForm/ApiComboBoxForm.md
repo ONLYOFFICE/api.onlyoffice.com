@@ -1,8 +1,12 @@
 # ApiComboBoxForm
 
+表示文档组合框/下拉列表的类。
+
 ApiComboBoxForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

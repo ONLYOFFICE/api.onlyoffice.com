@@ -1,8 +1,12 @@
 # ApiTextWidget
 
+Class representing a text field widget.
+
 ApiTextWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

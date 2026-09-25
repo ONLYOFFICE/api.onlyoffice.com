@@ -1,8 +1,10 @@
 # ApiTableRow
 
-Represents the ApiTableRow class.
+Class representing a table row.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,8 +1,10 @@
 # ApiDocumentContent
 
-Represents the ApiDocumentContent class.
+Class representing a container for paragraphs and tables.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,6 +1,11 @@
 # Document API
 
+Document API 包含 ONLYOFFICE 文档编辑器中
+可供插件使用的方法和事件。
+
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -52,7 +57,7 @@
 | [GetVBAMacros](./Methods/GetVBAMacros.md) | string \| null | 返回文档中的所有 VBA 宏。 |
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
-| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document. |
+| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
 | [InsertOleObject](./Methods/InsertOleObject.md) | 无 | 在当前文档位置插入 OLE 对象。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
@@ -113,14 +118,14 @@
 
 ## 事件
 
-The following table lists the available events.
+下表列出了可用的事件。
 
 | 事件 | 描述 |
 | ----- | ----------- |
-| [onAddComment](./Events/onAddComment.md) | The function called when a comment is added to the document with the [AddComment](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/AddComment.md) method. |
+| [onAddComment](./Events/onAddComment.md) | 使用 [AddComment](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/AddComment.md) 方法向文档添加批注时调用的函数。 |
 | [onBlurAnnotation](./Events/onBlurAnnotation.md) | 当批注失去焦点时调用的函数。 |
 | [onBlurContentControl](./Events/onBlurContentControl.md) | 用于显示哪个内容控件已失去焦点的函数。 |
-| [onChangeCommentData](./Events/onChangeCommentData.md) | The function called when the specified comment is changed with the [ChangeComment](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/ChangeComment.md) method. |
+| [onChangeCommentData](./Events/onChangeCommentData.md) | 使用 [ChangeComment](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/ChangeComment.md) 方法更改指定批注时调用的函数。 |
 | [onChangeContentControl](./Events/onChangeContentControl.md) | 用于显示哪个内容控件已更改的函数。 |
 | [onChangeCurrentPage](./Events/onChangeCurrentPage.md) | 当前页面发生更改时调用的函数。 |
 | [onChangeRestrictions](./Events/onChangeRestrictions.md) | 当编辑器中的限制更改时调用的函数。 |
@@ -134,7 +139,7 @@ The following table lists the available events.
 | [onHideContentControlTrack](./Events/onHideContentControlTrack.md) | 当内容控件在文档中失去焦点时调用的函数。 |
 | [onInsertOleObjects](./Events/onInsertOleObjects.md) | 当一个或多个 OLE 对象插入文档时调用的函数。 |
 | [onParagraphText](./Events/onParagraphText.md) | 当文档中的段落文本更新时调用的函数。 |
-| [onRemoveComment](./Events/onRemoveComment.md) | The function called when the specified comment is removed with the [RemoveComments](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/RemoveComments.md) method. |
+| [onRemoveComment](./Events/onRemoveComment.md) | 使用 [RemoveComments](./../../../../docs/plugins/interacting-with-editors/document-api/Methods/RemoveComments.md) 方法删除指定批注时调用的函数。 |
 | [onShowContentControlTrack](./Events/onShowContentControlTrack.md) | 当内容控件获得焦点并显示其轨道时调用的函数。 |
 | [onSubmitForm](./Events/onSubmitForm.md) | 用户点击"完成并提交"按钮时调用的函数。 |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | 当编辑器中的目标位置发生更改时调用的函数。 |

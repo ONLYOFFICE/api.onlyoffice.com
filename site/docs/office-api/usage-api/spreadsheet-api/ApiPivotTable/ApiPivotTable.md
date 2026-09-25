@@ -1,6 +1,6 @@
 # ApiPivotTable
 
-Represents the ApiPivotTable class.
+Class representing a pivot table.
 
 ## Properties
 
@@ -39,6 +39,8 @@ Represents the ApiPivotTable class.
 | VisibleFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that represents all visible fields in the pivot table. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

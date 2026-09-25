@@ -4,6 +4,8 @@ ApiRangeTextPr 是 [ApiTextPr](../ApiTextPr/ApiTextPr.md) 的子类。
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetBold](./Methods/GetBold.md) | boolean | 从当前文本属性获取粗体属性。 |

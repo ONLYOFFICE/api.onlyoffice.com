@@ -1,8 +1,10 @@
 # ApiChartSeries
 
-Represents the ApiChartSeries class.
+Class representing a chart series.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

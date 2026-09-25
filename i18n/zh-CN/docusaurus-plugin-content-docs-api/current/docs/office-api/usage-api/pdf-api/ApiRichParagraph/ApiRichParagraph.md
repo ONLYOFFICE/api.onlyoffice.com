@@ -1,8 +1,12 @@
 # ApiRichParagraph
 
+表示富文本段落的类。
+
 ApiRichParagraph 是 [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

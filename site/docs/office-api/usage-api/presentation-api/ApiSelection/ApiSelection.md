@@ -1,8 +1,10 @@
 # ApiSelection
 
-Represents the ApiSelection class.
+Class representing the selection in the presentation.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

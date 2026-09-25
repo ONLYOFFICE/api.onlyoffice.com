@@ -1,8 +1,12 @@
 # ApiRun
 
+表示称为“run”的小文本块的类。
+
 ApiRun 是 [ApiTextPr](../ApiTextPr/ApiTextPr.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

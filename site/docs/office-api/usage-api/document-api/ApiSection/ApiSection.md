@@ -1,8 +1,10 @@
 # ApiSection
 
-Represents the ApiSection class.
+Class representing a document section.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

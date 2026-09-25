@@ -1,8 +1,12 @@
 # ApiRichParagraph
 
+Class representing a rich paragraph.
+
 ApiRichParagraph is a subclass of [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

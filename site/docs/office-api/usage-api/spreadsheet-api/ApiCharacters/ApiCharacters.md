@@ -1,6 +1,6 @@
 # ApiCharacters
 
-Represents the ApiCharacters class.
+Class representing characters in an object that contains text.
 
 ## Properties
 
@@ -13,6 +13,8 @@ Represents the ApiCharacters class.
 | Text | string | The string value representing the text of the specified range of characters. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

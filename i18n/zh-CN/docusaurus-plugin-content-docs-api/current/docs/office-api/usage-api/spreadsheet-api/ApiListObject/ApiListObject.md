@@ -1,6 +1,6 @@
 # ApiListObject
 
-表示 ApiListObject 类。
+表示格式化表格的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -35,6 +35,8 @@
 | TotalsRowRange | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回汇总行的范围；如果未显示则为 null。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

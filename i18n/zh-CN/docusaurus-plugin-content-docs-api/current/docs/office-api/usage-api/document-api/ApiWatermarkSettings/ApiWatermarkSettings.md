@@ -1,8 +1,10 @@
 # ApiWatermarkSettings
 
-表示 ApiWatermarkSettings 类。
+表示用于创建水印的设置的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

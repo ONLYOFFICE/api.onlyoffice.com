@@ -1,6 +1,6 @@
 # ApiWorksheet
 
-Represents the ApiWorksheet class.
+Class representing a sheet.
 
 ## Properties
 
@@ -31,6 +31,8 @@ Represents the ApiWorksheet class.
 | Visible | boolean | Returns or sets the state of sheet visibility. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

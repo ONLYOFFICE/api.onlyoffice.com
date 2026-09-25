@@ -1,8 +1,12 @@
 # ApiComboBoxForm
 
+Class representing a document combo box / drop-down list.
+
 ApiComboBoxForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

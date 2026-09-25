@@ -1,5 +1,7 @@
 # ApiPivotDataField
 
+表示数据透视表数据字段的类。
+
 ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子类。
 
 ## 属性
@@ -17,6 +19,8 @@ ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子�
 | Value | string | 返回或设置表示数据透视表报表中指定数据字段名称的值。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

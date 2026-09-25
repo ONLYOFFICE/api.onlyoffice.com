@@ -1,8 +1,10 @@
 # ApiGeometry
 
-Represents the ApiGeometry class.
+Class representing the shape geometry.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

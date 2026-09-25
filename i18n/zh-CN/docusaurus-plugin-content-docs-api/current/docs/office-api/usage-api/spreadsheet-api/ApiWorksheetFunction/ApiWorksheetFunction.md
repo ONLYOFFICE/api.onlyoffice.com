@@ -1,8 +1,10 @@
 # ApiWorksheetFunction
 
-表示 ApiWorksheetFunction 类。
+表示工作表函数的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

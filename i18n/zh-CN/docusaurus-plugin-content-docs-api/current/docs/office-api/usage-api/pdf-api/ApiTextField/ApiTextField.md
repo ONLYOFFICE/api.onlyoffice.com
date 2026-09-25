@@ -1,8 +1,12 @@
 # ApiTextField
 
+表示文本字段的类。
+
 ApiTextField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

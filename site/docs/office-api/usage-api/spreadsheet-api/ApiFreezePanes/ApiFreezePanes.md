@@ -1,8 +1,10 @@
 # ApiFreezePanes
 
-Represents the ApiFreezePanes class.
+Class representing freeze panes.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,6 +1,6 @@
 # Api
 
-表示 Api 类。
+基类。
 
 ## 属性
 
@@ -17,6 +17,8 @@
 | WorksheetFunction | [ApiWorksheetFunction](../ApiWorksheetFunction/ApiWorksheetFunction.md) | 返回表示函数列表的对象。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

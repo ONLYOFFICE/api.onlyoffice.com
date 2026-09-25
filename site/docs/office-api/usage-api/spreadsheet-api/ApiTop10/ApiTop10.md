@@ -1,5 +1,7 @@
 # ApiTop10
 
+Class representing a top 10 conditional formatting rule.
+
 ApiTop10 is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -12,6 +14,8 @@ ApiTop10 is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCo
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the top 10 conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

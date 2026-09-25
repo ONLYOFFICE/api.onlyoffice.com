@@ -1,6 +1,11 @@
 # Form API
 
+The Forms API contains the methods and events available to a plugin
+in the ONLYOFFICE Forms editor.
+
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

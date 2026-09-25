@@ -1,6 +1,11 @@
 # Presentation API
 
+The Presentation API contains the methods and events available to a plugin
+in the ONLYOFFICE Presentation editor.
+
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

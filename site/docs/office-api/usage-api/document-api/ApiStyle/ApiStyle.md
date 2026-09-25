@@ -1,8 +1,10 @@
 # ApiStyle
 
-Represents the ApiStyle class.
+Class representing a style.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

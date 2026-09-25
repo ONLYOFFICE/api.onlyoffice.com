@@ -1,6 +1,6 @@
 # ApiSort
 
-表示 ApiSort 类。
+表示列表对象（表格）排序状态的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -19,6 +19,8 @@
 | SortMethod | [XlSortMethod](../Enumeration/XlSortMethod.md) | 返回或设置中文文本的排序方法。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

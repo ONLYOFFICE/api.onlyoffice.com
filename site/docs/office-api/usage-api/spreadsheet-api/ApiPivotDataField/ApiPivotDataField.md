@@ -1,5 +1,7 @@
 # ApiPivotDataField
 
+Class representing a pivot table data field.
+
 ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotField.md).
 
 ## Properties
@@ -17,6 +19,8 @@ ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotFiel
 | Value | string | Returns or sets a value representing the name of the specified data field in the pivot table report. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

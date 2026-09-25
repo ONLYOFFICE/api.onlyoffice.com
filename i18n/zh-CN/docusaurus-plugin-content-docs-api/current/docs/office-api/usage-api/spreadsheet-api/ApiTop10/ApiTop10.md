@@ -1,5 +1,7 @@
 # ApiTop10
 
+表示前 10 项条件格式规则的类。
+
 ApiTop10 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -12,6 +14,8 @@ ApiTop10 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) �
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回前 10 项条件格式规则的类型。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

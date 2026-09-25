@@ -1,8 +1,10 @@
 # ApiFill
 
-Represents the ApiFill class.
+Class representing a base class for fill.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

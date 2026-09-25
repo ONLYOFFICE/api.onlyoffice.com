@@ -1,5 +1,7 @@
 # ApiColorScale
 
+表示色阶条件格式规则的类。
+
 ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -10,6 +12,8 @@ ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回色阶条件格式规则的类型。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

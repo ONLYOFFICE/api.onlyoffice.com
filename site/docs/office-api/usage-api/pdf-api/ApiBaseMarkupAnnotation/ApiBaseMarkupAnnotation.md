@@ -1,8 +1,12 @@
 # ApiBaseMarkupAnnotation
 
+Class representing a base markup annotation.
+
 ApiBaseMarkupAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

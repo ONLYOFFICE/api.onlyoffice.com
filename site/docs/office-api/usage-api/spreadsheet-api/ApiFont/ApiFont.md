@@ -1,6 +1,6 @@
 # ApiFont
 
-Represents the ApiFont class.
+Class that contains the font attributes (font name, font size, color, and so on).
 
 ## Properties
 
@@ -18,6 +18,8 @@ Represents the ApiFont class.
 | Underline | string \| null | The font type of underline. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

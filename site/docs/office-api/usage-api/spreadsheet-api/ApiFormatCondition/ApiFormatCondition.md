@@ -1,6 +1,6 @@
 # ApiFormatCondition
 
-Represents the ApiFormatCondition class.
+Class representing a single format condition.
 
 ## Properties
 
@@ -27,6 +27,8 @@ Represents the ApiFormatCondition class.
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the format condition type. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

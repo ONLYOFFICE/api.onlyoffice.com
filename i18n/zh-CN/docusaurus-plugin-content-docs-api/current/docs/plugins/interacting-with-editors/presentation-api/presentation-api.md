@@ -1,6 +1,11 @@
 # Presentation API
 
+Presentation API 包含 ONLYOFFICE 演示文稿编辑器中
+可供插件使用的方法和事件。
+
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -59,7 +64,7 @@
 
 ## 事件
 
-The following table lists the available events.
+下表列出了可用的事件。
 
 | 事件 | 描述 |
 | ----- | ----------- |

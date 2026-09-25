@@ -1,8 +1,10 @@
 # ApiStroke
 
-Represents the ApiStroke class.
+Class representing a stroke.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

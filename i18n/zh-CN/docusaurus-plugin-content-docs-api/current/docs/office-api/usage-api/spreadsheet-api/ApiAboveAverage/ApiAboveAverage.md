@@ -1,5 +1,7 @@
 # ApiAboveAverage
 
+表示高于平均值条件格式规则的类。
+
 ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -11,6 +13,8 @@ ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatConditio
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回高于平均值条件格式规则的类型。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

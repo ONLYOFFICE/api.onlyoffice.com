@@ -1,6 +1,6 @@
 # ApiValidation
 
-Represents the ApiValidation class.
+Class representing data validation.
 
 ## Properties
 
@@ -23,6 +23,8 @@ Represents the ApiValidation class.
 | Value | string | Returns the validation value. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

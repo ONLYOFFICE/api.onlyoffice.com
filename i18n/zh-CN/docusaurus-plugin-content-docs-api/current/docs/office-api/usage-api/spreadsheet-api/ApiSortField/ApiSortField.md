@@ -1,6 +1,6 @@
 # ApiSortField
 
-表示 ApiSortField 类。
+表示 SortFields 集合中单个排序字段的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -17,6 +17,8 @@
 | SortOn | [XlSortOn](../Enumeration/XlSortOn.md) | 返回或设置用作排序条件的值。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

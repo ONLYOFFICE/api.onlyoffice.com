@@ -1,8 +1,10 @@
 # ApiAnimationEffect
 
-Represents the ApiAnimationEffect class.
+Class representing an animation effect.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

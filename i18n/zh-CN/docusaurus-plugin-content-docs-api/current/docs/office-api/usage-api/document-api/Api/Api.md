@@ -1,8 +1,10 @@
 # Api
 
-表示 Api 类。
+基类
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -85,5 +87,5 @@
 | [Save](./Methods/Save.md) | boolean | 保存对指定文档的更改。 |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | 将缇转换为磅。 |
-| [attachEvent](./Methods/attachEvent.md) | boolean | 订阅指定事件，并在事件触发时调用回调函数。 |
-| [detachEvent](./Methods/detachEvent.md) | boolean | 取消订阅指定事件。 |
+| [attachEvent](./Methods/attachEvent.md) | 无 | 订阅指定事件，并在事件触发时调用回调函数。 |
+| [detachEvent](./Methods/detachEvent.md) | 无 | 取消订阅指定事件。 |

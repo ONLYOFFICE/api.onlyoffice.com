@@ -1,8 +1,12 @@
 # ApiRun
 
+Class representing a small text block called 'run'.
+
 ApiRun is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

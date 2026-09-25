@@ -1,8 +1,12 @@
 # ApiCheckboxWidget
 
+Class representing a checkbox field widget.
+
 ApiCheckboxWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

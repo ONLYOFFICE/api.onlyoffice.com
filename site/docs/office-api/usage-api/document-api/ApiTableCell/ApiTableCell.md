@@ -1,8 +1,12 @@
 # ApiTableCell
 
+Class representing a table cell.
+
 ApiTableCell is a subclass of [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,8 +1,12 @@
 # ApiCheckboxField
 
+表示复选框字段的类。
+
 ApiCheckboxField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

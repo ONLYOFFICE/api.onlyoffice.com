@@ -1,8 +1,10 @@
 # Api
 
-Represents the Api class.
+Base class
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -85,5 +87,5 @@ Represents the Api class.
 | [Save](./Methods/Save.md) | boolean | Saves changes to the specified document. |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
-| [attachEvent](./Methods/attachEvent.md) | boolean | Subscribes to the specified event and calls the callback function when the event fires. |
-| [detachEvent](./Methods/detachEvent.md) | boolean | Unsubscribes from the specified event. |
+| [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
+| [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

@@ -18,7 +18,7 @@ expression.detachEvent(eventName);
 
 ## 返回值
 
-boolean
+此方法不返回任何数据。
 
 ## 示例
 

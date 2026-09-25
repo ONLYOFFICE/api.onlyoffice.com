@@ -1,6 +1,11 @@
 # Spreadsheet API
 
+The Spreadsheet API contains the methods and events available to a plugin
+in the ONLYOFFICE Spreadsheet editor.
+
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

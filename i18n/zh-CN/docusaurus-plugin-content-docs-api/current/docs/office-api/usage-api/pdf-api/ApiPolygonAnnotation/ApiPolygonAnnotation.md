@@ -1,8 +1,12 @@
 # ApiPolygonAnnotation
 
+表示多边形批注的类。
+
 ApiPolygonAnnotation 是 [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

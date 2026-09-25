@@ -1,8 +1,12 @@
 # ApiDateForm
 
+表示文档日期字段的类。
+
 ApiDateForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

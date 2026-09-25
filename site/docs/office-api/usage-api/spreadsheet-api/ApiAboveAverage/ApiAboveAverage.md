@@ -1,5 +1,7 @@
 # ApiAboveAverage
 
+Class representing an above average conditional formatting rule.
+
 ApiAboveAverage is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -11,6 +13,8 @@ ApiAboveAverage is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiF
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the above average conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -1,8 +1,10 @@
 # ApiThemeColorScheme
 
-表示 ApiThemeColorScheme 类。
+表示主题配色方案的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

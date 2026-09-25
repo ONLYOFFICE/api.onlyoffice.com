@@ -1,8 +1,12 @@
 # ApiSignatureForm
 
+表示文档图片表单的类。
+
 ApiSignatureForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

@@ -1,8 +1,12 @@
 # ApiCheckboxWidget
 
+表示复选框字段控件的类。
+
 ApiCheckboxWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

@@ -1,8 +1,12 @@
 # ApiComplexForm
 
+Class representing a complex field.
+
 ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

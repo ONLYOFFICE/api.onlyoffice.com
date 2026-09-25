@@ -1,6 +1,6 @@
 # Api
 
-Represents the Api class.
+Base class.
 
 ## Properties
 
@@ -17,6 +17,8 @@ Represents the Api class.
 | WorksheetFunction | [ApiWorksheetFunction](../ApiWorksheetFunction/ApiWorksheetFunction.md) | Returns an object that represents the function list. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

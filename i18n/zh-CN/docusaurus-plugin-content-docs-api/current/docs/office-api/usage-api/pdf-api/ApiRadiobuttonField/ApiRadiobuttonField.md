@@ -1,8 +1,12 @@
 # ApiRadiobuttonField
 
+表示单选按钮字段的类。
+
 ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

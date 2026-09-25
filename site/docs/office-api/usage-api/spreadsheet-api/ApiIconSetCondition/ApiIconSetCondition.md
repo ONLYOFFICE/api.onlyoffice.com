@@ -1,5 +1,7 @@
 # ApiIconSetCondition
 
+Class representing an icon set conditional formatting rule.
+
 ApiIconSetCondition is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -15,6 +17,8 @@ ApiIconSetCondition is a subclass of [ApiFormatCondition](../ApiFormatCondition/
 | Type | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the icon set conditional formatting rule. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

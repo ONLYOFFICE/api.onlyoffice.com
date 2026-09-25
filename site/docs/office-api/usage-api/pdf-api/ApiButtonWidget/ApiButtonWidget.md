@@ -1,8 +1,12 @@
 # ApiButtonWidget
 
+Class representing a button widget.
+
 ApiButtonWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

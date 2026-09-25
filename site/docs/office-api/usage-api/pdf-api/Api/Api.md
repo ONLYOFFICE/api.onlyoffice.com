@@ -4,6 +4,8 @@ Represents the Api class.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
@@ -81,3 +83,5 @@ Represents the Api class.
 | [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
+| [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
+| [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |
