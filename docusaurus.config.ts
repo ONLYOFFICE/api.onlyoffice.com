@@ -190,6 +190,12 @@ const config: Config = {
         split: [
           // One llms.txt per editor.
           'docs/office-api/usage-api/',
+          // Not the parent: `interacting-with-editors/overview/` stays in the section.
+          'docs/plugins/interacting-with-editors/document-api/',
+          'docs/plugins/interacting-with-editors/form-api/',
+          'docs/plugins/interacting-with-editors/pdf-api/',
+          'docs/plugins/interacting-with-editors/presentation-api/',
+          'docs/plugins/interacting-with-editors/spreadsheet-api/',
         ],
         optional: [
           {

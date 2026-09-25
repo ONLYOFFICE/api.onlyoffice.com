@@ -16,7 +16,7 @@
  * of the `split` prefixes is given an llms.txt of its own, which the section's file links
  * to in its place. Inside such a file each subcategory is a heading, and the pages nested
  * one level further are named after it: `ApiRange.AddComment`, not one `AddComment` among
- * many.
+ * many. Pages directly in a subcategory, like the plugin API's `Methods/`, keep their names.
  *
  * Each file is laid out the way the spec asks: the H1, a `>` blockquote holding the
  * summary, then plain paragraphs saying how to read what follows. Those are two slots, not
