@@ -87,7 +87,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 - **[交互式 Playground](playground.md)** - 无需安装即可测试代码
 - **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** - 预构建组件
 - **[插件模板](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 起始项目
-- **[浏览器开发者工具](../development-workflow/debugging/for-web-editors.md)** - 调试指南
+- **[浏览器开发者工具](../development-workflow/debugging/debugging-plugins.md)** - 调试指南
 - **[插件示例](/samples/?doctype=docs&text=plugin)** - 可运行示例
 - **[API 参考](../interacting-with-editors/overview/overview.md)** - 完整 API 文档
 - **[插件结构](../configuration/configuration.md)** - 配置指南

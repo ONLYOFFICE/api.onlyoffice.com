@@ -56,6 +56,10 @@ window.Asc.plugin.init = function(data) {
 ```
 :::
 
+### 编辑器无法打开并报告令牌错误 {#editor-does-not-open-with-a-token-error}
+
+在加载任何插件之前，编辑器就报告文档安全令牌格式不正确或已过期。这是 ONLYOFFICE 文档中的 JWT 配置问题，而不是插件错误。请参阅[签名](../../../docs-api/additional-api/signature/signature.md)。
+
 ## API 方法错误 {#api-method-errors}
 
 ### executeMethod 不起作用 {#executemethod-not-working}
@@ -230,6 +234,13 @@ function safeSave(key, data) {
 :::
 
 ## 网络错误 {#network-errors}
+
+### 插件文件被 CORS 阻止 {#plugin-files-blocked-by-cors}
+
+编辑器无法从本地服务器加载 `config.json` 或其他插件文件，控制台报告 CORS 错误。
+
+- 启动本地服务器时启用 CORS，例如 `http-server --cors`。
+- 如果编辑器通过 HTTPS 打开，插件也需要通过 HTTPS 提供。浏览器会阻止 HTTPS 页面中的 HTTP 资源，控制台报告 Mixed Content 错误。
 
 ### CORS 错误 {#cors-errors}
 

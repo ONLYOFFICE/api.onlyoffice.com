@@ -56,6 +56,10 @@ window.Asc.plugin.init = function(data) {
 ```
 :::
 
+### Editor does not open with a token error
+
+The editor reports that the document security token is not correctly formed, or that it has expired, before any plugin loads. This is a JWT configuration problem in ONLYOFFICE Docs, not a plugin error. See [Signature](../../../docs-api/additional-api/signature/signature.md).
+
 ## API method errors
 
 ### executeMethod not working
@@ -230,6 +234,13 @@ function safeSave(key, data) {
 :::
 
 ## Network errors
+
+### Plugin files blocked by CORS
+
+The editor cannot load `config.json` or other plugin files from your local server, and the console reports a CORS error.
+
+- Start the local server with CORS enabled, for example `http-server --cors`.
+- If the editor is opened over HTTPS, serve the plugin over HTTPS too. Browsers block HTTP resources on an HTTPS page, and the console reports a Mixed Content error.
 
 ### CORS errors
 
