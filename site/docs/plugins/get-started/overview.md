@@ -100,5 +100,5 @@ Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tool
 
 - [Plugin quick start](quick-start.md)
 - [Plugin events](../interacting-with-editors/overview/asc-plugin.md#events)
-- [Developing for web editors](../development-workflow/developing/for-web-editors.md)
+- [Developing plugins](../development-workflow/developing-plugins.md)
 - [Publishing guide](../development-workflow/publishing/submit-to-marketplace.md)

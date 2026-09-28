@@ -16,7 +16,7 @@ ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器�
 | 插件自身的代码：`index.html` 加载的脚本、`Asc.plugin.init`、事件处理程序、`executeMethod` 回调 | 插件 iframe `iframe_<guid>`，其中 `<guid>` 是插件的 [`guid`](../../configuration/configuration.md#guid) |
 | 传递给 `callCommand` 的函数 | 编辑器框架 `frameEditor` |
 
-![Developer console](/assets/images/plugins/debugging-iframes.png)
+![开发者控制台](/assets/images/plugins/debugging-iframes.png)
 
 传递给 `callCommand` 的函数并不在您编写它的地方运行。插件会将其转换为字符串并发送给编辑器，由编辑器执行。因此：
 
@@ -45,9 +45,9 @@ ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器�
 })(window, undefined);
 ```
 
-请先打开开发者工具：如果开发者工具未打开，浏览器会忽略 `debugger`。然后打开 **Plugins** 选项卡并运行插件。执行将在 `debugger` 所在行停止：
+请先打开开发者工具：如果开发者工具未打开，浏览器会忽略 `debugger`。然后打开**插件**选项卡并运行插件。执行将在 `debugger` 所在行停止：
 
-![Builder debugger](/assets/images/plugins/plugin-debugging.png)
+![调试工具](/assets/images/plugins/plugin-debugging.png)
 
 ## 调试检查清单
 
