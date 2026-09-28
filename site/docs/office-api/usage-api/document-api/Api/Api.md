@@ -1,6 +1,7 @@
 # Api
 
-Base class
+The main class of the Document API. Use it to get the current document and to create
+document elements, such as paragraphs, tables, images, and charts.
 
 ## Methods
 

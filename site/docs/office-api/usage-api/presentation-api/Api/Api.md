@@ -1,6 +1,7 @@
 # Api
 
-Represents the Api class.
+The main class of the Presentation API. Use it to get the current presentation and to
+create slides and slide elements, such as shapes, images, tables, and charts.
 
 ## Methods
 

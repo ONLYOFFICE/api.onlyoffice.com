@@ -1,6 +1,7 @@
 # Api
 
-Represents the Api class.
+The main class of the PDF API. Use it to get the current document and to create page
+content, such as paragraphs, tables, images, annotations, and form fields.
 
 ## Methods
 

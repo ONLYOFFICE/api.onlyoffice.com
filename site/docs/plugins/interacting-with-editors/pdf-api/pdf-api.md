@@ -1,7 +1,8 @@
 # PDF API
 
-The PDF API contains the methods and events available to a plugin
-in the ONLYOFFICE PDF editor.
+The PDF API lists the methods and events a plugin can use when working with a PDF file in
+ONLYOFFICE Docs. To create or edit PDF files from a script instead, see the Office API
+[PDF](./../../../../docs/office-api/usage-api/pdf-api/pdf-api.md).
 
 ## Methods
 

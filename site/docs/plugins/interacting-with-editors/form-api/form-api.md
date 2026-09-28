@@ -1,7 +1,8 @@
 # Form API
 
-The Forms API contains the methods and events available to a plugin
-in the ONLYOFFICE Forms editor.
+The Form API lists the methods and events a plugin can use when working with a form in
+ONLYOFFICE Docs. To create forms from a script instead, see the Office API
+[Form](./../../../../docs/office-api/usage-api/form-api/form-api.md).
 
 ## Methods
 

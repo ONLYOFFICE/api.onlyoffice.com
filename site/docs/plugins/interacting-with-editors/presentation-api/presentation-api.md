@@ -1,7 +1,8 @@
 # Presentation API
 
-The Presentation API contains the methods and events available to a plugin
-in the ONLYOFFICE Presentation editor.
+The Presentation API lists the methods and events a plugin can use when working with a
+presentation in ONLYOFFICE Docs. To create or edit presentations from a script instead,
+see the Office API [Presentation](./../../../../docs/office-api/usage-api/presentation-api/presentation-api.md).
 
 ## Methods
 

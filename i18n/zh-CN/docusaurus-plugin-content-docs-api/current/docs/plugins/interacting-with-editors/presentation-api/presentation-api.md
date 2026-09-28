@@ -1,7 +1,6 @@
 # Presentation API
 
-Presentation API 包含 ONLYOFFICE 演示文稿编辑器中
-可供插件使用的方法和事件。
+Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可以使用的方法和事件。如需通过脚本创建或编辑演示文稿，请参阅 Office API 的 [Presentation](./../../../../docs/office-api/usage-api/presentation-api/presentation-api.md)。
 
 ## 方法
 

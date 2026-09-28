@@ -1,7 +1,6 @@
 # Document API
 
-Document API 包含 ONLYOFFICE 文档编辑器中
-可供插件使用的方法和事件。
+Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以使用的方法和事件。如需通过脚本创建或编辑文档，请参阅 Office API 的 [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md)。
 
 ## 方法
 

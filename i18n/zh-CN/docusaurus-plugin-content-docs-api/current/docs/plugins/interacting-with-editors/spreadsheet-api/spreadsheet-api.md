@@ -1,7 +1,6 @@
 # Spreadsheet API
 
-Spreadsheet API 包含 ONLYOFFICE 电子表格编辑器中
-可供插件使用的方法和事件。
+Spreadsheet API 列出了插件在 ONLYOFFICE 文档中处理电子表格时可以使用的方法和事件。如需通过脚本创建或编辑电子表格，请参阅 Office API 的 [Spreadsheet](./../../../../docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md)。
 
 ## 方法
 
