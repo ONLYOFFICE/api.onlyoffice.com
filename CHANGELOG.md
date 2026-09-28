@@ -48,6 +48,7 @@
 * Fixed `APITable` row anchors to use the property name's exact casing
 * Fixed broken cross-page links and pointed links at the new per-editor API index pages
 * Fixed the Automation API sample cards linking to the wrong pages
+* Fixed the font and text size units of chart, paragraph, range and PDF widget methods: they take half-points (`hps`), not points (`pt`)
 
 ## 9.2.0
 
