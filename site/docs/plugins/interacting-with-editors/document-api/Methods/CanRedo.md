@@ -8,7 +8,7 @@ Checks if it possible to revert the user's last undone action.
 expression.CanRedo();
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

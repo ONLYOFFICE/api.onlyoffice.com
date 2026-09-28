@@ -8,7 +8,7 @@ Returns the document macros.
 expression.GetMacros();
 ```
 
-`expression` - A variable that represents a [Api](../presentation-api.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 

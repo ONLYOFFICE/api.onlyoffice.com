@@ -9,7 +9,7 @@ Sets the preferred width to the current table.
 expression.SetWidth(sType, nValue);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

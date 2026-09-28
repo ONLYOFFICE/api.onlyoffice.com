@@ -8,7 +8,7 @@ Adds a new adjustment parameter to the current geometry.
 expression.AddAdj(sName, nValue);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

@@ -10,7 +10,7 @@ For proportional fonts, the width of the character 0 (zero) is used.
 expression.SetColumnWidth(nWidth);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

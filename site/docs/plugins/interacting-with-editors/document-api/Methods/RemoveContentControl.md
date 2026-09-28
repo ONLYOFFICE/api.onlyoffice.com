@@ -8,7 +8,7 @@ Removes the currently selected content control retaining all its contents. The c
 expression.RemoveContentControl(InternalId);
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

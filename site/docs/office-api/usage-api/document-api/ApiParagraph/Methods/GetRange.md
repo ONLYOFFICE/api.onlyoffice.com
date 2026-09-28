@@ -9,7 +9,7 @@ The paragraph must be attached to the document before calling this method.
 expression.GetRange(Start, End);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

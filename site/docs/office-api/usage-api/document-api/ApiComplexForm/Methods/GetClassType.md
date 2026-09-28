@@ -8,7 +8,7 @@ Returns a type of the ApiComplexForm class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
 
 ## Parameters
 

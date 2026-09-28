@@ -8,7 +8,7 @@ Specifies that the contents of the current Range are displayed with a single hor
 expression.SetStrikeout(isStrikeout);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

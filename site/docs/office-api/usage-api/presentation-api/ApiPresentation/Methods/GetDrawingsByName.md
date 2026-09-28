@@ -8,7 +8,7 @@ Returns a collection of drawing objects from the document content filtered by th
 expression.GetDrawingsByName(ids);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

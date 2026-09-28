@@ -9,7 +9,7 @@ If table is inline, then only left padding is applied.
 expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

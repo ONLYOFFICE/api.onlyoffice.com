@@ -8,7 +8,7 @@ Returns the month, a number from 1 (January) to 12 (December).
 expression.MONTH(arg1-);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

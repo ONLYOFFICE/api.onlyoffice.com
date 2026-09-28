@@ -8,7 +8,7 @@ Creates an interactive animation sequence triggered by clicking on a specified o
 expression.AddInteractiveSequence(drawing);
 ```
 
-`expression` - A variable that represents a [ApiTimeLine](../ApiTimeLine.md) class.
+`expression` - A variable that represents an [ApiTimeLine](../ApiTimeLine.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the cell width to the applied comb of characters.
 expression.SetCellWidth(nCellWidth);
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

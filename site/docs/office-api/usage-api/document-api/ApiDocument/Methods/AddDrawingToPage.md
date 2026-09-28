@@ -10,7 +10,7 @@ process to arrange tables on the specified page.
 expression.AddDrawingToPage(oDrawing, nPage, x, y);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

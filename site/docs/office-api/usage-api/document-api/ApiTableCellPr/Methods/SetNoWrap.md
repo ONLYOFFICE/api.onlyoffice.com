@@ -9,7 +9,7 @@ only affects the behavior of the cell when the [ApiTablePr#SetTableLayout](../..
 expression.SetNoWrap(isNoWrap);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

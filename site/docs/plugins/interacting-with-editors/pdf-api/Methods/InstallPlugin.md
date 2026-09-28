@@ -8,7 +8,7 @@ Installs a plugin using the specified plugin config.
 expression.InstallPlugin(config);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

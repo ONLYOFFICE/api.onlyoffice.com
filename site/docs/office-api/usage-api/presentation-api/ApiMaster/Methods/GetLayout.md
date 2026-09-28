@@ -8,7 +8,7 @@ Returns a layout of the specified slide master by its position.
 expression.GetLayout(nPos);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

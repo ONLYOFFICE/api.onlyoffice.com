@@ -8,7 +8,7 @@ Returns the two-tailed inverse of the Student's t-distribution.
 expression.T_INV_2T(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

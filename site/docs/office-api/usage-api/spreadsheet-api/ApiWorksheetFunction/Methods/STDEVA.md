@@ -8,7 +8,7 @@ Estimates standard deviation based on a sample, including logical values and tex
 expression.STDEVA(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

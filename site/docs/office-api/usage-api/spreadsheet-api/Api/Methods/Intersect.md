@@ -8,7 +8,7 @@ Returns the ApiRange object that represents the rectangular intersection of two 
 expression.Intersect(Range1, Range2);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

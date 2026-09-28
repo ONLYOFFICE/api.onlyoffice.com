@@ -8,7 +8,7 @@ Returns a list of all forms in the document with the specified role name.
 expression.GetFormsByRole(role);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

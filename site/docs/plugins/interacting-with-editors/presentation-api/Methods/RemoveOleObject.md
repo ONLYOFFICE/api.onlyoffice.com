@@ -8,7 +8,7 @@ Removes the OLE object from the presentation by its internal ID.
 expression.RemoveOleObject(internalId);
 ```
 
-`expression` - A variable that represents a [Api](../presentation-api.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ partly rendered on the same page as the following paragraph whenever possible.
 expression.SetKeepNext(isKeepNext);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

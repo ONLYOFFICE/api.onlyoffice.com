@@ -8,7 +8,7 @@ Enables or disables AI-assisted change tracking in the document.
 expression.SetAssistantTrackRevisions(isTrack, assistantName);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

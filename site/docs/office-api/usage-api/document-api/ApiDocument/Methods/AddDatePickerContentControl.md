@@ -8,7 +8,7 @@ Adds a new date picker content control to the document.
 expression.AddDatePickerContentControl(datePickerPr);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

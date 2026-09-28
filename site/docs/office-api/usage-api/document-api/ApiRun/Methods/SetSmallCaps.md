@@ -9,7 +9,7 @@ letter character equivalents which are two points smaller than the actual font s
 expression.SetSmallCaps(isSmallCaps);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

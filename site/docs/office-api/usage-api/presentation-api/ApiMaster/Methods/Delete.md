@@ -9,7 +9,7 @@ Note: Master can't be deleted if it's the last one in the presentation.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ letter character equivalents which are two points smaller than the actual font s
 expression.SetSmallCaps(isSmallCaps);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

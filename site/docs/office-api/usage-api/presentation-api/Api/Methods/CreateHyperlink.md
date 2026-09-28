@@ -8,7 +8,7 @@ Creates a new hyperlink object to be used for setting hyperlinks on drawing obje
 expression.CreateHyperlink(link, tooltip);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

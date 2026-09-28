@@ -8,7 +8,7 @@ Sets the table description.
 expression.SetTableDescription(sDescr);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

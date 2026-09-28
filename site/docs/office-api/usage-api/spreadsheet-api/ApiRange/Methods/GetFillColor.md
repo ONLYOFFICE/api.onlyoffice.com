@@ -8,7 +8,7 @@ Returns the background color for the current cell range. Returns 'No Fill' when 
 expression.GetFillColor();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

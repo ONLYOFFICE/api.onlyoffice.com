@@ -8,7 +8,7 @@ Creates an OLE object with the parameters specified.
 expression.CreateOleObject(imageSrc, width, height, data, appId);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the type of the ApiThemeFontScheme class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
+`expression` - A variable that represents an [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
 
 ## Parameters
 

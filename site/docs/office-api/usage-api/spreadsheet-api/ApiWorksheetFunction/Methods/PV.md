@@ -8,7 +8,7 @@ Returns the present value of an investment: the total amount that a series of fu
 expression.PV(arg1, arg2, arg3, arg4, arg5);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

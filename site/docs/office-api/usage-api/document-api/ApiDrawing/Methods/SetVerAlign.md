@@ -8,7 +8,7 @@ Specifies how the floating object will be vertically aligned.
 expression.SetVerAlign(sRelativeFrom, sAlign);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

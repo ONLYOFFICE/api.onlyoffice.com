@@ -8,7 +8,7 @@ Returns the text properties of the current run.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

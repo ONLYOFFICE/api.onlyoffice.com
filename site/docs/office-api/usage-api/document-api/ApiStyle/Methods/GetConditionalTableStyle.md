@@ -9,7 +9,7 @@ requirement specified in the sType parameter.
 expression.GetConditionalTableStyle(sType);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

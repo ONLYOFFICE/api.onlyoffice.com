@@ -8,7 +8,7 @@ Sets a formula that the name is defined to refer to.
 expression.SetRefersTo(sRef);
 ```
 
-`expression` - A variable that represents a [ApiName](../ApiName.md) class.
+`expression` - A variable that represents an [ApiName](../ApiName.md) class.
 
 ## Parameters
 

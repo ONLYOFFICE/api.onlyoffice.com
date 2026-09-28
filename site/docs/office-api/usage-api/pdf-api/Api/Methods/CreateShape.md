@@ -8,7 +8,7 @@ Creates a shape with the parameters specified.
 expression.CreateShape(shapeType, width, height, fill, stroke);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

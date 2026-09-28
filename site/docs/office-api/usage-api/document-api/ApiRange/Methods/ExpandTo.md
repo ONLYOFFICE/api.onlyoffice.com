@@ -8,7 +8,7 @@ Returns a new range that goes beyond the specified range in any direction and sp
 expression.ExpandTo(oRange);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

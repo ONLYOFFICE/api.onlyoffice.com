@@ -8,7 +8,7 @@ Returns the list values from the current combo box.
 expression.GetListValues();
 ```
 
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
 
 ## Parameters
 

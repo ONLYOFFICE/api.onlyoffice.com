@@ -9,7 +9,7 @@ Sets the placeholder text to the current form.
 expression.SetPlaceholderText(sText);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds a footnote for the selected text (or the current position if the selection 
 expression.AddFootnote();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds a page break and starts the next element from the next page.
 expression.AddPageBreak();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 expression.GetText();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a type of the ApiPresetColor class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiPresetColor](../ApiPresetColor.md) class.
+`expression` - A variable that represents an [ApiPresetColor](../ApiPresetColor.md) class.
 
 ## Parameters
 

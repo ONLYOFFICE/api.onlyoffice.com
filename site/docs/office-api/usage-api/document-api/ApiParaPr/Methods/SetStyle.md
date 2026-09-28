@@ -9,7 +9,7 @@ The paragraph style base method.
 expression.SetStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

@@ -11,7 +11,7 @@ Specifies the alignment which will be applied to the contents of the run in rela
 expression.SetVertAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

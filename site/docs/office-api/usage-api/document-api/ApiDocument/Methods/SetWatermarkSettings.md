@@ -8,7 +8,7 @@ Sets the watermark settings in the current document.
 expression.SetWatermarkSettings(Settings);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

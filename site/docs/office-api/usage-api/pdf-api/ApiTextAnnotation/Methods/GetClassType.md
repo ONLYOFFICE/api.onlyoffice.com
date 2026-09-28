@@ -8,7 +8,7 @@ Returns a type of the ApiTextAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
 
 ## Parameters
 

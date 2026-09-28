@@ -10,7 +10,7 @@ the specified column and row cells only. If this value exceeds the cell width or
 expression.SetPosition(nFromCol, nColOffset, nFromRow, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

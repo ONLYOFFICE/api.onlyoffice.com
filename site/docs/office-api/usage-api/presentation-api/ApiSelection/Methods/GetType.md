@@ -8,7 +8,7 @@ Returns the type of the current selection.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiSelection](../ApiSelection.md) class.
+`expression` - A variable that represents an [ApiSelection](../ApiSelection.md) class.
 
 ## Parameters
 

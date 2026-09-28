@@ -10,7 +10,7 @@ For proportional fonts, the width of the character 0 (zero) is used.
 expression.SetColumnWidth(nColumn, nWidth, bWithotPaddings);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

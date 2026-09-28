@@ -8,7 +8,7 @@ Sets the font size to the characters of the current text Range.
 expression.SetFontSize(fontSize);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

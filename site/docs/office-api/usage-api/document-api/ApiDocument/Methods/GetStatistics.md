@@ -13,7 +13,7 @@ Returns the document statistics represented as an object with the following para
 expression.GetStatistics();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

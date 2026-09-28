@@ -8,7 +8,7 @@ Returns the selected text from the document.
 expression.GetSelectedText(prop);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

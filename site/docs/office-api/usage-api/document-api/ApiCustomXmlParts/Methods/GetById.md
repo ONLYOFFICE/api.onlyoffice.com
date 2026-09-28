@@ -8,7 +8,7 @@ Returns a custom XML part by its ID from the XML manager.
 expression.GetById(xmlPartId);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 

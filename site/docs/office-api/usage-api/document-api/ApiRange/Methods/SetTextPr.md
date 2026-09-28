@@ -8,7 +8,7 @@ Sets the text properties to the current Range.
 expression.SetTextPr(oTextPr);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

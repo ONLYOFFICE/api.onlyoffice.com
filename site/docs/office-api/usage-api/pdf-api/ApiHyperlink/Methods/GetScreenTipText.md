@@ -8,7 +8,7 @@ Returns the screen tip text of the hyperlink.
 expression.GetScreenTipText();
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 

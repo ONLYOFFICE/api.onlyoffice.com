@@ -8,7 +8,7 @@ Specifies the shading applied to the contents of the current text run.
 expression.SetShd(type, color);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

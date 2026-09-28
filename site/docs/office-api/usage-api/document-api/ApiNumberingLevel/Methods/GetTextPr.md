@@ -9,7 +9,7 @@ Returns the text properties which will be applied to the text in the current num
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Deletes the current slide from the presentation.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

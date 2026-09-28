@@ -8,7 +8,7 @@ Specifies a one-based index which determines when a numbering level should resta
 expression.SetRestart(isRestart);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

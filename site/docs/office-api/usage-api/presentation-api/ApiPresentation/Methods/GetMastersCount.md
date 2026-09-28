@@ -8,7 +8,7 @@ Returns a number of slide masters.
 expression.GetMastersCount();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

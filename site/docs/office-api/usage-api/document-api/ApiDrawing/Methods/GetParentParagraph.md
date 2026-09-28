@@ -8,7 +8,7 @@ Returns a parent paragraph that contains the graphic object.
 expression.GetParentParagraph();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

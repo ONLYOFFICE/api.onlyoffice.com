@@ -8,7 +8,7 @@ Selects the radio button with the specified choice name in the group.
 expression.SetGroupValue(value);
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

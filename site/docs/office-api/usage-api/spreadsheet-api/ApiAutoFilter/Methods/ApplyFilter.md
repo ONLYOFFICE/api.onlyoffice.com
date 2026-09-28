@@ -13,7 +13,7 @@ If no AutoFilter is defined for the worksheet, the method does nothing.
 expression.ApplyFilter();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

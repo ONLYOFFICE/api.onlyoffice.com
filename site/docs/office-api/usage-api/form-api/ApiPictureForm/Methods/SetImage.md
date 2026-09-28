@@ -8,7 +8,7 @@ Sets an image to the current picture form.
 expression.SetImage(imageSrc);
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

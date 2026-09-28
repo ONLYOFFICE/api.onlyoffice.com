@@ -8,7 +8,7 @@ Removes objects (image, shape or chart) from the current slide.
 expression.RemoveObject(nPos, nCount);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

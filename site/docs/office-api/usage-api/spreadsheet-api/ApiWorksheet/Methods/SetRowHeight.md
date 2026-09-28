@@ -9,7 +9,7 @@ A point is 1/72 inch.
 expression.SetRowHeight(nRow, nHeight);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

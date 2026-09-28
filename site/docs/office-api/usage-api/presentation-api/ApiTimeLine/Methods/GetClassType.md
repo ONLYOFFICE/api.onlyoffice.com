@@ -8,7 +8,7 @@ Returns the type of the ApiTimeLine class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTimeLine](../ApiTimeLine.md) class.
+`expression` - A variable that represents an [ApiTimeLine](../ApiTimeLine.md) class.
 
 ## Parameters
 

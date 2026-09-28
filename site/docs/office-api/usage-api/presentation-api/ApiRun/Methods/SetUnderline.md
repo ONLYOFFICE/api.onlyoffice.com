@@ -9,7 +9,7 @@ Specifies that the contents of the current run are displayed along with a line a
 expression.SetUnderline(isUnderline);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the layout subtotal location.
 expression.SetLayoutSubtotalLocation(type);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

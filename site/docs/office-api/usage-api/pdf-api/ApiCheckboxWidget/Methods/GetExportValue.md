@@ -8,7 +8,7 @@ Gets widget export value.
 expression.GetExportValue();
 ```
 
-`expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
 
 ## Parameters
 

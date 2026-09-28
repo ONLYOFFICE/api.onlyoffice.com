@@ -8,7 +8,7 @@ Sets the cell range to which the current conditional formatting rule applies.
 expression.ModifyAppliesToRange(Range);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Moves the cursor to the reference of this footnote/endnote in the main document.
 expression.MoveCursorToNoteReference(isBefore);
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

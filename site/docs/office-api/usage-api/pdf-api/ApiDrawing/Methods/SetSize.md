@@ -8,7 +8,7 @@ Sets the size of the object (image, shape, chart) bounding box.
 expression.SetSize(width, height);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

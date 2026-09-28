@@ -8,7 +8,7 @@ Returns the value for the data field in a pivot table.
 expression.GetData(items);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

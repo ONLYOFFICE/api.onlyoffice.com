@@ -8,7 +8,7 @@ Returns the - **e** constant raised to the power of a given number. The - **e** 
 expression.EXP(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

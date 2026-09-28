@@ -8,7 +8,7 @@ Changes the specified comment.
 expression.ChangeComment(sId, oCommentData);
 ```
 
-`expression` - A variable that represents a [Api](../presentation-api.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ common text properties like bold, italic, underline, etc.
 expression.GetParagraphMarkTextPr();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

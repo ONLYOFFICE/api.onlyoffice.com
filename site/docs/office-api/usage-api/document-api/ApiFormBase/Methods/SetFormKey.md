@@ -8,7 +8,7 @@ Sets a key to the current form.
 expression.SetFormKey(sKey);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

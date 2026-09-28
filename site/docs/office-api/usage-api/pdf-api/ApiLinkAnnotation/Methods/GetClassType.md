@@ -8,7 +8,7 @@ Returns a type of the ApiLinkAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiLinkAnnotation](../ApiLinkAnnotation.md) class.
+`expression` - A variable that represents an [ApiLinkAnnotation](../ApiLinkAnnotation.md) class.
 
 ## Parameters
 

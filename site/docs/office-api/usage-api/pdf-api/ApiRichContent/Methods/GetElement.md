@@ -8,7 +8,7 @@ Returns an rich paragraph by its position in the content.
 expression.GetElement(pos);
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds an empty content control datepicker to the document.
 expression.AddContentControlDatePicker(datePickerPr, commonPr);
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds a reply to a comment.
 expression.AddReply(sText, sAuthorName, sUserId, nPos);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

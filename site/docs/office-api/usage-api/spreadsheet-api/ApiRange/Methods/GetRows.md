@@ -8,7 +8,7 @@ Returns a Range object that represents the rows in the specified range. If the s
 expression.GetRows(nRow);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

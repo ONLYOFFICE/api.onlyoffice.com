@@ -8,7 +8,7 @@ Returns a Range object that represents the entire row(s) containing the specifie
 expression.GetEntireRow();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

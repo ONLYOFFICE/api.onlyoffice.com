@@ -8,7 +8,7 @@ Adds a new name to a range of cells.
 expression.AddDefName(sName, sRef, isHidden);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

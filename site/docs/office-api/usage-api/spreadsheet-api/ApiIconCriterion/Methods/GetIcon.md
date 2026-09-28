@@ -8,7 +8,7 @@ Returns the icon associated with the current icon criterion.
 expression.GetIcon();
 ```
 
-`expression` - A variable that represents a [ApiIconCriterion](../ApiIconCriterion.md) class.
+`expression` - A variable that represents an [ApiIconCriterion](../ApiIconCriterion.md) class.
 
 ## Parameters
 

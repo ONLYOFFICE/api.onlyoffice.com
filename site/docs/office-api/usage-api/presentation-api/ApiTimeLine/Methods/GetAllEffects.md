@@ -8,7 +8,7 @@ Returns all animation effects for the slide.
 expression.GetAllEffects();
 ```
 
-`expression` - A variable that represents a [ApiTimeLine](../ApiTimeLine.md) class.
+`expression` - A variable that represents an [ApiTimeLine](../ApiTimeLine.md) class.
 
 ## Parameters
 

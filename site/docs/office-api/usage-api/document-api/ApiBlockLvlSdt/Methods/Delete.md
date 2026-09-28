@@ -8,7 +8,7 @@ Removes a content control and its content. If keepContent is true, the content i
 expression.Delete(keepContent);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

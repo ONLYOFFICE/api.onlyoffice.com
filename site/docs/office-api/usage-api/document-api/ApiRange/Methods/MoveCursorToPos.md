@@ -9,7 +9,7 @@ If there is any selection in the document, it will be removed.
 expression.MoveCursorToPos(nPos);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

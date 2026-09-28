@@ -8,7 +8,7 @@ Specifies the shading applied to the contents of the paragraph.
 expression.SetShd(type, color);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

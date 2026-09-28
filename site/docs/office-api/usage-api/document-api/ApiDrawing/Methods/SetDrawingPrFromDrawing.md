@@ -9,7 +9,7 @@ The following properties will be copied: horizontal and vertical alignment, dist
 expression.SetDrawingPrFromDrawing(oAnotherDrawing);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

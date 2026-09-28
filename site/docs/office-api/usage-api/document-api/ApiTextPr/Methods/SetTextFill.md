@@ -8,7 +8,7 @@ Sets the text fill to the current text run.
 expression.SetTextFill(oApiFill);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

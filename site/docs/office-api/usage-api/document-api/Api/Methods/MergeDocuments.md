@@ -8,7 +8,7 @@ Merges the current document with another document opened via builderJS.OpenTmpFi
 expression.MergeDocuments(file);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Pastes text into the document.
 expression.PasteText(text);
 ```
 
-`expression` - A variable that represents a [Api](../presentation-api.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 

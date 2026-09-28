@@ -8,7 +8,7 @@ Specifies whether the current sheet gridlines must be printed or not.
 expression.SetPrintGridlines(bPrint);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

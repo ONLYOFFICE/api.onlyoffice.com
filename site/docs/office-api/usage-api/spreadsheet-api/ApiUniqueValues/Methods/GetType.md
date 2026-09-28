@@ -8,7 +8,7 @@ Returns the type of the unique values conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
 
 ## Parameters
 

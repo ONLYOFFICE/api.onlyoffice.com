@@ -8,7 +8,7 @@ Returns a comment from the current document by its ID.
 expression.GetCommentById(sId);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

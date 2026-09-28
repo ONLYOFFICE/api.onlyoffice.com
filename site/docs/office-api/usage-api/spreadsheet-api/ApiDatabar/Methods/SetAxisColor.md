@@ -8,7 +8,7 @@ Sets the axis color for the data bar conditional formatting rule.
 expression.SetAxisColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

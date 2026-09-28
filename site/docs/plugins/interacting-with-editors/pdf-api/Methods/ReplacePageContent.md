@@ -8,7 +8,7 @@ Replaces the page content with the specified parameters.
 expression.ReplacePageContent(nPage, oParams);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

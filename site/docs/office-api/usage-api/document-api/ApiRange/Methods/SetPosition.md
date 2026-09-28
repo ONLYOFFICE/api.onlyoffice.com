@@ -9,7 +9,7 @@ baseline of the surrounding non-positioned text.
 expression.SetPosition(nPosition);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

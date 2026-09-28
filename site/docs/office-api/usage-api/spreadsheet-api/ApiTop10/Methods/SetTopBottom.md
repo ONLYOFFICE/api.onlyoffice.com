@@ -8,7 +8,7 @@ Sets the "XlTopBottom" constant indicating whether the ranking is evaluated from
 expression.SetTopBottom(topBottom);
 ```
 
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
 
 ## Parameters
 

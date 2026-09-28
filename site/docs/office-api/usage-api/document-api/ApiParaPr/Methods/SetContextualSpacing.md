@@ -10,7 +10,7 @@ following paragraphs are of the same paragraph style, affecting the top and bott
 expression.SetContextualSpacing(isContextualSpacing);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

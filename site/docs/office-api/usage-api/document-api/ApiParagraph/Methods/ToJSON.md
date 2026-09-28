@@ -8,7 +8,7 @@ Converts the ApiParagraph object into the JSON object.
 expression.ToJSON(bWriteNumberings, bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

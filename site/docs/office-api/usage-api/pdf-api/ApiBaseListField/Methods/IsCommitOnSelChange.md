@@ -8,7 +8,7 @@ Checks if field can commit on selection change.
 expression.IsCommitOnSelChange();
 ```
 
-`expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
+`expression` - A variable that represents an [ApiBaseListField](../ApiBaseListField.md) class.
 
 ## Parameters
 

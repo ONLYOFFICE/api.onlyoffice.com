@@ -8,7 +8,7 @@ Adds a table of figures to the current document.
 expression.AddTableOfFigures(oTofPr, bReplace);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

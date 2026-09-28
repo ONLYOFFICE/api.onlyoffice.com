@@ -8,7 +8,7 @@ Removes a content control and its content. If keepContent is true, the content i
 expression.Delete(keepContent);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

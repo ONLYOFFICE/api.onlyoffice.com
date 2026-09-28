@@ -9,7 +9,7 @@ If another drawing with the same name already exists, that drawing's name will b
 expression.SetName(name);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

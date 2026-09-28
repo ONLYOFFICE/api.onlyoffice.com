@@ -10,7 +10,7 @@ the selected or created style to the text.
 expression.SetStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the text color to the current cell range with the previously created color 
 expression.SetFontColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

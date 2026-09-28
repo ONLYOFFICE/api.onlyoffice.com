@@ -9,7 +9,7 @@ section - page size, footer, header, columns, etc.
 expression.CreateSection(oParagraph);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

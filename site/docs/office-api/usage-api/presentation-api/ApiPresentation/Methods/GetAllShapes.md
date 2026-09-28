@@ -8,7 +8,7 @@ Returns an array with all the shape objects from the current presentation.
 expression.GetAllShapes();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

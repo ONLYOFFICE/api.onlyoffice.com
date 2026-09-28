@@ -8,7 +8,7 @@ Specifies the border which will be displayed at the right side of the page aroun
 expression.SetRightBorder(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

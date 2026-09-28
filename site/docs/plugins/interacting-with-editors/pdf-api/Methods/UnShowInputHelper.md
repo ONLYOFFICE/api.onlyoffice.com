@@ -8,7 +8,7 @@ Unshows the input helper.
 expression.UnShowInputHelper(guid, isclear);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

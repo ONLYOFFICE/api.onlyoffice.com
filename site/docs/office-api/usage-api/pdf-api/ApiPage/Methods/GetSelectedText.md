@@ -8,7 +8,7 @@ Gets selected text on page
 expression.GetSelectedText();
 ```
 
-`expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
+`expression` - A variable that represents an [ApiPage](../ApiPage.md) class.
 
 ## Parameters
 

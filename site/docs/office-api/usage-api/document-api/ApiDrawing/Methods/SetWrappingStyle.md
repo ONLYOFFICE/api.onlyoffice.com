@@ -16,7 +16,7 @@ If one of the following styles is selected, the object can be moved independentl
 expression.SetWrappingStyle(sType);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

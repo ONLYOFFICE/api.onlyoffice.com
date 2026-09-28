@@ -9,7 +9,7 @@ Sets validate range for field.
 expression.SetValidateRange(greaterThan, greaterThanValue, lessThan, lessThanValue);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

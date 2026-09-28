@@ -8,7 +8,7 @@ Sets whether data validation displays a drop-down list that contains acceptable 
 expression.SetInCellDropdown(InCellDropdown);
 ```
 
-`expression` - A variable that represents a [ApiValidation](../ApiValidation.md) class.
+`expression` - A variable that represents an [ApiValidation](../ApiValidation.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the border which shall be displayed at the right of the current table cell.
 expression.SetCellBorderRight(borderWidth, fill);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a type of the ApiHyperlink class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 

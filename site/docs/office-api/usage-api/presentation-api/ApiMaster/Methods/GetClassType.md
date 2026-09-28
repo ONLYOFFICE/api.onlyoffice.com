@@ -8,7 +8,7 @@ Returns the type of the ApiMaster class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

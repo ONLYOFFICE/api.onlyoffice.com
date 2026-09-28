@@ -8,7 +8,7 @@ Links the specified paragraph style with the current numbering level.
 expression.LinkWithStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

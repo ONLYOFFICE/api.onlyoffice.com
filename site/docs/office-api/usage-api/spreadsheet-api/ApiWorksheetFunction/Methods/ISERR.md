@@ -8,7 +8,7 @@ Checks whether a value is an error other than *#N/A*, and returns - **true** or 
 expression.ISERR(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the text color to the current paragraph.
 expression.SetColor(color);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

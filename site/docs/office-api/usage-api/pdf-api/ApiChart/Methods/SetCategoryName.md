@@ -8,7 +8,7 @@ Sets a name to the specified chart category.
 expression.SetCategoryName(sName, nCategory);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

@@ -12,7 +12,7 @@ Converts speed to duration based on standard values:
 expression.SetSpeed(speed);
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

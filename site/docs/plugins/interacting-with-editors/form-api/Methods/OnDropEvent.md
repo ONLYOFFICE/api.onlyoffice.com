@@ -8,7 +8,7 @@ Implements the external drag&drop emulation.
 expression.OnDropEvent(obj);
 ```
 
-`expression` - A variable that represents a [Api](../form-api.md) class.
+`expression` - A variable that represents an [Api](../form-api.md) class.
 
 ## Parameters
 

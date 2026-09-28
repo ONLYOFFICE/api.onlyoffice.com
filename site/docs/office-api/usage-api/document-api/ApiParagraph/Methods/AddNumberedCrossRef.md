@@ -9,7 +9,7 @@ Adds a numbered cross-reference to the current paragraph.
 expression.AddNumberedCrossRef(sRefType, oParaTo, bLink, bAboveBelow, sSepWith);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

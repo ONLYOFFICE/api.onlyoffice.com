@@ -9,7 +9,7 @@ Sets the bold property to the specified font.
 expression.SetBold(isBold);
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

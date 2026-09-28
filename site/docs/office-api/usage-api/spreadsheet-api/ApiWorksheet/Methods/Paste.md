@@ -8,7 +8,7 @@ Pastes the contents of the clipboard to the current sheet.
 expression.Paste(destination);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

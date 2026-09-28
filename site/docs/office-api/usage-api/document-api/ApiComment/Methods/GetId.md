@@ -8,7 +8,7 @@ Returns the current comment ID. If the comment doesn't have an ID, null is retur
 expression.GetId();
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

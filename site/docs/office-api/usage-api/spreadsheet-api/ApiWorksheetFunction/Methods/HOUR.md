@@ -8,7 +8,7 @@ Returns the hour as a number from 0 (12:00 A.M.) to 23 (11:00 P.M.).
 expression.HOUR(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a parent of the pivot item.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiPivotItem](../ApiPivotItem.md) class.
+`expression` - A variable that represents an [ApiPivotItem](../ApiPivotItem.md) class.
 
 ## Parameters
 

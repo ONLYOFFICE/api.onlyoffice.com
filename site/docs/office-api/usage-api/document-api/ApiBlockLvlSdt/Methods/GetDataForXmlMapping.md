@@ -8,7 +8,7 @@ Returns the content control data for the XML mapping.
 expression.GetDataForXmlMapping();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

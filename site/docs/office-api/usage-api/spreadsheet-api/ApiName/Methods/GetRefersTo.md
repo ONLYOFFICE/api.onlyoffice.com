@@ -8,7 +8,7 @@ Returns a formula that the name is defined to refer to.
 expression.GetRefersTo();
 ```
 
-`expression` - A variable that represents a [ApiName](../ApiName.md) class.
+`expression` - A variable that represents an [ApiName](../ApiName.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ Specifies a sequence of custom tab stops which will be used for any tab characte
 expression.SetTabs(aPos, aVal);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

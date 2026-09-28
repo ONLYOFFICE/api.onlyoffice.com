@@ -8,7 +8,7 @@ Sets stamp rotate.
 expression.SetRotation(angle);
 ```
 
-`expression` - A variable that represents a [ApiStampAnnotation](../ApiStampAnnotation.md) class.
+`expression` - A variable that represents an [ApiStampAnnotation](../ApiStampAnnotation.md) class.
 
 ## Parameters
 

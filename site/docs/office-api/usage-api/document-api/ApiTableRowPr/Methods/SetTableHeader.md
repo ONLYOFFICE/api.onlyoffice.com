@@ -11,7 +11,7 @@ table structure in order to generate multi-row table headers.
 expression.SetTableHeader(isHeader);
 ```
 
-`expression` - A variable that represents a [ApiTableRowPr](../ApiTableRowPr.md) class.
+`expression` - A variable that represents an [ApiTableRowPr](../ApiTableRowPr.md) class.
 
 ## Parameters
 

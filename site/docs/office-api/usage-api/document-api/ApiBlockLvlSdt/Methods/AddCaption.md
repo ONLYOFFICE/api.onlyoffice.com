@@ -10,7 +10,7 @@ And if the current content control is placed in a shape, then a caption is added
 expression.AddCaption(additionalText, label, excludeLabel, numFormat, isBefore, headingLvl, captionSep);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

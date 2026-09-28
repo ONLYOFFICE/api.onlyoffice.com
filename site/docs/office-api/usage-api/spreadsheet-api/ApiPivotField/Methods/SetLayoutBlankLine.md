@@ -8,7 +8,7 @@ Sets the setting which specifies whether to insert blank rows after each item.
 expression.SetLayoutBlankLine(insert);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

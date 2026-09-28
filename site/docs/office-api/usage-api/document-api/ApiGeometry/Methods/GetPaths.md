@@ -8,7 +8,7 @@ Returns all paths of the current geometry.
 expression.GetPaths();
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

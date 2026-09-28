@@ -9,7 +9,7 @@ or a collection of all the visible and hidden items (an array of the ApiPivotIte
 expression.GetPivotItems(index);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

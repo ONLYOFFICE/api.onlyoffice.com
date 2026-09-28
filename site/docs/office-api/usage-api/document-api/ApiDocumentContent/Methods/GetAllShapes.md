@@ -8,7 +8,7 @@ Returns a collection of shape objects from the document content.
 expression.GetAllShapes();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

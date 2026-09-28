@@ -8,7 +8,7 @@ Returns the full name of the currently opened file.
 expression.GetFullName();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

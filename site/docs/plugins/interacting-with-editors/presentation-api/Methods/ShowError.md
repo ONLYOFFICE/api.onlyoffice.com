@@ -8,7 +8,7 @@ Shows an error/warning message.
 expression.ShowError(error, level);
 ```
 
-`expression` - A variable that represents a [Api](../presentation-api.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 

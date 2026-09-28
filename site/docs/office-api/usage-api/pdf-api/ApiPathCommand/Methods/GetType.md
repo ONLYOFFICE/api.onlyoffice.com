@@ -8,7 +8,7 @@ Returns the type of the current path command.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiPathCommand](../ApiPathCommand.md) class.
+`expression` - A variable that represents an [ApiPathCommand](../ApiPathCommand.md) class.
 
 ## Parameters
 

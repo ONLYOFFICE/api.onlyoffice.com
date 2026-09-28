@@ -8,7 +8,7 @@ Checks whether a value is not text (blank cells are not text), and returns - **t
 expression.ISNONTEXT(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ Returns an empty string if the current form is not a radio button or nothing is 
 expression.GetGroupValue();
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

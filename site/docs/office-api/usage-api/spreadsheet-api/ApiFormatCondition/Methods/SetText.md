@@ -8,7 +8,7 @@ Sets the text value used in text-based conditional formatting rules.
 expression.SetText(Text);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

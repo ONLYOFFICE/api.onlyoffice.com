@@ -8,7 +8,7 @@ Adds an element to the current paragraph.
 expression.AddElement(oElement, nPos);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Gets the vertical alignment type from the current text properties.
 expression.GetVertAlign();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

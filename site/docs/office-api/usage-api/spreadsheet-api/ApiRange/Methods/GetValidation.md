@@ -8,7 +8,7 @@ Returns the data validation object associated with this range. If no validation 
 expression.GetValidation();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

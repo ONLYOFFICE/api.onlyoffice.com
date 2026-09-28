@@ -8,7 +8,7 @@ Sets the bar fill type for the data bar.
 expression.SetBarFillType(fillType);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

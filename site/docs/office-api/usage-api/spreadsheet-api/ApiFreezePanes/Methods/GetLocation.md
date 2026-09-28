@@ -8,7 +8,7 @@ Returns a range that describes the frozen cells in the active worksheet view.
 expression.GetLocation();
 ```
 
-`expression` - A variable that represents a [ApiFreezePanes](../ApiFreezePanes.md) class.
+`expression` - A variable that represents an [ApiFreezePanes](../ApiFreezePanes.md) class.
 
 ## Parameters
 

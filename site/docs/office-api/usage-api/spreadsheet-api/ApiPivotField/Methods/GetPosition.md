@@ -9,7 +9,7 @@ among all the fields in its orientation (Rows, Columns, Pages, Data).
 expression.GetPosition();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

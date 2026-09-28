@@ -17,7 +17,7 @@ Unsupported inputs (objects, arrays, an existing ApiColor, unknown strings, no a
 expression.Color(r, g, b, a);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

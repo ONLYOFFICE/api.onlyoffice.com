@@ -9,7 +9,7 @@ or a collection of both the visible and hidden fields in the pivot table report.
 expression.GetPivotFields(field);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

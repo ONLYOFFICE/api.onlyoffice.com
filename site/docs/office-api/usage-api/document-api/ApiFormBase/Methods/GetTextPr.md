@@ -9,7 +9,7 @@ Returns the text properties from the current form.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

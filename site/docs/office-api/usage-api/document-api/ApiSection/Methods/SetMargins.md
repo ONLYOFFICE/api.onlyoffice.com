@@ -8,7 +8,7 @@ Specifies the page margins for all the pages in this section. Alias for [ApiSect
 expression.SetMargins(left, top, right, bottom);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds the new columns to the current table.
 expression.AddColumns(oCell, nCount, isBefore);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

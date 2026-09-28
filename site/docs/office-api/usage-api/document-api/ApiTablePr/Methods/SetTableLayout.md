@@ -8,7 +8,7 @@ Specifies the algorithm which will be used to lay out the contents of the curren
 expression.SetTableLayout(sType);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

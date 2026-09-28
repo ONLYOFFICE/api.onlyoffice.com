@@ -10,7 +10,7 @@ process to arrange tables on the specified page.
 expression.GetAllTablesOnPage(page);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

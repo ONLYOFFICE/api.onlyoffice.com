@@ -8,7 +8,7 @@ Returns the negative bar border color of the data bar.
 expression.GetNegativeBorderColor();
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Specifies whether the words in the cell must be wrapped to fit the cell size or 
 expression.SetWrap(isWrap);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

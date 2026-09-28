@@ -8,7 +8,7 @@ Removes an element using the position specified from the current inline text con
 expression.RemoveElement(nPos);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

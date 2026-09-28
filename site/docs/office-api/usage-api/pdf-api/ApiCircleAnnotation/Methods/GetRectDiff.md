@@ -8,7 +8,7 @@ Gets annotation rect difference.
 expression.GetRectDiff();
 ```
 
-`expression` - A variable that represents a [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
 
 ## Parameters
 

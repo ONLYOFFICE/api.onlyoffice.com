@@ -8,7 +8,7 @@ Creates a new style with the specified type and name. If a style with the specif
 expression.CreateStyle(styleName, type);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the properties to the document.
 expression.SetProperties(obj);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

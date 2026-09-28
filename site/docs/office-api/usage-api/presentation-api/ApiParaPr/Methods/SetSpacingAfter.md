@@ -10,7 +10,7 @@ will be interpreted as false.
 expression.SetSpacingAfter(nAfter, isAfterAuto);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

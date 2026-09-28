@@ -8,7 +8,7 @@ Returns the type of the current selection.
 expression.GetSelectionType();
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

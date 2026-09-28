@@ -8,7 +8,7 @@ Edits an OLE object in the document.
 expression.EditOleObject(data);
 ```
 
-`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
+`expression` - A variable that represents an [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

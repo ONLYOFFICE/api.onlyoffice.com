@@ -8,7 +8,7 @@ Returns the ApiRange object that represents all the cells on the columns range.
 expression.GetCols(sRange);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

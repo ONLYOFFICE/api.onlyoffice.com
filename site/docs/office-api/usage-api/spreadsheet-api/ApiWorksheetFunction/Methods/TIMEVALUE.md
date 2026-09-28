@@ -8,7 +8,7 @@ Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM
 expression.TIMEVALUE(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

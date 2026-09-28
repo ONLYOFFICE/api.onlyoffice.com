@@ -8,7 +8,7 @@ Copies the current form (copies with the shape if it exists).
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

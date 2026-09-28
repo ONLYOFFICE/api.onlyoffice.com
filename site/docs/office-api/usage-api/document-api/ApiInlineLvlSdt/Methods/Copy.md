@@ -8,7 +8,7 @@ Creates a copy of an inline content control. Ignores comments, footnote referenc
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

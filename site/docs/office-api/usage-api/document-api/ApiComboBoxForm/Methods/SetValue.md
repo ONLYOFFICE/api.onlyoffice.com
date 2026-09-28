@@ -9,7 +9,7 @@ otherwise sets it as free text (only for editable combo boxes).
 expression.SetValue(value);
 ```
 
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
 
 ## Parameters
 

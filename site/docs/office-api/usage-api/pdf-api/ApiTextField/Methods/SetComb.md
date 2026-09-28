@@ -9,7 +9,7 @@ Sets whether the text field uses comb formatting.
 expression.SetComb(comb);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

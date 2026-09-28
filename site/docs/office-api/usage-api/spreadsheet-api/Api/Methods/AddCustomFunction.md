@@ -15,7 +15,7 @@ This method is not used in ONLYOFFICE Document Builder. Use AddCustomFunctionLib
 expression.AddCustomFunction(fCustom);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

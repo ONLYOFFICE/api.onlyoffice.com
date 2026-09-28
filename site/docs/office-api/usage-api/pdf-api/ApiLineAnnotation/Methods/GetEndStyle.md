@@ -8,7 +8,7 @@ Gets a line end style.
 expression.GetEndStyle();
 ```
 
-`expression` - A variable that represents a [ApiLineAnnotation](../ApiLineAnnotation.md) class.
+`expression` - A variable that represents an [ApiLineAnnotation](../ApiLineAnnotation.md) class.
 
 ## Parameters
 

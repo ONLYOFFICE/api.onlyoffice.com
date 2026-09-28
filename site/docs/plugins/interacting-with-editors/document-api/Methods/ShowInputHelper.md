@@ -8,7 +8,7 @@ Shows the input helper.
 expression.ShowInputHelper(guid, w, h, isKeyboardTake);
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

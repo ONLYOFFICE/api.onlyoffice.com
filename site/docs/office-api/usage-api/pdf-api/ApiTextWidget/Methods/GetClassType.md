@@ -8,7 +8,7 @@ Returns a type of the ApiTextWidget class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Converts a value to a number, dates to serial numbers, - **true** to 1, error to
 expression.N(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

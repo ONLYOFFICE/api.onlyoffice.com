@@ -9,7 +9,7 @@ Merges an array of cells. If the merge is done successfully, it will return the 
 expression.MergeCells(aCells);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

@@ -9,7 +9,7 @@ This method is used to view or modify standard metadata such as title, author, a
 expression.GetCore();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds an object (image, shape or chart) to the current presentation slide.
 expression.AddObject(oDrawing);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

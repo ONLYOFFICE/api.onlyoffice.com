@@ -8,7 +8,7 @@ Sets all 4 font slots with the specified font family.
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

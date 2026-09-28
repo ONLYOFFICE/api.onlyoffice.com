@@ -8,7 +8,7 @@ Sets the setting which specifies whether to repeat items labels at each row.
 expression.SetRepeatLabels(repeat);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

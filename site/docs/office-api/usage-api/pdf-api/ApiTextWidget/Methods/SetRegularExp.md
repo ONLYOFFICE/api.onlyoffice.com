@@ -8,7 +8,7 @@ Sets the text widget regular validation expression.
 expression.SetRegularExp(regularExpression);
 ```
 
-`expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Specifies the content which will be added between the given numbering level text
 expression.SetSuff(sType);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

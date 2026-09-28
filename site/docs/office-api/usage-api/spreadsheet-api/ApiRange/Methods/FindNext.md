@@ -8,7 +8,7 @@ Continues a search that was begun with the [ApiRange#Find](../../ApiRange/Method
 expression.FindNext(After);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

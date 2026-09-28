@@ -8,7 +8,7 @@ Returns a set of default paragraph properties in the current document.
 expression.GetDefaultParaPr();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

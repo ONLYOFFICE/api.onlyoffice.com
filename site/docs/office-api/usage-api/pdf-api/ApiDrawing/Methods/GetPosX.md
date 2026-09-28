@@ -8,7 +8,7 @@ Gets the x position of the drawing on the page.
 expression.GetPosX();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

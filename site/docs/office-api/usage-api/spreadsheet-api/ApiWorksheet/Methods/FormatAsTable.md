@@ -9,7 +9,7 @@ Formats the selected range of cells from the current sheet as a table (with the 
 expression.FormatAsTable(sRange);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

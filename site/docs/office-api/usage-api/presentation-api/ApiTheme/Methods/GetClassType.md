@@ -8,7 +8,7 @@ Returns the type of the ApiTheme class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTheme](../ApiTheme.md) class.
+`expression` - A variable that represents an [ApiTheme](../ApiTheme.md) class.
 
 ## Parameters
 

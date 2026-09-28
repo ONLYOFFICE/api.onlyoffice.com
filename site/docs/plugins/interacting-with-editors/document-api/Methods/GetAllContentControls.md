@@ -8,7 +8,7 @@ Returns information about all the content controls that have been added to the p
 expression.GetAllContentControls();
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

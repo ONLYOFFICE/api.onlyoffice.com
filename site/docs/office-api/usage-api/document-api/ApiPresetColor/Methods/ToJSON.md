@@ -8,7 +8,7 @@ Converts the ApiPresetColor object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiPresetColor](../ApiPresetColor.md) class.
+`expression` - A variable that represents an [ApiPresetColor](../ApiPresetColor.md) class.
 
 ## Parameters
 

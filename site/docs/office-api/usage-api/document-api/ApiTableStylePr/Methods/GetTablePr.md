@@ -8,7 +8,7 @@ Returns a set of the table properties which will be applied to all the regions w
 expression.GetTablePr();
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 

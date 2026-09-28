@@ -8,7 +8,7 @@ Returns an array with all tables from the current presentation (including slide 
 expression.GetAllTables();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

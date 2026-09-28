@@ -8,7 +8,7 @@ Checks whether the specified form has been digitally signed.
 expression.IsFormSigned();
 ```
 
-`expression` - A variable that represents a [Api](../form-api.md) class.
+`expression` - A variable that represents an [Api](../form-api.md) class.
 
 ## Parameters
 

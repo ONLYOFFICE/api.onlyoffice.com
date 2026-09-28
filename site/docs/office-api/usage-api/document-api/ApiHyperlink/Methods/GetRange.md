@@ -8,7 +8,7 @@ Returns a Range object that represents the document part contained in the specif
 expression.GetRange(Start, End);
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 

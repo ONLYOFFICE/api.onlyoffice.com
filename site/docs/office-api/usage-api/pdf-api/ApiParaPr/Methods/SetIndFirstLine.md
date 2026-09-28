@@ -8,7 +8,7 @@ Sets the paragraph first line indentation.
 expression.SetIndFirstLine(nValue);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

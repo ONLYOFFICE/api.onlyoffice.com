@@ -8,7 +8,7 @@ Adds an item to a combo box list or drop-down list.
 expression.AddListItem(name, value, pos);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

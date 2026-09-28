@@ -8,7 +8,7 @@ Removes a plugin with the specified GUID.
 expression.RemovePlugin(guid, backup);
 ```
 
-`expression` - A variable that represents a [Api](../pdf-api.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

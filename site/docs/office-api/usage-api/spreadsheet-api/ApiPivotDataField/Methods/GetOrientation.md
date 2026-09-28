@@ -8,7 +8,7 @@ Returns a data field orientation value that represents the data field location i
 expression.GetOrientation();
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

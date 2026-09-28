@@ -8,7 +8,7 @@ Sets the data validation error message.
 expression.SetErrorMessage(ErrorMessage);
 ```
 
-`expression` - A variable that represents a [ApiValidation](../ApiValidation.md) class.
+`expression` - A variable that represents an [ApiValidation](../ApiValidation.md) class.
 
 ## Parameters
 

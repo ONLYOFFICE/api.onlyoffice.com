@@ -8,7 +8,7 @@ Returns the logical - **Exclusive Or** value of all arguments. The function retu
 expression.XOR(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

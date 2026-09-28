@@ -8,7 +8,7 @@ Specifies the direction of the text flow for this table cell.
 expression.SetTextDirection(sType);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

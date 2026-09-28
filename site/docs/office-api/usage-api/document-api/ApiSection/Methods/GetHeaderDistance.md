@@ -8,7 +8,7 @@ Returns the distance from the top edge of the page to the top edge of the header
 expression.GetHeaderDistance();
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the between border of the current paragraph.
 expression.GetBetweenBorder();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

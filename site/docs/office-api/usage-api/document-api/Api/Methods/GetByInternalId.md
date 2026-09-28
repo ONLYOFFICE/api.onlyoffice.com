@@ -8,7 +8,7 @@ Returns the object by it's internal ID.
 expression.GetByInternalId(id);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

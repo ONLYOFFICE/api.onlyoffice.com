@@ -8,7 +8,7 @@ Returns the Worksheet object that represents the worksheet containing the specif
 expression.GetWorksheet();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

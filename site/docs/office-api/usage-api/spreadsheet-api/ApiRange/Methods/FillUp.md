@@ -13,7 +13,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.FillUp();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

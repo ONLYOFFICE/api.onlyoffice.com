@@ -9,7 +9,7 @@ This manager allows manipulation and access to custom XML parts within the curre
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

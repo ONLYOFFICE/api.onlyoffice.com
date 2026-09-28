@@ -9,7 +9,7 @@ The maximum number of characters must be set to a positive value.
 expression.SetComb(bComb);
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns an object that represents a user from the current protected range.
 expression.GetUser(sId);
 ```
 
-`expression` - A variable that represents a [ApiProtectedRange](../ApiProtectedRange.md) class.
+`expression` - A variable that represents an [ApiProtectedRange](../ApiProtectedRange.md) class.
 
 ## Parameters
 

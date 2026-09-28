@@ -8,7 +8,7 @@ Pastes text in the HTML format into the document.
 expression.PasteHtml(htmlText);
 ```
 
-`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
+`expression` - A variable that represents an [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

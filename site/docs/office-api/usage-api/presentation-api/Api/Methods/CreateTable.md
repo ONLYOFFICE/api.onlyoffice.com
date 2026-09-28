@@ -11,7 +11,7 @@ Starting from version 9.4.0, the parameter order has been changed from `Api.Crea
 expression.CreateTable(rows, cols);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

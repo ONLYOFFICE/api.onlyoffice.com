@@ -8,7 +8,7 @@ Sets the x-axis values from the specified range to the specified series. It is u
 expression.SetSeriaXValues(sRange, nSeria);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

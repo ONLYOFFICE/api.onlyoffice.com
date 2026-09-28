@@ -8,7 +8,7 @@ Removes several OLE objects from the document by their internal IDs.
 expression.RemoveOleObjects(arrObjects);
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

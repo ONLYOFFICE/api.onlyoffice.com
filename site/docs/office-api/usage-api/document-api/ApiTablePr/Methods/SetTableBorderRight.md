@@ -8,7 +8,7 @@ Sets the border which will be displayed on the right of the current table.
 expression.SetTableBorderRight(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

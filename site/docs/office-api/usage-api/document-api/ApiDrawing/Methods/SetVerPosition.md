@@ -8,7 +8,7 @@ Sets the absolute measurement for the vertical positioning of the floating objec
 expression.SetVerPosition(sRelativeFrom, nDistance, bPercent);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

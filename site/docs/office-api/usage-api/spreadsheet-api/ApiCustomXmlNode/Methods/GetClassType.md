@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlNode class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 

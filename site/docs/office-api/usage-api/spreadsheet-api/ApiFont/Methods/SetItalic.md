@@ -9,7 +9,7 @@ Sets the italic property to the specified font.
 expression.SetItalic(isItalic);
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

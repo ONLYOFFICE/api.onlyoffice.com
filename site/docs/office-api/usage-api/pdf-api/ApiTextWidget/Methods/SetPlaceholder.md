@@ -8,7 +8,7 @@ Sets text field placeholder.
 expression.SetPlaceholder(placeholder);
 ```
 
-`expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
 
 ## Parameters
 

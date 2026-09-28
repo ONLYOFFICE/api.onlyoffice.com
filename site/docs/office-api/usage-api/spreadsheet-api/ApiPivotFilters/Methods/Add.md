@@ -9,7 +9,7 @@ Supports all major filter types including label filters, value filters, top/bott
 expression.Add(filterType, dataField, value1, value2, wholeDayFilter);
 ```
 
-`expression` - A variable that represents a [ApiPivotFilters](../ApiPivotFilters.md) class.
+`expression` - A variable that represents an [ApiPivotFilters](../ApiPivotFilters.md) class.
 
 ## Parameters
 

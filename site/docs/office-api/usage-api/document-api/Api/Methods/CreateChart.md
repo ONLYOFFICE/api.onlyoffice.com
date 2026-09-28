@@ -12,7 +12,7 @@ Values of *styleIndex* outside - **1 - 48** are interpreted as a chart style id 
 expression.CreateChart(chartType, series, seriesNames, catNames, width, height, styleIndex, numFormats);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

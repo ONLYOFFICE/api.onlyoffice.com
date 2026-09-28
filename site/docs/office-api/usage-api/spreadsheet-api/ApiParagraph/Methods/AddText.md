@@ -8,7 +8,7 @@ Adds some text to the current paragraph.
 expression.AddText(text);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

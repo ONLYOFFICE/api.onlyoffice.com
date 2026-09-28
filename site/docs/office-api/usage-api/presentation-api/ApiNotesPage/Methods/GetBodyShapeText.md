@@ -8,7 +8,7 @@ Returns the text from the body shape of the current notes page.
 expression.GetBodyShapeText();
 ```
 
-`expression` - A variable that represents a [ApiNotesPage](../ApiNotesPage.md) class.
+`expression` - A variable that represents an [ApiNotesPage](../ApiNotesPage.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the layout corresponding to the specified layout type of the slide maste
 expression.GetLayoutByType(sType);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

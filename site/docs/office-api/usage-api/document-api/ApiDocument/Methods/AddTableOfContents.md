@@ -9,7 +9,7 @@ Adds a table of content to the current document.
 expression.AddTableOfContents(oTocPr);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

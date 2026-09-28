@@ -9,7 +9,7 @@ left edge border of a specific individual table cell within a table.
 expression.SetCellMarginLeft(margin);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

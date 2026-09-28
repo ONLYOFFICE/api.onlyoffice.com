@@ -8,7 +8,7 @@ Returns the paragraph properties which are applied to any numbered paragraph tha
 expression.GetParaPr();
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

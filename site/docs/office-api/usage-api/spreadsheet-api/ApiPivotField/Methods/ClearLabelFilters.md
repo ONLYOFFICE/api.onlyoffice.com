@@ -8,7 +8,7 @@ Deletes all label filters or all date filters from the pivot filters collection.
 expression.ClearLabelFilters();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

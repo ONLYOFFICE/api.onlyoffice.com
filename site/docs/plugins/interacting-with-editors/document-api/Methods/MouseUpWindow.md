@@ -8,7 +8,7 @@ Sends an event to the plugin when the mouse button is released inside the plugin
 expression.MouseUpWindow(frameId, x, y);
 ```
 
-`expression` - A variable that represents a [Api](../document-api.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

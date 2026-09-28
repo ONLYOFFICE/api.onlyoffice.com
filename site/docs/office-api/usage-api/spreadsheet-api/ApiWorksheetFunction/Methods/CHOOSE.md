@@ -8,7 +8,7 @@ Chooses a value or action to perform from a list of values, based on an index nu
 expression.CHOOSE(arg1, args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a number of elements in the current hyperlink.
 expression.GetElementsCount();
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 

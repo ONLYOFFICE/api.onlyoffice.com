@@ -9,7 +9,7 @@ If the attribute doesn't exist, the update will not occur.
 expression.UpdateAttribute(name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 

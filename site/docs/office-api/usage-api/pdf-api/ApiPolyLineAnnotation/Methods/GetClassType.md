@@ -8,7 +8,7 @@ Returns a type of the ApiPolyLineAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiPolyLineAnnotation](../ApiPolyLineAnnotation.md) class.
+`expression` - A variable that represents an [ApiPolyLineAnnotation](../ApiPolyLineAnnotation.md) class.
 
 ## Parameters
 

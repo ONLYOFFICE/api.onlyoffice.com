@@ -8,7 +8,7 @@ Specifies a number of columns which will comprise each table column band for thi
 expression.SetStyleColBandSize(nCount);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

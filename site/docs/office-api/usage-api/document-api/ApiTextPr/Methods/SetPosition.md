@@ -9,7 +9,7 @@ baseline of the surrounding non-positioned text.
 expression.SetPosition(nPosition);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the drawing inner contents where a paragraph or text runs can be inserte
 expression.GetContent();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

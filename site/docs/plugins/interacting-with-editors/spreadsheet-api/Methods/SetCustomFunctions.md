@@ -8,7 +8,7 @@ Updates a library of local custom functions.
 expression.SetCustomFunctions(jsonString);
 ```
 
-`expression` - A variable that represents a [Api](../spreadsheet-api.md) class.
+`expression` - A variable that represents an [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 

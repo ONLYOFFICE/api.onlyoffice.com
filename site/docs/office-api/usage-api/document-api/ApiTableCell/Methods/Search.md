@@ -8,7 +8,7 @@ Searches for a scope of a table cell object. The search results are a collection
 expression.Search(sText, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

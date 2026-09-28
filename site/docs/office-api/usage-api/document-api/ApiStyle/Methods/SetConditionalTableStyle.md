@@ -8,7 +8,7 @@ Sets conditional formatting properties that are applied to table parts matching 
 expression.SetConditionalTableStyle(oTableStylePr);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

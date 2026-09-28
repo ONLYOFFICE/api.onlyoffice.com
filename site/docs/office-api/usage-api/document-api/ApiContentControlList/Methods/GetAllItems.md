@@ -8,7 +8,7 @@ Returns a collection of items (the ApiContentControlListEntry objects) of the co
 expression.GetAllItems();
 ```
 
-`expression` - A variable that represents a [ApiContentControlList](../ApiContentControlList.md) class.
+`expression` - A variable that represents an [ApiContentControlList](../ApiContentControlList.md) class.
 
 ## Parameters
 

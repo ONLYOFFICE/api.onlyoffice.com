@@ -8,7 +8,7 @@ Returns the current date in the *MM/dd/yy* format.
 expression.TODAY();
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

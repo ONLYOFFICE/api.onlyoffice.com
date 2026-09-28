@@ -8,7 +8,7 @@ Returns a type of the ApiUnderlineAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
+`expression` - A variable that represents an [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
 
 ## Parameters
 

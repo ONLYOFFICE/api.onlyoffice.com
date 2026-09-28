@@ -9,7 +9,7 @@ If a form was created and not assigned to any part of the document, it won't app
 expression.GetFormsData();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

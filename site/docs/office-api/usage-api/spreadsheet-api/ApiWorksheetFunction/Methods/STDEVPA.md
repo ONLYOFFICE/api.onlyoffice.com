@@ -9,7 +9,7 @@ Text and the - **false** logical value have the value 0; the - **true** logical 
 expression.STDEVPA(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
