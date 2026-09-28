@@ -1,11 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 description: Debug ONLYOFFICE plugins with browser DevTools in the web and desktop editors, including code that runs in the editor through callCommand.
 ---
 
 # Debugging plugins
 
-ONLYOFFICE plugins are debugged with the browser DevTools. In the web editors, open them as usual, for example with **F12**. In the desktop editors, start the application with the `--ascdesktop-support-debug-info` flag, then click anywhere in the document and press **F1**, or right-click a toolbar field and select **Inspect Element**. See [Debugging](../../../desktop-editors/usage-api/debugging.md) for how to set the flag on each operating system.
+ONLYOFFICE plugins are debugged with the browser DevTools. In the web editors, open them as usual, for example with **F12**. In the desktop editors, start the application with the `--ascdesktop-support-debug-info` flag, then click anywhere in the document and press **F1**, or right-click a toolbar field and select **Inspect Element**. See [Debugging](../../desktop-editors/usage-api/debugging.md) for how to set the flag on each operating system.
 
 ## Which frame your code runs in
 
@@ -13,7 +13,7 @@ A plugin's code runs in two frames:
 
 | Code | Runs in |
 | --- | --- |
-| The plugin's own code: scripts loaded by `index.html`, `Asc.plugin.init`, event handlers, `executeMethod` callbacks | The plugin iframe, `iframe_<guid>`, where `<guid>` is the plugin [`guid`](../../configuration/configuration.md#guid) |
+| The plugin's own code: scripts loaded by `index.html`, `Asc.plugin.init`, event handlers, `executeMethod` callbacks | The plugin iframe, `iframe_<guid>`, where `<guid>` is the plugin [`guid`](../configuration/configuration.md#guid) |
 | The function passed to `callCommand` | The editor frame, `frameEditor` |
 
 ![Developer console](/assets/images/plugins/debugging-iframes.png)

@@ -1,11 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 description: 在 Web 编辑器和桌面编辑器中使用浏览器开发者工具调试 ONLYOFFICE 插件，包括通过 callCommand 在编辑器中运行的代码。
 ---
 
 # 调试插件
 
-ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器中，按常规方式打开开发者工具，例如按 **F12**。在桌面编辑器中，使用 `--ascdesktop-support-debug-info` 标志启动应用程序，然后在文档中的任意位置单击并按 **F1**，或者右键单击工具栏字段并选择 **检查元素**。有关在各操作系统中设置该标志的方法，请参阅[调试](../../../desktop-editors/usage-api/debugging.md)。
+ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器中，按常规方式打开开发者工具，例如按 **F12**。在桌面编辑器中，使用 `--ascdesktop-support-debug-info` 标志启动应用程序，然后在文档中的任意位置单击并按 **F1**，或者右键单击工具栏字段并选择 **检查元素**。有关在各操作系统中设置该标志的方法，请参阅[调试](../../desktop-editors/usage-api/debugging.md)。
 
 ## 代码在哪个框架中运行
 
@@ -13,7 +13,7 @@ ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器�
 
 | 代码 | 运行位置 |
 | --- | --- |
-| 插件自身的代码：`index.html` 加载的脚本、`Asc.plugin.init`、事件处理程序、`executeMethod` 回调 | 插件 iframe `iframe_<guid>`，其中 `<guid>` 是插件的 [`guid`](../../configuration/configuration.md#guid) |
+| 插件自身的代码：`index.html` 加载的脚本、`Asc.plugin.init`、事件处理程序、`executeMethod` 回调 | 插件 iframe `iframe_<guid>`，其中 `<guid>` 是插件的 [`guid`](../configuration/configuration.md#guid) |
 | 传递给 `callCommand` 的函数 | 编辑器框架 `frameEditor` |
 
 ![开发者控制台](/assets/images/plugins/debugging-iframes.png)

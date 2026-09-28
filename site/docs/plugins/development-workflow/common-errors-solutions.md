@@ -1,18 +1,18 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-# 常见错误及解决方案 {#common-errors-and-solutions}
+# Common errors and solutions
 
-本指南涵盖了 ONLYOFFICE 插件开发过程中最常见的错误及其解决方案。
+This guide covers the most common errors encountered during ONLYOFFICE plugin development and their solutions.
 
-## 插件初始化错误 {#plugin-initialization-errors}
+## Plugin initialization errors
 
-### 插件未出现在菜单中 {#plugin-not-appearing-in-menu}
+### Plugin not appearing in menu
 
-**症状：** 插件已安装但不可见；控制台无错误信息；配置文件存在。
+**Symptoms:** Plugin installed but not visible; no errors in console; config file present.
 
-:::danger[错误示例]
+:::danger[Wrong]
 ```json
 { "guid": "{12345678-ABCD}" }
 ```
@@ -24,7 +24,7 @@ sidebar_position: 2
 ```
 :::
 
-:::tip[正确示例]
+:::tip[Correct]
 ```json
 { "guid": "asc.{12345678-1234-1234-1234-123456789ABC}" }
 ```
@@ -36,17 +36,17 @@ sidebar_position: 2
 ```
 :::
 
-验证方法：
+Verification:
 ```bash
 cat config.json | python -m json.tool
 ls index.html
-# 验证 GUID 格式以 "asc." 开头
-# 完全重启 ONLYOFFICE
+# Verify GUID format starts with "asc."
+# Restart ONLYOFFICE completely
 ```
 
-### 插件初始化后显示白屏 {#plugin-initializes-but-shows-blank-screen}
+### Plugin initializes but shows blank screen
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.init = function(data) {
   const element = document.getElementById('output');
@@ -56,15 +56,15 @@ window.Asc.plugin.init = function(data) {
 ```
 :::
 
-### 编辑器无法打开并报告令牌错误 {#editor-does-not-open-with-a-token-error}
+### Editor does not open with a token error
 
-在加载任何插件之前，编辑器就报告文档安全令牌格式不正确或已过期。这是 ONLYOFFICE 文档中的 JWT 配置问题，而不是插件错误。请参阅[签名](../../../docs-api/additional-api/signature/signature.md)。
+The editor reports that the document security token is not correctly formed, or that it has expired, before any plugin loads. This is a JWT configuration problem in ONLYOFFICE Docs, not a plugin error. See [Signature](../../docs-api/additional-api/signature/signature.md).
 
-## API 方法错误 {#api-method-errors}
+## API method errors
 
-### executeMethod 不起作用 {#executemethod-not-working}
+### executeMethod not working
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.executeMethod("GetSelectedText", [], function(text) {
   console.log('Selected text:', text);
@@ -73,9 +73,9 @@ window.Asc.plugin.executeMethod("GetSelectedText", [], function(text) {
 ```
 :::
 
-### callCommand 静默失败 {#callcommand-fails-silently}
+### callCommand fails silently
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.callCommand(function() {
   try {
@@ -91,15 +91,15 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-### callCommand 内部变量未定义 {#variables-undefined-inside-callcommand}
+### Variables undefined inside callCommand
 
-`callCommand` 在编辑器上下文中运行，而非插件上下文。局部变量不可访问。请使用 `Asc.scope` 跨边界传递数据：
+`callCommand` runs in the editor's context, not your plugin's. Local variables are not accessible. Use `Asc.scope` to pass data across the boundary:
 
-:::danger[错误示例]
+:::danger[Wrong]
 ```javascript
 var text = document.getElementById("input").value;
 window.Asc.plugin.callCommand(function() {
-  // text 在此处未定义——不同的执行上下文
+  // text is undefined here - different execution context
   var oParagraph = Api.CreateParagraph();
   oParagraph.AddText(text);
   Api.GetDocument().InsertContent([oParagraph]);
@@ -107,7 +107,7 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 Asc.scope.text = document.getElementById("input").value;
 window.Asc.plugin.callCommand(function() {
@@ -118,17 +118,17 @@ window.Asc.plugin.callCommand(function() {
 ```
 :::
 
-详情请参阅[向 callCommand 传递数据](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)。
+See [Passing data into callCommand](../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) for details.
 
-## 配置错误 {#configuration-errors}
+## Configuration errors
 
-### 图标不显示 {#icons-not-displaying}
+### Icons not displaying
 
-:::tip[正确示例]
+:::tip[Correct]
 ```json
 { "variations": [{ "icons": "resources/%theme-type%(light|dark)/icon%scale%(default).%extension%(png)" }] }
 ```
-文件结构：
+File structure:
 ```
 my-plugin/
 ├── config.json
@@ -141,27 +141,27 @@ my-plugin/
 ```
 :::
 
-### 模态窗口/面板配置问题 {#modalpanel-configuration-issues}
+### Modal/panel configuration issues
 
-:::tip[正确示例]
-模态对话框：
+:::tip[Correct]
+For modal dialog:
 
 ```json
 { "type": "window", "buttons": [{"text": "OK", "primary": true}, {"text": "Cancel"}] }
 ```
 
-侧边面板：
+For side panel:
 
 ```json
 { "type": "panel" }
 ```
 :::
 
-## 事件处理错误 {#event-handling-errors}
+## Event handling errors
 
-### 事件未触发 {#events-not-firing}
+### Events not firing
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.attachEditorEvent("onDocumentContentReady", function() {
   console.log('Document ready');
@@ -170,11 +170,11 @@ window.Asc.plugin.attachEditorEvent("onDocumentContentReady", function() {
 ```
 :::
 
-对于需要感知选区变化的插件，在 `config.json` 中设置 `"initOnSelectionChanged": true`——`init` 函数将在每次选区变化时接收选中的数据，而不是仅在插件打开时接收。
+For selection-aware plugins, set `"initOnSelectionChanged": true` in `config.json` - the `init` function then receives the selected data on every selection change instead of only on plugin open.
 
-### 按钮处理程序无响应 {#button-handler-not-responding}
+### Button handler not responding
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.button = function(id) {
   if (id === 0) { handleOK(); }
@@ -184,11 +184,11 @@ window.Asc.plugin.button = function(id) {
 ```
 :::
 
-## 数据处理错误 {#data-handling-errors}
+## Data handling errors
 
-### JSON 解析错误 {#json-parse-errors}
+### JSON parse errors
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 fetch('/api/data')
   .then(response => {
@@ -211,9 +211,9 @@ fetch('/api/data')
 ```
 :::
 
-### LocalStorage 配额超限 {#localstorage-quota-exceeded}
+### LocalStorage quota exceeded
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 function safeSave(key, data) {
   try {
@@ -233,34 +233,34 @@ function safeSave(key, data) {
 ```
 :::
 
-## 网络错误 {#network-errors}
+## Network errors
 
-### 插件文件被 CORS 阻止 {#plugin-files-blocked-by-cors}
+### Plugin files blocked by CORS
 
-编辑器无法从本地服务器加载 `config.json` 或其他插件文件，控制台报告 CORS 错误。
+The editor cannot load `config.json` or other plugin files from your local server, and the console reports a CORS error.
 
-- 启动本地服务器时启用 CORS，例如 `http-server --cors`。
-- 如果编辑器通过 HTTPS 打开，插件也需要通过 HTTPS 提供。浏览器会阻止 HTTPS 页面中的 HTTP 资源，控制台报告 Mixed Content 错误。
+- Start the local server with CORS enabled, for example `http-server --cors`.
+- If the editor is opened over HTTPS, serve the plugin over HTTPS too. Browsers block HTTP resources on an HTTPS page, and the console reports a Mixed Content error.
 
-### CORS 错误 {#cors-errors}
+### CORS errors
 
-控制台错误信息：
+Error in console:
 ```
 Access to fetch at 'https://api.example.com/data' from origin 'http://localhost:3000' has been blocked by CORS policy
 ```
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
-// 通过自有后端代理转发请求
+// Route requests through your own backend proxy
 fetch('/api/proxy?url=' + encodeURIComponent('https://external-api.com/data'))
   .then(response => response.json());
-// 服务器必须包含：Access-Control-Allow-Origin: *
+// Server must include: Access-Control-Allow-Origin: *
 ```
 :::
 
-### 超时错误 {#timeout-errors}
+### Timeout errors
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 async function fetchWithTimeout(url, timeout = 5000) {
   const controller = new AbortController();
@@ -277,11 +277,11 @@ async function fetchWithTimeout(url, timeout = 5000) {
 ```
 :::
 
-## UI/UX 错误 {#uiux-errors}
+## UI/UX errors
 
-### 元素未找到 {#elements-not-found}
+### Elements not found
 
-:::tip[正确示例]
+:::tip[Correct]
 ```javascript
 window.Asc.plugin.init = function() {
   if (document.readyState === 'loading') {

@@ -87,7 +87,7 @@ Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tool
 - **[Interactive playground](playground.md)** - Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** - Pre-built components
 - **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Starter projects
-- **[Browser DevTools](../development-workflow/debugging/debugging-plugins.md)** - Debugging guide
+- **[Browser DevTools](../development-workflow/debugging-plugins.md)** - Debugging guide
 - **[Plugin examples](/samples/?doctype=docs&text=plugin)** - Working examples
 - **[API reference](../interacting-with-editors/overview/overview.md)** - Complete API documentation
 - **[Plugin structure](../configuration/configuration.md)** - Configuration guide

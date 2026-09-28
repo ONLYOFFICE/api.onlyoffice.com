@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
    ![开发者控制台](/assets/images/plugins/developer-console.png)
 
-该命令返回 `true`，插件将显示在**插件**选项卡中。如果返回 `false`，则表示无法获取或解析 `config.json`。该命令不会报告原因。请检查 URL，然后参阅[插件文件被 CORS 阻止](debugging/common-errors-solutions.md#plugin-files-blocked-by-cors)。
+该命令返回 `true`，插件将显示在**插件**选项卡中。如果返回 `false`，则表示无法获取或解析 `config.json`。该命令不会报告原因。请检查 URL，然后参阅[插件文件被 CORS 阻止](common-errors-solutions.md#plugin-files-blocked-by-cors)。
 
 如果您可以控制集成的编辑器配置，也可以让插件在每次打开文档时自动加载：将其 `config.json` 的 URL 添加到 [`editorConfig.plugins.pluginsData`](../../docs-api/usage-api/config/editor/plugins.md#pluginsdata) 中。请参阅[通过 config.json 添加插件](installing-and-testing/docs-on-premises-installation.md#adding-plugins-through-the-configjson-file)。
 
@@ -84,4 +84,4 @@ import TabItem from '@theme/TabItem';
 
 ## 后续步骤 {#next-steps}
 
-要暂停并检查插件代码，请参阅[调试插件](debugging/debugging-plugins.md)。
+要暂停并检查插件代码，请参阅[调试插件](debugging-plugins.md)。

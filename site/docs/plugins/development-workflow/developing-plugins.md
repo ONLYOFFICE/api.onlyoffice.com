@@ -26,7 +26,7 @@ To develop a plugin, create a folder on your machine and place the [index.html](
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 
-The command returns `true` and the plugin appears in the **Plugins** tab. If it returns `false`, `config.json` could not be fetched or parsed. The command does not report the reason. Check the URL, then see [Plugin files blocked by CORS](debugging/common-errors-solutions.md#plugin-files-blocked-by-cors).
+The command returns `true` and the plugin appears in the **Plugins** tab. If it returns `false`, `config.json` could not be fetched or parsed. The command does not report the reason. Check the URL, then see [Plugin files blocked by CORS](common-errors-solutions.md#plugin-files-blocked-by-cors).
 
 If you control the editor configuration of your integration, you can load the plugin on every document open instead: add the URL of its `config.json` to [`editorConfig.plugins.pluginsData`](../../docs-api/usage-api/config/editor/plugins.md#pluginsdata). See [Adding plugins through the config.json file](installing-and-testing/docs-on-premises-installation.md#adding-plugins-through-the-configjson-file).
 
@@ -84,4 +84,4 @@ After you change the plugin files, reopen the document to load the new version.
 
 ## Next steps
 
-To pause and inspect the plugin code, see [Debugging plugins](debugging/debugging-plugins.md).
+To pause and inspect the plugin code, see [Debugging plugins](debugging-plugins.md).
