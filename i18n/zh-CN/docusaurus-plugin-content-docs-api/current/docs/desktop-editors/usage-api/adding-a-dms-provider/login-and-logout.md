@@ -30,7 +30,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | email       | string | `"john@example.com"`        | 在*已连接的云盘*页面上显示的用户邮箱。                                                                                                                                                              |
 | domain      | string | `"https://exampledomain.com"` | 云盘名称和云盘入口点。**此字段为必填项。**                                                                                                                                                          |
 | provider    | string | `"onlyoffice"`              | 用于在 JavaScript 命令中引用桌面应用的提供商 ID（与 [配置](adding-a-dms-provider.md) 中的相同）。**此字段为必填项。**                                                                                     |
-| uiTheme     | string | `"theme-dark"`              | 编辑器主题设置。可以通过两种方式设置：<br /><br />• **主题 ID** – 用户通过主题 ID 设置主题参数（*theme-light、theme-classic-light、theme-dark、theme-contrast-dark*）。<br /><br />• **默认主题** – 将设置默认的深色或浅色主题值（*default-dark、default-light*）。<br /><br />默认的浅色主题是 *theme-classic-light*。第一种方式优先级更高。<br /><br />除了可用的编辑器主题外，用户还可以自定义应用界面的颜色主题。 |
+| uiTheme     | string or object | `"theme-dark"`              | 云在标签栏中的标签颜色：已安装主题的 ID（例如 `theme-dark`）、`default-dark` 或 `default-light`，或包含 `type`（`dark` 或 `light`）和 `color`（十六进制颜色）字段的对象。仅支持 Windows 和 Linux。                                                                                                                                                        |
 | userId      | string | `"78e1e841"`                | 用户 ID。**此字段为必填项。**                                                                                                                                                                       |
 
 </APITable>
