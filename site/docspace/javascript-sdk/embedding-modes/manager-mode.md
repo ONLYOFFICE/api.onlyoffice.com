@@ -17,7 +17,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
+Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults — with one exception worth calling out: the left navigation menu (`showMenu`) defaults to **hidden**. A plain `initManager()` call like the one above shows the room/file list without a sidebar; pass `showMenu: true` if you want it, along with the "Sign out" and "Actions" controls that live inside it — see [Hiding UI elements and frame layout](../customization/ui-elements.md#manager-mode) for which other chrome elements default on vs. off.
 
 For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md). For a complete HTML example, see [Initialize manager](../samples/basic-samples/init-manager.md).
 

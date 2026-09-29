@@ -28,7 +28,7 @@ Supply a `getToken` callback in the frame config:
 ``` ts
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
-  src: "https://your-docspace.example.com",
+  src: "https://your-docspace.com",
   getToken: async () => {
     const response = await fetch("/api/docspace-token");
     const { accessToken } = await response.json();
@@ -47,7 +47,9 @@ Never expose `client_secret` or refresh tokens to the browser. Perform the token
 
 If you already have a valid token and don't need the SDK to refresh it, pass it directly via `accessToken` instead of a callback. The config also accepts a `tokenExpiresAt` field, but it's currently reserved and not acted on — setting it does not make the SDK refresh the token proactively before it expires. The SDK cannot refresh a static `accessToken` on its own at all, so use `getToken` instead for anything longer-lived than the token's TTL.
 
-If the SDK can't resolve a token — `getToken` throws, rejects, or returns nothing — it fires `onAuthError` instead of `onAuthSuccess`. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events) for details.
+If the SDK can't resolve a token — `getToken` throws, rejects, or returns nothing — it fires `onAuthError` with `code: "TOKEN_RESOLVE_FAILED"`. There's no dedicated `onAuthSuccess` for this flow — that event only fires from DocSpace's own confirm-by-link login page and never in OAuth mode, so a successful token resolution is visible only indirectly, through the frame loading and firing `onAppReady`.
+
+`onAuthError` can also fire later, after the frame is already running: if a DocSpace API call comes back `401` and a token refresh via `getToken` doesn't fix it, the frame reports it with `code: "UNAUTHORIZED"` — this usually means the token has expired or lacks a required scope. Treat both cases the same way: call `getToken` again (or your own refresh logic) and, if needed, reload the frame with a fresh token.
 
 Full parameter reference: [TFrameConfig#getToken](../usage-sdk/type-aliases/TFrameConfig.md#gettoken), [TFrameConfig#accessToken](../usage-sdk/type-aliases/TFrameConfig.md#accesstoken).
 
@@ -56,14 +58,17 @@ Full parameter reference: [TFrameConfig#getToken](../usage-sdk/type-aliases/TFra
 To embed a **public room** without requiring the viewer to be a DocSpace user, pass a `requestToken` in the frame config:
 
 ``` ts
-DocSpace.SDK.initManager({
+DocSpace.SDK.initPublicRoom({
   frameId: "ds-frame",
-  src: "https://your-docspace.example.com",
+  src: "https://your-docspace.com",
   requestToken: "<your-room-access-token>",
+  id: "your-room-or-folder-id",
 });
 ```
 
-The token is scoped to a specific room and grants access to its contents without requiring the viewer to have a DocSpace account. The `requestToken` parameter is supported by all init methods, not just `initManager`.
+The token is scoped to a specific room and grants access to its contents without requiring the viewer to have a DocSpace account. See [Public room mode](../embedding-modes/public-room-mode.md) for the full parameter reference.
+
+`requestToken` isn't accepted by every init method — only [Public room](../embedding-modes/public-room-mode.md), [Manager](../embedding-modes/manager-mode.md), and [Editor](../embedding-modes/editor-mode.md)/[Viewer](../embedding-modes/viewer-mode.md) mode read it; selector, Uploader, Forms, Chat, Personal, and System mode ignore it. In Manager mode it opens the room's classic shared-link path (`/rooms/shared/?key=...`) instead of the dedicated Public room UI shown above — for a public-facing embed, `initPublicRoom` is the intended entry point.
 
 :::warning
 Never expose admin-level tokens in client-side code. Obtain `requestToken` values server-side and inject them into the page at render time.
@@ -85,20 +90,11 @@ Only exact origins are matched — subdomains and paths are not automatically in
 
 ## SameSite cookie requirements
 
-When DocSpace is embedded in an iframe on a different domain, the browser must send session cookies with the cross-origin request. Without this setting, the embedded DocSpace behaves as if no user is logged in.
+When DocSpace is embedded in an iframe on a different domain, the browser must send its session cookie along with the cross-origin request — otherwise the embedded DocSpace behaves as if no user is logged in. There's nothing to configure for the common case: with both sides served over HTTPS and the embedding page's origin registered under [Developer Tools](#registering-allowed-embed-origins), the portal sets the cookie's `SameSite=None; Secure; Partitioned` attributes automatically. Without HTTPS, the cookie falls back to `SameSite=Strict` and isn't sent inside the iframe at all, breaking session-based authentication (see the note in [Get started](./get-started.md#prerequisites)).
 
-Note that `"Secure": true` requires both the DocSpace server and the embedding page to be served over HTTPS. Without HTTPS, browsers will not send cookies with the `Secure` flag set.
+The `Partitioned` attribute is what keeps this working even when the browser blocks third-party cookies outright — Chrome, Firefox, and Safari 18.4+ all still allow a partitioned cookie through, scoped to the embedding page's origin.
 
-Set the following in `appsettings.json` on the DocSpace server:
-
-``` json
-{
-  "CookieSettings": {
-    "SameSite": "None",
-    "Secure": true
-  }
-}
-```
+If you need to force a specific mode regardless of these defaults, the DocSpace server reads a `web.samesite` key from its configuration (empty/unset by default, which is what enables the automatic behavior above).
 
 ## Content Security Policy (CSP)
 
@@ -108,4 +104,6 @@ Before initializing the iframe, the SDK checks whether the embedding domain is i
 
 The current CSP allowlist can be checked via `GET /api/2.0/security/csp`. To add your domain, register it in **DocSpace settings → Developer Tools → Embed SDK** as described in [Registering allowed embed origins](#registering-allowed-embed-origins) above.
 
-You can set `checkCSP: false` in the frame config to skip the check, but this is not recommended for production — doing so allows the SDK to initialize on any domain, including unauthorized ones.
+The check compares only the embedding page's host and port against the allowlist — the scheme (`http` vs `https`) isn't part of the comparison, so an `http` and `https` variant of the same host are indistinguishable to the SDK. It's also skipped automatically when the embedding page and `src` share the same origin.
+
+`checkCSP: false` skips this fetch entirely — it's a client-side optimization for when you already know your origin is allowlisted (avoiding the extra round trip to `/api/2.0/security/csp` on every load), not a way to bypass the restriction. The portal still sends its own CSP headers regardless of this setting, and the browser enforces `frame-ancestors` on top of them — an unauthorized origin's iframe will still be blocked even with `checkCSP: false`, it just fails later (as a browser-level CSP violation) instead of showing the SDK's own error page.

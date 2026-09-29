@@ -25,10 +25,12 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 `initChat()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md). It forces `mode` to Chat.
 
 :::note
-The page renders a composer (the input box) only when the current user is signed in, isn't a guest, and the portal has AI enabled. Otherwise it shows a no-access state — a chat history control with no way to send a message. When AI Chat is disabled for the workspace, the frame fires `onNoAccess` (with an empty payload) in addition to `onAppReady` — attach a handler for it if you want to react to this instead of relying on `onAppReady` alone.
+The page renders a composer (the input box) only when the current user is signed in and isn't a guest. Otherwise it shows a no-access state — a chat history control with no way to send a message — and the frame fires `onNoAccess` (with an empty payload) in addition to `onAppReady`; attach a handler for it if you want to react to this instead of relying on `onAppReady` alone. AI being disabled on the portal also hides the composer, but doesn't fire `onNoAccess` itself — there's no dedicated signal for that case, only the visual state. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events) for `onNoAccess`'s full availability and payload details.
 
 In [OAuth mode](../get-started/authentication-security.md#oauth-authentication), the same no-access state appears if the token can't read the user's profile — make sure the **Profile** scope (`accounts.self:read`) is included.
 :::
+
+`headerOffset` (inline-start padding added to header rows, so a host overlay like a floating side menu doesn't cover the chat header's own controls) and `headerHeight` (override the header's height to match your app's chrome) are also honored in Chat mode, alongside Forms and Personal.
 
 ## Use cases
 
@@ -76,7 +78,7 @@ const docSpace = DocSpace.SDK.initChat({
 
 ### Showing the chat on demand
 
-Render the chat in a hidden container and make it visible only when the user opens it:
+Delay loading the frame entirely with `waiting: true` (see [Frame layout](../customization/ui-elements.md#frame-layout)), then release it when the user opens the chat — this also avoids loading the chat frame before it's needed at all, not just hiding an already-loaded one:
 
 ```javascript
 const docSpace = DocSpace.SDK.initChat({
@@ -85,9 +87,16 @@ const docSpace = DocSpace.SDK.initChat({
   agentId: "your-agent-id",
   width: "400px",
   height: "600px",
+  waiting: true,
 });
 
 document.getElementById("open-chat").addEventListener("click", function () {
-  document.getElementById("ds-chat").style.display = "block";
+  docSpace.setConfig({ waiting: false }, true);
 });
 ```
+
+If you'd rather have the chat preloaded in the background and just hide it visually until the user opens it — trading a bit of upfront network/render cost for an instant reveal instead of an init delay — set `display: none` on the frame's markup instead of using `waiting`, and toggle it on click.
+
+:::note
+The SDK wraps every frame in its own container element, `{frameId}-container` (`ds-chat-container` in this example) — not specific to Chat mode. Whichever hiding approach you use, apply it (or target it, for the CSS approach) to that container, not just the original element — the iframe itself is inside it.
+:::

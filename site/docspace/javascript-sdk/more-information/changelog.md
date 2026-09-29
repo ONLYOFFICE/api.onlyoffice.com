@@ -8,7 +8,7 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 - Added [Forms mode](../embedding-modes/forms-mode.md)
 - Added [Chat mode](../embedding-modes/chat-mode.md)
 - Added [Personal mode](../embedding-modes/personal-mode.md)
-- Added the `stylesUrl` and `integrationUrl` [config fields](../usage-sdk/type-aliases/TFrameConfig.md) — see also [Theming](../customization/theming.md) for `stylesUrl`
+- Added the `stylesUrl` and `integrationUrl` [config fields](../usage-sdk/type-aliases/TFrameConfig.md) — see also [Appearance and language](../customization/appearance-and-language.md) for `stylesUrl`
 - Added the `navigateSection()`, `setCustomActions()`, and `upload()` [instance methods](../usage-sdk/classes/SDKInstance.md) — see [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) for usage examples
 - Added the `onNavigate`, `onUploadSuccess`, `onUploadError`, `onCustomAction`, `onContentReady`, `onNoAccess`, `onNotFound`, `onEditorOpen`, `onGetExternalData`, and `onSetExternalData` [events](../usage-sdk/type-aliases/TFrameEvents.md) — see also [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events)
 - Added an optional `code` argument to [`login()`](../usage-sdk/classes/SDKInstance.md#login) for two-factor sign-in — see [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md)

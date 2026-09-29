@@ -16,15 +16,19 @@ const docSpace = DocSpace.SDK.initForms({
 });
 ```
 
-The parameters `frameId`, `src`, and `id` (the room identifier) are required. All other parameters are optional and have sensible defaults.
+The parameters `frameId` and `src` are required. `id` (the room identifier) is optional — without it, the frame opens whichever room is configured in the portal's own Forms settings; the same applies to `libraryId`. All other parameters are optional and have sensible defaults.
 
 For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 
 ## Configuration, events, and methods
 
-`initForms()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md). It forces `mode` to Forms and defaults `showMenu` to `true` (pass `showMenu: false` to hide the side panel).
+`initForms()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md). It forces `mode` to Forms, forces `noLoader` to `true` (the loading spinner never shows in Forms mode, regardless of that setting), and defaults `showMenu` to `true` (pass `showMenu: false` to hide the side panel).
 
-`navigateSection()`, `setCustomActions()`, and `upload()` only work once the frame has connected — call them from inside `onAppReady` (or later), not right after `initForms()` returns. `setCustomActions()` and `upload()` also only work in Forms mode; `navigateSection()` additionally works in [Personal mode](./personal-mode.md). Calling any of them from an incompatible mode throws an error.
+`navigateSection()`, `setCustomActions()`, and `upload()` only work once the frame has connected — call them from inside `onAppReady` (or later), not right after `initForms()` returns. `setCustomActions()` is Forms-mode-only; `navigateSection()` and `upload()` also work in [Personal mode](./personal-mode.md). Calling any of the three from an incompatible mode rejects the returned promise with `SDKErrorCode.ModeMismatch` — none of them throw synchronously.
+
+`onFileManagerClick` also fires in Forms mode, same as in Manager and Public room mode. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md) for its payload shape.
+
+`headerOffset` (inline-start padding added to header rows, so a host overlay like a floating side menu doesn't cover the header's own controls) and `headerHeight` (override the header's height to match your app's chrome) are also honored in Forms mode, alongside [Chat](./chat-mode.md) and [Personal](./personal-mode.md).
 
 ## Use cases
 
@@ -82,6 +86,9 @@ const docSpace = DocSpace.SDK.initForms({
             { key: "send-to-crm", label: "Send to CRM", icon: "https://your-app.com/icon.svg" },
             { key: "archive", label: "Archive", section: ["completed-forms"] },
           ],
+          folder: [
+            { key: "share-folder", label: "Share folder" },
+          ],
         },
       });
     },
@@ -96,7 +103,7 @@ const docSpace = DocSpace.SDK.initForms({
 
 ### Uploading a file without the picker dialog
 
-Call `upload()` directly with a `File` object — useful when the file comes from your own drop zone or input element rather than the DocSpace UI. Wait for `onAppReady` before the frame will accept the call. `onUploadSuccess`/`onUploadError` fire for a `upload()`-initiated transfer with a small payload (`{ fileName, fileSize }`) — this is narrower than what [Uploader mode](./uploader-mode.md)'s own native upload dialog produces; see [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#event-payloads) for both shapes:
+Call `upload()` directly with a `File` object — useful when the file comes from your own drop zone or input element rather than the DocSpace UI. Wait for `onAppReady` before the frame will accept the call. The call has its own fixed 120-second transfer timeout, independent of `methodTimeout` — past that, the promise rejects with `SDKErrorCode.UploadFailed`. On success, the returned promise resolves with the same payload passed to `onUploadSuccess` (`{ fileName, fileSize }`), so you can skip the event handler entirely if you only care about this specific call's outcome; `onUploadProgress` is never emitted for an `upload()`-initiated transfer, only for a native upload through [Uploader mode](./uploader-mode.md)'s own dialog. `onUploadSuccess`/`onUploadError` fire with this narrower payload for an `upload()`-initiated transfer — see [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#event-payloads) for how it compares to Uploader mode's own (much larger) native-dialog payload:
 
 ```javascript
 const docSpace = DocSpace.SDK.initForms({

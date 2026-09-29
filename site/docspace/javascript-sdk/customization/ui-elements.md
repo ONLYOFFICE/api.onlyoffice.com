@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Hiding and showing UI elements
+# Hiding UI elements and frame layout
 
 Most embedding modes expose parameters to hide chrome you don't need — menus, headers, selector buttons — so the embedded frame blends into your application instead of looking like a separate product.
 
@@ -10,7 +10,7 @@ Most embedding modes expose parameters to hide chrome you don't need — menus, 
 
 ## Manager mode
 
-Most of these toggle independently, but two of them only take effect when the left menu itself is visible — see the note after the example.
+Most of these toggle independently, but two of them only take effect when the left menu itself is visible, and not all of them default to visible in the first place — see the note after the example before assuming a plain `initManager()` call shows everything.
 
 - `showMenu` — left navigation menu
 - `showHeader` — header bar in the mobile view
@@ -20,6 +20,7 @@ Most of these toggle independently, but two of them only take effect when the le
 - `showSignOut` — "Sign out" button
 - `disableActionButton` — "Actions" button
 - `infoPanelVisible` — info panel toggle button
+- `viewTableColumns` — which columns are shown in table view (see note below)
 
 Not exhaustive — see [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md) for every Manager-related field, including ones this page doesn't cover.
 
@@ -27,15 +28,19 @@ Not exhaustive — see [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md)
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  showMenu: false,
+  showMenu: true,
+  showFilter: true,
   showTitle: false,
-  showSettings: false,
   infoPanelVisible: false,
 });
 ```
 
 :::note
-`showSignOut` and `disableActionButton` control elements that live inside the left menu — they only have a visible effect when `showMenu` is `true`. With `showMenu: false`, the menu itself is gone, so there's nothing for these two parameters to show or hide.
+Despite the framing of this list as "what you can hide," not everything on it defaults to visible — confirmed against `docspace-sdk-js`'s own `defaultConfig` (the type reference doesn't state defaults at all). **Off by default:** `showMenu`, `showHeader`, `showFilter`, `showSettings`. **On by default:** `showTitle`, `showSignOut`, `infoPanelVisible`, and the Actions button itself (`disableActionButton` defaults to `false`, i.e. not disabled). A plain `initManager()` call with no other config therefore shows no left menu at all — and since `showSignOut` and `disableActionButton` control elements that live *inside* that menu, both stay invisible along with it until you pass `showMenu: true` explicitly.
+:::
+
+:::note
+`viewTableColumns` only has an effect once the list is already in table view — switch to it with [`setListView("table")`](../samples/basic-samples/set-list-view.md) (the `viewAs` config field does not switch the view itself, despite being documented in `TFrameConfig`). The column names are also mode-specific: a room list accepts `Type`, `Tags`, `Owner`, `Last activity`, `Storage` (`Name` always shows); a file list accepts a different set (e.g. `Size`, `Modified Date`, `Author`) — passing a column name that doesn't exist for the current list has no effect.
 :::
 
 See also: [Set list view](../samples/basic-samples/set-list-view.md).
@@ -73,6 +78,8 @@ These live under `editorCustomization`, not at the top level of the config — t
 - `compactHeader` — move header action buttons into the toolbar for a more compact header
 - `compactToolbar` — compact toolbar layout instead of the full one
 - `toolbarNoTabs` — highlight toolbar tabs instead of displaying them distinctly
+- `toolbarHideFileName` — hide the document title on the toolbar (only has an effect when `compactHeader` is also `true`)
+- `hideRightMenu` — collapse the right-side panel (comments, chat, navigation, and similar tools) on first load
 - `hideRulers` — hide the document/presentation rulers
 - `help` — "Help" button
 - `comments` — "Comments" button (viewing still works when disabled)
@@ -87,12 +94,21 @@ const docSpace = DocSpace.SDK.initEditor({
   editorCustomization: {
     compactHeader: true,
     compactToolbar: true,
+    toolbarHideFileName: true,
     help: false,
   },
 });
 ```
 
-Also relevant to editor chrome: `editorGoBack` (`boolean` or the literal `"event"`) controls the "Open file location" button shown in the editor and viewer. `true` (default) shows the button and clicking it opens the file's portal folder; `"event"` hides the button entirely. See [Viewer mode](../embedding-modes/viewer-mode.md#embedding-a-document-preview-in-mobile-layout) for an example.
+If a visitor manually collapses or expands the right panel using the editor's own toggle, that choice is saved to the browser's local storage and overrides `hideRightMenu` on every later load for that visitor — so passing `hideRightMenu` only controls the very first impression for a new visitor, not a setting you can keep forcing afterward.
+
+Also relevant to editor chrome: `editorGoBack` (`boolean` or the literal `"event"`) controls the "Open file location" button shown in the editor and viewer, with three distinct behaviors — `"event"` does **not** hide the button, despite the name suggesting otherwise:
+
+- `false` — hides the button entirely.
+- `true` (default) — shows the button; clicking it navigates to the file's portal folder.
+- `"event"` — shows the button too, but clicking it fires [`onEditorCloseCallback`](../events-and-callbacks/events-and-callbacks.md) instead of navigating anywhere. The SDK sets this automatically whenever you supply an `onEditorCloseCallback` handler, overriding whatever you passed for `editorGoBack` yourself — so if you want the click to call your handler, attaching the handler is enough on its own.
+
+See [Viewer mode](../embedding-modes/viewer-mode.md#embedding-a-document-preview-in-mobile-layout) for an example.
 
 See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
@@ -100,9 +116,9 @@ See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 A few parameters control the frame's own footprint rather than DocSpace's internal UI: `width`/`height` (pixels or percentages), and `destroyText` (text inserted into the frame's container when `destroyFrame()` is called — see [Destroy frame](../samples/basic-samples/destroy-frame.md)).
 
-`noLoader` skips the loading spinner while the frame initializes — except in Manager and System modes, which always show it regardless of this setting.
+`noLoader` skips the loading spinner while the frame initializes, but two mode pairs ignore whatever you set it to: Manager and System mode always show the spinner regardless of this setting, while Forms and Personal mode always skip it — the spinner never shows in either, even with `noLoader: false`.
 
-`waiting: true` delays the frame entirely: the `<iframe>` isn't added to the page at all (only the loading spinner shows, no request is sent to the portal) until you release it. Useful when several frames share a page and one of them needs to finish authenticating before the rest load.
+`waiting: true` delays the frame entirely: the `<iframe>` isn't added to the page at all (only the loading spinner shows, no request is sent to the portal) until you release it. Useful when several frames share a page and one of them needs to finish authenticating before the rest load. System mode is the one exception — it ignores `waiting` and renders immediately regardless of the setting.
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({

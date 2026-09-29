@@ -14,16 +14,16 @@ You can use it as an [npm package](./quickstart.md#using-the-npm-package) for mo
 
 Before you begin, make sure you have the following:
 
-- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later.
-- The URL of your server added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
-- A server environment to serve your files from — opening an HTML file directly in the browser will not work
+- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later (Embed SDK 2.2.0 requires DocSpace 4.0.0).
+- The origin of your embedding page added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
+- A server environment to serve your embedding page from — opening it as a local HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
 
 :::info
 
-If your DocSpace instance is served over HTTPS, your embedding page must also be served over HTTPS. Browsers block mixed content (an HTTPS page loading resources from HTTP), which will prevent the SDK from loading correctly.
+If your DocSpace instance is served over HTTPS, your embedding page must also be served over HTTPS — browsers block mixed content (an HTTPS page loading resources from HTTP), which prevents the SDK from loading at all.
 
-Additionally, we recommend configuring HTTPS on your server and setting `"SameSite": "None"` in `appsettings.json`. This is to allow cross-domain cookies in stricter browser environments. Without HTTPS, the SDK may still work in some setups, but cross-origin authentication and session handling can fail depending on your browser's cookie policy.
+With HTTPS on both sides and the embedding page's origin registered in Developer Tools (see the Prerequisites above), the portal automatically sets the auth cookie's `SameSite=None; Secure; Partitioned` attributes for you — no manual configuration needed. Without HTTPS, the cookie falls back to `SameSite=Strict` and won't be sent inside the iframe, breaking session-based authentication.
 
 :::
 
@@ -41,7 +41,7 @@ The SDK supports multiple initialization modes:
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
 | Uploader | File upload dialog | No | No | Yes (folder) | Yes |
-| Forms | Form filling room | Yes | Yes | Yes (room) | Yes |
+| Forms | Form filling room | Yes | Yes | Optional (room from portal settings by default) | Yes |
 | Chat | AI chat interface | No | No | No | Yes |
 | Personal | Personal file manager (My Documents, Favorites, Recent, Trash) | Yes | Yes | No | Yes |
 

@@ -9,7 +9,7 @@ System mode initializes a lightweight, hidden SDK frame that displays a blank pa
 File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` aren't available from a system frame — use [Manager mode](./manager-mode.md) for those instead.
 
 :::note
-Calling `createRoom()` from a system frame doesn't throw or reject — the returned promise **resolves** with the plain string `"Wrong method for this mode"` instead of a room object, and no room is created. Check the type/shape of what a method call resolves with rather than assuming a resolved promise means success; this SDK's DocSpace-client-side validation (as opposed to mode-guards the SDK itself throws synchronously, like `setCustomActions()`/`upload()`/`navigateSection()`'s `SDKErrorCode.ModeMismatch`) doesn't consistently reject on failure. See [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors).
+Calling `createRoom()` from a system frame rejects the returned promise with `SDKErrorCode.ModeMismatch` (message naming the method and the mode) instead of resolving with a room object, and no room is created. See [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for how this generalizes to any method the current mode has no handler for.
 :::
 
 ## Initialization
@@ -68,7 +68,7 @@ After initialization, the SDK instance can be accessed by its `frameId`:
 const frame = DocSpace.SDK.frames["ds-frame"];
 ```
 
-System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame is not prevented by the SDK, but the DocSpace server does not process them in this mode.
+System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame isn't blocked at the type level, but the DocSpace client has no handler for them in this mode — the call rejects instead of doing anything.
 
 | Method | Description |
 | -------- | ------------- |
@@ -92,8 +92,18 @@ const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-
 
 const settings = await system.getHashSettings();
 const hash = await system.createHash("p@ssw0rd", settings);
-await system.login("user@example.com", hash);
+const result = await system.login("user@example.com", hash);
+
+if (result.url === "/") {
+  console.log("Signed in");
+} else if (result.url && result.url.startsWith("/confirm/")) {
+  console.log("Two-factor code required"); // see Two-factor authentication
+} else {
+  console.error("Login failed"); // don't log `result` itself — see Method-call errors
+}
 ```
+
+`login()` always resolves, even on failure — it never rejects. Check `result.url` rather than wrapping the call in `try`/`catch`, and never log or forward the resolved `result` object as-is on failure: see [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for why.
 
 ### Switching users
 
@@ -105,9 +115,13 @@ const system = DocSpace.SDK.frames["ds-auth"];
 await system.logout();
 const settings = await system.getHashSettings();
 const hash = await system.createHash("otherPassword", settings);
-await system.login("other@example.com", hash);
+const result = await system.login("other@example.com", hash);
 
-// Reinitialize the Manager frame for the new user
+if (result.url !== "/") {
+  console.error("Login failed"); // see the result-checking note above
+} else {
+  // Reinitialize the Manager frame for the new user
+}
 ```
 
 ### Checking authorization status
