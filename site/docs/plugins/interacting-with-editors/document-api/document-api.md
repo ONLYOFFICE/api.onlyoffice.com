@@ -1,8 +1,9 @@
 # Document API
 
 The Document API lists the methods and events a plugin can use when working with a text
-document in ONLYOFFICE Docs. To create or edit documents from a script instead, see the
-Office API [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md).
+document in ONLYOFFICE Docs. To work with the document content directly, such as
+paragraphs and tables, run Office API code in `callCommand`. See
+[Document API](./../../../../docs/office-api/usage-api/document-api/document-api.md).
 
 ## Methods
 
@@ -58,7 +59,7 @@ The following table lists the available methods.
 | [GetVBAMacros](./Methods/GetVBAMacros.md) | string \| null | Returns all VBA macros from the document. |
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
-| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document. |
+| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document Builder](./../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document. |
 | [InsertOleObject](./Methods/InsertOleObject.md) | None | Inserts the OLE object at the current document position. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
 | [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |

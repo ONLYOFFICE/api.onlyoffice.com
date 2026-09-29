@@ -1,8 +1,9 @@
 # Spreadsheet API
 
 The Spreadsheet API lists the methods and events a plugin can use when working with a
-spreadsheet in ONLYOFFICE Docs. To create or edit spreadsheets from a script instead, see
-the Office API [Spreadsheet](./../../../../docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md).
+spreadsheet in ONLYOFFICE Docs. To work with the spreadsheet content directly, such as
+worksheets and ranges, run Office API code in `callCommand`. See
+[Spreadsheet API](./../../../../docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md).
 
 ## Methods
 

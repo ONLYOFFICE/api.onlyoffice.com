@@ -1,8 +1,9 @@
 # Form API
 
 The Form API lists the methods and events a plugin can use when working with a form in
-ONLYOFFICE Docs. To create forms from a script instead, see the Office API
-[Form](./../../../../docs/office-api/usage-api/form-api/form-api.md).
+ONLYOFFICE Docs. To work with the form content directly, such as form fields, run
+Office API code in `callCommand`. See
+[Form API](./../../../../docs/office-api/usage-api/form-api/form-api.md).
 
 ## Methods
 

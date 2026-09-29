@@ -1,6 +1,6 @@
 # PDF API
 
-PDF API 列出了插件在 ONLYOFFICE 文档中处理 PDF 文件时可以使用的方法和事件。如需通过脚本创建或编辑 PDF 文件，请参阅 Office API 的 [PDF](./../../../../docs/office-api/usage-api/pdf-api/pdf-api.md)。
+PDF API 列出了插件在 ONLYOFFICE 文档中处理 PDF 文件时可以使用的方法和事件。如需直接处理 PDF 内容（例如页面和注释），请在 `callCommand` 中运行 Office API 代码。请参阅 [PDF API](./../../../../docs/office-api/usage-api/pdf-api/pdf-api.md)。
 
 ## 方法
 

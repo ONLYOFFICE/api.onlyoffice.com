@@ -1,6 +1,6 @@
 # Form API
 
-Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的方法和事件。如需通过脚本创建表单，请参阅 Office API 的 [Form](./../../../../docs/office-api/usage-api/form-api/form-api.md)。
+Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的方法和事件。如需直接处理表单内容（例如表单字段），请在 `callCommand` 中运行 Office API 代码。请参阅 [Form API](./../../../../docs/office-api/usage-api/form-api/form-api.md)。
 
 ## 方法
 

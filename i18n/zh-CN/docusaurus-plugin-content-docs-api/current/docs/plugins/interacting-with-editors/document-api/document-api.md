@@ -1,6 +1,6 @@
 # Document API
 
-Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以使用的方法和事件。如需通过脚本创建或编辑文档，请参阅 Office API 的 [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md)。
+Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以使用的方法和事件。如需直接处理文档内容（例如段落和表格），请在 `callCommand` 中运行 Office API 代码。请参阅 [Document API](./../../../../docs/office-api/usage-api/document-api/document-api.md)。
 
 ## 方法
 
@@ -56,7 +56,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [GetVBAMacros](./Methods/GetVBAMacros.md) | string \| null | 返回文档中的所有 VBA 宏。 |
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
-| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document](./../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
+| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document Builder](./../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
 | [InsertOleObject](./Methods/InsertOleObject.md) | 无 | 在当前文档位置插入 OLE 对象。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
