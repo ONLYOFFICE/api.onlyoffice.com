@@ -190,12 +190,24 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
       }
       ```
 
-      Add the file to the `serve` target of the project in the `./angular.json` file, under `projects` → `onlyoffice-angular-demo` → `architect`:
+      Reference the file in the `serve` target of the project in the `./angular.json` file:
 
       ```json
-      "serve": {
-        "options": {
-          "proxyConfig": "proxy.conf.json"
+      {
+        // ...
+        "projects": {
+          "onlyoffice-angular-demo": {
+            // ...
+            "architect": {
+              // ...
+              "serve": {
+                // ...
+                "options": {
+                  "proxyConfig": "proxy.conf.json"
+                }
+              }
+            }
+          }
         }
       }
       ```
@@ -203,10 +215,17 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
       </TabItem>
       <TabItem value="package" label="package.json">
 
-      Replace the `start` script with the following line, which starts the signing server and the Angular CLI development server together.
+      Replace the `start` script in `package.json` with the following, which starts the signing server and the Angular CLI development server together.
 
       ```json
-      "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\""
+      {
+        // ...
+        "scripts": {
+          // ...
+          "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\"",
+          // ...
+        }
+      }
       ```
 
       </TabItem>

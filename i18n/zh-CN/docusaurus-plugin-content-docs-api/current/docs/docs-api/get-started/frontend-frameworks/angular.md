@@ -190,12 +190,24 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
       }
       ```
 
-      请将该文件添加到 `./angular.json` 文件中该项目的 `serve` 目标下，路径为 `projects` → `onlyoffice-angular-demo` → `architect`：
+      请在 `./angular.json` 文件中该项目的 `serve` 目标下引用该文件：
 
       ```json
-      "serve": {
-        "options": {
-          "proxyConfig": "proxy.conf.json"
+      {
+        // ...
+        "projects": {
+          "onlyoffice-angular-demo": {
+            // ...
+            "architect": {
+              // ...
+              "serve": {
+                // ...
+                "options": {
+                  "proxyConfig": "proxy.conf.json"
+                }
+              }
+            }
+          }
         }
       }
       ```
@@ -206,7 +218,14 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
       请将 `start` 脚本替换为以下内容，它会同时启动签名服务器和 Angular CLI 开发服务器。
 
       ```json
-      "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\""
+      {
+        // ...
+        "scripts": {
+          // ...
+          "start": "concurrently \"node --env-file=.env.local server.mjs\" \"ng serve\"",
+          // ...
+        }
+      }
       ```
 
       </TabItem>
