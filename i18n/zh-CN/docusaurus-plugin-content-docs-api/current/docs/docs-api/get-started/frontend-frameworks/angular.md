@@ -192,7 +192,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
       请在 `./angular.json` 文件中该项目的 `serve` 目标下引用该文件：
 
-      ```json
+      ```json5
       {
         // ...
         "projects": {
@@ -217,7 +217,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
       请将 `start` 脚本替换为以下内容，它会同时启动签名服务器和 Angular CLI 开发服务器。
 
-      ```json
+      ```json5
       {
         // ...
         "scripts": {
@@ -272,11 +272,15 @@ ONLYOFFICE 文档使用 JSON Web Token 校验编辑器配置。JWT 验证默认�
 组件会将每个编辑器实例存储在 `window.DocEditor.instances` 对象中。请通过组件 `id` 获取实例，然后从该实例调用任何编辑器[方法](../../usage-api/methods.md)：
 
 ```ts
-onDocumentReady = () => {
-  const documentEditor = window.DocEditor.instances["docxEditor"];
+export class App implements OnInit {
+  // ...
 
-  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-};
+  onDocumentReady = () => {
+    const documentEditor = window.DocEditor.instances["docxEditor"];
+
+    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
+  };
+}
 ```
 
 该包已声明 `window` 对象的 `DocEditor` 属性，因此无需额外的 TypeScript 声明。
@@ -335,32 +339,40 @@ export class App implements OnDestroy {
 请在通过连接器发送命令之前检查连接器是否已创建，而不是重试失败的调用：
 
 ```ts
-getAllComments() {
-  if (!this.connector) return;   // 编辑器尚未准备就绪
+export class App implements OnDestroy {
+  // ...
 
-  this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
-    console.log("Comments:", comments);
-  });
+  getAllComments() {
+    if (!this.connector) return;   // 编辑器尚未准备就绪
+
+    this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
+      console.log("Comments:", comments);
+    });
+  }
 }
 ```
 
 [executeMethod](../../usage-api/automation-api/connector-class.md#executemethod) 按名称运行单个编辑器方法，如上所示。[callCommand](../../usage-api/automation-api/connector-class.md#callcommand) 在编辑器内部运行一个包含 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令的函数，文档内容正是通过这种方式进行修改的。该函数拥有自身的上下文，无法读取组件状态，因此请通过 `Asc.scope` 对象传递它所需的数据：
 
 ```ts
-insertText(text: string) {
-  if (!this.connector) return;
+export class App implements OnDestroy {
+  // ...
 
-  Asc.scope.text = text;   // 下面的命令拥有自身的上下文
+  insertText(text: string) {
+    if (!this.connector) return;
 
-  this.connector.callCommand(() => {
-    const document = Api.GetDocument();
-    const paragraph = Api.CreateParagraph();
+    Asc.scope.text = text;   // 下面的命令拥有自身的上下文
 
-    paragraph.AddText(Asc.scope.text);
-    document.InsertContent([paragraph]);
-  }, () => {
-    console.log("Text is inserted");
-  });
+    this.connector.callCommand(() => {
+      const document = Api.GetDocument();
+      const paragraph = Api.CreateParagraph();
+
+      paragraph.AddText(Asc.scope.text);
+      document.InsertContent([paragraph]);
+    }, () => {
+      console.log("Text is inserted");
+    });
+  }
 }
 ```
 

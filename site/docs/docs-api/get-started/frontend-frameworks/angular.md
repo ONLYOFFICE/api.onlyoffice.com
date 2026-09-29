@@ -192,7 +192,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 
       Reference the file in the `serve` target of the project in the `./angular.json` file:
 
-      ```json
+      ```json5
       {
         // ...
         "projects": {
@@ -217,7 +217,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 
       Replace the `start` script in `package.json` with the following, which starts the signing server and the Angular CLI development server together.
 
-      ```json
+      ```json5
       {
         // ...
         "scripts": {
@@ -272,11 +272,15 @@ See the [Signature](../../additional-api/signature/signature.md) section for the
 The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`, then call any editor [method](../../usage-api/methods.md) from it:
 
 ```ts
-onDocumentReady = () => {
-  const documentEditor = window.DocEditor.instances["docxEditor"];
+export class App implements OnInit {
+  // ...
 
-  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-};
+  onDocumentReady = () => {
+    const documentEditor = window.DocEditor.instances["docxEditor"];
+
+    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
+  };
+}
 ```
 
 The package declares the `DocEditor` property of the `window` object, so no additional TypeScript declaration is required.
@@ -335,32 +339,40 @@ Call the [disconnect](../../usage-api/automation-api/connector-class.md#disconne
 Check that the connector is created before sending commands through it instead of retrying the failed calls:
 
 ```ts
-getAllComments() {
-  if (!this.connector) return;   // the editor is not ready yet
+export class App implements OnDestroy {
+  // ...
 
-  this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
-    console.log("Comments:", comments);
-  });
+  getAllComments() {
+    if (!this.connector) return;   // the editor is not ready yet
+
+    this.connector.executeMethod("GetAllComments", null, (comments: object[]) => {
+      console.log("Comments:", comments);
+    });
+  }
 }
 ```
 
 [executeMethod](../../usage-api/automation-api/connector-class.md#executemethod) runs one editor method by name, as above. [callCommand](../../usage-api/automation-api/connector-class.md#callcommand) runs a function of [Office JavaScript API](../../../office-api/get-started/overview.md) commands inside the editor, which is how the content of the document is changed. That function has a context of its own and cannot read the component state, so pass the data it needs through the `Asc.scope` object:
 
 ```ts
-insertText(text: string) {
-  if (!this.connector) return;
+export class App implements OnDestroy {
+  // ...
 
-  Asc.scope.text = text;   // the command below has a context of its own
+  insertText(text: string) {
+    if (!this.connector) return;
 
-  this.connector.callCommand(() => {
-    const document = Api.GetDocument();
-    const paragraph = Api.CreateParagraph();
+    Asc.scope.text = text;   // the command below has a context of its own
 
-    paragraph.AddText(Asc.scope.text);
-    document.InsertContent([paragraph]);
-  }, () => {
-    console.log("Text is inserted");
-  });
+    this.connector.callCommand(() => {
+      const document = Api.GetDocument();
+      const paragraph = Api.CreateParagraph();
+
+      paragraph.AddText(Asc.scope.text);
+      document.InsertContent([paragraph]);
+    }, () => {
+      console.log("Text is inserted");
+    });
+  }
 }
 ```
 
