@@ -31,7 +31,7 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onAppReady` | All modes | The frame finished initializing successfully. |
 | `onAppError` | All modes | The frame failed to initialize. |
 | `onAuthSuccess` | All modes | Fires only from DocSpace's own confirm-by-link authentication page (`/confirm/Auth`, reached when that page loads inside the iframe) — not for regular session sign-in, and never in [OAuth mode](../get-started/authentication-security.md#oauth-authentication). |
-| `onAuthError` | All modes | The SDK couldn't resolve an access token — only fires with OAuth-based authentication, see below. |
+| `onAuthError` | All modes | An OAuth token problem (one of four error codes) — only fires with OAuth-based authentication, see below. |
 | `onContentReady` | All modes | The frame's content has loaded. |
 | `onCloseCallback` | Room selector, File selector | The selector was closed or the selection was canceled. |
 | `onSelectCallback` | Room selector, File selector | A room or file was selected. |
@@ -56,7 +56,7 @@ Full type reference: [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 `onFileManagerClick` and `onEditorOpen` don't just notify you that something happened — attaching a handler for either one **suppresses its default behavior** (normally, clicking a file opens it in a new browser tab, and opening a file for editing does the same). With a handler attached, your code decides what to do instead; remove the handler (see [Subscribing and updating handlers](#subscribing-and-updating-handlers) below) and the default behavior comes back.
 :::
 
-`onAuthError` only fires when the frame is configured for OAuth-based authentication — supplying a `getToken` (or `accessToken`) function in the config instead of relying on the session cookie. It fires when that callback throws, rejects, or returns nothing, so your application can re-authenticate or surface the failure. See [OAuth authentication](../get-started/authentication-security.md#oauth-authentication) for how to set this up.
+`onAuthError` only fires when the frame is configured for OAuth-based authentication — supplying a `getToken` (or `accessToken`) function in the config instead of relying on the session cookie. Its `code` identifies what went wrong: an unresolved or unavailable token, a failed refresh, or a portal `401` that survived a fresh one. `login()`/`logout()` also become unavailable in this mode — both reject instead of running. See [OAuth authentication](../get-started/authentication-security.md#oauth-authentication) for the full list of codes and how to set this up.
 
 `onContentReady` can fire more than once per frame instance — e.g. after signing out, the frame reloads to show the sign-in page, which triggers `onContentReady` again without a second `onAppReady`. `onAppReady` itself isn't strictly limited to firing once either: signing back in through that sign-in page triggers `onAppReady` a second time. Don't assume either event only fires once at startup.
 
@@ -139,7 +139,7 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onEditorOpen` | The file that was opened — the full file object (see below). |
 | `onFileManagerClick` | The file that was clicked — the full file object (see below). |
 | `onAppError` | An error message string (e.g. `"The current domain is not set in the Content Security Policy (CSP) settings."` on a CSP rejection). |
-| `onAuthError` | `{ code?, message }` — details about why the access token couldn't be resolved. Only fires with OAuth-based authentication. |
+| `onAuthError` | `{ code?, message }` — one of four token-failure codes, see [OAuth authentication](../get-started/authentication-security.md#oauth-authentication). Only fires with OAuth-based authentication. |
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut`, `onCloseCallback`, `onNoAccess` | An empty object `{}` — a signal only, no `eventData.data` to report. |
 | `onCustomAction` | `{ action, type, item }` — `action` is the `key` you registered, `item` is the file/folder it was clicked on. |
@@ -179,7 +179,7 @@ A method call also fails if the iframe doesn't respond within `methodTimeout` mi
 
 The `MODE_MISMATCH` guards the SDK enforces itself — calling [`navigateSection()`](../embedding-modes/forms-mode.md#navigating-between-sections-at-runtime), [`setCustomActions()`](../embedding-modes/forms-mode.md#adding-custom-context-menu-actions), or [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog) from a mode that doesn't support it — all reject their returned `Promise` the same way; none of them throw synchronously.
 
-When the current mode has no handler at all for a method you called, the rejection's `message` names both the method and the mode (e.g. `"logout is not available in forms mode"`) — this applies generally, not just to the three mode-guarded methods above.
+When the current mode has no handler at all for a method you called, the rejection's `message` names both the method and the mode (e.g. `"logout is not available in forms mode"`) — this applies generally, not just to the three mode-guarded methods above. The same code also guards [`login()`](../get-started/authentication-security.md#oauth-authentication) and `logout()` in OAuth mode, where the host — not the portal's session cookie — owns authentication.
 
 :::warning
 Most method calls reject with `code: "API_ERROR"` (carrying the portal's HTTP `status` and a sanitized error `data` object) when the DocSpace portal itself reports a failure — an invalid parameter, a permission error, and so on. This requires a portal that flags method errors this way (client 4.0+); on an older portal, or if you're unsure which version you're targeting, treat a resolved value as unverified rather than assuming success. `login()` and `createRoom()` are the two exceptions that keep an older contract: instead of rejecting, they resolve with a sanitized `{ status, message }` object — `.catch()` alone won't catch a failure from either. For a method that returns an entity (like `createRoom()`), checking for `result.id` on the resolved value is a more reliable success check than assuming a resolved promise means success.
