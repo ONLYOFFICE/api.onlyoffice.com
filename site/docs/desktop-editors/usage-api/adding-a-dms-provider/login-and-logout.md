@@ -35,7 +35,7 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 
 </APITable>
 
-#### Example
+### Example
 
 ```ts
 const params = {
@@ -67,7 +67,7 @@ Use the [execCommand](./execcommand.md) method to remove a cloud from the **Conn
 
 </APITable>
 
-#### Example
+### Example
 
 ```ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({

@@ -35,7 +35,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 </APITable>
 
-#### 示例
+### 示例
 
 ```ts
 const params = {
@@ -67,7 +67,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params));
 
 </APITable>
 
-#### 示例
+### 示例
 
 ```ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
