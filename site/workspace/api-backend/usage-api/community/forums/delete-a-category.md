@@ -13,7 +13,7 @@ Deletes a category with the ID specified in the request.
 
 ### categoryid
 
-**type:** `integer`
+**type**: `integer`
 
 Category ID
 
@@ -25,37 +25,37 @@ Category. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample title"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3459179Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3459179Z"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample category"`
 
 ### Threads
 
-**type:** `ForumThreadWrapper[]`
+**type**: `ForumThreadWrapper[]`
 
 ## Response example
 

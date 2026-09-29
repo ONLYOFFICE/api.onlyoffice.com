@@ -13,7 +13,7 @@ Returns the detailed list of all the files and folders for the project with the 
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -33,41 +33,41 @@ Project files. A request that is not authenticated returns `401`.
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### Folders
 
-**type:** `FolderWrapper[]`
+**type**: `FolderWrapper[]`
 
 ### Current
 
-**type:** `FolderWrapper`
+**type**: `FolderWrapper`
 
 ### PathParts
 
-**type:** `object`
+**type**: `object`
 
 ### StartIndex
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Count
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `4`
 
 ### Total
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `4`
 
 ### New
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

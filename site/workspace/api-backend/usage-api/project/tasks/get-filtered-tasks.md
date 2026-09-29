@@ -13,7 +13,7 @@ Returns a list with the detailed information about all the tasks matching the pa
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### myProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return tasks only from my projects or not
 
@@ -29,13 +29,13 @@ Specifies whether to return tasks only from my projects or not
 
 ### milestone
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Milestone ID
 
 ### myMilestones
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return tasks only from my milestones or not
 
@@ -43,7 +43,7 @@ Specifies whether to return tasks only from my milestones or not
 
 ### nomilestone
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return tasks only without milestones or not
 
@@ -51,7 +51,7 @@ Specifies whether to return tasks only without milestones or not
 
 ### tag
 
-**type:** `integer`
+**type**: `integer`
 
 Project tag
 
@@ -59,19 +59,19 @@ Project tag
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Task status
 
 ### substatus
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Custom task status
 
 ### follow
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return only followed tasks or not
 
@@ -79,7 +79,7 @@ Specifies whether to return only followed tasks or not
 
 ### departament
 
-**type:** `string`
+**type**: `string`
 
 Departament GUID
 
@@ -87,13 +87,13 @@ Departament GUID
 
 ### participant
 
-**type:** `string[]`
+**type**: `string[]`
 
 Participant GUID
 
 ### creator
 
-**type:** `string`
+**type**: `string`
 
 Creator GUID
 
@@ -101,7 +101,7 @@ Creator GUID
 
 ### deadlineStart
 
-**type:** `string`
+**type**: `string`
 
 Minimum value of task deadline
 
@@ -109,7 +109,7 @@ Minimum value of task deadline
 
 ### deadlineStop
 
-**type:** `string`
+**type**: `string`
 
 Maximum value of task deadline
 
@@ -117,7 +117,7 @@ Maximum value of task deadline
 
 ### lastId
 
-**type:** `integer`
+**type**: `integer`
 
 Last task ID
 

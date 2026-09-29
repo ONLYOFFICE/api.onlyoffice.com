@@ -13,7 +13,7 @@ Sends a message quickly specifying the sender, recipients, message subject, and 
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
@@ -21,13 +21,13 @@ Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### to
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of mail addresses to which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 Message subject
 
@@ -35,7 +35,7 @@ Message subject
 
 ### body
 
-**type:** `string`
+**type**: `string`
 
 Message body as the HTML string
 
@@ -43,7 +43,7 @@ Message body as the HTML string
 
 ### isReceipt
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the receipt is returned to the sender or not
 

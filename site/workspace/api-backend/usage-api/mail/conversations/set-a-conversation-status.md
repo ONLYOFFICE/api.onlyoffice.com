@@ -13,13 +13,13 @@ Sets a status to the conversations with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of conversation IDs
 
 ### status
 
-**type:** `string`
+**type**: `string`
 
 New status ("read", "unread", "important", or "normal")
 

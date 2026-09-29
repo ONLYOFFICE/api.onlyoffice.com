@@ -13,7 +13,7 @@ Deletes a file with the name specified in the request from the wiki page 'Files'
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 File name
 

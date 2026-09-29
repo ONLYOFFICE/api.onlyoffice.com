@@ -13,7 +13,7 @@ Returns access rights of the contact with the ID specified in the request.
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

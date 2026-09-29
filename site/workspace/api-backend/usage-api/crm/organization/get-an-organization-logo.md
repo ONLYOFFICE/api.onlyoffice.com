@@ -13,7 +13,7 @@ Returns an organization logo with the ID specified in the request in the base64 
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Organization logo ID
 

@@ -13,7 +13,7 @@ Creates an invoice with the parameters (contact ID, consignee ID, etc.) specifie
 
 ### number
 
-**type:** `string`
+**type**: `string`
 
 Invoice number
 
@@ -21,7 +21,7 @@ Invoice number
 
 ### issueDate
 
-**type:** `string`
+**type**: `string`
 
 Invoice issue date
 
@@ -29,7 +29,7 @@ Invoice issue date
 
 ### templateType
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice template type
 
@@ -37,7 +37,7 @@ Invoice template type
 
 ### contactId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice contact ID
 
@@ -45,7 +45,7 @@ Invoice contact ID
 
 ### consigneeId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice consignee ID
 
@@ -53,7 +53,7 @@ Invoice consignee ID
 
 ### entityId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice entity ID
 
@@ -61,7 +61,7 @@ Invoice entity ID
 
 ### billingAddressID
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice billing address ID
 
@@ -69,7 +69,7 @@ Invoice billing address ID
 
 ### deliveryAddressID
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice delivery address ID
 
@@ -77,7 +77,7 @@ Invoice delivery address ID
 
 ### dueDate
 
-**type:** `string`
+**type**: `string`
 
 Invoice due date
 
@@ -85,7 +85,7 @@ Invoice due date
 
 ### language
 
-**type:** `string`
+**type**: `string`
 
 Invoice language
 
@@ -93,7 +93,7 @@ Invoice language
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 Invoice currency (abbreviation)
 
@@ -101,7 +101,7 @@ Invoice currency (abbreviation)
 
 ### exchangeRate
 
-**type:** `number`
+**type**: `number`
 
 Invoice exchange rate
 
@@ -109,7 +109,7 @@ Invoice exchange rate
 
 ### purchaseOrderNumber
 
-**type:** `string`
+**type**: `string`
 
 Invoice purchase order number
 
@@ -117,7 +117,7 @@ Invoice purchase order number
 
 ### terms
 
-**type:** `string`
+**type**: `string`
 
 Invoice terms
 
@@ -125,7 +125,7 @@ Invoice terms
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Invoice description
 
@@ -133,7 +133,7 @@ Invoice description
 
 ### invoiceLines
 
-**type:** `InvoiceLine[]`
+**type**: `InvoiceLine[]`
 
 List of invoice lines
 
@@ -170,27 +170,27 @@ Invoice. A request that is not authenticated returns `401`.
 
 ### InvoiceLines
 
-**type:** `InvoiceLineWrapper[]`
+**type**: `InvoiceLineWrapper[]`
 
 ### Status
 
-**type:** `InvoiceStatusWrapper`
+**type**: `InvoiceStatusWrapper`
 
 ### Number
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### IssueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### TemplateType
 
-**type:** `"Eur" | "Rus"`
+**type**: `"Eur" | "Rus"`
 
 [0 - Eur, 1 - Rus]
 
@@ -198,93 +198,93 @@ Invoice. A request that is not authenticated returns `401`.
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Consignee
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### DueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### Language
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### ExchangeRate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"1,0"`
 
 ### PurchaseOrderNumber
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Terms
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### FileID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `-1`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Cost
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

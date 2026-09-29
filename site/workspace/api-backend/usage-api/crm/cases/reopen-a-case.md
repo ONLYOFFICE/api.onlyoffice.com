@@ -13,7 +13,7 @@ Reopens a case with the ID specified in the request.
 
 ### caseid
 
-**type:** `integer`
+**type**: `integer`
 
 Case ID
 
@@ -33,53 +33,53 @@ Case. A request that is not authenticated returns `401`.
 
 ### Members
 
-**type:** `ContactBaseWrapper[]`
+**type**: `ContactBaseWrapper[]`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5736385Z"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Exhibition organization"`
 
 ### IsClosed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

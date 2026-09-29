@@ -13,7 +13,7 @@ Checks the report data by the URI specified in the request.
 
 ### uri
 
-**type:** `string`
+**type**: `string`
 
 Report URI
 

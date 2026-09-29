@@ -13,7 +13,7 @@ Changes the default access rights in the sharing settings.
 
 ### value
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Default access rights
 

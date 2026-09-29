@@ -13,7 +13,7 @@ Updates the tip settings with a parameter specified in the request.
 
 ### show
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to show tips for the user or not
 
@@ -33,7 +33,7 @@ Updated tip settings. A request that is not authenticated returns `401`.
 
 ### Show
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

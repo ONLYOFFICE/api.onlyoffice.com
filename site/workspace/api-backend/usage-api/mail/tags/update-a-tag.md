@@ -13,7 +13,7 @@ Updates a tag with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Tag ID
 
@@ -23,7 +23,7 @@ Tag ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New tag name
 
@@ -31,7 +31,7 @@ New tag name
 
 ### style
 
-**type:** `string`
+**type**: `string`
 
 New style identifier: a postfix which represents the CSS style (tag color)
 
@@ -39,7 +39,7 @@ New style identifier: a postfix which represents the CSS style (tag color)
 
 ### addresses
 
-**type:** `string[]`
+**type**: `string[]`
 
 New list of addresses associated with a tag
 
@@ -61,29 +61,29 @@ Updated mail tag. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### Style
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"style"`
 
 ### Addresses
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### LettersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Updates the selected post changing the post title, content or/and tags specified
 
 ### postid
 
-**type:** `string`
+**type**: `string`
 
 Post ID
 
@@ -23,7 +23,7 @@ Post ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New title
 
@@ -31,7 +31,7 @@ New title
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 New post text
 
@@ -39,7 +39,7 @@ New post text
 
 ### tags
 
-**type:** `string`
+**type**: `string`
 
 New list of tags separated with comma
 
@@ -61,37 +61,37 @@ Updated post. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Post text"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Example post"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

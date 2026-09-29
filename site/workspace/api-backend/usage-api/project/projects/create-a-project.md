@@ -13,7 +13,7 @@ Creates a new project using all the necessary (title, description, responsible I
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Project title
 
@@ -21,7 +21,7 @@ Project title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Project description
 
@@ -29,7 +29,7 @@ Project description
 
 ### responsibleId
 
-**type:** `string`
+**type**: `string`
 
 Project responsible ID
 
@@ -37,7 +37,7 @@ Project responsible ID
 
 ### tags
 
-**type:** `string`
+**type**: `string`
 
 Project tags
 
@@ -45,7 +45,7 @@ Project tags
 
 ### private
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this project is private or not
 
@@ -53,31 +53,31 @@ Specifies if this project is private or not
 
 ### participants
 
-**type:** `string[]`
+**type**: `string[]`
 
 Project participants
 
 ### notify
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to notify a project manager about the project actions or not
 
 ### tasks
 
-**type:** `Task[]`
+**type**: `Task[]`
 
 Project tasks
 
 ### milestones
 
-**type:** `Milestone[]`
+**type**: `Milestone[]`
 
 Project milestones
 
 ### notifyResponsibles
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to notify responsibles about the project actions or not
 
@@ -114,147 +114,147 @@ Newly created project. A request that is not authenticated returns `401`.
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Security
 
-**type:** `ProjectSecurityInfo`
+**type**: `ProjectSecurityInfo`
 
 ### ProjectFolder
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"13234"`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### TaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### TaskCountTotal
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MilestoneCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### DiscussionCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### ParticipantCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### TimeTrackingTotal
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"TimeTrackingTotal"`
 
 ### DocumentsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### IsFollow
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `"0"`
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

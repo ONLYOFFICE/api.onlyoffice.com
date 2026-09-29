@@ -13,7 +13,7 @@ Updates a wiki page with the name and content specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New page name
 
@@ -23,7 +23,7 @@ New page name
 
 ### body
 
-**type:** `string`
+**type**: `string`
 
 New page content
 
@@ -43,23 +43,23 @@ Page information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Page name"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Page content"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3164965Z"`
 

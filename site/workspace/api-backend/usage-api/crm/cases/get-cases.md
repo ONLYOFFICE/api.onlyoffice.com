@@ -13,7 +13,7 @@ Returns a list of all the cases matching the parameters specified in the request
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,13 +21,13 @@ Contact ID
 
 ### isClosed
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Case status: closed or not
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Case tags
 

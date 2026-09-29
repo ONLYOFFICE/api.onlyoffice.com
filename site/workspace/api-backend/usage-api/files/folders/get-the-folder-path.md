@@ -13,7 +13,7 @@ Returns a path to the folder with the ID specified in the request.
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 

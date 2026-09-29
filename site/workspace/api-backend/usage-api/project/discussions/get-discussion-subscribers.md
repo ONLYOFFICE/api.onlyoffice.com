@@ -13,7 +13,7 @@ Returns a list of all the subscribers to the discussion with the selected messag
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 

@@ -13,7 +13,7 @@ Returns a list of all the posts of the selected forum topic with the dates of cr
 
 ### topicid
 
-**type:** `integer`
+**type**: `integer`
 
 Topic ID
 
@@ -25,49 +25,49 @@ List of topic posts. A request that is not authenticated returns `401`.
 
 ### Posts
 
-**type:** `ForumTopicPostWrapper[]`
+**type**: `ForumTopicPostWrapper[]`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample topic"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3259212Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3259212Z"`
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"This is sample post"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ThreadTitile
 
-**type:** `string`
+**type**: `string`
 
 ### Status
 
-**type:** `"Normal" | "Closed" | "Sticky"`
+**type**: `"Normal" | "Closed" | "Sticky"`
 
 [0 - Normal, 1 - Closed, 2 - Sticky]
 
@@ -75,7 +75,7 @@ List of topic posts. A request that is not authenticated returns `401`.
 
 ### Type
 
-**type:** `"Informational" | "Poll"`
+**type**: `"Informational" | "Poll"`
 
 [0 - Informational, 1 - Poll]
 
@@ -83,7 +83,7 @@ List of topic posts. A request that is not authenticated returns `401`.
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

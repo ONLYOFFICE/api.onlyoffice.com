@@ -13,7 +13,7 @@ Returns a list of the audit events by the parameters specified in the request.
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -21,7 +21,7 @@ User ID
 
 ### productType
 
-**type:** `integer`
+**type**: `integer`
 
 Product
 
@@ -29,7 +29,7 @@ Product
 
 ### moduleType
 
-**type:** `integer`
+**type**: `integer`
 
 Module
 
@@ -37,7 +37,7 @@ Module
 
 ### actionType
 
-**type:** `integer`
+**type**: `integer`
 
 Action type
 
@@ -45,7 +45,7 @@ Action type
 
 ### action
 
-**type:** `integer`
+**type**: `integer`
 
 Action
 
@@ -53,7 +53,7 @@ Action
 
 ### entryType
 
-**type:** `integer`
+**type**: `integer`
 
 Entry
 
@@ -61,7 +61,7 @@ Entry
 
 ### target
 
-**type:** `string`
+**type**: `string`
 
 Target
 
@@ -69,7 +69,7 @@ Target
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -77,7 +77,7 @@ Start date
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 End date
 

@@ -13,7 +13,7 @@ Creates a mailbox with your own domain name.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Mailbox name
 
@@ -33,35 +33,35 @@ Mailbox data associated with the tenant. A request that is not authenticated ret
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### UserId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserId"`
 
 ### UserDisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserDisplayName"`
 
 ### Address
 
-**type:** `ServerDomainAddressData`
+**type**: `ServerDomainAddressData`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Aliases
 
-**type:** `ServerDomainAddressData[]`
+**type**: `ServerDomainAddressData[]`
 
 ## Response example
 

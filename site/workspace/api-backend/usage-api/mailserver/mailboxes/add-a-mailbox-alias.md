@@ -13,7 +13,7 @@ Adds an alias to the mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### alias_name
 
-**type:** `string`
+**type**: `string`
 
 Mailbox alias
 
@@ -42,19 +42,19 @@ Mailbox data associated with the tenant. A request that is not authenticated ret
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### DomainId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Email
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Email@only.com"`
 

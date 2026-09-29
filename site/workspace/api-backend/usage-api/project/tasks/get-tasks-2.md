@@ -13,7 +13,7 @@ Returns a list of all the tasks from a project with the ID specified in the requ
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

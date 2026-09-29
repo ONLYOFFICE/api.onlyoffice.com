@@ -13,7 +13,7 @@ Returns a list of all the groups by the group name specified in the request.
 
 ### groupName
 
-**type:** `string`
+**type**: `string`
 
 Group name
 

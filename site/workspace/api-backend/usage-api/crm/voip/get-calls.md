@@ -13,7 +13,7 @@ Returns a list of the calls matching the parameters specified in the request.
 
 ### callType
 
-**type:** `string`
+**type**: `string`
 
 Phone call type
 
@@ -21,7 +21,7 @@ Phone call type
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -29,7 +29,7 @@ Start date
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 End date
 
@@ -37,19 +37,19 @@ End date
 
 ### agent
 
-**type:** `string[]`
+**type**: `string[]`
 
 Call agent
 
 ### client
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Call client
 
 ### contactID
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact ID
 

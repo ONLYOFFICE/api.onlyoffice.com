@@ -13,7 +13,7 @@ Sets a mobile phone for the user with the name specified in the request.
 
 ### userName
 
-**type:** `string`
+**type**: `string`
 
 User name or email
 
@@ -21,7 +21,7 @@ User name or email
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Password
 
@@ -29,7 +29,7 @@ Password
 
 ### provider
 
-**type:** `string`
+**type**: `string`
 
 Social media provider type
 
@@ -37,7 +37,7 @@ Social media provider type
 
 ### accessToken
 
-**type:** `string`
+**type**: `string`
 
 Provider token
 
@@ -45,7 +45,7 @@ Provider token
 
 ### mobilePhone
 
-**type:** `string`
+**type**: `string`
 
 New mobile phone
 
@@ -69,37 +69,37 @@ Authentication data: authentication by SMS or not, phone number, SMS expiration 
 
 ### Token
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"abcde12345"`
 
 ### Expires
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-11-24T05:36:20.4206897Z"`
 
 ### Sms
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### PhoneNoise
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"+1 555 0100"`
 
 ### Tfa
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TfaKey
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"123dwa"`
 

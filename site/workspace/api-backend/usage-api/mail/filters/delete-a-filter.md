@@ -13,7 +13,7 @@ Deletes a filter with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Filter ID
 

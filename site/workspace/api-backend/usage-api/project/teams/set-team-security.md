@@ -13,7 +13,7 @@ Sets the security rights to the user with the ID specified in the request from t
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -29,7 +29,7 @@ User ID
 
 ### security
 
-**type:** `integer`
+**type**: `integer`
 
 Security rights
 
@@ -37,7 +37,7 @@ Security rights
 
 ### visible
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the user security rights will be visible or not
 

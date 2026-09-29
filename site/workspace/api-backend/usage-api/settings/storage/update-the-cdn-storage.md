@@ -13,7 +13,7 @@ Updates the CDN storage with the parameters specified in the request.
 
 ### module
 
-**type:** `string`
+**type**: `string`
 
 CDN storage name
 
@@ -21,7 +21,7 @@ CDN storage name
 
 ### props
 
-**type:** `object[]`
+**type**: `object[]`
 
 New CDN storage properties
 
@@ -42,13 +42,13 @@ Updated CDN storage. A request that is not authenticated returns `401`.
 
 ### Module
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Module"`
 
 ### Props
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"Props"`
 

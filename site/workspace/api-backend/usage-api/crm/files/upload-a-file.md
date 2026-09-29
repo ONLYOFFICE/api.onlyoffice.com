@@ -19,7 +19,7 @@ Uploads a file to the CRM module with the parameters specified in the request.
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Related entity type
 
@@ -27,7 +27,7 @@ Related entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Related entity ID
 
@@ -35,31 +35,31 @@ Related entity ID
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 Request input stream
 
 ### contentType
 
-**type:** `object`
+**type**: `object`
 
 Content-Type header
 
 ### contentDisposition
 
-**type:** `object`
+**type**: `object`
 
 Content-Disposition header
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of files when posted as multipart/form-data
 
 ### storeOriginalFileFlag
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the documents in the original formats are also stored or not
 
@@ -87,23 +87,23 @@ File information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

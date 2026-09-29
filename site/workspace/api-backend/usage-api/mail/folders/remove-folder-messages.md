@@ -13,7 +13,7 @@ Removes all the messages from the trash or spam folder.
 
 ### folderid
 
-**type:** `integer`
+**type**: `integer`
 
 Folder ID: 4 - Trash, 5 - Spam
 

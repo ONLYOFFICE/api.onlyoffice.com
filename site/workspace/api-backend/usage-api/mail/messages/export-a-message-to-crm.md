@@ -13,7 +13,7 @@ Exports a mail to the CRM relation history for some entities.
 
 ### id_message
 
-**type:** `integer`
+**type**: `integer`
 
 ID of any message from the chain
 
@@ -21,7 +21,7 @@ ID of any message from the chain
 
 ### crm_contact_ids
 
-**type:** `CrmContactData[]`
+**type**: `CrmContactData[]`
 
 List of CRM contact entity IDs in the following format: `{entity_id: 0, entity_type: 0}`.
             Entity types: 1 - Contact, 2 - Case, 3 - Opportunity

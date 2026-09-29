@@ -13,7 +13,7 @@ Creates a mail contact with the parameters specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Contact name
 
@@ -21,7 +21,7 @@ Contact name
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Contact description
 
@@ -29,13 +29,13 @@ Contact description
 
 ### emails
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of contact emails
 
 ### phoneNumbers
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of contact phone numbers
 
@@ -60,45 +60,45 @@ Information about created contact. A request that is not authenticated returns `
 
 ### ContactId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"description"`
 
 ### Emails
 
-**type:** `ContactInfo[]`
+**type**: `ContactInfo[]`
 
 ### PhoneNumbers
 
-**type:** `ContactInfo[]`
+**type**: `ContactInfo[]`
 
 ### Type
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### SmallFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smallFotoUrl"`
 
 ### MediumFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"mediumFotoUrl"`
 

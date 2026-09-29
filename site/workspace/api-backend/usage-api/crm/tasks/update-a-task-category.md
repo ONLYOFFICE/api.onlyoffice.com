@@ -13,7 +13,7 @@ Updates the selected task category with the parameters (title, description, etc.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Task category ID
 
@@ -21,7 +21,7 @@ Task category ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New task category title
 
@@ -29,7 +29,7 @@ New task category title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New task category description
 
@@ -37,7 +37,7 @@ New task category description
 
 ### imageName
 
-**type:** `string`
+**type**: `string`
 
 New image name of task category
 
@@ -45,7 +45,7 @@ New image name of task category
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 New task category order
 
@@ -69,43 +69,43 @@ Updated task category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Returns a list of all the persons linked to the company with the ID specified in
 
 ### companyid
 
-**type:** `integer`
+**type**: `integer`
 
 Company ID
 

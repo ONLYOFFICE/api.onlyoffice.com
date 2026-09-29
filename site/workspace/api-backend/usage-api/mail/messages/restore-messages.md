@@ -13,7 +13,7 @@ Restores the messages with the IDs specified in the request to their original fo
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs
 

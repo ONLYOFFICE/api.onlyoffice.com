@@ -13,7 +13,7 @@ Returns a list of all the milestones matching the parameters specified in the re
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### tag
 
-**type:** `integer`
+**type**: `integer`
 
 Milestone tag
 
@@ -29,13 +29,13 @@ Milestone tag
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Milestone status ("Open" or "Closed")
 
 ### deadlineStart
 
-**type:** `string`
+**type**: `string`
 
 Minimum value of milestone deadline
 
@@ -43,7 +43,7 @@ Minimum value of milestone deadline
 
 ### deadlineStop
 
-**type:** `string`
+**type**: `string`
 
 Maximum value of milestone deadline
 
@@ -51,13 +51,13 @@ Maximum value of milestone deadline
 
 ### taskResponsible
 
-**type:** `string[]`
+**type**: `string[]`
 
 Milestone responsible GUID
 
 ### lastId
 
-**type:** `integer`
+**type**: `integer`
 
 Last milestone ID
 
@@ -65,7 +65,7 @@ Last milestone ID
 
 ### myProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return milestones only from my projects or not
 
@@ -73,7 +73,7 @@ Specifies whether to return milestones only from my projects or not
 
 ### milestoneResponsible
 
-**type:** `string`
+**type**: `string`
 
 Milestone responsible GUID
 

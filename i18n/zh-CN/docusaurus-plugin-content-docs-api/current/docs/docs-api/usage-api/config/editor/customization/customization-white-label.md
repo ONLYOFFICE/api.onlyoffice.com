@@ -12,15 +12,15 @@ customization 部分定义编辑器自定义参数。
 
 ## 关于
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **关于**菜单按钮显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ## features.spellcheck.change
 
-**类型：** `boolean`
+**类型**：`boolean`
 
 拼写检查器设置是否显示。此设置在所有编辑器类型中可用。
 
@@ -32,11 +32,11 @@ customization 部分定义编辑器自定义参数。
 自 9.0.4 版起已弃用。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ## 字体 
 
-**类型：** `object`
+**类型**：`object`
 
 界面元素（按钮、选项卡等）的字体。
 
@@ -51,23 +51,23 @@ customization 部分定义编辑器自定义参数。
 
 ### font.name
 
-**类型：** `string`
+**类型**：`string`
 
 字体名称。
 
-**示例**: `"Arial"`
+**示例**：`"Arial"`
 
 ### font.size
 
-**类型：** `string`
+**类型**：`string`
 
 字体大小。
 
-**示例**: `"11px"`
+**示例**：`"11px"`
 
 ## 布局
 
-**类型：** `object`
+**类型**：`object`
 
 用户可用于隐藏界面元素但不完全禁用功能的参数。隐藏的功能仍可通过上下文菜单或快捷键访问。
 
@@ -120,7 +120,7 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.header
 
-**类型：** `object`
+**类型**：`object`
 
 编辑器标题设置。
 
@@ -137,39 +137,39 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.header.editMode
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是否在标题中显示用于切换编辑器模式的按钮。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.header.save
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 编辑器标题中的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 `false` 时，将使用此设置。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.header.user
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 编辑器标题栏中带有用户头像/姓名首字母的图标是否显示或隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.header.users
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是否显示或隐藏带有编辑用户的按钮。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.leftMenu
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 左侧菜单设置。如果设置为 `false`，左侧菜单将被隐藏。
 
@@ -185,31 +185,31 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.leftMenu.mode
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 左侧面板可见性的初始值 - 显示或隐藏。它用于**视图**选项卡上的**左侧面板**菜单选项。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.leftMenu.navigation
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **导航**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.leftMenu.spellcheck
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **拼写检查**按钮是显示还是隐藏。此参数仅适用于电子表格编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.rightMenu
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 右侧菜单设置。如果设置为 `false`，右侧菜单将被隐藏。
 
@@ -223,15 +223,15 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.rightMenu.mode
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 右侧面板可见性的初始值 - 显示或隐藏。它用于**视图**选项卡上的**右侧面板**菜单选项。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.statusBar
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 状态栏设置。如果设置为 `false`，状态栏将被隐藏。
 
@@ -247,31 +247,31 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.statusBar.actionStatus
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 动作状态是显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.statusBar.docLang
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是显示还是隐藏用于选择文档语言的按钮。此参数仅适用于文档编辑器和演示文稿编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.statusBar.textLang
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 用于选择文本语言的按钮是显示还是隐藏。此参数仅适用于文档编辑器和演示文稿编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 工具栏设置。如果设置为 `false`，工具栏将被隐藏。
 
@@ -309,7 +309,7 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.collaboration
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 **Collaboration** 选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
@@ -323,23 +323,23 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.collaboration.mailmerge
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 选择邮件合并基础的按钮是否显示或隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.draw
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是否显示或隐藏**绘图**选项卡。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.file
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 **文件**选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
@@ -356,47 +356,47 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.file.close
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **关闭菜单**选项是显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.file.info
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是显示还是隐藏**文档信息**选项。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.file.save
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **保存**选项是显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.file.settings
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是显示还是隐藏**高级设置**选项。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.home
 
-**类型：** `object`
+**类型**：`object`
 
 **主页**选项卡设置。无法隐藏此选项卡。
 
-**示例**: `{}`
+**示例**：`{}`
 
 ### layout.toolbar.home.mailmerge
 
-**类型：** `boolean`
+**类型**：`boolean`
 
 是否显示或隐藏用于选择邮件合并基础的按钮。
 
@@ -404,11 +404,11 @@ customization 部分定义编辑器自定义参数。
 请改用 [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmailmerge) 参数。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.insert
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 **插入**选项卡设置。如果设置为 `false`，选项卡将被隐藏。此参数仅适用于文档编辑器。
 
@@ -423,23 +423,23 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.insert.field
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **域**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.insert.file
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **来自文件的文本**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.layout
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 **布局**选项卡设置。如果设置为 `false`，选项卡将被隐藏。此参数仅适用于文档编辑器和电子表格编辑器。
 
@@ -453,47 +453,47 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.layout.pagecolor
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **页面颜色**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.plugins
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **插件**选项卡是显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.protect
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **保护**选项卡是显示还是隐藏。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.references
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是显示还是隐藏**参考**选项卡。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.save
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 工具栏上的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 `true` 时，将使用此设置。
 
-**示例**: `true`
+**示例**：`true`
 
 ### layout.toolbar.view
 
-**类型：** `object | boolean` | **默认值：** `true`
+**类型**：`object | boolean` | **默认值**：`true`
 
 **视图**选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
@@ -507,15 +507,15 @@ customization 部分定义编辑器自定义参数。
 
 ### layout.toolbar.view.navigation
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 **导航**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
-**示例**: `true`
+**示例**：`true`
 
 ## leftMenu
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 左侧菜单面板是显示还是隐藏。
 
@@ -523,11 +523,11 @@ customization 部分定义编辑器自定义参数。
 自 7.1 版起已弃用，请改用 [layout.leftMenu](#layoutleftmenu) 参数。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ## loaderLogo
 
-**类型：** `string`
+**类型**：`string`
 
 加载文档时显示的图像徽标的路径。当在编辑器中显示时，图像将按比例调整到 160 像素的高度。
 
@@ -535,19 +535,19 @@ customization 部分定义编辑器自定义参数。
 对于此文件没有特别的建议，但最好使用透明背景的 .png 格式。
 :::
 
-**示例**: `"https://example.com/loader-logo.png"`
+**示例**：`"https://example.com/loader-logo.png"`
 
 ## loaderName
 
-**类型：** `string`
+**类型**：`string`
 
 加载文档时显示的文本。
 
-**示例**: `"正在加载文档，请稍候…"`
+**示例**：`"正在加载文档，请稍候…"`
 
 ## rightMenu
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 右菜单面板是显示还是隐藏。
 
@@ -555,11 +555,11 @@ customization 部分定义编辑器自定义参数。
 自 7.1 版起已弃用。请改用 [layout.rightMenu](#layoutrightmenu) 参数。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ## statusBar
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 状态栏是显示还是隐藏。
 
@@ -567,11 +567,11 @@ customization 部分定义编辑器自定义参数。
 自 7.1 版起已弃用。请改用 [layout.statusBar](#layoutstatusbar) 参数。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ## toolbar
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 顶部工具栏是显示还是隐藏。
 
@@ -579,7 +579,7 @@ customization 部分定义编辑器自定义参数。
 自 7.1 版起已弃用。请改用 [layout.toolbar](#layouttoolbar) 参数。
 :::
 
-**示例**: `true`
+**示例**：`true`
 
 ## 示例
 

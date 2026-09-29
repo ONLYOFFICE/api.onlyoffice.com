@@ -13,7 +13,7 @@ Returns a list of blog posts matching the search query specified in the request 
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

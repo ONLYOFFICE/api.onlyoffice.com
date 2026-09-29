@@ -13,7 +13,7 @@ Sets currency rates to the currency specified in the request.
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 Currency (abbreviation)
 
@@ -21,7 +21,7 @@ Currency (abbreviation)
 
 ### rates
 
-**type:** `CurrencyRate[]`
+**type**: `CurrencyRate[]`
 
 List of currency rates
 

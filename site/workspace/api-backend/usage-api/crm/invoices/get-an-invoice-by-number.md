@@ -13,7 +13,7 @@ Returns the detailed information about an invoice with the number specified in t
 
 ### number
 
-**type:** `string`
+**type**: `string`
 
 Invoice number
 
@@ -33,27 +33,27 @@ Invoice. A request that is not authenticated returns `401`.
 
 ### InvoiceLines
 
-**type:** `InvoiceLineWrapper[]`
+**type**: `InvoiceLineWrapper[]`
 
 ### Status
 
-**type:** `InvoiceStatusWrapper`
+**type**: `InvoiceStatusWrapper`
 
 ### Number
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### IssueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### TemplateType
 
-**type:** `"Eur" | "Rus"`
+**type**: `"Eur" | "Rus"`
 
 [0 - Eur, 1 - Rus]
 
@@ -61,93 +61,93 @@ Invoice. A request that is not authenticated returns `401`.
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Consignee
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### DueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### Language
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### ExchangeRate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"1,0"`
 
 ### PurchaseOrderNumber
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Terms
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### FileID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `-1`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Cost
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

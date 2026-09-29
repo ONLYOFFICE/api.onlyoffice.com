@@ -13,7 +13,7 @@ Attaches a document to the message with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -21,7 +21,7 @@ Message ID
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 Document ID
 
@@ -29,7 +29,7 @@ Document ID
 
 ### version
 
-**type:** `string`
+**type**: `string`
 
 Document version
 
@@ -37,7 +37,7 @@ Document version
 
 ### needSaveToTemp
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this document needs to be saved to a template message or not
 
@@ -60,67 +60,67 @@ Attached document. A request that is not authenticated returns `401`.
 
 ### fileId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### fileName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"fileName"`
 
 ### size
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### contentType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"contentType"`
 
 ### needSaveToTemp
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### contentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"contentId"`
 
 ### fileNumber
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `333`
 
 ### storedName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"storedName"`
 
 ### streamId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"streamId"`
 
 ### attachedAsLink
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### tempStoredUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"tempStoredUrl"`
 

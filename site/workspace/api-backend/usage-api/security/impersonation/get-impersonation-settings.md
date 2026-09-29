@@ -15,13 +15,13 @@ Impersonation settings. A request that is not authenticated returns `401`.
 
 ### Enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### EnableType
 
-**type:** `"DisableForAdmins" | "EnableForAllFullAdmins" | "EnableWithLimits"`
+**type**: `"DisableForAdmins" | "EnableForAllFullAdmins" | "EnableWithLimits"`
 
 [0 - DisableForAdmins, 1 - EnableForAllFullAdmins, 2 - EnableWithLimits]
 
@@ -29,21 +29,21 @@ Impersonation settings. A request that is not authenticated returns `401`.
 
 ### OnlyForOwnGroups
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### AllowedAdmins
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### RestrictionUsers
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### RestrictionGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

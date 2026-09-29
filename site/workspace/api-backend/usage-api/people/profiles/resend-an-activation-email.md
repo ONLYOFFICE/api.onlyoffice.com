@@ -13,7 +13,7 @@ Resends emails to the users who have not activated their emails.
 
 ### userIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 

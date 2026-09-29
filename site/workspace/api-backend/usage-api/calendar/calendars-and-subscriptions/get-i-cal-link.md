@@ -13,7 +13,7 @@ Returns a link to the iCal related to the calendar with the ID specified in the 
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 

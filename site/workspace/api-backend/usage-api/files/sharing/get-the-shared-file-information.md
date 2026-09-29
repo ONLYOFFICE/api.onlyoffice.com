@@ -13,7 +13,7 @@ Returns the detailed information about the shared file with the ID specified in 
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 

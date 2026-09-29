@@ -13,7 +13,7 @@ Returns the information about a comment with the ID specified in the request.
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 
@@ -25,41 +25,41 @@ Comment. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### ParentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Page
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Some page"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Comment content"`
 
 ### Author
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### LastModified
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3304954Z"`
 
 ### Inactive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

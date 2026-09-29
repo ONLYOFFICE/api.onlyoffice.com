@@ -13,7 +13,7 @@ Returns the search results for a project containing the words/phrases matching t
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 
@@ -23,7 +23,7 @@ Search query
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

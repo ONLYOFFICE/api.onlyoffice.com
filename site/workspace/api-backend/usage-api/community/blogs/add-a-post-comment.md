@@ -15,7 +15,7 @@ Adds a comment to the post with the ID specified in the request. The parent comm
 
 ### postid
 
-**type:** `string`
+**type**: `string`
 
 Post ID
 
@@ -25,7 +25,7 @@ Post ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Comment text
 
@@ -33,7 +33,7 @@ Comment text
 
 ### parentId
 
-**type:** `string`
+**type**: `string`
 
 Parent comment ID
 
@@ -54,31 +54,31 @@ List of post comments. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"comment text"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-03T21:36:13.0325127Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"c2020-12-03T21:36:13.0325127Z"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"c2020-12-03T21:36:13.0325127Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

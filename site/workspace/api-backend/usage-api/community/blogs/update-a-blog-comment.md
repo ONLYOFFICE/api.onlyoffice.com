@@ -13,7 +13,7 @@ Updates a blog comment specified in the request changing its content.
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 
@@ -23,7 +23,7 @@ Comment ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 New comment text
 

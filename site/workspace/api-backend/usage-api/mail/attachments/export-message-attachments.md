@@ -13,7 +13,7 @@ Exports all the message attachments to the folder with documents.
 
 ### id_message
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -21,7 +21,7 @@ Message ID
 
 ### id_folder
 
-**type:** `string`
+**type**: `string`
 
 Folder ID (if this parameter is empty, the "My documents" folder is used)
 

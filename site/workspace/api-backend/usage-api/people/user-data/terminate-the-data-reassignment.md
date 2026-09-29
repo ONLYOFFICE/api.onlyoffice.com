@@ -13,7 +13,7 @@ Terminates the data reassignment for the user with the ID specified in the reque
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID whose data is reassigned
 

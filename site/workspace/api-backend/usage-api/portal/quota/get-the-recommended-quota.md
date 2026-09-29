@@ -15,67 +15,67 @@ Quota. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `234`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### MaxFileSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `12345`
 
 ### MaxTotalSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `12345`
 
 ### ActiveUsers
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `2`
 
 ### Features
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Features"`
 
 ### Price
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `22.5`
 
 ### AvangateId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"AvangateId"`
 
 ### Visible
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Year
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Year3
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

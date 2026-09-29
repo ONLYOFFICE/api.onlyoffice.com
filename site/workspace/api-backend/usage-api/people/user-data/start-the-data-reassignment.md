@@ -13,7 +13,7 @@ Starts the data reassignment for the user with the ID specified in the request.
 
 ### fromUserId
 
-**type:** `string`
+**type**: `string`
 
 User ID whose data will be reassigned to another user
 
@@ -21,7 +21,7 @@ User ID whose data will be reassigned to another user
 
 ### toUserId
 
-**type:** `string`
+**type**: `string`
 
 User ID to whom all the data will be reassigned
 
@@ -29,7 +29,7 @@ User ID to whom all the data will be reassigned
 
 ### deleteProfile
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to delete a profile when the data reassignment will be finished or not
 

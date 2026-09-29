@@ -13,7 +13,7 @@ Saves a price for the call with the ID specified in the request.
 
 ### callId
 
-**type:** `string`
+**type**: `string`
 
 Phone call ID
 

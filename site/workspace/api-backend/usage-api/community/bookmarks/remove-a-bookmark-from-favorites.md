@@ -13,7 +13,7 @@ Removes a bookmark from favorites. If after removing the user bookmark, its rati
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Bookmark ID
 
@@ -25,49 +25,49 @@ Bookmark. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `11`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Google inc."`
 
 ### Url
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"http://www.google.com"`
 
 ### Thumbnail
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Url to thumbnail"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8181893Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8181893Z"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Google"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

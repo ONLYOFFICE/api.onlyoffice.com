@@ -13,7 +13,7 @@ Updates the selected milestone changing the milestone parameters (title, deadlin
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Milestone ID
 
@@ -21,7 +21,7 @@ Milestone ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New milestone title
 
@@ -29,7 +29,7 @@ New milestone title
 
 ### deadline
 
-**type:** `string`
+**type**: `string`
 
 New milestone deadline
 
@@ -37,13 +37,13 @@ New milestone deadline
 
 ### isKey
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if this is a key milestone or not
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 New milestone status ("Open" or "Closed")
 
@@ -51,13 +51,13 @@ New milestone status ("Open" or "Closed")
 
 ### isNotify
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to remind me 48 hours before the milestone due date or not
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New milestone description
 
@@ -65,7 +65,7 @@ New milestone description
 
 ### projectID
 
-**type:** `integer`
+**type**: `integer`
 
 New project ID
 
@@ -73,7 +73,7 @@ New project ID
 
 ### responsible
 
-**type:** `string`
+**type**: `string`
 
 New milestone responsible
 
@@ -81,7 +81,7 @@ New milestone responsible
 
 ### notifyResponsible
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify responsible about the milestone actions or not
 
@@ -114,113 +114,113 @@ Updated milestone. A request that is not authenticated returns `401`.
 
 ### ProjectOwner
 
-**type:** `SimpleProjectWrapper`
+**type**: `SimpleProjectWrapper`
 
 ### Deadline
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.4458522Z"`
 
 ### IsKey
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsNotify
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### ActiveTaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `15`
 
 ### ClosedTaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `5`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

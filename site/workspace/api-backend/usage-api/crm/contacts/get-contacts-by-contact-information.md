@@ -15,13 +15,13 @@ Returns a list of contacts from the CRM module with the contact information spec
 
 ### infoType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact information type
 
 ### data
 
-**type:** `string`
+**type**: `string`
 
 Contact data
 
@@ -29,13 +29,13 @@ Contact data
 
 ### category
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact category
 
 ### isPrimary
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Contact importance: primary or not
 

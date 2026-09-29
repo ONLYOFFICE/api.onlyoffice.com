@@ -13,7 +13,7 @@ Returns a list of all the discussion messages within a project with the ID speci
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

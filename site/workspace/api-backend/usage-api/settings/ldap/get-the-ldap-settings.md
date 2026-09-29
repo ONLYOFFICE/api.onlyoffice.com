@@ -15,175 +15,175 @@ LDAP settings. A request that is not authenticated returns `401`.
 
 ### EnableLdapAuthentication
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### StartTls
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Ssl
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SendWelcomeEmail
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Server
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Server"`
 
 ### UserDN
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserDN"`
 
 ### PortNumber
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### UserFilter
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserFilter"`
 
 ### LoginAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"LoginAttribute"`
 
 ### LdapMapping
 
-**type:** `object`
+**type**: `object`
 
 ### AccessRights
 
-**type:** `object`
+**type**: `object`
 
 ### FirstNameAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"FirstNameAttribute"`
 
 ### SecondNameAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"SecondNameAttribute"`
 
 ### MailAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"MailAttribute"`
 
 ### TitleAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"TitleAttribute"`
 
 ### MobilePhoneAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"MobilePhoneAttribute"`
 
 ### LocationAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"LocationAttribute"`
 
 ### GroupMembership
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### GroupDN
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"GroupDN"`
 
 ### GroupNameAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"GroupNameAttribute"`
 
 ### GroupFilter
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"GroupFilter"`
 
 ### UserAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserAttribute"`
 
 ### GroupAttribute
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"GroupAttribute"`
 
 ### Authentication
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Login
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Login"`
 
 ### Password
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Password"`
 
 ### PasswordBytes
 
-**type:** `object[]`
+**type**: `object[]`
 
 ### IsDefault
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### AcceptCertificate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### AcceptCertificateHash
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"AcceptCertificateHash"`
 

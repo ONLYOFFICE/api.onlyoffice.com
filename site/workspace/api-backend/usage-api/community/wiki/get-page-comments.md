@@ -13,7 +13,7 @@ Returns a list of all the comments on the wiki page with the name specified in t
 
 ### page
 
-**type:** `string`
+**type**: `string`
 
 Page name
 

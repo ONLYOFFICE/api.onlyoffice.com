@@ -15,7 +15,7 @@ Sets the sharing settings to a folder with the ID specified in the request.
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -25,13 +25,13 @@ Folder ID
 
 ### share
 
-**type:** `FileShareParams[]`
+**type**: `FileShareParams[]`
 
 Collection of sharing parameters
 
 ### notify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Notifies users about the shared folder or not
 
@@ -39,7 +39,7 @@ Notifies users about the shared folder or not
 
 ### sharingMessage
 
-**type:** `string`
+**type**: `string`
 
 Message to send when notifying about the shared folder
 

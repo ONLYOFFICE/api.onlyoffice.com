@@ -13,7 +13,7 @@ Returns the sharing access parameters of the calendar with the ID specified in t
 
 ### calendarId
 
-**type:** `integer`
+**type**: `integer`
 
 Calendar ID
 
@@ -25,11 +25,11 @@ Sharing access parameters. A request that is not authenticated returns `401`.
 
 ### AvailableOptions
 
-**type:** `AccessOption[]`
+**type**: `AccessOption[]`
 
 ### Items
 
-**type:** `PublicItemWrapper[]`
+**type**: `PublicItemWrapper[]`
 
 ## Response example
 

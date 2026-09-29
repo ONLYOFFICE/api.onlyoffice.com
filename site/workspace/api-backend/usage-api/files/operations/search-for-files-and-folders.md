@@ -13,7 +13,7 @@ Searches for files and folders by the query specified in the request.
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Query string
 

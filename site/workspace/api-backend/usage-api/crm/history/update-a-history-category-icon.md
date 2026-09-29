@@ -13,7 +13,7 @@ Updates an icon of a history category with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 History category ID
 
@@ -21,7 +21,7 @@ History category ID
 
 ### imageName
 
-**type:** `string`
+**type**: `string`
 
 New image name of the history category
 
@@ -42,43 +42,43 @@ History category with the updated icon. A request that is not authenticated retu
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Sets the default account with the email address specified in the request.
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address
 
@@ -21,7 +21,7 @@ Account email address
 
 ### isDefault
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this account is default or not
 

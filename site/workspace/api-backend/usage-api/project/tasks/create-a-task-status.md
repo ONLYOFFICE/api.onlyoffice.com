@@ -13,7 +13,7 @@ Creates a task status specified in the request.
 
 ### status
 
-**type:** `object`
+**type**: `object`
 
 Task status
 

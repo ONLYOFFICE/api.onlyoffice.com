@@ -13,7 +13,7 @@ Adds a task to the selected project by the message ID specified in the request.
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -42,69 +42,69 @@ Added task. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### Contact
 
-**type:** `ContactBaseWithEmailWrapper`
+**type**: `ContactBaseWithEmailWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Send a commercial offer"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### DeadLine
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### AlertValue
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### IsClosed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Category
 
-**type:** `TaskCategoryBaseWrapper`
+**type**: `TaskCategoryBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

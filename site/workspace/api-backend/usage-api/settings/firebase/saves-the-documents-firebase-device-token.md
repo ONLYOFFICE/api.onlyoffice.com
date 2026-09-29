@@ -13,7 +13,7 @@ Saves the Firebase device token specified in the request for the Documents appli
 
 ### firebaseDeviceToken
 
-**type:** `string`
+**type**: `string`
 
 Firebase device token
 

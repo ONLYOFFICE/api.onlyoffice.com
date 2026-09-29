@@ -13,7 +13,7 @@ Returns a list of profiles for all the portal users matching the search query.
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Query
 

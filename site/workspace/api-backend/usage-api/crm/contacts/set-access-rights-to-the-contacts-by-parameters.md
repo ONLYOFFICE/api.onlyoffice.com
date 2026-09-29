@@ -13,25 +13,25 @@ Sets access rights to the list of contacts with the parameters specified in the 
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Contact tags
 
 ### contactStage
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact stage ID (warmth)
 
 ### contactType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact type ID
 
 ### contactListView
 
-**type:** `integer`
+**type**: `integer`
 
 Contact list view
 
@@ -39,7 +39,7 @@ Contact list view
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -47,7 +47,7 @@ Start date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 End date
 
@@ -55,7 +55,7 @@ End date
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Contact privacy: private or not
 
@@ -63,7 +63,7 @@ Contact privacy: private or not
 
 ### managerList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of managers
 

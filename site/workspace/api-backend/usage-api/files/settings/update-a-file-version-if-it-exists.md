@@ -13,7 +13,7 @@ Updates a file version if a file with such a name already exists.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Turns the parameter on or off
 

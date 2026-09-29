@@ -13,7 +13,7 @@ Returns the detailed contact information by the information type specified in th
 
 ### infoType
 
-**type:** `"Phone" | "Email" | "Website" | "Skype" | "Twitter" | "LinkedIn" | "Facebook" | "Address" | "LiveJournal" | "MySpace" | "GMail" | "Blogger" | "Yahoo" | "MSN" | "ICQ" | "Jabber" | "AIM" | "VK"`
+**type**: `"Phone" | "Email" | "Website" | "Skype" | "Twitter" | "LinkedIn" | "Facebook" | "Address" | "LiveJournal" | "MySpace" | "GMail" | "Blogger" | "Yahoo" | "MSN" | "ICQ" | "Jabber" | "AIM" | "VK"`
 
 Contact information type
 
@@ -23,7 +23,7 @@ Contact information type
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

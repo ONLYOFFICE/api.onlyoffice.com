@@ -13,7 +13,7 @@ Displays the "Favorites" folder.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Turns the parameter on or off
 

@@ -13,7 +13,7 @@ Changes a type (user or visitor) for the users with the IDs specified in the req
 
 ### type
 
-**type:** `"All" | "User" | "Visitor"`
+**type**: `"All" | "User" | "Visitor"`
 
 New user type ("All", "User", or "Visitor")
 
@@ -23,7 +23,7 @@ New user type ("All", "User", or "Visitor")
 
 ### userIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 

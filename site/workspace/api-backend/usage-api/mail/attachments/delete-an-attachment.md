@@ -13,7 +13,7 @@ Deletes the selected attachment from the message with the ID specified in the re
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -21,7 +21,7 @@ Message ID
 
 ### attachmentid
 
-**type:** `integer`
+**type**: `integer`
 
 Attachment ID
 

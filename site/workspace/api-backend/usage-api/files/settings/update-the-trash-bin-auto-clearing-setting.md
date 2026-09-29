@@ -13,7 +13,7 @@ Updates the trash bin auto-clearing setting.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Enables the auto-clearing or not
 
@@ -21,7 +21,7 @@ Enables the auto-clearing or not
 
 ### gap
 
-**type:** `integer`
+**type**: `integer`
 
 A time interval when the auto-clearing will be performed (one week, two weeks, one month, two months, three months)
 
@@ -42,13 +42,13 @@ The auto-clearing setting properties. A request that is not authenticated return
 
 ### IsAutoCleanUp
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Gap
 
-**type:** `"OneWeek" | "TwoWeeks" | "OneMonth" | "TwoMonths" | "ThreeMonths"`
+**type**: `"OneWeek" | "TwoWeeks" | "OneMonth" | "TwoMonths" | "ThreeMonths"`
 
 [1 - OneWeek, 2 - TwoWeeks, 3 - OneMonth, 4 - TwoMonths, 5 - ThreeMonths]
 

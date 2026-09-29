@@ -13,7 +13,7 @@ Returns the total time spent matching the filter parameters specified in the req
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### myProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return task time only for my projects or not
 
@@ -29,13 +29,13 @@ Specifies whether to return task time only for my projects or not
 
 ### milestone
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Milestone ID
 
 ### myMilestones
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return task time only for my milestones or not
 
@@ -43,7 +43,7 @@ Specifies whether to return task time only for my milestones or not
 
 ### tag
 
-**type:** `integer`
+**type**: `integer`
 
 Project tag
 
@@ -51,7 +51,7 @@ Project tag
 
 ### departament
 
-**type:** `string`
+**type**: `string`
 
 Departament GUID
 
@@ -59,7 +59,7 @@ Departament GUID
 
 ### participant
 
-**type:** `string`
+**type**: `string`
 
 Participant GUID
 
@@ -67,7 +67,7 @@ Participant GUID
 
 ### createdStart
 
-**type:** `string`
+**type**: `string`
 
 The earliest date of task creation
 
@@ -75,7 +75,7 @@ The earliest date of task creation
 
 ### createdStop
 
-**type:** `string`
+**type**: `string`
 
 The latest date of task creation
 
@@ -83,7 +83,7 @@ The latest date of task creation
 
 ### lastId
 
-**type:** `integer`
+**type**: `integer`
 
 Last spent time ID
 
@@ -91,7 +91,7 @@ Last spent time ID
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Payment status ("NotChargeable", "NotBilled", or "Billed")
 

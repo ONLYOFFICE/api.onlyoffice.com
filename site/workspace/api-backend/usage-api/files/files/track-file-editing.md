@@ -13,7 +13,7 @@ Tracks file changes when editing.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### tabId
 
-**type:** `string`
+**type**: `string`
 
 Tab ID
 
@@ -31,7 +31,7 @@ Tab ID
 
 ### docKeyForTrack
 
-**type:** `string`
+**type**: `string`
 
 Document key for tracking
 
@@ -39,7 +39,7 @@ Document key for tracking
 
 ### doc
 
-**type:** `string`
+**type**: `string`
 
 Shared token
 
@@ -47,7 +47,7 @@ Shared token
 
 ### isFinish
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to finish file tracking or not
 

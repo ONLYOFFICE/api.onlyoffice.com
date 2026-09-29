@@ -13,7 +13,7 @@ Adds a comment to the selected task with the comment text and parent comment ID 
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 
@@ -21,7 +21,7 @@ Task ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Comment text
 
@@ -29,7 +29,7 @@ Comment text
 
 ### parentid
 
-**type:** `string`
+**type**: `string`
 
 Parent comment ID
 
@@ -51,41 +51,41 @@ List of comments. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### ParentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Page
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Some page"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Comment content"`
 
 ### Author
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### LastModified
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3304954Z"`
 
 ### Inactive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

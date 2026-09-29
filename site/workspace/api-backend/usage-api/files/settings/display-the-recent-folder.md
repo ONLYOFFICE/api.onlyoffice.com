@@ -13,7 +13,7 @@ Displays the "Recent" folder.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Turns the parameter on or off
 

@@ -13,7 +13,7 @@ Adds an image address specified in the request to the list of trusted image addr
 
 ### address
 
-**type:** `string`
+**type**: `string`
 
 Image address
 

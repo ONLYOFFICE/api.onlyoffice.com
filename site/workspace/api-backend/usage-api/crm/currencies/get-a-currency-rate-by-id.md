@@ -13,7 +13,7 @@ Returns a currency rate by ID.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Currency rate ID
 
@@ -33,25 +33,25 @@ Currency rate. A request that is not authenticated returns `401`.
 
 ### FromCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"EUR"`
 
 ### ToCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"USD"`
 
 ### Rate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `1.1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

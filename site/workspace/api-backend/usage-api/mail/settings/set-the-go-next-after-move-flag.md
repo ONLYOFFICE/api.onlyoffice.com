@@ -13,7 +13,7 @@ Sets a flag that specifies whether to go to the next message after moving/deleti
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to go to the next message after moving/deleting the currently viewed or return to the current folder
 

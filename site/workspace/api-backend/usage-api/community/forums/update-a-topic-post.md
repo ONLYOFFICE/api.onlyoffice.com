@@ -13,7 +13,7 @@ Updates a post in the selected topic changing the post subject or/and content sp
 
 ### topicid
 
-**type:** `integer`
+**type**: `integer`
 
 Topic ID
 
@@ -21,7 +21,7 @@ Topic ID
 
 ### postid
 
-**type:** `integer`
+**type**: `integer`
 
 Post ID
 
@@ -31,7 +31,7 @@ Post ID
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 New post subject (required)
 
@@ -39,7 +39,7 @@ New post subject (required)
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 New post text
 
@@ -60,47 +60,47 @@ Updated post. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### Subject
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample subject"`
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Post text"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3269198Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3269198Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ThreadTitle
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Attachments
 
-**type:** `ForumTopicPostAttachmentWrapper[]`
+**type**: `ForumTopicPostAttachmentWrapper[]`
 
 ## Response example
 

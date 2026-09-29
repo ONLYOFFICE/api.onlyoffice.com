@@ -13,13 +13,13 @@ Moves the messages to a folder with the ID specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs
 
 ### folder
 
-**type:** `integer`
+**type**: `integer`
 
 Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam
 
@@ -27,7 +27,7 @@ Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam
 
 ### userFolderId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 User folder ID
 

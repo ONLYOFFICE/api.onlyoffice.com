@@ -13,7 +13,7 @@ Creates a list of companies with the names specified in the request.
 
 ### companyName
 
-**type:** `string[]`
+**type**: `string[]`
 
 Company names
 

@@ -13,7 +13,7 @@ Creates a new folder structure specified in the request in a folder with a speci
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Parent folder ID
 
@@ -23,7 +23,7 @@ Parent folder ID
 
 ### relativePaths
 
-**type:** `string[]`
+**type**: `string[]`
 
 Relative paths to create a folder structure
 
@@ -43,97 +43,97 @@ Main folder contents. A request that is not authenticated returns `401`.
 
 ### TotalFiles
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `5`
 
 ### TotalSubFolders
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `5`
 
 ### Shareable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### NewForMe
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `3`
 
 ### FolderUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"folder url"`
 
 ### IsFavorite
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"123wda-wdaw"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"title"`
 
 ### CreateBy
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"d40b68d0-5b86-4823-b22a-f57f429f5aff"`
 
 ### CreateByString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"admin"`
 
 ### CreateOnString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"create_on"`
 
 ### ModifiedOnString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"modified_on"`
 
 ### ModifiedBy
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"d40b68d0-5b86-4823-b22a-f57f429f5aff"`
 
 ### ModifiedByString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"admin"`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Access
 
-**type:** `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
+**type**: `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
 
 [0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]
 
@@ -141,43 +141,43 @@ Main folder contents. A request that is not authenticated returns `401`.
 
 ### Shared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ProviderId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `3`
 
 ### ProviderKey
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"provider_key"`
 
 ### FolderIdDisplay
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"123wda5"`
 
 ### DeletedPermanentlyOnString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### DenyDownload
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DenySharing
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

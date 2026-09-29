@@ -13,7 +13,7 @@ Deletes an address for the tenant notifications specified in the request.
 
 ### address
 
-**type:** `string`
+**type**: `string`
 
 Address name
 

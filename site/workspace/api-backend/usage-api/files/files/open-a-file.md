@@ -13,7 +13,7 @@ Returns the initialization configuration of a file to open it in the editor.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### version
 
-**type:** `integer`
+**type**: `integer`
 
 File version
 
@@ -31,7 +31,7 @@ File version
 
 ### doc
 
-**type:** `string`
+**type**: `string`
 
 Shared token
 
@@ -52,13 +52,13 @@ Configuration
 
 ### DocumentType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"documentType"`
 
 ### TypeString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"type"`
 

@@ -13,7 +13,7 @@ Returns the time spent on the task with the ID specified in the request.
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 

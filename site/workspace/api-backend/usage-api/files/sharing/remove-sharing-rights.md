@@ -13,13 +13,13 @@ Removes the sharing rights for the group of folders and files with the IDs speci
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

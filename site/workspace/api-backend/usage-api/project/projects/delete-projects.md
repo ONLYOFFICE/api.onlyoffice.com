@@ -13,7 +13,7 @@ Deletes the projects with the IDs specified in the request from the portal.
 
 ### projectids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of project IDs
 

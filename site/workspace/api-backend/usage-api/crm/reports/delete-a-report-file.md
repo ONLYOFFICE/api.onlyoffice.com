@@ -13,7 +13,7 @@ Deletes a report file with the ID specified in the request.
 
 ### fileid
 
-**type:** `integer`
+**type**: `integer`
 
 File ID
 

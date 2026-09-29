@@ -13,13 +13,13 @@ Updates the VoIP settings with the parameters specified in the request.
 
 ### queue
 
-**type:** `object`
+**type**: `object`
 
 Connection waiting queue
 
 ### pause
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the operator have some time before accepting calls again. This can be used to take some notes on the previous call, etc.
 

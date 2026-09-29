@@ -13,7 +13,7 @@ Sets the selected custom field to the entity with type and ID specified in the r
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Entity ID
 
@@ -29,7 +29,7 @@ Entity ID
 
 ### fieldid
 
-**type:** `integer`
+**type**: `integer`
 
 Field ID
 
@@ -37,7 +37,7 @@ Field ID
 
 ### fieldValue
 
-**type:** `string`
+**type**: `string`
 
 Field value
 
@@ -60,25 +60,25 @@ Custom field. A request that is not authenticated returns `401`.
 
 ### EntityId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `14523423`
 
 ### Label
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Birthdate"`
 
 ### FieldValue
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5916406Z"`
 
 ### FieldType
 
-**type:** `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
+**type**: `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
 
 [0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]
 
@@ -86,19 +86,19 @@ Custom field. A request that is not authenticated returns `401`.
 
 ### Position
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Mask
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

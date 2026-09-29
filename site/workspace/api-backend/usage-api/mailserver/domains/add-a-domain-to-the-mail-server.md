@@ -13,7 +13,7 @@ Adds a web domain to the current tenant.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Web domain name
 
@@ -21,7 +21,7 @@ Web domain name
 
 ### id_dns
 
-**type:** `integer`
+**type**: `integer`
 
 DNS ID
 
@@ -42,25 +42,25 @@ Web domain data associated with the tenant. A request that is not authenticated 
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"id"`
 
 ### IsSharedDomain
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Dns
 
-**type:** `ServerDomainDnsData`
+**type**: `ServerDomainDnsData`
 
 ## Response example
 

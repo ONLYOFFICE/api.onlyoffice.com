@@ -15,19 +15,19 @@ Project common settings. A request that is not authenticated returns `401`.
 
 ### EverebodyCanCreate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### HideEntitiesInPausedProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### StartModuleType
 
-**type:** `"Projects" | "Tasks" | "Discussions" | "TimeTracking"`
+**type**: `"Projects" | "Tasks" | "Discussions" | "TimeTracking"`
 
 [0 - Projects, 1 - Tasks, 2 - Discussions, 3 - TimeTracking]
 

@@ -15,7 +15,7 @@ Updates the calendar display parameters specified in the request for the current
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -25,7 +25,7 @@ Calendar ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New calendar name
 
@@ -33,7 +33,7 @@ New calendar name
 
 ### textColor
 
-**type:** `string`
+**type**: `string`
 
 New event text color
 
@@ -41,7 +41,7 @@ New event text color
 
 ### backgroundColor
 
-**type:** `string`
+**type**: `string`
 
 New event background color
 
@@ -49,7 +49,7 @@ New event background color
 
 ### timeZone
 
-**type:** `string`
+**type**: `string`
 
 New calendar time zone
 
@@ -57,7 +57,7 @@ New calendar time zone
 
 ### alertType
 
-**type:** `integer`
+**type**: `integer`
 
 New event alert type, in case alert type is set by default
 
@@ -65,7 +65,7 @@ New event alert type, in case alert type is set by default
 
 ### hideEvents
 
-**type:** `boolean`
+**type**: `boolean`
 
 Display type: show or hide events in the calendar
 
@@ -90,109 +90,109 @@ Updated calendar. A request that is not authenticated returns `401`.
 
 ### IsSubscription
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### iCalUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### IsiCalStream
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsHidden
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanAlertModify
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Permissions
 
-**type:** `CalendarPermissions`
+**type**: `CalendarPermissions`
 
 ### IsEditable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TextColor
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#ffffff"`
 
 ### BackgroundColor
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#000000"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Calendar Description"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Calendar Name"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"1"`
 
 ### IsTodo
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"false"`
 
 ### Owner
 
-**type:** `UserParams`
+**type**: `UserParams`
 
 ### Events
 
-**type:** `EventWrapper[]`
+**type**: `EventWrapper[]`
 
 ### Todos
 
-**type:** `TodoWrapper[]`
+**type**: `TodoWrapper[]`
 
 ### DefaultAlertType
 
-**type:** `EventAlertWrapper`
+**type**: `EventAlertWrapper`
 
 ### TimeZoneInfo
 
-**type:** `TimeZoneWrapper`
+**type**: `TimeZoneWrapper`
 
 ### CanEditTimeZone
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

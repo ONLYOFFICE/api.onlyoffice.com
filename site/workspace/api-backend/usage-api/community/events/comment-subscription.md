@@ -13,7 +13,7 @@ Subscribes to or unsubscribes from the comments of the event with the ID specifi
 
 ### feedid
 
-**type:** `string`
+**type**: `string`
 
 Feed ID
 
@@ -23,7 +23,7 @@ Feed ID
 
 ### isSubscribe
 
-**type:** `boolean`
+**type**: `boolean`
 
 Subscribes to the event comments or unsubscribes from them
 

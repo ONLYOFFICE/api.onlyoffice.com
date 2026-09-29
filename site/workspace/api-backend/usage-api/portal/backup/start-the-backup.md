@@ -13,7 +13,7 @@ Starts the backup of the current portal with the parameters specified in the req
 
 ### storageType
 
-**type:** `integer`
+**type**: `integer`
 
 Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataStore", or "ThirdPartyConsumer")
 
@@ -21,13 +21,13 @@ Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataS
 
 ### storageParams
 
-**type:** `object[]`
+**type**: `object[]`
 
 Storage parameters
 
 ### backupMail
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the mails will be included into the backup or not
 
@@ -51,23 +51,23 @@ Backup progress. A request that is not authenticated returns `401`.
 
 ### IsCompleted
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Progress
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `44`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 ### Link
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Link"`
 

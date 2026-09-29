@@ -13,7 +13,7 @@ Updates the time for the selected task with the time parameters specified in the
 
 ### timeid
 
-**type:** `integer`
+**type**: `integer`
 
 Time ID
 
@@ -21,7 +21,7 @@ Time ID
 
 ### note
 
-**type:** `string`
+**type**: `string`
 
 New time note
 
@@ -29,7 +29,7 @@ New time note
 
 ### date
 
-**type:** `string`
+**type**: `string`
 
 New date
 
@@ -37,7 +37,7 @@ New date
 
 ### personId
 
-**type:** `string`
+**type**: `string`
 
 New person ID
 
@@ -45,7 +45,7 @@ New person ID
 
 ### hours
 
-**type:** `number`
+**type**: `number`
 
 New spent hours
 
@@ -69,67 +69,67 @@ Updated time. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Date
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5438537Z"`
 
 ### Hours
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `3.5`
 
 ### Note
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample note"`
 
 ### RelatedProject
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### Task
 
-**type:** `TaskWrapper`
+**type**: `TaskWrapper`
 
 ### RelatedTask
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `13456`
 
 ### RelatedTaskTitle
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample task"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Person
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### PaymentStatus
 
-**type:** `"NotChargeable" | "NotBilled" | "Billed"`
+**type**: `"NotChargeable" | "NotBilled" | "Billed"`
 
 [0 - NotChargeable, 1 - NotBilled, 2 - Billed]
 
@@ -137,19 +137,19 @@ Updated time. A request that is not authenticated returns `401`.
 
 ### StatusChanged
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5438537Z"`
 
 ### CanEditPaymentStatus
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5438537Z"`
 

@@ -13,7 +13,7 @@ Removes an alias from the mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### address_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox address ID
 

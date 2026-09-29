@@ -13,7 +13,7 @@ Updates or creates an autoreply with the parameters specified in the request.
 
 ### mailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### turnOn
 
-**type:** `boolean`
+**type**: `boolean`
 
 New autoreply status
 
@@ -29,7 +29,7 @@ New autoreply status
 
 ### onlyContacts
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to send an autoreply only to the contacts or not
 
@@ -37,7 +37,7 @@ Specifies whether to send an autoreply only to the contacts or not
 
 ### turnOnToDate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to send an autoreply till the specified date or not
 
@@ -45,7 +45,7 @@ Specifies whether to send an autoreply till the specified date or not
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 New start date of autoreply sending
 
@@ -53,7 +53,7 @@ New start date of autoreply sending
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 New end date of autoreply sending
 
@@ -61,7 +61,7 @@ New end date of autoreply sending
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 New autoreply subject
 
@@ -69,7 +69,7 @@ New autoreply subject
 
 ### html
 
-**type:** `string`
+**type**: `string`
 
 New autoreply contents in the HTML format
 
@@ -96,49 +96,49 @@ Updated autoreply information. A request that is not authenticated returns `401`
 
 ### MailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `33`
 
 ### TurnOn
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### OnlyContacts
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### TurnOnToDate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### FromDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-10-01T17:04:32.0000000"`
 
 ### ToDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-10-01T17:04:32.0000000"`
 
 ### Subject
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"subject"`
 
 ### Html
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"html"`
 

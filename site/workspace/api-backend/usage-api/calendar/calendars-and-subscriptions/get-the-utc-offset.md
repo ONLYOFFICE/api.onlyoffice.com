@@ -13,7 +13,7 @@ Returns the time offset in the specified time zone compared to Coordinated Unive
 
 ### timeZone
 
-**type:** `string`
+**type**: `string`
 
 Time zone ID
 
@@ -21,7 +21,7 @@ Time zone ID
 
 ### startDate
 
-**type:** `string`
+**type**: `string`
 
 Start date to determine the offset
 
@@ -29,7 +29,7 @@ Start date to determine the offset
 
 ### endDate
 
-**type:** `string`
+**type**: `string`
 
 End date to determine the offset
 

@@ -10,7 +10,7 @@ The portal pricing plan. Returned by [Get tariff](../billing/get-tariff.md) and
 
 ## activeUsers
 
-**type:** `integer`
+**type**: `integer`
 
 Number of active users.
 
@@ -18,7 +18,7 @@ Number of active users.
 
 ## dueDate
 
-**type:** `string`
+**type**: `string`
 
 End date of the portal pricing plan.
 
@@ -26,7 +26,7 @@ End date of the portal pricing plan.
 
 ## features
 
-**type:** `string`
+**type**: `string`
 
 List of available features.
 
@@ -34,7 +34,7 @@ List of available features.
 
 ## maxFileSize
 
-**type:** `number`
+**type**: `number`
 
 Maximum size of a single uploaded file, in bytes. The default is 26214400 (25 megabytes).
 The value is stored in megabytes, so it can come back rounded down — see
@@ -44,7 +44,7 @@ The value is stored in megabytes, so it can come back rounded down — see
 
 ## maxTotalSize
 
-**type:** `number`
+**type**: `number`
 
 Maximum size of the portal disk space, in bytes. Unlimited by default.
 

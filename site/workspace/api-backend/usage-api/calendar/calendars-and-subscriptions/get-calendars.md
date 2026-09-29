@@ -13,7 +13,7 @@ Returns a list of calendars with the events for the current user in the selected
 
 ### startDate
 
-**type:** `string`
+**type**: `string`
 
 Period start date
 
@@ -21,7 +21,7 @@ Period start date
 
 ### endDate
 
-**type:** `string`
+**type**: `string`
 
 Period end date
 

@@ -13,7 +13,7 @@ Updates a color of the selected contact status with a new color specified in the
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Contact status ID
 
@@ -21,7 +21,7 @@ Contact status ID
 
 ### color
 
-**type:** `string`
+**type**: `string`
 
 New contact status color
 
@@ -42,37 +42,37 @@ Contact status with a new color. A request that is not authenticated returns `40
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

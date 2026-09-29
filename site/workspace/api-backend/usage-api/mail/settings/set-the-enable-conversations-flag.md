@@ -13,7 +13,7 @@ Sets a flag that specifies whether to group messages into conversations or not.
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to group messages into conversations or not
 

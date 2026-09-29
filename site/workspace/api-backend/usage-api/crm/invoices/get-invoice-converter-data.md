@@ -13,7 +13,7 @@ Returns information about the generation of the invoice pdf file.
 
 ### invoiceId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice ID
 
@@ -21,7 +21,7 @@ Invoice ID
 
 ### storageUrl
 
-**type:** `string`
+**type**: `string`
 
 Storage URL
 
@@ -29,7 +29,7 @@ Storage URL
 
 ### revisionId
 
-**type:** `string`
+**type**: `string`
 
 Revision ID
 

@@ -14,7 +14,7 @@ Deletes a portal with a name specified in the request.
 
 ### portalName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal name.
 
@@ -27,7 +27,7 @@ instead.
 
 ### tenant
 
-**type:** [`Tenant`](../objects/tenant.md)
+**type**: [`Tenant`](../objects/tenant.md)
 
 ## Response example
 

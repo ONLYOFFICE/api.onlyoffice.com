@@ -13,7 +13,7 @@ Returns the information about the migrators with the names specified in the requ
 
 ### migratorsName
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of migrator names
 

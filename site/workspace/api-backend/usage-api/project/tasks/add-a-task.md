@@ -13,7 +13,7 @@ Adds a task to the selected project with the parameters (responsible user ID, ta
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Task description
 
@@ -29,7 +29,7 @@ Task description
 
 ### deadline
 
-**type:** `string`
+**type**: `string`
 
 Task deadline time
 
@@ -37,7 +37,7 @@ Task deadline time
 
 ### priority
 
-**type:** `integer`
+**type**: `integer`
 
 Task priority ("Low", "Normal", or "High")
 
@@ -45,7 +45,7 @@ Task priority ("Low", "Normal", or "High")
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Task title
 
@@ -53,7 +53,7 @@ Task title
 
 ### milestoneid
 
-**type:** `integer`
+**type**: `integer`
 
 Task milestone ID
 
@@ -61,13 +61,13 @@ Task milestone ID
 
 ### responsibles
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of responsibles
 
 ### notify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify the responsibles about the task actions or not
 
@@ -75,7 +75,7 @@ Specifies whether to notify the responsibles about the task actions or not
 
 ### startDate
 
-**type:** `string`
+**type**: `string`
 
 Task start date
 
@@ -105,69 +105,69 @@ Added task. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### Contact
 
-**type:** `ContactBaseWithEmailWrapper`
+**type**: `ContactBaseWithEmailWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Send a commercial offer"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### DeadLine
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### AlertValue
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### IsClosed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Category
 
-**type:** `TaskCategoryBaseWrapper`
+**type**: `TaskCategoryBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

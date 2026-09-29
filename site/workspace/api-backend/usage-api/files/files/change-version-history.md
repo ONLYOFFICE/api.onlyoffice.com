@@ -13,7 +13,7 @@ Changes version history of a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### version
 
-**type:** `integer`
+**type**: `integer`
 
 History version
 
@@ -31,7 +31,7 @@ History version
 
 ### continueVersion
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to continue the current version and mark it as a revision or create a new one
 

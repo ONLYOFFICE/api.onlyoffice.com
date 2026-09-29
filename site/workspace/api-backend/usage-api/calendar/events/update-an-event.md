@@ -13,7 +13,7 @@ Updates the existing event in the selected calendar with the parameters specifie
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 
@@ -31,7 +31,7 @@ Event ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New event name
 
@@ -39,7 +39,7 @@ New event name
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New event description
 
@@ -47,7 +47,7 @@ New event description
 
 ### startDate
 
-**type:** `string`
+**type**: `string`
 
 New event start date
 
@@ -55,7 +55,7 @@ New event start date
 
 ### endDate
 
-**type:** `string`
+**type**: `string`
 
 New event end date
 
@@ -63,7 +63,7 @@ New event end date
 
 ### repeatType
 
-**type:** `string`
+**type**: `string`
 
 New event repeat type (RRULE string in the iCal format)
 
@@ -71,7 +71,7 @@ New event repeat type (RRULE string in the iCal format)
 
 ### alertType
 
-**type:** `integer`
+**type**: `integer`
 
 New event notification type
 
@@ -79,7 +79,7 @@ New event notification type
 
 ### isAllDayLong
 
-**type:** `boolean`
+**type**: `boolean`
 
 New event duration type: all day long or not
 
@@ -87,13 +87,13 @@ New event duration type: all day long or not
 
 ### sharingOptions
 
-**type:** `SharingParam[]`
+**type**: `SharingParam[]`
 
 New event sharing access parameters
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 New event status
 

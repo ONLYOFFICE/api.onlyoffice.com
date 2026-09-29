@@ -13,7 +13,7 @@ Returns a result of converting one currency into another.
 
 ### amount
 
-**type:** `number`
+**type**: `number`
 
 Amount to convert
 
@@ -21,7 +21,7 @@ Amount to convert
 
 ### fromcurrency
 
-**type:** `string`
+**type**: `string`
 
 Currency to convert
 
@@ -29,7 +29,7 @@ Currency to convert
 
 ### tocurrency
 
-**type:** `string`
+**type**: `string`
 
 Currency into which the original currency will be converted
 

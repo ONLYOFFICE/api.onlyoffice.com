@@ -15,7 +15,7 @@ the request.
 
 ### email
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal owner email address.
 
@@ -28,7 +28,7 @@ The descriptions of the portals registered for that email address. A failed requ
 
 ### tenants
 
-**type:** [`Tenant`](../objects/tenant.md)[]
+**type**: [`Tenant`](../objects/tenant.md)[]
 
 ## Response example
 

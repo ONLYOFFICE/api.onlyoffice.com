@@ -13,7 +13,7 @@ Returns the detailed list of all the projects with a tag specified in the reques
 
 ### tag
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

@@ -13,7 +13,7 @@ Removes the mail contacts with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of mail contact IDs
 

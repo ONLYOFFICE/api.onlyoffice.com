@@ -15,67 +15,67 @@ Password settings. A request that is not authenticated returns `401`.
 
 ### LimitMaxLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### LimitMinLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MaxLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MinLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AllowedCharactersRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### UpperCase
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### UpperCaseRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### Digits
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DigitsRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### SpecSymbols
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SpecSymbolsRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 

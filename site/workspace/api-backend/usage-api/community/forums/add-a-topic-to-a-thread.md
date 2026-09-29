@@ -13,7 +13,7 @@ Adds a new topic to the existing thread with a subject, content and topic type s
 
 ### threadid
 
-**type:** `integer`
+**type**: `integer`
 
 Thread ID
 
@@ -23,7 +23,7 @@ Thread ID
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 Topic subject
 
@@ -31,7 +31,7 @@ Topic subject
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Topic text
 
@@ -39,7 +39,7 @@ Topic text
 
 ### topicType
 
-**type:** `integer`
+**type**: `integer`
 
 Topic type
 
@@ -61,49 +61,49 @@ Added topic. A request that is not authenticated returns `401`.
 
 ### Posts
 
-**type:** `ForumTopicPostWrapper[]`
+**type**: `ForumTopicPostWrapper[]`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample topic"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3259212Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3259212Z"`
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"This is sample post"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ThreadTitile
 
-**type:** `string`
+**type**: `string`
 
 ### Status
 
-**type:** `"Normal" | "Closed" | "Sticky"`
+**type**: `"Normal" | "Closed" | "Sticky"`
 
 [0 - Normal, 1 - Closed, 2 - Sticky]
 
@@ -111,7 +111,7 @@ Added topic. A request that is not authenticated returns `401`.
 
 ### Type
 
-**type:** `"Informational" | "Poll"`
+**type**: `"Informational" | "Poll"`
 
 [0 - Informational, 1 - Poll]
 
@@ -119,7 +119,7 @@ Added topic. A request that is not authenticated returns `401`.
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

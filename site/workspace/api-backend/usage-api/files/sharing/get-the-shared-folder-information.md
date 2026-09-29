@@ -13,7 +13,7 @@ Returns the detailed information about the shared folder with the ID specified i
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 

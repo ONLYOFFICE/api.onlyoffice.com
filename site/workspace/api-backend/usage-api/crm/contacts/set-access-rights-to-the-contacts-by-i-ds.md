@@ -13,13 +13,13 @@ Sets access rights to the list of contacts with the IDs specified in the request
 
 ### contactid
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of contact IDs
 
 ### isShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 Company privacy: shared or not
 
@@ -27,7 +27,7 @@ Company privacy: shared or not
 
 ### managerList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of managers
 

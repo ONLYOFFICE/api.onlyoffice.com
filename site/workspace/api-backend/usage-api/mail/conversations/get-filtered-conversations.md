@@ -13,43 +13,43 @@ Returns the conversations with the parameters specified in the request.
 
 ### folder
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam
 
 ### unread
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Conversation status: unread (true), read (false), or all (null) messages
 
 ### attachments
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if a conversation has attachments or not: with attachments (true), without attachments (false), or all (null) messages
 
 ### period_from
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Start search period date
 
 ### period_to
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 End search period date
 
 ### important
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if only important conversations will be displayed or not
 
 ### from_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which the conversation messages were received
 
@@ -57,7 +57,7 @@ Mail address from which the conversation messages were received
 
 ### to_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address to which the conversation messages were sent
 
@@ -65,19 +65,19 @@ Mail address to which the conversation messages were sent
 
 ### mailbox_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Recipient mailbox ID
 
 ### tags
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 IDs of tags linked to the target conversation
 
 ### search
 
-**type:** `string`
+**type**: `string`
 
 Text to search in the conversation bodies and subjects
 
@@ -85,13 +85,13 @@ Text to search in the conversation bodies and subjects
 
 ### page_size
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Number of conversations on the page
 
 ### sortorder
 
-**type:** `string`
+**type**: `string`
 
 Sort order by date: "ascending" or "descending"
 
@@ -99,7 +99,7 @@ Sort order by date: "ascending" or "descending"
 
 ### from_date
 
-**type:** `string`
+**type**: `string`
 
 Start date of conversation search
 
@@ -107,25 +107,25 @@ Start date of conversation search
 
 ### from_message
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Message from which the conversations are searched
 
 ### with_calendar
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if the conversations have a calendar or not
 
 ### user_folder_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 User folder ID
 
 ### prev_flag
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Direction sort of the conversation list: true for previous, false for next
 

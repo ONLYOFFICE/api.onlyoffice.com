@@ -14,7 +14,7 @@ Returns a pricing plan of a portal with a name specified in the request.
 
 ### portalName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal name.
 
@@ -27,13 +27,13 @@ The description of the portal and the portal pricing plan. A failed request retu
 
 ### tariff
 
-**type:** [`Tariff`](../objects/tariff.md)
+**type**: [`Tariff`](../objects/tariff.md)
 
 The portal pricing plan.
 
 ### tenant
 
-**type:** [`Tenant`](../objects/tenant.md)
+**type**: [`Tenant`](../objects/tenant.md)
 
 The portal description.
 

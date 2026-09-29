@@ -13,7 +13,7 @@ Updates a comment on the selected wiki page with the content specified in the re
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 
@@ -23,7 +23,7 @@ Comment ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 New comment text
 

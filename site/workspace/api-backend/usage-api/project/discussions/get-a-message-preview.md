@@ -13,7 +13,7 @@ Returns a preview of the discussion message.
 
 ### htmltext
 
-**type:** `string`
+**type**: `string`
 
 Message text in the HTML format
 

@@ -13,7 +13,7 @@ Returns a list with the detailed information about all the messages matching the
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### tag
 
-**type:** `integer`
+**type**: `integer`
 
 Project tag
 
@@ -29,7 +29,7 @@ Project tag
 
 ### departament
 
-**type:** `string`
+**type**: `string`
 
 Departament GUID
 
@@ -37,7 +37,7 @@ Departament GUID
 
 ### participant
 
-**type:** `string`
+**type**: `string`
 
 Participant GUID
 
@@ -45,7 +45,7 @@ Participant GUID
 
 ### createdStart
 
-**type:** `string`
+**type**: `string`
 
 Minimum value of message creation date
 
@@ -53,7 +53,7 @@ Minimum value of message creation date
 
 ### createdStop
 
-**type:** `string`
+**type**: `string`
 
 Maximum value of message creation date
 
@@ -61,7 +61,7 @@ Maximum value of message creation date
 
 ### lastId
 
-**type:** `integer`
+**type**: `integer`
 
 Last message ID
 
@@ -69,7 +69,7 @@ Last message ID
 
 ### myProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return messages only from my projects or not
 
@@ -77,7 +77,7 @@ Specifies whether to return messages only from my projects or not
 
 ### follow
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return messages only from followed discussions or not
 
@@ -85,7 +85,7 @@ Specifies whether to return messages only from followed discussions or not
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Message status ("Open" or "Archived")
 

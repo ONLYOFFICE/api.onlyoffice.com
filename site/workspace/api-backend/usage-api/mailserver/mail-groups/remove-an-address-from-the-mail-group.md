@@ -13,7 +13,7 @@ Removes an address with the ID specified in the request from the mail group.
 
 ### mailgroup_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mail group ID
 
@@ -21,7 +21,7 @@ Mail group ID
 
 ### address_id
 
-**type:** `integer`
+**type**: `integer`
 
 Address ID
 

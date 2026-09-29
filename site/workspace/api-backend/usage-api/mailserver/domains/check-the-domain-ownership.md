@@ -13,7 +13,7 @@ Checks if a web domain specified in the request belongs to the current user or n
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Web domain name
 

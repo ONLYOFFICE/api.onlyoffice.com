@@ -13,7 +13,7 @@ Updates the IP restriction settings with a parameter specified in the request.
 
 ### enable
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to enable IP restrictions or not
 
@@ -33,7 +33,7 @@ Updated IP restriction settings. A request that is not authenticated returns `40
 
 ### Enable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

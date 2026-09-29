@@ -13,7 +13,7 @@ Deletes a list of all the opportunities matching the parameters specified in the
 
 ### responsibleid
 
-**type:** `string`
+**type**: `string`
 
 Opportunity responsible ID
 
@@ -21,7 +21,7 @@ Opportunity responsible ID
 
 ### opportunityStagesid
 
-**type:** `integer`
+**type**: `integer`
 
 Opportunity stage ID
 
@@ -29,13 +29,13 @@ Opportunity stage ID
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Opportunity tags
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -43,19 +43,19 @@ Contact ID
 
 ### stageType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Opportunity stage type
 
 ### contactAlsoIsParticipant
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Participation status: take into account opportunities where the contact is a participant or not
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -63,7 +63,7 @@ Start date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 End date
 

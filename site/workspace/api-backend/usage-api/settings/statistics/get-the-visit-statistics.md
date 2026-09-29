@@ -13,7 +13,7 @@ Returns the user visit statistics for the period specified in the request.
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Start period date
 
@@ -21,7 +21,7 @@ Start period date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 End period date
 

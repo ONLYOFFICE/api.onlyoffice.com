@@ -13,7 +13,7 @@ Updates the selected task with the parameters (title, description, due date, etc
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 
@@ -21,7 +21,7 @@ Task ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New task title
 
@@ -29,7 +29,7 @@ New task title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New task description
 
@@ -37,7 +37,7 @@ New task description
 
 ### deadline
 
-**type:** `string`
+**type**: `string`
 
 New task due date
 
@@ -45,7 +45,7 @@ New task due date
 
 ### responsibleid
 
-**type:** `string`
+**type**: `string`
 
 New task responsible ID
 
@@ -53,7 +53,7 @@ New task responsible ID
 
 ### categoryid
 
-**type:** `integer`
+**type**: `integer`
 
 New task category ID
 
@@ -61,7 +61,7 @@ New task category ID
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 New contact ID
 
@@ -69,7 +69,7 @@ New contact ID
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 New related entity type
 
@@ -77,7 +77,7 @@ New related entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 New related entity ID
 
@@ -85,7 +85,7 @@ New related entity ID
 
 ### isNotify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Notifies the responsible about the task or not
 
@@ -93,7 +93,7 @@ Notifies the responsible about the task or not
 
 ### alertValue
 
-**type:** `integer`
+**type**: `integer`
 
 New time period in minutes to remind the responsible of the task
 
@@ -123,69 +123,69 @@ Task. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### Contact
 
-**type:** `ContactBaseWithEmailWrapper`
+**type**: `ContactBaseWithEmailWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Send a commercial offer"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### DeadLine
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-16T03:11:54.3573531Z"`
 
 ### AlertValue
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### IsClosed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Category
 
-**type:** `TaskCategoryBaseWrapper`
+**type**: `TaskCategoryBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Returns an external link to the shared file with the ID specified in the request
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### share
 
-**type:** `integer`
+**type**: `integer`
 
 Sharing rights
 

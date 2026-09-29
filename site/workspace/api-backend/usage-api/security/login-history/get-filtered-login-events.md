@@ -13,7 +13,7 @@ Returns a list of the login events by the parameters specified in the request.
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -21,7 +21,7 @@ User ID
 
 ### action
 
-**type:** `integer`
+**type**: `integer`
 
 Action
 
@@ -29,7 +29,7 @@ Action
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -37,7 +37,7 @@ Start date
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 End date
 

@@ -13,7 +13,7 @@ Updates a company name with the one specified in the request.
 
 ### companyName
 
-**type:** `string`
+**type**: `string`
 
 New company name
 

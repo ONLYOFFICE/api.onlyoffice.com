@@ -13,7 +13,7 @@ Removes files with the IDs specified in the request from the template list.
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

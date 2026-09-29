@@ -13,7 +13,7 @@ Creates a new filter with the parameters specified in the request.
 
 ### filter
 
-**type:** `object`
+**type**: `object`
 
 Filter parameters: ID, name, position, enabled, conditions, actions, options
 
@@ -29,39 +29,39 @@ Filter. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### Position
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `2`
 
 ### Enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Conditions
 
-**type:** `MailSieveFilterConditionData[]`
+**type**: `MailSieveFilterConditionData[]`
 
 ### Actions
 
-**type:** `MailSieveFilterActionData[]`
+**type**: `MailSieveFilterActionData[]`
 
 ### Options
 
-**type:** `MailSieveFilterOptionsData`
+**type**: `MailSieveFilterOptionsData`
 
 ## Response example
 

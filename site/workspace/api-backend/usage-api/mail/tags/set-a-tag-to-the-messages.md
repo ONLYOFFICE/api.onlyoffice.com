@@ -13,7 +13,7 @@ Adds a tag with the ID specified in the request to the messages.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Tag ID
 
@@ -23,7 +23,7 @@ Tag ID
 
 ### messages
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs
 

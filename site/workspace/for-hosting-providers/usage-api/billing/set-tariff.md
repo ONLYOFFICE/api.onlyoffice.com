@@ -14,7 +14,7 @@ Changes the portal pricing plan with the parameters specified in the request.
 
 ### portalName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal name.
 
@@ -22,7 +22,7 @@ Portal name.
 
 ### activeUsers
 
-**type:** `integer`
+**type**: `integer`
 
 Number of active users.
 
@@ -30,7 +30,7 @@ Number of active users.
 
 ### dueDate
 
-**type:** `string`
+**type**: `string`
 
 End date of the portal pricing plan.
 
@@ -38,7 +38,7 @@ End date of the portal pricing plan.
 
 ### features
 
-**type:** `string`
+**type**: `string`
 
 List of available features.
 
@@ -46,7 +46,7 @@ List of available features.
 
 ### maxFileSize
 
-**type:** `number`
+**type**: `number`
 
 Maximum size of a single uploaded file, in bytes. The default is 26214400 (25 megabytes).
 
@@ -54,7 +54,7 @@ Maximum size of a single uploaded file, in bytes. The default is 26214400 (25 me
 
 ### maxTotalSize
 
-**type:** `number`
+**type**: `number`
 
 Maximum size of the portal disk space, in bytes. Unlimited by default.
 
@@ -87,13 +87,13 @@ The description of the portal and the portal pricing plan. A failed request retu
 
 ### tariff
 
-**type:** [`Tariff`](../objects/tariff.md)
+**type**: [`Tariff`](../objects/tariff.md)
 
 The portal pricing plan.
 
 ### tenant
 
-**type:** [`Tenant`](../objects/tenant.md)
+**type**: [`Tenant`](../objects/tenant.md)
 
 The portal description.
 

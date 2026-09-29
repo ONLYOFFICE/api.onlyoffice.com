@@ -13,7 +13,7 @@ Sets the security settings to the modules with the IDs specified in the request.
 
 ### items
 
-**type:** `object[]`
+**type**: `object[]`
 
 Modules with security information
 

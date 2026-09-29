@@ -143,7 +143,7 @@ Asc.plugin.button = (id) => {
 
 #### ContextMenuItem
 
-**类型：** `object`
+**类型**：`object`
 
 上下文菜单项。
 
@@ -350,7 +350,7 @@ Asc.plugin.onThemeChanged = onThemeChanged;
 
 #### ContextMenuOptions
 
-**类型：** `object`
+**类型**：`object`
 
 上下文菜单选项。
 
@@ -366,7 +366,7 @@ Asc.plugin.onThemeChanged = onThemeChanged;
 
 #### ContextMenuType
 
-**类型：** `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
+**类型**：`"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 上下文菜单类型：
 

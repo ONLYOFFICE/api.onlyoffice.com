@@ -13,7 +13,7 @@ Adds the operators to the phone number with the ID specified in the request.
 
 ### numberId
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID
 
@@ -21,7 +21,7 @@ Phone number ID
 
 ### operators
 
-**type:** `string[]`
+**type**: `string[]`
 
 Phone number operators
 

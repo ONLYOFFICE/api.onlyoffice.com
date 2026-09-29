@@ -13,7 +13,7 @@ Creates an address for the tenant notifications with the parameters specified in
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Address name
 
@@ -21,7 +21,7 @@ Address name
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Address password
 
@@ -29,7 +29,7 @@ Address password
 
 ### domain_id
 
-**type:** `integer`
+**type**: `integer`
 
 Domain ID
 
@@ -51,43 +51,43 @@ Notification address data associated with the tenant. A request that is not auth
 
 ### Email
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Email"`
 
 ### SmtpServer
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_server"`
 
 ### SmtpPort
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `33`
 
 ### SmtpAccount
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_account"`
 
 ### SmtpAuth
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SmptEncryptionType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_encryption_type"`
 
 ### SmtpAuthenticationType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_auth_type"`
 

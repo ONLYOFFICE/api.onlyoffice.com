@@ -13,7 +13,7 @@ Returns a list of users matching the status filter and search query.
 
 ### status
 
-**type:** `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
+**type**: `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
 
 User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")
 
@@ -23,7 +23,7 @@ User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

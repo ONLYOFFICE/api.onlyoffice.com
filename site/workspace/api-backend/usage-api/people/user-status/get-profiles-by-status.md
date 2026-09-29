@@ -13,7 +13,7 @@ Returns a list of profiles filtered by user status.
 
 ### status
 
-**type:** `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
+**type**: `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
 
 User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")
 

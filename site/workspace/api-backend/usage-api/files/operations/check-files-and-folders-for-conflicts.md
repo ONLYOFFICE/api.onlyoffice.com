@@ -13,7 +13,7 @@ Checks a batch of files and folders for conflicts when moving or copying them to
 
 ### destFolderId
 
-**type:** `string`
+**type**: `string`
 
 Destination folder ID
 
@@ -21,13 +21,13 @@ Destination folder ID
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

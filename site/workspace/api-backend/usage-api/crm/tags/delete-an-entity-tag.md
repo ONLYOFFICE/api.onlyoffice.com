@@ -13,7 +13,7 @@ Deletes the selected tag from the entity with the type and ID specified in the r
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Entity ID
 
@@ -29,7 +29,7 @@ Entity ID
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

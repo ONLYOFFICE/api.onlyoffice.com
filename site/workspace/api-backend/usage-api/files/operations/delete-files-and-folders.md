@@ -13,19 +13,19 @@ Deletes the files and folders with the IDs specified in the request.
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 
 ### deleteAfter
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to delete a file after the editing session is finished or not
 
@@ -33,7 +33,7 @@ Specifies whether to delete a file after the editing session is finished or not
 
 ### immediately
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to move a file to the "Trash" folder or delete it immediately
 

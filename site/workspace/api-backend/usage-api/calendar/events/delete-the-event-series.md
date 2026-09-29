@@ -13,7 +13,7 @@ Deletes the event series from the calendar.
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 

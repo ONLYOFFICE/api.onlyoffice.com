@@ -12,7 +12,7 @@ let button = new Asc.ButtonContentControl();
 
 ## icons
 
-**type:** `string`
+**type**: `string`
 
 Sets the path to the icon displayed on the button.
 
@@ -24,7 +24,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 ## attachOnClick
 
-**type:** `function`
+**type**: `function`
 
 The action to be performed when the button is clicked.
 

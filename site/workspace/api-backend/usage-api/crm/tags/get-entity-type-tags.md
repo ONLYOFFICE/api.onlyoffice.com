@@ -13,7 +13,7 @@ Returns a list of all the tags associated with the entity type specified in the 
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 

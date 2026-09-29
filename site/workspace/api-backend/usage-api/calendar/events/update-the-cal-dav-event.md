@@ -13,7 +13,7 @@ Updates the existing CalDav event in the calendar with the ID specified in the r
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### uid
 
-**type:** `string`
+**type**: `string`
 
 Event UID
 
@@ -29,7 +29,7 @@ Event UID
 
 ### alert
 
-**type:** `integer`
+**type**: `integer`
 
 Defines how many minutes before the event a reminder will be displayed
 
@@ -37,7 +37,7 @@ Defines how many minutes before the event a reminder will be displayed
 
 ### responsibles
 
-**type:** `string[]`
+**type**: `string[]`
 
 Task responsibles
 

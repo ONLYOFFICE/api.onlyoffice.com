@@ -15,37 +15,37 @@ SMTP operation status. A request that is not authenticated returns `401`.
 
 ### Completed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"{some-random-guid}"`
 
 ### Status
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Percents
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Source
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 

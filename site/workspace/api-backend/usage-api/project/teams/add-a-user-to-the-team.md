@@ -13,7 +13,7 @@ Adds a user with the ID specified in the request to the selected project team.
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

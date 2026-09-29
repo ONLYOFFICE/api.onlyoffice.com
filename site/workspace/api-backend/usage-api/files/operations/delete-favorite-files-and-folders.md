@@ -13,13 +13,13 @@ Removes files and folders with the IDs specified in the request from the favorit
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

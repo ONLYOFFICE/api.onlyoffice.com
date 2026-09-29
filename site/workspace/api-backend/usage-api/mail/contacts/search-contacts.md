@@ -13,7 +13,7 @@ Searches for contacts by their names, last names, or emails.
 
 ### term
 
-**type:** `string`
+**type**: `string`
 
 The string part of the contact name, last name, or email address
 

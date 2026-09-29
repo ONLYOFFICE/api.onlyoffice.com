@@ -13,7 +13,7 @@ Returns a list of feeds that are filtered by the parameters specified in the req
 
 ### product
 
-**type:** `string`
+**type**: `string`
 
 Product which feeds you want to read
 
@@ -21,7 +21,7 @@ Product which feeds you want to read
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Time from which the feeds should be displayed
 
@@ -29,7 +29,7 @@ Time from which the feeds should be displayed
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 Time until which the feeds should be displayed
 
@@ -37,19 +37,19 @@ Time until which the feeds should be displayed
 
 ### author
 
-**type:** `string[]`
+**type**: `string[]`
 
 Author whose feeds you want to read
 
 ### onlyNew
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Displays only fresh feeds
 
 ### timeReaded
 
-**type:** `string`
+**type**: `string`
 
 Time when the feeds were read
 

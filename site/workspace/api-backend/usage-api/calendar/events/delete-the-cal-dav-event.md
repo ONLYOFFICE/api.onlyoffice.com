@@ -13,7 +13,7 @@ Deletes the CalDav event from the calendar with the ID specified in the request.
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### uid
 
-**type:** `string`
+**type**: `string`
 
 Event UID
 
@@ -29,7 +29,7 @@ Event UID
 
 ### responsibles
 
-**type:** `string[]`
+**type**: `string[]`
 
 Task responsibles
 

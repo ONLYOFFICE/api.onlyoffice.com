@@ -13,7 +13,7 @@ Creates an account using full information about mail servers specified in the re
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Account name
 
@@ -21,7 +21,7 @@ Account name
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address in the name@domain format
 
@@ -29,7 +29,7 @@ Account email address in the name@domain format
 
 ### account
 
-**type:** `string`
+**type**: `string`
 
 IMAP or POP server login
 
@@ -37,7 +37,7 @@ IMAP or POP server login
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 IMAP or POP server password
 
@@ -45,7 +45,7 @@ IMAP or POP server password
 
 ### port
 
-**type:** `integer`
+**type**: `integer`
 
 IMAP or POP server port
 
@@ -53,7 +53,7 @@ IMAP or POP server port
 
 ### server
 
-**type:** `string`
+**type**: `string`
 
 IMAP or POP server address or IP
 
@@ -61,7 +61,7 @@ IMAP or POP server address or IP
 
 ### smtp_account
 
-**type:** `string`
+**type**: `string`
 
 SMTP server login
 
@@ -69,7 +69,7 @@ SMTP server login
 
 ### smtp_password
 
-**type:** `string`
+**type**: `string`
 
 SMTP server password
 
@@ -77,7 +77,7 @@ SMTP server password
 
 ### smtp_port
 
-**type:** `integer`
+**type**: `integer`
 
 SMTP server port
 
@@ -85,7 +85,7 @@ SMTP server port
 
 ### smtp_server
 
-**type:** `string`
+**type**: `string`
 
 SMTP server address or IP
 
@@ -93,7 +93,7 @@ SMTP server address or IP
 
 ### smtp_auth
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the authentication is needed for the SMTP server or not
 
@@ -101,7 +101,7 @@ Specifies if the authentication is needed for the SMTP server or not
 
 ### imap
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the IMAP server is used for incoming mails or not
 
@@ -109,7 +109,7 @@ Specifies if the IMAP server is used for incoming mails or not
 
 ### restrict
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if all the mails should be downloaded from the account (false) or not (true). If true, then messages for the last 30 days only will be imported
 
@@ -117,7 +117,7 @@ Specifies if all the mails should be downloaded from the account (false) or not 
 
 ### incoming_encryption_type
 
-**type:** `integer`
+**type**: `integer`
 
 Encryption type for the IMAP or POP server: 0 - None, 1 - SSL, 2 - StartTLS
 
@@ -125,7 +125,7 @@ Encryption type for the IMAP or POP server: 0 - None, 1 - SSL, 2 - StartTLS
 
 ### outcoming_encryption_type
 
-**type:** `integer`
+**type**: `integer`
 
 Encryption type for the SMTP server: 0 - None, 1 - SSL, 2 - StartTLS
 
@@ -133,7 +133,7 @@ Encryption type for the SMTP server: 0 - None, 1 - SSL, 2 - StartTLS
 
 ### auth_type_in
 
-**type:** `integer`
+**type**: `integer`
 
 Authentication type for the IMAP or POP server: 0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2
 
@@ -141,7 +141,7 @@ Authentication type for the IMAP or POP server: 0 - None, 1 - Login, 4 - CramMd5
 
 ### auth_type_smtp
 
-**type:** `integer`
+**type**: `integer`
 
 Authentication type for the SMTP server: 0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2
 
@@ -177,93 +177,93 @@ Created account. A request that is not authenticated returns `401`.
 
 ### MailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `12`
 
 ### Email
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"email@only.com"`
 
 ### Enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### OAuthConnection
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Signature
 
-**type:** `MailSignatureData`
+**type**: `MailSignatureData`
 
 ### Autoreply
 
-**type:** `MailAutoreplyData`
+**type**: `MailAutoreplyData`
 
 ### EMailInFolder
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"eMailInFolder"`
 
 ### QuotaError
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AuthError
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsGroup
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsAlias
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsTeamlabMailbox
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsDefault
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsSharedDomainMailbox
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DateCreated
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

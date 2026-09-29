@@ -13,7 +13,7 @@ Changes a photo using its URL for the contact with the ID specified in the reque
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,7 +21,7 @@ Contact ID
 
 ### photourl
 
-**type:** `string`
+**type**: `string`
 
 Contact photo URL
 

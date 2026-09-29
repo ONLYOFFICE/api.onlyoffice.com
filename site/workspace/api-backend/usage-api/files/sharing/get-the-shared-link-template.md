@@ -13,7 +13,7 @@ Returns a new unsaved link object to the file with the ID specified in the reque
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### isFolder
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if a link is to the shared folder or not
 
@@ -43,37 +43,37 @@ Shared link template. A request that is not authenticated returns `401`.
 
 ### SubjectId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### SubjectName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### Link
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### SubjectGroup
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Owner
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Share
 
-**type:** `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
+**type**: `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
 
 [0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]
 
@@ -81,23 +81,23 @@ Shared link template. A request that is not authenticated returns `401`.
 
 ### LockedRights
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DisableRemove
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### LinkSettings
 
-**type:** `LinkSettingsWrapper`
+**type**: `LinkSettingsWrapper`
 
 ### EntryType
 
-**type:** `"Folder" | "File"`
+**type**: `"Folder" | "File"`
 
 [1 - Folder, 2 - File]
 
@@ -105,7 +105,7 @@ Shared link template. A request that is not authenticated returns `401`.
 
 ### Inherited
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

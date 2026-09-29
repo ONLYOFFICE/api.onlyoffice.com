@@ -13,7 +13,7 @@ Creates a new contact type with the parameters specified in the request.
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Contact type title
 
@@ -21,7 +21,7 @@ Contact type title
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 Contact type sort order
 
@@ -42,37 +42,37 @@ Contact type. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

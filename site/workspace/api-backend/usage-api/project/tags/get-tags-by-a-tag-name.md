@@ -13,7 +13,7 @@ Returns a list of all the tags by the tag name specified in the request.
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

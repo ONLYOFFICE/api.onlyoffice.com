@@ -13,7 +13,7 @@ Sets the status of an account with the email address specified in the request.
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address
 
@@ -21,7 +21,7 @@ Account email address
 
 ### state
 
-**type:** `boolean`
+**type**: `boolean`
 
 Account activity status: true - enabled, false - disabled
 

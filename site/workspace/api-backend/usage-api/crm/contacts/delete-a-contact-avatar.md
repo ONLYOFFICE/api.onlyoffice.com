@@ -13,7 +13,7 @@ Deletes an avatar of the contact with the ID specified in the request.
 
 ### contactId
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,7 +21,7 @@ Contact ID
 
 ### contactType
 
-**type:** `string`
+**type**: `string`
 
 Contact type
 
@@ -29,7 +29,7 @@ Contact type
 
 ### uploadOnly
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines whether to upload a new avatar only or also delete an old one
 

@@ -13,7 +13,7 @@ Returns a list of the CRM entities (contact, case, or opportunity) linked with a
 
 ### message_id
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID. It may be ID of any message included in the conversation
 

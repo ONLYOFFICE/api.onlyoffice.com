@@ -13,13 +13,13 @@ Inserts a file specified in the request to the "My documents" section by single 
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 Request input stream
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 File name
 
@@ -27,13 +27,13 @@ File name
 
 ### createNewIfExist
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to create a new file if it already exists or not
 
 ### keepConvertStatus
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to keep the file converting status or not
 
@@ -58,23 +58,23 @@ Inserted file. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

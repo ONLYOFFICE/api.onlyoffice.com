@@ -13,7 +13,7 @@ Creates a new iCal event in the selected calendar with the parameters specified 
 
 ### calendarId
 
-**type:** `integer`
+**type**: `integer`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### ics
 
-**type:** `string`
+**type**: `string`
 
 Event in the iCal format
 
@@ -29,7 +29,7 @@ Event in the iCal format
 
 ### alertType
 
-**type:** `integer`
+**type**: `integer`
 
 Event notification type
 
@@ -37,13 +37,13 @@ Event notification type
 
 ### sharingOptions
 
-**type:** `SharingParam[]`
+**type**: `SharingParam[]`
 
 Event sharing access parameters
 
 ### eventUid
 
-**type:** `string`
+**type**: `string`
 
 Event UID
 

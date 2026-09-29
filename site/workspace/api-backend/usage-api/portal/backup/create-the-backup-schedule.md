@@ -13,7 +13,7 @@ Creates the backup schedule for the current portal with the parameters specified
 
 ### storageType
 
-**type:** `integer`
+**type**: `integer`
 
 Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataStore", or "ThirdPartyConsumer")
 
@@ -21,13 +21,13 @@ Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataS
 
 ### storageParams
 
-**type:** `object[]`
+**type**: `object[]`
 
 Storage parameters
 
 ### backupsStored
 
-**type:** `integer`
+**type**: `integer`
 
 Maximum number of backup stored copies
 
@@ -35,13 +35,13 @@ Maximum number of backup stored copies
 
 ### cronParams
 
-**type:** `object`
+**type**: `object`
 
 Cron parameters
 
 ### backupMail
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the mails will be included into the backup or not
 

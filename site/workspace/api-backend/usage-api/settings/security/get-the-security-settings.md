@@ -13,7 +13,7 @@ Returns the security settings for the modules specified in the request.
 
 ### ids
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of module IDs
 

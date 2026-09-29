@@ -13,7 +13,7 @@ Deletes a group of contacts with the IDs specified in the request.
 
 ### contactids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of contact IDs
 

@@ -13,7 +13,7 @@ Returns the detailed information about a file with the ID specified in the reque
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### version
 
-**type:** `integer`
+**type**: `integer`
 
 File version
 
@@ -43,23 +43,23 @@ File information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

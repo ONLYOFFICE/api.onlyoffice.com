@@ -15,7 +15,7 @@ Creates a new file in the specified folder with the title specified in the reque
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -25,7 +25,7 @@ Folder ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 File title
 
@@ -33,7 +33,7 @@ File title
 
 ### templateId
 
-**type:** `string`
+**type**: `string`
 
 Template file ID
 
@@ -41,7 +41,7 @@ Template file ID
 
 ### enableExternalExt
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to allow the creation of external extension files or not
 
@@ -63,23 +63,23 @@ New file information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

@@ -13,13 +13,13 @@ Sets access rights to the list of cases with the IDs specified in the request.
 
 ### casesid
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of case IDs
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Case privacy: private or not
 
@@ -27,7 +27,7 @@ Case privacy: private or not
 
 ### accessList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users with access
 

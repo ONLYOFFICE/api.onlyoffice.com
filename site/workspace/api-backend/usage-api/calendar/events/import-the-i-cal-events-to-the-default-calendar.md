@@ -13,7 +13,7 @@ Imports the events from the iCal files to the default calendar.
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 The iCal files with the events
 

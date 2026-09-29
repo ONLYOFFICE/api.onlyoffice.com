@@ -13,13 +13,13 @@ Saves file properties to the specified files.
 
 ### filesId
 
-**type:** `string[]`
+**type**: `string[]`
 
 IDs of files
 
 ### createSubfolder
 
-**type:** `boolean`
+**type**: `boolean`
 
 Creates a subfolder or not
 
@@ -27,7 +27,7 @@ Creates a subfolder or not
 
 ### fileProperties
 
-**type:** `object`
+**type**: `object`
 
 File properties
 

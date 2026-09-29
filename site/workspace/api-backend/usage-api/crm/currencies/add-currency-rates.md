@@ -13,7 +13,7 @@ Adds currency rates specified in the request.
 
 ### rates
 
-**type:** `CurrencyRate[]`
+**type**: `CurrencyRate[]`
 
 List of currency rates
 

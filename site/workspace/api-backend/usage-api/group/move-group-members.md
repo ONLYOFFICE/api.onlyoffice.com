@@ -13,7 +13,7 @@ Moves all the members from the selected group to another one specified in the re
 
 ### groupid
 
-**type:** `string`
+**type**: `string`
 
 Group ID to move from
 
@@ -21,7 +21,7 @@ Group ID to move from
 
 ### newgroupid
 
-**type:** `string`
+**type**: `string`
 
 Group ID to move to
 
@@ -33,39 +33,39 @@ New group information. A request that is not authenticated returns `401`.
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample group"`
 
 ### Parent
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### Category
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"74f31a85-991b-4e9b-b9e8-ae8e80d468f5"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"fadd9f49-2431-4610-a518-3ca9b3843c88"`
 
 ### Manager
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Members
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ## Response example
 

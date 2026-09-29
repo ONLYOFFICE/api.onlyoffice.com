@@ -15,7 +15,7 @@ Saves the third-party storage service account. For WebDav, Yandex, kDrive and Sh
 
 ### url
 
-**type:** `string`
+**type**: `string`
 
 Connection URL for the sharepoint
 
@@ -23,7 +23,7 @@ Connection URL for the sharepoint
 
 ### login
 
-**type:** `string`
+**type**: `string`
 
 Login
 
@@ -31,7 +31,7 @@ Login
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Password
 
@@ -39,7 +39,7 @@ Password
 
 ### token
 
-**type:** `string`
+**type**: `string`
 
 Authentication token
 
@@ -47,7 +47,7 @@ Authentication token
 
 ### isCorporate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this is a corporate account or not
 
@@ -55,7 +55,7 @@ Specifies if this is a corporate account or not
 
 ### customerTitle
 
-**type:** `string`
+**type**: `string`
 
 Customer title
 
@@ -63,7 +63,7 @@ Customer title
 
 ### providerKey
 
-**type:** `string`
+**type**: `string`
 
 Provider key
 
@@ -71,7 +71,7 @@ Provider key
 
 ### providerId
 
-**type:** `string`
+**type**: `string`
 
 Provider ID
 
@@ -98,49 +98,49 @@ Folder contents. A request that is not authenticated returns `401`.
 
 ### ParentId
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"1840746475"`
 
 ### FilesCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1840746475`
 
 ### FoldersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1840746475`
 
 ### IsShareable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsFavorite
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Id
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"857864274"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Some titile.txt"`
 
 ### Access
 
-**type:** `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
+**type**: `"None" | "ReadWrite" | "Read" | "Restrict" | "Varies" | "Review" | "Comment" | "FillForms" | "CustomFilter"`
 
 [0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]
 
@@ -148,29 +148,29 @@ Folder contents. A request that is not authenticated returns `401`.
 
 ### Shared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-13T17:13:31.5902727Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-13T17:13:31.5902727Z"`
 
 ### RootFolderType
 
-**type:** `"DEFAULT" | "COMMON" | "BUNCH" | "TRASH" | "USER" | "SHARE" | "Projects" | "Favorites" | "Recent" | "Templates" | "Privacy"`
+**type**: `"DEFAULT" | "COMMON" | "BUNCH" | "TRASH" | "USER" | "SHARE" | "Projects" | "Favorites" | "Recent" | "Templates" | "Privacy"`
 
 [0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]
 
@@ -178,35 +178,35 @@ Folder contents. A request that is not authenticated returns `401`.
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ProviderItem
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ProviderKey
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"1234d"`
 
 ### ProviderId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### DenyDownload
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DenySharing
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

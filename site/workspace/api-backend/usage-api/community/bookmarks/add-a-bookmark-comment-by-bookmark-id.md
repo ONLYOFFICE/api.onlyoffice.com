@@ -15,7 +15,7 @@ Adds a comment to the bookmark with the ID specified in the request. The parent 
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Bookmark ID
 
@@ -25,7 +25,7 @@ Bookmark ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Comment text
 
@@ -33,7 +33,7 @@ Comment text
 
 ### parentId
 
-**type:** `string`
+**type**: `string`
 
 Parent comment ID
 
@@ -54,37 +54,37 @@ List of bookmark comments. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"comment text"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8151911Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8151911Z"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### ParentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

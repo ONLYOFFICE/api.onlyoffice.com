@@ -13,7 +13,7 @@ Returns the JSON data of an invoice with the ID specified in the request.
 
 ### invoiceid
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice ID
 

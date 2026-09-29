@@ -13,7 +13,7 @@ Uploads the selected files to the wiki page 'Files' section.
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of files to upload
 

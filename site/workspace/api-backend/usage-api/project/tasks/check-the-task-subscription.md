@@ -13,7 +13,7 @@ Checks the subscription to the notifications about the actions performed with th
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 

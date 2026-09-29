@@ -13,7 +13,7 @@ Updates the selected bookmark comment with the content specified in the request.
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 
@@ -23,7 +23,7 @@ Comment ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 New comment text
 

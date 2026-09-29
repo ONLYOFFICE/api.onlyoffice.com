@@ -13,7 +13,7 @@ Imports the events from the iCal files to the calendar with the ID specified in 
 
 ### calendarId
 
-**type:** `integer`
+**type**: `integer`
 
 Calendar ID
 
@@ -23,7 +23,7 @@ Calendar ID
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 The iCal files with the events
 

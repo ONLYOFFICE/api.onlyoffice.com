@@ -13,13 +13,13 @@ Changes a quota limit for the users with the IDs specified in the request.
 
 ### userIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 
 ### quota
 
-**type:** `integer`
+**type**: `integer`
 
 User quota
 

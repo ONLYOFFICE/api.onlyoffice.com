@@ -15,19 +15,19 @@ Full mail server information for the current tenant. A request that is not authe
 
 ### Server
 
-**type:** `ServerData`
+**type**: `ServerData`
 
 ### Domains
 
-**type:** `ServerDomainData[]`
+**type**: `ServerDomainData[]`
 
 ### Mailboxes
 
-**type:** `ServerMailboxData[]`
+**type**: `ServerMailboxData[]`
 
 ### Mailgroups
 
-**type:** `ServerDomainGroupData[]`
+**type**: `ServerDomainGroupData[]`
 
 ## Response example
 

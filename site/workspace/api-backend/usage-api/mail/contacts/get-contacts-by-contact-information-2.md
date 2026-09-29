@@ -13,7 +13,7 @@ Returns a list of mail contacts with the contact information specified in the re
 
 ### infoType
 
-**type:** `integer`
+**type**: `integer`
 
 Information type
 
@@ -21,7 +21,7 @@ Information type
 
 ### data
 
-**type:** `string`
+**type**: `string`
 
 Contact data
 
@@ -29,7 +29,7 @@ Contact data
 
 ### isPrimary
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Contact importance: primary or not
 

@@ -13,7 +13,7 @@ Creates a subtask with the title and responsible within the parent task specifie
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Parent task ID
 
@@ -21,7 +21,7 @@ Parent task ID
 
 ### responsible
 
-**type:** `string`
+**type**: `string`
 
 Subtask responsible
 
@@ -29,7 +29,7 @@ Subtask responsible
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Subtask title
 
@@ -51,79 +51,79 @@ Subtask. A request that is not authenticated returns `401`.
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### TaskId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

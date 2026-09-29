@@ -13,13 +13,13 @@ Sets the tenant settings specified in the request to the portal.
 
 ### configured
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if the portal is configured or not
 
 ### webFormKey
 
-**type:** `string[]`
+**type**: `string[]`
 
 Website contact form key
 

@@ -13,7 +13,7 @@ Subscribes to or unsubscribes from the birthday of the user with the ID specifie
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -21,7 +21,7 @@ User ID
 
 ### onRemind
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the user will be notified about another user's birthday or not
 

@@ -15,23 +15,23 @@ Backup progress. A request that is not authenticated returns `401`.
 
 ### IsCompleted
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Progress
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `44`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 ### Link
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Link"`
 

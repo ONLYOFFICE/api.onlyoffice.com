@@ -13,7 +13,7 @@ Checks if the mailbox address is valid or not.
 
 ### local_part
 
-**type:** `string`
+**type**: `string`
 
 Mailbox local part
 
@@ -21,7 +21,7 @@ Mailbox local part
 
 ### domain_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox domain ID
 

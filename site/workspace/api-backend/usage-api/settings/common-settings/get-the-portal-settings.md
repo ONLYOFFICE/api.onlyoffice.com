@@ -15,17 +15,17 @@ Settings. A request that is not authenticated returns `401`.
 
 ### Timezone
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UTC"`
 
 ### TrustedDomains
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### TrustedDomainsType
 
-**type:** `"None" | "Custom" | "All"`
+**type**: `"None" | "Custom" | "All"`
 
 [0 - None, 1 - Custom, 2 - All]
 
@@ -33,19 +33,19 @@ Settings. A request that is not authenticated returns `401`.
 
 ### Culture
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"en-US"`
 
 ### UtcOffset
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"-08:30:00"`
 
 ### UtcHoursOffset
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `-8.5`
 

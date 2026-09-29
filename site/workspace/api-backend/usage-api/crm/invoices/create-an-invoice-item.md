@@ -13,7 +13,7 @@ Creates an invoice item with the parameters (title, description, price, etc.) sp
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Invoice item title
 
@@ -21,7 +21,7 @@ Invoice item title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Invoice item description
 
@@ -29,7 +29,7 @@ Invoice item description
 
 ### price
 
-**type:** `number`
+**type**: `number`
 
 Invoice item price
 
@@ -37,7 +37,7 @@ Invoice item price
 
 ### sku
 
-**type:** `string`
+**type**: `string`
 
 Invoice item stock keeping unit
 
@@ -45,7 +45,7 @@ Invoice item stock keeping unit
 
 ### stockQuantity
 
-**type:** `number`
+**type**: `number`
 
 Invoice item stock quantity
 
@@ -53,7 +53,7 @@ Invoice item stock quantity
 
 ### trackInventory
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the inventory is tracked or not
 
@@ -61,7 +61,7 @@ Specifies if the inventory is tracked or not
 
 ### invoiceTax1id
 
-**type:** `integer`
+**type**: `integer`
 
 First invoice item tax ID
 
@@ -69,7 +69,7 @@ First invoice item tax ID
 
 ### invoiceTax2id
 
-**type:** `integer`
+**type**: `integer`
 
 Second invoice item tax ID
 
@@ -96,77 +96,77 @@ Invoice item. A request that is not authenticated returns `401`.
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### StockKeepingUnit
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"StockKeepingUnit"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Price
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `1.2`
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### StockQuantity
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `2.2`
 
 ### TrackInvenory
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### InvoiceTax1
 
-**type:** `InvoiceTaxWrapper`
+**type**: `InvoiceTaxWrapper`
 
 ### InvoiceTax2
 
-**type:** `InvoiceTaxWrapper`
+**type**: `InvoiceTaxWrapper`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

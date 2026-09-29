@@ -143,7 +143,7 @@ Adds an item to the context menu. See [Context menu](../../customization/context
 
 #### ContextMenuItem
 
-**type:** `object`
+**type**: `object`
 
 The context menu item.
 
@@ -350,7 +350,7 @@ The function called when the context menu is shown. If a plugin listens for this
 
 #### ContextMenuOptions
 
-**type:** `object`
+**type**: `object`
 
 The context menu options.
 
@@ -366,7 +366,7 @@ The context menu options.
 
 #### ContextMenuType
 
-**type:** `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
+**type**: `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 The context menu type:
 

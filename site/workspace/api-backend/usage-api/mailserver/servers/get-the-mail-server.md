@@ -15,25 +15,25 @@ Mail server data for the current tenant. A request that is not authenticated ret
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Dns
 
-**type:** `ServerDomainDnsData`
+**type**: `ServerDomainDnsData`
 
 ### ServerLimits
 
-**type:** `ServerLimitData`
+**type**: `ServerLimitData`
 
 ### InServer
 
-**type:** `MailboxServer`
+**type**: `MailboxServer`
 
 ### OutServer
 
-**type:** `MailboxServer`
+**type**: `MailboxServer`
 
 ## Response example
 

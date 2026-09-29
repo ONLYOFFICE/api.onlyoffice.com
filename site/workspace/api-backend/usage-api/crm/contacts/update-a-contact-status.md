@@ -13,7 +13,7 @@ Updates the selected contact status with the parameters (title, description, etc
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Contact status ID
 
@@ -21,7 +21,7 @@ Contact status ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New contact status title
 
@@ -29,7 +29,7 @@ New contact status title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New contact status description
 
@@ -37,7 +37,7 @@ New contact status description
 
 ### color
 
-**type:** `string`
+**type**: `string`
 
 New contact status color
 
@@ -45,7 +45,7 @@ New contact status color
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 New contact status sort order
 
@@ -69,37 +69,37 @@ Contact status. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

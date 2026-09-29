@@ -13,7 +13,7 @@ Creates a blog post with the specified title, content, tags and subscription to 
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Post title
 
@@ -21,7 +21,7 @@ Post title
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Post text
 
@@ -29,7 +29,7 @@ Post text
 
 ### tags
 
-**type:** `string`
+**type**: `string`
 
 List of tags separated with comma
 
@@ -37,7 +37,7 @@ List of tags separated with comma
 
 ### subscribeComments
 
-**type:** `boolean`
+**type**: `boolean`
 
 Subscribes to the post comments or not
 
@@ -60,37 +60,37 @@ Newly created post. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Post text"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Example post"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

@@ -13,7 +13,7 @@ Starts the data restoring process for the current portal with the parameters spe
 
 ### backupId
 
-**type:** `string`
+**type**: `string`
 
 Backup ID
 
@@ -21,7 +21,7 @@ Backup ID
 
 ### storageType
 
-**type:** `integer`
+**type**: `integer`
 
 Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataStore", or "ThirdPartyConsumer")
 
@@ -29,13 +29,13 @@ Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataS
 
 ### storageParams
 
-**type:** `object[]`
+**type**: `object[]`
 
 Storage parameters
 
 ### notify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify the users about the backup or not
 
@@ -60,23 +60,23 @@ Restoring progress. A request that is not authenticated returns `401`.
 
 ### IsCompleted
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Progress
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `44`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 ### Link
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Link"`
 

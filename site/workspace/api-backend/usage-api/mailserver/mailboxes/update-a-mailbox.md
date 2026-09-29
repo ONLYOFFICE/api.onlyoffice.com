@@ -13,7 +13,7 @@ Updates a mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New sender name
 
@@ -42,35 +42,35 @@ Updated mailbox data. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### UserId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserId"`
 
 ### UserDisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserDisplayName"`
 
 ### Address
 
-**type:** `ServerDomainAddressData`
+**type**: `ServerDomainAddressData`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Aliases
 
-**type:** `ServerDomainAddressData[]`
+**type**: `ServerDomainAddressData[]`
 
 ## Response example
 

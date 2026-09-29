@@ -14,7 +14,7 @@ Registers a new portal with the parameters specified in the request.
 
 ### portalName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal name.
 
@@ -22,7 +22,7 @@ Portal name.
 
 ### firstName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal owner first name.
 
@@ -30,7 +30,7 @@ Portal owner first name.
 
 ### lastName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal owner last name.
 
@@ -38,7 +38,7 @@ Portal owner last name.
 
 ### email
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal owner email address.
 
@@ -46,7 +46,7 @@ Portal owner email address.
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Portal owner password.
 
@@ -54,7 +54,7 @@ Portal owner password.
 
 ### phone
 
-**type:** `string`
+**type**: `string`
 
 Portal owner phone number.
 
@@ -62,7 +62,7 @@ Portal owner phone number.
 
 ### language
 
-**type:** `string`
+**type**: `string`
 
 Portal language.
 
@@ -70,7 +70,7 @@ Portal language.
 
 ### timeZoneName
 
-**type:** `string`
+**type**: `string`
 
 Portal time zone.
 
@@ -98,7 +98,7 @@ The link for portal activation and the portal description. A failed request retu
 
 ### reference
 
-**type:** `string`
+**type**: `string`
 
 The portal activation link.
 
@@ -106,7 +106,7 @@ The portal activation link.
 
 ### tenant
 
-**type:** [`Tenant`](../objects/tenant.md)
+**type**: [`Tenant`](../objects/tenant.md)
 
 The portal description.
 

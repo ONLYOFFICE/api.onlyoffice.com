@@ -13,7 +13,7 @@ Adds the information with the parameters specified in the request to the contact
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,7 +21,7 @@ Contact ID
 
 ### infoType
 
-**type:** `integer`
+**type**: `integer`
 
 Contact information type
 
@@ -29,7 +29,7 @@ Contact information type
 
 ### data
 
-**type:** `string`
+**type**: `string`
 
 New data
 
@@ -37,7 +37,7 @@ New data
 
 ### isPrimary
 
-**type:** `boolean`
+**type**: `boolean`
 
 Contact information importance: primary or not
 
@@ -45,7 +45,7 @@ Contact information importance: primary or not
 
 ### category
 
-**type:** `string`
+**type**: `string`
 
 Contact information category
 
@@ -69,7 +69,7 @@ Contact information. A request that is not authenticated returns `401`.
 
 ### InfoType
 
-**type:** `"Phone" | "Email" | "Website" | "Skype" | "Twitter" | "LinkedIn" | "Facebook" | "Address" | "LiveJournal" | "MySpace" | "GMail" | "Blogger" | "Yahoo" | "MSN" | "ICQ" | "Jabber" | "AIM" | "VK"`
+**type**: `"Phone" | "Email" | "Website" | "Skype" | "Twitter" | "LinkedIn" | "Facebook" | "Address" | "LiveJournal" | "MySpace" | "GMail" | "Blogger" | "Yahoo" | "MSN" | "ICQ" | "Jabber" | "AIM" | "VK"`
 
 [0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]
 
@@ -77,31 +77,31 @@ Contact information. A request that is not authenticated returns `401`.
 
 ### Category
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Data
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"support@onlyoffice.com"`
 
 ### CategoryName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Home"`
 
 ### IsPrimary
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

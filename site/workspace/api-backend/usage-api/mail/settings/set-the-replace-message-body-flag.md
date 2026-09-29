@@ -13,7 +13,7 @@ Sets a flag that specifies whether to completely replace text of the email when 
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to completely replace text of the email when inserting a template or not
 

@@ -13,7 +13,7 @@ Returns a list of all the pages from the wiki or wiki category specified in the 
 
 ### category
 
-**type:** `string`
+**type**: `string`
 
 Category name
 

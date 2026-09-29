@@ -13,7 +13,7 @@ Saves edits to a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### fileExtension
 
-**type:** `string`
+**type**: `string`
 
 File extension
 
@@ -31,7 +31,7 @@ File extension
 
 ### downloadUri
 
-**type:** `string`
+**type**: `string`
 
 URI to download a file
 
@@ -39,13 +39,13 @@ URI to download a file
 
 ### stream
 
-**type:** `object`
+**type**: `object`
 
 Request file stream
 
 ### doc
 
-**type:** `string`
+**type**: `string`
 
 Shared token
 
@@ -53,7 +53,7 @@ Shared token
 
 ### forcesave
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to force save a file or not
 
@@ -77,23 +77,23 @@ Saved file. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

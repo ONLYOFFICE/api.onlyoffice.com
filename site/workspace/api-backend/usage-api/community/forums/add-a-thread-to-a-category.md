@@ -13,7 +13,7 @@ Adds a thread to the category with the ID specified in the request.
 
 ### categoryId
 
-**type:** `integer`
+**type**: `integer`
 
 Category ID (-1 for a new category)
 
@@ -21,7 +21,7 @@ Category ID (-1 for a new category)
 
 ### categoryName
 
-**type:** `string`
+**type**: `string`
 
 Category name
 
@@ -29,7 +29,7 @@ Category name
 
 ### threadName
 
-**type:** `string`
+**type**: `string`
 
 Thread name
 
@@ -37,7 +37,7 @@ Thread name
 
 ### threadDescription
 
-**type:** `string`
+**type**: `string`
 
 Thread description
 
@@ -60,49 +60,49 @@ Added thread. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"The Thread"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample thread"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3249197Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3249197Z"`
 
 ### RecentTopicId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### RecentTopicTitle
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample topic"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

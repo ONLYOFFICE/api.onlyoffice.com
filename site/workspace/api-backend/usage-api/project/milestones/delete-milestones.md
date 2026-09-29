@@ -13,7 +13,7 @@ Deletes the milestones with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Milestone IDs
 

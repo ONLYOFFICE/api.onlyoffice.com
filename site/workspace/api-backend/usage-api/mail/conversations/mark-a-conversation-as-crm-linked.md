@@ -13,7 +13,7 @@ Marks a conversation as CRM linked. All the new mails will be added to the CRM h
 
 ### id_message
 
-**type:** `integer`
+**type**: `integer`
 
 ID of any messages from the conversation
 
@@ -21,7 +21,7 @@ ID of any messages from the conversation
 
 ### crm_contact_ids
 
-**type:** `CrmContactData[]`
+**type**: `CrmContactData[]`
 
 List of CRM entities in the following format: `{entity_id: 0, entity_type: 0}`.
             Entity types: 1 - Contact, 2 - Case, 3 - Opportunity

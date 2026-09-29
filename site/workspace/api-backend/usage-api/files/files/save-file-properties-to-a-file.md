@@ -13,7 +13,7 @@ Saves file properties to the specified file.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### fileProperties
 
-**type:** `object`
+**type**: `object`
 
 File properties
 
@@ -39,7 +39,7 @@ File properties. A request that is not authenticated returns `401`.
 
 ### FormFilling
 
-**type:** `FormFillingProperties`
+**type**: `FormFillingProperties`
 
 ## Response example
 

@@ -13,7 +13,7 @@ Creates a new currency rate with the parameters specified in the request.
 
 ### fromCurrency
 
-**type:** `string`
+**type**: `string`
 
 Currency to convert
 
@@ -21,7 +21,7 @@ Currency to convert
 
 ### toCurrency
 
-**type:** `string`
+**type**: `string`
 
 Currency into which the original currency will be converted
 
@@ -29,7 +29,7 @@ Currency into which the original currency will be converted
 
 ### rate
 
-**type:** `number`
+**type**: `number`
 
 Exchange rate
 
@@ -51,25 +51,25 @@ Currency rate. A request that is not authenticated returns `401`.
 
 ### FromCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"EUR"`
 
 ### ToCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"USD"`
 
 ### Rate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `1.1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

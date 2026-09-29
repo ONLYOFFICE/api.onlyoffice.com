@@ -13,7 +13,7 @@ Deletes a task category with the ID specified in the request.
 
 ### categoryid
 
-**type:** `integer`
+**type**: `integer`
 
 Task category ID
 
@@ -21,7 +21,7 @@ Task category ID
 
 ### newcategoryid
 
-**type:** `integer`
+**type**: `integer`
 
 Task category ID to replace the deleted category in the tasks with the current task category
 
@@ -42,43 +42,43 @@ Task category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

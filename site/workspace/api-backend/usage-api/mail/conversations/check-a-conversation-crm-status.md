@@ -13,7 +13,7 @@ Checks if a conversation is CRM linked or not by message ID.
 
 ### message_id
 
-**type:** `integer`
+**type**: `integer`
 
 ID of any messages from the conversation
 
@@ -33,13 +33,13 @@ Conversation CRM status. A request that is not authenticated returns `401`.
 
 ### MessageId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `12354`
 
 ### IsLinked
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

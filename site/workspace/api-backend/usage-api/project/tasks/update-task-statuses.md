@@ -13,7 +13,7 @@ Updates the task statuses with the values specified in the request.
 
 ### statuses
 
-**type:** `CustomTaskStatus[]`
+**type**: `CustomTaskStatus[]`
 
 New task statuses
 

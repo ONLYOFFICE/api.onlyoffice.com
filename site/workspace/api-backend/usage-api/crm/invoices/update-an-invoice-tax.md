@@ -13,7 +13,7 @@ Updates the selected invoice tax with the parameters (name, description, rate) s
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Tax ID
 
@@ -21,7 +21,7 @@ Tax ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New tax name
 
@@ -29,7 +29,7 @@ New tax name
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New tax description
 
@@ -37,7 +37,7 @@ New tax description
 
 ### rate
 
-**type:** `number`
+**type**: `number`
 
 New tax rate
 
@@ -60,47 +60,47 @@ Updated invoice tax. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Rate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"Rate"`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Updates the order of the history categories with a list specified in the request
 
 ### titles
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of history category titles
 

@@ -13,7 +13,7 @@ Creates a tag for the selected entity with a tag name specified in the request.
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

@@ -13,7 +13,7 @@ Returns a list of all the comments on the event with the ID specified in the req
 
 ### feedid
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 

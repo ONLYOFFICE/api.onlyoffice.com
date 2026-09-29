@@ -13,7 +13,7 @@ Returns a list of messages linked in one chain (conversation).
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 ID of any message from the conversation
 
@@ -21,19 +21,19 @@ ID of any message from the conversation
 
 ### loadAll
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Loads the content of all messages
 
 ### markRead
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if a conversation will be marked as read or not
 
 ### needSanitize
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if HTML needs to be prepared for the FCK editor or not
 

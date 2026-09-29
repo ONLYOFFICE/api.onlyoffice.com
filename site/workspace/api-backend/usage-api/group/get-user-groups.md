@@ -13,7 +13,7 @@ Returns a list of groups for the user with the ID specified in the request.
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

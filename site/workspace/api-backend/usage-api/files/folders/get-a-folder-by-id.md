@@ -13,7 +13,7 @@ Returns the detailed list of files and folders located in the folder with the ID
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -23,7 +23,7 @@ Folder ID
 
 ### userIdOrGroupId
 
-**type:** `string`
+**type**: `string`
 
 User or group ID
 
@@ -31,7 +31,7 @@ User or group ID
 
 ### filterType
 
-**type:** `integer`
+**type**: `integer`
 
 Filter type
 
@@ -39,7 +39,7 @@ Filter type
 
 ### searchInContent
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to search within the section contents or not
 
@@ -47,7 +47,7 @@ Specifies whether to search within the section contents or not
 
 ### extension
 
-**type:** `string`
+**type**: `string`
 
 File extension by which files will be searched for if the FilterType.ByExtension parameter is passed
 
@@ -55,7 +55,7 @@ File extension by which files will be searched for if the FilterType.ByExtension
 
 ### withSubfolders
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return sections with or without subfolders
 
@@ -79,41 +79,41 @@ Folder contents. A request that is not authenticated returns `401`.
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### Folders
 
-**type:** `FolderWrapper[]`
+**type**: `FolderWrapper[]`
 
 ### Current
 
-**type:** `FolderWrapper`
+**type**: `FolderWrapper`
 
 ### PathParts
 
-**type:** `object`
+**type**: `object`
 
 ### StartIndex
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Count
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `4`
 
 ### Total
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `4`
 
 ### New
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

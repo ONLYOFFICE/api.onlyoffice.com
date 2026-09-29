@@ -13,7 +13,7 @@ Sets the audit trail settings for the current portal.
 
 ### settings
 
-**type:** `object`
+**type**: `object`
 
 Audit trail settings
 
@@ -29,13 +29,13 @@ Audit trail settings. A request that is not authenticated returns `401`.
 
 ### LoginHistoryLifeTime
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AuditTrailLifeTime
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

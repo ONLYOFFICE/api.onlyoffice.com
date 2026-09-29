@@ -13,7 +13,7 @@ Deletes a mail group with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Mail group ID
 

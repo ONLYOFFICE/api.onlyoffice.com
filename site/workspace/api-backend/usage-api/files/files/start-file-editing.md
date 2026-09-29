@@ -13,7 +13,7 @@ Informs about opening a file with the ID specified in the request for editing, l
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### editingAlone
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to share a file with other users for editing or not
 
@@ -31,7 +31,7 @@ Specifies whether to share a file with other users for editing or not
 
 ### doc
 
-**type:** `string`
+**type**: `string`
 
 Shared token
 

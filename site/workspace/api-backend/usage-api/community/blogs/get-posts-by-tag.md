@@ -13,7 +13,7 @@ Returns a list of blog posts containing the tag specified in the request with th
 
 ### tag
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

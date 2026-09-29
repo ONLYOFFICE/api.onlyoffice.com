@@ -13,7 +13,7 @@ Deletes a list of the users with the IDs specified in the request.
 
 ### userIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 

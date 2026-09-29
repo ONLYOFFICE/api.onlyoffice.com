@@ -13,7 +13,7 @@ Returns a list of the discussion message comments from a project with the ID spe
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 

@@ -13,7 +13,7 @@ Saves the SMTP settings for the current portal.
 
 ### smtpSettings
 
-**type:** `object`
+**type**: `object`
 
 SMTP settings
 
@@ -29,53 +29,53 @@ SMTP settings. A request that is not authenticated returns `401`.
 
 ### Host
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"mail.example.com"`
 
 ### Port
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### SenderAddress
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"notify@example.com"`
 
 ### SenderDisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Postman"`
 
 ### CredentialsUserName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"notify@example.com"`
 
 ### CredentialsUserPassword
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"{password}"`
 
 ### EnableSSL
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### EnableAuth
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### UseNtlm
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

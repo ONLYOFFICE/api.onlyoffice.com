@@ -15,7 +15,7 @@ Sets the sharing settings to a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -25,13 +25,13 @@ File ID
 
 ### share
 
-**type:** `FileShareParams[]`
+**type**: `FileShareParams[]`
 
 Collection of sharing parameters
 
 ### notify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Notifies users about the shared file or not
 
@@ -39,7 +39,7 @@ Notifies users about the shared file or not
 
 ### sharingMessage
 
-**type:** `string`
+**type**: `string`
 
 Message to send when notifying about the shared file
 
@@ -47,7 +47,7 @@ Message to send when notifying about the shared file
 
 ### advancedSettings
 
-**type:** `object`
+**type**: `object`
 
 Advanced settings which prohibit printing, downloading, copying the file, and changing sharing settings
 

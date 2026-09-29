@@ -13,7 +13,7 @@ Updates the setting for writing mails to the history with the parameter specifie
 
 ### writeMailToHistoryAuto
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the mails are written to the history automatically or not
 

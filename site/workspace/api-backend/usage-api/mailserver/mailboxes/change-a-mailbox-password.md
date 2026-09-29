@@ -13,7 +13,7 @@ Changes a password of a mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 New password
 

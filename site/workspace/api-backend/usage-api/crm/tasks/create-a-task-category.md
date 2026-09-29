@@ -13,7 +13,7 @@ Creates a new task category with the parameters (title, description, etc.) speci
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Task category title
 
@@ -21,7 +21,7 @@ Task category title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Task category description
 
@@ -29,7 +29,7 @@ Task category description
 
 ### imageName
 
-**type:** `string`
+**type**: `string`
 
 Image name of task category
 
@@ -37,7 +37,7 @@ Image name of task category
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 Task category order
 
@@ -60,43 +60,43 @@ Task category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

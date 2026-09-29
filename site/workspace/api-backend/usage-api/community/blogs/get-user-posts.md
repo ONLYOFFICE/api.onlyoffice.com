@@ -13,7 +13,7 @@ Returns a list of blog posts for the specified user with the post titles, dates 
 
 ### username
 
-**type:** `string`
+**type**: `string`
 
 User name
 

@@ -13,7 +13,7 @@ Creates a new tag with the data specified in the request.
 
 ### data
 
-**type:** `string`
+**type**: `string`
 
 Tag data
 
@@ -33,35 +33,35 @@ Created tag. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

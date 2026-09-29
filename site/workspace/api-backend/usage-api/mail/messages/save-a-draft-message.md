@@ -13,7 +13,7 @@ Saves a message with the ID specified in the request as a draft.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID which will be saved or 0
 
@@ -21,7 +21,7 @@ Message ID which will be saved or 0
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
@@ -29,25 +29,25 @@ Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### to
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of mail addresses to which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### cc
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of Cc (carbon copy) mail addresses. Format: Name &lt;name@domain&gt;
 
 ### bcc
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of Bcc (blind carbon copy) mail addresses. Format: Name &lt;name@domain&gt;
 
 ### mimeReplyToId
 
-**type:** `string`
+**type**: `string`
 
 Message ID to which this message is replying to
 
@@ -55,7 +55,7 @@ Message ID to which this message is replying to
 
 ### importance
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this message is important or not: true - important, false - not important
 
@@ -63,7 +63,7 @@ Specifies if this message is important or not: true - important, false - not imp
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 Message subject
 
@@ -71,13 +71,13 @@ Message subject
 
 ### tags
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of tag IDs added to the message
 
 ### body
 
-**type:** `string`
+**type**: `string`
 
 Message body as the HTML string
 
@@ -85,13 +85,13 @@ Message body as the HTML string
 
 ### attachments
 
-**type:** `MailAttachmentData[]`
+**type**: `MailAttachmentData[]`
 
 List of message attachments
 
 ### calendarIcs
 
-**type:** `string`
+**type**: `string`
 
 Calendar event in the iCal format for sending
 
@@ -144,165 +144,165 @@ Saved message. A request that is not authenticated returns `401`.
 
 ### Attachments
 
-**type:** `MailAttachmentData[]`
+**type**: `MailAttachmentData[]`
 
 ### Introduction
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Introduction"`
 
 ### HtmlBody
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"HtmlBody"`
 
 ### ContentIsBlocked
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Important
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Subject
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Subject"`
 
 ### HasAttachments
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Bcc
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Bcc"`
 
 ### Cc
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Cc"`
 
 ### To
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"To"`
 
 ### Address
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Address"`
 
 ### From
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"From"`
 
 ### ReplyTo
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"ReplyTo"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `555`
 
 ### ChainId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"ChainId"`
 
 ### ChainDateString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"ChainDate"`
 
 ### DateString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Date"`
 
 ### DateDisplay
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"DateDisplay"`
 
 ### TagIds
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### LabelsInString
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"LabelsInString"`
 
 ### IsNew
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsAnswered
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsForwarded
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TextBodyOnly
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Size
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `555555`
 
 ### EMLLink
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"EMLLink"`
 
 ### StreamId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"StreamId"`
 
 ### RestoreFolderId
 
-**type:** `"Sending" | "Inbox" | "Sent" | "Draft" | "Trash" | "Spam" | "UserFolder" | "Templates"`
+**type**: `"Sending" | "Inbox" | "Sent" | "Draft" | "Trash" | "Spam" | "UserFolder" | "Templates"`
 
 [0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]
 
@@ -310,7 +310,7 @@ Saved message. A request that is not authenticated returns `401`.
 
 ### Folder
 
-**type:** `"Sending" | "Inbox" | "Sent" | "Draft" | "Trash" | "Spam" | "UserFolder" | "Templates"`
+**type**: `"Sending" | "Inbox" | "Sent" | "Draft" | "Trash" | "Spam" | "UserFolder" | "Templates"`
 
 [0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]
 
@@ -318,71 +318,71 @@ Saved message. A request that is not authenticated returns `401`.
 
 ### UserFolderId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### ChainLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `144`
 
 ### WasNew
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsToday
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsYesterday
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### ReceivedDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-18T08:12:09.1209967Z"`
 
 ### IsBodyCorrupted
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### HasParseError
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### MimeMessageId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"MimeMessageId"`
 
 ### MimeReplyToId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"MimeReplyToId"`
 
 ### CalendarUid
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"CalendarUid"`
 
 ### ReadRequestStatus
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

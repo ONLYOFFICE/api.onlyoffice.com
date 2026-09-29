@@ -13,7 +13,7 @@ Changes a status for the users with the IDs specified in the request.
 
 ### status
 
-**type:** `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
+**type**: `"Active" | "Terminated" | "LeaveOfAbsence" | "Default" | "All"`
 
 New user status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default"
 
@@ -23,7 +23,7 @@ New user status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default"
 
 ### userIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 

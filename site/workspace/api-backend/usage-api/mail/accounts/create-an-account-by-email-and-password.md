@@ -13,7 +13,7 @@ Creates an account based on the email address and password specified in the requ
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address in the name@domain format
 
@@ -21,7 +21,7 @@ Account email address in the name@domain format
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Email password
 
@@ -42,93 +42,93 @@ Created account. A request that is not authenticated returns `401`.
 
 ### MailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `12`
 
 ### Email
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"email@only.com"`
 
 ### Enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### OAuthConnection
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Signature
 
-**type:** `MailSignatureData`
+**type**: `MailSignatureData`
 
 ### Autoreply
 
-**type:** `MailAutoreplyData`
+**type**: `MailAutoreplyData`
 
 ### EMailInFolder
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"eMailInFolder"`
 
 ### QuotaError
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AuthError
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsGroup
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsAlias
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsTeamlabMailbox
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsDefault
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsSharedDomainMailbox
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DateCreated
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

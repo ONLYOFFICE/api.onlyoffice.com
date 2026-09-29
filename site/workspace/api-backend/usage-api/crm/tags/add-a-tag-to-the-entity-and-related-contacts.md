@@ -13,7 +13,7 @@ Adds the selected tag to the entity (company or person) specified in the request
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Entity ID
 
@@ -29,7 +29,7 @@ Entity ID
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

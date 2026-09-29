@@ -13,7 +13,7 @@ Adds a tag specified in the request to the selected conversations.
 
 ### tag_id
 
-**type:** `integer`
+**type**: `integer`
 
 Tag ID
 
@@ -23,7 +23,7 @@ Tag ID
 
 ### messages
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of conversation IDs
 

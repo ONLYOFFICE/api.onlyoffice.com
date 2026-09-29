@@ -13,7 +13,7 @@ Returns the detailed information on a wiki page with the name and version specif
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Page name
 
@@ -23,7 +23,7 @@ Page name
 
 ### version
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Page version
 
@@ -43,23 +43,23 @@ Page information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Page name"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Page content"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3164965Z"`
 

@@ -13,7 +13,7 @@ Creates a comment on the selected wiki page with the content specified in the re
 
 ### page
 
-**type:** `string`
+**type**: `string`
 
 Page name
 
@@ -23,7 +23,7 @@ Page name
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Comment text
 
@@ -31,7 +31,7 @@ Comment text
 
 ### parentId
 
-**type:** `string`
+**type**: `string`
 
 Comment parent ID
 
@@ -52,41 +52,41 @@ Comment information. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### ParentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Page
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Some page"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Comment content"`
 
 ### Author
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### LastModified
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3304954Z"`
 
 ### Inactive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

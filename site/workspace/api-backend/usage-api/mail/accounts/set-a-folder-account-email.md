@@ -13,7 +13,7 @@ Sets an account email in a folder with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### email_in_folder
 
-**type:** `string`
+**type**: `string`
 
 Document folder ID
 

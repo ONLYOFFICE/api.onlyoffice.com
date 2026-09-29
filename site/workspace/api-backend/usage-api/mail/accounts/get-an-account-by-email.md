@@ -13,7 +13,7 @@ Returns the account information by the email address specified in the request.
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address
 
@@ -33,79 +33,79 @@ Account information. A request that is not authenticated returns `401`.
 
 ### MailBoxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### EMailView
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"email.only.com"`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### Account
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"account"`
 
 ### Password
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"password"`
 
 ### Server
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"server"`
 
 ### SmtpServer
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_server"`
 
 ### SmtpPortStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_port"`
 
 ### SmtpAccount
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_account"`
 
 ### SmtpPassword
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"smtp_password"`
 
 ### SmtpAuth
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `"smtp_auth"`
 
 ### PortStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"port"`
 
 ### Encryption
 
-**type:** `"None" | "SSL" | "StartTLS"`
+**type**: `"None" | "SSL" | "StartTLS"`
 
 [0 - None, 1 - SSL, 2 - StartTLS]
 
@@ -113,7 +113,7 @@ Account information. A request that is not authenticated returns `401`.
 
 ### SmtpEncryption
 
-**type:** `"None" | "SSL" | "StartTLS"`
+**type**: `"None" | "SSL" | "StartTLS"`
 
 [0 - None, 1 - SSL, 2 - StartTLS]
 
@@ -121,7 +121,7 @@ Account information. A request that is not authenticated returns `401`.
 
 ### Authentication
 
-**type:** `"None" | "Login" | "CramMd5" | "OAuth2" | "Ntlm"`
+**type**: `"None" | "Login" | "CramMd5" | "OAuth2" | "Ntlm"`
 
 [0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]
 
@@ -129,7 +129,7 @@ Account information. A request that is not authenticated returns `401`.
 
 ### SmtpAuthentication
 
-**type:** `"None" | "Login" | "CramMd5" | "OAuth2" | "Ntlm"`
+**type**: `"None" | "Login" | "CramMd5" | "OAuth2" | "Ntlm"`
 
 [0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]
 
@@ -137,37 +137,37 @@ Account information. A request that is not authenticated returns `401`.
 
 ### Imap
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### BeginDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-10-01T17:04:32.0000000"`
 
 ### IsOAuth
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Restrict
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### EMailInFolder
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"email_in_folder"`
 
 ### IsTeamlab
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `"is_teamlab"`
 

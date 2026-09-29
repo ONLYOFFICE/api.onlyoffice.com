@@ -13,7 +13,7 @@ Deletes a folder with the ID specified in the request.
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -23,7 +23,7 @@ Folder ID
 
 ### deleteAfter
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to delete a folder after the editing session is finished or not
 
@@ -31,7 +31,7 @@ Specifies whether to delete a folder after the editing session is finished or no
 
 ### immediately
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to move a folder to the "Trash" folder or delete it immediately
 

@@ -13,7 +13,7 @@ Returns a list of all the comments on the blog post with the ID specified in the
 
 ### postid
 
-**type:** `string`
+**type**: `string`
 
 Post ID (GUID)
 

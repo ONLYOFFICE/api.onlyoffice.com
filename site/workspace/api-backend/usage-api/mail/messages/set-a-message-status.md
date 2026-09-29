@@ -13,13 +13,13 @@ Sets a status to the messages with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs
 
 ### status
 
-**type:** `string`
+**type**: `string`
 
 Message status: "read", "unread", "important", or "normal"
 

@@ -13,7 +13,7 @@ Creates a new tag with the parameters specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 
@@ -21,7 +21,7 @@ Tag name
 
 ### style
 
-**type:** `string`
+**type**: `string`
 
 Style identifier: a postfix which represents the CSS style (tag color)
 
@@ -29,7 +29,7 @@ Style identifier: a postfix which represents the CSS style (tag color)
 
 ### addresses
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of addresses associated with a tag
 
@@ -51,29 +51,29 @@ Mail tag. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### Style
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"style"`
 
 ### Addresses
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### LettersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

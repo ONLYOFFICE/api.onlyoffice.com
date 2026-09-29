@@ -13,7 +13,7 @@ Updates the existing iCal event in the selected calendar with the ID specified i
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 
@@ -21,7 +21,7 @@ Event ID
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -29,7 +29,7 @@ Calendar ID
 
 ### ics
 
-**type:** `string`
+**type**: `string`
 
 Event in the iCal format
 
@@ -37,7 +37,7 @@ Event in the iCal format
 
 ### alertType
 
-**type:** `integer`
+**type**: `integer`
 
 New event notification type
 
@@ -45,13 +45,13 @@ New event notification type
 
 ### sharingOptions
 
-**type:** `SharingParam[]`
+**type**: `SharingParam[]`
 
 New event sharing access parameters
 
 ### fromCalDavServer
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the request is from the CalDav server or not
 
@@ -59,7 +59,7 @@ Defines if the request is from the CalDav server or not
 
 ### ownerId
 
-**type:** `string`
+**type**: `string`
 
 New event owner ID
 

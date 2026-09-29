@@ -13,7 +13,7 @@ Sets a cookie after verifying the password for a password-protected external lin
 
 ### key
 
-**type:** `string`
+**type**: `string`
 
 Link signature
 
@@ -21,7 +21,7 @@ Link signature
 
 ### passwordHash
 
-**type:** `string`
+**type**: `string`
 
 Password hash
 
@@ -29,7 +29,7 @@ Password hash
 
 ### isFolder
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if a link is to the shared folder or not
 

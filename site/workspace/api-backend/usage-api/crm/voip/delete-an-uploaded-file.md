@@ -13,7 +13,7 @@ Deletes an uploaded file with the name specified in the request.
 
 ### audioType
 
-**type:** `integer`
+**type**: `integer`
 
 Audio type
 
@@ -21,7 +21,7 @@ Audio type
 
 ### fileName
 
-**type:** `string`
+**type**: `string`
 
 Uploaded file name
 

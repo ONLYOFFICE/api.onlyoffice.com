@@ -15,19 +15,19 @@ Operation result. A request that is not authenticated returns `401`.
 
 ### EnableUserQuota
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DefaultUserQuota
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### LastRecalculateDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2024-01-15T09:30:00"`
 

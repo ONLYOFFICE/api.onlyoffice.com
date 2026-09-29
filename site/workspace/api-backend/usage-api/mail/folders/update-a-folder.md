@@ -13,7 +13,7 @@ Updates a user folder with the parameters specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Folder ID
 
@@ -23,7 +23,7 @@ Folder ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 New folder name
 
@@ -31,7 +31,7 @@ New folder name
 
 ### parentId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 New parent folder ID (root level is equal to 0)
 
@@ -52,49 +52,49 @@ Folder information. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### ParentId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"name"`
 
 ### UnreadCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### TotalCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### UnreadChainCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### TotalChainCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### FolderCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 

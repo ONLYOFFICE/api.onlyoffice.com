@@ -13,7 +13,7 @@ Returns a list of all the tags for the contact with the ID specified in the requ
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

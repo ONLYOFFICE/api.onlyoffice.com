@@ -13,7 +13,7 @@ Updates the selected opportunity with the parameters specified in the request.
 
 ### opportunityid
 
-**type:** `integer`
+**type**: `integer`
 
 Opportunity ID
 
@@ -21,7 +21,7 @@ Opportunity ID
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 New opportunity primary contact ID
 
@@ -29,13 +29,13 @@ New opportunity primary contact ID
 
 ### members
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 New opportunity participants
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New opportunity title
 
@@ -43,7 +43,7 @@ New opportunity title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New opportunity description
 
@@ -51,7 +51,7 @@ New opportunity description
 
 ### responsibleid
 
-**type:** `string`
+**type**: `string`
 
 New opportunity responsible ID
 
@@ -59,7 +59,7 @@ New opportunity responsible ID
 
 ### bidType
 
-**type:** `integer`
+**type**: `integer`
 
 New bid type
 
@@ -67,7 +67,7 @@ New bid type
 
 ### bidValue
 
-**type:** `number`
+**type**: `number`
 
 New amount of transactions
 
@@ -75,7 +75,7 @@ New amount of transactions
 
 ### bidCurrencyAbbr
 
-**type:** `string`
+**type**: `string`
 
 New currency (abbreviation)
 
@@ -83,7 +83,7 @@ New currency (abbreviation)
 
 ### perPeriodValue
 
-**type:** `integer`
+**type**: `integer`
 
 New amount per period
 
@@ -91,7 +91,7 @@ New amount per period
 
 ### stageid
 
-**type:** `integer`
+**type**: `integer`
 
 New stage ID
 
@@ -99,7 +99,7 @@ New stage ID
 
 ### successProbability
 
-**type:** `integer`
+**type**: `integer`
 
 New opportunity success probability
 
@@ -107,7 +107,7 @@ New opportunity success probability
 
 ### actualCloseDate
 
-**type:** `string`
+**type**: `string`
 
 New actual opportunity closure date
 
@@ -115,7 +115,7 @@ New actual opportunity closure date
 
 ### expectedCloseDate
 
-**type:** `string`
+**type**: `string`
 
 New expected opportunity closure date
 
@@ -123,13 +123,13 @@ New expected opportunity closure date
 
 ### customFieldList
 
-**type:** `object[]`
+**type**: `object[]`
 
 New custom field list
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 New opportunity privacy: private or not
 
@@ -137,13 +137,13 @@ New opportunity privacy: private or not
 
 ### accessList
 
-**type:** `string[]`
+**type**: `string[]`
 
 New list of users with access rights to the opportunity
 
 ### isNotify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Notifies users from the access list about the opportunity or not
 
@@ -186,41 +186,41 @@ Updated opportunity. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### Members
 
-**type:** `ContactBaseWrapper[]`
+**type**: `ContactBaseWrapper[]`
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Hotel catalogue"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"description"`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### BidType
 
-**type:** `"FixedBid" | "PerHour" | "PerDay" | "PerWeek" | "PerMonth" | "PerYear"`
+**type**: `"FixedBid" | "PerHour" | "PerDay" | "PerWeek" | "PerMonth" | "PerYear"`
 
 [0 - FixedBid, 1 - PerHour, 2 - PerDay, 3 - PerWeek, 4 - PerMonth, 5 - PerYear]
 
@@ -228,65 +228,65 @@ Updated opportunity. A request that is not authenticated returns `401`.
 
 ### BidValue
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"1,1"`
 
 ### BidCurrency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### PerPeriodValue
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Stage
 
-**type:** `DealMilestoneBaseWrapper`
+**type**: `DealMilestoneBaseWrapper`
 
 ### SuccessProbability
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `65`
 
 ### ActualCloseDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### ExpectedCloseDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

@@ -13,7 +13,7 @@ Deletes a group of invoice items with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of invoice item IDs
 

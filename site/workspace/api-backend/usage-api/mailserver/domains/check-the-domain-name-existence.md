@@ -13,7 +13,7 @@ Checks if a web domain name specified in the request already exists or not.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Web domain name
 

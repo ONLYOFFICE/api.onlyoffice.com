@@ -13,7 +13,7 @@ Creates an invoice line with the parameters (invoice ID, invoice item ID, etc.) 
 
 ### invoiceId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice ID
 
@@ -21,7 +21,7 @@ Invoice ID
 
 ### invoiceItemId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice item ID
 
@@ -29,7 +29,7 @@ Invoice item ID
 
 ### invoiceTax1Id
 
-**type:** `integer`
+**type**: `integer`
 
 First invoice tax ID
 
@@ -37,7 +37,7 @@ First invoice tax ID
 
 ### invoiceTax2Id
 
-**type:** `integer`
+**type**: `integer`
 
 Second invoice tax ID
 
@@ -45,7 +45,7 @@ Second invoice tax ID
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 Sort order
 
@@ -53,7 +53,7 @@ Sort order
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Description
 
@@ -61,7 +61,7 @@ Description
 
 ### quantity
 
-**type:** `number`
+**type**: `number`
 
 Quantity
 
@@ -69,7 +69,7 @@ Quantity
 
 ### price
 
-**type:** `number`
+**type**: `number`
 
 Price
 
@@ -77,7 +77,7 @@ Price
 
 ### discount
 
-**type:** `number`
+**type**: `number`
 
 Discount
 
@@ -105,61 +105,61 @@ Invoice line. A request that is not authenticated returns `401`.
 
 ### InvoiceID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceItemID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceTax1ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceTax2ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Quantity
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### Price
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### Discount
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

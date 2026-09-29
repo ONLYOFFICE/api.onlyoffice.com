@@ -13,7 +13,7 @@ Returns a list of all the bookmarks marked by the tag specified in the request w
 
 ### tag
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

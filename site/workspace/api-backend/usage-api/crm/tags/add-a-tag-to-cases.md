@@ -13,7 +13,7 @@ Adds the selected tag to the group of cases with the parameters specified in the
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,19 +21,19 @@ Contact ID
 
 ### isClosed
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Case status: closed or not
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Case tags
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

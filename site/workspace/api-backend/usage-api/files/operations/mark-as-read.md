@@ -13,13 +13,13 @@ Marks the files and folders with the IDs specified in the request as read.
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

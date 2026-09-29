@@ -16,7 +16,7 @@ Creates a list of persons with the first and last names specified in the request
 
 ### data
 
-**type:** `object[]`
+**type**: `object[]`
 
 Pairs: user first name, user last name
 

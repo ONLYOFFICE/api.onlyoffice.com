@@ -13,7 +13,7 @@ Returns the detailed information on the contact with the ID specified in the req
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

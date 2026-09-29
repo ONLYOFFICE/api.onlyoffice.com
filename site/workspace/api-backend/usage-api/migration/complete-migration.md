@@ -13,7 +13,7 @@ Completes the migration process.
 
 ### isSendWelcomeEmail
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to send a welcome letter to the imported users or not
 

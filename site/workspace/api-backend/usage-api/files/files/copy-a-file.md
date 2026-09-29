@@ -13,7 +13,7 @@ Copies (and converts if possible) an existing file to the specified folder.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### destFolderId
 
-**type:** `string`
+**type**: `string`
 
 Destination folder ID
 
@@ -31,7 +31,7 @@ Destination folder ID
 
 ### destTitle
 
-**type:** `string`
+**type**: `string`
 
 Destination file title
 
@@ -39,7 +39,7 @@ Destination file title
 
 ### toForm
 
-**type:** `boolean`
+**type**: `boolean`
 
 Convert to form
 
@@ -61,23 +61,23 @@ Copied file
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

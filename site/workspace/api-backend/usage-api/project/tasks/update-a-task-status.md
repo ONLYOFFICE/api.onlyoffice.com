@@ -13,7 +13,7 @@ Updates a task status with a value specified in the request.
 
 ### newStatus
 
-**type:** `object`
+**type**: `object`
 
 New task status
 

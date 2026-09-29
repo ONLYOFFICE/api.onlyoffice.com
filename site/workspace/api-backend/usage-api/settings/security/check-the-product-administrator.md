@@ -13,7 +13,7 @@ Checks if the selected user is an administrator of a product with the ID specifi
 
 ### productid
 
-**type:** `string`
+**type**: `string`
 
 Product ID
 
@@ -21,7 +21,7 @@ Product ID
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

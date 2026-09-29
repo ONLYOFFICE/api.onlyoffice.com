@@ -13,7 +13,7 @@ Deletes the selected contact from the project with the ID specified in the reque
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -42,147 +42,147 @@ Project. A request that is not authenticated returns `401`.
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Security
 
-**type:** `ProjectSecurityInfo`
+**type**: `ProjectSecurityInfo`
 
 ### ProjectFolder
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"13234"`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### TaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### TaskCountTotal
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MilestoneCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### DiscussionCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### ParticipantCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### TimeTrackingTotal
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"TimeTrackingTotal"`
 
 ### DocumentsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### IsFollow
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `"0"`
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

@@ -13,7 +13,7 @@ Updates the user activity status.
 
 ### userOnline
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the user is online or not
 

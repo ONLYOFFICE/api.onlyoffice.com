@@ -13,7 +13,7 @@ Returns a user with the ID specified in the request from the current portal.
 
 ### userID
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

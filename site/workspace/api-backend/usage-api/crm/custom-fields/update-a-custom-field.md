@@ -15,7 +15,7 @@ Updates the selected custom field with the parameters (entity type, field title,
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Custom field ID
 
@@ -23,7 +23,7 @@ Custom field ID
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 New entity type
 
@@ -31,7 +31,7 @@ New entity type
 
 ### label
 
-**type:** `string`
+**type**: `string`
 
 New field title
 
@@ -39,7 +39,7 @@ New field title
 
 ### fieldType
 
-**type:** `integer`
+**type**: `integer`
 
 New custom field type
 
@@ -47,7 +47,7 @@ New custom field type
 
 ### position
 
-**type:** `integer`
+**type**: `integer`
 
 New field position
 
@@ -55,7 +55,7 @@ New field position
 
 ### mask
 
-**type:** `string`
+**type**: `string`
 
 New mask
 
@@ -80,31 +80,31 @@ Updated custom field. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### EntityId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `14523423`
 
 ### Label
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Birthdate"`
 
 ### FieldValue
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5916406Z"`
 
 ### FieldType
 
-**type:** `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
+**type**: `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
 
 [0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]
 
@@ -112,19 +112,19 @@ Updated custom field. A request that is not authenticated returns `401`.
 
 ### Position
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Mask
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

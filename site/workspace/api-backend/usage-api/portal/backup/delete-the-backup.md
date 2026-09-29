@@ -13,7 +13,7 @@ Deletes the backup with the ID specified in the request.
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Backup ID
 

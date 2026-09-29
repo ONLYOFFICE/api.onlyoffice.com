@@ -13,7 +13,7 @@ Checks the conversion status of a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### start
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if a conversion operation is started or not
 

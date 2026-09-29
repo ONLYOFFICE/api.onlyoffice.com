@@ -13,7 +13,7 @@ Deletes a history category with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 History category ID
 
@@ -33,43 +33,43 @@ History category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

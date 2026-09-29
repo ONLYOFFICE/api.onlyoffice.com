@@ -13,7 +13,7 @@ Imports the new portal users with the first name, last name, and email address.
 
 ### userList
 
-**type:** `string`
+**type**: `string`
 
 List of users
 
@@ -21,7 +21,7 @@ List of users
 
 ### importUsersAsCollaborators
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to import users as guests (true) or not (false)
 

@@ -14,7 +14,7 @@ Changes a portal activation status with a value specified in the request.
 
 ### status
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 New portal status: `Active` (0) or `Suspended` (1).
 
@@ -22,7 +22,7 @@ New portal status: `Active` (0) or `Suspended` (1).
 
 ### portalName
 
-**type:** `string`
+**type**: `string`
 
 Portal name.
 
@@ -43,7 +43,7 @@ The description of the portal with its new status. A failed request returns
 
 ### tenant
 
-**type:** [`Tenant`](../objects/tenant.md)
+**type**: [`Tenant`](../objects/tenant.md)
 
 ## Response example
 

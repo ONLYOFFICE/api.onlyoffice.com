@@ -13,7 +13,7 @@ Deletes a task with the ID specified in the request.
 
 ### todoId
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 
@@ -23,7 +23,7 @@ Task ID
 
 ### fromCaldavServer
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the request is from the CalDav server or not
 

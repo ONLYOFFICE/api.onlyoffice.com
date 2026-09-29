@@ -13,7 +13,7 @@ Creates a person with the parameters (first name, last name, description, etc.) 
 
 ### firstName
 
-**type:** `string`
+**type**: `string`
 
 First name
 
@@ -21,7 +21,7 @@ First name
 
 ### lastName
 
-**type:** `string`
+**type**: `string`
 
 Last name
 
@@ -29,7 +29,7 @@ Last name
 
 ### jobTitle
 
-**type:** `string`
+**type**: `string`
 
 Job title
 
@@ -37,7 +37,7 @@ Job title
 
 ### companyId
 
-**type:** `integer`
+**type**: `integer`
 
 Company ID
 
@@ -45,7 +45,7 @@ Company ID
 
 ### about
 
-**type:** `string`
+**type**: `string`
 
 Person description text
 
@@ -53,7 +53,7 @@ Person description text
 
 ### shareType
 
-**type:** `integer`
+**type**: `integer`
 
 Person privacy: 0 - not shared, 1 - shared for reading/writing, 2 - shared for reading only
 
@@ -61,19 +61,19 @@ Person privacy: 0 - not shared, 1 - shared for reading/writing, 2 - shared for r
 
 ### managerList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of person managers
 
 ### customFieldList
 
-**type:** `object[]`
+**type**: `object[]`
 
 Custom field list
 
 ### photo
 
-**type:** `string[]`
+**type**: `string[]`
 
 Contact photo (upload using multipart/form-data)
 
@@ -105,127 +105,127 @@ Person. A request that is not authenticated returns `401`.
 
 ### FirstName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Tadjeddine"`
 
 ### LastName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Bachir"`
 
 ### Company
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Programmer"`
 
 ### Addresses
 
-**type:** `Address[]`
+**type**: `Address[]`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5916406Z"`
 
 ### About
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"About"`
 
 ### Industry
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Industry"`
 
 ### ContactStatus
 
-**type:** `ContactStatusBaseWrapper`
+**type**: `ContactStatusBaseWrapper`
 
 ### ContactType
 
-**type:** `ContactTypeBaseWrapper`
+**type**: `ContactTypeBaseWrapper`
 
 ### CommonData
 
-**type:** `ContactInfoWrapper[]`
+**type**: `ContactInfoWrapper[]`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### TaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### HaveLateTasks
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SmallFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### MediumFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### DisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Tadjeddine Bachir"`
 
 ### IsCompany
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### ShareType
 
-**type:** `"None" | "ReadWrite" | "Read"`
+**type**: `"None" | "ReadWrite" | "Read"`
 
 [0 - None, 1 - ReadWrite, 2 - Read]
 
@@ -233,23 +233,23 @@ Person. A request that is not authenticated returns `401`.
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

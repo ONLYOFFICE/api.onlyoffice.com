@@ -13,7 +13,7 @@ Changes a photo for the contact with the ID specified in the request.
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,7 +21,7 @@ Contact ID
 
 ### photo
 
-**type:** `string[]`
+**type**: `string[]`
 
 Contact photo (upload using multipart/form-data)
 

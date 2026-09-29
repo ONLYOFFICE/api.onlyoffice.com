@@ -13,7 +13,7 @@ Returns a comment preview with the content specified in the request.
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 
@@ -21,7 +21,7 @@ Comment ID
 
 ### htmltext
 
-**type:** `string`
+**type**: `string`
 
 Comment text in the HTML format
 
@@ -42,81 +42,81 @@ Comment information. A request that is not authenticated returns `401`.
 
 ### CommentID
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"12261949-db62-43c2-b956-91e12c412d5a"`
 
 ### UserID
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"15985c13-ad91-4f2c-9286-cf991448e796"`
 
 ### UserPost
 
-**type:** `string`
+**type**: `string`
 
 ### UserFullName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Administrator"`
 
 ### UserProfileLink
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"/Products/People/Profile.aspx?user=administrator"`
 
 ### UserAvatarPath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"/skins/default/images/default_user_photo_size_82-82.png"`
 
 ### CommentBody
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"das\\u000a"`
 
 ### Inactive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsRead
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsEditPermissions
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsResponsePermissions
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TimeStampStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"15:39 Today"`
 
 ### CommentList
 
-**type:** `object`
+**type**: `object`
 
 ### Attachments
 
-**type:** `Attachment[]`
+**type**: `Attachment[]`
 
 ## Response example
 

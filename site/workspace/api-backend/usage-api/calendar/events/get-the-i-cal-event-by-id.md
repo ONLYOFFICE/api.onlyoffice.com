@@ -13,7 +13,7 @@ Returns the iCal event by its ID from the history.
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 
@@ -25,53 +25,53 @@ Event history. A request that is not authenticated returns `401`.
 
 ### CalendarId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### EventUid
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"uid1@onlyoffice.com"`
 
 ### EventId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### MergedIcs
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"BEGIN:VCALENDAR\n            VERSION:2.0\n            PRODID:onlyoffice.com\n            BEGIN:VEVENT\n            UID:uid1@onlyoffice.com\n            DTSTAMP:19970714T170000Z\n            ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com\n            DTSTART:19970714T170000Z\n            DTEND:19970715T035959Z\n            SUMMARY:Bastille Day Party\n            END:VEVENT\n            END:VCALENDAR"`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanNotify
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Ics
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"some text"`
 
 ### TimeZoneInfo
 
-**type:** `TimeZoneWrapper`
+**type**: `TimeZoneWrapper`
 
 ### CalendarName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Calendar name"`
 

@@ -13,7 +13,7 @@ Updates the order of the task categories with a list specified in the request.
 
 ### titles
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of task category titles
 

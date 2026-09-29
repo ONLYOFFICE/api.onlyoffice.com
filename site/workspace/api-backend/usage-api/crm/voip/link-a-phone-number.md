@@ -13,7 +13,7 @@ Links a new phone number with the ID specified in the request to the VoIP provid
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID
 

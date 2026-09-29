@@ -14,7 +14,7 @@ Checks if the specified name is available to create a portal.
 
 ### portalName
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 Portal name.
 
@@ -29,7 +29,7 @@ a bare error.
 
 ### error
 
-**type:** `string`
+**type**: `string`
 
 Present only when the name cannot be used.
 
@@ -37,13 +37,13 @@ Present only when the name cannot be used.
 
 ### message
 
-**type:** `string`
+**type**: `string`
 
 `portalNameReadyToRegister` when the name is available, otherwise the error description.
 
 ### variants
 
-**type:** `string[]`
+**type**: `string[]`
 
 When `error` is `portalNameExist`, the existing portal names starting with the name from the
 request.

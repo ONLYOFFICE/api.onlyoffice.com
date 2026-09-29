@@ -13,13 +13,13 @@ Sets access rights to the list of opportunities with the IDs specified in the re
 
 ### opportunityid
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of opportunity IDs
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Opportunity privacy: private or not
 
@@ -27,7 +27,7 @@ Opportunity privacy: private or not
 
 ### accessList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users with access rights
 

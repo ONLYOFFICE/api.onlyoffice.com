@@ -13,7 +13,7 @@ Sets access rights to the list of all the cases matching the parameters specifie
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,19 +21,19 @@ Contact ID
 
 ### isClosed
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Case status: closed or not
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Case tags
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Case privacy: private or not
 
@@ -41,7 +41,7 @@ Case privacy: private or not
 
 ### accessList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users with access
 

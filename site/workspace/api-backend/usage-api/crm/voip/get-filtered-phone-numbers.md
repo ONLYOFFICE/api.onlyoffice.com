@@ -13,7 +13,7 @@ Returns all the available phone numbers matching the parameters specified in the
 
 ### numberType
 
-**type:** `integer`
+**type**: `integer`
 
 Number type
 
@@ -21,7 +21,7 @@ Number type
 
 ### isoCountryCode
 
-**type:** `string`
+**type**: `string`
 
 ISO country code
 

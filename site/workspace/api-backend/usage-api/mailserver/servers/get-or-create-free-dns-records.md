@@ -15,29 +15,29 @@ DNS records for the current tenant and user. A request that is not authenticated
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### MxRecord
 
-**type:** `ServerDomainMxRecordData`
+**type**: `ServerDomainMxRecordData`
 
 ### SpfRecord
 
-**type:** `ServerDomainDnsRecordData`
+**type**: `ServerDomainDnsRecordData`
 
 ### DkimRecord
 
-**type:** `ServerDomainDkimRecordData`
+**type**: `ServerDomainDkimRecordData`
 
 ### DomainCheckRecord
 
-**type:** `ServerDomainDnsRecordData`
+**type**: `ServerDomainDnsRecordData`
 
 ### IsVerified
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

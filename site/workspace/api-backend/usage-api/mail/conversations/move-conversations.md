@@ -13,13 +13,13 @@ Moves conversations with the IDs specified in the request to the selected folder
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs from the conversations
 
 ### folder
 
-**type:** `integer`
+**type**: `integer`
 
 Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam
 
@@ -27,7 +27,7 @@ Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam
 
 ### userFolderId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 User folder ID
 

@@ -13,7 +13,7 @@ Creates a company with the parameters specified in the request.
 
 ### companyName
 
-**type:** `string`
+**type**: `string`
 
 Company name
 
@@ -21,7 +21,7 @@ Company name
 
 ### about
 
-**type:** `string`
+**type**: `string`
 
 Company description text
 
@@ -29,13 +29,13 @@ Company description text
 
 ### personList
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of persons linked to the company
 
 ### shareType
 
-**type:** `integer`
+**type**: `integer`
 
 Company privacy: 0 - not shared, 1 - shared for reading/writing, 2 - shared for reading only
 
@@ -43,19 +43,19 @@ Company privacy: 0 - not shared, 1 - shared for reading/writing, 2 - shared for 
 
 ### managerList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of company managers
 
 ### customFieldList
 
-**type:** `object[]`
+**type**: `object[]`
 
 Custom field list
 
 ### photo
 
-**type:** `string[]`
+**type**: `string[]`
 
 Contact photo (upload using multipart/form-data)
 
@@ -87,121 +87,121 @@ Company. A request that is not authenticated returns `401`.
 
 ### CompanyName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Food and Culture Project"`
 
 ### Persons
 
-**type:** `ContactBaseWrapper[]`
+**type**: `ContactBaseWrapper[]`
 
 ### PersonsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `33`
 
 ### Addresses
 
-**type:** `Address[]`
+**type**: `Address[]`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5916406Z"`
 
 ### About
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"About"`
 
 ### Industry
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Industry"`
 
 ### ContactStatus
 
-**type:** `ContactStatusBaseWrapper`
+**type**: `ContactStatusBaseWrapper`
 
 ### ContactType
 
-**type:** `ContactTypeBaseWrapper`
+**type**: `ContactTypeBaseWrapper`
 
 ### CommonData
 
-**type:** `ContactInfoWrapper[]`
+**type**: `ContactInfoWrapper[]`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### Tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### TaskCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### HaveLateTasks
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SmallFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### MediumFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### DisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Tadjeddine Bachir"`
 
 ### IsCompany
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### ShareType
 
-**type:** `"None" | "ReadWrite" | "Read"`
+**type**: `"None" | "ReadWrite" | "Read"`
 
 [0 - None, 1 - ReadWrite, 2 - Read]
 
@@ -209,23 +209,23 @@ Company. A request that is not authenticated returns `401`.
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

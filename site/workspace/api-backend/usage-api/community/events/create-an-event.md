@@ -13,7 +13,7 @@ Creates a new event with the parameters (title, content, type) specified in the 
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Event title
 
@@ -21,7 +21,7 @@ Event title
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Event content
 
@@ -29,7 +29,7 @@ Event content
 
 ### type
 
-**type:** `integer`
+**type**: `integer`
 
 Event type
 
@@ -51,41 +51,41 @@ Newly created event. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Text of feed"`
 
 ### Poll
 
-**type:** `PollWrapper`
+**type**: `PollWrapper`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Manager"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.2729203Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.2729203Z"`
 
 ### Type
 
-**type:** `"None" | "News" | "Order" | "Advert" | "AllNews" | "Poll" | "All"`
+**type**: `"None" | "News" | "Order" | "Advert" | "AllNews" | "Poll" | "All"`
 
 [0 - None, 1 - News, 2 - Order, 4 - Advert, 7 - AllNews, 8 - Poll, 15 - All]
 
@@ -93,7 +93,7 @@ Newly created event. A request that is not authenticated returns `401`.
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

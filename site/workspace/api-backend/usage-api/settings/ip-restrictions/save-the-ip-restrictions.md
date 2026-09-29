@@ -13,7 +13,7 @@ Saves the new portal IP restrictions specified in the request.
 
 ### ips
 
-**type:** `IPRestrictionBase[]`
+**type**: `IPRestrictionBase[]`
 
 New IP restrictions
 

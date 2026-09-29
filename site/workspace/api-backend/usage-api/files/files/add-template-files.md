@@ -13,7 +13,7 @@ Adds files with the IDs specified in the request to the template list.
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

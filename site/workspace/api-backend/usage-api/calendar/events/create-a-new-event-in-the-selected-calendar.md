@@ -13,7 +13,7 @@ Creates a new event in the selected calendar with the parameters specified in th
 
 ### calendarId
 
-**type:** `integer`
+**type**: `integer`
 
 Calendar ID
 
@@ -23,7 +23,7 @@ Calendar ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Event name
 
@@ -31,7 +31,7 @@ Event name
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Event description
 
@@ -39,7 +39,7 @@ Event description
 
 ### startDate
 
-**type:** `string`
+**type**: `string`
 
 Event start date
 
@@ -47,7 +47,7 @@ Event start date
 
 ### endDate
 
-**type:** `string`
+**type**: `string`
 
 Event end date
 
@@ -55,7 +55,7 @@ Event end date
 
 ### repeatType
 
-**type:** `string`
+**type**: `string`
 
 Event repeat type (RRULE string in the iCal format)
 
@@ -63,7 +63,7 @@ Event repeat type (RRULE string in the iCal format)
 
 ### alertType
 
-**type:** `integer`
+**type**: `integer`
 
 Event notification type
 
@@ -71,7 +71,7 @@ Event notification type
 
 ### isAllDayLong
 
-**type:** `boolean`
+**type**: `boolean`
 
 Event duration type: all day long or not
 
@@ -79,7 +79,7 @@ Event duration type: all day long or not
 
 ### sharingOptions
 
-**type:** `SharingParam[]`
+**type**: `SharingParam[]`
 
 Event sharing access parameters
 

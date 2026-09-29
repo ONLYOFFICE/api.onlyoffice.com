@@ -13,7 +13,7 @@ Reassigns drafts/templates to the selected email.
 
 ### folder
 
-**type:** `integer`
+**type**: `integer`
 
 Folder ID
 
@@ -21,7 +21,7 @@ Folder ID
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Email to which messages will be reassigned
 

@@ -15,7 +15,7 @@ Operation result. A request that is not authenticated returns `401`.
 
 ### DisableQuota
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

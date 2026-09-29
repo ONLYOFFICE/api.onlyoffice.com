@@ -13,7 +13,7 @@ Creates a new template with the title and description specified in the request.
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Template title
 
@@ -21,7 +21,7 @@ Template title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 JSON template structure in the following format: `{"tasks": [{"title": "Task without milestone"}], "milestones": [{"title": "milestone title", "duration": 0.5, "tasks": [{"title": "milestone task"}]}]}`
 
@@ -42,35 +42,35 @@ Newly created template. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

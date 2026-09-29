@@ -13,7 +13,7 @@ Returns a list of all the user mailboxes, aliases, and groups.
 
 ### username
 
-**type:** `string`
+**type**: `string`
 
 User name
 

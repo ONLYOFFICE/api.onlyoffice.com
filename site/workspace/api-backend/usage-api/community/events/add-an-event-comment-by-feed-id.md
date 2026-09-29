@@ -15,7 +15,7 @@ Adds a comment to the event with the ID specified in the request. The parent eve
 
 ### feedid
 
-**type:** `integer`
+**type**: `integer`
 
 Feed ID
 
@@ -25,7 +25,7 @@ Feed ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Comment text
 
@@ -33,7 +33,7 @@ Comment text
 
 ### parentId
 
-**type:** `integer`
+**type**: `integer`
 
 Comment parent ID
 
@@ -54,37 +54,37 @@ Comment. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"comment text"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.2899133Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.2899133Z"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### ParentId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

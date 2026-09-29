@@ -19,7 +19,7 @@ Uploads a file specified in the request to the selected folder by single file up
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -29,43 +29,43 @@ Folder ID
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 Request input stream
 
 ### contentType
 
-**type:** `object`
+**type**: `object`
 
 Content-Type header
 
 ### contentDisposition
 
-**type:** `object`
+**type**: `object`
 
 Content-Disposition header
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of files when specified as multipart/form-data
 
 ### createNewIfExist
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to create a new file if it already exists or not
 
 ### storeOriginalFileFlag
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies whether to upload documents in the original formats as well or not
 
 ### keepConvertStatus
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to keep the file converting status or not
 

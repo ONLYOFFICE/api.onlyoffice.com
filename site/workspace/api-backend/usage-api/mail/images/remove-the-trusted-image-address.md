@@ -13,7 +13,7 @@ Removes an image address specified in the request from the list of trusted image
 
 ### address
 
-**type:** `string`
+**type**: `string`
 
 Image address
 

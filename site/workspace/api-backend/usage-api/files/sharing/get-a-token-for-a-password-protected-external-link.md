@@ -15,7 +15,7 @@ Returns a token after verifying the password or password hash for a password-pro
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### linkId
 
-**type:** `string`
+**type**: `string`
 
 Link ID
 
@@ -33,7 +33,7 @@ Link ID
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Password
 
@@ -41,7 +41,7 @@ Password
 
 ### passwordHash
 
-**type:** `string`
+**type**: `string`
 
 Password hash
 
@@ -62,37 +62,37 @@ Token for a password-protected external link. A request that is not authenticate
 
 ### Token
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"abcde12345"`
 
 ### Expires
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-11-24T05:36:20.4206897Z"`
 
 ### Sms
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### PhoneNoise
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"+1 555 0100"`
 
 ### Tfa
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TfaKey
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"123dwa"`
 

@@ -13,7 +13,7 @@ Deletes a project calendar with the ID specified in the request.
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### team
 
-**type:** `string[]`
+**type**: `string[]`
 
 Project team
 

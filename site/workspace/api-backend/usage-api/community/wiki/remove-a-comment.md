@@ -13,7 +13,7 @@ Removes a comment with the ID specified in the request.
 
 ### commentid
 
-**type:** `string`
+**type**: `string`
 
 Comment ID
 

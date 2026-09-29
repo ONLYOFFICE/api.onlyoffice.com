@@ -13,7 +13,7 @@ Returns a list of all the projects matching the query specified in the request.
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

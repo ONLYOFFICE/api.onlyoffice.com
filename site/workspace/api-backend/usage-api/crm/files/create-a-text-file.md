@@ -13,7 +13,7 @@ Creates a text (.txt) file in the selected folder with the title and contents sp
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Related entity type
 
@@ -21,7 +21,7 @@ Related entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Related entity ID
 
@@ -29,7 +29,7 @@ Related entity ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 File title
 
@@ -37,7 +37,7 @@ File title
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 File contents
 
@@ -60,23 +60,23 @@ File information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

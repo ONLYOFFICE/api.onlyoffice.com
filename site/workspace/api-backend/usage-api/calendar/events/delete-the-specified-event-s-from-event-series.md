@@ -13,7 +13,7 @@ Deletes the specified event(s) from the series of repeating events.
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 
@@ -23,7 +23,7 @@ Event ID
 
 ### date
 
-**type:** `string`
+**type**: `string`
 
 Date to be deleted from the repeating event
 
@@ -31,7 +31,7 @@ Date to be deleted from the repeating event
 
 ### type
 
-**type:** `integer`
+**type**: `integer`
 
 The event deletion type: 0 - the single event, 1 - all the following events, 2 - all the event series.
 
@@ -39,7 +39,7 @@ The event deletion type: 0 - the single event, 1 - all the following events, 2 -
 
 ### fromCaldavServer
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the request is from the CalDav server or not
 
@@ -47,7 +47,7 @@ Defines if the request is from the CalDav server or not
 
 ### uri
 
-**type:** `string`
+**type**: `string`
 
 Current URI
 

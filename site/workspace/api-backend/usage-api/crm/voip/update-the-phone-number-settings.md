@@ -13,7 +13,7 @@ Updates the settings of the phone number with the ID specified in the request.
 
 ### numberId
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID
 
@@ -21,7 +21,7 @@ Phone number ID
 
 ### greeting
 
-**type:** `string`
+**type**: `string`
 
 New first greeting that callers hear when they call to this phone number
 
@@ -29,7 +29,7 @@ New first greeting that callers hear when they call to this phone number
 
 ### holdUp
 
-**type:** `string`
+**type**: `string`
 
 New music on hold that callers hear when they are placed in the waiting queue
 
@@ -37,7 +37,7 @@ New music on hold that callers hear when they are placed in the waiting queue
 
 ### wait
 
-**type:** `string`
+**type**: `string`
 
 New URL to which the customer is redirected to the voice mail service when the waiting timeout is exceeded
 
@@ -45,7 +45,7 @@ New URL to which the customer is redirected to the voice mail service when the w
 
 ### voiceMail
 
-**type:** `string`
+**type**: `string`
 
 New message that callers hear when the waiting queue length or max waiting time is exceeded and the callers are able to leave a voicemail message
 
@@ -53,25 +53,25 @@ New message that callers hear when the waiting queue length or max waiting time 
 
 ### workingHours
 
-**type:** `object`
+**type**: `object`
 
 New phone number working hours
 
 ### allowOutgoingCalls
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if a phone number allows making the outgoing calls or not
 
 ### record
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if the phone number allows recording the calls or not
 
 ### alias
 
-**type:** `string`
+**type**: `string`
 
 New phone number alias
 

@@ -13,7 +13,7 @@ Returns a list of all the opportunities for the contact with the ID specified in
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

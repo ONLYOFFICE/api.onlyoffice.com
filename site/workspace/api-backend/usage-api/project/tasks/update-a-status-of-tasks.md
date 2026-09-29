@@ -13,13 +13,13 @@ Updates a status of the tasks with the IDs specified in the request.
 
 ### taskids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Task IDs
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 New task status
 
@@ -27,7 +27,7 @@ New task status
 
 ### statusId
 
-**type:** `integer`
+**type**: `integer`
 
 New custom status ID
 

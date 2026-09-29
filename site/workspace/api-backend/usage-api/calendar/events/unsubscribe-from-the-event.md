@@ -13,7 +13,7 @@ Unsubscribes the current user from the event with the ID specified in the reques
 
 ### eventId
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 

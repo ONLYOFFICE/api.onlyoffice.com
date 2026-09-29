@@ -13,7 +13,7 @@ Returns the space usage statistics of the module with the ID specified in the re
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Module ID
 

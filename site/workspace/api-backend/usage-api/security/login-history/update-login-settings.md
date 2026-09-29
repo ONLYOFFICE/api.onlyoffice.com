@@ -13,7 +13,7 @@ Updates the login settings with the parameters specified in the request.
 
 ### attemptsCount
 
-**type:** `integer`
+**type**: `integer`
 
 Maximum number of the user attempts to log in
 
@@ -21,7 +21,7 @@ Maximum number of the user attempts to log in
 
 ### blockTime
 
-**type:** `integer`
+**type**: `integer`
 
 The time for which the user will be blocked after unsuccessful login attempts
 
@@ -29,7 +29,7 @@ The time for which the user will be blocked after unsuccessful login attempts
 
 ### checkPeriod
 
-**type:** `integer`
+**type**: `integer`
 
 The time to wait for a response from the server
 
@@ -51,19 +51,19 @@ Updated login settings. A request that is not authenticated returns `401`.
 
 ### AttemptCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### BlockTime
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### CheckPeriod
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

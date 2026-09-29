@@ -13,25 +13,25 @@ Returns a list of all the contacts in the CRM module matching the parameters spe
 
 ### tags
 
-**type:** `string[]`
+**type**: `string[]`
 
 Contact tag
 
 ### contactStage
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact stage ID (warmth)
 
 ### contactType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact type ID
 
 ### contactListView
 
-**type:** `integer`
+**type**: `integer`
 
 Contact list view
 
@@ -39,19 +39,19 @@ Contact list view
 
 ### responsibleid
 
-**type:** `string[]`
+**type**: `string[]`
 
 Responsible ID
 
 ### isShared
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Contact privacy: private or not
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Start date
 
@@ -59,7 +59,7 @@ Start date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 End date
 

@@ -13,7 +13,7 @@ Adds an attachment to the draft with the ID specified in the request.
 
 ### id_message
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -21,7 +21,7 @@ Message ID
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 File name
 
@@ -29,13 +29,13 @@ File name
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 File stream
 
 ### content_type
 
-**type:** `string`
+**type**: `string`
 
 File content type
 
@@ -58,67 +58,67 @@ Mail attachment. A request that is not authenticated returns `401`.
 
 ### fileId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### fileName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"fileName"`
 
 ### size
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### contentType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"contentType"`
 
 ### needSaveToTemp
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### contentId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"contentId"`
 
 ### fileNumber
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `333`
 
 ### storedName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"storedName"`
 
 ### streamId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"streamId"`
 
 ### attachedAsLink
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### tempStoredUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"tempStoredUrl"`
 

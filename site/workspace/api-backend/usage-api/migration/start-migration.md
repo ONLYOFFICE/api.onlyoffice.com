@@ -13,7 +13,7 @@ Starts the migration process specifying the migration information to be imported
 
 ### info
 
-**type:** `object`
+**type**: `object`
 
 Migration information
 

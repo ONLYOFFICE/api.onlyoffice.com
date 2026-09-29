@@ -13,7 +13,7 @@ Creates a new task in the selected calendar with the parameters specified in the
 
 ### ics
 
-**type:** `string`
+**type**: `string`
 
 Task in the iCal format
 
@@ -21,7 +21,7 @@ Task in the iCal format
 
 ### todoUid
 
-**type:** `string`
+**type**: `string`
 
 Task UID
 

@@ -13,7 +13,7 @@ Returns a list of all the current and excluded project team members.
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

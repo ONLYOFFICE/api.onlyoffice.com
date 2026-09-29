@@ -13,7 +13,7 @@ Redirects a phone call with the ID specified in the request to the specified pho
 
 ### callId
 
-**type:** `string`
+**type**: `string`
 
 Phone call ID
 
@@ -21,7 +21,7 @@ Phone call ID
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 Phone number to redirect the phone call
 
@@ -42,65 +42,65 @@ Phone call information. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Id"`
 
 ### From
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"From"`
 
 ### To
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"To"`
 
 ### Status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### AnsweredBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### DialDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-23T04:11:57.1649297Z"`
 
 ### DialDuration
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Cost
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `5.3`
 
 ### Contact
 
-**type:** `ContactWrapper`
+**type**: `ContactWrapper`
 
 ### Calls
 
-**type:** `object`
+**type**: `object`
 
 ### RecordUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"RecordUrl"`
 
 ### RecordDuration
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `2`
 

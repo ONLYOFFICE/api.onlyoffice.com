@@ -13,7 +13,7 @@ Checks the document service location.
 
 ### docServiceUrl
 
-**type:** `string`
+**type**: `string`
 
 The address of Document Server
 
@@ -21,7 +21,7 @@ The address of Document Server
 
 ### docServiceUrlInternal
 
-**type:** `string`
+**type**: `string`
 
 The address of Document Server in the local private network
 
@@ -29,7 +29,7 @@ The address of Document Server in the local private network
 
 ### docServiceUrlPortal
 
-**type:** `string`
+**type**: `string`
 
 The address of Community Server
 

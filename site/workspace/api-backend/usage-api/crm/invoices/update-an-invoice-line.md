@@ -13,7 +13,7 @@ Updates the selected invoice line with the parameters (invoice ID, invoice item 
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice line ID
 
@@ -21,7 +21,7 @@ Invoice line ID
 
 ### invoiceId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice ID
 
@@ -29,7 +29,7 @@ Invoice ID
 
 ### invoiceItemId
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice item ID
 
@@ -37,7 +37,7 @@ Invoice item ID
 
 ### invoiceTax1Id
 
-**type:** `integer`
+**type**: `integer`
 
 New first invoice tax ID
 
@@ -45,7 +45,7 @@ New first invoice tax ID
 
 ### invoiceTax2Id
 
-**type:** `integer`
+**type**: `integer`
 
 New second invoice tax ID
 
@@ -53,7 +53,7 @@ New second invoice tax ID
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 New sort order
 
@@ -61,7 +61,7 @@ New sort order
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New description
 
@@ -69,7 +69,7 @@ New description
 
 ### quantity
 
-**type:** `number`
+**type**: `number`
 
 New quantity
 
@@ -77,7 +77,7 @@ New quantity
 
 ### price
 
-**type:** `number`
+**type**: `number`
 
 New price
 
@@ -85,7 +85,7 @@ New price
 
 ### discount
 
-**type:** `number`
+**type**: `number`
 
 New discount
 
@@ -114,61 +114,61 @@ Updated invoice line. A request that is not authenticated returns `401`.
 
 ### InvoiceID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceItemID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceTax1ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### InvoiceTax2ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Quantity
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### Price
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### Discount
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

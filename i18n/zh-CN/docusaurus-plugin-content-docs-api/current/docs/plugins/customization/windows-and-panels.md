@@ -79,7 +79,7 @@ sidebar_position: -3
 | ----------- | --------- | ------------- |
 | variation | `variation` | 模态窗口 / 面板设置。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -96,7 +96,7 @@ newWindow.show(variation)
 | frameId     | `string`    | 框架 ID。        |
 | variation   | `variation` | 模态窗口 / 面板设置。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -132,7 +132,7 @@ window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B
 | --------- | ------ | ------ |
 | frameId   | `string` | 框架 ID。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -154,7 +154,7 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 | x         | `number` | X 坐标。  |
 | y         | `number` | Y 坐标。  |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -174,7 +174,7 @@ window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4
 | x         | `number` | X 坐标。  |
 | y         | `number` | Y 坐标。  |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -195,7 +195,7 @@ window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-484
 | minSize   | `number` | 窗口框架最小大小 |
 | maxSize   | `number` | 窗口框架最大大小 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -218,7 +218,7 @@ window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 | maxW     | `number` | 窗口最大宽度 |
 | maxH     | `number` | 窗口最大高度 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -239,7 +239,7 @@ window.Asc.plugin.init = () => {
 | messageName | `string` | 消息名称               |
 | data        | `string` | 消息数据（该数据将发送到事件回调中） |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -258,7 +258,7 @@ newWindow.command("messageName", "data")
 | name   | `string` | 事件名称 |
 | data   | `object` | 事件数据 |
 
-**返回值**: `boolean`
+**返回值**：`boolean`
 
 **示例**:
 
@@ -278,7 +278,7 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
 | name     | `string` | 事件名称    |
 | data     | `object` | 事件数据    |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -297,7 +297,7 @@ window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 | id     | `string`   | 事件名称   |
 | action | `function` | 事件监听函数 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 
@@ -317,7 +317,7 @@ Asc.plugin.attachEditorEvent("messageName", (message) => {
 | --------- | ------ | ------- |
 | frameId   | `string` | 窗口框架 ID |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
 **示例**:
 

@@ -13,7 +13,7 @@ Deletes an event with the ID specified in the request and all the files associat
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Event ID
 
@@ -33,45 +33,45 @@ Event. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-13T17:13:31.5902727Z"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Agreed to meet at lunch and discuss the client commercial offer"`
 
 ### Category
 
-**type:** `HistoryCategoryBaseWrapper`
+**type**: `HistoryCategoryBaseWrapper`
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

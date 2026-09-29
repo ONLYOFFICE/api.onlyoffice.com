@@ -13,43 +13,43 @@ Returns the messages with the parameters specified in the request.
 
 ### folder
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Folder ID
 
 ### unread
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Message status: unread (true), read (false), or all (null) messages
 
 ### attachments
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages
 
 ### period_from
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Start search period date
 
 ### period_to
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 End search period date
 
 ### important
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if only important messages will be displayed or not
 
 ### from_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which a letter was received
 
@@ -57,7 +57,7 @@ Mail address from which a letter was received
 
 ### to_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address to which a letter was sent
 
@@ -65,19 +65,19 @@ Mail address to which a letter was sent
 
 ### mailbox_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Recipient mailbox ID
 
 ### tags
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 IDs of tags linked to the target messages
 
 ### search
 
-**type:** `string`
+**type**: `string`
 
 Text to search in the message bodies and subjects
 
@@ -85,31 +85,31 @@ Text to search in the message bodies and subjects
 
 ### page
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Page number
 
 ### with_calendar
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if the messages have a calendar or not
 
 ### page_size
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Number of messages on the page
 
 ### user_folder_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 User folder ID
 
 ### sortorder
 
-**type:** `string`
+**type**: `string`
 
 Sort order by date: "ascending" or "descending"
 

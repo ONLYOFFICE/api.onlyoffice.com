@@ -13,7 +13,7 @@ Returns a list of all the projects linked with a contact with the ID specified i
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 

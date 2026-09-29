@@ -13,7 +13,7 @@ Updates a storage with the parameters specified in the request.
 
 ### module
 
-**type:** `string`
+**type**: `string`
 
 Storage name
 
@@ -21,7 +21,7 @@ Storage name
 
 ### props
 
-**type:** `object[]`
+**type**: `object[]`
 
 New storage properties
 
@@ -42,13 +42,13 @@ Updated storage. A request that is not authenticated returns `401`.
 
 ### Module
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Module"`
 
 ### Props
 
-**type:** `object`
+**type**: `object`
 
 **Example**: `"Props"`
 

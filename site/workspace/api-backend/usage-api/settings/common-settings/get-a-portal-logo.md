@@ -13,7 +13,7 @@ Returns the portal logo image URL.
 
 ### dark
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the portal logo will be used for the dark theme or not
 

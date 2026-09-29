@@ -13,7 +13,7 @@ Deletes an invoice line with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice line ID
 

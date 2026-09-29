@@ -13,13 +13,13 @@ Returns a list of invoices matching the parameters specified in the request.
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Invoice status
 
 ### issueDateFrom
 
-**type:** `string`
+**type**: `string`
 
 Invoice start issue date
 
@@ -27,7 +27,7 @@ Invoice start issue date
 
 ### issueDateTo
 
-**type:** `string`
+**type**: `string`
 
 Invoice end issue date
 
@@ -35,7 +35,7 @@ Invoice end issue date
 
 ### dueDateFrom
 
-**type:** `string`
+**type**: `string`
 
 Invoice start due date
 
@@ -43,7 +43,7 @@ Invoice start due date
 
 ### dueDateTo
 
-**type:** `string`
+**type**: `string`
 
 Invoice end due date
 
@@ -51,7 +51,7 @@ Invoice end due date
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Invoice entity type
 
@@ -59,7 +59,7 @@ Invoice entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice entity ID
 
@@ -67,7 +67,7 @@ Invoice entity ID
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 Invoice currency (abbreviation)
 

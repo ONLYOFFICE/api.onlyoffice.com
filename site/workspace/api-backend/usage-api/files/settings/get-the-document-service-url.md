@@ -13,7 +13,7 @@ Returns the address of the connected editors.
 
 ### version
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies the editor version or not
 

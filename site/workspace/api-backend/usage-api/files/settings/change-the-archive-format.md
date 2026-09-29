@@ -13,7 +13,7 @@ Changes the format of the downloaded archive from .zip to .tar.gz.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Turns the parameter on or off
 

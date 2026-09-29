@@ -13,7 +13,7 @@ Returns a list of events matching the search query specified in the request with
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

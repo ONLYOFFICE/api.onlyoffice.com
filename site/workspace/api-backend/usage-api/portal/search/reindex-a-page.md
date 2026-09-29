@@ -13,7 +13,7 @@ Reindexes a page during the search process.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Index name
 

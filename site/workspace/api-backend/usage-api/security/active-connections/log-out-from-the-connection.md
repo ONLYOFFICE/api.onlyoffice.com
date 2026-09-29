@@ -13,7 +13,7 @@ Logs out from the connection with the ID specified in the request.
 
 ### loginEventId
 
-**type:** `integer`
+**type**: `integer`
 
 Login event ID
 

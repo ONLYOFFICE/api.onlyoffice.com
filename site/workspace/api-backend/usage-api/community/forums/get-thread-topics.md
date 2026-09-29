@@ -13,7 +13,7 @@ Returns a list of all the thread topics with the topic titles, dates of creation
 
 ### threadid
 
-**type:** `integer`
+**type**: `integer`
 
 Thread ID
 
@@ -25,53 +25,53 @@ List of thread topics. A request that is not authenticated returns `401`.
 
 ### Topics
 
-**type:** `ForumTopicWrapper[]`
+**type**: `ForumTopicWrapper[]`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"The Thread"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample thread"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3249197Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-07T13:56:02.3249197Z"`
 
 ### RecentTopicId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### RecentTopicTitle
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample topic"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

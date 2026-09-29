@@ -13,7 +13,7 @@ Unlinks the current two-factor authentication application from the user account 
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

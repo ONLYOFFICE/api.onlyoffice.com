@@ -13,7 +13,7 @@ Returns a list of all the events matching the parameters specified in the reques
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Related entity type
 
@@ -21,7 +21,7 @@ Related entity type
 
 ### entityId
 
-**type:** `integer`
+**type**: `integer`
 
 Related entity ID
 
@@ -29,7 +29,7 @@ Related entity ID
 
 ### categoryId
 
-**type:** `integer`
+**type**: `integer`
 
 Event category ID
 
@@ -37,7 +37,7 @@ Event category ID
 
 ### createBy
 
-**type:** `string`
+**type**: `string`
 
 Event author
 
@@ -45,7 +45,7 @@ Event author
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Earliest event due date
 
@@ -53,7 +53,7 @@ Earliest event due date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 Latest event due date
 

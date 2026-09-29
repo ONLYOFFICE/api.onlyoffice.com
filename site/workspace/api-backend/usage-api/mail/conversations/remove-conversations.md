@@ -13,7 +13,7 @@ Removes conversations with the IDs specified in the request from the folders.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of conversation IDs
 

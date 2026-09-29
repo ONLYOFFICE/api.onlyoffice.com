@@ -13,7 +13,7 @@ Returns a list of all the tasks from a milestone with the ID specified in the re
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Milestone ID
 

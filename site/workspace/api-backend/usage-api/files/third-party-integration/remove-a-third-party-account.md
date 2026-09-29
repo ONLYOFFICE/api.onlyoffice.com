@@ -13,7 +13,7 @@ Removes the third-party storage service account with the ID specified in the req
 
 ### providerId
 
-**type:** `integer`
+**type**: `integer`
 
 Provider ID. It is a part of the folder ID. Example: folder ID is "sbox-123", then provider ID is "123".
 

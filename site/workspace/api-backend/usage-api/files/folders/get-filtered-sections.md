@@ -13,7 +13,7 @@ Returns all the sections matching the parameters specified in the request.
 
 ### userIdOrGroupId
 
-**type:** `string`
+**type**: `string`
 
 User or group ID
 
@@ -21,7 +21,7 @@ User or group ID
 
 ### filterType
 
-**type:** `integer`
+**type**: `integer`
 
 Filter type
 
@@ -29,7 +29,7 @@ Filter type
 
 ### searchInContent
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to search within the section contents or not
 
@@ -37,7 +37,7 @@ Specifies whether to search within the section contents or not
 
 ### extension
 
-**type:** `string`
+**type**: `string`
 
 File extension by which files will be searched for if the FilterType.ByExtension parameter is passed
 
@@ -45,7 +45,7 @@ File extension by which files will be searched for if the FilterType.ByExtension
 
 ### withSubfolders
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return sections with or without subfolders
 
@@ -53,7 +53,7 @@ Specifies whether to return sections with or without subfolders
 
 ### withoutTrash
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return sections with or without trash folder
 
@@ -61,7 +61,7 @@ Specifies whether to return sections with or without trash folder
 
 ### withoutAdditionalFolder
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to return sections with or without additional folders
 

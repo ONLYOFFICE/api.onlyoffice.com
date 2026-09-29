@@ -13,7 +13,7 @@ Adds a bookmark with the title, description and tags specified in the request.
 
 ### url
 
-**type:** `string`
+**type**: `string`
 
 Absolute URL to the bookmark page
 
@@ -21,7 +21,7 @@ Absolute URL to the bookmark page
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Bookmark title
 
@@ -29,7 +29,7 @@ Bookmark title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Bookmark description
 
@@ -37,7 +37,7 @@ Bookmark description
 
 ### tags
 
-**type:** `string`
+**type**: `string`
 
 Bookmark tags separated with semicolon
 
@@ -60,49 +60,49 @@ Newly added bookmark. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `11`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Google inc."`
 
 ### Url
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"http://www.google.com"`
 
 ### Thumbnail
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Url to thumbnail"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8181893Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.8181893Z"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Google"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

@@ -13,7 +13,7 @@ Returns a summary table with the rates for the currency specified in the request
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 Currency (abbreviation)
 

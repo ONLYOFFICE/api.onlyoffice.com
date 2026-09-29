@@ -13,7 +13,7 @@ Updates a phone number operator with the parameters specified in the request.
 
 ### operatorId
 
-**type:** `string`
+**type**: `string`
 
 Phone number operator ID
 
@@ -23,31 +23,31 @@ Phone number operator ID
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 New operator status
 
 ### allowOutgoingCalls
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if an operator allows making the outgoing calls or not
 
 ### record
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if an operator allows recording calls or not
 
 ### answerType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 New operator answer type
 
 ### redirectToNumber
 
-**type:** `string`
+**type**: `string`
 
 New redirect phone number
 

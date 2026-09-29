@@ -13,7 +13,7 @@ Deletes a tag with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Tag ID
 

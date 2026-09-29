@@ -13,7 +13,7 @@ Creates a new custom field with the parameters (entity type, field title, type, 
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### label
 
-**type:** `string`
+**type**: `string`
 
 Field title
 
@@ -29,7 +29,7 @@ Field title
 
 ### fieldType
 
-**type:** `integer`
+**type**: `integer`
 
 Custom field type
 
@@ -37,7 +37,7 @@ Custom field type
 
 ### position
 
-**type:** `integer`
+**type**: `integer`
 
 Field position
 
@@ -45,7 +45,7 @@ Field position
 
 ### mask
 
-**type:** `string`
+**type**: `string`
 
 Mask
 
@@ -69,31 +69,31 @@ Custom field. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### EntityId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `14523423`
 
 ### Label
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Birthdate"`
 
 ### FieldValue
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5916406Z"`
 
 ### FieldType
 
-**type:** `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
+**type**: `"TextField" | "TextArea" | "SelectBox" | "CheckBox" | "Heading" | "Date"`
 
 [0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]
 
@@ -101,19 +101,19 @@ Custom field. A request that is not authenticated returns `401`.
 
 ### Position
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Mask
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

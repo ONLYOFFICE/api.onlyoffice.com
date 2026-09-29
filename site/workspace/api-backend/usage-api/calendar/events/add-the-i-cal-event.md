@@ -13,7 +13,7 @@ Adds the iCal event to the calendar specified in the request.
 
 ### calendarGuid
 
-**type:** `string`
+**type**: `string`
 
 Calendar GUID
 
@@ -21,7 +21,7 @@ Calendar GUID
 
 ### eventGuid
 
-**type:** `string`
+**type**: `string`
 
 Event GUID
 
@@ -29,7 +29,7 @@ Event GUID
 
 ### ics
 
-**type:** `string`
+**type**: `string`
 
 Event in the iCal format
 

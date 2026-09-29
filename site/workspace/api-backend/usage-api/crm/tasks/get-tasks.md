@@ -13,7 +13,7 @@ Returns a list of tasks matching the parameters specified in the request.
 
 ### responsibleid
 
-**type:** `string`
+**type**: `string`
 
 Task responsible ID
 
@@ -21,7 +21,7 @@ Task responsible ID
 
 ### categoryid
 
-**type:** `integer`
+**type**: `integer`
 
 Task category ID
 
@@ -29,13 +29,13 @@ Task category ID
 
 ### isClosed
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Task status
 
 ### fromDate
 
-**type:** `string`
+**type**: `string`
 
 Earliest task due date
 
@@ -43,7 +43,7 @@ Earliest task due date
 
 ### toDate
 
-**type:** `string`
+**type**: `string`
 
 Latest task due date
 
@@ -51,7 +51,7 @@ Latest task due date
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Related entity type
 
@@ -59,7 +59,7 @@ Related entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Related entity ID
 

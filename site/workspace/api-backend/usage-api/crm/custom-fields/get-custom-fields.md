@@ -13,7 +13,7 @@ Returns a list of descriptions for all the existing custom fields.
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 

@@ -13,7 +13,7 @@ Updates the selected history category with the parameters (title, description, e
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 History category ID
 
@@ -21,7 +21,7 @@ History category ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New history category title
 
@@ -29,7 +29,7 @@ New history category title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New history category description
 
@@ -37,7 +37,7 @@ New history category description
 
 ### imageName
 
-**type:** `string`
+**type**: `string`
 
 New image name of the history category
 
@@ -45,7 +45,7 @@ New image name of the history category
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 New history category order
 
@@ -69,43 +69,43 @@ Updated history category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

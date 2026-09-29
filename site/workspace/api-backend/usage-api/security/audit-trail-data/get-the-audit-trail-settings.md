@@ -15,13 +15,13 @@ Audit settings. A request that is not authenticated returns `401`.
 
 ### LoginHistoryLifeTime
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AuditTrailLifeTime
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

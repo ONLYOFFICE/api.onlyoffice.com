@@ -13,7 +13,7 @@ Checks the report data for the parameters specified in the request.
 
 ### type
 
-**type:** `integer`
+**type**: `integer`
 
 Report type
 
@@ -21,7 +21,7 @@ Report type
 
 ### timePeriod
 
-**type:** `integer`
+**type**: `integer`
 
 Report time period
 
@@ -29,7 +29,7 @@ Report time period
 
 ### managers
 
-**type:** `string[]`
+**type**: `string[]`
 
 Managers
 

@@ -13,7 +13,7 @@ Authenticates the current user by SMS, authenticator app, or without two-factor 
 
 ### userName
 
-**type:** `string`
+**type**: `string`
 
 User name or email
 
@@ -21,7 +21,7 @@ User name or email
 
 ### password
 
-**type:** `string`
+**type**: `string`
 
 Password
 
@@ -29,7 +29,7 @@ Password
 
 ### provider
 
-**type:** `string`
+**type**: `string`
 
 Social media provider type
 
@@ -37,7 +37,7 @@ Social media provider type
 
 ### accessToken
 
-**type:** `string`
+**type**: `string`
 
 Provider token
 
@@ -45,7 +45,7 @@ Provider token
 
 ### codeOAuth
 
-**type:** `string`
+**type**: `string`
 
 Code for getting a token
 
@@ -69,37 +69,37 @@ Authentication token to use in the 'Authorization' header when calling API metho
 
 ### Token
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"abcde12345"`
 
 ### Expires
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-11-24T05:36:20.4206897Z"`
 
 ### Sms
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### PhoneNoise
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"+1 555 0100"`
 
 ### Tfa
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TfaKey
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"123dwa"`
 

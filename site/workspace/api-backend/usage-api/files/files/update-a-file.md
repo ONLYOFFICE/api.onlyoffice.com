@@ -13,7 +13,7 @@ Updates the information of the selected file with the parameters specified in th
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New file title
 
@@ -31,7 +31,7 @@ New file title
 
 ### lastVersion
 
-**type:** `integer`
+**type**: `integer`
 
 Number of the latest file version
 
@@ -52,23 +52,23 @@ File information. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

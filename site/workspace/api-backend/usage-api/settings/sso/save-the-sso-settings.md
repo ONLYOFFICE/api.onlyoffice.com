@@ -13,7 +13,7 @@ Saves the SSO settings for the current portal.
 
 ### serializeSettings
 
-**type:** `string`
+**type**: `string`
 
 Serialized SSO settings
 
@@ -33,43 +33,43 @@ SSO settings. A request that is not authenticated returns `401`.
 
 ### EnableSso
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IdpSettings
 
-**type:** `SsoIdpSettings`
+**type**: `SsoIdpSettings`
 
 ### IdpCertificates
 
-**type:** `SsoCertificate[]`
+**type**: `SsoCertificate[]`
 
 ### IdpCertificateAdvanced
 
-**type:** `SsoIdpCertificateAdvanced`
+**type**: `SsoIdpCertificateAdvanced`
 
 ### SpLoginLabel
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"SpLoginLabel"`
 
 ### SpCertificates
 
-**type:** `SsoCertificate[]`
+**type**: `SsoCertificate[]`
 
 ### SpCertificateAdvanced
 
-**type:** `SsoSpCertificateAdvanced`
+**type**: `SsoSpCertificateAdvanced`
 
 ### FieldMapping
 
-**type:** `SsoFieldMapping`
+**type**: `SsoFieldMapping`
 
 ### HideAuthPage
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

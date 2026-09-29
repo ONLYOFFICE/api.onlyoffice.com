@@ -13,13 +13,13 @@ Restores the conversations with the IDs specified in the request to their origin
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of conversation IDs
 
 ### learnSpamTrainer
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to send messages to the spam training or not
 

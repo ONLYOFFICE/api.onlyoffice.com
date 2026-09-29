@@ -13,7 +13,7 @@ Updates the content of a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,13 +23,13 @@ File ID
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 Request input stream
 
 ### fileExtension
 
-**type:** `string`
+**type**: `string`
 
 File extension
 
@@ -37,7 +37,7 @@ File extension
 
 ### encrypted
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to encrypt a file or not
 
@@ -45,7 +45,7 @@ Specifies whether to encrypt a file or not
 
 ### forcesave
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to force save a file or not
 
@@ -68,23 +68,23 @@ Updated file. A request that is not authenticated returns `401`.
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"File name"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:03.3424957Z"`
 
 ### Location
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"4\\\\46\\\\File name"`
 

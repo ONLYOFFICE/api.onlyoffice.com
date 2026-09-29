@@ -13,7 +13,7 @@ Returns the availability of the module with the ID specified in the request.
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Module ID
 

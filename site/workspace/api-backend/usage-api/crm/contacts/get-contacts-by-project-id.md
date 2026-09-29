@@ -13,7 +13,7 @@ Returns contacts for the project with the ID specified in the request.
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

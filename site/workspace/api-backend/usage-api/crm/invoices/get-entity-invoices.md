@@ -13,7 +13,7 @@ Returns a list of all the invoices related to the entity with the ID and type sp
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Invoice entity type
 
@@ -21,7 +21,7 @@ Invoice entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice entity ID
 

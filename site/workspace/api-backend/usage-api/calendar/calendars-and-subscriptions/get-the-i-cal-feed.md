@@ -15,7 +15,7 @@ Returns the iCal feed associated with the calendar by its ID and signagure speci
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -23,7 +23,7 @@ Calendar ID
 
 ### signature
 
-**type:** `string`
+**type**: `string`
 
 Signature
 

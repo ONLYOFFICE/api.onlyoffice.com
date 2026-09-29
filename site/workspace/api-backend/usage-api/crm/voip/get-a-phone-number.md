@@ -13,7 +13,7 @@ Returns a phone number with the ID specified in the request.
 
 ### numberId
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID
 

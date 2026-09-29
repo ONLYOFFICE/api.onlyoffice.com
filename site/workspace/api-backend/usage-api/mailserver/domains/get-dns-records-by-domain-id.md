@@ -13,7 +13,7 @@ Returns DNS records related to the domain with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Domain ID
 
@@ -33,29 +33,29 @@ DNS records associated with the domain. A request that is not authenticated retu
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### MxRecord
 
-**type:** `ServerDomainMxRecordData`
+**type**: `ServerDomainMxRecordData`
 
 ### SpfRecord
 
-**type:** `ServerDomainDnsRecordData`
+**type**: `ServerDomainDnsRecordData`
 
 ### DkimRecord
 
-**type:** `ServerDomainDkimRecordData`
+**type**: `ServerDomainDkimRecordData`
 
 ### DomainCheckRecord
 
-**type:** `ServerDomainDnsRecordData`
+**type**: `ServerDomainDnsRecordData`
 
 ### IsVerified
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

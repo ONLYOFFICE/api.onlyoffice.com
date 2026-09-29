@@ -13,7 +13,7 @@ Returns a signature of a mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -33,19 +33,19 @@ Signature object. A request that is not authenticated returns `401`.
 
 ### MailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `132`
 
 ### Html
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"html"`
 
 ### IsActive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

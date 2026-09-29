@@ -15,29 +15,29 @@ Portal capabilities
 
 ### LdapEnabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### OauthEnabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `"google,facebook,twitter,linkedin,mailru,vk,yandex,gosuslugi"`
 
 ### Providers
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### SsoLabel
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### SsoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 

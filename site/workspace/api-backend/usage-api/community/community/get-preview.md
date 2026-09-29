@@ -13,7 +13,7 @@ Returns the preview information about the specified category from the community 
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Category title
 
@@ -21,7 +21,7 @@ Category title
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Category content
 

@@ -13,7 +13,7 @@ Creates a photo thumbnail by coordinates of the original image specified in the 
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -23,7 +23,7 @@ User ID
 
 ### tmpFile
 
-**type:** `string`
+**type**: `string`
 
 Path to the temporary file
 
@@ -31,7 +31,7 @@ Path to the temporary file
 
 ### x
 
-**type:** `integer`
+**type**: `integer`
 
 Horizontal coordinate
 
@@ -39,7 +39,7 @@ Horizontal coordinate
 
 ### y
 
-**type:** `integer`
+**type**: `integer`
 
 Vertical coordinate
 
@@ -47,7 +47,7 @@ Vertical coordinate
 
 ### width
 
-**type:** `integer`
+**type**: `integer`
 
 Thumbnail width
 
@@ -55,7 +55,7 @@ Thumbnail width
 
 ### height
 
-**type:** `integer`
+**type**: `integer`
 
 Thumbnail height
 
@@ -79,37 +79,37 @@ Thumbnail. A request that is not authenticated returns `401`.
 
 ### Original
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_1280-1280.png"`
 
 ### Retina
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_360-360.png"`
 
 ### Max
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_200-200.png"`
 
 ### Big
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_82-82.png"`
 
 ### Medium
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"\"default_user_photo_size_48-48.png"`
 
 ### Small
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_32-32.png"`
 

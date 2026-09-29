@@ -15,7 +15,7 @@ Creates an event with the parameters specified in the request.
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Related entity type
 
@@ -23,7 +23,7 @@ Related entity type
 
 ### entityId
 
-**type:** `integer`
+**type**: `integer`
 
 Related entity ID
 
@@ -31,7 +31,7 @@ Related entity ID
 
 ### contactId
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -39,7 +39,7 @@ Contact ID
 
 ### content
 
-**type:** `string`
+**type**: `string`
 
 Event contents
 
@@ -47,7 +47,7 @@ Event contents
 
 ### categoryId
 
-**type:** `integer`
+**type**: `integer`
 
 Event category ID
 
@@ -55,7 +55,7 @@ Event category ID
 
 ### created
 
-**type:** `string`
+**type**: `string`
 
 Event creation date
 
@@ -63,13 +63,13 @@ Event creation date
 
 ### fileId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of file IDs for the current event
 
 ### notifyUserList
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users who will be notified about the event
 
@@ -98,45 +98,45 @@ Created event. A request that is not authenticated returns `401`.
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-13T17:13:31.5902727Z"`
 
 ### Content
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Agreed to meet at lunch and discuss the client commercial offer"`
 
 ### Category
 
-**type:** `HistoryCategoryBaseWrapper`
+**type**: `HistoryCategoryBaseWrapper`
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

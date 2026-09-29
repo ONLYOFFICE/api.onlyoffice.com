@@ -13,7 +13,7 @@ Returns the detailed information about the time spent on the project with the ID
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

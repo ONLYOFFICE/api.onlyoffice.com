@@ -13,7 +13,7 @@ Returns the detailed information about a discussion message with the ID specifie
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 
@@ -33,123 +33,123 @@ Message. A request that is not authenticated returns `401`.
 
 ### CanEditFiles
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanReadFiles
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Subscribers
 
-**type:** `EmployeeWraperFull[]`
+**type**: `EmployeeWraperFull[]`
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### Comments
 
-**type:** `CommentInfo[]`
+**type**: `CommentInfo[]`
 
 ### Project
 
-**type:** `ProjectWrapperFull`
+**type**: `ProjectWrapperFull`
 
 ### ProjectOwner
 
-**type:** `SimpleProjectWrapper`
+**type**: `SimpleProjectWrapper`
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Hello, this is sample message"`
 
 ### CanCreateComment
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CommentsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `5`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

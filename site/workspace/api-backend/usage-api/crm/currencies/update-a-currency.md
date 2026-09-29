@@ -13,7 +13,7 @@ Updates the default CRM currency with the currency specified in the request.
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 Currency (abbreviation)
 
@@ -33,37 +33,37 @@ Updated currency. A request that is not authenticated returns `401`.
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Chinese Yuan"`
 
 ### Symbol
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"¥"`
 
 ### Abbreviation
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"CNY"`
 
 ### CultureName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"CN"`
 
 ### IsConvertable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsBasic
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

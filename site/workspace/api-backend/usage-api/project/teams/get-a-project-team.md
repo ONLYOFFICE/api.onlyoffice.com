@@ -13,7 +13,7 @@ Returns a list of all the users participating in the project with the ID specifi
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

@@ -13,13 +13,13 @@ Updates a milestone of the tasks with the IDs specified in the request.
 
 ### taskids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Task IDs
 
 ### milestoneid
 
-**type:** `integer`
+**type**: `integer`
 
 Milestone ID
 

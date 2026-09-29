@@ -13,13 +13,13 @@ Returns the mappers for the audit trail types.
 
 ### productType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Product
 
 ### moduleType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Module
 

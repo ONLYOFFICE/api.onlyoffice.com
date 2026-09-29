@@ -13,7 +13,7 @@ Deletes a post with the ID specified in the request from blogs.
 
 ### postid
 
-**type:** `string`
+**type**: `string`
 
 Post ID
 
@@ -25,37 +25,37 @@ Deleted post. A request that is not authenticated returns `401`.
 
 ### Text
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Post text"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Example post"`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-06T07:36:14.7981820Z"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ## Response example
 

@@ -13,7 +13,7 @@ Updates the contact status setting with the parameter specified in the request.
 
 ### changeContactStatusGroupAuto
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if the contact status setting is changed automatically or not
 

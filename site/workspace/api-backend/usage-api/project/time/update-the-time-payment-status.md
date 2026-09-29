@@ -13,13 +13,13 @@ Updates the time payment status with the parameters specified in the request.
 
 ### timeids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Spent time IDs
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 New payment status ("NotChargeable", "NotBilled", or "Billed")
 

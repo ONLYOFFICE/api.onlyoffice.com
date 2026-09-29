@@ -15,7 +15,7 @@ List of forums. A request that is not authenticated returns `401`.
 
 ### Categories
 
-**type:** `ForumCategoryWrapper[]`
+**type**: `ForumCategoryWrapper[]`
 
 ## Response example
 

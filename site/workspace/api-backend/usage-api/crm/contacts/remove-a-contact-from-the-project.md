@@ -13,7 +13,7 @@ Removes a link to the selected project from the contact with the ID specified in
 
 ### contactid
 
-**type:** `integer`
+**type**: `integer`
 
 Contact ID
 
@@ -21,7 +21,7 @@ Contact ID
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -42,47 +42,47 @@ Contact information. A request that is not authenticated returns `401`.
 
 ### SmallFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### MediumFotoUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"url to foto"`
 
 ### DisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Tadjeddine Bachir"`
 
 ### IsCompany
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### ShareType
 
-**type:** `"None" | "ReadWrite" | "Read"`
+**type**: `"None" | "ReadWrite" | "Read"`
 
 [0 - None, 1 - ReadWrite, 2 - Read]
 
@@ -90,23 +90,23 @@ Contact information. A request that is not authenticated returns `401`.
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

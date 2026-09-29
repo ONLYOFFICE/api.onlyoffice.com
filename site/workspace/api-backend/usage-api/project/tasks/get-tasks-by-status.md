@@ -13,7 +13,7 @@ Returns a list of all the tasks with the selected status in the project with the
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 Task status
 

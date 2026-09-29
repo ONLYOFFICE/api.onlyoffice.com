@@ -13,7 +13,7 @@ Updates the email activation settings.
 
 ### show
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to show the email activation panel to the user or not
 
@@ -33,7 +33,7 @@ Updated email activation settings. A request that is not authenticated returns `
 
 ### Show
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

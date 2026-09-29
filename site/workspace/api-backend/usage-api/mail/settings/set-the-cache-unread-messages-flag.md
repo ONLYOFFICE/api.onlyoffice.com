@@ -13,7 +13,7 @@ Sets a flag that specifies whether to cache unread messages or not.
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to cache unread messages or not
 

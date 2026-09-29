@@ -13,7 +13,7 @@ Deletes an account by email address specified in the request.
 
 ### email
 
-**type:** `string`
+**type**: `string`
 
 Account email address
 
@@ -33,49 +33,49 @@ Operation status. A request that is not authenticated returns `401`.
 
 ### Completed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Id"`
 
 ### Status
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Status"`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Error"`
 
 ### Percents
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `100`
 
 ### Source
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Source"`
 
 ### OperationType
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Operation
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Operation"`
 

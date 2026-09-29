@@ -13,7 +13,7 @@ Updates a project team with the user IDs specified in the request.
 
 ### projectId
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,13 +21,13 @@ Project ID
 
 ### participants
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user IDs
 
 ### notify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify a project team members that they are added to the project or not
 

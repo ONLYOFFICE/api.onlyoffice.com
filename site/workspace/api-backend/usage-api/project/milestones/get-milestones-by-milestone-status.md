@@ -13,7 +13,7 @@ Returns a list of all the milestones with the selected status from a project wit
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 
@@ -21,7 +21,7 @@ Project ID
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 Milestone status ("Open" or "Closed")
 

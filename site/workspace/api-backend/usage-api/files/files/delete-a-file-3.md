@@ -13,7 +13,7 @@ Deletes a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 
@@ -23,7 +23,7 @@ File ID
 
 ### deleteAfter
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to delete a file after the editing session is finished or not
 
@@ -31,7 +31,7 @@ Specifies whether to delete a file after the editing session is finished or not
 
 ### immediately
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to move a file to the "Trash" folder or delete it immediately
 

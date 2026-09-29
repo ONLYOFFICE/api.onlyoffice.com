@@ -13,7 +13,7 @@ Updates a status of a task with the ID specified in the request.
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 
@@ -21,7 +21,7 @@ Task ID
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 New task status
 
@@ -29,7 +29,7 @@ New task status
 
 ### statusId
 
-**type:** `integer`
+**type**: `integer`
 
 Custom status ID
 
@@ -51,97 +51,97 @@ Updated task. A request that is not authenticated returns `401`.
 
 ### Files
 
-**type:** `FileWrapper[]`
+**type**: `FileWrapper[]`
 
 ### Comments
 
-**type:** `CommentInfo[]`
+**type**: `CommentInfo[]`
 
 ### CommentsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### IsSubscribed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanEditFiles
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanCreateComment
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Project
 
-**type:** `ProjectWrapperFull`
+**type**: `ProjectWrapperFull`
 
 ### TimeSpend
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `3.5`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanCreateSubtask
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanCreateTimeSpend
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanReadFiles
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### Deadline
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5768573Z"`
 
 ### StartDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5768573Z"`
 
 ### MilestoneId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `123`
 
 ### Priority
 
-**type:** `"Normal" | "High" | "Low"`
+**type**: `"Normal" | "High" | "Low"`
 
 [0 - Normal, 1 - High, -1 - Low]
 
@@ -149,101 +149,101 @@ Updated task. A request that is not authenticated returns `401`.
 
 ### ProjectOwner
 
-**type:** `SimpleProjectWrapper`
+**type**: `SimpleProjectWrapper`
 
 ### Progress
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `55`
 
 ### Subtasks
 
-**type:** `SubtaskWrapper[]`
+**type**: `SubtaskWrapper[]`
 
 ### Links
 
-**type:** `TaskLinkWrapper[]`
+**type**: `TaskLinkWrapper[]`
 
 ### Responsibles
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### ResponsibleIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### Milestone
 
-**type:** `SimpleMilestoneWrapper`
+**type**: `SimpleMilestoneWrapper`
 
 ### CustomTaskStatus
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### CreatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### CreatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Updated
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-22T04:11:56.5658524Z"`
 
 ### UpdatedBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### UpdatedById
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `10`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Sample description"`
 
 ### Status
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### ResponsibleId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"00000000-0000-0000-0000-000000000000"`
 

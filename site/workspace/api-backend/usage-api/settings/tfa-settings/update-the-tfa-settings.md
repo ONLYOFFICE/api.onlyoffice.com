@@ -13,7 +13,7 @@ Updates the two-factor authentication settings with the type specified in the re
 
 ### type
 
-**type:** `integer`
+**type**: `integer`
 
 TFA type (None, Sms, or App)
 
@@ -21,19 +21,19 @@ TFA type (None, Sms, or App)
 
 ### trustedIps
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of trusted IP addresses
 
 ### mandatoryUsers
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users required for the TFA verification
 
 ### mandatoryGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of groups required for the TFA verification
 

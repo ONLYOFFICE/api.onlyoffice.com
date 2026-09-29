@@ -13,7 +13,7 @@ Adds a tag to the entities with the IDs specified in the request.
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,13 +21,13 @@ Entity type
 
 ### entityid
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of entity IDs
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

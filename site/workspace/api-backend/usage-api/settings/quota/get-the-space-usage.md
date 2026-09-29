@@ -15,77 +15,77 @@ Space usage and limits for upload. A request that is not authenticated returns `
 
 ### StorageSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1073741824`
 
 ### MaxFileSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `26214400`
 
 ### UsedSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `262144000`
 
 ### MaxUsersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### UsersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AvailableSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AvailableUsersCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### StorageUsage
 
-**type:** `QuotaUsage[]`
+**type**: `QuotaUsage[]`
 
 ### UserStorageSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### UserUsedSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### UserAvailableSize
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MaxVisitors
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### VisitorsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 

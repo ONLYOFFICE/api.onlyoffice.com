@@ -13,7 +13,7 @@ Updates a company address with the one specified in the request.
 
 ### street
 
-**type:** `string`
+**type**: `string`
 
 New company street/building/apartment
 
@@ -21,7 +21,7 @@ New company street/building/apartment
 
 ### city
 
-**type:** `string`
+**type**: `string`
 
 New company city
 
@@ -29,7 +29,7 @@ New company city
 
 ### state
 
-**type:** `string`
+**type**: `string`
 
 New company state
 
@@ -37,7 +37,7 @@ New company state
 
 ### zip
 
-**type:** `string`
+**type**: `string`
 
 New company zip
 
@@ -45,7 +45,7 @@ New company zip
 
 ### country
 
-**type:** `string`
+**type**: `string`
 
 New company country
 

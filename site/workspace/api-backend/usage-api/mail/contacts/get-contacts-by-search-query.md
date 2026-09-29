@@ -13,7 +13,7 @@ Returns a list of filtered mail contacts by the search query specified in the re
 
 ### search
 
-**type:** `string`
+**type**: `string`
 
 Text to search in contact names or emails
 
@@ -21,19 +21,19 @@ Text to search in contact names or emails
 
 ### contactType
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Contact type
 
 ### pageSize
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Number of contacts on the page
 
 ### fromIndex
 
-**type:** `integer`
+**type**: `integer`
 
 Page number
 
@@ -41,7 +41,7 @@ Page number
 
 ### sortorder
 
-**type:** `string`
+**type**: `string`
 
 Sort order by name. String parameter: "ascending" or "descending"
 

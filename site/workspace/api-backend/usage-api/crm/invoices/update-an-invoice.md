@@ -13,7 +13,7 @@ Updates the selected invoice with the parameters (contact ID, consignee ID, etc.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice ID
 
@@ -21,7 +21,7 @@ Invoice ID
 
 ### issueDate
 
-**type:** `string`
+**type**: `string`
 
 New invoice issue date
 
@@ -29,7 +29,7 @@ New invoice issue date
 
 ### templateType
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice template type
 
@@ -37,7 +37,7 @@ New invoice template type
 
 ### contactId
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice contact ID
 
@@ -45,7 +45,7 @@ New invoice contact ID
 
 ### consigneeId
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice consignee ID
 
@@ -53,7 +53,7 @@ New invoice consignee ID
 
 ### entityId
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice entity ID
 
@@ -61,7 +61,7 @@ New invoice entity ID
 
 ### billingAddressID
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice billing address ID
 
@@ -69,7 +69,7 @@ New invoice billing address ID
 
 ### deliveryAddressID
 
-**type:** `integer`
+**type**: `integer`
 
 New invoice delivery address ID
 
@@ -77,7 +77,7 @@ New invoice delivery address ID
 
 ### dueDate
 
-**type:** `string`
+**type**: `string`
 
 New invoice due date
 
@@ -85,7 +85,7 @@ New invoice due date
 
 ### language
 
-**type:** `string`
+**type**: `string`
 
 New invoice language
 
@@ -93,7 +93,7 @@ New invoice language
 
 ### currency
 
-**type:** `string`
+**type**: `string`
 
 New invoice currency (abbreviation)
 
@@ -101,7 +101,7 @@ New invoice currency (abbreviation)
 
 ### exchangeRate
 
-**type:** `number`
+**type**: `number`
 
 New invoice exchange rate
 
@@ -109,7 +109,7 @@ New invoice exchange rate
 
 ### purchaseOrderNumber
 
-**type:** `string`
+**type**: `string`
 
 New invoice purchase order number
 
@@ -117,7 +117,7 @@ New invoice purchase order number
 
 ### terms
 
-**type:** `string`
+**type**: `string`
 
 New invoice terms
 
@@ -125,7 +125,7 @@ New invoice terms
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 New invoice description
 
@@ -133,7 +133,7 @@ New invoice description
 
 ### invoiceLines
 
-**type:** `InvoiceLine[]`
+**type**: `InvoiceLine[]`
 
 New list of invoice lines
 
@@ -170,27 +170,27 @@ Updated invoice. A request that is not authenticated returns `401`.
 
 ### InvoiceLines
 
-**type:** `InvoiceLineWrapper[]`
+**type**: `InvoiceLineWrapper[]`
 
 ### Status
 
-**type:** `InvoiceStatusWrapper`
+**type**: `InvoiceStatusWrapper`
 
 ### Number
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### IssueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### TemplateType
 
-**type:** `"Eur" | "Rus"`
+**type**: `"Eur" | "Rus"`
 
 [0 - Eur, 1 - Rus]
 
@@ -198,93 +198,93 @@ Updated invoice. A request that is not authenticated returns `401`.
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Consignee
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Entity
 
-**type:** `EntityWrapper`
+**type**: `EntityWrapper`
 
 ### DueDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### Language
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Currency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### ExchangeRate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"1,0"`
 
 ### PurchaseOrderNumber
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Terms
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### FileID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `-1`
 
 ### CreateOn
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-14T22:13:41.5378233Z"`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Cost
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"0,0"`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CanDelete
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

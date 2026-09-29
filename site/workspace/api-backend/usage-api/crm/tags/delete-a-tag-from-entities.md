@@ -13,7 +13,7 @@ Deletes the selected tag from the entities with the type specified in the reques
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### tagName
 
-**type:** `string`
+**type**: `string`
 
 Tag name
 

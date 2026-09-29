@@ -13,7 +13,7 @@ Updates the selected opportunity to the stage with the ID specified in the reque
 
 ### opportunityid
 
-**type:** `integer`
+**type**: `integer`
 
 Opportunity ID
 
@@ -21,7 +21,7 @@ Opportunity ID
 
 ### stageid
 
-**type:** `integer`
+**type**: `integer`
 
 New opportunity stage ID
 
@@ -42,41 +42,41 @@ Opportunity with the updated stage. A request that is not authenticated returns 
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### Members
 
-**type:** `ContactBaseWrapper[]`
+**type**: `ContactBaseWrapper[]`
 
 ### Contact
 
-**type:** `ContactBaseWrapper`
+**type**: `ContactBaseWrapper`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Hotel catalogue"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"description"`
 
 ### Responsible
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### BidType
 
-**type:** `"FixedBid" | "PerHour" | "PerDay" | "PerWeek" | "PerMonth" | "PerYear"`
+**type**: `"FixedBid" | "PerHour" | "PerDay" | "PerWeek" | "PerMonth" | "PerYear"`
 
 [0 - FixedBid, 1 - PerHour, 2 - PerDay, 3 - PerWeek, 4 - PerMonth, 5 - PerYear]
 
@@ -84,65 +84,65 @@ Opportunity with the updated stage. A request that is not authenticated returns 
 
 ### BidValue
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `"1,1"`
 
 ### BidCurrency
 
-**type:** `CurrencyInfoWrapper`
+**type**: `CurrencyInfoWrapper`
 
 ### PerPeriodValue
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Stage
 
-**type:** `DealMilestoneBaseWrapper`
+**type**: `DealMilestoneBaseWrapper`
 
 ### SuccessProbability
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `65`
 
 ### ActualCloseDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### ExpectedCloseDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-11T03:36:09.7011881Z"`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

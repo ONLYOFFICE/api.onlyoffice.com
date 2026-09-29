@@ -13,7 +13,7 @@ Returns a list of wiki pages with the name matching the search query specified i
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

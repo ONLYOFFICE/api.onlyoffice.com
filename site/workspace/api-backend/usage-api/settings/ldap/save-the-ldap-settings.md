@@ -13,7 +13,7 @@ Saves the LDAP settings specified in the request and starts importing/synchroniz
 
 ### settings
 
-**type:** `string`
+**type**: `string`
 
 LDAP settings in the serialized string format
 
@@ -21,7 +21,7 @@ LDAP settings in the serialized string format
 
 ### acceptCertificate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if a certificate will be accepted (true) or not (false)
 
@@ -42,53 +42,53 @@ Operation status. A request that is not authenticated returns `401`.
 
 ### Completed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Status
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Warning
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Percents
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"true"`
 
 ### CertificateConfirmRequest
 
-**type:** `LdapCertificateConfirmRequest`
+**type**: `LdapCertificateConfirmRequest`
 
 ### Source
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Source"`
 
 ### OperationType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"OperationType"`
 

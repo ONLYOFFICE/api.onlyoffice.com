@@ -13,19 +13,19 @@ Checks the results of a filter specified in the request.
 
 ### filter
 
-**type:** `object`
+**type**: `object`
 
 Filter parameters: ID, name, position, enabled, conditions, actions, options
 
 ### page
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Page number
 
 ### pageSize
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Number of messages on the page
 

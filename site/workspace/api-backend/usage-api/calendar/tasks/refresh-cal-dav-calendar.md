@@ -13,7 +13,7 @@ Refreshes the caldav calendar with the id specified in the request.
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -21,7 +21,7 @@ Calendar ID
 
 ### team
 
-**type:** `string[]`
+**type**: `string[]`
 
 User list
 

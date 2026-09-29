@@ -13,7 +13,7 @@ Returns a list of bookmarks matching the search query specified in the request w
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search query
 

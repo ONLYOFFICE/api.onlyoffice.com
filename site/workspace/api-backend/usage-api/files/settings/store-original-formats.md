@@ -13,7 +13,7 @@ Stores files in the original formats as well when uploading and converting.
 
 ### set
 
-**type:** `boolean`
+**type**: `boolean`
 
 Turns the parameter on or off
 

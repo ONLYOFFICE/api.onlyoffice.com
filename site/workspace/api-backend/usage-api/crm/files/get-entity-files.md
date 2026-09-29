@@ -13,7 +13,7 @@ Returns a list of all the files for the entity with the ID and type specified in
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 
@@ -21,7 +21,7 @@ Entity type
 
 ### entityid
 
-**type:** `integer`
+**type**: `integer`
 
 Entity ID
 

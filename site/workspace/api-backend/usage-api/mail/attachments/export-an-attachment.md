@@ -13,7 +13,7 @@ Exports an attachment with the ID specified in the request to the folder with do
 
 ### id_attachment
 
-**type:** `integer`
+**type**: `integer`
 
 Attachment ID
 
@@ -21,7 +21,7 @@ Attachment ID
 
 ### id_folder
 
-**type:** `string`
+**type**: `string`
 
 Folder ID (if this parameter is empty, the "My documents" folder is used)
 

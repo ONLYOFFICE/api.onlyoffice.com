@@ -13,7 +13,7 @@ Creates a mailbox with the parameters specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Mailbox name
 
@@ -21,7 +21,7 @@ Mailbox name
 
 ### local_part
 
-**type:** `string`
+**type**: `string`
 
 Mailbox local part
 
@@ -29,7 +29,7 @@ Mailbox local part
 
 ### domain_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox domain ID
 
@@ -37,7 +37,7 @@ Mailbox domain ID
 
 ### user_id
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -45,7 +45,7 @@ User ID
 
 ### notifyCurrent
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify the current user's email when a mailbox is created or not
 
@@ -53,7 +53,7 @@ Specifies whether to notify the current user's email when a mailbox is created o
 
 ### notifyProfile
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to notify the current user's profile when a mailbox is created or not
 
@@ -78,35 +78,35 @@ Mailbox data associated with the tenant. A request that is not authenticated ret
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### UserId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserId"`
 
 ### UserDisplayName
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"UserDisplayName"`
 
 ### Address
 
-**type:** `ServerDomainAddressData`
+**type**: `ServerDomainAddressData`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Aliases
 
-**type:** `ServerDomainAddressData[]`
+**type**: `ServerDomainAddressData[]`
 
 ## Response example
 

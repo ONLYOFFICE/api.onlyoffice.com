@@ -13,7 +13,7 @@ Deletes the tasks with the IDs specified in the request from the project.
 
 ### taskids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Task IDs
 

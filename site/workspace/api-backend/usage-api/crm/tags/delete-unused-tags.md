@@ -13,7 +13,7 @@ Deletes all the unused tags from the entities with the type specified in the req
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 

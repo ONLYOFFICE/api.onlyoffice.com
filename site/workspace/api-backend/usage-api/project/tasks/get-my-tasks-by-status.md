@@ -13,7 +13,7 @@ Returns a list with the detailed information about the tasks for the current use
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 Task status
 

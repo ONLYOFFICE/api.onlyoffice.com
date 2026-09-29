@@ -13,7 +13,7 @@ Checks if a user with the ID specified in the request can be impersonated or not
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

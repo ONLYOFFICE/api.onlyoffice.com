@@ -13,7 +13,7 @@ Updates a photo of the user with the ID specified in the request.
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -23,7 +23,7 @@ User ID
 
 ### files
 
-**type:** `string`
+**type**: `string`
 
 New avatar photo URL
 
@@ -43,37 +43,37 @@ Updated user photo. A request that is not authenticated returns `401`.
 
 ### Original
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_1280-1280.png"`
 
 ### Retina
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_360-360.png"`
 
 ### Max
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_200-200.png"`
 
 ### Big
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_82-82.png"`
 
 ### Medium
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"\"default_user_photo_size_48-48.png"`
 
 ### Small
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"default_user_photo_size_32-32.png"`
 

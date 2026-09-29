@@ -13,7 +13,7 @@ Deletes a wiki page with the name specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Page name
 

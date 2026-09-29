@@ -13,25 +13,25 @@ Updates the project settings with the parameters specified in the request.
 
 ### everebodyCanCreate
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if all the portal users can create projects or not
 
 ### hideEntitiesInPausedProjects
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if the entities will be hidden in the paused projects or not
 
 ### startModule
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Module type: Projects, Tasks, Discussions, TimeTracking
 
 ### folderId
 
-**type:** `object`
+**type**: `object`
 
 Folder ID
 
@@ -58,19 +58,19 @@ Updated project settings. A request that is not authenticated returns `401`.
 
 ### EverebodyCanCreate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### HideEntitiesInPausedProjects
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### StartModuleType
 
-**type:** `"Projects" | "Tasks" | "Discussions" | "TimeTracking"`
+**type**: `"Projects" | "Tasks" | "Discussions" | "TimeTracking"`
 
 [0 - Projects, 1 - Tasks, 2 - Discussions, 3 - TimeTracking]
 

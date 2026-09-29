@@ -13,7 +13,7 @@ Returns a list of all the administrators of the product with the ID specified in
 
 ### productid
 
-**type:** `string`
+**type**: `string`
 
 Product ID
 

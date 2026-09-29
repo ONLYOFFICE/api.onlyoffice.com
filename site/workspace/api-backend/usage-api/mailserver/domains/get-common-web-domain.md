@@ -15,25 +15,25 @@ Common web domain. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"id"`
 
 ### IsSharedDomain
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Name
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Name"`
 
 ### Dns
 
-**type:** `ServerDomainDnsData`
+**type**: `ServerDomainDnsData`
 
 ## Response example
 

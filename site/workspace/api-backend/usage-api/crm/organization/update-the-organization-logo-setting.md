@@ -13,7 +13,7 @@ Updates the organization logo setting with the parameter specified in the reques
 
 ### reset
 
-**type:** `boolean`
+**type**: `boolean`
 
 Resets the organization logo or not
 

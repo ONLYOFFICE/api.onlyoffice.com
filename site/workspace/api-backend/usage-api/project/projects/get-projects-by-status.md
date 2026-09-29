@@ -13,7 +13,7 @@ Returns a list of all the projects with a status specified in the request.
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 Project status ("Open", "Paused", or "Closed")
 

@@ -13,7 +13,7 @@ Returns a list of all the milestones from a project with the ID specified in the
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

@@ -13,7 +13,7 @@ Uploads a backup of a migrator specified in the request and initializes the impo
 
 ### migratorName
 
-**type:** `string`
+**type**: `string`
 
 Migrator name
 
@@ -23,7 +23,7 @@ Migrator name
 
 ### path
 
-**type:** `string`
+**type**: `string`
 
 Path to the backup file
 

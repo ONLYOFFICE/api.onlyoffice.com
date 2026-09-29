@@ -13,7 +13,7 @@ Updates a currency rate with the parameters specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Currency ID
 
@@ -21,7 +21,7 @@ Currency ID
 
 ### fromCurrency
 
-**type:** `string`
+**type**: `string`
 
 New currency to convert
 
@@ -29,7 +29,7 @@ New currency to convert
 
 ### toCurrency
 
-**type:** `string`
+**type**: `string`
 
 New currency into which the original currency will be converted
 
@@ -37,7 +37,7 @@ New currency into which the original currency will be converted
 
 ### rate
 
-**type:** `number`
+**type**: `number`
 
 New currency rate
 
@@ -60,25 +60,25 @@ Updated currency rate. A request that is not authenticated returns `401`.
 
 ### FromCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"EUR"`
 
 ### ToCurrency
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"USD"`
 
 ### Rate
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `1.1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

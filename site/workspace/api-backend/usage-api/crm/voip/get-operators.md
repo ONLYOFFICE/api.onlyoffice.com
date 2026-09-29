@@ -13,7 +13,7 @@ Returns the operators of the phone number with the ID specified in the request.
 
 ### numberId
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID
 

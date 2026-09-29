@@ -13,7 +13,7 @@ Copies all the selected files and folders to the folder with the ID specified in
 
 ### destFolderId
 
-**type:** `string`
+**type**: `string`
 
 Destination folder ID
 
@@ -21,19 +21,19 @@ Destination folder ID
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 
 ### conflictResolveType
 
-**type:** `integer`
+**type**: `integer`
 
 Overwriting behavior: skip (0), overwrite (1) or duplicate (2)
 
@@ -41,7 +41,7 @@ Overwriting behavior: skip (0), overwrite (1) or duplicate (2)
 
 ### deleteAfter
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to delete a folder after the editing session is finished or not
 

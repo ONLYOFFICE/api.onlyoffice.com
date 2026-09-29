@@ -13,7 +13,7 @@ Uppdates the impersonation settings with the parameters specified in the request
 
 ### enable
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether impersonation is enabled or not
 
@@ -21,7 +21,7 @@ Specifies whether impersonation is enabled or not
 
 ### enableType
 
-**type:** `integer`
+**type**: `integer`
 
 Specifies for whom impersonation is enabled (DisableForAdmins, EnableForAllFullAdmins, or EnableWithLimits)
 
@@ -29,7 +29,7 @@ Specifies for whom impersonation is enabled (DisableForAdmins, EnableForAllFullA
 
 ### onlyForOwnGroups
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if impersonation is enabled only for the current user groups or not
 
@@ -37,19 +37,19 @@ Specifies if impersonation is enabled only for the current user groups or not
 
 ### allowedAdmins
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of admins who can be impersonated
 
 ### restrictionUsers
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of users who cannot be impersonated
 
 ### restrictionGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of groups who cannot be impersonated
 
@@ -78,13 +78,13 @@ Updated impersonation settings. A request that is not authenticated returns `401
 
 ### Enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### EnableType
 
-**type:** `"DisableForAdmins" | "EnableForAllFullAdmins" | "EnableWithLimits"`
+**type**: `"DisableForAdmins" | "EnableForAllFullAdmins" | "EnableWithLimits"`
 
 [0 - DisableForAdmins, 1 - EnableForAllFullAdmins, 2 - EnableWithLimits]
 
@@ -92,21 +92,21 @@ Updated impersonation settings. A request that is not authenticated returns `401
 
 ### OnlyForOwnGroups
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### AllowedAdmins
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### RestrictionUsers
 
-**type:** `string[]`
+**type**: `string[]`
 
 ### RestrictionGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 ## Response example
 

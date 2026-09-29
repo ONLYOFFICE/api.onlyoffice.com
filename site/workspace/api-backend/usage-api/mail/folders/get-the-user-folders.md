@@ -13,13 +13,13 @@ Returns a list of user folders with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of folder IDs
 
 ### parentId
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Parent folder ID (root level is equal to 0)
 

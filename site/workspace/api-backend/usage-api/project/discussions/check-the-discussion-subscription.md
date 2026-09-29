@@ -13,7 +13,7 @@ Checks subscription to the notifications about the actions performed in the disc
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 

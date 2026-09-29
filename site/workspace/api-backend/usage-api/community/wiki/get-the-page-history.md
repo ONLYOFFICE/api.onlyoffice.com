@@ -13,7 +13,7 @@ Returns a list of history changes for a wiki page with the name specified in the
 
 ### page
 
-**type:** `string`
+**type**: `string`
 
 Page name
 

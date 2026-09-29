@@ -13,7 +13,7 @@ Returns a link to download a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 

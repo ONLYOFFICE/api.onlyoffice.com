@@ -13,7 +13,7 @@ Logs out from all the active connections for the user with the ID specified in t
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

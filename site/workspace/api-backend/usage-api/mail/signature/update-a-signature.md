@@ -13,7 +13,7 @@ Updates a signature of a mailbox with the ID specified in the request.
 
 ### mailbox_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mailbox ID
 
@@ -21,7 +21,7 @@ Mailbox ID
 
 ### html
 
-**type:** `string`
+**type**: `string`
 
 New signature value in the HTML format
 
@@ -29,7 +29,7 @@ New signature value in the HTML format
 
 ### is_active
 
-**type:** `boolean`
+**type**: `boolean`
 
 New signature status (active or not)
 
@@ -51,19 +51,19 @@ Updated signature object. A request that is not authenticated returns `401`.
 
 ### MailboxId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `132`
 
 ### Html
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"html"`
 
 ### IsActive
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

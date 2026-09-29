@@ -13,7 +13,7 @@ Buys a phone number specified in the request.
 
 ### number
 
-**type:** `string`
+**type**: `string`
 
 Phone number
 

@@ -13,7 +13,7 @@ Deletes the time from the tasks with the IDs specified in the request.
 
 ### timeids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Spent time IDs
 

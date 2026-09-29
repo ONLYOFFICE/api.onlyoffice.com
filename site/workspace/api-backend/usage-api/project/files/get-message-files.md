@@ -13,7 +13,7 @@ Returns the detailed information about files attached to the discussion message 
 
 ### messageid
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID
 

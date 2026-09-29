@@ -13,7 +13,7 @@ Sets the search settings specified in the request.
 
 ### items
 
-**type:** `SearchSettingsItem[]`
+**type**: `SearchSettingsItem[]`
 
 Search settings
 

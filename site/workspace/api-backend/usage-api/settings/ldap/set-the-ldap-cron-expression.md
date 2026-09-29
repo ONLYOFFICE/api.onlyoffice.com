@@ -13,7 +13,7 @@ Sets the LDAP autosynchronous cron expression to the current portal.
 
 ### cron
 
-**type:** `string`
+**type**: `string`
 
 Cron expression
 

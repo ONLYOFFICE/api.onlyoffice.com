@@ -13,13 +13,13 @@ Updates the order of the custom fields with a list specified in the request.
 
 ### fieldids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of custom field IDs
 
 ### entityType
 
-**type:** `string`
+**type**: `string`
 
 Entity type
 

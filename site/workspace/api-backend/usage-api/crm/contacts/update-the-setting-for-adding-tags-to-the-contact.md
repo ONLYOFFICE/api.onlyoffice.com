@@ -13,7 +13,7 @@ Updates the setting for adding tags to the contact with the parameter specified 
 
 ### addTagToContactGroupAuto
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if a tag is added to the contact automatically or not
 

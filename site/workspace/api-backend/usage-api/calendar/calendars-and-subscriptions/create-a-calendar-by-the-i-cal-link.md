@@ -15,7 +15,7 @@ Creates a calendar by the link to the external iCal feed.
 
 ### iCalUrl
 
-**type:** `string`
+**type**: `string`
 
 Link to the external iCal feed
 
@@ -23,7 +23,7 @@ Link to the external iCal feed
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Calendar name
 
@@ -31,7 +31,7 @@ Calendar name
 
 ### textColor
 
-**type:** `string`
+**type**: `string`
 
 Event text color
 
@@ -39,7 +39,7 @@ Event text color
 
 ### backgroundColor
 
-**type:** `string`
+**type**: `string`
 
 Event background name
 
@@ -62,109 +62,109 @@ Created calendar. A request that is not authenticated returns `401`.
 
 ### IsSubscription
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### iCalUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `""`
 
 ### IsiCalStream
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsHidden
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### CanAlertModify
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### IsShared
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Permissions
 
-**type:** `CalendarPermissions`
+**type**: `CalendarPermissions`
 
 ### IsEditable
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### TextColor
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#ffffff"`
 
 ### BackgroundColor
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#000000"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Calendar Description"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Calendar Name"`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"1"`
 
 ### IsTodo
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"false"`
 
 ### Owner
 
-**type:** `UserParams`
+**type**: `UserParams`
 
 ### Events
 
-**type:** `EventWrapper[]`
+**type**: `EventWrapper[]`
 
 ### Todos
 
-**type:** `TodoWrapper[]`
+**type**: `TodoWrapper[]`
 
 ### DefaultAlertType
 
-**type:** `EventAlertWrapper`
+**type**: `EventAlertWrapper`
 
 ### TimeZoneInfo
 
-**type:** `TimeZoneWrapper`
+**type**: `TimeZoneWrapper`
 
 ### CanEditTimeZone
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 

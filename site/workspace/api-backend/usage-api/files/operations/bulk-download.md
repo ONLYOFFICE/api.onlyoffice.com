@@ -13,19 +13,19 @@ Starts the download process of files and folders with the IDs specified in the r
 
 ### fileConvertIds
 
-**type:** `object[]`
+**type**: `object[]`
 
 List of file IDs which will be converted
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 

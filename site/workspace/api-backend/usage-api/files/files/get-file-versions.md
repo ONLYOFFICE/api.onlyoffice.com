@@ -13,7 +13,7 @@ Returns the detailed information about all the available file versions with the 
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 

@@ -15,53 +15,53 @@ Operation status. A request that is not authenticated returns `401`.
 
 ### Completed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Status
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Warning
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"true"`
 
 ### Percents
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `"true"`
 
 ### CertificateConfirmRequest
 
-**type:** `LdapCertificateConfirmRequest`
+**type**: `LdapCertificateConfirmRequest`
 
 ### Source
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Source"`
 
 ### OperationType
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"OperationType"`
 

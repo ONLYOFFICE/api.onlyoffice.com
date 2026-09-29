@@ -13,13 +13,13 @@ Links the selected contacts to the project with the ID specified in the request.
 
 ### contactid
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Array of contact IDs
 
 ### projectid
 
-**type:** `integer`
+**type**: `integer`
 
 Project ID
 

@@ -13,7 +13,7 @@ Deletes a group of opportunities with the IDs specified in the request.
 
 ### opportunityids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of opportunity IDs
 

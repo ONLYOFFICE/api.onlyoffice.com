@@ -13,7 +13,7 @@ Removes messages with the IDs specified in the request.
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of message IDs
 

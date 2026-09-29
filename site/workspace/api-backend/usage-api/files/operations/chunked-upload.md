@@ -19,7 +19,7 @@ Creates a session to upload large files in multiple chunks to the folder with th
 
 ### folderId
 
-**type:** `string`
+**type**: `string`
 
 Folder ID
 
@@ -29,7 +29,7 @@ Folder ID
 
 ### fileName
 
-**type:** `string`
+**type**: `string`
 
 File name
 
@@ -37,7 +37,7 @@ File name
 
 ### fileSize
 
-**type:** `integer`
+**type**: `integer`
 
 File length in bytes
 
@@ -45,7 +45,7 @@ File length in bytes
 
 ### relativePath
 
-**type:** `string`
+**type**: `string`
 
 Relative path to the folder
 
@@ -53,7 +53,7 @@ Relative path to the folder
 
 ### encrypted
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to encrypt a file or not
 

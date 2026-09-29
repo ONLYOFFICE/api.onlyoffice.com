@@ -13,7 +13,7 @@ Impersonates a user with the ID specified in the request.
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

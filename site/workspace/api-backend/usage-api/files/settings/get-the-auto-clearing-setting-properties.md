@@ -15,13 +15,13 @@ The auto-clearing setting properties. A request that is not authenticated return
 
 ### IsAutoCleanUp
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### Gap
 
-**type:** `"OneWeek" | "TwoWeeks" | "OneMonth" | "TwoMonths" | "ThreeMonths"`
+**type**: `"OneWeek" | "TwoWeeks" | "OneMonth" | "TwoMonths" | "ThreeMonths"`
 
 [1 - OneWeek, 2 - TwoWeeks, 3 - OneMonth, 4 - TwoMonths, 5 - ThreeMonths]
 

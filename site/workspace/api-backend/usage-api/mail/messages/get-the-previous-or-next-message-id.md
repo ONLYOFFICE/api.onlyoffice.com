@@ -13,7 +13,7 @@ Returns the previous or next message ID filtered with the parameters specified i
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Head message ID of the current conversation
 
@@ -21,7 +21,7 @@ Head message ID of the current conversation
 
 ### direction
 
-**type:** `string`
+**type**: `string`
 
 Defines if the previous or next message is needed: "prev" for previous, "next" for next
 
@@ -29,43 +29,43 @@ Defines if the previous or next message is needed: "prev" for previous, "next" f
 
 ### folder
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Folder type: 1 - inbox, 2 - sent, 5 - spam
 
 ### unread
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Message status: unread (true), read (false), or all (null) messages
 
 ### attachments
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages
 
 ### period_from
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Start search period date
 
 ### period_to
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 End search period date
 
 ### important
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if only important messages will be displayed or not
 
 ### from_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which a letter was received
 
@@ -73,7 +73,7 @@ Mail address from which a letter was received
 
 ### to_address
 
-**type:** `string`
+**type**: `string`
 
 Mail address to which a letter was sent
 
@@ -81,19 +81,19 @@ Mail address to which a letter was sent
 
 ### mailbox_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Recipient mailbox ID
 
 ### tags
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 IDs of tags linked to the target message
 
 ### search
 
-**type:** `string`
+**type**: `string`
 
 Text to search in the message bodies and subjects
 
@@ -101,13 +101,13 @@ Text to search in the message bodies and subjects
 
 ### page_size
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Number of messages on the page
 
 ### sortorder
 
-**type:** `string`
+**type**: `string`
 
 Sort order by date: "ascending" or "descending"
 
@@ -115,13 +115,13 @@ Sort order by date: "ascending" or "descending"
 
 ### with_calendar
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if the messages have a calendar or not
 
 ### user_folder_id
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 User folder ID
 

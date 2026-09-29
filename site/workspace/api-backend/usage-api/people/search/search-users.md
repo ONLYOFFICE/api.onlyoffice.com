@@ -13,7 +13,7 @@ Returns a list of users matching the search query.
 
 ### query
 
-**type:** `string`
+**type**: `string`
 
 Search text
 

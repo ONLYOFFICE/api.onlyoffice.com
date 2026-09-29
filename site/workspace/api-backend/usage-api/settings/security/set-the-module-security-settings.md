@@ -13,7 +13,7 @@ Sets the security settings to the module with the ID specified in the request.
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Module ID
 
@@ -21,7 +21,7 @@ Module ID
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the selected module is enabled or not
 
@@ -29,7 +29,7 @@ Specifies if the selected module is enabled or not
 
 ### subjects
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of user/group IDs
 

@@ -13,7 +13,7 @@ Returns the progress of the started data reassignment for the user with the ID s
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID whose data is reassigned
 

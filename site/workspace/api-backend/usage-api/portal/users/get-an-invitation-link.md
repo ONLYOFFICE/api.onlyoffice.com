@@ -13,7 +13,7 @@ Returns an invitation link for joining the portal.
 
 ### employeeType
 
-**type:** `"All" | "User" | "Visitor"`
+**type**: `"All" | "User" | "Visitor"`
 
 Employee type (User or Visitor)
 

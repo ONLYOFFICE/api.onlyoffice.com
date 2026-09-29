@@ -13,7 +13,7 @@ Sets a flag that specifies whether to display external images in the messages or
 
 ### enabled
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to display external images in the messages or not
 

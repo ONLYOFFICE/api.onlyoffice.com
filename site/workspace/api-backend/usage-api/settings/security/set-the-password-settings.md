@@ -13,7 +13,7 @@ Sets the portal password settings.
 
 ### maxLength
 
-**type:** `integer`
+**type**: `integer`
 
 Maximum length
 
@@ -21,7 +21,7 @@ Maximum length
 
 ### minLength
 
-**type:** `integer`
+**type**: `integer`
 
 Minimum length
 
@@ -29,7 +29,7 @@ Minimum length
 
 ### upperCase
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to include uppercase letters or not
 
@@ -37,7 +37,7 @@ Specifies whether to include uppercase letters or not
 
 ### digits
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to include digits or not
 
@@ -45,7 +45,7 @@ Specifies whether to include digits or not
 
 ### specSymbols
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to include special symbols or not
 
@@ -69,67 +69,67 @@ Password settings. A request that is not authenticated returns `401`.
 
 ### LimitMaxLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### LimitMinLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MaxLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### MinLength
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### AllowedCharactersRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### UpperCase
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### UpperCaseRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### Digits
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### DigitsRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### SpecSymbols
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### SpecSymbolsRegexStr
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 

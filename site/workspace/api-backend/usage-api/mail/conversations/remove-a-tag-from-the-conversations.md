@@ -13,7 +13,7 @@ Removes a tag specified in the request from the conversations.
 
 ### tag_id
 
-**type:** `integer`
+**type**: `integer`
 
 Tag ID
 
@@ -23,7 +23,7 @@ Tag ID
 
 ### messages
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of conversation IDs
 

@@ -15,31 +15,31 @@ Mail common settings. A request that is not authenticated returns `401`.
 
 ### EnableConversationsSetting
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### AlwaysDisplayImagesSetting
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CacheUnreadMessagesSetting
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### EnableGoNextAfterMoveSetting
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### ReplaceMessageBodySetting
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 

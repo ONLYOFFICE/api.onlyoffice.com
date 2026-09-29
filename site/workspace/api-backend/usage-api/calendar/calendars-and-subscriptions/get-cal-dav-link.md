@@ -13,7 +13,7 @@ Returns a link to the CalDav related to the calendar with the ID specified in th
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -23,7 +23,7 @@ Calendar ID
 
 ### uri
 
-**type:** `string`
+**type**: `string`
 
 Current URI
 
@@ -43,25 +43,25 @@ CalDav link. A request that is not authenticated returns `401`.
 
 ### Completed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### StatusCode
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `0`
 
 ### Data
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 
 ### Error
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"string"`
 

@@ -13,7 +13,7 @@ Returns a list of all the comments on the bookmark with the ID specified in the 
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Bookmark ID
 

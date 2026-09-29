@@ -15,11 +15,11 @@ Default sharing access parameters. A request that is not authenticated returns `
 
 ### AvailableOptions
 
-**type:** `AccessOption[]`
+**type**: `AccessOption[]`
 
 ### Items
 
-**type:** `PublicItemWrapper[]`
+**type**: `PublicItemWrapper[]`
 
 ## Response example
 

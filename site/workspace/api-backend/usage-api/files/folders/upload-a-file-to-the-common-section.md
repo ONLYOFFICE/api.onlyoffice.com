@@ -19,25 +19,25 @@ Uploads a file specified in the request to the "Common" section by single file u
 
 ### file
 
-**type:** `object`
+**type**: `object`
 
 Request input stream
 
 ### contentType
 
-**type:** `object`
+**type**: `object`
 
 Content-Type header
 
 ### contentDisposition
 
-**type:** `object`
+**type**: `object`
 
 Content-Disposition header
 
 ### files
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of files when specified as multipart/form-data
 

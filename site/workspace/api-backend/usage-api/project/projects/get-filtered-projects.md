@@ -13,7 +13,7 @@ Returns a list of all the portal projects filtered by project title, status, par
 
 ### tag
 
-**type:** `integer`
+**type**: `integer`
 
 Project tag
 
@@ -21,13 +21,13 @@ Project tag
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Project status ("Open", "Paused", or "Closed")
 
 ### participant
 
-**type:** `string`
+**type**: `string`
 
 Project participant GUID
 
@@ -35,7 +35,7 @@ Project participant GUID
 
 ### manager
 
-**type:** `string`
+**type**: `string`
 
 Project manager GUID
 
@@ -43,7 +43,7 @@ Project manager GUID
 
 ### departament
 
-**type:** `string`
+**type**: `string`
 
 Project department
 
@@ -51,7 +51,7 @@ Project department
 
 ### follow
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if the current user is following this project or not
 

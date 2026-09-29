@@ -13,7 +13,7 @@ Saves a call with the parameters specified in the request.
 
 ### callId
 
-**type:** `string`
+**type**: `string`
 
 Phone call ID
 
@@ -21,7 +21,7 @@ Phone call ID
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Phone number that is calling
 
@@ -29,7 +29,7 @@ Phone number that is calling
 
 ### to
 
-**type:** `string`
+**type**: `string`
 
 Phone number to call
 
@@ -37,7 +37,7 @@ Phone number to call
 
 ### answeredBy
 
-**type:** `string`
+**type**: `string`
 
 Phone number ID that answered a call
 
@@ -45,13 +45,13 @@ Phone number ID that answered a call
 
 ### status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 Phone call status
 
 ### contactId
 
-**type:** `string`
+**type**: `string`
 
 Contact ID
 
@@ -59,7 +59,7 @@ Contact ID
 
 ### price
 
-**type:** `number[]`
+**type**: `number[]`
 
 Phone call price
 
@@ -87,65 +87,65 @@ Phone call information. A request that is not authenticated returns `401`.
 
 ### Id
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Id"`
 
 ### From
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"From"`
 
 ### To
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"To"`
 
 ### Status
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 ### AnsweredBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### DialDate
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-23T04:11:57.1649297Z"`
 
 ### DialDuration
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### Cost
 
-**type:** `number`
+**type**: `number`
 
 **Example**: `5.3`
 
 ### Contact
 
-**type:** `ContactWrapper`
+**type**: `ContactWrapper`
 
 ### Calls
 
-**type:** `object`
+**type**: `object`
 
 ### RecordUrl
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"RecordUrl"`
 
 ### RecordDuration
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `2`
 

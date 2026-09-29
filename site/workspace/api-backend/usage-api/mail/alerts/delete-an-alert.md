@@ -13,7 +13,7 @@ Deletes an alert with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Alert ID
 

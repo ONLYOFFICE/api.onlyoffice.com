@@ -13,7 +13,7 @@ Returns a list of invoice items matching the parameters specified in the request
 
 ### status
 
-**type:** `integer`
+**type**: `integer`
 
 Invoice status
 
@@ -21,7 +21,7 @@ Invoice status
 
 ### inventoryStock
 
-**type:** `boolean[]`
+**type**: `boolean[]`
 
 Specifies if the inventory is tracked or not
 

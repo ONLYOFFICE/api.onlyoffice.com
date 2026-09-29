@@ -13,13 +13,13 @@ The portal description. Returned by [List portals](../portal/list-portals.md),
 
 ## tenantId
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ## portalName
 
-**type:** `string`
+**type**: `string`
 
 Portal name.
 
@@ -27,31 +27,31 @@ Portal name.
 
 ## domain
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"example.com"`
 
 ## created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2010-07-07T15:46:00"`, `"2014-02-07T20:14:00"`
 
 ## status
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Active"`
 
 ## ownerId
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"78e1e841-8314-4846-8fc0-e7d6451b6475"`, `"be7bc931-b966-493e-a8b5-56fc7d21f9c8"`
 
 ## language
 
-**type:** `string`
+**type**: `string`
 
 Portal language.
 
@@ -59,7 +59,7 @@ Portal language.
 
 ## timeZoneName
 
-**type:** `string`
+**type**: `string`
 
 Portal time zone.
 

@@ -13,7 +13,7 @@ Deletes a group of cases with the IDs specified in the request.
 
 ### casesids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of case IDs
 

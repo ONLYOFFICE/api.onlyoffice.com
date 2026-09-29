@@ -13,7 +13,7 @@ Sets the selected user as an administrator of a product with the ID specified in
 
 ### productid
 
-**type:** `string`
+**type**: `string`
 
 Product ID
 
@@ -21,7 +21,7 @@ Product ID
 
 ### userid
 
-**type:** `string`
+**type**: `string`
 
 User ID
 
@@ -29,7 +29,7 @@ User ID
 
 ### administrator
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if a user will be a product administrator or not
 

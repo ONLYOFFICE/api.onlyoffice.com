@@ -13,7 +13,7 @@ Updates the available order of opportunity stages with a list specified in the r
 
 ### ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of opportunity stage IDs
 

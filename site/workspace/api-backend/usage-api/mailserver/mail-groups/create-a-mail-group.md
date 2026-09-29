@@ -13,7 +13,7 @@ Creates a mail group with the parameters specified in the request.
 
 ### name
 
-**type:** `string`
+**type**: `string`
 
 Sender name
 
@@ -21,7 +21,7 @@ Sender name
 
 ### domain_id
 
-**type:** `integer`
+**type**: `integer`
 
 Domain ID
 
@@ -29,7 +29,7 @@ Domain ID
 
 ### address_ids
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of address IDs
 
@@ -51,17 +51,17 @@ Mail group data associated with the tenant. A request that is not authenticated 
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Address
 
-**type:** `ServerDomainAddressData`
+**type**: `ServerDomainAddressData`
 
 ### Addresses
 
-**type:** `ServerDomainAddressData[]`
+**type**: `ServerDomainAddressData[]`
 
 ## Response example
 

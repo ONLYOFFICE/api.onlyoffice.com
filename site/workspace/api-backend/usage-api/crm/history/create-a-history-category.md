@@ -13,7 +13,7 @@ Creates a new history category with the parameters (title, description, etc.) sp
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 History category title
 
@@ -21,7 +21,7 @@ History category title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 History category description
 
@@ -29,7 +29,7 @@ History category description
 
 ### imageName
 
-**type:** `string`
+**type**: `string`
 
 Image name of the history category
 
@@ -37,7 +37,7 @@ Image name of the history category
 
 ### sortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 History category order
 
@@ -60,43 +60,43 @@ History category. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ImagePath
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"path to image"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

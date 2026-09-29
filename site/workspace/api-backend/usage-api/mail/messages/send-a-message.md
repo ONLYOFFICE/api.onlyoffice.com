@@ -13,7 +13,7 @@ Sends a message with the ID specified in the request.
 
 ### id
 
-**type:** `integer`
+**type**: `integer`
 
 Message ID which will be sent or 0
 
@@ -21,7 +21,7 @@ Message ID which will be sent or 0
 
 ### from
 
-**type:** `string`
+**type**: `string`
 
 Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
@@ -29,25 +29,25 @@ Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### to
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of mail addresses to which a letter will be sent. Format: Name &lt;name@domain&gt;
 
 ### cc
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of Cc (carbon copy) mail addresses. Format: Name &lt;name@domain&gt;
 
 ### bcc
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of Bcc (blind carbon copy) mail addresses. Format: Name &lt;name@domain&gt;
 
 ### mimeReplyToId
 
-**type:** `string`
+**type**: `string`
 
 Message ID to which this message is replying to
 
@@ -55,7 +55,7 @@ Message ID to which this message is replying to
 
 ### importance
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this message is important or not: true - important, false - not important
 
@@ -63,7 +63,7 @@ Specifies if this message is important or not: true - important, false - not imp
 
 ### subject
 
-**type:** `string`
+**type**: `string`
 
 Message subject
 
@@ -71,13 +71,13 @@ Message subject
 
 ### tags
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of tag IDs added to the message
 
 ### body
 
-**type:** `string`
+**type**: `string`
 
 Message body as the HTML string
 
@@ -85,13 +85,13 @@ Message body as the HTML string
 
 ### attachments
 
-**type:** `MailAttachmentData[]`
+**type**: `MailAttachmentData[]`
 
 List of message attachments
 
 ### fileLinksShareMode
 
-**type:** `integer`
+**type**: `integer`
 
 Sharing mode for the links of the attached files
 
@@ -99,7 +99,7 @@ Sharing mode for the links of the attached files
 
 ### calendarIcs
 
-**type:** `string`
+**type**: `string`
 
 Calendar event in the iCal format for sending
 
@@ -107,7 +107,7 @@ Calendar event in the iCal format for sending
 
 ### isAutoreply
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies if this message is autoreply or not
 
@@ -115,7 +115,7 @@ Specifies if this message is autoreply or not
 
 ### requestReceipt
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to add a request with the Return-Receipt-To header or not
 
@@ -123,7 +123,7 @@ Specifies whether to add a request with the Return-Receipt-To header or not
 
 ### requestRead
 
-**type:** `boolean`
+**type**: `boolean`
 
 Specifies whether to add a request with the Disposition-Notification-To header or not
 

@@ -13,7 +13,7 @@ Returns a list of all the files attached to the task with the ID specified in th
 
 ### taskid
 
-**type:** `integer`
+**type**: `integer`
 
 Task ID
 

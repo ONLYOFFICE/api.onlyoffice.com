@@ -13,7 +13,7 @@ Returns a list of all the contacts related to the case with the ID specified in 
 
 ### caseid
 
-**type:** `integer`
+**type**: `integer`
 
 Case ID
 

@@ -13,7 +13,7 @@ Returns a list of all the milestones with the deadline month specified in the re
 
 ### year
 
-**type:** `integer`
+**type**: `integer`
 
 Deadline year
 
@@ -21,7 +21,7 @@ Deadline year
 
 ### month
 
-**type:** `integer`
+**type**: `integer`
 
 Deadline month
 

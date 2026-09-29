@@ -13,7 +13,7 @@ Creates an opportunity stage with the parameters (title, description, success pr
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 Stage title
 
@@ -21,7 +21,7 @@ Stage title
 
 ### description
 
-**type:** `string`
+**type**: `string`
 
 Stage description
 
@@ -29,7 +29,7 @@ Stage description
 
 ### color
 
-**type:** `string`
+**type**: `string`
 
 Stage color
 
@@ -37,7 +37,7 @@ Stage color
 
 ### successProbability
 
-**type:** `integer`
+**type**: `integer`
 
 Stage success probability
 
@@ -45,7 +45,7 @@ Stage success probability
 
 ### stageType
 
-**type:** `integer`
+**type**: `integer`
 
 Stage type
 
@@ -69,19 +69,19 @@ Opportunity stage. A request that is not authenticated returns `401`.
 
 ### RelativeItemsCount
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### SuccessProbability
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `20`
 
 ### StageType
 
-**type:** `"Open" | "ClosedAndWon" | "ClosedAndLost"`
+**type**: `"Open" | "ClosedAndWon" | "ClosedAndLost"`
 
 [0 - Open, 1 - ClosedAndWon, 2 - ClosedAndLost]
 
@@ -89,31 +89,31 @@ Opportunity stage. A request that is not authenticated returns `401`.
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Title"`
 
 ### Description
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Description"`
 
 ### Color
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"#a7fc00"`
 
 ### SortOrder
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 

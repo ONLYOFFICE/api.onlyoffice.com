@@ -13,13 +13,13 @@ Adds files and folders with the IDs specified in the request to the favorite lis
 
 ### folderIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of folder IDs
 
 ### fileIds
 
-**type:** `string[]`
+**type**: `string[]`
 
 List of file IDs
 

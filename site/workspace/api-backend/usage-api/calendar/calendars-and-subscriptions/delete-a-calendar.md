@@ -13,7 +13,7 @@ Deletes a calendar with the ID specified in the request.
 
 ### calendarId
 
-**type:** `integer`
+**type**: `integer`
 
 Calendar ID
 

@@ -13,7 +13,7 @@ Updates the existing task with the parameters specified in the request.
 
 ### todoId
 
-**type:** `string`
+**type**: `string`
 
 Task ID
 
@@ -21,7 +21,7 @@ Task ID
 
 ### calendarId
 
-**type:** `string`
+**type**: `string`
 
 Calendar ID
 
@@ -29,7 +29,7 @@ Calendar ID
 
 ### ics
 
-**type:** `string`
+**type**: `string`
 
 Task in the iCal format
 
@@ -37,7 +37,7 @@ Task in the iCal format
 
 ### fromCalDavServer
 
-**type:** `boolean`
+**type**: `boolean`
 
 Defines if the request is from the CalDav server or not
 

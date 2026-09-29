@@ -13,7 +13,7 @@ Adds an address with the ID specified in the request to the mail group.
 
 ### mailgroup_id
 
-**type:** `integer`
+**type**: `integer`
 
 Mail group ID
 
@@ -21,7 +21,7 @@ Mail group ID
 
 ### address_id
 
-**type:** `integer`
+**type**: `integer`
 
 Address ID
 
@@ -42,17 +42,17 @@ Mail group data associated with the tenant. A request that is not authenticated 
 
 ### Id
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
 ### Address
 
-**type:** `ServerDomainAddressData`
+**type**: `ServerDomainAddressData`
 
 ### Addresses
 
-**type:** `ServerDomainAddressData[]`
+**type**: `ServerDomainAddressData[]`
 
 ## Response example
 

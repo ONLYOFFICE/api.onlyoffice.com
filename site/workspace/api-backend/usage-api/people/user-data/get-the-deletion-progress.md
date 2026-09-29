@@ -13,7 +13,7 @@ Returns the progress of the started data deletion for the user with the ID speci
 
 ### userId
 
-**type:** `string`
+**type**: `string`
 
 User ID
 

@@ -13,7 +13,7 @@ Returns the existence of an invoice with the number specified in the request.
 
 ### number
 
-**type:** `string`
+**type**: `string`
 
 Invoice number
 

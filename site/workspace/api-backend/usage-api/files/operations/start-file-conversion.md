@@ -13,7 +13,7 @@ Starts a conversion operation of a file with the ID specified in the request.
 
 ### fileId
 
-**type:** `string`
+**type**: `string`
 
 File ID
 

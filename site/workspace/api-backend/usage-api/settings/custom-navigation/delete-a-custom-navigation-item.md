@@ -13,7 +13,7 @@ Deletes a custom navigation item with the ID specified in the request.
 
 ### id
 
-**type:** `string`
+**type**: `string`
 
 Item ID
 

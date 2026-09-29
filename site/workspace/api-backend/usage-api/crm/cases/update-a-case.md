@@ -13,7 +13,7 @@ Updates the selected case with the parameters specified in the request.
 
 ### caseid
 
-**type:** `integer`
+**type**: `integer`
 
 Case ID
 
@@ -21,7 +21,7 @@ Case ID
 
 ### title
 
-**type:** `string`
+**type**: `string`
 
 New case title
 
@@ -29,19 +29,19 @@ New case title
 
 ### members
 
-**type:** `integer[]`
+**type**: `integer[]`
 
 List of contact IDs of the case participants
 
 ### customFieldList
 
-**type:** `object[]`
+**type**: `object[]`
 
 New list of case custom fields
 
 ### isPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 Case privacy: private or not
 
@@ -49,13 +49,13 @@ Case privacy: private or not
 
 ### accessList
 
-**type:** `string[]`
+**type**: `string[]`
 
 New list of users with access to the case
 
 ### isNotify
 
-**type:** `boolean`
+**type**: `boolean`
 
 Notifies users from the access list about the case
 
@@ -87,53 +87,53 @@ Case. A request that is not authenticated returns `401`.
 
 ### Members
 
-**type:** `ContactBaseWrapper[]`
+**type**: `ContactBaseWrapper[]`
 
 ### CreateBy
 
-**type:** `EmployeeWraper`
+**type**: `EmployeeWraper`
 
 ### Created
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"2020-12-08T17:37:04.5736385Z"`
 
 ### Title
 
-**type:** `string`
+**type**: `string`
 
 **Example**: `"Exhibition organization"`
 
 ### IsClosed
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### IsPrivate
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `false`
 
 ### AccessList
 
-**type:** `EmployeeWraper[]`
+**type**: `EmployeeWraper[]`
 
 ### CanEdit
 
-**type:** `boolean`
+**type**: `boolean`
 
 **Example**: `true`
 
 ### CustomFields
 
-**type:** `CustomFieldBaseWrapper[]`
+**type**: `CustomFieldBaseWrapper[]`
 
 ### ID
 
-**type:** `integer`
+**type**: `integer`
 
 **Example**: `1234`
 
