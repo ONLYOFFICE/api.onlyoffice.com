@@ -12,6 +12,8 @@ import APITable from '@site/src/components/APITable/APITable';
 otherWindow.postMessage(msg, targetOrigin)
 ```
 
+其中 `otherWindow` 是对 `msg` 将被发布到的窗口的引用。
+
 ## 参数
 
 <APITable>
@@ -22,7 +24,7 @@ otherWindow.postMessage(msg, targetOrigin)
 | msg.MessageId | string                | "App\_LoadingStatus"        | [消息名称](#available-messages)。                                                                                                                                                                                                                                                                                 |
 | msg.SendTime  | integer               | 1329014075000               | 消息发送的时间，以 UTC 1970 年 1 月 1 日午夜以来的毫秒数表示。                                                                                                                                                                                                        |
 | msg.Values    | JSON 对象           | `{"key": "value"}`          | 消息属性。                                                                                                                                                                                                                                                                            |
-| targetOrigin  | string                | `https://exampledomain.com` | *otherWindow* 原点必须是要调度的事件。它将被设置为 *CheckFileInfo*中提供的 [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) 属性。<br /><br />*otherWindow* 是对 *msg* 将被发布到的另一个窗口的引用。 |
+| targetOrigin  | string                | `https://exampledomain.com` | `otherWindow` 必须具有的源，只有源匹配时事件才会被调度。它将被设置为 `CheckFileInfo` 中提供的 [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) 属性。                                         |
 
 </APITable>
 

@@ -12,6 +12,8 @@ import APITable from '@site/src/components/APITable/APITable';
 otherWindow.postMessage(msg, targetOrigin)
 ```
 
+where `otherWindow` is a reference to the window that `msg` is posted to.
+
 ## Parameters
 
 <APITable>
@@ -22,7 +24,7 @@ otherWindow.postMessage(msg, targetOrigin)
 | msg.MessageId | string                | "App\_LoadingStatus"        | The [message name](#available-messages).                                                                                                                                                                                                                                                           |
 | msg.SendTime  | integer               | 1329014075000               | The time the message was sent, expressed as milliseconds since midnight 1 January 1970 UTC.                                                                                                                                                                                                        |
 | msg.Values    | JSON object           | `{"key": "value"}`          | The message properties.                                                                                                                                                                                                                                                                            |
-| targetOrigin  | string                | `https://exampledomain.com` | The *otherWindow* origin that must be for the event to be dispatched. It will be set to the [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) property provided in *CheckFileInfo*.<br /><br />*otherWindow* is a reference to another window that *msg* will be posted to. |
+| targetOrigin  | string                | `https://exampledomain.com` | The origin that `otherWindow` must have for the event to be dispatched. It is set to the [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) property provided in `CheckFileInfo`.                                                                                            |
 
 </APITable>
 
