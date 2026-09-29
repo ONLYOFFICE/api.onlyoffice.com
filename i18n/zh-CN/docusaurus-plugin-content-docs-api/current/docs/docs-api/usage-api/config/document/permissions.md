@@ -32,7 +32,7 @@ permissions 部分定义文档权限参数。
 
 `[""]` 值意味着用户可以编辑/删除/查看不属于这些组的人所做的评论（例如，如果文档在第三方编辑器中进行了审阅）。如果值为 `[]`，则用户无法编辑/删除/查看任何组的评论。如果 `commentGroups.edit`, `commentGroups.remove` 和 `commentGroups.view` 参数未指定，则用户可以查看/编辑/删除任何用户的评论。
 
-**示例**:
+**示例**：
 
 ```ts
 const config = {

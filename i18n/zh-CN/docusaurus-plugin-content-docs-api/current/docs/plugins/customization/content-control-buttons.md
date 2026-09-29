@@ -16,7 +16,7 @@ let button = new Asc.ButtonContentControl();
 
 设置按钮上显示的图标路径。
 
-**示例**:
+**示例**：
 
 ```ts
 button.icons = "/resources/check%scale%(default).png";
@@ -34,7 +34,7 @@ button.icons = "/resources/check%scale%(default).png";
 | ---- | ---- | ---- |
 | contentControlId | `string` | 按钮所属内容控件的 ID。 |
 
-**示例**:
+**示例**：
 
 ```ts
 button.attachOnClick((contentControlId) => {

@@ -21,7 +21,7 @@ customization 部分定义编辑器自定义参数。
 
 添加对匿名名称的请求：
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -80,7 +80,7 @@ customization 部分定义编辑器自定义参数。
  
  用于关闭编辑器的关闭按钮的设置。
 
- **示例**:
+ **示例**：
 
 ```ts
 {
@@ -163,7 +163,7 @@ customization 部分定义编辑器自定义参数。
 此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -258,7 +258,7 @@ customization 部分定义编辑器自定义参数。
 
 如果可能，定义用户可以禁用或自定义的参数：
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -376,7 +376,7 @@ customization 部分定义编辑器自定义参数。
 
 **反馈和支持**菜单按钮的设置。如果设置为 `false`，按钮隐藏。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -429,7 +429,7 @@ customization 部分定义编辑器自定义参数。
 
 **打开文件位置**菜单按钮和右上角按钮的设置。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -541,7 +541,7 @@ customization 部分定义编辑器自定义参数。
 此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -655,7 +655,7 @@ customization 部分定义编辑器自定义参数。
 移动文档编辑器设置。
 
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -739,7 +739,7 @@ customization 部分定义编辑器自定义参数。
 [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 `review` 参数。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -806,7 +806,7 @@ customization 部分定义编辑器自定义参数。
 
 此参数与 [user.group](../editor.md#user) 字段和 [document.permissions.reviewGroups](../../document/permissions.md#reviewgroups) 参数一起使用。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -901,7 +901,7 @@ customization 部分定义编辑器自定义参数。
 
 PDF 表单编辑模式下*开始填写*按钮的设置。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -923,7 +923,7 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 **完成并提交**按钮设置。如果设置为 `false`，按钮隐藏。该按钮仅适用于 `pdf` 格式。
 
-**示例**:
+**示例**：
 
 ```ts
 {

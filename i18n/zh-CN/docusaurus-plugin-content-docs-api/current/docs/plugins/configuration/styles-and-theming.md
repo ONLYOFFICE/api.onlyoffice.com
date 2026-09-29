@@ -31,13 +31,13 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为您的插件添加默认的白色按钮样式。
 
-**示例**:
+**示例**：
 
 ```html
 <button class="btn-text-default" style="width:75px;">Button 1</button>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .btn-text-default {
@@ -60,13 +60,13 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为您的插件添加主要的深灰色按钮样式。用于确认操作并提交结果。
 
-**示例**:
+**示例**：
 
 ```html
 <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .btn-text-default.submit.primary {
@@ -83,13 +83,13 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为您的插件添加浅灰色按钮样式。
 
-**示例**:
+**示例**：
 
 ```html
 <button class="btn-text-default submit" style="width:75px;">Button 3</button>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .btn-text-default.submit {
@@ -107,13 +107,13 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为您的插件添加编辑按钮图标。
 
-**示例**:
+**示例**：
 
 ```html
 <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .btn-edit {
@@ -136,13 +136,13 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为您的插件添加文本区域输入字段。
 
-**示例**:
+**示例**：
 
 ```html
 <textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 textarea.form-control {
@@ -158,13 +158,13 @@ textarea.form-control {
 
 为您的插件添加文本输入字段。
 
-**示例**:
+**示例**：
 
 ```html
 <input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .form-control {
@@ -192,13 +192,13 @@ textarea.form-control {
 
 为您的插件添加复选框输入。
 
-**示例**:
+**示例**：
 
 ```html
 <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 input[type='checkbox '].form-control {
@@ -219,13 +219,13 @@ input[type='checkbox '].form-control {
 
 为您的插件添加加粗标题标签。
 
-**示例**:
+**示例**：
 
 ```html
 <label class="header">Header label</label>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 label.header {
@@ -239,13 +239,13 @@ label.header {
 
 为您的插件添加链接样式的标签。
 
-**示例**:
+**示例**：
 
 ```html
 <label class="link">Link label</label>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 label.link {
@@ -260,7 +260,7 @@ label.link {
 
 使用 [select2](https://select2.org/) 库为您的插件添加下拉组合框。
 
-**示例**:
+**示例**：
 
 ```html
 <select id="select_example" class="" ></select>
@@ -279,13 +279,13 @@ $('#select_example').select2({
 
 为您的插件添加加载器容器，用于显示加载状态。
 
-**示例**:
+**示例**：
 
 ```html
 <div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"></div>
 ```
 
-**CSS 参数**:
+**CSS 参数**：
 
 ```css
 .asc-loader-container {

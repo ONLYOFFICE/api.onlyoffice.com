@@ -20,7 +20,7 @@ sidebar_position: -5
 
 插件所在的分组，在**插件**选项卡中用于与其他插件区分。第一组通常包含**插件管理器**和**后台插件**。其他插件则出现在第二组。你可以根据需要添加任意数量的分组。如果省略该参数，插件将被添加到最后一个分组中。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -95,7 +95,7 @@ sidebar_position: -5
 
 文本字段的多语言翻译。对象的键为两位语言代码（如 ru、de、it 等），值为各语言对应的按钮标签翻译。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -133,7 +133,7 @@ sidebar_position: -5
 
 插件变体（或子插件），是在原始插件内部创建的子模块。详见[此处](variations.md)。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -193,7 +193,7 @@ sidebar_position: -5
 
 插件界面中使用的可换肤按钮列表。该参数仅适用于插件窗口和面板类型的插件，即当 [type](#variationstype) 参数为 `window`、`panel` 或 `panelRight` 时使用。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -224,7 +224,7 @@ sidebar_position: -5
 | isViewer   | boolean                             | 定义按钮是否仅在查看模式下显示。                                                            |
 | textLocale | [localeTranslate](#localetranslate) | text 字段的翻译。对象的键为两字母语言代码（如 ru、de、it 等），值为对应语言的按钮标签翻译。 |
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -319,7 +319,7 @@ sidebar_position: -5
 - `slide` - 演示文稿编辑器，
 - `pdf` - PDF 编辑器。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -349,7 +349,7 @@ sidebar_position: -5
 
 插件事件（如 [onDocumentContentReady](../interacting-with-editors/form-api/Events/onDocumentContentReady.md)、[onTargetPositionChanged](../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)、[onClick](../interacting-with-editors/form-api/Events/onClick.md)、onInputHelperClear、onInputHelperInput 等）。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -411,7 +411,7 @@ sidebar_position: -5
 - `none` - 编辑器不会向插件发送任何数据，
 - `sign` - 钥匙串插件的签名。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -549,7 +549,7 @@ sidebar_position: -5
 
 插件在 **ONLYOFFICE 插件市场**中的展示选项。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -572,7 +572,7 @@ sidebar_position: -5
 
 **ONLYOFFICE 插件市场**中插件图标使用的背景颜色。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -625,7 +625,7 @@ sidebar_position: -5
 
 **ONLYOFFICE 插件市场**中使用的插件图标图片文件路径。
 
-**示例**:
+**示例**：
 
 ```json
 {

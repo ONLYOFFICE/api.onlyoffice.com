@@ -28,7 +28,7 @@ plugins 部分定义运行时插件参数。
 您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugins/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) 方法将此对象传递给插件。
 :::
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -43,7 +43,7 @@ plugins 部分定义运行时插件参数。
 
 应用于所有插件的参数。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -59,7 +59,7 @@ plugins 部分定义运行时插件参数。
 
 特定插件的参数，通过 `asc.{UUID}` 格式的 GUID 标识。
 
-**示例**:
+**示例**：
 
 ```json
 {

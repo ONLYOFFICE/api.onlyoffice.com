@@ -8,7 +8,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 使用 `data.actionLink` 参数中的 [onMakeActionLink](../events.md#onmakeactionlink) 事件或 [onRequestSendNotify](../events.md#onrequestsendnotify) 事件指定从**文档编辑服务**接收的数据，其中包含有关将滚动到的文档中的操作的信息。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -55,7 +55,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 共同编辑模式以及更改它的可能性。此参数用于应用[共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes)和[查看](../../../get-started/how-it-works/viewing.md)模式。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -220,7 +220,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **打开最近...**菜单选项中文档的存在或不存在。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -354,7 +354,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **Create New...**菜单选项中模板的存在或不存在。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -404,7 +404,7 @@ editorConfig 部分定义了编辑器界面参数。
 如果您订阅了 [onRequestUsers](../events.md#onrequestusers) 事件并通过 [setUsers](../../methods.md#setusers) 方法发送头像，初始化配置中的 `user.image` 字段不是必需的。如果头像以 base64 格式发送且初始化配置使用 JWT 签名，不建议指定此参数，因为令牌会太长。
 :::
 
-**示例**:
+**示例**：
 
 ```json
 {
