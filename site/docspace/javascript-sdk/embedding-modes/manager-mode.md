@@ -188,7 +188,7 @@ Extend Manager mode's file, folder, and room context menus, and its create ("+")
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  showFilter: true, // the create menu lives in the filter toolbar's "New" button
+  showFilter: true, // the create menu lives in the filter toolbar's "New" button on desktop
   customActions: {
     contextMenu: {
       file: [
@@ -213,7 +213,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-`contextMenu.room` actions are Manager-only — Personal and Forms mode have no rooms concept. The create menu (`createMenu`) is the filter toolbar's "New" button, so it only shows with `showFilter: true`; it's also available in [Personal mode](./personal-mode.md#adding-custom-actions), but not on Manager's default Rooms list — there, the "+" button always means "create a room," not a customizable menu.
+`contextMenu.room` actions are Manager-only — Personal and Forms mode have no rooms concept. The create menu (`createMenu`) is the filter toolbar's "New" button on desktop (needs `showFilter: true`) and the floating create button on mobile devices; it's also available in [Personal mode](./personal-mode.md#adding-custom-actions), but not on Manager's default Rooms list — there, the "+" button always means "create a room," not a customizable menu.
 
 Each action can be restricted, and every condition set must hold for it to show:
 
@@ -222,7 +222,7 @@ Each action can be restricted, and every condition set must hold for it to show:
 - `roomTypes` — numeric room types it shows for (room actions only) — see [Creating a room programmatically](#creating-a-room-programmatically) above for the value mapping.
 - `requireSecurity` — access flags the clicked item's `security` object must all have, e.g. `["Download"]` or `["EditRoom"]`.
 
-`onCustomAction`'s payload: `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`; `item` is the single clicked entity (absent for `create`); `items` holds every selected entity instead, when the action ran on a multi-selection; `folderId` is the id of the folder or room the user was in.
+`onCustomAction`'s payload: `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`; `item` is the single clicked entity, absent for `create` and for an action run on a multi-selection; `items` holds every selected entity instead, for a multi-selection of items of one type; `folderId` is the id of the folder or room the user was in.
 
 `setCustomActions()` replaces the whole configuration rather than merging into it, so pass every group you want to keep:
 

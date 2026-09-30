@@ -64,7 +64,7 @@ The frame never shows DocSpace's own sign-in page in OAuth mode. If no usable to
 - `TOKEN_RESOLVE_FAILED` — `getToken` threw, rejected, or returned nothing, or neither `getToken` nor `accessToken` is set. Reported by the SDK itself.
 - `TOKEN_UNAVAILABLE` — the frame asked for its first token and got none back within 10 seconds. Reported by the portal.
 - `TOKEN_REFRESH_FAILED` — the frame asked for a fresh token after a `401` and got none back. Reported by the portal.
-- `UNAUTHORIZED` — the portal still answered `401` with a freshly obtained token — it's expired, revoked, or missing a scope the current page needs. Reported by the portal.
+- `UNAUTHORIZED` — the portal didn't accept the token: either a fresh token still got `401` again, or the frame treated it as anonymous right from the start. The token is invalid, expired, or missing a scope the current page needs. Reported by the portal.
 
 A `getToken` failure on the very first token request typically fires both of the first two, not just one: `TOKEN_RESOLVE_FAILED` arrives immediately from the SDK, and `TOKEN_UNAVAILABLE` follows about 10 seconds later — the portal waits out its own timeout for a token reply that was never going to arrive, since `getToken` never produced one to send.
 
