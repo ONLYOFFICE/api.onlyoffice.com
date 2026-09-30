@@ -19,6 +19,7 @@ type TCustomContextMenuActions = object;
 const contextMenu: TCustomContextMenuActions = {
   file: [{ key: "export", label: "Export to CRM" }],
   folder: [{ key: "share", label: "Share folder" }],
+  room: [{ key: "unlink", label: "Unlink from deal", requireSecurity: ["EditRoom"] }],
 };
 await instance.setCustomActions({ contextMenu });
 ```
@@ -31,5 +32,6 @@ await instance.setCustomActions({ contextMenu });
 | ------ | ------ | ------ |
 | `file`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for file context menus. |
 | `folder`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for folder context menus. |
+| `room`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for room context menus. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager). |
 
 </APITable>

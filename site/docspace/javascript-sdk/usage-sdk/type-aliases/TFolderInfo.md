@@ -30,7 +30,7 @@ type TFolderInfo = TEntityBase & object;
 | `parentShared`? | `boolean` | Whether the parent is shared. |
 | `pinned` | `boolean` | Whether the folder is pinned. |
 | `private`? | `boolean` | Whether the folder is private. |
-| `roomType`? | `number` | Room type number. |
+| `roomType`? | `number` | Room type number. See [RoomType](../enumerations/RoomType.md). |
 | `rootFolderId` | `number` | Root folder ID. |
 | `rootFolderType` | `number` | Root folder type. |
 | `sharedBy`? | [`TCreatedBy`](TCreatedBy.md) | User who shared the folder. |

@@ -34,7 +34,7 @@ type TRoomInfo = TEntityBase & object;
 | `pinned` | `boolean` | Whether the room is pinned. |
 | `private` | `boolean` | Whether the room is private. |
 | `quotaLimit`? | `number` | Storage quota in bytes. |
-| `roomType` | `number` | Numeric room type. |
+| `roomType` | `number` | Numeric room type. See [RoomType](../enumerations/RoomType.md). |
 | `rootFolderId`? | `number` | Root folder ID. |
 | `rootFolderType`? | `number` | Root folder type number. |
 | `tags` | `string`[] | Tag names assigned to the room. |

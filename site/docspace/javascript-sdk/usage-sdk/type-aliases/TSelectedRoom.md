@@ -23,7 +23,7 @@ type TSelectedRoom = object;
 | `id` | `string` \| `number` | Room ID. |
 | `label` | `string` | Room title. |
 | `requestTokens`? | [`TRequestTokenInfo`](TRequestTokenInfo.md)[] | External links of a public or shared room; `requestTokens[0].requestToken` is the key for [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom). Absent for rooms without links. |
-| `roomType`? | `number` | Numeric room type. |
+| `roomType`? | `number` | Numeric room type. See [RoomType](../enumerations/RoomType.md). |
 | `shared`? | `boolean` | Whether the room has an external link. |
 
 </APITable>

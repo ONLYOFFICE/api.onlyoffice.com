@@ -98,11 +98,12 @@ The chat is bound to the AI agent when [TFrameConfig.agentId](../type-aliases/TF
 otherwise it is bound to the current user. Forces `mode` to [SDKMode.Chat](../enumerations/SDKMode.md#Chat).
 
 :::note
-The page renders a composer only when the frame's user is signed in and is not a guest,
-and the portal has AI enabled. Otherwise it shows a no-access state (a "Chat history"
-control without an input) and fires no event — [TFrameEvents.onAppReady](../type-aliases/TFrameEvents.md#onAppReady) still
-arrives. In OAuth mode the token must carry the scopes that read the user's profile;
-a token that cannot load the profile lands in the same no-access state.
+The page renders a composer only when the frame's user is signed in and is not a guest.
+Otherwise it shows a no-access state (a "Chat history" control without an input) and fires
+[TFrameEvents.onNoAccess](../type-aliases/TFrameEvents.md#onNoAccess) — [TFrameEvents.onAppReady](../type-aliases/TFrameEvents.md#onAppReady) still arrives. AI disabled
+on the portal hides the composer too, without the event. In OAuth mode the token must carry
+the scopes that read the user's profile; a token that cannot load the profile lands in the
+same no-access state.
 :::
 
 #### Parameters
@@ -330,7 +331,7 @@ Forces `mode` to [SDKMode.Manager](../enumerations/SDKMode.md#Manager).
 
 The initialized [SDKInstance](SDKInstance.md).
 
-#### Example
+#### Examples
 
 ```typescript
 import { SDK, ManagerViewMode, FilterSortBy, FilterSortOrder } from '@onlyoffice/docspace-sdk-js';
@@ -347,6 +348,16 @@ const instance = sdk.initManager({
     onAppReady: () => console.log('ready'),
     onFileManagerClick: (item) => console.log('clicked:', item),
   },
+});
+```
+
+The rooms of one room group, pinned: search and filters inside the frame stay within the group.
+```typescript
+const dealRooms = sdk.initManager({
+  frameId: 'ds-frame',
+  src: 'https://portal.example.com',
+  rootPath: '/rooms/shared/',
+  filter: { groupId: '42' },
 });
 ```
 
@@ -584,8 +595,9 @@ const uploader = sdk.initUploader({
   acceptExtensions: '.docx,.xlsx,.pdf',
   isMultipleUpload: true,
   events: {
-    onUploadSuccess: (file) => console.log('uploaded:', file),
-    onUploadError: (err) => console.error('error:', err),
+    onUploadSuccess: (files) => console.log('uploaded:', files.map((f) => f.response?.title)),
+    onUploadProgress: (p) => console.log(p.fileName, p.percent),
+    onUploadError: (err) => console.error(err.error, err.rejectedFiles),
   },
 });
 ```

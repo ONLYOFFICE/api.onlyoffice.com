@@ -32,6 +32,16 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAuthError",
+        "label": "TAuthError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAuthErrorCode",
+        "label": "TAuthErrorCode"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TBannerDisplaying",
         "label": "TBannerDisplaying"
       },
@@ -47,8 +57,18 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionEvent",
+        "label": "TCustomActionEvent"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionsConfig",
         "label": "TCustomActionsConfig"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionSection",
+        "label": "TCustomActionSection"
       },
       {
         "type": "doc",
@@ -59,6 +79,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomContextMenuActions",
         "label": "TCustomContextMenuActions"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomCreateAction",
+        "label": "TCustomCreateAction"
       },
       {
         "type": "doc",
@@ -167,6 +192,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TManagerSection",
+        "label": "TManagerSection"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TManagerViewMode",
         "label": "TManagerViewMode"
       },
@@ -182,6 +212,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRejectedFile",
+        "label": "TRejectedFile"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRequestTokenInfo",
         "label": "TRequestTokenInfo"
       },
@@ -194,6 +229,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRoomsResponse",
         "label": "TRoomsResponse"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TSDKErrorDetails",
+        "label": "TSDKErrorDetails"
       },
       {
         "type": "doc",
@@ -219,6 +259,41 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TTheme",
         "label": "TTheme"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadedFile",
+        "label": "TUploadedFile"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadError",
+        "label": "TUploadError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploaderUploadError",
+        "label": "TUploaderUploadError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploaderUploadResult",
+        "label": "TUploaderUploadResult"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadProgress",
+        "label": "TUploadProgress"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadRejection",
+        "label": "TUploadRejection"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadResult",
+        "label": "TUploadResult"
       },
       {
         "type": "doc",
@@ -259,6 +334,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/enumerations/ManagerViewMode",
         "label": "ManagerViewMode"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/enumerations/RoomType",
+        "label": "RoomType"
       },
       {
         "type": "doc",

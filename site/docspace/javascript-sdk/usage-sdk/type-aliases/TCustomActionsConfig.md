@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # TCustomActionsConfig
 
-Configuration for custom context menu actions, passed to [SDKInstance.setCustomActions](../classes/SDKInstance.md#setcustomactions).
+Custom actions of a frame, set with [TFrameConfig.customActions](TFrameConfig.md#customActions) or [SDKInstance.setCustomActions](../classes/SDKInstance.md#setcustomactions).
 
 ```ts
 type TCustomActionsConfig = object;
@@ -17,13 +17,10 @@ type TCustomActionsConfig = object;
 ```typescript
 await instance.setCustomActions({
   contextMenu: {
-    file: [
-      { key: "export", label: "Export to CRM" },
-    ],
-    folder: [
-      { key: "share", label: "Share folder" },
-    ],
+    file: [{ key: "send", label: "Send to CRM" }],
+    room: [{ key: "share-contacts", label: "Share to CRM contacts" }],
   },
+  createMenu: [{ key: "upload-from-crm", label: "Upload from CRM" }],
 });
 ```
 
@@ -34,5 +31,6 @@ await instance.setCustomActions({
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `contextMenu`? | [`TCustomContextMenuActions`](TCustomContextMenuActions.md) | Context menu actions grouped by entity type. See [TCustomContextMenuActions](TCustomContextMenuActions.md). |
+| `createMenu`? | [`TCustomCreateAction`](TCustomCreateAction.md)[] | Items added to the create ("+") menu. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal). |
 
 </APITable>

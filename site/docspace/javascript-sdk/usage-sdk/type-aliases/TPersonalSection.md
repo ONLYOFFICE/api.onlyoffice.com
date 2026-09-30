@@ -9,7 +9,13 @@ Used as [TFrameConfig.personalDestination](TFrameConfig.md#personalDestination) 
 [SDKInstance.navigateSection](../classes/SDKInstance.md#navigatesection) to switch sections at runtime.
 
 ```ts
-type TPersonalSection = "my-documents" | "favorites" | "recent" | "trash" | "settings";
+type TPersonalSection = 
+  | "my-documents"
+  | "favorites"
+  | "recent"
+  | "shared-with-me"
+  | "trash"
+  | "settings";
 ```
 
 ## Example

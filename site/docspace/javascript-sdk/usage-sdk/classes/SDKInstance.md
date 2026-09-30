@@ -12,6 +12,17 @@ and exposes methods for operating on the embedded ONLYOFFICE Apps UI.
 Instances are created and stored by [SDK](SDK.md). Do not construct directly —
 use [SDK.init](SDK.md#init) or any `init*` convenience wrapper.
 
+:::note
+Every method that talks to the frame returns a promise that rejects with an [SDKError](SDKError.md):
+[SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError) when the portal reports a failure (HTTP status in [SDKError.status](SDKError.md#SDKError-status)),
+[SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) when the current mode has no such method,
+[SDKErrorCode.Timeout](../enumerations/SDKErrorCode.md#Timeout) after [TFrameConfig.methodTimeout](../type-aliases/TFrameConfig.md#methodTimeout) and
+[SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected) when the frame is not connected. Two legacy methods differ:
+[SDKInstance.login](#login) and [SDKInstance.createRoom](#createroom) resolve a portal failure as `{ status, message }`.
+A portal older than ONLYOFFICE Apps 4.0 does not flag failures: there every method resolves the portal's
+error object instead of rejecting.
+:::
+
 ## Example
 
 ```typescript
@@ -56,6 +67,8 @@ new SDKInstance(config: TFrameConfig): SDKInstance;
 addTagsToRoom(roomId: string, tags: string[]): Promise<object>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Adds the specified tags to a room.
 
 #### Parameters
@@ -74,6 +87,7 @@ Adds the specified tags to a room.
 `Promise`\<`object`\>
 
 A promise that resolves with the result of the operation.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -85,7 +99,7 @@ Create a new tag with [SDKInstance.createTag](#createtag) and apply it
 to a newly created room via [SDKInstance.createRoom](#createroom).
 ```typescript
 await instance.createTag('design');
-const room = await instance.createRoom('Creative Hub', 'collaboration');
+const room = await instance.createRoom('Creative Hub', RoomType.Collaboration);
 await instance.addTagsToRoom(room.id, ['design']);
 ```
 
@@ -97,10 +111,12 @@ await instance.addTagsToRoom(room.id, ['design']);
 createFile(
    folderId: string, 
    title: string, 
-   templateId: string, 
-   formId: string
+   templateId?: string, 
+   formId?: string
 ): Promise<TFileInfo>;
 ```
+
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
 
 Creates a new file in the specified folder.
 
@@ -111,9 +127,9 @@ Creates a new file in the specified folder.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `folderId` | `string` | The ID of the target folder. |
-| `title` | `string` | The file title (without extension). |
-| `templateId` | `string` | The ID of the template to use for the new file. |
-| `formId` | `string` | The ID of the associated form, or an empty string if none. |
+| `title` | `string` | The file title. An extension is optional: `"Report.docx"` keeps it, `"Report"` gets `.docx` from the portal. |
+| `templateId`? | `string` | The ID of a file to copy the content from. Omit for an empty document. |
+| `formId`? | `string` | The ID of a form to create the file from. Omit when the file is not based on a form. |
 
 </APITable>
 
@@ -122,17 +138,18 @@ Creates a new file in the specified folder.
 `Promise`\<[`TFileInfo`](../type-aliases/TFileInfo.md)\>
 
 A promise that resolves with [TFileInfo](../type-aliases/TFileInfo.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
 ```typescript
-const file = await instance.createFile('folder-123', 'Project Proposal', 'template-456', '');
+const file = await instance.createFile('folder-123', 'Project Proposal');
 console.log(file);
 ```
 
-Create a file and immediately open it in the editor using [SDKInstance.setConfig](#setconfig).
+Create a file from a template and immediately open it in the editor using [SDKInstance.setConfig](#setconfig).
 ```typescript
-const file = await instance.createFile('folder-123', 'Report', 'template-456', '');
+const file = await instance.createFile('folder-123', 'Report.docx', 'template-456');
 await instance.setConfig({ id: file.id, mode: SDKMode.Editor }, true);
 ```
 
@@ -143,6 +160,8 @@ await instance.setConfig({ id: file.id, mode: SDKMode.Editor }, true);
 ```ts
 createFolder(parentFolderId: string, title: string): Promise<TFolderInfo>;
 ```
+
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
 
 Creates a new folder inside the specified parent folder.
 
@@ -162,6 +181,7 @@ Creates a new folder inside the specified parent folder.
 `Promise`\<[`TFolderInfo`](../type-aliases/TFolderInfo.md)\>
 
 A promise that resolves with [TFolderInfo](../type-aliases/TFolderInfo.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -173,7 +193,7 @@ console.log(folder);
 Create a folder and immediately add a file inside it using [SDKInstance.createFile](#createfile).
 ```typescript
 const folder = await instance.createFolder('parent-123', 'Q1 Reports');
-await instance.createFile(folder.id, 'Summary', 'template-456', '');
+await instance.createFile(folder.id, 'Summary');
 ```
 
 ***
@@ -183,6 +203,8 @@ await instance.createFile(folder.id, 'Summary', 'template-456', '');
 ```ts
 createHash(password: string, hashSettings: object): Promise<object>;
 ```
+
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.System](../enumerations/SDKMode.md#System); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
 
 Creates a password hash using the provided hash settings.
 
@@ -204,6 +226,7 @@ Obtain `hashSettings` from [SDKInstance.getHashSettings](#gethashsettings) befor
 `Promise`\<`object`\>
 
 A promise that resolves with the generated hash.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -232,7 +255,15 @@ createRoom(
 ): Promise<TRoomInfo>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Creates a new room with the given type and optional settings.
+
+:::note
+The room type decides which access levels the room accepts: reviewing and commenting exist only in
+[RoomType.Custom](../enumerations/RoomType.md#Custom); a [RoomType.Collaboration](../enumerations/RoomType.md#Collaboration) room offers editing and reading only.
+Creating a room requires the room admin role on the portal; a user without it gets a `403` result.
+:::
 
 #### Parameters
 
@@ -241,7 +272,7 @@ Creates a new room with the given type and optional settings.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `title` | `string` | The room display name. |
-| `roomType` | `string` \| `number` | The room type (e.g. `1` for custom, `2` for filling forms). |
+| `roomType` | `string` \| `number` | The room type: a [RoomType](../enumerations/RoomType.md) value or its numeric API value. |
 | `options`? | [`TCreateRoomOptions`](../type-aliases/TCreateRoomOptions.md) | Optional room settings. See [TCreateRoomOptions](../type-aliases/TCreateRoomOptions.md). |
 
 </APITable>
@@ -250,19 +281,20 @@ Creates a new room with the given type and optional settings.
 
 `Promise`\<[`TRoomInfo`](../type-aliases/TRoomInfo.md)\>
 
-A promise that resolves with [TRoomInfo](../type-aliases/TRoomInfo.md).
+A promise that resolves with [TRoomInfo](../type-aliases/TRoomInfo.md), or with `{ status, message }` when the portal
+  reports a failure — unlike the other methods, `createRoom` does not reject on portal errors.
 
 #### Examples
 
 ```typescript
-const room = await instance.createRoom('Design Team', 1, { tags: ['design'] });
+const room = await instance.createRoom('Design Team', RoomType.Collaboration, { tags: ['design'] });
 console.log(room);
 ```
 
 Create a room, then create a new tag and apply it using [SDKInstance.createTag](#createtag)
 and [SDKInstance.addTagsToRoom](#addtagstoroom).
 ```typescript
-const room = await instance.createRoom('Marketing', 1);
+const room = await instance.createRoom('Marketing', RoomType.Custom);
 await instance.createTag('campaigns');
 await instance.addTagsToRoom(room.id, ['campaigns']);
 ```
@@ -274,6 +306,8 @@ await instance.addTagsToRoom(room.id, ['campaigns']);
 ```ts
 createTag(name: string): Promise<object>;
 ```
+
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
 
 Creates a new tag with the given name.
 
@@ -292,6 +326,7 @@ Creates a new tag with the given name.
 `Promise`\<`object`\>
 
 A promise that resolves with the created tag data.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -318,8 +353,9 @@ Tears down the iframe and releases all resources associated with this instance.
 
 Replaces the container with a plain `<div>` (preserving the original `frameId` and CSS classes,
 showing [TFrameConfig.destroyText](../type-aliases/TFrameConfig.md#destroyText)), removes the `message` listener, rejects pending
-method calls with [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected), and removes the instance from the global
-`DocSpace.SDK.frames` registry.
+method calls with [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected), cancels the proactive OAuth token refresh,
+and removes the instance from the global `DocSpace.SDK.frames` registry. In OAuth mode this is
+how a host ends the embedded session: no cookie exists, so nothing outlives the frame.
 
 The call is synchronous and complete when it returns: the placeholder keeps the `frameId`, so
 an `SDK.init*` call on the same `frameId` may follow immediately — there is nothing to await.
@@ -458,6 +494,8 @@ await instance.setConfig({ ...config, theme: Theme.Dark });
 getFiles(): Promise<TFilesResponse>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager), [SDKMode.Personal](../enumerations/SDKMode.md#Personal) and [SDKMode.Forms](../enumerations/SDKMode.md#Forms); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns the files in the folder currently open in the frame.
 
 #### Returns
@@ -465,6 +503,7 @@ Returns the files in the folder currently open in the frame.
 `Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
 A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -489,6 +528,8 @@ if (files.files[0]) {
 getFolderInfo(): Promise<TFolderInfo>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns metadata about the folder currently open in the frame.
 
 #### Returns
@@ -496,6 +537,7 @@ Returns metadata about the folder currently open in the frame.
 `Promise`\<[`TFolderInfo`](../type-aliases/TFolderInfo.md)\>
 
 A promise that resolves with [TFolderInfo](../type-aliases/TFolderInfo.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -520,6 +562,8 @@ if (info.security?.create) {
 getFolders(): Promise<TFilesResponse>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager), [SDKMode.Personal](../enumerations/SDKMode.md#Personal) and [SDKMode.Forms](../enumerations/SDKMode.md#Forms); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns the subfolders of the folder currently open in the frame.
 
 #### Returns
@@ -527,6 +571,7 @@ Returns the subfolders of the folder currently open in the frame.
 `Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
 A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -551,6 +596,8 @@ if (folders.folders[0]) {
 getHashSettings(): Promise<THashSettings>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.System](../enumerations/SDKMode.md#System); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns the server's password hash settings needed by [SDKInstance.createHash](#createhash).
 
 #### Returns
@@ -558,6 +605,7 @@ Returns the server's password hash settings needed by [SDKInstance.createHash](#
 `Promise`\<[`THashSettings`](../type-aliases/THashSettings.md)\>
 
 A promise that resolves with [THashSettings](../type-aliases/THashSettings.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -581,6 +629,8 @@ await instance.login('user@example.com', hash);
 getList(): Promise<TFilesResponse>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager), [SDKMode.Personal](../enumerations/SDKMode.md#Personal) and [SDKMode.Forms](../enumerations/SDKMode.md#Forms); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns all files and folders in the folder currently open in the frame.
 
 Use [SDKInstance.getFiles](#getfiles) or [SDKInstance.getFolders](#getfolders)
@@ -591,6 +641,7 @@ when you need only one content type.
 `Promise`\<[`TFilesResponse`](../type-aliases/TFilesResponse.md)\>
 
 A promise that resolves with [TFilesResponse](../type-aliases/TFilesResponse.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -612,6 +663,8 @@ console.log('Files:', list.files.length, 'Folders:', list.folders.length);
 getRooms(filter: TFrameFilter): Promise<TRoomsResponse>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns a list of rooms, filtered by `filter`.
 
 #### Parameters
@@ -629,6 +682,7 @@ Returns a list of rooms, filtered by `filter`.
 `Promise`\<[`TRoomsResponse`](../type-aliases/TRoomsResponse.md)\>
 
 A promise that resolves with [TRoomsResponse](../type-aliases/TRoomsResponse.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -649,6 +703,12 @@ for (const room of rooms.folders) {
 }
 ```
 
+The rooms of one room group ([TFrameFilter.groupId](../type-aliases/TFrameFilter.md#groupId)), e.g. the rooms attached to a deal.
+```typescript
+const deal = await instance.getRooms({ groupId: '42' });
+console.log(deal.folders.map((room) => room.title));
+```
+
 ***
 
 ### getSelection()
@@ -657,6 +717,8 @@ for (const room of rooms.folders) {
 getSelection(): Promise<TFileInfo[]>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns the items currently selected in the frame.
 
 #### Returns
@@ -664,6 +726,7 @@ Returns the items currently selected in the frame.
 `Promise`\<[`TFileInfo`](../type-aliases/TFileInfo.md)[]\>
 
 A promise that resolves with an array of [TFileInfo](../type-aliases/TFileInfo.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -688,6 +751,8 @@ if (selection.length > 0) {
 getUserInfo(): Promise<TUserInfo>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager), [SDKMode.System](../enumerations/SDKMode.md#System), [SDKMode.Personal](../enumerations/SDKMode.md#Personal) and [SDKMode.Forms](../enumerations/SDKMode.md#Forms); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Returns information about the currently authenticated user.
 
 #### Returns
@@ -695,6 +760,7 @@ Returns information about the currently authenticated user.
 `Promise`\<[`TUserInfo`](../type-aliases/TUserInfo.md)\>
 
 A promise that resolves with [TUserInfo](../type-aliases/TUserInfo.md).
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -784,6 +850,8 @@ login(
 ): Promise<TLoginResult>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.System](../enumerations/SDKMode.md#System); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Authenticates a user using email and a hashed password.
 
 Obtain `passwordHash` from [SDKInstance.createHash](#createhash). The portal's SDK dispatcher
@@ -792,10 +860,14 @@ persistent session; the REST endpoint behind it would also take a plaintext pass
 session flag, but neither reaches it from the frame.
 
 :::note
-The result is **resolved, never rejected** — see [TLoginResult](../type-aliases/TLoginResult.md). `url === "/"` means a
+A failed sign-in is **resolved, not rejected** — see [TLoginResult](../type-aliases/TLoginResult.md). `url === "/"` means a
 session exists; a `url` under `/confirm/` means the account needs a second factor and no
 session was created — call `login` again with the same credentials and the one-time `code`;
-a `status` means the attempt failed. A portal whose SDK dispatcher predates the `code`
+a `status` (`401` for wrong credentials) with a `message` means the attempt failed. Only SDK-side
+failures reject: [SDKErrorCode.Timeout](../enumerations/SDKErrorCode.md#Timeout), [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected),
+[SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) — the latter also in OAuth mode ([TFrameConfig.getToken](../type-aliases/TFrameConfig.md#getToken) or
+[TFrameConfig.accessToken](../type-aliases/TFrameConfig.md#accessToken) set), where the host owns the session and no cookie sign-in is
+possible. A portal whose SDK dispatcher predates the `code`
 argument ignores it and answers the challenge again; on such a portal the login page remains
 the only way to complete a two-factor sign-in.
 :::
@@ -819,6 +891,7 @@ the only way to complete a two-factor sign-in.
 `Promise`\<[`TLoginResult`](../type-aliases/TLoginResult.md)\>
 
 A promise that resolves with the authentication result — see [TLoginResult](../type-aliases/TLoginResult.md).
+  Unlike the other methods, a portal failure is resolved as `{ status, message }`, not rejected.
 
 #### Examples
 
@@ -848,13 +921,22 @@ if (first.url?.startsWith('/confirm/')) {
 logout(): Promise<object>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.System](../enumerations/SDKMode.md#System); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Ends the current user session.
+
+In OAuth mode ([TFrameConfig.getToken](../type-aliases/TFrameConfig.md#getToken) or [TFrameConfig.accessToken](../type-aliases/TFrameConfig.md#accessToken) set) there is no
+portal session to end: the frame authenticates every request with the host's token. The call
+rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch); revoke the token on the host and call
+[SDKInstance.destroyFrame](#destroyframe) instead.
 
 #### Returns
 
 `Promise`\<`object`\>
 
 A promise that resolves with the logout result.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure,
+  and with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) in OAuth mode.
 
 #### Examples
 
@@ -885,6 +967,7 @@ navigateSection(section:
   | "my-documents"
   | "favorites"
   | "recent"
+  | "shared-with-me"
 | "trash"): Promise<object>;
 ```
 
@@ -897,7 +980,7 @@ Works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `section` | \| `"my-forms"` \| `"in-progress"` \| `"completed-forms"` \| `"library"` \| `"settings"` \| `"my-documents"` \| `"favorites"` \| `"recent"` \| `"trash"` | Target section. For [SDKMode.Forms](../enumerations/SDKMode.md#Forms) — [TFormsSection](../type-aliases/TFormsSection.md); for [SDKMode.Personal](../enumerations/SDKMode.md#Personal) — [TPersonalSection](../type-aliases/TPersonalSection.md). |
+| `section` | \| `"my-forms"` \| `"in-progress"` \| `"completed-forms"` \| `"library"` \| `"settings"` \| `"my-documents"` \| `"favorites"` \| `"recent"` \| `"shared-with-me"` \| `"trash"` | Target section. For [SDKMode.Forms](../enumerations/SDKMode.md#Forms) — [TFormsSection](../type-aliases/TFormsSection.md); for [SDKMode.Personal](../enumerations/SDKMode.md#Personal) — [TPersonalSection](../type-aliases/TPersonalSection.md). |
 
 </APITable>
 
@@ -906,6 +989,8 @@ Works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal
 `Promise`\<`object`\>
 
 A promise that resolves when the navigation is complete.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure,
+  or with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) in any other mode.
 
 #### Examples
 
@@ -931,6 +1016,8 @@ await personal.navigateSection("trash");
 openModal(type: string, options: object): Promise<object>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Opens a modal dialog of the specified type inside the frame.
 
 #### Parameters
@@ -949,6 +1036,7 @@ Opens a modal dialog of the specified type inside the frame.
 `Promise`\<`object`\>
 
 A promise that resolves with the modal result.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -973,6 +1061,8 @@ if (selection.length > 0) {
 removeTagsFromRoom(roomId: string, tags: string[]): Promise<object>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Removes the specified tags from a room.
 
 #### Parameters
@@ -991,6 +1081,7 @@ Removes the specified tags from a room.
 `Promise`\<`object`\>
 
 A promise that resolves with the result of the operation.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -1035,6 +1126,7 @@ instead of sending a postMessage update.
 `Promise`\<`object`\>
 
 A promise that resolves with the iframe's response, or with the merged config if `reload` is `true`.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -1057,9 +1149,13 @@ await instance.setConfig({ ...current, id: 99, mode: SDKMode.Editor }, true);
 setCustomActions(config: TCustomActionsConfig): Promise<object>;
 ```
 
-Registers custom context menu actions for files and/or folders.
-Only works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode.
-When a custom action is clicked, [TFrameEvents.onCustomAction](../type-aliases/TFrameEvents.md#onCustomAction) fires with the action key and item data.
+Replaces the custom actions of the frame: context menu items for files, folders and rooms and
+items of the create ("+") menu. Groups left out of `config` are cleared; pass `{}` to remove all items.
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager), [SDKMode.Personal](../enumerations/SDKMode.md#Personal) and [SDKMode.Forms](../enumerations/SDKMode.md#Forms).
+Room actions are shown in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) only, create menu items in [SDKMode.Manager](../enumerations/SDKMode.md#Manager)
+and [SDKMode.Personal](../enumerations/SDKMode.md#Personal). When an action is clicked, [TFrameEvents.onCustomAction](../type-aliases/TFrameEvents.md#onCustomAction) fires
+with a [TCustomActionEvent](../type-aliases/TCustomActionEvent.md). To show the items from the first render, set
+[TFrameConfig.customActions](../type-aliases/TFrameConfig.md#customActions) instead.
 
 #### Parameters
 
@@ -1075,7 +1171,9 @@ When a custom action is clicked, [TFrameEvents.onCustomAction](../type-aliases/T
 
 `Promise`\<`object`\>
 
-A promise that resolves when actions are registered.
+A promise that resolves when the actions are applied.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure,
+  or with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) in any other mode.
 
 #### Examples
 
@@ -1084,23 +1182,24 @@ await instance.setCustomActions({
   contextMenu: {
     file: [
       { key: "send-to-crm", label: "Send to CRM", icon: "https://example.com/icon.svg" },
-      { key: "export", label: "Export", section: ["completed-forms"] },
+      { key: "export", label: "Export", extensions: ["pdf"] },
     ],
+    room: [{ key: "unlink", label: "Unlink from deal", requireSecurity: ["EditRoom"] }],
   },
+  createMenu: [{ key: "upload-from-crm", label: "Upload from CRM" }],
 });
 ```
 
 Handle the custom action event on the host page.
 ```typescript
-const forms = sdk.initForms({
-  frameId: 'ds-forms',
+const manager = sdk.initManager({
+  frameId: 'ds-frame',
   src: 'https://portal.example.com',
-  id: 'room-42',
   events: {
-    onCustomAction: (data) => console.log('action:', data),
+    onCustomAction: ({ action, items }) => console.log(action, items),
   },
 });
-await forms.setCustomActions({
+await manager.setCustomActions({
   contextMenu: { file: [{ key: "approve", label: "Approve" }] },
 });
 ```
@@ -1152,6 +1251,8 @@ document.getElementById('show-frame').onclick = () => instance.setIsLoaded();
 setListView(viewType: "row" | "table" | "tile"): Promise<object>;
 ```
 
+Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Switches the file list display mode.
 
 #### Parameters
@@ -1169,6 +1270,7 @@ Switches the file list display mode.
 `Promise`\<`object`\>
 
 A promise that resolves with the result of the operation.
+  Rejects with [SDKError](SDKError.md) ([SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError)) when the portal reports a failure.
 
 #### Examples
 
@@ -1192,10 +1294,10 @@ if (mode === SDKMode.Manager) {
 upload(file: File): Promise<object>;
 ```
 
-Uploads a file into the current room.
-Only works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode.
+Uploads a file into the frame's current location: the form filling room in
+[SDKMode.Forms](../enumerations/SDKMode.md#Forms), the open folder in [SDKMode.Personal](../enumerations/SDKMode.md#Personal).
 The file is transferred to the iframe via zero-copy ArrayBuffer and uploaded
-using the chunked upload API. The form list refreshes automatically when complete.
+using the chunked upload API. The file list refreshes automatically when complete.
 
 #### Parameters
 
@@ -1211,8 +1313,10 @@ using the chunked upload API. The form list refreshes automatically when complet
 
 `Promise`\<`object`\>
 
-A promise that resolves with upload result from the iframe,
-  or rejects if the iframe reports an error via `onUploadError`.
+A promise that resolves with the [TUploadResult](../type-aliases/TUploadResult.md) of [TFrameEvents.onUploadSuccess](../type-aliases/TFrameEvents.md#onUploadSuccess),
+  so a handler for that event is optional. Rejects with [SDKErrorCode.UploadFailed](../enumerations/SDKErrorCode.md#UploadFailed) on
+  [TFrameEvents.onUploadError](../type-aliases/TFrameEvents.md#onUploadError) or after 120 seconds, [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch) in any
+  other mode, [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected) before the frame is connected.
 
 :::note
 The entire file is read into memory via `arrayBuffer()` before transfer.
@@ -1222,6 +1326,9 @@ is configured in ONLYOFFICE Apps and will reject files that exceed it.
 
 The ArrayBuffer is transferred to the iframe (zero-copy). After `upload()`
 returns, the buffer is neutered and cannot be reused.
+
+[TFrameConfig.methodTimeout](../type-aliases/TFrameConfig.md#methodTimeout) does not apply to the transfer, and
+[TFrameEvents.onUploadProgress](../type-aliases/TFrameEvents.md#onUploadProgress) is not emitted for it.
 :::
 
 #### Examples

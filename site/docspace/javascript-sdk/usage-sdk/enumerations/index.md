@@ -17,6 +17,7 @@ The following enumerations are available:
 | [`FilterSortOrder`](FilterSortOrder.md) | The sort direction for file/folder lists. |
 | [`HeaderBannerDisplaying`](HeaderBannerDisplaying.md) | The header banner visibility. |
 | [`ManagerViewMode`](ManagerViewMode.md) | The item layout in [SDKMode.Manager](SDKMode.md#Manager) mode. |
+| [`RoomType`](RoomType.md) | Room types accepted by [SDKInstance.createRoom](../classes/SDKInstance.md#createroom) and returned as `roomType` in [TRoomInfo](../type-aliases/TRoomInfo.md) and [TSelectedRoom.roomType](../type-aliases/TSelectedRoom.md#roomType). |
 | [`SDKErrorCode`](SDKErrorCode.md) | Error codes for [SDKError](../classes/SDKError.md). |
 | [`SDKMode`](SDKMode.md) | The SDK initialization mode. |
 | [`SelectorFilterType`](SelectorFilterType.md) | The content filter for selector modes ([SDKMode.RoomSelector](SDKMode.md#RoomSelector), [SDKMode.FileSelector](SDKMode.md#FileSelector)). |
