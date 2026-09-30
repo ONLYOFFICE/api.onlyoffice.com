@@ -1,6 +1,8 @@
 # IsEditable
 
-Checks if the combo box text can be edited. If it is not editable, then this form is a drop-down list.
+Checks if the combo box text can be edited.
+
+If it is not editable, then this form is a drop-down list.
 
 ## Syntax
 

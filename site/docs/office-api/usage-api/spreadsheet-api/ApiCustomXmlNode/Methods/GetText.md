@@ -1,6 +1,7 @@
 # GetText
 
 Returns the inner text of the current node and its child nodes.
+
 For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 
 ## Syntax

@@ -1,6 +1,8 @@
 # SelectNoteReference
 
-Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing.
+Selects the reference to this footnote/endnote.
+
+If this document content is not a footnote/endnote, do nothing.
 
 ## Syntax
 

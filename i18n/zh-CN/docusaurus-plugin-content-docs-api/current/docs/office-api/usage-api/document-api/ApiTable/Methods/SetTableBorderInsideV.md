@@ -1,7 +1,6 @@
 # SetTableBorderInsideV
 
-指定将在所有不在父表格最外边缘的垂直表格单元格边框上显示的边框
-（所有非最左或最右边框的垂直边框）。
+指定将在所有不在父表格最外边缘的垂直表格单元格边框上显示的边框（所有非最左侧或最右侧边框的垂直边框）。
 
 继承自 [ApiTablePr.SetTableBorderInsideV](../../ApiTablePr/Methods/SetTableBorderInsideV.md)。
 

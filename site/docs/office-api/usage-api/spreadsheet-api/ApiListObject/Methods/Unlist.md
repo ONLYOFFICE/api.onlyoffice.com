@@ -1,7 +1,6 @@
 # Unlist
 
-Removes the list functionality from the ListObject and converts it to a regular data range.
-Cell data, formatting, and formulas remain on the sheet.
+Removes the list functionality from the ListObject and converts it to a regular data range. Cell data, formatting, and formulas remain on the sheet.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

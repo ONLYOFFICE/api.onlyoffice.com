@@ -1,6 +1,8 @@
 # RATE
 
-Returns the interest rate per period for a loan or an investment. For example, use 6%/4 for quarterly payments at 6% APR.
+Returns the interest rate per period for a loan or an investment.
+
+For example, use 6%/4 for quarterly payments at 6% APR.
 
 ## Syntax
 

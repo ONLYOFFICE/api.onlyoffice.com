@@ -73,7 +73,7 @@
 | [GetPrintGridlines](./Methods/GetPrintGridlines.md) | boolean | 返回页面 PrintGridlines 属性，该属性指定是否必须打印当前工作表网格线。 |
 | [GetPrintHeadings](./Methods/GetPrintHeadings.md) | boolean | 返回页面 PrintHeadings 属性，该属性指定是否必须打印当前工作表的行/列标题。 |
 | [GetProtectedRange](./Methods/GetProtectedRange.md) | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md) \| null | 按标题返回受保护区域对象。 |
-| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示当前工作表选定范围的对象。可以是单个单元格 - **A1**，或单元格 |
+| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示当前工作表选定范围的对象。 |
 | [GetRangeByNumber](./Methods/GetRangeByNumber.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回使用 **行/列** 坐标进行单元格选择的当前工作表选定区域的对象。 |
 | [GetRightMargin](./Methods/GetRightMargin.md) | number | 返回工作表的右边距。 |
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示行区域中所有单元格的 ApiRange 对象。 |

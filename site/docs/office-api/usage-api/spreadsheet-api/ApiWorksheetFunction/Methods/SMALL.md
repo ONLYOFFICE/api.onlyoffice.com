@@ -1,6 +1,8 @@
 # SMALL
 
-Returns the k-th smallest value in a data set. For example, the fifth smallest number.
+Returns the k-th smallest value in a data set.
+
+For example, the fifth smallest number.
 
 ## Syntax
 

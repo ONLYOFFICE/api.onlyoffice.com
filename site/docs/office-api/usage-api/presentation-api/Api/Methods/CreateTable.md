@@ -1,6 +1,7 @@
 # CreateTable
 
 Creates a table.
+
 :::danger[Breaking Change]
 Starting from version 9.4.0, the parameter order has been changed from `Api.CreateTable(cols, rows)` to `Api.CreateTable(rows, cols)`.
 :::

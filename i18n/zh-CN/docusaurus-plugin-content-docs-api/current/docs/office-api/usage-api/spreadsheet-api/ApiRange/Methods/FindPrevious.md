@@ -1,6 +1,8 @@
 # FindPrevious
 
-继续使用 [ApiRange#Find](../../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。这不会影响选择或活动单元格。
+继续使用 [ApiRange#Find](../../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。
+
+这不会影响选择或活动单元格。
 
 ## 语法
 

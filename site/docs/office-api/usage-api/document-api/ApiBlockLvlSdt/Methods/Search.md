@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a content control object. The search results are a collection of ApiRange objects.
+Searches for a scope of a content control object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 

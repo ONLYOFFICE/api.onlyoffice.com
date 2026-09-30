@@ -1,6 +1,6 @@
 # CEILING_PRECISE
 
-Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. The number is always rounded up regardless of its sing.
+Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. The number is always rounded up regardless of its sign.
 
 ## Syntax
 

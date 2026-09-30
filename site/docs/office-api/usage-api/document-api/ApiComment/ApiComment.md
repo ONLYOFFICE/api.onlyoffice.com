@@ -12,7 +12,7 @@ The following table lists the available methods.
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current comment from the document. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Returns the comment author's name. |
 | [GetClassType](./Methods/GetClassType.md) | "comment" | Returns a type of the ApiComment class. |
-| [GetId](./Methods/GetId.md) | string | Returns the current comment ID. If the comment doesn't have an ID, null is returned. |
+| [GetId](./Methods/GetId.md) | string | Returns the current comment ID. |
 | [GetQuoteText](./Methods/GetQuoteText.md) | Number | Returns the quote text of the current comment. |
 | [GetRepliesCount](./Methods/GetRepliesCount.md) | Number | Returns a number of the comment replies. |
 | [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) | Returns the specified comment reply. |

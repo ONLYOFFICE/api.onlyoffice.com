@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the current sheet.
+
 This manager allows manipulation and access to custom XML parts within the current sheet.
 
 ## Syntax

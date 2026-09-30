@@ -1,6 +1,8 @@
 # GetCharacters
 
-Returns the ApiCharacters object that represents a range of characters within the object text. Use the ApiCharacters object to format characters within a text string.
+Returns the ApiCharacters object that represents a range of characters within the object text.
+
+Use the ApiCharacters object to format characters within a text string.
 
 ## Syntax
 

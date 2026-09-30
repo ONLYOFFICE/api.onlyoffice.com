@@ -1,7 +1,8 @@
 # SetValue
 
-Sets the value of the combo box form. Selects a list item if the value matches one,
-otherwise sets it as free text (only for editable combo boxes).
+Sets the value of the combo box form.
+
+Selects a list item if the value matches one, otherwise sets it as free text (only for editable combo boxes).
 
 ## Syntax
 

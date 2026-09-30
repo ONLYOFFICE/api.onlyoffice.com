@@ -1,7 +1,6 @@
 # SetOrientation
 
-Sets a pivot field orientation value that represents the location
-of the field in the specified pivot table report.
+Sets a pivot field orientation value that represents the location of the field in the specified pivot table report.
 
 Inherited from [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md).
 

@@ -2,8 +2,8 @@
 
 Indicates whether any filter is applied on this column.
 
-The property is true when at least one of the following underlying
-structures is present for the column:
+The property is true when at least one of the following underlying structures is present for the column:
+
 - Filters
 - CustomFiltersObj
 - DynamicFilter

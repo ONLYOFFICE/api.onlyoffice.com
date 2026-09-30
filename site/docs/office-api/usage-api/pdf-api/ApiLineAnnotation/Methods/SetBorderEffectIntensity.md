@@ -1,7 +1,10 @@
 # SetBorderEffectIntensity
 
 Sets annotation border effect intensity.
-💡  Can be applied to circle, square, freeText and polygon annotations 
+
+:::note
+Can be applied to circle, square, freeText and polygon annotations.
+:::
 
 Inherited from [ApiBaseAnnotation.SetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/SetBorderEffectIntensity.md).
 

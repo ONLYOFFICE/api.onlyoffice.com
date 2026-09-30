@@ -1,7 +1,9 @@
 # Event_ContentControlLock
 
 Defines the access restrictions for a content control.
+
 Possible values:
+
 - **0** - only deleting,
 - **1** - disable deleting or editing,
 - **2** - only editing,

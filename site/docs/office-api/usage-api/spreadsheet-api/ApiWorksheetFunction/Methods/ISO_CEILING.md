@@ -1,7 +1,8 @@
 # ISO_CEILING
 
 Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance regardless of the sign of the number.
-The number is always rounded up regardless of its sing.
+
+The number is always rounded up regardless of its sign.
 
 ## Syntax
 

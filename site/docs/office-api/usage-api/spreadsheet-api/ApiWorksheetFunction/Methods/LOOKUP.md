@@ -1,6 +1,8 @@
 # LOOKUP
 
-Looks up a value either from a one-row or one-column range. Provided for backwards compatibility.
+Looks up a value either from a one-row or one-column range.
+
+Provided for backwards compatibility.
 
 ## Syntax
 

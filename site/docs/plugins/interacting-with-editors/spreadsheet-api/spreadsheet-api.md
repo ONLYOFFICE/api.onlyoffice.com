@@ -1,9 +1,6 @@
 # Spreadsheet API
 
-The Spreadsheet API lists the methods and events a plugin can use when working with a
-spreadsheet in ONLYOFFICE Docs. To work with the spreadsheet content directly, such as
-worksheets and ranges, run Office API code in `callCommand`. See
-[Spreadsheet API](./../../../../docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md).
+The Spreadsheet API lists the methods and events a plugin can use when working with a spreadsheet in ONLYOFFICE Docs. To work with the spreadsheet content directly, such as worksheets and ranges, run Office API code in `callCommand`. See [Spreadsheet API](./../../../../docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md).
 
 ## Methods
 
@@ -22,7 +19,7 @@ The following table lists the available methods.
 | [GetCustomFunctions](./Methods/GetCustomFunctions.md) | string | Returns a library of local custom functions. |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
@@ -46,7 +43,7 @@ The following table lists the available methods.
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SetCustomFunctions](./Methods/SetCustomFunctions.md) | None | Updates a library of local custom functions. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./Methods/ShowError.md) | None | Shows an error/warning message. |

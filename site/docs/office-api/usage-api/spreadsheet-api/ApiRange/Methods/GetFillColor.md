@@ -1,6 +1,8 @@
 # GetFillColor
 
-Returns the background color for the current cell range. Returns 'No Fill' when the color of the background in the cell / cell range is null.
+Returns the background color for the current cell range.
+
+Returns 'No Fill' when the color of the background in the cell / cell range is null.
 
 ## Syntax
 

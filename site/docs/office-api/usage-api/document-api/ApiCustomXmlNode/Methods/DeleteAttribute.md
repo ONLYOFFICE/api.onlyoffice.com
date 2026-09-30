@@ -1,6 +1,7 @@
 # DeleteAttribute
 
 Deletes an attribute from the custom XML node.
+
 If the attribute exists, it will be removed.
 
 ## Syntax

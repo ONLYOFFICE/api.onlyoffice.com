@@ -1,7 +1,6 @@
 # SetSmallCaps
 
-指定文本块中的所有小写字母仅格式化显示为比指定字体大小
-小两磅的大写字母。
+指定文本块中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
 
 继承自 [ApiTextPr.SetSmallCaps](../../ApiTextPr/Methods/SetSmallCaps.md)。
 

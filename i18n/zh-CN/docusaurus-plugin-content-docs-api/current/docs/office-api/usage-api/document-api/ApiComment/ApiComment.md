@@ -12,7 +12,7 @@
 | [Delete](./Methods/Delete.md) | boolean | 从文档中删除当前批注。 |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | 返回批注作者的姓名。 |
 | [GetClassType](./Methods/GetClassType.md) | "comment" | 返回 ApiComment 类的类型。 |
-| [GetId](./Methods/GetId.md) | string | 返回当前批注 ID。如果批注没有 ID，则返回 null。 |
+| [GetId](./Methods/GetId.md) | string | 返回当前批注 ID。 |
 | [GetQuoteText](./Methods/GetQuoteText.md) | Number | 返回当前批注的引用文本。 |
 | [GetRepliesCount](./Methods/GetRepliesCount.md) | Number | 返回批注回复的数量。 |
 | [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) | 返回指定的批注回复。 |

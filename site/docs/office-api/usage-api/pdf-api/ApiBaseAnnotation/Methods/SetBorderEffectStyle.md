@@ -1,7 +1,10 @@
 # SetBorderEffectStyle
 
 Sets annotation border effect style.
-💡  Can be applied to circle, square, freeText and polygon annotations 
+
+:::note
+Can be applied to circle, square, freeText and polygon annotations.
+:::
 
 ## Syntax
 

@@ -1,6 +1,8 @@
 # SetStart
 
-Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition. By default this value is 1.
+Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition.
+
+By default this value is 1.
 
 ## Syntax
 

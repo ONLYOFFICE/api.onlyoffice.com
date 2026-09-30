@@ -1,6 +1,8 @@
 # ChangeChartType
 
-Tries to change the series type. Returns true if successful.
+Tries to change the series type.
+
+Returns true if successful.
 
 ## Syntax
 

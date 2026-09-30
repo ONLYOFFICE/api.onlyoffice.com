@@ -1,6 +1,8 @@
 # LARGE
 
-Returns the k-th largest value in a data set. For example, the fifth largest number.
+Returns the k-th largest value in a data set.
+
+For example, the fifth largest number.
 
 ## Syntax
 

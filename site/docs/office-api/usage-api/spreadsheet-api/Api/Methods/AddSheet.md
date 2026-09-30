@@ -1,6 +1,8 @@
 # AddSheet
 
-Creates a new worksheet. The new worksheet becomes the active sheet.
+Creates a new worksheet.
+
+The new worksheet becomes the active sheet.
 
 ## Syntax
 

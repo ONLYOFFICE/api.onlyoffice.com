@@ -1,7 +1,10 @@
 # SetBorderEffectIntensity
 
 设置批注边框效果强度。
-💡 可应用于圆形、方形、自由文本和多边形批注
+
+:::note
+可应用于圆形、方形、自由文本和多边形批注。
+:::
 
 继承自 [ApiBaseAnnotation.SetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/SetBorderEffectIntensity.md)。
 

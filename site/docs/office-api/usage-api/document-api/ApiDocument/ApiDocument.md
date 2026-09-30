@@ -30,8 +30,8 @@ The following table lists the available methods.
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | Creates a new history point. |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | Creates an abstract multilevel numbering with a specified type. |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new empty paragraph. |
-| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current |
-| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Creates a new style with the specified type and name. If a style with the specified name already exists, it will be returned without creating a new one. |
+| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Creates a new document section which ends at the specified paragraph. |
+| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Creates a new style with the specified type and name. |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a new table with a specified number of rows and columns. |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | Removes a bookmark from the document, if one exists. |
 | [EnterText](./Methods/EnterText.md) | boolean | Add text to the document on the cursor position. |
@@ -82,7 +82,7 @@ The following table lists the available methods.
 | [GetFinalSection](./Methods/GetFinalSection.md) | [ApiSection](../ApiSection/ApiSection.md) | Returns the document final section. |
 | [GetFootnotesFirstParagraphs](./Methods/GetFootnotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns the first paragraphs from all footnotes in the current document. |
 | [GetFormKeysByRole](./Methods/GetFormKeysByRole.md) | string[] | Returns a list of all form keys attached to the specified role. |
-| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | Returns the form value for the specified key. For a group of radio buttons returns Choice, i.e. the name of the selected item. |
+| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | Returns the form value for the specified key. |
 | [GetFormsByKey](./Methods/GetFormsByKey.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified key. |
 | [GetFormsByRole](./Methods/GetFormsByRole.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified role name. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified tag name. |
@@ -115,7 +115,7 @@ The following table lists the available methods.
 | [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves the cursor to the left. |
 | [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves the cursor to the right. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
-| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. If this document content is not a footnote/endnote, does nothing. |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
 | [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves the cursor up. |
@@ -129,16 +129,16 @@ The following table lists the available methods.
 | [ReplaceCurrentSentence](./Methods/ReplaceCurrentSentence.md) | boolean | Replaces the current sentence or part of the current sentence with the specified text. |
 | [ReplaceCurrentWord](./Methods/ReplaceCurrentWord.md) | boolean | Replaces the current word or part of the current word with the specified text. |
 | [ReplaceDrawing](./Methods/ReplaceDrawing.md) | boolean | Replaces a drawing with a new drawing. |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a document object. The search results are a collection of ApiRange objects. |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a document object. |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | Finds and replaces the text. |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | Selects the current word if it is possible. |
-| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing. |
+| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Selects the reference to this footnote/endnote. |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | Enables or disables AI-assisted change tracking in the document. |
 | [SetControlsHighlight](./Methods/SetControlsHighlight.md) | boolean | Sets the highlight to the content controls from the current document. |
-| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and |
+| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and odd pages (one header/footer for odd pages and another header/footer for even pages). |
 | [SetFormsData](./Methods/SetFormsData.md) | boolean | Sets the data to the specified forms. |
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | Sets the highlight to the forms in the document. |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph. |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | Sets the change tracking mode. |
 | [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Sets the watermark settings in the current document. |
 | [ShowComment](./Methods/ShowComment.md) | boolean | Shows a comment by its ID. |

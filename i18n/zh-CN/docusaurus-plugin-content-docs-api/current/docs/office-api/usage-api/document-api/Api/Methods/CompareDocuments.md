@@ -1,6 +1,8 @@
 # CompareDocuments
 
-将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档进行比较。两个文档之间的修订在当前文档中生成。
+将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档进行比较。
+
+两个文档之间的修订在当前文档中生成。
 
 ## 语法
 

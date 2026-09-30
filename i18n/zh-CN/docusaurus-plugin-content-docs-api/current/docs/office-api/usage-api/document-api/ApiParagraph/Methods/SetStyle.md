@@ -1,7 +1,10 @@
 # SetStyle
 
 段落样式基础方法。
-💡 此方法本身不单独使用，它仅构成 [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) 方法的基础，该方法为段落设置选定或创建的样式。
+
+:::note
+此方法本身不单独使用，它仅构成 [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) 方法的基础，该方法为段落设置选定或创建的样式。
+:::
 
 继承自 [ApiParaPr.SetStyle](../../ApiParaPr/Methods/SetStyle.md)。
 

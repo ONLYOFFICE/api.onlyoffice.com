@@ -1,6 +1,7 @@
 # footnoteRefTo
 
 Available values of the "footnote" reference type:
+
 - **"footnoteNum"** - the footnote number;
 - **"pageNum"** - the page number of the footnote;
 - **"aboveBelow"** - the words "above" or "below" depending on the position of the item;

@@ -1,6 +1,8 @@
 # GetCharacters
 
-返回表示对象文本中字符范围的 ApiCharacters 对象。使用 ApiCharacters 对象格式化文本字符串中的字符。
+返回表示对象文本中字符范围的 ApiCharacters 对象。
+
+使用 ApiCharacters 对象格式化文本字符串中的字符。
 
 ## 语法
 

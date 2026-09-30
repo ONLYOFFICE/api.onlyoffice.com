@@ -1,7 +1,6 @@
 # SetPosition
 
-指定此文本块的文本相对于周围非定位文本的默认
-基线升高或降低的量。
+指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 继承自 [ApiTextPr.SetPosition](../../ApiTextPr/Methods/SetPosition.md)。
 

@@ -1,6 +1,8 @@
 # GetImageDataFromSelection
 
-Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.
+Returns the image data from the first of the selected drawings.
+
+If there are no drawings selected, the method returns a white rectangle.
 
 ## Syntax
 

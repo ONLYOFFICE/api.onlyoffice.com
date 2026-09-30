@@ -1,14 +1,8 @@
 # Quad
 
-Quadrilateral represented as a flat tuple of vertices.
-Vertices order is fixed:
- · left-top → right-top → left-bottom → right-bottom
+Quadrilateral represented as a flat tuple of vertices. Vertices order is fixed:  · left-top → right-top → left-bottom → right-bottom
 
-Invariants:
- · x1 \<= x2 (top edge goes left → right)
- · x3 \<= x4 (bottom edge goes left → right)
- · y1 \<= y3 (left edge goes top → bottom)
- · y2 \<= y4 (right edge goes top → bottom)
+Invariants:  · x1 \<= x2 (top edge goes left → right)  · x3 \<= x4 (bottom edge goes left → right)  · y1 \<= y3 (left edge goes top → bottom)  · y2 \<= y4 (right edge goes top → bottom)
 
 ## Type
 

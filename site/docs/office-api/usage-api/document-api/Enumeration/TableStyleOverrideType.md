@@ -1,6 +1,7 @@
 # TableStyleOverrideType
 
 This simple type specifies possible values for the table sections to which the current conditional formatting properties will be applied when this selected table style is used.
+
 - **"topLeftCell"** - specifies that the table formatting is applied to the top left cell.
 - **"topRightCell"** - specifies that the table formatting is applied to the top right cell.
 - **"bottomLeftCell"** - specifies that the table formatting is applied to the bottom left cell.

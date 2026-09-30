@@ -1,6 +1,8 @@
 # REPT
 
-Repeats text a given number of times. Use this function to fill a cell with a number of instances of a text string.
+Repeats text a given number of times.
+
+Use this function to fill a cell with a number of instances of a text string.
 
 ## Syntax
 

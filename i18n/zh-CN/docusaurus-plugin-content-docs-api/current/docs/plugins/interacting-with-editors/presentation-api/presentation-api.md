@@ -22,7 +22,7 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [GetEditorThemes](./Methods/GetEditorThemes.md) | object[] | 返回可用编辑器主题的列表。 |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。如果没有选择图形，该方法将返回一个白色矩形。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
@@ -51,7 +51,7 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选定内容中的每个段落（或单元格中的文本）。 |
 | [ResumeSlideShow](./Methods/ResumeSlideShow.md) | 无 | 恢复当前幻灯片放映。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./Methods/ShowError.md) | 无 | 显示错误/警告消息。 |

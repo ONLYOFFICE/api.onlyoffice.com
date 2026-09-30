@@ -1,7 +1,10 @@
 # SetDashPattern
 
 Sets annotation dash pattern.
-💡  The border style property must be set to "dashed". 
+
+:::note
+The border style property must be set to "dashed".
+:::
 
 Inherited from [ApiBaseAnnotation.SetDashPattern](../../ApiBaseAnnotation/Methods/SetDashPattern.md).
 

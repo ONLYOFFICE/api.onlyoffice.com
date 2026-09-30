@@ -1,6 +1,7 @@
 # SetFillColor
 
 Sets the background color to the format condition with the previously created color object.
+
 Sets 'No Fill' when previously created color object is null.
 
 Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md).

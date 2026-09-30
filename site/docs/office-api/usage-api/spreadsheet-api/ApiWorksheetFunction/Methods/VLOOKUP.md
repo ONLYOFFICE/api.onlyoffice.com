@@ -1,6 +1,8 @@
 # VLOOKUP
 
-Looks for a value in the leftmost column of a table and then returns a value in the same row from the specified column. By default, the table must be sorted in an ascending order.
+Looks for a value in the leftmost column of a table and then returns a value in the same row from the specified column.
+
+By default, the table must be sorted in an ascending order.
 
 ## Syntax
 

@@ -1,6 +1,8 @@
 # SetAllowedSymbols
 
-Sets the allowed symbols for the current text field. Only the specified characters will be accepted as input.
+Sets the allowed symbols for the current text field.
+
+Only the specified characters will be accepted as input.
 
 ## Syntax
 

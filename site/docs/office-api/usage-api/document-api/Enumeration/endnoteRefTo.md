@@ -1,6 +1,7 @@
 # endnoteRefTo
 
 Available values of the "endnote" reference type:
+
 - **"endnoteNum"** - the endnote number;
 - **"pageNum"** - the endnote page number;
 - **"aboveBelow"** - the words "above" or "below" depending on the item position;

@@ -12,7 +12,7 @@ The following table lists the available methods.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
-| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "comboBoxForm" | Returns a type of the ApiComboBoxForm class. |
@@ -29,7 +29,7 @@ The following table lists the available methods.
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
 | [GetValue](./Methods/GetValue.md) | string | Returns the current text value of the combo box form. |
 | [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. |
-| [IsEditable](./Methods/IsEditable.md) | boolean | Checks if the combo box text can be edited. If it is not editable, then this form is a drop-down list. |
+| [IsEditable](./Methods/IsEditable.md) | boolean | Checks if the combo box text can be edited. |
 | [IsFilled](./Methods/IsFilled.md) | boolean | Checks if the current form is filled. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if the current form is required. |
@@ -47,6 +47,6 @@ The following table lists the available methods.
 | [SetText](./Methods/SetText.md) | boolean | Sets the text to the current combo box. |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | Sets the text properties to the current form. |
 | [SetTipText](./Methods/SetTipText.md) | boolean | Sets the tip text to the current form. |
-| [SetValue](./Methods/SetValue.md) | boolean | Sets the value of the combo box form. Selects a list item if the value matches one, |
+| [SetValue](./Methods/SetValue.md) | boolean | Sets the value of the combo box form. |
 | [ToFixed](./Methods/ToFixed.md) | boolean | Converts the current form to a fixed size form. |
 | [ToInline](./Methods/ToInline.md) | boolean | Converts the current form to an inline form. |

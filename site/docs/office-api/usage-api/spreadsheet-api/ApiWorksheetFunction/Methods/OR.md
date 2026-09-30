@@ -1,6 +1,8 @@
 # OR
 
-Checks whether any of the arguments are - **true**. Returns - **false** only if all arguments are - **false**.
+Checks whether any of the arguments are **true**.
+
+Returns **false** only if all arguments are **false**.
 
 ## Syntax
 

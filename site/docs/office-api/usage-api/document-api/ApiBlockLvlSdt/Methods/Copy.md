@@ -1,6 +1,8 @@
 # Copy
 
-Creates a copy of an block content control. Ignores comments, footnote references, complex fields.
+Creates a copy of a block content control.
+
+Ignores comments, footnote references, complex fields.
 
 ## Syntax
 

@@ -1,6 +1,8 @@
 # GESTEP
 
-Tests whether a number is greater than a threshold value. The function returns 1 if the number is greater than or equal to the threshold value and 0 otherwise.
+Tests whether a number is greater than a threshold value.
+
+The function returns 1 if the number is greater than or equal to the threshold value and 0 otherwise.
 
 ## Syntax
 

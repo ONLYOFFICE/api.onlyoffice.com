@@ -1,7 +1,8 @@
 # GetAllOleObjects
 
 Returns all OLE object data for objects which can be opened by the specified plugin.
-If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document.
+
+If *sPluginId* is not defined, this method returns all OLE objects contained in the current document.
 
 ## Syntax
 

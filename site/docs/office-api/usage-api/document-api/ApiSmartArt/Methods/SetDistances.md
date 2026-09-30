@@ -1,7 +1,6 @@
 # SetDistances
 
-Specifies the minimum distance which will be maintained between the edges of the current drawing object and any
-subsequent text.
+Specifies the minimum distance which will be maintained between the edges of the current drawing object and any subsequent text.
 
 Inherited from [ApiDrawing.SetDistances](../../ApiDrawing/Methods/SetDistances.md).
 

@@ -1,6 +1,7 @@
 # GetAllOleObjects
 
 返回可由指定插件打开的对象的所有 OLE 对象数据。
+
 如果未定义 *sPluginId*，此方法将返回当前文档中包含的所有 OLE 对象。
 
 ## 语法

@@ -1,6 +1,8 @@
 # RemoveContentControl
 
-Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed.
+Removes the currently selected content control retaining all its contents.
+
+The content control where the mouse cursor is currently positioned will be removed.
 
 ## Syntax
 

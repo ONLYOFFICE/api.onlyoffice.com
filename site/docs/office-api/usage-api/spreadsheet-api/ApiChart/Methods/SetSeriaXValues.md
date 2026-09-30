@@ -1,6 +1,8 @@
 # SetSeriaXValues
 
-Sets the x-axis values from the specified range to the specified series. It is used with the scatter charts only.
+Sets the x-axis values from the specified range to the specified series.
+
+It is used with the scatter charts only.
 
 ## Syntax
 

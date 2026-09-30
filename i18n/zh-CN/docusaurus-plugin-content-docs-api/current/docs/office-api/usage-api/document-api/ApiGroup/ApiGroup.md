@@ -34,7 +34,7 @@ ApiGroup 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [ScaleHeight](./Methods/ScaleHeight.md) | boolean | 使用指定的系数缩放图形的高度。 |
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | 使用指定的系数缩放图形的宽度。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前图形对象。 |
-| [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象边缘与任何 |
+| [SetDistances](./Methods/SetDistances.md) | boolean | 指定将在当前绘图对象的边缘和任何后续文本之间保持的最小距离。 |
 | [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | 将另一个绘图的属性设置到当前绘图。 |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | 设置当前绘图的水平翻转。 |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | 设置当前绘图的垂直翻转。 |
@@ -51,7 +51,7 @@ ApiGroup 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetVerAlign](./Methods/SetVerAlign.md) | boolean | 指定浮动对象的垂直对齐方式。 |
 | [SetVerPosition](./Methods/SetVerPosition.md) | boolean | 设置浮动对象垂直定位的绝对测量值。 |
 | [SetVertFlip](./Methods/SetVertFlip.md) | boolean | 垂直翻转当前绘图。 |
-| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | 设置当前对象（图像、形状、图表）的环绕类型。可以设置以下环绕样式类型之一： |
+| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | 设置当前对象（图像、形状、图表）的环绕类型。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDrawing 对象转换为 JSON 对象。 |
 | [Ungroup](./Methods/Ungroup.md) | boolean | 取消当前绘图组的组合。 |
 | [Unselect](./Methods/Unselect.md) | boolean | 从选择中移除当前图形对象。 |

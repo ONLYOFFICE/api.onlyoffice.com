@@ -1,7 +1,10 @@
 # SetValidateRange
 
 Sets validate range for field.
-💡  Can only be applied to fields with a percentage or number format. 
+
+:::note
+Can only be applied to fields with a percentage or number format.
+:::
 
 ## Syntax
 

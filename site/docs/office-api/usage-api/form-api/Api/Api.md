@@ -1,8 +1,6 @@
 # Api
 
-The main class of the Form API. Use it to create forms: text fields, combo boxes,
-checkboxes and radio buttons, date fields, picture forms, signature forms, and complex
-fields.
+The main class of the Form API. Use it to create forms: text fields, combo boxes, checkboxes and radio buttons, date fields, picture forms, signature forms, and complex fields.
 
 ## Methods
 

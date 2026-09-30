@@ -1,13 +1,15 @@
 # RectDiff
 
 以元组表示的轴对齐矩形差值。
+
 描述两个矩形之间的坐标增量 (B - A)。
 
 不变量：
- - diff[0] = x1B - x1A
- - diff[1] = y1B - y1A
- - diff[2] = x2B - x2A
- - diff[3] = y2B - y2A
+
+- `diff[0] = x1B - x1A`
+- `diff[1] = y1B - y1A`
+- `diff[2] = x2B - x2A`
+- `diff[3] = y2B - y2A`
 
 ## 类型
 

@@ -1,7 +1,6 @@
 # GetPivotItems
 
-Returns an object that represents either a single pivot table item (the ApiPivotItem object)
-or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field.
+Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field.
 
 Inherited from [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md).
 

@@ -1,8 +1,10 @@
 # SetStyle
 
 文本样式基础方法。
-💡 此方法本身不单独使用，它仅构成 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法的基础，该方法将
-选定或创建的样式设置到文本。
+
+:::note
+此方法本身不单独使用，它仅构成 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法的基础，该方法将选定或创建的样式设置到文本。
+:::
 
 继承自 [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md)。
 

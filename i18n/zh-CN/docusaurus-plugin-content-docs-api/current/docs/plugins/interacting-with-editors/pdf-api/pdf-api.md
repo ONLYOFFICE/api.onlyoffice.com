@@ -30,7 +30,7 @@ PDF API 列出了插件在 ONLYOFFICE 文档中处理 PDF 文件时可以使用�
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | 删除具有指定 GUID 的插件。 |
 | [ReplacePageContent](./Methods/ReplacePageContent.md) | boolean | 使用指定的参数替换页面内容。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./Methods/ShowError.md) | 无 | 显示错误/警告消息。 |

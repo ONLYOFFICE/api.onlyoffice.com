@@ -1,7 +1,6 @@
 # GetPivotItems
 
-返回表示单个数据透视表项（ApiPivotItem 对象）
-或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
+返回一个对象，该对象表示指定字段中的单个数据透视表项（ApiPivotItem 对象）或所有可见和隐藏项的集合（ApiPivotItem 对象数组）。
 
 继承自 [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md)。
 

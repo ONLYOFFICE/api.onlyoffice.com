@@ -1,6 +1,7 @@
 # GetRange
 
 Returns a Range object that represents the part of the document contained in the specified paragraph.
+
 The paragraph must be attached to the document before calling this method.
 
 ## Syntax

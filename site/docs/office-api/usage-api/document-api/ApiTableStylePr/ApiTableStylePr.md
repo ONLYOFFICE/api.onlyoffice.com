@@ -1,7 +1,6 @@
 # ApiTableStylePr
 
-Class representing a set of formatting properties which shall be conditionally applied to the parts of a table
-which match the requirement specified on the `Type`.
+Class representing a set of formatting properties which shall be conditionally applied to the parts of a table which match the requirement specified on the `Type`.
 
 ## Methods
 

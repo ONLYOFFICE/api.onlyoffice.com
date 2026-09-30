@@ -1,7 +1,6 @@
 # SetOrientation
 
-设置表示字段在指定数据透视表报表中
-位置的透视字段方向值。
+设置表示字段在指定数据透视表报表中位置的透视字段方向值。
 
 继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
 

@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to all contents of the current table.
-💡 Please note that this table must be in the document.
+
+:::note
+This table must be in the document.
+:::
 
 ## Syntax
 

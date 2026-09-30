@@ -89,6 +89,6 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetVertAxisMajorTickMark](./Methods/SetVertAxisMajorTickMark.md) | boolean | 指定纵轴的主刻度线。 |
 | [SetVertAxisMinorTickMark](./Methods/SetVertAxisMinorTickMark.md) | boolean | 指定纵轴的次刻度线。 |
 | [SetVertAxisTickLabelPosition](./Methods/SetVertAxisTickLabelPosition.md) | boolean | 指定纵轴刻度标签的位置。 |
-| [SetXValues](./Methods/SetXValues.md) | boolean | 将 x 轴值设置为所有图表系列。仅用于散点图。 |
+| [SetXValues](./Methods/SetXValues.md) | boolean | 将 x 轴值设置为所有图表系列。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDrawing 对象转换为 JSON 对象。 |
 | [Unselect](./Methods/Unselect.md) | boolean | 从选择中移除当前图形对象。 |

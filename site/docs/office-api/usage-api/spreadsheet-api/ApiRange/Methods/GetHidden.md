@@ -1,6 +1,8 @@
 # GetHidden
 
-Returns the value hiding property. The specified range must span an entire column or row.
+Returns the value hiding property.
+
+The specified range must span an entire column or row.
 
 ## Syntax
 

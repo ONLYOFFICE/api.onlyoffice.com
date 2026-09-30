@@ -1,6 +1,7 @@
 # SetPlaceholderText
 
 设置当前表单的占位符文本。
+
 *不能设置为复选框或单选按钮。*
 
 继承自 [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md)。

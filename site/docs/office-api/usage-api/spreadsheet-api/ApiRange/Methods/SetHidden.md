@@ -1,6 +1,8 @@
 # SetHidden
 
-Sets the value hiding property. The specified range must span an entire column or row.
+Sets the value hiding property.
+
+The specified range must span an entire column or row.
 
 ## Syntax
 

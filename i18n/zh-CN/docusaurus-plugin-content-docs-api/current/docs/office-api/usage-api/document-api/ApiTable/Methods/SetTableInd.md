@@ -1,7 +1,6 @@
 # SetTableInd
 
-指定将在文档中当前表格的前缘之前添加的缩进
-（从左到右表格中的左边缘，以及从右到左表格中的右边缘）。
+指定将在文档中当前表格的前缘之前添加的缩进（从左到右表格中的左边缘，以及从右到左表格中的右边缘）。
 
 继承自 [ApiTablePr.SetTableInd](../../ApiTablePr/Methods/SetTableInd.md)。
 

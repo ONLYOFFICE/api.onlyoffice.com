@@ -1,7 +1,10 @@
 # SetTopBorder
 
 Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.
-💡 The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.
+
+:::note
+The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.
+:::
 
 ## Syntax
 

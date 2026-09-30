@@ -15,5 +15,5 @@ The following table lists the available methods.
 | [GetFieldByName](./Methods/GetFieldByName.md) | [ApiField](../Enumeration/ApiField.md) | Gets field by it's name. |
 | [GetPage](./Methods/GetPage.md) | [ApiPage](../ApiPage/ApiPage.md) | Gets page by index from document. |
 | [GetPagesCount](./Methods/GetPagesCount.md) | number | Gets document pages count |
-| [RemovePage](./Methods/RemovePage.md) | boolean | Removes page by index from document |
+| [RemovePage](./Methods/RemovePage.md) | boolean | Removes a page from the document by its index. |
 | [SearchAndRedact](./Methods/SearchAndRedact.md) | [ApiRedactAnnotation](../ApiRedactAnnotation/ApiRedactAnnotation.md)[] | Searchs words and adds redact to it. |

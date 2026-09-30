@@ -61,7 +61,7 @@ The following table lists the available methods.
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
 | [SetSeriaName](./Methods/SetSeriaName.md) | boolean | Sets a name to the specified series. |
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | Sets values from the specified range to the specified series. |
-| [SetSeriaXValues](./Methods/SetSeriaXValues.md) | boolean | Sets the x-axis values from the specified range to the specified series. It is used with the scatter charts only. |
+| [SetSeriaXValues](./Methods/SetSeriaXValues.md) | boolean | Sets the x-axis values from the specified range to the specified series. |
 | [SetSeriesFill](./Methods/SetSeriesFill.md) | boolean | Sets the fill to the specified chart series. |
 | [SetSeriesOutLine](./Methods/SetSeriesOutLine.md) | boolean | Sets the outline to the specified chart series. |
 | [SetShowDataLabels](./Methods/SetShowDataLabels.md) | boolean | Specifies which chart data labels are shown for the chart. |

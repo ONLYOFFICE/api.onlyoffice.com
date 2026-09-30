@@ -1,6 +1,8 @@
 # Copy
 
-Creates a paragraph copy. Ingnore comments, footnote references, complex fields.
+Creates a paragraph copy.
+
+Ignores comments, footnote references, complex fields.
 
 ## Syntax
 

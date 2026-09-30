@@ -1,6 +1,8 @@
 # GetWorksheet
 
-Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode.
+Returns the Worksheet object that represents the worksheet containing the specified range.
+
+It will be available in the read-only mode.
 
 ## Syntax
 

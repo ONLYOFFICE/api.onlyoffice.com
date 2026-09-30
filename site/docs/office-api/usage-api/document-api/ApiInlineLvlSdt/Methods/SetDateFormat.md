@@ -1,8 +1,8 @@
 # SetDateFormat
 
 Sets the date format for the datepicker content control.
-This method allows setting the format in which the date should be displayed in the datepicker content control.
-The format string should be specified using common date format patterns (e.g., "mm.dd.yyyy").
+
+This method allows setting the format in which the date should be displayed in the datepicker content control. The format string should be specified using common date format patterns (e.g., "mm.dd.yyyy").
 
 ## Syntax
 

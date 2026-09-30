@@ -1,6 +1,8 @@
 # GetFillColor
 
-Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null.
+Returns the background color for the format condition.
+
+Returns 'No Fill' when the background color of the format condition is null.
 
 Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
 

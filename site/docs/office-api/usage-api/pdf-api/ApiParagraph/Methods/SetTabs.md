@@ -1,7 +1,10 @@
 # SetTabs
 
 Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.
-- **Warning**: The lengths of aPos array and aVal array - **MUST BE** equal to each other.
+
+:::warning
+The lengths of the aPos and aVal arrays must be equal to each other.
+:::
 
 Inherited from [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md).
 

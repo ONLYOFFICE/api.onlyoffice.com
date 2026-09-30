@@ -1,6 +1,8 @@
 # YIELDDISC
 
-Returns the annual yield for a discounted security. For example, a Treasury bill.
+Returns the annual yield for a discounted security.
+
+For example, a Treasury bill.
 
 ## Syntax
 

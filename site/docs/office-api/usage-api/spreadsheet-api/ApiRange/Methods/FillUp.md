@@ -1,7 +1,6 @@
 # FillUp
 
-Copies the contents and formatting of the bottom row of the range into the remaining rows.
-If the range has only one row, the method succeeds but makes no changes.
+Copies the contents and formatting of the bottom row of the range into the remaining rows. If the range has only one row, the method succeeds but makes no changes.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

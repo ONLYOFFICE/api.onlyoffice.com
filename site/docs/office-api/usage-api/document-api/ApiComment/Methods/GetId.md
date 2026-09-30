@@ -1,6 +1,8 @@
 # GetId
 
-Returns the current comment ID. If the comment doesn't have an ID, null is returned.
+Returns the current comment ID.
+
+If the comment doesn't have an ID, null is returned.
 
 ## Syntax
 

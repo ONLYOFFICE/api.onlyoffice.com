@@ -1,6 +1,8 @@
 # Delete
 
-Removes a form and its content. If keepContent is true, the content is not deleted.
+Removes a form and its content.
+
+If keepContent is true, the content is not deleted.
 
 ## Syntax
 

@@ -46,7 +46,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | 返回指定表单的值。 |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | 返回已添加到文档中具有指定标签的所有表单的信息。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。如果没有选择图形，该方法将返回一个白色矩形。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
@@ -56,7 +56,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [GetVBAMacros](./Methods/GetVBAMacros.md) | string \| null | 返回文档中的所有 VBA 宏。 |
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
-| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document Builder](./../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
+| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。 |
 | [InsertOleObject](./Methods/InsertOleObject.md) | 无 | 在当前文档位置插入 OLE 对象。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
@@ -83,7 +83,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [RemoveAddinField](./Methods/RemoveAddinField.md) | 无 | 删除指定的加载项字段。 |
 | [RemoveAnnotationRange](./Methods/RemoveAnnotationRange.md) | 无 | 从文档中移除特定的注解范围。 |
 | [RemoveComments](./Methods/RemoveComments.md) | 无 | 删除指定的批注。 |
-| [RemoveContentControl](./Methods/RemoveContentControl.md) | [ContentControlParentPr](./Enumeration/ContentControlParentPr.md) | 删除当前选定的内容控件，同时保留其所有内容。将删除鼠标光标当前所在位置的内容控件。 |
+| [RemoveContentControl](./Methods/RemoveContentControl.md) | [ContentControlParentPr](./Enumeration/ContentControlParentPr.md) | 删除当前选定的内容控件，同时保留其所有内容。 |
 | [RemoveContentControls](./Methods/RemoveContentControls.md) | 无 | 删除多个内容控件。 |
 | [RemoveFieldWrapper](./Methods/RemoveFieldWrapper.md) | 无 | 删除字段包装器，仅保留字段内容。 |
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | 无 | 通过内部 ID 从文档中删除 OLE 对象。 |
@@ -103,8 +103,8 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | 无 | 设置文档编辑限制。 |
 | [SetFormValue](./Methods/SetFormValue.md) | 无 | 为指定的表单设置值。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。 |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。如果 HTML 包含多个块级元素，其内联内容将合并到目标段落中。 |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./Methods/ShowError.md) | 无 | 显示错误/警告消息。 |

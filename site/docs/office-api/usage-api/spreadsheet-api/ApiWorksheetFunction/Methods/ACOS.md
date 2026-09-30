@@ -1,6 +1,8 @@
 # ACOS
 
-Returns the arccosine of a number, in radians in the range from 0 to Pi. The arccosine is the angle whose cosine is a number specified in the parameters.
+Returns the arccosine of a number, in radians in the range from 0 to Pi.
+
+The arccosine is the angle whose cosine is a number specified in the parameters.
 
 ## Syntax
 

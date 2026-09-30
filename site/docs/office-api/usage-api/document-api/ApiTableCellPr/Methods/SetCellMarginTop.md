@@ -1,7 +1,6 @@
 # SetCellMarginTop
 
-Specifies an amount of space which will be left between the upper extent of the cell contents
-and the border of a specific table cell within a table.
+Specifies an amount of space which will be left between the upper extent of the cell contents and the border of a specific table cell within a table.
 
 ## Syntax
 

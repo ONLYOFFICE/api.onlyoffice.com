@@ -1,7 +1,6 @@
 # FillLeft
 
-Copies the contents and formatting of the rightmost column of the range into the remaining columns.
-If the range has only one column, the method succeeds but makes no changes.
+Copies the contents and formatting of the rightmost column of the range into the remaining columns. If the range has only one column, the method succeeds but makes no changes.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

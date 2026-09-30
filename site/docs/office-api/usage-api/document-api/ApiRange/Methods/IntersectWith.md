@@ -1,6 +1,8 @@
 # IntersectWith
 
-Returns a new range as the intersection of the current range with another range. The current range has not changed.
+Returns a new range as the intersection of the current range with another range.
+
+The current range has not changed.
 
 ## Syntax
 

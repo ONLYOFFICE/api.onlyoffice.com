@@ -1,6 +1,7 @@
 # GetTextPr
 
 Returns the text properties from the current form.
+
 *Used if possible for this type of form*
 
 Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).

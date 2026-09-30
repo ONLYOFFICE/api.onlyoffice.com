@@ -1,7 +1,6 @@
 # SetTableCellMarginLeft
 
-指定在父表格（或表格行）中所有表格单元格的单元格内容左侧范围与左边框之间
-保留的空间量。
+指定在父表格（或表格行）中所有表格单元格的单元格内容左侧范围与左边框之间保留的空间量。
 
 继承自 [ApiTablePr.SetTableCellMarginLeft](../../ApiTablePr/Methods/SetTableCellMarginLeft.md)。
 

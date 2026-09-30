@@ -1,7 +1,6 @@
 # SetText
 
-Replaces all content of the current document content object with the specified text,
-preserving the formatting of the first paragraph.
+Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph.
 
 ## Syntax
 

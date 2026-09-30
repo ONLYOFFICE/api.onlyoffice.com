@@ -1,8 +1,8 @@
 # SetSpacingBefore
 
-设置当前段落的段前间距。如果 isBeforeAuto 参数的值为 true，则
-nBefore 的任何值都将被忽略。如果未指定 isBeforeAuto 参数，则
-将其解释为 false。
+设置当前段落的段前间距。
+
+如果 isBeforeAuto 参数的值为 true，则 nBefore 的任何值都将被忽略。如果未指定 isBeforeAuto 参数，则将其解释为 false。
 
 继承自 [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md)。
 

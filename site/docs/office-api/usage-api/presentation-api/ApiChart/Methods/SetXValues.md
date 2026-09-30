@@ -1,6 +1,8 @@
 # SetXValues
 
-Sets the x-axis values to all chart series. It is used with the scatter charts only.
+Sets the x-axis values to all chart series.
+
+It is used with the scatter charts only.
 
 ## Syntax
 

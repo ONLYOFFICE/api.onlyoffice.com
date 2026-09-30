@@ -1,7 +1,10 @@
 # AddTableOfContents
 
 Adds a table of content to the current document.
-💡 Please note that the new table of contents replaces the existing table of contents.
+
+:::note
+The new table of contents replaces the existing table of contents.
+:::
 
 ## Syntax
 

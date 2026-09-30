@@ -1,6 +1,7 @@
 # SetTextPr
 
 Sets the text properties to the current form.
+
 *Used if possible for this type of form*
 
 Inherited from [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md).

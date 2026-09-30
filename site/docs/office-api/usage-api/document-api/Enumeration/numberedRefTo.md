@@ -1,6 +1,7 @@
 # numberedRefTo
 
 Available values of the "numbered" reference type:
+
 - **"pageNum"** - the numbered item page number;
 - **"paraNum"** - the numbered item paragraph number;
 - **"noCtxParaNum"** - the abbreviated paragraph number (the specific item only, e.g. instead of "4.1.1" you refer to "1" only);

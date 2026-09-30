@@ -1,6 +1,8 @@
 # DELTA
 
-Tests whether two numbers are equal. The function returns 1 if the numbers are equal and 0 otherwise.
+Tests whether two numbers are equal.
+
+The function returns 1 if the numbers are equal and 0 otherwise.
 
 ## Syntax
 

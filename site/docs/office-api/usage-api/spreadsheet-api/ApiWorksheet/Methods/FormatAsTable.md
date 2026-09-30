@@ -1,7 +1,10 @@
 # FormatAsTable
 
 Formats the selected range of cells from the current sheet as a table (with the first row formatted as a header).
-💡 As the first row is always formatted as a table header, you need to select at least two rows for the table to be formed correctly.
+
+:::note
+As the first row is always formatted as a table header, you need to select at least two rows for the table to be formed correctly.
+:::
 
 ## Syntax
 

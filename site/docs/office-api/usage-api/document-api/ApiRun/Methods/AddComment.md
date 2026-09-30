@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current run.
-💡 Please note that this run must be in the document.
+
+:::note
+This run must be in the document.
+:::
 
 ## Syntax
 

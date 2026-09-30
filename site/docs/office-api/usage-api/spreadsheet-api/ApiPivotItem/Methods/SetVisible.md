@@ -1,7 +1,10 @@
 # SetVisible
 
 Sets the visibility of the pivot item.
-💡  At least one item must remain visible when hiding others. 
+
+:::note
+At least one item must remain visible when hiding others.
+:::
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 # SetDrawingPrFromDrawing
 
 将另一个绘图的属性设置到当前绘图。
+
 将复制以下属性：水平和垂直对齐方式、当前绘图对象边缘与任何后续文本之间的距离、环绕样式、绘图名称、标题和描述。
 
 继承自 [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md)。

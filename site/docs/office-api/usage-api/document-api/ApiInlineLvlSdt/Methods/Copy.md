@@ -1,6 +1,8 @@
 # Copy
 
-Creates a copy of an inline content control. Ignores comments, footnote references, complex fields.
+Creates a copy of an inline content control.
+
+Ignores comments, footnote references, complex fields.
 
 ## Syntax
 

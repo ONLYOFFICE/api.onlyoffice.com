@@ -1,6 +1,7 @@
 # ToInline
 
 Converts the current form to an inline form.
+
 *Picture form can't be converted to an inline form, it's always a fixed size object.*
 
 Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).

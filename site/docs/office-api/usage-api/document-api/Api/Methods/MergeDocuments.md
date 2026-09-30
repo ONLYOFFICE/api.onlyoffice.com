@@ -1,6 +1,8 @@
 # MergeDocuments
 
-Merges the current document with another document opened via builderJS.OpenTmpFile. Its contents are merged into the current document.
+Merges the current document with another document opened via builderJS.OpenTmpFile.
+
+Its contents are merged into the current document.
 
 ## Syntax
 

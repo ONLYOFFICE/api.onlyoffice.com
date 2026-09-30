@@ -1,6 +1,8 @@
 # GetFormValueByKey
 
-Returns the form value for the specified key. For a group of radio buttons returns Choice, i.e. the name of the selected item.
+Returns the form value for the specified key.
+
+For a group of radio buttons returns Choice, i.e. the name of the selected item.
 
 ## Syntax
 

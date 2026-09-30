@@ -34,7 +34,7 @@ ApiTable 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [GetRotation](./Methods/GetRotation.md) | number | 返回当前绘图对象的旋转角度。 |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | 按索引返回行。 |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的宽度。 |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 “null”。 |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 合并单元格数组。 |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | 删除包含指定单元格的表格列。 |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | 删除包含指定单元格的表格行。 |
 | [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | 用幻灯片上的绘图替换占位符。 |
@@ -53,6 +53,6 @@ ApiTable 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置当前绘图对象的旋转角度。 |
 | [SetShd](./Methods/SetShd.md) | 无 | 指定应用于当前表格范围的底纹。 |
 | [SetSize](./Methods/SetSize.md) | 无 | 设置表格大小。 |
-| [SetTableLook](./Methods/SetTableLook.md) | 无 | 指定引用的表格样式的条件格式组件（如果存在） |
+| [SetTableLook](./Methods/SetTableLook.md) | 无 | 指定引用的表格样式（如果存在）的条件格式组件，这些组件将应用于具有当前表格级属性例外的表格行集。表格样式可以指定最多六种不同的可选条件格式[示例：第一列的不同格式]，然后可以应用或从父表格中的各个表格行中省略。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiTable 对象转换为 JSON 对象。 |
 | [Unselect](./Methods/Unselect.md) | boolean | 从选择中移除当前图形对象。 |

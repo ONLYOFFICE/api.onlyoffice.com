@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current block content control.
-💡 Please note that the current block content control must be in the document.
+
+:::note
+The current block content control must be in the document.
+:::
 
 ## Syntax
 

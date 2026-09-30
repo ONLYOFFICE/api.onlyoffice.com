@@ -1,6 +1,7 @@
 # GetGroupValue
 
 Returns the choice name of the currently selected radio button in the group.
+
 Returns an empty string if the current form is not a radio button or nothing is selected.
 
 ## Syntax

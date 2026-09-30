@@ -1,6 +1,7 @@
 # bookmarkRefTo
 
 Available values of the "bookmark" reference type:
+
 - **"text"** - the entire bookmark text;
 - **"pageNum"** - the bookmark page number;
 - **"paraNum"** - the bookmark paragraph number;

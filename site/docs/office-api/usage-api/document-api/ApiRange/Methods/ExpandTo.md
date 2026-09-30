@@ -1,6 +1,8 @@
 # ExpandTo
 
-Returns a new range that goes beyond the specified range in any direction and spans a different range. The current range has not changed.
+Returns a new range that goes beyond the specified range in any direction and spans a different range.
+
+The current range has not changed.
 
 ## Syntax
 

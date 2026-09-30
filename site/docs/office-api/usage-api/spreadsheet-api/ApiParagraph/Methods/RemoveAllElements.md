@@ -1,8 +1,10 @@
 # RemoveAllElements
 
 Removes all the elements from the current paragraph.
-💡 When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add
-content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
+
+:::note
+When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
+:::
 
 ## Syntax
 

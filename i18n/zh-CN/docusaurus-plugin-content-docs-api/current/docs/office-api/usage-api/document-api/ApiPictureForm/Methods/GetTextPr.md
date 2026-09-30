@@ -1,6 +1,7 @@
 # GetTextPr
 
 返回当前表单的文本属性。
+
 *如果该表单类型支持则使用*
 
 继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。

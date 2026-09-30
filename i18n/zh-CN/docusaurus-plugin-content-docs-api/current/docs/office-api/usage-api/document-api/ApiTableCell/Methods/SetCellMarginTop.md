@@ -1,7 +1,6 @@
 # SetCellMarginTop
 
-指定表格中特定表格单元格的内容上边与
-单元格边框之间的间距。
+指定表格中特定表格单元格的内容上边与单元格边框之间的间距。
 
 继承自 [ApiTableCellPr.SetCellMarginTop](../../ApiTableCellPr/Methods/SetCellMarginTop.md)。
 

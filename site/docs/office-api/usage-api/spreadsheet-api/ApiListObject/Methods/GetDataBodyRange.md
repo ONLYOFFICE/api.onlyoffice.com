@@ -1,7 +1,6 @@
 # GetDataBodyRange
 
-Returns the range of the data rows in the table, excluding the header row and totals row.
-Returns null if the table has no data rows.
+Returns the range of the data rows in the table, excluding the header row and totals row. Returns null if the table has no data rows.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

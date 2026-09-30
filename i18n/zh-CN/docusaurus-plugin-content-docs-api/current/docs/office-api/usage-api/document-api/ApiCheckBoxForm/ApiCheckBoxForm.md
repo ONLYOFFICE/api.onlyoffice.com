@@ -12,7 +12,7 @@ ApiCheckBoxForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
 | [GetChoiceName](./Methods/GetChoiceName.md) | string | 返回当前单选按钮的选项名称。 |

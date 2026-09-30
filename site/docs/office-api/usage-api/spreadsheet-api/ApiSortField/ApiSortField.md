@@ -28,7 +28,7 @@ The following table lists the available methods.
 | [GetParent](./Methods/GetParent.md) | [ApiSortFields](../ApiSortFields/ApiSortFields.md) | Returns the parent SortFields collection. |
 | [GetPriority](./Methods/GetPriority.md) | number | Returns the 1-based priority of this sort field within the collection. |
 | [GetSortOn](./Methods/GetSortOn.md) | [XlSortOn](../Enumeration/XlSortOn.md) | Returns the sort-on type: "xlSortOnValues", "xlSortOnCellColor", "xlSortOnFontColor", "xlSortOnIcon". |
-| [GetSortOnValue](./Methods/GetSortOnValue.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the value (color or null) by which this sort field is sorted. |
+| [GetSortOnValue](./Methods/GetSortOnValue.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the value (color or null) by which this sort field is sorted. For color-based sorts returns the fill/font color; otherwise returns null. |
 | [ModifyKey](./Methods/ModifyKey.md) | None | Changes the sort key column. |
 | [SetOrder](./Methods/SetOrder.md) | None | Sets the sort order. |
 | [SetPriority](./Methods/SetPriority.md) | None | Sets the 1-based priority of this sort field, repositioning it within the collection. |

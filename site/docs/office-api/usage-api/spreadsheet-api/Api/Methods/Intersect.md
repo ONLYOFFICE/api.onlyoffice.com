@@ -1,6 +1,8 @@
 # Intersect
 
-Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.
+Returns the ApiRange object that represents the rectangular intersection of two or more ranges.
+
+If one or more ranges from a different worksheet are specified, an error will be returned.
 
 ## Syntax
 

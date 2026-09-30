@@ -1,6 +1,8 @@
 # GetValidation
 
-Returns the data validation object associated with this range. If no validation object exists yet, it will be created.
+Returns the data validation object associated with this range.
+
+If no validation object exists yet, it will be created.
 
 ## Syntax
 

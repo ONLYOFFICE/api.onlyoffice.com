@@ -34,22 +34,22 @@ The following table lists the available methods.
 | [GetWidowControl](./Methods/GetWidowControl.md) | boolean \| undefined | Returns the widow control value of the current paragraph. |
 | [SetBetweenBorder](./Methods/SetBetweenBorder.md) | boolean | Specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings. |
 | [SetBottomBorder](./Methods/SetBottomBorder.md) | boolean | Specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings. |
-| [SetContextualSpacing](./Methods/SetContextualSpacing.md) | boolean | Specifies that any space before or after this paragraph set using the  |
+| [SetContextualSpacing](./Methods/SetContextualSpacing.md) | boolean | Specifies that any space before or after this paragraph set using the  [ApiParaPr#SetSpacingBefore](../ApiParaPr/Methods/SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](../ApiParaPr/Methods/SetSpacingAfter.md) spacing element, should not be applied when the preceding and  following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively. |
 | [SetIndFirstLine](./Methods/SetIndFirstLine.md) | boolean | Sets the paragraph first line indentation. |
 | [SetIndLeft](./Methods/SetIndLeft.md) | boolean | Sets the paragraph left side indentation. |
 | [SetIndRight](./Methods/SetIndRight.md) | boolean | Sets the paragraph right side indentation. |
 | [SetJc](./Methods/SetJc.md) | boolean | Sets the paragraph contents justification. |
 | [SetKeepLines](./Methods/SetKeepLines.md) | boolean | Specifies that when rendering the document using a page view, all lines of the current paragraph are maintained on a single page whenever possible. |
-| [SetKeepNext](./Methods/SetKeepNext.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least |
+| [SetKeepNext](./Methods/SetKeepNext.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least partly rendered on the same page as the following paragraph whenever possible. |
 | [SetLeftBorder](./Methods/SetLeftBorder.md) | boolean | Specifies the border which will be displayed at the left side of the page around the specified paragraph. |
 | [SetNumPr](./Methods/SetNumPr.md) | boolean | Specifies that the current paragraph references a numbering definition instance in the current document. |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | Sets the outline level for the specified properties. |
-| [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at |
+| [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document. |
 | [SetRightBorder](./Methods/SetRightBorder.md) | boolean | Specifies the border which will be displayed at the right side of the page around the specified paragraph. |
 | [SetShd](./Methods/SetShd.md) | boolean | Specifies the shading applied to the contents of the paragraph. |
-| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then  |
-| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then  |
-| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | Sets the paragraph line spacing. If the value of the sLineRule parameter is either  |
+| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | Sets the spacing after the current paragraph. |
+| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | Sets the spacing before the current paragraph. |
+| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | Sets the paragraph line spacing. |
 | [SetStyle](./Methods/SetStyle.md) | boolean | The paragraph style base method. |
 | [SetTabs](./Methods/SetTabs.md) | boolean | Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph. |
 | [SetTopBorder](./Methods/SetTopBorder.md) | boolean | Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings. |

@@ -1,8 +1,10 @@
 # GetPageCount
 
 Returns a number of pages in the current document.
-💡 This method can be slow for large documents because it runs the document calculation
-process before the full recalculation.
+
+:::note
+This method can be slow for large documents because it runs the document calculation process before the full recalculation.
+:::
 
 ## Syntax
 

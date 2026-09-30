@@ -1,7 +1,10 @@
 # SetItalic
 
 Sets the italic property to the specified font.
-💡 This method will work only with the text format of the cell.
+
+:::note
+This method will work only with the text format of the cell.
+:::
 
 ## Syntax
 

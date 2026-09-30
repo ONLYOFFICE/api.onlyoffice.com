@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current paragraph.
-💡 Please note that this paragraph must be in the document.
+
+:::note
+This paragraph must be in the document.
+:::
 
 ## Syntax
 

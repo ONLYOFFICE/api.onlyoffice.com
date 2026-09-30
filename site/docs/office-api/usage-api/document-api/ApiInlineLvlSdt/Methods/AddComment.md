@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current inline content control.
-💡 Please note that this inline content control must be in the document.
+
+:::note
+This inline content control must be in the document.
+:::
 
 ## Syntax
 

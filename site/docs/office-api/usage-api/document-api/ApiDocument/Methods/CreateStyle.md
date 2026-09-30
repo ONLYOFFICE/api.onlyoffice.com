@@ -1,6 +1,8 @@
 # CreateStyle
 
-Creates a new style with the specified type and name. If a style with the specified name already exists, it will be returned without creating a new one.
+Creates a new style with the specified type and name.
+
+If a style with the specified name already exists, it will be returned without creating a new one.
 
 ## Syntax
 

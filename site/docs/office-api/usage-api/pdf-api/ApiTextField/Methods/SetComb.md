@@ -1,7 +1,10 @@
 # SetComb
 
 Sets whether the text field uses comb formatting.
-💡 The character limit must be greater than 0.
+
+:::note
+The character limit must be greater than 0.
+:::
 
 ## Syntax
 

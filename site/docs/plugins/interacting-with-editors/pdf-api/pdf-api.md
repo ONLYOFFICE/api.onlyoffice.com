@@ -1,9 +1,6 @@
 # PDF API
 
-The PDF API lists the methods and events a plugin can use when working with a PDF file in
-ONLYOFFICE Docs. To work with the PDF content directly, such as pages and annotations, run
-Office API code in `callCommand`. See
-[PDF API](./../../../../docs/office-api/usage-api/pdf-api/pdf-api.md).
+The PDF API lists the methods and events a plugin can use when working with a PDF file in ONLYOFFICE Docs. To work with the PDF content directly, such as pages and annotations, run Office API code in `callCommand`. See [PDF API](./../../../../docs/office-api/usage-api/pdf-api/pdf-api.md).
 
 ## Methods
 
@@ -33,7 +30,7 @@ The following table lists the available methods.
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplacePageContent](./Methods/ReplacePageContent.md) | boolean | Replaces the page content with the specified parameters. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./Methods/ShowError.md) | None | Shows an error/warning message. |

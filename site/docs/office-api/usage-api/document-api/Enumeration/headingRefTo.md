@@ -1,6 +1,7 @@
 # headingRefTo
 
 Available values of the "heading" reference type:
+
 - **"text"** - the entire heading text;
 - **"pageNum"** - the heading page number;
 - **"headingNum"** - the heading sequence number;

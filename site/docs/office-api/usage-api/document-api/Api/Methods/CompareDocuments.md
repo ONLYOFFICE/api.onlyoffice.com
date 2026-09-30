@@ -1,6 +1,8 @@
 # CompareDocuments
 
-Compares the current document with another document opened via builderJS.OpenTmpFile. Tracked changes between the two documents are produced in the current document.
+Compares the current document with another document opened via builderJS.OpenTmpFile.
+
+Tracked changes between the two documents are produced in the current document.
 
 ## Syntax
 

@@ -28,21 +28,21 @@ ApiTableCell 是 [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) 的子类
 | [GetText](./Methods/GetText.md) | string | 返回当前表格单元格的内部文本。 |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | 删除包含当前单元格的列。 |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | 删除包含当前单元格的行。 |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 在表格单元格对象的范围内搜索。搜索结果是 ApiRange 对象的集合。 |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 在表格单元格对象的范围内搜索。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前表格单元格的背景颜色。 |
 | [SetCellBorderBottom](./Methods/SetCellBorderBottom.md) | boolean | 设置将显示在当前表格单元格底部的边框。 |
 | [SetCellBorderLeft](./Methods/SetCellBorderLeft.md) | boolean | 设置将显示在当前表格单元格左侧的边框。 |
 | [SetCellBorderRight](./Methods/SetCellBorderRight.md) | boolean | 设置将显示在当前表格单元格右侧的边框。 |
 | [SetCellBorderTop](./Methods/SetCellBorderTop.md) | boolean | 设置将显示在当前表格单元格顶部的边框。 |
-| [SetCellMarginBottom](./Methods/SetCellMarginBottom.md) | boolean | 指定将在单元格内容底部边缘与边框之间保留的间距 |
-| [SetCellMarginLeft](./Methods/SetCellMarginLeft.md) | boolean | 指定将在单元格内容左边缘与 |
+| [SetCellMarginBottom](./Methods/SetCellMarginBottom.md) | boolean | 指定表格中特定表格单元格的内容底边与单元格边框之间的间距。 |
+| [SetCellMarginLeft](./Methods/SetCellMarginLeft.md) | boolean | 指定表格中特定表格单元格的内容左边与单元格边框之间的间距。 |
 | [SetCellMarginRight](./Methods/SetCellMarginRight.md) | boolean | 指定表格中特定表格单元格的内容右边与单元格边框之间的间距。 |
-| [SetCellMarginTop](./Methods/SetCellMarginTop.md) | boolean | 指定将在单元格内容上边缘 |
+| [SetCellMarginTop](./Methods/SetCellMarginTop.md) | boolean | 指定表格中特定表格单元格的内容上边与单元格边框之间的间距。 |
 | [SetCellPr](./Methods/SetCellPr.md) | boolean | 设置当前单元格的单元格属性。 |
 | [SetColumnBackgroundColor](./Methods/SetColumnBackgroundColor.md) | boolean | 为包含当前单元格的列中的所有单元格设置背景颜色。 |
-| [SetNoWrap](./Methods/SetNoWrap.md) | boolean | 指定在文档中显示父表格时当前表格单元格的布局方式。此设置 |
+| [SetNoWrap](./Methods/SetNoWrap.md) | boolean | 指定在文档中显示父表格时当前表格单元格的布局方式。 |
 | [SetShd](./Methods/SetShd.md) | boolean | 指定应用于表格单元格内容的底纹。 |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前表格单元格的所有内容， |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换当前表格单元格的所有内容，保留第一个段落的格式。 |
 | [SetTextDirection](./Methods/SetTextDirection.md) | boolean | 指定此表格单元格的文本流方向。 |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | 将文本设置应用于当前单元格的整个内容。 |
 | [SetVerticalAlign](./Methods/SetVerticalAlign.md) | boolean | 指定当前表格单元格中文本内容的垂直对齐方式。 |

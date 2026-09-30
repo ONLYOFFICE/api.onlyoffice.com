@@ -12,7 +12,7 @@ The following table lists the available methods.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
-| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. |
 | [GetAllowedSymbols](./Methods/GetAllowedSymbols.md) | string | Returns the allowed symbols for the current text field. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
@@ -38,7 +38,7 @@ The following table lists the available methods.
 | [IsMultiline](./Methods/IsMultiline.md) | boolean | Checks if the current text field is multiline. |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if the current form is required. |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | Places a cursor before/after the current form. |
-| [SetAllowedSymbols](./Methods/SetAllowedSymbols.md) | boolean | Sets the allowed symbols for the current text field. Only the specified characters will be accepted as input. |
+| [SetAllowedSymbols](./Methods/SetAllowedSymbols.md) | boolean | Sets the allowed symbols for the current text field. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Specifies if the text field content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current form. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current form. |

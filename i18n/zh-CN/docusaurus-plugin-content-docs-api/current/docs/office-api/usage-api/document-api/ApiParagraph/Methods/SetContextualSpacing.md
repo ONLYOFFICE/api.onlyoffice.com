@@ -1,7 +1,6 @@
 # SetContextualSpacing
 
-指定当前后段落具有相同段落样式时，使用
-[ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) 或 [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) 间距元素设置的此段落前后任何间距不应被应用，分别影响顶部和底部间距。
+指定当前后段落具有相同段落样式时，使用 [ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) 或 [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) 间距元素设置的此段落前后任何间距不应被应用，分别影响顶部和底部间距。
 
 继承自 [ApiParaPr.SetContextualSpacing](../../ApiParaPr/Methods/SetContextualSpacing.md)。
 

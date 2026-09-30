@@ -1,7 +1,6 @@
 # GetShowAutoFilter
 
-Returns whether the AutoFilter dropdown buttons are displayed on the header row of the table.
-Returns true by default for a new table.
+Returns whether the AutoFilter dropdown buttons are displayed on the header row of the table. Returns true by default for a new table.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

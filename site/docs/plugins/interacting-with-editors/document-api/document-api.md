@@ -1,9 +1,6 @@
 # Document API
 
-The Document API lists the methods and events a plugin can use when working with a text
-document in ONLYOFFICE Docs. To work with the document content directly, such as
-paragraphs and tables, run Office API code in `callCommand`. See
-[Document API](./../../../../docs/office-api/usage-api/document-api/document-api.md).
+The Document API lists the methods and events a plugin can use when working with a text document in ONLYOFFICE Docs. To work with the document content directly, such as paragraphs and tables, run Office API code in `callCommand`. See [Document API](./../../../../docs/office-api/usage-api/document-api/document-api.md).
 
 ## Methods
 
@@ -49,7 +46,7 @@ The following table lists the available methods.
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | Returns a value of the specified form. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document with specified tag. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
@@ -59,7 +56,7 @@ The following table lists the available methods.
 | [GetVBAMacros](./Methods/GetVBAMacros.md) | string \| null | Returns all VBA macros from the document. |
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
-| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document Builder](./../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document. |
+| [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. |
 | [InsertOleObject](./Methods/InsertOleObject.md) | None | Inserts the OLE object at the current document position. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
 | [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
@@ -86,7 +83,7 @@ The following table lists the available methods.
 | [RemoveAddinField](./Methods/RemoveAddinField.md) | None | Removes the specified add-in field. |
 | [RemoveAnnotationRange](./Methods/RemoveAnnotationRange.md) | None | Remove a specific annotation range from the document. |
 | [RemoveComments](./Methods/RemoveComments.md) | None | Removes the specified comments. |
-| [RemoveContentControl](./Methods/RemoveContentControl.md) | [ContentControlParentPr](./Enumeration/ContentControlParentPr.md) | Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed. |
+| [RemoveContentControl](./Methods/RemoveContentControl.md) | [ContentControlParentPr](./Enumeration/ContentControlParentPr.md) | Removes the currently selected content control retaining all its contents. |
 | [RemoveContentControls](./Methods/RemoveContentControls.md) | None | Removes several content controls. |
 | [RemoveFieldWrapper](./Methods/RemoveFieldWrapper.md) | None | Removes a field wrapper, leaving only the field content. |
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | None | Removes the OLE object from the document by its internal ID. |
@@ -106,8 +103,8 @@ The following table lists the available methods.
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | None | Sets the document editing restrictions. |
 | [SetFormValue](./Methods/SetFormValue.md) | None | Sets a value to the specified form. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
-| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. If the HTML contains multiple block-level elements, their inline content is merged into the target paragraph. |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./Methods/ShowError.md) | None | Shows an error/warning message. |

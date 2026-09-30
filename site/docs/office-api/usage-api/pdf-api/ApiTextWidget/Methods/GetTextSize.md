@@ -1,7 +1,10 @@
 # GetTextSize
 
 Gets widget text size.
-💡  Text size === 0 means autofit 
+
+:::note
+Text size === 0 means autofit.
+:::
 
 Inherited from [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md).
 

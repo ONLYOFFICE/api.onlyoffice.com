@@ -1,7 +1,10 @@
 # SetDashPattern
 
 设置批注虚线图案。
-💡 边框样式属性必须设置为 “dashed”。
+
+:::note
+边框样式属性必须设置为 “dashed”。
+:::
 
 ## 语法
 

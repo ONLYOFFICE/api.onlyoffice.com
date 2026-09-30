@@ -1,6 +1,7 @@
 # GetDocumentInfo
 
 Returns the document information:
+
 - **Application** - the application the document was created with.
 - **CreatedRaw** - the date and time when the file was created.
 - **Created** - the parsed date and time when the file was created.

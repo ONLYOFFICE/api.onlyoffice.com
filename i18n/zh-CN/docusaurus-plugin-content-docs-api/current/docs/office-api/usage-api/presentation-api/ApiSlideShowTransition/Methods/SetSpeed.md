@@ -1,7 +1,9 @@
 # SetSpeed
 
 设置切换速度（类似于 PowerPoint VBA 的 Speed 属性）。
+
 根据标准值将速度转换为持续时间：
+
 - fast（快）= 500ms
 - medium（中）= 750ms
 - slow（慢）= 1000ms

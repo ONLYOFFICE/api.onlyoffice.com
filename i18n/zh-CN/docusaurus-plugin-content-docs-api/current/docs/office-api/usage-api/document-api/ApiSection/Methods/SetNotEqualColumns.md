@@ -1,7 +1,8 @@
 # SetNotEqualColumns
 
-指定当前节中的所有列具有不同的宽度。列数等于
-aWidth 数组的长度。aSpaces 数组的长度必须等于 (aWidth.length - 1)。
+指定当前节中的所有栏具有不同的宽度。
+
+栏数等于 aWidth 数组的长度。aSpaces 数组的长度必须等于 (aWidth.length - 1)。
 
 ## 语法
 
