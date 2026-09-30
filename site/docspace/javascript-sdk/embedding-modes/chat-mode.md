@@ -36,6 +36,8 @@ In [OAuth mode](../get-started/authentication-security.md#oauth-authentication),
 
 ### Reacting to the chat being ready
 
+`onAppReady` fires once the frame has finished initializing and is ready to use — a good place to enable any host UI that depends on it, like an "open chat" toggle:
+
 ```javascript
 const docSpace = DocSpace.SDK.initChat({
   frameId: "ds-chat",

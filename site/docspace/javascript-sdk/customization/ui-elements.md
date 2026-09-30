@@ -15,7 +15,7 @@ Most of these toggle independently, but two of them only take effect when the le
 - `showMenu` — left navigation menu
 - `showHeader` — header bar in the mobile view
 - `showTitle` — current section/room/folder title
-- `showFilter` — filter controls
+- `showFilter` — filter controls, including the create ("+") menu for [custom actions](../embedding-modes/manager-mode.md#adding-custom-actions)
 - `showSettings` — "Manage displayed columns" button in table view
 - `showSignOut` — "Sign out" button
 - `disableActionButton` — "Actions" button

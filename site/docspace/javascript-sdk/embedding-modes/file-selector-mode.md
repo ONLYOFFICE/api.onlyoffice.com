@@ -66,9 +66,9 @@ const docSpace = DocSpace.SDK.initFileSelector({
 });
 ```
 
-### Filtering by file type
+### Restricting to rooms or personal folders
 
-Use `selectorType` to limit the selector to files owned by the current user, or restrict to rooms only:
+`selectorType` restricts which content the selector lists — `"roomsOnly"` shows only rooms, `"userFolderOnly"` only the user's personal folders; the default, `"all"`, shows both:
 
 ```javascript
 const docSpace = DocSpace.SDK.initFileSelector({

@@ -42,7 +42,7 @@ This page covers the vanilla JS SDK's `events` config, used the same way across 
 | `onNoAccess` | Manager, Public room, Chat | The target file/folder exists but isn't accessible to the current user (Manager, Public room); in Chat mode, fires when there's no signed-in, non-guest user — see [Chat mode](../embedding-modes/chat-mode.md) for the exact condition (it's not about AI being disabled on the portal, which hides the composer but fires no event of its own). |
 | `onNotFound` | Manager, Public room | The target file/folder doesn't exist. |
 | `onSignOut` | Manager, Editor, Viewer, Room selector, File selector, System, Uploader | The user signed out — either through the portal's own profile-menu "Log out" action or the [`logout()`](../usage-sdk/classes/SDKInstance.md#logout) instance method. Not fired in Forms, Chat, Personal, or Public room mode — those don't have a sign-out UI element or a `logout` command handler wired up on the client side. |
-| `onCustomAction` | Forms | A custom context menu action (registered via `setCustomActions()`) was clicked. |
+| `onCustomAction` | Manager, Personal, Forms | A custom context menu or create-menu action (registered via `customActions` or `setCustomActions()`) was clicked. |
 | `onNavigate` | Forms, Personal | The user navigated to a different section. |
 | `onUploadSuccess` | Uploader, Forms, Personal | A file upload completed. In Forms and Personal mode, only for an [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog)-initiated transfer; in Uploader mode, only for a native upload through its own dialog. |
 | `onUploadError` | Uploader, Forms, Personal | A file upload failed — same per-mode scope as `onUploadSuccess`. |
@@ -72,7 +72,7 @@ In [Public room mode](../embedding-modes/public-room-mode.md) specifically, `id`
 
 [Chat mode](../embedding-modes/chat-mode.md) has a related but different behavior: when there's no signed-in, non-guest user, the frame shows a no-access state — a chat history control with no composer — and fires `onNoAccess` (with an empty payload) alongside `onAppReady`. AI being disabled on the portal also hides the composer, but doesn't fire `onNoAccess` itself — there's no dedicated signal for that specific case, only the visual state. Attach a handler for `onNoAccess` rather than trying to infer either no-access state from `onAppReady` alone.
 
-`onCustomAction` is specific to [Forms mode](../embedding-modes/forms-mode.md) — see that page for `setCustomActions()` usage examples. `onNavigate` fires in both [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) — see either page for `navigateSection()` usage examples.
+`onCustomAction` fires in [Manager](../embedding-modes/manager-mode.md#adding-custom-actions), [Personal](../embedding-modes/personal-mode.md#adding-custom-actions), and [Forms](../embedding-modes/forms-mode.md#adding-custom-context-menu-actions) mode — see Manager mode's section for the full `setCustomActions()`/`customActions` reference (context menu, create menu, restriction fields). `onNavigate` fires in both [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) — see either page for `navigateSection()` usage examples.
 
 :::note
 What triggers `onUploadSuccess`/`onUploadError` depends on the mode:
@@ -142,7 +142,7 @@ Most events are simple lifecycle signals and are called with no arguments at all
 | `onAuthError` | `{ code?, message }` — one of four token-failure codes, see [OAuth authentication](../get-started/authentication-security.md#oauth-authentication). Only fires with OAuth-based authentication. |
 | `onDownload` | The download URL as a plain string (only fires with `downloadToEvent: true`). |
 | `onSignOut`, `onCloseCallback`, `onNoAccess` | An empty object `{}` — a signal only, no `eventData.data` to report. |
-| `onCustomAction` | `{ action, type, item }` — `action` is the `key` you registered, `item` is the file/folder it was clicked on. |
+| `onCustomAction` | `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`; `item` is the single clicked entity (absent for `create`); `items` holds every selected entity instead, for an action run on a multi-selection; `folderId` is the id of the folder or room the user was in. |
 | `onNavigate` | `{ section }` — the section the user navigated to (e.g. `"completed-forms"`). |
 | `onUploadSuccess` | Forms/Personal (`upload()`-initiated, see above): `{ fileName, fileSize }`. Uploader mode's native dialog: an **array** wrapping the created file's info — `[{ response: { id, folderId, version, title, uploaded, file: {...} }, count, links, status, statusCode }]` — a different shape entirely, not just a bigger version of the Forms/Personal one. |
 | `onUploadError` | Forms/Personal: `{ fileName, message }`. Uploader mode's native dialog: `{ error, rejectedFiles? }` — again a different shape, not the Forms/Personal one scaled up. |
@@ -177,7 +177,7 @@ If you're using the `<script>`-tag integration (as opposed to the npm package), 
 
 A method call also fails if the iframe doesn't respond within `methodTimeout` milliseconds (default `30000`) — that specific call's `Promise` rejects with `{ code: "TIMEOUT", ... }`, and separately fires `onAppError` with the same message as a plain string.
 
-The `MODE_MISMATCH` guards the SDK enforces itself — calling [`navigateSection()`](../embedding-modes/forms-mode.md#navigating-between-sections-at-runtime), [`setCustomActions()`](../embedding-modes/forms-mode.md#adding-custom-context-menu-actions), or [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog) from a mode that doesn't support it — all reject their returned `Promise` the same way; none of them throw synchronously.
+The `MODE_MISMATCH` guards the SDK enforces itself — calling [`navigateSection()`](../embedding-modes/forms-mode.md#navigating-between-sections-at-runtime), [`setCustomActions()`](../embedding-modes/manager-mode.md#adding-custom-actions), or [`upload()`](../embedding-modes/forms-mode.md#uploading-a-file-without-the-picker-dialog) from a mode that doesn't support it — all reject their returned `Promise` the same way; none of them throw synchronously.
 
 When the current mode has no handler at all for a method you called, the rejection's `message` names both the method and the mode (e.g. `"logout is not available in forms mode"`) — this applies generally, not just to the three mode-guarded methods above. The same code also guards [`login()`](../get-started/authentication-security.md#oauth-authentication) and `logout()` in OAuth mode, where the host — not the portal's session cookie — owns authentication.
 

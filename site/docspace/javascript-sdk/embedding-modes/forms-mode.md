@@ -24,9 +24,11 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 `initForms()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md). It forces `mode` to Forms, forces `noLoader` to `true` (the loading spinner never shows in Forms mode, regardless of that setting), and defaults `showMenu` to `true` (pass `showMenu: false` to hide the side panel).
 
-`navigateSection()`, `setCustomActions()`, and `upload()` only work once the frame has connected — call them from inside `onAppReady` (or later), not right after `initForms()` returns. `setCustomActions()` is Forms-mode-only; `navigateSection()` and `upload()` also work in [Personal mode](./personal-mode.md). Calling any of the three from an incompatible mode rejects the returned promise with `SDKErrorCode.ModeMismatch` — none of them throw synchronously.
+`navigateSection()`, `setCustomActions()`, and `upload()` only work once the frame has connected — call them from inside `onAppReady` (or later), not right after `initForms()` returns. `setCustomActions()` also works in [Manager](./manager-mode.md#adding-custom-actions) and [Personal](./personal-mode.md#adding-custom-actions) mode; `navigateSection()` and `upload()` also work in [Personal mode](./personal-mode.md). Calling any of the three from an incompatible mode rejects the returned promise with `SDKErrorCode.ModeMismatch` — none of them throw synchronously.
 
 `onFileManagerClick` also fires in Forms mode, same as in Manager and Public room mode. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md) for its payload shape.
+
+Forms mode also supports [`getUserInfo()`](../usage-sdk/classes/SDKInstance.md#getuserinfo), [`getFiles()`](../usage-sdk/classes/SDKInstance.md#getfiles), [`getFolders()`](../usage-sdk/classes/SDKInstance.md#getfolders), and [`getList()`](../usage-sdk/classes/SDKInstance.md#getlist) — the same read-only listing methods available in [Manager](./manager-mode.md) and [Personal](./personal-mode.md) mode.
 
 `headerOffset` (inline-start padding added to header rows, so a host overlay like a floating side menu doesn't cover the header's own controls) and `headerHeight` (override the header's height to match your app's chrome) are also honored in Forms mode, alongside [Chat](./chat-mode.md) and [Personal](./personal-mode.md).
 
@@ -71,7 +73,7 @@ const docSpace = DocSpace.SDK.initForms({
 
 ### Adding custom context menu actions
 
-Register your own entries in the file/folder context menu with `setCustomActions()`, then handle clicks via `onCustomAction`:
+Register your own entries in the file/folder context menu with `setCustomActions()` (or `customActions` in the config, to show them from the first render), then handle clicks via `onCustomAction`. `setCustomActions()` also works in [Manager](./manager-mode.md#adding-custom-actions) and [Personal](./personal-mode.md#adding-custom-actions) mode — see Manager mode's section for the full set of restriction fields (`extensions`, `roomTypes`, `requireSecurity`) and the `onCustomAction` payload shape; Forms mode itself only has a file/folder context menu, no rooms and no create menu.
 
 ```javascript
 const docSpace = DocSpace.SDK.initForms({
@@ -132,7 +134,9 @@ const docSpace = DocSpace.SDK.initForms({
 
 The whole file is read into memory before transfer, so validate its size on the host page first — the server-side upload limit is enforced separately and will reject oversized files.
 
-### Restricting the gallery to one forms library
+### Restricting to one forms library
+
+Pass `libraryId` to scope the [Library](#opening-a-specific-section-on-load) section to one specific forms library instead of the portal's default — like `id`, it's optional and falls back to the portal's own Forms settings when omitted:
 
 ```javascript
 const docSpace = DocSpace.SDK.initForms({

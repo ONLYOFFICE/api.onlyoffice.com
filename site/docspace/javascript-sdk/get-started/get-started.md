@@ -43,7 +43,7 @@ The SDK supports multiple initialization modes:
 | Uploader | File upload dialog | No | No | Yes (folder) | Yes |
 | Forms | Form filling room | Yes | Yes | Optional (room from portal settings by default) | Yes |
 | Chat | AI chat interface | No | No | No | Yes |
-| Personal | Personal file manager (My Documents, Favorites, Recent, Trash) | Yes | Yes | No | Yes |
+| Personal | Personal file manager (My Documents, Favorites, Recent, Shared with me, Trash) | Yes | Yes | No | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.

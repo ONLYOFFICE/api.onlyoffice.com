@@ -57,12 +57,16 @@ If you already have a valid token and don't need the SDK to refresh it, pass it 
 
 [`login()`](../usage-sdk/classes/SDKInstance.md#login) and [`logout()`](../usage-sdk/classes/SDKInstance.md#logout) are unavailable in OAuth mode — both reject with `SDKErrorCode.ModeMismatch`, since the host owns the session instead of the portal's own cookie-based one: `login()` rejects with *"login is not available in OAuth mode: the host supplies the access token via getToken"*, `logout()` with *"logout is not available in OAuth mode: revoke the token on the host and call destroyFrame"*. There's no session cookie to end in the first place, so ending a session is a host-side action, not a frame call: stop renewing the token on your backend (revoke the refresh token, if your OAuth provider supports that), then call [`destroyFrame()`](../usage-sdk/classes/SDKInstance.md#destroyframe) — nothing else in the browser would otherwise stop the frame from working with whatever token it was last given.
 
+If the frame's own UI exposes a sign-out action (Manager mode's profile menu, when shown) and a visitor uses it, the frame latches into a signed-out state for the rest of that frame's lifetime — it stops asking for tokens entirely instead of silently fetching a new one and carrying on as if nothing happened. [`onSignOut`](../events-and-callbacks/events-and-callbacks.md#available-events) still fires, the same as in session-based auth. This latch lives inside the iframe's own document, so it doesn't need to be undone: a fresh `init*()` call creates a new frame with a clean state.
+
 The frame never shows DocSpace's own sign-in page in OAuth mode. If no usable token is available, it stays on a loader and reports the problem through `onAuthError` instead of `onAppError`, with a `code` identifying what went wrong:
 
 - `TOKEN_RESOLVE_FAILED` — `getToken` threw, rejected, or returned nothing, or neither `getToken` nor `accessToken` is set. Reported by the SDK itself.
 - `TOKEN_UNAVAILABLE` — the frame asked for its first token and got none back within 10 seconds. Reported by the portal.
 - `TOKEN_REFRESH_FAILED` — the frame asked for a fresh token after a `401` and got none back. Reported by the portal.
 - `UNAUTHORIZED` — the portal still answered `401` with a freshly obtained token — it's expired, revoked, or missing a scope the current page needs. Reported by the portal.
+
+A `getToken` failure on the very first token request typically fires both of the first two, not just one: `TOKEN_RESOLVE_FAILED` arrives immediately from the SDK, and `TOKEN_UNAVAILABLE` follows about 10 seconds later — the portal waits out its own timeout for a token reply that was never going to arrive, since `getToken` never produced one to send.
 
 Treat all four as the same kind of problem in practice: something is wrong with the token your backend is producing, or the session it depends on at the OAuth provider has ended. Re-check `getToken`'s own logic first; if that isn't it, call `destroyFrame()` and send the user back through your own re-authentication flow rather than leaving the frame stuck on its loader. There's no dedicated `onAuthSuccess` for OAuth mode — that event only fires from DocSpace's own confirm-by-link login page — so a successful token resolution is visible only indirectly, through the frame loading and firing `onAppReady`.
 

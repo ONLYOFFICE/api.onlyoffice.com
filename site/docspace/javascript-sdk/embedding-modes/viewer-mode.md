@@ -41,7 +41,7 @@ const docSpace = DocSpace.SDK.initViewer({
 
 ### Embedding a document preview in mobile layout
 
-Use `editorType` to switch the viewer to a mobile-optimized layout and hide the "Open file location" button:
+`editorType: "mobile"` switches to a mobile-optimized layout; `editorGoBack: false` additionally hides the "Open file location" button — see [Hiding UI elements and frame layout](../customization/ui-elements.md#editor-mode) for its other two values:
 
 ```javascript
 const docSpace = DocSpace.SDK.initViewer({
