@@ -21,7 +21,7 @@ Automate repetitive tasks without leaving the editor.
 
 **Development profile:**
 
-- **Time:** 30 mins - 2 hours | **Skill:** Beginner | **Tech:** JavaScript basics
+- **Skill:** Beginner | **Tech:** JavaScript basics
 - **Distribution:** Copy-paste code or embed in document templates
 
 [Browse all macro examples](/samples/?doctype=docs&text=macros)

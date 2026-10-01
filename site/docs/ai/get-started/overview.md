@@ -21,7 +21,7 @@ Build next-generation document workflows powered by AI.
 
 **Development profile:**
 
-- **Time:** 3-10 days | **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
+- **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
 - **Requirements:** API keys for OpenAI, DeepSeek, or any OpenAI-compatible provider
 
 [Browse all AI tool examples](/samples/?doctype=ai&text=ai+tools)

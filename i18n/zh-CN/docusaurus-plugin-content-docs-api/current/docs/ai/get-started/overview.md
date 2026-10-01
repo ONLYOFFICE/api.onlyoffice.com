@@ -21,7 +21,7 @@ ONLYOFFICE 自定义 AI 工具是编辑器扩展，将插件框架与 AI 提供�
 
 **开发概况：**
 
-- **时间：** 3-10 天 | **技能：** 高级 | **技术栈：** 插件 API + AI 提供商集成
+- **技能：** 高级 | **技术栈：** 插件 API + AI 提供商集成
 - **要求：** OpenAI、DeepSeek 或任何兼容 OpenAI 的提供商的 API 密钥
 
 [浏览所有 AI 工具示例](/samples/?doctype=ai&text=ai+tools)

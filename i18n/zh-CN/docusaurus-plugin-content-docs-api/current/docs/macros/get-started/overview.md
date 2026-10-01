@@ -21,7 +21,7 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 
 **开发概况：**
 
-- **时间：** 30 分钟 - 2 小时 | **技能：** 入门 | **技术栈：** JavaScript 基础
+- **技能：** 入门 | **技术栈：** JavaScript 基础
 - **分发方式：** 复制粘贴代码或嵌入文档模板
 
 [浏览所有宏示例](/samples/?doctype=docs&text=macros)
