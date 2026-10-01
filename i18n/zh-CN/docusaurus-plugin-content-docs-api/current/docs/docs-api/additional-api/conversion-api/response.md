@@ -16,7 +16,7 @@ JSON 响应格式从 4.3 版开始提供。
 
 <APITable>
 
-| Parameter | Type | Example | Description |
+| 参数 | 类型 | 示例 | 描述 |
 | --------- | ---- | ------- | ----------- |
 | endConvert | boolean | `true` | 转换是否完成。 |
 | error | integer | `-3` | 转换期间发生的错误。可以在[此处](./error-codes.md)找到可能的错误代码。 |

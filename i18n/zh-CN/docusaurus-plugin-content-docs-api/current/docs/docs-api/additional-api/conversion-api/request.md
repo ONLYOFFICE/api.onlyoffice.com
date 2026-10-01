@@ -24,7 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
 
-| Parameter | Type | Presence | Description |
+| 参数 | 类型 | 是否必填 | 描述 |
 | --------- | ---- | -------- | ----------- |
 | async | boolean | optional | 转换请求类型：异步与否。支持的值：**true**，**false**。使用异步请求类型时，响应立即形成。在这种情况下，要获得结果，必须在转换完成之前发送不更改参数的请求。默认值为 **false**。 |
 | codePage | integer | optional | 从 *csv* 或 *txt* 格式转换时的文件编码。主要支持的值：**932** - 日语 (Shift-JIS)，**950** - 繁体中文 (Big5)，**1250** - 中欧 (Windows)，**1251** - 西里尔字母 (Windows)，**65001** - Unicode (UTF-8)。您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。 |
