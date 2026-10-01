@@ -6,9 +6,9 @@ sidebar_position: -3
 
 插件可以以模态窗口（modal window）或面板（panel）的形式展示。
 
-![Modal window（模态窗口）](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Modal window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
+![模态窗口](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![模态窗口](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
+![插件左侧面板](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![插件左侧面板](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
 可以同时运行多个面板插件。每个插件将在左侧或右侧工具栏显示为一个独立按钮。
 

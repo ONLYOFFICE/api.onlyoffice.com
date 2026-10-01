@@ -39,7 +39,7 @@ sidebar_position: -1
 
 该插件在左侧面板中打开。您可以同时运行多个面板插件，每个插件都会在左侧工具栏中显示为一个独立按钮。
 
-![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
+![插件左侧面板](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![插件左侧面板](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
 **示例**：[Translator](../samples/translator.md)、[Thesaurus](../samples/thesaurus.md)、[Zotero](../samples/zotero.md)
 

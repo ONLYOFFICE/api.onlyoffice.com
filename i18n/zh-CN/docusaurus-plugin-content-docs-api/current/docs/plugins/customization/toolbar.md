@@ -243,7 +243,7 @@ const oToolbarMenuItem = {
 }
 ```
 
-![Split and toggled button](/assets/images/plugins/split-toggle-button.png#gh-light-mode-only)![Split and toggled button](/assets/images/plugins/split-toggle-button.dark.png#gh-dark-mode-only)
+![可切换的拆分按钮](/assets/images/plugins/split-toggle-button.png#gh-light-mode-only)![可切换的拆分按钮](/assets/images/plugins/split-toggle-button.dark.png#gh-dark-mode-only)
 
 ### 样例 3
 

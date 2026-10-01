@@ -45,7 +45,7 @@ sidebar_position: -5
 
 **示例**：`2`
 
-![Plugin groups](/assets/images/plugins/plugin-groups.png#gh-light-mode-only)![Plugin groups](/assets/images/plugins/plugin-groups.dark.png#gh-dark-mode-only)
+![插件分组](/assets/images/plugins/plugin-groups.png#gh-light-mode-only)![插件分组](/assets/images/plugins/plugin-groups.dark.png#gh-dark-mode-only)
 
 ## guid
 
