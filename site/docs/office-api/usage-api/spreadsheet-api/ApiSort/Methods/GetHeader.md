@@ -1,6 +1,8 @@
 # GetHeader
 
-Returns the header setting. Always "xlYes" for a ListObject.
+Returns the header setting.
+
+Always "xlYes" for a ListObject.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

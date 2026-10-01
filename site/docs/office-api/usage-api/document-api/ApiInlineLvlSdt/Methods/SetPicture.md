@@ -2,7 +2,7 @@
 
 Sets the content (image) for the picture content control.
 
-This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image.
+The URL should be an internet link to the image.
 
 ## Syntax
 

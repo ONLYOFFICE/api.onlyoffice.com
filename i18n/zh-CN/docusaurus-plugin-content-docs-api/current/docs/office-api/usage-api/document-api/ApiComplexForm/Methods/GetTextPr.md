@@ -2,7 +2,9 @@
 
 返回当前表单的文本属性。
 
-*如果该表单类型支持则使用*
+:::note
+仅在此类型表单支持时使用。
+:::
 
 继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 

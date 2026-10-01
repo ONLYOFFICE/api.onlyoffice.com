@@ -30,7 +30,7 @@
 | [GetName](./Methods/GetName.md) | string | 返回表格列的名称。 |
 | [GetParent](./Methods/GetParent.md) | [ApiListObject](../ApiListObject/ApiListObject.md) | 返回父列表对象。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回整个列的范围，包括标题行和汇总行。 |
-| [GetTotal](./Methods/GetTotal.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回列的汇总行单元格范围。如果表格没有汇总行，则返回 null。 |
+| [GetTotal](./Methods/GetTotal.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回列的汇总行单元格范围。 |
 | [GetTotalsCalculation](./Methods/GetTotalsCalculation.md) | [XlTotalsCalculation](../Enumeration/XlTotalsCalculation.md) | 返回列的汇总计算类型。 |
 | [SetName](./Methods/SetName.md) | 无 | 设置表格列的名称。 |
 | [SetTotalsCalculation](./Methods/SetTotalsCalculation.md) | 无 | 设置列的汇总计算类型。 |

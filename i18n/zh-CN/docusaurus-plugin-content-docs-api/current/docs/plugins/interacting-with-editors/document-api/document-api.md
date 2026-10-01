@@ -103,7 +103,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | 无 | 设置文档编辑限制。 |
 | [SetFormValue](./Methods/SetFormValue.md) | 无 | 为指定的表单设置值。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。如果 HTML 包含多个块级元素，其内联内容将合并到目标段落中。 |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。 |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |

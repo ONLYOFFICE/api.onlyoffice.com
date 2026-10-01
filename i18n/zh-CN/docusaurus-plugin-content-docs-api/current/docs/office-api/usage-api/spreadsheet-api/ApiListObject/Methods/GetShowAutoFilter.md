@@ -1,6 +1,8 @@
 # GetShowAutoFilter
 
-返回自动筛选下拉按钮是否显示在表格的标题行上。对于新表格，默认返回 true。
+返回表格标题行上是否显示自动筛选下拉按钮。
+
+对于新表格，默认返回 true。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

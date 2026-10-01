@@ -1,6 +1,8 @@
 # XlListObjectSourceType
 
-Specifies the data source for the ListObject. Only **"xlSrcRange"** is currently supported.
+Specifies the data source for the ListObject.
+
+Only **"xlSrcRange"** is currently supported.
 
 ## Type
 

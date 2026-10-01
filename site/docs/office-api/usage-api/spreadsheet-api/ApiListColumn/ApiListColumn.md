@@ -30,7 +30,7 @@ The following table lists the available methods.
 | [GetName](./Methods/GetName.md) | string | Returns the name of the table column. |
 | [GetParent](./Methods/GetParent.md) | [ApiListObject](../ApiListObject/ApiListObject.md) | Returns the parent list object. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the entire column, including the header and totals rows. |
-| [GetTotal](./Methods/GetTotal.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the totals row cell for the column. Returns null if the table has no totals row. |
+| [GetTotal](./Methods/GetTotal.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the totals row cell for the column. |
 | [GetTotalsCalculation](./Methods/GetTotalsCalculation.md) | [XlTotalsCalculation](../Enumeration/XlTotalsCalculation.md) | Returns the totals calculation type for the column. |
 | [SetName](./Methods/SetName.md) | None | Sets the name of the table column. |
 | [SetTotalsCalculation](./Methods/SetTotalsCalculation.md) | None | Sets the totals calculation type for the column. |

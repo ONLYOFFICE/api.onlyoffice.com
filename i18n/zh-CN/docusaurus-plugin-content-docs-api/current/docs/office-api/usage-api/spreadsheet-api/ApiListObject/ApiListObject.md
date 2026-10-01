@@ -40,23 +40,23 @@
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | 在指定的从 1 开始的位置向表格添加新列。如果未提供位置，则将列追加到末尾。 |
-| [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | 在指定的从 1 开始的位置向表格添加新数据行。如果未提供位置，则将行追加到末尾。 |
+| [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | 在表格中指定的位置（从 1 开始）添加新列。 |
+| [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | 在表格中指定的位置（从 1 开始）添加新数据行。 |
 | [Delete](./Methods/Delete.md) | 无 | 删除 ListObject 对象并清除单元格格式。 |
 | [GetActive](./Methods/GetActive.md) | boolean | 返回一个布尔值，指示 ListObject 是否处于活动状态，即活动单元格是否在 ListObject 的范围内。 |
 | [GetAlternativeText](./Methods/GetAlternativeText.md) | string | 返回表格的替代文本。 |
-| [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | 返回表示应用于表格的自动筛选的 ApiAutoFilter 对象。如果表格没有自动筛选，则返回 null。 |
+| [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | 返回表示应用于表格的自动筛选的 ApiAutoFilter 对象。 |
 | [GetComment](./Methods/GetComment.md) | string | 返回表格的批注（摘要替代文本）。 |
-| [GetDataBodyRange](./Methods/GetDataBodyRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格中数据行的范围，不包括标题行和汇总行。如果表格没有数据行，则返回 null。 |
+| [GetDataBodyRange](./Methods/GetDataBodyRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格中数据行的范围，不包括标题行和汇总行。 |
 | [GetDisplayName](./Methods/GetDisplayName.md) | string | 返回表格的显示名称。 |
-| [GetHeaderRowRange](./Methods/GetHeaderRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格标题行的范围。如果表格没有标题行，则返回 null。 |
+| [GetHeaderRowRange](./Methods/GetHeaderRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格标题行的范围。 |
 | [GetListColumns](./Methods/GetListColumns.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md)[] | 返回表格中所有列的数组。 |
 | [GetListRows](./Methods/GetListRows.md) | [ApiListRow](../ApiListRow/ApiListRow.md)[] | 返回表格中所有数据行的数组，不包括标题行和汇总行。 |
 | [GetName](./Methods/GetName.md) | string | 返回表格的显示名称。 |
 | [GetParent](./Methods/GetParent.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回作为表格父级的 ApiWorksheet 对象。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示表格范围的 ApiRange 对象。 |
-| [GetShowAutoFilter](./Methods/GetShowAutoFilter.md) | boolean | 返回自动筛选下拉按钮是否显示在表格的标题行上。对于新表格，默认返回 true。 |
-| [GetShowAutoFilterDropDown](./Methods/GetShowAutoFilterDropDown.md) | boolean | 返回自动筛选下拉箭头是否显示在表格的标题行上。对于新表格，默认返回 true。 |
+| [GetShowAutoFilter](./Methods/GetShowAutoFilter.md) | boolean | 返回表格标题行上是否显示自动筛选下拉按钮。 |
+| [GetShowAutoFilterDropDown](./Methods/GetShowAutoFilterDropDown.md) | boolean | 返回表格标题行上是否显示自动筛选下拉箭头。 |
 | [GetShowHeaders](./Methods/GetShowHeaders.md) | boolean | 返回表格是否显示标题行。 |
 | [GetShowTableStyleColumnStripes](./Methods/GetShowTableStyleColumnStripes.md) | boolean | 返回是否对表格应用了条带列格式。 |
 | [GetShowTableStyleFirstColumn](./Methods/GetShowTableStyleFirstColumn.md) | boolean | 返回是否对表格应用了第一列格式。 |
@@ -64,17 +64,17 @@
 | [GetShowTableStyleRowStripes](./Methods/GetShowTableStyleRowStripes.md) | boolean | 返回是否对表格应用了条带行格式。 |
 | [GetShowTotals](./Methods/GetShowTotals.md) | boolean | 返回表格是否显示汇总行。 |
 | [GetSort](./Methods/GetSort.md) | [ApiSort](../ApiSort/ApiSort.md) | 返回此列表对象的 Sort 对象。 |
-| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。对于基于范围的表格，始终返回 “xlSrcRange”。 |
+| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。 |
 | [GetSummary](./Methods/GetSummary.md) | string | 返回表格的摘要描述（替代文本摘要）。 |
 | [GetTableStyle](./Methods/GetTableStyle.md) | string | 返回应用于表格的表格样式名称。 |
-| [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格汇总行的范围。如果表格没有汇总行，则返回 null。 |
-| [Resize](./Methods/Resize.md) | 无 | 将 ListObject 调整为新范围。不插入或移动单元格。 |
+| [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格汇总行的范围。 |
+| [Resize](./Methods/Resize.md) | 无 | 将 ListObject 调整为新范围。 |
 | [SetAlternativeText](./Methods/SetAlternativeText.md) | 无 | 设置表格的替代文本。 |
 | [SetComment](./Methods/SetComment.md) | 无 | 设置表格的批注（摘要替代文本）。 |
 | [SetDisplayName](./Methods/SetDisplayName.md) | boolean | 设置表格的显示名称。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置表格的名称。等同于 SetDisplayName。 |
-| [SetShowAutoFilter](./Methods/SetShowAutoFilter.md) | 无 | 设置表格上是否存在自动筛选。设为 false 将完全移除自动筛选；设为 true 将在不存在时创建自动筛选。 |
-| [SetShowAutoFilterDropDown](./Methods/SetShowAutoFilterDropDown.md) | 无 | 设置是否在表格的标题行上显示自动筛选下拉箭头。不会移除自动筛选本身，仅隐藏或显示下拉按钮。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置表格的名称。 |
+| [SetShowAutoFilter](./Methods/SetShowAutoFilter.md) | 无 | 设置表格上是否存在自动筛选。 |
+| [SetShowAutoFilterDropDown](./Methods/SetShowAutoFilterDropDown.md) | 无 | 设置表格标题行上是否显示自动筛选下拉箭头。 |
 | [SetShowHeaders](./Methods/SetShowHeaders.md) | 无 | 设置表格是否显示标题行。 |
 | [SetShowTableStyleColumnStripes](./Methods/SetShowTableStyleColumnStripes.md) | 无 | 设置是否对表格应用条带列格式。 |
 | [SetShowTableStyleFirstColumn](./Methods/SetShowTableStyleFirstColumn.md) | 无 | 设置是否对表格应用第一列格式。 |
@@ -83,4 +83,4 @@
 | [SetShowTotals](./Methods/SetShowTotals.md) | 无 | 设置表格是否显示汇总行。 |
 | [SetSummary](./Methods/SetSummary.md) | 无 | 设置表格的摘要描述（替代文本摘要）。 |
 | [SetTableStyle](./Methods/SetTableStyle.md) | 无 | 按名称设置表格样式。 |
-| [Unlist](./Methods/Unlist.md) | 无 | 从 ListObject 移除列表功能并将其转换为常规数据范围。单元格数据、格式和公式保留在工作表上。 |
+| [Unlist](./Methods/Unlist.md) | 无 | 移除 ListObject 的列表功能，并将其转换为常规数据区域。 |

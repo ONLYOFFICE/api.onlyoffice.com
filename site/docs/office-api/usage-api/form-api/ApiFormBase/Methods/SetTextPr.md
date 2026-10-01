@@ -2,7 +2,9 @@
 
 Sets the text properties to the current form.
 
-*Used if possible for this type of form*
+:::note
+Used if possible for this type of form.
+:::
 
 ## Syntax
 

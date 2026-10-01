@@ -2,7 +2,9 @@
 
 Sets the text to the current combo box.
 
-*Available only for editable combo box forms.*
+:::note
+Available only for editable combo box forms.
+:::
 
 ## Syntax
 

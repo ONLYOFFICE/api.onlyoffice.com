@@ -2,8 +2,6 @@
 
 Checks whether the content control is a picture control.
 
-This method verifies if the content control is specifically a picture control.
-
 ## Syntax
 
 ```javascript

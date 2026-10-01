@@ -69,10 +69,10 @@ The following table lists the available methods.
 | [Cut](./Methods/Cut.md) | None | Cuts the range and save it to the clipboard or paste it to the specified range. |
 | [Delete](./Methods/Delete.md) | None | Deletes the Range object. |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the end in the specified direction in the specified range. |
-| [FillDown](./Methods/FillDown.md) | boolean | Copies the contents and formatting of the top row of the range into the remaining rows. If the range has only one row, the method succeeds but makes no changes. |
-| [FillLeft](./Methods/FillLeft.md) | boolean | Copies the contents and formatting of the rightmost column of the range into the remaining columns. If the range has only one column, the method succeeds but makes no changes. |
-| [FillRight](./Methods/FillRight.md) | boolean | Copies the contents and formatting of the leftmost column of the range into the remaining columns. If the range has only one column, the method succeeds but makes no changes. |
-| [FillUp](./Methods/FillUp.md) | boolean | Copies the contents and formatting of the bottom row of the range into the remaining rows. If the range has only one row, the method succeeds but makes no changes. |
+| [FillDown](./Methods/FillDown.md) | boolean | Copies the contents and formatting of the top row of the range into the remaining rows. |
+| [FillLeft](./Methods/FillLeft.md) | boolean | Copies the contents and formatting of the rightmost column of the range into the remaining columns. |
+| [FillRight](./Methods/FillRight.md) | boolean | Copies the contents and formatting of the leftmost column of the range into the remaining columns. |
+| [FillUp](./Methods/FillUp.md) | boolean | Copies the contents and formatting of the bottom row of the range into the remaining rows. |
 | [Find](./Methods/Find.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Finds specific information in the current range. |
 | [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the next cell that matches those same conditions and returns the ApiRange object that represents that cell. |
 | [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell. |

@@ -103,7 +103,7 @@ The following table lists the available methods.
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | None | Sets the document editing restrictions. |
 | [SetFormValue](./Methods/SetFormValue.md) | None | Sets a value to the specified form. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
-| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. If the HTML contains multiple block-level elements, their inline content is merged into the target paragraph. |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |

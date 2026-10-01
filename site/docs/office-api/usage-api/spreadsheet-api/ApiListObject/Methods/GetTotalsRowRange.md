@@ -1,6 +1,8 @@
 # GetTotalsRowRange
 
-Returns the range of the totals row of the table. Returns null if the table has no totals row.
+Returns the range of the totals row of the table.
+
+Returns null if the table has no totals row.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

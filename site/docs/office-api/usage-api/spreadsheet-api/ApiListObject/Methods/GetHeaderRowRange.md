@@ -1,6 +1,8 @@
 # GetHeaderRowRange
 
-Returns the range of the header row of the table. Returns null if the table has no header row.
+Returns the range of the header row of the table.
+
+Returns null if the table has no header row.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

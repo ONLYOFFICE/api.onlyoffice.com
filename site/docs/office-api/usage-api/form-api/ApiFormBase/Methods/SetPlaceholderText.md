@@ -2,7 +2,9 @@
 
 Sets the placeholder text to the current form.
 
-*Can't be set to checkbox or radio button.*
+:::note
+The placeholder text can't be set for checkbox or radio button forms.
+:::
 
 ## Syntax
 

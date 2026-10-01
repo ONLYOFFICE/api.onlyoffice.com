@@ -2,7 +2,9 @@
 
 将当前表单转换为内联表单。
 
-*图片表单无法转换为内联表单，它始终是固定大小的对象。*
+:::note
+图片表单无法转换为内联表单，因为它始终是固定大小的对象。
+:::
 
 继承自 [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md)。
 

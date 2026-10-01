@@ -69,10 +69,10 @@
 | [Cut](./Methods/Cut.md) | 无 | 剪切范围并将其保存到剪贴板或粘贴到指定范围。 |
 | [Delete](./Methods/Delete.md) | 无 | 删除 Range 对象。 |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定范围中指定方向末端的 Range 对象。 |
-| [FillDown](./Methods/FillDown.md) | boolean | 将范围顶行的内容和格式复制到其余行。如果范围只有一行，方法成功但不做任何更改。 |
-| [FillLeft](./Methods/FillLeft.md) | boolean | 将范围最右列的内容和格式复制到其余列。如果范围只有一列，方法成功但不做任何更改。 |
-| [FillRight](./Methods/FillRight.md) | boolean | 将范围最左列的内容和格式复制到其余列。如果范围只有一列，方法成功但不做任何更改。 |
-| [FillUp](./Methods/FillUp.md) | boolean | 将范围底行的内容和格式复制到其余行。如果范围只有一行，方法成功但不做任何更改。 |
+| [FillDown](./Methods/FillDown.md) | boolean | 将范围顶行的内容和格式复制到其余行中。 |
+| [FillLeft](./Methods/FillLeft.md) | boolean | 将范围最右列的内容和格式复制到其余列中。 |
+| [FillRight](./Methods/FillRight.md) | boolean | 将范围最左列的内容和格式复制到其余列中。 |
+| [FillUp](./Methods/FillUp.md) | boolean | 将范围底行的内容和格式复制到其余行中。 |
 | [Find](./Methods/Find.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 在当前范围中查找特定信息。 |
 | [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的下一个单元格并返回表示该单元格的 ApiRange 对象。 |
 | [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。 |

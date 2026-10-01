@@ -1,6 +1,8 @@
 # SetParagraphHtml
 
-Replaces all content of the specified paragraph with the content parsed from the given HTML string. If the HTML contains multiple block-level elements, their inline content is merged into the target paragraph.
+Replaces all content of the specified paragraph with the content parsed from the given HTML string.
+
+If the HTML contains multiple block-level elements, their inline content is merged into the target paragraph.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
