@@ -14,6 +14,18 @@ This plugin adds two entries to the DocSpace sidebar (the *article*) using the `
 
 Because a navigation item's page renders inside the portal's own React tree, it can be a plain component built with [`@docspace/ui-kit`](https://github.com/ONLYOFFICE/docspace-ui-kit-react) — it gets the portal theme for free, and the [React hooks](/docspace/plugins-sdk/usage-sdk/coding-plugin.md#react-components) reach the portal through context.
 
+:::note
+**Import only from `@docspace/ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@docspace/ui-kit`. A plugin that imports `@docspace/ui-kit/components/button` will fail to load.
+
+```tsx
+// ✅ Correct
+import { Button } from "@docspace/ui-kit";
+
+// ❌ Wrong — the portal cannot load this
+import Button from "@docspace/ui-kit/components/button";
+```
+:::
+
 <details>
   <summary>Full example</summary>
 
@@ -236,9 +248,72 @@ Then add the UI kit as a dependency pointing at the packed file, and install:
 }
 ```
 
+:::important
+**Import only from `@docspace/ui-kit`; do not use subpath imports.**
+
+```tsx
+// ✅ Correct
+import { Button, Text, ToggleButton } from "@docspace/ui-kit";
+
+// ❌ Wrong — the portal cannot load this
+import Button from "@docspace/ui-kit/components/button";
+```
+
+**Do not** use subpath imports such as `@docspace/ui-kit/components/button`. They will not resolve at runtime because the UI kit must stay out of the plugin bundle — DocSpace supplies it at load time and rewrites the `@docspace/ui-kit` specifier. The build configuration in *vite.config.ts* marks it as external with the pattern `/^@docspace\/ui-kit(\/.*)?$/`.
+:::
+
 ## Step 4: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Rename it to `src/index.tsx` to use JSX, and implement [`IPlugin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md) and [`IArticleNavigationPlugin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleNavigationPlugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. To use JSX:
+
+1. Rename `src/index.ts` to `src/index.tsx`:
+
+   ```bash
+   mv src/index.ts src/index.tsx
+   ```
+
+2. Update the entry point in `vite.config.ts`:
+
+   ```ts
+   import { defineConfig } from "vite";
+   import react from "@vitejs/plugin-react";
+   import { fileURLToPath } from "url";
+
+   const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+   export default defineConfig({
+     plugins: [react()],
+     define: {
+       "process.env.NODE_ENV": JSON.stringify("production"),
+       "process.env": "{}",
+     },
+     build: {
+       lib: {
+         entry: `${__dirname}/src/index.tsx`,  // Changed from index.ts
+         formats: ["es"],
+         fileName: () => "plugin.js",
+       },
+       rolldownOptions: {
+         external: [
+           "react",
+           "react-dom",
+           "react/jsx-runtime",
+           "@onlyoffice/docspace-plugin-sdk/react",
+           /^@docspace\/ui-kit(\/.*)?$/,
+         ],
+         output: {
+           codeSplitting: false,
+           assetFileNames: (assetInfo: { name?: string }) =>
+             assetInfo.name?.endsWith(".css")
+             ? "plugin.css" 
+             : (assetInfo.name ?? "asset"),
+         },
+       },
+     },
+   });
+   ```
+
+3. Implement [`IPlugin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md) and [`IArticleNavigationPlugin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleNavigationPlugin.md) in `src/index.tsx`:
 
 <details>
   <summary>ArticleNavigationSample class</summary>
@@ -295,7 +370,7 @@ export default plugin;
 
 </details>
 
-The items are registered in `onLoadCallback` rather than right after construction, matching when DocSpace is ready to receive them.
+The items are registered in `onLoadCallback` rather than right after construction, ensuring DocSpace is ready to receive them.
 
 ## Step 5: Build the pages with the UI kit
 
@@ -357,7 +432,7 @@ const SettingsPage = () => {
 
 </details>
 
-`useCurrentUser` and `usePluginRuntime` return `null` on surfaces without a selection, but a sidebar page is not one of them — both hooks resolve normally here.
+`useCurrentFile` returns `null` on article navigation pages (surfaces with no file selection), but `useCurrentUser` and `usePluginRuntime` resolve normally here.
 
 ## Step 6: Register the navigation items
 
@@ -403,7 +478,7 @@ This runs `vite build && npx build-docspace-plugin`, which bundles `src/index.ts
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.
-3. Click **Upload**, and select the generated `dist/plugin.zip`.
+3. Click **Upload plugin**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 9: Test the plugin
