@@ -170,6 +170,40 @@ const message: IMessage = {
 }
 ```
 
+### updateArticleNavigationItems
+
+```ts
+updateArticleNavigationItems: "update-article-navigation-items";
+```
+
+Calls a function to update all the article navigation items.
+The sidebar is refreshed, so a new "label" or "icon" set through
+"IArticleNavigationPlugin.updateArticleNavigationItem" becomes visible.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleNavigationItems],
+}
+```
+
+### updateArticleButtonItems
+
+```ts
+updateArticleButtonItems: "update-article-button-items";
+```
+
+Calls a function to update all the article button items.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleButtonItems],
+}
+```
+
 ### showToast
 
 ```ts
