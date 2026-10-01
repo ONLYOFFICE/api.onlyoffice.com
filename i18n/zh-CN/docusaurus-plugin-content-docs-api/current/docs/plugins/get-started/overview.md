@@ -23,7 +23,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 **开发概况**：
 
 - **技能**：中级 | **技术栈**：HTML/CSS/JavaScript
-- **分发方式**：[ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
+- **分发方式**：编辑器内置的 ONLYOFFICE 插件市场（[如何提交](../development-workflow/publishing/submit-to-marketplace.md)），或[私有部署](../development-workflow/publishing/private-distribution.md)
 
 ## 插件的限制 {#what-plugins-cannot-do}
 

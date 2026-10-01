@@ -23,7 +23,7 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 **Development profile**:
 
 - **Skill**: Intermediate | **Tech**: HTML/CSS/JavaScript
-- **Distribution**: [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
+- **Distribution**: the ONLYOFFICE Plugin Marketplace, built into the editors ([how to submit](../development-workflow/publishing/submit-to-marketplace.md)), or [private deployment](../development-workflow/publishing/private-distribution.md)
 
 ## What plugins cannot do
 
