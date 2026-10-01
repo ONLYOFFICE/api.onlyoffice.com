@@ -54,7 +54,7 @@ embedded 部分定义嵌入模式参数。
 
 **示例**：`"bottom"`
 
-![Embedded](/assets/images/editor/embedded.png)
+![嵌入式查看器](/assets/images/editor/embedded.png)
 
 ## 示例
 

@@ -372,8 +372,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
-![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
-![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
+![编辑 PDF 按钮](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
+![编辑 PDF 按钮](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
 **示例**：
 

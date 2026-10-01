@@ -646,7 +646,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-![Mention share](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mention share](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
+![提及共享提示](/assets/images/editor/mentionShare.png#gh-light-mode-only)![提及共享提示](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
 
 ## mobile
 
