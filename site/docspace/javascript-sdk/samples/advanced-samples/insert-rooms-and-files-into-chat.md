@@ -7,8 +7,6 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 This example shows how to integrate DocSpace SDK selectors into a chat interface. Users can enter special slash commands to open file or room selectors. Once an item is selected, the link is automatically added to the chat.
 
-Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/insert-rooms-and-files-into-chat.html)
-
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.  
@@ -28,12 +26,26 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
-      /* Styles omitted for brevity - same as your input */
+      body { font-family: sans-serif; margin: 0; background: #f5f6f8; }
+      .commands { position: absolute; top: 20px; left: 20px; }
+      .chat-container { max-width: 600px; margin: 120px auto 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; }
+      .chat-messages { height: 360px; overflow-y: auto; padding: 12px; }
+      .message { margin-bottom: 8px; padding: 8px 12px; background: #eef2ff; border-radius: 6px; word-break: break-all; }
+      .input-container { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #ddd; }
+      .input-container input { flex: 1; }
+      input, button { font: inherit; padding: 8px 12px; }
+      button { cursor: pointer; }
+      button:disabled { cursor: default; opacity: 0.5; }
+      /* Both modals stay hidden until the script shows them */
+      .selector-modal { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); }
+      .selector-options, .selector-frame { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 8px; }
+      .selector-options { display: flex; gap: 8px; padding: 16px; }
+      .selector-frame { width: 480px; height: 430px; border: none; }
     </style>
   </head>
   <body>
     <!-- Step 2: Command info block -->
-    <div style="position:absolute; top:20px; left:20px;">
+    <div class="commands">
       <p><b>/docspace room</b> to open room selector</p>
       <p><b>/docspace file</b> to open file selector</p>
     </div>
@@ -123,8 +135,9 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         document.getElementById("selectorModal").style.display = "block"
 
         docSpace = DocSpace.SDK.initRoomSelector({
-          height: "430px",
+          src: portalSrc,
           frameId: "ds-selector",
+          height: "430px",
           showSelectorCancel: true,
           events: {
             onSelectCallback: onRoomSelectCallback,
@@ -135,10 +148,11 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
       // Initializes and shows the File Selector SDK modal
       function openFileSelector() {
-        document.getElementById("selectorChoiceModal").style.display = "none";
-        document.getElementById("selectorModal").style.display = "block";
+        document.getElementById("selectorChoiceModal").style.display = "none"
+        document.getElementById("selectorModal").style.display = "block"
 
         docSpace = DocSpace.SDK.initFileSelector({
+          src: portalSrc,
           frameId: "ds-selector",
           height: "430px",
           showSelectorCancel: true,
@@ -153,14 +167,16 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       function onRoomSelectCallback(e) {
         if (!Array.isArray(e) || !e.length) return
         const id = e[0].id
-        const link = `${portalSrc}rooms/shared/${id}/filter?folder=${id}`
+        const link = `${portalSrc}/rooms/shared/${id}/filter?folder=${id}`
         addMessage(link, true)
         returnToChat()
       }
 
       // Callback for when a file is selected
       function onFileSelectCallback(e) {
-        addMessage(e.viewUrl, true)
+        if (!e?.id) return
+        const link = `${portalSrc}/doceditor?fileId=${e.id}`
+        addMessage(link, true)
         returnToChat()
       }
 
@@ -185,7 +201,7 @@ function sendMessage() {
   const text = input.value.trim()
   if (!text) return
 
-  input.value = "";
+  input.value = ""
   if (text.startsWith("/docspace room")) return openRoomSelector()
   if (text.startsWith("/docspace file")) return openFileSelector()
 
@@ -202,9 +218,14 @@ function sendMessage() {
 
 ``` ts
 function openSelectorChoice() {
+  const btn = document.querySelector(".input-container button:last-child")
+  btn.disabled = true
   document.getElementById("selectorChoiceModal").style.display = "block"
 }
 ```
+
+- Disables the **DocSpace** button and shows the room/file choice
+- Both modals are hidden by the `.selector-modal` style until the script shows them
 
 ---
 
@@ -212,22 +233,23 @@ function openSelectorChoice() {
 
 ``` ts
 function openRoomSelector() {
-    document.getElementById("selectorChoiceModal").style.display = "none"
-    document.getElementById("selectorModal").style.display = "block"
+  document.getElementById("selectorChoiceModal").style.display = "none"
+  document.getElementById("selectorModal").style.display = "block"
 
-    docSpace = DocSpace.SDK.initRoomSelector({
-        height: "430px",
-        frameId: "ds-selector",
-        showSelectorCancel: true,
-        events: {
-            onSelectCallback: onRoomSelectCallback,
-            onCloseCallback: returnToChat
-        }
-    })
+  docSpace = DocSpace.SDK.initRoomSelector({
+    src: portalSrc,
+    frameId: "ds-selector",
+    height: "430px",
+    showSelectorCancel: true,
+    events: {
+      onSelectCallback: onRoomSelectCallback,
+      onCloseCallback: returnToChat
+    }
+  })
 }
 ```
 
-- Initializes the SDK Room Selector
+- Initializes the SDK Room Selector. The file selector is initialized the same way with `initFileSelector()`.
 - Runs callback when a room is selected or modal is closed
 
 ### 4. Handle file and room selection
@@ -236,18 +258,21 @@ function openRoomSelector() {
 function onRoomSelectCallback(e) {
   if (!Array.isArray(e) || !e.length) return
   const id = e[0].id
-  const link = `${portalSrc}rooms/shared/${id}/filter?folder=${id}`
+  const link = `${portalSrc}/rooms/shared/${id}/filter?folder=${id}`
   addMessage(link, true)
   returnToChat()
 }
 
 function onFileSelectCallback(e) {
-  addMessage(e.viewUrl, true)
+  if (!e?.id) return
+  const link = `${portalSrc}/doceditor?fileId=${e.id}`
+  addMessage(link, true)
   returnToChat()
 }
 ```
 
-- Room and file selections are inserted into the chat as links
+- The room selector passes an array of selected rooms, the file selector passes a single file object
+- Room and file selections are inserted into the chat as links built from the item `id`
 - `addMessage(..., true)` adds a clickable link element
 
 ### 5. Return to chat
@@ -257,7 +282,12 @@ function returnToChat() {
   if (docSpace) docSpace.destroyFrame()
   document.getElementById("selectorChoiceModal").style.display = "none"
   document.getElementById("selectorModal").style.display = "none"
+
+  const btn = document.querySelector(".input-container button:last-child")
+  btn.disabled = false
 }
 ```
 
 - Closes selector modal and cleans up frame
+- `destroyFrame()` leaves a placeholder with the same `frameId`, so the selector can be opened again
+- Re-enables the **DocSpace** button

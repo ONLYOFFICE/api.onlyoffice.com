@@ -5,14 +5,18 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Collaborative project workflow
 
-This example shows how to build a freelance project workspace using DocSpace SDK. When a project is created, a room is generated, a freelancer is assigned via API, task files are managed, and the room is archived on completion.
-
-Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/freelance-platform-docspace.html)
+This example shows how to build a freelance project workspace using the DocSpace Embed SDK. When a project is created, a collaboration room is generated for it, a freelancer is added to the room as a content creator, the project files are managed in the embedded file manager, and the room is archived when the project is complete.
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+
+The user who runs the example must be a DocSpace admin or a room admin: only these roles can create rooms and invite users to them.
+
+:::warning
+The example requests an access token from `/api/2.0/authentication` with a login and password written in client-side code. This is acceptable for a local demo only. In production, get the token on your backend and never expose user credentials in the browser.
+:::
 
 <details>
   <summary>Full example</summary>
@@ -28,7 +32,21 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
-      /* Styles omitted for brevity - same as your input */
+      body { font-family: sans-serif; margin: 0; background: #f5f6f8; }
+      .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+      .hidden { display: none; }
+      input, button { font: inherit; padding: 8px 12px; }
+      button { cursor: pointer; }
+      button:disabled { cursor: default; opacity: 0.5; }
+      .workspace { display: flex; gap: 16px; align-items: flex-start; }
+      .users-list { flex: 0 0 240px; }
+      .frame-container { flex: 1; }
+      .frame-title { margin-bottom: 8px; font-weight: bold; }
+      #usersContainer { margin: 12px 0; }
+      .user-item { padding: 8px 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; }
+      .user-item + .user-item { border-top: none; }
+      .user-item.selected { background: #e6efff; border-color: #2e66f5; }
+      #completeOrderBtn { margin-top: 12px; }
     </style>
   </head>
   <body>
@@ -37,12 +55,11 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
       <!-- Step 2: Project creation form -->
       <div id="orderForm">
-        <!-- Form fields: title, description, deadline, requirements -->
-        ...
+        <input type="text" id="title" placeholder="Project title" />
         <button id="createOrderBtn" disabled>Create Order</button>
       </div>
 
-      <!-- Step 3: Workspace and user assignment -->
+      <!-- Step 3: Workspace and freelancer assignment -->
       <div id="workspace" class="workspace hidden">
         <div id="usersList" class="users-list">
           <h3>Select Freelancer</h3>
@@ -52,7 +69,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         <div class="frame-container">
           <div class="frame-title">Drag and drop files for the task</div>
           <iframe id="ds-frame" style="width: 100%; height: 500px; border: 1px solid #ddd;"></iframe>
-          <button id="completeOrderBtn" style="display: none;">Complete Order</button>
+          <button id="completeOrderBtn" class="hidden">Complete Order</button>
         </div>
       </div>
     </div>
@@ -64,11 +81,87 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       let roomId
       let selectedUserId = null
       let selectedUserEmail = null
-      let selectedUserName = null
+      // Room type 2 is a collaboration room
+      const COLLABORATION_ROOM = 2
+      // Access levels are sent as numbers, the same way the DocSpace client sends them
+      const CONTENT_CREATOR_ACCESS = 11
+      const NO_ACCESS = 0
 
-      // Grant or revoke room access for freelancer
-      function setRoomAccessRights(access) {
-        fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
+      // Initialize DocSpace SDK
+      function initDocSpace(rootPath = null, filter = null) {
+        const config = {
+          frameId: "ds-frame",
+          src: "{PORTAL_SRC}",
+          events: {
+            onAppReady: rootPath ? onWorkspaceReady : onInitialReady
+          }
+        };
+        if (rootPath) {
+          config.rootPath = rootPath;
+          config.filter = filter;
+        }
+        docSpace = DocSpace.SDK.initManager(config);
+      }
+
+      // Called when SDK is ready for the project form
+      function onInitialReady() {
+        document.getElementById("createOrderBtn").disabled = false
+      }
+
+      // Load freelancers list
+      async function fetchUsers() {
+        try {
+          const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
+            headers: { "Authorization": `Bearer ${token}` }
+          })
+          const data = await response.json()
+          if (data.response && data.response.length > 0) {
+            const usersContainer = document.getElementById("usersContainer")
+            usersContainer.innerHTML = ""
+            data.response.forEach(user => {
+              const userDiv = document.createElement("div")
+              userDiv.className = "user-item"
+              userDiv.dataset.userId = user.id
+              userDiv.textContent = `${user.firstName} ${user.lastName}`
+              userDiv.addEventListener("click", function () {
+                document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
+                this.classList.add("selected")
+                selectedUserId = user.id
+                selectedUserEmail = user.email
+              });
+              usersContainer.appendChild(userDiv)
+            });
+          }
+        } catch (error) {
+          console.error("Error fetching users:", error)
+        }
+      }
+
+      // Create the project room from form input
+      async function createOrder() {
+        const title = document.getElementById("title").value
+        if (!title) return alert("Please enter a project title")
+        const button = document.getElementById("createOrderBtn")
+        button.disabled = true
+        const room = await docSpace.createRoom(title, COLLABORATION_ROOM)
+        if (!room?.id) {
+          button.disabled = false
+          return alert("Error creating room")
+        }
+        roomId = room.id
+        initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+      }
+
+      // Called when the SDK loads the project room
+      function onWorkspaceReady() {
+        document.getElementById("ds-frame").style.display = "block"
+        document.getElementById("orderForm").classList.add("hidden")
+        document.getElementById("workspace").classList.remove("hidden")
+      }
+
+      // Grant or revoke room access for the freelancer
+      async function setRoomAccessRights(access) {
+        const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
           method: "PUT",
           headers: {
             "Authorization": `Bearer ${token}`,
@@ -84,108 +177,50 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
             notify: true
           })
         });
+        if (!response.ok) throw new Error(`Failed to update freelancer access: HTTP ${response.status}`)
       }
 
-      // Initialize DocSpace SDK
-      function initDocSpace(rootPath = null, filter = null) {
-        const config = {
-          frameId: "ds-frame",
-          events: {
-            onAppReady: rootPath ? onWorkspaceReady : onInitialReady
-          }
-        };
-        if (rootPath) {
-          config.rootPath = rootPath;
-          config.filter = filter;
-          config.showHeader = false;
-        }
-        docSpace = DocSpace.SDK.initManager(config);
-      }
-
-      // Called when SDK is ready for form
-      function onInitialReady() {
-        fetchUsers()
-        const button = document.getElementById("createOrderBtn")
-        button.addEventListener("click", createOrder)
-        button.disabled = false
-      }
-
-      // Called when SDK loads project room
-      function onWorkspaceReady() {
-        document.getElementById("ds-frame").style.display = "block"
-        document.getElementById("orderForm").classList.add("hidden")
-        document.getElementById("workspace").classList.remove("hidden")
-        document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
-      }
-
-      // Create project room from form input
-      async function createOrder() {
-        document.getElementById("createOrderBtn").disabled = true
-        const title = document.getElementById("title").value
-        if (!title) return alert("Please enter a project title")
-          const room = await docSpace.createRoom(title, 2)
-          if (room.status && room.status !== 200) return alert("Error creating room")
-          roomId = room.id
-          initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
-      }
-
-      // Load users list
-      async function fetchUsers() {
-        try {
-          const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
-            headers: { "Authorization": `Bearer ${token}` }
-          })
-          const data = await response.json()
-          if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById("usersContainer")
-            usersContainer.innerHTML = ""
-            data.response.forEach(user => {
-              const userDiv = document.createElement("div")
-              userDiv.className = "user-item"
-              userDiv.dataset.userId = user.id
-              userDiv.textContent = `${user.firstName} ${user.lastName}`
-              userDiv.addEventListener("click", function() {
-                document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
-                this.classList.add("selected")
-                selectedUserId = user.id
-                selectedUserEmail = user.email
-                selectedUserName = `${user.firstName} ${user.lastName}`
-              });
-              usersContainer.appendChild(userDiv)
-            });
-          }
-        } catch (error) {
-          console.error("Error fetching users:", error)
-        }
-      }
-
-      // Confirm selected freelancer
-      function confirmUser() {
+      // Add the selected freelancer to the room
+      async function confirmUser() {
         if (!selectedUserId) return alert("Please select a freelancer")
-        document.getElementById("usersList").style.display = "none"
-        document.getElementById("confirmUserBtn").textContent = "Complete Order"
-        document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser)
-        document.getElementById("completeOrderBtn").style.display = "block"
-        document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
-        setRoomAccessRights("ContentCreator")
+        try {
+          await setRoomAccessRights(CONTENT_CREATOR_ACCESS)
+        } catch (error) {
+          console.error(error)
+          return alert("Error assigning freelancer")
+        }
+        document.getElementById("usersList").classList.add("hidden")
+        document.getElementById("completeOrderBtn").classList.remove("hidden")
       }
 
-      // Archive the room and revoke access
-      function completeOrder() {
-        setRoomAccessRights(0)
-        fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
-          method: "PUT",
-          headers: {
-            "Authorization": `Bearer ${token}`,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({ deleteAfter: true })
-        })
+      // Revoke the freelancer's access and archive the room
+      async function completeOrder() {
+        try {
+          await setRoomAccessRights(NO_ACCESS)
+          const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
+            method: "PUT",
+            headers: {
+              "Authorization": `Bearer ${token}`,
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({ deleteAfter: true })
+          })
+          if (!response.ok) throw new Error(`Failed to archive the room: HTTP ${response.status}`)
+        } catch (error) {
+          console.error(error)
+          return alert("Error completing order")
+        }
+        document.getElementById("completeOrderBtn").disabled = true
+        alert("Order completed: the room is archived")
       }
 
-      // Initial login and load
-      document.addEventListener("DOMContentLoaded", function() {
+      // Step 5: Wire up buttons and log in on load
+      document.getElementById("createOrderBtn").addEventListener("click", createOrder)
+      document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
+      document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
+
+      document.addEventListener("DOMContentLoaded", function () {
         fetch("{PORTAL_SRC}/api/2.0/authentication", {
           method: "POST",
           headers: {
@@ -200,6 +235,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         .then(response => response.json())
         .then(data => {
           token = data.response.token;
+          fetchUsers();
         });
 
         initDocSpace()
@@ -213,11 +249,11 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ## Script execution steps
 
-### 1. Initialize the SDK on page load
+### 1. Initialize the SDK and authenticate on page load
 
 ``` ts
-document.addEventListener("DOMContentLoaded", function() {
-  fetch("{PORTAL_SRC}api/2.0/authentication", {
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("{PORTAL_SRC}/api/2.0/authentication", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -230,154 +266,188 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   .then(response => response.json())
   .then(data => {
-    token = data.response.token
+    token = data.response.token;
+    fetchUsers();
   });
 
-  initDocSpace();
+  initDocSpace()
 });
 ```
 
-- Authenticates the current user
-- Initializes DocSpace file manager (read-only)
+- Authenticates the current user and stores the access token
+- Loads the list of freelancers once the token is available and initializes the SDK for the project form
 
-### 2. SDK configuration
+### 2. Fetch available freelancers
+
+``` ts
+async function fetchUsers() {
+  try {
+    const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
+      headers: { "Authorization": `Bearer ${token}` }
+    })
+    const data = await response.json()
+    if (data.response && data.response.length > 0) {
+      const usersContainer = document.getElementById("usersContainer")
+      usersContainer.innerHTML = ""
+      data.response.forEach(user => {
+        const userDiv = document.createElement("div")
+        userDiv.className = "user-item"
+        userDiv.dataset.userId = user.id
+        userDiv.textContent = `${user.firstName} ${user.lastName}`
+        userDiv.addEventListener("click", function () {
+          document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
+          this.classList.add("selected")
+          selectedUserId = user.id
+          selectedUserEmail = user.email
+        });
+        usersContainer.appendChild(userDiv)
+      });
+    }
+  } catch (error) {
+    console.error("Error fetching users:", error)
+  }
+}
+```
+
+- Runs right after authentication, while the user fills in the project form
+- Retrieves the list of platform users
+- Renders them as selectable items used by `confirmUser()`
+
+### 3. Configure the SDK
 
 ``` ts
 function initDocSpace(rootPath = null, filter = null) {
   const config = {
     frameId: "ds-frame",
+    src: "{PORTAL_SRC}",
     events: {
       onAppReady: rootPath ? onWorkspaceReady : onInitialReady
     }
-  }
+  };
 
   if (rootPath) {
     config.rootPath = rootPath;
     config.filter = filter;
-    config.showHeader = false;
   }
 
   docSpace = DocSpace.SDK.initManager(config);
 }
 ```
 
-- If `rootPath` is provided, the SDK loads the freelancer's workspace view.
-- If not, we are still on the project creation form.
+- If `rootPath` is provided, the SDK opens the project room in the file manager
+- If not, the frame is initialized for the project creation form
 
-### 3. Enable the Create Order button
+### 4. Enable the Create Order button
 
 ``` ts
 function onInitialReady() {
-  fetchUsers(); // Load available freelancers
-  const button = document.getElementById("createOrderBtn")
-  button.addEventListener("click", createOrder)
-  button.disabled = false
+  document.getElementById("createOrderBtn").disabled = false
 }
 ```
 
-- Called when the SDK is ready and no room is yet created.
-- Enables the "Create Order" button and loads user list.
+- Called when the SDK is ready and no room is created yet
+- Enables the **Create Order** button, so `createRoom()` is never called before the frame connects
 
-### 4. Create a project room
+### 5. Create a project room
 
 ``` ts
 async function createOrder() {
-  document.getElementById("createOrderBtn").disabled = true
   const title = document.getElementById("title").value
   if (!title) return alert("Please enter a project title")
-    const room = await docSpace.createRoom(title, 2)
-  if (room.status && room.status !== 200) return alert("Error creating room")
-    roomId = room.id
+  const button = document.getElementById("createOrderBtn")
+  button.disabled = true
+  const room = await docSpace.createRoom(title, COLLABORATION_ROOM)
+  if (!room?.id) {
+    button.disabled = false
+    return alert("Error creating room")
+  }
+  roomId = room.id
   initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
 }
 ```
 
-- Creates a new room using the provided project title.
-- Initializes a fresh workspace for file collaboration.
+- Creates a collaboration room (type 2) with the project title, where the freelancer can get the **Content creator** role
+- Checks `id` in the result to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field.
+- Opens the new room in the file manager
 
-### 5. Display workspace and assign freelancer
+### 6. Display the workspace
 
 ``` ts
 function onWorkspaceReady() {
   document.getElementById("ds-frame").style.display = "block"
   document.getElementById("orderForm").classList.add("hidden")
   document.getElementById("workspace").classList.remove("hidden")
-  document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
 }
 ```
 
-- Shows the file workspace after project creation.
-- Prepares to assign a freelancer.
+- Shows the project room and the freelancer list once the SDK loads the room
 
-### 6. Select and confirm freelancer
-
-``` ts
-function confirmUser() {
-    if (!selectedUserId) return alert("Please select a freelancer")
-    document.getElementById("usersList").style.display = "none"
-    document.getElementById("confirmUserBtn").textContent = "Complete Order"
-    document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser)
-    document.getElementById("completeOrderBtn").style.display = "block"
-    document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
-    setRoomAccessRights("ContentCreator")
-}
-```
-
-- Grants selected user access to the room as ContentCreator
-- Reveals the "Complete Order" button
-
-### 7. Fetch available users
+### 7. Assign the freelancer
 
 ``` ts
-async function fetchUsers() {
-    try {
-        const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
-            headers: { "Authorization": `Bearer ${token}` }
-        })
-        const data = await response.json()
-        if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById("usersContainer")
-            usersContainer.innerHTML = ""
-            data.response.forEach(user => {
-                const userDiv = document.createElement("div")
-                userDiv.className = "user-item"
-                userDiv.dataset.userId = user.id
-                userDiv.textContent = `${user.firstName} ${user.lastName}`
-                userDiv.addEventListener("click", function() {
-                    document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
-                    this.classList.add("selected")
-                    selectedUserId = user.id
-                    selectedUserEmail = user.email
-                    selectedUserName = `${user.firstName} ${user.lastName}`
-                });
-                usersContainer.appendChild(userDiv)
-            });
-        }
-    } catch (error) {
-        console.error("Error fetching users:", error)
-    }
-}
-```
-
-- Retrieves a list of platform users
-- Renders them as selectable list items
-
-### 8. Finalize the task and archive the room
-
-``` ts
-function completeOrder() {
-  setRoomAccessRights(0) // remove access
-  fetch(`{PORTAL_SRC}api/2.0/files/rooms/${roomId}/archive`, {
+async function setRoomAccessRights(access) {
+  const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
     method: "PUT",
     headers: {
       "Authorization": `Bearer ${token}`,
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    body: JSON.stringify({ deleteAfter: true })
-  })
+    body: JSON.stringify({
+      invitations: [{
+        email: selectedUserEmail,
+        id: selectedUserId,
+        access: access
+      }],
+      notify: true
+    })
+  });
+  if (!response.ok) throw new Error(`Failed to update freelancer access: HTTP ${response.status}`)
+}
+
+async function confirmUser() {
+  if (!selectedUserId) return alert("Please select a freelancer")
+  try {
+    await setRoomAccessRights(CONTENT_CREATOR_ACCESS)
+  } catch (error) {
+    console.error(error)
+    return alert("Error assigning freelancer")
+  }
+  document.getElementById("usersList").classList.add("hidden")
+  document.getElementById("completeOrderBtn").classList.remove("hidden")
 }
 ```
 
-- Removes user access and archives the room
-- Ensures the task is closed and no longer editable
+- Adds the selected freelancer to the room with the **Content creator** access right, so they can upload and edit project files
+- Sends the access level as a number (11 for Content creator, 0 for None), the same way the DocSpace client does
+- Waits for the response and stops if the portal rejects the request
+- Reveals the **Complete Order** button
+
+### 8. Complete the order and archive the room
+
+``` ts
+async function completeOrder() {
+  try {
+    await setRoomAccessRights(NO_ACCESS)
+    const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
+      method: "PUT",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({ deleteAfter: true })
+    })
+    if (!response.ok) throw new Error(`Failed to archive the room: HTTP ${response.status}`)
+  } catch (error) {
+    console.error(error)
+    return alert("Error completing order")
+  }
+  document.getElementById("completeOrderBtn").disabled = true
+  alert("Order completed: the room is archived")
+}
+```
+
+- Removes the freelancer from the room: access level 0 (None) revokes their access
+- Archives the room, so the project is closed and no longer editable
+- Stops and reports an error if either request fails

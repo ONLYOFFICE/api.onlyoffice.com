@@ -7,12 +7,9 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 This example demonstrates how to embed ONLYOFFICE DocSpace in a tabbed interface, where each tab runs its own DocSpace instance in manager mode.
 
-Complete source code on GitHub: [Source](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/create-tabbed-docspace-manager.html)
-
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+The app runs on the development server at `http://localhost:3000`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
 
 ## Script execution steps
 
@@ -30,14 +27,18 @@ cd docspace-tabs
 Create a `.env` file in the project root:
 
 ``` bash
-REACT_APP_DOCPSACE_URL=https://yourportal.onlyoffice.com
-REACT_APP_DOCPSACE_USER_LOGIN=user@example.com
-REACT_APP_DOCPSACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
+REACT_APP_DOCSPACE_URL=https://yourportal.onlyoffice.com
+REACT_APP_DOCSPACE_USER_LOGIN=user@example.com
+REACT_APP_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
 ```
 
-- `REACT_APP_DOCPSACE_URL` - your DocSpace portal URL (root).
-- `REACT_APP_DOCPSACE_USER_LOGIN` - user login for authentication.
-- `REACT_APP_DOCPSACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see Create password hash sample).
+- `REACT_APP_DOCSPACE_URL` - your DocSpace portal URL (root).
+- `REACT_APP_DOCSPACE_USER_LOGIN` - user login for authentication.
+- `REACT_APP_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see Create password hash sample).
+
+:::warning
+Create React App embeds every `REACT_APP_*` variable into the client bundle, so anyone who opens the page can read the password hash. Use this approach for local demos only. In production, get the credentials or a token on your backend.
+:::
 
 ### 3. Install Tailwind CSS (v3) and configure PostCSS
 
@@ -87,12 +88,12 @@ Install the React wrapper and the core SDK:
 ``` bash
 npm i @onlyoffice/docspace-sdk-js @onlyoffice/docspace-react
 ```
-- `@onlyoffice/docspace-react` mounts the iframe and wires SDK events.
-- `@onlyoffice/docspace-sdk-js` provides methods such as `login()` (see Login, Get hash settings, Create hash samples for context).
+- `@onlyoffice/docspace-react` mounts the iframe, wires SDK events, and pulls in the core SDK at runtime.
+- `@onlyoffice/docspace-sdk-js` is installed explicitly only to import the `SDKInstance` type. Without TypeScript, the React wrapper alone is enough.
 
 ### 5. Create the tab iframe component
 
-Add a reusable component that embeds DocSpace and logs in on `onAppReady`.
+Add a reusable component that embeds DocSpace and logs in on `onAppReady`. The component gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component.
 
 `src/components/TabDocSpace.tsx`
 
@@ -100,8 +101,9 @@ Add a reusable component that embeds DocSpace and logs in on `onAppReady`.
   <summary>Create the tab iframe component</summary>
 
 ``` tsx
-import React from "react";
+import React, { useRef } from "react";
 import { DocSpace } from "@onlyoffice/docspace-react";
+import type { SDKInstance } from "@onlyoffice/docspace-sdk-js";
 
 type Props = {
   frameId: string;
@@ -118,11 +120,13 @@ export default function TabDocSpace({
   passwordHash,
   visible,
 }: Props) {
+  const instance = useRef<SDKInstance | null>(null);
+
   async function handleAppReady() {
     try {
-      const ds = (window as any).DocSpace?.SDK?.frames?.[frameId];
+      const ds = instance.current;
       if (!ds) {
-        console.error(`[${frameId}] frame not found`);
+        console.error(`[${frameId}] SDK instance not found`);
         return;
       }
       await ds.login(login, passwordHash);
@@ -143,7 +147,11 @@ export default function TabDocSpace({
 
   return (
     <div className="w-full h-full" style={{ display: visible ? "block" : "none" }}>
-      <DocSpace url={portalUrl} config={config} />
+      <DocSpace
+        url={portalUrl}
+        config={config}
+        onSetDocspaceInstance={(ds: SDKInstance) => { instance.current = ds; }}
+      />
     </div>
   );
 }
@@ -151,14 +159,14 @@ export default function TabDocSpace({
 
 </details>
 
-### 6. Render multiple modals
+### 6. Render the tabs
 
 Render a tab bar with + New Tab and per-tab close button. The active tab shows its DocSpace instance.
 
 `src/pages/Tabs/index.tsx`
 
 <details>
-  <summary>Render multiple modals</summary>
+  <summary>Render the tabs</summary>
 
 ``` tsx
 import React, { useMemo, useState } from "react";
@@ -171,9 +179,9 @@ type Tab = {
 };
 
 export default function TabsPage() {
-  const portal = process.env.REACT_APP_DOCPSACE_URL || "";
-  const login = process.env.REACT_APP_DOCPSACE_USER_LOGIN || "";
-  const passwordHash = process.env.REACT_APP_DOCPSACE_USER_PASSWORD_HASH || "";
+  const portal = process.env.REACT_APP_DOCSPACE_URL || "";
+  const login = process.env.REACT_APP_DOCSPACE_USER_LOGIN || "";
+  const passwordHash = process.env.REACT_APP_DOCSPACE_USER_PASSWORD_HASH || "";
 
   const initialTabs: Tab[] = useMemo(
     () => [
@@ -226,7 +234,7 @@ export default function TabsPage() {
                 Open DocSpace
               </a>
             ) : (
-              <span className="text-xs text-red-600">Set REACT_APP_DOCPSACE_URL in .env</span>
+              <span className="text-xs text-red-600">Set REACT_APP_DOCSPACE_URL in .env</span>
             )}
             <button
               onClick={addTab}
@@ -324,4 +332,4 @@ Start the dev server:
 npm start
 ```
 
-Open `http://localhost:3000`. You should see a modal with DocSpace. Drag it by the header and resize from the bottom-right. Click New Window to open another modal.
+Open `http://localhost:3000`. You should see a tab with DocSpace in manager mode. Click **+ New Tab** to open another DocSpace instance, and switch between tabs or close them with **✕**.
