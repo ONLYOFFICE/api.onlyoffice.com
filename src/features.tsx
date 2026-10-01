@@ -61,12 +61,12 @@ function toFeatures<Id extends SectionId>(
 
 export const DocsFeatures: Features = toFeatures(docsSections, {
   text: "Try Docs Playground",
-  href: "/playground/?script=config",
+  href: "/playground?script=config",
 });
 
 export const DocSpaceFeatures: Features = toFeatures(docspaceSections, {
   text: "Try DocSpace Playground",
-  href: "/docspace-playground/",
+  href: "/docspace-playground",
 });
 
 export const WorkspaceFeatures: Features = toFeatures(workspaceSections);
