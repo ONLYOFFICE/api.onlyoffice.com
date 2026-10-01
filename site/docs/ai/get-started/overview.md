@@ -12,17 +12,17 @@ If you prefer to start coding right away, go directly to the [quick start guide]
 
 Build next-generation document workflows powered by AI.
 
-**Perfect for:**
+**Perfect for**:
 
 - Writing assistance ([Rewrite text](../samples/document-editor/rewrite-text.md) - AI-powered text rewriting)
 - Smart styling ([Change text style](../samples/document-editor/change-text-style.md) - AI-powered text styling)
 - Automatic shape generation ([Add shape to slide](../samples/presentation-editor/add-shape-to-slide.md) - AI-powered presentation design)
 - Data insights ([Explain formula](../samples/spreadsheet-editor/explain-formula.md) - AI-powered formula explanations)
 
-**Development profile:**
+**Development profile**:
 
-- **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
-- **Requirements:** API keys for OpenAI, DeepSeek, or any OpenAI-compatible provider
+- **Skill**: Advanced | **Tech**: Plugin API + AI provider integration
+- **Requirements**: API keys for OpenAI, DeepSeek, or any OpenAI-compatible provider
 
 [Browse all AI tool examples](/samples/?doctype=ai&text=ai+tools)
 

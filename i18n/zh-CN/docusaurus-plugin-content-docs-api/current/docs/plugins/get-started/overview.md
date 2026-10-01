@@ -13,17 +13,17 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 构建与 ONLYOFFICE 原生体验融为一体的复杂集成。
 
-**适用场景：**
+**适用场景**：
 
 - 嵌入外部内容（[YouTube](../samples/youtube.md)、媒体库）
 - 第三方集成（[Translator](../samples/translator.md)、[Zotero](../samples/zotero.md)、CRM 系统）
 - 高级处理（[OCR](../samples/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
-**开发概况：**
+**开发概况**：
 
-- **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
-- **分发方式：** [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
+- **技能**：中级 | **技术栈**：HTML/CSS/JavaScript
+- **分发方式**：[ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
 
 ## 插件的限制 {#what-plugins-cannot-do}
 

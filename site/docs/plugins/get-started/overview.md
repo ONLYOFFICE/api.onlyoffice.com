@@ -13,17 +13,17 @@ If you prefer to start coding right away, go directly to the [quick start](quick
 
 Build sophisticated integrations that feel native to ONLYOFFICE.
 
-**Perfect for:**
+**Perfect for**:
 
 - Embedding external content ([YouTube](../samples/youtube.md), media galleries)
 - Third-party integrations ([Translator](../samples/translator.md), [Zotero](../samples/zotero.md), CRM systems)
 - Advanced processing ([OCR](../samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
-**Development profile:**
+**Development profile**:
 
-- **Skill:** Intermediate | **Tech:** HTML/CSS/JavaScript
-- **Distribution:** [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
+- **Skill**: Intermediate | **Tech**: HTML/CSS/JavaScript
+- **Distribution**: [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
 
 ## What plugins cannot do
 

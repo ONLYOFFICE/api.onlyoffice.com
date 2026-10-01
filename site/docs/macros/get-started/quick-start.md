@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Macros are quite simple - pure JavaScript with no installation required.
 
-**Time:** 2 minutes | **Skill level:** Beginner
+**Time**: 2 minutes | **Skill level**: Beginner
 
 ## Step 1: Open the macro editor
 
@@ -36,7 +36,7 @@ Paste this code into the editor:
 })();
 ```
 
-**What this does:**
+**What this does**:
 
 - Gets the current document
 - Creates a new paragraph with text
@@ -136,13 +136,13 @@ Try these examples to learn more:
 
 ## Next steps
 
-**Learn more:**
+**Learn more**:
 
 - [Complete macro guide](../guides/writing-macros.md)
 - [Custom spreadsheet functions](../guides/adding-custom-functions.md)
 - [Debugging macros](../guides/debugging.md)
 
-**Explore examples:**
+**Explore examples**:
 
 - [Macro samples collection](/samples/?doctype=docs&text=macros)
 - [Converting VBA macros](../guides/converting-vba-macros.md)

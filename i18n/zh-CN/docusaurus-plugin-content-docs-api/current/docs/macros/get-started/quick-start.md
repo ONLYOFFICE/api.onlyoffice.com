@@ -6,7 +6,7 @@ sidebar_position: 2
 
 宏非常简单 - 纯 JavaScript，无需安装。
 
-**时间：** 2 分钟 | **技能等级：** 初级
+**时间**：2 分钟 | **技能等级**：初级
 
 ## 第 1 步：打开宏编辑器
 
@@ -36,7 +36,7 @@ sidebar_position: 2
 })();
 ```
 
-**代码说明：**
+**代码说明**：
 
 - 获取当前文档
 - 创建一个带文本的新段落
@@ -137,13 +137,13 @@ sidebar_position: 2
 
 ## 下一步
 
-**深入学习：**
+**深入学习**：
 
 - [完整宏指南](../guides/writing-macros.md)
 - [自定义电子表格函数](../guides/adding-custom-functions.md)
 - [调试宏](../guides/debugging.md)
 
-**浏览示例：**
+**浏览示例**：
 
 - [宏示例集合](/samples/?doctype=docs&text=macros)
 - [转换 VBA 宏](../guides/converting-vba-macros.md)
