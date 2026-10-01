@@ -66,6 +66,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",        // Set iframe ID
+      src: "{PORTAL_SRC}",
       width: "100%",              // Set width
       height: "700px",            // Set height
       events: { onAppReady },     // Event listener for SDK readiness
@@ -140,6 +141,7 @@ function onAppReady() {
 
 const config = {
   frameId: "ds-frame",        // Set iframe ID
+  src: "{PORTAL_SRC}",
   width: "100%",              // Set width
   height: "700px",            // Set height
   events: { onAppReady },     // Event listener for SDK readiness

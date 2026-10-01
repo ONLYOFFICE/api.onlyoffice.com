@@ -19,7 +19,7 @@ These samples show how to combine DocSpace Embed SDK calls into complete, real-w
 | Sample | Description |
 | --- | --- |
 | [Structured room creation](room-creation-with-folder-structure.md) | Create client rooms with predefined folders and document templates. |
-| [Create a Tabbed DocSpace Manager UI](create-tabbed-docspace-manager.md) | Embed DocSpace in a tabbed interface with multiple manager instances. |
+| [Tabbed manager UI](create-tabbed-docspace-manager.md) | Embed DocSpace in a tabbed interface with multiple manager instances. |
 | [Draggable resizable modals](draggable-resizable-modals.md) | Embed DocSpace in draggable and resizable modal windows. |
 
 ## File and folder management
@@ -40,6 +40,11 @@ These samples show how to combine DocSpace Embed SDK calls into complete, real-w
 | [Manage project folders](project-manager-folder-integration.md) | Track projects as folders in a shared room with file locking. |
 | [File manager with task attachments](file-manager-task-attachments.md) | Attach files to tasks using a DocSpace file selector modal. |
 | [Collaborative project workflow](freelance-platform-docspace.md) | Build a freelance project workspace with rooms and file management. |
+
+## Document workflows
+
+| Sample | Description |
+| --- | --- |
 | [Approval workflow](approval-workflow.md) | Route a document through reviewer sign-off before it's approved. |
 
 ## Communication

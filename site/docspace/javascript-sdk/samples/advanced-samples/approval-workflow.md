@@ -5,12 +5,22 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Document approval workflow
 
-This example shows how to build a document approval workflow using the DocSpace Embed SDK. When an author submits a document, a room is created for it and tagged **Pending review**, a reviewer is granted review-only access, and the reviewer can then approve the document or request changes. Each decision updates the room's tag so its status stays visible at a glance.
+This example shows how to build a document approval workflow using the DocSpace Embed SDK. When an author submits a document, a custom room is created for it and tagged **Pending review**, a reviewer is granted review-only access, and the reviewer can then approve the document or request changes. Each decision updates the room's tag so its status stays visible at a glance.
+
+:::note
+To keep the example short, the author and the reviewer act in the same browser session: the user who submits the document also sees the **Approve** and **Request changes** buttons. In a real integration, the reviewer makes the decision in their own session.
+:::
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
 You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+
+The user who runs the example must be a **DocSpace admin** or a **room admin**: only these roles can create tags, and the example creates the **Pending review**, **Approved**, and **Changes requested** tags on the fly.
+
+:::warning
+The example requests an access token from `/api/2.0/authentication` with a login and password written in client-side code. This is acceptable for a local demo only. In production, get the token on your backend and never expose user credentials in the browser.
+:::
 
 <details>
   <summary>Full example</summary>
@@ -26,7 +36,17 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
-      /* Styles omitted for brevity - same as your input */
+      body { font-family: sans-serif; margin: 0; background: #f5f6f8; }
+      .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+      .hidden { display: none; }
+      input, button { font: inherit; padding: 8px 12px; }
+      button { cursor: pointer; }
+      button:disabled { cursor: default; opacity: 0.5; }
+      #reviewersContainer { margin: 12px 0; }
+      .user-item { padding: 8px 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; }
+      .user-item + .user-item { border-top: none; }
+      .user-item.selected { background: #e6efff; border-color: #2e66f5; }
+      #decisionButtons { margin-top: 12px; display: flex; gap: 8px; }
     </style>
   </head>
   <body>
@@ -64,8 +84,11 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       let selectedReviewerId = null
       let selectedReviewerEmail = null
 
-      const REVIEW_ACCESS = "Review"
-      const READ_ACCESS = "Read"
+      // Room type 5 is a custom room: the only room type that allows the Review access
+      const CUSTOM_ROOM = 5
+      // Access levels are sent as numbers, the same way the DocSpace client sends them
+      const REVIEW_ACCESS = 5
+      const READ_ACCESS = 2
 
       // Initialize DocSpace SDK
       function initDocSpace(rootPath = null, filter = null) {
@@ -79,7 +102,6 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         if (rootPath) {
           config.rootPath = rootPath;
           config.filter = filter;
-          config.showHeader = false;
         }
         docSpace = DocSpace.SDK.initManager(config);
       }
@@ -87,79 +109,6 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       // Called when SDK is ready for the submission form
       function onAppReady() {
         document.getElementById("createRequestBtn").disabled = false
-      }
-
-      // Create the approval room, add the document, tag it as pending review
-      async function createApprovalRequest() {
-        document.getElementById("createRequestBtn").disabled = true
-        const title = document.getElementById("documentTitle").value
-        if (!title) return alert("Please enter a document title")
-
-        const room = await docSpace.createRoom(`Approval: ${title}`, 2)
-        if (room.status && room.status !== 200) return alert("Error creating room")
-        roomId = room.id
-
-        const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-        if (file.status && file.status !== 200) return alert("Error creating document")
-
-        await docSpace.createTag("Pending review")
-        await docSpace.addTagsToRoom(roomId, ["Pending review"])
-
-        document.getElementById("createStep").classList.add("hidden")
-        document.getElementById("reviewerStep").classList.remove("hidden")
-      }
-
-      // Grant or revoke room access for the reviewer
-      function setReviewerAccess(access) {
-        fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
-          method: "PUT",
-          headers: {
-            "Authorization": `Bearer ${token}`,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({
-            invitations: [{
-              email: selectedReviewerEmail,
-              id: selectedReviewerId,
-              access: access
-            }],
-            notify: true
-          })
-        });
-      }
-
-      // Assign the selected reviewer and open the review workspace
-      function assignReviewer() {
-        if (!selectedReviewerId) return alert("Please select a reviewer")
-        setReviewerAccess(REVIEW_ACCESS)
-
-        document.getElementById("reviewerStep").classList.add("hidden")
-        document.getElementById("workspace").classList.remove("hidden")
-        initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
-      }
-
-      // Called when the SDK loads the review workspace
-      function onWorkspaceReady() {
-        document.getElementById("ds-frame").style.display = "block"
-        document.getElementById("decisionButtons").classList.remove("hidden")
-      }
-
-      // Approve the document: swap the room's status tag and drop reviewer access to read-only
-      async function approveDocument() {
-        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-        await docSpace.createTag("Approved")
-        await docSpace.addTagsToRoom(roomId, ["Approved"])
-        setReviewerAccess(READ_ACCESS)
-        alert("Document approved")
-      }
-
-      // Send the document back to the author for changes
-      async function requestChanges() {
-        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-        await docSpace.createTag("Changes requested")
-        await docSpace.addTagsToRoom(roomId, ["Changes requested"])
-        alert("Changes requested - the author has been notified")
       }
 
       // Load reviewers list
@@ -189,6 +138,90 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         } catch (error) {
           console.error("Error fetching reviewers:", error)
         }
+      }
+
+      // Create the approval room, add the document, tag it as pending review
+      async function createApprovalRequest() {
+        const title = document.getElementById("documentTitle").value
+        if (!title) return alert("Please enter a document title")
+        document.getElementById("createRequestBtn").disabled = true
+
+        const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
+        if (!room?.id) return alert("Error creating room")
+        roomId = room.id
+
+        const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
+        if (!file?.id) return alert("Error creating document")
+
+        await docSpace.createTag("Pending review")
+        await docSpace.addTagsToRoom(roomId, ["Pending review"])
+
+        document.getElementById("createStep").classList.add("hidden")
+        document.getElementById("reviewerStep").classList.remove("hidden")
+      }
+
+      // Grant or change room access for the reviewer
+      async function setReviewerAccess(access) {
+        const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
+          method: "PUT",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            invitations: [{
+              email: selectedReviewerEmail,
+              id: selectedReviewerId,
+              access: access
+            }],
+            notify: true
+          })
+        });
+        if (!response.ok) throw new Error(`Failed to update reviewer access: HTTP ${response.status}`)
+      }
+
+      // Assign the selected reviewer and open the review workspace
+      async function assignReviewer() {
+        if (!selectedReviewerId) return alert("Please select a reviewer")
+        try {
+          await setReviewerAccess(REVIEW_ACCESS)
+        } catch (error) {
+          console.error(error)
+          return alert("Error assigning reviewer")
+        }
+
+        document.getElementById("reviewerStep").classList.add("hidden")
+        document.getElementById("workspace").classList.remove("hidden")
+        initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+      }
+
+      // Called when the SDK loads the review workspace
+      function onWorkspaceReady() {
+        document.getElementById("ds-frame").style.display = "block"
+        document.getElementById("decisionButtons").classList.remove("hidden")
+      }
+
+      // Approve the document: swap the room's status tag and drop reviewer access to read-only
+      async function approveDocument() {
+        try {
+          await setReviewerAccess(READ_ACCESS)
+        } catch (error) {
+          console.error(error)
+          return alert("Error updating reviewer access")
+        }
+        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+        await docSpace.createTag("Approved")
+        await docSpace.addTagsToRoom(roomId, ["Approved"])
+        alert("Document approved")
+      }
+
+      // Send the document back to the author for changes
+      async function requestChanges() {
+        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+        await docSpace.createTag("Changes requested")
+        await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+        alert("Changes requested")
       }
 
       // Step 6: Wire up buttons and log in on load
@@ -256,97 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ---
 
-### 2. Submit the document for approval
-
-``` ts
-async function createApprovalRequest() {
-  document.getElementById("createRequestBtn").disabled = true
-  const title = document.getElementById("documentTitle").value
-  if (!title) return alert("Please enter a document title")
-
-  const room = await docSpace.createRoom(`Approval: ${title}`, 2)
-  if (room.status && room.status !== 200) return alert("Error creating room")
-  roomId = room.id
-
-  const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-  if (file.status && file.status !== 200) return alert("Error creating document")
-
-  await docSpace.createTag("Pending review")
-  await docSpace.addTagsToRoom(roomId, ["Pending review"])
-
-  document.getElementById("createStep").classList.add("hidden")
-  document.getElementById("reviewerStep").classList.remove("hidden")
-}
-```
-
-- Creates a room for the approval request and adds the document to it
-- Tags the room **Pending review** so its status is visible in the room list
-- Reveals the reviewer selection step
-
----
-
-### 3. Assign a reviewer with review-only access
-
-``` ts
-function setReviewerAccess(access) {
-  fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
-    method: "PUT",
-    headers: {
-      "Authorization": `Bearer ${token}`,
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      invitations: [{
-        email: selectedReviewerEmail,
-        id: selectedReviewerId,
-        access: access
-      }],
-      notify: true
-    })
-  });
-}
-
-function assignReviewer() {
-  if (!selectedReviewerId) return alert("Please select a reviewer")
-  setReviewerAccess(REVIEW_ACCESS)
-
-  document.getElementById("reviewerStep").classList.add("hidden")
-  document.getElementById("workspace").classList.remove("hidden")
-  initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
-}
-```
-
-- Grants the selected reviewer the **Review** access right on the room, so they can add comments but not edit the content
-- Opens the review workspace once a reviewer is assigned
-
----
-
-### 4. Approve the document or request changes
-
-``` ts
-async function approveDocument() {
-  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-  await docSpace.createTag("Approved")
-  await docSpace.addTagsToRoom(roomId, ["Approved"])
-  setReviewerAccess(READ_ACCESS)
-  alert("Document approved")
-}
-
-async function requestChanges() {
-  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-  await docSpace.createTag("Changes requested")
-  await docSpace.addTagsToRoom(roomId, ["Changes requested"])
-  alert("Changes requested - the author has been notified")
-}
-```
-
-- On approval, swaps the **Pending review** tag for **Approved** and drops the reviewer's access to read-only
-- On a change request, swaps the tag to **Changes requested**, leaving the reviewer's access untouched so the author can address the feedback and resubmit
-
----
-
-### 5. Fetch available reviewers
+### 2. Fetch available reviewers
 
 ``` ts
 async function fetchReviewers() {
@@ -378,5 +321,115 @@ async function fetchReviewers() {
 }
 ```
 
+- Runs right after authentication, while the user fills in the submission form
 - Retrieves the list of platform users
 - Renders them as selectable items used by `assignReviewer()`
+
+---
+
+### 3. Submit the document for approval
+
+``` ts
+async function createApprovalRequest() {
+  const title = document.getElementById("documentTitle").value
+  if (!title) return alert("Please enter a document title")
+  document.getElementById("createRequestBtn").disabled = true
+
+  const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
+  if (!room?.id) return alert("Error creating room")
+  roomId = room.id
+
+  const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
+  if (!file?.id) return alert("Error creating document")
+
+  await docSpace.createTag("Pending review")
+  await docSpace.addTagsToRoom(roomId, ["Pending review"])
+
+  document.getElementById("createStep").classList.add("hidden")
+  document.getElementById("reviewerStep").classList.remove("hidden")
+}
+```
+
+- Creates a custom room (type `5`) for the approval request and adds the document to it. A custom room is required because it's the only room type that allows the **Review** access. In a collaboration room (type `2`), the portal rejects it with HTTP 403.
+- Checks `id` in the results to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field.
+- Tags the room **Pending review** so its status is visible in the room list
+- Reveals the reviewer selection step
+
+:::note
+The `createFile()` TypeScript signature currently marks the fourth `formId` argument as required. If you port this example to TypeScript, pass an empty string: `createFile(roomId, title, templateId, "")`.
+:::
+
+---
+
+### 4. Assign a reviewer with review-only access
+
+``` ts
+async function setReviewerAccess(access) {
+  const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
+    method: "PUT",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      invitations: [{
+        email: selectedReviewerEmail,
+        id: selectedReviewerId,
+        access: access
+      }],
+      notify: true
+    })
+  });
+  if (!response.ok) throw new Error(`Failed to update reviewer access: HTTP ${response.status}`)
+}
+
+async function assignReviewer() {
+  if (!selectedReviewerId) return alert("Please select a reviewer")
+  try {
+    await setReviewerAccess(REVIEW_ACCESS)
+  } catch (error) {
+    console.error(error)
+    return alert("Error assigning reviewer")
+  }
+
+  document.getElementById("reviewerStep").classList.add("hidden")
+  document.getElementById("workspace").classList.remove("hidden")
+  initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+}
+```
+
+- Grants the selected reviewer the **Review** access right on the room, so they can add comments but not edit the content
+- Sends the access level as a number (`5` for **Review**, `2` for **Read**), the same way the DocSpace client does. The API also accepts the access names as strings, but an unrecognized string is silently treated as **None**, which removes the user from the room.
+- Waits for the response and stops if the portal rejects the request
+- Opens the review workspace once a reviewer is assigned
+
+---
+
+### 5. Approve the document or request changes
+
+``` ts
+async function approveDocument() {
+  try {
+    await setReviewerAccess(READ_ACCESS)
+  } catch (error) {
+    console.error(error)
+    return alert("Error updating reviewer access")
+  }
+  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+  await docSpace.createTag("Approved")
+  await docSpace.addTagsToRoom(roomId, ["Approved"])
+  alert("Document approved")
+}
+
+async function requestChanges() {
+  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+  await docSpace.createTag("Changes requested")
+  await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+  alert("Changes requested")
+}
+```
+
+- On approval, drops the reviewer's access to read-only and swaps the **Pending review** tag for **Approved**
+- On a change request, swaps the tag to **Changes requested**, leaving the reviewer's access untouched so the author can address the feedback and resubmit. The example doesn't notify the author: the tag is the only status signal.
+- Calling `createTag()` for a tag that already exists is safe: DocSpace returns the existing tag

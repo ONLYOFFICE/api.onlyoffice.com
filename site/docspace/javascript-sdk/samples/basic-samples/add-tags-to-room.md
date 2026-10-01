@@ -57,6 +57,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <script>
     const config = {
       frameId: "ds-frame",
+      src: "{PORTAL_SRC}",
       width: "100%",
       height: "700px",
       events: {
@@ -132,6 +133,7 @@ Create a script block to configure and initialize the SDK. Use the [addTagsToRoo
 ``` ts
 const config = {
   frameId: "ds-frame",
+  src: "{PORTAL_SRC}",
   width: "100%",
   height: "700px",
   events: {

@@ -5,40 +5,46 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Draggable resizable modals
 
-Embed DocSpace inside draggable and resizable modal windows built with Create React App, TypeScript, and Tailwind CSS.
+Embed DocSpace inside draggable and resizable modal windows built with Vite, React, TypeScript, and Tailwind CSS.
 This example shows how to embed multiple DocSpace instances, automatically log in via the SDK, and manage them dynamically.
 
-Complete source code on GitHub: [Source](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/create-draggable-and-resize-modals.html)
+Each modal starts in `system` mode, which is only used to log in: in this mode the frame shows a loader and nothing else. Once `login()` succeeds, the modal switches the frame to `manager` mode with `setConfig()`, and the DocSpace file manager appears.
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
 
 ## Script execution steps
 
 ### 1. Create the project
 
-Create a new React + TypeScript project and move into it:
+Create a new React + TypeScript project with [Vite](https://vite.dev/) and move into it:
 
 ``` sh
-npx create-react-app docspace-modals --template typescript
+npm create vite@latest docspace-modals -- --template react-ts
 cd docspace-modals
+npm install
 ```
+
+The current Vite template requires Node.js 20.19+ or 22.12+.
 
 ### 2. Prepare environment variables
 
 Create a `.env` file in the project root:
 
 ``` bash
-REACT_APP_DOCPSACE_URL=https://yourportal.onlyoffice.com
-REACT_APP_DOCPSACE_USER_LOGIN=user@example.com
-REACT_APP_DOCPSACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
+VITE_DOCSPACE_URL={PORTAL_SRC}
+VITE_DOCSPACE_USER_LOGIN=user@example.com
+VITE_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
 ```
 
-- `REACT_APP_DOCPSACE_URL` - your DocSpace portal URL (root).
-- `REACT_APP_DOCPSACE_USER_LOGIN` - user login for authentication.
-- `REACT_APP_DOCPSACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see Create password hash sample).
+- `VITE_DOCSPACE_URL` - your DocSpace portal URL (root).
+- `VITE_DOCSPACE_USER_LOGIN` - user login for authentication.
+- `VITE_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see the [Create password hash](../basic-samples/create-hash.md) sample).
+
+:::warning
+Vite embeds every `VITE_*` variable into the client bundle, so anyone who opens the page can read the password hash. Use this approach for local demos only. In production, get the credentials or a token on your backend.
+:::
 
 ### 3. Install Tailwind CSS (v3) and configure PostCSS
 
@@ -52,7 +58,7 @@ npm i -D tailwindcss@3.4.14 postcss@8 autoprefixer@10
 
 ``` ts
 // postcss.config.js
-module.exports = {
+export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
@@ -64,8 +70,8 @@ module.exports = {
 
 ``` ts
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: { extend: {} },
   plugins: [],
 };
@@ -86,14 +92,14 @@ html, body, #root { height: 100%; margin: 0; }
 Install the React wrapper and the core SDK:
 
 ``` bash
-npm i @onlyoffice/docspace-sdk-js @onlyoffice/docspace-react
+npm i @onlyoffice/docspace-react @onlyoffice/docspace-sdk-js
 ```
-- `@onlyoffice/docspace-react` mounts the iframe and wires SDK events.
-- `@onlyoffice/docspace-sdk-js` provides methods such as `login()` (see Login, Get hash settings, Create hash samples for context).
+- `@onlyoffice/docspace-react` mounts the iframe, wires SDK events, and pulls in the core SDK at runtime.
+- `@onlyoffice/docspace-sdk-js` is installed explicitly only to import the `SDKInstance` type. Without TypeScript, the React wrapper alone is enough.
 
 ### 5. Create the modal component
 
-Add a reusable modal that embeds DocSpace and logs in on `onAppReady`.
+Add a reusable modal that embeds DocSpace, logs in on `onAppReady`, and then switches the frame to `manager` mode. The modal gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component. The config has no `src` because the component takes it from the `url` prop.
 
 `src/components/DraggableModal.tsx`
 
@@ -101,8 +107,9 @@ Add a reusable modal that embeds DocSpace and logs in on `onAppReady`.
   <summary>Create the modal component</summary>
 
 ``` tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { DocSpace } from "@onlyoffice/docspace-react";
+import type { SDKInstance } from "@onlyoffice/docspace-sdk-js";
 
 interface DraggableModalProps {
   id: string;
@@ -123,6 +130,7 @@ export default function DraggableModal({
   const [drag, setDrag] = useState<{ x: number; y: number } | null>(null);
   const [resize, setResize] = useState<{ x: number; y: number } | null>(null);
   const frameId = `frame-${id}`;
+  const instance = useRef<SDKInstance | null>(null);
 
   // drag & resize
   useEffect(() => {
@@ -145,26 +153,27 @@ export default function DraggableModal({
     return () => { window.removeEventListener("mousemove", onMove); window.removeEventListener("mouseup", onUp); };
   }, [drag, resize]);
 
-  // login when iframe is ready
+  // log in when the system frame is ready, then switch it to the file manager
   async function handleAppReady() {
-    const ds = (window as any).DocSpace?.SDK?.frames?.[frameId];
-    if (!ds) return console.error(`[${id}] SDK frame not found`);
+    const ds = instance.current;
+    if (!ds) return console.error(`[${id}] SDK instance not found`);
     try {
       await ds.login(login, passwordHash);
+      await ds.setConfig({ mode: "manager" });
       console.log(`[${id}] login success`);
     } catch (e) {
       console.error(`[${id}] login failed`, e);
     }
   }
 
-  const config = {
+  // keep the config stable so dragging and resizing don't recreate the frame
+  const config = useMemo(() => ({
     frameId,
     width: "100%",
     height: "100%",
-    src: portalUrl,
     mode: "system",
     events: { onAppReady: handleAppReady },
-  };
+  }), [frameId]);
 
   return (
     <div
@@ -186,7 +195,11 @@ export default function DraggableModal({
         </button>
       </div>
 
-      <DocSpace url={portalUrl} config={config} />
+      <DocSpace
+        url={portalUrl}
+        config={config}
+        onSetDocspaceInstance={(ds: SDKInstance) => { instance.current = ds; }}
+      />
 
       <div
         className="absolute bottom-0 right-0 w-3 h-3 bg-gray-300 cursor-se-resize"
@@ -210,15 +223,15 @@ Create a page that opens, focuses, and closes DocSpace windows.
   <summary>Render multiple modals</summary>
 
 ``` tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import DraggableModal from "../../components/DraggableModal";
 
 type Win = { id: string; z: number };
 
 export default function ModalsPage() {
-  const portal = process.env.REACT_APP_DOCPSACE_URL || "";
-  const login = process.env.REACT_APP_DOCPSACE_USER_LOGIN || "";
-  const passwordHash = process.env.REACT_APP_DOCPSACE_USER_PASSWORD_HASH || "";
+  const portal = import.meta.env.VITE_DOCSPACE_URL || "";
+  const login = import.meta.env.VITE_DOCSPACE_USER_LOGIN || "";
+  const passwordHash = import.meta.env.VITE_DOCSPACE_USER_PASSWORD_HASH || "";
   const [wins, setWins] = useState<Win[]>([{ id: crypto.randomUUID(), z: 10 }]);
 
   function addWin() {
@@ -248,7 +261,7 @@ export default function ModalsPage() {
                 Open DocSpace
               </a>
             ) : (
-              <span className="text-xs text-red-600">Set REACT_APP_DOCPSACE_URL in .env</span>
+              <span className="text-xs text-red-600">Set VITE_DOCSPACE_URL in .env</span>
             )}
             <button onClick={addWin} className="px-3 py-1.5 rounded bg-emerald-600 text-white text-sm">
               New Window
@@ -284,7 +297,6 @@ export default function ModalsPage() {
 Replace `src/App.tsx`:
 
 ``` tsx
-import React from "react";
 import ModalsPage from "./pages/Modals";
 
 export default function App() {
@@ -292,14 +304,14 @@ export default function App() {
 }
 ```
 
-Ensure `src/index.tsx` imports `./index.css` (default CRA does).
+Make sure `src/main.tsx` imports `./index.css` (the Vite template does this by default).
 
-### 7. Run the app
+### 8. Run the app
 
 Start the dev server:
 
 ``` bash
-npm start
+npm run dev
 ```
 
-Open `http://localhost:3000`. You should see a modal with DocSpace. Drag it by the header and resize from the bottom-right. Click New Window to open another modal.
+Open `http://localhost:5173`. You should see a modal with DocSpace. Drag it by the header and resize from the bottom-right. Click New Window to open another modal.

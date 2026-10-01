@@ -65,6 +65,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",
+      src: "{PORTAL_SRC}",
       width: "100%",
       height: "700px",
       rootPath: `/rooms/shared/${roomId}`,
@@ -139,6 +140,7 @@ function onAppReady() {
 
 const config = {
   frameId: "ds-frame",
+  src: "{PORTAL_SRC}",
   width: "100%",
   height: "700px",
   rootPath: `/rooms/shared/${roomId}`,

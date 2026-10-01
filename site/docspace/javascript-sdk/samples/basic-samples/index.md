@@ -5,7 +5,9 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 
 # Basic samples
 
-These samples each demonstrate a single DocSpace Embed SDK method in isolation. Use them as a quick reference before combining several calls into a real integration, like the ones in [Advanced samples](../advanced-samples/index.md).
+These samples each demonstrate a single DocSpace Embed SDK mode or method in isolation. Use them as a quick reference before combining several calls into a real integration, like the ones in [Advanced samples](../advanced-samples/index.md).
+
+Not every SDK method has a dedicated sample yet. For the complete list, see the [SDK](../../usage-sdk/classes/SDK.md) reference for the init methods and the [SDKInstance](../../usage-sdk/classes/SDKInstance.md) reference for the instance methods.
 
 ## Authentication and session
 
@@ -21,7 +23,7 @@ These samples each demonstrate a single DocSpace Embed SDK method in isolation. 
 
 | Sample | Description |
 | --- | --- |
-| [Initialize frame](init-frame.md) | Initialize the DocSpace view-only frame using the JS SDK. |
+| [Initialize frame](init-frame.md) | Initialize a DocSpace frame in the mode set by the `mode` config field. |
 | [Initialize manager](init-manager.md) | Initialize the DocSpace manager using the JS SDK. |
 | [Initialize editor](init-editor.md) | Open a document in the DocSpace editor using the JS SDK. |
 | [Initialize viewer](init-viewer.md) | Embed a read-only document viewer using the JS SDK. |
