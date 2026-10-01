@@ -12,17 +12,17 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 构建与 ONLYOFFICE 原生体验融为一体的复杂集成。
 
-**适用场景：**
+**适用场景**：
 
 - 嵌入外部内容（[YouTube](../samples/youtube.md)、媒体库）
 - 第三方集成（[Translator](../samples/translator.md)、[Zotero](../samples/zotero.md)、CRM 系统）
 - 高级处理（[OCR](../samples/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
-**开发概况：**
+**开发概况**：
 
-- **时间：** 2-7 天 | **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
-- **分发方式：** [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
+- **时间**：2-7 天 | **技能**：中级 | **技术栈**：HTML/CSS/JavaScript
+- **分发方式**：[ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或私有部署
 
 ## 插件的限制 {#what-plugins-cannot-do}
 
@@ -58,19 +58,19 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的交互式工具，
 
 ## 故障排除
 
-**插件不显示：**
+**插件不显示**：
 
 - 检查 `config.json` 中是否有唯一的 GUID
 - 确认文件路径正确
 - 重启 ONLYOFFICE
 
-**JavaScript 错误：**
+**JavaScript 错误**：
 
 - 打开浏览器开发者工具（F12）
 - 在 Console 标签页中查看错误信息
 - 确认 `plugin.js` 已加载
 
-**API 方法调用失败：**
+**API 方法调用失败**：
 
 - 确认您的 ONLYOFFICE 版本支持该方法
 - 在 [API 参考](../interacting-with-editors/overview/overview.md)中检查方法语法

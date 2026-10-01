@@ -10,7 +10,7 @@ This guide covers the most common errors encountered during ONLYOFFICE plugin de
 
 ### Plugin not appearing in menu
 
-**Symptoms:** Plugin installed but not visible; no errors in console; config file present.
+**Symptoms**: Plugin installed but not visible; no errors in console; config file present.
 
 :::danger[Wrong]
 ```json

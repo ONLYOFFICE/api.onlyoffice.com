@@ -12,17 +12,17 @@ If you prefer to start coding right away, go directly to the [quick start](quick
 
 Build sophisticated integrations that feel native to ONLYOFFICE.
 
-**Perfect for:**
+**Perfect for**:
 
 - Embedding external content ([YouTube](../samples/youtube.md), media galleries)
 - Third-party integrations ([Translator](../samples/translator.md), [Zotero](../samples/zotero.md), CRM systems)
 - Advanced processing ([OCR](../samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
-**Development profile:**
+**Development profile**:
 
-- **Time:** 2-7 days | **Skill:** Intermediate | **Tech:** HTML/CSS/JavaScript
-- **Distribution:** [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
+- **Time**: 2-7 days | **Skill**: Intermediate | **Tech**: HTML/CSS/JavaScript
+- **Distribution**: [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
 
 ## What plugins cannot do
 
@@ -58,19 +58,19 @@ Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tool
 
 ## Troubleshooting
 
-**Plugin doesn't appear:**
+**Plugin doesn't appear**:
 
 - Check `config.json` has a unique GUID
 - Verify file paths are correct
 - Restart ONLYOFFICE
 
-**JavaScript errors:**
+**JavaScript errors**:
 
 - Open browser DevTools (F12)
 - Check the Console tab for error messages
 - Verify `plugin.js` is loaded
 
-**API methods fail:**
+**API methods fail**:
 
 - Ensure your ONLYOFFICE version supports the method
 - Check method syntax in the [API reference](../interacting-with-editors/overview/overview.md)
