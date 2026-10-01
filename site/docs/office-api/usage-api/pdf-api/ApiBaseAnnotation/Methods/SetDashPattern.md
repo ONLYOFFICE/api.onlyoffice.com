@@ -3,7 +3,7 @@
 Sets annotation dash pattern.
 
 :::note
-The border style property must be set to "dashed".
+The border style must be set to `"dashed"` using the [ApiBaseAnnotation#SetBorderStyle](../../ApiBaseAnnotation/Methods/SetBorderStyle.md) method.
 :::
 
 ## Syntax

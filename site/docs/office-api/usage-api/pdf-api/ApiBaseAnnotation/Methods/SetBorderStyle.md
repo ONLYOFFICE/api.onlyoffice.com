@@ -14,7 +14,7 @@ expression.SetBorderStyle(borderStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| borderStyle | Required | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | The border style: **"solid"** or **"dashed"**. |
+| borderStyle | Required | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | The border style: `"solid"` or `"dashed"`. |
 
 ## Returns
 
