@@ -52,7 +52,7 @@ Not sure which approach fits your use case? See how plugins compare to macros an
 | **Skill level**       | Intermediate                       | Beginner                     | Advanced                         |
 | **Distribution**      | Marketplace, GitHub, private       | Copy-paste, templates        | Marketplace, private             |
 | **Best for**          | Reusable tools, integrations       | Personal automation          | AI-powered features              |
-| **Framework support** | ✅ React, Vue, Angular              | ❌ Vanilla JS only            | ✅ Any framework                  |
+| **Framework support** | ✅ Any (React, Vue, Angular, or plain HTML) | ❌ Plain JavaScript only      | ✅ Any (same as plugins)          |
 
 Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)
 

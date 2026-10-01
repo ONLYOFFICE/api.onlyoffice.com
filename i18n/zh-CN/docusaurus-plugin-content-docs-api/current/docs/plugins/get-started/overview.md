@@ -52,7 +52,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 | **技能要求**   | 中级                            | 入门                     | 高级                     |
 | **分发方式**   | 应用市场、GitHub、私有          | 复制粘贴、模板           | 应用市场、私有           |
 | **最适合**     | 可复用工具、集成                | 个人自动化               | AI 驱动功能              |
-| **框架支持**   | ✅ React、Vue、Angular          | ❌ 仅限原生 JS           | ✅ 任意框架              |
+| **框架支持**   | ✅ 任意（React、Vue、Angular 或纯 HTML）  | ❌ 仅限原生 JavaScript   | ✅ 任意（与插件相同）         |
 
 另请参阅：[宏](../../macros/get-started/overview.md) | [自定义 AI 工具](../../ai/get-started/overview.md)
 
