@@ -6,7 +6,7 @@ Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTabl
 
 ## Example
 
-Read the descriptive text assigned to a table in a document.
+Read the table description from the table properties of a style in a document.
 
 ```javascript editor-docx
 // How do I retrieve the written description stored with a table in a document?

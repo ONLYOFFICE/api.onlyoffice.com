@@ -20,7 +20,7 @@ Date
 
 ## Example
 
-Set and retrieve the creation date of a presentation in a presentation.
+Read the creation date of a presentation.
 
 ```javascript editor-pptx
 // How do I access the creation date in a presentation?

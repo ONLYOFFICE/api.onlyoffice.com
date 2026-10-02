@@ -23,7 +23,7 @@
 添加指向包含尾注的页面的交叉引用。
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with an endnote.
+// How do I create a reference to a paragraph with an endnote?
 
 // Use endnote to create a cross-reference.
 

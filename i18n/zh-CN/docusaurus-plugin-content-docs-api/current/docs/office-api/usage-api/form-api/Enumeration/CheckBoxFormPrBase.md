@@ -17,7 +17,7 @@ Object
 创建具有特定复选框表单属性的复选框表单。
 
 ```javascript editor-forms
-// How to create a checkbox form with its base properties.
+// How do I create a checkbox form with its base properties?
 
 // Create the base properties and apply them to the ApiCheckBoxForm object.
 

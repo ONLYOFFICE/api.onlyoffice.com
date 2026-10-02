@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-防止文本在文档中的表格单元格内换行。
+在文档中使用样式的表格单元格属性防止文本在表格单元格内换行。
 
 ```javascript editor-docx
 // How do I stop text from breaking onto multiple lines inside a table cell in a document?

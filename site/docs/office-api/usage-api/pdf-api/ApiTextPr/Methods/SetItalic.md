@@ -22,7 +22,7 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-Make text slanted in a PDF.
+Make text slanted using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I apply italic formatting to text in a PDF?

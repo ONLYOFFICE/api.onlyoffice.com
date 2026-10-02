@@ -26,7 +26,7 @@ Object
 指定可用于创建表单的表单数据。
 
 ```javascript editor-forms
-// How to create a form data indicating its key and value.
+// How do I create form data with a key and a value?
 
 // Create a data to add it to the form.
 

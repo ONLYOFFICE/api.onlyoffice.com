@@ -6,7 +6,7 @@ Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLi
 
 ## Example
 
-Indent the first line of a paragraph in a PDF.
+Indent the first line of a paragraph using the paragraph properties in a PDF.
 
 ```javascript editor-pdf
 // How do I indent the first line of a paragraph in a PDF?

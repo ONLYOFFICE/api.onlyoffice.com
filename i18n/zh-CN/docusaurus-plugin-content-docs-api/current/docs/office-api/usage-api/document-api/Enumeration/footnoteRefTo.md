@@ -23,7 +23,7 @@
 添加指向包含脚注的页面的交叉引用。
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with an footnote.
+// How do I create a reference to a paragraph with a footnote?
 
 // Use footnote to create a cross-reference.
 

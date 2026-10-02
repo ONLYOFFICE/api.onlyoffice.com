@@ -22,7 +22,7 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-Add an underline to text in a PDF.
+Add an underline to text using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I underline text in a PDF?

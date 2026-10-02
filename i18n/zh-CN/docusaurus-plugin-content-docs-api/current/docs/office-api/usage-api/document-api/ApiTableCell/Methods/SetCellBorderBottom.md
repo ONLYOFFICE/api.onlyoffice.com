@@ -6,7 +6,7 @@
 
 ## 示例
 
-在文档中为表格单元格的底部边缘添加边框。
+在文档中使用样式的表格单元格属性为所有表格单元格添加底部边框。
 
 ```javascript editor-docx
 // How do I draw a line at the bottom of a table cell in a document?

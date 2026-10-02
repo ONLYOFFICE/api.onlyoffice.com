@@ -11,7 +11,7 @@ number
 将列间距设置为 36 磅。
 
 ```javascript editor-xlsx
-// How to set a column distance in twips.
+// How do I set the column spacing in twips?
 
 // Set column distance in twips.
 

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-Add a bullet point to a paragraph in a presentation.
+Add a bullet point to a paragraph using the paragraph properties in a presentation.
 
 ```javascript editor-pptx
 // How do I apply a bullet style to a paragraph in a presentation?

@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-Draw a line through text in a PDF.
+Draw a line through text using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I add strikethrough formatting to text in a PDF?

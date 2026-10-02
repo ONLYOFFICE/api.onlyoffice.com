@@ -10,7 +10,7 @@ Inherited from [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md).
 
 ## Example
 
-Apply a named character style to a text run in a document.
+Apply a named character style to a text run using its text properties in a document.
 
 ```javascript editor-docx
 // How do I assign a predefined style to a portion of text in a document?
@@ -28,7 +28,7 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetStyle(myNewRunStyle);
+run.GetTextPr().SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```

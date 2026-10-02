@@ -24,7 +24,7 @@ boolean
 
 ## Example
 
-Create adjustable geometry with guides and connection points in a presentation.
+Add a connection point to a custom geometry in a presentation.
 
 ```javascript editor-pptx
 // Connection points define where connectors attach to a shape's geometry.

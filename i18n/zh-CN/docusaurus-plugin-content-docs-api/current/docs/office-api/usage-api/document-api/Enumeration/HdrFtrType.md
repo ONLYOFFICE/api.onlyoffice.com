@@ -21,7 +21,7 @@
 从文档最后一节中删除 'title' 类型的页眉。
 
 ```javascript editor-docx
-// How to delete a header from the title type.
+// How do I delete the title page header?
 
 // Remove a header from the specified type of the section.
 

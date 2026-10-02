@@ -22,7 +22,7 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-Add a bullet marker to a paragraph inside a shape in a spreadsheet.
+Create a dash bullet and apply it to a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I add a custom bullet symbol to a paragraph in a spreadsheet?

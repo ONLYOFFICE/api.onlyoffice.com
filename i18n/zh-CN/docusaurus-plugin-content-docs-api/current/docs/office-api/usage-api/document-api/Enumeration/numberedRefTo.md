@@ -27,7 +27,7 @@
 添加指向包含编号段落的页面的交叉引用。
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with a numbered paragraph.
+// How do I create a reference to a numbered paragraph?
 
 // Use numbered paragraph to create a cross-reference.
 

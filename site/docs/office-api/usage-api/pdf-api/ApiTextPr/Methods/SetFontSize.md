@@ -22,7 +22,7 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-Adjust the text size in a PDF.
+Adjust the text size using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I make text larger or smaller in a PDF?

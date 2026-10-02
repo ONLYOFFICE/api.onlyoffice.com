@@ -11,7 +11,7 @@ number
 设置 3 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为 1 磅。
 
 ```javascript editor-xlsx
-// How to set a bottom border indicating weight points and color.
+// How do I set a bottom border with a weight in points and a color?
 
 // Add bottom border with its type, weight, color, etc.
 

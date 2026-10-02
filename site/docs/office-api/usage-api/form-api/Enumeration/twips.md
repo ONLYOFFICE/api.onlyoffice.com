@@ -11,7 +11,7 @@ number
 Set the distance between columns equal to 36 points.
 
 ```javascript editor-forms
-// How to set a column distance in twips.
+// How do I set the column spacing in twips?
 
 // Set column distance in twips.
 

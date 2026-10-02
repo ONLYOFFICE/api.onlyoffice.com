@@ -6,7 +6,7 @@ Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
 ## Example
 
-Duplicate a shape and place the copy on another slide in a presentation.
+Duplicate a drawing and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
 // How do I make a copy of a shape in a presentation?

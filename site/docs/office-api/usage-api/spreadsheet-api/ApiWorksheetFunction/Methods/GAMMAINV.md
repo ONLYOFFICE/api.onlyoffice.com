@@ -24,7 +24,7 @@ number
 
 ## Example
 
-Find the value that corresponds to a given probability in a gamma distribution in a spreadsheet.
+Find the value that corresponds to a given probability in a gamma distribution using the GAMMAINV compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I calculate the inverse of a gamma cumulative distribution in a spreadsheet?

@@ -26,7 +26,7 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-Position text above or below the baseline in a PDF.
+Position text above or below the baseline using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I create superscript or subscript text in a PDF?

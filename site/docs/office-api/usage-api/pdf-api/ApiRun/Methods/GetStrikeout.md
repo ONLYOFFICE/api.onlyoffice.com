@@ -6,7 +6,7 @@ Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)
 
 ## Example
 
-Check if text has a line drawn through it in a PDF.
+Check if text has a line drawn through it using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I see if strikethrough formatting is applied to text in a PDF?

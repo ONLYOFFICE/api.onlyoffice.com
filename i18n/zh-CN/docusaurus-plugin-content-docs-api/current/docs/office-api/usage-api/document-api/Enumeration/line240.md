@@ -11,7 +11,7 @@ number
 将段落行距设置为 1 行。
 
 ```javascript editor-docx
-// How to change a spacing of a line.
+// How do I change the line spacing?
 
 // Set paragraph spacing line rule to auto and indicate its size.
 

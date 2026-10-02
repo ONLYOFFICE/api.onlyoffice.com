@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-在电子表格中基于样本估计方差（忽略样本中的逻辑值和文本）。
+在电子表格中使用 VAR 兼容性函数基于样本估计方差。
 
 ```javascript editor-xlsx
 // The VAR function calculates sample variance from numeric data only.

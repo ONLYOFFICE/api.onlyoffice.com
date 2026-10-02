@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-Add a bullet point to a paragraph in a PDF.
+Add a bullet point to a paragraph using the paragraph properties in a PDF.
 
 ```javascript editor-pdf
 // How do I add a bullet to a paragraph in a PDF?

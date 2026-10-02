@@ -6,7 +6,7 @@
 
 ## 示例
 
-在 PDF 中缩进段落的第一行。
+在 PDF 中使用段落属性缩进段落的第一行。
 
 ```javascript editor-pdf
 // How do I indent the first line of a paragraph in a PDF?

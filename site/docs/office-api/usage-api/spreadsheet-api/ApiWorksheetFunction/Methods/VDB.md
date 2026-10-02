@@ -28,7 +28,7 @@ number
 
 ## Example
 
-Calculate asset depreciation using the double-declining balance method in a spreadsheet.
+Calculate asset depreciation for a specified period using the variable declining balance method in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I calculate asset depreciation over a specific time period in a spreadsheet?

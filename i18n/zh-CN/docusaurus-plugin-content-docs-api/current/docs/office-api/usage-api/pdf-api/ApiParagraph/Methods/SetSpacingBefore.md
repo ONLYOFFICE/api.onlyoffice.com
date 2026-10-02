@@ -8,7 +8,7 @@
 
 ## 示例
 
-在 PDF 中为段落上方添加空间。
+在 PDF 中使用段落属性为段落上方添加空间。
 
 ```javascript editor-pdf
 // How do I add space before a paragraph in a PDF?

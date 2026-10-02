@@ -11,7 +11,7 @@ number
 The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge.
 
 ```javascript editor-docx
-// How to set a bottom border indicating weight points and color.
+// How do I set a bottom border with a weight in eighths of a point and a color?
 
 // Add bottom border with its type, weight, color, etc.
 

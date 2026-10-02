@@ -8,7 +8,7 @@ Inherited from [ApiTableCellPr.SetNoWrap](../../ApiTableCellPr/Methods/SetNoWrap
 
 ## Example
 
-Prevent text from wrapping inside a table cell in a document.
+Prevent text from wrapping inside table cells using the table cell properties of a style in a document.
 
 ```javascript editor-docx
 // How do I stop text from breaking onto multiple lines inside a table cell in a document?

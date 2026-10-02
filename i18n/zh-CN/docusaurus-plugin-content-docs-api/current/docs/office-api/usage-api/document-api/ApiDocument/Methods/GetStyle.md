@@ -22,7 +22,7 @@ expression.GetStyle(styleName);
 
 ## 示例
 
-在文档中为段落应用命名样式。
+按名称获取内置样式并将其应用于文档中的段落。
 
 ```javascript editor-docx
 // How do I retrieve and apply a built-in heading style in a document?

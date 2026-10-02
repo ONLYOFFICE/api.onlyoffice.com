@@ -26,7 +26,7 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-在文档中为文本运行应用命名字符样式。
+在文档中通过文本运行的文本属性为其应用命名字符样式。
 
 ```javascript editor-docx
 // How do I assign a predefined style to a portion of text in a document?
@@ -44,7 +44,7 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetStyle(myNewRunStyle);
+run.GetTextPr().SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```

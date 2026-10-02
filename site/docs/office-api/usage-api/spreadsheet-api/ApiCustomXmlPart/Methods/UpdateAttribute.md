@@ -24,7 +24,7 @@ boolean
 
 ## Example
 
-Change the value of an existing attribute on an XML element in a spreadsheet.
+Update an attribute of the XML element found by its path in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I overwrite the current value of a named property on an XML node in a spreadsheet?

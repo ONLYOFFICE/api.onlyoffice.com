@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-在电子表格中为形状内段落的上方添加额外空间。
+在电子表格中使用段落属性为段落上方添加额外空间。
 
 ```javascript editor-xlsx
 // How do I increase the gap between one paragraph and the one before it in a spreadsheet?

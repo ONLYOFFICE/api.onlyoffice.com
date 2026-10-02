@@ -22,7 +22,7 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-Add a bullet point to a paragraph in a PDF.
+Create a dash bullet and apply it to a paragraph in a PDF.
 
 ```javascript editor-pdf
 // How do I create a bulleted list in a PDF?

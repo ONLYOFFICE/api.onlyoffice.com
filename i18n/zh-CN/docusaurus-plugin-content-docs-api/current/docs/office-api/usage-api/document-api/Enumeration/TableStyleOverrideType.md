@@ -41,7 +41,7 @@
 将创建的样式（设置阴影）应用于表格的左上角单元格。
 
 ```javascript editor-docx
-// How to change a style of the specific part of the table.
+// How do I change the style of a specific part of a table?
 
 // Get table part style by condition and update it.
 

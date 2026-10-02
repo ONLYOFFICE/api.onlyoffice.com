@@ -20,7 +20,7 @@ Date
 
 ## 示例
 
-设置和检索演示文稿的创建日期。
+读取演示文稿的创建日期。
 
 ```javascript editor-pptx
 // How do I access the creation date in a presentation?

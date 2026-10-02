@@ -6,7 +6,7 @@ Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
 ## Example
 
-Read the left indentation value set on a paragraph in a document.
+Read the left indentation value from the paragraph properties in a document.
 
 ```javascript editor-docx
 // How do I find out how far a paragraph is indented from the left margin in a document?

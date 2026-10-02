@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-在 PDF 中复制段落。
+在 PDF 中复制自由文本批注中的段落。
 
 ```javascript editor-pdf
 // How do I create a copy of a paragraph in a PDF?

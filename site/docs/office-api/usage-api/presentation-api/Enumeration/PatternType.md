@@ -65,10 +65,10 @@ Enumeration
 
 ## Example
 
-Set the picture position measured in percent inside the current form.
+Create a pattern fill with the dashed downward diagonal pattern.
 
 ```javascript editor-pptx
-// How to create a pattern fill indicating its pattern type.
+// How do I create a pattern fill with a specific pattern type?
 
 // Create a dash diagonal pattern.
 

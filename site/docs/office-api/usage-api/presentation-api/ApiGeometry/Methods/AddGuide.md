@@ -26,7 +26,7 @@ boolean
 
 ## Example
 
-Create adjustable geometry with guides and connection points in a presentation.
+Add a guide formula to a custom geometry in a presentation.
 
 ```javascript editor-pptx
 // Guides define calculation formulas for custom shape dimensions and proportions.

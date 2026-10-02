@@ -28,7 +28,7 @@
 创建具有 'accent2' 标识符的主题颜色。
 
 ```javascript editor-pdf
-// How to create a scheme color.
+// How do I create a scheme color?
 
 // Create a scheme color with accent.
 

@@ -19,7 +19,7 @@ Enumeration
 Add a table of contents of the standard style to the document.
 
 ```javascript editor-docx
-// How to create a table of contents properties indicating its style.
+// How do I create table of contents properties with a specific style?
 
 // Add a table of contents with standard style.
 

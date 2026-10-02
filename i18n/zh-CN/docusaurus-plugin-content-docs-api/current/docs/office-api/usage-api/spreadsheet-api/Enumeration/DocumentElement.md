@@ -15,7 +15,7 @@
 向文档添加名为 “paragraph” 的文档元素。
 
 ```javascript editor-xlsx
-// How to add a paragraph element to the document.
+// How do I add a paragraph element to a document?
 
 // Add elements to the document.
 

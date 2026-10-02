@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-使文档中的段落与其后面的段落保持在同一页上。
+在文档中使用样式的段落属性使段落与下一段落保持在同一页上。
 
 ```javascript editor-docx
 // How do I prevent a paragraph from being separated from the next paragraph in a document?

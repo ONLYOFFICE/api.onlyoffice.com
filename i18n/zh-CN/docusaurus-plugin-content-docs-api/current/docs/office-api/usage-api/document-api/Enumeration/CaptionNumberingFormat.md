@@ -25,7 +25,7 @@
 向段落添加具有阿拉伯数字编号格式的题注。
 
 ```javascript editor-docx
-// How to add a caption to the paragraph specifying numbering format.
+// How do I add a caption with a specific numbering format to a paragraph?
 
 // Add a text caption with parameters to the ApiParagraph object and indicate its numbering format.
 

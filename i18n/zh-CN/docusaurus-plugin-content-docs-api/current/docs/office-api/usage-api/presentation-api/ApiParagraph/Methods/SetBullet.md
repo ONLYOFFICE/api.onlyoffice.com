@@ -6,7 +6,7 @@
 
 ## 示例
 
-在演示文稿中为段落添加项目符号。
+在演示文稿中使用段落属性为段落添加项目符号。
 
 ```javascript editor-pptx
 // How do I apply a bullet style to a paragraph in a presentation?

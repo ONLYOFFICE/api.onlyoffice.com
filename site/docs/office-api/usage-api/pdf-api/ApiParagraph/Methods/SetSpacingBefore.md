@@ -8,7 +8,7 @@ Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBe
 
 ## Example
 
-Add space above a paragraph in a PDF.
+Add space above a paragraph using the paragraph properties in a PDF.
 
 ```javascript editor-pdf
 // How do I add space before a paragraph in a PDF?

@@ -26,7 +26,7 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-在 PDF 中将文本定位在基线的上方或下方。
+在 PDF 中使用文本属性将文本定位在基线的上方或下方。
 
 ```javascript editor-pdf
 // How do I create superscript or subscript text in a PDF?

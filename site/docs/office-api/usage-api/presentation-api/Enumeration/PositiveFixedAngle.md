@@ -11,7 +11,7 @@ number
 Set the resulting gradient direction angle in 90 degrees.
 
 ```javascript editor-pptx
-// How to create a gradient fill using positive fixed angle.
+// How do I create a gradient fill using a positive fixed angle?
 
 // Set gradient direction angle.
 

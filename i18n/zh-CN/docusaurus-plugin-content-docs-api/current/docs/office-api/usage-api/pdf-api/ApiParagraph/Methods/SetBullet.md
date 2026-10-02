@@ -6,7 +6,7 @@
 
 ## 示例
 
-在 PDF 中为段落添加项目符号。
+在 PDF 中使用段落属性为段落添加项目符号。
 
 ```javascript editor-pdf
 // How do I add a bullet to a paragraph in a PDF?

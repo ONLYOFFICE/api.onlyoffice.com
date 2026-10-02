@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-Read the first-line indentation value set on a paragraph in a document.
+Read the first-line indentation value from the paragraph properties in a document.
 
 ```javascript editor-docx
 // How do I find out how far the first line of a paragraph is indented in a document?

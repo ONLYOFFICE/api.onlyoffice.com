@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-Read the right indentation value set on a paragraph in a document.
+Read the right indentation value from the paragraph properties in a document.
 
 ```javascript editor-docx
 // How do I find out how far a paragraph is indented from the right margin in a document?

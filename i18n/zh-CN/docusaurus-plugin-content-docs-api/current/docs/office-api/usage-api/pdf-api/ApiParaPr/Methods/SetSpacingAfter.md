@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-在 PDF 中为段落下方添加空间。
+在 PDF 中使用段落属性为段落下方添加空间。
 
 ```javascript editor-pdf
 // How do I add space after a paragraph in a PDF?

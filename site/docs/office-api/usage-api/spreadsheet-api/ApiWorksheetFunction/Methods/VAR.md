@@ -22,7 +22,7 @@ number
 
 ## Example
 
-Estimate variance based on a sample (ignores logical values and text in the sample) in a spreadsheet.
+Estimate variance based on a sample using the VAR compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // The VAR function calculates sample variance from numeric data only.

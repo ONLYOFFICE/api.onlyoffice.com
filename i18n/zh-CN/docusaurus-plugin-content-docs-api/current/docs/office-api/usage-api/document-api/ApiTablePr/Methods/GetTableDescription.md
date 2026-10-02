@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-读取分配给文档中表格的描述性文本。
+从文档中样式的表格属性读取表格描述。
 
 ```javascript editor-docx
 // How do I retrieve the written description stored with a table in a document?

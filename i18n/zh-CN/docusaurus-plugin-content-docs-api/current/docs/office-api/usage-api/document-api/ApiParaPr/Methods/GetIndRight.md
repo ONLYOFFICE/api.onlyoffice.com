@@ -20,7 +20,7 @@ expression.GetIndRight();
 
 ## 示例
 
-读取文档中段落设置的右缩进值。
+从文档中的段落属性读取右缩进值。
 
 ```javascript editor-docx
 // How do I find out how far a paragraph is indented from the right margin in a document?

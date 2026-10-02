@@ -15,10 +15,10 @@ Object
 
 ## 示例
 
-在选定文本上方插入具有指定文本框属性的文本框。
+插入文本表单时使用所选文本作为占位符。
 
 ```javascript editor-forms
-// How to create a text form with its properties and insert it into the ApiDocument object.
+// How do I create a text form with its properties and insert it into a document?
 
 // Create the ApiTextForm object and insert it into the document using the specified properties.
 

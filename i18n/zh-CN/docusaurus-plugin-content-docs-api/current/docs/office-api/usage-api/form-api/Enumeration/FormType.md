@@ -25,7 +25,7 @@
 返回当前表单的类型。
 
 ```javascript editor-forms
-// How to get a form type.
+// How do I get the type of a form?
 
 // Return a type from the ApiTextForm object.
 

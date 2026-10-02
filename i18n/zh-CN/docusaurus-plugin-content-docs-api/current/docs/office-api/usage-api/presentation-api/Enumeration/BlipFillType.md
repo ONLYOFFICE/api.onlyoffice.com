@@ -19,7 +19,7 @@
 创建一个图像填充，该图像平铺在整个创建的形状上。
 
 ```javascript editor-pptx
-// How to create a blip fill from the image URL.
+// How do I create a blip fill from an image URL?
 
 // Create a tiled blip fill from the image.
 

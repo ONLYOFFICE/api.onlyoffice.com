@@ -6,7 +6,7 @@ Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLi
 
 ## Example
 
-Read the first-line indentation value set on a paragraph in a document.
+Read the first-line indentation value from the paragraph properties in a document.
 
 ```javascript editor-docx
 // How do I find out how far the first line of a paragraph is indented in a document?

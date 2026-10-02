@@ -23,7 +23,7 @@
 将 “text” 表单类型设置到当前文档的第一个表单。
 
 ```javascript editor-forms
-// How to specify the form type.
+// How do I specify the form type?
 
 // Create the form data with the "text" form type and set it to the first form in the document.
 

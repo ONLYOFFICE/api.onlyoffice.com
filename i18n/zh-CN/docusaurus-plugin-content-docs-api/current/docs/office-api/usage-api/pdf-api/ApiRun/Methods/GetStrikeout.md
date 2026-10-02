@@ -6,7 +6,7 @@
 
 ## 示例
 
-检查 PDF 中的文本是否有删除线。
+使用文本属性检查 PDF 中的文本是否有删除线。
 
 ```javascript editor-pdf
 // How do I see if strikethrough formatting is applied to text in a PDF?

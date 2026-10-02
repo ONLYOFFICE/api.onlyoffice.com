@@ -11,7 +11,7 @@ number
 Set the cell width measured in millimeters to the applied comb of characters.
 
 ```javascript editor-pptx
-// How to set a cell width in millimeters.
+// How do I set a cell width in millimeters?
 
 // Resize a cell indicating its width in millimeters.
 

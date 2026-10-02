@@ -22,7 +22,7 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-在 PDF 中为文本添加下划线。
+在 PDF 中使用文本属性为文本添加下划线。
 
 ```javascript editor-pdf
 // How do I underline text in a PDF?

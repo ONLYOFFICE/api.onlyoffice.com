@@ -18,7 +18,7 @@
 将坐标轴值设置到图表的顶部位置。
 
 ```javascript editor-pptx
-// How to change the axis labels format of the chart.
+// How do I change the axis label format of a chart?
 
 // Set axis values to the top.
 

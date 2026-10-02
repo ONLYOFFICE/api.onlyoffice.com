@@ -23,7 +23,7 @@ number
 
 ## Example
 
-Round a number down to the nearest integer in a spreadsheet.
+Round a number down to a specified number of digits in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I round numbers down while keeping decimals in a spreadsheet?

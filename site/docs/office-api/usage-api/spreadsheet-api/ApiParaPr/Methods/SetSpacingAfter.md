@@ -25,7 +25,7 @@ boolean
 
 ## Example
 
-Add extra space below a paragraph inside a shape in a spreadsheet.
+Add extra space below a paragraph using the paragraph properties in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I increase the gap between one paragraph and the next in a spreadsheet?

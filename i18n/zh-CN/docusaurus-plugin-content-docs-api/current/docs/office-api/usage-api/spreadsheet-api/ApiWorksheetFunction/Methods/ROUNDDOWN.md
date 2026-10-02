@@ -23,7 +23,7 @@ number
 
 ## 示例
 
-在电子表格中将数字向下舍入到最接近的整数。
+在电子表格中将数字向下舍入到指定的位数。
 
 ```javascript editor-xlsx
 // How do I round numbers down while keeping decimals in a spreadsheet?

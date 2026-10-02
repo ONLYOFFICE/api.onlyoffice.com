@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-Delete a row from a table in a document.
+Remove the first row of a table in a document.
 
 ```javascript editor-docx
 // How do I permanently remove an unwanted row from a table in a document?
