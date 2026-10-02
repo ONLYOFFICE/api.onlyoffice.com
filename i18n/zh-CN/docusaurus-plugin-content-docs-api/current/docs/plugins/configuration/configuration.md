@@ -142,7 +142,7 @@ sidebar_position: -5
       {
         "text": "Cancel",
         "primary": false,
-        "isviewer": false,
+        "isViewer": false,
         "textLocale": {
           "fr": "Annuler",
           "es": "Cancelar"
@@ -200,7 +200,7 @@ sidebar_position: -5
   {
     "text": "Cancel",
     "primary": false,
-    "isviewer": false,
+    "isViewer": false,
     "textLocale": {
       "fr": "Annuler",
       "es": "Cancelar"
@@ -234,7 +234,7 @@ sidebar_position: -5
         {
           "text": "Cancel",
           "primary": false,
-          "isviewer": false,
+          "isViewer": false,
           "textLocale": {
             "fr": "Annuler",
             "es": "Cancelar"
@@ -732,7 +732,7 @@ sidebar_position: -5
         {
           "text": "Cancel",
           "primary": false,
-          "isviewer": false,
+          "isViewer": false,
           "textLocale": {
             "fr": "Annuler",
             "es": "Cancelar"
