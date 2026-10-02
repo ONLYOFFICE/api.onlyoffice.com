@@ -61,7 +61,8 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       height: "700px",
     }
 
-    function onComboboxClick(e) {
+    async function onComboboxClick(e) {
+      const frame = DocSpace.SDK.frames["ds-frame"]
       const data = await frame.getFolders()
       for (const item of data) {
         const option = document.createElement("option")
@@ -71,7 +72,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       }
     }
 
-    function onButtonClick() {
+    async function onButtonClick() {
       const frame = DocSpace.SDK.frames["ds-frame"]
       const selectedFolder = document.querySelector("#combobox").value
       const fileName = document.querySelector("#fileName").value
@@ -168,8 +169,9 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/clas
 Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfolders) method, upload the list into the combo box:
 
 ``` ts
-const combobox = document.querySelector("#combobox").value
-function onComboboxClick(e) {
+const combobox = document.querySelector("#combobox")
+async function onComboboxClick(e) {
+  const frame = DocSpace.SDK.frames["ds-frame"]
   const data = await frame.getFolders()
   for (const item of data) {
     const option = document.createElement("option")
@@ -185,7 +187,7 @@ function onComboboxClick(e) {
 Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createfile) method, create a file in the selected folder:
 
 ``` ts
-function onButtonClick() {
+async function onButtonClick() {
   const frame = DocSpace.SDK.frames["ds-frame"]
   const selectedFolder = document.querySelector("#combobox").value
   const fileName = document.querySelector("#fileName").value

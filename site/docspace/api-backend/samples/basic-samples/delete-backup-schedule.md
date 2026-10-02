@@ -47,7 +47,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       method: 'DELETE',
       headers: HEADERS,
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Backup schedule deletion failed. Status code: ${res.status}, Message: ${text}`);

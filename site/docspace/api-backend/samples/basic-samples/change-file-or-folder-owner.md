@@ -52,13 +52,14 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       headers: HEADERS,
       body: JSON.stringify(payload),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Ownership update failed. Status code: ${res.status}, Message: ${text}`);
         return null;
       })
       .then((data) => {
+        if (!data) return null;
         const result = data?.response ?? [];
         console.log('Ownership successfully updated for the following items:');
         result.forEach((entry) => {
@@ -159,13 +160,14 @@ The API responds with a list of updated items and whether they are still shared.
       headers: HEADERS,
       body: JSON.stringify(payload),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Ownership update failed. Status code: ${res.status}, Message: ${text}`);
         return null;
       })
       .then((data) => {
+        if (!data) return null;
         const result = data?.response ?? [];
         console.log('Ownership successfully updated for the following items:');
         result.forEach((entry) => {

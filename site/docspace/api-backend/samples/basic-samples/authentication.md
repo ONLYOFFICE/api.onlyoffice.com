@@ -38,7 +38,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(USER_CREDENTIALS),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
@@ -61,7 +61,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
       method: 'GET',
       headers: { Authorization: token },
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {
@@ -144,7 +144,7 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(USER_CREDENTIALS),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
@@ -194,7 +194,7 @@ A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-a
       method: 'GET',
       headers: { Authorization: token },
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {

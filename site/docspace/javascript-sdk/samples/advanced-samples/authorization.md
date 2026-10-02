@@ -35,7 +35,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
     <button id="startButton" onclick="onButtonClick()" style="margin-top: 20px;">Login</button>
     <div id="ds-frame"></div>
     <script>
-      function onButtonClick() {
+      async function onButtonClick() {
         const frame = DocSpace.SDK.frames["ds-frame"]
         const login = document.querySelector("#login").value
         const password = document.querySelector("#password").value
@@ -126,7 +126,7 @@ Add the **onButtonClick()** event handler for the button. Using the [getHashSett
 and generate the password hash using the [createHash](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) method. After this, authorize the user using the [login](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) method:
 
 ``` ts
-function onButtonClick() {
+async function onButtonClick() {
   const frame = DocSpace.SDK.frames["ds-frame"]
   const login = document.querySelector("#login").value
   const password = document.querySelector("#password").value
