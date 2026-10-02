@@ -214,7 +214,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 - 当 *edit* 或 *review* 参数设置为 **true**时，会启用表单填写权限（即使 *fillForm* 参数设置为 **false**)）。
 - 当 *edit* 和 *review* 参数都设置为 **false**并且注释设置为true时，表单填写权限被禁用（即使 *fillForm* 参数设置为 **true**）。
-- 当 *edit* 和 *review* 参数都被设置为 **false**而且 *fillForms* 被设置为 **true**时。 评论权限被禁用 (即使 *comment* 参数设置为 **true**)。
+- 当 *edit* 和 *review* 参数都被设置为 **false**而且 *fillForms* 被设置为 **true**时。评论权限被禁用 (即使 *comment* 参数设置为 **true**)。
 
 当您设置必要的权限并为同一个文档组合不同的权限时，您应该牢记这一点。
 

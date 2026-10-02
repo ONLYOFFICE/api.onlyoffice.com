@@ -128,7 +128,7 @@ const config = {
 
 **类型**：`boolean` | **默认值**：`true`
 
-是否允许更改内容控制设置。 如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，内容控制修改将仅可用于文档编辑器。
+是否允许更改内容控制设置。如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，内容控制修改将仅可用于文档编辑器。
 
 **示例**：`true`
 

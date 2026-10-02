@@ -12,7 +12,7 @@ import APITable from '@site/src/components/APITable/APITable';
 f
 - 出于安全目的，主机必须通过一个 *form* 元素将 [access_token](#access_token) 和 [access_token_ttl](#access_token_ttl) 参数 *POST* 到online office iframe。 [docs_api_config](#docs_api_config) 参数是可选的。
 - 使用 [PostMessage](./postmessage.md) 与online office iframe 交互的 JavaScript 代码。
-- Body元素和online office的特定 CSS 样式，以避免视觉包。 此外，主机页面应使用 [WOPI 发现](./wopi-discovery.md)中提供的网站图标 URL 为页面设置适当的网站图标。
+- Body元素和online office的特定 CSS 样式，以避免视觉包。此外，主机页面应使用 [WOPI 发现](./wopi-discovery.md)中提供的网站图标 URL 为页面设置适当的网站图标。
 - 用于避免移动端浏览器的视觉和功能问题的 *viewport* 元标签。
 
 ## 主机页面代码
