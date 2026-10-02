@@ -624,7 +624,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
 | event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
-<img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
+<img alt="打开源" src="/assets/images/editor/open-source.png" width="498px" />
 
 **示例**：
 
@@ -656,9 +656,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
-<img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
+<img alt="粘贴链接" src="/assets/images/editor/paste-link.png" width="400px" />
 
-<img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
+<img alt="更新值" src="/assets/images/editor/update-values.png" width="400px" />
 
 **参数**：
 
@@ -715,7 +715,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
 | event.data.path          | `string` | 文件路径或名称。 |
 
-<img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+<img alt="更改源" src="/assets/images/editor/change-source.png" width="498px" />
 
 **示例**：
 
@@ -1116,7 +1116,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
 
-<img alt="Protect range" src="/assets/images/editor/protect-range.png" width="292px" />
+<img alt="保护范围" src="/assets/images/editor/protect-range.png" width="292px" />
 
 **示例**：
 
