@@ -170,8 +170,8 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
     response = requests.post(f'{BASE_URL}/api/2.0/authentication', json=USER_CREDENTIALS)
     if response.status_code == 200:
       auth_token = response.json().get('response', {}).get('token')
-        if auth_token:
-          return auth_token
+      if auth_token:
+        return auth_token
     else:
       print(f'Authentication failed. Status code: {response.status_code}, Message: {response.text}')
     return None
