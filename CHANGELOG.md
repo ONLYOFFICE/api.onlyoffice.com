@@ -25,6 +25,7 @@
 
 * Added Automation API and PDF API to the Get started overview
 * Expanded the main `Api` class descriptions in the editor API references
+* Added Syntax, Parameters and Returns sections to inherited method pages, and shortened method table descriptions to their first sentence
 
 #### Plugins and macros
 
@@ -32,6 +33,10 @@
 * Replaced the custom functions note with an intro paragraph and made the sample link text descriptive
 * Documented the `*` icon fallback and dropped the duplicated selection steps from the scale row
 * Linked each plugin API overview to its Office API counterpart and clarified the `SetProperties` watermark parameter
+* Rewrote the plugins overview intro, troubleshooting and resources sections, and dropped the development time estimates
+* Linked the overview's distribution line to the marketplace submission and private distribution pages
+* Clarified the framework support row in the overview comparison table
+* Moved colons outside bold labels on the overview, common errors, and plugins, macros and AI get started pages
 
 #### Desktop
 
@@ -57,6 +62,9 @@
 * Used full-width colons after bold labels in zh-CN pages
 * Added `hml` to the zh-CN text document conversion table
 * Dropped the duplicated `meta.title` description from the zh-CN `meta` row
+* Translated the zh-CN Office API overview page
+* Translated table headers and the Parameters/Example labels on the zh-CN methods, events and conversion API pages
+* Translated English image alt text on the zh-CN customization, embedded, events, external data, plugin configuration and macros pages
 
 ### Fixes
 
@@ -66,6 +74,14 @@
 * Fixed the Automation API sample cards linking to the wrong pages
 * Fixed the font and text size units of chart, paragraph, range and PDF widget methods: they take half-points (`hps`), not points (`pt`)
 * Fixed a stray asterisk before `otherWindow` in the WOPI postMessage `targetOrigin` description
+* Fixed Python sample indentation in the DocSpace basic samples
+* Fixed DocSpace samples that use `await` inside callbacks not marked `async`
+* Fixed a Cyrillic "с" in the `const` keyword in the DocSpace move file sample
+* Fixed the `isViewer` key casing in the plugin button examples
+* Fixed trailing slashes in Playground and editor links
+* Fixed the missing `:::note` admonition keyword on the zh-CN conversion tables page
+* Fixed zh-CN keyword search, windows and panels code examples that were out of sync with the English pages
+* Fixed stray spaces after full-width punctuation on zh-CN pages
 
 ## 9.2.0
 
