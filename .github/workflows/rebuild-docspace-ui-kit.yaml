@@ -1,0 +1,73 @@
+name: ReBuild docspace-ui-kit
+
+run-name: "ReBuild docspace-ui-kit"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # The Storybook build and ~1 200 screenshots take about half an hour.
+    timeout-minutes: 60
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
+
+      - name: Checkout docspace-ui-kit-react repository (branch)
+        id: checkout_docspace_ui_kit
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-ui-kit-react
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: docspace-ui-kit-react
+
+      - name: Checkout docspace-ui-kit-react repository (default)
+        if: steps.checkout_docspace_ui_kit.outcome == 'failure'
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-ui-kit-react
+          token: ${{ secrets.READ_PAT }}
+          path: docspace-ui-kit-react
+
+      # Takes the version from the kit's `packageManager` field.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          package_json_file: docspace-ui-kit-react/package.json
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Build docspace-ui-kit-react docs
+        env:
+          CI: true
+        run: |
+          cd docspace-ui-kit-react
+          pnpm install --frozen-lockfile
+          DOCS_REVISION=$(git rev-parse HEAD) pnpm docs:build
+          cd ..
+
+          rm -rf api.onlyoffice.com/site/docspace/ui-kit
+          cp -r docspace-ui-kit-react/site-docs api.onlyoffice.com/site/docspace/ui-kit
+
+          cd api.onlyoffice.com
+          if [ -n "$(git status --porcelain)" ]; then
+              git add .
+              git commit -m "Update DocSpace UI Kit documentation from GitHub Actions"
+              git push origin ${{ github.ref_name }}
+            else
+              echo "Nothing to commit"
+            fi
