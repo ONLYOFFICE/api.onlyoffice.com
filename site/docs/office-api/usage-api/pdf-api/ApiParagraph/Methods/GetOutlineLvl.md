@@ -4,14 +4,30 @@ Returns the outline level of the specified properties.
 
 Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
 
+## Syntax
+
+```javascript
+expression.GetOutlineLvl();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+Number \| undefined
+
 ## Example
 
-Determine the outline hierarchy level of a paragraph in a PDF.
+Check the heading level assigned to a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I check the outline level for document structure in a PDF?
+// How do I determine the outline level of a paragraph in a PDF?
 
-// Get the nesting level used in document outline in a PDF.
+// Read the current heading level setting for a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,11 +41,10 @@ page.AddObject(shape);
 
 const content = shape.GetContent();
 const paragraph = content.GetElement(0);
-const paraPr = paragraph.GetParaPr();
 
-const levelBefore = paraPr.GetOutlineLvl();
-paraPr.SetOutlineLvl(8);
-const levelAfter = paraPr.GetOutlineLvl();
+const levelBefore = paragraph.GetOutlineLvl();
+paragraph.SetOutlineLvl(8);
+const levelAfter = paragraph.GetOutlineLvl();
 
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\n';

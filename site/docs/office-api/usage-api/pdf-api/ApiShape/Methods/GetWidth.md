@@ -4,6 +4,22 @@ Returns the width of the current drawing.
 
 Inherited from [ApiDrawing.GetWidth](../../ApiDrawing/Methods/GetWidth.md).
 
+## Syntax
+
+```javascript
+expression.GetWidth();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Find the horizontal size of a shape in a PDF.

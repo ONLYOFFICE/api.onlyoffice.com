@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)。
 
+## 语法
+
+```javascript
+expression.GetSmallCaps();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检查 PDF 中的文本是否以小型大写字母显示。
+在 PDF 中检查文本是否使用小型大写字母格式。
 
 ```javascript editor-pdf
-// How do I determine if text has small capital formatting in a PDF?
+// How do I see if text is displayed as small caps in a PDF?
 
-// Retrieve and verify the small capitals setting applied to text in a PDF.
+// Determine the small caps setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetSmallCaps(true);
+run.SetSmallCaps(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const smallCaps = textPr.GetSmallCaps();
+const smallCaps = run.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
 ```

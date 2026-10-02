@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md)。
 
+## 语法
+
+```javascript
+expression.GetJc();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"left" \| "right" \| "both" \| "center" \| undefined
+
 ## 示例
 
-获取 PDF 中段落的文本对齐设置。
+在 PDF 中查看段落中文本的对齐方式。
 
 ```javascript editor-pdf
-// How do I find out how text is aligned in a PDF?
+// How do I check the text alignment of a paragraph in a PDF?
 
-// Retrieve the paragraph justification type in a PDF.
+// Retrieve the alignment setting from a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,16 +42,13 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
 
-const jc = paraPr.GetJc();
+const sJc = paragraph.GetJc();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Justification: " + jc);
+paragraph.AddText("Justification: " + sJc);
 docContent.Push(paragraph);
 ```

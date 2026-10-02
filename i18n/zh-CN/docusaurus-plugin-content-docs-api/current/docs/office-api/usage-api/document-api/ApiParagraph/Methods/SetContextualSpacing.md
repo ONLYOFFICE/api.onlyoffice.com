@@ -4,30 +4,51 @@
 
 继承自 [ApiParaPr.SetContextualSpacing](../../ApiParaPr/Methods/SetContextualSpacing.md)。
 
+## 语法
+
+```javascript
+expression.SetContextualSpacing(isContextualSpacing);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isContextualSpacing | 必需 | boolean |  | true 值将启用段落上下文间距。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中取消相邻同样式段落之间的间距。
+在文档中控制是否在相同样式的段落之间添加额外间距。
 
 ```javascript editor-docx
-// How do I remove extra space between paragraphs that share the same style in a document?
+// How do I remove or keep extra space between adjacent paragraphs of the same style in a document?
 
-// Keep visually grouped paragraphs compact by ignoring before/after spacing within a style.
+// Adjust spacing behavior so that matching paragraphs sit closer together or farther apart in a document.
 
 let doc = Api.GetDocument();
-let myStyle = doc.CreateStyle("My document style");
-let paraPr = myStyle.GetParaPr();
-paraPr.SetContextualSpacing(true);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("This is a paragraph with contextual spacing set to 'false' (no paragraph style is applied).");
+paragraph.AddText("This is a paragraph with contextual spacing set to 'false'.");
+paragraph.SetContextualSpacing(false);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("This is a paragraph with contextual spacing set to 'false' (no paragraph style is applied).");
+paragraph.AddText("This is a paragraph with contextual spacing set to 'false'.");
+paragraph.SetContextualSpacing(false);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.SetStyle(myStyle);
-paragraph.AddText("This is a paragraph with contextual spacing set to 'true' (paragraph style is applied).");
+paragraph.AddText("This is a paragraph with contextual spacing set to 'false'.");
+paragraph.SetContextualSpacing(false);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.SetStyle(myStyle);
-paragraph.AddText("This is a paragraph with contextual spacing set to 'true' (paragraph style is applied).");
+paragraph.AddText("This is a paragraph with contextual spacing set to 'true'.");
+paragraph.SetContextualSpacing(true);
+doc.Push(paragraph);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with contextual spacing set to 'true'.");
+paragraph.SetContextualSpacing(true);
 doc.Push(paragraph);
 ```

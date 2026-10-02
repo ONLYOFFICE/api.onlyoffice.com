@@ -4,6 +4,22 @@ Checks if field can commit on selection change.
 
 Inherited from [ApiBaseListField.IsCommitOnSelChange](../../ApiBaseListField/Methods/IsCommitOnSelChange.md).
 
+## Syntax
+
+```javascript
+expression.IsCommitOnSelChange();
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if a dropdown field auto-submits when a selection changes in a PDF.

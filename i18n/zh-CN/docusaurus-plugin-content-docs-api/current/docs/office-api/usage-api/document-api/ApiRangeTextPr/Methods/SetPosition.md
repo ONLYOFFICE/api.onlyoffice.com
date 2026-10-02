@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetPosition](../../ApiTextPr/Methods/SetPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetPosition(nPosition);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（上标文本）或负值（下标文本）的度量值。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 相对于文档中周围的基线升高或降低文本。

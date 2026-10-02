@@ -6,6 +6,24 @@ Sets 'No Fill' when previously created color object is null.
 
 Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md).
 
+## Syntax
+
+```javascript
+expression.SetFillColor(oColor);
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object that specifies the background color for the format condition. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Apply a background color to cells that satisfy a conditional formatting rule in a spreadsheet.

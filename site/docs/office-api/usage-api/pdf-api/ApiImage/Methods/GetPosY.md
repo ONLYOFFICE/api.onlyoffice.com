@@ -4,6 +4,22 @@ Gets the y position of the drawing on the page.
 
 Inherited from [ApiDrawing.GetPosY](../../ApiDrawing/Methods/GetPosY.md).
 
+## Syntax
+
+```javascript
+expression.GetPosY();
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Find the top-to-bottom position of a shape in a PDF.

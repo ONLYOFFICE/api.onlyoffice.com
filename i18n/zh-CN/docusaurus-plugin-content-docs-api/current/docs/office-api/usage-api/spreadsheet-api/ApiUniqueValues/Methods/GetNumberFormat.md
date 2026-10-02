@@ -4,33 +4,46 @@
 
 继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
 
+## 语法
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-读取电子表格中条件格式规则应用于匹配单元格的数字显示模式。
+在电子表格中读取分配给唯一值条件格式规则的数字格式模式。
 
 ```javascript editor-xlsx
-// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I check what number format a unique-values rule applies to matching cells in a spreadsheet?
 
-// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
+// Confirm the numeric display pattern a unique-values rule enforces on highlighted cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(1234.56);
-worksheet.GetRange("A3").SetValue(2500.75);
-worksheet.GetRange("A4").SetValue(150.25);
-worksheet.GetRange("A5").SetValue(3000.00);
-worksheet.GetRange("A6").SetValue(750.50);
+worksheet.GetRange("A1").SetValue("Numbers");
+worksheet.GetRange("A2").SetValue(10.5);
+worksheet.GetRange("A3").SetValue(20.3);
+worksheet.GetRange("A4").SetValue(10.5);
+worksheet.GetRange("A5").SetValue(30.7);
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+uniqueValuesCondition.SetNumberFormat("0.00%");
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "2000");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-condition1.SetNumberFormat("$#,##0.00");
-
-let numberFormat = condition1.GetNumberFormat();
+let numberFormat = uniqueValuesCondition.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);

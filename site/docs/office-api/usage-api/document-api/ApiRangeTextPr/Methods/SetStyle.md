@@ -8,6 +8,24 @@ This method is not used by itself, as it only forms the basis for the [ApiRun#Se
 
 Inherited from [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md).
 
+## Syntax
+
+```javascript
+expression.SetStyle(oStyle);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text character. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Apply a named character style to a text run using its text properties in a document.

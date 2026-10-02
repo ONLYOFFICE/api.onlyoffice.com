@@ -4,6 +4,22 @@ Gets all options from list options.
 
 Inherited from [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetOptions.md).
 
+## Syntax
+
+```javascript
+expression.GetOptions();
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ListOption](../../Enumeration/ListOption.md)[]
+
 ## Example
 
 Retrieve all choices available in a dropdown field in a PDF.

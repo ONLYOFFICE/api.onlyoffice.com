@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md)。
 
+## 语法
+
+```javascript
+expression.GetTextOperator();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlContainsOperator](../../Enumeration/XlContainsOperator.md) \| null
+
 ## 示例
 
 读取电子表格中基于文本的条件格式规则使用的比较类型。

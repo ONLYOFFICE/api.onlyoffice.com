@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
 
+## 语法
+
+```javascript
+expression.GetFont();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFont](../../ApiFont/ApiFont.md) \| null
+
 ## 示例
 
-访问电子表格中条件格式规则应用于匹配单元格的字体设置。
+在电子表格中读取前 10 项条件格式规则所应用的文本样式。
 
 ```javascript editor-xlsx
-// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I access the font settings of a top 10 conditional formatting rule in a spreadsheet?
 
-// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
+// Inspect bold, color, and other text properties that mark top values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,19 +39,15 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
 let font = condition1.GetFont();
-if (font) {
-    font.SetBold(true);
-    font.SetSize(14);
-}
+font.SetBold(true);
+font.SetColor(Api.CreateColorFromRGB(255, 0, 0));
 
-worksheet.GetRange("C1").SetValue("Font applied:");
-worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
-worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
+worksheet.GetRange("C1").SetValue("Font formatting applied");
+worksheet.GetRange("C2").SetValue("Top 2 values have bold red text");
 ```

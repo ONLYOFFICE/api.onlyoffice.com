@@ -4,21 +4,38 @@ Returns the border color of the current form.
 
 Inherited from [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
-Read the border color of a form field in a document.
+Read the border color of a checkbox form field in a document.
 
 ```javascript editor-docx
-// How do I get the border color of a form field in a document?
+// How do I find out what color is applied to the border of a checkbox in a document?
 
-// Verify a custom border color by reading its RGB values back after applying it.
+// Inspect the border color after styling a checkbox form to confirm the value was applied correctly in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBorderColor(Api.RGB(255, 111, 61));
-let borderColor = textForm.GetBorderColor();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+checkBoxForm.SetBorderColor(Api.RGB(255, 111, 61));
+let borderColor = checkBoxForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);

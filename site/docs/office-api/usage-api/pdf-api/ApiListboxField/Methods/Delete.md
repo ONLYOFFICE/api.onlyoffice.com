@@ -4,6 +4,22 @@ Removes field from document.
 
 Inherited from [ApiBaseField.Delete](../../ApiBaseField/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove a form field from a PDF.

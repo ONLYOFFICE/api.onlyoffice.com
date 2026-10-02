@@ -6,6 +6,22 @@
 
 继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
 
+## 语法
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+
 ## 示例
 
 读取电子表格中条件格式规则设置的背景颜色。

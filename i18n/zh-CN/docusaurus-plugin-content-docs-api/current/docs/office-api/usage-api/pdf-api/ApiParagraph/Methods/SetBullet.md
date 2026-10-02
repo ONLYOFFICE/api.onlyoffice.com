@@ -4,14 +4,32 @@
 
 继承自 [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md)。
 
+## 语法
+
+```javascript
+expression.SetBullet(oBullet);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oBullet | 必需 | [ApiBullet](../../ApiBullet/ApiBullet.md) |  | 使用 [Api#CreateBullet](../../Api/Methods/CreateBullet.md) 或 [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) 方法创建的项目符号对象。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-在 PDF 中使用段落属性为段落添加项目符号。
+在 PDF 中为段落添加项目符号。
 
 ```javascript editor-pdf
-// How do I add a bullet to a paragraph in a PDF?
+// How do I mark a paragraph with a bullet symbol in a PDF?
 
-// Create a bulleted list item in a paragraph in a PDF.
+// Assign a bullet character to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,9 +43,8 @@ shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
 const bullet = Api.CreateBullet("-");
-paraPr.SetBullet(bullet);
+paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
 ```

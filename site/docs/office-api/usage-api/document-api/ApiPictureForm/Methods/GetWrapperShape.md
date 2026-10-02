@@ -6,21 +6,38 @@ The null value will be returned for the inline forms.
 
 Inherited from [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md).
 
+## Syntax
+
+```javascript
+expression.GetWrapperShape();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiShape](../../ApiShape/ApiShape.md)
+
 ## Example
 
-Access the container shape that holds a fixed-size form field to control its frame in a document.
+Retrieve the shape that wraps a picture form to control its position and size in a document.
 
 ```javascript editor-docx
-// How do I get the surrounding shape of a form field so I can adjust its border or position in a document?
+// How do I access the container shape of a picture form in a document?
 
-// Apply a custom outline to the wrapper shape of a form field to make it stand out visually in a document.
+// Get the outer shape holding a picture form to adjust its layout in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let shape = textForm.GetWrapperShape();
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+pictureForm.ToFixed(10 * 240, 10 * 240);
+let shape = pictureForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```

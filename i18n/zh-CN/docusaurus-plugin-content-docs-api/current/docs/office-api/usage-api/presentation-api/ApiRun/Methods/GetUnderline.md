@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md)。
 
+## 语法
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查演示文稿中的文本是否格式化了下划线。

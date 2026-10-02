@@ -6,6 +6,24 @@ If another drawing with the same name already exists, that drawing's name will b
 
 Inherited from [ApiDrawing.SetName](../../ApiDrawing/Methods/SetName.md).
 
+## Syntax
+
+```javascript
+expression.SetName(name);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | The name which will be set to the current drawing. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Assign a custom name to a drawing in a document.

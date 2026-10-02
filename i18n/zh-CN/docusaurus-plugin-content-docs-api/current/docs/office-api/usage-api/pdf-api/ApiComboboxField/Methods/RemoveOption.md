@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseListField.RemoveOption](../../ApiBaseListField/Methods/RemoveOption.md)。
 
+## 语法
+
+```javascript
+expression.RemoveOption(index);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | 必需 | number |  | 选项索引。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从 PDF 中的下拉字段删除选项。

@@ -4,21 +4,39 @@
 
 继承自 [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md)。
 
+## 语法
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | 必需 | string |  | 表单键。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-为文档中的表单字段分配标识键。
+在文档中为复合表单分配唯一键。
 
 ```javascript editor-forms
-// How do I set the key that identifies a form field in a document?
+// How do I set or update the key of a form in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Link a form to a specific identifier so it can be referenced or grouped with related fields.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex1"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetFormKey("Personal information");
-let key = textForm.GetFormKey();
+paragraph.AddElement(complexForm);
+complexForm.SetFormKey("Complex2");
+let key = complexForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

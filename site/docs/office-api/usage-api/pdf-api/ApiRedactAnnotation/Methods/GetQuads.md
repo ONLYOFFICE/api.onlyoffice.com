@@ -4,6 +4,22 @@ Gets quads from current markup annotation.
 
 Inherited from [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md).
 
+## Syntax
+
+```javascript
+expression.GetQuads();
+```
+
+`expression` - A variable that represents an [ApiRedactAnnotation](../ApiRedactAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Quad](../../Enumeration/Quad.md)[]
+
 ## Example
 
 Get the highlight area from a markup annotation in a PDF.

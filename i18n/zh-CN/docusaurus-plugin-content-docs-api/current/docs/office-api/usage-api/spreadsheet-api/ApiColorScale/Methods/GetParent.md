@@ -4,28 +4,48 @@
 
 继承自 [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md)。
 
+## 语法
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiRange](../../ApiRange/ApiRange.md)
+
 ## 示例
 
-检索电子表格中拥有条件格式规则的集合。
+在电子表格中获取色阶规则所应用的单元格区域。
 
 ```javascript editor-xlsx
-// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
+// How do I find out which cells are covered by a color scale rule in a spreadsheet?
 
-// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
+// Identify the source range behind an existing color gradient rule in a spreadsheet.
 
-const worksheet = Api.GetActiveSheet();
+let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange('A1').SetValue('Sales Data');
-worksheet.GetRange('A2').SetValue(100);
-worksheet.GetRange('A3').SetValue(250);
-worksheet.GetRange('A4').SetValue(150);
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(100);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(150);
+worksheet.GetRange("A5").SetValue(300);
+worksheet.GetRange("A6").SetValue(75);
 
-const dataRange = worksheet.GetRange('A2:A4');
-const formatConditions = dataRange.GetFormatConditions();
-const condition = formatConditions.Add('xlCellValue', 'xlGreater', '200');
-condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
+let dataRange = worksheet.GetRange("A2:A6");
 
-const parentRange = condition.GetParent();
-worksheet.GetRange('C1').SetValue('Parent range:');
-worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
+let formatConditions = dataRange.GetFormatConditions();
+
+let colorScale = formatConditions.AddColorScale();
+
+let parentRange = colorScale.GetParent();
+
+worksheet.GetRange("C1").SetValue("Parent range:");
+worksheet.GetRange("C2").SetValue(parentRange.GetAddress());
 ```

@@ -8,18 +8,37 @@ The placeholder text can't be set for checkbox or radio button forms.
 
 Inherited from [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md).
 
+## Syntax
+
+```javascript
+expression.SetPlaceholderText(sText);
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | Required | string |  | The text that will be set to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Set placeholder text on a form field to guide user input in a document.
+Assign placeholder text to a picture field in a document.
 
 ```javascript editor-docx
-// How do I add hint text inside an empty form field in a document?
+// How do I add a hint label that appears inside an empty picture field in a document?
 
-// Display a prompt inside a field before the user fills it in.
+// Label an unfilled picture field with descriptive placeholder text in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetPlaceholderText("First name");
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+pictureForm.SetPlaceholderText("Picture form");
 ```

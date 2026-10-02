@@ -4,6 +4,24 @@ Sets the font size to the characters of the current text run.
 
 Inherited from [ApiTextPr.SetFontSize](../../ApiTextPr/Methods/SetFontSize.md).
 
+## Syntax
+
+```javascript
+expression.SetFontSize(nSize);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Adjust the font size applied to text in a document.

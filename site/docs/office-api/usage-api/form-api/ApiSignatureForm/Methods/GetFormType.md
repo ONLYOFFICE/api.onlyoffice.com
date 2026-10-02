@@ -4,20 +4,36 @@ Returns a type of the current form.
 
 Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
+## Syntax
+
+```javascript
+expression.GetFormType();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[FormType](../../Enumeration/FormType.md)
+
 ## Example
 
-Read the type of a form field in a document.
+Read the form type of a signature field in a document.
 
 ```javascript editor-forms
-// How do I get the type of a form field in a document?
+// How do I find out what type a signature form is set to in a document?
 
-// Distinguish one form from another by printing its type identifier next to it.
+// Confirm the category label assigned to a signature form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let formType = textForm.GetFormType();
+paragraph.AddElement(signatureForm);
+let formType = signatureForm.GetFormType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);

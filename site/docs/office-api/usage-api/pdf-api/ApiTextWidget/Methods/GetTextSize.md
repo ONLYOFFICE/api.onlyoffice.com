@@ -8,6 +8,22 @@ Text size === 0 means autofit.
 
 Inherited from [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md).
 
+## Syntax
+
+```javascript
+expression.GetTextSize();
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[hps](../../Enumeration/hps.md)
+
 ## Example
 
 Get the text size of a field widget in a PDF.

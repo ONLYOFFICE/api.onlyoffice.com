@@ -4,38 +4,47 @@
 
 继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
 
+## 语法
+
+```javascript
+expression.GetFont();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFont](../../ApiFont/ApiFont.md) \| null
+
 ## 示例
 
-访问电子表格中条件格式规则应用于匹配单元格的字体设置。
+在电子表格中访问高于平均值条件格式规则的文本样式设置。
 
 ```javascript editor-xlsx
-// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I read and modify the font used when a cell value is above average in a spreadsheet?
 
-// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
+// Retrieve the typography settings from an average-based rule to apply bold or colored text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Performance Data");
+worksheet.GetRange("A2").SetValue(65);
+worksheet.GetRange("A3").SetValue(85);
+worksheet.GetRange("A4").SetValue(95);
+worksheet.GetRange("A5").SetValue(75);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A5");
 let formatConditions = dataRange.GetFormatConditions();
+let aboveAverageCondition = formatConditions.AddAboveAverage();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let font = aboveAverageCondition.GetFont();
+font.SetBold(true);
+font.SetColor(Api.CreateColorFromRGB(0, 0, 255));
 
-let font = condition1.GetFont();
-if (font) {
-    font.SetBold(true);
-    font.SetSize(14);
-}
-
-worksheet.GetRange("C1").SetValue("Font applied:");
-worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
-worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
+worksheet.GetRange("C1").SetValue("Font formatting applied");
+worksheet.GetRange("C2").SetValue("Bold blue text for above average");
 ```

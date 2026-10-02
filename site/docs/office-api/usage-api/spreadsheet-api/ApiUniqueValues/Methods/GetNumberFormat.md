@@ -4,33 +4,46 @@ Returns the number format applied to a cell when the conditional formatting rule
 
 Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
+## Syntax
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Read the number display pattern that a conditional formatting rule applies to matching cells in a spreadsheet.
+Read the number format pattern assigned to a unique-values conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I check what number format a unique-values rule applies to matching cells in a spreadsheet?
 
-// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
+// Confirm the numeric display pattern a unique-values rule enforces on highlighted cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(1234.56);
-worksheet.GetRange("A3").SetValue(2500.75);
-worksheet.GetRange("A4").SetValue(150.25);
-worksheet.GetRange("A5").SetValue(3000.00);
-worksheet.GetRange("A6").SetValue(750.50);
+worksheet.GetRange("A1").SetValue("Numbers");
+worksheet.GetRange("A2").SetValue(10.5);
+worksheet.GetRange("A3").SetValue(20.3);
+worksheet.GetRange("A4").SetValue(10.5);
+worksheet.GetRange("A5").SetValue(30.7);
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+uniqueValuesCondition.SetNumberFormat("0.00%");
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "2000");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-condition1.SetNumberFormat("$#,##0.00");
-
-let numberFormat = condition1.GetNumberFormat();
+let numberFormat = uniqueValuesCondition.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);

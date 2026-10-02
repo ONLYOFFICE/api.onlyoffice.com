@@ -4,21 +4,39 @@ Sets a key to the current form.
 
 Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | Required | string |  | Form key. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign an identifying key to a form field in a document.
+Assign a unique key to a complex form in a document.
 
 ```javascript editor-forms
-// How do I set the key that identifies a form field in a document?
+// How do I set or update the key of a form in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Link a form to a specific identifier so it can be referenced or grouped with related fields.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex1"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetFormKey("Personal information");
-let key = textForm.GetFormKey();
+paragraph.AddElement(complexForm);
+complexForm.SetFormKey("Complex2");
+let key = complexForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

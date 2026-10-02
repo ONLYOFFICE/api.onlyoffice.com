@@ -6,21 +6,46 @@
 
 继承自 [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md)。
 
+## 语法
+
+```javascript
+expression.GetWrapperShape();
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiShape](../../../document-api/ApiShape/ApiShape.md)
+
 ## 示例
 
-访问包含固定大小表单字段的容器形状以控制其在文档中的框架。
+在文档中获取包裹固定大小复选框表单的形状，以控制其位置和大小。
 
 ```javascript editor-forms
-// How do I get the surrounding shape of a form field so I can adjust its border or position in a document?
+// How do I access the container shape of a fixed-size form in a document?
 
-// Apply a custom outline to the wrapper shape of a form field to make it stand out visually in a document.
+// Apply a custom outline to the shape frame surrounding each checkbox form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let shape = textForm.GetWrapperShape();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+checkBoxForm.ToFixed(1 * 240, 1 * 240);
+let shape = checkBoxForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
+shape.SetOutLine(stroke);
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+checkBoxForm.ToFixed(1 * 240, 1 * 240);
+shape = checkBoxForm.GetWrapperShape();
+stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```

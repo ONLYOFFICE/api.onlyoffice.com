@@ -8,25 +8,36 @@ When all elements are removed, a new empty paragraph is automatically created. I
 
 Inherited from [ApiDocumentContent.RemoveAllElements](../../ApiDocumentContent/Methods/RemoveAllElements.md).
 
+## Syntax
+
+```javascript
+expression.RemoveAllElements();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Clear all elements from a shape's content area in a document.
+Remove all content elements from a document.
 
 ```javascript editor-docx
-// How do I delete every element inside a shape's content block in a document?
+// How do I clear every element out of a document?
 
-// Reset a shape's interior to an empty state before inserting new content.
+// Start fresh by wiping all existing content before adding new paragraphs in a document.
 
 let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
-paragraph.AddDrawing(drawing);
-let docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-paragraph = Api.CreateParagraph();
-paragraph.SetJc("left");
-paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
-docContent.AddElement(0, paragraph);
+doc.RemoveAllElements();
+let paragraph = Api.CreateParagraph();
+paragraph.AddText("This is the first paragraph. ");
+paragraph.AddText("We removed all document elements (including the first paragraph, created by default). ");
+paragraph.AddText("This paragraph now took its place.");
+doc.AddElement(0, paragraph);
 ```

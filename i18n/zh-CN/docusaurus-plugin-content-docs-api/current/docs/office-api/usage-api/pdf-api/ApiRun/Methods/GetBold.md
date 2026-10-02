@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md)。
 
+## 语法
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检查 PDF 中的文本是否有粗体格式。
+检查 PDF 中的文本是否为粗体。
 
 ```javascript editor-pdf
-// How do I determine whether text is bold in a PDF?
+// How do I determine whether text has bold formatting in a PDF?
 
-// Read the bold property from text formatting settings in a PDF.
+// Verify the bold setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetBold(true);
+run.SetBold(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const bold = textPr.GetBold();
+const bold = run.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
 ```

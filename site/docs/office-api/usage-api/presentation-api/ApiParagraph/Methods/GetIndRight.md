@@ -4,14 +4,30 @@ Returns the paragraph right side indentation.
 
 Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
+## Syntax
+
+```javascript
+expression.GetIndRight();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## Example
 
-Check the right margin of a paragraph in a presentation.
+Get the right indentation of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I read the right indentation value from a paragraph in a presentation?
+// How do I find the right indent value for a paragraph in a presentation?
 
-// Retrieve the distance between the right edge and the paragraph text in a presentation.
+// Read and display the right margin setting of formatted text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,16 +43,14 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndRight(2880);
-paraPr.SetJc("right");
-paragraph.AddText("This is the first paragraph with the right offset of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the right offset of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+paragraph.SetIndRight(2880);
 
-const indRight = paraPr.GetIndRight();
+const indRight = paragraph.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);

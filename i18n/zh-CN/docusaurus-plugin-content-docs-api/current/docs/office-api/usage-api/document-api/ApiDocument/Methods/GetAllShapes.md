@@ -4,33 +4,42 @@
 
 继承自 [ApiDocumentContent.GetAllShapes](../../ApiDocumentContent/Methods/GetAllShapes.md)。
 
+## 语法
+
+```javascript
+expression.GetAllShapes();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiShape](../../ApiShape/ApiShape.md)[]
+
 ## 示例
 
-检索文档内容中嵌入的所有形状。
+获取文档中的所有形状。
 
 ```javascript editor-docx
-// How do I collect every shape from a content container in a document?
+// How do I collect every shape object present in a document?
 
-// Read the class type of the first shape and write it as text at the bottom of the shape in a document.
+// Change the fill color of the second shape to distinguish it from the others.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape1 = Api.CreateShape("rect", 95 * 36000, 85 * 36000, fill, stroke);
-paragraph.AddDrawing(shape1);
-fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape2 = Api.CreateShape("ellipse", 90 * 36000, 80 * 36000, fill, stroke);
-paragraph = Api.CreateParagraph();
-paragraph.AddDrawing(shape2);
-let docContent = shape1.GetDocContent();
-docContent.AddElement(0, paragraph);
-let shapes = docContent.GetAllShapes();
-docContent = shapes[0].GetDocContent();
-let classType = shapes[0].GetClassType();
-paragraph = docContent.GetElement(0);
-paragraph.AddText("Class Type = " + classType);
-paragraph.SetColor(Api.HexColor('#333333'));
-shapes[0].SetVerticalTextAlign("bottom");
+let drawing1 = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing1);
+let drawing2 = Api.CreateShape("wave", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing2);
+let drawings = doc.GetAllShapes();
+fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+drawings[1].Fill(fill);
 ```

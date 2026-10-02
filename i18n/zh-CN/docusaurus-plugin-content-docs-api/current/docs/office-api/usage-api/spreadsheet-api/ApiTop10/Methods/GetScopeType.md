@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## 示例
 
-读取控制电子表格中条件格式规则应用位置的范围类型。
+在电子表格中读取前 10 项条件格式规则的范围类型。
 
 ```javascript editor-xlsx
-// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
+// How do I find the scope setting of a top 10 conditional formatting rule in a spreadsheet?
 
-// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
+// Determine how broadly a top 10 highlight rule applies across cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,11 +39,10 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
 let scopeType = condition1.GetScopeType();
 

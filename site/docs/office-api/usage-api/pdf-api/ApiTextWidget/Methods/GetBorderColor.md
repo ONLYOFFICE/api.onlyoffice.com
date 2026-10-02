@@ -4,6 +4,22 @@ Gets widget border color.
 
 Inherited from [ApiBaseWidget.GetBorderColor](../../ApiBaseWidget/Methods/GetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Read the border color of a form field widget in a PDF.

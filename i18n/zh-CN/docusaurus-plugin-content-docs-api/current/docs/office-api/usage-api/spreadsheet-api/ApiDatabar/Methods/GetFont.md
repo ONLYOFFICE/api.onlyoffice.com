@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
 
+## 语法
+
+```javascript
+expression.GetFont();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFont](../../ApiFont/ApiFont.md) \| null
+
 ## 示例
 
 访问电子表格中条件格式规则应用于匹配单元格的字体设置。

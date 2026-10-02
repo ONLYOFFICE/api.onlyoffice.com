@@ -4,6 +4,22 @@ Returns the between border of the current paragraph.
 
 Inherited from [ApiParaPr.GetBetweenBorder](../../ApiParaPr/Methods/GetBetweenBorder.md).
 
+## Syntax
+
+```javascript
+expression.GetBetweenBorder();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## Example
 
 Retrieve the between border settings applied to a paragraph style in a document.

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md)。
 
+## 语法
+
+```javascript
+expression.GetDateOperator();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+
 ## 示例
 
 检索电子表格中基于日期的格式规则使用的时间段比较类型。

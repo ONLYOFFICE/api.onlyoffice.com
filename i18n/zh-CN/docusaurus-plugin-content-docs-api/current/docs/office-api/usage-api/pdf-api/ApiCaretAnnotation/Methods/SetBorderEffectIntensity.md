@@ -8,6 +8,24 @@
 
 继承自 [ApiBaseAnnotation.SetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/SetBorderEffectIntensity.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderEffectIntensity(value);
+```
+
+`expression` - 表示 [ApiCaretAnnotation](../ApiCaretAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | 必需 | number |  | 边框效果强度。必须大于或等于 0。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 控制 PDF 中注释上边框效果的强度。

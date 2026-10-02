@@ -8,24 +8,47 @@ Used if possible for this type of form.
 
 Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
+## Syntax
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
+
 ## Example
 
-Read the text formatting properties applied to a form field in a document.
+Access and modify the text formatting properties of a checkbox form in a document.
 
 ```javascript editor-forms
-// How do I access the font and style settings of a form field in a document?
+// How do I change the font style of a checkbox form's text in a document?
 
-// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
+// Apply bold and italic formatting to a checkbox form by reading and updating its text properties in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
-let formTextPr = textForm.GetTextPr();
+checkBoxForm.SetTextPr(textPr);
+let formTextPr = checkBoxForm.GetTextPr();
 formTextPr.SetItalic(true);
-textForm.SetTextPr(formTextPr);
+checkBoxForm.SetTextPr(formTextPr);
 ```

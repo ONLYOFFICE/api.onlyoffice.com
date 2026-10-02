@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md)。
 
+## 语法
+
+```javascript
+expression.SetFirstPriority();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-将电子表格中的条件格式规则移动到评估顺序的顶部。
+在电子表格中将前 10 项条件格式规则移至所有其他规则之前。
 
 ```javascript editor-xlsx
-// How do I make a formatting rule take precedence over all other formatting rules in a spreadsheet?
+// How do I make a top 10 rule take precedence over other formatting rules in a spreadsheet?
 
-// Promote a formatting rule so it is evaluated before any other rules in a spreadsheet.
+// Ensure the top values highlight always wins when multiple rules compete in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,22 +39,18 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
 
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
+let condition2 = formatConditions.AddTop10();
 condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
 
-worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
-
+let priorityBefore = condition2.GetPriority();
 condition2.SetFirstPriority();
+let priorityAfter = condition2.GetPriority();
 
-worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C1").SetValue("Priority before: " + priorityBefore);
+worksheet.GetRange("C2").SetValue("Priority after: " + priorityAfter);
 ```

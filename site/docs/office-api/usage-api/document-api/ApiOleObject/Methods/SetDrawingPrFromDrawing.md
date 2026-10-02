@@ -6,6 +6,24 @@ The following properties will be copied: horizontal and vertical alignment, dist
 
 Inherited from [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md).
 
+## Syntax
+
+```javascript
+expression.SetDrawingPrFromDrawing(oAnotherDrawing);
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oAnotherDrawing | Required | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | The drawing which properties will be set to the current drawing. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Copy layout properties from one drawing to another in a document.

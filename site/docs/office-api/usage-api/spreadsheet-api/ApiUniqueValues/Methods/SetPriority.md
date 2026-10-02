@@ -4,36 +4,49 @@ Sets the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetPriority(Priority);
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Priority | Required | number |  | The priority value (1-based). |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Assign a specific evaluation rank to a formatting rule in a spreadsheet.
+Assign a specific evaluation priority to a unique values formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
+// How do I set the exact priority number of a unique values formatting rule in a spreadsheet?
 
-// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
+// Control the order in which a unique values rule is applied relative to others in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+uniqueValuesCondition.SetPriority(5);
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let priority = uniqueValuesCondition.GetPriority();
 
-worksheet.GetRange("C1").SetValue("Original priority:");
-worksheet.GetRange("C2").SetValue(condition1.GetPriority());
-
-condition1.SetPriority(5);
-
-worksheet.GetRange("C4").SetValue("New priority:");
-worksheet.GetRange("C5").SetValue(condition1.GetPriority());
+worksheet.GetRange("C1").SetValue("New priority:");
+worksheet.GetRange("C2").SetValue(priority);
 ```

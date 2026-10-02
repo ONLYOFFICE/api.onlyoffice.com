@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetPosY](../../ApiDrawing/Methods/SetPosY.md)。
 
+## 语法
+
+```javascript
+expression.SetPosY(posY);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posY | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位测量的从幻灯片顶部到绘图上侧的距离。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中垂直移动幻灯片上的形状。

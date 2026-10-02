@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
 
+## 语法
+
+```javascript
+expression.GetCaps();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检测 PDF 中的文本是否使用大写字母格式。
+在 PDF 中检查文本是否全部大写。
 
 ```javascript editor-pdf
-// How do I check whether text letters are set to uppercase in a PDF?
+// How do I know if text has uppercase formatting in a PDF?
 
-// Retrieve the capitalization setting from text properties in a PDF.
+// Verify the capitalization setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetCaps(true);
+run.SetCaps(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const caps = textPr.GetCaps();
+const caps = run.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
 ```

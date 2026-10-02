@@ -4,6 +4,22 @@ Removes the current drawing from the selection.
 
 Inherited from [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md).
 
+## Syntax
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Deselect a drawing while keeping other shapes selected in a spreadsheet.

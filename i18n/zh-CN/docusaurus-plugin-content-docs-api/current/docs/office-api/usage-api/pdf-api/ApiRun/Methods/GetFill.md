@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
 
+## 语法
+
+```javascript
+expression.GetFill();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## 示例
 
-读取 PDF 中的文本颜色设置。
+在 PDF 中获取文本的颜色。
 
 ```javascript editor-pdf
-// How do I find out what color text is using in a PDF?
+// How do I find out what color text is in a PDF?
 
-// Retrieve the fill color information from text properties in a PDF.
+// Read the text color setting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -29,13 +45,12 @@ run.AddText("The text properties are changed and the style is added to the parag
 run.AddLineBreak();
 paragraph.AddElement(run);
 
-const textPr = run.GetTextPr();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
-textPr.SetFill(fill);
+run.SetFill(fill);
 page.AddObject(shape);
 paragraph = Api.CreateParagraph();
 
-fill = textPr.GetFill();
+fill = run.GetFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);

@@ -4,41 +4,47 @@ Sets the evaluation order for the current conditional formatting rule so it is e
 
 Inherited from [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetLastPriority();
+```
+
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Move a formatting rule to the lowest position in the evaluation order in a spreadsheet.
+Move a data bar formatting rule to the bottom of the evaluation order in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I make a conditional formatting rule apply after all other rules in a spreadsheet?
+// How do I make a data bar rule evaluate after all other formatting rules in a spreadsheet?
 
-// Push an existing highlight rule to the bottom of the priority stack in a spreadsheet.
+// Defer a data bar rule so it only applies when no higher-priority rule already matches in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A1").SetValue("Priority Test");
 worksheet.GetRange("A2").SetValue(100);
 worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A3");
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let dataBar1 = formatConditions.AddDatabar();
+let dataBar2 = formatConditions.AddDatabar();
 
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+dataBar1.SetLastPriority();
 
-worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
+let priority = dataBar1.GetPriority();
 
-condition1.SetLastPriority();
-
-worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C1").SetValue("Data bar priority:");
+worksheet.GetRange("C2").SetValue(priority);
 ```

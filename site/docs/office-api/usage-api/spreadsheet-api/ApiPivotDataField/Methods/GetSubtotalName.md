@@ -4,6 +4,22 @@ Returns the text label displayed in the subtotal column or row heading in the sp
 
 Inherited from [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md).
 
+## Syntax
+
+```javascript
+expression.GetSubtotalName();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the custom subtotal label assigned to a pivot field in a spreadsheet.

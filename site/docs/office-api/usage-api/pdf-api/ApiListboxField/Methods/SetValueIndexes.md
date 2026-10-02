@@ -4,6 +4,24 @@ Sets selected value indexes.
 
 Inherited from [ApiBaseListField.SetValueIndexes](../../ApiBaseListField/Methods/SetValueIndexes.md).
 
+## Syntax
+
+```javascript
+expression.SetValueIndexes(valueIndexes);
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| valueIndexes | Required | number[] |  | The indexes of the selected values. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mark items as selected in a dropdown by their position in a PDF.

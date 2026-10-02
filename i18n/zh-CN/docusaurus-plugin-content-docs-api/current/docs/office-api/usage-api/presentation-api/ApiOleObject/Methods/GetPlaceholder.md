@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlaceholder.md)。
 
+## 语法
+
+```javascript
+expression.GetPlaceholder();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiPlaceholder](../../ApiPlaceholder/ApiPlaceholder.md) \| null
+
 ## 示例
 
 获取演示文稿中分配给形状的占位符。

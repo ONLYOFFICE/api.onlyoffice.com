@@ -6,6 +6,24 @@ Pass null to remove the hyperlink.
 
 Inherited from [ApiDrawing.SetHyperlink](../../ApiDrawing/Methods/SetHyperlink.md).
 
+## Syntax
+
+```javascript
+expression.SetHyperlink(hyperlink);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| hyperlink | Required | [ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null |  | The hyperlink object to be set to the drawing, or null to remove the hyperlink. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add clickable links to shapes and images in a presentation.

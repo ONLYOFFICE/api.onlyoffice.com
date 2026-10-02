@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetContents](../../ApiBaseAnnotation/Methods/SetContents.md)。
 
+## 语法
+
+```javascript
+expression.SetContents(contents);
+```
+
+`expression` - 表示 [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| contents | 必需 | string |  | 批注文本内容。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 向 PDF 中的注释添加文本内容。

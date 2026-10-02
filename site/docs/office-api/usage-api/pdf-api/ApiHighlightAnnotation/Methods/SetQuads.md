@@ -4,6 +4,24 @@ Sets quads to current markup annotation.
 
 Inherited from [ApiBaseMarkupAnnotation.SetQuads](../../ApiBaseMarkupAnnotation/Methods/SetQuads.md).
 
+## Syntax
+
+```javascript
+expression.SetQuads(quads);
+```
+
+`expression` - A variable that represents an [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | An array of quadrilaterals defining the highlighted regions. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Specify the highlight area for a markup annotation in a PDF.

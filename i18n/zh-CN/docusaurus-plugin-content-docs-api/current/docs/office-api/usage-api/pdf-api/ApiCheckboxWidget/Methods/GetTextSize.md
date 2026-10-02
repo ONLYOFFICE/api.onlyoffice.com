@@ -8,6 +8,22 @@
 
 继承自 [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md)。
 
+## 语法
+
+```javascript
+expression.GetTextSize();
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[hps](../../Enumeration/hps.md)
+
 ## 示例
 
 获取 PDF 中字段控件的文本大小。

@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md)。
 
+## 语法
+
+```javascript
+expression.Copy();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
 ## 示例
 
 复制绘图对象并将副本放在演示文稿的另一张幻灯片上。

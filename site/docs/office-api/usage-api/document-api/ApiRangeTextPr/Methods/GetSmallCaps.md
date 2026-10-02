@@ -4,6 +4,22 @@ Returns whether the text with the current text properties are displayed capitali
 
 Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md).
 
+## Syntax
+
+```javascript
+expression.GetSmallCaps();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Determine whether a run of text is formatted with small capitals in a document.

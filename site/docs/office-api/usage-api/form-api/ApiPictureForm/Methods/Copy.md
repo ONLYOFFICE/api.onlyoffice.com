@@ -4,20 +4,37 @@ Copies the current form (copies with the shape if it exists).
 
 Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiForm](../../Enumeration/ApiForm.md)
+
 ## Example
 
-Duplicate a form field in a document.
+Duplicate a picture form field and place the copy in a document.
 
 ```javascript editor-forms
-// How do I copy a form field in a document?
+// How do I make an exact copy of a picture form field in a document?
 
-// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
+// Reuse an existing picture form by cloning it and inserting the duplicate into a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let copyTextForm = textForm.Copy();
+paragraph.AddElement(pictureForm);
+let copyPictureForm = pictureForm.Copy();
 paragraph.AddLineBreak();
-paragraph.AddElement(copyTextForm);
+paragraph.AddElement(copyPictureForm);
 ```

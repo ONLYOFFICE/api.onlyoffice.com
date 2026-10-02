@@ -4,6 +4,24 @@ Sets the vertical flip of the current drawing.
 
 Inherited from [ApiDrawing.SetFlipV](../../ApiDrawing/Methods/SetFlipV.md).
 
+## Syntax
+
+```javascript
+expression.SetFlipV(bFlip);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | Required | boolean |  | Specifies if the figure will be flipped vertically or not. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mirror an object top-to-bottom on a slide in a presentation.

@@ -8,23 +8,41 @@ Tables are created with the [ApiTable#SetWidth](../../ApiTable/Methods/SetWidth.
 
 Inherited from [ApiTablePr.SetWidth](../../ApiTablePr/Methods/SetWidth.md).
 
+## Syntax
+
+```javascript
+expression.SetWidth(sType, nValue);
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | [TableWidth](../../Enumeration/TableWidth.md) |  | Type of the width value from one of the available width values types. |
+| nValue | Optional | number |  | The table width value measured in positive integers. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Define how wide a table should be relative to the page in a document.
+Stretch a table to fill the full width of the page in a document.
 
 ```javascript editor-docx
-// How do I make a table span a specific percentage of the available page width in a document?
+// How do I make a table span the entire width of the page in a document?
 
-// Control the overall horizontal size of a table by specifying its width in a document.
+// Expand a table so it takes up all available horizontal space in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("We set the table cells to preserve their size:");
+paragraph.AddText("We set the table width to 100 percent:");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let tablePr = tableStyle.GetTablePr();
 let table = Api.CreateTable(3, 3);
-tablePr.SetWidth("percent", 100);
+table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

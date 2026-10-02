@@ -4,6 +4,24 @@ Wraps the graphic object with a rich text content control.
 
 Inherited from [ApiDrawing.InsertInContentControl](../../ApiDrawing/Methods/InsertInContentControl.md).
 
+## Syntax
+
+```javascript
+expression.InsertInContentControl(nType);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nType | Required | number |  | Defines if this method returns the ApiBlockLvlSdt (nType === 1) or ApiDrawing (any value except 1) object. |
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| [ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md)
+
 ## Example
 
 Wrap a drawing inside a rich text content control in a document.

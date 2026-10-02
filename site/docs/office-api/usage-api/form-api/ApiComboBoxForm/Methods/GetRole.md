@@ -4,37 +4,36 @@ Returns the role of the current form.
 
 Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
+## Syntax
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the role assigned to a form field in a document.
+Read the role assigned to a combo box form in a document.
 
 ```javascript editor-forms
-// How do I get the role of a form field in a document?
+// How do I check the role of a combo box form in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Determine the purpose of a combo box within a form by inspecting its assigned role.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(comboBoxForm);
+let role = comboBoxForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

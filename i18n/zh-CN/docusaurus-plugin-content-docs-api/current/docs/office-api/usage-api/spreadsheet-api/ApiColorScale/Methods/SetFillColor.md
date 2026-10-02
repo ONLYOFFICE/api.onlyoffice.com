@@ -6,6 +6,24 @@
 
 继承自 [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md)。
 
+## 语法
+
+```javascript
+expression.SetFillColor(oColor);
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定格式条件背景颜色的颜色对象。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 为满足电子表格中条件格式规则的单元格应用背景颜色。

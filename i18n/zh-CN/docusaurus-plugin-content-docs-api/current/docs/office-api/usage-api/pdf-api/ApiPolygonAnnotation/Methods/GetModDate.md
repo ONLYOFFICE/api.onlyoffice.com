@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetModDate](../../ApiBaseAnnotation/Methods/GetModDate.md)。
 
+## 语法
+
+```javascript
+expression.GetModDate();
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 检索 PDF 中注释的最后修改日期。

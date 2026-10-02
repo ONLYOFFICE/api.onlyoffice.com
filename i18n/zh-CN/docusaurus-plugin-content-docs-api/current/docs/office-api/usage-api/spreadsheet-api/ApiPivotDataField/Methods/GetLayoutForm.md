@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutForm();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[PivotLayoutType](../../Enumeration/PivotLayoutType.md)
+
 ## 示例
 
 读取电子表格中应用于透视字段的布局表单样式。

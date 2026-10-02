@@ -4,6 +4,24 @@ Sets the text color to the current text run.
 
 Inherited from [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md).
 
+## Syntax
+
+```javascript
+expression.SetColor(color);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The text color. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Apply a specific color to the default text characters in a document.

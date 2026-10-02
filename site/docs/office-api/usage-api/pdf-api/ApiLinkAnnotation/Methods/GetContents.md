@@ -4,6 +4,22 @@ Gets annotation contents.
 
 Inherited from [ApiBaseAnnotation.GetContents](../../ApiBaseAnnotation/Methods/GetContents.md).
 
+## Syntax
+
+```javascript
+expression.GetContents();
+```
+
+`expression` - A variable that represents an [ApiLinkAnnotation](../ApiLinkAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Retrieve the text or message inside an annotation in a PDF.

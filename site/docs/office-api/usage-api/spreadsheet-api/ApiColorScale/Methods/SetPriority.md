@@ -4,14 +4,32 @@ Sets the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetPriority(Priority);
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Priority | Required | number |  | The priority value (1-based). |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Assign a specific evaluation rank to a formatting rule in a spreadsheet.
+Assign a specific position in the evaluation order to a color gradient rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
+// How do I place a color scale rule at an exact rank among all formatting rules in a spreadsheet?
 
-// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
+// Reorder a color gradient condition by giving it a precise priority number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,14 +44,14 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale1 = formatConditions.AddColorScale();
+let colorScale2 = formatConditions.AddColorScale();
 
-worksheet.GetRange("C1").SetValue("Original priority:");
-worksheet.GetRange("C2").SetValue(condition1.GetPriority());
+worksheet.GetRange("C1").SetValue("Priority before:");
+worksheet.GetRange("C2").SetValue(colorScale1.GetPriority());
 
-condition1.SetPriority(5);
+colorScale1.SetPriority(3);
 
-worksheet.GetRange("C4").SetValue("New priority:");
-worksheet.GetRange("C5").SetValue(condition1.GetPriority());
+worksheet.GetRange("D1").SetValue("Priority after:");
+worksheet.GetRange("D2").SetValue(colorScale1.GetPriority());
 ```

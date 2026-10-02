@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetOutLine](../../ApiDrawing/Methods/SetOutLine.md)。
 
+## 语法
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建图形对象轮廓的笔触。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在电子表格中为绘图添加可见边框以定义其边缘。

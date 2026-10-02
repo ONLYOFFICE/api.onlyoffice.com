@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从演示文稿中删除图表或形状。

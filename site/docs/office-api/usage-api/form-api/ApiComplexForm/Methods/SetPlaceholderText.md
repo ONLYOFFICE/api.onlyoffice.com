@@ -8,18 +8,36 @@ The placeholder text can't be set for checkbox or radio button forms.
 
 Inherited from [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md).
 
+## Syntax
+
+```javascript
+expression.SetPlaceholderText(sText);
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | Required | string |  | The text that will be set to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Set placeholder text on a form field to guide user input in a document.
+Set placeholder text on a complex form in a document.
 
 ```javascript editor-forms
-// How do I add hint text inside an empty form field in a document?
+// How do I add instructional placeholder text to a form in a document?
 
-// Display a prompt inside a field before the user fills it in.
+// Guide users by displaying a hint inside an empty form before they begin filling it in.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm();
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetPlaceholderText("First name");
+paragraph.AddElement(complexForm);
+complexForm.SetPlaceholderText("Start adding forms and text");
 ```

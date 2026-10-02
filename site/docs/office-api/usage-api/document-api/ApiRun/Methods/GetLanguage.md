@@ -4,6 +4,22 @@ Gets the language from the current text properties.
 
 Inherited from [ApiTextPr.GetLanguage](../../ApiTextPr/Methods/GetLanguage.md).
 
+## Syntax
+
+```javascript
+expression.GetLanguage();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the language assigned to a run of text in a document.

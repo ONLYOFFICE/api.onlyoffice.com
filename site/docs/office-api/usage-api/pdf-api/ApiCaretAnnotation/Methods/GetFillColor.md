@@ -4,6 +4,22 @@ Gets annotation fill color.
 
 Inherited from [ApiBaseAnnotation.GetFillColor](../../ApiBaseAnnotation/Methods/GetFillColor.md).
 
+## Syntax
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - A variable that represents an [ApiCaretAnnotation](../ApiCaretAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Retrieve the fill color of an annotation in a PDF.

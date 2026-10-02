@@ -6,6 +6,22 @@
 
 继承自 [ApiDocumentContent.SelectNoteReference](../../ApiDocumentContent/Methods/SelectNoteReference.md)。
 
+## 语法
+
+```javascript
+expression.SelectNoteReference();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中选择脚注引用标记。

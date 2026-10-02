@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetBorderWidth](../../ApiBaseAnnotation/Methods/SetBorderWidth.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderWidth(width);
+```
+
+`expression` - 表示 [ApiLinkAnnotation](../ApiLinkAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的边框宽度。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 更改 PDF 中注释边框的粗细。

@@ -6,6 +6,22 @@ The method automatically calculates the font from the theme if the font was set 
 
 Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md).
 
+## Syntax
+
+```javascript
+expression.GetFontFamily();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the typeface name used for a run of text in a document.

@@ -17,6 +17,24 @@ If one of the following styles is selected, the object can be moved independentl
 
 Inherited from [ApiDrawing.SetWrappingStyle](../../ApiDrawing/Methods/SetWrappingStyle.md).
 
+## Syntax
+
+```javascript
+expression.SetWrappingStyle(sType);
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | "inline" \| "square" \| "tight" \| "through" \| "topAndBottom" \| "behind" \| "inFront" |  | The wrapping style type available for the object. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Make text wrap around a shape using the square wrapping style in a document.

@@ -4,21 +4,37 @@
 
 继承自 [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md)。
 
+## 语法
+
+```javascript
+expression.IsFixed();
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-确定文档中的表单字段是否具有固定大小。
+验证文档中的组合框表单是否具有固定的大小和位置。
 
 ```javascript editor-forms
-// How do I find out if a form field is locked to a specific size in a document?
+// How do I check if a combo box form is locked to a fixed frame in a document?
 
-// Confirm the fixed-size status of a form field before deciding whether layout adjustments are needed in a document.
+// Confirm that converting a combo box to fixed mode is reflected when reading its state in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let fixed = textForm.IsFixed();
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.ToFixed(7 * 240, 2 * 240);
+let fixed = comboBoxForm.IsFixed();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);

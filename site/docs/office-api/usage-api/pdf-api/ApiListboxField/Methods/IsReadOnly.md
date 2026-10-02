@@ -4,6 +4,22 @@ Checks if field is read only
 
 Inherited from [ApiBaseField.IsReadOnly](../../ApiBaseField/Methods/IsReadOnly.md).
 
+## Syntax
+
+```javascript
+expression.IsReadOnly();
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a form field is locked from editing in a PDF.

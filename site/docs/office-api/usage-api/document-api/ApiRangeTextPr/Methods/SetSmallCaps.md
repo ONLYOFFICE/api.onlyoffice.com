@@ -4,6 +4,24 @@ Specifies that all the small letter characters in the text run are formatted for
 
 Inherited from [ApiTextPr.SetSmallCaps](../../ApiTextPr/Methods/SetSmallCaps.md).
 
+## Syntax
+
+```javascript
+expression.SetSmallCaps(isSmallCaps);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isSmallCaps | Required | boolean |  | Specifies if the contents of the current run are displayed capitalized two points smaller or not. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Display lowercase letters as smaller capital letters in a document.

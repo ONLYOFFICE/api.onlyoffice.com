@@ -4,6 +4,22 @@ Gets annotation border effect style.
 
 Inherited from [ApiBaseAnnotation.GetBorderEffectStyle](../../ApiBaseAnnotation/Methods/GetBorderEffectStyle.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderEffectStyle();
+```
+
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md)
+
 ## Example
 
 Retrieve the style of a border effect applied to an annotation in a PDF.

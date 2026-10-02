@@ -4,14 +4,32 @@ Sets the scope type for the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
 
+## Syntax
+
+```javascript
+expression.SetScopeType(ScopeType);
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ScopeType | Required | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | The scope type: "xlSelectionScope", "xlDataFieldScope", or "xlFieldsScope". |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Define which portion of a table a formatting rule should apply to in a spreadsheet.
+Define which portion of the data a top 10 conditional formatting rule evaluates in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I limit a conditional formatting rule to only certain columns or data fields in a spreadsheet?
+// How do I limit a top 10 rule to the current selection rather than the whole range in a spreadsheet?
 
-// Narrow or expand the reach of a highlight rule across table sections in a spreadsheet.
+// Narrow the comparison area for a highlight rule by changing its scope in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,17 +41,15 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
-worksheet.GetRange("C1").SetValue("Original scope:");
-worksheet.GetRange("C2").SetValue(condition1.GetScopeType());
+let scopeBefore = condition1.GetScopeType();
+condition1.SetScopeType("xlSelectionScope");
+let scopeAfter = condition1.GetScopeType();
 
-condition1.SetScopeType("xlDataFieldScope");
-
-worksheet.GetRange("C4").SetValue("New scope:");
-worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
+worksheet.GetRange("C1").SetValue("Scope before: " + scopeBefore);
+worksheet.GetRange("C2").SetValue("Scope after: " + scopeAfter);
 ```

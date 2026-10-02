@@ -6,6 +6,24 @@
 
 继承自 [ApiDrawing.SetName](../../ApiDrawing/Methods/SetName.md)。
 
+## 语法
+
+```javascript
+expression.SetName(name);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 将设置到当前绘图的名称。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 为文档中的绘图分配自定义名称。

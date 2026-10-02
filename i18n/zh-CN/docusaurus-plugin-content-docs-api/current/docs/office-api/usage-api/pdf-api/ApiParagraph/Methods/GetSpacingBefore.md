@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacingBefore();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
+
 ## 示例
 
-读取 PDF 中段落上方的空间。
+在 PDF 中查找段落上方的间距。
 
 ```javascript editor-pdf
-// How do I check the space above a paragraph in a PDF?
+// How do I check the spacing that appears before a paragraph in a PDF?
 
-// Retrieve the space measurement before a paragraph in a PDF.
+// Retrieve the amount of space positioned above a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -32,12 +48,11 @@ paragraph.AddText("This is due to the fact that the second paragraph has this of
 
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
-const paraPr = paragraph2.GetParaPr();
-paraPr.SetSpacingBefore(1440);
+paragraph2.SetSpacingBefore(1440);
 docContent.Push(paragraph2);
 
-const spacingBefore = paraPr.GetSpacingBefore();
+const spacingBefore = paragraph2.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
-paragraph3.AddText("Spacing before: " + spacingBefore);
+paragraph3.AddText("Spacing before second paragraph: " + spacingBefore);
 docContent.Push(paragraph3);
 ```

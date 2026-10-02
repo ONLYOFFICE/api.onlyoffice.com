@@ -4,41 +4,46 @@
 
 继承自 [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md)。
 
+## 语法
+
+```javascript
+expression.SetFirstPriority();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-将电子表格中的条件格式规则移动到评估顺序的顶部。
+在电子表格中提升高于平均值突出显示规则的优先级，使其优先于所有其他规则。
 
 ```javascript editor-xlsx
-// How do I make a formatting rule take precedence over all other formatting rules in a spreadsheet?
+// How do I make an above-average rule the highest-priority formatting condition in a spreadsheet?
 
-// Promote a formatting rule so it is evaluated before any other rules in a spreadsheet.
+// Ensure a particular highlight rule wins when multiple rules compete for the same cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A1").SetValue("Priority Test");
 worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A3").SetValue(200);
+worksheet.GetRange("A4").SetValue(50);
+worksheet.GetRange("A5").SetValue(150);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A5");
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let cellValueCondition = formatConditions.Add("xlCellValue", "xlGreater", "120");
+let aboveAverageCondition = formatConditions.AddAboveAverage();
 
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
-
-worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
-
-condition2.SetFirstPriority();
-
-worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C1").SetValue("Before priority: " + aboveAverageCondition.GetPriority());
+aboveAverageCondition.SetFirstPriority();
+worksheet.GetRange("C2").SetValue("After priority: " + aboveAverageCondition.GetPriority());
 ```

@@ -4,28 +4,44 @@ Checks if the current form is filled.
 
 Inherited from [ApiFormBase.IsFilled](../../ApiFormBase/Methods/IsFilled.md).
 
+## Syntax
+
+```javascript
+expression.IsFilled();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check whether a form field contains a value entered by the user in a document.
+Determine whether a picture form contains an image in a document.
 
 ```javascript editor-forms
-// How do I tell if a form field has been filled out in a document?
+// How do I check if a picture form has been filled with an image in a document?
 
-// Verify the fill status of multiple form fields to determine which ones still need input in a document.
+// Verify that an image placeholder has received content before submitting a form in a document.
 
 let doc = Api.GetDocument();
-let textForm1 = Api.CreateTextForm({"key": "Name1", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": false, "multiLine": false, "autoFit": false});
+let pictureForm1 = Api.CreatePictureForm({"key": "Photo1", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm1);
-let textForm2 = Api.CreateTextForm({"key": "Name2", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "comb": false, "multiLine": false, "autoFit": false});
-paragraph.AddElement(textForm2);
-textForm2.SetText("Smith");
-let filled1 = textForm1.IsFilled();
-let filled2 = textForm2.IsFilled();
+paragraph.AddElement(pictureForm1);
+let pictureForm2 = Api.CreatePictureForm({"key": "Photo2", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+paragraph.AddElement(pictureForm2);
+pictureForm2.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let filled1 = pictureForm1.IsFilled();
+let filled2 = pictureForm2.IsFilled();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first text form is filled: " + filled1);
+paragraph.AddText("The first picture form is filled: " + filled1);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The second text form is filled: " + filled2);
+paragraph.AddText("The second picture form is filled: " + filled2);
 doc.Push(paragraph);
 ```

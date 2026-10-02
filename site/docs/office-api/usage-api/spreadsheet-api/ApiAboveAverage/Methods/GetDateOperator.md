@@ -4,6 +4,22 @@ Returns the date operator for time period conditions.
 
 Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
+## Syntax
+
+```javascript
+expression.GetDateOperator();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+
 ## Example
 
 Retrieve the time period comparison type used by a date-based formatting rule in a spreadsheet.

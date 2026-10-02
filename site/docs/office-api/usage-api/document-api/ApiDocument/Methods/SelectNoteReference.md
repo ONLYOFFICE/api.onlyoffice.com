@@ -6,6 +6,22 @@ If this document content is not a footnote/endnote, do nothing.
 
 Inherited from [ApiDocumentContent.SelectNoteReference](../../ApiDocumentContent/Methods/SelectNoteReference.md).
 
+## Syntax
+
+```javascript
+expression.SelectNoteReference();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Select a footnote reference marker in a document.

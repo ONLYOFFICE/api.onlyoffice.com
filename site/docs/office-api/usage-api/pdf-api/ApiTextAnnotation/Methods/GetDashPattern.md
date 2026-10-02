@@ -4,6 +4,22 @@ Gets annotation dash pattern.
 
 Inherited from [ApiBaseAnnotation.GetDashPattern](../../ApiBaseAnnotation/Methods/GetDashPattern.md).
 
+## Syntax
+
+```javascript
+expression.GetDashPattern();
+```
+
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number[]
+
 ## Example
 
 Retrieve the dash pattern of a dashed border on an annotation in a PDF.

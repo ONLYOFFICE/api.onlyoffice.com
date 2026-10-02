@@ -6,14 +6,33 @@ If the value of the isAfterAuto parameter is true, then any value of the nAfter 
 
 Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
 
+## Syntax
+
+```javascript
+expression.SetSpacingAfter(nAfter, isAfterAuto);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nAfter | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing after the current paragraph measured in twentieths of a point (1/1440 of an inch). |
+| isAfterAuto | Optional | boolean | false | The true value disables the spacing after the current paragraph. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Add space below a paragraph using the paragraph properties in a PDF.
+Add space below a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I add space after a paragraph in a PDF?
+// How do I create gap after a paragraph in a PDF?
 
-// Set the space below a paragraph in a PDF.
+// Control the margin between a paragraph and the next element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,15 +45,14 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetSpacingAfter(1440);
+let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is an example of setting a space after a paragraph. ");
 paragraph.AddText("The second paragraph will have an offset of one inch from the top. ");
 paragraph.AddText("This is due to the fact that the first paragraph has this offset enabled.");
+paragraph.SetSpacingAfter(1440);
 
-const secondParagraph = Api.CreateParagraph();
-secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
-docContent.Push(secondParagraph);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
+docContent.Push(paragraph);
 page.AddObject(shape);
 ```

@@ -4,22 +4,44 @@ Checks if the current form is fixed size.
 
 Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
+## Syntax
+
+```javascript
+expression.IsFixed();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Determine whether a form field has a fixed size in a document.
+Verify whether a checkbox form has a fixed size in a document.
 
 ```javascript editor-docx
-// How do I find out if a form field is locked to a specific size in a document?
+// How do I check if a checkbox form is fixed-size in a document?
 
-// Confirm the fixed-size status of a form field before deciding whether layout adjustments are needed in a document.
+// Confirm that a form converted to fixed dimensions reports its fixed state correctly in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let fixed = textForm.IsFixed();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+checkBoxForm.ToFixed(2 * 240, 1 * 240);
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+checkBoxForm.ToFixed(2 * 240, 1 * 240);
+let fixed = checkBoxForm.IsFixed();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document is fixed: " + fixed);
+paragraph.AddText("The second form from this document has a fixed size: " + fixed);
 doc.Push(paragraph);
 ```

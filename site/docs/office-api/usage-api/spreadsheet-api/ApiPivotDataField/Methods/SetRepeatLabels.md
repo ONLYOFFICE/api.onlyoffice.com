@@ -4,6 +4,24 @@ Sets the setting which specifies whether to repeat items labels at each row.
 
 Inherited from [ApiPivotField.SetRepeatLabels](../../ApiPivotField/Methods/SetRepeatLabels.md).
 
+## Syntax
+
+```javascript
+expression.SetRepeatLabels(repeat);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| repeat | Required | boolean |  | Specifies whether to repeat items labels at each row. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Repeat a pivot field's labels on every row instead of showing them only once in a spreadsheet.

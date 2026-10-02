@@ -8,21 +8,49 @@ Used if possible for this type of form.
 
 Inherited from [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md).
 
+## Syntax
+
+```javascript
+expression.SetTextPr(textPr);
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| textPr | Required | [ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md) |  | The text properties that will be set to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply custom text formatting to a form field in a document.
+Apply bold and font-size formatting to a checkbox form in a document.
 
 ```javascript editor-forms
-// How do I change the font size and style of text inside a form field in a document?
+// How do I change the text appearance of a form field in a document?
 
-// Make form field text bold and larger to improve readability.
+// Style a checkbox form with custom font properties so it stands out visually in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(checkBoxForm);
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
+checkBoxForm.SetTextPr(textPr);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+checkBoxForm.SetTipText("Specify your marital status");
+let tipText = checkBoxForm.GetTipText();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Tip text: " + tipText);
+doc.Push(paragraph);
 ```

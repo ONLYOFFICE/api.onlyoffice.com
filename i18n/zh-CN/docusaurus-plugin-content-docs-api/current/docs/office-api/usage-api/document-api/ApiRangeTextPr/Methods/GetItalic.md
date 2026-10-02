@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md)。
 
+## 语法
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 确定文档中的文本运行是否格式化为斜体。

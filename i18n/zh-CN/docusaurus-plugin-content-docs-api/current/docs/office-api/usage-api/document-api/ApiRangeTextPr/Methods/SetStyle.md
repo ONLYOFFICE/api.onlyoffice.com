@@ -8,6 +8,24 @@
 
 继承自 [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md)。
 
+## 语法
+
+```javascript
+expression.SetStyle(oStyle);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 必须应用于文本字符的样式。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中通过文本运行的文本属性为其应用命名字符样式。

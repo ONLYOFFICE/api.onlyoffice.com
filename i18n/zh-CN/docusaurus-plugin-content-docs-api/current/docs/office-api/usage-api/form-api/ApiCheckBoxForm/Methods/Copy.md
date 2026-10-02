@@ -4,20 +4,38 @@
 
 继承自 [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md)。
 
+## 语法
+
+```javascript
+expression.Copy();
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiForm](../../Enumeration/ApiForm.md)
+
 ## 示例
 
-在文档中复制表单字段。
+复制现有的复选框表单字段并将副本插入到文档中。
 
 ```javascript editor-forms
-// How do I copy a form field in a document?
+// How do I reuse a checkbox form by making an identical copy of it in a document?
 
-// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
+// Add a second radio button with the same settings as the first without recreating it from scratch in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let copyTextForm = textForm.Copy();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+let copyCheckBoxForm = checkBoxForm.Copy();
 paragraph.AddLineBreak();
-paragraph.AddElement(copyTextForm);
+paragraph.AddElement(copyCheckBoxForm);
+paragraph.AddText(" Single");
 ```

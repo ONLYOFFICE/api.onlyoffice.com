@@ -4,6 +4,22 @@ Gets field partial name.
 
 Inherited from [ApiBaseField.GetPartialName](../../ApiBaseField/Methods/GetPartialName.md).
 
+## Syntax
+
+```javascript
+expression.GetPartialName();
+```
+
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the local name of a form field in a PDF.

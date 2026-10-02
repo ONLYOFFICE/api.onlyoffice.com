@@ -4,6 +4,22 @@ Returns a source name for the pivot table field.
 
 Inherited from [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md).
 
+## Syntax
+
+```javascript
+expression.GetSourceName();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the original data source name of a pivot field in a spreadsheet.

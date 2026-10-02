@@ -4,6 +4,24 @@ Sets whether the field commits changes immediately after selection changes.
 
 Inherited from [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md).
 
+## Syntax
+
+```javascript
+expression.SetCommitOnSelChange(commitOnSelectionChange);
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| commitOnSelectionChange | Required | boolean |  | Specifies whether selection changes are committed immediately. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Enable auto-submission when a dropdown selection changes in a PDF.

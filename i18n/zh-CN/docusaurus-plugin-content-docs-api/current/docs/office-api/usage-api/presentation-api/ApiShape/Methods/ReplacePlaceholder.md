@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md)。
 
+## 语法
+
+```javascript
+expression.ReplacePlaceholder(drawing);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| drawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 将替换占位符的绘图对象。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中用图像替换占位符。

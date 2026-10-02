@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetFlipV](../../ApiDrawing/Methods/GetFlipV.md)。
 
+## 语法
+
+```javascript
+expression.GetFlipV();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| null
+
 ## 示例
 
 确定演示文稿中的形状是否上下翻转。

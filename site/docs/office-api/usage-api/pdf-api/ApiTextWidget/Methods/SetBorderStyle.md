@@ -4,6 +4,24 @@ Sets widget border style.
 
 Inherited from [ApiBaseWidget.SetBorderStyle](../../ApiBaseWidget/Methods/SetBorderStyle.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderStyle(borderStyle);
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| borderStyle | Required | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | The border style. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a border style to field widgets in a PDF.

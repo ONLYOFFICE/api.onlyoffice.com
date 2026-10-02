@@ -4,6 +4,27 @@ Specifies the minimum distance which will be maintained between the edges of the
 
 Inherited from [ApiDrawing.SetDistances](../../ApiDrawing/Methods/SetDistances.md).
 
+## Syntax
+
+```javascript
+expression.SetDistances(nLeft, nTop, nRight, nBottom);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nLeft | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the current object and the subsequent text run measured in English measure units. |
+| nTop | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the top side of the current object and the preceding text run measured in English measure units. |
+| nRight | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the right side of the current object and the subsequent text run measured in English measure units. |
+| nBottom | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the bottom side of the current object and the subsequent text run measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Set the spacing between a drawing and the surrounding text in a document.

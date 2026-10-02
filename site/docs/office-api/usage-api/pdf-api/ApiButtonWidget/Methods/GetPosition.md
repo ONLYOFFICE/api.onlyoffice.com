@@ -4,6 +4,22 @@ Gets widget position.
 
 Inherited from [ApiBaseWidget.GetPosition](../../ApiBaseWidget/Methods/GetPosition.md).
 
+## Syntax
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Point](../../Enumeration/Point.md)
+
 ## Example
 
 Get the coordinates of a form field widget in a PDF.

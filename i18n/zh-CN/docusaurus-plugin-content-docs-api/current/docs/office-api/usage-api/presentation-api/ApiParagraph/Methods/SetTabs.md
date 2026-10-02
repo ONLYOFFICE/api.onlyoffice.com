@@ -8,14 +8,33 @@ aPos 和 aVal 数组的长度必须相等。
 
 继承自 [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md)。
 
+## 语法
+
+```javascript
+expression.SetTabs(aPos, aVal);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| aPos | 必需 | [twips](../../Enumeration/twips.md)[] |  | 相对于当前页面边距的自定义制表位位置数组，以二十分之一磅（1/1440 英寸）为单位。 |
+| aVal | 必需 | [TabJc](../../Enumeration/TabJc.md)[] |  | 自定义制表位样式数组，用于确定制表位的行为以及在当前自定义制表位处输入的文本所应用的对齐方式。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在演示文稿中定义段落内的自定义制表位位置。
+在演示文稿中设置自定义制表位以控制文本对齐。
 
 ```javascript editor-pptx
-// How do I add tabs to control text spacing in a presentation?
+// How do I position text at specific tab locations in a presentation?
 
-// Configure tab stops for text alignment using paragraph settings in a presentation.
+// Configure tab stops at different positions within a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -30,8 +49,7 @@ shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetTabs([1440, 4320, 7200], ["left", "center", "right"]);
+paragraph.SetTabs([1440, 4320, 7200], ["left", "center", "right"]);
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 1 inch left");
 paragraph.AddLineBreak();
@@ -39,6 +57,7 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 3 inches center");
 paragraph.AddLineBreak();
+paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");

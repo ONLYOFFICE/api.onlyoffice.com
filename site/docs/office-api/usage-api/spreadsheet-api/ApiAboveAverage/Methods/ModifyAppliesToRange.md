@@ -4,39 +4,52 @@ Sets the cell range to which the current conditional formatting rule applies.
 
 Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
 
+## Syntax
+
+```javascript
+expression.ModifyAppliesToRange(Range);
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Range | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | The range to which the current conditional formatting rule will be applied. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Change the cells that a conditional formatting rule covers in a spreadsheet.
+Update the cells covered by an existing above-average highlight rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I reassign a formatting rule to a different group of cells in a spreadsheet?
+// How do I expand or change which cells an above-average formatting rule targets in a spreadsheet?
 
-// Expand or narrow the area where an existing formatting rule takes effect in a spreadsheet.
+// Reassign a highlight rule to a different set of cells without recreating it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
-worksheet.GetRange("A7").SetValue(180);
-worksheet.GetRange("A8").SetValue(220);
+worksheet.GetRange("A1").SetValue("Original Data");
+worksheet.GetRange("A2").SetValue(80);
+worksheet.GetRange("A3").SetValue(90);
+worksheet.GetRange("A4").SetValue(70);
 
-let dataRange = worksheet.GetRange("A2:A8");
+worksheet.GetRange("B1").SetValue("Extended Data");
+worksheet.GetRange("B2").SetValue(85);
+worksheet.GetRange("B3").SetValue(95);
+worksheet.GetRange("B4").SetValue(75);
 
-let formatConditions = dataRange.GetFormatConditions();
+let originalRange = worksheet.GetRange("A2:A4");
+let formatConditions = originalRange.GetFormatConditions();
+let aboveAverageCondition = formatConditions.AddAboveAverage();
+aboveAverageCondition.GetFont().SetColor(Api.CreateColorFromRGB(0, 255, 0));
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-worksheet.GetRange("C1").SetValue("Original range:");
-worksheet.GetRange("C2").SetValue(condition1.GetAppliesTo().GetAddress());
-
-let newRange = worksheet.GetRange("A2:A5");
-condition1.ModifyAppliesToRange(newRange);
-
-worksheet.GetRange("D1").SetValue("Modified range:");
-worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
+worksheet.GetRange("D1").SetValue("Before: A2:A4");
+let newRange = worksheet.GetRange("A2:B4");
+aboveAverageCondition.ModifyAppliesToRange(newRange);
+worksheet.GetRange("D2").SetValue("After: A2:B4");
 ```

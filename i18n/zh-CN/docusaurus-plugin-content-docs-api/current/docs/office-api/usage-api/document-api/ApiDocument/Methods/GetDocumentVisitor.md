@@ -8,46 +8,52 @@
 
 继承自 [ApiDocumentContent.GetDocumentVisitor](../../ApiDocumentContent/Methods/GetDocumentVisitor.md)。
 
+## 语法
+
+```javascript
+expression.GetDocumentVisitor();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+ApiDocumentVisitor
+
 ## 示例
 
-使用文档访问者遍历文档中的所有段落和表格。
+在文档中使用访问器收集每个段落的文本并列出结果。
 
 ```javascript editor-docx
-// How do I walk through every element in a document content with a visitor in a document?
+// How do I traverse all paragraphs and gather their text in a document?
 
-// Count paragraphs and tables automatically without iterating element indexes by hand.
+// Aggregate paragraph content into a summary paragraph without iterating elements manually in a document.
 
 const doc = Api.GetDocument();
 
 const p1 = doc.GetElement(0);
-p1.AddText('First paragraph.');
+p1.AddText('Text from the first paragraph.');
 
 const p2 = Api.CreateParagraph();
-p2.AddText('Second paragraph.');
+p2.AddText('Document visitor example.');
 doc.Push(p2);
 
-const table = Api.CreateTable(2, 2);
-table.GetCell(0, 0).GetContent().GetElement(0).AddText('Cell A1');
-table.GetCell(1, 1).GetContent().GetElement(0).AddText('Cell B2');
-doc.Push(table);
-
-let paragraphCount = 0;
-let tableCount = 0;
-
+const texts = [];
 const visitor = doc.GetDocumentVisitor();
-visitor.Paragraph = function () {
-	paragraphCount += 1;
-	return false;
-};
-visitor.Table = function () {
-	tableCount += 1;
+visitor.Text = function (text) {
+	texts.push(text);
 	return false;
 };
 visitor.Traverse(false);
 
 const resultParagraph = Api.CreateParagraph();
-resultParagraph.AddText('Paragraphs found: ' + paragraphCount + ' (including paragraphs inside tables)');
-resultParagraph.AddLineBreak();
-resultParagraph.AddText('Tables found: ' + tableCount);
+resultParagraph.AddText('Collected text:\n');
+texts.forEach(function (text) {
+	resultParagraph.AddText(' - ' + text + '\n');
+});
 doc.Push(resultParagraph);
 ```

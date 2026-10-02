@@ -4,6 +4,24 @@ Replaces the placeholder by a drawing on the slide.
 
 Inherited from [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md).
 
+## Syntax
+
+```javascript
+expression.ReplacePlaceholder(drawing);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| drawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | The drawing object that will replace the placeholder. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Replace a placeholder with an image in a presentation.

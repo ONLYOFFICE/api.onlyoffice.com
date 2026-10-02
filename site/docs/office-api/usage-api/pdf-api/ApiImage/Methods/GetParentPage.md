@@ -4,29 +4,51 @@ Returns the type of the ApiDrawing class.
 
 Inherited from [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md).
 
+## Syntax
+
+```javascript
+expression.GetParentPage();
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiPage](../../ApiPage/ApiPage.md)
+
 ## Example
 
-Check what type of shape an object is in a PDF.
+Identify what type of object an image is in a PDF.
 
 ```javascript editor-pdf
-// How do I identify the category of a drawing object in a PDF?
+// How do I find out what kind of image object I'm working with in a PDF?
 
-// Determine the kind of object you're working with in a PDF.
+// Retrieve the classification of an image element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-drawing.SetPosition(608400, 1267200);
-drawing.SetSize(150 * 36000, 65 * 36000);
-page.AddObject(drawing);
+const image = Api.CreateImage(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	60 * 36000, 60 * 36000
+);
+page.AddObject(image);
 
-const aDrawings = page.GetAllDrawings();
-const sType = aDrawings[0].GetClassType();
-const docContent = drawing.GetContent();
+const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('flowChartMagneticTape', 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const classType = image.GetClassType();
 const paragraph = docContent.GetElement(0);
-paragraph.SetJc("left");
-paragraph.AddText("Class Type = " + sType);
+paragraph.SetJc('left');
+paragraph.AddText('Class Type = ' + classType);
+page.AddObject(shape);
 ```

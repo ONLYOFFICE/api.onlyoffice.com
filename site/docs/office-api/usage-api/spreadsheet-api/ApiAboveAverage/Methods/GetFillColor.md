@@ -6,14 +6,30 @@ Returns 'No Fill' when the background color of the format condition is null.
 
 Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
 
+## Syntax
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+
 ## Example
 
-Read the background color set by a conditional formatting rule in a spreadsheet.
+Read the background color used to highlight above-average cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what background color a conditional formatting rule applies to matching cells in a spreadsheet?
+// How do I find out what fill color an above-average conditional formatting rule uses in a spreadsheet?
 
-// Confirm the highlight color of an existing rule before updating it in a spreadsheet.
+// Inspect the highlight shade assigned to cells that exceed the average value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -25,15 +41,13 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
-condition1.SetFillColor(fillColor);
+let aboveAvgCondition = formatConditions.AddAboveAverage();
+aboveAvgCondition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
-let currentColor = condition1.GetFillColor();
+let fillColor = aboveAvgCondition.GetFillColor();
 
-worksheet.GetRange("C1").SetValue("Background color:");
-worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
+worksheet.GetRange("B1").SetValue("Fill Color Retrieved");
+worksheet.GetRange("B2").SetValue(fillColor !== "No Fill" ? "Yellow color applied" : "No color");
 ```

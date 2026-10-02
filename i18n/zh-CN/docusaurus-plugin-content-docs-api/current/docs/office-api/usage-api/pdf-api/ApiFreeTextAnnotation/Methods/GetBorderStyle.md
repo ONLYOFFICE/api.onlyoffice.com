@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetBorderStyle](../../ApiBaseAnnotation/Methods/GetBorderStyle.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderStyle();
+```
+
+`expression` - 表示 [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md)
+
 ## 示例
 
 检索 PDF 中注释的边框样式。

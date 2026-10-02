@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md)。
 
+## 语法
+
+```javascript
+expression.GetIndFirstLine();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## 示例
 
-从 PDF 中的段落检索首行缩进值。
+在 PDF 中检查段落的首行缩进间距。
 
 ```javascript editor-pdf
-// How do I get the first line indent measurement in a PDF?
+// How do I find the first line indentation of a paragraph in a PDF?
 
-// Obtain the starting line offset amount in a PDF.
+// Retrieve the indent distance for the first line of a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,16 +42,14 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndFirstLine(1440);
-paragraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 1 inch set to the first line. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndFirstLine(1440);
 
-const indFirstLine = paraPr.GetIndFirstLine();
+const firstLineIndentation = paragraph.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("First line indent: " + indFirstLine);
+paragraph.AddText("First line indent: " + firstLineIndentation);
 docContent.Push(paragraph);
 ```

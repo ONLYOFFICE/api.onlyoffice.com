@@ -4,21 +4,39 @@ Sets a key to the current form.
 
 Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | Required | string |  | Form key. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign an identifying key to a form field in a document.
+Assign an identifying key to a date form in a document.
 
 ```javascript editor-docx
-// How do I set the key that identifies a form field in a document?
+// How do I set or update the key of a date form in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Rename a date form's key and confirm the new value is stored correctly in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetFormKey("Personal information");
-let key = textForm.GetFormKey();
+paragraph.AddElement(dateForm);
+dateForm.SetFormKey("Date form key");
+let key = dateForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

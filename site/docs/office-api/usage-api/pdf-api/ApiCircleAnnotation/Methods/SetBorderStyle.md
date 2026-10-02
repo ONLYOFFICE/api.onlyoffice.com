@@ -4,6 +4,24 @@ Sets annotation border style.
 
 Inherited from [ApiBaseAnnotation.SetBorderStyle](../../ApiBaseAnnotation/Methods/SetBorderStyle.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderStyle(borderStyle);
+```
+
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| borderStyle | Required | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | The border style: `"solid"` or `"dashed"`. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Set the border style of an annotation in a PDF.

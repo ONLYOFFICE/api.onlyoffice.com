@@ -6,14 +6,32 @@
 
 继承自 [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md)。
 
+## 语法
+
+```javascript
+expression.SetFillColor(oColor);
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定格式条件背景颜色的颜色对象。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-为满足电子表格中条件格式规则的单元格应用背景颜色。
+在电子表格中为符合前 10 项条件格式规则的单元格着色。
 
 ```javascript editor-xlsx
-// How do I fill matching cells with a specific color when a formatting condition is met in a spreadsheet?
+// How do I choose a background color for highlighted top values in a spreadsheet?
 
-// Color-code qualifying cells automatically through a conditional formatting rule in a spreadsheet.
+// Make the highest-ranking cells stand out with a custom fill color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -25,17 +43,14 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
+let condition1 = formatConditions.AddTop10();
 
-worksheet.GetRange("C1").SetValue("Original color:");
-worksheet.GetRange("C2").SetValue("No Fill");
+let colorBefore = condition1.GetFillColor();
+condition1.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+let colorAfter = condition1.GetFillColor();
 
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
-condition1.SetFillColor(fillColor);
-
-worksheet.GetRange("C4").SetValue("New color:");
-worksheet.GetRange("C5").SetValue("Yellow background");
+worksheet.GetRange("C1").SetValue("Fill color changed");
+worksheet.GetRange("C2").SetValue("Top 2 values now green");
 ```

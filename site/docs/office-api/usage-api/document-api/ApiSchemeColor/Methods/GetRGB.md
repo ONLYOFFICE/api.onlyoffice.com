@@ -4,6 +4,22 @@ Returns a color value in RGB format.
 
 Inherited from [ApiUniColor.GetRGB](../../ApiUniColor/Methods/GetRGB.md).
 
+## Syntax
+
+```javascript
+expression.GetRGB();
+```
+
+`expression` - A variable that represents an [ApiSchemeColor](../ApiSchemeColor.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Read the red, green, and blue values of a preset color in a document.

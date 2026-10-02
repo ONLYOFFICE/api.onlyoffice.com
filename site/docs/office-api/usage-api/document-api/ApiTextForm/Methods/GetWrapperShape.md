@@ -6,14 +6,30 @@ The null value will be returned for the inline forms.
 
 Inherited from [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md).
 
+## Syntax
+
+```javascript
+expression.GetWrapperShape();
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiShape](../../ApiShape/ApiShape.md)
+
 ## Example
 
-Access the container shape that holds a fixed-size form field to control its frame in a document.
+Access the surrounding shape that holds a fixed-size form field in a document.
 
 ```javascript editor-docx
-// How do I get the surrounding shape of a form field so I can adjust its border or position in a document?
+// How do I get the container shape around a text field to adjust its appearance in a document?
 
-// Apply a custom outline to the wrapper shape of a form field to make it stand out visually in a document.
+// Style the outer frame of a text field by reaching its wrapper shape in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

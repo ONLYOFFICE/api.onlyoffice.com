@@ -4,14 +4,30 @@ Sets the priority value for the current conditional formatting rule to "1" so th
 
 Inherited from [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetFirstPriority();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Move a conditional formatting rule to the top of the evaluation order in a spreadsheet.
+Move a color gradient rule to the top of the evaluation order in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I make a formatting rule take precedence over all other formatting rules in a spreadsheet?
+// How do I make a color scale rule take precedence over all other formatting rules in a spreadsheet?
 
-// Promote a formatting rule so it is evaluated before any other rules in a spreadsheet.
+// Promote a color gradient condition so it is always evaluated before any competing rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,19 +42,14 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+let topRule = formatConditions.Add("xlTop10");
+let colorScale = formatConditions.AddColorScale();
 
 worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C2").SetValue(colorScale.GetPriority());
 
-condition2.SetFirstPriority();
+colorScale.SetFirstPriority();
 
 worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("D2").SetValue(colorScale.GetPriority());
 ```

@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetHighlight](../../ApiTextPr/Methods/SetHighlight.md)。
 
+## 语法
+
+```javascript
+expression.SetHighlight(sColor);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sColor | 必需 | [highlightColor](../../Enumeration/highlightColor.md) |  | 可用的突出显示颜色。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为文本应用背景高亮颜色。

@@ -6,14 +6,32 @@ This setting only affects the behavior of the cell when the [ApiTablePr#SetTable
 
 Inherited from [ApiTableCellPr.SetNoWrap](../../ApiTableCellPr/Methods/SetNoWrap.md).
 
+## Syntax
+
+```javascript
+expression.SetNoWrap(isNoWrap);
+```
+
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isNoWrap | Required | boolean |  | The true value means that the current table cell will not be wrapped in the parent table. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Prevent text from wrapping inside table cells using the table cell properties of a style in a document.
+Prevent text from wrapping inside a table cell in a document.
 
 ```javascript editor-docx
-// How do I stop text from breaking onto multiple lines inside a table cell in a document?
+// How do I stop text from breaking onto a new line inside a table cell in a document?
 
-// Keep table cell content on a single line regardless of column width in a document.
+// Keep all text on a single line within a table cell regardless of column width in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -32,15 +50,13 @@ copyTable1.SetWidth("percent", 10);
 cell = copyTable1.GetRow(0).GetCell(0);
 cell.Clear();
 cell.GetContent().GetElement(0).AddText("This is a table cell where text is wrapped when we try to change table width.");
-let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetNoWrap(false);
+cell.SetNoWrap(false);
 doc.Push(copyTable1);
 let copyTable2 = table.Copy();
 copyTable2.SetWidth("percent", 10);
 cell = copyTable2.GetRow(0).GetCell(0);
 cell.Clear();
 cell.GetContent().GetElement(0).AddText("This is a table cell where text is not wrapped when we try to change table width.");
-tableCellPr.SetNoWrap(true);
-copyTable2.SetStyle(tableStyle);
+cell.SetNoWrap(true);
 doc.Push(copyTable2);
 ```

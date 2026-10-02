@@ -4,6 +4,25 @@ Adds new widget - visual representation for field
 
 Inherited from [ApiBaseField.AddWidget](../../ApiBaseField/Methods/AddWidget.md).
 
+## Syntax
+
+```javascript
+expression.AddWidget(pageIndex, rect);
+```
+
+`expression` - A variable that represents an [ApiButtonField](../ApiButtonField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| pageIndex | Required | number |  | page index to add widget |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
+
+## Returns
+
+[ApiWidget](../../Enumeration/ApiWidget.md)
+
 ## Example
 
 Add a visual representation for a form field in a PDF.

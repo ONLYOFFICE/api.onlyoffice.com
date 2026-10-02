@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.GetPartialName](../../ApiBaseField/Methods/GetPartialName.md)。
 
+## 语法
+
+```javascript
+expression.GetPartialName();
+```
+
+`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取 PDF 中表单字段的本地名称。

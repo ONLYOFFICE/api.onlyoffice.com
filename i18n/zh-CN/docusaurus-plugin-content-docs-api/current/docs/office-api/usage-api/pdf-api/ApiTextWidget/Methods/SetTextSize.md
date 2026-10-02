@@ -8,6 +8,24 @@
 
 继承自 [ApiBaseWidget.SetTextSize](../../ApiBaseWidget/Methods/SetTextSize.md)。
 
+## 语法
+
+```javascript
+expression.SetTextSize(size);
+```
+
+`expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| size | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的字体大小。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 设置 PDF 中输入字段控件的文本大小。

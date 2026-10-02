@@ -4,6 +4,24 @@ Specifies that the contents of the run are displayed along with a line appearing
 
 Inherited from [ApiTextPr.SetUnderline](../../ApiTextPr/Methods/SetUnderline.md).
 
+## Syntax
+
+```javascript
+expression.SetUnderline(isUnderline);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isUnderline | Required | boolean |  | Specifies that the contents of the current run are displayed underlined. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Underline all default text with a single line in a document.

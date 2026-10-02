@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.GetFullName](../../ApiBaseField/Methods/GetFullName.md)。
 
+## 语法
+
+```javascript
+expression.GetFullName();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取 PDF 中表单字段的完整名称标识符。

@@ -4,6 +4,24 @@ Replaces all content of the current document content object with the specified t
 
 Inherited from [ApiDocumentContent.SetText](../../ApiDocumentContent/Methods/SetText.md).
 
+## Syntax
+
+```javascript
+expression.SetText(text);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | Required | string |  | The text to set. |
+
+## Returns
+
+[ApiRun](../../ApiRun/ApiRun.md)
+
 ## Example
 
 Replace all content in a document content object with plain text in a document.

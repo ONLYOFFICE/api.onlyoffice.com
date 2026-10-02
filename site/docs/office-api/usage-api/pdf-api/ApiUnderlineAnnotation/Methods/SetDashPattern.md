@@ -8,6 +8,24 @@ The border style must be set to `"dashed"` using the [ApiBaseAnnotation#SetBorde
 
 Inherited from [ApiBaseAnnotation.SetDashPattern](../../ApiBaseAnnotation/Methods/SetDashPattern.md).
 
+## Syntax
+
+```javascript
+expression.SetDashPattern(pattern);
+```
+
+`expression` - A variable that represents an [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| pattern | Required | number[] |  | A dash array defining a pattern of dashes and gaps to be used in drawing a dashed border. For example, a value of [3, 2] specifies a border drawn with 3-point dashes alternating with 2-point gaps. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a dashed border style to an annotation in a PDF.

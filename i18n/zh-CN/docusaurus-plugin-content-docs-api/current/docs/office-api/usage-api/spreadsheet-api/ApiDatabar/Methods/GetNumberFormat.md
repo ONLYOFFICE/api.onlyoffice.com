@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
 
+## 语法
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中条件格式规则应用于匹配单元格的数字显示模式。

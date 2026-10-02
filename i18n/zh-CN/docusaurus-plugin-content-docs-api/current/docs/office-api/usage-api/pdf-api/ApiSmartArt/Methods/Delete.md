@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从 PDF 的页面移除绘图。

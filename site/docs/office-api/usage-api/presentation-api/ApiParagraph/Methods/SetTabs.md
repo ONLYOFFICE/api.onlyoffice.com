@@ -8,14 +8,33 @@ The lengths of the aPos and aVal arrays must be equal to each other.
 
 Inherited from [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md).
 
+## Syntax
+
+```javascript
+expression.SetTabs(aPos, aVal);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins measured in twentieths of a point (1/1440 of an inch). |
+| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab stop and the alignment which will be applied to text entered at the current custom tab stop. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Define custom tab stop positions in a paragraph in a presentation.
+Set custom tab stops to control text alignment in a presentation.
 
 ```javascript editor-pptx
-// How do I add tabs to control text spacing in a presentation?
+// How do I position text at specific tab locations in a presentation?
 
-// Configure tab stops for text alignment using paragraph settings in a presentation.
+// Configure tab stops at different positions within a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -30,8 +49,7 @@ shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetTabs([1440, 4320, 7200], ["left", "center", "right"]);
+paragraph.SetTabs([1440, 4320, 7200], ["left", "center", "right"]);
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 1 inch left");
 paragraph.AddLineBreak();
@@ -39,6 +57,7 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 3 inches center");
 paragraph.AddLineBreak();
+paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");

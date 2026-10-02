@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md)。
 
+## 语法
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 取消选择绘图同时在电子表格中保持其他形状的选中状态。

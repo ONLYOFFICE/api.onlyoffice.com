@@ -8,20 +8,36 @@
 
 继承自 [ApiParaPr.SetStyle](../../ApiParaPr/Methods/SetStyle.md)。
 
+## 语法
+
+```javascript
+expression.SetStyle(oStyle);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 要设置的段落样式。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-为段落应用命名样式以控制其在文档中的外观。
+在文档中为段落应用命名样式。
 
 ```javascript editor-docx
-// How do I assign a built-in style such as a heading to a paragraph in a document?
+// How do I format a paragraph using one of the built-in styles in a document?
 
-// Reuse a predefined heading style on a paragraph instead of applying formatting manually.
+// Give a paragraph a consistent appearance by assigning it a predefined style in a document.
 
 let doc = Api.GetDocument();
-let heading6Style = doc.GetStyle("Heading 6");
-let paraPr = heading6Style.GetParaPr();
-paraPr.SetJc("center");
+let newDocumentStyle = doc.GetStyle("Heading 6");
 let paragraph = doc.GetElement(0);
-paragraph.SetStyle(heading6Style);
+paragraph.SetStyle(newDocumentStyle);
 paragraph.AddText("This is a text in a paragraph styled with the 'Heading 6' style.");
 ```

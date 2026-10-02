@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md)。
 
+## 语法
+
+```javascript
+expression.ToJSON(bWriteNumberings, bWriteStyles);
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bWriteNumberings | 必需 | boolean |  | 指定使用的编号是否将写入 JSON 对象。 |
+| bWriteStyles | 必需 | boolean |  | 指定使用的样式是否将写入 JSON 对象。 |
+
+## 返回值
+
+JSON
+
 ## 示例
 
 将绘图序列化为 JSON 并在文档中恢复为新形状。

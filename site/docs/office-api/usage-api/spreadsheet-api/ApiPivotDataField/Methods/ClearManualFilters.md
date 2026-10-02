@@ -4,6 +4,22 @@ Deletes all manual filters from the pivot filters collection.
 
 Inherited from [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/ClearManualFilters.md).
 
+## Syntax
+
+```javascript
+expression.ClearManualFilters();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Remove manually selected item filters from a pivot table field in a spreadsheet.

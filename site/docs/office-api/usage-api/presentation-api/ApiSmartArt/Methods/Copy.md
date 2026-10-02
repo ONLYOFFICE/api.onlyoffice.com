@@ -4,6 +4,22 @@ Creates a copy of the specified drawing object.
 
 Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
 ## Example
 
 Duplicate a drawing and place the copy on another slide in a presentation.

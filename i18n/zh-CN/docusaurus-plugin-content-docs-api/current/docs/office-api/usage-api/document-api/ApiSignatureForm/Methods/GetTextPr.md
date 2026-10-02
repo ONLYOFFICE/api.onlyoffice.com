@@ -8,24 +8,40 @@
 
 继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 
+## 语法
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - 表示 [ApiSignatureForm](../ApiSignatureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
-读取文档中应用于表单字段的文本格式属性。
+读取文档中签名表单的文本格式设置。
 
 ```javascript editor-docx
-// How do I access the font and style settings of a form field in a document?
+// How do I retrieve the text styling applied to a signature form in a document?
 
-// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
+// Copy the text appearance from one signature form to reuse it in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(signatureForm);
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
-let formTextPr = textForm.GetTextPr();
+signatureForm.SetTextPr(textPr);
+let formTextPr = signatureForm.GetTextPr();
 formTextPr.SetItalic(true);
-textForm.SetTextPr(formTextPr);
+signatureForm.SetTextPr(formTextPr);
 ```

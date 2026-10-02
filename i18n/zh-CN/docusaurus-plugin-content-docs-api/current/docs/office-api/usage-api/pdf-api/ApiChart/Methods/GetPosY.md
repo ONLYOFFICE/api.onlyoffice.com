@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetPosY](../../ApiDrawing/Methods/GetPosY.md)。
 
+## 语法
+
+```javascript
+expression.GetPosY();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md)
+
 ## 示例
 
 查找 PDF 中形状的上下位置。

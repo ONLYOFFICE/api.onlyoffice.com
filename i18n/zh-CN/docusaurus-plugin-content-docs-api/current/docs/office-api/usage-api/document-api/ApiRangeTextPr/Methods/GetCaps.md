@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
 
+## 语法
+
+```javascript
+expression.GetCaps();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查文档中的文本是否应用了全大写格式。

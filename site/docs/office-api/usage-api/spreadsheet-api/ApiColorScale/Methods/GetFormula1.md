@@ -4,6 +4,22 @@ Returns the first formula used by the current conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md).
 
+## Syntax
+
+```javascript
+expression.GetFormula1();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the primary threshold value of a conditional formatting rule in a spreadsheet.

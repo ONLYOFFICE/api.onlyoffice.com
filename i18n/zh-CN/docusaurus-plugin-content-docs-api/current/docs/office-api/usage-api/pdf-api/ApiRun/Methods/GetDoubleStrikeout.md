@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检查 PDF 中的文本是否有双删除线效果。
+在 PDF 中检查文本是否带有双删除线。
 
 ```javascript editor-pdf
-// How do I see if text is crossed out with two lines in a PDF?
+// How do I determine if text is crossed out with two lines in a PDF?
 
-// Retrieve the double strikethrough property from text formatting in a PDF.
+// Verify the double strikethrough setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetDoubleStrikeout(true);
+run.SetDoubleStrikeout(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const doubleStrikeout = textPr.GetDoubleStrikeout();
+const doubleStrikeout = run.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
 ```

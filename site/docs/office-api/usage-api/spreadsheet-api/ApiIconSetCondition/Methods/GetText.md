@@ -4,6 +4,22 @@ Returns the text value used in text-based conditional formatting rules.
 
 Inherited from [ApiFormatCondition.GetText](../../ApiFormatCondition/Methods/GetText.md).
 
+## Syntax
+
+```javascript
+expression.GetText();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the text string that a conditional formatting rule matches against in a spreadsheet.

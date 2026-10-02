@@ -4,34 +4,48 @@
 
 继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
 
+## 语法
+
+```javascript
+expression.SetTag(tag);
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| tag | 必需 | string |  | 将添加到当前容器的标签。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-用自定义标识符标记文档中的表单字段。
+在文档中为复选框表单附加标识标签。
 
 ```javascript editor-docx
-// How do I attach a label or identifier to a form field in a document?
+// How do I label a form field with a custom tag for later retrieval in a document?
 
-// Organize or reference form fields programmatically using custom tags.
+// Store a searchable identifier on each checkbox so forms can be grouped or found programmatically in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
+checkBoxForm.SetTag("Marital status");
 let paragraph = doc.GetElement(0);
-
-const textForm = Api.CreateTextForm({
-	"key": "Personal information",
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-textForm.SetTag('MY_TAG');
-paragraph.AddElement(textForm);
-
-const formTag = textForm.GetTag();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+checkBoxForm.SetTag("Marital status");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let tag = checkBoxForm.GetTag();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form tag: " + formTag);
+paragraph.AddText("Form tag: " + tag);
 doc.Push(paragraph);
 ```

@@ -8,24 +8,41 @@
 
 继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 
+## 语法
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
-读取文档中应用于表单字段的文本格式属性。
+获取文档中图片表单的文本格式设置。
 
 ```javascript editor-docx
-// How do I access the font and style settings of a form field in a document?
+// How do I access the text style applied to a picture form in a document?
 
-// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
+// Read and then adjust the typography of a picture form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
-let formTextPr = textForm.GetTextPr();
+pictureForm.SetTextPr(textPr);
+let formTextPr = pictureForm.GetTextPr();
 formTextPr.SetItalic(true);
-textForm.SetTextPr(formTextPr);
+pictureForm.SetTextPr(formTextPr);
 ```

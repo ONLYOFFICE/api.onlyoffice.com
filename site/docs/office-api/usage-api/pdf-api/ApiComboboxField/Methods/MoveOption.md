@@ -4,6 +4,25 @@ Moves option to specified position in list options.
 
 Inherited from [ApiBaseListField.MoveOption](../../ApiBaseListField/Methods/MoveOption.md).
 
+## Syntax
+
+```javascript
+expression.MoveOption(currentIndex, newIndex);
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| currentIndex | Required | number |  | The current index of the option to move. |
+| newIndex | Required | number |  | The target index for the option. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Reorder choices in a dropdown field in a PDF.

@@ -17,6 +17,24 @@
 
 继承自 [ApiDrawing.SetWrappingStyle](../../ApiDrawing/Methods/SetWrappingStyle.md)。
 
+## 语法
+
+```javascript
+expression.SetWrappingStyle(sType);
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | 必需 | "inline" \| "square" \| "tight" \| "through" \| "topAndBottom" \| "behind" \| "inFront" |  | 对象可用的环绕样式类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中使用四周环绕样式使文本环绕形状。

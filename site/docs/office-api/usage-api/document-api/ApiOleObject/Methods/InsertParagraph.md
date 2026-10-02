@@ -4,6 +4,26 @@ Inserts a paragraph at the specified position.
 
 Inherited from [ApiDrawing.InsertParagraph](../../ApiDrawing/Methods/InsertParagraph.md).
 
+## Syntax
+
+```javascript
+expression.InsertParagraph(paragraph, sPosition, beRNewPara);
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| paragraph | Required | string \| [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | Text or paragraph. |
+| sPosition | Required | string |  | The position where the text or paragraph will be inserted ("before" or "after" the drawing specified). |
+| beRNewPara | Required | boolean |  | Defines if this method returns a new paragraph (true) or the current ApiDrawing (false). |
+
+## Returns
+
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| [ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
 ## Example
 
 Insert a paragraph into the content area of a drawing in a document.

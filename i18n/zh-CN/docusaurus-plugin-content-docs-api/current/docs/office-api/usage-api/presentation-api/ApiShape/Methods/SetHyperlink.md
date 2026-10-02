@@ -6,6 +6,24 @@
 
 继承自 [ApiDrawing.SetHyperlink](../../ApiDrawing/Methods/SetHyperlink.md)。
 
+## 语法
+
+```javascript
+expression.SetHyperlink(hyperlink);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| hyperlink | 必需 | [ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null |  | 要设置到绘图的超链接对象，或传递 null 以删除超链接。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中为形状和图像添加可点击的链接。

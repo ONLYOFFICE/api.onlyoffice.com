@@ -6,6 +6,24 @@
 
 继承自 [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md)。
 
+## 语法
+
+```javascript
+expression.SetDrawingPrFromDrawing(oAnotherDrawing);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oAnotherDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 其属性将设置到当前绘图的绘图。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中将布局属性从一个绘图复制到另一个绘图。

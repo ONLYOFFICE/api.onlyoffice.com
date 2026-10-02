@@ -4,6 +4,24 @@ Sets widget position.
 
 Inherited from [ApiBaseWidget.SetPosition](../../ApiBaseWidget/Methods/SetPosition.md).
 
+## Syntax
+
+```javascript
+expression.SetPosition(position);
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| position | Required | [Point](../../Enumeration/Point.md) |  | The new position of the widget. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move a widget to a new position in a PDF.

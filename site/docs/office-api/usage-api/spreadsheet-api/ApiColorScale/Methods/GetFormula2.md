@@ -4,6 +4,22 @@ Returns the second formula used by the current conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md).
 
+## Syntax
+
+```javascript
+expression.GetFormula2();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the upper boundary value of a range-based conditional formatting rule in a spreadsheet.

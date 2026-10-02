@@ -4,6 +4,22 @@ Returns the setting which specifies whether the specified field can be dragged t
 
 Inherited from [ApiPivotField.GetDragToPage](../../ApiPivotField/Methods/GetDragToPage.md).
 
+## Syntax
+
+```javascript
+expression.GetDragToPage();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a pivot field can be moved to the page filter area in a spreadsheet.

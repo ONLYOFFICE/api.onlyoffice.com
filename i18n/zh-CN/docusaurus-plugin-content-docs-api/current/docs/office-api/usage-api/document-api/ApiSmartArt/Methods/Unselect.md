@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md)。
 
+## 语法
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从当前选区中移除形状，同时保持文档中其他形状的选定状态。

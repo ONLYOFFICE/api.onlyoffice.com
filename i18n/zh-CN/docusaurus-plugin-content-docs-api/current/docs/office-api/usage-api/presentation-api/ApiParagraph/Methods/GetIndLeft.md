@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md)。
 
+## 语法
+
+```javascript
+expression.GetIndLeft();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## 示例
 
-检查演示文稿中段落的左边距。
+在演示文稿中获取段落的左缩进。
 
 ```javascript editor-pptx
-// How do I read the left indentation value from a paragraph in a presentation?
+// How do I find the left indent value for a paragraph in a presentation?
 
-// Retrieve the distance between the left edge and the paragraph text in a presentation.
+// Read and display the left margin setting of formatted text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,15 +43,13 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndLeft(2880);
-paragraph.AddText("This is the first paragraph with the indent of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndLeft(2880);
 
-const indLeft = paraPr.GetIndLeft();
+const indLeft = paragraph.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);

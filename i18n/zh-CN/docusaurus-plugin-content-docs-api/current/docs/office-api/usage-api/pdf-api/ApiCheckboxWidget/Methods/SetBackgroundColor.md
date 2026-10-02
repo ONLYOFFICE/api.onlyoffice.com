@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetBackgroundColor](../../ApiBaseWidget/Methods/SetBackgroundColor.md)。
 
+## 语法
+
+```javascript
+expression.SetBackgroundColor(color);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 背景颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为所有字段控件应用背景颜色。

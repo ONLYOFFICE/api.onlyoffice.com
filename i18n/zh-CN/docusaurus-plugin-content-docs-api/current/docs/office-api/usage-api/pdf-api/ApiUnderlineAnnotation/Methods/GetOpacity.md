@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetOpacity](../../ApiBaseAnnotation/Methods/GetOpacity.md)。
 
+## 语法
+
+```javascript
+expression.GetOpacity();
+```
+
+`expression` - 表示 [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 检索 PDF 中注释的透明度级别。

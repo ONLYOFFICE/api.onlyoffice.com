@@ -4,6 +4,24 @@ Sets an object that represents all subtotals.
 
 Inherited from [ApiPivotField.SetSubtotals](../../ApiPivotField/Methods/SetSubtotals.md).
 
+## Syntax
+
+```javascript
+expression.SetSubtotals(subtotals);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| subtotals | Required | [PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md) |  | An object that represents all subtotals or some of them. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Choose which summary calculations appear as subtotals for a pivot table field in a spreadsheet.

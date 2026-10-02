@@ -4,29 +4,50 @@
 
 继承自 [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md)。
 
+## 语法
+
+```javascript
+expression.GetParentPage();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiPage](../../ApiPage/ApiPage.md)
+
 ## 示例
 
-检查 PDF 中对象的形状类型。
+识别 PDF 中图表对象的类类型。
 
 ```javascript editor-pdf
-// How do I identify the category of a drawing object in a PDF?
+// How do I determine what kind of object a chart is in a PDF?
 
-// Determine the kind of object you're working with in a PDF.
+// Retrieve and display the class type of a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-drawing.SetPosition(608400, 1267200);
-drawing.SetSize(150 * 36000, 65 * 36000);
-page.AddObject(drawing);
+const chart = Api.CreateChart("bar3D", [
+	[200, 240, 280],
+	[250, 260, 280]
+], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
+const classType = chart.GetClassType();
+chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
+chart.SetHorAxisTitle("Year", 11);
+chart.SetLegendPos("bottom");
+chart.SetShowDataLabels(false, false, true, false);
+chart.SetTitle("Financial Overview: Class Type = " + classType, 20);
+chart.SetSize(150 * 36000, 65 * 36000);
+chart.SetPosition(608400, 1267200);
 
-const aDrawings = page.GetAllDrawings();
-const sType = aDrawings[0].GetClassType();
-const docContent = drawing.GetContent();
-const paragraph = docContent.GetElement(0);
-paragraph.SetJc("left");
-paragraph.AddText("Class Type = " + sType);
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+chart.SetSeriesFill(fill, 0, false);
+fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+chart.SetSeriesFill(fill, 1, false);
+page.AddObject(chart);
 ```

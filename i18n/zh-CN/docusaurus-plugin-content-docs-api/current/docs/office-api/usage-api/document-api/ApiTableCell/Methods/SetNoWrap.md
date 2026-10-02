@@ -6,14 +6,32 @@
 
 继承自 [ApiTableCellPr.SetNoWrap](../../ApiTableCellPr/Methods/SetNoWrap.md)。
 
+## 语法
+
+```javascript
+expression.SetNoWrap(isNoWrap);
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isNoWrap | 必需 | boolean |  | true 值表示当前表格单元格不会在父表格中换行。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中使用样式的表格单元格属性防止文本在表格单元格内换行。
+防止文本在文档中的表格单元格内换行。
 
 ```javascript editor-docx
-// How do I stop text from breaking onto multiple lines inside a table cell in a document?
+// How do I stop text from breaking onto a new line inside a table cell in a document?
 
-// Keep table cell content on a single line regardless of column width in a document.
+// Keep all text on a single line within a table cell regardless of column width in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -32,15 +50,13 @@ copyTable1.SetWidth("percent", 10);
 cell = copyTable1.GetRow(0).GetCell(0);
 cell.Clear();
 cell.GetContent().GetElement(0).AddText("This is a table cell where text is wrapped when we try to change table width.");
-let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetNoWrap(false);
+cell.SetNoWrap(false);
 doc.Push(copyTable1);
 let copyTable2 = table.Copy();
 copyTable2.SetWidth("percent", 10);
 cell = copyTable2.GetRow(0).GetCell(0);
 cell.Clear();
 cell.GetContent().GetElement(0).AddText("This is a table cell where text is not wrapped when we try to change table width.");
-tableCellPr.SetNoWrap(true);
-copyTable2.SetStyle(tableStyle);
+cell.SetNoWrap(true);
 doc.Push(copyTable2);
 ```

@@ -4,6 +4,22 @@ Returns the layout subtotal location.
 
 Inherited from [ApiPivotField.GetLayoutSubtotalLocation](../../ApiPivotField/Methods/GetLayoutSubtotalLocation.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutSubtotalLocation();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md)
+
 ## Example
 
 Read where subtotals appear for a pivot field — at the top or bottom of each group in a spreadsheet.

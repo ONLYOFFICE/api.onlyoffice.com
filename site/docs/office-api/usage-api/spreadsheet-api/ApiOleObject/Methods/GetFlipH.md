@@ -4,6 +4,22 @@ Get horizontal flip of current drawing.
 
 Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
 
+## Syntax
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null
+
 ## Example
 
 Read the horizontal flip state of a drawing in a spreadsheet.

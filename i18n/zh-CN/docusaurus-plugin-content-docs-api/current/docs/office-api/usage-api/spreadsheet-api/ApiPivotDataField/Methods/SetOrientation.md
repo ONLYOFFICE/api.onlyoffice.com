@@ -4,6 +4,24 @@
 
 继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
 
+## 语法
+
+```javascript
+expression.SetOrientation(type);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | 必需 | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 透视字段方向类型。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 将透视字段移动到电子表格中的行、列或值区域。

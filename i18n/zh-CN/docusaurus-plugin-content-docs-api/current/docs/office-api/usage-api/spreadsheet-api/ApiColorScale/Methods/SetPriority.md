@@ -4,14 +4,32 @@
 
 继承自 [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md)。
 
+## 语法
+
+```javascript
+expression.SetPriority(Priority);
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Priority | 必需 | number |  | 优先级值（从 1 开始）。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-为电子表格中的格式规则分配特定的评估排名。
+在电子表格中为颜色渐变规则指定计算顺序中的特定位置。
 
 ```javascript editor-xlsx
-// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
+// How do I place a color scale rule at an exact rank among all formatting rules in a spreadsheet?
 
-// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
+// Reorder a color gradient condition by giving it a precise priority number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,14 +44,14 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale1 = formatConditions.AddColorScale();
+let colorScale2 = formatConditions.AddColorScale();
 
-worksheet.GetRange("C1").SetValue("Original priority:");
-worksheet.GetRange("C2").SetValue(condition1.GetPriority());
+worksheet.GetRange("C1").SetValue("Priority before:");
+worksheet.GetRange("C2").SetValue(colorScale1.GetPriority());
 
-condition1.SetPriority(5);
+colorScale1.SetPriority(3);
 
-worksheet.GetRange("C4").SetValue("New priority:");
-worksheet.GetRange("C5").SetValue(condition1.GetPriority());
+worksheet.GetRange("D1").SetValue("Priority after:");
+worksheet.GetRange("D2").SetValue(colorScale1.GetPriority());
 ```

@@ -4,6 +4,24 @@
 
 继承自 [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md)。
 
+## 语法
+
+```javascript
+expression.GetPivotItems(index);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | 可选 | number |  | 项索引。 |
+
+## 返回值
+
+[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
+
 ## 示例
 
 检索电子表格中属于透视字段的各个项目的列表。

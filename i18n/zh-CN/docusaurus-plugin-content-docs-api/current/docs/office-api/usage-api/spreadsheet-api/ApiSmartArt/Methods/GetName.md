@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetName](../../ApiDrawing/Methods/GetName.md)。
 
+## 语法
+
+```javascript
+expression.GetName();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 检索分配给电子表格中绘图对象的名称。

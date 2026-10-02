@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetLanguage](../../ApiTextPr/Methods/GetLanguage.md)。
 
+## 语法
+
+```javascript
+expression.GetLanguage();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取文档中分配给文本运行的语言。

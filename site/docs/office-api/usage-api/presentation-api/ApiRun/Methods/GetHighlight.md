@@ -4,6 +4,22 @@ Gets the highlight property from the current text properties.
 
 Inherited from [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md).
 
+## Syntax
+
+```javascript
+expression.GetHighlight();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Check if text has a highlight color applied in a presentation.

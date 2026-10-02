@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetLeftBorder](../../ApiParaPr/Methods/GetLeftBorder.md)。
 
+## 语法
+
+```javascript
+expression.GetLeftBorder();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## 示例
 
 检索文档中应用于段落的左边框设置。

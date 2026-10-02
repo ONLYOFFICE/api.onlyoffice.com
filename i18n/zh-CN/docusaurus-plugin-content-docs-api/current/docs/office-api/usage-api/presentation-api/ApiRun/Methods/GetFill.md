@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
 
+## 语法
+
+```javascript
+expression.GetFill();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## 示例
 
 从文本运行属性检索填充属性。

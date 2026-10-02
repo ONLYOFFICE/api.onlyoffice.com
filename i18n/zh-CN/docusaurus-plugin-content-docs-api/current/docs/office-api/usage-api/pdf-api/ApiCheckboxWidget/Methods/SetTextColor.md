@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetTextColor](../../ApiBaseWidget/Methods/SetTextColor.md)。
 
+## 语法
+
+```javascript
+expression.SetTextColor(color);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 文本颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为所有字段控件应用文本颜色。

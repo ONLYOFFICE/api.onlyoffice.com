@@ -4,22 +4,38 @@ Clears the current form.
 
 Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
+## Syntax
+
+```javascript
+expression.Clear();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Erase the entered value from a text form field in a document.
+Remove all content from a signature field in a document.
 
 ```javascript editor-docx
-// How do I clear the content of a form in a document?
+// How do I erase everything entered into a signature field in a document?
 
-// Reset a filled-in form field to blank so it is ready for new input in a document.
+// Reset a signature field to its empty state in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("John Smith");
-textForm.Clear();
+paragraph.AddElement(signatureForm);
+signatureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png");
+signatureForm.Clear();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document was cleared.");
+paragraph.AddText("The signature form has been cleared.");
 doc.Push(paragraph);
 ```

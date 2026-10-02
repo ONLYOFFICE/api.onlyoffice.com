@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentTable](../../ApiDrawing/Methods/GetParentTable.md)。
 
+## 语法
+
+```javascript
+expression.GetParentTable();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTable](../../ApiTable/ApiTable.md) \| null
+
 ## 示例
 
 检索文档中包含绘图对象的父表格。

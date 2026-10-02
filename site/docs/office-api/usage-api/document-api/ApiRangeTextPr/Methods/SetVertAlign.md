@@ -8,6 +8,24 @@ Specifies the alignment which will be applied to the contents of the run in rela
 
 Inherited from [ApiTextPr.SetVertAlign](../../ApiTextPr/Methods/SetVertAlign.md).
 
+## Syntax
+
+```javascript
+expression.SetVertAlign(sType);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Position text as subscript, baseline, or superscript within a paragraph in a document.

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md)。
 
+## 语法
+
+```javascript
+expression.GetPTCondition();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+PTCondition \| null
+
 ## 示例
 
 检查电子表格中的条件格式规则是否链接到数据透视表范围。

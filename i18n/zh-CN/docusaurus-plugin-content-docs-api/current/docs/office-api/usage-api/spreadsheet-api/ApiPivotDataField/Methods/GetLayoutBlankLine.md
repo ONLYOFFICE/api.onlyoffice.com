@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutBlankLine();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中透视字段的每组之后是否插入空行。

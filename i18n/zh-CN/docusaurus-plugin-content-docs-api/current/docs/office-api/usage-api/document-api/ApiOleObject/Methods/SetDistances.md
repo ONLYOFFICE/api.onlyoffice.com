@@ -4,6 +4,27 @@
 
 继承自 [ApiDrawing.SetDistances](../../ApiDrawing/Methods/SetDistances.md)。
 
+## 语法
+
+```javascript
+expression.SetDistances(nLeft, nTop, nRight, nBottom);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象左侧与后续文本块之间的距离，以英制单位测量。 |
+| nTop | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象顶侧与前面文本块之间的距离，以英制单位测量。 |
+| nRight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象右侧与后续文本块之间的距离，以英制单位测量。 |
+| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象底侧与后续文本块之间的距离，以英制单位测量。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 设置文档中绘图与周围文本之间的间距。

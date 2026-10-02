@@ -4,6 +4,24 @@ Sets the text label displayed in the subtotal column or row heading in the speci
 
 Inherited from [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md).
 
+## Syntax
+
+```javascript
+expression.SetSubtotalName(caption);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| caption | Required | string |  | The text label displayed in the subtotal column or row heading. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Assign a custom label to the subtotal row of a pivot table field in a spreadsheet.

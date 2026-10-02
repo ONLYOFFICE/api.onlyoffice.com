@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetUniqueName](../../ApiBaseAnnotation/Methods/SetUniqueName.md)。
 
+## 语法
+
+```javascript
+expression.SetUniqueName(name);
+```
+
+`expression` - 表示 [ApiCircleAnnotation](../ApiCircleAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 批注的唯一名称。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 为 PDF 中的注释分配唯一标识符。

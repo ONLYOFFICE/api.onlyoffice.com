@@ -4,37 +4,49 @@
 
 继承自 [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md)。
 
+## 语法
+
+```javascript
+expression.SetRole(role);
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| role | 必需 | string |  | 将附加到当前表单的角色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-为文档中的表单字段分配角色以控制填写者。
+在文档中为复选框表单分配命名角色。
 
 ```javascript editor-forms
-// How do I associate a form field with a specific role in a document?
+// How do I restrict a form field to a specific group of users in a document?
 
-// Restrict which signers or participants are responsible for a given field.
+// Control who is responsible for filling each checkbox by attaching a role to it in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let roles = doc.GetFormRoles();
+roles.Add("Visitor");
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
+checkBoxForm.SetRole("Visitor");
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+checkBoxForm.SetRole("Visitor");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let role = checkBoxForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

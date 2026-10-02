@@ -8,30 +8,39 @@
 
 继承自 [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md)。
 
+## 语法
+
+```javascript
+expression.ToInline();
+```
+
+`expression` - 表示 [ApiSignatureForm](../ApiSignatureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中将固定大小的表单字段转换回内联表单。
+在文档中尝试将签名字段切换为内联布局。
 
 ```javascript editor-forms
-// How do I switch a form field from fixed size to inline positioning in a document?
+// How do I check whether a signature field can be converted to an inline element in a document?
 
-// Allow a form field to flow with surrounding text instead of occupying a fixed block.
+// Confirm that a signature field stays fixed even after trying to make it inline in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let copyForm = textForm.Copy();
-paragraph = Api.CreateParagraph();
-paragraph.AddElement(copyForm);
+paragraph.AddElement(signatureForm);
 doc.Push(paragraph);
-copyForm.ToInline();
-let fixed = textForm.IsFixed();
-let fixedCopy = copyForm.IsFixed();
+signatureForm.ToInline();
+let fixed = signatureForm.IsFixed();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document has a fixed size: " + fixed);
-paragraph.AddLineBreak();
-paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
+paragraph.AddText("The signature form is still fixed after calling ToInline: " + fixed);
 doc.Push(paragraph);
 ```

@@ -6,6 +6,22 @@
 
 继承自 [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md)。
 
+## 语法
+
+```javascript
+expression.GetFontFamily();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 从文本运行属性检索字体系列。

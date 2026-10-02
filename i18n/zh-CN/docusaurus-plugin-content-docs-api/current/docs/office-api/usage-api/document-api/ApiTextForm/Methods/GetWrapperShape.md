@@ -6,14 +6,30 @@
 
 继承自 [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md)。
 
+## 语法
+
+```javascript
+expression.GetWrapperShape();
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiShape](../../ApiShape/ApiShape.md)
+
 ## 示例
 
-访问包含固定大小表单字段的容器形状以控制其在文档中的框架。
+访问文档中容纳固定大小表单字段的外围形状。
 
 ```javascript editor-docx
-// How do I get the surrounding shape of a form field so I can adjust its border or position in a document?
+// How do I get the container shape around a text field to adjust its appearance in a document?
 
-// Apply a custom outline to the wrapper shape of a form field to make it stand out visually in a document.
+// Style the outer frame of a text field by reaching its wrapper shape in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

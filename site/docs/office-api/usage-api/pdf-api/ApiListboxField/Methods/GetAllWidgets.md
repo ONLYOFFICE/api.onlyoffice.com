@@ -4,6 +4,22 @@ Gets array with widgets of the current field.
 
 Inherited from [ApiBaseField.GetAllWidgets](../../ApiBaseField/Methods/GetAllWidgets.md).
 
+## Syntax
+
+```javascript
+expression.GetAllWidgets();
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiWidget](../../Enumeration/ApiWidget.md)[]
+
 ## Example
 
 Access all visual instances of a form field in a PDF.

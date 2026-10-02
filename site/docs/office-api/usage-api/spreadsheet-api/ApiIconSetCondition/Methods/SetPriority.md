@@ -4,36 +4,49 @@ Sets the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetPriority(Priority);
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Priority | Required | number |  | The priority value (1-based). |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Assign a specific evaluation rank to a formatting rule in a spreadsheet.
+Assign a specific priority order to an icon set formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
+// How do I control when an icon set rule is evaluated relative to other rules in a spreadsheet?
 
-// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
+// Reorder formatting rules so the icon set runs at the desired position in the evaluation sequence.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Ratings");
+worksheet.GetRange("A2").SetValue(88);
+worksheet.GetRange("A3").SetValue(68);
+worksheet.GetRange("A4").SetValue(48);
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A4");
+let formatConditions = range.GetFormatConditions();
 
-let formatConditions = dataRange.GetFormatConditions();
+let iconCondition = formatConditions.AddIconSetCondition();
+let dataBarCondition = formatConditions.AddDatabar();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+worksheet.GetRange("B1").SetValue("Priority before: " + iconCondition.GetPriority());
 
-worksheet.GetRange("C1").SetValue("Original priority:");
-worksheet.GetRange("C2").SetValue(condition1.GetPriority());
+iconCondition.SetPriority(3);
 
-condition1.SetPriority(5);
-
-worksheet.GetRange("C4").SetValue("New priority:");
-worksheet.GetRange("C5").SetValue(condition1.GetPriority());
+worksheet.GetRange("B2").SetValue("Priority after: " + iconCondition.GetPriority());
 ```

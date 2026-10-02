@@ -8,21 +8,40 @@
 
 继承自 [ApiParaPr.SetBottomBorder](../../ApiParaPr/Methods/SetBottomBorder.md)。
 
+## 语法
+
+```javascript
+expression.SetBottomBorder(sType, nSize, nSpace, r, g, b);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
+| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前底部边框的宽度，以磅的八分之一为单位。 |
+| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落下方间距偏移量，以磅为单位。 |
+| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
+| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
+| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-通过样式在文档中为段落添加底部边框。
+在文档中的段落下方绘制边框。
 
 ```javascript editor-docx
-// How do I place a line below a paragraph using paragraph border settings in a document?
+// How do I add a bottom border line to a paragraph in a document?
 
-// Visually separate a styled paragraph from content below it by drawing a bottom edge.
+// Visually separate a paragraph from the content beneath it using a styled bottom border in a document.
 
 let doc = Api.GetDocument();
-let myStyle = doc.CreateStyle("My document style");
-let paraPr = myStyle.GetParaPr();
-paraPr.SetBottomBorder("single", 24, 0, 255, 111, 61);
 let paragraph = doc.GetElement(0);
-paragraph.SetStyle(myStyle);
-paragraph.AddText("This is the first paragraph. ");
-paragraph.AddText("The paragraph properties styled above set a border below it.");
+paragraph.AddText("This is the first paragraph. We will add a thin orange border below it.");
+paragraph.SetBottomBorder("single", 8, 0, 255, 111, 61);
 ```

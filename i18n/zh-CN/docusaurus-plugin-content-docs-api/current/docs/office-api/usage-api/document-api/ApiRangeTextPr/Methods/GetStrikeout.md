@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查文档中的文本运行是否应用了单删除线。

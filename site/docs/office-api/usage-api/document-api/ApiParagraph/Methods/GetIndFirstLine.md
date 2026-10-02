@@ -4,25 +4,39 @@ Returns the paragraph first line indentation.
 
 Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md).
 
+## Syntax
+
+```javascript
+expression.GetIndFirstLine();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## Example
 
-Read the first-line indentation value from the paragraph properties in a document.
+Read the first-line indentation value set on a paragraph in a document.
 
 ```javascript editor-docx
 // How do I find out how far the first line of a paragraph is indented in a document?
 
-// Check the exact indent size before adjusting paragraph alignment or reusing the style elsewhere.
+// Verify a programmatically applied first-line indent by reading it back in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let paraPr = paragraph.GetParaPr();
-paraPr.SetIndFirstLine(1440);
-paragraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 1 inch set to the first line. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-let indFirstLine = paraPr.GetIndFirstLine();
+paragraph.SetIndFirstLine(1440);
+let indFirstLine = paragraph.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 doc.Push(paragraph);

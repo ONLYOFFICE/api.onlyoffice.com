@@ -4,53 +4,55 @@ Sets the paragraph contents justification.
 
 Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
+## Syntax
+
+```javascript
+expression.SetJc(sJc);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Control the horizontal alignment of paragraph text in a document.
+Align paragraph text to the left, right, center, or both sides in a document.
 
 ```javascript editor-docx
-// How do I apply left, right, center, or justified alignment to paragraphs in a document?
+// How do I control the horizontal alignment of a paragraph in a document?
 
-// Demonstrate multiple alignment styles side by side to choose the right layout for content.
+// Apply different text alignment options to paragraphs in a document.
 
 let doc = Api.GetDocument();
-let myStyleLeft = doc.CreateStyle("My style with left text alignment");
-let paraPr = myStyleLeft.GetParaPr();
-paraPr.SetJc("left");
-let myStyleRight = doc.CreateStyle("My style with right text alignment");
-paraPr = myStyleRight.GetParaPr();
-paraPr.SetJc("right");
-let myStyleCenter = doc.CreateStyle("My style with center text alignment");
-paraPr = myStyleCenter.GetParaPr();
-paraPr.SetJc("center");
-let myStyleBoth = doc.CreateStyle("My style with justify text alignment");
-paraPr = myStyleBoth.GetParaPr();
-paraPr.SetJc("both");
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the text in it aligned by the left side. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetStyle(myStyleLeft);
+paragraph.SetJc("left");
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This is a paragraph with the text in it aligned by the right side. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetStyle(myStyleRight);
+paragraph.SetJc("right");
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetStyle(myStyleCenter);
+paragraph.SetJc("center");
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This is a paragraph with the text in it aligned by both sides (justified). ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetStyle(myStyleBoth);
+paragraph.SetJc("both");
 doc.Push(paragraph);
 ```

@@ -4,14 +4,32 @@ Sets the border color to the current form.
 
 Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply a border color to a form field to highlight it in a document.
+Apply a border color to a text field in a document.
 
 ```javascript editor-docx
-// How do I change the border color of a form field in a document?
+// How do I change the color of the border around a text field in a document?
 
-// Style the outline of a form field with a specific color to draw attention to it in a document.
+// Highlight a text field's boundary by assigning it a specific border color in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

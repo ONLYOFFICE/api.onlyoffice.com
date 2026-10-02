@@ -4,6 +4,22 @@ Selects the current graphic object.
 
 Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 
+## Syntax
+
+```javascript
+expression.Select();
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Highlight a shape for editing in a PDF.

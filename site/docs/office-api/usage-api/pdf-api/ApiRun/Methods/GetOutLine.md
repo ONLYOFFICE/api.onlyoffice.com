@@ -4,14 +4,30 @@ Gets the text outline from the current text properties.
 
 Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.GetOutLine();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiStroke](../../ApiStroke/ApiStroke.md)
+
 ## Example
 
-Check if text has an outline border effect in a PDF.
+Check if text has an outline border applied in a PDF.
 
 ```javascript editor-pdf
-// How do I determine if text has an outline applied in a PDF?
+// How do I determine if text has an outline effect in a PDF?
 
-// Retrieve the outline properties from text formatting in a PDF.
+// Verify the outline property of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,13 +44,12 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
 stroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
-textPr.SetOutLine(stroke);
+run.SetOutLine(stroke);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-stroke = textPr.GetOutLine();
+stroke = run.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
