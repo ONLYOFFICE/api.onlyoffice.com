@@ -295,6 +295,13 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
+              sidebarId: 'docspaceUiKit',
+              label: 'UI Kit',
+              docsPluginId: 'api',
+              className: 'navbar-icon--ui-kit',
+            },
+            {
+              type: 'docSidebar',
               sidebarId: 'docspaceMCPServer',
               label: 'MCP Server',
               docsPluginId: 'api',

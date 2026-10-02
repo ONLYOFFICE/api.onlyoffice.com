@@ -125,6 +125,14 @@ export const docspaceSections = {
         'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
     },
     {
+      id: 'ui-kit',
+      name: 'UI Kit',
+      link: 'ui-kit',
+      sidebar: 'docspaceUiKit',
+      description:
+        'Build DocSpace plugin screens and Apps interfaces with the React components the portal itself uses: form controls, overlays, selectors, and theming.',
+    },
+    {
       id: 'mcp-server',
       name: 'MCP Server',
       link: 'mcp-server/getting-started',
