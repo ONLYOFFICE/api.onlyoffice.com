@@ -4,6 +4,10 @@
 
 ### New features
 
+#### Docs API
+
+* Added Comparing documents sample
+
 #### Common
 
 * Added llms.txt generation: a root index with an Optional section, one file per section, and separate Office API and plugin API indexes for each editor
@@ -20,6 +24,7 @@
 * Wrapped the Angular method snippets in the `App` class and highlighted commented JSON as `json5`
 * Moved the `otherWindow` definition out of the WOPI `targetOrigin` row and inlined the `CopyPasteRestrictions` values
 * Replaced hard `<br/>` line breaks in the WOPI config table
+* Clarified that `setRequestedDocument` can also be called directly once `onDocumentReady` has fired, not only from the `onRequestSelectDocument` handler
 
 #### Office API
 
