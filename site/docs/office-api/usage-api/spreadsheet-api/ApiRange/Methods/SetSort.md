@@ -8,7 +8,7 @@ Sorts the cells in the given range by the parameters specified in the request.
 expression.SetSort(key1, sSortOrder1, key2, sSortOrder2, key3, sSortOrder3, sHeader, sOrientation);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

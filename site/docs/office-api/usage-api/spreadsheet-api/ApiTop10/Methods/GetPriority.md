@@ -4,14 +4,30 @@ Returns the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
+## Syntax
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
-Read the priority level assigned to a conditional formatting rule in a spreadsheet.
+Read the priority order of a top 10 conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what priority order a formatting rule has in a spreadsheet?
+// How do I find the priority assigned to a top 10 conditional formatting rule in a spreadsheet?
 
-// Check which position a formatting rule holds among all active rules in a spreadsheet.
+// Check which position a top 10 highlight rule occupies in the formatting order in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,11 +39,10 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
 let priority = condition1.GetPriority();
 

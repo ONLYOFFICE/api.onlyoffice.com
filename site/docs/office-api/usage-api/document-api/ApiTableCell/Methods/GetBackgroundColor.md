@@ -8,7 +8,7 @@ Returns the background color of the current table cell.
 expression.GetBackgroundColor();
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

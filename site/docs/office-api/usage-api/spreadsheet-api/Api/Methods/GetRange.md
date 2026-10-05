@@ -8,7 +8,7 @@ Returns the ApiRange object by the range reference.
 expression.GetRange(sRange);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

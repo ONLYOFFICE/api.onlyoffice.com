@@ -8,7 +8,7 @@ Sets a value that represents the data field position within a category.
 expression.SetPosition(position);
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

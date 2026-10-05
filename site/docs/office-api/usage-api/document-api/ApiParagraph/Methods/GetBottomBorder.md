@@ -4,6 +4,22 @@ Returns the bottom border of the current paragraph.
 
 Inherited from [ApiParaPr.GetBottomBorder](../../ApiParaPr/Methods/GetBottomBorder.md).
 
+## Syntax
+
+```javascript
+expression.GetBottomBorder();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## Example
 
 Retrieve the bottom border settings applied to a paragraph in a document.

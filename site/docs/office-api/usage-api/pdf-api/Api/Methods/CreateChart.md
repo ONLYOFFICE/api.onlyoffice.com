@@ -3,7 +3,7 @@
 Creates a chart with the parameters specified.
 
 :::note
-Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+Values of *nStyleIndex* outside **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 ## Syntax
@@ -12,7 +12,7 @@ Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id
 expression.CreateChart(chartType, series, seriesNames, categoryNames, width, height, styleIndex, numFormats);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

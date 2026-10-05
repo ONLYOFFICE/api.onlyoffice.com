@@ -1,5 +1,7 @@
 # ApiPivotDataField
 
+表示数据透视表数据字段的类。
+
 ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子类。
 
 ## 属性
@@ -17,6 +19,8 @@ ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子�
 | Value | string | 返回或设置表示数据透视表报表中指定数据字段名称的值。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -45,7 +49,7 @@ ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子�
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 返回当前字段的父对象。 |
 | [GetPivotField](./Methods/GetPivotField.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | 返回创建数据字段的透视字段。 |
 | [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | 返回应用于指定透视字段的透视筛选器集合。 |
-| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回表示单个数据透视表项目（ApiPivotItem 对象）的对象 |
+| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回一个对象，该对象表示指定字段中的单个数据透视表项（ApiPivotItem 对象）或所有可见和隐藏项的集合（ApiPivotItem 对象数组）。 |
 | [GetPosition](./Methods/GetPosition.md) | number | 返回表示数据字段在类别中位置的值。 |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | 返回指定是否在每行重复项目标签的设置。 |
 | [GetShowAllItems](./Methods/GetShowAllItems.md) | boolean | 返回指定是否显示无数据项的设置。 |
@@ -71,7 +75,7 @@ ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子�
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | 无 | 设置指定是否显示分类汇总的设置。 |
 | [SetName](./Methods/SetName.md) | 无 | 设置表示对象名称的值。 |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | 无 | 设置表示对象格式代码的值。 |
-| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示位置的数据透视字段方向值 |
+| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示字段在指定数据透视表报表中位置的透视字段方向值。 |
 | [SetPosition](./Methods/SetPosition.md) | 无 | 设置表示数据字段在类别中位置的值。 |
 | [SetRepeatLabels](./Methods/SetRepeatLabels.md) | 无 | 设置指定是否在每行重复项目标签的设置。 |
 | [SetShowAllItems](./Methods/SetShowAllItems.md) | 无 | 设置指定是否显示无数据项的设置。 |

@@ -1,14 +1,16 @@
 # ApiFormBase
 
-Represents the ApiFormBase class.
+Class representing a document form base.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
-| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiFormBase class. |

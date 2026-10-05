@@ -1,9 +1,28 @@
 # SetDrawingPrFromDrawing
 
 将另一个绘图的属性设置到当前绘图。
+
 将复制以下属性：水平和垂直对齐方式、当前绘图对象边缘与任何后续文本之间的距离、环绕样式、绘图名称、标题和描述。
 
 继承自 [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md)。
+
+## 语法
+
+```javascript
+expression.SetDrawingPrFromDrawing(oAnotherDrawing);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oAnotherDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 其属性将设置到当前绘图的绘图。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 

@@ -4,41 +4,47 @@
 
 继承自 [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md)。
 
+## 语法
+
+```javascript
+expression.SetFirstPriority();
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-将电子表格中的条件格式规则移动到评估顺序的顶部。
+在电子表格中将图标集格式规则提升至计算顺序的顶部。
 
 ```javascript editor-xlsx
-// How do I make a formatting rule take precedence over all other formatting rules in a spreadsheet?
+// How do I make an icon set rule take precedence over all other formatting rules in a spreadsheet?
 
-// Promote a formatting rule so it is evaluated before any other rules in a spreadsheet.
+// Ensure an icon set rule is processed before any other conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Values");
+worksheet.GetRange("A2").SetValue(85);
+worksheet.GetRange("A3").SetValue(65);
+worksheet.GetRange("A4").SetValue(45);
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A4");
+let formatConditions = range.GetFormatConditions();
 
-let formatConditions = dataRange.GetFormatConditions();
+let iconCondition = formatConditions.AddIconSetCondition();
+let dataBarCondition = formatConditions.AddDatabar();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+worksheet.GetRange("B1").SetValue("Priority before: " + iconCondition.GetPriority());
 
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+iconCondition.SetFirstPriority();
 
-worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
-
-condition2.SetFirstPriority();
-
-worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("B2").SetValue("Priority after: " + iconCondition.GetPriority());
 ```

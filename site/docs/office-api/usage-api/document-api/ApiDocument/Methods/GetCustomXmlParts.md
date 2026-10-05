@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the document.
+
 This manager allows manipulation and access to custom XML parts within the document.
 
 ## Syntax
@@ -9,7 +10,7 @@ This manager allows manipulation and access to custom XML parts within the docum
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

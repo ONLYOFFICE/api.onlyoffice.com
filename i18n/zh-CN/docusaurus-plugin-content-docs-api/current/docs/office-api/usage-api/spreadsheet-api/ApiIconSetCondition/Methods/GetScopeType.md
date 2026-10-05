@@ -4,33 +4,44 @@
 
 继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## 示例
 
-读取控制电子表格中条件格式规则应用位置的范围类型。
+在电子表格中读取控制图标集规则应用方式的范围设置。
 
 ```javascript editor-xlsx
-// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
+// How do I find out the scope type of an icon set formatting rule in a spreadsheet?
 
-// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
+// Determine the range of cells an icon set rule is scoped to cover in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Results");
+worksheet.GetRange("A2").SetValue(87);
+worksheet.GetRange("A3").SetValue(67);
+worksheet.GetRange("A4").SetValue(47);
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A4");
+let formatConditions = range.GetFormatConditions();
 
-let formatConditions = dataRange.GetFormatConditions();
+let iconCondition = formatConditions.AddIconSetCondition();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let scopeType = iconCondition.GetScopeType();
 
-let scopeType = condition1.GetScopeType();
-
-worksheet.GetRange("C1").SetValue("Scope type:");
-worksheet.GetRange("C2").SetValue(scopeType);
+worksheet.GetRange("B1").SetValue("Scope type: " + scopeType);
 ```

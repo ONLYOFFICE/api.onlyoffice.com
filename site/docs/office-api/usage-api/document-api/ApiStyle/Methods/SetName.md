@@ -8,7 +8,7 @@ Sets a name of the current style.
 expression.SetName(sStyleName);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

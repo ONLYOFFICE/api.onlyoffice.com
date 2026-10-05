@@ -2,17 +2,15 @@
 sidebar_position: -1
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # API 与 WOPI
 
 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api)与任何云服务集成。
 
 下表将帮助您找出这些选项之间的区别。
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 |                  | **API**                                                                                     | **WOPI**                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -65,6 +63,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | 打印               | [Yes](../usage-api/config/document/permissions.md#print)                                    | [Yes](./wopi-rest-api/checkfileinfo.md#HidePrintOption)                                              |
 | 重命名              | No                                                                                          | [Yes](./wopi-rest-api/checkfileinfo.md#UserCanRename)                                                |
 
-```mdx-code-block
 </APITable>
-```

@@ -8,7 +8,7 @@ Returns an object that represents the selected range.
 expression.GetSelection();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

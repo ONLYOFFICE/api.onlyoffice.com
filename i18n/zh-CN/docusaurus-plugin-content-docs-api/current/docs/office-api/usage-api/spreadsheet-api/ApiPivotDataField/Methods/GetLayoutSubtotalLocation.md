@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutSubtotalLocation](../../ApiPivotField/Methods/GetLayoutSubtotalLocation.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutSubtotalLocation();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md)
+
 ## 示例
 
 读取透视字段的小计出现位置——在电子表格中每组的顶部还是底部。

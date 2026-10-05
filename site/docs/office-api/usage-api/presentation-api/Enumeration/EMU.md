@@ -11,7 +11,7 @@ number
 Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height.
 
 ```javascript editor-pptx
-// How to set a size of the drawing.
+// How do I set the size of a drawing?
 
 // Set a drawing size.
 

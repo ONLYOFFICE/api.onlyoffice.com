@@ -8,7 +8,7 @@ Returns the text properties of the watermark in the document.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
+`expression` - A variable that represents an [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
 
 ## Parameters
 

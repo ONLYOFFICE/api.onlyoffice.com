@@ -1,31 +1,59 @@
 # Delete
 
-Removes a form and its content. If keepContent is true, the content is not deleted.
+Removes a form and its content.
+
+If keepContent is true, the content is not deleted.
 
 Inherited from [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete(keepContent);
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| keepContent | Required | boolean |  | Specifies if the content will be deleted or not. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Remove a form field from a document.
+Remove a text input field entirely from a document.
 
 ```javascript editor-docx
-// How do I delete a form field in a document?
+// How do I permanently take out a text field while keeping its copy in a document?
 
-// Clean up a document by removing one of several inserted checkbox forms.
+// Erase a specific text entry field without affecting other fields in a document.
 
 const doc = Api.GetDocument();
-const checkBoxForm = Api.CreateCheckBoxForm({
-	'key': 'Marital status',
-	'tip': 'Specify your marital status',
-	'placeholder': 'Marital status',
-	'radio': true
-});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(checkBoxForm);
-paragraph.AddText(' Married');
-let copyCheckBoxForm = checkBoxForm.Copy();
-paragraph.AddLineBreak();
-paragraph.AddElement(copyCheckBoxForm);
-paragraph.AddText(' Single');
-checkBoxForm.Delete();
+paragraph.AddText('Original text form: ');
+
+const textForm = Api.CreateTextForm({
+	'key': 'Personal information',
+	'tip': 'Enter your first name',
+	'placeholder': 'First name',
+});
+paragraph.AddElement(textForm);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('Copy of the form: ');
+doc.Push(paragraph);
+
+const textFormCopy = textForm.Copy();
+paragraph.AddElement(textFormCopy);
+
+textForm.Delete();
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('The original text form has been deleted, but the copy remains.');
+doc.Push(paragraph);
 ```

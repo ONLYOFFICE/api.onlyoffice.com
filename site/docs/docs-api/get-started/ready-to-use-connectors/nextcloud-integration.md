@@ -5,13 +5,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/nextcloud.svg
 ---
 
-# Nextcloud integration
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Nextcloud integration
+
 <YoutubeVideo videoId="vN9v9sJ0HVw"/>
-```
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
 

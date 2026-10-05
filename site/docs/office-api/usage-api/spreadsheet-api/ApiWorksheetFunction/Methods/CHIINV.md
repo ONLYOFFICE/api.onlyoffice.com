@@ -8,7 +8,7 @@ Returns the inverse of the right-tailed probability of the chi-squared distribut
 expression.CHIINV(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -32,6 +32,6 @@ Convert a right-tail probability into the matching chi-squared critical value in
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
-let ans = func.CHIDIST(0.4, 10);
+let ans = func.CHIINV(0.4, 10);
 worksheet.GetRange("B2").SetValue(ans);
 ```

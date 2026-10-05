@@ -17,9 +17,12 @@
 
 ## 示例
 
-此示例展示如何将形状宽度设置为页面宽度的百分比。
+设置绘图相对于页面宽度的宽度。
 
 ```javascript editor-docx
+// How do I make a drawing take up half of the page width?
+
 // Set a drawing relative width to 50% of the page.
+
 drawing.SetRelativeWidth("page", 50);
 ```

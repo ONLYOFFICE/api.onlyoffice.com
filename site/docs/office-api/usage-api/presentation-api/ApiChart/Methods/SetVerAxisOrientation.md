@@ -8,7 +8,7 @@ Specifies the vertical axis orientation.
 expression.SetVerAxisOrientation(bIsMinMax);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -45,7 +45,6 @@ let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
-chart.SetTitleOutLine(stroke);
+chart.SetVerAxisOrientation(false);
 slide.AddObject(chart);
 ```

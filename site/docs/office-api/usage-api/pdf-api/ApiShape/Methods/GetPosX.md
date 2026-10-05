@@ -4,6 +4,22 @@ Gets the x position of the drawing on the page.
 
 Inherited from [ApiDrawing.GetPosX](../../ApiDrawing/Methods/GetPosX.md).
 
+## Syntax
+
+```javascript
+expression.GetPosX();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Find the left-to-right position of a shape in a PDF.

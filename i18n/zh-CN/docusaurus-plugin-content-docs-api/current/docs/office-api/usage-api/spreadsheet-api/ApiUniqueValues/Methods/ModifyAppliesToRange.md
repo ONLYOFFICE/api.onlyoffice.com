@@ -4,39 +4,56 @@
 
 继承自 [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md)。
 
+## 语法
+
+```javascript
+expression.ModifyAppliesToRange(Range);
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Range | 必需 | [ApiRange](../../ApiRange/ApiRange.md) |  | 当前条件格式规则将应用的区域。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-更改电子表格中条件格式规则覆盖的单元格。
+在电子表格中更改唯一值格式规则所覆盖的单元格区域。
 
 ```javascript editor-xlsx
-// How do I reassign a formatting rule to a different group of cells in a spreadsheet?
+// How do I update which cells a unique values formatting rule applies to in a spreadsheet?
 
-// Expand or narrow the area where an existing formatting rule takes effect in a spreadsheet.
+// Expand or narrow the area a unique values rule highlights in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
-worksheet.GetRange("A7").SetValue(180);
-worksheet.GetRange("A8").SetValue(220);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A8");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+let originalRange = uniqueValuesCondition.GetAppliesTo();
+let originalAddress = originalRange.GetAddress();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let newRange = worksheet.GetRange("A2:B5");
+uniqueValuesCondition.ModifyAppliesToRange(newRange);
 
-worksheet.GetRange("C1").SetValue("Original range:");
-worksheet.GetRange("C2").SetValue(condition1.GetAppliesTo().GetAddress());
+let modifiedRange = uniqueValuesCondition.GetAppliesTo();
+let modifiedAddress = modifiedRange.GetAddress();
 
-let newRange = worksheet.GetRange("A2:A5");
-condition1.ModifyAppliesToRange(newRange);
-
-worksheet.GetRange("D1").SetValue("Modified range:");
-worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
+worksheet.GetRange("D1").SetValue("Original range:");
+worksheet.GetRange("D2").SetValue(originalAddress);
+worksheet.GetRange("D3").SetValue("Modified range:");
+worksheet.GetRange("D4").SetValue(modifiedAddress);
 ```

@@ -1,6 +1,8 @@
-# ITextArea
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ITextArea.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ITextArea.ts#L99)
+# ITextArea
 
 Custom textarea.
 

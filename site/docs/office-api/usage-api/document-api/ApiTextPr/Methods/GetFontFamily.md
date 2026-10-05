@@ -1,6 +1,7 @@
 # GetFontFamily
 
 Returns the font family from the current text properties.
+
 The method automatically calculates the font from the theme if the font was set via the theme.
 
 ## Syntax
@@ -9,7 +10,7 @@ The method automatically calculates the font from the theme if the font was set 
 expression.GetFontFamily();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

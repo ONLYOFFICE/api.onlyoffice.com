@@ -4,6 +4,24 @@ Sets the y position of the drawing on the slide.
 
 Inherited from [ApiDrawing.SetPosY](../../ApiDrawing/Methods/SetPosY.md).
 
+## Syntax
+
+```javascript
+expression.SetPosY(posY);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posY | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the top side of the slide to the upper side of the drawing measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move a shape vertically on a slide in a presentation.

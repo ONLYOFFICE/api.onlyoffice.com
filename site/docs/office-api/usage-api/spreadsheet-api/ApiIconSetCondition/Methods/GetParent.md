@@ -4,28 +4,44 @@ Returns the parent range object of the current format condition.
 
 Inherited from [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md).
 
+## Syntax
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiRange](../../ApiRange/ApiRange.md)
+
 ## Example
 
-Retrieve the collection that owns a conditional formatting rule in a spreadsheet.
+Retrieve the formatting collection that owns an icon set rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
+// How do I access the parent collection that contains an icon set formatting rule in a spreadsheet?
 
-// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
+// Trace an icon set rule back to the formatting collection it belongs to in a spreadsheet.
 
-const worksheet = Api.GetActiveSheet();
+let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange('A1').SetValue('Sales Data');
-worksheet.GetRange('A2').SetValue(100);
-worksheet.GetRange('A3').SetValue(250);
-worksheet.GetRange('A4').SetValue(150);
+worksheet.GetRange("A1").SetValue("Values");
+worksheet.GetRange("A2").SetValue(75);
+worksheet.GetRange("A3").SetValue(55);
+worksheet.GetRange("A4").SetValue(35);
 
-const dataRange = worksheet.GetRange('A2:A4');
-const formatConditions = dataRange.GetFormatConditions();
-const condition = formatConditions.Add('xlCellValue', 'xlGreater', '200');
-condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
+let range = worksheet.GetRange("A2:A4");
+let formatConditions = range.GetFormatConditions();
 
-const parentRange = condition.GetParent();
-worksheet.GetRange('C1').SetValue('Parent range:');
-worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
+let iconCondition = formatConditions.AddIconSetCondition();
+
+let parent = iconCondition.GetParent();
+
+worksheet.GetRange("B1").SetValue("Parent range: " + parent.GetAddress());
 ```

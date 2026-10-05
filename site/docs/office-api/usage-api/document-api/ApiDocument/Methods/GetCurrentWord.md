@@ -8,7 +8,7 @@ Returns the current word or part of the current word.
 expression.GetCurrentWord(sWordPart);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

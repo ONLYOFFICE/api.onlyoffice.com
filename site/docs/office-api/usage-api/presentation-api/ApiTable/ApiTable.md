@@ -1,8 +1,12 @@
 # ApiTable
 
+Class representing a table.
+
 ApiTable is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -30,7 +34,7 @@ ApiTable is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [GetRotation](./Methods/GetRotation.md) | number | Returns the rotation angle of the current drawing object. |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Returns a row by its index. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the width of the current drawing. |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | Removes a table column with the specified cell. |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | Removes a table row with the specified cell. |
 | [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | Replaces the placeholder by a drawing on the slide. |
@@ -49,6 +53,6 @@ ApiTable is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
 | [SetShd](./Methods/SetShd.md) | None | Specifies the shading which shall be applied to the extents of the current table. |
 | [SetSize](./Methods/SetSize.md) | None | Sets the table size. |
-| [SetTableLook](./Methods/SetTableLook.md) | None | Specifies the components of the conditional formatting of the referenced table style (if one exists) |
+| [SetTableLook](./Methods/SetTableLook.md) | None | Specifies the components of the conditional formatting of the referenced table style (if one exists) which shall be applied to the set of table rows with the current table-level property exceptions. A table style can specify up to six different optional conditional formats [Example: Different formatting for first column], which then can be applied or omitted from individual table rows in the parent table. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiTable object into the JSON object. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current graphic object from the selection. |

@@ -1,6 +1,8 @@
 # SetRestart
 
-Specifies a one-based index which determines when a numbering level should restart to its starting value. A numbering level restarts when an instance of the specified numbering level which is higher (earlier than this level) is used in the given document contents. By default this value is true.
+Specifies a one-based index which determines when a numbering level should restart to its starting value.
+
+A numbering level restarts when an instance of the specified numbering level which is higher (earlier than this level) is used in the given document contents. By default this value is true.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies a one-based index which determines when a numbering level should resta
 expression.SetRestart(isRestart);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

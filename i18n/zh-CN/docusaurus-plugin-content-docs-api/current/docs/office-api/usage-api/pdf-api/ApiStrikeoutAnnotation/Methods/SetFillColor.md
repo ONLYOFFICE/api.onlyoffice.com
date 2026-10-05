@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetFillColor](../../ApiBaseAnnotation/Methods/SetFillColor.md)。
 
+## 语法
+
+```javascript
+expression.SetFillColor(color);
+```
+
+`expression` - 表示 [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 要设置的填充颜色（省略参数以设置无填充） |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 设置 PDF 中注释的背景颜色。

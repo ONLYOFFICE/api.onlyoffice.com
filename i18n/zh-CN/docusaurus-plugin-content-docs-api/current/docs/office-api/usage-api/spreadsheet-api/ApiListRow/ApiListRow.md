@@ -1,6 +1,6 @@
 # ApiListRow
 
-表示 ApiListRow 类。
+表示列表对象（表格）中单个数据行的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -15,6 +15,8 @@
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回跨所有列的整行范围。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

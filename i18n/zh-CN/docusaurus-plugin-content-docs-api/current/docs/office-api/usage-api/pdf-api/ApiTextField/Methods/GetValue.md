@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.GetValue](../../ApiBaseField/Methods/GetValue.md)。
 
+## 语法
+
+```javascript
+expression.GetValue();
+```
+
+`expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 在 PDF 中将文本从一个表单字段复制到另一个。

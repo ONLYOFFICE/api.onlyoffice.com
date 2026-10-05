@@ -1,6 +1,8 @@
 # TIMEVALUE
 
-Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM). Format the number with a time format after entering the formula.
+Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM).
+
+Format the number with a time format after entering the formula.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM
 expression.TIMEVALUE(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

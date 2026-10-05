@@ -8,7 +8,7 @@ Sets the table title (caption).
 expression.SetTableTitle(sTitle);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

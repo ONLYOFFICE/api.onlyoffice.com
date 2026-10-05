@@ -4,14 +4,30 @@ Returns the range of cells to which the current conditional formatting rule appl
 
 Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
 
+## Syntax
+
+```javascript
+expression.GetAppliesTo();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiRange](../../ApiRange/ApiRange.md) \| null
+
 ## Example
 
-Read the cell range that a conditional formatting rule covers in a spreadsheet.
+Identify the cell range covered by a color scale formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
+// How do I find out which cells a color scale rule is applied to in a spreadsheet?
 
-// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
+// Read back the target range of an active color scale rule and display its address in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,11 +42,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let appliedRange = condition1.GetAppliesTo();
+let appliedRange = colorScale.GetAppliesTo();
 
-worksheet.GetRange("C1").SetValue("Rule applies to:");
+worksheet.GetRange("C1").SetValue("Color scale applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
 ```

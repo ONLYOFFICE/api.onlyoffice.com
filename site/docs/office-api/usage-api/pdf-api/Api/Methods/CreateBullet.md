@@ -8,7 +8,7 @@ Creates a bullet for a paragraph with the character or symbol specified with the
 expression.CreateBullet(sSymbol);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-Add a bullet point to a paragraph in a PDF.
+Create a dash bullet and apply it to a paragraph in a PDF.
 
 ```javascript editor-pdf
 // How do I create a bulleted list in a PDF?

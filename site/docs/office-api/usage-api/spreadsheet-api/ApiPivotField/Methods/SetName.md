@@ -8,7 +8,7 @@ Sets a value representing the object name.
 expression.SetName(name);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

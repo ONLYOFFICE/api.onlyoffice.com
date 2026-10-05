@@ -8,7 +8,7 @@ Returns the parent filters collection for this filter column.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiFilter](../ApiFilter.md) class.
+`expression` - A variable that represents an [ApiFilter](../ApiFilter.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Calculates standard deviation based on the entire population given as arguments 
 expression.STDEVP(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ number
 
 ## Example
 
-Calculate the standard deviation of an entire population.
+Calculate the standard deviation of an entire population using the STDEVP compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // The STDEVP function computes population standard deviation while ignoring logical values and text.
@@ -33,13 +33,12 @@ const worksheet = Api.GetActiveSheet();
 
 let valueArr = [1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12];
 
-// Place the numbers in cells
 for (let i = 0; i < valueArr.length; i++) {
   worksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
 }
 
 let func = Api.WorksheetFunction;
-let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12); 
+let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```

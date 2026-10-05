@@ -1,7 +1,6 @@
 # SetPosition
 
-Specifies the amount by which text is raised or lowered for the current Range in relation to the default
-baseline of the surrounding non-positioned text.
+Specifies the amount by which text is raised or lowered for the current Range in relation to the default baseline of the surrounding non-positioned text.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ baseline of the surrounding non-positioned text.
 expression.SetPosition(nPosition);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

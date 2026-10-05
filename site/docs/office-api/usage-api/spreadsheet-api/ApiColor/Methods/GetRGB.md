@@ -8,7 +8,7 @@ Returns a color value in RGB format.
 expression.GetRGB();
 ```
 
-`expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
+`expression` - A variable that represents an [ApiColor](../ApiColor.md) class.
 
 ## Parameters
 

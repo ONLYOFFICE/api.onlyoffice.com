@@ -8,7 +8,7 @@ Returns the collection of conditional formatting rules for the current range.
 expression.GetFormatConditions();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

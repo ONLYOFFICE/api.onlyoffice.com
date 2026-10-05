@@ -4,6 +4,22 @@ Returns a parent content control that contains the graphic object.
 
 Inherited from [ApiDrawing.GetParentContentControl](../../ApiDrawing/Methods/GetParentContentControl.md).
 
+## Syntax
+
+```javascript
+expression.GetParentContentControl();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null
+
 ## Example
 
 Retrieve the parent content control that contains a drawing object in a document.

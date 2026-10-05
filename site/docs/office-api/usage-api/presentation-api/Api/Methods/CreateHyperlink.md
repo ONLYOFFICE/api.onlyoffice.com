@@ -8,7 +8,7 @@ Creates a new hyperlink object to be used for setting hyperlinks on drawing obje
 expression.CreateHyperlink(link, tooltip);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -40,6 +40,6 @@ const image = Api.CreateImage(
 );
 slide.AddObject(image);
 
-const hyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
+const hyperlink = Api.CreateHyperlink('https://www.onlyoffice.com', 'Link to ONLYOFFICE website');
 image.SetHyperlink(hyperlink);
 ```

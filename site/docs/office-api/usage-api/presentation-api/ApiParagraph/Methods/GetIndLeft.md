@@ -4,14 +4,30 @@ Returns the paragraph left side indentation.
 
 Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
+## Syntax
+
+```javascript
+expression.GetIndLeft();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## Example
 
-Check the left margin of a paragraph in a presentation.
+Get the left indentation of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I read the left indentation value from a paragraph in a presentation?
+// How do I find the left indent value for a paragraph in a presentation?
 
-// Retrieve the distance between the left edge and the paragraph text in a presentation.
+// Read and display the left margin setting of formatted text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,15 +43,13 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndLeft(2880);
-paragraph.AddText("This is the first paragraph with the indent of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndLeft(2880);
 
-const indLeft = paraPr.GetIndLeft();
+const indLeft = paragraph.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);

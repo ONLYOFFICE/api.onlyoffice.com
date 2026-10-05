@@ -4,6 +4,22 @@ Returns a parent table cell that contains the graphic object.
 
 Inherited from [ApiDrawing.GetParentTableCell](../../ApiDrawing/Methods/GetParentTableCell.md).
 
+## Syntax
+
+```javascript
+expression.GetParentTableCell();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null
+
 ## Example
 
 Retrieve the table cell that contains a drawing object in a document.

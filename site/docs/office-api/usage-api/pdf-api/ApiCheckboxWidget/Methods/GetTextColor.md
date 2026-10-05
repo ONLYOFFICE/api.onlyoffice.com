@@ -4,6 +4,22 @@ Gets widget text color.
 
 Inherited from [ApiBaseWidget.GetTextColor](../../ApiBaseWidget/Methods/GetTextColor.md).
 
+## Syntax
+
+```javascript
+expression.GetTextColor();
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Read the text color of a form field widget in a PDF.

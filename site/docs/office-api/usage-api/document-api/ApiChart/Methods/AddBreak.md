@@ -4,6 +4,25 @@ Inserts a break at the specified location in the main document.
 
 Inherited from [ApiDrawing.AddBreak](../../ApiDrawing/Methods/AddBreak.md).
 
+## Syntax
+
+```javascript
+expression.AddBreak(breakType, position);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| breakType | Required | number |  | The break type: page break (0) or line break (1). |
+| position | Required | string |  | The position where the page or line break will be inserted ("before" or "after" the current drawing). |
+
+## Returns
+
+boolean
+
 ## Example
 
 Insert a page or line break before a drawing in a document.

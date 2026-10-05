@@ -1,6 +1,6 @@
 # GetName
 
-Returns the name of the table.
+Returns the display name of the table.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetName();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

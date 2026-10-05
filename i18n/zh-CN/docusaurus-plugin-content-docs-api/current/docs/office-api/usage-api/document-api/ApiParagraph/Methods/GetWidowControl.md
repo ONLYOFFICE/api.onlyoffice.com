@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetWidowControl](../../ApiParaPr/Methods/GetWidowControl.md)。
 
+## 语法
+
+```javascript
+expression.GetWidowControl();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| undefined
+
 ## 示例
 
 读取文档中段落的孤行控制设置。

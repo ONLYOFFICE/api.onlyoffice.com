@@ -4,6 +4,22 @@ Gets the y position of the drawing on the slide.
 
 Inherited from [ApiDrawing.GetPosY](../../ApiDrawing/Methods/GetPosY.md).
 
+## Syntax
+
+```javascript
+expression.GetPosY();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Get the vertical position of a shape in a presentation.

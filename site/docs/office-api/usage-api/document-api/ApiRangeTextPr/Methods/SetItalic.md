@@ -4,6 +4,24 @@ Sets the italic property to the text character.
 
 Inherited from [ApiTextPr.SetItalic](../../ApiTextPr/Methods/SetItalic.md).
 
+## Syntax
+
+```javascript
+expression.SetItalic(isItalic);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isItalic | Required | boolean |  | Specifies that the contents of the current run are displayed italicized. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Make text appear in italic style in a document.

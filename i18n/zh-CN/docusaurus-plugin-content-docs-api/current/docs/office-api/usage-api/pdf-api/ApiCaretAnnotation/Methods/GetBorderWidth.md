@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetBorderWidth](../../ApiBaseAnnotation/Methods/GetBorderWidth.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderWidth();
+```
+
+`expression` - 表示 [ApiCaretAnnotation](../ApiCaretAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[pt](../../Enumeration/pt.md)
+
 ## 示例
 
 检索 PDF 中注释的边框宽度测量值。

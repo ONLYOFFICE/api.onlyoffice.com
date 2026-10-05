@@ -1,8 +1,12 @@
 # ApiListboxField
 
+Class representing a listbox field.
+
 ApiListboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

@@ -8,7 +8,7 @@ Sets ink path list.
 expression.SetPathList(inkPaths);
 ```
 
-`expression` - A variable that represents a [ApiInkAnnotation](../ApiInkAnnotation.md) class.
+`expression` - A variable that represents an [ApiInkAnnotation](../ApiInkAnnotation.md) class.
 
 ## Parameters
 

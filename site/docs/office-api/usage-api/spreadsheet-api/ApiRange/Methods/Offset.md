@@ -8,7 +8,7 @@ Returns a Range object offset from the current range.
 expression.Offset(rowOffset, columnOffset);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

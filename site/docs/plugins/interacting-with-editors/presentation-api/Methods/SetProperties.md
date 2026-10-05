@@ -8,7 +8,7 @@ Sets the properties to the document.
 expression.SetProperties(obj);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../presentation-api.md) class.
 
 ## Parameters
 
@@ -17,7 +17,7 @@ expression.SetProperties(obj);
 | obj | Required | object |  | The document properties. |
 | obj.copyoutenabled | Required | boolean |  | Disables copying from the editor if it is set to **false**. |
 | obj.hideContentControlTrack | Required | boolean |  | Disables tracking the content control if it is set to **true**. |
-| obj.watermark_on_draw | Required | string |  | A string value for [watermark](../Enumeration/watermark_on_draw.md) in JSON format. |
+| obj.watermark_on_draw | Required | string |  | A string value for [watermark properties](../Enumeration/watermark_on_draw.md) in JSON format. |
 | obj.disableAutostartMacros | Required | boolean |  | Sets a flag that specifies that macros are started automatically when the editor opens. |
 | obj.fillForms | Required | string |  | Sets rules in JSON format for filling document [forms](../Enumeration/fillForms.md) by tags. |
 
@@ -72,7 +72,7 @@ var initSettings = {
             "111" : {
                 "text" : "Text in form with tag 111",
                 "checkBox" : "true",
-                "picture" : "https://upload.wikimedia.org/wikipedia/commons/9/91/ONLYOFFICE_logo.png",
+                "picture" : "https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png",
                 "comboBox" : "item1"
             },
             "222" : {
@@ -81,7 +81,7 @@ var initSettings = {
                 "comboBox" : "item2"
             },
             "333" : {
-                "text" : "OnlyOffice"
+                "text" : "ONLYOFFICE"
             }
         }
     })

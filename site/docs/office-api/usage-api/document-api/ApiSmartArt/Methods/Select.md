@@ -4,6 +4,24 @@ Selects the current graphic object.
 
 Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 
+## Syntax
+
+```javascript
+expression.Select(isReplace);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | Optional | boolean | true | Specifies whether the selection should replace the current selection (true) or be added to it (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
 Programmatically select one or more drawing objects in a document.

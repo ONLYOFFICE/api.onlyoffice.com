@@ -8,7 +8,7 @@ Returns a type of the ApiPictureForm class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Gets the strikeout property from the current text properties.
 expression.GetStrikeout();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-Check if text has a line drawn through it in a PDF.
+Check if text has a line drawn through it using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I see if strikethrough formatting is applied to text in a PDF?

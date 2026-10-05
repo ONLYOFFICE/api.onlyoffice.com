@@ -1,6 +1,7 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text:
+
 - **"baseline"** - the characters in the current text Range will be aligned by the default text baseline.
 - **"subscript"** - the characters in the current text Range will be aligned below the default text baseline.
 - **"superscript"** - the characters in the current text Range will be aligned above the default text baseline.
@@ -11,7 +12,7 @@ Specifies the alignment which will be applied to the Range contents in relation 
 expression.SetVertAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

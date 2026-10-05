@@ -8,7 +8,7 @@ Sets the repeat count for the animation effect.
 expression.SetRepeatCount(count);
 ```
 
-`expression` - A variable that represents a [ApiAnimationEffect](../ApiAnimationEffect.md) class.
+`expression` - A variable that represents an [ApiAnimationEffect](../ApiAnimationEffect.md) class.
 
 ## Parameters
 

@@ -16,7 +16,7 @@
 指定在区域中搜索完整文本匹配。
 
 ```javascript editor-xlsx
-// How to indicate how the text should be searched.
+// How do I specify how the searched text is matched?
 
 // Search a whole text from a range.
 

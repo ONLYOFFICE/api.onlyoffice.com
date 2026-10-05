@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md)。
 
+## 语法
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建文本轮廓的笔画。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为装饰性文本添加彩色轮廓。

@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetBorderColor](../../ApiBaseWidget/Methods/SetBorderColor.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为所有字段控件应用边框颜色。

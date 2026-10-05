@@ -8,7 +8,7 @@ Returns the outline level of the specified properties.
 expression.GetOutlineLvl();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

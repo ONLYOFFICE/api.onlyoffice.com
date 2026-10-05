@@ -1,7 +1,10 @@
 # SetUnderline
 
 Sets an underline of the type specified in the request to the current font.
-💡 This method will work only with the text format of the cell.
+
+:::note
+This method will work only with the text format of the cell.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets an underline of the type specified in the request to the current font.
 expression.SetUnderline(Underline);
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

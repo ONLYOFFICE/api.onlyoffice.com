@@ -8,7 +8,7 @@ Sets the italic property to the text character.
 expression.SetItalic(isItalic);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

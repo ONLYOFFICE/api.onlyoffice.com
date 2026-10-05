@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a table row object. The search results are a collection of ApiRange objects.
+Searches for a scope of a table row object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Searches for a scope of a table row object. The search results are a collection 
 expression.Search(sText, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 

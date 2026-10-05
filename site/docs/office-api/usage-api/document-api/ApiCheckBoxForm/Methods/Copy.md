@@ -4,20 +4,38 @@ Copies the current form (copies with the shape if it exists).
 
 Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiForm](../../Enumeration/ApiForm.md)
+
 ## Example
 
-Duplicate a form field in a document.
+Duplicate an existing checkbox form field and insert the copy into a document.
 
 ```javascript editor-docx
-// How do I copy a form field in a document?
+// How do I reuse a checkbox form by making an identical copy of it in a document?
 
-// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
+// Add a second radio button with the same settings as the first without recreating it from scratch in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let copyTextForm = textForm.Copy();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+let copyCheckBoxForm = checkBoxForm.Copy();
 paragraph.AddLineBreak();
-paragraph.AddElement(copyTextForm);
+paragraph.AddElement(copyCheckBoxForm);
+paragraph.AddText(" Single");
 ```

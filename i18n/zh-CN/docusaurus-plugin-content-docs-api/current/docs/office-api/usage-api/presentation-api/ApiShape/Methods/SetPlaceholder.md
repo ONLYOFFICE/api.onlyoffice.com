@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetPlaceholder](../../ApiDrawing/Methods/SetPlaceholder.md)。
 
+## 语法
+
+```javascript
+expression.SetPlaceholder(oPlaceholder);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oPlaceholder | 必需 | [ApiPlaceholder](../../ApiPlaceholder/ApiPlaceholder.md) |  | 占位符对象。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中将形状标记为占位符。

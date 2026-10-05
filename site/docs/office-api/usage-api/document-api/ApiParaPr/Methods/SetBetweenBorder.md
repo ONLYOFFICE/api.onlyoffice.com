@@ -8,7 +8,7 @@ Specifies the border which will be displayed between each paragraph in a set of 
 expression.SetBetweenBorder(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

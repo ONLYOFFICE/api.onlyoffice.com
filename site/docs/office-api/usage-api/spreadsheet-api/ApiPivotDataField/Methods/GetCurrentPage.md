@@ -4,6 +4,22 @@ Returns the current page which is displayed for the page field (valid only for p
 
 Inherited from [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md).
 
+## Syntax
+
+```javascript
+expression.GetCurrentPage();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string \| number
+
 ## Example
 
 Read the active page selection for a pivot filter field in a spreadsheet.

@@ -1,6 +1,8 @@
 # GetRows
 
-Returns a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row.
+Returns a Range object that represents the rows in the specified range.
+
+If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns a Range object that represents the rows in the specified range. If the s
 expression.GetRows(nRow);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

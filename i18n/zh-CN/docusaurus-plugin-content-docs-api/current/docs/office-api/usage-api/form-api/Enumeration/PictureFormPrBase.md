@@ -21,7 +21,7 @@ Object
 创建具有特定图片表单属性的图片表单。
 
 ```javascript editor-forms
-// How to create a picture form with its base properties.
+// How do I create a picture form with its base properties?
 
 // Create the base properties and apply them to the ApiPictureForm object.
 

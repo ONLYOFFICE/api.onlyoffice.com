@@ -8,7 +8,7 @@ Deletes the specified object from the parent slide master if it exists.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

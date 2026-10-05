@@ -8,7 +8,7 @@ Converts the ApiMaster object into the JSON object.
 expression.ToJSON(bWriteTableStyles);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

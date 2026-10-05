@@ -8,7 +8,7 @@ Returns a number of custom XML parts in the XML manager.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 

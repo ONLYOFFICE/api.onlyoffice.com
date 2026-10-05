@@ -1,7 +1,8 @@
 # Add
 
-Adds a new filter to the pivot field. This method is VBA-compatible and follows the PivotFilters.Add signature from Excel VBA.
-Supports all major filter types including label filters, value filters, top/bottom filters, and date filters.
+Adds a new filter to the pivot field.
+
+This method is VBA-compatible and follows the PivotFilters.Add signature from Excel VBA. Supports all major filter types including label filters, value filters, top/bottom filters, and date filters.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ Supports all major filter types including label filters, value filters, top/bott
 expression.Add(filterType, dataField, value1, value2, wholeDayFilter);
 ```
 
-`expression` - A variable that represents a [ApiPivotFilters](../ApiPivotFilters.md) class.
+`expression` - A variable that represents an [ApiPivotFilters](../ApiPivotFilters.md) class.
 
 ## Parameters
 

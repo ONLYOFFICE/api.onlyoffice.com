@@ -1,10 +1,11 @@
 ---
 sidebar_position: -1
+description: Build ONLYOFFICE plugins with HTML, CSS, and JavaScript to add panels, toolbar buttons, and third-party integrations to the document, spreadsheet, presentation, and PDF editors.
 ---
 
 # Overview
 
-ONLYOFFICE plugins are interactive tools built with HTML, CSS, and JavaScript that embed native-feeling features directly into the editors. Install them once and make them available to all users.
+ONLYOFFICE plugins are web apps built with HTML, CSS, and JavaScript that run inside the document, spreadsheet, presentation, and PDF editors. A plugin can open a panel or a window, add toolbar buttons and context menu items, or run in the background, and it reads and changes the document through the Plugin API. Plugins work in ONLYOFFICE Docs, ONLYOFFICE DocSpace, and ONLYOFFICE Desktop Editors.
 
 If you prefer to start coding right away, go directly to the [quick start](quick-start.md) or try things out in the [interactive playground](playground.md).
 
@@ -12,17 +13,17 @@ If you prefer to start coding right away, go directly to the [quick start](quick
 
 Build sophisticated integrations that feel native to ONLYOFFICE.
 
-**Perfect for:**
+**Perfect for**:
 
 - Embedding external content ([YouTube](../samples/youtube.md), media galleries)
 - Third-party integrations ([Translator](../samples/translator.md), [Zotero](../samples/zotero.md), CRM systems)
 - Advanced processing ([OCR](../samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
-**Development profile:**
+**Development profile**:
 
-- **Time:** 2-7 days | **Skill:** Intermediate | **Tech:** HTML/CSS/JavaScript
-- **Distribution:** [ONLYOFFICE Plugin Marketplace](https://github.com/ONLYOFFICE/onlyoffice.github.io) or private deployment
+- **Skill**: Intermediate | **Tech**: HTML/CSS/JavaScript
+- **Distribution**: the ONLYOFFICE Plugin Marketplace, built into the editors ([how to submit](../development-workflow/publishing/submit-to-marketplace.md)), or [private deployment](../development-workflow/publishing/private-distribution.md)
 
 ## What plugins cannot do
 
@@ -49,56 +50,32 @@ Not sure which approach fits your use case? See how plugins compare to macros an
 | **External APIs**     | ✅ Yes (REST, GraphQL, etc.)        | ❌ No                         | ✅ Yes (AI services required)     |
 | **Offline use**       | ⚠️ Depends on features             | ✅ Fully offline              | ❌ Requires internet              |
 | **Skill level**       | Intermediate                       | Beginner                     | Advanced                         |
-| **Dev time**          | 2-7 days                           | 30 mins - 2 hours            | 3-10 days                        |
 | **Distribution**      | Marketplace, GitHub, private       | Copy-paste, templates        | Marketplace, private             |
 | **Best for**          | Reusable tools, integrations       | Personal automation          | AI-powered features              |
-| **Framework support** | ✅ React, Vue, Angular              | ❌ Vanilla JS only            | ✅ Any framework                  |
+| **Framework support** | ✅ Any (React, Vue, Angular, or plain HTML) | ❌ Plain JavaScript only      | ✅ Any (same as plugins)          |
 
 Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)
 
 ## Troubleshooting
 
-**Plugin doesn't appear:**
+If a plugin does not appear, shows a blank window, or an API call fails, see [Common errors and solutions](../development-workflow/common-errors-solutions.md) for symptoms and fixes, and [Debugging plugins](../development-workflow/debugging-plugins.md) for inspecting a running plugin in DevTools.
 
-- Check `config.json` has a unique GUID
-- Verify file paths are correct
-- Restart ONLYOFFICE
-
-**JavaScript errors:**
-
-- Open browser DevTools (F12)
-- Check the Console tab for error messages
-- Verify `plugin.js` is loaded
-
-**API methods fail:**
-
-- Ensure your ONLYOFFICE version supports the method
-- Check method syntax in the [API reference](../interacting-with-editors/overview/overview.md)
-- Verify editor type compatibility
-
-**Need more help?**
-
-- [Developer Forum](https://forum.onlyoffice.com/) - Community support
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - Report bugs
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) - Q&A archive
+Still stuck? Ask on the [ONLYOFFICE forum](https://forum.onlyoffice.com/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice), or report a bug in [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).
 
 ## Resources
 
-- **[Interactive playground](playground.md)** - Test code without installation
-- **[UI component library](https://onlyoffice.github.io/storybook/static/)** - Pre-built components
-- **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Starter projects
-- **[Browser DevTools](../development-workflow/debugging/for-web-editors.md)** - Debugging guide
-- **[Plugin examples](/samples/?doctype=docs&text=plugin)** - Working examples
-- **[API reference](../interacting-with-editors/overview/overview.md)** - Complete API documentation
-- **[Plugin structure](../configuration/configuration.md)** - Configuration guide
+- **[API reference](../interacting-with-editors/overview/overview.md)** - Plugin methods, events, and the `window.Asc.plugin` object
+- **[Plugin configuration](../configuration/configuration.md)** - Every `config.json` parameter
+- **[Interactive playground](playground.md)** - Run plugin code without installing anything
+- **[Plugin samples](/samples/?doctype=docs&text=plugin)** - Working plugins to copy from
+- **[UI component library](https://onlyoffice.github.io/storybook/static/)** - Controls styled to match the editors
+- **[Official plugins source code](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Complete plugins maintained by ONLYOFFICE
 - **[FAQ](../more-information/faq.md)** - Frequently asked questions
-- **[Forum](https://forum.onlyoffice.com/)** - Community support
-- **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** - Source code and contributions
-- **[Changelog](../more-information/changelog.md)** - Latest API updates
+- **[Changelog](../more-information/changelog.md)** - Which version added each method and event
 
 ## Next steps
 
 - [Plugin quick start](quick-start.md)
 - [Plugin events](../interacting-with-editors/overview/asc-plugin.md#events)
-- [Developing for web editors](../development-workflow/developing/for-web-editors.md)
+- [Developing plugins](../development-workflow/developing-plugins.md)
 - [Publishing guide](../development-workflow/publishing/submit-to-marketplace.md)

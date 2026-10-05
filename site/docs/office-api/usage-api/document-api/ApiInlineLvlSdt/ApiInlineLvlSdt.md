@@ -1,8 +1,10 @@
 # ApiInlineLvlSdt
 
-Represents the ApiInlineLvlSdt class.
+Class representing a container for the paragraph elements.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -10,8 +12,8 @@ Represents the ApiInlineLvlSdt class.
 | [AddElement](./Methods/AddElement.md) | boolean | Adds an element to the inline text content control. |
 | [AddListItem](./Methods/AddListItem.md) | boolean | Adds an item to a combo box list or drop-down list. |
 | [AddText](./Methods/AddText.md) | boolean | Adds text to the current content control. |
-| [Copy](./Methods/Copy.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a copy of an inline content control. Ignores comments, footnote references, complex fields. |
-| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
+| [Copy](./Methods/Copy.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a copy of an inline content control. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | Returns the visualization type of the content control. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current content control. |
@@ -23,7 +25,7 @@ Represents the ApiInlineLvlSdt class.
 | [GetDate](./Methods/GetDate.md) | undefined \| Date | Retrieves the selected date value from a date picker content control and returns it as a Date object. |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
 | [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns an element of the current inline text content control using the position specified. |
-| [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current inline text content control. The text content  |
+| [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current inline text content control. |
 | [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current content control. |
 | [GetLabel](./Methods/GetLabel.md) | number | Returns the label attribute for the current container. |

@@ -1,8 +1,10 @@
 # ApiCustomProperties
 
-Represents the ApiCustomProperties class.
+Class representing custom properties of the document.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

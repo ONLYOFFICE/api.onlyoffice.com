@@ -1,9 +1,28 @@
 # SetFillColor
 
 Sets the background color to the format condition with the previously created color object.
+
 Sets 'No Fill' when previously created color object is null.
 
 Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md).
+
+## Syntax
+
+```javascript
+expression.SetFillColor(oColor);
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object that specifies the background color for the format condition. |
+
+## Returns
+
+This method doesn't return any data.
 
 ## Example
 

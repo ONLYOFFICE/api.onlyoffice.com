@@ -1,8 +1,12 @@
 # ApiCheckboxWidget
 
+Class representing a checkbox field widget.
+
 ApiCheckboxWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -19,7 +23,7 @@ ApiCheckboxWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidge
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [IsChecked](./Methods/IsChecked.md) | boolean | Checks if checkbox widget is checked. |
 | [IsCheckedByDefault](./Methods/IsCheckedByDefault.md) | boolean | Checks if widget is checked by default. |

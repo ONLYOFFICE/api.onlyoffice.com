@@ -8,7 +8,7 @@ Adds a new top 10 conditional formatting rule to the collection.
 expression.AddTop10();
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 

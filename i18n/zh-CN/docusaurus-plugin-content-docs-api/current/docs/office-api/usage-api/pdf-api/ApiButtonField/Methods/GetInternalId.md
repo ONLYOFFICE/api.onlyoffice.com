@@ -7,3 +7,19 @@
 :::
 
 继承自 [ApiBaseField.GetInternalId](../../ApiBaseField/Methods/GetInternalId.md)。
+
+## 语法
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - 表示 [ApiButtonField](../ApiButtonField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string

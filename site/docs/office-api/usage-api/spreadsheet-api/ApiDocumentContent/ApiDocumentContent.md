@@ -1,8 +1,10 @@
 # ApiDocumentContent
 
-Represents the ApiDocumentContent class.
+Class representing a container for paragraphs and tables.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -19,4 +21,4 @@ Represents the ApiDocumentContent class.
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified. |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph. |

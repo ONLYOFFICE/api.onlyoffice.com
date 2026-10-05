@@ -8,7 +8,7 @@ Sets the text for the specified characters.
 expression.SetText(Text);
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

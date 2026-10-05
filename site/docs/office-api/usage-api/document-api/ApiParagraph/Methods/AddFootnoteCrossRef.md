@@ -1,7 +1,10 @@
 # AddFootnoteCrossRef
 
 Adds a footnote cross-reference to the current paragraph.
-💡 Please note that this paragraph must be in the document.
+
+:::note
+This paragraph must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a footnote cross-reference to the current paragraph.
 expression.AddFootnoteCrossRef(sRefType, oParaTo, bLink, bAboveBelow);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

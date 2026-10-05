@@ -8,7 +8,7 @@ Returns a Range object that represents the end in the specified direction in the
 expression.End(direction);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

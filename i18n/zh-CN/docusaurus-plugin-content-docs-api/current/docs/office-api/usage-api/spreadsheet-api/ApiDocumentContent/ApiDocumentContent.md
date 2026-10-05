@@ -1,8 +1,10 @@
 # ApiDocumentContent
 
-表示 ApiDocumentContent 类。
+表示段落和表格容器的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -19,4 +21,4 @@
 | [Push](./Methods/Push.md) | boolean | 推送段落或表格以将其实际添加到文档中。 |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。 |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前文档内容对象的所有内容， |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换当前文档内容对象的所有内容，保留第一个段落的格式。 |

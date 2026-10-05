@@ -1,7 +1,11 @@
-# Variable: cspErrorText
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts
+---
 
-> `const` **cspErrorText**: `"The current domain is not set in the Content Security Policy (CSP) settings."`
-
-Defined in: [constants/index.ts:173](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts#L173)
+# cspErrorText
 
 The error message displayed when the current domain is not included in the CSP settings.
+
+```ts
+const cspErrorText: "The current domain is not set in the Content Security Policy (CSP) settings.";
+```

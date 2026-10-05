@@ -4,6 +4,24 @@ Sets annotation fill color.
 
 Inherited from [ApiBaseAnnotation.SetFillColor](../../ApiBaseAnnotation/Methods/SetFillColor.md).
 
+## Syntax
+
+```javascript
+expression.SetFillColor(color);
+```
+
+`expression` - A variable that represents an [ApiRedactAnnotation](../ApiRedactAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | color to set fill (omit the argument to set no fill) |
+
+## Returns
+
+boolean
+
 ## Example
 
 Set the background color of an annotation in a PDF.

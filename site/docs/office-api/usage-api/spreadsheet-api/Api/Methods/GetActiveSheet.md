@@ -8,7 +8,7 @@ Returns an object that represents the active sheet.
 expression.GetActiveSheet();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

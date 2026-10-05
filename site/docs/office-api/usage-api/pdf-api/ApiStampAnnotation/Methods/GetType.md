@@ -8,7 +8,7 @@ Gets stamp type.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiStampAnnotation](../ApiStampAnnotation.md) class.
+`expression` - A variable that represents an [ApiStampAnnotation](../ApiStampAnnotation.md) class.
 
 ## Parameters
 
@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the category of a stamp annotation in a PDF
+Find out the category of a stamp annotation in a PDF.
 
 ```javascript editor-pdf
 // What kind of stamp annotation is being used in a PDF?
 
-// Look up and print the identifier type assigned to a stamp annotation in a PDF
+// Look up and print the identifier type assigned to a stamp annotation in a PDF.
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

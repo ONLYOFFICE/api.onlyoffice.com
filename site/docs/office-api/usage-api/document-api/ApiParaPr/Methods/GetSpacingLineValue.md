@@ -8,7 +8,7 @@ Returns the paragraph line spacing value.
 expression.GetSpacingLineValue();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

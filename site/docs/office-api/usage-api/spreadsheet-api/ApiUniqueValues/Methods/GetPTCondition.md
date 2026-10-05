@@ -4,33 +4,45 @@ Returns the pivot table condition object.
 
 Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md).
 
+## Syntax
+
+```javascript
+expression.GetPTCondition();
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+PTCondition \| null
+
 ## Example
 
-Check whether a conditional formatting rule is linked to a pivot table scope in a spreadsheet.
+Check whether a unique-values conditional formatting rule has a pivot table scope condition in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out if a conditional formatting rule applies within a pivot table context in a spreadsheet?
+// How do I find out if a unique-values rule is linked to a pivot table scope in a spreadsheet?
 
-// Determine the pivot table association of a formatting condition to understand its scope in a spreadsheet.
+// Detect the pivot table association of a unique-values formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
-
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let ptCondition = condition1.GetPTCondition();
+let ptCondition = uniqueValuesCondition.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
-worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
+worksheet.GetRange("C2").SetValue(ptCondition ? "Available" : "Not available");
 ```

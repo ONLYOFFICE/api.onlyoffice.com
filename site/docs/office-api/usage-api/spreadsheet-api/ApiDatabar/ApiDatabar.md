@@ -1,5 +1,7 @@
 # ApiDatabar
 
+Class representing a data bar conditional formatting rule.
+
 ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -21,6 +23,8 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | None | Deletes the current format condition. |
@@ -32,7 +36,7 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | [GetBarFillType](./Methods/GetBarFillType.md) | [XlDataBarFillType](../Enumeration/XlDataBarFillType.md) | Returns the bar fill type of the data bar. |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | Returns the date operator for time period conditions. |
 | [GetDirection](./Methods/GetDirection.md) | [XlReadingOrder](../Enumeration/XlReadingOrder.md) | Returns the direction of the data bar. |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null. |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the format condition. |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | Returns the font applied by the current format condition. |
 | [GetFormula](./Methods/GetFormula.md) | string | Returns the formula of the data bar. |
 | [GetFormula1](./Methods/GetFormula1.md) | string | Returns the first formula used by the current conditional formatting rule. |

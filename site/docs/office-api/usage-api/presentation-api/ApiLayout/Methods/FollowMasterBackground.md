@@ -8,7 +8,7 @@ Sets the master background as the background of the layout.
 expression.FollowMasterBackground();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

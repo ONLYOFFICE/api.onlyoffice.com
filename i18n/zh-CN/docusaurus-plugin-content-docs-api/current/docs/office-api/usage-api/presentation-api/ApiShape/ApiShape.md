@@ -1,8 +1,12 @@
 # ApiShape
 
+表示形状的类。
+
 ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -11,7 +15,7 @@ ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | 返回 ApiShape 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回可以插入段落或文本块的形状内部内容。 |
-| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 在 6.2 中已弃用。 |
+| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 在 6.2 中已弃用。返回可以插入段落或文本块的形状内部内容。 |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 从当前形状获取填充属性。 |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | 获取当前绘图的水平翻转状态。 |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | 获取当前绘图的垂直翻转状态。 |

@@ -1,7 +1,11 @@
-# Type Alias: TFilterSortBy
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TFilterSortBy** = `` `${FilterSortBy}` ``
-
-Defined in: [types/index.ts:69](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L69)
+# TFilterSortBy
 
 The template literal type representing the filter sort options.
+
+```ts
+type TFilterSortBy = `${FilterSortBy}`;
+```

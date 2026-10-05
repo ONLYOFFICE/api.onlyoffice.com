@@ -8,7 +8,7 @@ Removes the layouts from the current slide master.
 expression.RemoveLayout(nPos, nCount);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

@@ -19,7 +19,7 @@ Object
 创建具有特定组合框表单属性的组合框表单。
 
 ```javascript editor-forms
-// How to create a combo box form with its base properties.
+// How do I create a combo box form with its base properties?
 
 // Create the base properties and apply them to the ApiComboBoxForm object.
 

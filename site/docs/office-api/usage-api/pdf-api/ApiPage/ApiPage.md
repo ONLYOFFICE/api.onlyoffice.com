@@ -1,8 +1,10 @@
 # ApiPage
 
-Represents the ApiPage class.
+Class representing a document page.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

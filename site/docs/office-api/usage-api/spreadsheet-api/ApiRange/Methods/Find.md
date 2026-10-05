@@ -8,7 +8,7 @@ Finds specific information in the current range.
 expression.Find(oSearchData);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

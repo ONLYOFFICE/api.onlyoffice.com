@@ -1,9 +1,10 @@
 # RemoveElement
 
 使用指定的位置移除元素。
-💡 如果移除的元素是段落的最后一个元素（即所有元素都从段落中移除），
-将自动创建一个新的空 Run。如果要向此 Run 添加
-内容，请使用 [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) 方法。
+
+:::note
+如果移除的元素是段落的最后一个元素（即所有元素都从段落中移除），将自动创建一个新的空 Run。如果要向此 Run 添加内容，请使用 [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) 方法。
+:::
 
 ## 语法
 

@@ -8,7 +8,7 @@ Returns the timestamp of the comment reply creation in the current time zone for
 expression.GetTime();
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 

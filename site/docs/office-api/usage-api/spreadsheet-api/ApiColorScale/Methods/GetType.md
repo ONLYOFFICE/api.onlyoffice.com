@@ -8,7 +8,7 @@ Returns the type of the color scale conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
 
 ## Parameters
 

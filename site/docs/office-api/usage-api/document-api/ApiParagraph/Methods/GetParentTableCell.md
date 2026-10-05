@@ -8,7 +8,7 @@ Returns a table cell that contains the current paragraph.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

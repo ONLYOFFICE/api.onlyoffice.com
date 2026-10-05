@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-在文档中为表格单元格应用背景颜色。
+在文档中使用样式的表格单元格属性为所有表格单元格应用背景底纹。
 
 ```javascript editor-docx
 // How do I fill a table cell with a specific background color in a document?

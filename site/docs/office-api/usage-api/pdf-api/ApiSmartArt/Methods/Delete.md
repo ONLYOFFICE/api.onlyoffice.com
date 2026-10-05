@@ -4,6 +4,22 @@ Deletes the specified drawing object from the parent.
 
 Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove a drawing from a page in a PDF.

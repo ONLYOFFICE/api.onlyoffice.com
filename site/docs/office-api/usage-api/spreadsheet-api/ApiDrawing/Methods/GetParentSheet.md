@@ -8,7 +8,7 @@ Returns the parent sheet of the current drawing.
 expression.GetParentSheet();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

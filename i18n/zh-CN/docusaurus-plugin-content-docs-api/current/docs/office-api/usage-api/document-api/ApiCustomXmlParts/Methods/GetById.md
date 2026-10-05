@@ -22,22 +22,19 @@ expression.GetById(xmlPartId);
 
 ## 示例
 
-查找文档中匹配给定命名空间的自定义 XML 部件。
+通过 ID 查找文档中的自定义 XML 部件。
 
 ```javascript editor-docx
-// How do I look up custom XML parts by their namespace in a document?
+// How do I get a specific custom XML part using its identifier in a document?
 
-// Filter all embedded XML parts to those belonging to a specific schema in a document.
+// Read the XML content of the part returned for a given ID in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = "<content xmlns='http://example.com'><text>Example XML</text></content>";
-let xml = xmlManager.Add(xmlText);
-let namespace = "http://example.com";
-let xmlParts = xmlManager.GetByNamespace(namespace);
+let xmlPart = xmlManager.Add(xmlText);
+let foundPart = xmlManager.GetById(xmlPart.GetId());
 let infoParagraph = Api.CreateParagraph();
-xmlParts.forEach(part => {
-    infoParagraph.AddText("XML part: " + part.GetXml());
-});
+infoParagraph.AddText("XML part: " + foundPart.GetXml());
 doc.Push(infoParagraph);
 ```

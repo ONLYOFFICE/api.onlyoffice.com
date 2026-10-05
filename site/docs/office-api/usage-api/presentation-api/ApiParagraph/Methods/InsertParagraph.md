@@ -8,7 +8,7 @@ Inserts a paragraph at the specified position.
 expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

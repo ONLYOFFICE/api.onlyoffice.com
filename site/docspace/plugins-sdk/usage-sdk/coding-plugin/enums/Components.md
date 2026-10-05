@@ -1,6 +1,8 @@
-# Components
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Components.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Components.ts#L22)
+# Components
 
 Defines the available UI component.
 

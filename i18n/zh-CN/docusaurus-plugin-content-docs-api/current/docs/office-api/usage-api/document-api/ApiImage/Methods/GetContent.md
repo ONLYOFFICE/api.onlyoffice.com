@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetContent](../../ApiDrawing/Methods/GetContent.md)。
 
+## 语法
+
+```javascript
+expression.GetContent();
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+
 ## 示例
 
 获取绘图对象的内部内容以在文档中向其内部添加文本。

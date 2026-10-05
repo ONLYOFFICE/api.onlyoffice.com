@@ -1,6 +1,6 @@
 # ISERROR
 
-Checks whether a value is an error, and returns - **true** or - **false**.
+Checks whether a value is an error, and returns **true** or **false**.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Checks whether a value is an error, and returns - **true** or - **false**.
 expression.ISERROR(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -31,7 +31,7 @@ Check if a value is any type of error in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
-worksheet.GetRange("B3").SetValue("#N/A")
-let result = func.ISERR("B3");
-worksheet.GetRange("C3").SetValue(result)
+worksheet.GetRange("A1").SetValue(func.ISERROR("#N/A"));
+worksheet.GetRange("A2").SetValue(func.ISERROR("#DIV/0!"));
+worksheet.GetRange("A3").SetValue(func.ISERROR(255));
 ```

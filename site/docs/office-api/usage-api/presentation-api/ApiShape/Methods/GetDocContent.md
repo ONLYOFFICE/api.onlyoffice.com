@@ -1,7 +1,6 @@
 # GetDocContent
 
-Deprecated in 6.2.
-Returns the shape inner contents where a paragraph or text runs can be inserted.
+Deprecated in 6.2. Returns the shape inner contents where a paragraph or text runs can be inserted.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ Returns the shape inner contents where a paragraph or text runs can be inserted.
 expression.GetDocContent();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

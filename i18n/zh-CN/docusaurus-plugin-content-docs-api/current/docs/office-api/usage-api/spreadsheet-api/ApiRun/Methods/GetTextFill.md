@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md)。
 
+## 语法
+
+```javascript
+expression.GetTextFill();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## 示例
 
 读取应用于文本运行的填充以检查电子表格中的颜色类型。

@@ -8,7 +8,7 @@ Returns a collection of content control objects in the paragraph.
 expression.GetAllContentControls();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

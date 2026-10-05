@@ -1,28 +1,48 @@
 # GetTextPr
 
 Returns the text properties from the current form.
-*Used if possible for this type of form*
+
+:::note
+Used if possible for this type of form.
+:::
 
 Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
+## Syntax
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
+
 ## Example
 
-Read the text formatting properties applied to a form field in a document.
+Retrieve the text formatting settings of a picture form in a document.
 
 ```javascript editor-forms
-// How do I access the font and style settings of a form field in a document?
+// How do I access the text style applied to a picture form in a document?
 
-// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
+// Read and then adjust the typography of a picture form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
-let formTextPr = textForm.GetTextPr();
+pictureForm.SetTextPr(textPr);
+let formTextPr = pictureForm.GetTextPr();
 formTextPr.SetItalic(true);
-textForm.SetTextPr(formTextPr);
+pictureForm.SetTextPr(formTextPr);
 ```

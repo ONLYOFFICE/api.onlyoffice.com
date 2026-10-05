@@ -4,6 +4,22 @@ Checks if text is autofit.
 
 Inherited from [ApiBaseWidget.IsAutoFit](../../ApiBaseWidget/Methods/IsAutoFit.md).
 
+## Syntax
+
+```javascript
+expression.IsAutoFit();
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if automatic text fitting is enabled for a widget in a PDF.

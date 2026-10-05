@@ -1,4 +1,4 @@
-﻿# GetFile
+# GetFile
 
 `GET /wopi/files/(file_id)/contents`
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentSheet](../../ApiDrawing/Methods/GetParentSheet.md)。
 
+## 语法
+
+```javascript
+expression.GetParentSheet();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+
 ## 示例
 
 检索电子表格中包含绘图的工作表。

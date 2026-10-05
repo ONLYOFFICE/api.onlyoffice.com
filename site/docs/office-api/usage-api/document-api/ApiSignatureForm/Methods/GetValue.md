@@ -8,7 +8,7 @@ Returns the current image of the signature form as a base64 encoded string.
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiSignatureForm](../ApiSignatureForm.md) class.
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
 
 ## Parameters
 

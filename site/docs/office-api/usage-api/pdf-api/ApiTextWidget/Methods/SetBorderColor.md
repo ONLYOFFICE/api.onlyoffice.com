@@ -4,6 +4,24 @@ Sets widget border color.
 
 Inherited from [ApiBaseWidget.SetBorderColor](../../ApiBaseWidget/Methods/SetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a border color to all field widgets in a PDF.

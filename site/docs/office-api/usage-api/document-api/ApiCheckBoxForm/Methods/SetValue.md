@@ -8,7 +8,7 @@ Sets the state of the checkbox form.
 expression.SetValue(value);
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

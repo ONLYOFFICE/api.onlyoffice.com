@@ -4,6 +4,22 @@ Returns the next inline drawing object if exists.
 
 Inherited from [ApiDrawing.GetNextDrawing](../../ApiDrawing/Methods/GetNextDrawing.md).
 
+## Syntax
+
+```javascript
+expression.GetNextDrawing();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
+
 ## Example
 
 Get the next inline drawing object following a shape in a document.

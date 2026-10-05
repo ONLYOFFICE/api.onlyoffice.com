@@ -8,7 +8,7 @@ Adds a text to the notes page of the current slide.
 expression.AddNotesText(sText);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

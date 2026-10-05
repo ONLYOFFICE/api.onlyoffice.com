@@ -4,34 +4,46 @@ Returns the number format applied to a cell when the conditional formatting rule
 
 Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
+## Syntax
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Read the number display pattern that a conditional formatting rule applies to matching cells in a spreadsheet.
+Read the numeric display pattern applied by an above-average conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I retrieve the number format string assigned to an above-average highlight rule in a spreadsheet?
 
-// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
+// Inspect the display format a rule applies to cells that exceed the average value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(1234.56);
-worksheet.GetRange("A3").SetValue(2500.75);
-worksheet.GetRange("A4").SetValue(150.25);
-worksheet.GetRange("A5").SetValue(3000.00);
-worksheet.GetRange("A6").SetValue(750.50);
+worksheet.GetRange("A1").SetValue("Currency Values");
+worksheet.GetRange("A2").SetValue(1500);
+worksheet.GetRange("A3").SetValue(2200);
+worksheet.GetRange("A4").SetValue(900);
+worksheet.GetRange("A5").SetValue(1800);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A5");
 let formatConditions = dataRange.GetFormatConditions();
+let aboveAverageCondition = formatConditions.AddAboveAverage();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "2000");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-condition1.SetNumberFormat("$#,##0.00");
+aboveAverageCondition.SetNumberFormat("$#,##0.00");
+let numberFormat = aboveAverageCondition.GetNumberFormat();
 
-let numberFormat = condition1.GetNumberFormat();
-
-worksheet.GetRange("C1").SetValue("Number format:");
+worksheet.GetRange("C1").SetValue("Number format applied:");
 worksheet.GetRange("C2").SetValue(numberFormat);
 ```

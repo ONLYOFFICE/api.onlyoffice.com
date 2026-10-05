@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Removed users
 
 Users removed from the DocSpace portal are specified with the `LostUser` constant, which is a `UserInfo` object in the following format:
@@ -20,11 +22,7 @@ This object is also used for all users not found in the DocSpace portal (guests,
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter        | Type              | Value                                                | Description                                                                                 |
 |------------------|-------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------|
@@ -33,8 +31,6 @@ import APITable from '@site/src/components/APITable/APITable';
 | LastName         | string            | `"Unknown"`                                          | The user last name.                                                                         |
 | ActivationStatus | string \| integer | `EmployeeActivationStatus.NotActivated`              | The user activation status (`"NotActivated"` or `0`).                                       |
 
-```mdx-code-block
 </APITable>
-```
 
 For example, when sending GET requests to the [`api/2.0/people/email`](../../../../docspace/api-backend/usage-api/get-profile-by-email.api.mdx) or [`api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/get-profile-by-user-id.api.mdx) addresses, the `LostUser` ID is used to check if a user with the specified email or name exists. If the user ID is equal to the `LostUser` ID, this user is removed from the portal and a 404 status code is returned (`User not found`).

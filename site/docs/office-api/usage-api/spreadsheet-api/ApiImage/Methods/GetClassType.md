@@ -8,7 +8,7 @@ Returns a type of the ApiImage class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiImage](../ApiImage.md) class.
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
 
 ## Parameters
 

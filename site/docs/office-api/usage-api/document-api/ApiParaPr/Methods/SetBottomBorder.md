@@ -1,8 +1,10 @@
 # SetBottomBorder
 
 Specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings.
-💡 The paragraphs of the same style going one by one are considered as a single block, so the border is added
-to the whole block rather than to every paragraph in this block.
+
+:::note
+The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.
+:::
 
 ## Syntax
 
@@ -10,7 +12,7 @@ to the whole block rather than to every paragraph in this block.
 expression.SetBottomBorder(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

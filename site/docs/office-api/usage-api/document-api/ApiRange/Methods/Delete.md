@@ -8,7 +8,7 @@ Deletes all the contents from the current range.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

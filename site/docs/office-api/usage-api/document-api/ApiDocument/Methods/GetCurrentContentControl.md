@@ -4,22 +4,35 @@ Returns the currently selected content control.
 
 Inherited from [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentContent/Methods/GetCurrentContentControl.md).
 
+## Syntax
+
+```javascript
+expression.GetCurrentContentControl();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
+
 ## Example
 
-Retrieve the currently selected content control in a document.
+Retrieve the content control that is currently selected in a document.
 
 ```javascript editor-docx
-// How do I get the content control that is active at the cursor position in a document?
+// How do I get the active content control at the cursor position in a document?
 
-// Verify which control is selected before applying conditional formatting or reading its contents.
+// Check which control the user is interacting with by reading the current selection in a document.
 
 const doc = Api.GetDocument();
 
-const blockSdt = Api.CreateBlockLvlSdt();
-blockSdt.GetContent().GetElement(0).AddText('Content inside the control.');
-doc.AddElement(0, blockSdt);
-
-blockSdt.Select();
+const inlineSdt = doc.AddCheckBoxContentControl();
+inlineSdt.Select();
 const currentCC = doc.GetCurrentContentControl();
 
 const paragraph = Api.CreateParagraph();

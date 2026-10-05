@@ -1,31 +1,48 @@
 # ToInline
 
 Converts the current form to an inline form.
-*Picture form can't be converted to an inline form, it's always a fixed size object.*
+
+:::note
+A picture form can't be converted to an inline form, as it's always a fixed-size object.
+:::
 
 Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
+## Syntax
+
+```javascript
+expression.ToInline();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Convert a fixed-size form field back to an inline form in a document.
+Place a picture field inline with surrounding text in a document.
 
 ```javascript editor-forms
-// How do I switch a form field from fixed size to inline positioning in a document?
+// How do I embed a picture field directly within a line of text rather than floating it in a document?
 
-// Allow a form field to flow with surrounding text instead of occupying a fixed block.
+// Switch a picture field from a floating layout to one that flows with the text in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let copyForm = textForm.Copy();
-paragraph = Api.CreateParagraph();
-paragraph.AddElement(copyForm);
-doc.Push(paragraph);
-copyForm.ToInline();
-let fixed = textForm.IsFixed();
-let fixedCopy = copyForm.IsFixed();
+paragraph.AddElement(pictureForm);
+pictureForm.SetTipText("Upload your photo");
+let copyPictureForm = pictureForm.Copy();
+copyPictureForm.ToInline();
+let fixed = pictureForm.IsFixed();
+let fixedCopy = copyPictureForm.IsFixed();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document has a fixed size: " + fixed);
 paragraph.AddLineBreak();

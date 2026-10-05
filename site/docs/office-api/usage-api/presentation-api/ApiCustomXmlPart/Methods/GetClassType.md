@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlPart class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

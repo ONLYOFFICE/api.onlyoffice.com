@@ -4,14 +4,30 @@ Deletes the current format condition.
 
 Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Remove a conditional formatting rule from a cell range in a spreadsheet.
+Remove a top-10 conditional formatting rule from a range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I delete an existing conditional formatting rule applied to cells in a spreadsheet?
+// How do I delete a conditional formatting rule that highlights top values in a spreadsheet?
 
-// Clear an unwanted formatting condition so cells revert to their default appearance in a spreadsheet.
+// Clear a highlight rule for top values and confirm the rule count dropped in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,17 +39,15 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
-worksheet.GetRange("C1").SetValue("Rules before deletion:");
-worksheet.GetRange("C2").SetValue(formatConditions.GetCount());
-
+let countBefore = formatConditions.GetCount();
 condition1.Delete();
+let countAfter = formatConditions.GetCount();
 
-worksheet.GetRange("D1").SetValue("Rules after deletion:");
-worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
+worksheet.GetRange("C1").SetValue("Rules before: " + countBefore);
+worksheet.GetRange("C2").SetValue("Rules after: " + countAfter);
 ```

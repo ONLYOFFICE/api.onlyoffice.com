@@ -8,7 +8,7 @@ Returns a type of the ApiDocumentContent class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

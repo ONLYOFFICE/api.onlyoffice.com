@@ -4,14 +4,30 @@ Gets the strikeout property from the current text properties.
 
 Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if text has a line drawn through it in a PDF.
 
 ```javascript editor-pdf
-// How do I see if strikethrough formatting is applied to text in a PDF?
+// How do I see if text is formatted with strikethrough in a PDF?
 
-// Verify the strikethrough setting on text content in a PDF.
+// Determine whether strikethrough formatting is applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetStrikeout(true);
+run.SetStrikeout(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const strikeout = textPr.GetStrikeout();
+const strikeout = run.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
 ```

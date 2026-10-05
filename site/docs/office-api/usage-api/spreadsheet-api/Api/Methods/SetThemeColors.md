@@ -8,7 +8,7 @@ Sets the theme colors to the current spreadsheet.
 expression.SetThemeColors(sTheme);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

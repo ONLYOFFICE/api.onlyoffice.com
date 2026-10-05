@@ -16,7 +16,7 @@
 使用通用和特定的图片表单属性创建图片表单。
 
 ```javascript editor-forms
-// How to set the properties to the ApiPictureForm object.
+// How do I set the properties of a picture form?
 
 // Specify the picture form properties like placeholder, tip text, position, key, etc.
 

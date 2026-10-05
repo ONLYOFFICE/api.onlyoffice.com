@@ -3,13 +3,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/redmine.svg
 ---
 
-# Redmine 集成
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Redmine 集成
+
 <YoutubeVideo videoId="_1Q86nRnumo"/>
-```
 
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助ONLYOFFICE 文档，在[Redmine](https://www.redmine.org/)中编辑附件。
 

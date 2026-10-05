@@ -8,7 +8,7 @@ Sets the number of standard deviations from the average.
 expression.SetNumStdDev(numStdDev);
 ```
 
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
 
 ## Parameters
 

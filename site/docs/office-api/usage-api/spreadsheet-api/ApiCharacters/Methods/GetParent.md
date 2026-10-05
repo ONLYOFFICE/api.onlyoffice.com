@@ -8,7 +8,7 @@ Returns the parent object of the specified characters.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

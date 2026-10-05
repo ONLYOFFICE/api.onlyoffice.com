@@ -4,6 +4,24 @@ Sets the x position of the drawing on the slide.
 
 Inherited from [ApiDrawing.SetPosX](../../ApiDrawing/Methods/SetPosX.md).
 
+## Syntax
+
+```javascript
+expression.SetPosX(posX);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posX | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the slide to the left side of the drawing measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move a shape horizontally on a slide in a presentation.

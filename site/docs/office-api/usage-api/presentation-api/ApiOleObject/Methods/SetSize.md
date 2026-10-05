@@ -4,6 +4,25 @@ Sets the size of the object (image, shape, chart) bounding box.
 
 Inherited from [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md).
 
+## Syntax
+
+```javascript
+expression.SetSize(nWidth, nHeight);
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The object width measured in English measure units. |
+| nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The object height measured in English measure units. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Set size to the shape in a presentation.

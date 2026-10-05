@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md)。
 
+## 语法
+
+```javascript
+expression.ToJSON();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+JSON
+
 ## 示例
 
 在演示文稿中将形状转换为 JSON。

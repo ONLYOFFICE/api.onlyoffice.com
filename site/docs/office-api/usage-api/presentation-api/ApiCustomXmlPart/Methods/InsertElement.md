@@ -8,7 +8,7 @@ Inserts an XML element at the specified XPath.
 expression.InsertElement(xPath, xmlStr, index);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Creates an RGB color from red, green and blue components.
 expression.RGB(r, g, b);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

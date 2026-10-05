@@ -1,6 +1,6 @@
 # ApiWorksheet
 
-Represents the ApiWorksheet class.
+Class representing a sheet.
 
 ## Properties
 
@@ -31,6 +31,8 @@ Represents the ApiWorksheet class.
 | Visible | boolean | Returns or sets the state of sheet visibility. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -71,7 +73,7 @@ Represents the ApiWorksheet class.
 | [GetPrintGridlines](./Methods/GetPrintGridlines.md) | boolean | Returns the page PrintGridlines property which specifies whether the current sheet gridlines must be printed or not. |
 | [GetPrintHeadings](./Methods/GetPrintHeadings.md) | boolean | Returns the page PrintHeadings property which specifies whether the current sheet row/column headings must be printed or not. |
 | [GetProtectedRange](./Methods/GetProtectedRange.md) | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md) \| null | Returns a protected range object by its title. |
-| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns an object that represents the selected range of the current sheet. Can be a single cell - **A1**, or cells |
+| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns an object that represents the selected range of the current sheet. |
 | [GetRangeByNumber](./Methods/GetRangeByNumber.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range of the current sheet using the **row/column** coordinates for the cell selection. |
 | [GetRightMargin](./Methods/GetRightMargin.md) | number | Returns the right margin of the sheet. |
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents all the cells on the rows range. |

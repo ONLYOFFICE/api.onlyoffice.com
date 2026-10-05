@@ -4,14 +4,30 @@ Gets the bold property from the current text properties.
 
 Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
+## Syntax
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check if text has bold formatting in a PDF.
+Check if text is bold in a PDF.
 
 ```javascript editor-pdf
-// How do I determine whether text is bold in a PDF?
+// How do I determine whether text has bold formatting in a PDF?
 
-// Read the bold property from text formatting settings in a PDF.
+// Verify the bold setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetBold(true);
+run.SetBold(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const bold = textPr.GetBold();
+const bold = run.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
 ```

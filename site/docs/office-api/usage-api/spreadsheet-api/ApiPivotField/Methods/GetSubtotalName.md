@@ -8,7 +8,7 @@ Returns the text label displayed in the subtotal column or row heading in the sp
 expression.GetSubtotalName();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

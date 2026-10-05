@@ -4,6 +4,22 @@ Returns a parent paragraph that contains the graphic object.
 
 Inherited from [ApiDrawing.GetParentParagraph](../../ApiDrawing/Methods/GetParentParagraph.md).
 
+## Syntax
+
+```javascript
+expression.GetParentParagraph();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null
+
 ## Example
 
 Retrieve the parent paragraph that contains a drawing object in a document.

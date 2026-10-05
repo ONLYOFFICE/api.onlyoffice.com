@@ -8,7 +8,7 @@ Sets the priority value of the conditional formatting rule.
 expression.SetPriority(Priority);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

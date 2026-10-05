@@ -8,7 +8,7 @@ Clears the slide layout background.
 expression.ClearBackground();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

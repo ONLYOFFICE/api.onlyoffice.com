@@ -8,7 +8,7 @@ Returns nodes from the custom XML node based on the given XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 

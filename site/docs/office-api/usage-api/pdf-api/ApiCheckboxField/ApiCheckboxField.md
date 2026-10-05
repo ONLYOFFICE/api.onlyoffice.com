@@ -1,8 +1,12 @@
 # ApiCheckboxField
 
+Class representing a checkbox field.
+
 ApiCheckboxField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

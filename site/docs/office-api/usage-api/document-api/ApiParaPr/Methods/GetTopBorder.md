@@ -8,7 +8,7 @@ Returns the top border of the current paragraph.
 expression.GetTopBorder();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

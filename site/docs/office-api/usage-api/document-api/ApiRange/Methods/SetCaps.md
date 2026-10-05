@@ -8,7 +8,7 @@ Specifies that any lowercase characters in the current text Range are formatted 
 expression.SetCaps(isCaps);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

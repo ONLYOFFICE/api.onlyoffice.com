@@ -1,6 +1,8 @@
 # SelectNoteReference
 
-Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing.
+Selects the reference to this footnote/endnote.
+
+If this document content is not a footnote/endnote, do nothing.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Select the reference to this footnote/endnote. If this document content is not a
 expression.SelectNoteReference();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

@@ -1,6 +1,7 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
+
 - **"baseline"** - the characters in the current text run will be aligned by the default text baseline.
 - **"subscript"** - the characters in the current text run will be aligned below the default text baseline.
 - **"superscript"** - the characters in the current text run will be aligned above the default text baseline.
@@ -11,7 +12,7 @@ Specifies the alignment which will be applied to the contents of the run in rela
 expression.SetVertAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -25,7 +26,7 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-Position text above or below the baseline in a PDF.
+Position text above or below the baseline using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I create superscript or subscript text in a PDF?

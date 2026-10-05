@@ -8,7 +8,7 @@ Adds a new series to the current chart.
 expression.AddSeria(sNameRange, sValuesRange, sXValuesRange);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

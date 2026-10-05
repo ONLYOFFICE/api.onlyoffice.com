@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetFontFamily](../../ApiTextPr/Methods/SetFontFamily.md)。
 
+## 语法
+
+```javascript
+expression.SetFontFamily(sFontFamily);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sFontFamily | 必需 | string |  | 用于当前文本块的字体系列。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 更改文档中应用于文本的字体系列。

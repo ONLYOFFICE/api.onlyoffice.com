@@ -4,6 +4,22 @@ Gets widget border style.
 
 Inherited from [ApiBaseWidget.GetBorderStyle](../../ApiBaseWidget/Methods/GetBorderStyle.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderStyle();
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md)
+
 ## Example
 
 Read the border style of a form field widget in a PDF.

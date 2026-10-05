@@ -1,18 +1,35 @@
 # GetFontFamily
 
 从当前文本属性返回字体系列。
+
 如果字体是通过主题设置的，此方法会自动从主题计算字体。
 
 继承自 [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md)。
 
+## 语法
+
+```javascript
+expression.GetFontFamily();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-访问 PDF 中文本使用的字体名称。
+在 PDF 中获取文本的字体名称。
 
 ```javascript editor-pdf
-// How do I find out which font is applied to text in a PDF?
+// How do I find out what font is used for text in a PDF?
 
-// Look up the font family name from text formatting properties in a PDF.
+// Read the font family setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -30,12 +47,11 @@ run.AddText("The text properties are changed and the style is added to the parag
 run.AddLineBreak();
 paragraph.AddElement(run);
 
-const textPr = run.GetTextPr();
-textPr.SetFontFamily("Arial");
+run.SetFontFamily("Arial");
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const fontFamily = textPr.GetFontFamily();
+const fontFamily = run.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
 ```

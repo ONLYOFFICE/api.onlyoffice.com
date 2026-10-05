@@ -1,7 +1,8 @@
 # SetShowAutoFilter
 
 设置表格上是否存在自动筛选。
-设为 false 将完全移除自动筛选；设为 true 将在不存在时创建自动筛选。
+
+设置为 false 将完全移除自动筛选；设置为 true 时，如果不存在则创建自动筛选。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

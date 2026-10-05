@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiSortFields](../ApiSortFields.md) class.
+`expression` - A variable that represents an [ApiSortFields](../ApiSortFields.md) class.
 
 ## Parameters
 

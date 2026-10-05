@@ -8,46 +8,52 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 
 Inherited from [ApiDocumentContent.GetDocumentVisitor](../../ApiDocumentContent/Methods/GetDocumentVisitor.md).
 
+## Syntax
+
+```javascript
+expression.GetDocumentVisitor();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+ApiDocumentVisitor
+
 ## Example
 
-Traverse all paragraphs and tables using a document visitor in a document.
+Collect text from every paragraph using a visitor and list the results in a document.
 
 ```javascript editor-docx
-// How do I walk through every element in a document content with a visitor in a document?
+// How do I traverse all paragraphs and gather their text in a document?
 
-// Count paragraphs and tables automatically without iterating element indexes by hand.
+// Aggregate paragraph content into a summary paragraph without iterating elements manually in a document.
 
 const doc = Api.GetDocument();
 
 const p1 = doc.GetElement(0);
-p1.AddText('First paragraph.');
+p1.AddText('Text from the first paragraph.');
 
 const p2 = Api.CreateParagraph();
-p2.AddText('Second paragraph.');
+p2.AddText('Document visitor example.');
 doc.Push(p2);
 
-const table = Api.CreateTable(2, 2);
-table.GetCell(0, 0).GetContent().GetElement(0).AddText('Cell A1');
-table.GetCell(1, 1).GetContent().GetElement(0).AddText('Cell B2');
-doc.Push(table);
-
-let paragraphCount = 0;
-let tableCount = 0;
-
+const texts = [];
 const visitor = doc.GetDocumentVisitor();
-visitor.Paragraph = function () {
-	paragraphCount += 1;
-	return false;
-};
-visitor.Table = function () {
-	tableCount += 1;
+visitor.Text = function (text) {
+	texts.push(text);
 	return false;
 };
 visitor.Traverse(false);
 
 const resultParagraph = Api.CreateParagraph();
-resultParagraph.AddText('Paragraphs found: ' + paragraphCount + ' (including paragraphs inside tables)');
-resultParagraph.AddLineBreak();
-resultParagraph.AddText('Tables found: ' + tableCount);
+resultParagraph.AddText('Collected text:\n');
+texts.forEach(function (text) {
+	resultParagraph.AddText(' - ' + text + '\n');
+});
 doc.Push(resultParagraph);
 ```

@@ -1,7 +1,6 @@
 # SetCheckBoxChecked
 
 Sets the checkbox value for the content control.
-This method updates the checkbox state of the content control to either checked or unchecked.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ This method updates the checkbox state of the content control to either checked 
 expression.SetCheckBoxChecked(isChecked);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

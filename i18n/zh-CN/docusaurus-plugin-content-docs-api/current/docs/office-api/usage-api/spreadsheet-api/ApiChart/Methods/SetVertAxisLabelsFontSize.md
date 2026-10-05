@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetVertAxisLabelsFontSize(nFontSize);
+expression.SetVertAxisLabelsFontSize(fontSize);
 ```
 
 `expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetVertAxisLabelsFontSize(nFontSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的文本大小值。 |
+| fontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 
 ## 返回值
 

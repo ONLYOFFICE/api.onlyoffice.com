@@ -8,7 +8,7 @@
 expression.MouseMoveWindow(frameId, x, y);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../presentation-api.md) 类的变量。
 
 ## 参数
 

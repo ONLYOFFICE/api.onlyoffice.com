@@ -4,6 +4,22 @@ Gets the bold property from the current text properties.
 
 Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
+## Syntax
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether bold formatting is applied to text in a document.

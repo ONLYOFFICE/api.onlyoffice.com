@@ -8,7 +8,7 @@ Returns the main animation sequence for the slide.
 expression.GetMainSequence();
 ```
 
-`expression` - A variable that represents a [ApiTimeLine](../ApiTimeLine.md) class.
+`expression` - A variable that represents an [ApiTimeLine](../ApiTimeLine.md) class.
 
 ## Parameters
 

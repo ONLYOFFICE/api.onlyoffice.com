@@ -8,7 +8,7 @@ Retrieves nodes from custom XML based on the provided XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

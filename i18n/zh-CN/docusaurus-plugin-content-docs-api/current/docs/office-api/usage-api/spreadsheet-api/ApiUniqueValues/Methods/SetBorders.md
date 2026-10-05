@@ -4,6 +4,26 @@
 
 继承自 [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md)。
 
+## 语法
+
+```javascript
+expression.SetBorders(bordersIndex, lineStyle, oColor);
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bordersIndex | 必需 | [BordersIndex](../../Enumeration/BordersIndex.md) |  | 指定单元格边框位置。 |
+| lineStyle | 必需 | [LineStyle](../../Enumeration/LineStyle.md) |  | 指定用于形成单元格边框的线条样式。 |
+| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定要设置给单元格边框的颜色的颜色对象。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 为匹配电子表格中条件格式规则的单元格添加彩色边框。

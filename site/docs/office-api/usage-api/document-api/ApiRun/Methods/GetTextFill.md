@@ -4,32 +4,55 @@ Gets the text fill from the current text properties.
 
 Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
+## Syntax
+
+```javascript
+expression.GetTextFill();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## Example
 
-Read the fill color applied to decorative text in a document.
+Read the fill color applied to a text run in a document.
 
 ```javascript editor-docx
-// How do I find out what color fills the inside of styled text in a document?
+// How do I copy the text fill from one run and apply it to another in a document?
 
-// Reuse the fill from one text shape to paint another shape with the same color in a document.
+// Transfer the color fill setting between two text runs in a document.
 
 const doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
 
 const textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
-textPr.SetBold(true);
-textPr.SetCaps(true);
-textPr.SetOutLine(Api.CreateStroke(0, Api.CreateNoFill()));
-textPr.SetTextFill(Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
-textPr.SetFontFamily('Comic Sans MS');
-
-const textArt = Api.CreateWordArt(textPr, 'ONLYOFFICE', 'textArchUp', null, null, 0, 200 * 36000, 100 * 36000);
-const paragraph = doc.GetElement(0);
+textPr.SetFontFamily("Comic Sans MS");
+const textArt = Api.CreateWordArt(textPr, "<DEFAULT_COLOR />", "textWave1", null, null, 0, 1550 * 36000, 50 * 36000);
 paragraph.AddDrawing(textArt);
 
-const textArtFill = textPr.GetTextFill();
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const drawing = Api.CreateShape("rect", 130 * 36000, 30 * 36000, textArtFill, stroke);
-drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill as the WordArt text.');
-paragraph.AddDrawing(drawing);
+const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 221));
+const outline = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 175, 204)));
+
+const firstRun = Api.CreateRun();
+firstRun.AddText("<PINK_COLOR />");
+firstRun.SetTextFill(fill);
+firstRun.SetOutLine(outline);
+
+const secondRun = Api.CreateRun();
+secondRun.AddText('<SAME_COLOR />');
+secondRun.SetTextFill(firstRun.GetTextFill());
+secondRun.SetOutLine(firstRun.GetOutLine());
+
+paragraph = Api.CreateParagraph();
+paragraph.Push(firstRun);
+paragraph.Push(secondRun);
+textArt.GetContent().Push(paragraph);
 ```

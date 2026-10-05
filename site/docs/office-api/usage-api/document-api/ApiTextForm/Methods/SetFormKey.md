@@ -4,14 +4,32 @@ Sets a key to the current form.
 
 Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | Required | string |  | Form key. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign an identifying key to a form field in a document.
+Assign an identifying key to a text field in a document.
 
 ```javascript editor-docx
-// How do I set the key that identifies a form field in a document?
+// How do I give a text field a unique identifier for referencing it later in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Label a text field with a key so it can be found and grouped with related fields in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

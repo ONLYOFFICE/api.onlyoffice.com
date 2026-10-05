@@ -8,7 +8,7 @@ Creates a linear gradient fill to apply to the object using the selected linear 
 expression.CreateLinearGradientFill(gradientStops, angle);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

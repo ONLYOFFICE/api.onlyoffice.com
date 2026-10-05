@@ -1,6 +1,7 @@
 # SetPicturePosition
 
 Sets the picture position inside the current form:
+
 - **0** - the picture is placed on the left/top;
 - **50** - the picture is placed in the center;
 - **100** - the picture is placed on the right/bottom.
@@ -11,7 +12,7 @@ Sets the picture position inside the current form:
 expression.SetPicturePosition(nShiftX, nShiftY);
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

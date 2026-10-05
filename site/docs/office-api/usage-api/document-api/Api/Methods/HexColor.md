@@ -8,7 +8,7 @@ Creates a color from a HEX string.
 expression.HexColor(hexString);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

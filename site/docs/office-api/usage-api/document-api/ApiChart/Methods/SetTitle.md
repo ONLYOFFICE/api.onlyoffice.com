@@ -5,17 +5,17 @@ Specifies the chart title.
 ## Syntax
 
 ```javascript
-expression.SetTitle(sTitle, nFontSize, bIsBold);
+expression.SetTitle(sTitle, fontSize, bIsBold);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | Required | string |  | The title which will be displayed for the current chart. |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 | bIsBold | Required | boolean |  | Specifies if the chart title is written in bold font or not. |
 
 ## Returns

@@ -8,7 +8,7 @@ Adds a hyperlink to a paragraph.
 expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
@@ -34,7 +34,7 @@ Insert a clickable hyperlink into a paragraph in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
-run.AddText("ONLYOFFICE Document Builder");
+run.AddText("Visit ONLYOFFICE for developers");
 paragraph.AddElement(run);
-paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic", "docbuilder");
+paragraph.AddHyperlink("https://api.onlyoffice.com", "docbuilder");
 ```

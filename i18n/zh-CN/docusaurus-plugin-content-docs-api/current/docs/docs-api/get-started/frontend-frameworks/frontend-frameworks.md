@@ -1,4 +1,4 @@
-﻿import DocCardList from '@theme/DocCardList';
+import DocCardList from '@theme/DocCardList';
 
 # 前端框架
 

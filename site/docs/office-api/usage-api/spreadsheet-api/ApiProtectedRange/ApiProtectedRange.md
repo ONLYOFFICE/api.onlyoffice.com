@@ -1,8 +1,10 @@
 # ApiProtectedRange
 
-Represents the ApiProtectedRange class.
+Class representing a user-protected range.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

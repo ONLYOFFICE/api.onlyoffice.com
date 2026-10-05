@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetCaps](../../ApiTextPr/Methods/SetCaps.md)。
 
+## 语法
+
+```javascript
+expression.SetCaps(isCaps);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isCaps | 必需 | boolean |  | 指定当前文本块的内容显示为大写。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中将所有小写字母显示为大写而不更改底层文本。

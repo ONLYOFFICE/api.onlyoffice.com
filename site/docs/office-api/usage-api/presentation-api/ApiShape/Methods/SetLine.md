@@ -8,7 +8,7 @@ Sets the outline properties to the current shape.
 expression.SetLine(oStroke);
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@ Get horizontal flip of current drawing.
 
 Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
 
+## Syntax
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null
+
 ## Example
 
 Check whether a drawing is flipped horizontally in a document.

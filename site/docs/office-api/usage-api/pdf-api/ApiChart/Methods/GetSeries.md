@@ -8,7 +8,7 @@ Returns the series with a specific index.
 expression.GetSeries(nIdx);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -41,8 +41,7 @@ chart.SetHorAxisTitle("Year", 11);
 chart.SetLegendPos("bottom");
 chart.SetShowDataLabels(false, false, true, false);
 
-const allSeries = chart.GetAllSeries();
-const series = allSeries[0];
+const series = chart.GetSeries(0);
 const seriesType = series.GetChartType();
 const title = "Series Type = " + seriesType + "\n";
 chart.SetTitle(title, 20);

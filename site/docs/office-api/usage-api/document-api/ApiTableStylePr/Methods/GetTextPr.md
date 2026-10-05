@@ -8,7 +8,7 @@ Returns a set of the text run properties which will be applied to all the text r
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 

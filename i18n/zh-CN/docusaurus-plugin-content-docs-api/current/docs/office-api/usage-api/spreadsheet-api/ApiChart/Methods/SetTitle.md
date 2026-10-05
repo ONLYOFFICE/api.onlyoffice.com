@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTitle(sTitle, nFontSize, bIsBold);
+expression.SetTitle(sTitle, fontSize, bIsBold);
 ```
 
 `expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
@@ -15,7 +15,7 @@ expression.SetTitle(sTitle, nFontSize, bIsBold);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | 必需 | string |  | 将为当前图表显示的标题。 |
-| nFontSize | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的文本大小值。 |
+| fontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 | bIsBold | 必需 | boolean |  | 指定图表标题是否以粗体字体书写。 |
 
 ## 返回值

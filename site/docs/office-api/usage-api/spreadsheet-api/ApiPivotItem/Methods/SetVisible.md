@@ -1,7 +1,10 @@
 # SetVisible
 
 Sets the visibility of the pivot item.
-💡  At least one item must remain visible when hiding others. 
+
+:::note
+At least one item must remain visible when hiding others.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the visibility of the pivot item.
 expression.SetVisible(visible);
 ```
 
-`expression` - A variable that represents a [ApiPivotItem](../ApiPivotItem.md) class.
+`expression` - A variable that represents an [ApiPivotItem](../ApiPivotItem.md) class.
 
 ## Parameters
 

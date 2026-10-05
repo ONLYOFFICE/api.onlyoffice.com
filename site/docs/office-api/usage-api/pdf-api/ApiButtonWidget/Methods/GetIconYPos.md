@@ -8,7 +8,7 @@ Gets button widget icon y position.
 expression.GetIconYPos();
 ```
 
-`expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
 
 ## Parameters
 
@@ -35,5 +35,5 @@ page.AddObject(buttonField);
 let widgets = buttonField.GetAllWidgets();
 widgets[0].SetLayout('iconTextV');
 widgets[0].SetImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', 'normal');
-widgets[0].SetLabel('Icon Y position is: ' + widgets[0].GetIconXPos());
+widgets[0].SetLabel('Icon Y position is: ' + widgets[0].GetIconYPos());
 ```

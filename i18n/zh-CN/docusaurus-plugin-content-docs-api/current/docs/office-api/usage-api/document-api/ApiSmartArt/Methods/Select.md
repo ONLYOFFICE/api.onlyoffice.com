@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md)。
 
+## 语法
+
+```javascript
+expression.Select(isReplace);
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | 可选 | boolean | true | 指定选择是否应替换当前选择（true）还是添加到当前选择（false）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 以编程方式在文档中选择一个或多个绘图对象。

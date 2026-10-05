@@ -8,7 +8,7 @@ Specifies the shading which shall be applied to the extents of the current table
 expression.SetShd(sType, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

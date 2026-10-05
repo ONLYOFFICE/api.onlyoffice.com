@@ -1,8 +1,12 @@
 # ApiChart
 
+表示图表的类。
+
 ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -57,7 +61,7 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置当前绘图对象的旋转角度。 |
 | [SetSeriaName](./Methods/SetSeriaName.md) | boolean | 设置指定系列的名称。 |
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | 将指定范围的值设置到指定系列。 |
-| [SetSeriaXValues](./Methods/SetSeriaXValues.md) | boolean | 将指定范围的 X 轴值设置到指定系列。仅用于散点图。 |
+| [SetSeriaXValues](./Methods/SetSeriaXValues.md) | boolean | 将指定范围中的 x 轴值设置到指定系列。 |
 | [SetSeriesFill](./Methods/SetSeriesFill.md) | boolean | 设置指定图表系列的填充。 |
 | [SetSeriesOutLine](./Methods/SetSeriesOutLine.md) | boolean | 设置指定图表系列的轮廓。 |
 | [SetShowDataLabels](./Methods/SetShowDataLabels.md) | boolean | 指定为图表显示哪些图表数据标签。 |

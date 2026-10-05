@@ -8,7 +8,7 @@ Sets the negative bar color for the data bar.
 expression.SetNegativeBarColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns whether the rule is configured to detect values above or below the avera
 expression.GetAboveBelow();
 ```
 
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
 
 ## Parameters
 

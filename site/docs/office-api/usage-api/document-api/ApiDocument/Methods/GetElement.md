@@ -4,18 +4,36 @@ Returns an element by its position in the document.
 
 Inherited from [ApiDocumentContent.GetElement](../../ApiDocumentContent/Methods/GetElement.md).
 
+## Syntax
+
+```javascript
+expression.GetElement(nPos);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPos | Required | number |  | The element position that will be taken from the document. |
+
+## Returns
+
+[DocumentElement](../../Enumeration/DocumentElement.md)
+
 ## Example
 
-Retrieve a specific element by its index from a document content in a document.
+Access a document element by its index and add text to it in a document.
 
 ```javascript editor-docx
-// How do I get a single element at a known position inside a document content in a document?
+// How do I retrieve a specific element by position in a document?
 
-// Add text to a header paragraph by fetching it directly through its position index.
+// Target the first paragraph directly by index to insert a text run in a document.
 
 let doc = Api.GetDocument();
-let section = doc.GetFinalSection();
-let docContent = section.GetHeader("default", true);
-let paragraph = docContent.GetElement(0);
-paragraph.AddText("This is the text in the default header");
+let paragraph = doc.GetElement(0);
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. Nothing special.");
+paragraph.AddElement(run);
 ```

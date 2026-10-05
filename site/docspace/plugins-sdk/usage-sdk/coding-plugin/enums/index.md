@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Enums
 
 Enumerations for actions, component types, events, file types, security permissions, room types and other SDK-wide constants.

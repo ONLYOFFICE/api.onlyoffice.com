@@ -4,29 +4,46 @@ Returns the outline level of the specified properties.
 
 Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
 
+## Syntax
+
+```javascript
+expression.GetOutlineLvl();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+Number \| undefined
+
 ## Example
 
-Read the outline level assigned to a paragraph in a spreadsheet.
+Read the outline level assigned to each paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out which heading depth a paragraph belongs to in a spreadsheet?
+// How do I check the heading depth of a paragraph in a spreadsheet?
 
-// Capture a paragraph's outline depth before and after changing it to track the update in a spreadsheet.
+// Display each paragraph alongside its outline level to inspect the document structure in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 const content = shape.GetContent();
-const paragraph = content.GetElement(0);
-const paraPr = paragraph.GetParaPr();
+const firstParagraph = content.GetElement(0);
+firstParagraph.AddText('Outline level of this paragraph is ' + firstParagraph.GetOutlineLvl() + '.');
 
-const levelBefore = paraPr.GetOutlineLvl();
-paraPr.SetOutlineLvl(8);
-const levelAfter = paraPr.GetOutlineLvl();
-let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
-text += ',\nbut originally was set to ' + levelBefore;
-paragraph.AddText(text);
+for (let levelIndex = 0; levelIndex < 9; levelIndex++) {
+	const paragraph = Api.CreateParagraph();
+	paragraph.SetOutlineLvl(levelIndex);
+	const level = paragraph.GetOutlineLvl() + 1;
+	paragraph.AddText('This is a paragraph with outline level ' + level + '.');
+	content.Push(paragraph);
+}
 ```

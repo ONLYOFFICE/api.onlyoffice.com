@@ -8,7 +8,7 @@ Returns the parent ApiWorksheet object for the AutoFilter.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

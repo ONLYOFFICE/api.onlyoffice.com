@@ -8,7 +8,7 @@ Specifies the shading applied to the contents of the paragraph.
 expression.SetShd(type, color);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-Apply a background shading color to a paragraph in a document.
+Apply a background shading color to a paragraph using the paragraph properties of a style in a document.
 
 ```javascript editor-docx
 // How do I fill the background of a paragraph with a color in a document?

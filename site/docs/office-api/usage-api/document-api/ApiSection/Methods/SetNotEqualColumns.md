@@ -1,7 +1,8 @@
 # SetNotEqualColumns
 
-Specifies that all the columns in the current section have the different widths. Number of columns is equal 
-to the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).
+Specifies that all the columns in the current section have the different widths.
+
+Number of columns is equal to the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).
 
 ## Syntax
 
@@ -9,7 +10,7 @@ to the length of the aWidth array. The length of the aSpaces array MUST BE equal
 expression.SetNotEqualColumns(aWidths, aSpaces);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

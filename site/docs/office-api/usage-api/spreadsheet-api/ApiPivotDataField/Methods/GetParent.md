@@ -4,6 +4,22 @@ Returns the parent object for the current field.
 
 Inherited from [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md).
 
+## Syntax
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+
 ## Example
 
 Access the pivot table that owns a given pivot field in a spreadsheet.

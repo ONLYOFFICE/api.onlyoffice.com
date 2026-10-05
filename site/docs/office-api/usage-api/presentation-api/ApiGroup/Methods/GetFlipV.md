@@ -4,6 +4,22 @@ Get vertical flip of current drawing.
 
 Inherited from [ApiDrawing.GetFlipV](../../ApiDrawing/Methods/GetFlipV.md).
 
+## Syntax
+
+```javascript
+expression.GetFlipV();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null
+
 ## Example
 
 Determine if a shape is flipped upside down in a presentation.

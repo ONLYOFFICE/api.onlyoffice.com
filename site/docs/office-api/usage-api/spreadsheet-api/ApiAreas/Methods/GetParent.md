@@ -8,7 +8,7 @@ Returns the parent object for the specified collection.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiAreas](../ApiAreas.md) class.
+`expression` - A variable that represents an [ApiAreas](../ApiAreas.md) class.
 
 ## Parameters
 

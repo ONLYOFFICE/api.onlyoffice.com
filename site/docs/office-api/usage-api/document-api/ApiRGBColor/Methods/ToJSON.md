@@ -8,7 +8,7 @@ Converts the ApiRGBColor object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiRGBColor](../ApiRGBColor.md) class.
+`expression` - A variable that represents an [ApiRGBColor](../ApiRGBColor.md) class.
 
 ## Parameters
 

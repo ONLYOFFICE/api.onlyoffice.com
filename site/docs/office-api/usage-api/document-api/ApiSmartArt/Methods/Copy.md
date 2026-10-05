@@ -4,6 +4,22 @@ Copies the current graphic object.
 
 Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
 ## Example
 
 Duplicate a drawing and apply a new fill to the copy in a document.

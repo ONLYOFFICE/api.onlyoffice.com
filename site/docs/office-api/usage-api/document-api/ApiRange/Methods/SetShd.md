@@ -8,7 +8,7 @@ Specifies the shading applied to the contents of the current text Range.
 expression.SetShd(type, color);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

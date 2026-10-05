@@ -8,7 +8,7 @@ Sets the hyperlink display text.
 expression.SetDisplayedText(sDisplay);
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 
@@ -32,8 +32,8 @@ Set the displayed text of a hyperlink in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
-run.AddText("ONLYOFFICE Document Builder");
+run.AddText("Visit ONLYOFFICE for developers");
 paragraph.AddElement(run);
-let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
-hyperlink.SetDisplayedText("Api ONLYOFFICE DocBuilder");
+let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com");
+hyperlink.SetDisplayedText("ONLYOFFICE API reference");
 ```

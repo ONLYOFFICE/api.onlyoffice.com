@@ -1,6 +1,7 @@
 # GetHeaderRowRange
 
 Returns the range of the header row of the table.
+
 Returns null if the table has no header row.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetHeaderRowRange();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

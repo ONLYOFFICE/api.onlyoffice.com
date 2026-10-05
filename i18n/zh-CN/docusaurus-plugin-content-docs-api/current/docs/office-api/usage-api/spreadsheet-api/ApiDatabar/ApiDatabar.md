@@ -1,5 +1,7 @@
 # ApiDatabar
 
+表示数据条条件格式规则的类。
+
 ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -21,6 +23,8 @@ ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md)
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
@@ -32,7 +36,7 @@ ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md)
 | [GetBarFillType](./Methods/GetBarFillType.md) | [XlDataBarFillType](../Enumeration/XlDataBarFillType.md) | 返回数据条的填充类型。 |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | 返回时间段条件的日期运算符。 |
 | [GetDirection](./Methods/GetDirection.md) | [XlReadingOrder](../Enumeration/XlReadingOrder.md) | 返回数据条的方向。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。 |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | 返回当前格式条件应用的字体。 |
 | [GetFormula](./Methods/GetFormula.md) | string | 返回数据条的公式。 |
 | [GetFormula1](./Methods/GetFormula1.md) | string | 返回当前条件格式规则使用的第一个公式。 |

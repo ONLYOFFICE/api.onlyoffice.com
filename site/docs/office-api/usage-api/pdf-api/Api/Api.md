@@ -1,13 +1,15 @@
 # Api
 
-Represents the Api class.
+The main class of the PDF API. Use it to get the current document and to create page content, such as paragraphs, tables, images, annotations, and form fields.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateCaretAnnot](./Methods/CreateCaretAnnot.md) | [ApiCaretAnnotation](../ApiCaretAnnotation/ApiCaretAnnotation.md) | Creates caret annotation. |
@@ -81,3 +83,5 @@ Represents the Api class.
 | [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
+| [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
+| [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

@@ -8,7 +8,7 @@ Creates a checkbox / radio button with the specified checkbox / radio button pro
 expression.CreateCheckBoxForm(formPr);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns drawings with the specified names from the workbook.
 expression.GetDrawingsByName(ids);
 ```
 
-`expression` - A variable that represents a [ApiWorkbook](../ApiWorkbook.md) class.
+`expression` - A variable that represents an [ApiWorkbook](../ApiWorkbook.md) class.
 
 ## Parameters
 

@@ -1,3 +1,5 @@
+import APITable from '@site/src/components/APITable/APITable';
+
 # license
 
 Requests the license from ONLYOFFICE Docs with information about the server and user quota.
@@ -65,11 +67,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ## Response parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter                | Type             | Presence | Description                                                                                                                                                                                                                                                          |
 |--------------------------|------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -97,6 +95,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | quota.users_view.userid  | string           | required | The ID of the user who opened the document for viewing.                                                                                                                                                                                                      |
 | quota.users_view.expire  | string           | required | The date of viewing expiration for this user.                                                                                                                                                                                                                |
 
-```mdx-code-block
 </APITable>
-```

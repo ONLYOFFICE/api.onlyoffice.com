@@ -25,10 +25,10 @@
 
 ## 示例
 
-为单元格设置黑色点线底部边框。
+为单元格边框设置点线样式。
 
 ```javascript editor-xlsx
-// How to set a style of a border line.
+// How do I set the style of a border line?
 
 // Get a range and change its border line style to dotted.
 

@@ -8,7 +8,7 @@ Specifies the vertical alignment for the text contents within the current table 
 expression.SetVerticalAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

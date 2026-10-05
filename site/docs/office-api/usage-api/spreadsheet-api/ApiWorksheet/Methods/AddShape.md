@@ -1,9 +1,10 @@
 # AddShape
 
 Adds a shape to the current sheet with the parameters specified.
-💡 Please note that the horizontal and vertical offsets are
-calculated within the limits of the specified column and row cells
-only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+
+:::note
+The horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+:::
 
 ## Syntax
 
@@ -11,7 +12,7 @@ only. If this value exceeds the cell width or height, another vertical/horizonta
 expression.AddShape(sType, nWidth, nHeight, oFill, oStroke, nFromCol, nColOffset, nFromRow, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

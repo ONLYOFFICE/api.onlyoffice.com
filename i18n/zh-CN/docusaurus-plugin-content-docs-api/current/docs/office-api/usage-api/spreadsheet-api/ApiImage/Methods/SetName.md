@@ -1,9 +1,28 @@
 # SetName
 
 设置当前绘图的名称。
+
 如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。
 
 继承自 [ApiDrawing.SetName](../../ApiDrawing/Methods/SetName.md)。
+
+## 语法
+
+```javascript
+expression.SetName(name);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 将设置到当前绘图的名称。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 

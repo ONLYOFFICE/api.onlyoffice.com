@@ -8,7 +8,7 @@ Freezes the top row or rows of the current worksheet.
 expression.FreezeRows(count);
 ```
 
-`expression` - A variable that represents a [ApiFreezePanes](../ApiFreezePanes.md) class.
+`expression` - A variable that represents an [ApiFreezePanes](../ApiFreezePanes.md) class.
 
 ## Parameters
 

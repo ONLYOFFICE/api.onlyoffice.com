@@ -4,6 +4,22 @@ Gets annotation border width.
 
 Inherited from [ApiBaseAnnotation.GetBorderWidth](../../ApiBaseAnnotation/Methods/GetBorderWidth.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderWidth();
+```
+
+`expression` - A variable that represents an [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[pt](../../Enumeration/pt.md)
+
 ## Example
 
 Retrieve the border width measurement of an annotation in a PDF.

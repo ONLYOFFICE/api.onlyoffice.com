@@ -8,7 +8,7 @@ Sets the fill to the chart plot area.
 expression.SetPlotAreaFill(oFill);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

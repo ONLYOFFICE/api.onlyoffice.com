@@ -8,7 +8,7 @@ Sets the horizontal alignment to the table.
 expression.SetHAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

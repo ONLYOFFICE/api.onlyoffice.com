@@ -4,6 +4,24 @@ Sets field rect.
 
 Inherited from [ApiBaseWidget.SetRect](../../ApiBaseWidget/Methods/SetRect.md).
 
+## Syntax
+
+```javascript
+expression.SetRect(rect);
+```
+
+`expression` - A variable that represents an [ApiTextWidget](../ApiTextWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the widget. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Resize and reposition a widget using rectangular boundaries in a PDF.

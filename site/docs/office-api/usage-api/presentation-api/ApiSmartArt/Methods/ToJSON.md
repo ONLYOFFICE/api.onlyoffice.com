@@ -4,6 +4,22 @@ Converts the ApiDrawing object into the JSON object.
 
 Inherited from [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md).
 
+## Syntax
+
+```javascript
+expression.ToJSON();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+JSON
+
 ## Example
 
 Convert the shape into JSON in a presentation.

@@ -1,7 +1,12 @@
 # MergeCells
 
-Merges an array of cells. If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be "null".
-💡 The number of cells in any row and the number of rows in the current table may be changed.
+Merges an array of cells.
+
+If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be "null".
+
+:::warning
+The number of cells in any row and the number of rows in the current table may be changed.
+:::
 
 ## Syntax
 
@@ -9,7 +14,7 @@ Merges an array of cells. If the merge is done successfully, it will return the 
 expression.MergeCells(aCells);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

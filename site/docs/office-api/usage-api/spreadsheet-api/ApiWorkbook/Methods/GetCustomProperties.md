@@ -8,7 +8,7 @@ Returns the custom properties of the workbook.
 expression.GetCustomProperties();
 ```
 
-`expression` - A variable that represents a [ApiWorkbook](../ApiWorkbook.md) class.
+`expression` - A variable that represents an [ApiWorkbook](../ApiWorkbook.md) class.
 
 ## Parameters
 

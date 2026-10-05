@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetPrevDrawing](../../ApiDrawing/Methods/GetPrevDrawing.md)。
 
+## 语法
+
+```javascript
+expression.GetPrevDrawing();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
+
 ## 示例
 
 访问文档中紧接在另一个绘图之前出现的绘图。

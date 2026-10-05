@@ -8,7 +8,7 @@ Sets a style to the current table.
 expression.SetStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

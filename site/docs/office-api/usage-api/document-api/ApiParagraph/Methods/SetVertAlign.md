@@ -1,6 +1,7 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:
+
 - **"baseline"** - the characters in the current paragraph will be aligned by the default text baseline.
 - **"subscript"** - the characters in the current paragraph will be aligned below the default text baseline.
 - **"superscript"** - the characters in the current paragraph will be aligned above the default text baseline.
@@ -11,7 +12,7 @@ Specifies the alignment which will be applied to the contents of this paragraph 
 expression.SetVertAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

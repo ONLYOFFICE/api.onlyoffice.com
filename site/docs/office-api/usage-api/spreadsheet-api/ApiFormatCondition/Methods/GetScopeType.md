@@ -8,7 +8,7 @@ Returns the scope type of the conditional formatting rule.
 expression.GetScopeType();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

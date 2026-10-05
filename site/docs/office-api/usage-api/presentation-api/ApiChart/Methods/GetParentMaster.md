@@ -4,6 +4,22 @@ Returns the drawing parent slide master.
 
 Inherited from [ApiDrawing.GetParentMaster](../../ApiDrawing/Methods/GetParentMaster.md).
 
+## Syntax
+
+```javascript
+expression.GetParentMaster();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiMaster](../../ApiMaster/ApiMaster.md) \| null
+
 ## Example
 
 Find the slide master that contains a shape in a presentation.

@@ -1,6 +1,6 @@
 # ApiFormatConditions
 
-Represents the ApiFormatConditions class.
+Class representing a collection of format conditions.
 
 ## Properties
 
@@ -10,6 +10,8 @@ Represents the ApiFormatConditions class.
 | Parent | [ApiRange](../ApiRange/ApiRange.md) | Returns the parent range object associated with the current conditional formatting collection. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

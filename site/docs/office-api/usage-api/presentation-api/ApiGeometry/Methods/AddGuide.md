@@ -8,7 +8,7 @@ Adds a guide (formula) to the current geometry.
 expression.AddGuide(sName, sFormula, sX, sY, sZ);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ boolean
 
 ## Example
 
-Create adjustable geometry with guides and connection points in a presentation.
+Add a guide formula to a custom geometry in a presentation.
 
 ```javascript editor-pptx
 // Guides define calculation formulas for custom shape dimensions and proportions.

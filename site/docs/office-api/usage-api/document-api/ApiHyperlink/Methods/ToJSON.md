@@ -8,7 +8,7 @@ Converts the ApiHyperlink object into the JSON object.
 expression.ToJSON(bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 

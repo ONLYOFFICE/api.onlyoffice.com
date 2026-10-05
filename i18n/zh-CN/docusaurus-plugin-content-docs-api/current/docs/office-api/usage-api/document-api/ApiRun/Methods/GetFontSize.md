@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md)。
 
+## 语法
+
+```javascript
+expression.GetFontSize();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[hps](../../Enumeration/hps.md)
+
 ## 示例
 
 读取文档中应用于文本运行的字体大小。

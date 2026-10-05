@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiSortField](../ApiSortField.md) class.
+`expression` - A variable that represents an [ApiSortField](../ApiSortField.md) class.
 
 ## Parameters
 

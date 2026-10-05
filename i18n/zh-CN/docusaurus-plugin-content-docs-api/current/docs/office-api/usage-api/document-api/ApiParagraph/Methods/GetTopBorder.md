@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetTopBorder](../../ApiParaPr/Methods/GetTopBorder.md)。
 
+## 语法
+
+```javascript
+expression.GetTopBorder();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## 示例
 
 检索文档中段落的顶部边框设置。

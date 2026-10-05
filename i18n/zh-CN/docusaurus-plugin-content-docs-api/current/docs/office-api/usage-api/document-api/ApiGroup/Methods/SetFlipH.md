@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetFlipH](../../ApiDrawing/Methods/SetFlipH.md)。
 
+## 语法
+
+```javascript
+expression.SetFlipH(bFlip);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | 必需 | boolean |  | 指定图形是否水平翻转。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中水平翻转绘图。

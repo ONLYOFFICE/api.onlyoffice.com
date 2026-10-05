@@ -1,7 +1,10 @@
 # SetTextSize
 
 Sets widget text size.
-💡  Text size === 0 means autofit 
+
+:::note
+Text size === 0 means autofit.
+:::
 
 ## Syntax
 
@@ -9,13 +12,13 @@ Sets widget text size.
 expression.SetTextSize(size);
 ```
 
-`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+`expression` - A variable that represents an [ApiBaseWidget](../ApiBaseWidget.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| size | Required | [pt](../../Enumeration/pt.md) |  | The font size in points. |
+| size | Required | [hps](../../Enumeration/hps.md) |  | The font size measured in half-points (1/144 of an inch). |
 
 ## Returns
 

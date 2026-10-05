@@ -8,7 +8,7 @@ Sets the background to the current slide layout.
 expression.SetBackground(oApiFill);
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

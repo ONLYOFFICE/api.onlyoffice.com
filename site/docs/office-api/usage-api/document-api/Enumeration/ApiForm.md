@@ -21,9 +21,9 @@ Enumeration
 Copy a text form.
 
 ```javascript editor-docx
-// Get a form and create its copy. 
+// How do I duplicate a text form object?
 
-// How to duplicate a text form object.
+// Get a form and create its copy.
 
 let copyTextForm = textForm.Copy();
 ```

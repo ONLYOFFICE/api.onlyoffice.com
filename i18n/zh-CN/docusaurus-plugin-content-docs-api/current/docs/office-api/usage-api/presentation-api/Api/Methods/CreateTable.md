@@ -1,6 +1,7 @@
 # CreateTable
 
 创建表格。
+
 :::danger[Breaking Change]
 从版本 9.4.0 开始，参数顺序已从 `Api.CreateTable(cols, rows)` 更改为 `Api.CreateTable(rows, cols)`。
 :::

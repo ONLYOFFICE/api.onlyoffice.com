@@ -5,14 +5,11 @@ sidebar_custom_props:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # Alfresco 集成
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="pQPm00oUqOE"/>
-```
 
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share中用ONLYOFFICE 文档编辑办公文档。
 

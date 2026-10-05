@@ -4,6 +4,22 @@ Gets the text position from the current text properties measured in half-points 
 
 Inherited from [ApiTextPr.GetPosition](../../ApiTextPr/Methods/GetPosition.md).
 
+## Syntax
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[hps](../../Enumeration/hps.md)
+
 ## Example
 
 Read the vertical offset applied to a run of text in a document.

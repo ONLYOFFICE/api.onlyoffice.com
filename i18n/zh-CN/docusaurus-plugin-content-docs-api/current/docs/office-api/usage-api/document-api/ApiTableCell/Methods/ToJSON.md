@@ -4,27 +4,46 @@
 
 继承自 [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md)。
 
+## 语法
+
+```javascript
+expression.ToJSON();
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+JSON
+
 ## 示例
 
-将表格单元格格式导出为文档中的可移植数据快照。
+在文档中将表格单元格的属性导出为 JSON 字符串。
 
 ```javascript editor-docx
-// How do I save and reuse the formatting of a table cell in a document?
+// How do I serialize a table cell into a JSON representation in a document?
 
-// Preserve cell styling by converting its properties to a transferable format in a document.
+// Save the full configuration of a table cell as plain text data in a document.
 
 let doc = Api.GetDocument();
-let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
-tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
-table.SetWidth("percent", 100);
-let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetCellBorderBottom("single", 32, 0, 51, 51, 51);
-table.SetStyle(tableStyle);
 doc.Push(table);
-let json = tableCellPr.ToJSON();
-let tableCellPrFromJSON = Api.FromJSON(json);
-let type = tableCellPrFromJSON.GetClassType();
-let paragraph = doc.GetElement(0);
-paragraph.AddText("Class type = " + type);
+table.SetTableBorderTop("single", 32, 0, 51, 51, 51);
+table.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
+table.SetTableBorderLeft("single", 32, 0, 51, 51, 51);
+table.SetTableBorderRight("single", 32, 0, 51, 51, 51);
+table.SetTableBorderInsideV("single", 32, 0, 255, 111, 61);
+table.SetTableBorderInsideH("single", 32, 0, 255, 111, 61);
+table.SetWidth("percent", 100);
+let cell = table.GetCell(0, 0);
+let json = cell.ToJSON();
+let paragraph = Api.CreateParagraph();
+paragraph.AddText("The ApiTableCell object in the JSON format: ").SetBold(true);
+paragraph.AddLineBreak();
+paragraph.AddText(json);
+doc.Push(paragraph);
 ```

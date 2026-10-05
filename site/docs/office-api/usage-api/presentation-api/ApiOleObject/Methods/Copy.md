@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiOleObject](../ApiOleObject.md) class.
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
 
 ## Parameters
 

@@ -1,7 +1,8 @@
 # GetParagraphMarkTextPr
 
-Returns the text properties of the paragraph mark which is used to mark the paragraph end. The mark can also acquire
-common text properties like bold, italic, underline, etc.
+Returns the text properties of the paragraph mark which is used to mark the paragraph end.
+
+The mark can also acquire common text properties like bold, italic, underline, etc.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ common text properties like bold, italic, underline, etc.
 expression.GetParagraphMarkTextPr();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

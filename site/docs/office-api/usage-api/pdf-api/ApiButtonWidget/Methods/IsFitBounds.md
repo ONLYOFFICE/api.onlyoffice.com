@@ -8,7 +8,7 @@ Checks if button widget is fit bounds.
 expression.IsFitBounds();
 ```
 
-`expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
 
 ## Parameters
 

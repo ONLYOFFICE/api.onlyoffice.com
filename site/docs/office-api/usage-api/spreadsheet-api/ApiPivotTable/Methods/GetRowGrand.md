@@ -1,6 +1,6 @@
 # GetRowGrand
 
-Returns the - **Grand Totals** setting of the pivot table rows.
+Returns the **Grand Totals** setting of the pivot table rows.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the - **Grand Totals** setting of the pivot table rows.
 expression.GetRowGrand();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

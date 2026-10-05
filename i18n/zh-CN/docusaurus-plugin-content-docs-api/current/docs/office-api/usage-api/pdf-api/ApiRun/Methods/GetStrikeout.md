@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查 PDF 中的文本是否有删除线。
 
 ```javascript editor-pdf
-// How do I see if strikethrough formatting is applied to text in a PDF?
+// How do I see if text is formatted with strikethrough in a PDF?
 
-// Verify the strikethrough setting on text content in a PDF.
+// Determine whether strikethrough formatting is applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetStrikeout(true);
+run.SetStrikeout(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const strikeout = textPr.GetStrikeout();
+const strikeout = run.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
 ```

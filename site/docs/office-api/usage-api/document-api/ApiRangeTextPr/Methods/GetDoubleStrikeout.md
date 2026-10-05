@@ -4,6 +4,22 @@ Gets the double strikeout property from the current text properties.
 
 Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Determine whether text is crossed out with two lines in a document.

@@ -8,7 +8,7 @@ Returns the ApiRange object that represents the AutoFilter range.
 expression.GetRange();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

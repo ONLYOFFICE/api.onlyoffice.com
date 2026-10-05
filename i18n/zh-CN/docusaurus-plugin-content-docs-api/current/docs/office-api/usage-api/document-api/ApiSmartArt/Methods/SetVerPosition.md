@@ -4,6 +4,26 @@
 
 继承自 [ApiDrawing.SetVerPosition](../../ApiDrawing/Methods/SetVerPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetVerPosition(sRelativeFrom, nDistance, bPercent);
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | 必需 | [RelFromV](../../Enumeration/RelFromV.md) |  | 将作为对象垂直对齐参考点的文档元素。 |
+| nDistance | 必需 | [EMU](../../Enumeration/EMU.md) \| number |  | 从文档元素底部到浮动对象的距离。使用 EMU 表示绝对单位，或当 bPercent=true 时使用数字（1 = 1%）表示百分比相对定位。 |
+| bPercent | 可选 | boolean | false | 定义垂直对齐偏移量是否以百分比指定的选项。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中将浮动形状放置在页面上的精确垂直位置。

@@ -8,7 +8,7 @@ Returns a type of the ApiInkAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiInkAnnotation](../ApiInkAnnotation.md) class.
+`expression` - A variable that represents an [ApiInkAnnotation](../ApiInkAnnotation.md) class.
 
 ## Parameters
 

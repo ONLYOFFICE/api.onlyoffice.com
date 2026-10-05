@@ -1,6 +1,8 @@
-# IMediaViewer
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IMediaViewer.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IMediaViewer.ts#L116)
+# IMediaViewer
 
 Properties for the Media Viewer component that allows plugins to display custom content.
 
@@ -118,8 +120,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## IMediaViewerPlaylistFilter
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IMediaViewer.ts#L167)
-
 Filter configuration for media viewer playlist.
 Defines which files should be included in the playlist.
 
@@ -143,8 +143,6 @@ Defines which files should be included in the playlist.
 ***
 
 ## IMediaViewerNavigation
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IMediaViewer.ts#L199)
 
 Navigation callbacks for media viewer.
 Called when user navigates through the playlist.

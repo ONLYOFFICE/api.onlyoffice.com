@@ -8,7 +8,7 @@ Returns the type of the top 10 conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md)。
 
+## 语法
+
+```javascript
+expression.GetOutLine();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStroke](../../ApiStroke/ApiStroke.md)
+
 ## 示例
 
 读取文档中应用于装饰性文本的轮廓描边。

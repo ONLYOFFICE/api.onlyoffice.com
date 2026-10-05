@@ -4,6 +4,24 @@ Sets the scope type for the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
 
+## Syntax
+
+```javascript
+expression.SetScopeType(ScopeType);
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ScopeType | Required | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | The scope type: "xlSelectionScope", "xlDataFieldScope", or "xlFieldsScope". |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Define which portion of a table a formatting rule should apply to in a spreadsheet.

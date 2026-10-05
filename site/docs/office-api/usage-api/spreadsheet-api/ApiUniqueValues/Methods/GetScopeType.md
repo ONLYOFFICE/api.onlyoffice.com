@@ -4,32 +4,44 @@ Returns the scope type of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
 
+## Syntax
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## Example
 
-Read the scope type that controls where a conditional formatting rule applies in a spreadsheet.
+Read the scope type that determines where a unique-values formatting rule takes effect in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
+// How do I find out the scope setting of a unique-values conditional formatting rule in a spreadsheet?
 
-// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
+// Verify whether a unique-values rule is scoped to the whole sheet or a specific selection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
-
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let scopeType = condition1.GetScopeType();
+let scopeType = uniqueValuesCondition.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);

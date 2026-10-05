@@ -1,6 +1,8 @@
 # GetWorksheet
 
-Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode.
+Returns the Worksheet object that represents the worksheet containing the specified range.
+
+It will be available in the read-only mode.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the Worksheet object that represents the worksheet containing the specif
 expression.GetWorksheet();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

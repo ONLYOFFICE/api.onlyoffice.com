@@ -8,7 +8,7 @@ Returns the X coordinate of the first control point for the Bezier curves.
 expression.GetX0();
 ```
 
-`expression` - A variable that represents a [ApiPathCommand](../ApiPathCommand.md) class.
+`expression` - A variable that represents an [ApiPathCommand](../ApiPathCommand.md) class.
 
 ## Parameters
 

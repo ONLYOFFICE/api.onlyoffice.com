@@ -27,7 +27,7 @@ boolean
 
 ## 示例
 
-在文档中为段落的右侧添加边框。
+在文档中使用样式的段落属性为段落的右侧添加边框。
 
 ```javascript editor-docx
 // How do I place a visible border on the right edge of a paragraph in a document?

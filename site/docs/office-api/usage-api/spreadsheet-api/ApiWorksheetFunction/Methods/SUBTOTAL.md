@@ -8,7 +8,7 @@ Returns a subtotal in a list or database.
 expression.SUBTOTAL(arg1, args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

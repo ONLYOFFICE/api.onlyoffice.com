@@ -8,7 +8,7 @@ Returns a type of the ApiStrikeoutAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) class.
+`expression` - A variable that represents an [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) class.
 
 ## Parameters
 

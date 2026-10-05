@@ -1,6 +1,6 @@
 # ApiFilter
 
-表示 ApiFilter 类。
+表示单个自动筛选列的类。
 
 ## 属性
 
@@ -13,6 +13,8 @@
 | Parent | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) | 返回此筛选列的父筛选器集合。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

@@ -4,6 +4,24 @@ Sets annotation rect.
 
 Inherited from [ApiBaseAnnotation.SetRect](../../ApiBaseAnnotation/Methods/SetRect.md).
 
+## Syntax
+
+```javascript
+expression.SetRect(rect);
+```
+
+`expression` - A variable that represents an [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the annotation. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Resize an annotation by changing its boundaries in a PDF.

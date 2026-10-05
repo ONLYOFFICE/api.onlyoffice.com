@@ -8,7 +8,7 @@ Appends a new slide to the end of the presentation.
 expression.AddSlide(oSlide, nIndex);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

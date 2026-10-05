@@ -4,6 +4,24 @@ Sets annotation subject.
 
 Inherited from [ApiBaseAnnotation.SetSubject](../../ApiBaseAnnotation/Methods/SetSubject.md).
 
+## Syntax
+
+```javascript
+expression.SetSubject(subject);
+```
+
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| subject | Required | string |  | The annotation subject text. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add a subject or topic label to an annotation in a PDF.

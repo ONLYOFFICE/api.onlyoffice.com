@@ -1,6 +1,7 @@
 # footnoteRefTo
 
 Available values of the "footnote" reference type:
+
 - **"footnoteNum"** - the footnote number;
 - **"pageNum"** - the page number of the footnote;
 - **"aboveBelow"** - the words "above" or "below" depending on the position of the item;
@@ -22,7 +23,7 @@ Enumeration
 Add a cross-reference to the page containing a footnote.
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with an footnote.
+// How do I create a reference to a paragraph with a footnote?
 
 // Use footnote to create a cross-reference.
 

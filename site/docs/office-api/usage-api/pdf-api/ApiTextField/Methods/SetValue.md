@@ -4,6 +4,24 @@ Sets field value
 
 Inherited from [ApiBaseField.SetValue](../../ApiBaseField/Methods/SetValue.md).
 
+## Syntax
+
+```javascript
+expression.SetValue(value);
+```
+
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | Required | string |  | The new value for the field. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Enter text into a form field in a PDF.

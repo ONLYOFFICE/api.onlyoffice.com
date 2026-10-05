@@ -8,7 +8,7 @@ Sets the setting that specifies whether to format duplicate or unique values for
 expression.SetDupeUnique(dupeUnique);
 ```
 
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
 
 ## Parameters
 

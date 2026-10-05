@@ -8,7 +8,7 @@ Sets the font size to the characters of the current text run.
 expression.SetFontSize(nSize);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

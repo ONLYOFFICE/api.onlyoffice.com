@@ -8,7 +8,7 @@ Returns a parent paragraph of the current run.
 expression.GetParentParagraph();
 ```
 
-`expression` - A variable that represents a [ApiRichRun](../ApiRichRun.md) class.
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@ Sets the outline properties to the specified graphic object.
 
 Inherited from [ApiDrawing.SetOutLine](../../ApiDrawing/Methods/SetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the graphic object outline. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add a visible border outline to a drawing in a document.

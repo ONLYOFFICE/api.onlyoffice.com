@@ -8,7 +8,7 @@ Returns all the selected drawings in the current document.
 expression.GetSelectedDrawings();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

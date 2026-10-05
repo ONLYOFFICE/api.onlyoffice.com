@@ -4,6 +4,24 @@ Removes option from list options.
 
 Inherited from [ApiBaseListField.RemoveOption](../../ApiBaseListField/Methods/RemoveOption.md).
 
+## Syntax
+
+```javascript
+expression.RemoveOption(index);
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | Required | number |  | The option index. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Delete a choice from a dropdown field in a PDF.

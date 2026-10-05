@@ -8,7 +8,7 @@ Returns an array with all the OLE objects from the slide master.
 expression.GetAllOleObjects();
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

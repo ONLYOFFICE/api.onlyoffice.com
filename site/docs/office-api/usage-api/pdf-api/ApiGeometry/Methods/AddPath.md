@@ -8,7 +8,7 @@ Adds a new path to the current geometry.
 expression.AddPath();
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

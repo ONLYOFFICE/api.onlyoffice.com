@@ -8,7 +8,7 @@ Returns the keep next value of the current paragraph.
 expression.GetKeepNext();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

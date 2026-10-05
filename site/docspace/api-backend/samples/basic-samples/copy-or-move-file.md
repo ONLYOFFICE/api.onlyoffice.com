@@ -249,7 +249,7 @@ Payload parameters include:
   ``` ts
   function moveFileToFolder(fileId, destFolderId) {
     const url = `${API_HOST}/api/2.0/files/fileops/move`;
-    сonst payload = {
+    const payload = {
       fileIds: [fileId],
       destFolderId: destFolderId,
       deleteAfter: true, // Move means remove from original

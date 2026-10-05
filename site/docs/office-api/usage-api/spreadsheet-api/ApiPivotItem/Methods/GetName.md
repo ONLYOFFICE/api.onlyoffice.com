@@ -8,7 +8,7 @@ Returns a name of the pivot item.
 expression.GetName();
 ```
 
-`expression` - A variable that represents a [ApiPivotItem](../ApiPivotItem.md) class.
+`expression` - A variable that represents an [ApiPivotItem](../ApiPivotItem.md) class.
 
 ## Parameters
 

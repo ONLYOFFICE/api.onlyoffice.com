@@ -8,7 +8,7 @@ Returns a type of the ApiSmartArt class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiSmartArt](../ApiSmartArt.md) class.
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
 
 ## Parameters
 

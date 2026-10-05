@@ -1,6 +1,7 @@
 # AddListRow
 
 Adds a new data row to the table at the specified 1-based position.
+
 If no position is provided, the row is appended at the end.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.AddListRow(nPosition, bAlwaysInsert);
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

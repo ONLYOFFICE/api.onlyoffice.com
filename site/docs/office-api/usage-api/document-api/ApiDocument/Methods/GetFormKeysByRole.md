@@ -8,7 +8,7 @@ Returns a list of all form keys attached to the specified role.
 expression.GetFormKeysByRole(role);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

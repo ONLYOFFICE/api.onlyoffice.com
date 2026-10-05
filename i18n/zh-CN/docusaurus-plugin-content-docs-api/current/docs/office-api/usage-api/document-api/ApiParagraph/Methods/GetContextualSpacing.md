@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetContextualSpacing](../../ApiParaPr/Methods/GetContextualSpacing.md)。
 
+## 语法
+
+```javascript
+expression.GetContextualSpacing();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| undefined
+
 ## 示例
 
 从文档中段落的格式读取上下文间距设置。

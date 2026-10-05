@@ -1,6 +1,6 @@
 # ApiListObject
 
-Represents the ApiListObject class.
+Class representing a formatted table.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -17,7 +17,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | DataBodyRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the data rows. |
 | DisplayName | string | Returns or sets the display name of the table. |
 | HeaderRowRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the header row. |
-| Name | string | Returns or sets the name of the table. |
+| Name | string | Returns or sets the display name of the table. |
 | Parent | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the parent worksheet. |
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the table. |
 | ShowAutoFilter | boolean | Returns or sets whether the AutoFilter is present. |
@@ -36,12 +36,14 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | Adds a new column to the table at the specified 1-based position. |
 | [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | Adds a new data row to the table at the specified 1-based position. |
 | [Delete](./Methods/Delete.md) | None | Deletes the ListObject object and clears the cell formatting. |
-| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active. |
+| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active, i.e., whether the active cell is within the range of the ListObject. |
 | [GetAlternativeText](./Methods/GetAlternativeText.md) | string | Returns the alternative text for the table. |
 | [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | Returns the ApiAutoFilter object representing the autofilter applied to the table. |
 | [GetComment](./Methods/GetComment.md) | string | Returns the comment (summary alternative text) for the table. |
@@ -50,7 +52,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | [GetHeaderRowRange](./Methods/GetHeaderRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the header row of the table. |
 | [GetListColumns](./Methods/GetListColumns.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md)[] | Returns an array of all columns in the table. |
 | [GetListRows](./Methods/GetListRows.md) | [ApiListRow](../ApiListRow/ApiListRow.md)[] | Returns an array of all data rows in the table, excluding the header and totals rows. |
-| [GetName](./Methods/GetName.md) | string | Returns the name of the table. |
+| [GetName](./Methods/GetName.md) | string | Returns the display name of the table. |
 | [GetParent](./Methods/GetParent.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the ApiWorksheet object that is the parent of the table. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents the range of the table. |
 | [GetShowAutoFilter](./Methods/GetShowAutoFilter.md) | boolean | Returns whether the AutoFilter dropdown buttons are displayed on the header row of the table. |
@@ -62,15 +64,15 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | [GetShowTableStyleRowStripes](./Methods/GetShowTableStyleRowStripes.md) | boolean | Returns whether banded row formatting is applied to the table. |
 | [GetShowTotals](./Methods/GetShowTotals.md) | boolean | Returns whether the totals row is displayed for the table. |
 | [GetSort](./Methods/GetSort.md) | [ApiSort](../ApiSort/ApiSort.md) | Returns the Sort object for this list object. |
-| [GetSourceType](./Methods/GetSourceType.md) | string | Returns the source type of the table. Always returns "xlSrcRange" for range-based tables. |
+| [GetSourceType](./Methods/GetSourceType.md) | string | Returns the source type of the table. |
 | [GetSummary](./Methods/GetSummary.md) | string | Returns the summary description (alternative text summary) for the table. |
 | [GetTableStyle](./Methods/GetTableStyle.md) | string | Returns the name of the table style applied to the table. |
 | [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the totals row of the table. |
-| [Resize](./Methods/Resize.md) | None | Resizes the ListObject to a new range. Cells are not inserted or moved. |
+| [Resize](./Methods/Resize.md) | None | Resizes the ListObject to a new range. |
 | [SetAlternativeText](./Methods/SetAlternativeText.md) | None | Sets the alternative text for the table. |
 | [SetComment](./Methods/SetComment.md) | None | Sets the comment (summary alternative text) for the table. |
 | [SetDisplayName](./Methods/SetDisplayName.md) | boolean | Sets the display name of the table. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the table. Equivalent to SetDisplayName. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the table. |
 | [SetShowAutoFilter](./Methods/SetShowAutoFilter.md) | None | Sets whether the AutoFilter is present on the table. |
 | [SetShowAutoFilterDropDown](./Methods/SetShowAutoFilterDropDown.md) | None | Sets whether the AutoFilter dropdown arrows are displayed on the header row of the table. |
 | [SetShowHeaders](./Methods/SetShowHeaders.md) | None | Sets whether the header row is displayed for the table. |

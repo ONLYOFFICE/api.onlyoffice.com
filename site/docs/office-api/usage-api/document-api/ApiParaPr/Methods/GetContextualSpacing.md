@@ -8,7 +8,7 @@ Returns the contextual spacing value of the current paragraph.
 expression.GetContextualSpacing();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

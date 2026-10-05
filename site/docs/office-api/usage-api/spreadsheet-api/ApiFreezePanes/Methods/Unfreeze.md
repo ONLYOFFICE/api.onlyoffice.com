@@ -8,7 +8,7 @@ Removes all frozen panes in the current worksheet.
 expression.Unfreeze();
 ```
 
-`expression` - A variable that represents a [ApiFreezePanes](../ApiFreezePanes.md) class.
+`expression` - A variable that represents an [ApiFreezePanes](../ApiFreezePanes.md) class.
 
 ## Parameters
 

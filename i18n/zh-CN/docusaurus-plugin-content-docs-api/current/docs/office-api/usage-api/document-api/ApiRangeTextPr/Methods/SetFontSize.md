@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetFontSize](../../ApiTextPr/Methods/SetFontSize.md)。
 
+## 语法
+
+```javascript
+expression.SetFontSize(nSize);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 调整文档中应用于文本的字体大小。

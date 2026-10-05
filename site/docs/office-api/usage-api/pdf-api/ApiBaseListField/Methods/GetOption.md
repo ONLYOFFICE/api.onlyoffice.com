@@ -8,7 +8,7 @@ Gets option from list options.
 expression.GetOption(index);
 ```
 
-`expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
+`expression` - A variable that represents an [ApiBaseListField](../ApiBaseListField.md) class.
 
 ## Parameters
 

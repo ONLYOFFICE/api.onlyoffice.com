@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetOpacity](../../ApiBaseAnnotation/Methods/SetOpacity.md)。
 
+## 语法
+
+```javascript
+expression.SetOpacity(value);
+```
+
+`expression` - 表示 [ApiCircleAnnotation](../ApiCircleAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | 必需 | [percentage](../../Enumeration/percentage.md) |  | 不透明度值，从 0（透明）到 100（不透明）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中使注释透明或不透明。

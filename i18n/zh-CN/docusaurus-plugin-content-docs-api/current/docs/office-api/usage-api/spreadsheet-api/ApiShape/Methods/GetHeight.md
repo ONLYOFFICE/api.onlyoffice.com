@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetHeight](../../ApiDrawing/Methods/GetHeight.md)。
 
+## 语法
+
+```javascript
+expression.GetHeight();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md)
+
 ## 示例
 
 检索电子表格中绘图对象的高度。

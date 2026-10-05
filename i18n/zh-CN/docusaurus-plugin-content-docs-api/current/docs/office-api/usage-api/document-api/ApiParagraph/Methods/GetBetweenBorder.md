@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetBetweenBorder](../../ApiParaPr/Methods/GetBetweenBorder.md)。
 
+## 语法
+
+```javascript
+expression.GetBetweenBorder();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## 示例
 
 检索文档中应用于段落样式的段间边框设置。

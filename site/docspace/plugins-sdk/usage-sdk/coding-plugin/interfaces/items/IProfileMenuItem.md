@@ -1,6 +1,8 @@
-# IProfileMenuItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IProfileMenuItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IProfileMenuItem.ts#L94)
+# IProfileMenuItem
 
 Describes an item that will be embedded in the profile menu.
 

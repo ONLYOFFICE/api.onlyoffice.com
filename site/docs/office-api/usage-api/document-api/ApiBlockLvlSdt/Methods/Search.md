@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a content control object. The search results are a collection of ApiRange objects.
+Searches for a scope of a content control object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Searches for a scope of a content control object. The search results are a colle
 expression.Search(text, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

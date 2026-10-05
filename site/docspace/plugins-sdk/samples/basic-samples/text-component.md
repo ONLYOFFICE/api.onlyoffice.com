@@ -226,7 +226,7 @@ export default plugin;
 
 ## Step 4: Add a main button item
 
-Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem/) below the plugin initialization:
+Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md) below the plugin initialization:
 
 ```ts
 const plugin = new Textcomponentplugin();

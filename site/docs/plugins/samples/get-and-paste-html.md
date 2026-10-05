@@ -3,6 +3,8 @@ description: Get, modify, and paste back HTML content in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Get and paste html
 
 Gets the document content as HTML code, modifies it, and pastes back to the document.
@@ -13,11 +15,7 @@ Gets the document content as HTML code, modifies it, and pastes back to the docu
 
 **Analogue:** [Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="ZoY0CMfcPyk"/>
-```
 
 ## Installation
 
@@ -143,7 +141,7 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](../interacting-with-editors/document-api/Methods/PasteHtml.md)
 

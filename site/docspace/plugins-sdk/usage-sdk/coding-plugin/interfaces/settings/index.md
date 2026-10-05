@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Settings
 
 Interfaces for configuring plugin settings displayed in the DocSpace admin and user settings panels.

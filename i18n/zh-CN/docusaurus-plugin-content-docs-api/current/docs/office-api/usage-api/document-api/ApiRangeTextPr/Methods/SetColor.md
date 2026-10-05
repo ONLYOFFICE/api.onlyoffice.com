@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md)。
 
+## 语法
+
+```javascript
+expression.SetColor(color);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 文本颜色。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为默认文本字符应用特定颜色。

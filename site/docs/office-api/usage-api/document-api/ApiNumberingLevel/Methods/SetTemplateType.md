@@ -8,7 +8,7 @@ Sets one of the existing predefined numbering templates.
 expression.SetTemplateType(sType, sSymbol);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

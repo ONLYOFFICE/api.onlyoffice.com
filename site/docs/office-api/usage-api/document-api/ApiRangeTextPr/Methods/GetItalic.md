@@ -4,6 +4,22 @@ Gets the italic property from the current text properties.
 
 Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
+## Syntax
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Determine whether a run of text is formatted as italic in a document.

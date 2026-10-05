@@ -8,7 +8,7 @@ Adds the row, column, and page fields to the pivot table report.
 expression.AddFields(options);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

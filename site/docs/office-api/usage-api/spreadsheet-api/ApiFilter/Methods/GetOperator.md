@@ -8,7 +8,7 @@ Returns the operator used for the filter on this column.
 expression.GetOperator();
 ```
 
-`expression` - A variable that represents a [ApiFilter](../ApiFilter.md) class.
+`expression` - A variable that represents an [ApiFilter](../ApiFilter.md) class.
 
 ## Parameters
 

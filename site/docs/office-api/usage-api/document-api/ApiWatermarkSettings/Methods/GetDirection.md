@@ -8,7 +8,7 @@ Returns the direction of the watermark in the document.
 expression.GetDirection();
 ```
 
-`expression` - A variable that represents a [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
+`expression` - A variable that represents an [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
 
 ## Parameters
 

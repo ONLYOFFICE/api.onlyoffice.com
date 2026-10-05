@@ -1,7 +1,8 @@
 # GetAllOleObjects
 
 Returns all OLE object data for objects which can be opened by the specified plugin.
-If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document.
+
+If *sPluginId* is not defined, this method returns all OLE objects contained in the current document.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ If *sPluginId* is not defined, this method returns all OLE objects contained in 
 expression.GetAllOleObjects(sPluginId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

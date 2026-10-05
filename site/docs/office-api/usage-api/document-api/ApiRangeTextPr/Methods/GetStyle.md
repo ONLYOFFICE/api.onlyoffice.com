@@ -4,6 +4,22 @@ Gets the style of the current text properties.
 
 Inherited from [ApiTextPr.GetStyle](../../ApiTextPr/Methods/GetStyle.md).
 
+## Syntax
+
+```javascript
+expression.GetStyle();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiStyle](../../ApiStyle/ApiStyle.md)
+
 ## Example
 
 Read the named style attached to a text run in a document.

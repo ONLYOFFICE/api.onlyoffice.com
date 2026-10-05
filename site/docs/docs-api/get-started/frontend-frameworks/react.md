@@ -5,6 +5,7 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # React
 
@@ -13,6 +14,8 @@ The ONLYOFFICE Docs React [component](https://github.com/ONLYOFFICE/document-edi
 ## Prerequisites
 
 This procedure requires [Node.js (and npm)](https://nodejs.org/en) and a running ONLYOFFICE Docs instance. If you do not have one, install it on your own server as described in the [self-hosted](../installation/self-hosted.md) section, or deploy it in the [cloud](../installation/cloud.md).
+
+It also requires the secret key of your ONLYOFFICE Docs. The editor configuration is validated with a JSON Web Token signed with this key, and the validation is enabled by default. See [Signing the configuration](#signing-the-configuration).
 
 The page assumes a basic working knowledge of [React](https://react.dev/). The component works in any React project. The steps below use [Vite](https://vite.dev/) to create one from scratch.
 
@@ -28,97 +31,161 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
    npm install
    ```
 
-2. Install the ONLYOFFICE Docs React component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-react) public registry and save it to the `package.json` file:
+2. Install the ONLYOFFICE Docs React component from the [npm](https://www.npmjs.com/package/@onlyoffice/document-editor-react) public registry, together with the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) package that signs the editor configuration, and save them to the `package.json` file.
+
+   TypeScript declarations come from the [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) peer dependency, which npm 7 and later installs automatically and yarn does not. The `jsonwebtoken` package runs in the development server only, so it is a development dependency of the demo application. In a production application, it belongs to the backend that signs the configuration.
 
    <Tabs>
       <TabItem value="npm" label="npm">
             ```sh
             npm install --save @onlyoffice/document-editor-react
+            npm install --save-dev jsonwebtoken
             ```
       </TabItem>
       <TabItem value="yarn" label="yarn">
             ```sh
             yarn add @onlyoffice/document-editor-react
+            yarn add -D @onlyoffice/doceditor-types jsonwebtoken
             ```
       </TabItem>
    </Tabs>
 
-   TypeScript declarations come from the [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) peer dependency. npm 7 and later installs it automatically. With yarn, add it manually:
+3. Replace the contents of the `./src/App.jsx` and `./vite.config.js` files in the `onlyoffice-react-demo` project, and create the `./.env.local` file:
+
+   <Tabs>
+      <TabItem value="app" label="src/App.jsx">
+
+      The `App` component, which requests the signed configuration when it mounts and renders the ONLYOFFICE Docs editor once the configuration arrives. The `config` property is required, so the component returns `null` until then.
+
+      The editor fills the element it is rendered into, so the wrapper gives it an explicit height.
+
+      ```jsx
+      import {DocumentEditor} from "@onlyoffice/document-editor-react";
+      import {useEffect, useState} from "react";
+
+      function onDocumentReady() {
+        console.log("Document is loaded");
+      }
+
+      function onLoadComponentError(errorCode, errorDescription) {
+        switch (errorCode) {
+          case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+          case -2: // Error load DocsAPI from documentServerUrl
+            console.log(errorDescription);
+            break;
+
+          case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+        }
+      }
+
+      export default function App() {
+        const [config, setConfig] = useState(null);
+
+        useEffect(() => {
+          fetch("/api/editor-config")
+            .then((response) => response.json())
+            .then(setConfig);
+        }, []);
+
+        if (!config) return null;   // the configuration is not loaded yet
+
+        return (
+          <div style={{display: "flex", height: "100svh"}}>
+            <DocumentEditor
+              id="docxEditor"
+              documentServerUrl={import.meta.env.VITE_DOCUMENT_SERVER_URL}
+              config={config}
+              events_onDocumentReady={onDocumentReady}
+              onLoadComponentError={onLoadComponentError}
+            />
+          </div>
+        )
+      }
+      ```
+
+      </TabItem>
+      <TabItem value="vite" label="vite.config.js">
+
+      The `/api/editor-config` endpoint of the development server, which stands in for your backend: the configuration is built and signed in Node.js, and only the signed configuration reaches the browser.
+
+      :::warning
+      The `callbackUrl` points to the `dummyCallback` endpoint of ONLYOFFICE Docs, which accepts the save request and discards it, so the demo application needs no callback handler of its own. To [save](../how-it-works/saving-file.md) the document, replace it with the URL of your [callback handler](../../usage-api/callback-handler.md).
+      :::
+
+      Replace `https://static.onlyoffice.com/assets/docs/samples/demo.docx` with the URL to your file, or keep the URL of our sample document for testing.
+
+      :::warning
+      The `key` identifies the version of the document, not the editing session: everyone who opens the same key shares one session, and a document with a known key is served from the cache. The demo application keeps one key, as the sample document never changes. Generate a new [key](../../usage-api/config/document/document.md#key) whenever the document is edited and saved, or the editor keeps serving the cached version.
+      :::
+
+      ```js
+      import react from "@vitejs/plugin-react";
+      import jwt from "jsonwebtoken";
+      import {defineConfig, loadEnv} from "vite";
+
+      function editorConfigApi(secret, documentServerUrl) {
+        return {
+          name: "onlyoffice-editor-config",
+          configureServer(server) {
+            server.middlewares.use("/api/editor-config", (request, response) => {
+              const config = {
+                document: {
+                  fileType: "docx",
+                  key: "Khirz6zTPdfd7",
+                  title: "Example Document Title.docx",
+                  url: "https://static.onlyoffice.com/assets/docs/samples/demo.docx",
+                },
+                documentType: "word",
+                editorConfig: {
+                  callbackUrl: documentServerUrl + "dummyCallback",
+                },
+              };
+
+              config.token = jwt.sign(config, secret, {algorithm: "HS256"});
+
+              response.setHeader("Content-Type", "application/json");
+              response.end(JSON.stringify(config));
+            });
+          },
+        };
+      }
+
+      export default defineConfig(({mode}) => {
+        const env = loadEnv(mode, process.cwd(), "");
+
+        return {
+          plugins: [react(), editorConfigApi(env.DOCUMENT_SERVER_SECRET, env.VITE_DOCUMENT_SERVER_URL)],
+        };
+      });
+      ```
+
+      </TabItem>
+      <TabItem value="env" label=".env.local">
+
+      The address of your ONLYOFFICE Docs and its secret key. `VITE_DOCUMENT_SERVER_URL` carries the `VITE_` prefix, so Vite inlines it into the client bundle, where the component needs it. `DOCUMENT_SERVER_SECRET` has no prefix, so the key stays in Node.js and out of the bundle. The address ends with a slash, as the endpoint appends `dummyCallback` to it.
+
+      Replace `http://documentserver/` with the address of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console. The Vite template ignores `*.local` files, so the secret key stays out of the repository.
+
+      ```ini
+      VITE_DOCUMENT_SERVER_URL=http://documentserver/
+      DOCUMENT_SERVER_SECRET=your-secret-key
+      ```
+
+      </TabItem>
+   </Tabs>
+
+4. Start the Vite development server in the `onlyoffice-react-demo` directory:
 
    ```sh
-   yarn add -D @onlyoffice/doceditor-types
+   npm run dev
    ```
 
-3. Open the `./src/App.jsx` file in the `onlyoffice-react-demo` project and replace its contents with the following code:
-
-   ```jsx
-   import {DocumentEditor} from "@onlyoffice/document-editor-react";
-
-   function onDocumentReady() {
-     console.log("Document is loaded");
-   }
-
-   function onLoadComponentError(errorCode, errorDescription) {
-     switch (errorCode) {
-       case -1: // Unknown error loading component
-         console.log(errorDescription);
-         break;
-
-       case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription);
-         break;
-
-       case -3: // DocsAPI is not defined
-         console.log(errorDescription);
-         break;
-     }
-   }
-
-   export default function App() {
-     return (
-       <DocumentEditor
-         id="docxEditor"
-         documentServerUrl="http://documentserver/"
-         config={{
-           document: {
-             fileType: "docx",
-             key: "Khirz6zTPdfd7",
-             title: "Example Document Title.docx",
-             url: "https://example.com/url-to-example-document.docx",
-           },
-           documentType: "word",
-           editorConfig: {
-             callbackUrl: "https://example.com/url-to-callback",
-           },
-           token: "TOKEN_HERE",
-         }}
-         events_onDocumentReady={onDocumentReady}
-         onLoadComponentError={onLoadComponentError}
-       />
-     )
-   }
-   ```
-
-   Replace the following lines with your own data:
-
-   - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
-   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
-   - `TOKEN_HERE` - replace with the signature of the configuration. It is required when JWT validation is enabled on your document server, which is the default configuration. See [Signing the configuration](#signing-the-configuration).
-
-   This file creates the `App` component containing the ONLYOFFICE Docs editor configured with basic features.
-
-4. Test the application using the Vite development server:
-
-   - To start the development server, navigate to the `onlyoffice-react-demo` directory and run:
-
-     ```sh
-     npm run dev
-     ```
-
-     The application becomes available at `http://localhost:5173`.
-
-   - To stop the development server, switch to the command line or command prompt and press `Ctrl+C`.
+   Open `http://localhost:5173` in the browser. The editor opens the document from the signed configuration, and the `events_onDocumentReady` handler prints `Document is loaded` to the browser console.
 
 ## Signing the configuration
 
@@ -126,85 +193,18 @@ ONLYOFFICE Docs validates the editor configuration with a JSON Web Token. JWT va
 
 Signing requires the secret key of your ONLYOFFICE Docs, so generate the token on your server and send the ready configuration to the browser. A React application cannot keep the secret key private.
 
-### Signing the configuration on the server
+The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
 
-Build the configuration on your backend, sign it, and return it from an endpoint:
-
-```js
-// npm install jsonwebtoken
-import jwt from "jsonwebtoken";
-
-app.get("/api/editor-config", (request, response) => {
-  const config = {
-    document: {
-      fileType: "docx",
-      key: "Khirz6zTPdfd7",
-      title: "Example Document Title.docx",
-      url: "https://example.com/url-to-example-document.docx",
-    },
-    documentType: "word",
-    editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback",
-    },
-  };
-
-  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
-
-  response.json(config);
-});
-```
+The demo application above signs the configuration in the Vite development server, which exists in development only. In a production application, move the same code to your backend and keep the endpoint path, as the component requests the configuration in the same way.
 
 See the [Signature](../../additional-api/signature/signature.md) section for the signing code in other languages.
 
-### Passing the signed configuration to the component
-
-Request the configuration when the component mounts and render the editor once it arrives:
-
-```jsx
-import {DocumentEditor} from "@onlyoffice/document-editor-react";
-import {useEffect, useState} from "react";
-
-export default function Editor() {
-  const [config, setConfig] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/editor-config")
-      .then((response) => response.json())
-      .then(setConfig);
-  }, []);
-
-  if (!config) return null;   // the configuration is not loaded yet
-
-  return (
-    <DocumentEditor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      config={config}
-    />
-  )
-}
-```
-
-The component merges `config` into the configuration it sends to ONLYOFFICE Docs, so the `token` field reaches the editor unchanged.
-
 ## Calling editor methods in the React component
 
-1. The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`:
-
-   ```js
-   const documentEditor = window.DocEditor.instances["docxEditor"];
-   ```
-
-2. Call any editor [method](../../usage-api/methods.md) from this object:
-
-   ```js
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
-   ```
-
-Example:
+The component stores every editor instance in the `window.DocEditor.instances` object. Get the instance by the component `id`, then call any editor [method](../../usage-api/methods.md) from it:
 
 ```js
-const onDocumentReady = () => {
+function onDocumentReady() {
   const documentEditor = window.DocEditor.instances["docxEditor"];
 
   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
@@ -245,12 +245,14 @@ export default function Editor({config}) {
   }, []);
 
   return (
-    <DocumentEditor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      config={config}
-      events_onDocumentReady={onDocumentReady}
-    />
+    <div style={{display: "flex", height: "100svh"}}>
+      <DocumentEditor
+        id="docxEditor"
+        documentServerUrl="http://documentserver/"
+        config={config}
+        events_onDocumentReady={onDocumentReady}
+      />
+    </div>
   )
 }
 ```
@@ -269,88 +271,124 @@ useEffect(() => {
 }, [connector]);
 ```
 
+[executeMethod](../../usage-api/automation-api/connector-class.md#executemethod) runs one editor method by name, as above. [callCommand](../../usage-api/automation-api/connector-class.md#callcommand) runs a function of [Office JavaScript API](../../../office-api/get-started/overview.md) commands inside the editor, which is how the content of the document is changed. That function has a context of its own and cannot read the component state, so pass the data it needs through the `Asc.scope` object:
+
+```jsx
+function insertText(text) {
+  if (!connector) return;
+
+  Asc.scope.text = text;   // the command below has a context of its own
+
+  connector.callCommand(() => {
+    const document = Api.GetDocument();
+    const paragraph = Api.CreateParagraph();
+
+    paragraph.AddText(Asc.scope.text);
+    document.InsertContent([paragraph]);
+  }, () => {
+    console.log("Text is inserted");
+  });
+}
+```
+
 :::note
 The component destroys the editor when it is unmounted and when the `documentServerUrl`, `config`, `document_fileType`, `document_title`, `documentType`, `editorConfig_lang`, `height`, `type`, or `width` property changes, and then loads a new editor. The connector of the destroyed editor becomes invalid: disconnect it and create a new one in the `events_onDocumentReady` handler of the new editor.
 :::
 
 ## Deploying the demo React application
 
-1. Navigate to the `onlyoffice-react-demo` directory and create a production build:
+:::note
+The `/api/editor-config` endpoint is a part of the Vite development server, so it does not exist in the production build. Serve the endpoint from your own backend, as described in [Signing the configuration](#signing-the-configuration), and keep the path that `App.jsx` requests.
+:::
 
-   ```sh
-   npm run build
-   ```
+Create a production build in the `onlyoffice-react-demo` directory and check it locally with the Vite preview server:
 
-   The `dist` directory will be created with a production build of your app.
+```sh
+npm run build
+npm run preview
+```
 
-2. Check the build locally using the Vite preview server:
-
-   ```sh
-   npm run preview
-   ```
-
-3. To serve the build with a standalone static server, install the [serve](https://github.com/vercel/serve) package globally:
-
-   ```sh
-   npm install -g serve
-   ```
-
-4. Serve the `dist` directory on the 3000 port:
-
-   ```sh
-   serve -s dist
-   ```
-
-   Another port can be adjusted using the `-l` or `--listen` flags:
-
-   ```sh
-   serve -s dist -l 4000
-   ```
-
-To deploy the application to your own web server, copy the contents of the `onlyoffice-react-demo/dist` directory to the root directory of the web server.
+The build goes to the `dist` directory. To deploy the application to your own web server, copy the contents of this directory to the root directory of the web server.
 
 ## Using the component with Next.js
 
 The component renders the editor in the browser and does not contain the `"use client"` directive. The editor configuration also includes event handler functions, which cannot be passed from a server component. For these reasons, render the component from a client component.
 
-In the App Router, mark the file that renders the component with the `"use client"` directive and set the configuration in the same file:
+In the App Router, sign the configuration in a route handler, which runs on the server, and request it from a client component:
+
+<Tabs>
+<TabItem value="editor" label="app/editor.jsx">
+
+The client component, which carries the `"use client"` directive, requests the signed configuration, and renders the editor once the configuration arrives.
 
 ```jsx
 "use client";
 
 import {DocumentEditor} from "@onlyoffice/document-editor-react";
+import {useEffect, useState} from "react";
 
 export default function Editor() {
+  const [config, setConfig] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/editor-config")
+      .then((response) => response.json())
+      .then(setConfig);
+  }, []);
+
+  if (!config) return null;
+
   return (
-    <DocumentEditor
-      id="docxEditor"
-      documentServerUrl="http://documentserver/"
-      config={{
-        document: {
-          fileType: "docx",
-          key: "Khirz6zTPdfd7",
-          title: "Example Document Title.docx",
-          url: "https://example.com/url-to-example-document.docx",
-        },
-        documentType: "word",
-        editorConfig: {
-          callbackUrl: "https://example.com/url-to-callback",
-        },
-        token: "TOKEN_HERE",
-      }}
-      events_onDocumentReady={() => console.log("Document is loaded")}
-    />
+    <div style={{display: "flex", height: "100svh"}}>
+      <DocumentEditor
+        id="docxEditor"
+        documentServerUrl="http://documentserver/"
+        config={config}
+        events_onDocumentReady={() => console.log("Document is loaded")}
+      />
+    </div>
   )
 }
 ```
 
+</TabItem>
+<TabItem value="route" label="app/api/editor-config/route.js">
+
+The route handler, which builds and signs the configuration on the server.
+
+```js
+import jwt from "jsonwebtoken";
+
+export async function GET() {
+  const config = {
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+  };
+
+  config.token = jwt.sign(config, process.env.DOCUMENT_SERVER_SECRET, {algorithm: "HS256"});
+
+  return Response.json(config);
+}
+```
+
+</TabItem>
+</Tabs>
+
+A server component can also build the configuration and pass it to the client component as a prop, but the event handlers stay in the client component: functions cannot be passed from a server component.
+
 Server rendering does not require any additional settings: the component renders an empty container on the server and loads the ONLYOFFICE Docs API script after hydration. Importing the component with `next/dynamic` and the `{ssr: false}` option is only needed to exclude it from prerendering completely. In the App Router, this option is available in client components only.
 
-To deploy the application, use the `next start` command, or set the `output: "export"` option to host the static build, as the editor works entirely in the browser.
+To deploy the application, use the `next start` command. A static build with the `output: "export"` option cannot run route handlers, so it needs the endpoint served by a separate backend.
 
-## ONLYOFFICE Docs React component API
-
-### Properties
+## Properties
 
 The `config` property is merged over the separate properties of the component. The merge is shallow: a top-level key of `config` replaces the corresponding component properties entirely instead of merging with them.
 
@@ -360,11 +398,7 @@ The `config` property is merged over the separate properties of the component. T
 
 Each `events_on*` property corresponds to the [event](../../usage-api/config/events.md) with the same name in the editor configuration.
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name                                  | Type                                                  | Default | Description                                                                                                                                                |
 | ------------------------------------- | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -404,9 +438,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `events_onRequestSelectDocument`      | (event: object) => void                               | null    | The function called when the user is trying to select a document for comparing, combining, or inserting text.                                              |
 | `events_onRequestUsers`               | (event: object) => void                               | null    | The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. |
 
-```mdx-code-block
 </APITable>
-```
 
 \* *- required field*
 

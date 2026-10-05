@@ -29,7 +29,7 @@
 获取绘图对象指定锁定类型的锁定值。
 
 ```javascript editor-docx
-// How to get a lock value of the drawing.
+// How do I get the lock value of a drawing?
 
 // Find out a lock value of an image.
 

@@ -4,6 +4,22 @@ Returns the top border of the current paragraph.
 
 Inherited from [ApiParaPr.GetTopBorder](../../ApiParaPr/Methods/GetTopBorder.md).
 
+## Syntax
+
+```javascript
+expression.GetTopBorder();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## Example
 
 Retrieve the top border settings of a paragraph in a document.

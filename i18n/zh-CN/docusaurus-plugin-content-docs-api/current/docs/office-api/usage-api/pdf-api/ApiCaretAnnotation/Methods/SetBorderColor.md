@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetBorderColor](../../ApiBaseAnnotation/Methods/SetBorderColor.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - 表示 [ApiCaretAnnotation](../ApiCaretAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 更改 PDF 中注释的边框颜色。

@@ -8,7 +8,7 @@ Gets page widgets
 expression.GetAllWidgets();
 ```
 
-`expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
+`expression` - A variable that represents an [ApiPage](../ApiPage.md) class.
 
 ## Parameters
 

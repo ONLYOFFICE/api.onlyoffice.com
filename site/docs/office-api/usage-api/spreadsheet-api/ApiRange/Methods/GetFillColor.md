@@ -1,6 +1,8 @@
 # GetFillColor
 
-Returns the background color for the current cell range. Returns 'No Fill' when the color of the background in the cell / cell range is null.
+Returns the background color for the current cell range.
+
+Returns 'No Fill' when the color of the background in the cell / cell range is null.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the background color for the current cell range. Returns 'No Fill' when 
 expression.GetFillColor();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

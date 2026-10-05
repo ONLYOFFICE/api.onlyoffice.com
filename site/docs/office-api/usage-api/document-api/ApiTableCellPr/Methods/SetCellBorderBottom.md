@@ -8,7 +8,7 @@ Sets the border which will be displayed at the bottom of the current table cell.
 expression.SetCellBorderBottom(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 
@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-Add a border along the bottom edge of a table cell in a document.
+Add a bottom border to all table cells using the table cell properties of a style in a document.
 
 ```javascript editor-docx
 // How do I draw a line at the bottom of a table cell in a document?

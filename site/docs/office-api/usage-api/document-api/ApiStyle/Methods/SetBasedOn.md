@@ -8,7 +8,7 @@ Specifies the reference to the parent style which this style inherits from in th
 expression.SetBasedOn(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

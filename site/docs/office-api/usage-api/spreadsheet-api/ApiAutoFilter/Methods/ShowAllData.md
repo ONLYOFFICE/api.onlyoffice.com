@@ -2,10 +2,7 @@
 
 Clears all filters and displays all rows in the AutoFilter range.
 
-This method corresponds to the Excel AutoFilter.ShowAllData behavior:
-it removes any active filtering from the worksheet while preserving the
-AutoFilter drop-downs on the header row. If no AutoFilter is defined
-for the worksheet, the method does nothing.
+This method corresponds to the Excel AutoFilter.ShowAllData behavior: it removes any active filtering from the worksheet while preserving the AutoFilter drop-downs on the header row. If no AutoFilter is defined for the worksheet, the method does nothing.
 
 ## Syntax
 
@@ -13,7 +10,7 @@ for the worksheet, the method does nothing.
 expression.ShowAllData();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

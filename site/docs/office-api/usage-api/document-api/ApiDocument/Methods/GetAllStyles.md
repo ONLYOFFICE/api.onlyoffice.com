@@ -8,7 +8,7 @@ Returns all styles of the current document.
 expression.GetAllStyles();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

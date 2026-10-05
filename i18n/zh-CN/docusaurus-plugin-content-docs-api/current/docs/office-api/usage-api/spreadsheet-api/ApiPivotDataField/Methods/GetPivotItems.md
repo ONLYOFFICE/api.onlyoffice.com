@@ -1,9 +1,26 @@
 # GetPivotItems
 
-返回表示单个数据透视表项（ApiPivotItem 对象）
-或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
+返回一个对象，该对象表示指定字段中的单个数据透视表项（ApiPivotItem 对象）或所有可见和隐藏项的集合（ApiPivotItem 对象数组）。
 
 继承自 [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md)。
+
+## 语法
+
+```javascript
+expression.GetPivotItems(index);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | 可选 | number |  | 项索引。 |
+
+## 返回值
+
+[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
 
 ## 示例
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetAuthorName](../../ApiBaseAnnotation/Methods/GetAuthorName.md)。
 
+## 语法
+
+```javascript
+expression.GetAuthorName();
+```
+
+`expression` - 表示 [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取 PDF 中注释的作者。

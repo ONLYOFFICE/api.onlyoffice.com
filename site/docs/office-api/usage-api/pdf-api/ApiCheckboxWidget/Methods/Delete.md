@@ -4,6 +4,22 @@ Removes widget from parent field.
 
 Inherited from [ApiBaseWidget.Delete](../../ApiBaseWidget/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove a form field widget from a PDF.

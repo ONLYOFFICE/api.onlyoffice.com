@@ -4,6 +4,22 @@ Returns a parent table that contains the graphic object.
 
 Inherited from [ApiDrawing.GetParentTable](../../ApiDrawing/Methods/GetParentTable.md).
 
+## Syntax
+
+```javascript
+expression.GetParentTable();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTable](../../ApiTable/ApiTable.md) \| null
+
 ## Example
 
 Retrieve the parent table that contains a drawing object in a document.

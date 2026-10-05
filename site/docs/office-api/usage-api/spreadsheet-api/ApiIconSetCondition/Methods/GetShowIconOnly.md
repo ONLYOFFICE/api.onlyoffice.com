@@ -8,7 +8,7 @@ Returns whether only icons are displayed in the icon set rule (without cell valu
 expression.GetShowIconOnly();
 ```
 
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
 
 ## Parameters
 

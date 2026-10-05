@@ -1,7 +1,6 @@
 # SetSmallCaps
 
-Specifies that all the small letter characters in this text run are formatted for display only as their capital
-letter character equivalents which are two points smaller than the actual font size specified for this text.
+Specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ letter character equivalents which are two points smaller than the actual font s
 expression.SetSmallCaps(isSmallCaps);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

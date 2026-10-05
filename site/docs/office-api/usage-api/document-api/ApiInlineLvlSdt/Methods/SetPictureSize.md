@@ -1,7 +1,6 @@
 # SetPictureSize
 
 Sets the size for the picture in a content control.
-This method adjusts the width and height of the image if the content control is a picture.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ This method adjusts the width and height of the image if the content control is 
 expression.SetPictureSize(width, height);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

@@ -4,14 +4,30 @@ Returns the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
+## Syntax
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
-Read the priority level assigned to a conditional formatting rule in a spreadsheet.
+Read the evaluation order of a color gradient rule among all formatting rules in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what priority order a formatting rule has in a spreadsheet?
+// How do I check which position a color scale rule holds in the priority list in a spreadsheet?
 
-// Check which position a formatting rule holds among all active rules in a spreadsheet.
+// Inspect the rank assigned to a color gradient condition to understand its order of evaluation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,11 +42,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let priority = condition1.GetPriority();
+let priority = colorScale.GetPriority();
 
-worksheet.GetRange("C1").SetValue("Rule priority:");
+worksheet.GetRange("C1").SetValue("Color scale priority:");
 worksheet.GetRange("C2").SetValue(priority);
 ```

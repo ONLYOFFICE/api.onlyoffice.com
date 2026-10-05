@@ -8,7 +8,7 @@ Returns an attribute from the XML node at the specified XPath.
 expression.GetAttribute(xPath, name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

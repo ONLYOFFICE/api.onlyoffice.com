@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md)。
 
+## 语法
+
+```javascript
+expression.ReplacePlaceholder(drawing);
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| drawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 将替换占位符的绘图对象。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中用图像替换占位符。
@@ -30,6 +48,6 @@ const shapeCopy = shape.Copy();
 shapeCopy.SetPosition(0, Api.MillimetersToEmus(48));
 slide.AddObject(shapeCopy);
 
-const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
+const image = Api.CreateImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
 ```

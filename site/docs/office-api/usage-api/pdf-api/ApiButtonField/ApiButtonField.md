@@ -1,8 +1,12 @@
 # ApiButtonField
 
+Class representing a button field.
+
 ApiButtonField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

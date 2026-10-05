@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFontSize(FontSize);
+expression.SetFontSize(fontSize);
 ```
 
 `expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetFontSize(FontSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| FontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
+| fontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 
 ## 返回值
 

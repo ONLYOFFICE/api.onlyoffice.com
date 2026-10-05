@@ -4,6 +4,22 @@ Returns the scope type of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
 
+## Syntax
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## Example
 
 Read the scope type that controls where a conditional formatting rule applies in a spreadsheet.

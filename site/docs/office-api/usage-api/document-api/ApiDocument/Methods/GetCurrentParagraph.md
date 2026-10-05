@@ -4,30 +4,33 @@ Returns the current paragraph where the cursor is located.
 
 Inherited from [ApiDocumentContent.GetCurrentParagraph](../../ApiDocumentContent/Methods/GetCurrentParagraph.md).
 
+## Syntax
+
+```javascript
+expression.GetCurrentParagraph();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+
 ## Example
 
-Retrieve the paragraph at the current cursor position from a document content in a document.
+Access the paragraph where the cursor is placed in a document.
 
 ```javascript editor-docx
-// How do I get the active paragraph inside a document content container in a document?
+// How do I get the paragraph at the current cursor position in a document?
 
-// Append text to whichever paragraph is focused without referencing it by index.
+// Apply bold formatting to the paragraph the user is actively editing in a document.
 
 const doc = Api.GetDocument();
-const paragraph = doc.GetElement(0);
-
-const rgb = Api.CreateRGBColor(100, 150, 200);
-const fill = Api.CreateSolidFill(rgb);
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const drawing = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
-paragraph.AddDrawing(drawing);
-
-const docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-const newParagraph = Api.CreateParagraph();
-newParagraph.AddText("This is a new paragraph inside the shape.");
-docContent.Push(newParagraph);
-
-const currentParagraph = docContent.GetCurrentParagraph();
-currentParagraph.AddText("(Current paragraph detected!)");
+const paragraph = doc.GetCurrentParagraph();
+paragraph.AddText('This is current paragraph');
+paragraph.SetBold(true);
 ```

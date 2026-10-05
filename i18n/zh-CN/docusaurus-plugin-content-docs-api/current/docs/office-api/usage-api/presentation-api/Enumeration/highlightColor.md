@@ -31,7 +31,7 @@
 将段落突出显示设置为绿色。
 
 ```javascript editor-pptx
-// How to change a highlight color to green.
+// How do I change the highlight color to green?
 
 // Use a green color to highlight the ApiParagraph object.
 

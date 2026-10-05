@@ -4,6 +4,24 @@ Sets new field partial name.
 
 Inherited from [ApiBaseField.SetPartialName](../../ApiBaseField/Methods/SetPartialName.md).
 
+## Syntax
+
+```javascript
+expression.SetPartialName(name);
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | The new partial name for the field. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Assign a local name to a form field in a PDF.

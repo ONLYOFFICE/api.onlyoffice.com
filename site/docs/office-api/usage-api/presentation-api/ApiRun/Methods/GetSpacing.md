@@ -4,6 +4,22 @@ Gets the text spacing from the current text properties measured in twentieths of
 
 Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
+## Syntax
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md)
+
 ## Example
 
 Read the character spacing value for text in a presentation.

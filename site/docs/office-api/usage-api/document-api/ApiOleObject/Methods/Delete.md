@@ -4,6 +4,22 @@ Deletes the current graphic object.
 
 Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove a shape from the paragraph it is anchored to in a document.

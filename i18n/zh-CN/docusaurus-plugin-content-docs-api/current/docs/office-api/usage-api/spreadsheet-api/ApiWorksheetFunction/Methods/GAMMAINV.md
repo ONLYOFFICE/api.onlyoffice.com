@@ -24,7 +24,7 @@ number
 
 ## 示例
 
-查找电子表格中伽马分布中对应给定概率的值。
+在电子表格中使用 GAMMAINV 兼容性函数查找伽马分布中对应给定概率的值。
 
 ```javascript editor-xlsx
 // How do I calculate the inverse of a gamma cumulative distribution in a spreadsheet?

@@ -91,7 +91,7 @@ if __name__ == "__main__":
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a new [Notion integration](https://www.notion.so/profile/integrations) to obtain an API token and replace `your-notion-token` with it. After submitting, you'll see an `Internal Integration Token`. Verify that the `Read content` and `Read user information` capabilities are checked.
 
 ## Step 1: Retrieve Notion users

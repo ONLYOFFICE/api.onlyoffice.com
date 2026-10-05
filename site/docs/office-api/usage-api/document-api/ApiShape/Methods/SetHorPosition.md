@@ -4,6 +4,26 @@ Sets the absolute measurement for the horizontal positioning of the floating obj
 
 Inherited from [ApiDrawing.SetHorPosition](../../ApiDrawing/Methods/SetHorPosition.md).
 
+## Syntax
+
+```javascript
+expression.SetHorPosition(sRelativeFrom, nDistance, bPercent);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | Required | [RelFromH](../../Enumeration/RelFromH.md) |  | The document element which will be taken as a countdown point for the object horizontal alignment. |
+| nDistance | Required | [EMU](../../Enumeration/EMU.md) \| number |  | The distance from the right side of the document element to the floating object. Use EMU for absolute distance or a number for percent (1 = 1%) when bPercent=true. |
+| bPercent | Optional | boolean | false | The option defining whether the horizontal alignment offset is specified in percent. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Position a floating shape at a specific horizontal location in a document.

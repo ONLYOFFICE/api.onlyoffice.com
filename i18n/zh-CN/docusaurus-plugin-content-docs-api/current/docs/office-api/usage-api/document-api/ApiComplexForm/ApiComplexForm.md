@@ -1,8 +1,12 @@
 # ApiComplexForm
 
+表示复杂域的类。
+
 ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -10,7 +14,7 @@ ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
 | [ClearContent](./Methods/ClearContent.md) | boolean | 清除当前复合表单的所有内容，将其重置为占位符状态。 |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "form" | 返回 ApiComplexForm 类的类型。 |

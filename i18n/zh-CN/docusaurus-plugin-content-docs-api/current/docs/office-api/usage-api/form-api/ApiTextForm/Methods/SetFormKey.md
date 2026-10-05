@@ -4,14 +4,32 @@
 
 继承自 [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md)。
 
+## 语法
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | 必需 | string |  | 表单键。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-为文档中的表单字段分配标识键。
+在文档中为文本字段分配标识键。
 
 ```javascript editor-forms
-// How do I set the key that identifies a form field in a document?
+// How do I give a text field a unique identifier for referencing it later in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Label a text field with a key so it can be found and grouped with related fields in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

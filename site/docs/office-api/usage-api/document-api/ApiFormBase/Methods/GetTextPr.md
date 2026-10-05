@@ -1,7 +1,10 @@
 # GetTextPr
 
 Returns the text properties from the current form.
-*Used if possible for this type of form*
+
+:::note
+Used if possible for this type of form.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Returns the text properties from the current form.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

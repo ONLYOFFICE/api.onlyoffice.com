@@ -8,7 +8,7 @@ Returns a Range object that represents all the cells in the specified range or a
 expression.GetCells(row, col);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

@@ -1,6 +1,8 @@
-# IMainButtonPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IMainButtonPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IMainButtonPlugin.ts#L73)
+# IMainButtonPlugin
 
 The plugin that can add items to the main button menu.
 

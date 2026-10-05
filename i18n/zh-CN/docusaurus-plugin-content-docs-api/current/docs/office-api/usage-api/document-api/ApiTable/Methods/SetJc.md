@@ -4,25 +4,41 @@
 
 继承自 [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md)。
 
+## 语法
+
+```javascript
+expression.SetJc(sJcType);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJcType | 必需 | "left" \| "right" \| "center" |  | 用于当前表格放置的对齐类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中将表格水平定位在页面边距内。
+在文档中使表格相对于页边距水平对齐。
 
 ```javascript editor-docx
-// How do I align a table to the center or sides of the page in a document?
+// How do I control the horizontal position of a table in a document?
 
-// Place a table at a specific horizontal position relative to the surrounding text in a document.
+// Center or reposition a table to match the desired page layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("The table is aligned at the center of the page horizontally:");
+paragraph.AddText("The table is aligned at the center of the page horizontally.");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let tablePr = tableStyle.GetTablePr();
-tablePr.SetJc("center");
-let table = Api.CreateTable(3, 3);
+let table = Api.CreateTable(2, 2);
 table.SetWidth("percent", 50);
-table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
+table.SetJc("center");
 doc.Push(table);
 ```

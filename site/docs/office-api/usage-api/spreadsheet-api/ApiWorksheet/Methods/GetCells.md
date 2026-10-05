@@ -8,7 +8,7 @@ Returns the ApiRange that represents all the cells on the worksheet (not just th
 expression.GetCells(row, col);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current paragraph.
-💡 Please note that this paragraph must be in the document.
+
+:::note
+This paragraph must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a comment to the current paragraph.
 expression.AddComment(sText, sAuthor, sUserId);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

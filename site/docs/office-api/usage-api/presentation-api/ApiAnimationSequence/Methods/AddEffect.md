@@ -8,7 +8,7 @@ Adds an animation effect to the sequence.
 expression.AddEffect(drawing, effectType, trigger);
 ```
 
-`expression` - A variable that represents a [ApiAnimationSequence](../ApiAnimationSequence.md) class.
+`expression` - A variable that represents an [ApiAnimationSequence](../ApiAnimationSequence.md) class.
 
 ## Parameters
 

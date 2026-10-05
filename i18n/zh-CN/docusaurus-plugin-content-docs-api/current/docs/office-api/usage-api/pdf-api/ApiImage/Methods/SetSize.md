@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md)。
 
+## 语法
+
+```javascript
+expression.SetSize(width, height);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | 必需 | [EMU](../../Enumeration/EMU.md) |  | 对象宽度，以英制单位测量。 |
+| height | 必需 | [EMU](../../Enumeration/EMU.md) |  | 对象高度，以英制单位测量。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将绘图对象调整为特定尺寸。

@@ -8,7 +8,7 @@ Returns the next paragraph.
 expression.GetNext();
 ```
 
-`expression` - A variable that represents a [ApiRichParagraph](../ApiRichParagraph.md) class.
+`expression` - A variable that represents an [ApiRichParagraph](../ApiRichParagraph.md) class.
 
 ## Parameters
 

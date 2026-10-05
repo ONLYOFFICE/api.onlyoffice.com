@@ -1,8 +1,10 @@
 # ApiCore
 
-表示 ApiCore 类。
+表示文档属性的类（类似于 VBA 中的 BuiltInDocumentProperties）。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

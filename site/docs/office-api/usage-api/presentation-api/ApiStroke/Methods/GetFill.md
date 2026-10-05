@@ -8,7 +8,7 @@ Gets the fill (color) of the stroke.
 expression.GetFill();
 ```
 
-`expression` - A variable that represents a [ApiStroke](../ApiStroke.md) class.
+`expression` - A variable that represents an [ApiStroke](../ApiStroke.md) class.
 
 ## Parameters
 

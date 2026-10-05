@@ -1,6 +1,8 @@
 # SetStart
 
-Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition. By default this value is 1.
+Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition.
+
+By default this value is 1.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies the starting value for the numbering used by the parent numbering leve
 expression.SetStart(nStart);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

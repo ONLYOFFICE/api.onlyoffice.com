@@ -1,8 +1,10 @@
 # ApiTablePr
 
-表示 ApiTablePr 类。
+表示表格属性的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -16,17 +18,17 @@
 | [SetStyleRowBandSize](./Methods/SetStyleRowBandSize.md) | boolean | 指定此表格样式中每个表格行带包含的行数。 |
 | [SetTableBorderAll](./Methods/SetTableBorderAll.md) | boolean | 指定将在所有表格单元格边框上显示的边框。 |
 | [SetTableBorderBottom](./Methods/SetTableBorderBottom.md) | boolean | 设置将在当前表格底部显示的边框。 |
-| [SetTableBorderInsideH](./Methods/SetTableBorderInsideH.md) | boolean | 指定将在不在最外边缘的所有水平表格单元格边框上显示的边框 |
-| [SetTableBorderInsideV](./Methods/SetTableBorderInsideV.md) | boolean | 指定将在不在最外边缘的所有垂直表格单元格边框上显示的边框 |
+| [SetTableBorderInsideH](./Methods/SetTableBorderInsideH.md) | boolean | 指定将在所有不在父表格最外边缘的水平表格单元格边框上显示的边框（所有非顶部或底部边框的水平边框）。 |
+| [SetTableBorderInsideV](./Methods/SetTableBorderInsideV.md) | boolean | 指定将在所有不在父表格最外边缘的垂直表格单元格边框上显示的边框（所有非最左侧或最右侧边框的垂直边框）。 |
 | [SetTableBorderLeft](./Methods/SetTableBorderLeft.md) | boolean | 设置将在当前表格左侧显示的边框。 |
 | [SetTableBorderRight](./Methods/SetTableBorderRight.md) | boolean | 设置将在当前表格右侧显示的边框。 |
 | [SetTableBorderTop](./Methods/SetTableBorderTop.md) | boolean | 设置将在当前表格顶部显示的边框。 |
-| [SetTableCellMarginBottom](./Methods/SetTableCellMarginBottom.md) | boolean | 指定将在单元格内容底部边缘与边框之间保留的间距 |
-| [SetTableCellMarginLeft](./Methods/SetTableCellMarginLeft.md) | boolean | 指定将在单元格内容左边缘与左 |
-| [SetTableCellMarginRight](./Methods/SetTableCellMarginRight.md) | boolean | 指定将在单元格内容右边缘与右 |
-| [SetTableCellMarginTop](./Methods/SetTableCellMarginTop.md) | boolean | 指定将在单元格内容顶部边缘与顶部边框之间保留的间距 |
+| [SetTableCellMarginBottom](./Methods/SetTableCellMarginBottom.md) | boolean | 指定在父表格（或表格行）中所有表格单元格的单元格内容底部范围与边框之间保留的空间量。 |
+| [SetTableCellMarginLeft](./Methods/SetTableCellMarginLeft.md) | boolean | 指定在父表格（或表格行）中所有表格单元格的单元格内容左侧范围与左边框之间保留的空间量。 |
+| [SetTableCellMarginRight](./Methods/SetTableCellMarginRight.md) | boolean | 指定在父表格（或表格行）中所有表格单元格的单元格内容右侧范围与右边框之间保留的空间量。 |
+| [SetTableCellMarginTop](./Methods/SetTableCellMarginTop.md) | boolean | 指定在父表格（或表格行）中所有表格单元格的单元格内容顶部范围与上边框之间保留的空间量。 |
 | [SetTableDescription](./Methods/SetTableDescription.md) | boolean | 设置表格说明。 |
-| [SetTableInd](./Methods/SetTableInd.md) | boolean | 指定将在文档中当前表格的前边缘之前添加的缩进 |
+| [SetTableInd](./Methods/SetTableInd.md) | boolean | 指定将在文档中当前表格的前缘之前添加的缩进（从左到右表格中的左边缘，以及从右到左表格中的右边缘）。 |
 | [SetTableLayout](./Methods/SetTableLayout.md) | boolean | 指定将用于在文档中布局当前表格内容的算法。 |
 | [SetTableTitle](./Methods/SetTableTitle.md) | boolean | 设置表格标题（题注）。 |
 | [SetWidth](./Methods/SetWidth.md) | boolean | 为当前表格设置首选宽度。 |

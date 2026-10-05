@@ -1,9 +1,30 @@
 # SetTextSize
 
 设置控件文本大小。
-💡 文本大小 === 0 表示自动适应
+
+:::note
+文本大小 === 0 表示自动适应。
+:::
 
 继承自 [ApiBaseWidget.SetTextSize](../../ApiBaseWidget/Methods/SetTextSize.md)。
+
+## 语法
+
+```javascript
+expression.SetTextSize(size);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| size | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的字体大小。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 

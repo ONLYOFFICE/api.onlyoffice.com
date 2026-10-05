@@ -4,6 +4,22 @@ Returns the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
+## Syntax
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Read the priority level assigned to a conditional formatting rule in a spreadsheet.

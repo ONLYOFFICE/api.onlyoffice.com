@@ -8,7 +8,7 @@ Returns information about all the content controls that have been added to the p
 expression.GetAllContentControls();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 
@@ -21,19 +21,14 @@ This method doesn't have any parameters.
 ## Example
 
 ```javascript
-var flagInit = false;
-window.Asc.plugin.init = function (text) {
-    if (!flagInit) {
-        this.executeMethod ("GetAllContentControls", null, function (data) {
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].Tag == 11) {
-                    this.Asc.plugin.executeMethod ("SelectContentControl", [data[i].InternalId]);
-                    break;
-                }
+window.Asc.plugin.init = function () {
+    window.Asc.plugin.executeMethod("GetAllContentControls", null, function (controls) {
+        for (var i = 0; i < controls.length; i++) {
+            if (controls[i].Tag === "{tag}") {
+                window.Asc.plugin.executeMethod("SelectContentControl", [controls[i].InternalId]);
+                break;
             }
-        });
-        flagInit = true;
-        ...
-    }
+        }
+    });
 };
 ```

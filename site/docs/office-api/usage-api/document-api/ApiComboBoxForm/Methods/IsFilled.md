@@ -4,28 +4,44 @@ Checks if the current form is filled.
 
 Inherited from [ApiFormBase.IsFilled](../../ApiFormBase/Methods/IsFilled.md).
 
+## Syntax
+
+```javascript
+expression.IsFilled();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check whether a form field contains a value entered by the user in a document.
+Detect whether a combo box form has a value selected or entered in a document.
 
 ```javascript editor-docx
-// How do I tell if a form field has been filled out in a document?
+// How do I tell if a combo box form field has been filled in a document?
 
-// Verify the fill status of multiple form fields to determine which ones still need input in a document.
+// Compare an empty combo box against a populated one to verify their fill status in a document.
 
 let doc = Api.GetDocument();
-let textForm1 = Api.CreateTextForm({"key": "Name1", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": false, "multiLine": false, "autoFit": false});
+let comboBoxForm1 = Api.CreateComboBoxForm({"key": "Country1", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": true, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm1);
-let textForm2 = Api.CreateTextForm({"key": "Name2", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "comb": false, "multiLine": false, "autoFit": false});
-paragraph.AddElement(textForm2);
-textForm2.SetText("Smith");
-let filled1 = textForm1.IsFilled();
-let filled2 = textForm2.IsFilled();
+paragraph.AddElement(comboBoxForm1);
+let comboBoxForm2 = Api.CreateComboBoxForm({"key": "Country2", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": true, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
+paragraph.AddElement(comboBoxForm2);
+comboBoxForm2.SetText("Latvia");
+let filled1 = comboBoxForm1.IsFilled();
+let filled2 = comboBoxForm2.IsFilled();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first text form is filled: " + filled1);
+paragraph.AddText("The first combobox form is filled: " + filled1);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The second text form is filled: " + filled2);
+paragraph.AddText("The second combobox form is filled: " + filled2);
 doc.Push(paragraph);
 ```

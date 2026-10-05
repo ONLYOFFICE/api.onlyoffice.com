@@ -8,7 +8,7 @@ Specifies the default table cell spacing (the spacing between adjacent cells and
 expression.SetCellSpacing(nValue);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

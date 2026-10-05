@@ -1,18 +1,35 @@
 # GetFontFamily
 
 Returns the font family from the current text properties.
+
 The method automatically calculates the font from the theme if the font was set via the theme.
 
 Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md).
 
+## Syntax
+
+```javascript
+expression.GetFontFamily();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Access the font name used for text in a PDF.
+Get the font name of text in a PDF.
 
 ```javascript editor-pdf
-// How do I find out which font is applied to text in a PDF?
+// How do I find out what font is used for text in a PDF?
 
-// Look up the font family name from text formatting properties in a PDF.
+// Read the font family setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -30,12 +47,11 @@ run.AddText("The text properties are changed and the style is added to the parag
 run.AddLineBreak();
 paragraph.AddElement(run);
 
-const textPr = run.GetTextPr();
-textPr.SetFontFamily("Arial");
+run.SetFontFamily("Arial");
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const fontFamily = textPr.GetFontFamily();
+const fontFamily = run.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
 ```

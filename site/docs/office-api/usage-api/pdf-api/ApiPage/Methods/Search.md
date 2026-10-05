@@ -8,7 +8,7 @@ Search words and returns their quads.
 expression.Search(props);
 ```
 
-`expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
+`expression` - A variable that represents an [ApiPage](../ApiPage.md) class.
 
 ## Parameters
 

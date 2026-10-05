@@ -1,6 +1,8 @@
-# ISettingsPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts#L105)
+# ISettingsPlugin
 
 The plugin that manages settings for the administrator or owner.
 The plugin that can interact with the settings panel.

@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import { FeaturePageTemplate } from "@site/src/components/FeaturePageLayout";
 import Link from "@docusaurus/Link";
@@ -23,10 +22,9 @@ const templateProps: FeaturePageTemplate.Props = {
 };
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} Workspace API`}
+      title="Workspace API"
       description="Detailed guides on how to integrate ONLYOFFICE Workspace into your solution, manage documents, projects, emails, CRM, and timetables in one place."
     >
       <FeaturePageTemplate {...templateProps}/>

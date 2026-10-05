@@ -1,8 +1,8 @@
 # SetColumnWidth
 
 Sets the width of the specified column.
-One unit of column width is equal to the width of one character in the Normal style.
-For proportional fonts, the width of the character 0 (zero) is used.
+
+One unit of column width is equal to the width of one character in the Normal style. For proportional fonts, the width of the character 0 (zero) is used.
 
 ## Syntax
 
@@ -10,7 +10,7 @@ For proportional fonts, the width of the character 0 (zero) is used.
 expression.SetColumnWidth(nColumn, nWidth, bWithotPaddings);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

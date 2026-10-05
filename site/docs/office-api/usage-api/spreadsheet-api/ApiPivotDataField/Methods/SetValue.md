@@ -8,7 +8,7 @@ Sets a value representing the name of the specified data field in the pivot tabl
 expression.SetValue(name);
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

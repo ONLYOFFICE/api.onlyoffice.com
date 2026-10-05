@@ -1,12 +1,14 @@
 # ApiFreezePanes
 
-Represents the ApiFreezePanes class.
+Class representing freeze panes.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [FreezeAt](./Methods/FreezeAt.md) | None | Sets the frozen cells in the active worksheet view. The range provided corresponds to the cells that will be frozen in the top- and left-most pane. |
+| [FreezeAt](./Methods/FreezeAt.md) | None | Sets the frozen cells in the active worksheet view. |
 | [FreezeColumns](./Methods/FreezeColumns.md) | None | Freezes the first column or columns of the current worksheet. |
 | [FreezeRows](./Methods/FreezeRows.md) | None | Freezes the top row or rows of the current worksheet. |
 | [GetLocation](./Methods/GetLocation.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a range that describes the frozen cells in the active worksheet view. |

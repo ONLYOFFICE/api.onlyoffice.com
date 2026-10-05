@@ -1,4 +1,4 @@
-﻿# RenameFile
+# RenameFile
 
 `POST /wopi/files/(file_id)`
 

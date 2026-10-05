@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseWidget.IsAutoFit](../../ApiBaseWidget/Methods/IsAutoFit.md)。
 
+## 语法
+
+```javascript
+expression.IsAutoFit();
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查 PDF 中控件是否启用了自动文本适配。

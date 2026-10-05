@@ -8,7 +8,7 @@ Gets ink path list.
 expression.GetVertices();
 ```
 
-`expression` - A variable that represents a [ApiPolyLineAnnotation](../ApiPolyLineAnnotation.md) class.
+`expression` - A variable that represents an [ApiPolyLineAnnotation](../ApiPolyLineAnnotation.md) class.
 
 ## Parameters
 

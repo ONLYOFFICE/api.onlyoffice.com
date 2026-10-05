@@ -8,7 +8,7 @@ Selects the current word if it is possible.
 expression.SelectCurrentWord();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

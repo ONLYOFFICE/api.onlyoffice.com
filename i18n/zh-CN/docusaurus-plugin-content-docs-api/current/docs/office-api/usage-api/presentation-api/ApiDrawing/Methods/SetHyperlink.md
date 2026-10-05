@@ -1,6 +1,7 @@
 # SetHyperlink
 
 为当前绘图对象（形状或图像）设置超链接。
+
 传递 null 以删除超链接。
 
 ## 语法
@@ -48,7 +49,7 @@ const image = Api.CreateImage(
 image.SetPosition(160 * 36000, 0);
 slide.AddObject(image);
 
-const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
+const urlHyperlink = Api.CreateHyperlink('https://www.onlyoffice.com', 'Link to ONLYOFFICE website');
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);

@@ -1,8 +1,10 @@
 # ApiRange
 
-Represents the ApiRange class.
+Class representing a continuous region in a document.  Each Range object is determined by the position of the start and end characters.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -12,7 +14,7 @@ Represents the ApiRange class.
 | [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) | Adds a hyperlink to the specified range. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the specified position. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes all the contents from the current range. |
-| [ExpandTo](./Methods/ExpandTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range that goes beyond the specified range in any direction and spans a different range. The current range has not changed. |
+| [ExpandTo](./Methods/ExpandTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range that goes beyond the specified range in any direction and spans a different range. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns a collection of paragraphs that represents all the paragraphs in the specified range. |
 | [GetClassType](./Methods/GetClassType.md) | "range" | Returns a type of the ApiRange class. |
 | [GetEndPage](./Methods/GetEndPage.md) | Number | Returns the end page number of the current range. |
@@ -23,7 +25,7 @@ Represents the ApiRange class.
 | [GetStartPos](./Methods/GetStartPos.md) | number | Returns the start position of the current range. |
 | [GetText](./Methods/GetText.md) | string | Returns a text from the specified range. |
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the merged text properties of the entire range. |
-| [IntersectWith](./Methods/IntersectWith.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range as the intersection of the current range with another range. The current range has not changed. |
+| [IntersectWith](./Methods/IntersectWith.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range as the intersection of the current range with another range. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current range object. |
 | [Select](./Methods/Select.md) | boolean | Sets the selection to the specified range. |
 | [SetBold](./Methods/SetBold.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the bold property to the text character. |
@@ -35,15 +37,15 @@ Represents the ApiRange class.
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the font size to the characters of the current text Range. |
 | [SetHighlight](./Methods/SetHighlight.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies a highlighting color which is applied as a background to the contents of the current Range. |
 | [SetItalic](./Methods/SetItalic.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the italic property to the text character. |
-| [SetPosition](./Methods/SetPosition.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the amount by which text is raised or lowered for the current Range in relation to the default |
+| [SetPosition](./Methods/SetPosition.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the amount by which text is raised or lowered for the current Range in relation to the default baseline of the surrounding non-positioned text. |
 | [SetShd](./Methods/SetShd.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the shading applied to the contents of the current text Range. |
-| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that all the lowercase letter characters in the current text Range are formatted for display only as their capital |
+| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that all the lowercase letter characters in the current text Range are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text. |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text spacing measured in twentieths of a point. |
 | [SetStartPos](./Methods/SetStartPos.md) | boolean | Sets the start position of the current range object. |
 | [SetStrikeout](./Methods/SetStrikeout.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed with a single horizontal line through the range center. |
 | [SetStyle](./Methods/SetStyle.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the style to the current Range. |
 | [SetTextPr](./Methods/SetTextPr.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text properties to the current Range. |
-| [SetUnderline](./Methods/SetUnderline.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed along with a line appearing directly below the character |
+| [SetUnderline](./Methods/SetUnderline.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line). |
 | [SetVertAlign](./Methods/SetVertAlign.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text: |
 | [ToHtml](./Methods/ToHtml.md) | string | Converts the range to HTML. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiRange object into the JSON object. |

@@ -4,6 +4,22 @@ Returns the parent sheet of the current drawing.
 
 Inherited from [ApiDrawing.GetParentSheet](../../ApiDrawing/Methods/GetParentSheet.md).
 
+## Syntax
+
+```javascript
+expression.GetParentSheet();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+
 ## Example
 
 Retrieve the sheet that contains a drawing in a spreadsheet.

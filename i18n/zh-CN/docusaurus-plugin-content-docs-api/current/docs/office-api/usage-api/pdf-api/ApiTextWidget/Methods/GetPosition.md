@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseWidget.GetPosition](../../ApiBaseWidget/Methods/GetPosition.md)。
 
+## 语法
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Point](../../Enumeration/Point.md)
+
 ## 示例
 
 获取 PDF 中表单字段控件的坐标。

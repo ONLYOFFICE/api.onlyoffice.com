@@ -4,6 +4,22 @@ Gets field value
 
 Inherited from [ApiBaseField.GetValue](../../ApiBaseField/Methods/GetValue.md).
 
+## Syntax
+
+```javascript
+expression.GetValue();
+```
+
+`expression` - A variable that represents an [ApiButtonField](../ApiButtonField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Copy the text from one form field to another in a PDF.

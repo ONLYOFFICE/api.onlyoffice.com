@@ -8,7 +8,7 @@ Replaces a drawing with a new drawing.
 expression.ReplaceDrawing(oOldDrawing, oNewDrawing, bSaveOldDrawingPr);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -1,8 +1,12 @@
 # ApiComplexForm
 
+Class representing a complex field.
+
 ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -10,7 +14,7 @@ ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [ClearContent](./Methods/ClearContent.md) | boolean | Clears all content from the current complex form, resetting it to its placeholder state. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
-| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiComplexForm class. |

@@ -4,7 +4,7 @@ The plugins section defines the runtime plugin parameters.
 
 ## autostart
 
-**type:** `string[]`
+**type**: `string[]`
 
 The plugin identifiers from the [config.json](../../../../plugins/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
 
@@ -12,7 +12,7 @@ The plugin identifiers from the [config.json](../../../../plugins/configuration/
 
 ## disable
 
-**type:** `string[]`
+**type**: `string[]`
 
 The plugin identifiers from the [config.json](../../../../plugins/configuration/configuration.md#guid) file for plugins that will be disabled on load. The specified plugins will be blocked and unavailable in the editor interface.
 
@@ -20,7 +20,7 @@ The plugin identifiers from the [config.json](../../../../plugins/configuration/
 
 ## options
 
-**type:** `object`
+**type**: `object`
 
 The external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
 
@@ -39,7 +39,7 @@ You can also use the [`SetPluginsOptions`](../../../../plugins/interacting-with-
 
 ### options.all
 
-**type:** `object`
+**type**: `object`
 
 The parameters applied to all plugins.
 
@@ -55,7 +55,7 @@ The parameters applied to all plugins.
 
 ### options.pluginGuid
 
-**type:** `object`
+**type**: `object`
 
 The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
 
@@ -71,7 +71,7 @@ The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}`
 
 ## pluginsData
 
-**type:** `string[]`
+**type**: `string[]`
 
 The absolute URLs to the plugin [config.json](../../../../plugins/configuration/configuration.md) files.
 

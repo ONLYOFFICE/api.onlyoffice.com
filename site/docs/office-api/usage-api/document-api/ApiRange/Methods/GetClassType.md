@@ -8,7 +8,7 @@ Returns a type of the ApiRange class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

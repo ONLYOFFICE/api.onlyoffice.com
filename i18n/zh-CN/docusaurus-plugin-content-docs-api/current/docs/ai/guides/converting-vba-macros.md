@@ -32,7 +32,7 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
     虽然 AI 插件可以生成完整且可运行的宏，但并不总是完美无误。请务必仔细检查输出结果并进行充分测试，尤其是对于复杂的宏。
     :::
 
-6. 点击 ![Play icon](/assets/images/plugins/play.svg) 测试脚本。
+6. 点击 ![运行图标](/assets/images/plugins/play.svg) 测试脚本。
 
 例如，以下 VBA 宏可取消合并活动工作表中所有已合并的单元格：
 

@@ -4,14 +4,30 @@ Sets the evaluation order for the current conditional formatting rule so it is e
 
 Inherited from [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md).
 
+## Syntax
+
+```javascript
+expression.SetLastPriority();
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Move a formatting rule to the lowest position in the evaluation order in a spreadsheet.
+Push a top 10 conditional formatting rule to the lowest priority position in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I make a conditional formatting rule apply after all other rules in a spreadsheet?
+// How do I make a top 10 rule evaluate after all other formatting rules in a spreadsheet?
 
-// Push an existing highlight rule to the bottom of the priority stack in a spreadsheet.
+// Let other formatting rules take precedence by demoting the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,22 +39,18 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
 
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
+let condition2 = formatConditions.AddTop10();
 condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
 
-worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
+let priorityBefore = condition2.GetPriority();
+condition2.SetLastPriority();
+let priorityAfter = condition2.GetPriority();
 
-condition1.SetLastPriority();
-
-worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C1").SetValue("Priority before: " + priorityBefore);
+worksheet.GetRange("C2").SetValue("Priority after: " + priorityAfter);
 ```

@@ -4,6 +4,22 @@ Returns the drawing inner contents where a paragraph or text runs can be inserte
 
 Inherited from [ApiDrawing.GetContent](../../ApiDrawing/Methods/GetContent.md).
 
+## Syntax
+
+```javascript
+expression.GetContent();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+
 ## Example
 
 Get the inner content of a drawing object to add text inside it in a document.

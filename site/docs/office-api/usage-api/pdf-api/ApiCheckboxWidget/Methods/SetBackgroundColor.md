@@ -4,6 +4,24 @@ Sets widget background color.
 
 Inherited from [ApiBaseWidget.SetBackgroundColor](../../ApiBaseWidget/Methods/SetBackgroundColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBackgroundColor(color);
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a background color to all field widgets in a PDF.

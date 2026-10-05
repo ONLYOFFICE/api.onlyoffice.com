@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetValue(imageUrl);
 ```
 
-`expression` - A variable that represents a [ApiButtonField](../ApiButtonField.md) class.
+`expression` - A variable that represents an [ApiButtonField](../ApiButtonField.md) class.
 
 ## Parameters
 

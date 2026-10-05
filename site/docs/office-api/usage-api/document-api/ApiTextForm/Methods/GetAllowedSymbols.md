@@ -8,7 +8,7 @@ Returns the allowed symbols for the current text field.
 expression.GetAllowedSymbols();
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

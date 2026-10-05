@@ -8,7 +8,7 @@ Creates an image with the parameters specified.
 expression.CreateImage(sImageSrc, nWidth, nHeight);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

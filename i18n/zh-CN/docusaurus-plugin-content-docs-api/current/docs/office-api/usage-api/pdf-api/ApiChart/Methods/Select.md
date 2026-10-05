@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md)。
 
+## 语法
+
+```javascript
+expression.Select();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中高亮显示形状以进行编辑。

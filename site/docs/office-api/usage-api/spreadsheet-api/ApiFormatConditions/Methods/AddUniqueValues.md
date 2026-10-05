@@ -8,7 +8,7 @@ Adds a new unique values conditional formatting rule to the collection.
 expression.AddUniqueValues();
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 

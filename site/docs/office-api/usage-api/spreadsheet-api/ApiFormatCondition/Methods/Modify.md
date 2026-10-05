@@ -8,7 +8,7 @@ Modifies the current format condition with the specified parameters.
 expression.Modify(Type, Operator, Formula1, Formula2);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

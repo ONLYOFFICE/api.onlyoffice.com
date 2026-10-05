@@ -1,6 +1,6 @@
 # TextAnnotation
 
-No description provided.
+Identifies an annotation range within a paragraph.
 
 ## Type
 

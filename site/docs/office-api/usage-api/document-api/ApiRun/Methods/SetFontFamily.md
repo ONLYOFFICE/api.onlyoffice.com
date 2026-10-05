@@ -8,7 +8,7 @@ Sets all 4 font slots with the specified font family.
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

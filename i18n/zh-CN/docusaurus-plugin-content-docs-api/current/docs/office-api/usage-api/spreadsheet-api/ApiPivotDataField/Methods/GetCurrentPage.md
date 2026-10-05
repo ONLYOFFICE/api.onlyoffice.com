@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md)。
 
+## 语法
+
+```javascript
+expression.GetCurrentPage();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string \| number
+
 ## 示例
 
 读取电子表格中透视筛选字段的活动页面选择。

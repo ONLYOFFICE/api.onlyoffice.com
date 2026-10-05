@@ -1,6 +1,7 @@
 # ContentControlType
 
 A numeric value that specifies the content control type:
+
 - **1** - block content control
 - **2** - inline content control
 - **3** - row content control

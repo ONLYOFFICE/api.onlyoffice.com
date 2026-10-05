@@ -4,40 +4,52 @@
 
 继承自 [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md)。
 
+## 语法
+
+```javascript
+expression.GetContent(bGetCopies);
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bGetCopies | 必需 | boolean |  | 指定是否返回文档元素的副本。 |
+
+## 返回值
+
+[DocumentElement](../../Enumeration/DocumentElement.md)[]
+
 ## 示例
 
-从文档中的文档内容容器检索所有元素。
+在文档中以数组形式获取文档的所有顶级元素。
 
 ```javascript editor-docx
-// How do I get an array of all elements stored in a document content in a document?
+// How do I access every element in a document by its position in a document?
 
-// Access individual paragraphs, tables, and controls by their position after listing all content elements.
+// Style individual paragraphs, tables, and content controls by iterating the element array in a document.
 
 let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
-paragraph.AddDrawing(shape);
-let docContent = shape.GetDocContent();
-paragraph = Api.CreateParagraph();
+let paragraph = Api.CreateParagraph();
 paragraph.AddText("This paragraph is the first document element.");
-docContent.AddElement(0, paragraph);
+doc.AddElement(0, paragraph);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(2, 2);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
-docContent.AddElement(1, table);
+doc.AddElement(1, table);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This table is the second document element.");
-let cell = table.GetCell(0, 0);
+let cell = table.GetCell(0,0);
 table.AddElement(cell, 0, paragraph);
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This block text content control is the third document element.");
-docContent.AddElement(2, blockLvlSdt);
-let docElements = docContent.GetContent(false);
+doc.AddElement(2, blockLvlSdt);
+let docElements = doc.GetContent(false);
 docElements[0].SetBold(true);
-docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
+docElements[1].SetBackgroundColor(Api.HexColor('#FF6F3D'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```

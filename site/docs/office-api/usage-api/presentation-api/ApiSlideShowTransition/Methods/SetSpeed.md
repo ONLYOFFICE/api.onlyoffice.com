@@ -1,7 +1,9 @@
 # SetSpeed
 
 Sets the transition speed (similar to PowerPoint VBA Speed property).
+
 Converts speed to duration based on standard values:
+
 - fast = 500ms
 - medium = 750ms
 - slow = 1000ms
@@ -12,7 +14,7 @@ Converts speed to duration based on standard values:
 expression.SetSpeed(speed);
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

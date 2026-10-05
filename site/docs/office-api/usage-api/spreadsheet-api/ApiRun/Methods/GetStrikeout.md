@@ -4,6 +4,22 @@ Gets the strikeout property from the current text properties.
 
 Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether strikeout formatting is enabled for a text run in a spreadsheet.

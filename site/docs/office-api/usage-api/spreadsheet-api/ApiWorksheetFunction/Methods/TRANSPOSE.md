@@ -8,7 +8,7 @@ Converts a vertical range of cells to a horizontal range, or vice versa.
 expression.TRANSPOSE(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

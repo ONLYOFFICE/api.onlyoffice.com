@@ -8,7 +8,7 @@ Sets the table properties to the current style.
 expression.SetTablePr(tablePr);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

@@ -204,7 +204,7 @@ Enumeration
 Create a scheme color using the 'lightYellow' color preset.
 
 ```javascript editor-xlsx
-// How to create a preset color.
+// How do I create a preset color?
 
 // Create light yellow preset color.
 

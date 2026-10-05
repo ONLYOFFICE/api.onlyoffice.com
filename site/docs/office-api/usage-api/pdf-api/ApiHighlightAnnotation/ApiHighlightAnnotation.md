@@ -1,8 +1,12 @@
 # ApiHighlightAnnotation
 
+Class representing a highlight annotation.
+
 ApiHighlightAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

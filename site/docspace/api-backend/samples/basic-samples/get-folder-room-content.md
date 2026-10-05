@@ -132,14 +132,14 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
         for folder in folders:
           print(f"- {folder.get('title', 'No Title')}")
 
-          return contents
+        return contents
       else:
         print("Unexpected response format:", data)
     except Exception as e:
       print(f"Error parsing JSON: {e}")
       print("Raw response:", response.text)
 
-  return None
+    return None
 
   if __name__ == '__main__':
     folder_id = 1074098  # Replace with actual folder or room ID

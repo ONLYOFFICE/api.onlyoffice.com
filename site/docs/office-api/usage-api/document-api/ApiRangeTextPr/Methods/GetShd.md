@@ -4,6 +4,22 @@ Gets the text shading from the current text properties.
 
 Inherited from [ApiTextPr.GetShd](../../ApiTextPr/Methods/GetShd.md).
 
+## Syntax
+
+```javascript
+expression.GetShd();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Shd](../../Enumeration/Shd.md) \| undefined
+
 ## Example
 
 Read the background shading applied to a run of text in a document.

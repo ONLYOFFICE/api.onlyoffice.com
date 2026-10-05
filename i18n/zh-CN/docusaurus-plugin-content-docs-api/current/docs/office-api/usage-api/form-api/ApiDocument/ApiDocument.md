@@ -1,8 +1,12 @@
 # ApiDocument
 
+表示文档的类。
+
 ApiDocument 是 [ApiDocumentContent](../../document-api/ApiDocumentContent/ApiDocumentContent.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -10,7 +14,7 @@ ApiDocument 是 [ApiDocumentContent](../../document-api/ApiDocumentContent/ApiDo
 | [GetAllForms](./Methods/GetAllForms.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中所有现有表单。 |
 | [GetFormKeysByRole](./Methods/GetFormKeysByRole.md) | string[] | 返回附加到指定角色的所有表单键的列表。 |
 | [GetFormRoles](./Methods/GetFormRoles.md) | [ApiFormRoles](../ApiFormRoles/ApiFormRoles.md) | 返回表单角色集合。 |
-| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | 返回指定键的表单值。对于一组单选按钮，返回 Choice，即所选项目的名称。 |
+| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | 返回指定键的表单值。 |
 | [GetFormsByKey](./Methods/GetFormsByKey.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定键的所有表单的列表。 |
 | [GetFormsByRole](./Methods/GetFormsByRole.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定角色名称的所有表单的列表。 |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定标签名称的所有表单的列表。 |

@@ -8,7 +8,7 @@ Sets whether custom text can be entered.
 expression.SetEditable(allowCustomText);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

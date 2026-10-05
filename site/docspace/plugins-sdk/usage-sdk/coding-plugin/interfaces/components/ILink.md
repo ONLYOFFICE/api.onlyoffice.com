@@ -1,6 +1,8 @@
-# ILink
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L45)
+# ILink
 
 Defines the link component properties.
 
@@ -70,8 +72,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## LinkType
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L86)
-
 Defines the link type.
 
 ### Enumeration Members
@@ -95,8 +95,6 @@ Action link (clickable but not navigating)
 ***
 
 ## LinkTarget
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L96)
 
 Defines the link target attribute.
 

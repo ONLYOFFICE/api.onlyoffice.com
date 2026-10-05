@@ -8,7 +8,7 @@ Applies a theme to all the slides in the presentation.
 expression.ApplyTheme(oApiTheme);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@ Appends the specified text to the end of the document content.
 
 Inherited from [ApiDocumentContent.AddText](../../ApiDocumentContent/Methods/AddText.md).
 
+## Syntax
+
+```javascript
+expression.AddText(text);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | Required | string |  | The text to add. |
+
+## Returns
+
+[ApiRun](../../ApiRun/ApiRun.md)
+
 ## Example
 
 Append text to the end of a document content object in a document.

@@ -1,13 +1,15 @@
 # Api
 
-Represents the Api class.
+The main class of the Presentation API. Use it to get the current presentation and to create slides and slide elements, such as shapes, images, tables, and charts.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |

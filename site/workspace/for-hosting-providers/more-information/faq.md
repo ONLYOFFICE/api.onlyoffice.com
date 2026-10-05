@@ -21,4 +21,4 @@ Please note that the UTC date and time without the offset are used in this case.
 
 You can get *json* or *xml* format adding *.json* or *.xml* to the request or pointing the request *Content-Type* in application/json or text/xml.
 
-E.g.: [api/2.0/people.json](../../../workspace/api-backend/usage-api/get-profiles.api.mdx)
+E.g.: [api/2.0/people.json](../../../workspace/api-backend/usage-api/people/profiles/get-profiles.md)

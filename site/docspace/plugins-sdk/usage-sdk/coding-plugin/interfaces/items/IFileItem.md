@@ -1,6 +1,8 @@
-# IFileItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IFileItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IFileItem.ts#L132)
+# IFileItem
 
 Describes an item that will be embedded in the file list.
 The file item can be displayed as a file or a folder.
@@ -134,8 +136,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ***
 
 ## File
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IFileItem.ts#L191)
 
 Describes the file properties.
 

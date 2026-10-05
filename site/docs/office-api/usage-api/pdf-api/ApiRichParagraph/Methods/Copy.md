@@ -8,7 +8,7 @@ Creates a paragraph copy.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiRichParagraph](../ApiRichParagraph.md) class.
+`expression` - A variable that represents an [ApiRichParagraph](../ApiRichParagraph.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-Duplicate a paragraph in a PDF.
+Duplicate a paragraph in a free text annotation in a PDF.
 
 ```javascript editor-pdf
 // How do I create a copy of a paragraph in a PDF?

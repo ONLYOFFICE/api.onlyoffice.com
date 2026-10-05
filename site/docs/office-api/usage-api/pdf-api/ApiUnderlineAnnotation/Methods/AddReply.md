@@ -4,6 +4,24 @@ Adds reply on this annot.
 
 Inherited from [ApiBaseAnnotation.AddReply](../../ApiBaseAnnotation/Methods/AddReply.md).
 
+## Syntax
+
+```javascript
+expression.AddReply(textAnnot);
+```
+
+`expression` - A variable that represents an [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| textAnnot | Required | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | The text annotation to use as a reply. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add a response to an annotation in a PDF.

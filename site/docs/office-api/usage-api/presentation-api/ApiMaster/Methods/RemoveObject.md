@@ -8,7 +8,7 @@ Removes objects (image, shape or chart) from the current slide master.
 expression.RemoveObject(nPos, nCount);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

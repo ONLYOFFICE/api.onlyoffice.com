@@ -4,28 +4,45 @@ Checks if the current form is filled.
 
 Inherited from [ApiFormBase.IsFilled](../../ApiFormBase/Methods/IsFilled.md).
 
+## Syntax
+
+```javascript
+expression.IsFilled();
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check whether a form field contains a value entered by the user in a document.
+Determine whether all sub-forms inside a complex form are filled in a document.
 
 ```javascript editor-forms
-// How do I tell if a form field has been filled out in a document?
+// How do I check if a complex form has been completely filled out in a document?
 
-// Verify the fill status of multiple form fields to determine which ones still need input in a document.
+// Validate that a user has entered data in every required part of a form before submitting the document.
 
 let doc = Api.GetDocument();
-let textForm1 = Api.CreateTextForm({"key": "Name1", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": false, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Enter your email", "placeholder": "Email"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm1);
-let textForm2 = Api.CreateTextForm({"key": "Name2", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "comb": false, "multiLine": false, "autoFit": false});
-paragraph.AddElement(textForm2);
-textForm2.SetText("Smith");
-let filled1 = textForm1.IsFilled();
-let filled2 = textForm2.IsFilled();
+paragraph.AddElement(complexForm);
+let textForm = Api.CreateTextForm({"placeholder" : "name"});
+complexForm.Add(textForm);
+complexForm.Add("@mail");
+let filledBefore = complexForm.IsFilled();
+textForm.SetText("john.smith");
+let filledAfter = complexForm.IsFilled();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first text form is filled: " + filled1);
+paragraph.AddText("The complex form is filled before entering text: " + filledBefore);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The second text form is filled: " + filled2);
+paragraph.AddText("The complex form is filled after entering text: " + filledAfter);
 doc.Push(paragraph);
 ```

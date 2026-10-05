@@ -5,13 +5,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/sharepoint.svg
 ---
 
-# SharePoint integration
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# SharePoint integration
+
 <YoutubeVideo videoId="5rN7CksWE-w"/>
-```
 
 This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) using ONLYOFFICE Docs.
 

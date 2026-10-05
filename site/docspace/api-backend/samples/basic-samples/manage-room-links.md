@@ -172,7 +172,7 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-back
   <TabItem value="python" label="Python">
 
   ``` py
-    def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
+  def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
     url = f'{API_HOST}/api/2.0/files/rooms/{room_id}/links'
     data = {
       'access': access_level,

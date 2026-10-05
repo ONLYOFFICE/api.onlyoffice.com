@@ -42,7 +42,7 @@
 将 “0.00” 数字格式设置到图表数据点。
 
 ```javascript editor-pptx
-// How to use the specified numeric format for the ApiChart object.
+// How do I apply a specific number format to a chart?
 
 // Set the chart data point to the "0.00" numeric format.
 

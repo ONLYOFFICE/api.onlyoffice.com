@@ -1,6 +1,6 @@
 # ApiAutoFilter
 
-表示 ApiAutoFilter 类。
+表示工作表自动筛选的类。
 
 ## 属性
 
@@ -12,6 +12,8 @@
 | Range | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示自动筛选区域的 ApiRange 对象；如果未定义自动筛选则返回 null。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

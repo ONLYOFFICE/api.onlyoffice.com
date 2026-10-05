@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetPosX](../../ApiDrawing/Methods/SetPosX.md)。
 
+## 语法
+
+```javascript
+expression.SetPosX(posX);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posX | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位测量的从幻灯片左侧到绘图左侧的距离。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中水平移动幻灯片上的形状。

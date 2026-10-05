@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetItalic](../../ApiTextPr/Methods/SetItalic.md)。
 
+## 语法
+
+```javascript
+expression.SetItalic(isItalic);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isItalic | 必需 | boolean |  | 指定当前文本块的内容显示为斜体。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 使文档中的文本以斜体样式显示。

@@ -8,7 +8,7 @@ Returns the presentation height in English measure units.
 expression.GetHeight();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

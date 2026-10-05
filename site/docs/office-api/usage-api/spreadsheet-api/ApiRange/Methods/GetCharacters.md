@@ -1,6 +1,8 @@
 # GetCharacters
 
-Returns the ApiCharacters object that represents a range of characters within the object text. Use the ApiCharacters object to format characters within a text string.
+Returns the ApiCharacters object that represents a range of characters within the object text.
+
+Use the ApiCharacters object to format characters within a text string.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the ApiCharacters object that represents a range of characters within th
 expression.GetCharacters(Start, Length);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

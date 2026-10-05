@@ -8,7 +8,7 @@ Sets the end position of the current range object.
 expression.SetEndPos(nPos);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

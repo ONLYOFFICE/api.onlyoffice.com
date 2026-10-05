@@ -1,6 +1,8 @@
 # GetHeader
 
-Returns the header setting. Always "xlYes" for a ListObject.
+Returns the header setting.
+
+Always "xlYes" for a ListObject.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -12,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetHeader();
 ```
 
-`expression` - A variable that represents a [ApiSort](../ApiSort.md) class.
+`expression` - A variable that represents an [ApiSort](../ApiSort.md) class.
 
 ## Parameters
 

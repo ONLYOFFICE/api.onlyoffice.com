@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetPageBreakBefore](../../ApiParaPr/Methods/GetPageBreakBefore.md)。
 
+## 语法
+
+```javascript
+expression.GetPageBreakBefore();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| undefined
+
 ## 示例
 
 读取文档中段落是否设置为从新页面开始。

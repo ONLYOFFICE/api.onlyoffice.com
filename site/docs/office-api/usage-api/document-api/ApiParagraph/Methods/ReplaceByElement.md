@@ -8,7 +8,7 @@ Replaces the current paragraph with a new element.
 expression.ReplaceByElement(oElement);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -1,12 +1,8 @@
 # SetTableLook
 
-Specifies the components of the conditional formatting of the referenced table style (if one exists)
-which shall be applied to the set of table rows with the current table-level property exceptions. A table style
-can specify up to six different optional conditional formats [Example: Different formatting for first column],
-which then can be applied or omitted from individual table rows in the parent table.
+Specifies the components of the conditional formatting of the referenced table style (if one exists) which shall be applied to the set of table rows with the current table-level property exceptions. A table style can specify up to six different optional conditional formats [Example: Different formatting for first column], which then can be applied or omitted from individual table rows in the parent table.
 
-The default setting is to apply the row and column banding formatting, but not the first row, last row, first
-column, or last column formatting.
+The default setting is to apply the row and column banding formatting, but not the first row, last row, first column, or last column formatting.
 
 ## Syntax
 
@@ -14,7 +10,7 @@ column, or last column formatting.
 expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHorBand, isVerBand);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

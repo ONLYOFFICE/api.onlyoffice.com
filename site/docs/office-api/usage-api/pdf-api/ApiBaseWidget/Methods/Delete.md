@@ -8,7 +8,7 @@ Removes widget from parent field.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+`expression` - A variable that represents an [ApiBaseWidget](../ApiBaseWidget.md) class.
 
 ## Parameters
 

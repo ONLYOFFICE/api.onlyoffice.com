@@ -8,7 +8,7 @@ Sets whether the field commits changes immediately after selection changes.
 expression.SetCommitOnSelChange(commitOnSelectionChange);
 ```
 
-`expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
+`expression` - A variable that represents an [ApiBaseListField](../ApiBaseListField.md) class.
 
 ## Parameters
 

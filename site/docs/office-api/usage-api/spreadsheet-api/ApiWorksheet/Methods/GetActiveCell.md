@@ -8,7 +8,7 @@ Returns an object that represents an active cell.
 expression.GetActiveCell();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

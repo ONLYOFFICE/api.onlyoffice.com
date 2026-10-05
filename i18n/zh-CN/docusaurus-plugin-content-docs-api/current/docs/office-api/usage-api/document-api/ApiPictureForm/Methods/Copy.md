@@ -4,20 +4,37 @@
 
 继承自 [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md)。
 
+## 语法
+
+```javascript
+expression.Copy();
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiForm](../../Enumeration/ApiForm.md)
+
 ## 示例
 
-在文档中复制表单字段。
+复制文档中的图片表单字段并放置副本。
 
 ```javascript editor-docx
-// How do I copy a form field in a document?
+// How do I make an exact copy of a picture form field in a document?
 
-// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
+// Reuse an existing picture form by cloning it and inserting the duplicate into a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let copyTextForm = textForm.Copy();
+paragraph.AddElement(pictureForm);
+let copyPictureForm = pictureForm.Copy();
 paragraph.AddLineBreak();
-paragraph.AddElement(copyTextForm);
+paragraph.AddElement(copyPictureForm);
 ```

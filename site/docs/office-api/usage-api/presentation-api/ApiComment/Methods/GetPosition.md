@@ -8,7 +8,7 @@ Returns the position of the comment in the document.
 expression.GetPosition();
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

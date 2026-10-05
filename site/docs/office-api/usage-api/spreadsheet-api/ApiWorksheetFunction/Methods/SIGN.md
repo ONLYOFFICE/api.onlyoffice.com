@@ -1,6 +1,6 @@
 # SIGN
 
-Returns the sign of a number: - **1** if the number is positive, - **0** if the number is zero, or - **-1** if the number is negative.
+Returns the sign of a number: **1** if the number is positive, **0** if the number is zero, or **-1** if the number is negative.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the sign of a number: - **1** if the number is positive, - **0** if the 
 expression.SIGN(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

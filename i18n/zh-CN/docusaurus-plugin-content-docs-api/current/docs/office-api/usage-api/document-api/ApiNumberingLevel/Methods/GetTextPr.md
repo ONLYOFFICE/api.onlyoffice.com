@@ -1,7 +1,10 @@
 # GetTextPr
 
 返回将应用于当前编号级别本身文本的文本属性，而不是后续段落中的文本。
-💡 要更改段落的文本样式，必须使用 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法为其应用样式。
+
+:::note
+要更改段落的文本样式，必须使用 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法为其应用样式。
+:::
 
 ## 语法
 

@@ -1,9 +1,10 @@
 # TocLeader
 
 目录前导符的可能值：
-- **“dot”** - “.......”
-- **“dash”** - “-------”
-- **“underline”** - “_______”
+
+- **"dot"** - "......."
+- **"dash"** - "-------"
+- **"underline"** - "_______"
 
 ## 类型
 
@@ -21,7 +22,7 @@
 向文档添加具有点状前导符的目录。
 
 ```javascript editor-docx
-// How to create a table of contents properties indicating its leader type.
+// How do I create table of contents properties with a specific leader type?
 
 // Add a table of contents with dot leader type.
 

@@ -1,7 +1,10 @@
 # GetTextSize
 
 获取控件文本大小。
-💡 文本大小 === 0 表示自动适应
+
+:::note
+文本大小 === 0 表示自动适应。
+:::
 
 ## 语法
 
@@ -17,7 +20,7 @@ expression.GetTextSize();
 
 ## 返回值
 
-[pt](../../Enumeration/pt.md)
+[hps](../../Enumeration/hps.md)
 
 ## 示例
 

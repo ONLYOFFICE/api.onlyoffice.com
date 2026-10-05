@@ -4,19 +4,34 @@
 
 继承自 [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md)。
 
+## 语法
+
+```javascript
+expression.SetKeepLines(isKeepLines);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isKeepLines | 必需 | boolean |  | true 值启用将段落各行保持在同一页上的选项。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-防止文档中的段落跨页拆分。
+在文档中防止段落被拆分到两页。
 
 ```javascript editor-docx
-// How do I keep all lines of a paragraph together on one page in a document?
+// How do I keep all lines of a paragraph together on the same page in a document?
 
-// Ensure that long paragraphs always start on a new page rather than breaking mid-content.
+// Force a paragraph to stay on one page instead of breaking across pages in a document.
 
 let doc = Api.GetDocument();
-let myStyle = doc.CreateStyle("My document style");
-let paraPr = myStyle.GetParaPr();
-paraPr.SetKeepLines(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is an example of how the paragraph tries to keep lines together. ");
 paragraph.AddText("Scroll down to the second page to see it.");
@@ -32,6 +47,6 @@ paragraph.AddText("The paragraph lines are moved to the next page to keep them t
 for (let i = 0; i < 10; ++i) {
 	paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 }
-paragraph.SetStyle(myStyle);
+paragraph.SetKeepLines(true);
 doc.Push(paragraph);
 ```
