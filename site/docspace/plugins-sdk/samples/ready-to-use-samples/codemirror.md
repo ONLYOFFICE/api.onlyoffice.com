@@ -39,7 +39,7 @@ There you can also view the plugin metadata, such as the author, version, status
 To create a new code file:
 
 1. Open the **Documents** section or one of the available rooms.
-2. Click **+** → **More**.
+2. Click **Actions → More**. The same menu also opens from the **+** button next to the section title.
 
     ![CreateFile](/assets/images/docspace/codemirror-create-file.png#gh-light-mode-only)![CreateFile](/assets/images/docspace/codemirror-create-file.dark.png#gh-dark-mode-only)
 3. Select the **Text file** option from the appeared menu.
@@ -100,7 +100,7 @@ The following plugin interfaces are used:
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required as we implement a code editor service ([CodeMirror](https://codemirror.net/)).
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add a settings block for plugin configuration. Users can access this block from **Settings → Integration → Plugins** to adjust the plugin parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement the **Edit file with Codemirror** context menu action.
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to add the **Text file** option to the **+** → **More** menu for creating new code files.
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to add the **Text file** option to the **Actions → More** menu for creating new code files.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md). Used to register supported file types and open them in the CodeMirror editor.
 
 ## Support

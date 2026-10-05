@@ -19,7 +19,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往 **设置 → 集成 → 插件**，然后点击 **Markdown** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **Markdown** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 
 ## 使用
 
@@ -27,8 +27,8 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要创建新的 `.md` 文件：
 
-1. 打开 **文档** 部分或某个可用房间。
-2. 点击 **操作 → 更多**。
+1. 打开**文档**部分或某个可用房间。
+2. 点击**操作 → 更多**。
 3. 从出现的菜单中选择 **Markdown** 插件。
 4. 在弹出窗口中更改文件名，然后点击 **Create**。新的 `.md` 文件会显示在文件列表中。
 
@@ -54,9 +54,9 @@ GitHub 仓库：[markdown](https://github.com/ONLYOFFICE/docspace-plugins/tree/m
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于向 DocSpace 门户 API 发送请求（例如创建和保存文件）。该插件还使用 [markdown-it](https://markdown-it.github.io/markdown-it/) 作为客户端 Markdown 渲染库。
-- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从 **设置 → 集成 → 插件** 访问该块以调整插件参数。
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Markdown** 插件中，我们使用 **文档** 部分或所选房间中的 **操作按钮 → 更多** 菜单元素来创建 `.md` 文件。
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Markdown** 插件中，我们使用**文档**部分或所选房间中的**操作 → 更多**菜单元素来创建 `.md` 文件。
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于与指定的文件类型交互。在本例中为 `.md` 文件。
 
 ## 支持

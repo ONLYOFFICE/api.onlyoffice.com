@@ -20,7 +20,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 要开始使用该插件：
 
 1. 使用 [AssemblyAI](https://www.assemblyai.com/) 生成 API 令牌。
-2. 前往 **设置 → 集成 → 插件**。
+2. 前往**设置 → 集成 → 插件**。
 3. 点击 **Speech to text** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 4. 在相应字段中输入 API 令牌。
 
@@ -34,7 +34,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要将音频或视频文件转换为文本：
 
-1. 打开 **文档** 部分或某个可用房间。
+1. 打开**文档**部分或某个可用房间。
 2. 右键点击文件名以打开文件上下文菜单。
 3. 点击 **Convert to text**。
 4. 如果在音频/视频文件中检测到语音，将创建名为 *“Filename + text”* 的新文件。
@@ -51,7 +51,7 @@ GitHub 仓库：[speech-to-text](https://github.com/ONLYOFFICE/docspace-plugins/
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了第三方服务（[AssemblyAI](https://www.assemblyai.com/)）。
-- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从 **设置 → 集成 → 插件** 访问该块以调整插件参数。
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。
 
 ## 支持

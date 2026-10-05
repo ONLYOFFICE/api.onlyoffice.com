@@ -34,8 +34,7 @@ To open a file in the reader:
 1. Open the **Documents** section or one of the available rooms.
 2. Click on a supported file, or right-click it, navigate to the **More options** dropdown menu, and select **Open in Reader**.
 
-![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
-
+    ![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
 3. The file opens in a modal window.
 
 Use the **‹** and **›** buttons at the bottom to navigate between pages. A progress bar and page counter show your current position in the book.

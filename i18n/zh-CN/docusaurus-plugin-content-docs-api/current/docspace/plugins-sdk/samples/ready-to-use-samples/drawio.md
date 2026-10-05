@@ -19,7 +19,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往 **设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
 
 - **Languages**：从列表中选择所需语言。**Auto** 选项对应门户语言。
 - **Offline mode**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
@@ -33,8 +33,8 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要创建新的 `.drawio` 图表：
 
-1. 打开 **文档** 部分或某个可用房间。
-2. 点击 **操作 → 更多**。
+1. 打开**文档**部分或某个可用房间。
+2. 点击**操作 → 更多**。
 3. 从出现的菜单中选择 **Draw.io** 插件。
 4. 在弹出窗口中更改文件名，然后点击 **Create**。新的 `.drawio` 文件会显示在文件列表中。
 
@@ -56,9 +56,9 @@ GitHub 仓库：[draw.io](https://github.com/ONLYOFFICE/docspace-plugins/tree/ma
 
 - [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了第三方服务（[Draw.io](https://www.drawio.com/)）。
-- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从 **设置 → 集成 → 插件** 访问该块以调整插件参数。
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Draw.io** 插件中，我们使用 **文档** 部分或所选房间中的 **操作按钮 → 更多** 菜单元素来创建 `.drawio` 图表。
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Draw.io** 插件中，我们使用**文档**部分或所选房间中的**操作 → 更多**菜单元素来创建 `.drawio` 图表。
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于与指定的文件类型交互。在本例中为 `.drawio` 文件。
 
 ## 支持

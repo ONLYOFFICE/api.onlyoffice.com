@@ -46,7 +46,7 @@ To compress a folder into a ZIP archive, right-click the folder in the file list
 You can also archive files, images, or videos directly, without going through a folder:
 
 1. To archive a single item, right-click it and select **Archive selected item** from the **More options** dropdown menu.
-2. To archive several items at once, select them using the checkboxes, then choose **Archive selected items** from the selection actions menu.
+2. To archive several items at once, select them using the checkboxes, then right-click the selection and choose **Archive selected items**.
 
     ![Archive selected files](/assets/images/docspace/create-archive-from-files.png#gh-light-mode-only)![Archive selected files](/assets/images/docspace/create-archive-from-files.dark.png#gh-dark-mode-only)
 3. The plugin creates a file named `New archive.zip` in the same folder.

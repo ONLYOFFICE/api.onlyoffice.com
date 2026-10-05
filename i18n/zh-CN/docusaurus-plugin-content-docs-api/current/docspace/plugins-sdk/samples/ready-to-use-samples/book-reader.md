@@ -19,7 +19,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往 **设置 → 集成 → 插件**，然后点击 **Book reader** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **Book reader** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 
 ## 使用
 
@@ -32,10 +32,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 在阅读器中打开文件：
 
 1. 打开**文档**部分或某个可用房间。
-2. 点击受支持的文件，或右键点击它，打开 **More options** 下拉菜单，然后选择**在阅读器中打开**。
+2. 点击受支持的文件，或右键点击它，打开**更多选项**下拉菜单，然后选择**在阅读器中打开**。
 
-![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
-
+    ![Book reader open file](/assets/images/docspace/book-reader-open-file.png#gh-light-mode-only)![Book reader open file](/assets/images/docspace/book-reader-open-file.dark.png#gh-dark-mode-only)
 3. 文件会在模态窗口中打开。
 
 使用底部的 **‹** 和 **›** 按钮在页面之间导航。进度条和页码计数器会显示您当前在书中的位置。
