@@ -4,6 +4,22 @@ Returns the font applied by the current format condition.
 
 Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
 
+## Syntax
+
+```javascript
+expression.GetFont();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFont](../../ApiFont/ApiFont.md) \| null
+
 ## Example
 
 Access the font settings that a conditional formatting rule applies to matching cells in a spreadsheet.

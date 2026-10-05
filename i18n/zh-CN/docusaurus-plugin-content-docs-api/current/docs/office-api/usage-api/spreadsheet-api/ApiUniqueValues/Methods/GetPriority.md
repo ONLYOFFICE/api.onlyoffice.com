@@ -4,33 +4,45 @@
 
 继承自 [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md)。
 
+## 语法
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
-读取分配给电子表格中条件格式规则的优先级。
+在电子表格中读取唯一值条件格式规则的计算优先级。
 
 ```javascript editor-xlsx
-// How do I find out what priority order a formatting rule has in a spreadsheet?
+// How do I check the order in which a unique-values rule is evaluated against other rules in a spreadsheet?
 
-// Check which position a formatting rule holds among all active rules in a spreadsheet.
+// Confirm the precedence number of a unique-values rule to understand its position in the formatting queue in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+let priority = uniqueValuesCondition.GetPriority();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let priority = condition1.GetPriority();
-
-worksheet.GetRange("C1").SetValue("Rule priority:");
+worksheet.GetRange("C1").SetValue("Priority:");
 worksheet.GetRange("C2").SetValue(priority);
 ```

@@ -8,7 +8,7 @@ Deletes an XML element at the specified XPath.
 expression.DeleteElement(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

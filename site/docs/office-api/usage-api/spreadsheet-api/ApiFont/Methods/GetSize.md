@@ -1,6 +1,6 @@
 # GetSize
 
-Returns the font size property of the specified font.
+Returns the font size property of the specified font measured in points.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the font size property of the specified font.
 expression.GetSize();
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

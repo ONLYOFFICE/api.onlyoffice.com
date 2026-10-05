@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md)。
 
+## 语法
+
+```javascript
+expression.GetOperator();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+
 ## 示例
 
 读取电子表格中条件格式规则的比较类型。

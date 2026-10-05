@@ -8,7 +8,7 @@ Moves to specified page.
 expression.GoToPage(pageIndex, rect);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 

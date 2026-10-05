@@ -3,13 +3,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/nextcloud.svg
 ---
 
-# Nextcloud 集成
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# Nextcloud 集成
+
 <YoutubeVideo videoId="vN9v9sJ0HVw"/>
-```
 
 这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)允许用户借助ONLYOFFICE 文档在[Nextcloud](https://nextcloud.com)中编辑办公文档。
 

@@ -8,7 +8,7 @@ Sets whether the rule targets values above or below the average.
 expression.SetAboveBelow(aboveBelow);
 ```
 
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
 
 ## Parameters
 

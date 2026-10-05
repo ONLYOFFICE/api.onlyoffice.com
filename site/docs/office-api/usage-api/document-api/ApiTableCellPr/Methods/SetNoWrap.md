@@ -1,7 +1,8 @@
 # SetNoWrap
 
-Specifies how the current table cell is laid out when the parent table is displayed in a document. This setting
-only affects the behavior of the cell when the [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) table layout for this table is set to use the `"autofit"` algorithm.
+Specifies how the current table cell is laid out when the parent table is displayed in a document.
+
+This setting only affects the behavior of the cell when the [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) table layout for this table is set to use the `"autofit"` algorithm.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ only affects the behavior of the cell when the [ApiTablePr#SetTableLayout](../..
 expression.SetNoWrap(isNoWrap);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 
@@ -23,7 +24,7 @@ boolean
 
 ## Example
 
-Prevent text from wrapping inside a table cell in a document.
+Prevent text from wrapping inside table cells using the table cell properties of a style in a document.
 
 ```javascript editor-docx
 // How do I stop text from breaking onto multiple lines inside a table cell in a document?

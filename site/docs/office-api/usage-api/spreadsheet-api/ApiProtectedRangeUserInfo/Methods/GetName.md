@@ -8,7 +8,7 @@ Returns the name property of the current user's information.
 expression.GetName();
 ```
 
-`expression` - A variable that represents a [ApiProtectedRangeUserInfo](../ApiProtectedRangeUserInfo.md) class.
+`expression` - A variable that represents an [ApiProtectedRangeUserInfo](../ApiProtectedRangeUserInfo.md) class.
 
 ## Parameters
 

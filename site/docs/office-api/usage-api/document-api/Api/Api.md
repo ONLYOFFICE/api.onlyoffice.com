@@ -1,16 +1,18 @@
 # Api
 
-Represents the Api class.
+The main class of the Document API. Use it to get the current document and to create document elements, such as paragraphs, tables, images, and charts.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the specifed document element or array of Runs. |
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an auto-color. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
-| [CompareDocuments](./Methods/CompareDocuments.md) | None | Compares the current document with another document opened via builderJS.OpenTmpFile. Tracked changes between the two documents are produced in the current document. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. |
+| [CompareDocuments](./Methods/CompareDocuments.md) | None | Compares the current document with another document opened via builderJS.OpenTmpFile. |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a new block level container. |
@@ -63,7 +65,7 @@ Represents the Api class.
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | Loads data for the mail merge. |
 | [MailMerge](./Methods/MailMerge.md) | boolean | Starts the mail merge process. |
-| [MergeDocuments](./Methods/MergeDocuments.md) | None | Merges the current document with another document opened via builderJS.OpenTmpFile. Its contents are merged into the current document. |
+| [MergeDocuments](./Methods/MergeDocuments.md) | None | Merges the current document with another document opened via builderJS.OpenTmpFile. |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
@@ -85,5 +87,5 @@ Represents the Api class.
 | [Save](./Methods/Save.md) | boolean | Saves changes to the specified document. |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
-| [attachEvent](./Methods/attachEvent.md) | boolean | Subscribes to the specified event and calls the callback function when the event fires. |
-| [detachEvent](./Methods/detachEvent.md) | boolean | Unsubscribes from the specified event. |
+| [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
+| [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

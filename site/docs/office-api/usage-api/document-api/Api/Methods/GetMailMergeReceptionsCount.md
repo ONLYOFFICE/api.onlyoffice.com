@@ -8,7 +8,7 @@ Returns the mail merge receptions count.
 expression.GetMailMergeReceptionsCount();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

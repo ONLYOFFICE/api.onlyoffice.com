@@ -8,7 +8,7 @@ Specifies the horizontal axis orientation.
 expression.SetHorAxisOrientation(bIsMinMax);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

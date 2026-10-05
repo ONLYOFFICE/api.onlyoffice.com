@@ -1,8 +1,10 @@
 # ApiGradientStop
 
-Represents the ApiGradientStop class.
+Class representing gradient stop.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

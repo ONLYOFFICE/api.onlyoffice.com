@@ -8,7 +8,7 @@ Returns the skewness of a distribution: a characterization of the degree of asym
 expression.SKEW(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

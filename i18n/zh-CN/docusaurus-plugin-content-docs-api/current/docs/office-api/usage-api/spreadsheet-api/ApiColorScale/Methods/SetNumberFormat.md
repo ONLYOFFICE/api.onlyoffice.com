@@ -4,6 +4,24 @@
 
 继承自 [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md)。
 
+## 语法
+
+```javascript
+expression.SetNumberFormat(NumberFormat);
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| NumberFormat | 必需 | string |  | 数字格式代码（例如 “General”、“#,##0.00” 等） |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 控制电子表格中触发格式规则时数字的显示方式。

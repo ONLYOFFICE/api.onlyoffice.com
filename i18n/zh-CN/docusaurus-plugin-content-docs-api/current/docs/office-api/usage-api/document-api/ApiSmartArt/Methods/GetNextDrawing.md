@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetNextDrawing](../../ApiDrawing/Methods/GetNextDrawing.md)。
 
+## 语法
+
+```javascript
+expression.GetNextDrawing();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
+
 ## 示例
 
 获取文档中形状之后的下一个内联绘图对象。

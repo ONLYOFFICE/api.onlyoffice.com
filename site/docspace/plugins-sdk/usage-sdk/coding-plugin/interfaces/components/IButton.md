@@ -1,6 +1,8 @@
-# IButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IButton.ts#L63)
+# IButton
 
 A component that is used for an action on a page.
 
@@ -69,8 +71,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 
 ## ButtonSize
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IButton.ts#L121)
 
 Defines button size options
 

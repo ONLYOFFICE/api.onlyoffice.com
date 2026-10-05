@@ -1,6 +1,7 @@
 # SetFillColor
 
 Sets the background color to the current cell range with the previously created color object.
+
 Sets 'No Fill' when previously created color object is null.
 
 ## Syntax
@@ -9,7 +10,7 @@ Sets 'No Fill' when previously created color object is null.
 expression.SetFillColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

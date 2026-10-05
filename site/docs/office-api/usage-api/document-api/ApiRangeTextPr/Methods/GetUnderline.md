@@ -4,6 +4,22 @@ Gets the underline property from the current text properties.
 
 Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
+## Syntax
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether an underline is applied to a text run in a document.

@@ -4,6 +4,22 @@ Gets the vertical alignment type from the current text properties.
 
 Inherited from [ApiTextPr.GetVertAlign](../../ApiTextPr/Methods/GetVertAlign.md).
 
+## Syntax
+
+```javascript
+expression.GetVertAlign();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the vertical position of a text run relative to the baseline in a document.

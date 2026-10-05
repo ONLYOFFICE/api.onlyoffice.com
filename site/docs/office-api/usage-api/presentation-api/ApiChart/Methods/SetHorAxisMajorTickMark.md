@@ -8,7 +8,7 @@ Specifies major tick mark for the horizontal axis.
 expression.SetHorAxisMajorTickMark(sTickMark);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

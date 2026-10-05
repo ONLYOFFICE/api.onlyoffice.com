@@ -4,6 +4,22 @@ Returns the type of the ApiDrawing class.
 
 Inherited from [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md).
 
+## Syntax
+
+```javascript
+expression.GetParentPage();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiPage](../../ApiPage/ApiPage.md)
+
 ## Example
 
 Check what type of shape an object is in a PDF.

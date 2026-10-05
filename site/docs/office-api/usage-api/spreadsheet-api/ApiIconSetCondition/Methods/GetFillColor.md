@@ -1,8 +1,26 @@
 # GetFillColor
 
-Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null.
+Returns the background color for the format condition.
+
+Returns 'No Fill' when the background color of the format condition is null.
 
 Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
+
+## Syntax
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
 
 ## Example
 

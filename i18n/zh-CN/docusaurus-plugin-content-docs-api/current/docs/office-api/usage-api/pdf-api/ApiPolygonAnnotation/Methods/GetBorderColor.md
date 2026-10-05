@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetBorderColor](../../ApiBaseAnnotation/Methods/GetBorderColor.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## 示例
 
 检查 PDF 中注释的边框颜色。

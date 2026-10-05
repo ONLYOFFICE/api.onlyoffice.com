@@ -1,6 +1,8 @@
-# IEventListenerItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IEventListenerItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IEventListenerItem.ts#L110)
+# IEventListenerItem
 
 Describes an event listener that reacts to portal events.
 

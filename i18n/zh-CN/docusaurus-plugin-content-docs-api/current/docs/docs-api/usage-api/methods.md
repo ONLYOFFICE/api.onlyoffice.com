@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: -3
 ---
 
@@ -34,13 +34,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   docEditor.denyEditingRights(message);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数 | 类型   | 是否必填 | 描述                           |
 | --------- | ------ | -------- | ------------------------------------- |
 | message   | `string` | 非必填的 | 对话的文本消息。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   const message = "The document cannot be edited.";
@@ -63,17 +63,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   docEditor.downloadAs(format);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format    | `string` | 非必填的 | 下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 `bmp`, `gif`, `jpg`, `png` 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
+| format    | `string` | 非必填的 | 下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 `bmp`, `gif`, `jpg`, `png` 等图像格式的文件。如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
 
 :::note
 请注意从 `djvu`, `pdf`, `xps` 格式的转换不可用。将下载原始格式。
 :::
 
-**Example:**
+**示例**：
 
   ``` ts
   const format = "pdf";
@@ -88,7 +88,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   docEditor.insertImage(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                    | 类型             | 是否必填 | 描述                                                                                                                                                                                                                                                                     |
 | ----------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -100,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | options.token           | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
 | options.url             | `string` | 必填 | 存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 `options.images.url` 参数。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.insertImage({
@@ -143,13 +143,13 @@ docEditor.insertImage({
   docEditor.refreshFile(config);
   ```
 
-**Parameters:**
+**参数**：
 
-| Parameter | Type   | Presence | Description                                                                          |
+| 参数      | 类型   | 是否必填 | 描述                                                                                 |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------ |
 | config    | `object` | 必填 | 当前文件版本的编辑器初始化[配置](./config/config.md)。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.refreshFile({
@@ -175,7 +175,7 @@ docEditor.insertImage({
   docEditor.refreshHistory(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                         | 类型    | 是否必填 | 描述                                                                                                                                       |
 | ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -185,13 +185,13 @@ docEditor.insertImage({
 | options.history.changes       | `object` | 非必填的 | 保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
 | options.history.created       | `string` | 必填 | 文档版本创建日期。                                                                                                       |
 | options.history.key           | `string` | 必填 | 服务用来识别文档的唯一文档标识符。                                                             |
-| options.history.serverVersion | `number` | 非必填的 | 当前服务器版本号。 如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
+| options.history.serverVersion | `number` | 非必填的 | 当前服务器版本号。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
 | options.history.user          | `object` | 非必填的 | 作为文档版本作者的用户。                                                                                      |
 | options.history.user.id       | `string` | 非必填的 | 作为文档版本作者的用户的标识符。                                                                    |
 | options.history.user.name     | `string` | 非必填的 | 作为文档版本作者的用户的名称                                                                          |
 | options.history.version       | `number` | 必填 | 文档版本号。                                                                                                              |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.refreshHistory({
@@ -271,19 +271,19 @@ docEditor.insertImage({
 
 ## setActionLink
 
-设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 `ACTION_DATA` 以设置链接。 该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。
+设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 `ACTION_DATA` 以设置链接。该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。
 
   ``` ts
   docEditor.setActionLink(link);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数 | 类型   | 是否必填 | 描述                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------- |
 | link      | `string` | 必填 | 允许滚动到文档中书签位置的链接。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   const link = "https://example.com/editor?bookmark=bookmark_ABC123";
@@ -298,13 +298,13 @@ docEditor.insertImage({
   docEditor.setFavorite(favorite);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数 | 类型    | 是否必填 | 描述                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
 | favorite  | `boolean` | 必填 | 如果为 `true`，则突出显示*收藏夹*图标。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   const favorite = true;
@@ -319,7 +319,7 @@ docEditor.insertImage({
   docEditor.setHistoryData(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                     | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -335,7 +335,7 @@ docEditor.insertImage({
 | options.url               | `string` | 必填 | 当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 `url` 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
 | options.version           | `number` | 必填 | 文档版本号。                                                                                                                                                                                                                                                                                        |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setHistoryData({
@@ -386,7 +386,7 @@ docEditor.insertImage({
   docEditor.setMailMergeRecipients(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
 | ---------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -394,7 +394,7 @@ docEditor.insertImage({
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setmailmergerecipients)形式添加到参数的加密签名。                                         |
 | options.url      | `string` | 必填 | 存储源数据的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setMailMergeRecipients({
@@ -420,19 +420,19 @@ docEditor.insertImage({
   docEditor.setReferenceData(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                  | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | options.error         | `string` | 非必填的 | 错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | options.fileType      | `string` | 非必填的 | 用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。 文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.path          | `string` | 必填 | 公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | options.referenceData | `object` | 非必填的 | 由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同。 |
 | options.token         | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | options.url           | `string` | 必填 | 下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setReferenceData({
@@ -468,7 +468,7 @@ docEditor.insertImage({
   docEditor.setReferenceSource(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                  | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -480,7 +480,7 @@ docEditor.insertImage({
 | options.token         | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | options.url           | `string` | 必填 | 下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setReferenceSource({
@@ -506,22 +506,22 @@ docEditor.insertImage({
 
 ## setRequestedDocument
 
-选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
+选择用于比较、合并或插入文本的文档。该方法通常在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件处理程序中调用。也可以在 [onDocumentReady](./config/events.md#ondocumentready) 事件触发后直接调用，例如无需用户操作即可比较文档。
 
   ``` ts
   docEditor.setRequestedDocument(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | options.c        | `string` | 必填 | 从事件中选择的文档类型：`compare`、`combine`、`insert-text`。默认值为 `"compare"`。                                                                   |
 | options.fileType | `string` | 必填 | 要选择的文档类型：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                       |
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式添加到参数的加密签名。                                             |
-| options.url      | `string` | 必填 | 存储源文档的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+| options.url      | `string` | 必填 | 存储源文档的绝对 URL。使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setRequestedDocument({
@@ -540,16 +540,16 @@ docEditor.insertImage({
   docEditor.setRequestedSpreadsheet(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
 | ---------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | options.c        | `string` | 必填 | 从事件中选择的电子表格类型：`mailmerge`。                                                                                                                        |
 | options.fileType | `string` | 必填 | 文件中邮件合并的电子表格类型：`csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`。                                                     |
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequestedspreadsheet)的形式添加到参数的加密签名。                                        |
-| options.url      | `string` | 必填 | 存储源数据的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)令牌。否则会出现错误。 |
+| options.url      | `string` | 必填 | 存储源数据的绝对 URL。使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)令牌。否则会出现错误。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setRequestedSpreadsheet({
@@ -576,7 +576,7 @@ docEditor.insertImage({
   docEditor.setRevisedFile(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -584,7 +584,7 @@ docEditor.insertImage({
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrevisedfile)形式添加到参数的加密签名。                                                   |
 | options.url      | `string` | 必填 | 存储源文档的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setRevisedFile({
@@ -602,7 +602,7 @@ docEditor.insertImage({
   docEditor.setSharingSettings(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                                | 类型            | 是否必填 | 描述                                                             |
 | ----------------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
@@ -611,7 +611,7 @@ docEditor.insertImage({
 | options.sharingSettings.permissions | `string` | 非必填的 | 具有上述名称的用户的访问权限。             |
 | options.sharingSettings.user        | `string` | 非必填的 | 将与之共享文档的用户的名称。    |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setSharingSettings({
@@ -637,18 +637,18 @@ docEditor.insertImage({
   docEditor.setUsers(options);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
 | ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | options.c           | `string` | 必填 |  [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`, `protect` 或 `info`。默认值为 `mention`。|
 | options.users       | `object[]` | 非必填的 | 用户列表。                                                                                                                                                                                   |
-| options.users.email | `string` | 非必填的 | 用户的电子邮件地址。 当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
+| options.users.email | `string` | 非必填的 | 用户的电子邮件地址。当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
 | options.users.id    | `string` | 非必填的 | 用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
-| options.users.image | `string` | 非必填的 | 用户头像的路径。 当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
+| options.users.image | `string` | 非必填的 | 用户头像的路径。当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
 | options.users.name  | `string` | 非必填的 | 用户的全名。                                                                                                                                                                               |
 
-**Example:**
+**示例**：
 
   ``` ts
   docEditor.setUsers({
@@ -686,13 +686,13 @@ docEditor.insertImage({
   docEditor.showMessage(message);
   ```
 
-**Parameters:**
+**参数**：
 
 | 参数 | 类型   | 是否必填 | 描述               |
 | --------- | ------ | -------- | ------------------------- |
 | message   | `string` | 必填 | 消息文本。 |
 
-**Example:**
+**示例**：
 
   ``` ts
   const message = "Changes have been saved successfully.";

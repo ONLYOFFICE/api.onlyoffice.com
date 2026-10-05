@@ -8,7 +8,7 @@ Returns the second formula used by the current conditional formatting rule.
 expression.GetFormula2();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

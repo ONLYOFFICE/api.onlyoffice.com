@@ -8,7 +8,7 @@ Sets the tag attribute to the current form.
 expression.SetTag(tag);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@ Sets annotation border width.
 
 Inherited from [ApiBaseAnnotation.SetBorderWidth](../../ApiBaseAnnotation/Methods/SetBorderWidth.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderWidth(width);
+```
+
+`expression` - A variable that represents an [ApiPolyLineAnnotation](../ApiPolyLineAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | Required | [pt](../../Enumeration/pt.md) |  | The border width in points. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Change the thickness of an annotation's border in a PDF.

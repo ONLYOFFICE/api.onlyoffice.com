@@ -8,7 +8,7 @@ Returns an array of column width values measured in twentieths of a point (1/144
 expression.GetColumnsWidths();
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

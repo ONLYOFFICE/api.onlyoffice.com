@@ -4,6 +4,25 @@
 
 继承自 [ApiTextPr.SetShd](../../ApiTextPr/Methods/SetShd.md)。
 
+## 语法
+
+```javascript
+expression.SetShd(type, color);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 应用于当前文本块内容的底纹类型。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于填充底纹的颜色或图案。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为文本背后应用底纹颜色。

@@ -18,7 +18,7 @@
 获取表示指定区域左端的 Range 对象。
 
 ```javascript editor-xlsx
-// How to set a direction of the range.
+// How do I set the direction of a range?
 
 // Get a range and set its direction, color fill, etc.
 

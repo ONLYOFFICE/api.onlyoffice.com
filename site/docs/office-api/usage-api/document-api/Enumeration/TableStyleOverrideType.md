@@ -1,6 +1,7 @@
 # TableStyleOverrideType
 
 This simple type specifies possible values for the table sections to which the current conditional formatting properties will be applied when this selected table style is used.
+
 - **"topLeftCell"** - specifies that the table formatting is applied to the top left cell.
 - **"topRightCell"** - specifies that the table formatting is applied to the top right cell.
 - **"bottomLeftCell"** - specifies that the table formatting is applied to the bottom left cell.
@@ -40,7 +41,7 @@ Enumeration
 Apply the created style (set shadow) to the top left cell of the table.
 
 ```javascript editor-docx
-// How to change a style of the specific part of the table.
+// How do I change the style of a specific part of a table?
 
 // Get table part style by condition and update it.
 

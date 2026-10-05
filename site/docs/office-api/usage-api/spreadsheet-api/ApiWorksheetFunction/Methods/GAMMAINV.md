@@ -8,7 +8,7 @@ Returns the inverse of the gamma cumulative distribution: if p = GAMMADIST(x,...
 expression.GAMMAINV(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -24,7 +24,7 @@ number
 
 ## Example
 
-Find the value that corresponds to a given probability in a gamma distribution in a spreadsheet.
+Find the value that corresponds to a given probability in a gamma distribution using the GAMMAINV compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I calculate the inverse of a gamma cumulative distribution in a spreadsheet?

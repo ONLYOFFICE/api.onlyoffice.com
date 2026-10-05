@@ -11,7 +11,7 @@ number
 该段落将具有 6 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为零。
 
 ```javascript editor-docx
-// How to set a bottom border indicating weight points and color.
+// How do I set a bottom border with a weight in eighths of a point and a color?
 
 // Add bottom border with its type, weight, color, etc.
 

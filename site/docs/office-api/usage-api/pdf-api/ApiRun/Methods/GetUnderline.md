@@ -4,14 +4,30 @@ Gets the underline property from the current text properties.
 
 Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
+## Syntax
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check if text has an underline in a PDF.
+Check if text has an underline decoration in a PDF.
 
 ```javascript editor-pdf
-// How do I determine if underline formatting exists on text in a PDF?
+// How do I determine if text is underlined in a PDF?
 
-// Inspect the underline status of text formatting in a PDF.
+// Verify the underline status of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetUnderline(true);
+run.SetUnderline(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const underline = textPr.GetUnderline();
+const underline = run.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
 ```

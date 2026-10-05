@@ -8,7 +8,7 @@ Sets the specified section to the current paragraph.
 expression.SetSection(oSection);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

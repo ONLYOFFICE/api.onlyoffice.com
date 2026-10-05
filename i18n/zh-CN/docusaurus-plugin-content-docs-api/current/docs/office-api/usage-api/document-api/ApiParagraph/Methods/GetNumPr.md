@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetNumPr](../../ApiParaPr/Methods/GetNumPr.md)。
 
+## 语法
+
+```javascript
+expression.GetNumPr();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md) \| undefined
+
 ## 示例
 
 检索文档中项目符号段落的编号属性。

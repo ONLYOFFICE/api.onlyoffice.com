@@ -8,7 +8,7 @@ Wraps the graphic object with a rich text content control.
 expression.InsertInContentControl(nType);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

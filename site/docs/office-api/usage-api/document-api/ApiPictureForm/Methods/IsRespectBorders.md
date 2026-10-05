@@ -8,7 +8,7 @@ Checks if the form border width is respected or not.
 expression.IsRespectBorders();
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

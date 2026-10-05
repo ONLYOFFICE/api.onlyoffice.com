@@ -4,6 +4,22 @@ Removes annotation from document.
 
 Inherited from [ApiBaseAnnotation.Delete](../../ApiBaseAnnotation/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove an annotation from a PDF.

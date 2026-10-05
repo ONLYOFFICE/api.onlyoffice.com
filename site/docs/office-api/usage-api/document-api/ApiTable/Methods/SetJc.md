@@ -4,25 +4,41 @@ Specifies the alignment of the current table with respect to the text margins in
 
 Inherited from [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md).
 
+## Syntax
+
+```javascript
+expression.SetJc(sJcType);
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJcType | Required | "left" \| "right" \| "center" |  | The alignment type used for the current table placement. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Position a table horizontally within the page margins in a document.
+Align a table horizontally relative to the page margins in a document.
 
 ```javascript editor-docx
-// How do I align a table to the center or sides of the page in a document?
+// How do I control the horizontal position of a table in a document?
 
-// Place a table at a specific horizontal position relative to the surrounding text in a document.
+// Center or reposition a table to match the desired page layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("The table is aligned at the center of the page horizontally:");
+paragraph.AddText("The table is aligned at the center of the page horizontally.");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let tablePr = tableStyle.GetTablePr();
-tablePr.SetJc("center");
-let table = Api.CreateTable(3, 3);
+let table = Api.CreateTable(2, 2);
 table.SetWidth("percent", 50);
-table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
+table.SetJc("center");
 doc.Push(table);
 ```

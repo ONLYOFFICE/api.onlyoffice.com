@@ -1,8 +1,10 @@
 # ApiWorkbook
 
-Represents the ApiWorkbook class.
+Class representing the currently active workbook
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

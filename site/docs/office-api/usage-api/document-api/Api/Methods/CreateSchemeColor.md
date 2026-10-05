@@ -8,7 +8,7 @@ Creates a complex color scheme selecting from one of the available schemes.
 expression.CreateSchemeColor(schemeColorId);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

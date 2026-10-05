@@ -1,8 +1,10 @@
 # ApiBaseWidget
 
-表示 ApiBaseWidget 类。
+表示基础字段控件的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -17,7 +19,7 @@
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | 获取控件位置。 |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | 设置字段矩形。 |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件文本颜色。 |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | 获取控件文本大小。 |
+| [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | 获取控件文本大小。 |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | 检查文本是否自动适应。 |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | 设置文本自动适应。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置控件背景颜色。 |

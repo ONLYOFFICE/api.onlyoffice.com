@@ -4,32 +4,43 @@ Removes an element using the position specified.
 
 Inherited from [ApiDocumentContent.RemoveElement](../../ApiDocumentContent/Methods/RemoveElement.md).
 
+## Syntax
+
+```javascript
+expression.RemoveElement(nPos);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPos | Required | number |  | The element number (position) in the document or inside other element. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Delete a specific paragraph from a shape's content by its position in a document.
+Remove a paragraph at a specified position in a document.
 
 ```javascript editor-docx
-// How do I remove one paragraph at a given index from a shape's content in a document?
+// How do I delete a specific paragraph by its index in a document?
 
-// Prune a numbered list of paragraphs inside a shape by targeting the unwanted entry's position.
+// Target and drop one paragraph out of several without affecting the rest in a document.
 
 let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 1926590, fill, stroke);
-paragraph.AddDrawing(drawing);
-let docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-paragraph = docContent.GetElement(0);
-paragraph.AddText("This is paragraph #1.");
-for (let i = 1; i < 5; ++i) {
-	paragraph = Api.CreateParagraph();
-	paragraph.AddText("This is paragraph #" + (i + 1) + ".");
-	docContent.Push(paragraph);
+let paragraph0 = doc.GetElement(0);
+paragraph0.AddText("This is paragraph #1.");
+for (let i = 0; i < 4; ++i) {
+	let paragraph = Api.CreateParagraph();
+	paragraph.AddText("This is paragraph #" + (i + 2) + ".");
+	doc.Push(paragraph);
 }
-docContent.RemoveElement(2);
-paragraph = Api.CreateParagraph();
+doc.RemoveElement(2);
+let paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed paragraph #3, check that out above.");
-docContent.Push(paragraph);
+doc.Push(paragraph);
 ```

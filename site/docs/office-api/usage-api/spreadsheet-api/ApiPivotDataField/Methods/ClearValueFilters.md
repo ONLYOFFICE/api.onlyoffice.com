@@ -4,6 +4,22 @@ Deletes all value filters from the pivot filters collection.
 
 Inherited from [ApiPivotField.ClearValueFilters](../../ApiPivotField/Methods/ClearValueFilters.md).
 
+## Syntax
+
+```javascript
+expression.ClearValueFilters();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Remove all value filters from a pivot table field in a spreadsheet.

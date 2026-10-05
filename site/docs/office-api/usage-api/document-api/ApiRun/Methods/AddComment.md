@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current run.
-💡 Please note that this run must be in the document.
+
+:::note
+This run must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a comment to the current run.
 expression.AddComment(sText, sAuthor, sUserId);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

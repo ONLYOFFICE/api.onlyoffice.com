@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures, { HomepageFeaturesProps } from '@site/src/components/HomepageFeatures';
 import HomepageSamples, { HomepageSamplesProps } from '@site/src/components/HomepageSamples';
@@ -12,12 +11,11 @@ import { Samples, BlogArticles } from "@site/src/homepageItems";
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={styles.heroBanner}>
       <div className={styles.heroInner}>
         <Heading as="h1" className={`hero__title ${styles.title}`}>
-          Welcome to {siteConfig.title} API
+          Welcome to ONLYOFFICE API
         </Heading>
         <p className={styles.subtitle}>
           Developer Documentation
@@ -61,10 +59,9 @@ const blogProps: HomepageBlogProps.Props = {
 };
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} API`}
+      title="API Documentation"
       description="Learn how to integrate ONLYOFFICE Docs and DocSpace into your solution, configure and customize them — with code samples and detailed guides."
       wrapperClassName={styles.homepageWrapper}>
       <HomepageHeader />

@@ -1,6 +1,8 @@
 # GetImageDataFromSelection
 
-返回所选图形中第一个图形的图像数据。如果没有选择图形，该方法将返回一个白色矩形。
+返回所选图形中第一个图形的图像数据。
+
+如果没有选择图形，该方法将返回一个白色矩形。
 
 ## 语法
 
@@ -8,7 +10,7 @@
 expression.GetImageDataFromSelection();
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

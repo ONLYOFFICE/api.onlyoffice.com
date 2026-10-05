@@ -8,7 +8,7 @@ Sets the placeholder index.
 expression.SetIndex(nIdx);
 ```
 
-`expression` - A variable that represents a [ApiPlaceholder](../ApiPlaceholder.md) class.
+`expression` - A variable that represents an [ApiPlaceholder](../ApiPlaceholder.md) class.
 
 ## Parameters
 

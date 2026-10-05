@@ -12,29 +12,29 @@ If you prefer to start coding right away, go directly to the [quick start guide]
 
 Automate repetitive tasks without leaving the editor.
 
-**Perfect for:**
+**Perfect for**:
 
 - One-click formatting ([Reset text properties](../samples/document-editor/reset-text-properties.md) - quickly reset text to default formatting)
 - Batch operations ([Remove empty tables](../samples/document-editor/remove-empty-tables.md) - remove all empty tables across the document)
 - Custom calculations ([Find weighted average](../samples/spreadsheet-editor/weighted-average-function.md) - calculate a weighted average on the selected range)
 - Document cleanup ([Remove empty paragraphs](../samples/presentation-editor/remove-empty-paragraphs.md) - remove blank paragraphs across the entire presentation)
 
-**Development profile:**
+**Development profile**:
 
-- **Time:** 30 mins - 2 hours | **Skill:** Beginner | **Tech:** JavaScript basics
-- **Distribution:** Copy-paste code or embed in document templates
+- **Skill**: Beginner | **Tech**: JavaScript basics
+- **Distribution**: Copy-paste code or embed in document templates
 
 [Browse all macro examples](/samples/?doctype=docs&text=macros)
 
 ## Troubleshooting
 
-**Macro doesn't run:**
+**Macro doesn't run**:
 
 - Check macros are enabled in **View → Macros**
 - Look for syntax errors in the macro editor
 - Verify API method names are correct
 
-**Unexpected results:**
+**Unexpected results**:
 
 - Add `console.log()` statements for debugging
 - Test each step individually

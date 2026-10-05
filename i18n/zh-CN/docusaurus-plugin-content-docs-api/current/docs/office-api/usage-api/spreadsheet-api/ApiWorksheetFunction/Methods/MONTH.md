@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.MONTH(arg1-);
+expression.MONTH(arg1);
 ```
 
 `expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
@@ -14,7 +14,7 @@ expression.MONTH(arg1-);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1- | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 日期时间代码中的数字。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 日期时间代码中的数字。 |
 
 ## 返回值
 

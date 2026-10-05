@@ -8,7 +8,7 @@ Creates a solid fill to apply to the object using a selected solid color as the 
 expression.CreateSolidFill(color);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

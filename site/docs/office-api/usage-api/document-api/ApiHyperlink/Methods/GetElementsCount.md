@@ -8,7 +8,7 @@ Returns a number of elements in the current hyperlink.
 expression.GetElementsCount();
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 
@@ -30,12 +30,12 @@ Count the elements contained inside a hyperlink in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run1 = Api.CreateRun();
-run1.AddText("Api Document Builder.");
+run1.AddText("Visit ONLYOFFICE");
 paragraph.AddElement(run1, 0);
 let run2 = Api.CreateRun();
-run2.AddText(" ONLYOFFICE for developers");
+run2.AddText(" for developers");
 paragraph.AddElement(run2, 1);
-let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com");
 let elementsCount = hyperlink.GetElementsCount();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements in hyperlink: " + elementsCount);

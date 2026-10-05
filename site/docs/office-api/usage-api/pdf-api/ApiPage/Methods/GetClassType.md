@@ -8,7 +8,7 @@ Returns a type of the ApiPage class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
+`expression` - A variable that represents an [ApiPage](../ApiPage.md) class.
 
 ## Parameters
 

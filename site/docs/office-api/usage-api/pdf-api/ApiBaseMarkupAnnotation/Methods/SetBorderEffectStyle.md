@@ -1,9 +1,30 @@
 # SetBorderEffectStyle
 
 Sets annotation border effect style.
-💡  Can be applied to circle, square, freeText and polygon annotations 
+
+:::note
+Can be applied to circle, square, freeText and polygon annotations.
+:::
 
 Inherited from [ApiBaseAnnotation.SetBorderEffectStyle](../../ApiBaseAnnotation/Methods/SetBorderEffectStyle.md).
+
+## Syntax
+
+```javascript
+expression.SetBorderEffectStyle(style);
+```
+
+`expression` - A variable that represents an [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| style | Required | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | The border effect style: **"none"** or **"cloud"**. |
+
+## Returns
+
+boolean
 
 ## Example
 

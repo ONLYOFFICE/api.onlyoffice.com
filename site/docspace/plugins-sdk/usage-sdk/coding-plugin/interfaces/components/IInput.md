@@ -1,6 +1,8 @@
-# IInput
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L90)
+# IInput
 
 Input field for single-line strings.
 
@@ -113,8 +115,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## InputSize
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L238)
-
 The supported input sizes.
 
 ### Enumeration Members
@@ -163,8 +163,6 @@ Large size of the input field.
 
 ## InputAutocomplete
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L264)
-
 The input autocomplete feature.
 
 ### Enumeration Members
@@ -188,8 +186,6 @@ Autocomplete is disabled.
 ***
 
 ## InputType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L278)
 
 The supported input types.
 

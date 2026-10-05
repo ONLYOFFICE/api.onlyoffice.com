@@ -1,8 +1,12 @@
 # ApiParagraph
 
+表示段落的类。
+
 ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -26,7 +30,7 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [AddPagesCount](./Methods/AddPagesCount.md) | [ApiRun](../ApiRun/ApiRun.md) | 将当前文档的总页数插入到段落中。 |
 | [AddTabStop](./Methods/AddTabStop.md) | [ApiRun](../ApiRun/ApiRun.md) | 向当前段落添加制表位。 |
 | [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | 向当前段落添加文本。 |
-| [Copy](./Methods/Copy.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建段落副本。忽略批注、脚注引用和复杂域。 |
+| [Copy](./Methods/Copy.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建段落副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除当前段落。 |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | 返回段落中的图表对象集合。 |
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | 返回段落中的内容控件对象集合。 |
@@ -57,7 +61,7 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [GetPageBreakBefore](./Methods/GetPageBreakBefore.md) | boolean \| undefined | 返回当前段落的段前分页值。 |
 | [GetParaId](./Methods/GetParaId.md) | number | 返回当前段落的唯一 ID。 |
 | [GetParaPr](./Methods/GetParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 返回段落属性。 |
-| [GetParagraphMarkTextPr](./Methods/GetParagraphMarkTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回用于标记段落结尾的段落标记的文本属性。该标记也可以获取 |
+| [GetParagraphMarkTextPr](./Methods/GetParagraphMarkTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回用于标记段落结尾的段落标记的文本属性。 |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | 返回包含当前段落的内容控件。 |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | 返回包含当前段落的表格。 |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | 返回包含当前段落的表格单元格。 |
@@ -86,14 +90,14 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前段落中移除所有元素。 |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | 用新元素替换当前段落。 |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 在段落对象的范围内搜索。搜索结果是 ApiRange 对象的集合。 |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 在段落对象的范围内搜索。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前段落。 |
 | [SetBetweenBorder](./Methods/SetBetweenBorder.md) | boolean | 指定在具有相同段落边框设置的一组段落中每个段落之间显示的边框。 |
 | [SetBold](./Methods/SetBold.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 为文本字符设置粗体属性。 |
 | [SetBottomBorder](./Methods/SetBottomBorder.md) | boolean | 指定在具有相同段落边框设置的一组段落下方显示的边框。 |
 | [SetCaps](./Methods/SetCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的任何小写字符仅格式化显示为其对应的大写字母。 |
 | [SetColor](./Methods/SetColor.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置当前段落的文本颜色。 |
-| [SetContextualSpacing](./Methods/SetContextualSpacing.md) | boolean | 指定使用 |
+| [SetContextualSpacing](./Methods/SetContextualSpacing.md) | boolean | 指定当前后段落具有相同段落样式时，使用 [ApiParaPr#SetSpacingBefore](../ApiParaPr/Methods/SetSpacingBefore.md) 或 [ApiParaPr#SetSpacingAfter](../ApiParaPr/Methods/SetSpacingAfter.md) 间距元素设置的此段落前后任何间距不应被应用，分别影响顶部和底部间距。 |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示为每个字符都有两条水平线穿过。 |
 | [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 使用指定的字体系列设置所有 4 个字体槽。 |
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置当前段落字符的字体大小。 |
@@ -104,30 +108,30 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [SetItalic](./Methods/SetItalic.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 为文本字符设置斜体属性。 |
 | [SetJc](./Methods/SetJc.md) | boolean | 设置段落内容对齐方式。 |
 | [SetKeepLines](./Methods/SetKeepLines.md) | boolean | 指定在使用页面视图呈现文档时，尽可能将当前段落的所有行保持在同一页上。 |
-| [SetKeepNext](./Methods/SetKeepNext.md) | boolean | 指定在使用分页视图呈现文档时，当前段落的内容至少 |
+| [SetKeepNext](./Methods/SetKeepNext.md) | boolean | 指定在使用分页视图呈现文档时，尽可能将当前段落的内容至少部分地与下一段落呈现在同一页上。 |
 | [SetLeftBorder](./Methods/SetLeftBorder.md) | boolean | 指定将在指定段落周围的页面左侧显示的边框。 |
 | [SetNumPr](./Methods/SetNumPr.md) | boolean | 指定当前段落引用当前文档中的编号定义实例。 |
 | [SetNumbering](./Methods/SetNumbering.md) | boolean | 指定当前段落引用当前文档中的编号定义实例。 |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | 设置指定属性的大纲级别。 |
-| [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | 指定在使用分页视图呈现文档时，当前段落的内容呈现在 |
+| [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | 指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。 |
 | [SetParaId](./Methods/SetParaId.md) | boolean | 为当前段落指定唯一 ID。 |
-| [SetPosition](./Methods/SetPosition.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的文本相对于默认 |
+| [SetPosition](./Methods/SetPosition.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的文本相对于周围非定位文本的默认基线升高或降低的量。 |
 | [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定当前段落的阅读顺序。 |
 | [SetRightBorder](./Methods/SetRightBorder.md) | boolean | 指定将在指定段落周围的页面右侧显示的边框。 |
 | [SetSection](./Methods/SetSection.md) | boolean | 将指定的节设置到当前段落。 |
 | [SetShd](./Methods/SetShd.md) | boolean | 指定应用于段落内容的底纹。 |
-| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的所有小写字母字符仅格式化显示为其对应的大写 |
+| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。 |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置以二十分之一磅为单位测量的文本间距。 |
-| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则 |
-| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。如果 isBeforeAuto 参数的值为 true，则 |
-| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。如果 sLineRule 参数的值为 |
+| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。 |
+| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。 |
+| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。 |
 | [SetStrikeout](./Methods/SetStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示为中间有一条水平线穿过。 |
 | [SetStyle](./Methods/SetStyle.md) | boolean | 段落样式基础方法。 |
 | [SetTabs](./Methods/SetTabs.md) | boolean | 指定将用于当前段落中任何制表符的自定义制表位序列。 |
 | [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换段落内容。 |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | 设置段落文本属性。 |
 | [SetTopBorder](./Methods/SetTopBorder.md) | boolean | 指定在具有相同段落边框设置的一组段落上方显示的边框。 |
-| [SetUnderline](./Methods/SetUnderline.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示时，字符正下方会出现一条线 |
+| [SetUnderline](./Methods/SetUnderline.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。 |
 | [SetVertAlign](./Methods/SetVertAlign.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 指定将应用于此段落内容的对齐方式，相对于段落文本的默认外观： |
 | [SetWidowControl](./Methods/SetWidowControl.md) | boolean | 指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。 |
 | [ToHtml](./Methods/ToHtml.md) | string | 将段落转换为 HTML。 |

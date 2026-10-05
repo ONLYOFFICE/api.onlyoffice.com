@@ -4,14 +4,30 @@ Gets the double strikeout property from the current text properties.
 
 Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check if text has a double strikethrough effect in a PDF.
+Check if text has double strikethrough in a PDF.
 
 ```javascript editor-pdf
-// How do I see if text is crossed out with two lines in a PDF?
+// How do I determine if text is crossed out with two lines in a PDF?
 
-// Retrieve the double strikethrough property from text formatting in a PDF.
+// Verify the double strikethrough setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetDoubleStrikeout(true);
+run.SetDoubleStrikeout(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const doubleStrikeout = textPr.GetDoubleStrikeout();
+const doubleStrikeout = run.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
 ```

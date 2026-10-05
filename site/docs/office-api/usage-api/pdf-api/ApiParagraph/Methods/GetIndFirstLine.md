@@ -4,14 +4,30 @@ Returns the paragraph first line indentation.
 
 Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md).
 
+## Syntax
+
+```javascript
+expression.GetIndFirstLine();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## Example
 
-Retrieve the first line indentation value from a paragraph in a PDF.
+Check the first line indent spacing of a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I get the first line indent measurement in a PDF?
+// How do I find the first line indentation of a paragraph in a PDF?
 
-// Obtain the starting line offset amount in a PDF.
+// Retrieve the indent distance for the first line of a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,16 +42,14 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndFirstLine(1440);
-paragraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 1 inch set to the first line. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndFirstLine(1440);
 
-const indFirstLine = paraPr.GetIndFirstLine();
+const firstLineIndentation = paragraph.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("First line indent: " + indFirstLine);
+paragraph.AddText("First line indent: " + firstLineIndentation);
 docContent.Push(paragraph);
 ```

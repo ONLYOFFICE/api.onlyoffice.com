@@ -1,8 +1,10 @@
 # ApiBlockLvlSdt
 
-表示 ApiBlockLvlSdt 类。
+表示文档内容容器的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -10,8 +12,8 @@
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向当前块级内容控件添加批注。 |
 | [AddElement](./Methods/AddElement.md) | boolean | 向当前容器添加段落、表格或块级内容控件。 |
 | [AddText](./Methods/AddText.md) | boolean | 向当前内容控件添加文本。 |
-| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 创建块级内容控件的副本。忽略批注、脚注引用和复杂域。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除内容控件及其内容。如果 keepContent 为 true，则不删除内容。 |
+| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 创建块级内容控件的副本。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除内容控件及其内容。 |
 | [GetAlias](./Methods/GetAlias.md) | string | 返回当前容器的别名属性。 |
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | 返回当前内容控件中的内容控件对象集合。 |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | 返回当前内容控件中的绘图对象集合。 |
@@ -41,7 +43,7 @@
 | [Push](./Methods/Push.md) | boolean | 推送段落、表格或块级内容控件以将其实际添加到当前容器。 |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 清除当前内容控件的内容。 |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | 用新元素替换当前内容控件。 |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 搜索内容控件对象的范围。搜索结果是 ApiRange 对象的集合。 |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 搜索内容控件对象的范围。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前内容控件。 |
 | [SetAlias](./Methods/SetAlias.md) | boolean | 设置当前容器的别名属性。 |
 | [SetAppearance](./Methods/SetAppearance.md) | 无 | 设置内容控件的可视化效果。 |

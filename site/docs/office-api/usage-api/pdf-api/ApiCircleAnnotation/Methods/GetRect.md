@@ -4,6 +4,22 @@ Sets annotation rect.
 
 Inherited from [ApiBaseAnnotation.GetRect](../../ApiBaseAnnotation/Methods/GetRect.md).
 
+## Syntax
+
+```javascript
+expression.GetRect();
+```
+
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Rect](../../Enumeration/Rect.md)
+
 ## Example
 
 Get the rectangular boundary of an annotation in a PDF.

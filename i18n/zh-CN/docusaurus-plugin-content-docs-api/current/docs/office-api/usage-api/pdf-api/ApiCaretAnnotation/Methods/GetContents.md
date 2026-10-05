@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetContents](../../ApiBaseAnnotation/Methods/GetContents.md)。
 
+## 语法
+
+```javascript
+expression.GetContents();
+```
+
+`expression` - 表示 [ApiCaretAnnotation](../ApiCaretAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 检索 PDF 中注释内的文本或消息。

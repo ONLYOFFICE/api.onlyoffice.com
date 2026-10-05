@@ -8,7 +8,7 @@ Copies the range to the specified range or to the clipboard.
 expression.Copy(destination);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

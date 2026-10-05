@@ -8,7 +8,7 @@ Inserts an array of elements into the current position of the document.
 expression.InsertContent(arrContent, isInline, oPr);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

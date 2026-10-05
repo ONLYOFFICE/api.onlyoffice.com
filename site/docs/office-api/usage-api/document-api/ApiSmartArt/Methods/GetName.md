@@ -4,6 +4,22 @@ Returns the name of the current drawing.
 
 Inherited from [ApiDrawing.GetName](../../ApiDrawing/Methods/GetName.md).
 
+## Syntax
+
+```javascript
+expression.GetName();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Retrieve the name assigned to a drawing object in a document.

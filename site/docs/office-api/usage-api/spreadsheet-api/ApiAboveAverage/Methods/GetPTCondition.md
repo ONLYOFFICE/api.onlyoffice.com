@@ -4,6 +4,22 @@ Returns the pivot table condition object.
 
 Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md).
 
+## Syntax
+
+```javascript
+expression.GetPTCondition();
+```
+
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+PTCondition \| null
+
 ## Example
 
 Check whether a conditional formatting rule is linked to a pivot table scope in a spreadsheet.

@@ -1,9 +1,30 @@
 # SetTextSize
 
 Sets widget text size.
-💡  Text size === 0 means autofit 
+
+:::note
+Text size === 0 means autofit.
+:::
 
 Inherited from [ApiBaseWidget.SetTextSize](../../ApiBaseWidget/Methods/SetTextSize.md).
+
+## Syntax
+
+```javascript
+expression.SetTextSize(size);
+```
+
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| size | Required | [hps](../../Enumeration/hps.md) |  | The font size measured in half-points (1/144 of an inch). |
+
+## Returns
+
+boolean
 
 ## Example
 

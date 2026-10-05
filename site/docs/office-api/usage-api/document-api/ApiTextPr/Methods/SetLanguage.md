@@ -1,7 +1,6 @@
 # SetLanguage
 
-Specifies the languages which will be used to check spelling and grammar (if requested) when processing
-the contents of the text run.
+Specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ the contents of the text run.
 expression.SetLanguage(sLangId);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

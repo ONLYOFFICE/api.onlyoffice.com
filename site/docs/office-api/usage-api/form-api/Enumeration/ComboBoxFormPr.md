@@ -16,7 +16,7 @@ Enumeration
 Create a combo box form with the common and specific combo box form properties.
 
 ```javascript editor-forms
-// How to create a combo box form with its properties.
+// How do I create a combo box form with its properties?
 
 // Create the base properties and apply them to the ApiComboBoxForm object.
 

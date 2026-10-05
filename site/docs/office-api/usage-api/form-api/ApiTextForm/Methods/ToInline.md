@@ -1,18 +1,37 @@
 # ToInline
 
 Converts the current form to an inline form.
-*Picture form can't be converted to an inline form, it's always a fixed size object.*
+
+:::note
+A picture form can't be converted to an inline form, as it's always a fixed-size object.
+:::
 
 Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
+## Syntax
+
+```javascript
+expression.ToInline();
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Convert a fixed-size form field back to an inline form in a document.
+Switch a text form to inline layout in a document.
 
 ```javascript editor-forms
-// How do I switch a form field from fixed size to inline positioning in a document?
+// How do I make a text form flow with the surrounding text instead of sitting in a fixed position in a document?
 
-// Allow a form field to flow with surrounding text instead of occupying a fixed block.
+// Embed a text form directly within a line of text so it moves with the content in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

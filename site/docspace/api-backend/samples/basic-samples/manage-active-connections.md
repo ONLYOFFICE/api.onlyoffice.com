@@ -288,16 +288,16 @@ It returns a list of active sessions on the portal.
 
   ``` py
   def get_all_active_connections():
-  url = f'{API_HOST}/api/2.0/security/activeconnections'
-  response = requests.get(url, headers=HEADERS)
+    url = f'{API_HOST}/api/2.0/security/activeconnections'
+    response = requests.get(url, headers=HEADERS)
 
-  if response.status_code == 200:
-    active_connections = response.json()
-    print(f"Active connections retrieved successfully: {active_connections}")
-    return active_connections
-  else:
-    print(f"Active connections retrieval failed. Status code: {response.status_code}, Message: {response.text}")
-    return None
+    if response.status_code == 200:
+      active_connections = response.json()
+      print(f"Active connections retrieved successfully: {active_connections}")
+      return active_connections
+    else:
+      print(f"Active connections retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>

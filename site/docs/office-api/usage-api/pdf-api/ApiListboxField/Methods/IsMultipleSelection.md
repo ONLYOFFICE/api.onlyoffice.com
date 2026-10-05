@@ -8,7 +8,7 @@ Checks if the field supports multiple selection.
 expression.IsMultipleSelection();
 ```
 
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
 
 ## Parameters
 

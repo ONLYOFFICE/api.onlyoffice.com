@@ -4,6 +4,22 @@ Returns the hyperlink from the current drawing object (shape or image).
 
 Inherited from [ApiDrawing.GetHyperlink](../../ApiDrawing/Methods/GetHyperlink.md).
 
+## Syntax
+
+```javascript
+expression.GetHyperlink();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null
+
 ## Example
 
 Retrieve the link attached to a shape in a presentation.

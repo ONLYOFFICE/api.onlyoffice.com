@@ -4,22 +4,38 @@ Returns the lock state of the current form.
 
 Inherited from [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md).
 
+## Syntax
+
+```javascript
+expression.GetLock();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check the lock status of a form field in a document.
+Check whether a signature form is locked in a document.
 
 ```javascript editor-docx
-// How do I find out whether a form field is locked in a document?
+// How do I find out if a signature form is currently locked in a document?
 
-// Protect a form, then confirm the lock is active by reading the lock state.
+// Verify the editing restriction applied to a signature form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetLock(true);
-let locked = textForm.GetLock();
+paragraph.AddElement(signatureForm);
+signatureForm.SetLock(true);
+let lock = signatureForm.GetLock();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document is locked: " + locked);
+paragraph.AddText("The form is locked: " + lock);
 doc.Push(paragraph);
 ```

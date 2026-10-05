@@ -8,7 +8,7 @@ Returns an array that represents all the visible fields in the pivot table.
 expression.GetVisibleFields();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

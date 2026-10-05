@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current inline content control.
-💡 Please note that this inline content control must be in the document.
+
+:::note
+This inline content control must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a comment to the current inline content control.
 expression.AddComment(sText, sAuthor, sUserId);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

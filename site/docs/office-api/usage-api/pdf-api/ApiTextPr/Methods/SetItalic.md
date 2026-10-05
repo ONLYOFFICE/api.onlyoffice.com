@@ -8,7 +8,7 @@ Sets the italic property to the text character.
 expression.SetItalic(isItalic);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-Make text slanted in a PDF.
+Make text slanted using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I apply italic formatting to text in a PDF?

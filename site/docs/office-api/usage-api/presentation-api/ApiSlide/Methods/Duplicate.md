@@ -8,7 +8,7 @@ Creates a duplicate of the specified slide object, adds the new slide to the sli
 expression.Duplicate(nPos);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

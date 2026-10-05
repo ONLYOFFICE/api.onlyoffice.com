@@ -4,6 +4,22 @@ Returns whether the text with the current text properties are capitalized.
 
 Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
 
+## Syntax
+
+```javascript
+expression.GetCaps();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether all-caps formatting is applied to text in a document.

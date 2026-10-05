@@ -4,38 +4,45 @@ Returns the font applied by the current format condition.
 
 Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
 
+## Syntax
+
+```javascript
+expression.GetFont();
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFont](../../ApiFont/ApiFont.md) \| null
+
 ## Example
 
-Access the font settings that a conditional formatting rule applies to matching cells in a spreadsheet.
+Access the font settings defined by a unique-values conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I retrieve and modify the text style applied by a unique-values rule in a spreadsheet?
 
-// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
+// Adjust the font appearance of cells highlighted by a unique-values rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+let font = uniqueValuesCondition.GetFont();
+font.SetColor(Api.CreateColorFromRGB(255, 0, 0));
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let font = condition1.GetFont();
-if (font) {
-    font.SetBold(true);
-    font.SetSize(14);
-}
-
-worksheet.GetRange("C1").SetValue("Font applied:");
-worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
-worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
+worksheet.GetRange("C1").SetValue("Font formatting applied");
 ```

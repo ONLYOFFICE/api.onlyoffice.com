@@ -8,7 +8,7 @@ Sets the highlight to the forms in the document.
 expression.SetFormsHighlight(color);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

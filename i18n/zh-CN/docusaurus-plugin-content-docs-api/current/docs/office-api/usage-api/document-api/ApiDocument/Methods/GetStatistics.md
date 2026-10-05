@@ -1,6 +1,7 @@
 # GetStatistics
 
 返回以对象形式表示的文档统计信息，包含以下参数：
+
 - **PageCount** - 页数；
 - **WordsCount** - 字数；
 - **ParagraphCount** - 段落数；

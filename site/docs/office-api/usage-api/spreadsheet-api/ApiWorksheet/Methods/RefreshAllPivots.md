@@ -8,7 +8,7 @@ Refreshes all pivot tables on the current worksheet.
 expression.RefreshAllPivots();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

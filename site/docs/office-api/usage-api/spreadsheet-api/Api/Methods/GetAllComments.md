@@ -8,7 +8,7 @@ Returns all comments from the current workbook including comments from all works
 expression.GetAllComments();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

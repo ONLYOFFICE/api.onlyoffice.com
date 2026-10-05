@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseListField.SetValueIndexes](../../ApiBaseListField/Methods/SetValueIndexes.md)。
 
+## 语法
+
+```javascript
+expression.SetValueIndexes(valueIndexes);
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| valueIndexes | 必需 | number[] |  | 所选值的索引。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 按位置在 PDF 中的下拉列表中将项目标记为已选中。

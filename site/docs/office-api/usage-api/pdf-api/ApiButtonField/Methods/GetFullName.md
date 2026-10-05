@@ -4,6 +4,22 @@ Gets field full name.
 
 Inherited from [ApiBaseField.GetFullName](../../ApiBaseField/Methods/GetFullName.md).
 
+## Syntax
+
+```javascript
+expression.GetFullName();
+```
+
+`expression` - A variable that represents an [ApiButtonField](../ApiButtonField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the complete name identifier of a form field in a PDF.

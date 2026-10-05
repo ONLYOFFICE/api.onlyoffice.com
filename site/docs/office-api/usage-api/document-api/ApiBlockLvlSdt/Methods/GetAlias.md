@@ -8,7 +8,7 @@ Returns the alias attribute for the current container.
 expression.GetAlias();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 
@@ -29,8 +29,8 @@ Read the alias name assigned to a content control in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
-blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with alias 'OnlyOffice'.");
-blockLvlSdt.SetAlias("OnlyOffice");
+blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with alias 'ONLYOFFICE'.");
+blockLvlSdt.SetAlias("ONLYOFFICE");
 doc.AddElement(0, blockLvlSdt);
 doc.GetElement(1).AddText("Alias: " + blockLvlSdt.GetAlias());
 ```

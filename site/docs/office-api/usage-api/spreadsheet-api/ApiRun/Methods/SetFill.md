@@ -8,7 +8,7 @@ Sets the text color to the current text run.
 expression.SetFill(oApiFill);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

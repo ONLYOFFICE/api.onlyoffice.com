@@ -5,16 +5,16 @@ Specifies font size for labels of the horizontal axis.
 ## Syntax
 
 ```javascript
-expression.SetHorAxisLabelsFontSize(nFontSize);
+expression.SetHorAxisLabelsFontSize(fontSize);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 
 ## Returns
 

@@ -4,20 +4,37 @@
 
 继承自 [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternalId.md)。
 
+## 语法
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-检索文档中表单字段的内部标识符。
+获取文档中复选框表单的唯一内部标识符。
 
 ```javascript editor-forms
-// How do I get the internal ID of a form field in a document?
+// How do I get the internal identifier of a checkbox form in a document?
 
-// Uniquely track a form by reading its auto-assigned internal identifier.
+// Track a specific checkbox across operations by reading its system-assigned identifier in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let internalId = textForm.GetInternalId();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+let internalId = checkBoxForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);

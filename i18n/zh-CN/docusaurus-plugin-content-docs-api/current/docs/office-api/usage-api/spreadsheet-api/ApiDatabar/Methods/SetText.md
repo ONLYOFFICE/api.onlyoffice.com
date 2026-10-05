@@ -4,6 +4,24 @@
 
 继承自 [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md)。
 
+## 语法
+
+```javascript
+expression.SetText(Text);
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Text | 必需 | string |  | 要比较的文本值。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 更新触发电子表格中基于文本的格式规则的单词或短语。

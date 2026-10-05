@@ -8,7 +8,7 @@ Sets the data binding for the current content control.
 expression.SetDataBinding(xmlMapping);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

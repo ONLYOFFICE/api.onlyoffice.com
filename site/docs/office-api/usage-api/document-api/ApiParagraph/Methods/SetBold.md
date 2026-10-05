@@ -8,7 +8,7 @@ Sets the bold property to the text character.
 expression.SetBold(isBold);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

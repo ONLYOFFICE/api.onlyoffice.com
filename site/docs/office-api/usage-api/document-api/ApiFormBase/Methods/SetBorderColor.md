@@ -8,7 +8,7 @@ Sets the border color to the current form.
 expression.SetBorderColor(color);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

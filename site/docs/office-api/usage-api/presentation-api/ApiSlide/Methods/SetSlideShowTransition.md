@@ -8,7 +8,7 @@ Sets the slide show transition to the current slide.
 expression.SetSlideShowTransition(transition);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

@@ -1,6 +1,7 @@
 # GetTotal
 
 Returns the range of the totals row cell for the column.
+
 Returns null if the table has no totals row.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetTotal();
 ```
 
-`expression` - A variable that represents a [ApiListColumn](../ApiListColumn.md) class.
+`expression` - A variable that represents an [ApiListColumn](../ApiListColumn.md) class.
 
 ## Parameters
 

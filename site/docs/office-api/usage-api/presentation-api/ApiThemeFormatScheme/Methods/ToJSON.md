@@ -8,7 +8,7 @@ Converts the ApiThemeFormatScheme object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiThemeFormatScheme](../ApiThemeFormatScheme.md) class.
+`expression` - A variable that represents an [ApiThemeFormatScheme](../ApiThemeFormatScheme.md) class.
 
 ## Parameters
 

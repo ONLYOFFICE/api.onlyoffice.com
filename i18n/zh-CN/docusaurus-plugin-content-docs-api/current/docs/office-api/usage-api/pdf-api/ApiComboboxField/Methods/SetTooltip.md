@@ -7,3 +7,21 @@
 :::
 
 继承自 [ApiBaseField.SetTooltip](../../ApiBaseField/Methods/SetTooltip.md)。
+
+## 语法
+
+```javascript
+expression.SetTooltip(tooltip);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| tooltip | 必需 | string |  | 字段的工具提示文本。 |
+
+## 返回值
+
+boolean

@@ -1,6 +1,8 @@
 # InsertAndReplaceContentControls
 
-插入包含数据的内容控件。数据由 [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。
+插入包含数据的内容控件。
+
+数据由 [Document Builder](../../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。
 
 ## 语法
 
@@ -8,7 +10,7 @@
 expression.InsertAndReplaceContentControls(arrDocuments);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

@@ -8,7 +8,7 @@ Replaces part of a text string with a different text string.
 expression.REPLACE(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

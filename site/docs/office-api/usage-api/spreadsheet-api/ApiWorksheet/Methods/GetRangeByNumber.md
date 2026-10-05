@@ -1,6 +1,6 @@
 # GetRangeByNumber
 
-Returns an object that represents the selected range of the current sheet using the - **row/column** coordinates for the cell selection.
+Returns an object that represents the selected range of the current sheet using the **row/column** coordinates for the cell selection.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns an object that represents the selected range of the current sheet using 
 expression.GetRangeByNumber(nRow, nCol);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

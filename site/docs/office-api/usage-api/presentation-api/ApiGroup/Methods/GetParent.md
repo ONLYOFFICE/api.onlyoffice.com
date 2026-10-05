@@ -4,6 +4,22 @@ Returns the drawing parent object.
 
 Inherited from [ApiDrawing.GetParent](../../ApiDrawing/Methods/GetParent.md).
 
+## Syntax
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| [ApiLayout](../../ApiLayout/ApiLayout.md) \| [ApiMaster](../../ApiMaster/ApiMaster.md) \| null
+
 ## Example
 
 Find the parent container of a shape in a presentation.

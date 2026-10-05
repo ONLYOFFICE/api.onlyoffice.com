@@ -1,6 +1,8 @@
 # SetMargins
 
-Specifies the page margins for all the pages in this section. Alias for [ApiSection#SetPageMargins](../../ApiSection/Methods/SetPageMargins.md).
+Specifies the page margins for all the pages in this section.
+
+Alias for [ApiSection#SetPageMargins](../../ApiSection/Methods/SetPageMargins.md).
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies the page margins for all the pages in this section. Alias for [ApiSect
 expression.SetMargins(left, top, right, bottom);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

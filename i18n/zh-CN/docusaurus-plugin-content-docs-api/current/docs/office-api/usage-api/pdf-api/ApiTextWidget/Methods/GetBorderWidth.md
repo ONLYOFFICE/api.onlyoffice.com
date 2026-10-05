@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseWidget.GetBorderWidth](../../ApiBaseWidget/Methods/GetBorderWidth.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderWidth();
+```
+
+`expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md)
+
 ## 示例
 
 读取 PDF 中表单字段控件的边框宽度。

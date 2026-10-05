@@ -4,6 +4,24 @@ Specifies that the contents of the run are displayed with a single horizontal li
 
 Inherited from [ApiTextPr.SetStrikeout](../../ApiTextPr/Methods/SetStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.SetStrikeout(isStrikeout);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isStrikeout | Required | boolean |  | Specifies that the contents of the current run are displayed struck through. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Apply a strikethrough line to text in a document.

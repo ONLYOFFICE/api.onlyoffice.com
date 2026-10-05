@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md)。
 
+## 语法
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检查 PDF 中的文本是否有下划线。
+在 PDF 中检查文本是否带有下划线装饰。
 
 ```javascript editor-pdf
-// How do I determine if underline formatting exists on text in a PDF?
+// How do I determine if text is underlined in a PDF?
 
-// Inspect the underline status of text formatting in a PDF.
+// Verify the underline status of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetUnderline(true);
+run.SetUnderline(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const underline = textPr.GetUnderline();
+const underline = run.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
 ```

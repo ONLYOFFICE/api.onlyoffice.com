@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md)。
 
+## 语法
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中的文本是否格式化为粗体。

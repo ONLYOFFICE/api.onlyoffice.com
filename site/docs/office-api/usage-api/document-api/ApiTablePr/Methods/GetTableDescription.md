@@ -8,7 +8,7 @@ Returns the table description.
 expression.GetTableDescription();
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ string
 
 ## Example
 
-Read the descriptive text assigned to a table in a document.
+Read the table description from the table properties of a style in a document.
 
 ```javascript editor-docx
 // How do I retrieve the written description stored with a table in a document?

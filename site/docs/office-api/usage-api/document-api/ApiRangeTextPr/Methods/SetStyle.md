@@ -1,14 +1,34 @@
 # SetStyle
 
 The text style base method.
-💡 This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets
-the selected or created style to the text.
+
+:::note
+This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets the selected or created style to the text.
+:::
 
 Inherited from [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md).
 
+## Syntax
+
+```javascript
+expression.SetStyle(oStyle);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text character. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
-Apply a named character style to a text run in a document.
+Apply a named character style to a text run using its text properties in a document.
 
 ```javascript editor-docx
 // How do I assign a predefined style to a portion of text in a document?
@@ -26,7 +46,7 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetStyle(myNewRunStyle);
+run.GetTextPr().SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```

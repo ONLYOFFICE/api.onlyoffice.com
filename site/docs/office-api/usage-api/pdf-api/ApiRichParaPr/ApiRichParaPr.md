@@ -1,8 +1,10 @@
 # ApiRichParaPr
 
-Represents the ApiRichParaPr class.
+Class representing the rich paragraph properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

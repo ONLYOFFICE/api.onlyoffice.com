@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetStrikeout](../../ApiTextPr/Methods/SetStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.SetStrikeout(isStrikeout);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isStrikeout | 必需 | boolean |  | 指定当前文本块的内容显示为删除线。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为文本应用删除线。

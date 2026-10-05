@@ -1,7 +1,6 @@
 # SetUnderline
 
-指定文本块的内容显示时在字符正下方有一条线
-（小于行中字符上下的所有间距）。
+指定文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
 
 ## 语法
 
@@ -23,7 +22,7 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-在 PDF 中为文本添加下划线。
+在 PDF 中使用文本属性为文本添加下划线。
 
 ```javascript editor-pdf
 // How do I underline text in a PDF?

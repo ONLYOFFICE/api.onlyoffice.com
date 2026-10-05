@@ -1,6 +1,8 @@
 # MergeDocuments
 
-将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档合并。其内容将合并到当前文档中。
+将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档合并。
+
+其内容将合并到当前文档中。
 
 ## 语法
 

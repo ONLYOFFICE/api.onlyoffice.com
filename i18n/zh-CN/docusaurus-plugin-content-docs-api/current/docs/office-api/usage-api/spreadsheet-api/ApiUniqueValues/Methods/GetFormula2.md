@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md)。
 
+## 语法
+
+```javascript
+expression.GetFormula2();
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中基于范围的条件格式规则的上边界值。

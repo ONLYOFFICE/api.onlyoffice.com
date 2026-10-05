@@ -1,7 +1,6 @@
 # SetPageBreakBefore
 
-Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at
-the beginning of a new page in the document.
+Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ the beginning of a new page in the document.
 expression.SetPageBreakBefore(isPageBreakBefore);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

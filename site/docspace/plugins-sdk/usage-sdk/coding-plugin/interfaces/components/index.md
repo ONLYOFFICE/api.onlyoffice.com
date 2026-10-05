@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Components
 
 UI components for building plugin interfaces — dialogs, buttons, inputs, and other visual elements. Compose them with `IModalDialog`, `IBox`, or other layout containers; overlays such as dialogs, toasts and selectors are displayed by returning an `IMessage` with the matching [Actions](../../enums/Actions.md) value from an event handler.

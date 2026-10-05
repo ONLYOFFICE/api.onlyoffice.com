@@ -8,7 +8,7 @@
 expression.AddOleObject(data);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../spreadsheet-api.md) 类的变量。
 
 ## 参数
 
@@ -25,7 +25,7 @@ expression.AddOleObject(data);
 ```javascript
 var _param = {
     "data": "{data}",
-    "imgSrc": "https://link-to-the-image.jpg",
+    "imgSrc": "https://example.com/image.png",
     "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
     "width": 70,
     "height": 70,

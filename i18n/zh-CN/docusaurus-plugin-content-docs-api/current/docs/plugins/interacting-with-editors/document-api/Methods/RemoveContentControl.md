@@ -1,6 +1,8 @@
 # RemoveContentControl
 
-删除当前选定的内容控件，同时保留其所有内容。将删除鼠标光标当前所在位置的内容控件。
+删除当前选定的内容控件，同时保留其所有内容。
+
+将删除鼠标光标当前所在位置的内容控件。
 
 ## 语法
 
@@ -8,7 +10,7 @@
 expression.RemoveContentControl(InternalId);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## 示例
 
 读取控制电子表格中条件格式规则应用位置的范围类型。

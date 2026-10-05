@@ -3,6 +3,8 @@ description: Search for word synonyms and antonyms.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Thesaurus
 
 Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word synonyms and antonyms.
@@ -11,11 +13,7 @@ Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="3r0CCY5HNbQ"/>
-```
 
 ## Installation
 
@@ -143,7 +141,7 @@ Repository on GitHub: [thesaurus](https://github.com/ONLYOFFICE/onlyoffice.githu
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetSelectedText")](../interacting-with-editors/document-api/Methods/GetSelectedText.md)

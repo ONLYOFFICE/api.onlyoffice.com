@@ -8,7 +8,7 @@ Deletes all filters currently applied to the pivot field.
 expression.ClearAllFilters();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

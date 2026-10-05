@@ -8,7 +8,7 @@ Sets new field name if possible.
 expression.SetFullName(name);
 ```
 
-`expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
+`expression` - A variable that represents an [ApiBaseField](../ApiBaseField.md) class.
 
 ## Parameters
 

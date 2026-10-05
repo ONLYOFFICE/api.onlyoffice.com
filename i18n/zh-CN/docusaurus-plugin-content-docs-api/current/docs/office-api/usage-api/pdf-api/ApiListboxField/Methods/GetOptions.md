@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetOptions.md)。
 
+## 语法
+
+```javascript
+expression.GetOptions();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ListOption](../../Enumeration/ListOption.md)[]
+
 ## 示例
 
 检索 PDF 中下拉字段中所有可用的选项。

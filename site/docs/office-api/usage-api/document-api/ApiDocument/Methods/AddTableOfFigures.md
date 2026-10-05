@@ -8,13 +8,13 @@ Adds a table of figures to the current document.
 expression.AddTableOfFigures(oTofPr, bReplace);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | \{\} | Table of figures properties. 💡 Please note that the table of figures properties will be filled with the default properties if they are undefined. |
+| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | \{\} | Table of figures properties. Undefined properties are filled with the default values. |
 | bReplace | Optional | boolean | true | Specifies whether to replace the selected table of figures instead of adding a new one. |
 
 ## Returns

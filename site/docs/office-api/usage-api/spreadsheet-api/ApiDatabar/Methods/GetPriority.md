@@ -4,33 +4,44 @@ Returns the priority value of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
+## Syntax
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
-Read the priority level assigned to a conditional formatting rule in a spreadsheet.
+Read the evaluation order of a data bar rule among other formatting rules in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what priority order a formatting rule has in a spreadsheet?
+// How do I check which priority a data bar rule has when multiple formatting rules overlap in a spreadsheet?
 
-// Check which position a formatting rule holds among all active rules in a spreadsheet.
+// Confirm the position at which a data bar rule is evaluated relative to other rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange("A1").SetValue("Sales Data");
 worksheet.GetRange("A2").SetValue(100);
 worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A3");
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let dataBar = formatConditions.AddDatabar();
 
-let priority = condition1.GetPriority();
+let priority = dataBar.GetPriority();
 
-worksheet.GetRange("C1").SetValue("Rule priority:");
+worksheet.GetRange("C1").SetValue("Data bar priority:");
 worksheet.GetRange("C2").SetValue(priority);
 ```

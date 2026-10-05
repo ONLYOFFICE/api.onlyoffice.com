@@ -1,6 +1,7 @@
 # GetAutoFilter
 
 返回表示应用于表格的自动筛选的 ApiAutoFilter 对象。
+
 如果表格没有自动筛选，则返回 null。
 
 :::note

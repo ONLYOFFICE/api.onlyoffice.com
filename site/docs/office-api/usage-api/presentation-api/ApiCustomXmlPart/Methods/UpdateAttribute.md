@@ -8,7 +8,7 @@ Updates an attribute of the XML node at the specified XPath.
 expression.UpdateAttribute(xPath, name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

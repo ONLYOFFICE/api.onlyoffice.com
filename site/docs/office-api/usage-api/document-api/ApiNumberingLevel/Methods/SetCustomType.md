@@ -8,7 +8,7 @@ Sets your own customized numbering type.
 expression.SetCustomType(sType, sTextFormatString, sAlign);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

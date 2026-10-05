@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md)。
 
+## 语法
+
+```javascript
+expression.SetRotation(rotAngle);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rotAngle | 必需 | number |  | 新的绘图旋转角度。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将绘图对象旋转到特定角度。

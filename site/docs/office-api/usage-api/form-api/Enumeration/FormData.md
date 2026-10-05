@@ -26,13 +26,13 @@ Object
 Specify the form data that can be used to create the form.
 
 ```javascript editor-forms
-// How to create a form data indicating its key and value.
+// How do I create form data with a key and a value?
 
 // Create a data to add it to the form.
 
 let formData = {
 	key: "CompanyName",
-	value: "OnlyOffice",
+	value: "ONLYOFFICE",
 	type: "text"
 };
 ```

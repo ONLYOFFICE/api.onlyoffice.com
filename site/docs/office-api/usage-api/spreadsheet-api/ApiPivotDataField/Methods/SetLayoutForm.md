@@ -4,6 +4,24 @@ Sets the way the specified pivot table items appear — in table format or in ou
 
 Inherited from [ApiPivotField.SetLayoutForm](../../ApiPivotField/Methods/SetLayoutForm.md).
 
+## Syntax
+
+```javascript
+expression.SetLayoutForm(type);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | Required | [PivotLayoutType](../../Enumeration/PivotLayoutType.md) |  | The layout type of the pivot table report. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Change the display format of a pivot field to tabular, outline, or compact in a spreadsheet.

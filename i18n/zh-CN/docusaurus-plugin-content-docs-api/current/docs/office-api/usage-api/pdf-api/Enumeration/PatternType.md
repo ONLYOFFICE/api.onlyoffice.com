@@ -65,10 +65,10 @@
 
 ## 示例
 
-设置当前表单内以百分比计量的图片位置。
+使用向下虚线对角线图案创建图案填充。
 
 ```javascript editor-pdf
-// How to create a pattern fill indicating its pattern type.
+// How do I create a pattern fill with a specific pattern type?
 
 // Create a dash diagonal pattern.
 

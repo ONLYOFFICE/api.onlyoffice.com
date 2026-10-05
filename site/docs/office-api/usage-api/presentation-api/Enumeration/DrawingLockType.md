@@ -29,7 +29,7 @@ Enumeration
 Get the lock value for the specified lock type of a drawing.
 
 ```javascript editor-pptx
-// How to get a lock value of the drawing.
+// How do I get the lock value of a drawing?
 
 // Find out a lock value of an image.
 

@@ -1,9 +1,28 @@
 # SetDrawingPrFromDrawing
 
 Sets the properties from another drawing to the current drawing.
+
 The following properties will be copied: horizontal and vertical alignment, distance between the edges of the current drawing object and any subsequent text, wrapping style, drawing name, title and description.
 
 Inherited from [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md).
+
+## Syntax
+
+```javascript
+expression.SetDrawingPrFromDrawing(oAnotherDrawing);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oAnotherDrawing | Required | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | The drawing which properties will be set to the current drawing. |
+
+## Returns
+
+boolean
 
 ## Example
 

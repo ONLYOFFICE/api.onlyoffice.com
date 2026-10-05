@@ -1,8 +1,10 @@
 # ApiPlaceholder
 
-Represents the ApiPlaceholder class.
+Class representing a placeholder.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

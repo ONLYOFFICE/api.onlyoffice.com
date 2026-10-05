@@ -8,7 +8,7 @@ Specifies the border which will be displayed at the right side of the page aroun
 expression.SetRightBorder(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-Add a border to the right side of a paragraph in a document.
+Add a border to the right side of a paragraph using the paragraph properties of a style in a document.
 
 ```javascript editor-docx
 // How do I place a visible border on the right edge of a paragraph in a document?

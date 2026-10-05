@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md)。
 
+## 语法
+
+```javascript
+expression.GetOutlineLvl();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+Number \| undefined
+
 ## 示例
 
-确定 PDF 中段落的大纲层次级别。
+在 PDF 中检查分配给段落的标题级别。
 
 ```javascript editor-pdf
-// How do I check the outline level for document structure in a PDF?
+// How do I determine the outline level of a paragraph in a PDF?
 
-// Get the nesting level used in document outline in a PDF.
+// Read the current heading level setting for a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,11 +41,10 @@ page.AddObject(shape);
 
 const content = shape.GetContent();
 const paragraph = content.GetElement(0);
-const paraPr = paragraph.GetParaPr();
 
-const levelBefore = paraPr.GetOutlineLvl();
-paraPr.SetOutlineLvl(8);
-const levelAfter = paraPr.GetOutlineLvl();
+const levelBefore = paragraph.GetOutlineLvl();
+paragraph.SetOutlineLvl(8);
+const levelAfter = paragraph.GetOutlineLvl();
 
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\n';

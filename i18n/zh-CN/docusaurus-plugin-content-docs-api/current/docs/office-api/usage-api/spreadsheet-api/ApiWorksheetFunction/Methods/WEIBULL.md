@@ -25,7 +25,7 @@ number
 
 ## 示例
 
-计算电子表格中用于统计分析的威布尔分布。
+在电子表格中使用 WEIBULL 兼容性函数计算威布尔分布。
 
 ```javascript editor-xlsx
 // How do I compute the Weibull distribution for probability calculations in a spreadsheet?

@@ -8,7 +8,7 @@ Sets the timestamp of the comment reply creation in UTC format.
 expression.SetTimeUTC(nTimeStamp);
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 

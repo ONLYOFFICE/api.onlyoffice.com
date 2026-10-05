@@ -8,7 +8,7 @@ Specifies a highlighting color which is applied as a background to the contents 
 expression.SetHighlight(sColor);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

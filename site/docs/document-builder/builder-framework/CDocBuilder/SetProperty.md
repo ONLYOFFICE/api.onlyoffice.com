@@ -77,9 +77,7 @@ This method is not available for **JS**. Instead, pass arguments via the [CLI fl
 
 ## Supported properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Name                      | Type   | Default | Description                                                                                                                |
 | ------------------------- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -93,9 +91,7 @@ This method is not available for **JS**. Instead, pass arguments via the [CLI fl
 | --fonts-system            | bool   | true    | Specifies if the system fonts are used.                                                                                    |
 | --fonts-dir               | string | ""      | The path to the additional fonts directory (may be many records).                                                          |
 
-```mdx-code-block
 </APITable>
-```
 
 Once added, the argument will be available as the `Argument` variable with its parameter values set:
 

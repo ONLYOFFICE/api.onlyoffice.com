@@ -4,6 +4,22 @@
 
 继承自 [ApiDocumentContent.IsFootnote](../../ApiDocumentContent/Methods/IsFootnote.md)。
 
+## 语法
+
+```javascript
+expression.IsFootnote();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检测文档中的注释是否为脚注。

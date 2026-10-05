@@ -8,7 +8,7 @@ Adds a new form role.
 expression.Add(name, props);
 ```
 
-`expression` - A variable that represents a [ApiFormRoles](../ApiFormRoles.md) class.
+`expression` - A variable that represents an [ApiFormRoles](../ApiFormRoles.md) class.
 
 ## Parameters
 

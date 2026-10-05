@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md)。
 
+## 语法
+
+```javascript
+expression.GetRotation();
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 查找 PDF 中形状的旋转角度。

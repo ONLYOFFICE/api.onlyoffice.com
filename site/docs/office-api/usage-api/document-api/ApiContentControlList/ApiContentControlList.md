@@ -1,8 +1,10 @@
 # ApiContentControlList
 
-Represents the ApiContentControlList class.
+Class representing a list of values of the combo box / drop-down list content control.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

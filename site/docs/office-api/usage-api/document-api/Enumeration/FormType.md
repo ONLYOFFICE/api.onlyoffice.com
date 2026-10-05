@@ -1,6 +1,7 @@
 # FormType
 
 Form type.
+
 The available form types.
 
 ## Type
@@ -24,7 +25,7 @@ Enumeration
 Return the type of the current form.
 
 ```javascript editor-docx
-// How to get a form type.
+// How do I get the type of a form?
 
 // Return a type from the ApiTextForm object.
 

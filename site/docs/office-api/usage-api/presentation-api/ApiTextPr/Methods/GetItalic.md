@@ -8,7 +8,7 @@ Gets the italic property from the current text properties.
 expression.GetItalic();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

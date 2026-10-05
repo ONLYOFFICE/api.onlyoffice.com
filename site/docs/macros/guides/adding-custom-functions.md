@@ -4,11 +4,7 @@ sidebar_position: -4
 
 # Adding custom functions
 
-:::note
-
-Starting from version 8.1, you can add custom functions to the spreadsheets using the **Macros** plugin.
-
-:::
+Custom functions are JavaScript functions that you write in the **Macros** plugin and then call in a spreadsheet like any built-in function. They are available in the spreadsheet editor starting from version 8.1.
 
 ## Creating custom functions
 
@@ -31,17 +27,17 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
     })();
     ```
 
-3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
+3. Write a description for your function and specify its parameters and return value. The JSDoc comment is required: a function without it, or with a parameter whose type is not supported, is not registered, and a function without `@returns` returns an error value to the cell. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
 
 4. Click **Save**.
 
-  ![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
+![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
 
 Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
-You can find a sample of a custom function [here](../samples/spreadsheet-editor/weighted-average-function.md).
+For a complete sample, see [Weighted average function](../samples/spreadsheet-editor/weighted-average-function.md).
 
 ## Accessing cell addresses
 
@@ -51,18 +47,20 @@ Starting from version 9.0.4, you can access cell address information inside cust
 
 :::
 
-The following properties are available:
+Inside a custom function, `this` refers to a context object with the address of the cell being calculated and the addresses of the cells the arguments came from. The following properties are available:
 
-- `this.address` - the address of the cell where the custom function is being calculated (e.g., `"C5"`);
-- `this.args` - an array of input arguments. Each argument object includes a `value` field with the argument value and an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
+- `this.address` - the address of the cell where the custom function is being calculated, qualified with the name of the sheet (e.g., `"Sheet1!C5"`). A sheet name that contains spaces or special characters is enclosed in single quotes (e.g., `"'My Sheet'!C5"`);
+- `this.args` - an array describing the input arguments. An entry is present only for an argument that is a cell or range reference, and holds a single `address` field with the address of that cell or range, qualified in the same way (e.g., `"Sheet1!A1"`). An argument passed as a literal value leaves its entry `undefined`. To read the values themselves, use the function parameters. This array has the following structure:
 
   ``` ts
   [
-    {"value": "arg1_value", "address": "arg1_address"},
-    {"value": "arg2_value", "address": "arg2_address"},
+    {"address": "arg1_address"},
+    {"address": "arg2_address"},
     ...
   ]
   ```
+
+If the function is called as `=CUSTOMFUNC(5, A1)`, the first argument is a literal value and the second one is a cell reference, so `this.args[0]` is `undefined` and `this.args[1]` is `{"address": "Sheet1!A1"}`. Check an entry before reading its `address` field.
 
 Example:
 
@@ -70,17 +68,17 @@ Example:
 (function()
 {
   /**
-  * Function that returns the argument
+  * Returns the address of the cell where the function is calculated.
   * @customfunction
   * @param {any} arg1 Any data.
   * @param {any} arg2 Any data.
-  * @returns {any} The argument of the function.
+  * @returns {string} The address of the cell with the function.
   */
   function CUSTOMFUNC(arg1, arg2) {
     console.log("Function is evaluated in:", this.address);
-    this.args.forEach(arg => {
-      console.log("Argument value:", arg.value, "from cell:", arg.address);
-    });
+    console.log("First argument:", arg1, "from cell:", this.args[0] && this.args[0].address);
+    console.log("Second argument:", arg2, "from cell:", this.args[1] && this.args[1].address);
+    return this.address;
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();
@@ -104,6 +102,8 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 
 :::
 
+An asynchronous custom function returns a promise instead of a value, so it can make a network request or wait for any other asynchronous operation. The editor recalculates the cell when the promise resolves. If the promise is rejected, the cell shows the `#VALUE!` error.
+
 ```ts
 (function()
 {
@@ -120,4 +120,4 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 })();
 ```
 
-You can find a sample of an asynchronous custom function [here](../samples/spreadsheet-editor/calculate-world-bank-indicator.md).
+For a complete sample, see [Calculate World Bank indicator](../samples/spreadsheet-editor/calculate-world-bank-indicator.md).

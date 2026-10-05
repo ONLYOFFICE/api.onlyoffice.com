@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetFillColor](../../ApiBaseAnnotation/Methods/GetFillColor.md)。
 
+## 语法
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - 表示 [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## 示例
 
 检索 PDF 中注释的填充颜色。

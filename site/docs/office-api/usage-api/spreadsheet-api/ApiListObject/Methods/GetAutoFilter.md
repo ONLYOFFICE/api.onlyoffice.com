@@ -1,6 +1,7 @@
 # GetAutoFilter
 
 Returns the ApiAutoFilter object representing the autofilter applied to the table.
+
 Returns null if the table has no autofilter.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetAutoFilter();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

@@ -1,6 +1,7 @@
 # GetTotalsRowRange
 
 返回表格汇总行的范围。
+
 如果表格没有汇总行，则返回 null。
 
 :::note

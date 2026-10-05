@@ -1,6 +1,8 @@
 # SetName
 
-Sets the name of the table. Equivalent to SetDisplayName.
+Sets the name of the table.
+
+Equivalent to SetDisplayName.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -12,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetName(name);
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

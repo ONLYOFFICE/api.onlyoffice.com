@@ -8,7 +8,7 @@ Sets the background color to all cells in the column containing the current cell
 expression.SetColumnBackgroundColor(color);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

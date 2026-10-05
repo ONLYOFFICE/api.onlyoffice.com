@@ -8,7 +8,7 @@ Sets percentage format for field.
 expression.SetPercentageFormat(decimalPlaces, separatorStyle);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

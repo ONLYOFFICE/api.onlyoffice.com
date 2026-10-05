@@ -1,6 +1,6 @@
 # ApiSortFields
 
-Represents the ApiSortFields class.
+Class representing the collection of sort fields for a Sort object.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -14,6 +14,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | Parent | [ApiSort](../ApiSort/ApiSort.md) | Returns the parent Sort object. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

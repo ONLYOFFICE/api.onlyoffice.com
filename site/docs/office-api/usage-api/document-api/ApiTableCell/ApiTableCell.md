@@ -1,8 +1,12 @@
 # ApiTableCell
 
+Class representing a table cell.
+
 ApiTableCell is a subclass of [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -24,21 +28,21 @@ ApiTableCell is a subclass of [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current table cell. |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | Removes a column containing the current cell. |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | Removes a row containing the current cell. |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a table cell object. The search results are a collection of ApiRange objects. |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a table cell object. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current table cell. |
 | [SetCellBorderBottom](./Methods/SetCellBorderBottom.md) | boolean | Sets the border which will be displayed at the bottom of the current table cell. |
 | [SetCellBorderLeft](./Methods/SetCellBorderLeft.md) | boolean | Sets the border which will be displayed to the left of the current table cell. |
 | [SetCellBorderRight](./Methods/SetCellBorderRight.md) | boolean | Sets the border which will be displayed to the right of the current table cell. |
 | [SetCellBorderTop](./Methods/SetCellBorderTop.md) | boolean | Sets the border which will be displayed at the top of the current table cell. |
-| [SetCellMarginBottom](./Methods/SetCellMarginBottom.md) | boolean | Specifies an amount of space which will be left between the bottom extent of the cell contents and the border |
-| [SetCellMarginLeft](./Methods/SetCellMarginLeft.md) | boolean | Specifies an amount of space which will be left between the left extent of the cell contents and  |
+| [SetCellMarginBottom](./Methods/SetCellMarginBottom.md) | boolean | Specifies an amount of space which will be left between the bottom extent of the cell contents and the border of a specific table cell within a table. |
+| [SetCellMarginLeft](./Methods/SetCellMarginLeft.md) | boolean | Specifies an amount of space which will be left between the left extent of the cell contents and  the border of a specific table cell within a table. |
 | [SetCellMarginRight](./Methods/SetCellMarginRight.md) | boolean | Specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table. |
-| [SetCellMarginTop](./Methods/SetCellMarginTop.md) | boolean | Specifies an amount of space which will be left between the upper extent of the cell contents |
+| [SetCellMarginTop](./Methods/SetCellMarginTop.md) | boolean | Specifies an amount of space which will be left between the upper extent of the cell contents and the border of a specific table cell within a table. |
 | [SetCellPr](./Methods/SetCellPr.md) | boolean | Sets the cell properties to the current cell. |
 | [SetColumnBackgroundColor](./Methods/SetColumnBackgroundColor.md) | boolean | Sets the background color to all cells in the column containing the current cell. |
-| [SetNoWrap](./Methods/SetNoWrap.md) | boolean | Specifies how the current table cell is laid out when the parent table is displayed in a document. This setting |
+| [SetNoWrap](./Methods/SetNoWrap.md) | boolean | Specifies how the current table cell is laid out when the parent table is displayed in a document. |
 | [SetShd](./Methods/SetShd.md) | boolean | Specifies the shading applied to the contents of the table cell. |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current table cell with the specified text, |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current table cell with the specified text, preserving the formatting of the first paragraph. |
 | [SetTextDirection](./Methods/SetTextDirection.md) | boolean | Specifies the direction of the text flow for this table cell. |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | Applies the text settings to the entire contents of the current cell. |
 | [SetVerticalAlign](./Methods/SetVerticalAlign.md) | boolean | Specifies the vertical alignment for the text contents within the current table cell. |

@@ -8,7 +8,7 @@ Returns a type of the ApiListboxField class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
 
 ## Parameters
 

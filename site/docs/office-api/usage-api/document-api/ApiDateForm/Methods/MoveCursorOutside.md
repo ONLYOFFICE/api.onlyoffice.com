@@ -4,6 +4,24 @@ Places a cursor before/after the current form.
 
 Inherited from [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md).
 
+## Syntax
+
+```javascript
+expression.MoveCursorOutside(isAfter);
+```
+
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move the cursor to a position outside a form field in a document.

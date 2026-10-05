@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md)。
 
+## 语法
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-检测 PDF 中的文本是否有斜体格式。
+在 PDF 中检查文本是否以斜体样式显示。
 
 ```javascript editor-pdf
-// How do I check if text is italicized in a PDF?
+// How do I check whether text is styled as italic in a PDF?
 
-// Access the italic property from text formatting settings in a PDF.
+// Read the italic formatting status of text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetItalic(true);
+run.SetItalic(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const italic = textPr.GetItalic();
+const italic = run.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
 ```

@@ -1,6 +1,7 @@
 # GetAttribute
 
 从自定义 XML 节点检索属性值。
+
 如果属性不存在，则返回 `false`。
 
 ## 语法

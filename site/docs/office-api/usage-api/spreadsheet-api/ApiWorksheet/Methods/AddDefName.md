@@ -8,7 +8,7 @@ Adds a new name to the current worksheet.
 expression.AddDefName(sName, sRef, isHidden);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

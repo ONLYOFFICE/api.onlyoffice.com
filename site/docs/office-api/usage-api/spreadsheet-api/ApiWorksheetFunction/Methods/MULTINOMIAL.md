@@ -8,7 +8,7 @@ Returns the ratio of the factorial of a sum of numbers to the product of factori
 expression.MULTINOMIAL(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

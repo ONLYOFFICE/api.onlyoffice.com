@@ -4,6 +4,22 @@ Returns the setting which specifies whether to insert a page break after each fi
 
 Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutPageBreak();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Read whether a pivot table field inserts a page break after each group in a spreadsheet.

@@ -1,6 +1,8 @@
-# IArticleButtonPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleButtonPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleButtonPlugin.ts#L55)
+# IArticleButtonPlugin
 
 Describes a plugin that adds custom button items to the article sidebar.
 Article button items appear as custom plugin components above the DevTools section.

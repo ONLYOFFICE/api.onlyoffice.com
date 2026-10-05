@@ -18,7 +18,7 @@
 设置当前图片表单过大时的缩放条件。
 
 ```javascript editor-forms
-// How to set a scale flag for picture form.
+// How do I set the scale flag of a picture form?
 
 // Set picture form scale flag to "tooBig".
 

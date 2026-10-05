@@ -8,7 +8,7 @@ Returns an array with all tables from the slide master.
 expression.GetAllTables();
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

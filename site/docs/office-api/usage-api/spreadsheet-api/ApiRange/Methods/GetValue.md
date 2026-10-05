@@ -8,7 +8,7 @@ Returns a value of the specified range.
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

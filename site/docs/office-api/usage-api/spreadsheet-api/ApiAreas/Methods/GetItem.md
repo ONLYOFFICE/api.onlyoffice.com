@@ -8,7 +8,7 @@ Returns a single object from a collection by its ID.
 expression.GetItem(ind);
 ```
 
-`expression` - A variable that represents a [ApiAreas](../ApiAreas.md) class.
+`expression` - A variable that represents an [ApiAreas](../ApiAreas.md) class.
 
 ## Parameters
 

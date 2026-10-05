@@ -1,6 +1,6 @@
 # ApiColorScaleCriterion
 
-Represents the ApiColorScaleCriterion class.
+Class representing single criterion in a color scale conditional formatting rule.
 
 ## Properties
 
@@ -12,6 +12,8 @@ Represents the ApiColorScaleCriterion class.
 | Value | string | Returns or sets the value of the color scale criterion. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

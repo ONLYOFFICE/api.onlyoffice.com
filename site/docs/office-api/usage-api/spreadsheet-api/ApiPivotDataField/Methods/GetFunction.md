@@ -8,7 +8,7 @@ Returns a function performed in the data field.
 expression.GetFunction();
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

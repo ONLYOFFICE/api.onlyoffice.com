@@ -28,7 +28,7 @@ Enumeration
 Create a scheme color with the 'accent2' identifier.
 
 ```javascript editor-pptx
-// How to create a scheme color.
+// How do I create a scheme color?
 
 // Create a scheme color with accent.
 

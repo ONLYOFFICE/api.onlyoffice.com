@@ -1,8 +1,10 @@
 # ApiNumberingLevel
 
-Represents the ApiNumberingLevel class.
+Class representing a reference to a specified level of the numbering.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -13,7 +15,7 @@ Represents the ApiNumberingLevel class.
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the text properties which will be applied to the text in the current numbering level itself, not to the text in the subsequent paragraph. |
 | [LinkWithStyle](./Methods/LinkWithStyle.md) | boolean | Links the specified paragraph style with the current numbering level. |
 | [SetCustomType](./Methods/SetCustomType.md) | boolean | Sets your own customized numbering type. |
-| [SetRestart](./Methods/SetRestart.md) | boolean | Specifies a one-based index which determines when a numbering level should restart to its starting value. A numbering level restarts when an instance of the specified numbering level which is higher (earlier than this level) is used in the given document contents. By default this value is true. |
-| [SetStart](./Methods/SetStart.md) | boolean | Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition. By default this value is 1. |
-| [SetSuff](./Methods/SetSuff.md) | boolean | Specifies the content which will be added between the given numbering level text and the text of every numbered paragraph which references that numbering level. By default this value is "tab". |
+| [SetRestart](./Methods/SetRestart.md) | boolean | Specifies a one-based index which determines when a numbering level should restart to its starting value. |
+| [SetStart](./Methods/SetStart.md) | boolean | Specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition. |
+| [SetSuff](./Methods/SetSuff.md) | boolean | Specifies the content which will be added between the given numbering level text and the text of every numbered paragraph which references that numbering level. |
 | [SetTemplateType](./Methods/SetTemplateType.md) | boolean | Sets one of the existing predefined numbering templates. |

@@ -8,7 +8,7 @@ Sets the fonts to the current theme font scheme.
 expression.SetFonts(mjLatin, mjEa, mjCs, mnLatin, mnEa, mnCs);
 ```
 
-`expression` - A variable that represents a [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
+`expression` - A variable that represents an [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
 
 ## Parameters
 

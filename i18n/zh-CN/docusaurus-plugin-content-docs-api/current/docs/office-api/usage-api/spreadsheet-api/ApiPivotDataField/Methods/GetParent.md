@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md)。
 
+## 语法
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+
 ## 示例
 
 访问电子表格中拥有给定透视字段的数据透视表。

@@ -1,7 +1,6 @@
 # SetTableBorderInsideH
 
-Specifies the border which will be displayed on all horizontal table cell borders which are not on the outmost edge
-of the parent table (all horizontal borders which are not the topmost or bottommost borders).
+Specifies the border which will be displayed on all horizontal table cell borders which are not on the outmost edge of the parent table (all horizontal borders which are not the topmost or bottommost borders).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ of the parent table (all horizontal borders which are not the topmost or bottomm
 expression.SetTableBorderInsideH(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

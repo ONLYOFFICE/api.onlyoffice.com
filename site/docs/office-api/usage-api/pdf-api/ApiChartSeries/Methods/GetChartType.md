@@ -8,7 +8,7 @@ Returns a chart type of the current series.
 expression.GetChartType();
 ```
 
-`expression` - A variable that represents a [ApiChartSeries](../ApiChartSeries.md) class.
+`expression` - A variable that represents an [ApiChartSeries](../ApiChartSeries.md) class.
 
 ## Parameters
 

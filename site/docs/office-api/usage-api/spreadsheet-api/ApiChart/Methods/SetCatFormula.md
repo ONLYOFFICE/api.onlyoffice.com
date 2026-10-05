@@ -8,7 +8,7 @@ Sets a range with the category values to the current chart.
 expression.SetCatFormula(sRange);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

@@ -1,8 +1,10 @@
 # ApiThemeColorScheme
 
-Represents the ApiThemeColorScheme class.
+Class representing a theme color scheme.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

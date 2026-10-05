@@ -4,36 +4,51 @@ Deletes the current format condition.
 
 Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Remove a conditional formatting rule from a cell range in a spreadsheet.
+Remove a conditional formatting rule that highlights unique values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I delete an existing conditional formatting rule applied to cells in a spreadsheet?
+// How do I delete a unique-values highlighting rule from a cell range in a spreadsheet?
 
-// Clear an unwanted formatting condition so cells revert to their default appearance in a spreadsheet.
+// Clear an unwanted unique-values rule so the range returns to its default appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(100);
-worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
+worksheet.GetRange("A1").SetValue("Data");
+worksheet.GetRange("A2").SetValue("Apple");
+worksheet.GetRange("A3").SetValue("Banana");
+worksheet.GetRange("A4").SetValue("Apple");
+worksheet.GetRange("A5").SetValue("Orange");
 
-let dataRange = worksheet.GetRange("A2:A6");
+let range = worksheet.GetRange("A2:A5");
+let formatConditions = range.GetFormatConditions();
+let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-let formatConditions = dataRange.GetFormatConditions();
+let countBefore = formatConditions.GetCount();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+uniqueValuesCondition.Delete();
 
-worksheet.GetRange("C1").SetValue("Rules before deletion:");
-worksheet.GetRange("C2").SetValue(formatConditions.GetCount());
+let countAfter = formatConditions.GetCount();
 
-condition1.Delete();
-
-worksheet.GetRange("D1").SetValue("Rules after deletion:");
-worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
+worksheet.GetRange("C1").SetValue("Count before deletion:");
+worksheet.GetRange("C2").SetValue(countBefore);
+worksheet.GetRange("C3").SetValue("Count after deletion:");
+worksheet.GetRange("C4").SetValue(countAfter);
 ```

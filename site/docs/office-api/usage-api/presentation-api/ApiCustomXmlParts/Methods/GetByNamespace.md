@@ -8,7 +8,7 @@ Returns custom XML parts by namespace from the XML manager.
 expression.GetByNamespace(namespace);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 

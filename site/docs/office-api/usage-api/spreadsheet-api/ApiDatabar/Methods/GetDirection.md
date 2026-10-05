@@ -8,7 +8,7 @@ Returns the direction of the data bar.
 expression.GetDirection();
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

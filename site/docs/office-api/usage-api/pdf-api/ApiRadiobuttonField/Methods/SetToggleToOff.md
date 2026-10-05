@@ -4,6 +4,24 @@ Sets whether the checked state can be toggled off.
 
 Inherited from [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md).
 
+## Syntax
+
+```javascript
+expression.SetToggleToOff(allowToggleOff);
+```
+
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| allowToggleOff | Required | boolean |  | Specifies whether the checked state can be toggled off. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Enable or disable toggle-off behavior for a checkbox in a PDF.

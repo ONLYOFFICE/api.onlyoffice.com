@@ -1,6 +1,8 @@
-# IBox
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts#L70)
+# IBox
 
 A container that lays out its contents in one direction.
 Box provides general CSS capabilities like flexbox layout, paddings, background color, border, and animation.
@@ -87,8 +89,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ***
 
 ## IBorderProp
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts#L219)
 
 Defines the border properties for a box element.
 

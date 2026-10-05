@@ -8,7 +8,7 @@ Returns the value of a custom property by its name.
 expression.Get(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomProperties](../ApiCustomProperties.md) class.
+`expression` - A variable that represents an [ApiCustomProperties](../ApiCustomProperties.md) class.
 
 ## Parameters
 

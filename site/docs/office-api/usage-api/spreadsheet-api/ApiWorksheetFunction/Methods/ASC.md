@@ -8,7 +8,7 @@ For double-byte character set (DBCS) languages, the function changes full-width 
 expression.ASC(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

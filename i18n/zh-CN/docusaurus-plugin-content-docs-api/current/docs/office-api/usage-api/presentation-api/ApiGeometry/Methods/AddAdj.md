@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-在演示文稿中创建带有参考线和连接点的可调整几何图形。
+在演示文稿中向自定义几何图形添加调整参数。
 
 ```javascript editor-pptx
 // Adjustable parameters allow shapes to be customized without changing their geometry.

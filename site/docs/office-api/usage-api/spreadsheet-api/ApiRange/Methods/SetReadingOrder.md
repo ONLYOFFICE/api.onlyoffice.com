@@ -8,7 +8,7 @@ Sets the direction (reading order) of the text in the current cell range.
 expression.SetReadingOrder(direction);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

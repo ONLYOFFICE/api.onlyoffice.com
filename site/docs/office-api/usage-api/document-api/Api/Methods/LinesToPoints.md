@@ -8,7 +8,7 @@ Converts lines to points (1 line = 12 points).
 expression.LinesToPoints(lines);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

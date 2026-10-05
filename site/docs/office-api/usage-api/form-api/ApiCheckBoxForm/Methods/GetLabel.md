@@ -8,7 +8,7 @@ Returns the label of the current check box.
 expression.GetLabel();
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

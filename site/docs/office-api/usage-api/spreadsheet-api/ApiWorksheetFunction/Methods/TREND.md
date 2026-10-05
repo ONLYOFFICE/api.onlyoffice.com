@@ -8,7 +8,7 @@ Returns numbers in a linear trend matching known data points, using the least sq
 expression.TREND(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

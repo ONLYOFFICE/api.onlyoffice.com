@@ -1,6 +1,7 @@
 # GetFormsData
 
 Returns the data from all forms present in the current document.
+
 If a form was created and not assigned to any part of the document, it won't appear in this list.
 
 ## Syntax
@@ -9,7 +10,7 @@ If a form was created and not assigned to any part of the document, it won't app
 expression.GetFormsData();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -34,7 +35,7 @@ let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});
 checkBox.SetChecked(true);
 paragraph1.Push(checkBox);
 let textForm = Api.CreateTextForm({key: "CompanyName"});
-textForm.SetText("OnlyOffice");
+textForm.SetText("ONLYOFFICE");
 paragraph1.Push(textForm);
 
 let text = JSON.stringify(doc.GetFormsData());

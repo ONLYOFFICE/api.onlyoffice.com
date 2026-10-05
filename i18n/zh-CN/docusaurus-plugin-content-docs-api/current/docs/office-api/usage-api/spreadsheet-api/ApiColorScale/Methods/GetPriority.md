@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md)。
 
+## 语法
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
-读取分配给电子表格中条件格式规则的优先级。
+在电子表格中读取颜色渐变规则在所有格式规则中的计算顺序。
 
 ```javascript editor-xlsx
-// How do I find out what priority order a formatting rule has in a spreadsheet?
+// How do I check which position a color scale rule holds in the priority list in a spreadsheet?
 
-// Check which position a formatting rule holds among all active rules in a spreadsheet.
+// Inspect the rank assigned to a color gradient condition to understand its order of evaluation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,11 +42,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let priority = condition1.GetPriority();
+let priority = colorScale.GetPriority();
 
-worksheet.GetRange("C1").SetValue("Rule priority:");
+worksheet.GetRange("C1").SetValue("Color scale priority:");
 worksheet.GetRange("C2").SetValue(priority);
 ```

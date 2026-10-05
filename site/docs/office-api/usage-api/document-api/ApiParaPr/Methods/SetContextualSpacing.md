@@ -1,8 +1,6 @@
 # SetContextualSpacing
 
-Specifies that any space before or after this paragraph set using the 
-[ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) spacing element, should not be applied when the preceding and 
-following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.
+Specifies that any space before or after this paragraph set using the  [ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) spacing element, should not be applied when the preceding and  following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.
 
 ## Syntax
 
@@ -10,7 +8,7 @@ following paragraphs are of the same paragraph style, affecting the top and bott
 expression.SetContextualSpacing(isContextualSpacing);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

@@ -5,16 +5,16 @@ Specifies font size for labels of the horizontal axis.
 ## Syntax
 
 ```javascript
-expression.SetHorAxisLabelsFontSize(nFontSize);
+expression.SetHorAxisLabelsFontSize(fontSize);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 
 ## Returns
 
@@ -40,7 +40,7 @@ chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
 chart.SetHorAxisTitle("Year", 11);
 chart.SetTitle("Financial Overview", 13);
 chart.SetSize(150 * 36000, 65 * 36000);
-chart.SetVertAxisLabelsFontSize(13);
+chart.SetHorAxisLabelsFontSize(10);
 chart.SetPosition(608400, 1267200);
 
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));

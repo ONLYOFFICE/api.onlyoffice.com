@@ -8,7 +8,7 @@ Specifies that the contents of the current run are displayed with two horizontal
 expression.SetDoubleStrikeout(isDoubleStrikeout);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

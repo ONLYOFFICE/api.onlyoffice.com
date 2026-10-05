@@ -8,7 +8,7 @@ Returns a Range object that represents the entire row(s) containing the specifie
 expression.GetEntireRow();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ let range = worksheet.GetRange("C3:E5");
 range.SetValue("Range");
 range.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 
-let entireRows = range.EntireRow;
+let entireRows = range.GetEntireRow();
 entireRows.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 
 worksheet.GetRange("A1").SetValue("Entire rows of C3:E5 are highlighted");

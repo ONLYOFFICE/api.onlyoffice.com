@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md)。
 
+## 语法
+
+```javascript
+expression.GetAppliesTo();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiRange](../../ApiRange/ApiRange.md) \| null
+
 ## 示例
 
-读取电子表格中条件格式规则覆盖的单元格范围。
+在电子表格中识别色阶格式规则所覆盖的单元格区域。
 
 ```javascript editor-xlsx
-// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
+// How do I find out which cells a color scale rule is applied to in a spreadsheet?
 
-// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
+// Read back the target range of an active color scale rule and display its address in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,11 +42,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let appliedRange = condition1.GetAppliesTo();
+let appliedRange = colorScale.GetAppliesTo();
 
-worksheet.GetRange("C1").SetValue("Rule applies to:");
+worksheet.GetRange("C1").SetValue("Color scale applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
 ```

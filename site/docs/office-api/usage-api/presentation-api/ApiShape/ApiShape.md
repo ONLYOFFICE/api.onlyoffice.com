@@ -1,8 +1,12 @@
 # ApiShape
 
+Class representing a shape.
+
 ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -11,7 +15,7 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns the type of the ApiShape class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the shape inner contents where a paragraph or text runs can be inserted. |
-| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Deprecated in 6.2. |
+| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Deprecated in 6.2. Returns the shape inner contents where a paragraph or text runs can be inserted. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Gets the fill properties from the current shape. |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | Get horizontal flip of current drawing. |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | Get vertical flip of current drawing. |

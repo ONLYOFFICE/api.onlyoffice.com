@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-更改电子表格中 XML 元素上现有属性的值。
+更新电子表格中按路径找到的 XML 元素的属性。
 
 ```javascript editor-xlsx
 // How do I overwrite the current value of a named property on an XML node in a spreadsheet?

@@ -8,7 +8,7 @@ Returns a collection of icon criteria that represent the threshold values and ic
 expression.GetIconCriteria();
 ```
 
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a number of rows in the current range.
 expression.GetRowsCount();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

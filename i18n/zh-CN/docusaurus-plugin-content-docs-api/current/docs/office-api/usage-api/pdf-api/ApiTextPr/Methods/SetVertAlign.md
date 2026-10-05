@@ -1,9 +1,10 @@
 # SetVertAlign
 
 指定将应用于文本块内容相对于文本块默认外观的对齐方式：
-- **“baseline”** - 当前文本块中的字符将按默认文本基线对齐。
-- **“subscript”** - 当前文本块中的字符将对齐到默认文本基线下方。
-- **“superscript”** - 当前文本块中的字符将对齐到默认文本基线上方。
+
+- **"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
+- **"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
+- **"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -25,7 +26,7 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-在 PDF 中将文本定位在基线的上方或下方。
+在 PDF 中使用文本属性将文本定位在基线的上方或下方。
 
 ```javascript editor-pdf
 // How do I create superscript or subscript text in a PDF?

@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.ClearLabelFilters](../../ApiPivotField/Methods/ClearLabelFilters.md)。
 
+## 语法
+
+```javascript
+expression.ClearLabelFilters();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 从电子表格中的数据透视表字段移除基于标签的筛选器。

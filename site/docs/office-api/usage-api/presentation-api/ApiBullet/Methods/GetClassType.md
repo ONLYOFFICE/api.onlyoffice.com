@@ -8,7 +8,7 @@ Returns a type of the ApiBullet class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiBullet](../ApiBullet.md) class.
+`expression` - A variable that represents an [ApiBullet](../ApiBullet.md) class.
 
 ## Parameters
 

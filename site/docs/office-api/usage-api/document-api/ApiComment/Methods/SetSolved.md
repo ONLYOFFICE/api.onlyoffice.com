@@ -8,7 +8,7 @@ Marks a comment as solved.
 expression.SetSolved(bSolved);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the Weibull distribution.
 expression.WEIBULL(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ number
 
 ## Example
 
-Calculate the Weibull distribution for statistical analysis in a spreadsheet.
+Calculate the Weibull distribution using the WEIBULL compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I compute the Weibull distribution for probability calculations in a spreadsheet?

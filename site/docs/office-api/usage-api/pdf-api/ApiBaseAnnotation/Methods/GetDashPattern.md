@@ -8,7 +8,7 @@ Gets annotation dash pattern.
 expression.GetDashPattern();
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 

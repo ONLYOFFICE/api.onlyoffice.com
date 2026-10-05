@@ -230,18 +230,18 @@ The API returns users, which are required for further operations.
     created_users = []
     for user in users:
       url = f'{API_HOST}/api/2.0/people'
-        data = {
-          'firstName': user['first_name'],
-          'lastName': user['last_name'],
-          'email': user['email']
-        }
-        response = requests.post(url, json=data, headers=HEADERS)
-        if response.status_code == 200:
-          user_data = response.json()['response']
-          print(f'User created successfully: {user_data}')
-          created_users.append(user_data)
-        else:
-          print(f'User creation failed for {user["email"]}. Status code: {response.status_code}, Message: {response.text}')
+      data = {
+        'firstName': user['first_name'],
+        'lastName': user['last_name'],
+        'email': user['email']
+      }
+      response = requests.post(url, json=data, headers=HEADERS)
+      if response.status_code == 200:
+        user_data = response.json()['response']
+        print(f'User created successfully: {user_data}')
+        created_users.append(user_data)
+      else:
+        print(f'User creation failed for {user["email"]}. Status code: {response.status_code}, Message: {response.text}')
     return created_users
   ```
 

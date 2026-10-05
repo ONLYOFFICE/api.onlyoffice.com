@@ -8,7 +8,7 @@ Returns the animation timeline for the slide.
 expression.GetTimeLine();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

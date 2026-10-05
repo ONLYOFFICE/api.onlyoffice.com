@@ -3,6 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+import {docsSections, docspaceSections} from './src/sections';
 
 // SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
 const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
@@ -16,6 +17,11 @@ const announcementBarContent = localize({
   en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
   'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
 });
+
+// The landing-page cards, flattened for llms-txt: each section carries its group's name.
+const llmsTxtSections = [docsSections, docspaceSections].flatMap(({group, items}) =>
+  items.map(({sidebar, name, description}) => ({sidebar, group, name, description})),
+);
 
 let keyPath = '';
 function sidebarRecursive(item) {
@@ -32,14 +38,17 @@ function sidebarRecursive(item) {
 }
 
 const config: Config = {
+  // Docusaurus appends this to every page title, so it stays short. The full
+  // name goes to the llms-txt plugin below, which is where it earns its keep.
   title: 'ONLYOFFICE',
-  tagline: 'ONLYOFFICE',
+  tagline:
+    'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
-  url: 'https://api.onlyoffice.com',
+  url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
   baseUrl: '/',
 
-  trailingSlash: true,
+  trailingSlash: false,
 
   noIndex: isDev,
 
@@ -153,20 +162,6 @@ const config: Config = {
         id: 'openapi',
         docsPluginId: "api",
         config: {
-          workspaceBackend: {
-            specPath: "openapi/workspace/community-server.yaml",
-            outputDir: "site/workspace/api-backend/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tagGroup",
-            },
-          } satisfies OpenApiPlugin.Options,
-          workspaceHosted: {
-            specPath: "openapi/workspace/hosted-solutions.yaml",
-            outputDir: "site/workspace/for-hosting-providers/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
             specPath: "openapi/docspace/docspace-backend.yaml",
             outputDir: "site/docspace/api-backend/usage-api",
@@ -181,6 +176,46 @@ const config: Config = {
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'GTM-5NW47TX'
+      },
+    ],
+    [
+      './plugins/llms-txt',
+      {
+        docsPluginId: 'api',
+        title: 'ONLYOFFICE API Documentation',
+        notes: 'Each section below links to its own llms.txt, a full index of the pages under that section.',
+        // Workspace is deprecated and absent from the navbar: no twins, no entries.
+        exclude: ['workspace/'],
+        sections: llmsTxtSections,
+        split: [
+          // One llms.txt per editor.
+          'docs/office-api/usage-api/',
+          // Not the parent: `interacting-with-editors/overview/` stays in the section.
+          'docs/plugins/interacting-with-editors/document-api/',
+          'docs/plugins/interacting-with-editors/form-api/',
+          'docs/plugins/interacting-with-editors/pdf-api/',
+          'docs/plugins/interacting-with-editors/presentation-api/',
+          'docs/plugins/interacting-with-editors/spreadsheet-api/',
+        ],
+        optional: [
+          {
+            name: 'Changelog',
+            url: 'changelog',
+            description:
+              'Release notes for this documentation and the products it covers, newest first.',
+          },
+          {
+            name: 'Playground',
+            url: 'playground',
+            description:
+              'Interactive browser app for running API scripts against a live editor, not readable as text.',
+          },
+          {
+            name: 'Developer forum',
+            url: 'https://forum.onlyoffice.com/',
+            description: 'Community questions, answers, and announcements.',
+          },
+        ],
       },
     ],
   ],
@@ -389,7 +424,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsLight,
       darkTheme: prismThemes.vsDark,
-      additionalLanguages: ["bash", "batch", "php", "csharp", "java", "ruby"],
+      additionalLanguages: ["bash", "batch", "php", "csharp", "java", "ruby", "json5"],
     },
     algolia: {
       appId: '59O6KESY1Y',

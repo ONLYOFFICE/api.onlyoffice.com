@@ -8,7 +8,7 @@ Returns a String that represents the value of a list item for the combo box / dr
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

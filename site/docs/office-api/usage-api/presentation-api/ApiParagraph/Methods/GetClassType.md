@@ -8,7 +8,7 @@ Returns a type of the ApiParagraph class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

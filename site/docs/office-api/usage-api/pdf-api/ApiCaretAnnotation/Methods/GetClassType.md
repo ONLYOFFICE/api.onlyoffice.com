@@ -8,7 +8,7 @@ Returns a type of the ApiCaretAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCaretAnnotation](../ApiCaretAnnotation.md) class.
+`expression` - A variable that represents an [ApiCaretAnnotation](../ApiCaretAnnotation.md) class.
 
 ## Parameters
 

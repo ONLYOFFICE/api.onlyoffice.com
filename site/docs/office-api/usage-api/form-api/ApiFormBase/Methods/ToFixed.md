@@ -8,7 +8,7 @@ Converts the current form to a fixed size form.
 expression.ToFixed(width, height, keepPosition);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds a hyperlink to the specified range.
 expression.SetHyperlink(sRange, sAddress, subAddress, sScreenTip, sTextToDisplay);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

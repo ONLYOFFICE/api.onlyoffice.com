@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-在演示文稿中创建带有参考线和连接点的可调整几何图形。
+在演示文稿中向自定义几何图形添加参考线公式。
 
 ```javascript editor-pptx
 // Guides define calculation formulas for custom shape dimensions and proportions.

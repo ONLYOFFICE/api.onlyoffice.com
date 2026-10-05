@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Items
 
 Plugin items that extend specific DocSpace UI locations — context menus, file rows, info panels, profile menus, and navigation buttons.

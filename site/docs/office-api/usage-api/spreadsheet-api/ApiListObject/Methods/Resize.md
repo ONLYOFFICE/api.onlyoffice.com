@@ -1,6 +1,8 @@
 # Resize
 
-Resizes the ListObject to a new range. Cells are not inserted or moved.
+Resizes the ListObject to a new range.
+
+Cells are not inserted or moved.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -12,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Resize(Range);
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

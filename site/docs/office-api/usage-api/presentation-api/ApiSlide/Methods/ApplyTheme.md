@@ -8,7 +8,7 @@ Applies the specified theme to the current slide.
 expression.ApplyTheme(oApiTheme);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

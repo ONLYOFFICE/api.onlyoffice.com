@@ -1,6 +1,6 @@
 # ApiRange
 
-Represents the ApiRange class.
+Class representing a range.
 
 ## Properties
 
@@ -28,7 +28,7 @@ Represents the ApiRange class.
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns or sets the background color of the current cell range. |
 | FontColor | [ApiColor](../ApiColor/ApiColor.md) | Sets the text color to the current cell range with the previously created color object. |
 | FontName | string | Sets the specified font family as the font name for the current cell range. |
-| FontSize | number | Sets the font size to the characters of the current cell range. |
+| FontSize | number | Sets the font size (measured in points) to the characters of the current cell range. |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | Returns the collection of conditional formatting rules for the current range. |
 | Formula | string | Returns a formula from the first cell of the specified range or sets it to this cell. |
 | Height | number | Returns a value that represents the range height measured in points. |
@@ -55,6 +55,8 @@ Represents the ApiRange class.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | Adds a comment to the current range. |
@@ -72,14 +74,14 @@ Represents the ApiRange class.
 | [FillRight](./Methods/FillRight.md) | boolean | Copies the contents and formatting of the leftmost column of the range into the remaining columns. |
 | [FillUp](./Methods/FillUp.md) | boolean | Copies the contents and formatting of the bottom row of the range into the remaining rows. |
 | [Find](./Methods/Find.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Finds specific information in the current range. |
-| [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the next cell that matches those same conditions and returns the ApiRange object that represents that cell. This does not affect the selection or the active cell. |
-| [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell. This does not affect the selection or the active cell. |
+| [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the next cell that matches those same conditions and returns the ApiRange object that represents that cell. |
+| [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell. |
 | [ForEach](./Methods/ForEach.md) | boolean | Executes a provided function once for each cell. |
 | [GetAddress](./Methods/GetAddress.md) | string \| null | Returns the range address. |
 | [GetAreas](./Methods/GetAreas.md) | [ApiAreas](../ApiAreas/ApiAreas.md) | Returns a collection of the ranges. |
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents all the cells in the specified range or a specified cell. |
 | [GetCellsCount](./Methods/GetCellsCount.md) | number | Returns a number of cells in the current range. |
-| [GetCharacters](./Methods/GetCharacters.md) | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | Returns the ApiCharacters object that represents a range of characters within the object text. Use the ApiCharacters object to format characters within a text string. |
+| [GetCharacters](./Methods/GetCharacters.md) | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | Returns the ApiCharacters object that represents a range of characters within the object text. |
 | [GetClassType](./Methods/GetClassType.md) | "range" | Returns a type of the ApiRange class. |
 | [GetCol](./Methods/GetCol.md) | number | Returns a column number for the selected cell. |
 | [GetCols](./Methods/GetCols.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the columns in the specified range. |
@@ -91,24 +93,24 @@ Represents the ApiRange class.
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | Returns the ApiName object of the current range. |
 | [GetEntireColumn](./Methods/GetEntireColumn.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the entire column(s) containing the specified range. |
 | [GetEntireRow](./Methods/GetEntireRow.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the entire row(s) containing the specified range. |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the current cell range. Returns 'No Fill' when the color of the background in the cell / cell range is null. |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the current cell range. |
 | [GetFormatConditions](./Methods/GetFormatConditions.md) | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | Returns the collection of conditional formatting rules for the current range. |
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | Returns a formula of the specified range. |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | Returns an array formula from the current range. |
-| [GetHidden](./Methods/GetHidden.md) | boolean | Returns the value hiding property. The specified range must span an entire column or row. |
+| [GetHidden](./Methods/GetHidden.md) | boolean | Returns the value hiding property. |
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | Returns a value that represents the format code for the current range. |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | Returns the current range angle. |
 | [GetPivotTable](./Methods/GetPivotTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | Returns the ApiPivotTable object that represents the pivot table report containing the upper-left corner of the specified range. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents a cell or a range of cells. |
 | [GetRow](./Methods/GetRow.md) | number | Returns a row number for the selected cell. |
 | [GetRowHeight](./Methods/GetRowHeight.md) | [pt](../Enumeration/pt.md) | Returns the row height value. |
-| [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row. |
+| [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the rows in the specified range. |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | Returns a number of rows in the current range. |
 | [GetText](./Methods/GetText.md) | string \| string[][] | Returns the text of the specified range. |
-| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns the data validation object associated with this range. If no validation object exists yet, it will be created. |
+| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns the data validation object associated with this range. |
 | [GetValue](./Methods/GetValue.md) | string \| number \| boolean \| (string \| number \| boolean)[][] | Returns a value of the specified range. |
 | [GetValue2](./Methods/GetValue2.md) | string \| string[][] | Returns the Value2 property (value without format) of the specified range. |
-| [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode. |
+| [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. |
 | [GetWrapText](./Methods/GetWrapText.md) | boolean | Returns the information about the wrapping cell style. |
 | [Insert](./Methods/Insert.md) | None | Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space. |
 | [Merge](./Methods/Merge.md) | boolean | Merges the selected cell range into a single cell or a cell row. |
@@ -130,7 +132,7 @@ Represents the ApiRange class.
 | [SetFontSize](./Methods/SetFontSize.md) | boolean | Sets the font size to the characters of the current cell range. |
 | [SetFormula](./Methods/SetFormula.md) | boolean | Sets a formula or value to the current cell or cell range. |
 | [SetFormulaArray](./Methods/SetFormulaArray.md) | boolean | Sets an array formula to the current range. |
-| [SetHidden](./Methods/SetHidden.md) | boolean | Sets the value hiding property. The specified range must span an entire column or row. |
+| [SetHidden](./Methods/SetHidden.md) | boolean | Sets the value hiding property. |
 | [SetItalic](./Methods/SetItalic.md) | boolean | Sets the italic property to the text characters in the current cell or cell range. |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | Specifies whether a number in the cell should be treated like number, currency, date, time, etc. or just like text. |
 | [SetOffset](./Methods/SetOffset.md) | boolean | Sets the cell offset. |

@@ -4,21 +4,37 @@ Returns the border color of the current form.
 
 Inherited from [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../../document-api/ApiColor/ApiColor.md)
+
 ## Example
 
-Read the border color of a form field in a document.
+Read the border color of a complex form in a document.
 
 ```javascript editor-forms
-// How do I get the border color of a form field in a document?
+// How do I retrieve the border color of a complex form in a document?
 
-// Verify a custom border color by reading its RGB values back after applying it.
+// Inspect the RGB values of a form's border to verify or display its current styling.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex", "tip": "Insert here other forms"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBorderColor(Api.RGB(255, 111, 61));
-let borderColor = textForm.GetBorderColor();
+paragraph.AddElement(complexForm);
+complexForm.SetBorderColor(Api.RGB(255, 111, 61));
+let borderColor = complexForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);

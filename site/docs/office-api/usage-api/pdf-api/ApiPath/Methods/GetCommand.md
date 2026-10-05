@@ -8,7 +8,7 @@ Returns a specific path command by its index.
 expression.GetCommand(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

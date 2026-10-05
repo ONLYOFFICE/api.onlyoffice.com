@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md)。
 
+## 语法
+
+```javascript
+expression.SetLastPriority();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-将电子表格中的格式规则移动到评估顺序的最低位置。
+在电子表格中将颜色渐变规则移至计算顺序的底部。
 
 ```javascript editor-xlsx
-// How do I make a conditional formatting rule apply after all other rules in a spreadsheet?
+// How do I make a color scale rule yield to all other formatting rules in a spreadsheet?
 
-// Push an existing highlight rule to the bottom of the priority stack in a spreadsheet.
+// Demote a color gradient condition so it is always evaluated after every other competing rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,19 +42,14 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-
-let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+let colorScale = formatConditions.AddColorScale();
+let topRule = formatConditions.Add("xlTop10");
 
 worksheet.GetRange("C1").SetValue("Priority before:");
-worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("C3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("C2").SetValue(colorScale.GetPriority());
 
-condition1.SetLastPriority();
+colorScale.SetLastPriority();
 
 worksheet.GetRange("D1").SetValue("Priority after:");
-worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
-worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+worksheet.GetRange("D2").SetValue(colorScale.GetPriority());
 ```

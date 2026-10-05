@@ -1,8 +1,12 @@
 # ApiComboboxField
 
+Class representing a combobox field.
+
 ApiComboboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

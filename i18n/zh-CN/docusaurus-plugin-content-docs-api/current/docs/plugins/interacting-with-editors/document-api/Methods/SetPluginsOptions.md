@@ -1,7 +1,12 @@
 # SetPluginsOptions
 
-从外部源配置插件。可以为所有插件或特定插件设置参数。
-例如，此方法可用于向插件传递授权令牌。此方法只能与连接器类一起使用。
+从外部源配置插件。
+
+可以为所有插件或特定插件设置参数。例如，此方法可用于向插件传递授权令牌。
+
+:::note
+此方法只能与[连接器类](../../../../../docs/docs-api/usage-api/automation-api/connector-class.md)一起使用。
+:::
 
 ## 语法
 
@@ -9,7 +14,7 @@
 expression.SetPluginsOptions(options);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

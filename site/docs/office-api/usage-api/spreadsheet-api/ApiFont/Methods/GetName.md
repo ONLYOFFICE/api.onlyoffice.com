@@ -8,7 +8,7 @@ Returns the font name property of the specified font.
 expression.GetName();
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

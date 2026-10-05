@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
+
 ## 示例
 
 读取演示文稿中文本的字符间距值。

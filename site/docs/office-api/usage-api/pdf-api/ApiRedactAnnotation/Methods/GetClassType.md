@@ -8,7 +8,7 @@ Returns a type of the ApiRedactAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRedactAnnotation](../ApiRedactAnnotation.md) class.
+`expression` - A variable that represents an [ApiRedactAnnotation](../ApiRedactAnnotation.md) class.
 
 ## Parameters
 

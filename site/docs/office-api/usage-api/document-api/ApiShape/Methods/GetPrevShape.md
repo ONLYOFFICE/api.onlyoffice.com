@@ -8,7 +8,7 @@ Returns the previous inline shape if exists.
 expression.GetPrevShape();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

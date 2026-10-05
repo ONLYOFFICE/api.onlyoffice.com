@@ -1,8 +1,10 @@
 # ApiCore
 
-Represents the ApiCore class.
+Class representing document properties (similar to BuiltInDocumentProperties in VBA).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

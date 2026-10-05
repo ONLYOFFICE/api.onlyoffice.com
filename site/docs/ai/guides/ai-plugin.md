@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # AI plugin
 
 AI is a background plugin that connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
@@ -10,11 +12,7 @@ AI is a background plugin that connects an AI provider (e.g., OpenAI, DeepSeek) 
 
 **Repository on GitHub**: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="oQbH8JIe3eE"/>
-```
 
 ## Installing
 

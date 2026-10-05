@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetBorderEffectStyle](../../ApiBaseAnnotation/Methods/GetBorderEffectStyle.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderEffectStyle();
+```
+
+`expression` - 表示 [ApiStampAnnotation](../ApiStampAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md)
+
 ## 示例
 
 检索 PDF 中应用于注释的边框效果样式。

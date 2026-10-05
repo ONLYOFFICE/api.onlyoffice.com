@@ -1,5 +1,7 @@
 # ApiAboveAverage
 
+表示高于平均值条件格式规则的类。
+
 ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -12,13 +14,15 @@ ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatConditio
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
 | [GetAboveBelow](./Methods/GetAboveBelow.md) | boolean | 返回规则是否配置为检测高于或低于平均值的值。 |
 | [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回当前条件格式规则应用的单元格区域。 |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | 返回时间段条件的日期运算符。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。 |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | 返回当前格式条件应用的字体。 |
 | [GetFormula1](./Methods/GetFormula1.md) | string | 返回当前条件格式规则使用的第一个公式。 |
 | [GetFormula2](./Methods/GetFormula2.md) | string | 返回当前条件格式规则使用的第二个公式。 |

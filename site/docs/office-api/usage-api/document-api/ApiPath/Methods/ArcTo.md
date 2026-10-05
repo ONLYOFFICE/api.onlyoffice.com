@@ -8,7 +8,7 @@ Draws an arc from the current point using the specified width and height radii, 
 expression.ArcTo(wR, hR, stAng, swAng);
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

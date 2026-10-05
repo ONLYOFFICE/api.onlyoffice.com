@@ -4,6 +4,22 @@ Gets annotation border color.
 
 Inherited from [ApiBaseAnnotation.GetBorderColor](../../ApiBaseAnnotation/Methods/GetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Check the border color of an annotation in a PDF.

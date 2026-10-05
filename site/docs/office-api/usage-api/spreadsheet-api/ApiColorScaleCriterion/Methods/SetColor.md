@@ -8,7 +8,7 @@ Sets the format color for the color scale criterion.
 expression.SetColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
+`expression` - A variable that represents an [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
 
 ## Parameters
 

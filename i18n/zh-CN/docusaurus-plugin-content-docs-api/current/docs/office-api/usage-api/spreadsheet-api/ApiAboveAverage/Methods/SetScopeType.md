@@ -4,6 +4,24 @@
 
 继承自 [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.SetScopeType(ScopeType);
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ScopeType | 必需 | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | 作用域类型：“xlSelectionScope”、“xlDataFieldScope” 或 “xlFieldsScope”。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 定义格式规则应应用于电子表格中表格的哪个部分。

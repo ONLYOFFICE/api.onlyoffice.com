@@ -8,7 +8,7 @@ Sets mask for field.
 expression.SetMask(inputMask);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

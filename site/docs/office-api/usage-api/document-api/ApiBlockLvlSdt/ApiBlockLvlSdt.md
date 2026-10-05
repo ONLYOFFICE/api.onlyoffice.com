@@ -1,8 +1,10 @@
 # ApiBlockLvlSdt
 
-Represents the ApiBlockLvlSdt class.
+Class representing a container for the document content.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -10,8 +12,8 @@ Represents the ApiBlockLvlSdt class.
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a block content control to the current container. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the current content control. |
-| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of an block content control. Ignores comments, footnote references, complex fields. |
-| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
+| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of a block content control. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a collection of content control objects in the current content control. |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects in the current content control. |
@@ -41,7 +43,7 @@ Represents the ApiBlockLvlSdt class.
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table or a block content control to actually add it to the current container. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Clears the contents from the current content control. |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | Replaces the current content control with a new element. |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. |
 | [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
 | [SetAppearance](./Methods/SetAppearance.md) | None | Sets the visualization of the content control. |

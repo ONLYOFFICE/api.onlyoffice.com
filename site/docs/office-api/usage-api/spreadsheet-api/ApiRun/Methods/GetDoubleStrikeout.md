@@ -4,6 +4,22 @@ Gets the double strikeout property from the current text properties.
 
 Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md).
 
+## Syntax
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether text has a double strikethrough line applied in a spreadsheet.

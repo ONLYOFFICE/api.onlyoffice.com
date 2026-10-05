@@ -4,24 +4,41 @@
 
 继承自 [ApiTablePr.SetTableDescription](../../ApiTablePr/Methods/SetTableDescription.md)。
 
+## 语法
+
+```javascript
+expression.SetTableDescription(sDescr);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sDescr | 必需 | string |  | 要设置的表格说明。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-为文档中的表格分配描述性文本标签。
+在文档中为表格附加纯文本描述。
 
 ```javascript editor-docx
-// How do I attach a written description to a table in a document?
+// How do I store a written summary alongside a table in a document?
 
-// Give a table a readable summary that can be retrieved later in a document.
+// Provide accessible alternative text for a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let tablePr = tableStyle.GetTablePr();
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
-tablePr.SetTableDescription("Empty table");
+table.SetTableDescription("Empty table");
 table.SetStyle(tableStyle);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("Table description: " + tablePr.GetTableDescription());
+paragraph.AddText("Table description: " + table.GetTableDescription());
 doc.Push(table);
 ```

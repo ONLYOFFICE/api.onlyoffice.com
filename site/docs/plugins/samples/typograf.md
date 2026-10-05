@@ -3,6 +3,8 @@ description: Fix typography and grammar issues in text.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Typograf
 
 Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepare text for publishing by correcting typographical errors. It helps automatically place non-breaking spaces, remove extra spaces, correct minor typos, insert correct quotes, replace hyphens with dashes, and much more.
@@ -13,11 +15,7 @@ Supported languages are listed [here](https://github.com/typograf/typograf/blob/
 
 **Supported editors:** documents.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="Pr1TAstlj7E"/>
-```
 
 ## Installation
 
@@ -132,7 +130,7 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetSelectedText")](../interacting-with-editors/document-api/Methods/GetSelectedText.md)

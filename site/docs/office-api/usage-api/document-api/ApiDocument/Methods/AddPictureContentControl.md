@@ -8,7 +8,7 @@ Adds a new picture content control to the document.
 expression.AddPictureContentControl(width, height);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

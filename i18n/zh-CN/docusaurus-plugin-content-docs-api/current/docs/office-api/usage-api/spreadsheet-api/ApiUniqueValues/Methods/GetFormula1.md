@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md)。
 
+## 语法
+
+```javascript
+expression.GetFormula1();
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中条件格式规则的主要阈值。

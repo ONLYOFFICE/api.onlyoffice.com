@@ -8,7 +8,7 @@ Removes all effects from the sequence.
 expression.RemoveAllEffects();
 ```
 
-`expression` - A variable that represents a [ApiAnimationSequence](../ApiAnimationSequence.md) class.
+`expression` - A variable that represents an [ApiAnimationSequence](../ApiAnimationSequence.md) class.
 
 ## Parameters
 

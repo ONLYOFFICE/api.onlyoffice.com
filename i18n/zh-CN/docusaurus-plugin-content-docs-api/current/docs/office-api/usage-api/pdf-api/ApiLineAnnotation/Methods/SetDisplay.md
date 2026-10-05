@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetDisplay](../../ApiBaseAnnotation/Methods/SetDisplay.md)。
 
+## 语法
+
+```javascript
+expression.SetDisplay(display);
+```
+
+`expression` - 表示 [ApiLineAnnotation](../ApiLineAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| display | 必需 | [DisplayType](../../Enumeration/DisplayType.md) |  | 批注的显示类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 控制 PDF 中注释的可见性。

@@ -8,7 +8,7 @@ Sets the paragraph properties to the current style.
 expression.SetParaPr(paraPr);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

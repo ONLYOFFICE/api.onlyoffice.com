@@ -1,6 +1,8 @@
 # FreezeAt
 
-Sets the frozen cells in the active worksheet view. The range provided corresponds to the cells that will be frozen in the top- and left-most pane.
+Sets the frozen cells in the active worksheet view.
+
+The range provided corresponds to the cells that will be frozen in the top- and left-most pane.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Sets the frozen cells in the active worksheet view. The range provided correspon
 expression.FreezeAt(frozenRange);
 ```
 
-`expression` - A variable that represents a [ApiFreezePanes](../ApiFreezePanes.md) class.
+`expression` - A variable that represents an [ApiFreezePanes](../ApiFreezePanes.md) class.
 
 ## Parameters
 

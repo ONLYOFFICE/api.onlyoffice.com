@@ -4,6 +4,24 @@ Scales the width of the figure using the specified coefficient.
 
 Inherited from [ApiDrawing.ScaleWidth](../../ApiDrawing/Methods/ScaleWidth.md).
 
+## Syntax
+
+```javascript
+expression.ScaleWidth(coefficient);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| coefficient | Required | number |  | The coefficient by which the figure width will be scaled. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Scale the width of a drawing by a given factor in a document.

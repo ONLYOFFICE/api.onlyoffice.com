@@ -1,7 +1,6 @@
 # SetTableBorderInsideV
 
-Specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge
-of the parent table (all vertical borders which are not the leftmost or rightmost borders).
+Specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table (all vertical borders which are not the leftmost or rightmost borders).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ of the parent table (all vertical borders which are not the leftmost or rightmos
 expression.SetTableBorderInsideV(sType, nSize, nSpace, r, g, b);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

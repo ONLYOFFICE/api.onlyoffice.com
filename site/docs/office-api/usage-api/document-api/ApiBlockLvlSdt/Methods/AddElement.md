@@ -8,7 +8,7 @@ Adds a paragraph or a table or a block content control to the current container.
 expression.AddElement(element, pos);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

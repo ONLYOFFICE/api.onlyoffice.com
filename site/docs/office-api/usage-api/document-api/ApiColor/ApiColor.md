@@ -1,8 +1,10 @@
 # ApiColor
 
-Represents the ApiColor class.
+Represents a color that can be applied to text.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

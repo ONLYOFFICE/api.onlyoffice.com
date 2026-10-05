@@ -1,6 +1,8 @@
 # CompareDocuments
 
-Compares the current document with another document opened via builderJS.OpenTmpFile. Tracked changes between the two documents are produced in the current document.
+Compares the current document with another document opened via builderJS.OpenTmpFile.
+
+Tracked changes between the two documents are produced in the current document.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Compares the current document with another document opened via builderJS.OpenTmp
 expression.CompareDocuments(file);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

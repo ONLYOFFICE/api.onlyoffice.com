@@ -7,3 +7,19 @@
 :::
 
 继承自 [ApiBaseField.GetTooltip](../../ApiBaseField/Methods/GetTooltip.md)。
+
+## 语法
+
+```javascript
+expression.GetTooltip();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean

@@ -4,6 +4,24 @@ Sets the horizontal flip of the current drawing.
 
 Inherited from [ApiDrawing.SetFlipH](../../ApiDrawing/Methods/SetFlipH.md).
 
+## Syntax
+
+```javascript
+expression.SetFlipH(bFlip);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | Required | boolean |  | Specifies if the figure will be flipped horizontally or not. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mirror a drawing from left to right in a spreadsheet.

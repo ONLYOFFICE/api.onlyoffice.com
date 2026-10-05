@@ -8,7 +8,7 @@ Gets the theme color name if the color is a theme color.
 expression.GetThemeName();
 ```
 
-`expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
+`expression` - A variable that represents an [ApiColor](../ApiColor.md) class.
 
 ## Parameters
 

@@ -4,14 +4,30 @@ Returns the range of cells to which the current conditional formatting rule appl
 
 Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
 
+## Syntax
+
+```javascript
+expression.GetAppliesTo();
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiRange](../../ApiRange/ApiRange.md) \| null
+
 ## Example
 
-Read the cell range that a conditional formatting rule covers in a spreadsheet.
+Read which cell range a top 10 conditional formatting rule covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
+// How do I find the cell range a top 10 conditional formatting rule is applied to in a spreadsheet?
 
-// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
+// Check the address of cells targeted by a top 10 highlight rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -23,11 +39,10 @@ worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
 
 let dataRange = worksheet.GetRange("A2:A6");
-
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
 let appliedRange = condition1.GetAppliesTo();
 

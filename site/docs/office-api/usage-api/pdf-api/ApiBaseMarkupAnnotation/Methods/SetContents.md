@@ -4,6 +4,24 @@ Sets annotation contents.
 
 Inherited from [ApiBaseAnnotation.SetContents](../../ApiBaseAnnotation/Methods/SetContents.md).
 
+## Syntax
+
+```javascript
+expression.SetContents(contents);
+```
+
+`expression` - A variable that represents an [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| contents | Required | string |  | The annotation text contents. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add text content to an annotation in a PDF.

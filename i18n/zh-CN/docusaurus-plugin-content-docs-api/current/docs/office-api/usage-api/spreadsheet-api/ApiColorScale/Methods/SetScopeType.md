@@ -4,14 +4,32 @@
 
 继承自 [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.SetScopeType(ScopeType);
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ScopeType | 必需 | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | 作用域类型：“xlSelectionScope”、“xlDataFieldScope” 或 “xlFieldsScope”。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
-定义格式规则应应用于电子表格中表格的哪个部分。
+在电子表格中定义颜色渐变规则在所选单元格中的应用范围。
 
 ```javascript editor-xlsx
-// How do I limit a conditional formatting rule to only certain columns or data fields in a spreadsheet?
+// How do I control whether a color scale rule covers each cell independently or the entire range together in a spreadsheet?
 
-// Narrow or expand the reach of a highlight rule across table sections in a spreadsheet.
+// Adjust the coverage mode of a color gradient condition to change which cells it treats as a group in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,14 +44,13 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-worksheet.GetRange("C1").SetValue("Original scope:");
-worksheet.GetRange("C2").SetValue(condition1.GetScopeType());
+worksheet.GetRange("C1").SetValue("Scope before:");
+worksheet.GetRange("C2").SetValue(colorScale.GetScopeType());
 
-condition1.SetScopeType("xlDataFieldScope");
+colorScale.SetScopeType("xlDataFieldScope");
 
-worksheet.GetRange("C4").SetValue("New scope:");
-worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
+worksheet.GetRange("D1").SetValue("Scope after:");
+worksheet.GetRange("D2").SetValue(colorScale.GetScopeType());
 ```

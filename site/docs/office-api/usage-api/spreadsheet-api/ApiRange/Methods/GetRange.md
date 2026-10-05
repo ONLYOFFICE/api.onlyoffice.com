@@ -1,6 +1,7 @@
 # GetRange
 
 Returns a Range object that represents a cell or a range of cells.
+
 When applied to a Range object, the property is relative to that Range object.
 
 ## Syntax
@@ -9,7 +10,7 @@ When applied to a Range object, the property is relative to that Range object.
 expression.GetRange(cell1, cell2);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

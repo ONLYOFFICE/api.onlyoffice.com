@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.ToJSON](../../ApiTextPr/Methods/ToJSON.md)。
 
+## 语法
+
+```javascript
+expression.ToJSON(bWriteStyles);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bWriteStyles | 必需 | boolean |  | 指定使用的样式是否将写入 JSON 对象。 |
+
+## 返回值
+
+JSON
+
 ## 示例
 
 将文本格式设置导出为 JSON 并在文档中重新应用。

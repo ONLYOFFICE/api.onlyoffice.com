@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md)。
 
+## 语法
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| null
+
 ## 示例
 
 检查文档中的绘图是否水平翻转。

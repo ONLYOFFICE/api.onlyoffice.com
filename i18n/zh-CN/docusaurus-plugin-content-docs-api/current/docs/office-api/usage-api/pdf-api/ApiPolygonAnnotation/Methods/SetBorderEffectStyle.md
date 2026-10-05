@@ -1,9 +1,30 @@
 # SetBorderEffectStyle
 
 设置批注边框效果样式。
-💡 可应用于圆形、方形、自由文本和多边形批注
+
+:::note
+可应用于圆形、方形、自由文本和多边形批注。
+:::
 
 继承自 [ApiBaseAnnotation.SetBorderEffectStyle](../../ApiBaseAnnotation/Methods/SetBorderEffectStyle.md)。
+
+## 语法
+
+```javascript
+expression.SetBorderEffectStyle(style);
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| style | 必需 | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | 边框效果样式：**"none"** 或 **"cloud"**。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 

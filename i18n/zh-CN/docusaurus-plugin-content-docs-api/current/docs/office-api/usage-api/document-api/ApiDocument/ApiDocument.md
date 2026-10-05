@@ -1,8 +1,12 @@
 # ApiDocument
 
+表示文档的类。
+
 ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -26,8 +30,8 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | 创建新的历史记录点。 |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | 创建具有指定类型的抽象多级编号。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新的空段落。 |
-| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | 创建在指定段落处结束的新文档节。允许为当前 |
-| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | 使用指定的类型和名称创建新样式。如果已存在具有指定名称的样式，将返回该样式而不创建新样式。 |
+| [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | 创建在指定段落处结束的新文档节。 |
+| [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | 使用指定的类型和名称创建新样式。 |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | 创建具有指定行数和列数的新表格。 |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | 从文档中移除书签（如果存在）。 |
 | [EnterText](./Methods/EnterText.md) | boolean | 在光标位置向文档添加文本。 |
@@ -78,7 +82,7 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [GetFinalSection](./Methods/GetFinalSection.md) | [ApiSection](../ApiSection/ApiSection.md) | 返回文档的最后一节。 |
 | [GetFootnotesFirstParagraphs](./Methods/GetFootnotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 返回当前文档中所有脚注的第一个段落。 |
 | [GetFormKeysByRole](./Methods/GetFormKeysByRole.md) | string[] | 返回附加到指定角色的所有表单键的列表。 |
-| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | 返回指定键的表单值。对于一组单选按钮，返回 Choice，即所选项目的名称。 |
+| [GetFormValueByKey](./Methods/GetFormValueByKey.md) | null \| boolean \| string | 返回指定键的表单值。 |
 | [GetFormsByKey](./Methods/GetFormsByKey.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定键的所有表单的列表。 |
 | [GetFormsByRole](./Methods/GetFormsByRole.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定角色名称的所有表单的列表。 |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回文档中具有指定标签名称的所有表单的列表。 |
@@ -111,7 +115,7 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | 向左移动光标。 |
 | [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | 向右移动光标。 |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | 将光标移动到文档末尾。 |
-| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。 |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | 将光标移动到当前文档的指定位置。 |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | 将光标移动到文档开头。 |
 | [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | 向上移动光标。 |
@@ -125,16 +129,16 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [ReplaceCurrentSentence](./Methods/ReplaceCurrentSentence.md) | boolean | 用指定的文本替换当前句子或当前句子的一部分。 |
 | [ReplaceCurrentWord](./Methods/ReplaceCurrentWord.md) | boolean | 用指定的文本替换当前单词或当前单词的一部分。 |
 | [ReplaceDrawing](./Methods/ReplaceDrawing.md) | boolean | 用新绘图替换绘图。 |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 搜索文档对象的范围。搜索结果是 ApiRange 对象的集合。 |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 搜索文档对象的范围。 |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | 查找并替换文本。 |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | 如果可能，选择当前单词。 |
-| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
+| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。 |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | 在文档中启用或禁用 AI 辅助修订跟踪。 |
 | [SetControlsHighlight](./Methods/SetControlsHighlight.md) | boolean | 为当前文档中的内容控件设置突出显示。 |
-| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | 指定此文档中的节是否对奇偶 |
+| [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | 指定此文档中的节是否为奇数页和偶数页设置不同的页眉和页脚（奇数页使用一套页眉/页脚，偶数页使用另一套页眉/页脚）。 |
 | [SetFormsData](./Methods/SetFormsData.md) | boolean | 将数据设置到指定的表单。 |
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | 为文档中的表单设置突出显示。 |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前文档内容对象的所有内容， |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换当前文档内容对象的所有内容，保留第一个段落的格式。 |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | 设置修订跟踪模式。 |
 | [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 设置当前文档中的水印设置。 |
 | [ShowComment](./Methods/ShowComment.md) | boolean | 通过 ID 显示批注。 |

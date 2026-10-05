@@ -1,6 +1,8 @@
-# SelectorType
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Selector.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Selector.ts#L4)
+# SelectorType
 
 Defines the types of selector components that can be rendered.
 

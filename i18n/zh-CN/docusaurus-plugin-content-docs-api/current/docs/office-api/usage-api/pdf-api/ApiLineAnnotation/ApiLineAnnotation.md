@@ -1,8 +1,12 @@
 # ApiLineAnnotation
 
+表示直线批注的类。
+
 ApiLineAnnotation 是 [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

@@ -8,7 +8,7 @@ Returns the way the specified pivot table items appear — in table format or in
 expression.GetLayoutForm();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

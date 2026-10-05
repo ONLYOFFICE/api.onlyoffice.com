@@ -8,7 +8,7 @@ Returns a type of the ApiRichParaPr class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRichParaPr](../ApiRichParaPr.md) class.
+`expression` - A variable that represents an [ApiRichParaPr](../ApiRichParaPr.md) class.
 
 ## Parameters
 

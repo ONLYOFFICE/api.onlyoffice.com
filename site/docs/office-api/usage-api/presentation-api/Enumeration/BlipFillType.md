@@ -1,6 +1,7 @@
 # BlipFillType
 
 The type of a fill which uses an image as a background.
+
 - **"tile"** - if the image is smaller than the shape which is filled, the image will be tiled all over the created shape surface.
 - **"stretch"** - if the image is smaller than the shape which is filled, the image will be stretched to fit the created shape surface.
 
@@ -18,7 +19,7 @@ Enumeration
 Create a blip fill with an image which is tiled all over the created shape.
 
 ```javascript editor-pptx
-// How to create a blip fill from the image URL.
+// How do I create a blip fill from an image URL?
 
 // Create a tiled blip fill from the image.
 

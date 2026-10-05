@@ -1,6 +1,7 @@
 # numberedRefTo
 
 Available values of the "numbered" reference type:
+
 - **"pageNum"** - the numbered item page number;
 - **"paraNum"** - the numbered item paragraph number;
 - **"noCtxParaNum"** - the abbreviated paragraph number (the specific item only, e.g. instead of "4.1.1" you refer to "1" only);
@@ -26,7 +27,7 @@ Enumeration
 Add a cross-reference to the page containing a numbered paragraph.
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with a numbered paragraph.
+// How do I create a reference to a numbered paragraph?
 
 // Use numbered paragraph to create a cross-reference.
 

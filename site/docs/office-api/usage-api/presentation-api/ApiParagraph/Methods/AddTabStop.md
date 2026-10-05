@@ -8,7 +8,7 @@ Adds a tab stop to the current paragraph.
 expression.AddTabStop();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

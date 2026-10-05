@@ -8,7 +8,7 @@
 expression.EditOleObject(data);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../presentation-api.md) 类的变量。
 
 ## 参数
 
@@ -25,7 +25,7 @@ expression.EditOleObject(data);
 ```javascript
 var _param = {
     "data": "{data}",
-    "imgSrc": "https://link-to-the-image.jpg",
+    "imgSrc": "https://example.com/image.png",
     "objectId": "5_556",
     "width": 70,
     "height": 70,

@@ -8,7 +8,7 @@ Wraps the paragraph object with a rich text content control.
 expression.InsertInContentControl(nType);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -1,8 +1,26 @@
 # GetFillColor
 
-返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。
+返回格式条件的背景颜色。
+
+当格式条件的背景颜色为 null 时返回“无填充”。
 
 继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
+
+## 语法
+
+```javascript
+expression.GetFillColor();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
 
 ## 示例
 

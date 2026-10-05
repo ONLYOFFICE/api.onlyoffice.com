@@ -4,20 +4,36 @@
 
 继承自 [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md)。
 
+## 语法
+
+```javascript
+expression.IsRequired();
+```
+
+`expression` - 表示 [ApiSignatureForm](../ApiSignatureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-确定文档中的表单字段是否标记为必填。
+确认文档中的签名字段是否必须在提交文档之前完成。
 
 ```javascript editor-forms
-// How do I check if a form field must be filled out before the document is submitted in a document?
+// How do I check if a signature field is marked as mandatory in a document?
 
-// Confirm whether a form field is required so the result can be shown to the reader in a document.
+// Identify signature fields that cannot be skipped when filling out a form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let required = textForm.IsRequired();
+paragraph.AddElement(signatureForm);
+let required = signatureForm.IsRequired();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);

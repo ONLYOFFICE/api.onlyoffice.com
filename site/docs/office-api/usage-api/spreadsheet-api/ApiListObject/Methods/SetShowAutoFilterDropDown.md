@@ -1,6 +1,7 @@
 # SetShowAutoFilterDropDown
 
 Sets whether the AutoFilter dropdown arrows are displayed on the header row of the table.
+
 Does not remove the AutoFilter itself, only hides or shows the dropdown buttons.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetShowAutoFilterDropDown(bShow);
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

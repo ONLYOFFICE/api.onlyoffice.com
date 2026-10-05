@@ -6,7 +6,7 @@ sidebar_position: 2
 
 使用 ONLYOFFICE AI 代理为选中文本添加 AI 生成的注释或脚注。
 
-**时间：** 30 分钟 | **技能等级：** 高级
+**时间**：30 分钟 | **技能等级**：高级
 
 ## 第 1 步：配置开发环境
 
@@ -55,7 +55,7 @@ let func = new RegisteredFunction({
 });
 ```
 
-**关键字段说明：**
+**关键字段说明**：
 
 - `name` - AI 模型调用的函数名称
 - `parameters` - 函数期望从 AI 接收的 JSON 参数
@@ -165,13 +165,13 @@ func.call = async function (params) {
 
 ## 下一步
 
-**深入学习：**
+**深入学习**：
 
 - [ONLYOFFICE AI 代理入门](../guides/ai-agent.md)
 - [深入了解自定义 AI 工具](../guides/custom-ai-tools.md)
 - [文本注释 API 指南](../guides/text-annotations-guide.md)
 
-**浏览示例：**
+**浏览示例**：
 
 - [浏览所有 AI 工具示例](/samples/?doctype=ai&text=ai+tools)
 

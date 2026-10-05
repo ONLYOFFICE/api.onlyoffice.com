@@ -4,21 +4,40 @@
 
 继承自 [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md)。
 
+## 语法
+
+```javascript
+expression.SetRequired(bRequired);
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | 必需 | boolean |  | 定义当前表单是否为必填项（true）或非必填项（false）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-将文档中的表单字段标记为必填以强制完成。
+在文档中将图片字段标记为必填，必须填写后才能提交文档。
 
 ```javascript editor-docx
-// How do I make a form field mandatory in a document?
+// How do I make filling in a picture field obligatory in a document?
 
-// Ensure a field must be filled before the document form is submitted.
+// Enforce that a picture field must be completed before the form is finished in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetRequired(true);
-let required = textForm.IsRequired();
+paragraph.AddElement(pictureForm);
+pictureForm.SetRequired(true);
+let required = pictureForm.IsRequired();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);

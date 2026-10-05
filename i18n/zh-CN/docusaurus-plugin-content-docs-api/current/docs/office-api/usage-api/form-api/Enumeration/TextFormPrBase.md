@@ -21,7 +21,7 @@ Object
 创建具有特定文本表单属性的文本表单。
 
 ```javascript editor-forms
-// How to create a text form with adding base properties like max characters limit, cell width, etc. to it.
+// How do I create a text form with base properties such as the character limit and cell width?
 
 // Create a text form with base properties.
 

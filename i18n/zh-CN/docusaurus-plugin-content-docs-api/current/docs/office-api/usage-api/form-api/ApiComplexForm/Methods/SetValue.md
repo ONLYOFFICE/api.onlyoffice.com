@@ -4,6 +4,24 @@
 
 继承自 [ApiFormBase.SetValue](../../ApiFormBase/Methods/SetValue.md)。
 
+## 语法
+
+```javascript
+expression.SetValue(value);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | 必需 | string \| boolean |  | 要设置的值。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 ```javascript editor-forms

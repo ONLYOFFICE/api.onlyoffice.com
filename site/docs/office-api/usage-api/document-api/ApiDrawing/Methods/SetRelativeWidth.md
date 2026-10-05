@@ -8,7 +8,7 @@ Sets the relative width of the object (image, shape, chart) bounding box.
 expression.SetRelativeWidth(relativeFrom, percent);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

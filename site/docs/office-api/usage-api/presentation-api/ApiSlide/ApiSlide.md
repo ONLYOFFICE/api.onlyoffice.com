@@ -1,8 +1,10 @@
 # ApiSlide
 
-Represents the ApiSlide class.
+Class representing a slide.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

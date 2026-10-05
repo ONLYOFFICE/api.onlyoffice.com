@@ -8,7 +8,7 @@ Creates an RGB color setting the appropriate values for the red, green and blue 
 expression.CreateRGBColor(r, g, b);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -35,7 +35,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const rgbColor = Api.RGB(255, 111, 61);
+const rgbColor = Api.CreateRGBColor(255, 111, 61);
 const gs1 = Api.CreateGradientStop(Api.CreatePresetColor("peachPuff"), 0);
 const gs2 = Api.CreateGradientStop(rgbColor, 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);

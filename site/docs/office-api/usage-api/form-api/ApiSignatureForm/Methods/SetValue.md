@@ -8,7 +8,7 @@ Sets an image to the signature form.
 expression.SetValue(value);
 ```
 
-`expression` - A variable that represents a [ApiSignatureForm](../ApiSignatureForm.md) class.
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
 
 ## Parameters
 

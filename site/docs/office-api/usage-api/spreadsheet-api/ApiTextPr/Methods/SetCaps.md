@@ -8,7 +8,7 @@ Specifies that any lowercase characters in the text run are formatted for displa
 expression.SetCaps(isCaps);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

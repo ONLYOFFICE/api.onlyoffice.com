@@ -4,18 +4,43 @@ Sets the border color to the current form.
 
 Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Optional | [ApiColor](../../../document-api/ApiColor/ApiColor.md) |  | The border color. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply a border color to a form field to highlight it in a document.
+Apply a border color to checkbox forms in a document.
 
 ```javascript editor-forms
-// How do I change the border color of a form field in a document?
+// How do I change the border color of a checkbox form in a document?
 
-// Style the outline of a form field with a specific color to draw attention to it in a document.
+// Visually distinguish checkboxes by combining a colored border with a contrasting background fill in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+checkBoxForm.SetBorderColor(Api.HexColor('#FF6F3D'));
+checkBoxForm.SetBackgroundColor(Api.HexColor('#FFFF00'));
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+checkBoxForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```

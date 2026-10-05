@@ -1,6 +1,8 @@
 # Intersect
 
-Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.
+Returns the ApiRange object that represents the rectangular intersection of two or more ranges.
+
+If one or more ranges from a different worksheet are specified, an error will be returned.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the ApiRange object that represents the rectangular intersection of two 
 expression.Intersect(Range1, Range2);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

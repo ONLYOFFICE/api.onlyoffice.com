@@ -4,14 +4,30 @@ Returns whether the text with the current text properties are capitalized.
 
 Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
 
+## Syntax
+
+```javascript
+expression.GetCaps();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Detect if text uses capital letters formatting in a PDF.
+Check if text is in all caps in a PDF.
 
 ```javascript editor-pdf
-// How do I check whether text letters are set to uppercase in a PDF?
+// How do I know if text has uppercase formatting in a PDF?
 
-// Retrieve the capitalization setting from text properties in a PDF.
+// Verify the capitalization setting of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetCaps(true);
+run.SetCaps(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const caps = textPr.GetCaps();
+const caps = run.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
 ```

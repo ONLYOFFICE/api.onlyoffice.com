@@ -4,6 +4,24 @@ Sets the number format applied to a cell when the conditional formatting rule ev
 
 Inherited from [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md).
 
+## Syntax
+
+```javascript
+expression.SetNumberFormat(NumberFormat);
+```
+
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| NumberFormat | Required | string |  | The number format code (e.g., "General", "#,##0.00", etc.) |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Control how numbers are displayed when a formatting rule is triggered in a spreadsheet.

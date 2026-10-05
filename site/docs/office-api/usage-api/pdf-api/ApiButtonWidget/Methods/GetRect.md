@@ -4,6 +4,22 @@ Sets field rect.
 
 Inherited from [ApiBaseWidget.GetRect](../../ApiBaseWidget/Methods/GetRect.md).
 
+## Syntax
+
+```javascript
+expression.GetRect();
+```
+
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Rect](../../Enumeration/Rect.md)
+
 ## Example
 
 Get the bounding box dimensions of a form field widget in a PDF.

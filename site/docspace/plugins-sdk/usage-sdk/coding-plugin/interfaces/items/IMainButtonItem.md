@@ -1,6 +1,8 @@
-# IMainButtonItem
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IMainButtonItem.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IMainButtonItem.ts#L94)
+# IMainButtonItem
 
 Describes an item that will be embedded in the More item of the main button menu. It is available only inside a room (folder) and is not available for the room list.
 

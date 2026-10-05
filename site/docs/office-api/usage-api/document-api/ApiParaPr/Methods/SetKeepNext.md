@@ -1,7 +1,6 @@
 # SetKeepNext
 
-Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least
-partly rendered on the same page as the following paragraph whenever possible.
+Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least partly rendered on the same page as the following paragraph whenever possible.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ partly rendered on the same page as the following paragraph whenever possible.
 expression.SetKeepNext(isKeepNext);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -23,7 +22,7 @@ boolean
 
 ## Example
 
-Keep a paragraph on the same page as the paragraph that follows it in a document.
+Keep a paragraph on the same page as the next one using the paragraph properties of a style in a document.
 
 ```javascript editor-docx
 // How do I prevent a paragraph from being separated from the next paragraph in a document?

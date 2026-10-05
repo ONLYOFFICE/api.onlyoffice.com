@@ -1,6 +1,6 @@
 # ApiFilter
 
-Represents the ApiFilter class.
+Class representing a single AutoFilter column.
 
 ## Properties
 
@@ -13,6 +13,8 @@ Represents the ApiFilter class.
 | Parent | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) | Returns the parent filters collection for this filter column. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

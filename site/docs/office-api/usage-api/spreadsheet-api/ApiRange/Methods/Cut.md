@@ -8,7 +8,7 @@ Cuts the range and save it to the clipboard or paste it to the specified range.
 expression.Cut(destination);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

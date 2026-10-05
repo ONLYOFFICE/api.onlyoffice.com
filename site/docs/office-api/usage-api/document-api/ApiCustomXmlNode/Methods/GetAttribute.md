@@ -1,6 +1,7 @@
 # GetAttribute
 
 Retrieves the attribute value from the custom XML node.
+
 If the attribute doesn't exist, it returns `false`.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute doesn't exist, it returns `false`.
 expression.GetAttribute(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 

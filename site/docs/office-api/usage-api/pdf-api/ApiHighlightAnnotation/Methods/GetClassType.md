@@ -8,7 +8,7 @@ Returns a type of the ApiHighlightAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) class.
+`expression` - A variable that represents an [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) class.
 
 ## Parameters
 

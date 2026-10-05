@@ -4,6 +4,24 @@ Sets annotation last modification date.
 
 Inherited from [ApiBaseAnnotation.SetModDate](../../ApiBaseAnnotation/Methods/SetModDate.md).
 
+## Syntax
+
+```javascript
+expression.SetModDate(timeStamp);
+```
+
+`expression` - A variable that represents an [ApiLinkAnnotation](../ApiLinkAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| timeStamp | Required | number |  | The annotation last modification date as a numeric timestamp. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Record the date when an annotation was last modified in a PDF.

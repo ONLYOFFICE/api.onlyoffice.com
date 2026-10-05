@@ -22,7 +22,7 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在 PDF 中使文本倾斜。
+在 PDF 中使用文本属性使文本倾斜。
 
 ```javascript editor-pdf
 // How do I apply italic formatting to text in a PDF?

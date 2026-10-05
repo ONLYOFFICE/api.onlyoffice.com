@@ -1,7 +1,6 @@
 # SetCellMarginTop
 
-Specifies an amount of space which shall be left between the top extent of the current cell contents and the
-top edge border of a specific individual table cell within a table.
+Specifies an amount of space which shall be left between the top extent of the current cell contents and the top edge border of a specific individual table cell within a table.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ top edge border of a specific individual table cell within a table.
 expression.SetCellMarginTop(margin);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

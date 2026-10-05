@@ -4,6 +4,27 @@ Modifies the current format condition with the specified parameters.
 
 Inherited from [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md).
 
+## Syntax
+
+```javascript
+expression.Modify(Type, Operator, Formula1, Formula2);
+```
+
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Type | Optional | [XlFormatConditionType](../../Enumeration/XlFormatConditionType.md) |  | The format condition type. |
+| Operator | Optional | [XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md) |  | The format condition operator. |
+| Formula1 | Optional | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | The first formula. |
+| Formula2 | Optional | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | The second formula. |
+
+## Returns
+
+[ApiFormatCondition](../../ApiFormatCondition/ApiFormatCondition.md) \| null
+
 ## Example
 
 Update the condition of an existing formatting rule to use new criteria in a spreadsheet.

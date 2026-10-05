@@ -4,6 +4,24 @@ Sets the specified placeholder to the current drawing object.
 
 Inherited from [ApiDrawing.SetPlaceholder](../../ApiDrawing/Methods/SetPlaceholder.md).
 
+## Syntax
+
+```javascript
+expression.SetPlaceholder(oPlaceholder);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oPlaceholder | Required | [ApiPlaceholder](../../ApiPlaceholder/ApiPlaceholder.md) |  | Placeholder object. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mark a shape as a placeholder in a presentation.

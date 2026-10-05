@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentSlide](../../ApiDrawing/Methods/GetParentSlide.md)。
 
+## 语法
+
+```javascript
+expression.GetParentSlide();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null
+
 ## 示例
 
 查找演示文稿中包含形状的幻灯片。

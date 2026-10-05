@@ -8,7 +8,7 @@ Clears all content from the current complex form, resetting it to its placeholde
 expression.ClearContent();
 ```
 
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the slide advance time in milliseconds.
 expression.GetAdvanceTime();
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

@@ -4,14 +4,32 @@ Sets the cell range to which the current conditional formatting rule applies.
 
 Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
 
+## Syntax
+
+```javascript
+expression.ModifyAppliesToRange(Range);
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Range | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | The range to which the current conditional formatting rule will be applied. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
-Change the cells that a conditional formatting rule covers in a spreadsheet.
+Reassign a top 10 conditional formatting rule to a different cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I reassign a formatting rule to a different group of cells in a spreadsheet?
+// How do I change which cells a top 10 formatting rule covers in a spreadsheet?
 
-// Expand or narrow the area where an existing formatting rule takes effect in a spreadsheet.
+// Extend an existing highlight rule to include additional columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -21,22 +39,17 @@ worksheet.GetRange("A3").SetValue(250);
 worksheet.GetRange("A4").SetValue(150);
 worksheet.GetRange("A5").SetValue(300);
 worksheet.GetRange("A6").SetValue(75);
-worksheet.GetRange("A7").SetValue(180);
-worksheet.GetRange("A8").SetValue(220);
 
-let dataRange = worksheet.GetRange("A2:A8");
-
+let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let condition1 = formatConditions.AddTop10();
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
 
-worksheet.GetRange("C1").SetValue("Original range:");
-worksheet.GetRange("C2").SetValue(condition1.GetAppliesTo().GetAddress());
+let originalRange = condition1.GetAppliesTo().GetAddress();
+condition1.ModifyAppliesToRange(worksheet.GetRange("A2:B6"));
+let newRange = condition1.GetAppliesTo().GetAddress();
 
-let newRange = worksheet.GetRange("A2:A5");
-condition1.ModifyAppliesToRange(newRange);
-
-worksheet.GetRange("D1").SetValue("Modified range:");
-worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
+worksheet.GetRange("C1").SetValue("Original range: " + originalRange);
+worksheet.GetRange("C2").SetValue("New range: " + newRange);
 ```

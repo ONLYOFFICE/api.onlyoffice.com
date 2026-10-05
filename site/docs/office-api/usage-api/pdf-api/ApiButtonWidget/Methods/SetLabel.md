@@ -8,7 +8,7 @@ Sets label to button widget field.
 expression.SetLabel(label, appearance);
 ```
 
-`expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
 
 ## Parameters
 

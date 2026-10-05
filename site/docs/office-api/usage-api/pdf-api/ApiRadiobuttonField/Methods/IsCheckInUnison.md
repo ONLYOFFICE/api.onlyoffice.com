@@ -8,7 +8,7 @@ Checks if field will check in unison.
 expression.IsCheckInUnison();
 ```
 
-`expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
 
 ## Parameters
 

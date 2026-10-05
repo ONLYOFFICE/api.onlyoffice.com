@@ -1,6 +1,6 @@
 # Api
 
-表示 Api 类。
+Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和当前选区，以及添加工作表、定义名称和自定义函数。
 
 ## 属性
 
@@ -18,16 +18,18 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | 返回 ApiComment 对象的数组。 |
 | [AddCustomFunction](./Methods/AddCustomFunction.md) | 无 | 创建新的自定义函数。 |
 | [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | 无 | 注册新的自定义函数库（参见 **SetCustomFunctions** 插件方法）。 |
 | [AddDefName](./Methods/AddDefName.md) | boolean | 向单元格范围添加新名称。 |
-| [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 创建新工作表。新工作表将成为活动工作表。 |
+| [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 创建新工作表。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | 清除所有自定义函数。 |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
 | [CreateColorByName](./Methods/CreateColorByName.md) | [ApiColor](../ApiColor/ApiColor.md) | 从可用的颜色预设中选择创建颜色。 |
@@ -79,7 +81,7 @@
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [InsertPivotExistingWorksheet](./Methods/InsertPivotExistingWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到现有工作表中。 |
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到新工作表中。 |
-| [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示两个或多个范围的矩形交集的 ApiRange 对象。如果指定了来自不同工作表的一个或多个范围，将返回错误。 |
+| [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示两个或多个范围的矩形交集的 ApiRange 对象。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |

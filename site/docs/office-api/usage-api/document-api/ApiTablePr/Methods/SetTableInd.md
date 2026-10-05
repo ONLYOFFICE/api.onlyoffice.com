@@ -1,7 +1,6 @@
 # SetTableInd
 
-Specifies the indentation which will be added before the leading edge of the current table in the document
-(the left edge in the left-to-right table, and the right edge in the right-to-left table).
+Specifies the indentation which will be added before the leading edge of the current table in the document (the left edge in the left-to-right table, and the right edge in the right-to-left table).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ Specifies the indentation which will be added before the leading edge of the cur
 expression.SetTableInd(nValue);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

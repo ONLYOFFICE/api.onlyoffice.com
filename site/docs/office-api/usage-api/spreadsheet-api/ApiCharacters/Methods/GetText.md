@@ -8,7 +8,7 @@ Returns the text of the specified range of characters.
 expression.GetText();
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

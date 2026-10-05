@@ -8,7 +8,7 @@ Returns an array with all the OLE objects from the current presentation.
 expression.GetAllOleObjects();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiCheckboxField.IsToggleToOff](../../ApiCheckboxField/Methods/IsToggleToOff.md)。
 
+## 语法
+
+```javascript
+expression.IsToggleToOff();
+```
+
+`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查 PDF 中的复选框是否可以在单击时取消选中。

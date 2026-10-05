@@ -8,7 +8,7 @@ Specifies the shading applied to the contents of the table cell.
 expression.SetShd(sType, r, g, b, isAuto);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ boolean
 
 ## Example
 
-Apply a background color to a table cell in a document.
+Apply a background shading to all table cells using the table cell properties of a style in a document.
 
 ```javascript editor-docx
 // How do I fill a table cell with a specific background color in a document?

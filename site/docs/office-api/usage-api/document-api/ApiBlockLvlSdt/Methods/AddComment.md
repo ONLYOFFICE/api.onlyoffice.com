@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to the current block content control.
-💡 Please note that the current block content control must be in the document.
+
+:::note
+The current block content control must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a comment to the current block content control.
 expression.AddComment(text, author, userId);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

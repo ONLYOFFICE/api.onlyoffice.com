@@ -22,7 +22,7 @@ expression.CreateBullet(sSymbol);
 
 ## 示例
 
-在电子表格中为形状内的段落添加项目符号标记。
+创建短划线项目符号并将其应用于电子表格中形状内的段落。
 
 ```javascript editor-xlsx
 // How do I add a custom bullet symbol to a paragraph in a spreadsheet?

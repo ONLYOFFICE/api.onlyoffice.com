@@ -8,7 +8,7 @@ Returns an array of all slide masters from the current presentation.
 expression.GetAllSlideMasters();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 
@@ -38,13 +38,13 @@ for (let i = 0; i < count; i++) {
 	presentation.AddMaster(i + 1, master);
 }
 
-const mastersCount = presentation.GetMastersCount();
+const masters = presentation.GetAllSlideMasters();
 
 const fill = Api.CreateSolidFill(Api.CreateRGBColor(50, 100, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 300 * 36000, 100 * 36000, fill, stroke);
 firstSlide.AddObject(shape);
 
-const paragraph =  shape.GetContent().GetElement(0);
-paragraph.AddText('Total slide masters count: ' + mastersCount);
+const paragraph = shape.GetContent().GetElement(0);
+paragraph.AddText('Total slide masters count: ' + masters.length);
 ```

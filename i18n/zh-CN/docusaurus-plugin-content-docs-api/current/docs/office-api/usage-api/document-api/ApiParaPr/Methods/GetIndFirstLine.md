@@ -20,7 +20,7 @@ expression.GetIndFirstLine();
 
 ## 示例
 
-读取文档中段落设置的首行缩进值。
+从文档中的段落属性读取首行缩进值。
 
 ```javascript editor-docx
 // How do I find out how far the first line of a paragraph is indented in a document?

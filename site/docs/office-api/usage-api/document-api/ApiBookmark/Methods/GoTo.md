@@ -8,7 +8,7 @@ Moves a cursor to the current bookmark.
 expression.GoTo();
 ```
 
-`expression` - A variable that represents a [ApiBookmark](../ApiBookmark.md) class.
+`expression` - A variable that represents an [ApiBookmark](../ApiBookmark.md) class.
 
 ## Parameters
 

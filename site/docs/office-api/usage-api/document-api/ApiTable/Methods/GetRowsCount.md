@@ -8,7 +8,7 @@ Returns a number of rows in the current table.
 expression.GetRowsCount();
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

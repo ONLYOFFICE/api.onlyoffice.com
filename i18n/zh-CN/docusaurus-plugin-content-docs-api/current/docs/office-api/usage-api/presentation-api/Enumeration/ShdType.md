@@ -16,7 +16,7 @@
 为表格添加绿色阴影。
 
 ```javascript editor-pptx
-// How to change a table shadow type.
+// How do I change the shading type of a table?
 
 // Indicate a clear shadow type of the table.
 

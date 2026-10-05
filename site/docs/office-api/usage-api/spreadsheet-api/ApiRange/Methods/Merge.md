@@ -8,7 +8,7 @@ Merges the selected cell range into a single cell or a cell row.
 expression.Merge(isAcross);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

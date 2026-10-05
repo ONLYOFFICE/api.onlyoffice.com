@@ -8,7 +8,7 @@ Adds a math equation to the current presentation.
 expression.AddMathEquation(sText, sFormat);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the visibility to the current presentation slide.
 expression.SetVisible(value);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

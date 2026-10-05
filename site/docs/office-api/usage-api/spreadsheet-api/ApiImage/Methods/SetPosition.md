@@ -1,10 +1,33 @@
 # SetPosition
 
 Changes the position for the drawing object.
-💡 Please note that the horizontal and vertical offsets are calculated within the limits of
-the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+
+:::note
+The horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+:::
 
 Inherited from [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md).
+
+## Syntax
+
+```javascript
+expression.SetPosition(nFromCol, nColOffset, nFromRow, nRowOffset);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nFromCol | Required | number |  | The number of the column where the beginning of the drawing object will be placed. |
+| nColOffset | Required | [EMU](../../Enumeration/EMU.md) |  | The offset from the nFromCol column to the left part of the drawing object measured in English measure units. |
+| nFromRow | Required | number |  | The number of the row where the beginning of the drawing object will be placed. |
+| nRowOffset | Required | [EMU](../../Enumeration/EMU.md) |  | The offset from the nFromRow row to the upper part of the drawing object measured in English measure units. |
+
+## Returns
+
+This method doesn't return any data.
 
 ## Example
 

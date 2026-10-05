@@ -4,6 +4,24 @@ Sets the setting which specifies whether a pivot table field is compacted.
 
 Inherited from [ApiPivotField.SetLayoutCompactRow](../../ApiPivotField/Methods/SetLayoutCompactRow.md).
 
+## Syntax
+
+```javascript
+expression.SetLayoutCompactRow(compact);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| compact | Required | boolean |  | Specifies whether a pivot table field is compacted. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Switch a pivot field between compact and expanded row display in a spreadsheet.

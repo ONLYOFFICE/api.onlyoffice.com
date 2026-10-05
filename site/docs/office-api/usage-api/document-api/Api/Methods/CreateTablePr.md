@@ -8,7 +8,7 @@ Creates the empty table properties.
 expression.CreateTablePr();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -39,7 +39,7 @@ table.SetWidth("percent", 100);
 
 let tableStylePr = tableStyle.GetConditionalTableStyle("wholeTable");
 table.SetTableLook(true, true, true, true, true, true);
-let tablePr = tableStylePr.GetTablePr();
+let tablePr = Api.CreateTablePr();
 tablePr.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
 tableStylePr.SetTablePr(tablePr);
 

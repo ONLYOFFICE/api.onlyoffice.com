@@ -8,7 +8,7 @@ Specifies the alignment of the current table with respect to the text margins in
 expression.SetJc(sJcType);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

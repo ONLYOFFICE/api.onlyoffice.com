@@ -4,14 +4,30 @@ Returns the paragraph contents justification.
 
 Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
+## Syntax
+
+```javascript
+expression.GetJc();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"left" \| "right" \| "both" \| "center" \| undefined
+
 ## Example
 
-Get the text alignment setting for a paragraph in a PDF.
+Find out how text is aligned in a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I find out how text is aligned in a PDF?
+// How do I check the text alignment of a paragraph in a PDF?
 
-// Retrieve the paragraph justification type in a PDF.
+// Retrieve the alignment setting from a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,16 +42,13 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
 
-const jc = paraPr.GetJc();
+const sJc = paragraph.GetJc();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Justification: " + jc);
+paragraph.AddText("Justification: " + sJc);
 docContent.Push(paragraph);
 ```

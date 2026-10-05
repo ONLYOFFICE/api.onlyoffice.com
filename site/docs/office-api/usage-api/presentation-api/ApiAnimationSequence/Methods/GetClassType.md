@@ -8,7 +8,7 @@ Returns the type of the ApiAnimationSequence class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiAnimationSequence](../ApiAnimationSequence.md) class.
+`expression` - A variable that represents an [ApiAnimationSequence](../ApiAnimationSequence.md) class.
 
 ## Parameters
 

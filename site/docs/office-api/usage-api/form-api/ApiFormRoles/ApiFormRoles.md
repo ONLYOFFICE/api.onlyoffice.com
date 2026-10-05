@@ -1,8 +1,10 @@
 # ApiFormRoles
 
-Represents the ApiFormRoles class.
+Class representing a collection of form roles.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

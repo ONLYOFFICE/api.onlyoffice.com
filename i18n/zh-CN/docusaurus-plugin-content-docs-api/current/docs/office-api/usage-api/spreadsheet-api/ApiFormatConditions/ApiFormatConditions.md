@@ -1,6 +1,6 @@
 # ApiFormatConditions
 
-表示 ApiFormatConditions 类。
+表示格式条件集合的类。
 
 ## 属性
 
@@ -10,6 +10,8 @@
 | Parent | [ApiRange](../ApiRange/ApiRange.md) | 返回与当前条件格式集合关联的父区域对象。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

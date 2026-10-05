@@ -8,7 +8,7 @@ Sets the timestamp of the comment reply creation in the current time zone format
 expression.SetTime(nTimeStamp);
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 

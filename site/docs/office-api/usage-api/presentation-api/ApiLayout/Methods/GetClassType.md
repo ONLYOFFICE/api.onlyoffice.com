@@ -8,7 +8,7 @@ Returns the type of the ApiLayout class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

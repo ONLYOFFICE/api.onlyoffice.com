@@ -1,7 +1,7 @@
 # SetPicture
 
 Sets the content (image) for the picture content control.
-This method updates the picture inside a content control by setting an image from a provided URL.
+
 The URL should be an internet link to the image.
 
 ## Syntax
@@ -10,7 +10,7 @@ The URL should be an internet link to the image.
 expression.SetPicture(imageUrl);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
@@ -34,5 +34,5 @@ Insert an image into a picture content control in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddPictureContentControl();
-contentControl.SetPicture('https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg');
+contentControl.SetPicture('https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png');
 ```

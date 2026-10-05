@@ -22,7 +22,7 @@
 为单元格设置黑色点线底部边框。
 
 ```javascript editor-xlsx
-// How to add a border to the cell.
+// How do I add a border to a cell?
 
 // Use a border index to set borders with properties.
 

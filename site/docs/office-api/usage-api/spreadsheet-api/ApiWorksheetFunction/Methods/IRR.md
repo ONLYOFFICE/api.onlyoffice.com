@@ -8,7 +8,7 @@ Returns the internal rate of return for a series of cash flows.
 expression.IRR(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -1,10 +1,12 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts
+---
+
 # Utils
 
 Utility types for plugin messaging, return values, and panel navigation.
 
 ## IPostMessage
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L75)
 
 The properties that are used to send a message to a frame.
 If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes.
@@ -44,8 +46,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ***
 
 ## IMessage
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L148)
 
 A message which is returned when any item interacts with a user (onClick, onChange, onSelect, etc.).
 
@@ -140,8 +140,6 @@ const fieldUpdateMessage: IMessage = {
 
 ## IPostMessageCallbackMessage
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L273)
-
 A message which is returned from the postMessage callback.
 It is similar to [IMessage](#imessage) but with a reduced set of available actions.
 
@@ -189,8 +187,6 @@ const postMessageResponse: IPostMessageCallbackMessage = {
 type TInfoPanelTab = "info_members" | "info_history" | "info_details" | "info_share" | string;
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L49)
-
 Defines the info panel tab to open.
 
 ***
@@ -205,8 +201,6 @@ type TReturnPostMessage =
   | IPostMessageCallbackMessage;
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L357)
-
 Describes a return message of a postMessage event handler.
 
 ***
@@ -220,7 +214,5 @@ type TReturnMessage =
   | void
   | IMessage;
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L366)
 
 Describes a return message.

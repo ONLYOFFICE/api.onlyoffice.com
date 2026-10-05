@@ -1,7 +1,10 @@
 # AddField
 
 Adds a field to the specified range by the field instruction code.
-💡  This method removes text within a range. 
+
+:::note
+This method removes text within a range.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a field to the specified range by the field instruction code.
 expression.AddField(sCode);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

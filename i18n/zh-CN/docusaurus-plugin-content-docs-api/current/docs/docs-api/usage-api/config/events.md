@@ -1,4 +1,4 @@
-﻿# 事件
+# 事件
 
 事件部分定义了编辑器事件的回调函数。
 
@@ -6,7 +6,7 @@
 
 应用程序被加载到浏览器中。
 
-**示例**:
+**示例**：
 
 ```ts
 function onAppReady() {
@@ -27,7 +27,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 文档由其他用户以 `strict` 共同编辑模式共同编辑。
 
-**示例**:
+**示例**：
 
 ```ts
 function onCollaborativeChanges() {
@@ -48,7 +48,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 文档被加载到文档编辑器中。
 
-**示例**:
+**示例**：
 
 ```ts
 function onDocumentReady() {
@@ -75,7 +75,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ---------- | ------- | ---------------------------------------------------------------------------------------------- |
 | event.data | `boolean` | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
 
-**示例**:
+**示例**：
 
 ```ts
 function onDocumentStateChange(event) {
@@ -107,7 +107,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.fileType | `string` | 下载文档的[文件类型](document/document.md#filetype)。 |
 | event.data.url      | `string` | 要下载的文档的绝对 URL。     |
 
-**示例**:
+**示例**：
 
 ```ts
 function onDownloadAs(event) {
@@ -137,7 +137,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.errorCode         | `number` | [错误代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
 | event.data.errorDescription  | `string` | 错误描述。   |
 
-**示例**:
+**示例**：
 
 ```ts
 function onError(event) {
@@ -164,7 +164,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | --------------- | -------------------- | ------------ |
 | event.data.mode | `"view"` \| `"edit"` | 文件打开模式。 |
 
-**示例**:
+**示例**：
 
 ```ts
 function onInfo(event) {
@@ -200,7 +200,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onMakeActionLink(event) {
@@ -234,7 +234,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)。如果未声明该方法，则*收藏*图标不会更改。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 function onMetaChange(event) {
@@ -260,7 +260,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 function onOutdatedVersion() {
@@ -281,7 +281,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当所有插件都加载并可以使用时调用的函数。
 
-**示例**:
+**示例**：
 
 ```ts
 function onPluginsReady() {
@@ -306,7 +306,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果未声明此事件，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestClose() {
@@ -346,7 +346,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 此事件用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明此事件且未指定 `createUrl`，则不会显示*新建*按钮。
 :::
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestCreateNew() {
@@ -372,10 +372,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
-![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
-![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
+![编辑 PDF 按钮](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
+![编辑 PDF 按钮](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestEditRights() {
@@ -397,13 +397,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 在 PDF 表单填写模式下请求当前角色的填写状态时调用的函数。
 
-**参数**:
+**参数**：
 
 | 参数       | 类型     | 描述                         |
 | ---------- | -------- | ---------------------------- |
 | event.data | `string` | 请求填写状态的角色名称。     |
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestFillingStatus(event) {
@@ -432,7 +432,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestHistory() {
@@ -487,7 +487,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestHistoryClose() {
@@ -520,7 +520,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestHistoryData(event) {
@@ -569,7 +569,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestInsertImage(event) {
@@ -624,9 +624,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
 | event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
-<img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
+<img alt="打开源" src="/assets/images/editor/open-source.png" width="498px" />
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestOpen(event) {
@@ -656,9 +656,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
-<img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
+<img alt="粘贴链接" src="/assets/images/editor/paste-link.png" width="400px" />
 
-<img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
+<img alt="更新值" src="/assets/images/editor/update-values.png" width="400px" />
 
 **参数**：
 
@@ -668,7 +668,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.path          | `string` | 文件路径或名称。                 |
 | event.data.link          | `string` | 外部文件的 URL。                 |
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestReferenceData(event) {
@@ -715,9 +715,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
 | event.data.path          | `string` | 文件路径或名称。 |
 
-<img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+<img alt="更改源" src="/assets/images/editor/change-source.png" width="498px" />
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestReferenceSource(event) {
@@ -756,7 +756,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 在这些情况下，将调用 [refreshFile](../methods.md#refreshfile) 方法并更新文件版本，而无需重新加载编辑器。
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestRefreshFile() {
@@ -802,7 +802,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestRename(event) {
@@ -838,7 +838,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestRestore(event) {
@@ -905,7 +905,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestSaveAs(event) {
@@ -938,7 +938,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![插入文本](/assets/images/editor/insert-text.png#gh-light-mode-only)![插入文本](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestSelectDocument(event) {
@@ -973,7 +973,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestSelectSpreadsheet(event) {
@@ -1008,7 +1008,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.message      | `string`   | 评论消息。                                                                                                             |
 | event.data.emails       | `string[]` | 要通知的用户电子邮件列表。                                                                                             |
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestSendNotify(event) {
@@ -1037,7 +1037,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestSharingSettings() {
@@ -1074,7 +1074,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果未声明此事件，则不会显示*开始填写*按钮。
 :::
 
-**参数**:
+**参数**：
 
 | 参数               | 类型       | 描述               |
 | ------------------ | ---------- | ------------------ |
@@ -1084,7 +1084,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestStartFilling(event) {
@@ -1116,9 +1116,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
 
-<img alt="Protect range" src="/assets/images/editor/protect-range.png" width="292px" />
+<img alt="保护范围" src="/assets/images/editor/protect-range.png" width="292px" />
 
-**示例**:
+**示例**：
 
 ```ts
 function onRequestUsers(event) {
@@ -1158,13 +1158,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 将文档保存为二进制数据时调用的函数。
 
-**参数**:
+**参数**：
 
 | 参数       | 类型          | 描述                       |
 | ---------- | ------------- | -------------------------- |
 | event.data | `ArrayBuffer` | 二进制格式的文档文件数据。 |
 
-**示例**:
+**示例**：
 
 ```ts
 function onSaveDocument(event) {
@@ -1186,9 +1186,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
 
-**Parameters**:
+**参数**：
 
-| Parameter               | Type       | Description        |
+| 参数                    | 类型       | 描述               |
 | ----------------------- | ---------- | ------------------ |
 | event.data              | `object[]` | 角色对象的数组。    |
 | event.data[].color      | `string`   | 角色颜色，十六进制格式（例如 `#FF0000`）。 |
@@ -1199,7 +1199,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data[].user.image | `string`   | 用户头像的 URL。 |
 | event.data[].user.name  | `string`   | 用户名称。     |
 
-**Example**:
+**示例**：
 
 ```ts
 function onStartFilling(event) {
@@ -1221,7 +1221,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 `3` [forcesavetype](../callback-handler.md#forcesavetype) 的强制保存请求成功执行时调用的函数，即点击*完成并提交*按钮并提交表单时调用的函数。
 
-**示例**:
+**示例**：
 
 ```ts
 function onSubmit() {
@@ -1246,7 +1246,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 当用户需要为 `txt` 文件选择编码时；
 - 当用户需要为 `csv` 文件选择编码和分隔符时。
 
-**示例**:
+**示例**：
 
 ```ts
 function onUserActionRequired() {
@@ -1274,7 +1274,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.warningCode         | `number` | [警告代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
 | event.data.warningDescription  | `string` | 警告描述。   |
 
-**示例**:
+**示例**：
 
 ```ts
 function onWarning(event) {

@@ -1,22 +1,43 @@
 # SetPlaceholderText
 
 设置当前表单的占位符文本。
-*不能设置为复选框或单选按钮。*
+
+:::note
+无法为复选框或单选按钮表单设置占位符文本。
+:::
 
 继承自 [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md)。
 
+## 语法
+
+```javascript
+expression.SetPlaceholderText(sText);
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | 必需 | string |  | 将设置到当前表单的文本。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中为表单字段设置占位符文本以指导用户输入。
+在文档中为组合框表单设置占位符文本。
 
 ```javascript editor-docx
-// How do I add hint text inside an empty form field in a document?
+// How do I add placeholder text to a combo box form in a document?
 
-// Display a prompt inside a field before the user fills it in.
+// Guide users on what to select by displaying hint text inside an empty combo box in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetPlaceholderText("First name");
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.SetPlaceholderText("Country");
 ```

@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md)。
 
+## 语法
+
+```javascript
+expression.GetParentPage();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiPage](../../ApiPage/ApiPage.md)
+
 ## 示例
 
 检查 PDF 中对象的形状类型。

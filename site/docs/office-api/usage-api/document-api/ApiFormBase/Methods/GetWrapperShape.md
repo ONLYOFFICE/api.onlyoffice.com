@@ -1,6 +1,7 @@
 # GetWrapperShape
 
 Returns a shape in which the form is placed to control the position and size of the fixed size form frame.
+
 The null value will be returned for the inline forms.
 
 ## Syntax
@@ -9,7 +10,7 @@ The null value will be returned for the inline forms.
 expression.GetWrapperShape();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

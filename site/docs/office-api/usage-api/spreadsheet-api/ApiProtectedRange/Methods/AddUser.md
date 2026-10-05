@@ -8,7 +8,7 @@ Sets a user to the current protected range.
 expression.AddUser(sId, sName, protectedRangeUserType);
 ```
 
-`expression` - A variable that represents a [ApiProtectedRange](../ApiProtectedRange.md) class.
+`expression` - A variable that represents an [ApiProtectedRange](../ApiProtectedRange.md) class.
 
 ## Parameters
 

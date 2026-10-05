@@ -1,9 +1,26 @@
 # SetUnderline
 
-指定文本块的内容显示时在字符正下方有一条线
-（小于行中字符上下的所有间距）。
+指定文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
 
 继承自 [ApiTextPr.SetUnderline](../../ApiTextPr/Methods/SetUnderline.md)。
+
+## 语法
+
+```javascript
+expression.SetUnderline(isUnderline);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isUnderline | 必需 | boolean |  | 指定当前文本块的内容显示为带下划线。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 

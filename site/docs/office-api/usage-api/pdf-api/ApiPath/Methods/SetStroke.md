@@ -8,7 +8,7 @@ Sets whether the current path is stroked.
 expression.SetStroke(bStroke);
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

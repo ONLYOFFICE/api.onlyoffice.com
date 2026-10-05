@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md)。
 
+## 语法
+
+```javascript
+expression.GetIndLeft();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## 示例
 
-从 PDF 中的段落检索左边距缩进值。
+在 PDF 中检查段落的左边距缩进。
 
 ```javascript editor-pdf
-// How do I get the left side indent measurement in a PDF?
+// How do I find the left indentation of a paragraph in a PDF?
 
-// Obtain the left edge offset amount in a PDF.
+// Retrieve the left margin spacing for a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,15 +42,13 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndLeft(2880);
-paragraph.AddText("This is the first paragraph with the indent of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndLeft(2880);
 
-const indLeft = paraPr.GetIndLeft();
+const indLeft = paragraph.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);

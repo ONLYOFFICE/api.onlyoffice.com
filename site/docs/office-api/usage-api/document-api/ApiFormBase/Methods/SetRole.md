@@ -8,7 +8,7 @@ Sets the role to the current form.
 expression.SetRole(role);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

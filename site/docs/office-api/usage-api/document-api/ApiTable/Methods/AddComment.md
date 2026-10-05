@@ -1,7 +1,10 @@
 # AddComment
 
 Adds a comment to all contents of the current table.
-💡 Please note that this table must be in the document.
+
+:::note
+This table must be in the document.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Adds a comment to all contents of the current table.
 expression.AddComment(sText, sAuthor, sUserId);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

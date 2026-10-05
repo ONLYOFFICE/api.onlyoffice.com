@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md)。
 
+## 语法
+
+```javascript
+expression.GetPTCondition();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+PTCondition \| null
+
 ## 示例
 
-检查电子表格中的条件格式规则是否链接到数据透视表范围。
+在电子表格中读取附加到色阶规则的数据透视表范围设置。
 
 ```javascript editor-xlsx
-// How do I find out if a conditional formatting rule applies within a pivot table context in a spreadsheet?
+// How do I check whether a color scale rule targets a specific part of a pivot table in a spreadsheet?
 
-// Determine the pivot table association of a formatting condition to understand its scope in a spreadsheet.
+// Inspect the pivot table condition of a color scale rule and display whether one is set in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,11 +42,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let ptCondition = condition1.GetPTCondition();
+let ptCondition = colorScale.GetPTCondition();
 
-worksheet.GetRange("C1").SetValue("PT Condition:");
-worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
+worksheet.GetRange("C1").SetValue("PT condition:");
+worksheet.GetRange("C2").SetValue(ptCondition ? "Has condition" : "No condition");
 ```

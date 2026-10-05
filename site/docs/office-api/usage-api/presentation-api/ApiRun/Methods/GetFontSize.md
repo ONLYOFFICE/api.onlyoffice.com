@@ -4,6 +4,22 @@ Gets the font size from the current text properties.
 
 Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
+## Syntax
+
+```javascript
+expression.GetFontSize();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[hps](../../Enumeration/hps.md)
+
 ## Example
 
 Retrieve the font size from text run properties.

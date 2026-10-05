@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Build the simplest possible plugin — a button that inserts "Hello World" into your document.
 
-**Time:** 5 minutes | **Skill level:** Beginner
+**Time**: 5 minutes | **Skill level**: Beginner
 
 ## Step 1: Create the plugin structure
 
@@ -46,7 +46,7 @@ New-Guid
 Then format it as `asc.{YOUR-GENERATED-GUID}`.
 :::
 
-**Key fields explained:**
+**Key fields explained**:
 
 - `name` — Display name in the plugin menu
 - `guid` — Unique identifier (must be different for each plugin)
@@ -179,13 +179,13 @@ function insertFormattedText() {
 
 ## Next steps
 
-**Learn more:**
+**Learn more**:
 
 - [Plugin structure and configuration](../configuration/configuration.md)
 - [Complete API reference](../interacting-with-editors/overview/overview.md)
 - [UI customization options](../customization/toolbar.md)
 
-**Explore examples:**
+**Explore examples**:
 
 - [YouTube plugin](../samples/youtube.md) — Embed videos
 - [Translator plugin](../samples/translator.md) — Multi-language support

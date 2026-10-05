@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-在文档中为段落应用背景底纹颜色。
+在文档中使用样式的段落属性为段落应用背景底纹颜色。
 
 ```javascript editor-docx
 // How do I fill the background of a paragraph with a color in a document?

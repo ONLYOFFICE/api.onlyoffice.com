@@ -1,8 +1,10 @@
 # ApiRichContent
 
-Represents the ApiRichContent class.
+Class representing a rich content.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

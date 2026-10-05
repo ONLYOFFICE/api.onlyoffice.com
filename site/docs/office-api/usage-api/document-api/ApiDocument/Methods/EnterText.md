@@ -8,7 +8,7 @@ Add text to the document on the cursor position.
 expression.EnterText(sText);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

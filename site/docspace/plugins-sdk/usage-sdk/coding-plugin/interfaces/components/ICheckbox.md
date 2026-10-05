@@ -1,6 +1,8 @@
-# ICheckbox
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICheckbox.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICheckbox.ts#L59)
+# ICheckbox
 
 Custom checkbox.
 

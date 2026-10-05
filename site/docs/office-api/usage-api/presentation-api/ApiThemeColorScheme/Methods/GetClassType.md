@@ -8,7 +8,7 @@ Returns the type of the ApiThemeColorScheme class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiThemeColorScheme](../ApiThemeColorScheme.md) class.
+`expression` - A variable that represents an [ApiThemeColorScheme](../ApiThemeColorScheme.md) class.
 
 ## Parameters
 

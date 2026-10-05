@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetHyperlink](../../ApiDrawing/Methods/GetHyperlink.md)。
 
+## 语法
+
+```javascript
+expression.GetHyperlink();
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null
+
 ## 示例
 
 检索附加到演示文稿中形状的链接。

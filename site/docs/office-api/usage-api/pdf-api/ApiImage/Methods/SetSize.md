@@ -4,6 +4,25 @@ Sets the size of the object (image, shape, chart) bounding box.
 
 Inherited from [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md).
 
+## Syntax
+
+```javascript
+expression.SetSize(width, height);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | Required | [EMU](../../Enumeration/EMU.md) |  | The object width measured in English measure units. |
+| height | Required | [EMU](../../Enumeration/EMU.md) |  | The object height measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Resize a drawing object to specific dimensions in a PDF.

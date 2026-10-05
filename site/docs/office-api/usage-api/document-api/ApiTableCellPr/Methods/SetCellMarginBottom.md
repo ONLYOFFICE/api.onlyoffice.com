@@ -1,7 +1,6 @@
 # SetCellMarginBottom
 
-Specifies an amount of space which will be left between the bottom extent of the cell contents and the border
-of a specific table cell within a table.
+Specifies an amount of space which will be left between the bottom extent of the cell contents and the border of a specific table cell within a table.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ of a specific table cell within a table.
 expression.SetCellMarginBottom(nValue);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

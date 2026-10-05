@@ -4,19 +4,36 @@ Places a cursor before/after the current form.
 
 Inherited from [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md).
 
+## Syntax
+
+```javascript
+expression.MoveCursorOutside(isAfter);
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Move the cursor to a position outside a form field in a document.
+Place the text cursor immediately after a signature field in a document.
 
 ```javascript editor-forms
-// How do I place the cursor right after a form field to continue typing in a document?
+// How do I move focus past a signature field so I can continue typing in a document?
 
-// Shift focus out of a completed form field so the next input lands in the surrounding text in a document.
+// Step the cursor out of a signature field to resume editing surrounding content in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("The cursor will be placed after the current form.");
-textForm.MoveCursorOutside(true);
+paragraph.AddElement(signatureForm);
+signatureForm.MoveCursorOutside();
 ```

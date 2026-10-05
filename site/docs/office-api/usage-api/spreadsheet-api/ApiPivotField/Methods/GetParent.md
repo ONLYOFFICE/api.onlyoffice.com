@@ -8,7 +8,7 @@ Returns the parent object for the current field.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

@@ -4,29 +4,42 @@ Returns the type of the ApiDrawing class.
 
 Inherited from [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md).
 
+## Syntax
+
+```javascript
+expression.GetParentPage();
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiPage](../../ApiPage/ApiPage.md)
+
 ## Example
 
-Check what type of shape an object is in a PDF.
+Identify the type classification of a table in a PDF.
 
 ```javascript editor-pdf
-// How do I identify the category of a drawing object in a PDF?
+// How can I determine what type a table is in a PDF?
 
-// Determine the kind of object you're working with in a PDF.
+// Retrieve the object type information for any table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-drawing.SetPosition(608400, 1267200);
-drawing.SetSize(150 * 36000, 65 * 36000);
-page.AddObject(drawing);
+const table = Api.CreateTable(2, 4);
+const row = table.GetRow(0);
+const cell = row.GetCell(0);
+const content = cell.GetContent();
+const paragraph = Api.CreateParagraph();
+const classType = table.GetClassType();
+paragraph.AddText("Class type: " + classType);
+content.Push(paragraph);
 
-const aDrawings = page.GetAllDrawings();
-const sType = aDrawings[0].GetClassType();
-const docContent = drawing.GetContent();
-const paragraph = docContent.GetElement(0);
-paragraph.SetJc("left");
-paragraph.AddText("Class Type = " + sType);
+page.AddObject(table);
 ```

@@ -8,7 +8,7 @@ Sets a line start point.
 expression.SetStartPoint(point);
 ```
 
-`expression` - A variable that represents a [ApiLineAnnotation](../ApiLineAnnotation.md) class.
+`expression` - A variable that represents an [ApiLineAnnotation](../ApiLineAnnotation.md) class.
 
 ## Parameters
 

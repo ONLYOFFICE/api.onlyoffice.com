@@ -1,8 +1,10 @@
 # ApiBaseField
 
-Represents the ApiBaseField class.
+Class representing a base field.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

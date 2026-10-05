@@ -8,7 +8,7 @@ Pushes a paragraph or a table to actually add it to the document.
 expression.Push(oElement);
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Converts the ApiInlineLvlSdt object into the JSON object.
 expression.ToJSON(bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

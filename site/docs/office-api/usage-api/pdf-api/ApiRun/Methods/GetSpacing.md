@@ -4,14 +4,30 @@ Gets the text spacing from the current text properties measured in twentieths of
 
 Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
+## Syntax
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md)
+
 ## Example
 
-Get the amount of space between letters in text in a PDF.
+Get the space between characters in text in a PDF.
 
 ```javascript editor-pdf
-// How do I find the character spacing setting in a PDF?
+// How do I check the character spacing of text in a PDF?
 
-// Read and display the letter spacing value applied to text in a PDF.
+// Retrieve the spacing measurement for text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetSpacing(80);
+run.SetSpacing(80);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const spacing = textPr.GetSpacing();
+const spacing = run.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
 ```

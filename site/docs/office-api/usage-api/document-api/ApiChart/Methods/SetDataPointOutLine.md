@@ -8,7 +8,7 @@ Sets the outline to the data point in the specified chart series.
 expression.SetDataPointOutLine(oStroke, nSeries, nDataPoint, bAllSeries);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 

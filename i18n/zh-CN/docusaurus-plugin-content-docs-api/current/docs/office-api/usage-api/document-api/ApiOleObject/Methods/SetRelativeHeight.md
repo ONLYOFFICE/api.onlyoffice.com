@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetRelativeHeight](../../ApiDrawing/Methods/SetRelativeHeight.md)。
 
+## 语法
+
+```javascript
+expression.SetRelativeHeight(relativeFrom, percent);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| relativeFrom | 可选 | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | 将作为对象高度参考点的文档元素。 |
+| percent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 对象高度占指定元素的百分比。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 将文档中形状的高度设置为页面的百分比。

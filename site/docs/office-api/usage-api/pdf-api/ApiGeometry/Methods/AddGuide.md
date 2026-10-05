@@ -8,7 +8,7 @@ Adds a guide (formula) to the current geometry.
 expression.AddGuide(sName, sFormula, sX, sY, sZ);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

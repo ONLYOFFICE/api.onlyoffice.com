@@ -4,6 +4,22 @@ Gets widget background color.
 
 Inherited from [ApiBaseWidget.GetBackgroundColor](../../ApiBaseWidget/Methods/GetBackgroundColor.md).
 
+## Syntax
+
+```javascript
+expression.GetBackgroundColor();
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Read the background color of a form field widget in a PDF.

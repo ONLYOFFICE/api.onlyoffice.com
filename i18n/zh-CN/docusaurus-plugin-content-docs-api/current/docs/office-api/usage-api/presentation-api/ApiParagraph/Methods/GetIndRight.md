@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
 
+## 语法
+
+```javascript
+expression.GetIndRight();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## 示例
 
-检查演示文稿中段落的右边距。
+在演示文稿中获取段落的右缩进。
 
 ```javascript editor-pptx
-// How do I read the right indentation value from a paragraph in a presentation?
+// How do I find the right indent value for a paragraph in a presentation?
 
-// Retrieve the distance between the right edge and the paragraph text in a presentation.
+// Read and display the right margin setting of formatted text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,16 +43,14 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndRight(2880);
-paraPr.SetJc("right");
-paragraph.AddText("This is the first paragraph with the right offset of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the right offset of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+paragraph.SetIndRight(2880);
 
-const indRight = paraPr.GetIndRight();
+const indRight = paragraph.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);

@@ -1,7 +1,6 @@
 # GetConditionalTableStyle
 
-Returns a set of formatting properties which will be conditionally applied to the parts of a table that match the 
-requirement specified in the sType parameter.
+Returns a set of formatting properties which will be conditionally applied to the parts of a table that match the  requirement specified in the sType parameter.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ requirement specified in the sType parameter.
 expression.GetConditionalTableStyle(sType);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

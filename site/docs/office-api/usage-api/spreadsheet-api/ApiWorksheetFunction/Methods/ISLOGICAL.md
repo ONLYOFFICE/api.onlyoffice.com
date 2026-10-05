@@ -1,6 +1,6 @@
 # ISLOGICAL
 
-Checks whether a value is a logical value (- **true** or - **false**), and returns - **true** or - **false**.
+Checks whether a value is a logical value (**true** or **false**), and returns **true** or **false**.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Checks whether a value is a logical value (- **true** or - **false**), and retur
 expression.ISLOGICAL(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

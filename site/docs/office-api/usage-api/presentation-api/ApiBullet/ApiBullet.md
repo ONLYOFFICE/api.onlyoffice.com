@@ -1,8 +1,10 @@
 # ApiBullet
 
-Represents the ApiBullet class.
+Class representing a paragraph bullet.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

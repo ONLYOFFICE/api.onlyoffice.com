@@ -8,7 +8,7 @@ Returns the date operator for time period conditions.
 expression.GetDateOperator();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

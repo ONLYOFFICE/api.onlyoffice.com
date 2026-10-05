@@ -8,7 +8,7 @@ Returns a layout of the current slide.
 expression.GetLayout();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

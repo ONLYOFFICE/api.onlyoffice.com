@@ -8,7 +8,7 @@ Returns an array of drawings by the specified placeholder type.
 expression.GetDrawingsByPlaceholderType(sType);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

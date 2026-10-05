@@ -8,7 +8,7 @@ Sets the specified adjustment parameter for the current geometry.
 expression.SetAdjValue(sName, nValue);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

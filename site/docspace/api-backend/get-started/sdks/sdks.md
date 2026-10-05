@@ -17,6 +17,6 @@ Choose an option below to read the detailed getting started instructions.
 ---
 ## Other SDKs
 
-- [Embed SDK](/docspace/javascript-sdk/get-started/)
-- [Plugins SDK](/docspace/plugins-sdk/get-started/)
+- [Embed SDK](../../../javascript-sdk/get-started/get-started.md)
+- [Plugins SDK](../../../plugins-sdk/get-started/get-started.md)
 

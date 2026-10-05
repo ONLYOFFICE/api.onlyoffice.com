@@ -285,15 +285,15 @@ This step ensures that the group exists before making any updates or deletions.
   <TabItem value="python" label="Python">
 
   ``` py
-    def get_group_by_id(group_id):
-      url = f'{API_HOST}/api/2.0/group/{group_id}'
-      response = requests.get(url, headers=HEADERS)
-      if response.status_code == 200:
-        group = response.json()
-        print(group)
-        return group
-      else:
-        print(f"Group retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+  def get_group_by_id(group_id):
+    url = f'{API_HOST}/api/2.0/group/{group_id}'
+    response = requests.get(url, headers=HEADERS)
+    if response.status_code == 200:
+      group = response.json()
+      print(group)
+      return group
+    else:
+      print(f"Group retrieval failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

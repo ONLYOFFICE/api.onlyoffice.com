@@ -1,6 +1,6 @@
 {
   "name": "api-onlyoffice-com",
-  "version": "9.2.0",
+  "version": "9.3.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -48,6 +48,7 @@
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
+    "@docusaurus/utils": "^3.10.2",
     "@onlyoffice/doceditor-types": "^9.4.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.1.2",

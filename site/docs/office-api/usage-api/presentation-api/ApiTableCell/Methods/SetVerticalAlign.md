@@ -8,7 +8,7 @@ Specifies the vertical alignment for text within the current table cell.
 expression.SetVerticalAlign(sType);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

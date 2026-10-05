@@ -1,6 +1,7 @@
 # captionRefTo
 
 Available values of the "equation"/"figure"/"table" reference type:
+
 - **"entireCaption"**- the entire caption text;
 - **"labelNumber"** - the label and object number only, e.g. "Table 1.1";
 - **"captionText"** - the caption text only;

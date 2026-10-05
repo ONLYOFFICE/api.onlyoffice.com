@@ -8,7 +8,7 @@ Returns the smallest number in a set of values. Ignores logical values and text.
 expression.MIN(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

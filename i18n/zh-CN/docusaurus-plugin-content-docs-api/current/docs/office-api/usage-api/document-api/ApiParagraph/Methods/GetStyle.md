@@ -4,23 +4,37 @@
 
 继承自 [ApiParaPr.GetStyle](../../ApiParaPr/Methods/GetStyle.md)。
 
+## 语法
+
+```javascript
+expression.GetStyle();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStyle](../../ApiStyle/ApiStyle.md)
+
 ## 示例
 
-检索应用于段落的样式并在文档中显示其名称。
+读取文档中段落所应用的样式。
 
 ```javascript editor-docx
-// How do I get the current style of a paragraph in a document?
+// How do I get the name of the style assigned to a paragraph in a document?
 
-// Confirm which named style is active on a paragraph by reading and printing the style name in a document.
+// Apply a heading style, then retrieve and display the style name to confirm the assignment in a document.
 
 let doc = Api.GetDocument();
-let heading6Style = doc.GetStyle("Heading 6");
+let newDocumentStyle = doc.GetStyle("Heading 6");
 let paragraph = doc.GetElement(0);
-let paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
-paraPr.SetStyle(heading6Style);
+paragraph.SetStyle(newDocumentStyle);
 paragraph.AddText("This is a text in a paragraph styled with the 'Heading 6' style.");
-let style = paraPr.GetStyle();
+let style = paragraph.GetStyle();
 paragraph.AddLineBreak();
 paragraph.AddText("Style: " + style.GetName());
 ```

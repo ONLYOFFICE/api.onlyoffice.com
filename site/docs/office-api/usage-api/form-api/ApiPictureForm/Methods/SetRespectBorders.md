@@ -8,7 +8,7 @@ Respects the form border width when scaling the image.
 expression.SetRespectBorders(isRespect);
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

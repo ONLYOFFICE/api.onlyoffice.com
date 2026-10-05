@@ -8,7 +8,7 @@ Sets the text value of the text form.
 expression.SetValue(value);
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

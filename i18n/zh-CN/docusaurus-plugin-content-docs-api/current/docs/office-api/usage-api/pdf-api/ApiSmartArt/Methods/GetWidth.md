@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetWidth](../../ApiDrawing/Methods/GetWidth.md)。
 
+## 语法
+
+```javascript
+expression.GetWidth();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md)
+
 ## 示例
 
 查找 PDF 中形状的水平大小。

@@ -4,34 +4,46 @@
 
 继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
 
+## 语法
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-读取电子表格中条件格式规则应用于匹配单元格的数字显示模式。
+在电子表格中读取高于平均值条件格式规则所应用的数字显示格式。
 
 ```javascript editor-xlsx
-// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
+// How do I retrieve the number format string assigned to an above-average highlight rule in a spreadsheet?
 
-// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
+// Inspect the display format a rule applies to cells that exceed the average value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange("A1").SetValue("Sales Data");
-worksheet.GetRange("A2").SetValue(1234.56);
-worksheet.GetRange("A3").SetValue(2500.75);
-worksheet.GetRange("A4").SetValue(150.25);
-worksheet.GetRange("A5").SetValue(3000.00);
-worksheet.GetRange("A6").SetValue(750.50);
+worksheet.GetRange("A1").SetValue("Currency Values");
+worksheet.GetRange("A2").SetValue(1500);
+worksheet.GetRange("A3").SetValue(2200);
+worksheet.GetRange("A4").SetValue(900);
+worksheet.GetRange("A5").SetValue(1800);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A5");
 let formatConditions = dataRange.GetFormatConditions();
+let aboveAverageCondition = formatConditions.AddAboveAverage();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "2000");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
-condition1.SetNumberFormat("$#,##0.00");
+aboveAverageCondition.SetNumberFormat("$#,##0.00");
+let numberFormat = aboveAverageCondition.GetNumberFormat();
 
-let numberFormat = condition1.GetNumberFormat();
-
-worksheet.GetRange("C1").SetValue("Number format:");
+worksheet.GetRange("C1").SetValue("Number format applied:");
 worksheet.GetRange("C2").SetValue(numberFormat);
 ```

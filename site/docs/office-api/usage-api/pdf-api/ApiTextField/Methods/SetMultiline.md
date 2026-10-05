@@ -8,7 +8,7 @@ Sets text field multiline prop.
 expression.SetMultiline(multiline);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

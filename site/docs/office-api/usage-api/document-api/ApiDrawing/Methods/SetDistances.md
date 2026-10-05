@@ -1,7 +1,6 @@
 # SetDistances
 
-Specifies the minimum distance which will be maintained between the edges of the current drawing object and any
-subsequent text.
+Specifies the minimum distance which will be maintained between the edges of the current drawing object and any subsequent text.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ subsequent text.
 expression.SetDistances(nLeft, nTop, nRight, nBottom);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

@@ -6,9 +6,9 @@ sidebar_position: -3
 
 插件可以以模态窗口（modal window）或面板（panel）的形式展示。
 
-![Modal window（模态窗口）](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Modal window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
+![模态窗口](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![模态窗口](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
+![插件左侧面板](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![插件左侧面板](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
 可以同时运行多个面板插件。每个插件将在左侧或右侧工具栏显示为一个独立按钮。
 
@@ -18,7 +18,7 @@ sidebar_position: -3
 
 1. 在[插件代码](../interacting-with-editors/overview/overview.md)文件中，指定类似于插件配置中 [variations](../configuration/configuration.md#variations) 的模态窗口 / 面板设置。
 
-   **参数说明**:
+   **参数说明**：
 
    | 名称                     | 类型            | 示例                                                                                                            | 描述                                                                                                                                                                                                                                                               |
    | ------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,17 +27,17 @@ sidebar_position: -3
    | variations.description | `string`        | "Description"                                                                                                      | 模态窗口 / 面板的描述文本。                                                                                                                                                                                                                            |
    | variations.type        | `string`        | "window"                                                                                                           | 插件的[type](../configuration/configuration.md#variationstype)。使用 `"window"` 调取模态窗口，`"panel"` 调取左侧面板，`"panelRight"` 调取右侧面板。                                                                                     |
    | variations.size        | `number[]`      | [343, 122]                                                                                                         | 模态窗口的尺寸。该参数仅适用于模态窗口。                                                                                                                                                                                                     |
-   | variations.buttons     | `Button[]`      | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | 模态窗口中可皮肤化的插件按钮列表。该参数仅适用于模态窗                                                                                                                                                            |
+   | variations.buttons     | `Button[]`      | [\{ "text": "Cancel", "primary": false, "isViewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | 模态窗口中可皮肤化的插件按钮列表。该参数仅适用于模态窗                                                                                                                                                            |
    | variations.isActivated | `boolean`       | false                                                                                                              | 指定创建的面板是否默认为折叠（`false`）或展开（`true`）。默认值为 `true`。仅当 `variations.type` 为 `"panel"` 或 `"panelRight"`，并且插件版本为 8.3 及以上时该参数才有效。                        |
 
-   **示例**:
+   **示例**：
 
    ```ts
    function getFullUrl(name) {
-     const location = window.location
-     const start = location.pathname.lastIndexOf("/") + 1
-     const file = location.pathname.slice(start)
-     return location.href.replace(file, name)
+     const location = window.location;
+     const start = location.pathname.lastIndexOf("/") + 1;
+     const file = location.pathname.slice(start);
+     return location.href.replace(file, name);
    }
 
    const variation = {
@@ -58,13 +58,13 @@ sidebar_position: -3
          },
        },
      ],
-   }
+   };
    ```
 
 2. 在插件代码文件中定义一个新的插件窗口 / 面板：
 
    ```ts
-   const newWindow = new window.Asc.PluginWindow()
+   const newWindow = new window.Asc.PluginWindow();
    ```
 
 3. 在[index.html](../configuration/entry-point.md) 文件中指定窗口 / 面板的外观。
@@ -73,32 +73,32 @@ sidebar_position: -3
 
 要在编辑器中显示插件的模态窗口 / 面板，请使用 **show** 方法。
 
-**参数说明**:
+**参数说明**：
 
 | 名称          | 类型        | 描述            |
 | ----------- | --------- | ------------- |
 | variation | `variation` | 模态窗口 / 面板设置。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-newWindow.show(variation)
+newWindow.show(variation);
 ```
 
 你也可以使用 `window.Asc.plugin.executeMethod` 的 **ShowWindow** 方法。
 
-**参数说明**:
+**参数说明**：
 
 | 名称          | 类型        | 描述            |
 | ----------- | --------- | ------------- |
 | frameId     | `string`    | 框架 ID。        |
 | variation   | `variation` | 模态窗口 / 面板设置。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
 const variation = {
@@ -118,26 +118,26 @@ const variation = {
       primary: false,
     },
   ],
-}
-window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation])
+};
+window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation]);
 ```
 
 ## 激活窗口 {#activating-a-window}
 
 要激活（前置）插件窗口 / 面板，请使用 window.Asc.plugin.executeMethod 的 **ActivateWindow** 方法。
 
-**参数说明**:
+**参数说明**：
 
 | 名称        | 类型     | 描述     |
 | --------- | ------ | ------ |
 | frameId   | `string` | 框架 ID。 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"])
+window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"]);
 ```
 
 ## 与窗口进行交互 {#interacting-with-a-window}
@@ -146,7 +146,7 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 
 当鼠标在插件的 iframe 内移动时，可以使用 **MouseMoveWindow** 方法（来自`window.Asc.plugin.executeMethod`）向插件发送事件。
 
-**参数说明**:
+**参数说明**：
 
 | 名称        | 类型     | 描述     |
 | --------- | ------ | ------ |
@@ -154,19 +154,19 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 | x         | `number` | X 坐标。  |
 | y         | `number` | Y 坐标。  |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 ### MouseUpWindow
 
 当鼠标按钮在插件的 iframe 内被松开时，可以使用 **MouseUpWindow** 方法（来自`window.Asc.plugin.executeMethod`）向插件发送事件。
 
-**参数说明**:
+**参数说明**：
 
 | 名称        | 类型     | 描述     |
 | --------- | ------ | ------ |
@@ -174,19 +174,19 @@ window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4
 | x         | `number` | X 坐标。  |
 | y         | `number` | Y 坐标。  |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 ### ResizeWindow
 
 你可以通过调用 `window.Asc.plugin.executeMethod` 的 **ResizeWindow** 方法来调整插件模态窗口的大小。
 
-**参数说明**:
+**参数说明**：
 
 | 名称        | 类型     | 描述       |
 | --------- | ------ | -------- |
@@ -195,19 +195,19 @@ window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-484
 | minSize   | `number` | 窗口框架最小大小 |
 | maxSize   | `number` | 窗口框架最大大小 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392])
+window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392]);
 ```
 
 ### resizeWindow
 
 你也可以使用 **resizeWindow** 方法来更改窗口大小，同时更新最小/最大尺寸。
 
-**参数说明**:
+**参数说明**：
 
 | 名称       | 类型     | 描述     |
 | -------- | ------ | ------ |
@@ -218,59 +218,59 @@ window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 | maxW     | `number` | 窗口最大宽度 |
 | maxH     | `number` | 窗口最大高度 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
 window.Asc.plugin.init = () => {
-  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147)
-}
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147);
+};
 ```
 
 ### command
 
 你可以通过使用 **command** 方法向模态窗口或面板发送消息。 
 
-**参数说明**:
+**参数说明**：
 
 | 名称            | 类型     | 描述                 |
 | ------------- | ------ | ------------------ |
 | messageName | `string` | 消息名称               |
 | data        | `string` | 消息数据（该数据将发送到事件回调中） |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-newWindow.command("messageName", "data")
+newWindow.command("messageName", "data");
 ```
 
 ### sendToPlugin
 
 你可以在模态窗口或面板的代码中使用 **sendToPlugin** 方法向插件发送消息。 
 
-**参数说明**:
+**参数说明**：
 
 | 名称     | 类型     | 描述   |
 | ------ | ------ | ---- |
 | name   | `string` | 事件名称 |
 | data   | `object` | 事件数据 |
 
-**返回值**: `boolean`
+**返回值**：`boolean`
 
-**示例**:
+**示例**：
 
 ```ts
-Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
+Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```
 
 ### SendToWindow
 
 你可以通过调用 `window.Asc.plugin.executeMethod` 的 **SendToWindow** 方法向插件模态窗口或面板发送消息。
 
-**参数说明**:
+**参数说明**：
 
 | 名称         | 类型     | 描述      |
 | ---------- | ------ | ------- |
@@ -278,60 +278,60 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
 | name     | `string` | 事件名称    |
 | data     | `object` | 事件数据    |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
-window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}])
+window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
 ### attachEditorEvent
 
 你可以在窗口或面板的代码中使用 **attachEditorEvent** 方法订阅来自插件的消息。
 
-**参数说明**:
+**参数说明**：
 
 | 名称       | 类型       | 描述     |
 | -------- | -------- | ------ |
 | id     | `string`   | 事件名称   |
 | action | `function` | 事件监听函数 |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
 Asc.plugin.attachEditorEvent("messageName", (message) => {
-  console.log(message)
-})
+  console.log(message);
+});
 ```
 
 ## 关闭窗口 {#closing-a-window}
 
 要关闭插件窗口或面板，请使用 `window.Asc.plugin.executeMethod` 的 **CloseWindow** 方法。
 
-**参数说明**:
+**参数说明**：
 
 | 名称        | 类型     | 描述      |
 | --------- | ------ | ------- |
 | frameId   | `string` | 窗口框架 ID |
 
-**返回值**: 该方法不返回任何数据。
+**返回值**：该方法不返回任何数据。
 
-**示例**:
+**示例**：
 
 ```ts
 window.Asc.plugin.button = (id, windowId) => {
   if (!modalWindow) {
-    return
+    return;
   }
 
   if (windowId) {
     switch (id) {
     default:
-      window.Asc.plugin.executeMethod("CloseWindow", [windowId])
+      window.Asc.plugin.executeMethod("CloseWindow", [windowId]);
     }
   }
-}
+};
 ```

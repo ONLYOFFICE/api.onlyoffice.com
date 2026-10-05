@@ -4,14 +4,30 @@ Gets the italic property from the current text properties.
 
 Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
+## Syntax
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Detect whether text has italic formatting in a PDF.
+Check if text is displayed in italic style in a PDF.
 
 ```javascript editor-pdf
-// How do I check if text is italicized in a PDF?
+// How do I check whether text is styled as italic in a PDF?
 
-// Access the italic property from text formatting settings in a PDF.
+// Read the italic formatting status of text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetItalic(true);
+run.SetItalic(true);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const italic = textPr.GetItalic();
+const italic = run.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
 ```

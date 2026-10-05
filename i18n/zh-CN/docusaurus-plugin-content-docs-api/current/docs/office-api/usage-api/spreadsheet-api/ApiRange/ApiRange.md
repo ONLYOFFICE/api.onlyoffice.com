@@ -1,6 +1,6 @@
 # ApiRange
 
-表示 ApiRange 类。
+表示范围的类。
 
 ## 属性
 
@@ -28,7 +28,7 @@
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回或设置当前单元格范围的背景颜色。 |
 | FontColor | [ApiColor](../ApiColor/ApiColor.md) | 使用先前创建的颜色对象设置当前单元格范围的文本颜色。 |
 | FontName | string | 将指定的字体系列设置为当前单元格范围的字体名称。 |
-| FontSize | number | 设置当前单元格范围中字符的字体大小。 |
+| FontSize | number | 设置当前单元格范围中字符的字体大小（以磅为单位）。 |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
 | Formula | string | 返回指定范围第一个单元格的公式或将其设置到此单元格。 |
 | Height | number | 返回表示以磅为单位测量的范围高度的值。 |
@@ -55,6 +55,8 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | 向当前范围添加批注。 |
@@ -67,19 +69,19 @@
 | [Cut](./Methods/Cut.md) | 无 | 剪切范围并将其保存到剪贴板或粘贴到指定范围。 |
 | [Delete](./Methods/Delete.md) | 无 | 删除 Range 对象。 |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定范围中指定方向末端的 Range 对象。 |
-| [FillDown](./Methods/FillDown.md) | boolean | 将范围顶部行的内容和格式复制到其余行。 |
-| [FillLeft](./Methods/FillLeft.md) | boolean | 将范围最右列的内容和格式复制到其余列。 |
-| [FillRight](./Methods/FillRight.md) | boolean | 将范围最左列的内容和格式复制到其余列。 |
-| [FillUp](./Methods/FillUp.md) | boolean | 将范围底部行的内容和格式复制到其余行。 |
+| [FillDown](./Methods/FillDown.md) | boolean | 将范围顶行的内容和格式复制到其余行中。 |
+| [FillLeft](./Methods/FillLeft.md) | boolean | 将范围最右列的内容和格式复制到其余列中。 |
+| [FillRight](./Methods/FillRight.md) | boolean | 将范围最左列的内容和格式复制到其余列中。 |
+| [FillUp](./Methods/FillUp.md) | boolean | 将范围底行的内容和格式复制到其余行中。 |
 | [Find](./Methods/Find.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 在当前范围中查找特定信息。 |
-| [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的下一个单元格并返回表示该单元格的 ApiRange 对象。这不会影响选择或活动单元格。 |
-| [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。这不会影响选择或活动单元格。 |
+| [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的下一个单元格并返回表示该单元格的 ApiRange 对象。 |
+| [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 继续使用 [ApiRange#Find](../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。 |
 | [ForEach](./Methods/ForEach.md) | boolean | 为每个单元格执行一次提供的函数。 |
 | [GetAddress](./Methods/GetAddress.md) | string \| null | 返回范围地址。 |
 | [GetAreas](./Methods/GetAreas.md) | [ApiAreas](../ApiAreas/ApiAreas.md) | 返回范围的集合。 |
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定范围中所有单元格或指定单元格的 Range 对象。 |
 | [GetCellsCount](./Methods/GetCellsCount.md) | number | 返回当前范围中的单元格数量。 |
-| [GetCharacters](./Methods/GetCharacters.md) | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | 返回表示对象文本中字符范围的 ApiCharacters 对象。使用 ApiCharacters 对象格式化文本字符串中的字符。 |
+| [GetCharacters](./Methods/GetCharacters.md) | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | 返回表示对象文本中字符范围的 ApiCharacters 对象。 |
 | [GetClassType](./Methods/GetClassType.md) | "range" | 返回 ApiRange 类的类型。 |
 | [GetCol](./Methods/GetCol.md) | number | 返回所选单元格的列号。 |
 | [GetCols](./Methods/GetCols.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示指定范围中的列的 Range 对象。 |
@@ -91,24 +93,24 @@
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | 返回当前范围的 ApiName 对象。 |
 | [GetEntireColumn](./Methods/GetEntireColumn.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整列的 Range 对象。 |
 | [GetEntireRow](./Methods/GetEntireRow.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整行的 Range 对象。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。当单元格/单元格范围的背景颜色为空时返回“No Fill”。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。 |
 | [GetFormatConditions](./Methods/GetFormatConditions.md) | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | 返回指定范围的公式。 |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | 返回当前范围的数组公式。 |
-| [GetHidden](./Methods/GetHidden.md) | boolean | 返回值隐藏属性。指定的范围必须跨越整列或整行。 |
+| [GetHidden](./Methods/GetHidden.md) | boolean | 返回值隐藏属性。 |
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | 返回表示当前范围的格式代码的值。 |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | 返回当前范围的角度。 |
 | [GetPivotTable](./Methods/GetPivotTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | 返回表示包含指定范围左上角的数据透视表报告的 ApiPivotTable 对象。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示单元格或单元格范围的 Range 对象。 |
 | [GetRow](./Methods/GetRow.md) | number | 返回所选单元格的行号。 |
 | [GetRowHeight](./Methods/GetRowHeight.md) | [pt](../Enumeration/pt.md) | 返回行高值。 |
-| [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示指定范围中的行的 Range 对象。如果指定的行在 Range 对象之外，将返回一个新的 Range，表示指定行中原始范围列之间的单元格。 |
+| [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示指定范围中各行的 Range 对象。 |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | 返回当前范围中的行数。 |
 | [GetText](./Methods/GetText.md) | string \| string[][] | 返回指定范围的文本。 |
-| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | 返回与此范围关联的数据验证对象。如果尚不存在验证对象，将创建一个。 |
+| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | 返回与此范围关联的数据验证对象。 |
 | [GetValue](./Methods/GetValue.md) | string \| number \| boolean \| (string \| number \| boolean)[][] | 返回指定范围的值。 |
 | [GetValue2](./Methods/GetValue2.md) | string \| string[][] | 返回指定范围的 Value2 属性（不带格式的值）。 |
-| [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回表示包含指定范围的工作表的 Worksheet 对象。它将以只读模式可用。 |
+| [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回表示包含指定范围的工作表的 Worksheet 对象。 |
 | [GetWrapText](./Methods/GetWrapText.md) | boolean | 返回有关单元格自动换行样式的信息。 |
 | [Insert](./Methods/Insert.md) | 无 | 将单元格或单元格范围插入工作表或宏表，并移动其他单元格以腾出空间。 |
 | [Merge](./Methods/Merge.md) | boolean | 将选定的单元格范围合并为单个单元格或单元格行。 |
@@ -130,7 +132,7 @@
 | [SetFontSize](./Methods/SetFontSize.md) | boolean | 设置当前单元格范围中字符的字体大小。 |
 | [SetFormula](./Methods/SetFormula.md) | boolean | 为当前单元格或单元格范围设置公式或值。 |
 | [SetFormulaArray](./Methods/SetFormulaArray.md) | boolean | 设置当前范围的数组公式。 |
-| [SetHidden](./Methods/SetHidden.md) | boolean | 设置值隐藏属性。指定的范围必须跨越整列或整行。 |
+| [SetHidden](./Methods/SetHidden.md) | boolean | 设置值隐藏属性。 |
 | [SetItalic](./Methods/SetItalic.md) | boolean | 设置当前单元格或单元格范围中文本字符的斜体属性。 |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | 指定单元格中的数字应视为数字、货币、日期、时间等还是仅作为文本。 |
 | [SetOffset](./Methods/SetOffset.md) | boolean | 设置单元格偏移量。 |

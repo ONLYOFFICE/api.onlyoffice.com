@@ -42,7 +42,7 @@ Enumeration
 Set the "0.00" numeric format to the chart data point.
 
 ```javascript editor-xlsx
-// How to use the specified numeric format for the ApiChart object.
+// How do I apply a specific number format to a chart?
 
 // Set the chart data point to the "0.00" numeric format.
 

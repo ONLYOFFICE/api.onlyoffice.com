@@ -8,7 +8,7 @@ Sets the input mask for entered text.
 expression.SetMask(inputMask);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

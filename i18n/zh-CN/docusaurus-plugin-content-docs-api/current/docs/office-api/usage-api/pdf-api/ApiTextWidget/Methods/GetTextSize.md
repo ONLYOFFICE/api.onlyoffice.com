@@ -1,9 +1,28 @@
 # GetTextSize
 
 获取控件文本大小。
-💡 文本大小 === 0 表示自动适应
+
+:::note
+文本大小 === 0 表示自动适应。
+:::
 
 继承自 [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md)。
+
+## 语法
+
+```javascript
+expression.GetTextSize();
+```
+
+`expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[hps](../../Enumeration/hps.md)
 
 ## 示例
 

@@ -4,6 +4,24 @@ Flips the current drawing horizontally.
 
 Inherited from [ApiDrawing.SetHorFlip](../../ApiDrawing/Methods/SetHorFlip.md).
 
+## Syntax
+
+```javascript
+expression.SetHorFlip(bFlip);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | Required | boolean |  | Specifies if the figure will be flipped horizontally or not. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mirror a shape from left to right in a document.

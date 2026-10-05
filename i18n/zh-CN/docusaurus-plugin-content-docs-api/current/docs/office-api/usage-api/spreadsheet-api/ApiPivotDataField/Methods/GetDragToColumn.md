@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetDragToColumn](../../ApiPivotField/Methods/GetDragToColumn.md)。
 
+## 语法
+
+```javascript
+expression.GetDragToColumn();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中的透视字段是否可以移动到列区域。

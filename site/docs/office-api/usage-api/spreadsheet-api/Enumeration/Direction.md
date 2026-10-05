@@ -18,7 +18,7 @@ Enumeration
 Get a Range object that represents the left end of the specified range.
 
 ```javascript editor-xlsx
-// How to set a direction of the range.
+// How do I set the direction of a range?
 
 // Get a range and set its direction, color fill, etc.
 

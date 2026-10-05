@@ -4,6 +4,22 @@ Returns the number format applied to a cell when the conditional formatting rule
 
 Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
+## Syntax
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the number display pattern that a conditional formatting rule applies to matching cells in a spreadsheet.

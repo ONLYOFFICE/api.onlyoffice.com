@@ -8,7 +8,7 @@ Specifies a highlighting color which is applied as a background to the contents 
 expression.SetHighlight(sColor);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@ Sets the text value used in text-based conditional formatting rules.
 
 Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
 
+## Syntax
+
+```javascript
+expression.SetText(Text);
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Text | Required | string |  | The text value to compare against. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Update the word or phrase that triggers a text-based formatting rule in a spreadsheet.

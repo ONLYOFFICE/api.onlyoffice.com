@@ -134,7 +134,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       return room_id
     else:
       print(f"Room creation failed. Status code: {response.status_code}, Message: {response.text}")
-  return None
+    return None
 
   # Step 2: Invite a user to the room
   def invite_user_to_room(room_id, email, access='ReadWrite'):

@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md)。
 
+## 语法
+
+```javascript
+expression.GetIndFirstLine();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## 示例
 
-检查演示文稿中段落的首行缩进。
+在演示文稿中获取段落的首行缩进。
 
 ```javascript editor-pptx
-// How do I read the first line indentation value from a paragraph in a presentation?
+// How do I find the first line indent value for a paragraph in a presentation?
 
-// Retrieve the indentation distance set for the first line of text in a presentation.
+// Read and display the first line indentation setting of formatted text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,16 +43,14 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndFirstLine(1440);
-paragraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 1 inch set to the first line. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndFirstLine(1440);
 
-const indFirstLine = paraPr.GetIndFirstLine();
+const firstLineIndentation = paragraph.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("First line indent: " + indFirstLine);
+paragraph.AddText("First line indent: " + firstLineIndentation);
 docContent.Push(paragraph);
 ```

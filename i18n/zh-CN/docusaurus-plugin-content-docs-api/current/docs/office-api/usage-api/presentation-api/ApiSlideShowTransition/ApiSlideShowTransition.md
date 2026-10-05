@@ -1,8 +1,10 @@
 # ApiSlideShowTransition
 
-表示 ApiSlideShowTransition 类。
+表示幻灯片放映切换效果的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

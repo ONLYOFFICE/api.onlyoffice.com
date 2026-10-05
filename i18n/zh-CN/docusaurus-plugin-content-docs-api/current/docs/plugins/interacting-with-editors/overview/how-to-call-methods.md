@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # 如何调用方法
 
 要通过插件执行某些编辑器方法，需要定义 **executeMethod** 方法。
@@ -12,11 +14,7 @@ callback 是方法返回的结果，是一个可选参数。如果未传入该�
 
 ### 参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 名称    | 类型     | 描述                                               |
 |----------|----------|-----------------------------------------------------------|
@@ -24,9 +22,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | params   | array    | 该方法所需的参数（如果有的话）。 |
 | callback | function | 方法返回的结果。                       |
 
-```mdx-code-block
 </APITable>
-```
 
 ### 返回值
 

@@ -8,7 +8,7 @@
 expression.RemovePlugin(guid, backup);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../pdf-api.md) 类的变量。
 
 ## 参数
 

@@ -1,4 +1,4 @@
-﻿# RefreshLock
+# RefreshLock
 
 `POST /wopi/files/(file_id)`
 

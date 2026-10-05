@@ -8,7 +8,7 @@ Returns the type of the ApiNotesPage class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiNotesPage](../ApiNotesPage.md) class.
+`expression` - A variable that represents an [ApiNotesPage](../ApiNotesPage.md) class.
 
 ## Parameters
 

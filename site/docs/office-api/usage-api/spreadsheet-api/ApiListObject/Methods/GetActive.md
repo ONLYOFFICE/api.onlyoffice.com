@@ -1,7 +1,6 @@
 # GetActive
 
-Returns a Boolean value that indicates whether the ListObject is active.
-The ListObject is considered active when the active cell is within the range of the ListObject.
+Returns a Boolean value that indicates whether the ListObject is active, i.e., whether the active cell is within the range of the ListObject.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -13,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetActive();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

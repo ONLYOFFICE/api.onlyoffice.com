@@ -8,7 +8,7 @@ Deletes the current bookmark from the document.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiBookmark](../ApiBookmark.md) class.
+`expression` - A variable that represents an [ApiBookmark](../ApiBookmark.md) class.
 
 ## Parameters
 

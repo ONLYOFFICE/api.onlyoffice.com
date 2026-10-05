@@ -8,7 +8,7 @@ Returns a class formatted according to the instructions contained in the format 
 expression.Format(expression, format);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

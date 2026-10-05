@@ -4,6 +4,22 @@ Gets the underline property from the current text properties.
 
 Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
+## Syntax
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if text is formatted with an underline in a presentation.

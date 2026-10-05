@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetAutoFit](../../ApiBaseWidget/Methods/SetAutoFit.md)。
 
+## 语法
+
+```javascript
+expression.SetAutoFit(auto);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| auto | 必需 | boolean |  | 指定是否启用文本自动调整。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 为 PDF 中所有字段控件启用自动文本适配。

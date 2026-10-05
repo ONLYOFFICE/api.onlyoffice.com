@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the current sheet.
+
 This manager allows manipulation and access to custom XML parts within the current sheet.
 
 ## Syntax
@@ -9,7 +10,7 @@ This manager allows manipulation and access to custom XML parts within the curre
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the width to the current path.
 expression.SetWidth(nWidth);
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

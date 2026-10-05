@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
+
 ## 示例
 
-获取 PDF 中文本字母之间的间距量。
+在 PDF 中获取文本字符之间的间距。
 
 ```javascript editor-pdf
-// How do I find the character spacing setting in a PDF?
+// How do I check the character spacing of text in a PDF?
 
-// Read and display the letter spacing value applied to text in a PDF.
+// Retrieve the spacing measurement for text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,12 +44,11 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
-textPr.SetSpacing(80);
+run.SetSpacing(80);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-const spacing = textPr.GetSpacing();
+const spacing = run.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
 ```

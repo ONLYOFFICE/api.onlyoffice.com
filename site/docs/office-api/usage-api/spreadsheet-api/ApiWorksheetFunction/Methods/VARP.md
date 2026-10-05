@@ -8,7 +8,7 @@ Calculates variance based on the entire population (ignores logical values and t
 expression.VARP(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ number
 
 ## Example
 
-Calculate variance based on the entire population (ignores logical values and text in the population) in a spreadsheet.
+Calculate variance based on the entire population using the VARP compatibility function in a spreadsheet.
 
 ```javascript editor-xlsx
 // The VARP function computes population variance from numeric data only.

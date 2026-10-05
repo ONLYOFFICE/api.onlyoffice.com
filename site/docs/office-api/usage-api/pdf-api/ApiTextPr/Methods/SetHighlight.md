@@ -8,7 +8,7 @@ Specifies a highlighting color which is added to the text properties and applied
 expression.SetHighlight(sColor);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

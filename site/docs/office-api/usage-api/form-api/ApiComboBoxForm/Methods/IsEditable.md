@@ -1,6 +1,8 @@
 # IsEditable
 
-Checks if the combo box text can be edited. If it is not editable, then this form is a drop-down list.
+Checks if the combo box text can be edited.
+
+If it is not editable, then this form is a drop-down list.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Checks if the combo box text can be edited. If it is not editable, then this for
 expression.IsEditable();
 ```
 
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
 
 ## Parameters
 

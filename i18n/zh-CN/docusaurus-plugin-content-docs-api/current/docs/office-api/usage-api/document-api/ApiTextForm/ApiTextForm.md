@@ -1,14 +1,18 @@
 # ApiTextForm
 
+表示文档文本字段的类。
+
 ApiTextForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
 | [GetAllowedSymbols](./Methods/GetAllowedSymbols.md) | string | 返回当前文本字段允许的符号。 |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
@@ -34,7 +38,7 @@ ApiTextForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [IsMultiline](./Methods/IsMultiline.md) | boolean | 检查当前文本字段是否为多行。 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查当前表单是否为必填项。 |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | 将光标放置在当前表单之前/之后。 |
-| [SetAllowedSymbols](./Methods/SetAllowedSymbols.md) | boolean | 设置当前文本字段允许的符号。只接受指定的字符作为输入。 |
+| [SetAllowedSymbols](./Methods/SetAllowedSymbols.md) | boolean | 设置当前文本字段允许的符号。 |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | 指定文本字段内容是否应自动适应，即字体大小是否根据固定大小表单的尺寸进行调整。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前表单的背景颜色。 |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | 设置当前表单的边框颜色。 |

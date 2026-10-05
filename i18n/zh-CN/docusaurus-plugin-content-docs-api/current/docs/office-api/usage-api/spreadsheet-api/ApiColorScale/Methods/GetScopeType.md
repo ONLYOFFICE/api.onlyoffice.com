@@ -4,14 +4,30 @@
 
 继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
 
+## 语法
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## 示例
 
-读取控制电子表格中条件格式规则应用位置的范围类型。
+在电子表格中获取控制颜色渐变规则在单元格中应用方式的范围设置。
 
 ```javascript editor-xlsx
-// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
+// How do I find out whether a color scale rule applies to the whole range or only selected parts in a spreadsheet?
 
-// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
+// Determine the coverage mode of a color gradient condition to understand its boundaries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,10 +42,9 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let scopeType = condition1.GetScopeType();
+let scopeType = colorScale.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);

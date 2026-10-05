@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md)。
 
+## 语法
+
+```javascript
+expression.SetSize(nWidth, nHeight);
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 对象宽度，以英制单位测量。 |
+| nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 对象高度，以英制单位测量。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 在演示文稿中设置形状的大小。

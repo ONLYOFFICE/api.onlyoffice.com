@@ -8,7 +8,7 @@ Specifies that the contents of this paragraph are displayed with two horizontal 
 expression.SetDoubleStrikeout(isDoubleStrikeout);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the placeholder text to the current content control.
 expression.SetPlaceholderText(text);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

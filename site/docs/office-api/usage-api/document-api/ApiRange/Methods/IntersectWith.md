@@ -1,6 +1,8 @@
 # IntersectWith
 
-Returns a new range as the intersection of the current range with another range. The current range has not changed.
+Returns a new range as the intersection of the current range with another range.
+
+The current range has not changed.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns a new range as the intersection of the current range with another range.
 expression.IntersectWith(oRange);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

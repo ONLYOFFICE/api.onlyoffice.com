@@ -4,6 +4,24 @@ Sets the date operator for time period conditions.
 
 Inherited from [ApiFormatCondition.SetDateOperator](../../ApiFormatCondition/Methods/SetDateOperator.md).
 
+## Syntax
+
+```javascript
+expression.SetDateOperator(DateOperator);
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| DateOperator | Required | [XlTimePeriods](../../Enumeration/XlTimePeriods.md) |  | The date operator for time period conditions. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Assign the time period that a date-based conditional formatting rule checks in a spreadsheet.

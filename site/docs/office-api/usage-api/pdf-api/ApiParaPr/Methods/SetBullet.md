@@ -8,7 +8,7 @@ Sets the bullet or numbering to the current paragraph.
 expression.SetBullet(oBullet);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-Add a bullet point to a paragraph in a PDF.
+Add a bullet point to a paragraph using the paragraph properties in a PDF.
 
 ```javascript editor-pdf
 // How do I add a bullet to a paragraph in a PDF?

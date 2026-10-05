@@ -4,21 +4,37 @@
 
 继承自 [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md)。
 
+## 语法
+
+```javascript
+expression.Clear();
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-清除文档中文本表单字段的输入值。
+清除文档中组合框表单字段的所选值。
 
 ```javascript editor-forms
-// How do I clear the content of a form in a document?
+// How do I reset a combo box form field to its empty state in a document?
 
-// Reset a filled-in form field to blank so it is ready for new input in a document.
+// Remove a previously entered answer from a combo box so the field shows its placeholder again in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("John Smith");
-textForm.Clear();
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.SetText("John Smith");
+comboBoxForm.Clear();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);

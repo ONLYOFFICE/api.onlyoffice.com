@@ -1,7 +1,10 @@
 # RemovePage
 
-Removes page by index from document
-💡  You can't delete last page 
+Removes a page from the document by its index.
+
+:::note
+If the document has only one page, it cannot be removed, and the method returns **false**.
+:::
 
 ## Syntax
 
@@ -9,13 +12,13 @@ Removes page by index from document
 expression.RemovePage(index);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | Required | number |  | page index |
+| index | Required | number |  | The index of the page to remove. |
 
 ## Returns
 

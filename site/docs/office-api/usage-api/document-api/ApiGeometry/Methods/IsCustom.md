@@ -8,7 +8,7 @@ Checks whether the current geometry is custom.
 expression.IsCustom();
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

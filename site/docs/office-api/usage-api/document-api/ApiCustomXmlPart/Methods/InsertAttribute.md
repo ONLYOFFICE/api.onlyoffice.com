@@ -8,7 +8,7 @@ Inserts an attribute into the XML node at the specified XPath.
 expression.InsertAttribute(xPath, name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 

@@ -1,15 +1,17 @@
 # ApiWorksheetFunction
 
-Represents the ApiWorksheetFunction class.
+Class representing a worksheet function.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [ABS](./Methods/ABS.md) | number | Returns the absolute value of a number, a number without its sign. |
 | [ACCRINT](./Methods/ACCRINT.md) | number | Returns the accrued interest for a security that pays periodic interest. |
 | [ACCRINTM](./Methods/ACCRINTM.md) | number | Returns the accrued interest for a security that pays interest at maturity. |
-| [ACOS](./Methods/ACOS.md) | number | Returns the arccosine of a number, in radians in the range from 0 to Pi. The arccosine is the angle whose cosine is a number specified in the parameters. |
+| [ACOS](./Methods/ACOS.md) | number | Returns the arccosine of a number, in radians in the range from 0 to Pi. |
 | [ACOSH](./Methods/ACOSH.md) | number | Returns the inverse hyperbolic cosine of a number. |
 | [ACOT](./Methods/ACOT.md) | number | Returns the arccotangent of a number, in radians in the range from 0 to Pi. |
 | [ACOTH](./Methods/ACOTH.md) | number | Returns the inverse hyperbolic cotangent of a number. |
@@ -52,7 +54,7 @@ Represents the ApiWorksheetFunction class.
 | [BITXOR](./Methods/BITXOR.md) | number | Returns a bitwise "XOR" (Exclusive Or) of two numbers. |
 | [CEILING](./Methods/CEILING.md) | number | Rounds a number up, to the nearest multiple of significance. |
 | [CEILING_MATH](./Methods/CEILING_MATH.md) | number | Rounds a number up, to the nearest integer or to the nearest multiple of significance. |
-| [CEILING_PRECISE](./Methods/CEILING_PRECISE.md) | number | Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. The number is always rounded up regardless of its sing. |
+| [CEILING_PRECISE](./Methods/CEILING_PRECISE.md) | number | Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. The number is always rounded up regardless of its sign. |
 | [CHAR](./Methods/CHAR.md) | string | Returns the character specified by the code number from your computer's character set. |
 | [CHIDIST](./Methods/CHIDIST.md) | number | Returns the right-tailed probability of the chi-squared distribution. |
 | [CHIINV](./Methods/CHIINV.md) | number | Returns the inverse of the right-tailed probability of the chi-squared distribution. |
@@ -108,7 +110,7 @@ Represents the ApiWorksheetFunction class.
 | [DEC2OCT](./Methods/DEC2OCT.md) | number | Converts a decimal number to octal. |
 | [DECIMAL](./Methods/DECIMAL.md) | number | Converts a text representation of a number in a given base into a decimal number. |
 | [DEGREES](./Methods/DEGREES.md) | number | Converts radians to degrees. |
-| [DELTA](./Methods/DELTA.md) | number | Tests whether two numbers are equal. The function returns 1 if the numbers are equal and 0 otherwise. |
+| [DELTA](./Methods/DELTA.md) | number | Tests whether two numbers are equal. |
 | [DEVSQ](./Methods/DEVSQ.md) | number | Returns the sum of squares of deviations of data points from their sample mean. |
 | [DGET](./Methods/DGET.md) | number | Extracts from a database a single record that matches the conditions you specify. |
 | [DISC](./Methods/DISC.md) | number | Returns the discount rate for a security. |
@@ -135,7 +137,7 @@ Represents the ApiWorksheetFunction class.
 | [ERROR_TYPE](./Methods/ERROR_TYPE.md) | number | Returns a number matching an error value. |
 | [EVEN](./Methods/EVEN.md) | number | Rounds a positive number up and negative number down to the nearest even integer. |
 | [EXACT](./Methods/EXACT.md) | boolean | Checks whether two text strings are exactly the same, and returns **true** or **false**. This function is case-sensitive. |
-| [EXP](./Methods/EXP.md) | number | Returns the **e** constant raised to the power of a given number. The **e** constant is equal to **2.71828182845904**, the base of the natural logarithm. |
+| [EXP](./Methods/EXP.md) | number | Returns the **e** constant raised to the power of a given number. |
 | [EXPONDIST](./Methods/EXPONDIST.md) | number | Returns the exponential distribution. |
 | [EXPON_DIST](./Methods/EXPON_DIST.md) | number | Returns the exponential distribution. |
 | [FACT](./Methods/FACT.md) | number | Returns the factorial of a number, which is equal to *1*2*3*...** number. |
@@ -172,7 +174,7 @@ Represents the ApiWorksheetFunction class.
 | [GAUSS](./Methods/GAUSS.md) | number | Calculates the probability that a member of a standard normal population will fall between the mean and arg1 standard deviations from the mean. |
 | [GCD](./Methods/GCD.md) | number | Returns the greatest common divisor. |
 | [GEOMEAN](./Methods/GEOMEAN.md) | number | Returns the geometric mean of positive numeric data. |
-| [GESTEP](./Methods/GESTEP.md) | number | Tests whether a number is greater than a threshold value. The function returns 1 if the number is greater than or equal to the threshold value and 0 otherwise. |
+| [GESTEP](./Methods/GESTEP.md) | number | Tests whether a number is greater than a threshold value. |
 | [GROWTH](./Methods/GROWTH.md) | number | Calculates predicted exponential growth by using existing data. |
 | [HARMEAN](./Methods/HARMEAN.md) | number | Returns the harmonic mean of a data set of positive numbers: the reciprocal of the arithmetic mean of reciprocals. |
 | [HEX2BIN](./Methods/HEX2BIN.md) | number | Converts a hexadecimal number to binary. |
@@ -231,7 +233,7 @@ Represents the ApiWorksheetFunction class.
 | [ISREF](./Methods/ISREF.md) | boolean | Checks whether a value is a reference, and returns **true** or **false**. |
 | [ISTEXT](./Methods/ISTEXT.md) | boolean | Checks whether a value is text, and returns **true** or **false**. |
 | [KURT](./Methods/KURT.md) | number | Returns the kurtosis of a data set. |
-| [LARGE](./Methods/LARGE.md) | number | Returns the k-th largest value in a data set. For example, the fifth largest number. |
+| [LARGE](./Methods/LARGE.md) | number | Returns the k-th largest value in a data set. |
 | [LCM](./Methods/LCM.md) | number | Returns the least common multiple. |
 | [LEFT](./Methods/LEFT.md) | string | Returns the specified number of characters from the start of a text string. |
 | [LEFTB](./Methods/LEFTB.md) | string | Extracts the substring from the specified string starting from the left character and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
@@ -246,7 +248,7 @@ Represents the ApiWorksheetFunction class.
 | [LOGNORMDIST](./Methods/LOGNORMDIST.md) | number | Returns the cumulative lognormal distribution of x, where ln(x) is normally distributed with the specified parameters. |
 | [LOGNORM_DIST](./Methods/LOGNORM_DIST.md) | number | Returns the lognormal distribution of x, where ln(x) is normally distributed with the specified parameters. |
 | [LOGNORM_INV](./Methods/LOGNORM_INV.md) | number | Returns the inverse of the lognormal cumulative distribution function of x, where ln(x) is normally distributed with the specified parameters. |
-| [LOOKUP](./Methods/LOOKUP.md) | number \| string \| boolean | Looks up a value either from a one-row or one-column range. Provided for backwards compatibility. |
+| [LOOKUP](./Methods/LOOKUP.md) | number \| string \| boolean | Looks up a value either from a one-row or one-column range. |
 | [LOWER](./Methods/LOWER.md) | string | Converts all letters in a text string to lowercase. |
 | [MATCH](./Methods/MATCH.md) | number | Returns the relative position of an item in a range that matches the specified value in the specified order. |
 | [MAX](./Methods/MAX.md) | number | Returns the largest value in a set of values. Ignores logical values and text. |
@@ -292,7 +294,7 @@ Represents the ApiWorksheetFunction class.
 | [ODDFYIELD](./Methods/ODDFYIELD.md) | number | Returns the yield of a security with an odd first period. |
 | [ODDLPRICE](./Methods/ODDLPRICE.md) | number | Returns the price per $100 face value of a security with an odd last period. |
 | [ODDLYIELD](./Methods/ODDLYIELD.md) | number | Returns the yield of a security with an odd last period. |
-| [OR](./Methods/OR.md) | boolean | Checks whether any of the arguments are **true**. Returns **false** only if all arguments are **false**. |
+| [OR](./Methods/OR.md) | boolean | Checks whether any of the arguments are **true**. |
 | [PDURATION](./Methods/PDURATION.md) | number | Returns the number of periods required by an investment to reach a specified value. |
 | [PERCENTILE](./Methods/PERCENTILE.md) | number | Returns the k-th percentile of values in a range. |
 | [PERCENTILE_EXC](./Methods/PERCENTILE_EXC.md) | number | Returns the k-th percentile of values in a range, where k is in the range 0..1, exclusive. |
@@ -325,11 +327,11 @@ Represents the ApiWorksheetFunction class.
 | [RANK](./Methods/RANK.md) | number | Returns the rank of a number in a list of numbers: its size relative to other values in the list. |
 | [RANK_AVG](./Methods/RANK_AVG.md) | number | Returns the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the average rank is returned. |
 | [RANK_EQ](./Methods/RANK_EQ.md) | number | Returns the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the top rank of that set of values is returned. |
-| [RATE](./Methods/RATE.md) | number | Returns the interest rate per period for a loan or an investment. For example, use 6%/4 for quarterly payments at 6% APR. |
+| [RATE](./Methods/RATE.md) | number | Returns the interest rate per period for a loan or an investment. |
 | [RECEIVED](./Methods/RECEIVED.md) | number | Returns the amount received at maturity for a fully invested security. |
 | [REPLACE](./Methods/REPLACE.md) | string | Replaces part of a text string with a different text string. |
 | [REPLACEB](./Methods/REPLACEB.md) | string | Replaces a set of characters, based on the number of characters and the start position specified, with a new set of characters and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
-| [REPT](./Methods/REPT.md) | string | Repeats text a given number of times. Use this function to fill a cell with a number of instances of a text string. |
+| [REPT](./Methods/REPT.md) | string | Repeats text a given number of times. |
 | [RIGHT](./Methods/RIGHT.md) | string | Returns the specified number of characters from the end of a text string. |
 | [RIGHTB](./Methods/RIGHTB.md) | string | Extracts a substring from a string starting from the right-most character, based on the specified number of characters and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
 | [ROMAN](./Methods/ROMAN.md) | string | Converts an arabic numeral to a roman numeral in the string format. |
@@ -352,12 +354,12 @@ Represents the ApiWorksheetFunction class.
 | [SKEW](./Methods/SKEW.md) | number | Returns the skewness of a distribution: a characterization of the degree of asymmetry of a distribution around its mean. |
 | [SKEW_P](./Methods/SKEW_P.md) | number | Returns the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean. |
 | [SLN](./Methods/SLN.md) | number | Returns the straight-line depreciation of an asset for one period. |
-| [SMALL](./Methods/SMALL.md) | number | Returns the k-th smallest value in a data set. For example, the fifth smallest number. |
+| [SMALL](./Methods/SMALL.md) | number | Returns the k-th smallest value in a data set. |
 | [SQRT](./Methods/SQRT.md) | number | Returns the square root of a number. |
 | [SQRTPI](./Methods/SQRTPI.md) | number | Returns the square root of (number * pi). |
 | [STANDARDIZE](./Methods/STANDARDIZE.md) | number | Returns a normalised value from a distribution characterised by a mean and standard deviation. |
 | [STDEV](./Methods/STDEV.md) | number | Estimates standard deviation based on a sample (ignores logical values and text in the sample). |
-| [STDEVA](./Methods/STDEVA.md) | number | Estimates standard deviation based on a sample, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
+| [STDEVA](./Methods/STDEVA.md) | number | Estimates standard deviation based on a sample, including logical values and text. |
 | [STDEVP](./Methods/STDEVP.md) | number | Calculates standard deviation based on the entire population given as arguments (ignores logical values and text). |
 | [STDEVPA](./Methods/STDEVPA.md) | number | Calculates standard deviation based on the entire population, including logical values and text. |
 | [STDEV_P](./Methods/STDEV_P.md) | number | Calculates standard deviation based on the entire population given as arguments (ignores logical values and text). |
@@ -378,7 +380,7 @@ Represents the ApiWorksheetFunction class.
 | [TDIST](./Methods/TDIST.md) | number | Returns the Student's t-distribution. |
 | [TEXT](./Methods/TEXT.md) | string | Converts a value to text in a specific number format. |
 | [TIME](./Methods/TIME.md) | number | Converts hours, minutes and seconds given as numbers to a serial number, formatted with the time format. |
-| [TIMEVALUE](./Methods/TIMEVALUE.md) | number | Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM). Format the number with a time format after entering the formula. |
+| [TIMEVALUE](./Methods/TIMEVALUE.md) | number | Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM). |
 | [TINV](./Methods/TINV.md) | number | Returns the two-tailed inverse of the Student's t-distribution. |
 | [TODAY](./Methods/TODAY.md) | number | Returns the current date in the *MM/dd/yy* format. |
 | [TRANSPOSE](./Methods/TRANSPOSE.md) | [ApiRange](../ApiRange/ApiRange.md) | Converts a vertical range of cells to a horizontal range, or vice versa. |
@@ -398,13 +400,13 @@ Represents the ApiWorksheetFunction class.
 | [UPPER](./Methods/UPPER.md) | string | Converts a text string to all uppercase letters. |
 | [VALUE](./Methods/VALUE.md) | number | Converts a text string that represents a number to a number. |
 | [VAR](./Methods/VAR.md) | number | Estimates variance based on a sample (ignores logical values and text in the sample). |
-| [VARA](./Methods/VARA.md) | number | Estimates variance based on a sample, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
+| [VARA](./Methods/VARA.md) | number | Estimates variance based on a sample, including logical values and text. |
 | [VARP](./Methods/VARP.md) | number | Calculates variance based on the entire population (ignores logical values and text in the population). |
-| [VARPA](./Methods/VARPA.md) | number | Calculates variance based on the entire population, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
+| [VARPA](./Methods/VARPA.md) | number | Calculates variance based on the entire population, including logical values and text. |
 | [VAR_P](./Methods/VAR_P.md) | number | Calculates variance based on the entire population (ignores logical values and text in the population). |
 | [VAR_S](./Methods/VAR_S.md) | number | Estimates variance based on a sample (ignores logical values and text in the sample). |
 | [VDB](./Methods/VDB.md) | number | Returns the depreciation of an asset for any specified period, including partial periods, using the double-declining balance method or some other method specified. |
-| [VLOOKUP](./Methods/VLOOKUP.md) | number \| string | Looks for a value in the leftmost column of a table and then returns a value in the same row from the specified column. By default, the table must be sorted in an ascending order. |
+| [VLOOKUP](./Methods/VLOOKUP.md) | number \| string | Looks for a value in the leftmost column of a table and then returns a value in the same row from the specified column. |
 | [WEEKDAY](./Methods/WEEKDAY.md) | number | Returns a number from 1 to 7 identifying the day of the week of the specified date. |
 | [WEEKNUM](./Methods/WEEKNUM.md) | number | Returns the week number in the year. |
 | [WEIBULL](./Methods/WEIBULL.md) | number | Returns the Weibull distribution. |
@@ -413,11 +415,11 @@ Represents the ApiWorksheetFunction class.
 | [WORKDAY_INTL](./Methods/WORKDAY_INTL.md) | number | Returns the serial number of the date before or after a specified number of workdays with custom weekend parameters. |
 | [XIRR](./Methods/XIRR.md) | number | Returns the internal rate of return for a schedule of cash flows. |
 | [XNPV](./Methods/XNPV.md) | number | Returns the net present value for a schedule of cash flows. |
-| [XOR](./Methods/XOR.md) | boolean | Returns the logical **Exclusive Or** value of all arguments. The function returns **true** when the number of **true** inputs is odd and **false** when the number of **true** inputs is even. |
+| [XOR](./Methods/XOR.md) | boolean | Returns the logical **Exclusive Or** value of all arguments. |
 | [YEAR](./Methods/YEAR.md) | number | Returns the year of a date, an integer in the range 1900-9999. |
 | [YEARFRAC](./Methods/YEARFRAC.md) | number | Returns the year fraction representing the number of whole days between the start date and end date. |
 | [YIELD](./Methods/YIELD.md) | number | Returns the yield on a security that pays periodic interest. |
-| [YIELDDISC](./Methods/YIELDDISC.md) | number | Returns the annual yield for a discounted security. For example, a Treasury bill. |
+| [YIELDDISC](./Methods/YIELDDISC.md) | number | Returns the annual yield for a discounted security. |
 | [YIELDMAT](./Methods/YIELDMAT.md) | number | Returns the annual yield of a security that pays interest at maturity. |
 | [ZTEST](./Methods/ZTEST.md) | number | Returns the one-tailed P-value of a z-test. |
 | [Z_TEST](./Methods/Z_TEST.md) | number | Returns the one-tailed P-value of a z-test. |

@@ -8,7 +8,7 @@ Gets field by it's name.
 expression.GetFieldByName(name);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

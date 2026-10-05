@@ -1,6 +1,7 @@
 # TableWidth
 
 The possible values for the units of the width property are defined by a specific table or table cell width property.
+
 - **"auto"** - sets the table or table cell width to auto width.
 - **"twips"** - sets the table or table cell width to be measured in twentieths of a point.
 - **"nul"** - sets the table or table cell width to be of a zero value.
@@ -22,7 +23,7 @@ Enumeration
 Set the width of the table cell equal to 100 points (2000 twips).
 
 ```javascript editor-docx
-// How to change a table cell width using twips.
+// How do I change the width of a table cell using twips?
 
 // Resize a cell by setting its width to 2000 twips.
 

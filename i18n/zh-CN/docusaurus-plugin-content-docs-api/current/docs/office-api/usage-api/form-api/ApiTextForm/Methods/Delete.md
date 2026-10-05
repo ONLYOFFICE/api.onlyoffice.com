@@ -1,31 +1,59 @@
 # Delete
 
-删除表单及其内容。如果 keepContent 为 true，则不删除内容。
+删除表单及其内容。
+
+如果 keepContent 为 true，则不删除内容。
 
 继承自 [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete(keepContent);
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| keepContent | 必需 | boolean |  | 指定是否删除内容。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-从文档中删除表单字段。
+从文档中完全移除文本输入字段。
 
 ```javascript editor-forms
-// How do I delete a form field in a document?
+// How do I permanently take out a text field while keeping its copy in a document?
 
-// Clean up a document by removing one of several inserted checkbox forms.
+// Erase a specific text entry field without affecting other fields in a document.
 
 const doc = Api.GetDocument();
-const checkBoxForm = Api.CreateCheckBoxForm({
-	'key': 'Marital status',
-	'tip': 'Specify your marital status',
-	'placeholder': 'Marital status',
-	'radio': true
-});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(checkBoxForm);
-paragraph.AddText(' Married');
-let copyCheckBoxForm = checkBoxForm.Copy();
-paragraph.AddLineBreak();
-paragraph.AddElement(copyCheckBoxForm);
-paragraph.AddText(' Single');
-checkBoxForm.Delete();
+paragraph.AddText('Original text form: ');
+
+const textForm = Api.CreateTextForm({
+	'key': 'Personal information',
+	'tip': 'Enter your first name',
+	'placeholder': 'First name',
+});
+paragraph.AddElement(textForm);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('Copy of the form: ');
+doc.Push(paragraph);
+
+const textFormCopy = textForm.Copy();
+paragraph.AddElement(textFormCopy);
+
+textForm.Delete();
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('The original text form has been deleted, but the copy remains.');
+doc.Push(paragraph);
 ```

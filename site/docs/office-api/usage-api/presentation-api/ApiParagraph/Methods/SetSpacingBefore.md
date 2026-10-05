@@ -1,19 +1,38 @@
 # SetSpacingBefore
 
-Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then 
-any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
-it will be interpreted as false.
+Sets the spacing before the current paragraph.
+
+If the value of the isBeforeAuto parameter is true, then any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then  it will be interpreted as false.
 
 Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md).
 
+## Syntax
+
+```javascript
+expression.SetSpacingBefore(nBefore, isBeforeAuto);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nBefore | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing before the current paragraph measured in twentieths of a point (1/1440 of an inch). |
+| isBeforeAuto | Optional | boolean | false | The true value disables the spacing before the current paragraph. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Add space above a paragraph in a presentation.
+Add space before a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I set the distance before a paragraph begins in a presentation?
+// How do I increase the gap between paragraphs in a presentation?
 
-// Configure the gap before a paragraph using paragraph settings in a presentation.
+// Control the top margin of a paragraph by setting space before in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,16 +46,14 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
+let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is an example of setting a space before a paragraph. ");
 paragraph.AddText("The second paragraph will have an offset of one inch from the top. ");
 paragraph.AddText("This is due to the fact that the second paragraph has this offset enabled.");
 
-const secondParagraph = Api.CreateParagraph();
-const secondParaPr = secondParagraph.GetParaPr();
-secondParaPr.SetSpacingBefore(1440);
-secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
-docContent.Push(secondParagraph);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
+paragraph.SetSpacingBefore(1440);
+docContent.Push(paragraph);
 slide.AddObject(shape);
 ```

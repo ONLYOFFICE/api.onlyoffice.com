@@ -1,6 +1,7 @@
 # SetShowAutoFilter
 
 Sets whether the AutoFilter is present on the table.
+
 Setting to false removes the AutoFilter entirely; setting to true creates it if not present.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetShowAutoFilter(show);
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

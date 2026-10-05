@@ -1,6 +1,8 @@
-# IComboBox
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts#L82)
+# IComboBox
 
 Custom combo box input.
 
@@ -97,8 +99,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ***
 
 ## IComboBoxItem
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts#L186)
 
 Custom combo box option.
 

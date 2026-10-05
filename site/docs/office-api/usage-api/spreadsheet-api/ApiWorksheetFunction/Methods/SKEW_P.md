@@ -8,7 +8,7 @@ Returns the skewness of a distribution based on a population: a characterization
 expression.SKEW_P(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

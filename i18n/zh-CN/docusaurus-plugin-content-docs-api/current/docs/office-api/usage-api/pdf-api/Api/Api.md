@@ -1,13 +1,15 @@
 # Api
 
-表示 Api 类。
+PDF API 的主类。用于获取当前文档，以及创建段落、表格、图像、批注和表单字段等页面内容。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
 | [CreateCaretAnnot](./Methods/CreateCaretAnnot.md) | [ApiCaretAnnotation](../ApiCaretAnnotation/ApiCaretAnnotation.md) | 创建插入符号批注。 |
@@ -81,3 +83,5 @@
 | [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝和透明度分量创建 RGBA 颜色。 |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | 将缇转换为磅。 |
+| [attachEvent](./Methods/attachEvent.md) | 无 | 订阅指定事件，并在事件触发时调用回调函数。 |
+| [detachEvent](./Methods/detachEvent.md) | 无 | 取消订阅指定事件。 |

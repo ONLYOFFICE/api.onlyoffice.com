@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md)。
 
+## 语法
+
+```javascript
+expression.SetCommitOnSelChange(commitOnSelectionChange);
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| commitOnSelectionChange | 必需 | boolean |  | 指定选择更改是否立即提交。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 当 PDF 中下拉选择更改时启用自动提交。

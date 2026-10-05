@@ -1,6 +1,8 @@
 # Copy
 
-Creates a copy of an block content control. Ignores comments, footnote references, complex fields.
+Creates a copy of a block content control.
+
+Ignores comments, footnote references, complex fields.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Creates a copy of an block content control. Ignores comments, footnote reference
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

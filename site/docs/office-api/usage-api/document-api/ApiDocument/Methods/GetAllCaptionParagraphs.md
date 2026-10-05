@@ -8,7 +8,7 @@ Returns all caption paragraphs of the specified type from the current document.
 expression.GetAllCaptionParagraphs(sCaption);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

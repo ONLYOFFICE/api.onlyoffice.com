@@ -8,7 +8,7 @@ Sets annotation rect difference.
 expression.SetRectDiff(rectDiff);
 ```
 
-`expression` - A variable that represents a [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the active chart of the workbook.
 expression.GetActiveChart();
 ```
 
-`expression` - A variable that represents a [ApiWorkbook](../ApiWorkbook.md) class.
+`expression` - A variable that represents an [ApiWorkbook](../ApiWorkbook.md) class.
 
 ## Parameters
 

@@ -4,14 +4,30 @@ Returns the scope type of the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
 
+## Syntax
+
+```javascript
+expression.GetScopeType();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+
 ## Example
 
-Read the scope type that controls where a conditional formatting rule applies in a spreadsheet.
+Retrieve the scope setting that controls how a color gradient rule is applied across cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
+// How do I find out whether a color scale rule applies to the whole range or only selected parts in a spreadsheet?
 
-// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
+// Determine the coverage mode of a color gradient condition to understand its boundaries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -26,10 +42,9 @@ let dataRange = worksheet.GetRange("A2:A6");
 
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let colorScale = formatConditions.AddColorScale();
 
-let scopeType = condition1.GetScopeType();
+let scopeType = colorScale.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);

@@ -1,6 +1,7 @@
 # GetShowAutoFilterDropDown
 
-返回自动筛选下拉箭头是否显示在表格的标题行上。
+返回表格标题行上是否显示自动筛选下拉箭头。
+
 对于新表格，默认返回 true。
 
 :::note

@@ -1,8 +1,10 @@
 # ApiBookmark
 
-Represents the ApiBookmark class.
+Class representing a bookmark in the document.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

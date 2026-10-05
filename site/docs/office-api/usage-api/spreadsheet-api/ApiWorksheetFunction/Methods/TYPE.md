@@ -8,7 +8,7 @@ Returns an integer representing the data type of a value: number = 1; text = 2; 
 expression.TYPE(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

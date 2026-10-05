@@ -1,8 +1,12 @@
 # ApiRichRun
 
+Class representing a small text block called 'run'.
+
 ApiRichRun is a subclass of [ApiRichTextPr](../ApiRichTextPr/ApiRichTextPr.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

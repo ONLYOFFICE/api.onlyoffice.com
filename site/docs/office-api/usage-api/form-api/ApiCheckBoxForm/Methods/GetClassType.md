@@ -8,7 +8,7 @@ Returns a type of the ApiCheckBoxForm class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

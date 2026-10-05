@@ -55,8 +55,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
           console.log('Backup schedule created successfully.');
         } else {
           return res.text().then((t) => {
-            const text = await res.text();
-            console.log(`Backup schedule creation failed. Status code: ${res.status}, Message: ${text}`);
+            console.log(`Backup schedule creation failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })

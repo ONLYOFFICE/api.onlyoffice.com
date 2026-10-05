@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md)。
 
+## 语法
+
+```javascript
+expression.Select(isReplace);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | 可选 | boolean | false | 指定选择是否应替换当前选择（true）还是添加到当前选择（false）。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 在电子表格的工作表上选择绘图对象。

@@ -4,14 +4,32 @@
 
 继承自 [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md)。
 
+## 语法
+
+```javascript
+expression.SetJc(sJc);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 将应用于段落内容的对齐类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在 PDF 中对齐段落中的文本。
+在 PDF 中将段落文本设置为左对齐、居中或右对齐。
 
 ```javascript editor-pdf
-// How do I change the text alignment in a paragraph in a PDF?
+// How do I position text alignment in a PDF?
 
-// Apply text alignment to a paragraph in a PDF.
+// Justify paragraphs by distributing text across the width in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -24,12 +42,24 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
+let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the right side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+docContent.Push(paragraph);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the left side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("left");
+docContent.Push(paragraph);
 page.AddObject(shape);
 ```

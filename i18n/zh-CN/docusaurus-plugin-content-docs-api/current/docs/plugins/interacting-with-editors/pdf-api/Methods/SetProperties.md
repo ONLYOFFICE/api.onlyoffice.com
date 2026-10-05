@@ -8,7 +8,7 @@
 expression.SetProperties(obj);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../pdf-api.md) 类的变量。
 
 ## 参数
 
@@ -17,7 +17,7 @@ expression.SetProperties(obj);
 | obj | 必需 | object |  | 文档属性。 |
 | obj.copyoutenabled | 必需 | boolean |  | 如果设置为 **false**，则禁止从编辑器复制。 |
 | obj.hideContentControlTrack | 必需 | boolean |  | 如果设置为 **true**，则禁止跟踪内容控件。 |
-| obj.watermark_on_draw | 必需 | string |  | JSON 格式的[水印](../Enumeration/watermark_on_draw.md)字符串值。 |
+| obj.watermark_on_draw | 必需 | string |  | JSON 格式的 [水印属性](../Enumeration/watermark_on_draw.md) 字符串值。 |
 | obj.disableAutostartMacros | 必需 | boolean |  | 设置一个标志，指定编辑器打开时自动启动宏。 |
 | obj.fillForms | 必需 | string |  | 设置 JSON 格式的规则，用于按标签填写文档[表单](../Enumeration/fillForms.md)。 |
 
@@ -72,7 +72,7 @@ var initSettings = {
             "111" : {
                 "text" : "Text in form with tag 111",
                 "checkBox" : "true",
-                "picture" : "https://upload.wikimedia.org/wikipedia/commons/9/91/ONLYOFFICE_logo.png",
+                "picture" : "https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png",
                 "comboBox" : "item1"
             },
             "222" : {
@@ -81,7 +81,7 @@ var initSettings = {
                 "comboBox" : "item2"
             },
             "333" : {
-                "text" : "OnlyOffice"
+                "text" : "ONLYOFFICE"
             }
         }
     })

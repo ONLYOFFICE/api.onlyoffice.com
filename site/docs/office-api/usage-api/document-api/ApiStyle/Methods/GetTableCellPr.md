@@ -8,7 +8,7 @@ Returns the table cell properties of the current style.
 expression.GetTableCellPr();
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

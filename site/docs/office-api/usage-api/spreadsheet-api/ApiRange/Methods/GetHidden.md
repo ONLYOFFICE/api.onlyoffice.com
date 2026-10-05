@@ -1,6 +1,8 @@
 # GetHidden
 
-Returns the value hiding property. The specified range must span an entire column or row.
+Returns the value hiding property.
+
+The specified range must span an entire column or row.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the value hiding property. The specified range must span an entire colum
 expression.GetHidden();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

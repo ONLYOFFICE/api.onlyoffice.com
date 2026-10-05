@@ -4,6 +4,22 @@ Gets the RGB color from the current text properties.
 
 Inherited from [ApiTextPr.GetColor](../../ApiTextPr/Methods/GetColor.md).
 
+## Syntax
+
+```javascript
+expression.GetColor();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## Example
 
 Read the color applied to a run of text in a document.

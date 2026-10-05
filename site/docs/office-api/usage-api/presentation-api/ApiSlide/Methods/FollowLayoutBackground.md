@@ -8,7 +8,7 @@ Sets the layout background as the background of the slide.
 expression.FollowLayoutBackground();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

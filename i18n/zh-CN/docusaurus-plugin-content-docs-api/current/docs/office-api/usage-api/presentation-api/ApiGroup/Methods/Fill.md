@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md)。
 
+## 语法
+
+```javascript
+expression.Fill(oFill);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充图形对象的填充类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在演示文稿中为形状应用渐变颜色填充。

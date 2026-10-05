@@ -1,8 +1,12 @@
 # ApiRadiobuttonField
 
+Class representing a radiobutton field.
+
 ApiRadiobuttonField is a subclass of [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

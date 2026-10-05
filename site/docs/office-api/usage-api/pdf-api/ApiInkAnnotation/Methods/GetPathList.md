@@ -8,7 +8,7 @@ Gets ink path list.
 expression.GetPathList();
 ```
 
-`expression` - A variable that represents a [ApiInkAnnotation](../ApiInkAnnotation.md) class.
+`expression` - A variable that represents an [ApiInkAnnotation](../ApiInkAnnotation.md) class.
 
 ## Parameters
 

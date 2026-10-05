@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Add an AI-generated comment or footnote to selected text using the ONLYOFFICE AI agent.
 
-**Time:** 30 minutes | **Skill level:** Advanced
+**Time**: 30 minutes | **Skill level**: Advanced
 
 ## Step 1: Set up your environment
 
@@ -55,7 +55,7 @@ let func = new RegisteredFunction({
 });
 ```
 
-**Key fields explained:**
+**Key fields explained**:
 
 - `name` - The function name the AI model will invoke
 - `parameters` - Parameters the function expects from the AI as a JSON object
@@ -165,13 +165,13 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 ## Next steps
 
-**Learn more:**
+**Learn more**:
 
 - [Getting started with ONLYOFFICE AI agent](../guides/ai-agent.md)
 - [Learn more about custom AI tools](../guides/custom-ai-tools.md)
 - [Text annotations API guide](../guides/text-annotations-guide.md)
 
-**Explore examples:**
+**Explore examples**:
 
 - [Browse all AI tool examples](/samples/?doctype=ai&text=ai+tools)
 

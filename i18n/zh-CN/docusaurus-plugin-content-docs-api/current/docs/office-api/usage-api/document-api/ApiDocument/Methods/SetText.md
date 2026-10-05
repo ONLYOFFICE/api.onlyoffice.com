@@ -1,9 +1,26 @@
 # SetText
 
-用指定文本替换当前文档内容对象的所有内容，
-保留第一个段落的格式。
+用指定文本替换当前文档内容对象的所有内容，保留第一个段落的格式。
 
 继承自 [ApiDocumentContent.SetText](../../ApiDocumentContent/Methods/SetText.md)。
+
+## 语法
+
+```javascript
+expression.SetText(text);
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | 必需 | string |  | 要设置的文本。 |
+
+## 返回值
+
+[ApiRun](../../ApiRun/ApiRun.md)
 
 ## 示例
 

@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a paragraph object. The search results are a collection of ApiRange objects.
+Searches for a scope of a paragraph object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Searches for a scope of a paragraph object. The search results are a collection 
 expression.Search(sText, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

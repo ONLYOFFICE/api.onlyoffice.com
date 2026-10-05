@@ -4,6 +4,22 @@ Gets annotation subject.
 
 Inherited from [ApiBaseAnnotation.GetSubject](../../ApiBaseAnnotation/Methods/GetSubject.md).
 
+## Syntax
+
+```javascript
+expression.GetSubject();
+```
+
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the subject line of an annotation in a PDF.

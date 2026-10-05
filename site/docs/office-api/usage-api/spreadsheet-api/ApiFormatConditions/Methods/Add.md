@@ -8,7 +8,7 @@ Adds a new format condition to the collection.
 expression.Add(Type, Operator, Formula1, Formula2);
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 

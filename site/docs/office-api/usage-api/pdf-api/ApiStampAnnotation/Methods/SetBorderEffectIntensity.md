@@ -1,9 +1,30 @@
 # SetBorderEffectIntensity
 
 Sets annotation border effect intensity.
-💡  Can be applied to circle, square, freeText and polygon annotations 
+
+:::note
+Can be applied to circle, square, freeText and polygon annotations.
+:::
 
 Inherited from [ApiBaseAnnotation.SetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/SetBorderEffectIntensity.md).
+
+## Syntax
+
+```javascript
+expression.SetBorderEffectIntensity(value);
+```
+
+`expression` - A variable that represents an [ApiStampAnnotation](../ApiStampAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | Required | number |  | The border effect intensity. Must be greater than or equal to 0. |
+
+## Returns
+
+boolean
 
 ## Example
 

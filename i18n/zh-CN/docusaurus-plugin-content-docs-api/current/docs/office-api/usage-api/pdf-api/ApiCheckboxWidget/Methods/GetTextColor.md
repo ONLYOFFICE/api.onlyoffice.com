@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseWidget.GetTextColor](../../ApiBaseWidget/Methods/GetTextColor.md)。
 
+## 语法
+
+```javascript
+expression.GetTextColor();
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md)
+
 ## 示例
 
 读取 PDF 中表单字段控件的文本颜色。

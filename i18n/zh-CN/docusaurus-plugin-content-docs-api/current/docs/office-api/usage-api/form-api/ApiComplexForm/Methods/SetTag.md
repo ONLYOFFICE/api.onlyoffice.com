@@ -4,34 +4,40 @@
 
 继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
 
+## 语法
+
+```javascript
+expression.SetTag(tag);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| tag | 必需 | string |  | 将添加到当前容器的标签。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-用自定义标识符标记文档中的表单字段。
+在文档中为复合表单附加自定义标签。
 
 ```javascript editor-forms
-// How do I attach a label or identifier to a form field in a document?
+// How do I label a form with a tag in a document?
 
-// Organize or reference form fields programmatically using custom tags.
+// Organize or categorize forms by tagging them for later lookup or processing.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-
-const textForm = Api.CreateTextForm({
-	"key": "Personal information",
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-textForm.SetTag('MY_TAG');
-paragraph.AddElement(textForm);
-
-const formTag = textForm.GetTag();
+let complexForm = Api.CreateComplexForm({"key": "Complex1"});
+complexForm.SetTag("Custom tag")
+paragraph.AddElement(complexForm);
+let tag = complexForm.GetTag();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form tag: " + formTag);
+paragraph.AddText("Form tag: " + tag);
 doc.Push(paragraph);
 ```

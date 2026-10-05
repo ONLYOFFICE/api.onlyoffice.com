@@ -8,7 +8,7 @@ Returns an array formula from the current range.
 expression.GetFormulaArray();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

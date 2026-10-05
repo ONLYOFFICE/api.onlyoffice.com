@@ -8,7 +8,7 @@ Creates a radial gradient fill to apply to the object using the selected radial 
 expression.CreateRadialGradientFill(gradientStops);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

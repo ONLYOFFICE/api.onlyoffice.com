@@ -8,7 +8,7 @@ Returns the number of effects in the sequence.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiAnimationSequence](../ApiAnimationSequence.md) class.
+`expression` - A variable that represents an [ApiAnimationSequence](../ApiAnimationSequence.md) class.
 
 ## Parameters
 

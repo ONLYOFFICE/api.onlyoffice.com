@@ -4,6 +4,7 @@ sidebar_position: 0
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # 连接 MCP 服务器
 
@@ -146,11 +147,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 ### 配置参数
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | 参数          | 类型   | 描述                                                                |
 |---------------|--------|---------------------------------------------------------------------|
@@ -160,9 +157,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | args          | array  | 传递给命令的命令行参数数组。                                         |
 | env           | object | MCP 服务器所需的环境变量（例如 API 密钥、URL）。                      |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 实际示例
 

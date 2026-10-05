@@ -1,6 +1,8 @@
-# Events
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Events.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Events.ts#L22)
+# Events
 
 Defines the supported event types for the plugin system.
 

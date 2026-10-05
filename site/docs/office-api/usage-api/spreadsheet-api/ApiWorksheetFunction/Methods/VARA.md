@@ -1,6 +1,8 @@
 # VARA
 
-Estimates variance based on a sample, including logical values and text. Text and the - **false** logical value have the value 0; the - **true** logical value has the value 1.
+Estimates variance based on a sample, including logical values and text.
+
+Text and the **false** logical value have the value 0; the **true** logical value has the value 1.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Estimates variance based on a sample, including logical values and text. Text an
 expression.VARA(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

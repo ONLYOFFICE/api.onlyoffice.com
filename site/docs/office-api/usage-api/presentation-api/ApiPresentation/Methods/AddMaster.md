@@ -8,7 +8,7 @@ Adds the slide master to the presentation slide masters collection.
 expression.AddMaster(pos, apiMaster);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

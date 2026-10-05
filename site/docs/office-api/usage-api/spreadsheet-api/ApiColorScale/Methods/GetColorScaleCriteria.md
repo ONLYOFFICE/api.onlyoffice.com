@@ -8,7 +8,7 @@ Returns the collection of criteria that define this color scale rule.
 expression.GetColorScaleCriteria();
 ```
 
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
 
 ## Parameters
 

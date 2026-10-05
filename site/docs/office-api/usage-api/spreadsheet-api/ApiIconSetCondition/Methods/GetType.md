@@ -8,7 +8,7 @@ Returns the type of the icon set conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the format scheme to the current presentation theme.
 expression.SetFormatScheme(oApiFormatScheme);
 ```
 
-`expression` - A variable that represents a [ApiTheme](../ApiTheme.md) class.
+`expression` - A variable that represents an [ApiTheme](../ApiTheme.md) class.
 
 ## Parameters
 

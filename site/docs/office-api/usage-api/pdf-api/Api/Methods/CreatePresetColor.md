@@ -8,7 +8,7 @@ Creates a color selecting it from one of the available color presets.
 expression.CreatePresetColor(presetColor);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Moves the specified field from one category to another.
 expression.MoveField(identifier, type, index);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

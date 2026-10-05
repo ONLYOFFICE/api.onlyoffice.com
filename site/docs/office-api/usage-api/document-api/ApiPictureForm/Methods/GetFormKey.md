@@ -4,20 +4,37 @@ Returns the current form key.
 
 Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.GetFormKey();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the key assigned to a form field in a document.
+Read the unique identifier assigned to a picture form field in a document.
 
 ```javascript editor-docx
-// How do I get the key of a form field in a document?
+// How do I find the identifier that links a picture form field to other fields in a document?
 
-// Confirm the grouping key of a combo box by reading it back and displaying it.
+// Confirm which key is associated with a picture form field by retrieving it in a document.
 
 let doc = Api.GetDocument();
-let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(comboBoxForm);
-let key = comboBoxForm.GetFormKey();
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let key = pictureForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

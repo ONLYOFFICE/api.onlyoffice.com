@@ -4,14 +4,32 @@
 
 继承自 [ApiTablePr.SetStyleColBandSize](../../ApiTablePr/Methods/SetStyleColBandSize.md)。
 
+## 语法
+
+```javascript
+expression.SetStyleColBandSize(nCount);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nCount | 必需 | number |  | 以正整数表示的列数。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中将多个相邻列组合为单个交替带。
+在文档中设置表格样式中构成重复镶边图案的列数。
 
 ```javascript editor-docx
-// How do I make the striped column pattern span more than one column in a document?
+// How do I control the width of alternating column groups in a table in a document?
 
-// Widen the repeating column highlight bands applied by a table style in a document.
+// Group multiple columns together so they share the same banded formatting in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
@@ -20,9 +38,8 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(2, 4);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
-let tablePr = tableStyle.GetTablePr();
 table.SetTableLook(true, true, true, true, true, true);
-tablePr.SetStyleColBandSize(2);
+table.SetStyleColBandSize(2);
 tableStyle.GetConditionalTableStyle("bandedColumn").GetTextPr().SetBold(true);
 table.Cells[0][0].GetContent().AddText("Bold");
 table.Cells[0][1].GetContent().AddText("Bold");

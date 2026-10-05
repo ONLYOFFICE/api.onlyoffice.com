@@ -8,7 +8,7 @@ Sets the value for the minimum value condition for the data bar.
 expression.SetMinPointValue(value);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

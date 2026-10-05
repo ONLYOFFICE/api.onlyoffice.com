@@ -4,33 +4,44 @@
 
 继承自 [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md)。
 
+## 语法
+
+```javascript
+expression.GetPTCondition();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+PTCondition \| null
+
 ## 示例
 
-检查电子表格中的条件格式规则是否链接到数据透视表范围。
+在电子表格中检查数据条规则是否与数据透视表条件关联。
 
 ```javascript editor-xlsx
-// How do I find out if a conditional formatting rule applies within a pivot table context in a spreadsheet?
+// How do I find out if a data bar formatting rule is connected to a pivot table in a spreadsheet?
 
-// Determine the pivot table association of a formatting condition to understand its scope in a spreadsheet.
+// Determine whether a conditional data bar targets a pivot table range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange("A1").SetValue("Sales Data");
 worksheet.GetRange("A2").SetValue(100);
 worksheet.GetRange("A3").SetValue(250);
-worksheet.GetRange("A4").SetValue(150);
-worksheet.GetRange("A5").SetValue(300);
-worksheet.GetRange("A6").SetValue(75);
 
-let dataRange = worksheet.GetRange("A2:A6");
-
+let dataRange = worksheet.GetRange("A2:A3");
 let formatConditions = dataRange.GetFormatConditions();
 
-let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+let dataBar = formatConditions.AddDatabar();
 
-let ptCondition = condition1.GetPTCondition();
+let ptCondition = dataBar.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
-worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
+worksheet.GetRange("C2").SetValue(ptCondition !== null ? "Available" : "Not available");
 ```

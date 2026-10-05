@@ -4,28 +4,45 @@
 
 继承自 [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md)。
 
+## 语法
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiRange](../../ApiRange/ApiRange.md)
+
 ## 示例
 
-检索电子表格中拥有条件格式规则的集合。
+在电子表格中读取拥有数据条格式规则的单元格区域。
 
 ```javascript editor-xlsx
-// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
+// How do I find out which range a data bar formatting rule belongs to in a spreadsheet?
 
-// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
+// Trace back a data bar rule to the range it was applied to in a spreadsheet.
 
-const worksheet = Api.GetActiveSheet();
+let worksheet = Api.GetActiveSheet();
 
-worksheet.GetRange('A1').SetValue('Sales Data');
-worksheet.GetRange('A2').SetValue(100);
-worksheet.GetRange('A3').SetValue(250);
-worksheet.GetRange('A4').SetValue(150);
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(100);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(150);
 
-const dataRange = worksheet.GetRange('A2:A4');
-const formatConditions = dataRange.GetFormatConditions();
-const condition = formatConditions.Add('xlCellValue', 'xlGreater', '200');
-condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
+let dataRange = worksheet.GetRange("A2:A4");
+let formatConditions = dataRange.GetFormatConditions();
 
-const parentRange = condition.GetParent();
-worksheet.GetRange('C1').SetValue('Parent range:');
-worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
+let dataBar = formatConditions.AddDatabar();
+
+let parent = dataBar.GetParent();
+
+worksheet.GetRange("C1").SetValue("Parent range:");
+worksheet.GetRange("C2").SetValue(parent.GetAddress());
 ```

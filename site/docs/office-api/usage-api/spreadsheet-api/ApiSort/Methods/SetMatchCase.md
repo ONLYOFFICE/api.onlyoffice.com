@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetMatchCase(matchCase);
 ```
 
-`expression` - A variable that represents a [ApiSort](../ApiSort.md) class.
+`expression` - A variable that represents an [ApiSort](../ApiSort.md) class.
 
 ## Parameters
 

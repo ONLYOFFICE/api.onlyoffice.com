@@ -1,10 +1,12 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts
+---
+
 # Plugins
 
 Enumerations for plugin status and supported locales.
 
 ## PluginStatus
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts#L27)
 
 Defines the supported plugin statuses.
 
@@ -29,8 +31,6 @@ Plugin is disabled and hidden from the user interface
 ***
 
 ## PluginLocale
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts#L38)
 
 Defines the supported plugin locales.
 

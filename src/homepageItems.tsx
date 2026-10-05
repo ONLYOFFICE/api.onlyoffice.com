@@ -51,7 +51,7 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink:'/docs/ai/samples/spreadsheet-editor/insert-pivot-table/',
+      viewLink:'/docs/ai/samples/spreadsheet-editor/insert-pivot-table',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Plugins', variant: 'blue' },
@@ -73,7 +73,7 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink:'/docs/docs-api/samples/automation-api/working-with-comments/',
+      viewLink:'/docs/docs-api/samples/automation-api/working-with-comments',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Integration', variant: 'purple' },

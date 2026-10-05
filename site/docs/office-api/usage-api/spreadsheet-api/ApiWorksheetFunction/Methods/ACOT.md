@@ -8,7 +8,7 @@ Returns the arccotangent of a number, in radians in the range from 0 to Pi.
 expression.ACOT(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

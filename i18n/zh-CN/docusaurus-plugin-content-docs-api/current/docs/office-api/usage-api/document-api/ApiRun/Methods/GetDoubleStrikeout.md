@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 确定文档中的文本是否有双删除线。

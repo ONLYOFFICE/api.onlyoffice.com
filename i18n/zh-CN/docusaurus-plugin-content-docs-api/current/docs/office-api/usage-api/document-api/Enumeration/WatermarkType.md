@@ -17,7 +17,7 @@
 设置文档中水印的类型。
 
 ```javascript editor-docx
-// How to set a watermark type.
+// How do I set the watermark type?
 
 // Set type in watermark settings to "text".
 

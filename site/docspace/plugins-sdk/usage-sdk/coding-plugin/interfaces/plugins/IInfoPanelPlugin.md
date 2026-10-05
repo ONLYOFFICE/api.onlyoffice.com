@@ -1,6 +1,8 @@
-# IInfoPanelPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IInfoPanelPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IInfoPanelPlugin.ts#L88)
+# IInfoPanelPlugin
 
 The plugin that is embedded as a separate tab in the file info panel.
 

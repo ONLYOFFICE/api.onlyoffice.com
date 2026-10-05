@@ -1,7 +1,9 @@
 # GetSpeed
 
 返回切换速度（类似于 PowerPoint VBA 的 Speed 属性）。
+
 根据 OOXML spd 属性逻辑将持续时间映射为速度：
+
 - fast（快）：duration \<= 500ms
 - medium（中）：500ms \< duration \<= 750ms
 - slow（慢）：duration \> 750ms

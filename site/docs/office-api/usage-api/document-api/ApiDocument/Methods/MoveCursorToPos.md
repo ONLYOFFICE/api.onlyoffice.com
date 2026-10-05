@@ -1,6 +1,7 @@
 # MoveCursorToPos
 
 Moves a cursor to a specified position of the current document.
+
 If there is any selection in the document, it will be removed.
 
 ## Syntax
@@ -9,7 +10,7 @@ If there is any selection in the document, it will be removed.
 expression.MoveCursorToPos(nPos);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

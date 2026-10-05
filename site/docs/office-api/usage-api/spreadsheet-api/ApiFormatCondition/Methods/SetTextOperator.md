@@ -8,7 +8,7 @@ Sets the text operator for text-based conditional formatting rules.
 expression.SetTextOperator(TextOperator);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 

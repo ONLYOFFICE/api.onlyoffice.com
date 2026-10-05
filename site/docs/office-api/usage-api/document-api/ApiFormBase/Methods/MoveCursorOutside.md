@@ -8,7 +8,7 @@ Places a cursor before/after the current form.
 expression.MoveCursorOutside(isAfter);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 
