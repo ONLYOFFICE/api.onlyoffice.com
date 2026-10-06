@@ -49,12 +49,12 @@ This means an SDK method was called on an instance whose frame isn't ready yet, 
 
 ### A method returned an error, but the promise didn't reject
 
-Instance methods reject on SDK-side errors, such as a timeout, a disconnected frame, or a method that isn't available in the current mode (`MODE_MISMATCH`). On a portal that flags method errors (client 4.0+), they also reject with the `API_ERROR` code when a DocSpace API call fails. In two cases, a failed call still resolves instead of rejecting:
+Instance methods reject only on SDK-side errors, such as a timeout, a disconnected frame, or a method that isn't available in the current mode (`MODE_MISMATCH`). When a DocSpace API call fails, the portal sends the error back as a regular method result, and the promise resolves with it:
 
-- on a portal older than client 4.0, the portal sends the error back as a regular method result: an object with `message`, `name`, `code`, and `status` fields, or an empty object `{}` for some errors;
-- `login()` and `createRoom()` keep the older contract on every portal version and resolve with a `{ status, message }` object.
+- for HTTP errors, the result is an object with `message`, `name`, `code`, and `status` fields;
+- for some other errors, the result is an empty object `{}`, so checking `status` alone isn't enough.
 
-This means `try`/`catch` alone doesn't catch every failure. To detect success reliably, check for a field that a successful result always has, such as `id`:
+This means `try`/`catch` catches only SDK-side errors. To detect success reliably, check for a field that a successful result always has, such as `id`:
 
 ```js
 const room = await instance.createRoom("Project room", 5);
@@ -77,7 +77,6 @@ When an instance method rejects, the error has one of the following codes:
 | `UPLOAD_FAILED` | A file upload failed. |
 | `PARSE_ERROR` | A message from the frame couldn't be parsed. |
 | `TOKEN_RESOLVE_FAILED` | The SDK couldn't get an access token. |
-| `API_ERROR` | The portal reported a failure while executing the method. The error carries the HTTP `status` and the portal's error payload. Requires client 4.0+. |
 
 ## Debugging tips
 

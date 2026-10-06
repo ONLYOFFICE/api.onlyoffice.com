@@ -49,12 +49,12 @@ SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加�
 
 ### 方法返回了错误，但 Promise 没有被拒绝 {#a-method-returned-an-error-but-the-promise-didnt-reject}
 
-实例方法会因 SDK 端的错误而拒绝，例如超时、框架已断开连接，或当前模式不支持该方法（`MODE_MISMATCH`）。在会标记方法错误的门户（客户端 4.0+）上，DocSpace API 调用失败时，方法也会以 `API_ERROR` 代码拒绝。在以下两种情况下，失败的调用仍会正常解析，而不是拒绝：
+实例方法仅在 SDK 端发生错误时才会拒绝，例如超时、框架已断开连接，或当前模式不支持该方法（`MODE_MISMATCH`）。当 DocSpace API 调用失败时，门户会将错误作为普通的方法结果返回，Promise 会以该结果正常解析：
 
-- 在低于客户端 4.0 的门户上，门户会将错误作为普通的方法结果返回：一个包含 `message`、`name`、`code` 和 `status` 字段的对象，某些错误则返回空对象 `{}`；
-- `login()` 和 `createRoom()` 在所有门户版本上都保留旧的约定，会解析为 `{ status, message }` 对象。
+- 对于 HTTP 错误，结果是一个包含 `message`、`name`、`code` 和 `status` 字段的对象；
+- 对于其他某些错误，结果是空对象 `{}`，因此仅检查 `status` 是不够的。
 
-这意味着仅靠 `try`/`catch` 无法捕获所有失败。要可靠地判断是否成功，请检查成功结果中必定存在的字段，例如 `id`：
+这意味着 `try`/`catch` 只能捕获 SDK 端的错误。要可靠地判断是否成功，请检查成功结果中必定存在的字段，例如 `id`：
 
 ```js
 const room = await instance.createRoom("Project room", 5);
@@ -77,7 +77,6 @@ if (!room?.id) {
 | `UPLOAD_FAILED` | 文件上传失败。 |
 | `PARSE_ERROR` | 无法解析来自框架的消息。 |
 | `TOKEN_RESOLVE_FAILED` | SDK 无法获取访问令牌。 |
-| `API_ERROR` | 门户在执行方法时报告了失败。错误中包含 HTTP `status` 和门户的错误数据。需要客户端 4.0+。 |
 
 ## 调试技巧 {#debugging-tips}
 

@@ -154,7 +154,6 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       // Called when the SDK loads the project room
       function onWorkspaceReady() {
-        document.getElementById("ds-frame").style.display = "block"
         document.getElementById("orderForm").classList.add("hidden")
         document.getElementById("workspace").classList.remove("hidden")
       }
@@ -195,6 +194,8 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       // Revoke the freelancer's access and archive the room
       async function completeOrder() {
+        const button = document.getElementById("completeOrderBtn")
+        button.disabled = true
         try {
           await setRoomAccessRights(NO_ACCESS)
           const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
@@ -209,9 +210,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
           if (!response.ok) throw new Error(`Failed to archive the room: HTTP ${response.status}`)
         } catch (error) {
           console.error(error)
+          button.disabled = false
           return alert("Error completing order")
         }
-        document.getElementById("completeOrderBtn").disabled = true
         alert("Order completed: the room is archived")
       }
 
@@ -236,6 +237,10 @@ The example requests an access token from `/api/2.0/authentication` with a login
         .then(data => {
           token = data.response.token
           fetchUsers()
+        })
+        .catch(error => {
+          console.error("Authentication failed:", error)
+          alert("Authentication failed: check the login and password")
         })
 
         initDocSpace()
@@ -269,12 +274,16 @@ document.addEventListener("DOMContentLoaded", function () {
     token = data.response.token
     fetchUsers()
   })
+  .catch(error => {
+    console.error("Authentication failed:", error)
+    alert("Authentication failed: check the login and password")
+  })
 
   initDocSpace()
 })
 ```
 
-- Authenticates the current user and stores the access token
+- Authenticates the current user and stores the access token. If authentication fails, logs the error and alerts the user instead of failing silently.
 - Loads the list of freelancers once the token is available and initializes the SDK for the project form
 
 ### 2. Fetch available freelancers
@@ -374,7 +383,6 @@ async function createOrder() {
 
 ``` ts
 function onWorkspaceReady() {
-  document.getElementById("ds-frame").style.display = "block"
   document.getElementById("orderForm").classList.add("hidden")
   document.getElementById("workspace").classList.remove("hidden")
 }
@@ -427,6 +435,8 @@ async function confirmUser() {
 
 ``` ts
 async function completeOrder() {
+  const button = document.getElementById("completeOrderBtn")
+  button.disabled = true
   try {
     await setRoomAccessRights(NO_ACCESS)
     const response = await fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
@@ -441,13 +451,13 @@ async function completeOrder() {
     if (!response.ok) throw new Error(`Failed to archive the room: HTTP ${response.status}`)
   } catch (error) {
     console.error(error)
+    button.disabled = false
     return alert("Error completing order")
   }
-  document.getElementById("completeOrderBtn").disabled = true
   alert("Order completed: the room is archived")
 }
 ```
 
 - Removes the freelancer from the room: access level 0 (None) revokes their access
 - Archives the room, so the project is closed and no longer editable
-- Stops and reports an error if either request fails
+- Disables the **Complete Order** button while the requests run. If either request fails, enables it again and reports the error.

@@ -144,14 +144,21 @@ The example requests an access token from `/api/2.0/authentication` with a login
       async function createApprovalRequest() {
         const title = document.getElementById("documentTitle").value
         if (!title) return alert("Please enter a document title")
-        document.getElementById("createRequestBtn").disabled = true
+        const button = document.getElementById("createRequestBtn")
+        button.disabled = true
 
         const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
-        if (!room?.id) return alert("Error creating room")
+        if (!room?.id) {
+          button.disabled = false
+          return alert("Error creating room")
+        }
         roomId = room.id
 
         const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-        if (!file?.id) return alert("Error creating document")
+        if (!file?.id) {
+          button.disabled = false
+          return alert("Error creating document")
+        }
 
         await docSpace.createTag("Pending review")
         await docSpace.addTagsToRoom(roomId, ["Pending review"])
@@ -198,7 +205,6 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       // Called when the SDK loads the review workspace
       function onWorkspaceReady() {
-        document.getElementById("ds-frame").style.display = "block"
         document.getElementById("decisionButtons").classList.remove("hidden")
       }
 
@@ -256,6 +262,10 @@ The example requests an access token from `/api/2.0/authentication` with a login
           token = data.response.token
           fetchReviewers()
         })
+        .catch(error => {
+          console.error("Authentication failed:", error)
+          alert("Authentication failed: check the login and password")
+        })
 
         initDocSpace()
       })
@@ -288,12 +298,16 @@ document.addEventListener("DOMContentLoaded", function () {
     token = data.response.token
     fetchReviewers()
   })
+  .catch(error => {
+    console.error("Authentication failed:", error)
+    alert("Authentication failed: check the login and password")
+  })
 
   initDocSpace()
 })
 ```
 
-- Authenticates the current user and stores the access token
+- Authenticates the current user and stores the access token. If authentication fails, logs the error and alerts the user instead of failing silently.
 - Loads the list of reviewers and initializes the SDK for the submission form
 
 ### 2. Fetch available reviewers
@@ -338,14 +352,21 @@ async function fetchReviewers() {
 async function createApprovalRequest() {
   const title = document.getElementById("documentTitle").value
   if (!title) return alert("Please enter a document title")
-  document.getElementById("createRequestBtn").disabled = true
+  const button = document.getElementById("createRequestBtn")
+  button.disabled = true
 
   const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
-  if (!room?.id) return alert("Error creating room")
+  if (!room?.id) {
+    button.disabled = false
+    return alert("Error creating room")
+  }
   roomId = room.id
 
   const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-  if (!file?.id) return alert("Error creating document")
+  if (!file?.id) {
+    button.disabled = false
+    return alert("Error creating document")
+  }
 
   await docSpace.createTag("Pending review")
   await docSpace.addTagsToRoom(roomId, ["Pending review"])
@@ -356,7 +377,7 @@ async function createApprovalRequest() {
 ```
 
 - Creates a custom room (type `5`) for the approval request and adds the document to it. A custom room is required because it's the only room type that allows the **Review** access. In a collaboration room (type `2`), the portal rejects it with HTTP 403.
-- Checks `id` in the results to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field.
+- Checks `id` in the results to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field. If either call fails, the **Submit for Approval** button is enabled again so the user can retry.
 - Tags the room **Pending review** so its status is visible in the room list
 - Reveals the reviewer selection step
 

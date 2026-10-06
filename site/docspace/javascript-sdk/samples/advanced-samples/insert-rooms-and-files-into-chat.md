@@ -121,7 +121,10 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
       // Hides selector modals and destroys SDK frame if needed
       function returnToChat() {
-        if (docSpace) docSpace.destroyFrame()
+        if (docSpace) {
+          docSpace.destroyFrame()
+          docSpace = null
+        }
         document.getElementById("selectorChoiceModal").style.display = "none"
         document.getElementById("selectorModal").style.display = "none"
 
@@ -275,7 +278,10 @@ function onFileSelectCallback(e) {
 
 ``` ts
 function returnToChat() {
-  if (docSpace) docSpace.destroyFrame()
+  if (docSpace) {
+    docSpace.destroyFrame()
+    docSpace = null
+  }
   document.getElementById("selectorChoiceModal").style.display = "none"
   document.getElementById("selectorModal").style.display = "none"
 
@@ -285,5 +291,5 @@ function returnToChat() {
 ```
 
 - Closes selector modal and cleans up frame
-- `destroyFrame()` leaves a placeholder with the same `frameId`, so the selector can be opened again
+- `destroyFrame()` leaves a placeholder with the same `frameId`, so the selector can be opened again. The instance is cleared afterwards, so closing the choice modal never calls a method on a destroyed instance.
 - Re-enables the **DocSpace** button
