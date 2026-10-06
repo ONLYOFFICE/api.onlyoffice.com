@@ -1,0 +1,67 @@
+.pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid var(--compare-border-color);
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--compare-border-color);
+  background-color: var(--compare-header-bg);
+}
+
+.label {
+  font-size: 13px;
+  color: var(--compare-file-color);
+}
+
+.file {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--compare-label-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--compare-status-color);
+}
+
+.statusError {
+  color: var(--compare-status-error-color);
+}
+
+.editor {
+  width: 100%;
+}
+
+:root {
+  --compare-border-color: #e0e0e0;
+  --compare-header-bg: #f5f5f0;
+  --compare-label-color: #333333;
+  --compare-file-color: #666666;
+  --compare-status-color: #666666;
+  --compare-status-error-color: #cb0000;
+}
+
+html[data-theme="dark"] {
+  --compare-border-color: #474747;
+  --compare-header-bg: #2a2a2a;
+  --compare-label-color: #e0e0e0;
+  --compare-file-color: #aaaaaa;
+  --compare-status-color: #aaaaaa;
+  --compare-status-error-color: #ff6b6b;
+}

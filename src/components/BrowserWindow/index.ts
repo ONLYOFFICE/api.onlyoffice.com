@@ -7,3 +7,4 @@ export { default as ContentControlsExternalToolbar } from "./ExternalToolbars/Co
 export { default as SearchPdfExternalToolbar } from "./ExternalToolbars/SearchPdfExternalToolbar/SearchPdfExternalToolbar";
 export { default as RedactPdfExternalToolbar } from "./ExternalToolbars/RedactPdfExternalToolbar/RedactPdfExternalToolbar";
 export { default as ChangeTextPdfExternalToolbar } from "./ExternalToolbars/ChangeTextPdfExternalToolbar/ChangeTextPdfExternalToolbar";
+export { default as CompareDocumentsEditor } from "./CompareDocumentsEditor/CompareDocumentsEditor";
