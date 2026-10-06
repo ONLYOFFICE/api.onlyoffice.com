@@ -1,225 +1,68 @@
 ---
 sidebar_position: -11
+description: 运行 ONLYOFFICE 文档 Node.js 集成示例，并将其连接到您的 ONLYOFFICE 文档服务器。
+tags: ["Docs", "Integration", "Node.js"]
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Node.js 集成
 
-## 概述
-
-本示例将帮助您把ONLYOFFICE 文档集成到基于Node.js的Web应用程序中。
+Node.js 集成示例是一个小型 Express 应用程序，它可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。在编写您自己的集成之前，运行此示例即可看到一个完整可用的集成。
 
 :::warning
-本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+本示例仅用于测试。它没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它的人都可以读取和修改其中的文件。请勿在公共服务器上运行此示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 先决条件
 
-在使用测试示例时，请牢记以下安全方面的内容：
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **Node.js**：请参阅[官方网站](https://nodejs.org/en/download/)。
+- **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-- 由于无需授权，存储不受未经授权访问的保护。
-- 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
+## 步骤1. 下载示例
 
-## 安装
+克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/nodejs)，进入 Node.js 示例目录，并获取其子模块：
 
-<Tabs>
-    <TabItem value="windows" label="Windows">
-        ### 步骤1. 安装ONLYOFFICE 文档
+```sh
+git clone --depth 1 https://github.com/ONLYOFFICE/document-server-integration
+cd document-server-integration/web/documentserver-example/nodejs
+git submodule update --init --depth 1 .
+```
 
-        下载并安装ONLYOFFICE 文档（打包为文档服务器）：
+## 步骤2. 配置连接
 
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
+打开 `config/default.json` 文件并编辑以下键。它们都位于 `server` 对象中：
 
-        如需了解如何在Windows系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_nodejs_example)。
+```json
+{
+  "server": {
+    "siteUrl": "http://documentserver/",
+    "storageFolder": "./files",
+    "exampleUrl": null,
+    "token": {
+      "enable": true,
+      "secret": "secret"
+    }
+  }
+}
+```
 
-        ### 步骤2. 下载用于集成编辑器的Node.js代码
+- `siteUrl`：安装了 ONLYOFFICE 文档的服务器地址。请将 `documentserver` 替换为该服务器的名称或 IP 地址。
+- `storageFolder`：示例创建和存储文件的文件夹。您可以设置一个绝对路径。在 JSON 中，每个反斜杠都需要转义，例如 `D:\\folder`。运行示例的用户需要对该文件夹具有读写权限。
+- `token.enable` 和 `token.secret`：必须与 ONLYOFFICE 文档的 JWT 设置一致。ONLYOFFICE 文档默认启用 JWT，因此请将 `enable` 设置为 `true`，并将 `secret` 的值替换为您服务器的[密钥](/docs/docs-api/additional-api/signature/signature.md)。
+- `exampleUrl`：ONLYOFFICE 文档访问示例时使用的地址。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为您在浏览器中打开的地址（例如 `localhost`）在那里指向的是其他位置。
 
-        下载包含Node.js示例的压缩包并解压，或者直接从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/nodejs)获取源代码：
+如果您想尝试配置编辑器，请修改 `views/config.ejs` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-        ``` sh
-        curl --output Node.js.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip
-        tar -xf Node.js.Example.zip
-        ```
+## 步骤3. 安装依赖项并运行示例
 
-        将当前目录切换到项目目录：
+```sh
+npm install
+npm start
+```
 
-        ``` sh
-        cd "Node.js Example"
-        ```
+在浏览器中打开 `http://localhost:3000`。您将看到示例的起始页面，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单。
 
-        要将编辑器连接到您的网站，请在*config/default.json*文件中指定编辑器的安装路径和存储文件夹的路径：
+## 故障排除
 
-        ``` json
-        {
-          "storageFolder": "./files",
-          "storagePath": "/files",
-          "siteUrl": "https://documentserver/"
-        }
-        ```
-
-        其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storageFolder`和`storagePath`是将创建和存储文件的路径。您可以设置一个绝对路径，例如`D:\\folder`。请注意，在Windows操作系统中，必须使用双反斜杠作为分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
-
-        如果您想尝试配置编辑器，请修改*views/editor.ejs*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
-
-        ### 步骤3. 安装Node.js环境
-
-        安装用于运行Node.js项目的**Node.js**环境。请访问[官方网站](https://nodejs.org/en/download/)，根据您的Windows操作系统（32位或64位）选择正确的版本进行安装。
-
-        ### 步骤4. 配置JWT
-
-        打开*config/default.json*文件并启用JWT：
-
-        ``` json
-        {
-          "server": {
-            "token": {
-              "enable": true
-            }
-          }
-        }
-        ```
-
-        同样也要与ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
-
-        ``` json
-        {
-          "server": {
-            "token": {
-              "secret": "secret"
-            }
-          }
-        }
-        ```
-
-        ### 步骤5. 运行Node.js代码
-
-        Node.js附带了一个包管理器，即**node包管理器(npm)**，它会随Node.js一起自动安装。要运行Node.js代码，请使用以下*npm*命令安装项目模块：
-
-        ``` sh
-        npm install
-        ```
-
-        项目文件夹中将会创建一个新的*node\_modules*文件夹。
-
-        使用**命令提示符**运行项目：
-
-        ``` sh
-        node bin/www
-        ```
-
-        在您的浏览器中使用以下地址查看结果：
-
-        ``` sh
-        http://localhost:3000
-        ```
-
-        ### 步骤6. 检查可访问性
-
-        如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
-    </TabItem>
-    <TabItem value="linux" label="Linux">
-        ### 步骤1. 安装ONLYOFFICE 文档
-
-        下载并安装ONLYOFFICE 文档（打包为文档服务器）：
-
-        [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-        如需了解如何在Linux系统上安装ONLYOFFICE 文档，请查看[详细指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_nodejs_example)。
-
-        ### 步骤2. 安装先决条件并运行带有编辑器的网站
-
-        1. 安装**Node.js**：
-
-           ``` sh
-           curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-           sudo apt-get install -y nodejs
-           ```
-
-        2. 下载包含Node.js示例的压缩包并解压，或者直接从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/nodejs)获取源代码：
-
-           ``` sh
-           curl --output Node.js.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip
-           unzip Node.js.Example.zip
-           ```
-
-        3. 将当前目录切换到项目目录：
-
-           ``` sh
-           cd "Node.js Example"
-           ```
-
-        4. 安装依赖项：
-
-           ``` sh
-           npm install
-           ```
-
-        5. 编辑*config/default.json*配置文件。指定安装了ONLYOFFICE 文档的本地服务器名称。
-
-           ``` sh
-           nano config/default.json
-           ```
-
-           编辑以下内容：
-
-           ``` json
-           {
-             "storageFolder": "./files",
-             "storagePath": "/files",
-             "siteUrl": "https://documentserver/"
-           }
-           ```
-
-           其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storageFolder`和`storagePath`是将创建和存储文件的路径。请注意，您必须对该文件夹具有读写权限。如果没有，请使用以下命令：
-
-           ``` sh
-           sudo chmod -R ugo+rw /{path}
-           ```
-
-           启用JWT：
-
-           ``` json
-           {
-             "server": {
-               "token": {
-                 "enable": true
-               }
-             }
-           }
-           ```
-
-           同样也要与ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
-
-           ``` json
-           {
-             "server": {
-               "token": {
-                 "secret": "secret"
-               }
-             }
-           }
-           ```
-
-           您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址或DNS可以在云控制台的**实例**部分找到。
-
-        6. 使用Node.js运行项目：
-
-           ``` sh
-           node bin/www
-           ```
-
-        7. 在您的浏览器中使用以下地址查看结果：
-
-           ``` sh
-           http://localhost:3000
-           ```
-
-        ### 步骤3. 检查可访问性
-
-        如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
-    </TabItem>
-</Tabs>
+- **文档安全令牌的格式不正确**：示例中未启用 JWT（`token.enable` 为 `false`），或者 `token.secret` 与 ONLYOFFICE 文档的密钥不一致。
+- **下载失败**：ONLYOFFICE 文档无法访问示例。请在 `config/default.json` 中将 `exampleUrl` 设置为 ONLYOFFICE 文档可以解析的地址。
