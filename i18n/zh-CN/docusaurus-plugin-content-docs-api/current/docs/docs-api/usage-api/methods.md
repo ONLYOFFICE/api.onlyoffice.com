@@ -506,7 +506,7 @@ docEditor.insertImage({
 
 ## setRequestedDocument
 
-选择用于比较、合并或插入文本的文档。该方法通常在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件处理程序中调用。也可以在 [onDocumentReady](./config/events.md#ondocumentready) 事件触发后直接调用，例如无需用户操作即可比较文档。
+选择用于比较、合并或插入文本的文档。该方法通常在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件处理程序中调用。也可以在 [onDocumentReady](./config/events.md#ondocumentready) 事件触发后直接调用，例如无需用户操作即可比较文档。请参阅[比较文档](../samples/comparing-documents.md)示例。
 
   ``` ts
   docEditor.setRequestedDocument(options);
