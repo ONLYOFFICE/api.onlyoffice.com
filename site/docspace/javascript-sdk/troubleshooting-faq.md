@@ -1,5 +1,4 @@
 ---
-slug: /docspace/javascript-sdk/get-started/troubleshooting-faq
 description: Common errors and fixes, debugging tips, and known limitations when integrating the DocSpace Embed SDK.
 tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
 ---
@@ -20,7 +19,7 @@ The frame shows the same CSP error page for init failures that have nothing to d
 
 ### Cross-origin / "domain not allowed" errors
 
-The SDK doesn't rely on traditional CORS response headers. Instead, the embedding origin must be explicitly whitelisted in DocSpace. If requests from your page are being rejected, see [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins). The SDK compares only the host and port, case-insensitively, so add the entry as a host and port, without a scheme or path. An entry with a path, such as `https://example.com/app`, never matches, and subdomains aren't matched automatically.
+The SDK doesn't rely on traditional CORS response headers. Instead, the embedding origin must be explicitly added to the DocSpace allowlist. If requests from your page are being rejected, see [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins). The SDK compares only the host and port, case-insensitively, so add the entry as a host and port, without a scheme or path. An entry with a path, such as `https://example.com/app`, never matches, and subdomains aren't matched automatically.
 
 ### Blank iframe (frame loads but shows nothing)
 
@@ -28,7 +27,7 @@ Check these in order:
 
 1. The container element referenced by `frameId` exists in the DOM *before* `initManager`/`initEditor` is called. If there's no element with this ID, the init method returns `null` and inserts nothing.
 2. `src` is set and points at a reachable DocSpace instance served over HTTPS. When `src` is empty or isn't a valid URL, the SDK logs `SDK Warning: src is empty` or `src "..." is not a valid URL` to the console. Mixed content (an HTTPS page loading an HTTP `src`) is silently blocked by the browser. See [Prerequisites](./get-started/get-started.md#prerequisites).
-3. The origin is whitelisted, per [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins).
+3. The origin is in the allowlist, per [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins).
 4. The browser console and the `onAppError` event (see [Debugging tips](#debugging-tips)) for the actual error. A blank frame is usually a swallowed init error rather than a rendering issue.
 
 ### Authentication loops (user is repeatedly asked to sign in)
@@ -50,13 +49,12 @@ This means an SDK method was called on an instance whose frame isn't ready yet, 
 
 ### A method returned an error, but the promise didn't reject
 
-Instance methods reject only on SDK-side errors, such as a timeout, a disconnected frame, or a method that isn't available in the current mode. When a DocSpace API call fails, the portal sends the error back as a regular method result, so the promise resolves:
+Instance methods reject on SDK-side errors, such as a timeout, a disconnected frame, or a method that isn't available in the current mode (`MODE_MISMATCH`). On a portal that flags method errors (client 4.0+), they also reject with the `API_ERROR` code when a DocSpace API call fails. In two cases, a failed call still resolves instead of rejecting:
 
-- for HTTP errors, the result is an object with `message`, `name`, `code`, and `status` fields;
-- for some errors, the result is an empty object `{}`;
-- for a method that the current mode doesn't support, the result is the `"Wrong method for this mode"` string.
+- on a portal older than client 4.0, the portal sends the error back as a regular method result: an object with `message`, `name`, `code`, and `status` fields, or an empty object `{}` for some errors;
+- `login()` and `createRoom()` keep the older contract on every portal version and resolve with a `{ status, message }` object.
 
-This means `try`/`catch` catches only SDK errors, and checking `result.status` catches only HTTP errors. To detect success reliably, check for a field that a successful result always has, such as `id`:
+This means `try`/`catch` alone doesn't catch every failure. To detect success reliably, check for a field that a successful result always has, such as `id`:
 
 ```js
 const room = await instance.createRoom("Project room", 5);
@@ -74,11 +72,12 @@ When an instance method rejects, the error has one of the following codes:
 | `TIMEOUT` | The frame didn't answer within `methodTimeout` (30 seconds by default). |
 | `DISCONNECTED` | The frame isn't connected (`Message bus is not connected with frame`), was reloaded (`Frame reloaded`), or was destroyed (`Frame destroyed`). |
 | `CSP_VIOLATION` | The embedding origin isn't in the DocSpace CSP allowlist. |
-| `MODE_MISMATCH` | The method isn't available in the current mode. For example, `upload()` and `setCustomActions()` work only in the Forms mode, and `navigateSection()` works only in the Forms and Personal modes. |
+| `MODE_MISMATCH` | The method isn't available in the current mode. For example, `upload()` and `setCustomActions()` work only in the Forms mode, and `navigateSection()` works only in the Forms and Personal modes. The same code is used for `login()` and `logout()` in the OAuth mode. |
 | `INVALID_CONFIG` | The frame config is invalid. |
 | `UPLOAD_FAILED` | A file upload failed. |
 | `PARSE_ERROR` | A message from the frame couldn't be parsed. |
 | `TOKEN_RESOLVE_FAILED` | The SDK couldn't get an access token. |
+| `API_ERROR` | The portal reported a failure while executing the method. The error carries the HTTP `status` and the portal's error payload. Requires client 4.0+. |
 
 ## Debugging tips
 

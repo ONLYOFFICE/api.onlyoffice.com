@@ -9,35 +9,38 @@ This example demonstrates how to embed ONLYOFFICE DocSpace in a tabbed interface
 
 ## Before you start
 
-The app runs on the development server at `http://localhost:3000`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
+The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
 
 ## Script execution steps
 
 ### 1. Create the project
 
-Create a new React + TypeScript project and move into it:
+Create a new React + TypeScript project with [Vite](https://vite.dev/) and move into it:
 
 ``` sh
-npx create-react-app docspace-tabs --template typescript
+npm create vite@latest docspace-tabs -- --template react-ts
 cd docspace-tabs
+npm install
 ```
+
+The current Vite template requires Node.js 20.19+ or 22.12+.
 
 ### 2. Prepare environment variables
 
 Create a `.env` file in the project root:
 
 ``` bash
-REACT_APP_DOCSPACE_URL=https://yourportal.onlyoffice.com
-REACT_APP_DOCSPACE_USER_LOGIN=user@example.com
-REACT_APP_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
+VITE_DOCSPACE_URL={PORTAL_SRC}
+VITE_DOCSPACE_USER_LOGIN=user@example.com
+VITE_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
 ```
 
-- `REACT_APP_DOCSPACE_URL` - your DocSpace portal URL (root).
-- `REACT_APP_DOCSPACE_USER_LOGIN` - user login for authentication.
-- `REACT_APP_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see Create password hash sample).
+- `VITE_DOCSPACE_URL` - your DocSpace portal URL (root).
+- `VITE_DOCSPACE_USER_LOGIN` - user login for authentication.
+- `VITE_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see the [Create password hash](../basic-samples/create-hash.md) sample).
 
 :::warning
-Create React App embeds every `REACT_APP_*` variable into the client bundle, so anyone who opens the page can read the password hash. Use this approach for local demos only. In production, get the credentials or a token on your backend.
+Vite embeds every `VITE_*` variable into the client bundle, so anyone who opens the page can read the password hash. Use this approach for local demos only. In production, get the credentials or a token on your backend.
 :::
 
 ### 3. Install Tailwind CSS (v3) and configure PostCSS
@@ -52,7 +55,7 @@ npm i -D tailwindcss@3.4.14 postcss@8 autoprefixer@10
 
 ``` ts
 // postcss.config.js
-module.exports = {
+export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
@@ -64,8 +67,8 @@ module.exports = {
 
 ``` ts
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: { extend: {} },
   plugins: [],
 };
@@ -86,14 +89,14 @@ html, body, #root { height: 100%; margin: 0; }
 Install the React wrapper and the core SDK:
 
 ``` bash
-npm i @onlyoffice/docspace-sdk-js @onlyoffice/docspace-react
+npm i @onlyoffice/docspace-react @onlyoffice/docspace-sdk-js
 ```
 - `@onlyoffice/docspace-react` mounts the iframe, wires SDK events, and pulls in the core SDK at runtime.
 - `@onlyoffice/docspace-sdk-js` is installed explicitly only to import the `SDKInstance` type. Without TypeScript, the React wrapper alone is enough.
 
 ### 5. Create the tab iframe component
 
-Add a reusable component that embeds DocSpace and logs in on `onAppReady`. The component gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component.
+Add a reusable component that embeds DocSpace and logs in on `onAppReady`. The component gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component. The config has no `src` because the component takes it from the `url` prop.
 
 `src/components/TabDocSpace.tsx`
 
@@ -101,7 +104,7 @@ Add a reusable component that embeds DocSpace and logs in on `onAppReady`. The c
   <summary>Create the tab iframe component</summary>
 
 ``` tsx
-import React, { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { DocSpace } from "@onlyoffice/docspace-react";
 import type { SDKInstance } from "@onlyoffice/docspace-sdk-js";
 
@@ -136,14 +139,14 @@ export default function TabDocSpace({
     }
   }
 
-  const config = {
+  // keep the config stable so switching tabs doesn't recreate the frame
+  const config = useMemo(() => ({
     frameId,
     width: "100%",
     height: "100%",
-    src: portalUrl,
     mode: "manager" as const, // all tabs use manager mode
     events: { onAppReady: handleAppReady },
-  };
+  }), [frameId]);
 
   return (
     <div className="w-full h-full" style={{ display: visible ? "block" : "none" }}>
@@ -169,7 +172,7 @@ Render a tab bar with + New Tab and per-tab close button. The active tab shows i
   <summary>Render the tabs</summary>
 
 ``` tsx
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import TabDocSpace from "../../components/TabDocSpace";
 
 type Tab = {
@@ -179,9 +182,9 @@ type Tab = {
 };
 
 export default function TabsPage() {
-  const portal = process.env.REACT_APP_DOCSPACE_URL || "";
-  const login = process.env.REACT_APP_DOCSPACE_USER_LOGIN || "";
-  const passwordHash = process.env.REACT_APP_DOCSPACE_USER_PASSWORD_HASH || "";
+  const portal = import.meta.env.VITE_DOCSPACE_URL || "";
+  const login = import.meta.env.VITE_DOCSPACE_USER_LOGIN || "";
+  const passwordHash = import.meta.env.VITE_DOCSPACE_USER_PASSWORD_HASH || "";
 
   const initialTabs: Tab[] = useMemo(
     () => [
@@ -234,7 +237,7 @@ export default function TabsPage() {
                 Open DocSpace
               </a>
             ) : (
-              <span className="text-xs text-red-600">Set REACT_APP_DOCSPACE_URL in .env</span>
+              <span className="text-xs text-red-600">Set VITE_DOCSPACE_URL in .env</span>
             )}
             <button
               onClick={addTab}
@@ -314,7 +317,6 @@ export default function TabsPage() {
 Replace `src/App.tsx`:
 
 ``` tsx
-import React from "react";
 import TabsPage from "./pages/Tabs";
 
 export default function App() {
@@ -322,14 +324,14 @@ export default function App() {
 }
 ```
 
-Ensure `src/index.tsx` imports `./index.css` (default CRA does).
+Make sure `src/main.tsx` imports `./index.css` (the Vite template does this by default).
 
 ### 8. Run the app
 
 Start the dev server:
 
 ``` bash
-npm start
+npm run dev
 ```
 
-Open `http://localhost:3000`. You should see a tab with DocSpace in manager mode. Click **+ New Tab** to open another DocSpace instance, and switch between tabs or close them with **✕**.
+Open `http://localhost:5173`. You should see a tab with DocSpace in manager mode. Click **+ New Tab** to open another DocSpace instance, and switch between tabs or close them with **✕**.

@@ -16,7 +16,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <summary>Full example</summary>
 
 ```html
-<!-- Step 1: HTML Setup -->
+<!-- HTML Setup -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,13 +44,13 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     </style>
   </head>
   <body>
-    <!-- Step 2: Command info block -->
+    <!-- Command info block -->
     <div class="commands">
       <p><b>/docspace room</b> to open room selector</p>
       <p><b>/docspace file</b> to open file selector</p>
     </div>
 
-    <!-- Step 3: Chat interface -->
+    <!-- Chat interface -->
     <div class="chat-container">
       <div class="chat-messages" id="messages"></div>
       <div class="input-container">
@@ -60,7 +60,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       </div>
     </div>
 
-    <!-- Step 4: Selector mode modal -->
+    <!-- Selector mode modal -->
     <div class="selector-modal" id="selectorChoiceModal">
       <div class="selector-options">
         <button onclick="openRoomSelector()">Select Room</button>
@@ -69,12 +69,12 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       </div>
     </div>
 
-    <!-- Step 5: File/room selector view -->
+    <!-- File/room selector view -->
     <div class="selector-modal" id="selectorModal">
       <iframe id="ds-selector" class="selector-frame"></iframe>
     </div>
 
-    <!-- Step 6: Embed SDK Logic -->
+    <!-- Embed SDK Logic -->
     <script>
       let docSpace
       const portalSrc = "{PORTAL_SRC}"
@@ -212,8 +212,6 @@ function sendMessage() {
 - User types a message or command
 - Commands like `/docspace room` and `/docspace file` trigger specific SDK selectors
 
----
-
 ### 2. Open selector mode modal
 
 ``` ts
@@ -226,8 +224,6 @@ function openSelectorChoice() {
 
 - Disables the **DocSpace** button and shows the room/file choice
 - Both modals are hidden by the `.selector-modal` style until the script shows them
-
----
 
 ### 3. Show and destroy SDK selector
 

@@ -26,7 +26,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
   <summary>Full example</summary>
 
 ```html
-<!-- Step 1: HTML Setup -->
+<!-- HTML Setup -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,20 +53,20 @@ The example requests an access token from `/api/2.0/authentication` with a login
     <div class="container">
       <h1>Document Approval Workflow</h1>
 
-      <!-- Step 2: Submission form -->
+      <!-- Submission form -->
       <div id="createStep">
         <input type="text" id="documentTitle" placeholder="Document title" />
         <button id="createRequestBtn" disabled>Submit for Approval</button>
       </div>
 
-      <!-- Step 3: Reviewer assignment -->
+      <!-- Reviewer assignment -->
       <div id="reviewerStep" class="hidden">
         <h3>Select Reviewer</h3>
         <div id="reviewersContainer"></div>
         <button id="confirmReviewerBtn">Assign Reviewer</button>
       </div>
 
-      <!-- Step 4: Review workspace -->
+      <!-- Review workspace -->
       <div id="workspace" class="hidden">
         <iframe id="ds-frame" style="width: 100%; height: 500px; border: 1px solid #ddd;"></iframe>
         <div id="decisionButtons" class="hidden">
@@ -76,7 +76,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
       </div>
     </div>
 
-    <!-- Step 5: Embed SDK Logic -->
+    <!-- Embed SDK Logic -->
     <script>
       let docSpace
       let token
@@ -98,12 +98,12 @@ The example requests an access token from `/api/2.0/authentication` with a login
           events: {
             onAppReady: rootPath ? onWorkspaceReady : onAppReady
           }
-        };
-        if (rootPath) {
-          config.rootPath = rootPath;
-          config.filter = filter;
         }
-        docSpace = DocSpace.SDK.initManager(config);
+        if (rootPath) {
+          config.rootPath = rootPath
+          config.filter = filter
+        }
+        docSpace = DocSpace.SDK.initManager(config)
       }
 
       // Called when SDK is ready for the submission form
@@ -131,9 +131,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
                 this.classList.add("selected")
                 selectedReviewerId = user.id
                 selectedReviewerEmail = user.email
-              });
+              })
               container.appendChild(item)
-            });
+            })
           }
         } catch (error) {
           console.error("Error fetching reviewers:", error)
@@ -177,7 +177,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
             }],
             notify: true
           })
-        });
+        })
         if (!response.ok) throw new Error(`Failed to update reviewer access: HTTP ${response.status}`)
       }
 
@@ -193,7 +193,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
         document.getElementById("reviewerStep").classList.add("hidden")
         document.getElementById("workspace").classList.remove("hidden")
-        initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+        initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
       }
 
       // Called when the SDK loads the review workspace
@@ -202,12 +202,20 @@ The example requests an access token from `/api/2.0/authentication` with a login
         document.getElementById("decisionButtons").classList.remove("hidden")
       }
 
+      // Lock both decision buttons so the room never gets two status tags
+      function setDecisionButtonsDisabled(disabled) {
+        document.getElementById("approveBtn").disabled = disabled
+        document.getElementById("requestChangesBtn").disabled = disabled
+      }
+
       // Approve the document: swap the room's status tag and drop reviewer access to read-only
       async function approveDocument() {
+        setDecisionButtonsDisabled(true)
         try {
           await setReviewerAccess(READ_ACCESS)
         } catch (error) {
           console.error(error)
+          setDecisionButtonsDisabled(false)
           return alert("Error updating reviewer access")
         }
         await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
@@ -218,13 +226,14 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       // Send the document back to the author for changes
       async function requestChanges() {
+        setDecisionButtonsDisabled(true)
         await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
         await docSpace.createTag("Changes requested")
         await docSpace.addTagsToRoom(roomId, ["Changes requested"])
         alert("Changes requested")
       }
 
-      // Step 6: Wire up buttons and log in on load
+      // Wire up buttons and log in on load
       document.getElementById("createRequestBtn").addEventListener("click", createApprovalRequest)
       document.getElementById("confirmReviewerBtn").addEventListener("click", assignReviewer)
       document.getElementById("approveBtn").addEventListener("click", approveDocument)
@@ -244,9 +253,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
         })
         .then(response => response.json())
         .then(data => {
-          token = data.response.token;
-          fetchReviewers();
-        });
+          token = data.response.token
+          fetchReviewers()
+        })
 
         initDocSpace()
       })
@@ -276,18 +285,16 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   .then(response => response.json())
   .then(data => {
-    token = data.response.token;
-    fetchReviewers();
-  });
+    token = data.response.token
+    fetchReviewers()
+  })
 
   initDocSpace()
-});
+})
 ```
 
 - Authenticates the current user and stores the access token
 - Loads the list of reviewers and initializes the SDK for the submission form
-
----
 
 ### 2. Fetch available reviewers
 
@@ -311,9 +318,9 @@ async function fetchReviewers() {
           this.classList.add("selected")
           selectedReviewerId = user.id
           selectedReviewerEmail = user.email
-        });
+        })
         container.appendChild(item)
-      });
+      })
     }
   } catch (error) {
     console.error("Error fetching reviewers:", error)
@@ -324,8 +331,6 @@ async function fetchReviewers() {
 - Runs right after authentication, while the user fills in the submission form
 - Retrieves the list of platform users
 - Renders them as selectable items used by `assignReviewer()`
-
----
 
 ### 3. Submit the document for approval
 
@@ -359,8 +364,6 @@ async function createApprovalRequest() {
 The `createFile()` TypeScript signature currently marks the fourth `formId` argument as required. If you port this example to TypeScript, pass an empty string: `createFile(roomId, title, templateId, "")`.
 :::
 
----
-
 ### 4. Assign a reviewer with review-only access
 
 ``` ts
@@ -380,7 +383,7 @@ async function setReviewerAccess(access) {
       }],
       notify: true
     })
-  });
+  })
   if (!response.ok) throw new Error(`Failed to update reviewer access: HTTP ${response.status}`)
 }
 
@@ -395,7 +398,7 @@ async function assignReviewer() {
 
   document.getElementById("reviewerStep").classList.add("hidden")
   document.getElementById("workspace").classList.remove("hidden")
-  initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+  initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
 }
 ```
 
@@ -404,16 +407,21 @@ async function assignReviewer() {
 - Waits for the response and stops if the portal rejects the request
 - Opens the review workspace once a reviewer is assigned
 
----
-
 ### 5. Approve the document or request changes
 
 ``` ts
+function setDecisionButtonsDisabled(disabled) {
+  document.getElementById("approveBtn").disabled = disabled
+  document.getElementById("requestChangesBtn").disabled = disabled
+}
+
 async function approveDocument() {
+  setDecisionButtonsDisabled(true)
   try {
     await setReviewerAccess(READ_ACCESS)
   } catch (error) {
     console.error(error)
+    setDecisionButtonsDisabled(false)
     return alert("Error updating reviewer access")
   }
   await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
@@ -423,6 +431,7 @@ async function approveDocument() {
 }
 
 async function requestChanges() {
+  setDecisionButtonsDisabled(true)
   await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
   await docSpace.createTag("Changes requested")
   await docSpace.addTagsToRoom(roomId, ["Changes requested"])
@@ -430,6 +439,7 @@ async function requestChanges() {
 }
 ```
 
+- Disables both decision buttons as soon as one is clicked, so the room never ends up with both the **Approved** and **Changes requested** tags. If updating the reviewer's access fails, the buttons are enabled again.
 - On approval, drops the reviewer's access to read-only and swaps the **Pending review** tag for **Approved**
 - On a change request, swaps the tag to **Changes requested**, leaving the reviewer's access untouched so the author can address the feedback and resubmit. The example doesn't notify the author: the tag is the only status signal.
 - Calling `createTag()` for a tag that already exists is safe: DocSpace returns the existing tag

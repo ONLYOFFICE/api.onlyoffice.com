@@ -22,7 +22,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
   <summary>Full example</summary>
 
 ```html
-<!-- Step 1: HTML Setup -->
+<!-- HTML Setup -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,13 +53,13 @@ The example requests an access token from `/api/2.0/authentication` with a login
     <div class="container">
       <h1>Freelance Platform</h1>
 
-      <!-- Step 2: Project creation form -->
+      <!-- Project creation form -->
       <div id="orderForm">
         <input type="text" id="title" placeholder="Project title" />
         <button id="createOrderBtn" disabled>Create Order</button>
       </div>
 
-      <!-- Step 3: Workspace and freelancer assignment -->
+      <!-- Workspace and freelancer assignment -->
       <div id="workspace" class="workspace hidden">
         <div id="usersList" class="users-list">
           <h3>Select Freelancer</h3>
@@ -74,7 +74,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
       </div>
     </div>
 
-    <!-- Step 4: Embed SDK Logic -->
+    <!-- Embed SDK Logic -->
     <script>
       let docSpace
       let token
@@ -95,12 +95,12 @@ The example requests an access token from `/api/2.0/authentication` with a login
           events: {
             onAppReady: rootPath ? onWorkspaceReady : onInitialReady
           }
-        };
-        if (rootPath) {
-          config.rootPath = rootPath;
-          config.filter = filter;
         }
-        docSpace = DocSpace.SDK.initManager(config);
+        if (rootPath) {
+          config.rootPath = rootPath
+          config.filter = filter
+        }
+        docSpace = DocSpace.SDK.initManager(config)
       }
 
       // Called when SDK is ready for the project form
@@ -128,9 +128,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
                 this.classList.add("selected")
                 selectedUserId = user.id
                 selectedUserEmail = user.email
-              });
+              })
               usersContainer.appendChild(userDiv)
-            });
+            })
           }
         } catch (error) {
           console.error("Error fetching users:", error)
@@ -149,7 +149,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
           return alert("Error creating room")
         }
         roomId = room.id
-        initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+        initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
       }
 
       // Called when the SDK loads the project room
@@ -176,7 +176,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
             }],
             notify: true
           })
-        });
+        })
         if (!response.ok) throw new Error(`Failed to update freelancer access: HTTP ${response.status}`)
       }
 
@@ -215,7 +215,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
         alert("Order completed: the room is archived")
       }
 
-      // Step 5: Wire up buttons and log in on load
+      // Wire up buttons and log in on load
       document.getElementById("createOrderBtn").addEventListener("click", createOrder)
       document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
       document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
@@ -234,9 +234,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
         })
         .then(response => response.json())
         .then(data => {
-          token = data.response.token;
-          fetchUsers();
-        });
+          token = data.response.token
+          fetchUsers()
+        })
 
         initDocSpace()
       })
@@ -266,12 +266,12 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   .then(response => response.json())
   .then(data => {
-    token = data.response.token;
-    fetchUsers();
-  });
+    token = data.response.token
+    fetchUsers()
+  })
 
   initDocSpace()
-});
+})
 ```
 
 - Authenticates the current user and stores the access token
@@ -299,9 +299,9 @@ async function fetchUsers() {
           this.classList.add("selected")
           selectedUserId = user.id
           selectedUserEmail = user.email
-        });
+        })
         usersContainer.appendChild(userDiv)
-      });
+      })
     }
   } catch (error) {
     console.error("Error fetching users:", error)
@@ -323,14 +323,14 @@ function initDocSpace(rootPath = null, filter = null) {
     events: {
       onAppReady: rootPath ? onWorkspaceReady : onInitialReady
     }
-  };
-
-  if (rootPath) {
-    config.rootPath = rootPath;
-    config.filter = filter;
   }
 
-  docSpace = DocSpace.SDK.initManager(config);
+  if (rootPath) {
+    config.rootPath = rootPath
+    config.filter = filter
+  }
+
+  docSpace = DocSpace.SDK.initManager(config)
 }
 ```
 
@@ -362,7 +362,7 @@ async function createOrder() {
     return alert("Error creating room")
   }
   roomId = room.id
-  initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
+  initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
 }
 ```
 
@@ -401,7 +401,7 @@ async function setRoomAccessRights(access) {
       }],
       notify: true
     })
-  });
+  })
   if (!response.ok) throw new Error(`Failed to update freelancer access: HTTP ${response.status}`)
 }
 

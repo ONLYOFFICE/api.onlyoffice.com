@@ -1,5 +1,4 @@
 ---
-slug: /docspace/javascript-sdk/get-started/troubleshooting-faq
 description: 集成 DocSpace 嵌入式 SDK 时常见错误及修复方法、调试技巧以及已知限制。
 tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
 ---
@@ -20,7 +19,7 @@ tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
 
 ### 跨域 / "domain not allowed" 错误 {#cross-origin--domain-not-allowed-errors}
 
-SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加入 DocSpace 的白名单。如果来自您页面的请求被拒绝，请参阅[注册允许的嵌入来源](./get-started/authentication-security.md#registering-allowed-embed-origins)。SDK 只比较主机和端口（不区分大小写），因此请以"主机和端口"的形式添加条目，不要包含协议或路径。带路径的条目（例如 `https://example.com/app`）永远不会匹配，子域也不会被自动匹配。
+SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加入 DocSpace 的允许列表。如果来自您页面的请求被拒绝，请参阅[注册允许的嵌入来源](./get-started/authentication-security.md#registering-allowed-embed-origins)。SDK 只比较主机和端口（不区分大小写），因此请以"主机和端口"的形式添加条目，不要包含协议或路径。带路径的条目（例如 `https://example.com/app`）永远不会匹配，子域也不会被自动匹配。
 
 ### 空白 iframe（框架已加载但无任何内容） {#blank-iframe-frame-loads-but-shows-nothing}
 
@@ -28,8 +27,8 @@ SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加�
 
 1. 在调用 `initManager`/`initEditor` **之前**，`frameId` 所引用的容器元素已存在于 DOM 中。如果不存在具有该 ID 的元素，初始化方法将返回 `null`，且不会插入任何内容。
 2. 已设置 `src`，并且它指向一个可访问且通过 HTTPS 提供服务的 DocSpace 实例。当 `src` 为空或不是有效的 URL 时，SDK 会在控制台中输出 `SDK Warning: src is empty` 或 `src "..." is not a valid URL`。混合内容（HTTPS 页面加载 HTTP 的 `src`）会被浏览器静默拦截。参见[前提条件](./get-started/get-started.md#prerequisites)。
-3. 该来源已按照[注册允许的嵌入来源](./get-started/authentication-security.md#registering-allowed-embed-origins)的说明加入白名单。
-4. 查看浏览器控制台以及 `onAppError` 事件（参见[调试技巧](#debugging-tips)）中的实际错误信息——空白框架通常是初始化错误被吞掉了，而不是渲染问题。
+3. 该来源已按照[注册允许的嵌入来源](./get-started/authentication-security.md#registering-allowed-embed-origins)的说明加入允许列表。
+4. 查看浏览器控制台以及 `onAppError` 事件（参见[调试技巧](#debugging-tips)）中的实际错误信息。空白框架通常是初始化错误被吞掉了，而不是渲染问题。
 
 ### 身份验证循环（用户被反复要求登录） {#authentication-loops-user-is-repeatedly-asked-to-sign-in}
 
@@ -50,13 +49,12 @@ SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加�
 
 ### 方法返回了错误，但 Promise 没有被拒绝 {#a-method-returned-an-error-but-the-promise-didnt-reject}
 
-实例方法只会因 SDK 端的错误而拒绝，例如超时、框架已断开连接，或当前模式不支持该方法。当 DocSpace API 调用失败时，门户会将错误作为普通的方法结果返回，因此 Promise 会正常解析：
+实例方法会因 SDK 端的错误而拒绝，例如超时、框架已断开连接，或当前模式不支持该方法（`MODE_MISMATCH`）。在会标记方法错误的门户（客户端 4.0+）上，DocSpace API 调用失败时，方法也会以 `API_ERROR` 代码拒绝。在以下两种情况下，失败的调用仍会正常解析，而不是拒绝：
 
-- 对于 HTTP 错误，结果是一个包含 `message`、`name`、`code` 和 `status` 字段的对象；
-- 对于某些错误，结果是一个空对象 `{}`；
-- 对于当前模式不支持的方法，结果是字符串 `"Wrong method for this mode"`。
+- 在低于客户端 4.0 的门户上，门户会将错误作为普通的方法结果返回：一个包含 `message`、`name`、`code` 和 `status` 字段的对象，某些错误则返回空对象 `{}`；
+- `login()` 和 `createRoom()` 在所有门户版本上都保留旧的约定，会解析为 `{ status, message }` 对象。
 
-这意味着 `try`/`catch` 只能捕获 SDK 错误，而检查 `result.status` 只能捕获 HTTP 错误。要可靠地判断是否成功，请检查成功结果中必定存在的字段，例如 `id`：
+这意味着仅靠 `try`/`catch` 无法捕获所有失败。要可靠地判断是否成功，请检查成功结果中必定存在的字段，例如 `id`：
 
 ```js
 const room = await instance.createRoom("Project room", 5);
@@ -74,11 +72,12 @@ if (!room?.id) {
 | `TIMEOUT` | 框架未在 `methodTimeout`（默认 30 秒）内响应。 |
 | `DISCONNECTED` | 框架未连接（`Message bus is not connected with frame`）、已重新加载（`Frame reloaded`）或已销毁（`Frame destroyed`）。 |
 | `CSP_VIOLATION` | 嵌入来源不在 DocSpace 的 CSP 允许列表中。 |
-| `MODE_MISMATCH` | 当前模式不支持该方法。例如，`upload()` 和 `setCustomActions()` 仅在 Forms 模式下可用，`navigateSection()` 仅在 Forms 和 Personal 模式下可用。 |
+| `MODE_MISMATCH` | 当前模式不支持该方法。例如，`upload()` 和 `setCustomActions()` 仅在 Forms 模式下可用，`navigateSection()` 仅在 Forms 和 Personal 模式下可用。在 OAuth 模式下调用 `login()` 和 `logout()` 时也会使用此代码。 |
 | `INVALID_CONFIG` | 框架配置无效。 |
 | `UPLOAD_FAILED` | 文件上传失败。 |
 | `PARSE_ERROR` | 无法解析来自框架的消息。 |
 | `TOKEN_RESOLVE_FAILED` | SDK 无法获取访问令牌。 |
+| `API_ERROR` | 门户在执行方法时报告了失败。错误中包含 HTTP `status` 和门户的错误数据。需要客户端 4.0+。 |
 
 ## 调试技巧 {#debugging-tips}
 
@@ -105,4 +104,4 @@ const instance = DocSpace.SDK.initManager({
 ## 已知限制 {#known-limitations}
 
 - **任何初始化失败都会在框架内显示同一个 CSP 错误页面。** 无论 CSP 检查因何种原因失败，SDK 都会在框架内渲染同一个 CSP 错误页面，而不仅仅是在真正违反允许列表时。`onAppError` 的数据可以区分这些情况：`src` 为空或无效时为 `Invalid URL`，无法访问门户时为 `CSP validation failed: ...`，只有当域名确实不在允许列表中时，才会是 "not set in the Content Security Policy (CSP) settings" 提示。在修改 CSP 设置之前，请先检查 `onAppError` 和浏览器控制台。若要在代码中检测允许列表冲突，请检查 `CSP_VIOLATION` 错误代码。
-- **`checkCSP: false` 是全有或全无的开关。** 目前没有办法在调试时仅部分放宽 CSP 检查而不将其完全禁用，这也是不建议在本地开发环境之外使用该选项的原因——参见[内容安全策略 (CSP)](./get-started/authentication-security.md#content-security-policy-csp)。
+- **`checkCSP: false` 是全有或全无的开关。** 目前没有办法在调试时仅部分放宽 CSP 检查而不将其完全禁用，这也是不建议在本地开发环境之外使用该选项的原因。参见[内容安全策略 (CSP)](./get-started/authentication-security.md#content-security-policy-csp)。
