@@ -1,322 +1,71 @@
 ---
 sidebar_position: -6
+description: 运行 ONLYOFFICE 文档 Java Spring 集成示例，并将其连接到您的 ONLYOFFICE 文档服务器。
+tags: ["Docs", "Integration", "Java"]
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Java Spring 集成
 
-## 概述
-
-此示例将帮助您将 ONLYOFFICE 文档集成到用 Java with Spring Boot 编写的 Web 应用程序中。
-
-Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自动配置和内置的 servlet 容器。
+Java Spring 集成示例是一个 Spring Boot 应用程序，它可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。它基于 [ONLYOFFICE 文档集成 SDK](/docs/docs-api/samples/language-specific-examples/java-integration-sdk.md) 构建。在编写您自己的集成之前，运行此示例即可看到一个完整可用的集成。
 
 :::warning
-它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入生产之前将其禁用。
+本示例仅用于测试。它没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它的人都可以读取和修改其中的文件。请勿在公共服务器上运行此示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 先决条件
 
-在使用测试示例时，请记住以下几方面的安全事项：
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **Java**：版本 11，即示例的 `pom.xml` 所指定的版本。请参阅[官方网站](https://www.oracle.com/java/technologies/downloads/#java11)。
+- **Apache Maven**：请参阅[官方网站](https://maven.apache.org/download.cgi)。
+- **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-- 由于不需要授权，因此无法保护存储免受未经授权的访问。
-- 没有检查链接中的参数替换，因为参数是由代码根据预先安排的脚本生成的。
-- 在编辑后保存文件的请求中没有数据检查，因为每个测试示例仅适用于来自 ONLYOFFICE 文档的请求。
-- 没有禁止使用来自其他网站的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档进行交互。
+## 步骤1. 下载示例
 
-## 安装
+克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/java-spring)，进入 Java Spring 示例目录，并获取其子模块：
 
-<Tabs>
-    <TabItem value="windows" label="Windows">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
+```sh
+git clone --depth 1 https://github.com/ONLYOFFICE/document-server-integration
+cd document-server-integration/web/documentserver-example/java-spring
+git submodule update --init --depth 1 .
+```
 
-        下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
+## 步骤2. 配置连接
 
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download?from=api#docs-developer)
+打开 `src/main/resources/application.properties` 文件并编辑以下键：
 
-        请参阅详细指南以了解如何安装[适用于 Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example)的 ONLYOFFICE 文档。
+```ini
+files.storage=
+files.docservice.url.example=
+docservice.url=http://documentserver/
+docservice.security.key=
+```
 
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
+- `docservice.url`：安装了 ONLYOFFICE 文档的服务器地址。请将 `documentserver` 替换为该服务器的名称或 IP 地址。
+- `files.storage`：示例创建和存储文件的文件夹。如果留空，示例将使用运行目录中的 `documents` 文件夹。您可以设置一个绝对路径。在此文件中，每个反斜杠都需要转义，例如 `D:\\folder`。运行示例的用户需要对该文件夹具有读写权限。
+- `docservice.security.key`：必须与 ONLYOFFICE 文档的 JWT 设置一致。ONLYOFFICE 文档默认启用 JWT，但此处的密钥为空，这会使示例中的 JWT 处于禁用状态。请将其设置为您服务器的[密钥](/docs/docs-api/additional-api/signature/signature.md)。
+- `files.docservice.url.example`：ONLYOFFICE 文档访问示例时使用的地址，末尾不带斜杠，例如 `http://192.168.1.10:4000`。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为您在浏览器中打开的地址（例如 `localhost`）在那里指向的是其他位置。
 
-        下载发布存档并解压，或从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 克隆源代码：
+如果您想尝试配置编辑器，请修改 `src/main/java/com/onlyoffice/integration/sdk/service/ConfigServiceImpl.java` 文件中 `createConfig` 方法的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-        ``` sh
-        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-        tar -xf Java.Spring.Example.zip
-        ```
+## 步骤3. 构建并运行示例
 
-        将当前目录更改为项目目录：
+```sh
+mvn spring-boot:run
+```
 
-        ``` sh
-        cd "Java Spring Example"
-        ```
+在浏览器中打开 `http://localhost:4000`。如需使用其他端口，请修改 `application.properties` 中的 `server.port`。您将看到示例的起始页面，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单，并选择测试用户和编辑器语言。
 
-        ### 步骤 3. 安装先决条件
+## 使用 Docker 运行
 
-        安装适用于您的操作系统和框架 **Apache Maven** 的 Java 版本 11：
+如果您已安装带有 Docker Compose 的 [Docker](https://docs.docker.com/get-started/get-docker/)，也可以在容器中构建并运行示例，无需安装 Java 或 Maven。此配置不会启动 ONLYOFFICE 文档，因此请先完成步骤2。在示例目录中运行：
 
-        - **Java**（从 [Oracle官网](https://www.oracle.com/java/technologies/downloads/#java11)下载）；
-        - **Apache Maven**（从[官网](https://maven.apache.org/download.cgi)下载）。
+```sh
+docker compose up --build
+```
 
-        在 Windows 上安装 Java 后，将 **JAVA\_HOME** 环境变量设置为指向 Java 安装目录。
+在浏览器中打开 `http://localhost:4000`。示例文件夹会挂载到容器中，因此文件存储在其 `documents` 文件夹中，对 `application.properties` 的修改在重新启动后生效。在容器内部，`localhost` 指向容器本身，因此请勿在 `docservice.url` 中使用它，并将 `files.docservice.url.example` 设置为 ONLYOFFICE 文档可以访问您计算机的地址。
 
-        找出 Java 的安装位置。如果您在安装过程中没有更改路径，它将是这样的：
+## 故障排除
 
-        ``` sh
-        C:\Program Files\Java\jdk11
-        ```
-
-        在 **Windows 7** 中，右键单击**我的电脑**并选择**属性**，然后单击**高级**。
-
-        在 **Windows 8**中，进入**控制面板**并选择**系统**，然后单击**高级系统设置**。
-
-        单击**环境变量**按钮。
-
-        在**系统变量**，单击**新建**。
-
-        在**变量名称**字段中，如果您安装了**JDK**（Java 开发工具包），请输入 **JAVA\_HOME**；如果您安装了 **JRE**（Java 运行时环境），请输入**JRE\_HOME**。
-
-        在**变量值**字段中，输入您的 **JDK** 或 **JRE** 安装路径，例如 `C:\Program Files\Java\jdk11`。
-
-        检查**命令提示符**中的 **echo** 命令是否成功创建变量：
-
-        ``` sh
-        echo %JAVA_HOME%
-        ```
-
-        设置 **MAVEN_HOME** 环境变量：
-
-        使用 Maven 将下载的压缩文件解压缩到任意目录。它会是这样的：
-
-        ``` sh
-        C:\apache-maven-3.8.1
-        ```
-
-        在 **Windows 7** 中，右键单击**我的电脑**并选择**属性**，然后单击**高级**。
-
-        在 **Windows 8**中，进入**控制面板**并选择**系统**，然后单击**高级系统设置**。
-
-        单击**环境变量**按钮。
-
-        在**系统变量**，单击**新建**。
-
-        在**变量名称**字段中，输入 **MAVEN_HOME**。
-
-        在**变量值**字段中，输入您的 Maven 安装路径，例如 `C:\apache-maven-3.8.1`。
-
-        在系统变量中，找到 **PATH**，单击**编辑...**按钮。在**编辑环境变量**对话框中，单击**新建**按钮并将 `C:\apache-maven-3.8.1\bin` 添加到 **PATH** 系统变量。
-
-        检查**命令提示符**中的 **echo** 命令是否成功创建变量：
-
-        ``` sh
-        echo %MAVEN_HOME%
-        ```
-
-        ### 步骤 4. 配置应用程序
-
-        要将编辑器连接到您的网站，请在 `src/main/resources/application.properties` 文件中指定编辑器安装的路径和存储文件夹的路径：
-
-        ``` ini
-        files.storage=
-        server.port=port
-        docservice.url=https://documentserver/
-        ```
-
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-        您可以设置绝对路径。例如，`D:\\folder`。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。
-
-        如果要试验编辑器配置，请修改 `src/main/webapp/editor.jsp` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
-
-        ### 步骤 5. 配置 JWT
-
-        打开 `src/main/resources/application.properties` 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
-
-        ``` ini
-        docservice.security.key=secret
-        ```
-
-        ### 步骤 6. 构建并运行
-
-        在项目目录中，输入以下命令：
-
-        ``` sh
-        mvn clean
-        mvn package
-        mvn spring-boot:run
-        ```
-
-        使用 **server.address** 和 **server.port** 打开浏览器：
-
-        ``` sh
-        http://server.address:server.port/
-        ```
-
-        ### 步骤 7. 检查可访问性
-
-        如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。
-
-        确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 `example.com`。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-    </TabItem>
-    <TabItem value="linux" label="Linux">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
-
-        下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：
-
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-        请参阅详细指南以了解如何安装[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
-
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
-
-        下载发布存档并解压，或从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 克隆源代码：
-
-        ``` sh
-        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-        unzip Java.Spring.Example.zip
-        ```
-
-        将当前目录更改为项目目录：
-
-        ``` sh
-        cd "Java Spring Example"
-        ```
-
-        ### 步骤 3. 安装先决条件
-
-        按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
-
-        安装 **Maven**:
-
-        ``` sh
-        sudo apt-get install maven
-        ```
-
-        ### 步骤 4. 配置应用程序
-
-        编辑 `src/main/resources/application.properties` 配置文件。指定安装了 ONLYOFFICE 文档的本地服务器的名称。
-
-        ``` sh
-        nano src/main/resources/application.properties
-        ```
-
-        编辑以下行：
-
-        ``` ini
-        files.storage=
-        server.port=port
-        docservice.url=https://documentserver/
-        ```
-
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-
-        ### 步骤 5. 配置 JWT
-
-        打开 `src/main/resources/application.properties` 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
-
-        ``` ini
-        docservice.security.key=secret
-        ```
-
-        ### 步骤 6. 构建并运行
-
-        构建项目：
-
-        ``` sh
-        mvn package
-        ```
-
-        启动 Java-Spring 示例：
-
-        ``` sh
-        ./mvnw spring-boot:run
-        ```
-
-        使用 **server.address** 和 **server.port** 打开浏览器：
-
-        ``` sh
-        http://server.address:server.port/
-        ```
-
-        ### 步骤 7. 检查可访问性
-
-        如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。
-
-        确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中指定的地址而不是 `example.com`。
-    </TabItem>
-    <TabItem value="docker" label="Docker">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
-
-        下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：
-
-        [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-        请参阅详细指南以了解如何安装[适用于 Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example)的 ONLYOFFICE 文档。
-
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
-
-        下载发布存档并解压，或从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 克隆源代码：
-
-        ``` sh
-        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-        unzip Java.Spring.Example.zip
-        ```
-
-        将当前目录更改为项目目录：
-
-        ``` sh
-        cd "Java Spring Example"
-        ```
-
-        ### 步骤 3. 安装先决条件
-
-        按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
-
-        ### 步骤 4. 配置应用程序
-
-        编辑 `src/main/resources/application.properties` 配置文件。指定安装了 ONLYOFFICE Docs 的本地服务器的名称：
-
-        ``` sh
-        nano src/main/resources/application.properties
-        ```
-
-        编辑以下行：
-
-        ``` ini
-        files.storage=
-        server.port=port
-        docservice.url=https://documentserver/
-        ```
-
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`port` 是任何可用的端口，而 `files.storage` 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-
-        ### 步骤 5. 配置 JWT
-
-        打开 `src/main/resources/application.properties` 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
-
-        ``` ini
-        docservice.security.key=secret
-        ```
-
-        ### 步骤 6. 构建并运行
-
-        在 Java-Spring 示例目录中运行以下命令：
-
-        ``` sh
-        docker-compose up
-        ```
-
-        使用 **server.address** 和 **server.port** 打开浏览器：
-
-        ``` sh
-        http://server.address:server.port/
-        ```
-
-        ### 步骤 7. 检查可访问性
-
-        如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以使用您在配置文件中指定的地址（而不是 `documentserver`）访问 ONLYOFFICE 文档。
-
-        确保 ONLYOFFICE 文档可以访问安装了示例的服务器，该示例的地址是您在配置文件中指定的地址，而不是 `example.com`。
-    </TabItem>
-</Tabs>
+- **文档安全令牌的格式不正确**：示例中未启用 JWT（`docservice.security.key` 为空），或者 `docservice.security.key` 与 ONLYOFFICE 文档的密钥不一致。
+- **下载失败**：ONLYOFFICE 文档无法访问示例。请在 `application.properties` 中将 `files.docservice.url.example` 设置为 ONLYOFFICE 文档可以解析的地址。
