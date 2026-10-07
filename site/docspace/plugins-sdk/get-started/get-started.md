@@ -53,7 +53,7 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 For more information about plugin settings and scopes, see [creating a plugin template](../usage-sdk/creating-plugin-template.md).
 
-![Creating template](/assets/images/docspace/creating-template.png)
+![Creating template](/assets/images/docspace/creating-template.png#gh-light-mode-only)![Creating template](/assets/images/docspace/creating-template.dark.png#gh-dark-mode-only)
 
 ### Step 3. Coding
 

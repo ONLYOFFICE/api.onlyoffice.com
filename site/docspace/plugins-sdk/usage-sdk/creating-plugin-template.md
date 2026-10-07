@@ -50,7 +50,7 @@ Before starting plugin development, create a plugin template and configure its s
    - **Article button** - the plugin can be embedded as a button in the article sidebar.
    - **Article navigation** - the plugin can be embedded as a navigation item in the article sidebar.
 
-![Creating template](/assets/images/docspace/creating-template.png)
+![Creating template](/assets/images/docspace/creating-template.png#gh-light-mode-only)![Creating template](/assets/images/docspace/creating-template.dark.png#gh-dark-mode-only)
 
 All the specified parameters can be changed later in the *package.json* file. The CLI automatically generates `pluginName`, `nameLocale`, and `descriptionLocale` based on the values you enter.
 
