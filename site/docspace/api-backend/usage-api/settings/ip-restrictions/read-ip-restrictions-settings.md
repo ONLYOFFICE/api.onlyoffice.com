@@ -1,6 +1,6 @@
 # readIpRestrictionsSettings
 
-> IPRestrictionsSettingsWrapper readIpRestrictionsSettings()
+> IpRestrictionsSettingsWrapper readIpRestrictionsSettings()
 
 `GET /api/2.0/settings/iprestrictions/settings`
 
@@ -15,7 +15,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The enforcement flag of the IP restrictions and the date the setting was last modified | [**IPRestrictionsSettingsWrapper**](../../models/ip-restrictions-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The enforcement flag of the IP restrictions and the date the setting was last modified | [**IpRestrictionsSettingsWrapper**](../../models/ip-restrictions-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **304** | The enforcement flag has not changed since the `Last-Modified` value sent back in `If-Modified-Since`; the body is empty | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +26,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**IPRestrictionsSettingsWrapper**](../../models/ip-restrictions-settings-wrapper.md)
+[**IpRestrictionsSettingsWrapper**](../../models/ip-restrictions-settings-wrapper.md)
 
 ## Authorization
 

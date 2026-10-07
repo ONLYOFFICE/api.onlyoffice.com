@@ -1,18 +1,18 @@
 # saveAdditionalWhiteLabelSettings
 
-> BooleanWrapper saveAdditionalWhiteLabelSettings(AdditionalWhiteLabelSettingsWrapper)
+> BooleanWrapper saveAdditionalWhiteLabelSettings(AdditionalWhiteLabelSettingsRequestDto)
 
 `POST /api/2.0/settings/rebranding/additional`
 
 Save the additional white label settings
 
-Stores which of the ONLYOFFICE help and community resources the interface offers: the sample documents, the Help Center link, the Feedback and Support link, the user forum, the video guides and the license agreements. The whole set is replaced by the `settings` object of the request, so send every flag, not only the changed ones - a flag left out is stored as off. A request without that object is rejected as an invalid request. Requires a DocSpace administrator, a server installation with unrestricted space access and a plan that includes branding, which `GET api/2.0/settings/enablewhitelabel` reports; on a SaaS portal the call is refused. The flags are installation-wide, so the change reaches every portal of that installation. The call is mutating and idempotent, and answers `true`. Only the visibility of these entries is controlled here, not the addresses behind them. Read the result back with `GET api/2.0/settings/rebranding/additional` and undo it with `DELETE api/2.0/settings/rebranding/additional`.
+Stores which of the ONLYOFFICE help and community resources the interface offers: the sample documents, the Help Center link, the Feedback and Support link, the user forum, the video guides and the license agreements. The whole set is replaced by the `settings` object of the request, so send every flag, not only the changed ones - a flag left out is stored as off. A request without that object is rejected as an invalid request. Requires a DocSpace administrator, a server installation with unrestricted space access and a plan that includes customization, which `GET api/2.0/settings/enablewhitelabel` reports; on a SaaS portal the call is refused. The flags are installation-wide, so the change reaches every portal of that installation. The call is mutating and idempotent, and answers `true`. Only the visibility of these entries is controlled here, not the addresses behind them. Read the result back with `GET api/2.0/settings/rebranding/additional` and undo it with `DELETE api/2.0/settings/rebranding/additional`.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **AdditionalWhiteLabelSettingsWrapper** | body | [**AdditionalWhiteLabelSettingsWrapper**](../../models/additional-white-label-settings-wrapper.md) |  | [optional] |
+| **AdditionalWhiteLabelSettingsRequestDto** | body | [**AdditionalWhiteLabelSettingsRequestDto**](../../models/additional-white-label-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -20,6 +20,7 @@ Stores which of the ONLYOFFICE help and community resources the interface offers
 |------------- | ------------- | ------------- | -------------|
 | **200** | Always `true` once the resource flags have been stored for the installation | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request carries no settings object | - | - |
+| **402** | The portal's pricing plan has no customization option, or the branding section is switched off in the installation | - | - |
 | **403** | The caller is not a DocSpace administrator, or the installation does not allow branding to be edited | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

@@ -1,6 +1,6 @@
 # getCheckoutSetupUrl
 
-> StringWrapper getCheckoutSetupUrl(BackUrl, SuccessUrl)
+> StringWrapper getCheckoutSetupUrl(backUrl, successUrl)
 
 `GET /api/2.0/portal/payment/checkoutsetupurl`
 
@@ -12,19 +12,19 @@ Hands back the hosted page on which a payment method is attached to the portal's
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **BackUrl** | query | **URI** (uri) | The absolute address the setup page sends the user back to when attaching a payment method is abandoned. It has to be a well-formed URL and must be reachable by that user rather than by the portal. | [required] [example: `https://example.com/payment/back`] [minLength: 0] [maxLength: 255] |
-| **SuccessUrl** | query | **URI** (uri) | The absolute address the setup page sends the user to once the payment provider has stored the payment method. Reaching it means a method is now on file, which `GET api/2.0/portal/payment/customerinfo` confirms; nothing has been charged. | [required] [example: `https://example.com/payment/success`] [minLength: 0] [maxLength: 255] |
+| **backUrl** | query | **URI** (uri) | The absolute address the setup page sends the user back to when attaching a payment method is abandoned. It has to be a well-formed URL and must be reachable by that user rather than by the portal. | [required] [example: `https://example.com/payment/back`] [minLength: 0] [maxLength: 255] |
+| **successUrl** | query | **URI** (uri) | The absolute address the setup page sends the user to once the payment provider has stored the payment method. Reaching it means a method is now on file, which `GET api/2.0/portal/payment/customerinfo` confirms; nothing has been charged. | [required] [example: `https://example.com/payment/success`] [minLength: 0] [maxLength: 255] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The absolute URL of the payment method setup page, or an empty result when the portal already has a payment method | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | `backUrl` or `successUrl` is missing, does not start with `http://`, `https://` or `ftp://`, or is longer than 255 characters | - | - |
 | **403** | The caller is not a DocSpace administrator or, once a billing customer exists, not its payer; or the portal has no billing service configured | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

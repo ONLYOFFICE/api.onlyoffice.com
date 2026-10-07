@@ -1,6 +1,6 @@
 # getSubscriptionBalanceInfo
 
-> SubscriptionBalanceInfoWrapper getSubscriptionBalanceInfo()
+> SubscriptionBalanceWrapper getSubscriptionBalanceInfo()
 
 `GET /api/2.0/portal/payment/subscription/balance`
 
@@ -15,9 +15,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The unused balance of the current subscription period with its period boundaries and currencies | [**SubscriptionBalanceInfoWrapper**](../../models/subscription-balance-info-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The unused balance of the current subscription period with its period boundaries and currencies | [**SubscriptionBalanceWrapper**](../../models/subscription-balance-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The plan currently paid is a wallet product or has no product identifier | - | - |
-| **402** | The plan of the portal is not in the paid state | - | - |
+| **402** | The plan of the portal is not in the paid state, or the billing service answers with an error or cannot be reached | - | - |
 | **403** | The caller is not the payer of this portal, or the portal has no billing service configured | - | - |
 | **404** | This portal has no billing customer, or its paid plan has no subscription | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -28,7 +28,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**SubscriptionBalanceInfoWrapper**](../../models/subscription-balance-info-wrapper.md)
+[**SubscriptionBalanceWrapper**](../../models/subscription-balance-wrapper.md)
 
 ## Authorization
 

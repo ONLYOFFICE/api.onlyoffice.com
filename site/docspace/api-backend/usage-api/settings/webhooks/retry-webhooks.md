@@ -1,6 +1,6 @@
 # retryWebhooks
 
-> WebhooksLogArrayWrapper retryWebhooks(WebhookRetryRequestsDto)
+> WebhooksLogArrayWrapper retryWebhooks(WebhookRetryRequestDto)
 
 `PUT /api/2.0/settings/webhook/retry`
 
@@ -12,7 +12,7 @@ Sends a batch of past webhook deliveries again. `ids` holds the identifiers of d
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **WebhookRetryRequestsDto** | body | [**WebhookRetryRequestsDto**](../../models/webhook-retry-requests-dto.md) |  | [optional] |
+| **WebhookRetryRequestDto** | body | [**WebhookRetryRequestDto**](../../models/webhook-retry-request-dto.md) |  | [optional] |
 
 ## Responses
 

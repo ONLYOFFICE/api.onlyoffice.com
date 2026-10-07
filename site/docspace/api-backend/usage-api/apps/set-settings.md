@@ -1,6 +1,6 @@
 # setSettings
 
-> AppWrapper setSettings(id, SetAppSettingsBody)
+> AppWrapper setSettings(id, SetAppSettingsRequest)
 
 `PUT /api/2.0/apps/{id}/settings`
 
@@ -13,7 +13,7 @@ Stores the application-specific settings document of one portal application for 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **id** | path | **String** | The application whose configuration is stored, by the identifier `GET api/2.0/apps` reports. An identifier not declared in the installation configuration answers 404. | [required] [example: `ai-room`] |
-| **SetAppSettingsBody** | body | [**SetAppSettingsBody**](../models/set-app-settings-body.md) | The configuration to store for this portal, replacing whatever was stored before. | [required] |
+| **SetAppSettingsRequest** | body | [**SetAppSettingsRequest**](../models/set-app-settings-request.md) | The configuration to store for this portal, replacing whatever was stored before. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Stores the application-specific settings document of one portal application for 
 |------------- | ------------- | ------------- | -------------|
 | **200** | The application in its new state, with the stored settings document | [**AppWrapper**](../models/app-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body is not a valid JSON document, so no settings are stored | - | - |
-| **403** | The caller is not allowed to edit the portal settings | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **404** | No application with this identifier is configured on this installation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |

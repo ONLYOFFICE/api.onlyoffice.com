@@ -1,6 +1,6 @@
 # aiWebSearchConfigure
 
-> AiWebSearchMutationResult aiWebSearchConfigure(aiWebSearchConfigure\_request)
+> AiWebSearchMutationResult aiWebSearchConfigure(AiWebSearchConfigureRequest)
 
 `PUT /api/2.0/ai/web-search/configure`
 
@@ -12,17 +12,17 @@ Validates a web-search configuration against the live provider and stores it onl
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiWebSearchConfigure\_request** | body | [**aiWebSearchConfigure_request**](../../models/ai-web-search-configure-request-body.md) |  | [required] |
+| **AiWebSearchConfigureRequest** | body | [**AiWebSearchConfigureRequest**](../../models/ai-web-search-configure-request.md) |  | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Whether the configuration was stored, after the provider answered. | [**AiWebSearchMutationResult**](../../models/ai-web-search-mutation-result.md) | - |
-| **400** | The configuration is missing or malformed, or the provider URL points at a private network address. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **200** | The stored configuration, after the provider accepted it. | [**AiWebSearchMutationResult**](../../models/ai-web-search-mutation-result.md) | - |
+| **400** | The configuration is missing or malformed, the provider URL points at a private network address, or the provider refused the configuration - the body then carries `success: false` and an `error` naming the field. Nothing is stored in any of these cases. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **404** | The referenced object does not exist, or the caller cannot access it - the two are deliberately indistinguishable, so a room the caller may not open answers 404 rather than 403. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

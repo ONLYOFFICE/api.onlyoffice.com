@@ -9,13 +9,13 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
-| [**aiAiApproveToolCall**](ai/ai-ai-approve-tool-call.md) | **POST** /api/2.0/ai/ai/approve-tool-call | Approve tool call |
-| [**aiAiDenyToolCall**](ai/ai-ai-deny-tool-call.md) | **POST** /api/2.0/ai/ai/deny-tool-call | Deny tool call |
-| [**aiAiRegenerateStream**](ai/ai-ai-regenerate-stream.md) | **POST** /api/2.0/ai/ai/regenerate-stream | Regenerate stream |
-| [**aiAiSend**](ai/ai-ai-send.md) | **POST** /api/2.0/ai/ai/send | Run an AI action |
-| [**aiAiSendCustom**](ai/ai-ai-send-custom.md) | **POST** /api/2.0/ai/ai/send-custom | Send custom |
-| [**aiAiSendWithStream**](ai/ai-ai-send-with-stream.md) | **POST** /api/2.0/ai/ai/send-with-stream | Send with stream |
-| [**aiAiSendWithStreamOpenAI**](ai/ai-ai-send-with-stream-open-ai.md) | **POST** /api/2.0/ai/ai/send-with-stream-openai | Stream a chat in OpenAI format |
+| [**aiApproveToolCall**](ai/ai-approve-tool-call.md) | **POST** /api/2.0/ai/ai/approve-tool-call | Approve tool call |
+| [**aiDenyToolCall**](ai/ai-deny-tool-call.md) | **POST** /api/2.0/ai/ai/deny-tool-call | Deny tool call |
+| [**aiRegenerateStream**](ai/ai-regenerate-stream.md) | **POST** /api/2.0/ai/ai/regenerate-stream | Regenerate stream |
+| [**aiSend**](ai/ai-send.md) | **POST** /api/2.0/ai/ai/send | Run an AI action |
+| [**aiSendCustom**](ai/ai-send-custom.md) | **POST** /api/2.0/ai/ai/send-custom | Send custom |
+| [**aiSendWithStream**](ai/ai-send-with-stream.md) | **POST** /api/2.0/ai/ai/send-with-stream | Send with stream |
+| [**aiSendWithStreamOpenAI**](ai/ai-send-with-stream-open-ai.md) | **POST** /api/2.0/ai/ai/send-with-stream-openai | Stream a chat in OpenAI format |
 
 ## Agents
 
@@ -51,9 +51,18 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**aiAttachmentsDeleteMany**](attachments/ai-attachments-delete-many.md) | **DELETE** /api/2.0/ai/attachments/delete-many | Delete many |
 | [**aiAttachmentsGet**](attachments/ai-attachments-get.md) | **POST** /api/2.0/ai/attachments/get | Get one attachment |
 | [**aiAttachmentsGetMany**](attachments/ai-attachments-get-many.md) | **POST** /api/2.0/ai/attachments/get-many | Get many |
+| [**aiAttachmentsGetSuggestedQuestions**](attachments/ai-attachments-get-suggested-questions.md) | **POST** /api/2.0/ai/attachments/suggested-questions | Get suggested questions |
 | [**aiAttachmentsLinkToMessage**](attachments/ai-attachments-link-to-message.md) | **POST** /api/2.0/ai/attachments/link-to-message | Link to message |
 | [**aiAttachmentsSaveFile**](attachments/ai-attachments-save-file.md) | **POST** /api/2.0/ai/attachments/save-file | Save file |
 | [**aiAttachmentsSaveFilesMany**](attachments/ai-attachments-save-files-many.md) | **POST** /api/2.0/ai/attachments/save-files-many | Save files many |
+
+## Context
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**aiContextGetContextFolders**](context/ai-context-get-context-folders.md) | **GET** /api/2.0/ai/context/get-context-folders | Get context folders |
+| [**aiContextGetRoomSkill**](context/ai-context-get-room-skill.md) | **GET** /api/2.0/ai/context/get-room-skill | Get room skill |
+| [**aiContextGetRoomSkills**](context/ai-context-get-room-skills.md) | **GET** /api/2.0/ai/context/get-room-skills | Get room skills |
 
 ## Editor tools
 
@@ -82,9 +91,11 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**aiPreferencesClearDeepMode**](preferences/ai-preferences-clear-deep-mode.md) | **DELETE** /api/2.0/ai/preferences/clear-deep-mode | Clear deep mode |
 | [**aiPreferencesGetDeepMode**](preferences/ai-preferences-get-deep-mode.md) | **GET** /api/2.0/ai/preferences/get-deep-mode | Get deep mode |
 | [**aiPreferencesGetReasoningLevel**](preferences/ai-preferences-get-reasoning-level.md) | **GET** /api/2.0/ai/preferences/get-reasoning-level | Get reasoning level |
+| [**aiPreferencesGetToolPermissionMode**](preferences/ai-preferences-get-tool-permission-mode.md) | **GET** /api/2.0/ai/preferences/get-tool-permission-mode | Get tool permission mode |
 | [**aiPreferencesIsDeepModeSet**](preferences/ai-preferences-is-deep-mode-set.md) | **GET** /api/2.0/ai/preferences/is-deep-mode-set | Is deep mode set |
 | [**aiPreferencesSetDeepMode**](preferences/ai-preferences-set-deep-mode.md) | **PUT** /api/2.0/ai/preferences/set-deep-mode | Set deep mode |
 | [**aiPreferencesSetReasoningLevel**](preferences/ai-preferences-set-reasoning-level.md) | **PUT** /api/2.0/ai/preferences/set-reasoning-level | Set reasoning level |
+| [**aiPreferencesSetToolPermissionMode**](preferences/ai-preferences-set-tool-permission-mode.md) | **PUT** /api/2.0/ai/preferences/set-tool-permission-mode | Set tool permission mode |
 
 ## Profiles
 
@@ -122,8 +133,10 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
 | [**aiSettingsGet**](settings/ai-settings-get.md) | **GET** /api/2.0/ai/config | Get AI settings |
+| [**aiSettingsGetToolMode**](settings/ai-settings-get-tool-mode.md) | **GET** /api/2.0/ai/config/tool-mode | Get the tool permission mode |
 | [**aiSettingsGetUser**](settings/ai-settings-get-user.md) | **GET** /api/2.0/ai/config/user | Get user AI settings |
 | [**aiSettingsGetVectorization**](settings/ai-settings-get-vectorization.md) | **GET** /api/2.0/ai/config/vectorization | Get vectorization settings |
+| [**aiSettingsSetToolMode**](settings/ai-settings-set-tool-mode.md) | **PUT** /api/2.0/ai/config/tool-mode | Set the tool permission mode |
 | [**aiSettingsSetUser**](settings/ai-settings-set-user.md) | **PUT** /api/2.0/ai/config/user | Update user AI settings |
 | [**aiSettingsSetVectorization**](settings/ai-settings-set-vectorization.md) | **PUT** /api/2.0/ai/config/vectorization | Update vectorization settings |
 

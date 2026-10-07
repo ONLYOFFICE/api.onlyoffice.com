@@ -1,6 +1,6 @@
 # sendJoinInviteMail
 
-> StringWrapper sendJoinInviteMail(AdminMessageBaseSettingsRequestsDto)
+> StringWrapper sendJoinInviteMail(AdminMessageBaseSettingsRequestDto)
 
 `POST /api/2.0/settings/sendjoininvite`
 
@@ -12,18 +12,18 @@ Sends an invitation email with a join link to the address in the request - the s
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **AdminMessageBaseSettingsRequestsDto** | body | [**AdminMessageBaseSettingsRequestsDto**](../../models/admin-message-base-settings-requests-dto.md) |  | [optional] |
+| **AdminMessageBaseSettingsRequestDto** | body | [**AdminMessageBaseSettingsRequestDto**](../../models/admin-message-base-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | A localized message confirming that the invitation with the join link has been sent | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The email address is malformed or internationalized, lies outside the trusted domains, or already belongs to a member of the portal | - | - |
+| **400** | The request body cannot be read or has no `email`, the email address is malformed, internationalized or longer than 255 characters, lies outside the trusted domains, or already belongs to a member of the portal | - | - |
 | **403** | The portal is not accepting requests while it is being restored, transferred or encrypted | - | - |
 | **405** | The portal publishes no trusted-domain policy, so it has nothing to join | - | - |
-| **429** | Too many invitation requests came from the same network address | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **500** | Eleven invitation requests from the same network address have already been counted, each less than two minutes after the one before | - | - |
+| **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -33,7 +33,7 @@ Sends an invitation email with a join link to the address in the request - the s
 
 ## Authorization
 
-[cookieAuth](../settings.md#cookieauth), [bearerAuth](../settings.md#bearerauth)
+[Basic](../settings.md#basic), [OAuth2](../settings.md#oauth2) (scopes: read, write), [ApiKeyBearer](../settings.md#apikeybearer), [asc_auth_key](../settings.md#asc_auth_key), [Bearer](../settings.md#bearer), [OpenId](../settings.md#openid)
 
 ## HTTP request headers
 

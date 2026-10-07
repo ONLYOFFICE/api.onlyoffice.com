@@ -1,6 +1,6 @@
 # createFileInMyDocuments
 
-> FileIntegerWrapper createFileInMyDocuments(CreateFileJsonElement)
+> FileWrapper createFileInMyDocuments(CreateFileRequest)
 
 `POST /api/2.0/files/@my/file`
 
@@ -12,23 +12,26 @@ Creates a file in the caller's own My documents section and answers with the sto
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **CreateFileJsonElement** | body | [**CreateFileJsonElement**](../../models/create-file-json-element.md) |  | [optional] |
+| **CreateFileRequest** | body | [**CreateFileRequest**](../../models/create-file-request.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The file created in My documents: its id and the title the portal actually stored, whose extension may differ from the requested one; `thumbnailStatus` says whether the preview is already built | [**FileIntegerWrapper**](../../models/file-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The file created in My documents: its id and the title the portal actually stored, whose extension may differ from the requested one; `thumbnailStatus` says whether the preview is already built | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `title`, or the title is empty or longer than 165 characters | - | - |
+| **402** | The new file does not fit into the storage quota of the portal, the room or the user | - | - |
+| **403** | The template does not exist or cannot be read, or the form gallery has no file of the title's format | - | - |
+| **404** | `templateId` is a string that is not the id of a file in a known third-party storage | - | - |
+| **500** | `templateId` is a fraction, a number outside the 32-bit range or a numeric string, the form gallery does not know `formId` or cannot be reached, or the caller is a guest, who has no My documents | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FileIntegerWrapper**](../../models/file-integer-wrapper.md)
+[**FileWrapper**](../../models/file-wrapper.md)
 
 ## Authorization
 

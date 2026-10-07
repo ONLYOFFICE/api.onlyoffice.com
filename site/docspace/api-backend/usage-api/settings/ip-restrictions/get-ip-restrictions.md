@@ -1,6 +1,6 @@
 # getIpRestrictions
 
-> IPRestrictionArrayWrapper getIpRestrictions()
+> IpRestrictionArrayWrapper getIpRestrictions()
 
 `GET /api/2.0/settings/iprestrictions`
 
@@ -15,7 +15,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The IP addresses allowed to reach the portal, each with its ID and administrators-only flag; an empty list when the portal has no restrictions | [**IPRestrictionArrayWrapper**](../../models/ip-restriction-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The IP addresses allowed to reach the portal, each with its ID and administrators-only flag; an empty list when the portal has no restrictions | [**IpRestrictionArrayWrapper**](../../models/ip-restriction-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **304** | The addresses have not changed since the `ETag` sent back in `If-None-Match`, which ignores the administrators-only flags; the body is empty | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +26,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**IPRestrictionArrayWrapper**](../../models/ip-restriction-array-wrapper.md)
+[**IpRestrictionArrayWrapper**](../../models/ip-restriction-array-wrapper.md)
 
 ## Authorization
 

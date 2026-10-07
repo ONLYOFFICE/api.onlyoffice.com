@@ -1,6 +1,6 @@
 # updatePasswordSettings
 
-> PasswordSettingsWrapper updatePasswordSettings(PasswordSettingsRequestsDto)
+> PasswordSettingsWrapper updatePasswordSettings(PasswordSettingsRequestDto)
 
 `PUT /api/2.0/settings/security/password`
 
@@ -12,14 +12,15 @@ Replaces the password policy of the whole portal with the four values sent: `min
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **PasswordSettingsRequestsDto** | body | [**PasswordSettingsRequestsDto**](../../models/password-settings-requests-dto.md) |  | [optional] |
+| **PasswordSettingsRequestDto** | body | [**PasswordSettingsRequestDto**](../../models/password-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The password policy as it was stored, including the regular expressions a client can validate against | [**PasswordSettingsWrapper**](../../models/password-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The requested minimum length is outside the range the installation allows | - | - |
+| **400** | The request body cannot be read or has no `minLength`, or the minimum length is outside the range the installation allows | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

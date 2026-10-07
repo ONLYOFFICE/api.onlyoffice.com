@@ -1,6 +1,6 @@
 # createBackupSchedule
 
-> BooleanWrapper createBackupSchedule(BackupScheduleDto)
+> BooleanWrapper createBackupSchedule(CreateBackupScheduleRequestDto)
 
 `POST /api/2.0/backup/createbackupschedule`
 
@@ -12,20 +12,20 @@ Sets the backup schedule of the current portal. A portal keeps at most one sched
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **BackupScheduleDto** | body | [**BackupScheduleDto**](../models/backup-schedule-dto.md) |  | [optional] |
+| **CreateBackupScheduleRequestDto** | body | [**CreateBackupScheduleRequestDto**](../models/create-backup-schedule-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | True if the schedule was saved | [**BooleanWrapper**](../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The number of the stored copies is outside 1 - 30, or a dump was requested on a portal that is not a standalone installation | - | - |
+| **400** | The request body cannot be read, the number of the stored copies is outside 1-30, a dump was requested on a portal that is not a standalone installation, or `storageParams` repeats a key or, on a dump, contains `tenantId` | - | - |
 | **402** | The portal subscription does not cover scheduled backups, has expired or has not been paid | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **404** | The target folder was not found | - | - |
+| **500** | `cronParams` is missing, its period is not a defined value, its hour or day is out of range for the period, which includes a weekly or monthly schedule sent without `day`, a key or value of `storageParams` is null, the `folderId` or `filePath` key the storage type needs is missing, or `Local` storage was requested on a portal that is not a standalone installation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

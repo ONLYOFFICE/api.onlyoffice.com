@@ -1,6 +1,6 @@
 # getDefaultSsoSettingsV2
 
-> SsoSettingsV2Wrapper getDefaultSsoSettingsV2()
+> SsoSettingsWrapper getDefaultSsoSettingsV2()
 
 `GET /api/2.0/settings/ssov2/default`
 
@@ -15,7 +15,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The built-in SSO configuration a portal starts from | [**SsoSettingsV2Wrapper**](../../models/sso-settings-v-2-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The built-in SSO configuration a portal starts from | [**SsoSettingsWrapper**](../../models/sso-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | The portal is a cloud one, and its pricing plan has no single sign-on option or the SSO section is not enabled for it | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +26,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**SsoSettingsV2Wrapper**](../../models/sso-settings-v-2-wrapper.md)
+[**SsoSettingsWrapper**](../../models/sso-settings-wrapper.md)
 
 ## Authorization
 

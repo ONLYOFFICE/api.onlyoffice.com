@@ -1,6 +1,6 @@
 # getAccountingServicePrices
 
-> ServicePriceInfoArrayWrapper getAccountingServicePrices(serviceName, active)
+> ServicePriceArrayWrapper getAccountingServicePrices(serviceName, active)
 
 `GET /api/2.0/portal/payment/accounting/prices/{serviceName}`
 
@@ -19,18 +19,18 @@ Returns the portal's automatic wallet top-up settings: whether it is switched on
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The list of the service prices | [**ServicePriceInfoArrayWrapper**](../../models/service-price-info-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | No permissions to perform this action | - | - |
+| **200** | The list of the service prices | [**ServicePriceArrayWrapper**](../../models/service-price-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The `serviceName` is longer than 255 characters | - | - |
+| **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
+| **500** | The accounting service is not configured, answers the price request with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**ServicePriceInfoArrayWrapper**](../../models/service-price-info-array-wrapper.md)
+[**ServicePriceArrayWrapper**](../../models/service-price-array-wrapper.md)
 
 ## Authorization
 

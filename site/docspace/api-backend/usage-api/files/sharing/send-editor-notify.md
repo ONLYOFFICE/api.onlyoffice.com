@@ -1,6 +1,6 @@
 # sendEditorNotify
 
-> AceShortWrapperArrayWrapper sendEditorNotify(fileId, MentionMessageWrapper)
+> AceShortArrayWrapper sendEditorNotify(fileId, MentionMessageRequest)
 
 `POST /api/2.0/files/file/{fileId}/sendeditornotify`
 
@@ -13,13 +13,13 @@ Emails the people named in `emails` that they were mentioned in a file, with a l
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **Integer** (int32) | The file the mention was made in. A file stored on the portal is numbered, while a file in a connected third-party account is named by an opaque string. | [required] [example: `10`] |
-| **MentionMessageWrapper** | body | [**MentionMessageWrapper**](../../models/mention-message-wrapper.md) | The notification to send. | [optional] |
+| **MentionMessageRequest** | body | [**MentionMessageRequest**](../../models/mention-message-request.md) | The notification to send. | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The people who currently have access to the file, when the caller still has to invite someone; empty otherwise | [**AceShortWrapperArrayWrapper**](../../models/ace-short-wrapper-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The people who currently have access to the file, when the caller still has to invite someone; empty otherwise | [**AceShortArrayWrapper**](../../models/ace-short-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The address list is missing, or the message is longer than the field allows | - | - |
 | **403** | The caller may not comment on the file | - | - |
 | **404** | The file does not exist | - | - |
@@ -31,7 +31,16 @@ Emails the people named in `emails` that they were mentioned in a file, with a l
 
 ## Return type
 
-[**AceShortWrapperArrayWrapper**](../../models/ace-short-wrapper-array-wrapper.md)
+[**AceShortArrayWrapper**](../../models/ace-short-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file the mention was made in. A file stored on the portal is numbered, while a file in a connected third-party account is named by an opaque string. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
 
 ## Authorization
 

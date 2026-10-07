@@ -1,6 +1,6 @@
 # authenticateMe
 
-> AuthenticationTokenWrapper authenticateMe(AuthRequestsDto)
+> AuthenticationTokenWrapper authenticateMe(AuthRequestDto)
 
 `POST /api/2.0/authentication`
 
@@ -12,7 +12,7 @@ Signs a user in to the current portal and either issues the authentication token
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **AuthRequestsDto** | body | [**AuthRequestsDto**](../models/auth-requests-dto.md) |  | [optional] |
+| **AuthRequestDto** | body | [**AuthRequestDto**](../models/auth-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -34,7 +34,7 @@ Signs a user in to the current portal and either issues the authentication token
 
 ## Authorization
 
-[cookieAuth](authentication.md#cookieauth), [bearerAuth](authentication.md#bearerauth)
+[Basic](authentication.md#basic), [OAuth2](authentication.md#oauth2) (scopes: read, write), [ApiKeyBearer](authentication.md#apikeybearer), [asc_auth_key](authentication.md#asc_auth_key), [Bearer](authentication.md#bearer), [OpenId](authentication.md#openid)
 
 ## HTTP request headers
 

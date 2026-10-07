@@ -1,6 +1,6 @@
 # startBackup
 
-> BackupProgressWrapper startBackup(BackupDto)
+> BackupProgressWrapper startBackup(StartBackupRequestDto)
 
 `POST /api/2.0/backup/startbackup`
 
@@ -12,20 +12,20 @@ Queues a backup of the current portal and returns straight away: the archive its
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **BackupDto** | body | [**BackupDto**](../models/backup-dto.md) |  | [optional] |
+| **StartBackupRequestDto** | body | [**StartBackupRequestDto**](../models/start-backup-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The state of the queued backup job | [**BackupProgressWrapper**](../models/backup-progress-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The folder ID does not match the storage type, or a dump was requested on a portal that is not a standalone installation | - | - |
-| **402** | The free backups of the current month are used up and the paid backup service is not available to this portal | - | - |
+| **400** | The request body cannot be read, the folder ID does not match the storage type, a dump was requested on a portal that is not a standalone installation, or `storageParams` repeats a key | - | - |
+| **402** | The portal already uses more storage than its plan allows and the backup goes to `Documents`, or the free backups of the current month are used up and the paid backup service is not available to this portal or cannot be charged | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **404** | The target folder or the backup quota was not found | - | - |
+| **500** | A key or value of `storageParams` is null, `ThridpartyDocuments` storage has no `folderId`, or `Local` storage has no `filePath` or was requested on a portal that is not a standalone installation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

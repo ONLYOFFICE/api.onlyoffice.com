@@ -1,6 +1,6 @@
 # aiExportTextToDocx
 
-> aiExportTextToDocx_202_response aiExportTextToDocx(aiExportTextToDocx\_request)
+> aiExportTextToDocx_202_response aiExportTextToDocx(AiExportTextToDocxRequest)
 
 `POST /api/2.0/ai/text-to-docx`
 
@@ -12,7 +12,7 @@ Queues a markdown export and answers 202 as soon as the job is accepted, without
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiExportTextToDocx\_request** | body | [**aiExportTextToDocx_request**](../../models/ai-export-text-to-docx-request-body.md) |  | [required] |
+| **AiExportTextToDocxRequest** | body | [**AiExportTextToDocxRequest**](../../models/ai-export-text-to-docx-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Queues a markdown export and answers 202 as soon as the job is accepted, without
 | **202** | Confirms the export was queued. The file arrives in the target folder later, announced by a folder-modified socket event. | [**aiExportTextToDocx_202_response**](../../models/ai-export-text-to-docx-202-response.md) | - |
 | **400** | `title`, `content` or `folderId` is missing, or `format` is not one of `Docx`, `Pdf`, `Md`. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The transcript is larger than 15 MB, this route's own parser limit. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

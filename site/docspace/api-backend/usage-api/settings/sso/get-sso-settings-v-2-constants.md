@@ -1,6 +1,6 @@
 # getSsoSettingsV2Constants
 
-> SsoSettingsV2ConstantsWrapper getSsoSettingsV2Constants()
+> SsoSettingsConstantsWrapper getSsoSettingsV2Constants()
 
 `GET /api/2.0/settings/ssov2/constants`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Every value the SAML fields accept: name ID formats, bindings, signing and encryption algorithms, and the service provider and identity provider certificate uses | [**SsoSettingsV2ConstantsWrapper**](../../models/sso-settings-v-2-constants-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Every value the SAML fields accept: name ID formats, bindings, signing and encryption algorithms, and the service provider and identity provider certificate uses | [**SsoSettingsConstantsWrapper**](../../models/sso-settings-constants-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +24,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**SsoSettingsV2ConstantsWrapper**](../../models/sso-settings-v-2-constants-wrapper.md)
+[**SsoSettingsConstantsWrapper**](../../models/sso-settings-constants-wrapper.md)
 
 ## Authorization
 

@@ -1,6 +1,6 @@
 # getLicensorData
 
-> CompanyWhiteLabelSettingsArrayWrapper getLicensorData()
+> LicensorDetailsArrayWrapper getLicensorData()
 
 `GET /api/2.0/settings/companywhitelabel`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The licensor details in effect, followed by the built-in ONLYOFFICE ones when they have been replaced | [**CompanyWhiteLabelSettingsArrayWrapper**](../../models/company-white-label-settings-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The licensor details in effect, followed by the built-in ONLYOFFICE ones when they have been replaced | [**LicensorDetailsArrayWrapper**](../../models/licensor-details-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +24,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**CompanyWhiteLabelSettingsArrayWrapper**](../../models/company-white-label-settings-array-wrapper.md)
+[**LicensorDetailsArrayWrapper**](../../models/licensor-details-array-wrapper.md)
 
 ## Authorization
 

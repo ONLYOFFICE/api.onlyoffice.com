@@ -1,6 +1,6 @@
 # updateFileComment
 
-> StringWrapper updateFileComment(fileId, UpdateComment)
+> StringWrapper updateFileComment(fileId, UpdateCommentRequest)
 
 `PUT /api/2.0/files/file/{fileId}/comment`
 
@@ -13,23 +13,34 @@ Replaces the comment stored on one version of a file - the note that explains wh
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **Integer** (int32) | The file whose version comment is replaced. | [required] [example: `1`] |
-| **UpdateComment** | body | [**UpdateComment**](../../models/update-comment.md) | The version and the comment to store on it. | [required] |
+| **UpdateCommentRequest** | body | [**UpdateCommentRequest**](../../models/update-comment-request.md) | The version and the comment to store on it. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The comment as it was stored | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `version`, the version is below 1 or does not exist, or the comment is longer than 255 characters | - | - |
+| **403** | The caller may not change the version history of the file, or the file is locked by somebody else | - | - |
+| **404** | The file id resolves to nothing | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
 [**StringWrapper**](../../models/string-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file whose version comment is replaced. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
 
 ## Authorization
 

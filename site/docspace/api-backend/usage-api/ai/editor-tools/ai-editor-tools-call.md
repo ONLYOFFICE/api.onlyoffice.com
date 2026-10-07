@@ -1,6 +1,6 @@
 # aiEditorToolsCall
 
-> aiEditorToolsCall_200_response aiEditorToolsCall(aiEditorToolsCall\_request)
+> aiEditorToolsCall_200_response aiEditorToolsCall(AiEditorToolsCallRequest)
 
 `POST /api/2.0/ai/editor-tools/call`
 
@@ -12,7 +12,7 @@ Executes one DocSpace tool on behalf of the document editor's AI plugin, server-
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiEditorToolsCall\_request** | body | [**aiEditorToolsCall_request**](../../models/ai-editor-tools-call-request-body.md) | The tool to run: `name` from `GET api/2.0/ai/editor-tools/list`, `arguments` matching that tool's input schema, and an optional `entityId` for the room to run it in. | [required] |
+| **AiEditorToolsCallRequest** | body | [**AiEditorToolsCallRequest**](../../models/ai-editor-tools-call-request.md) | The tool to run: `name` from `GET api/2.0/ai/editor-tools/list`, `arguments` matching that tool's input schema, and an optional `entityId` for the room to run it in. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Executes one DocSpace tool on behalf of the document editor's AI plugin, server-
 | **200** | The tool's output as a string. A tool that failed reports it inside that string. | [**aiEditorToolsCall_200_response**](../../models/ai-editor-tools-call-200-response.md) | - |
 | **400** | The tool name is not one this portal exposes. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

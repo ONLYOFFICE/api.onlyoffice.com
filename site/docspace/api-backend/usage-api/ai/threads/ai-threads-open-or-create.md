@@ -1,6 +1,6 @@
 # aiThreadsOpenOrCreate
 
-> AiOpenOrCreateResult aiThreadsOpenOrCreate(aiThreadsOpenOrCreate\_request)
+> AiOpenOrCreateResult aiThreadsOpenOrCreate(AiThreadsOpenOrCreateRequest)
 
 `POST /api/2.0/ai/threads/open-or-create`
 
@@ -12,7 +12,7 @@ Opens a chat thread and returns it with its history, or creates one whose title 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiThreadsOpenOrCreate\_request** | body | [**aiThreadsOpenOrCreate_request**](../../models/ai-threads-open-or-create-request-body.md) |  | [required] |
+| **AiThreadsOpenOrCreateRequest** | body | [**AiThreadsOpenOrCreateRequest**](../../models/ai-threads-open-or-create-request.md) |  | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Opens a chat thread and returns it with its history, or creates one whose title 
 |------------- | ------------- | ------------- | -------------|
 | **200** | The thread that was opened or created, with its prior messages. A created one carries the generated title. | [**AiOpenOrCreateResult**](../../models/ai-open-or-create-result.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **404** | The `entityId` names a room the caller cannot open, or no live AI profile is bound to it. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

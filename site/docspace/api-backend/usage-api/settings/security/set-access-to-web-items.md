@@ -1,6 +1,6 @@
 # setAccessToWebItems
 
-> SecurityArrayWrapper setAccessToWebItems(WebItemsSecurityRequestsDto)
+> SecurityArrayWrapper setAccessToWebItems(WebItemsSecurityRequestDto)
 
 `PUT /api/2.0/settings/security/access`
 
@@ -12,18 +12,18 @@ Switches several portal modules on or off in one call: `items` carries an entry 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **WebItemsSecurityRequestsDto** | body | [**WebItemsSecurityRequestsDto**](../../models/web-items-security-requests-dto.md) |  | [optional] |
+| **WebItemsSecurityRequestDto** | body | [**WebItemsSecurityRequestDto**](../../models/web-items-security-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The resulting access configuration of every module listed in the request | [**SecurityArrayWrapper**](../../models/security-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read, or a `key` in `items` is not a GUID | - | - |
 | **403** | Per-module access cannot be configured on an open portal, or the caller lacks the portal-settings right of a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

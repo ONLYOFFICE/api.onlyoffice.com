@@ -1,6 +1,6 @@
 # getRoomTagsInfo
 
-> STRINGArrayWrapper getRoomTagsInfo(count, startIndex, filterValue)
+> StringArrayWrapper getRoomTagsInfo(count, startIndex, filterValue)
 
 `GET /api/2.0/files/tags`
 
@@ -20,17 +20,17 @@ Returns the custom room tags available to the caller as a flat array of names, n
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The tag names available to the caller | [**STRINGArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The tag names available to the caller | [**StringArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | A parameter has the wrong type, the `count` is outside its allowed range, or the `startIndex` is negative | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**STRINGArrayWrapper**](../models/string-array-wrapper.md)
+[**StringArrayWrapper**](../models/string-array-wrapper.md)
 
 ## Authorization
 

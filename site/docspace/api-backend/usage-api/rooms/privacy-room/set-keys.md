@@ -20,6 +20,7 @@ Stores a new encryption key pair for the calling user and answers with that user
 |------------- | ------------- | ------------- | -------------|
 | **201** | The encryption key is created. Answered 200 before DocSpace 4.0; the response body is unchanged | [**EncryptionKeyArrayWrapper**](../../models/encryption-key-array-wrapper.md) | - |
 | **400** | The key material is missing, blank or too large to be stored | - | - |
+| **403** | The caller is a guest, who cannot own encryption keys | - | - |
 | **409** | A key with the same identifier already exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

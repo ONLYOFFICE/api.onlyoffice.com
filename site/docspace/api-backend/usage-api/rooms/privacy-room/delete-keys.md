@@ -20,6 +20,7 @@ Removes one encryption key pair from the calling user's own key set and answers 
 |------------- | ------------- | ------------- | -------------|
 | **204** | The encryption key is deleted. Answered 200 with the remaining keys before DocSpace 4.0 | - | - |
 | **400** | The key identifier is not a valid GUID | - | - |
+| **403** | The caller is a guest, who cannot own encryption keys | - | - |
 | **404** | The encryption key is not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

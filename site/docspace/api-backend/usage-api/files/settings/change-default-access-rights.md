@@ -1,6 +1,6 @@
 # changeDefaultAccessRights
 
-> FileShareResponseArrayWrapper changeDefaultAccessRights(request\_body)
+> FileShareResponseArrayWrapper changeDefaultAccessRights(DefaultAccessRightsRequestDto)
 
 `PUT /api/2.0/files/settings/dafaultaccessrights`
 
@@ -12,17 +12,17 @@ Stores the access rights the sharing dialog offers the calling account by defaul
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **request\_body** | body | **List** | The access rights the sharing dialog should offer by default. The array is the whole request body rather than a field of an object, and the portal stores a normalised subset of it instead of the array as sent, so read the answer to learn what was kept. An empty array clears the setting, after which the portal reports read access alone. A value outside the published list is rejected as an invalid request. | [optional] |
+| **DefaultAccessRightsRequestDto** | body | **List** | The access rights the sharing dialog should offer by default. The array is the whole request body rather than a field of an object, and the portal stores a normalised subset of it instead of the array as sent, so read the answer to learn what was kept. An empty array clears the setting, after which the portal reports read access alone. A value outside the published list is rejected as an invalid request. | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The normalised set of default access rights stored for the caller | [**FileShareResponseArrayWrapper**](../../models/file-share-response-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or holds a number outside the published list of access rights | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

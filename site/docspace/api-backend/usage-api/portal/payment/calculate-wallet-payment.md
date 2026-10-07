@@ -19,9 +19,9 @@ Prices a wallet-service purchase without making it: it returns what buying the r
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The amount the purchase would cost, its currency and the quantity it was calculated for | [**PaymentCalculationWrapper**](../../models/payment-calculation-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The quantity type is not `Add`, the quantity is not greater than zero, or the product is not a wallet service | - | - |
+| **400** | The request body cannot be read or has no `quantity`, `quantity` does not hold exactly one product, the quantity type is not `Add`, the quantity is not greater than zero, or the product is not a wallet service | - | - |
 | **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
-| **404** | This portal has no billing customer, or its wallet has no sub-account in the accounting currency | - | - |
+| **404** | This portal has no billing customer, or its wallet has no balance or no sub-account in the accounting currency | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

@@ -25,7 +25,7 @@ Returns a page of portal accounts selected by the full set of account filters, w
 | **excludeGroup** | query | **Boolean** | Inverts `groupId`: with true the members of that group are left out instead of being the only ones kept. It has no effect without `groupId`. | [optional] [example: `false`] |
 | **invitedByMe** | query | **Boolean** | Keeps only the accounts invited by the caller when true, and only those invited by somebody else when false. Omit it to search regardless of who sent the invitation. | [optional] [example: `false`] |
 | **inviterId** | query | **UUID** (uuid) | Keeps only the accounts invited by the account with this ID. Omit it to search regardless of who sent the invitation. | [optional] [example: `00000000-0000-0000-0000-000000000000`] |
-| **area** | query | **Area** | The part of the portal to search in: `All`, the default, searches members and guests together, `People` leaves the guests out, and `Guests` returns guests only. It also cancels the type filters that contradict it. | [optional] [example: `All`] [enum: `0`, `1`, `2`] |
+| **area** | query | **AccountSearchArea** | The part of the portal to search in: `All`, the default, searches members and guests together, `People` leaves the guests out, and `Guests` returns guests only. It also cancels the type filters that contradict it. | [optional] [example: `All`] [enum: `0`, `1`, `2`] |
 | **count** | query | **Integer** (int32) | The size of the page. It defaults to 100, which is also the largest value the operation accepts. | [optional] [example: `25`] [min: 1] [max: 100] |
 | **startIndex** | query | **Integer** (int32) | The number of matches to skip before the page starts. It defaults to 0, and the total number of matches is reported in the total count of the response. | [optional] [example: `0`] |
 | **sortBy** | query | **String** | What to order the accounts by, compared without regard to case: `FirstName`, `LastName`, `DisplayName`, `Type`, `Email`, `Department`, `UsedSpace`, `CreatedBy` or `RegistrationDate`. | [optional] [example: `DisplayName`] |
@@ -38,11 +38,11 @@ Returns a page of portal accounts selected by the full set of account filters, w
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | A page of matching accounts, with their short profiles | [**EmployeeArrayWrapper**](../../models/employee-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | A parameter has the wrong type, or the `count` is outside its allowed range | - | - |
 | **403** | The caller is a member or a guest | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

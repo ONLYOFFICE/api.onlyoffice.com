@@ -1,6 +1,6 @@
 # getAuditSettings
 
-> TenantAuditSettingsResponseWrapper getAuditSettings()
+> TenantAuditSettingsWrapper getAuditSettings()
 
 `GET /api/2.0/security/audit/settings/lifetime`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The login history and audit trail lifetimes of the portal, in days | [**TenantAuditSettingsResponseWrapper**](../../models/tenant-audit-settings-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The login history and audit trail lifetimes of the portal, in days | [**TenantAuditSettingsWrapper**](../../models/tenant-audit-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **402** | The login history and audit trail section is not enabled for this portal | - | - |
 | **403** | The caller does not have the portal-settings right of a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -26,7 +26,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**TenantAuditSettingsResponseWrapper**](../../models/tenant-audit-settings-response-wrapper.md)
+[**TenantAuditSettingsWrapper**](../../models/tenant-audit-settings-wrapper.md)
 
 ## Authorization
 

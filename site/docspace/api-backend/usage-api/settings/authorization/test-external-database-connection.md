@@ -1,6 +1,6 @@
 # testExternalDatabaseConnection
 
-> ConnectionTestResultWrapper testExternalDatabaseConnection(ExternalDatabaseSettings)
+> ConnectionTestResultWrapper testExternalDatabaseConnection(ExternalDatabaseConnectionRequestDto)
 
 `POST /api/2.0/settings/authservice/externaldb/test`
 
@@ -12,13 +12,14 @@ Probes connectivity to an external database using the settings supplied in the r
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **ExternalDatabaseSettings** | body | [**ExternalDatabaseSettings**](../../models/external-database-settings.md) |  | [optional] |
+| **ExternalDatabaseConnectionRequestDto** | body | [**ExternalDatabaseConnectionRequestDto**](../../models/external-database-connection-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Connection test result: a success flag and, on failure, an error message | [**ConnectionTestResultWrapper**](../../models/connection-test-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

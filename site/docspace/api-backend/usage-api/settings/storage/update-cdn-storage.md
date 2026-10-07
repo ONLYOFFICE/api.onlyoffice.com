@@ -1,6 +1,6 @@
 # updateCdnStorage
 
-> CdnStorageSettingsWrapper updateCdnStorage(StorageRequestsDto)
+> StorageSettingsWrapper updateCdnStorage(StorageRequestDto)
 
 `PUT /api/2.0/settings/storage/cdn`
 
@@ -12,14 +12,14 @@ Selects the content delivery network that serves the static content of the porta
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **StorageRequestsDto** | body | [**StorageRequestsDto**](../../models/storage-requests-dto.md) |  | [optional] |
+| **StorageRequestDto** | body | [**StorageRequestDto**](../../models/storage-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The saved CDN configuration; the upload of the static content has been handed to the storage service | [**CdnStorageSettingsWrapper**](../../models/cdn-storage-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The requested CDN module is not configured on this installation | - | - |
+| **200** | The saved CDN configuration; the upload of the static content has been handed to the storage service | [**StorageSettingsWrapper**](../../models/storage-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `module`, or the requested CDN module is unknown or not configured on this installation | - | - |
 | **403** | The caller may not edit portal settings, or this installation does not allow changing the storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
@@ -29,7 +29,7 @@ Selects the content delivery network that serves the static content of the porta
 
 ## Return type
 
-[**CdnStorageSettingsWrapper**](../../models/cdn-storage-settings-wrapper.md)
+[**StorageSettingsWrapper**](../../models/storage-settings-wrapper.md)
 
 ## Authorization
 

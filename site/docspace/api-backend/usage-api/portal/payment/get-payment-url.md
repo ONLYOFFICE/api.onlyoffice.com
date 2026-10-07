@@ -19,7 +19,8 @@ Starts the purchase of a monthly paid plan for this portal by handing back the h
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The absolute URL of the checkout page to open, or an empty result when the portal already has a paid plan | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | `quantity` holds more than one product, a quantity that is not greater than zero, or a product that is not a monthly plan | - | - |
+| **400** | The request body cannot be read or has no `backUrl`, `successUrl` or `quantity`, `backUrl` or `successUrl` does not start with `http://`, `https://` or `ftp://` or is longer than 255 characters, or `quantity` does not hold exactly one product, holds a quantity that is not greater than zero, or a product that is not a monthly plan | - | - |
+| **402** | The portal already has more administrators, users, rooms or AI agents, or stores more data, than the plan in the requested quantity allows | - | - |
 | **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

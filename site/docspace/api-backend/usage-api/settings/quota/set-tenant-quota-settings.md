@@ -1,6 +1,6 @@
 # setTenantQuotaSettings
 
-> TenantQuotaSettingsWrapper setTenantQuotaSettings(TenantQuotaSettingsRequestsDto)
+> TenantQuotaSettingsWrapper setTenantQuotaSettings(TenantQuotaSettingsRequestDto)
 
 `PUT /api/2.0/settings/tenantquotasettings`
 
@@ -12,19 +12,20 @@ Sets or removes the storage quota for a given tenant. Available only on a Standa
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TenantQuotaSettingsRequestsDto** | body | [**TenantQuotaSettingsRequestsDto**](../../models/tenant-quota-settings-requests-dto.md) |  | [optional] |
+| **TenantQuotaSettingsRequestDto** | body | [**TenantQuotaSettingsRequestDto**](../../models/tenant-quota-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Saved tenant storage quota settings | [**TenantQuotaSettingsWrapper**](../../models/tenant-quota-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `tenantId` | - | - |
 | **402** | The portal's pricing plan does not include the statistics feature required for tenant quotas | - | - |
-| **405** | The caller is not a DocSpace administrator, or the portal is not a Standalone installation | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **415** | The caller is not a DocSpace administrator, or the portal is not a Standalone installation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

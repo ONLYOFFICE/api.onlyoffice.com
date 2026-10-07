@@ -1,6 +1,6 @@
 # saveRoomQuotaSettings
 
-> TenantRoomQuotaSettingsWrapper saveRoomQuotaSettings(QuotaSettingsRequestsDto)
+> EntityQuotaSettingsWrapper saveRoomQuotaSettings(QuotaSettingsRequestDto)
 
 `POST /api/2.0/settings/roomquotasettings`
 
@@ -12,24 +12,25 @@ Sets the portal's default per-room storage quota, applied to newly created rooms
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **QuotaSettingsRequestsDto** | body | [**QuotaSettingsRequestsDto**](../../models/quota-settings-requests-dto.md) |  | [optional] |
+| **QuotaSettingsRequestDto** | body | [**QuotaSettingsRequestDto**](../../models/quota-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Saved default per-room storage quota settings | [**TenantRoomQuotaSettingsWrapper**](../../models/tenant-room-quota-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Saved default per-room storage quota settings | [**EntityQuotaSettingsWrapper**](../../models/entity-quota-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `defaultQuota` | - | - |
 | **402** | The portal's pricing plan does not include the statistics feature required for room quotas | - | - |
+| **403** | The caller has no portal-settings right, or `defaultQuota` is not a JSON number | - | - |
+| **500** | The `defaultQuota` is not a whole number within the 64-bit range, or exceeds the portal's total storage quota or, on a Standalone installation with a portal-wide quota enabled, that quota | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**TenantRoomQuotaSettingsWrapper**](../../models/tenant-room-quota-settings-wrapper.md)
+[**EntityQuotaSettingsWrapper**](../../models/entity-quota-settings-wrapper.md)
 
 ## Authorization
 

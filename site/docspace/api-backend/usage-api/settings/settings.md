@@ -192,7 +192,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getEnabledModules**](security/get-enabled-modules.md) | **GET** /api/2.0/settings/security/modules | Get enabled modules |
 | [**getIsProductAdministrator**](security/get-is-product-administrator.md) | **GET** /api/2.0/settings/security/administrator | Check product administrator |
 | [**getPasswordSettings**](security/get-password-settings.md) | **GET** /api/2.0/settings/security/password | Get password settings |
-| [**getProductAdministrators**](security/get-product-administrators.md) | **GET** /api/2.0/settings/security/administrator/\{productid\} | Get product administrators |
+| [**getProductAdministrators**](security/get-product-administrators.md) | **GET** /api/2.0/settings/security/administrator/\{productId\} | Get product administrators |
 | [**getWebItemSecurityInfo**](security/get-web-item-security-info.md) | **GET** /api/2.0/settings/security/\{id\} | Check module availability |
 | [**getWebItemSettingsSecurityInfo**](security/get-web-item-settings-security-info.md) | **GET** /api/2.0/settings/security | Get module access settings |
 | [**setAccessToWebItems**](security/set-access-to-web-items.md) | **PUT** /api/2.0/settings/security/access | Set access to modules in bulk |

@@ -1,6 +1,6 @@
 # saveDnsSettings
 
-> StringWrapper saveDnsSettings(DnsSettingsRequestsDto)
+> StringWrapper saveDnsSettings(DnsSettingsRequestDto)
 
 `PUT /api/2.0/settings/dns`
 
@@ -12,19 +12,19 @@ Maps a custom domain name onto the current tenant, or clears the mapping, so the
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **DnsSettingsRequestsDto** | body | [**DnsSettingsRequestsDto**](../../models/dns-settings-requests-dto.md) |  | [optional] |
+| **DnsSettingsRequestDto** | body | [**DnsSettingsRequestDto**](../../models/dns-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirmation that the DNS mapping was updated | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The domain name is invalid, or collides with the portal's reserved base domain | - | - |
-| **402** | This option is not available under the portal's current pricing plan | - | - |
-| **405** | The portal is not a Standalone installation, so a custom domain cannot be mapped | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **415** | The portal is not a Standalone installation, so a custom domain cannot be mapped | - | - |
+| **500** | The installation hides the DNS settings section, or the domain name is not a valid host name, lies under the portal's base domain, has a length outside the allowed range, is reserved, or is already the alias or mapped domain of a portal, this one included | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

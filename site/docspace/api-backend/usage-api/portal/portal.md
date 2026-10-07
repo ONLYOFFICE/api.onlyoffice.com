@@ -9,7 +9,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
-| [**getGuestSharingLink**](guests/get-guest-sharing-link.md) | **GET** /api/2.0/people/guests/\{userid\}/share | Get a guest sharing link |
+| [**getGuestSharingLink**](guests/get-guest-sharing-link.md) | **GET** /api/2.0/people/guests/\{userId\}/share | Get a guest sharing link |
 
 ## Payment
 
@@ -86,7 +86,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getInvitationLink**](users/get-invitation-link.md) | **GET** /api/2.0/portal/users/invite/\{employeeType\} | Get a legacy invitation link |
 | [**getInvitationLinkByEmployeeType**](users/get-invitation-link-by-employee-type.md) | **GET** /api/2.0/portal/users/invitationlink/\{employeeType\} | Get an invitation link by role |
 | [**getPortalUsersCount**](users/get-portal-users-count.md) | **GET** /api/2.0/portal/userscount | Get a number of portal users |
-| [**getUserById**](users/get-user-by-id.md) | **GET** /api/2.0/portal/users/\{userID\} | Get a portal user |
+| [**getUserById**](users/get-user-by-id.md) | **GET** /api/2.0/portal/users/\{userId\} | Get a portal user |
 | [**markGiftMessageAsRead**](users/mark-gift-message-as-read.md) | **POST** /api/2.0/portal/present/mark | Mark a gift message as read |
 | [**sendCongratulations**](users/send-congratulations.md) | **POST** /api/2.0/portal/sendcongratulations | Send congratulations |
 | [**updateInvitationLink**](users/update-invitation-link.md) | **PUT** /api/2.0/portal/users/invitationlink | Update an invitation link |

@@ -1,6 +1,6 @@
 # insertFileToMyFromBody
 
-> FileIntegerWrapper insertFileToMyFromBody(File, Title, CreateNewIfExist, KeepConvertStatus, Stream.CanRead, Stream.CanWrite, Stream.CanSeek, Stream.CanTimeout, Stream.Length, Stream.Position, Stream.ReadTimeout, Stream.WriteTimeout)
+> FileWrapper insertFileToMyFromBody(file, title, createNewIfExist, keepConvertStatus, stream.canRead, stream.canWrite, stream.canSeek, stream.canTimeout, stream.length, stream.position, stream.readTimeout, stream.writeTimeout)
 
 `POST /api/2.0/files/@my/insert`
 
@@ -12,26 +12,28 @@ Stores one file in the caller's own My documents section, the personal storage e
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **File** | form | **File** (binary) | The content to store, sent as a `multipart/form-data` part. The same content may instead be sent as the raw request body, which is what a client that cannot build a form does; when both are present the form part wins. | [optional] |
-| **Title** | form | **String** | The name to store the file under, extension included. It wins over the name of the uploaded part, which is the reason to choose this operation over the plain upload, and it is the only name available when the content arrives as a raw body. Characters a title cannot hold are replaced with underscores and the name is cut to 170 characters before the file is stored. | [optional] |
-| **CreateNewIfExist** | form | **Boolean** | Settles the clash with a file already carrying that title: left out, the content is written as the next version of that file; set to true, both survive and the new one gets a numeric suffix in its title. | [optional] |
-| **KeepConvertStatus** | form | **Boolean** | Decides whether the outcome of the background conversion outlives the conversion itself. True keeps the queue record, so `GET api/2.0/files/file/{fileId}/checkconversion` can still report the result or the error; left out, the record is cleared the moment the conversion ends and that call finds nothing. | [optional] |
-| **Stream.CanRead** | form | **Boolean** |  | [optional] |
-| **Stream.CanWrite** | form | **Boolean** |  | [optional] |
-| **Stream.CanSeek** | form | **Boolean** |  | [optional] |
-| **Stream.CanTimeout** | form | **Boolean** |  | [optional] |
-| **Stream.Length** | form | **Long** (int64) |  | [optional] |
-| **Stream.Position** | form | **Long** (int64) |  | [optional] |
-| **Stream.ReadTimeout** | form | **Integer** (int32) |  | [optional] |
-| **Stream.WriteTimeout** | form | **Integer** (int32) |  | [optional] |
+| **file** | form | **File** (binary) | The content to store, sent as a `multipart/form-data` part. The same content may instead be sent as the raw request body, which is what a client that cannot build a form does; when both are present the form part wins. | [optional] |
+| **title** | form | **String** | The name to store the file under, extension included. It wins over the name of the uploaded part, which is the reason to choose this operation over the plain upload, and it is the only name available when the content arrives as a raw body. Characters a title cannot hold are replaced with underscores and the name is cut to 170 characters before the file is stored. | [optional] |
+| **createNewIfExist** | form | **Boolean** | Settles the clash with a file already carrying that title: left out, the content is written as the next version of that file; set to true, both survive and the new one gets a numeric suffix in its title. | [optional] |
+| **keepConvertStatus** | form | **Boolean** | Decides whether the outcome of the background conversion outlives the conversion itself. True keeps the queue record, so `GET api/2.0/files/file/{fileId}/checkconversion` can still report the result or the error; left out, the record is cleared the moment the conversion ends and that call finds nothing. | [optional] |
+| **stream.canRead** | form | **Boolean** |  | [optional] |
+| **stream.canWrite** | form | **Boolean** |  | [optional] |
+| **stream.canSeek** | form | **Boolean** |  | [optional] |
+| **stream.canTimeout** | form | **Boolean** |  | [optional] |
+| **stream.length** | form | **Long** (int64) |  | [optional] |
+| **stream.position** | form | **Long** (int64) |  | [optional] |
+| **stream.readTimeout** | form | **Integer** (int32) |  | [optional] |
+| **stream.writeTimeout** | form | **Integer** (int32) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The stored file, with the identifier, version and title it was saved under | [**FileIntegerWrapper**](../../models/file-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The stored file, with the identifier, version and title it was saved under | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | The file exceeds the single-request upload limit, or storing it would exceed a storage quota or size limit | - | - |
 | **403** | Creating a file in the personal section is not allowed for this account | - | - |
 | **404** | The caller has no personal section, so there is nothing to store the file in | - | - |
+| **415** | The installation restricts uploadable formats and the file extension is not among them | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -41,7 +43,7 @@ Stores one file in the caller's own My documents section, the personal storage e
 
 ## Return type
 
-[**FileIntegerWrapper**](../../models/file-integer-wrapper.md)
+[**FileWrapper**](../../models/file-wrapper.md)
 
 ## Authorization
 

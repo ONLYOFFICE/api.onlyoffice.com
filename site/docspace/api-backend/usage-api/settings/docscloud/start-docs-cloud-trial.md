@@ -18,11 +18,11 @@ This endpoint does not need any parameter.
 | **200** | Boolean value: true if the trial subscription is activated, false if the billing service declines it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal already has a Docs Connect trial, Docs Connect or Docs Connect Dev Pack subscription | - | - |
 | **402** | The portal tariff is delayed or not paid, so the trial cannot be started | - | - |
-| **403** | The caller is not allowed to edit the portal settings, or the billing service is not configured | - | - |
+| **403** | The caller has no portal-settings right, the billing service is not configured, or the trial was granted but the address of the assigned Docs Connect server would push the Content Security Policy header over its size limit | - | - |
 | **404** | The Docs Connect trial quota is not available on this installation | - | - |
+| **500** | The trial was granted, but reading the Docs Connect tenant afterwards failed: the Docs Connect service is not configured on this installation, has no tenant for the portal yet, is unreachable, or answered with an error | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

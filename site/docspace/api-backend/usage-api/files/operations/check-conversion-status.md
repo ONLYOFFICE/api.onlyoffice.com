@@ -20,6 +20,8 @@ Reports how far the conversion of a file has got, as a list that holds one entry
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The conversion entry of the file, or an empty list when the portal has none | [**ConversationResultArrayWrapper**](../../models/conversation-result-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller cannot read the file, or, with `start=true`, may not convert it | - | - |
+| **404** | The file id is neither a number nor the id of a file in a known third-party storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -30,6 +32,15 @@ Reports how far the conversion of a file has got, as a list that holds one entry
 ## Return type
 
 [**ConversationResultArrayWrapper**](../../models/conversation-result-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file whose conversion is asked about. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
 
 ## Authorization
 

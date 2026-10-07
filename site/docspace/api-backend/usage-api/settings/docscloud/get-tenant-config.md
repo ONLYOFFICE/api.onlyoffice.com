@@ -20,10 +20,10 @@ Returns the configuration of the Docs Connect tenant of the current portal: its 
 |------------- | ------------- | ------------- | -------------|
 | **200** | The configuration of the Docs Connect tenant of the portal, with its security, server, WOPI and IP filter settings | [**DocsCloudConfigWrapper**](../../models/docs-cloud-config-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal has no activated Docs Connect tenant, so there is no configuration to return | - | - |
-| **403** | The caller is not allowed to edit the portal settings | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

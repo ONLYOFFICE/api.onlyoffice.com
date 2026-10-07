@@ -1,6 +1,6 @@
 # getAuthServices
 
-> AuthServiceRequestsArrayWrapper getAuthServices()
+> AuthServiceArrayWrapper getAuthServices()
 
 `GET /api/2.0/settings/authservice`
 
@@ -15,7 +15,8 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Third-party providers with a manageable key, and their last-saved key values | [**AuthServiceRequestsArrayWrapper**](../../models/auth-service-requests-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Third-party providers with a manageable key, and their last-saved key values | [**AuthServiceArrayWrapper**](../../models/auth-service-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +25,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**AuthServiceRequestsArrayWrapper**](../../models/auth-service-requests-array-wrapper.md)
+[**AuthServiceArrayWrapper**](../../models/auth-service-array-wrapper.md)
 
 ## Authorization
 

@@ -12,3 +12,4 @@ Possible values:
 - `ImageGeneration`
 - `OCR`
 - `Vision`
+- `FormAnalysis`

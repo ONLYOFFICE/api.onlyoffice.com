@@ -1,6 +1,6 @@
 # aiPreferencesGetReasoningLevel
 
-> AiAiReasoningLevel aiPreferencesGetReasoningLevel(entityId)
+> AiReasoningLevel aiPreferencesGetReasoningLevel(entityId)
 
 `GET /api/2.0/ai/preferences/get-reasoning-level`
 
@@ -18,14 +18,14 @@ Returns the effective extended-thinking depth of the scope: `off` while deep mod
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Success. | [**AiAiReasoningLevel**](../../models/ai-ai-reasoning-level.md) | - |
+| **200** | Success. | [**AiReasoningLevel**](../../models/ai-reasoning-level.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 
 ## Return type
 
-[**AiAiReasoningLevel**](../../models/ai-ai-reasoning-level.md)
+[**AiReasoningLevel**](../../models/ai-reasoning-level.md)
 
 ## Authorization
 

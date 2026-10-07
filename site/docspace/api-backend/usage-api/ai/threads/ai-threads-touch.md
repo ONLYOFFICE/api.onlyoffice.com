@@ -1,6 +1,6 @@
 # aiThreadsTouch
 
-> AiSuccessResponse aiThreadsTouch(aiThreadsTouch\_request)
+> AiSuccessResponse aiThreadsTouch(AiThreadsTouchRequest)
 
 `POST /api/2.0/ai/threads/touch`
 
@@ -12,7 +12,7 @@ Bumps a thread's last-edit date without adding a message, which resurfaces it in
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiThreadsTouch\_request** | body | [**aiThreadsTouch_request**](../../models/ai-threads-touch-request-body.md) |  | [required] |
+| **AiThreadsTouchRequest** | body | [**AiThreadsTouchRequest**](../../models/ai-threads-touch-request.md) |  | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Bumps a thread's last-edit date without adding a message, which resurfaces it in
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirms the thread's activity date moved forward. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

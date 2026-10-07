@@ -1,6 +1,6 @@
 # aiAssignmentsCascadeProfileDelete
 
-> AiSuccessResponse aiAssignmentsCascadeProfileDelete(aiAssignmentsCascadeProfileDelete\_request)
+> AiSuccessResponse aiAssignmentsCascadeProfileDelete(AiAssignmentsCascadeProfileDeleteRequest)
 
 `DELETE /api/2.0/ai/assignments/cascade-profile-delete`
 
@@ -12,7 +12,7 @@ Detaches a profile from every assignment that points at it, which is the cleanup
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiAssignmentsCascadeProfileDelete\_request** | body | [**aiAssignmentsCascadeProfileDelete_request**](../../models/ai-assignments-cascade-profile-delete-request-body.md) | The profile to detach from every assignment. May be sent as the `profileId` query parameter instead of in the body. | [required] |
+| **AiAssignmentsCascadeProfileDeleteRequest** | body | [**AiAssignmentsCascadeProfileDeleteRequest**](../../models/ai-assignments-cascade-profile-delete-request.md) | The profile to detach from every assignment. May be sent as the `profileId` query parameter instead of in the body. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Detaches a profile from every assignment that points at it, which is the cleanup
 | **200** | Confirms no assignment points at the profile any more. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **400** | `profileId` is missing. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

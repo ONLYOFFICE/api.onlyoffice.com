@@ -20,7 +20,7 @@ Replaces the whole member list of a group with the accounts given in the request
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The group with the members it ends up with | [**GroupWrapper**](../models/group-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | None of the listed accounts can be a group member | - | - |
+| **400** | The request body cannot be read or has no `members` list, or none of the listed accounts can be a group member | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **404** | No group has the specified ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |

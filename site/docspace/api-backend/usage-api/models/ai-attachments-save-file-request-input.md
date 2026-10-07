@@ -1,4 +1,4 @@
-# aiAttachmentsSaveFile.request.input
+# AiAttachmentsSaveFileRequest.input
 A file attachment draft to persist.
 
 | Name | Type | Description | Notes |

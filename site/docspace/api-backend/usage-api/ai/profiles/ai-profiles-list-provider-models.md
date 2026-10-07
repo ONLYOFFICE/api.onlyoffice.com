@@ -1,6 +1,6 @@
 # aiProfilesListProviderModels
 
-> List aiProfilesListProviderModels(aiProfilesListProviderModels\_request)
+> List aiProfilesListProviderModels(AiProfilesListProviderModelsRequest)
 
 `POST /api/2.0/ai/profiles/list-provider-models`
 
@@ -12,7 +12,7 @@ Lists the models an endpoint offers for credentials supplied in the request, bef
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiProfilesListProviderModels\_request** | body | [**aiProfilesListProviderModels_request**](../../models/ai-profiles-list-provider-models-request-body.md) |  | [required] |
+| **AiProfilesListProviderModelsRequest** | body | [**AiProfilesListProviderModelsRequest**](../../models/ai-profiles-list-provider-models-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Lists the models an endpoint offers for credentials supplied in the request, bef
 | **200** | The models the endpoint offers for the supplied credentials. | [**List**](../../models/ai-model.md) | - |
 | **400** | `baseUrl` is missing, points at a private network address, or the provider rejected the supplied API key. | [**aiProfilesListProviderModels_400_response**](../../models/ai-profiles-list-provider-models-400-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **502** | The AI provider could not be reached, or answered with a failure of its own. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

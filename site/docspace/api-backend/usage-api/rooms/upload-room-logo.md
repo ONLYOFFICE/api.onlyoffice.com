@@ -19,7 +19,7 @@ Stores an image in temporary storage and answers with the path to it, which is t
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The path of the stored temporary image | [**UploadResultWrapper**](../models/upload-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The request carries no image, or the image cannot be used as a logo | - | - |
+| **400** | The request is not a multipart form or carries no file, or the first file is empty, larger than the portal limit for uploaded images, or not a readable PNG or JPEG image | - | - |
 | **403** | Only a room manager or a portal administrator can upload a logo | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |

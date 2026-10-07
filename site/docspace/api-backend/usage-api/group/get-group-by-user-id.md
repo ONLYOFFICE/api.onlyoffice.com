@@ -1,8 +1,8 @@
 # getGroupByUserId
 
-> GroupSummaryArrayWrapper getGroupByUserId(userid)
+> GroupSummaryArrayWrapper getGroupByUserId(userId)
 
-`GET /api/2.0/group/user/{userid}`
+`GET /api/2.0/group/user/{userId}`
 
 Get user groups
 
@@ -12,7 +12,7 @@ Returns every group the account with the ID in the route belongs to, as a flat l
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **userid** | path | **UUID** (uuid) | The ID of the account whose groups are listed, taken from the route. An ID that matches no account yields an empty list rather than 404. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **userId** | path | **UUID** (uuid) | The ID of the account whose groups are listed, taken from the route. An ID that matches no account yields an empty list rather than 404. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
 
 ## Responses
 

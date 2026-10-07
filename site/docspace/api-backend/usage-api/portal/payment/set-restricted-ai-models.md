@@ -1,6 +1,6 @@
 # setRestrictedAiModels
 
-> RestrictedModelsResponseWrapper setRestrictedAiModels(SetRestrictedAiModelsRequestDto)
+> RestrictedAiModelsWrapper setRestrictedAiModels(SetRestrictedAiModelsRequestDto)
 
 `PUT /api/2.0/portal/payment/ai-model/restrictions`
 
@@ -18,19 +18,19 @@ Replaces the whole set of AI chat models barred on this portal: the body is the 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The set of barred AI chat models as it was stored | [**RestrictedModelsResponseWrapper**](../../models/restricted-models-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller may not edit the portal settings or is not a DocSpace administrator, or the installation has no billing service or no AI gateway configured | - | - |
+| **200** | The set of barred AI chat models as it was stored | [**RestrictedAiModelsWrapper**](../../models/restricted-ai-models-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read, or `models` is missing or `null` | - | - |
+| **403** | The caller has no portal-settings right or is not a DocSpace administrator, or the installation has no billing service or no AI gateway configured | - | - |
 | **404** | This portal has no billing customer yet | - | - |
+| **500** | The AI gateway answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**RestrictedModelsResponseWrapper**](../../models/restricted-models-response-wrapper.md)
+[**RestrictedAiModelsWrapper**](../../models/restricted-ai-models-wrapper.md)
 
 ## Authorization
 

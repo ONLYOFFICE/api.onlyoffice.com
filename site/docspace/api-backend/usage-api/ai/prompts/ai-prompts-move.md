@@ -1,6 +1,6 @@
 # aiPromptsMove
 
-> AiPromptMutationResult aiPromptsMove(aiPromptsMove\_request)
+> AiPromptMutationResult aiPromptsMove(AiPromptsMoveRequest)
 
 `PUT /api/2.0/ai/prompts/move`
 
@@ -12,7 +12,7 @@ Moves a saved prompt into another folder, or to the root when `folderId` is omit
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiPromptsMove\_request** | body | [**aiPromptsMove_request**](../../models/ai-prompts-move-request-body.md) |  | [required] |
+| **AiPromptsMoveRequest** | body | [**AiPromptsMoveRequest**](../../models/ai-prompts-move-request.md) |  | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Moves a saved prompt into another folder, or to the root when `folderId` is omit
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the prompt was moved, with the moved prompt in `prompt`. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

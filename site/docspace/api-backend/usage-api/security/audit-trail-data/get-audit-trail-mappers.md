@@ -1,6 +1,6 @@
 # getAuditTrailMappers
 
-> AuditTrailProductMapperArrayWrapper getAuditTrailMappers(productType, moduleType)
+> AuditTrailProductArrayWrapper getAuditTrailMappers(productType, moduleType)
 
 `GET /api/2.0/security/audit/mappers`
 
@@ -19,7 +19,7 @@ Returns the audit vocabulary as the tree it really is: every product, the module
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The products with their modules and the actions each module can record | [**AuditTrailProductMapperArrayWrapper**](../../models/audit-trail-product-mapper-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The products with their modules and the actions each module can record | [**AuditTrailProductArrayWrapper**](../../models/audit-trail-product-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller does not have the portal-settings right of a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
@@ -30,7 +30,7 @@ Returns the audit vocabulary as the tree it really is: every product, the module
 
 ## Return type
 
-[**AuditTrailProductMapperArrayWrapper**](../../models/audit-trail-product-mapper-array-wrapper.md)
+[**AuditTrailProductArrayWrapper**](../../models/audit-trail-product-array-wrapper.md)
 
 ## Authorization
 

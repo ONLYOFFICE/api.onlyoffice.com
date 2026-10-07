@@ -1,6 +1,6 @@
 # updateStorage
 
-> StorageSettingsWrapper updateStorage(StorageRequestsDto)
+> StorageSettingsWrapper updateStorage(StorageRequestDto)
 
 `PUT /api/2.0/settings/storage`
 
@@ -12,14 +12,14 @@ Points the current portal at another storage and saves the credentials it needs:
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **StorageRequestsDto** | body | [**StorageRequestsDto**](../../models/storage-requests-dto.md) |  | [optional] |
+| **StorageRequestDto** | body | [**StorageRequestDto**](../../models/storage-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The saved storage configuration; migration of the portal data to it has been started | [**StorageSettingsWrapper**](../../models/storage-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The requested storage module is not configured on this installation | - | - |
+| **400** | The request body cannot be read or has no `module`, or the requested storage module is unknown or not configured on this installation | - | - |
 | **403** | The caller may not edit portal settings, or this installation does not allow changing the storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

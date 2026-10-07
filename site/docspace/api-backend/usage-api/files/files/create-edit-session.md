@@ -1,6 +1,6 @@
 # createEditSession
 
-> ChunkedUploadSessionResponseWrapperIntegerWrapper createEditSession(fileId, fileSize)
+> ChunkedUploadSessionResultWrapper createEditSession(fileId, fileSize)
 
 `POST /api/2.0/files/file/{fileId}/edit_session`
 
@@ -19,8 +19,10 @@ Opens a chunked session that replaces the content of an existing file, which is 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The created editing session, wrapped in the success envelope | [**ChunkedUploadSessionResponseWrapperIntegerWrapper**](../../models/chunked-upload-session-response-wrapper-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller cannot edit this file | - | - |
+| **200** | The created editing session, wrapped in the success envelope | [**ChunkedUploadSessionResultWrapper**](../../models/chunked-upload-session-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | The declared `fileSize` exceeds the portal limit for chunked uploads | - | - |
+| **403** | The caller cannot edit this file, or the file is locked, open in the editor, in the trash or encrypted | - | - |
+| **404** | No file with the specified ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -30,7 +32,17 @@ Opens a chunked session that replaces the content of an existing file, which is 
 
 ## Return type
 
-[**ChunkedUploadSessionResponseWrapperIntegerWrapper**](../../models/chunked-upload-session-response-wrapper-integer-wrapper.md)
+[**ChunkedUploadSessionResultWrapper**](../../models/chunked-upload-session-result-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file whose content the session will replace; take the id from a folder listing or from the file itself. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
+Return type: [**ThirdPartyChunkedUploadSessionResultWrapper**](../../models/third-party-chunked-upload-session-result-wrapper.md)
 
 ## Authorization
 

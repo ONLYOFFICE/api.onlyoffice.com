@@ -19,11 +19,12 @@ Makes an existing document the blank the portal creates for one extension, and r
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The blank document configured for each supported extension after the change | [**DefaultTemplateSettingsWrapper**](../../models/default-template-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The file identifier is of an unsupported kind, or its extension is not the one requested | - | - |
-| **403** | The caller may not read the portal settings, or may not copy the selected file | - | - |
+| **400** | The request body cannot be read or has no `selectedFile` or `fileExtension`, the file identifier is of an unsupported kind, or its extension is not the one requested | - | - |
+| **403** | The caller has no portal-settings right, or may not copy the selected file | - | - |
+| **404** | The selected file does not exist | - | - |
+| **500** | The file identifier is a number that cannot be read as a 32-bit integer: fractional, in exponent notation or out of range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

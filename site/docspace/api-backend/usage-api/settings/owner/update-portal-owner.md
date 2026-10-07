@@ -19,11 +19,11 @@ Completes the portal owner change that `POST api/2.0/settings/owner` started, ma
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The portal owner has been changed to the user named in the request | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The user named as the new owner cannot be found in this portal, is a guest, or is not active | - | - |
-| **409** | The new owner could not be given DocSpace administrator rights, so the transfer was not applied | - | - |
+| **400** | The request body cannot be read or has no `ownerId` | - | - |
+| **402** | The user named as the new owner is a regular user, and promoting them to DocSpace administrator needs a paid seat the portal has run out of | - | - |
+| **500** | The user named as the new owner cannot be found in this portal, is a guest, or is not active, or the email address the confirmation link was issued for no longer belongs to the portal owner | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

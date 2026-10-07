@@ -1,9 +1,9 @@
 # TenantWalletServiceSettingsWrapper
-The successful API response containing the TenantWalletServiceSettings object.
+The successful API response containing the TenantWalletServiceSettingsDto object.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **response** | [**TenantWalletServiceSettings**](tenant-wallet-service-settings.md) | The TenantWalletServiceSettings object returned by the operation. | [optional] |
+| **response** | [**TenantWalletServiceSettingsDto**](tenant-wallet-service-settings-dto.md) | The TenantWalletServiceSettingsDto object returned by the operation. | [optional] |
 | **count** | **Integer** (int32) | The total number of items in the response | [optional] |
 | **links** | [**List**](get-portal-prices-200-response-links-item.md) | List of links related to the response | [optional] |
 | **status** | **Integer** (int32) | HTTP status code of the response | [optional] |

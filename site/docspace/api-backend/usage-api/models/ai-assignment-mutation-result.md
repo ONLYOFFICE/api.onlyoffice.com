@@ -4,4 +4,4 @@ Outcome of `AssignmentsEngine.assign` / `AssignmentsEngine.unassign`. Either a s
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **success** | **Boolean** | True when the assignment was persisted. | [required] [example: `true`] |
-| **error** | [**AiTErrorData**](ai-t-error-data.md) | Why the assignment was rejected. Present on failure. | [optional] |
+| **error** | [**AiErrorData**](ai-error-data.md) | Why the assignment was rejected. Present on failure. | [optional] |

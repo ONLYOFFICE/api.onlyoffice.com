@@ -1,19 +1,19 @@
 # updateMemberCulture
 
-> EmployeeFullWrapper updateMemberCulture(userid, Culture)
+> EmployeeFullWrapper updateMemberCulture(userId, UpdateMemberCultureRequest)
 
-`PUT /api/2.0/people/{userid}/culture`
+`PUT /api/2.0/people/{userId}/culture`
 
 Update a user culture
 
-Changes the interface language of a profile, which decides the language of the portal for that account and of the emails it receives. The culture has to be one the portal has enabled, otherwise the operation answers 400; read the enabled list from the portal settings rather than guessing a code. A caller may only change their own language - the ID in the route has to be the calling account, and an administrator gets 403 for anybody else - and the account must be allowed to edit its own profile. The change takes effect immediately, raises a `UserUpdated` webhook, and answers with the profile carrying the new `cultureName`. Other profile fields are not touched here; use `PUT api/2.0/people/{userid}` for those.
+Changes the interface language of a profile, which decides the language of the portal for that account and of the emails it receives. The culture has to be one the portal has enabled, otherwise the operation answers 400; read the enabled list from the portal settings rather than guessing a code. A caller may only change their own language - the ID in the route has to be the calling account, and an administrator gets 403 for anybody else - and the account must be allowed to edit its own profile. The change takes effect immediately, raises a `UserUpdated` webhook, and answers with the profile carrying the new `cultureName`. Other profile fields are not touched here; use `PUT api/2.0/people/{userId}` for those.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **userid** | path | **String** | The user ID. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
-| **Culture** | body | [**Culture**](../../models/culture.md) | The culture name parameters. | [optional] |
+| **userId** | path | **String** | The user ID. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **UpdateMemberCultureRequest** | body | [**UpdateMemberCultureRequest**](../../models/update-member-culture-request.md) | The culture name parameters. | [optional] |
 
 ## Responses
 

@@ -21,7 +21,7 @@ Counts the backups of the current portal created within a period and splits the 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The number of free and of paid backups created within the period | [**BackupsCountResultWrapper**](../models/backups-count-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The start of the period is later than its end | - | - |
+| **400** | The start of the period is later than its end, or `from`, `to` or `paid` cannot be parsed | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |

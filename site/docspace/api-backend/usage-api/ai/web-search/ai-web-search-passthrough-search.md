@@ -1,6 +1,6 @@
 # aiWebSearchPassthroughSearch
 
-> Map aiWebSearchPassthroughSearch(request\_body)
+> Map aiWebSearchPassthroughSearch(AiWebSearchPassthroughSearchRequest)
 
 `POST /api/2.0/ai/websearch/v1/search`
 
@@ -12,7 +12,7 @@ Runs a web search on behalf of the document editor's AI plugin, which holds only
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **request\_body** | body | **Map** | A search request in the shape the portal's active web-search provider expects, forwarded to it unchanged. The endpoint and the key come from the stored configuration and must not be sent here. | [required] |
+| **AiWebSearchPassthroughSearchRequest** | body | **Map** | A search request in the shape the portal's active web-search provider expects, forwarded to it unchanged. The endpoint and the key come from the stored configuration and must not be sent here. | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Runs a web search on behalf of the document editor's AI plugin, which holds only
 |------------- | ------------- | ------------- | -------------|
 | **200** | The provider's own response, relayed verbatim with its status and content type. | **Map** | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **404** | Web search is not configured for this portal. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **429** | Relayed verbatim from the AI provider, which is rate-limiting this portal's key. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

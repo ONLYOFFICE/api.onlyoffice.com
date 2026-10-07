@@ -13,7 +13,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**addMembersTo**](add-members-to.md) | **PUT** /api/2.0/group/\{id\}/members | Add group members |
 | [**deleteGroup**](delete-group.md) | **DELETE** /api/2.0/group/\{id\} | Delete a group |
 | [**getGroup**](get-group.md) | **GET** /api/2.0/group/\{id\} | Get a group |
-| [**getGroupByUserId**](get-group-by-user-id.md) | **GET** /api/2.0/group/user/\{userid\} | Get user groups |
+| [**getGroupByUserId**](get-group-by-user-id.md) | **GET** /api/2.0/group/user/\{userId\} | Get user groups |
 | [**getGroups**](get-groups.md) | **GET** /api/2.0/group | Get groups |
 | [**moveMembersTo**](move-members-to.md) | **PUT** /api/2.0/group/\{fromId\}/members/\{toId\} | Move group members |
 | [**removeMembersFrom**](remove-members-from.md) | **DELETE** /api/2.0/group/\{id\}/members | Remove group members |

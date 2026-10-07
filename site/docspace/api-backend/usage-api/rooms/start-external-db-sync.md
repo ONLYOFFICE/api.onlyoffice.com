@@ -19,12 +19,12 @@ Queues a background job that re-exports the collected data of every original for
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The synchronization job record to poll | [**ExternalDbSyncTaskWrapper**](../models/external-db-sync-task-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The portal has no external database configured | - | - |
 | **403** | The room is not a form filling room, or the caller cannot edit it | - | - |
-| **404** | No room with this ID is visible to the caller | - | - |
+| **404** | No folder with this ID exists | - | - |
+| **500** | The portal has no external database configured | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
+| **400** | Bad Request. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -19,10 +19,10 @@ Buys more units of a wallet service - extra administrators, disk storage, backup
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | `true` when the purchase or the scheduled change was accepted, `false` when the provider declined it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The quantity type is not `Set` or `Add`, the product is not a wallet service, the quantity is below the minimum for it, or that service is already set | - | - |
-| **402** | The plan of the portal is not paid and the requested service is an add-on to it | - | - |
+| **400** | The request body cannot be read or has no `quantity`, `quantity` does not hold exactly one product, the quantity type is not `Set` or `Add`, the product is not a wallet service, the quantity is below the minimum for it or is empty or zero where a purchase needs one, or that service is already set | - | - |
+| **402** | The plan of the portal is not paid and the requested service is an add-on to it, or in the `Add` form the billing service declines the purchase, answers with an error or cannot be reached | - | - |
 | **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
-| **404** | This portal has no billing customer, or its wallet has no sub-account in the accounting currency | - | - |
+| **404** | This portal has no billing customer, or its wallet has no balance or no sub-account in the accounting currency | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

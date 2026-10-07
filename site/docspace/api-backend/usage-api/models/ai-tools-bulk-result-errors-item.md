@@ -3,4 +3,4 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** |  | [required] |
-| **error** | [**AiTErrorData**](ai-t-error-data.md) |  | [required] |
+| **error** | [**AiErrorData**](ai-error-data.md) |  | [required] |

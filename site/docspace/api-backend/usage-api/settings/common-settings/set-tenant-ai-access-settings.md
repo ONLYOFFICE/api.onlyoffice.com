@@ -1,6 +1,6 @@
 # setTenantAiAccessSettings
 
-> TenantAiAccessSettingsWrapper setTenantAiAccessSettings(TenantAiAccessSettingsDto)
+> TenantAiAccessSettingsWrapper setTenantAiAccessSettings(TenantAiAccessSettingsRequestDto)
 
 `POST /api/2.0/settings/ai-access`
 
@@ -12,7 +12,7 @@ Turns AI functionality (chat, agents, vectorization) on or off for the whole por
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TenantAiAccessSettingsDto** | body | [**TenantAiAccessSettingsDto**](../../models/tenant-ai-access-settings-dto.md) |  | [optional] |
+| **TenantAiAccessSettingsRequestDto** | body | [**TenantAiAccessSettingsRequestDto**](../../models/tenant-ai-access-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 

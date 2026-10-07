@@ -1,6 +1,6 @@
 # aiToolsReplaceAllCustomServers
 
-> AiToolsBulkResult aiToolsReplaceAllCustomServers(aiToolsReplaceAllCustomServers\_request)
+> AiToolsBulkResult aiToolsReplaceAllCustomServers(AiToolsReplaceAllCustomServersRequest)
 
 `PUT /api/2.0/ai/tools/replace-all-custom-servers`
 
@@ -12,7 +12,7 @@ Replaces the whole custom MCP server registry of the scope with the supplied map
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiToolsReplaceAllCustomServers\_request** | body | [**aiToolsReplaceAllCustomServers_request**](../../models/ai-tools-replace-all-custom-servers-request-body.md) |  | [required] |
+| **AiToolsReplaceAllCustomServersRequest** | body | [**AiToolsReplaceAllCustomServersRequest**](../../models/ai-tools-replace-all-custom-servers-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,8 +21,8 @@ Replaces the whole custom MCP server registry of the scope with the supplied map
 | **200** | Whether the registry was replaced, with `errors` listing what was refused. | [**AiToolsBulkResult**](../../models/ai-tools-bulk-result.md) | - |
 | **400** | The body is not a map of server name to configuration, or a name is not routable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **404** | The referenced object does not exist, or the caller cannot access it - the two are deliberately indistinguishable, so a room the caller may not open answers 404 rather than 403. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

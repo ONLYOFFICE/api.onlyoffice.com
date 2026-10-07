@@ -20,6 +20,8 @@ Cancels a chunked upload opened with `POST api/2.0/files/{folderId}/session` and
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The session and the parts received so far have been discarded | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The session was opened by another account | - | - |
+| **404** | No open session with the specified ID: it never existed, was finalized or aborted, or has expired | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -30,6 +32,15 @@ Cancels a chunked upload opened with `POST api/2.0/files/{folderId}/session` and
 ## Return type
 
 null (empty response body)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **folderId** | path | **String** | The folder the session was opened against. It is part of the route only and is not matched against the session, which is found by its own id. | [required] [example: `sbox-42`] |
+
 
 ## Authorization
 

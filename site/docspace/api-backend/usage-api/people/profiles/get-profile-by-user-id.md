@@ -1,8 +1,8 @@
 # getProfileByUserId
 
-> EmployeeFullWrapper getProfileByUserId(userid)
+> EmployeeFullWrapper getProfileByUserId(userId)
 
-`GET /api/2.0/people/{userid}`
+`GET /api/2.0/people/{userId}`
 
 Get a profile by user ID
 
@@ -12,7 +12,7 @@ Returns the profile of one account, looked up by its user name first and by its 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **userid** | path | **String** | The user ID. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **userId** | path | **String** | The user ID. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
 
 ## Responses
 

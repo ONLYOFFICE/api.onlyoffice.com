@@ -1,6 +1,6 @@
 # getAdditionalWhiteLabelSettings
 
-> AdditionalWhiteLabelSettingsDtoWrapper getAdditionalWhiteLabelSettings()
+> AdditionalWhiteLabelSettingsWrapper getAdditionalWhiteLabelSettings()
 
 `GET /api/2.0/settings/rebranding/additional`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The help and community resources the interface may offer, with the default flag | [**AdditionalWhiteLabelSettingsDtoWrapper**](../../models/additional-white-label-settings-dto-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The help and community resources the interface may offer, with the default flag | [**AdditionalWhiteLabelSettingsWrapper**](../../models/additional-white-label-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +24,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**AdditionalWhiteLabelSettingsDtoWrapper**](../../models/additional-white-label-settings-dto-wrapper.md)
+[**AdditionalWhiteLabelSettingsWrapper**](../../models/additional-white-label-settings-wrapper.md)
 
 ## Authorization
 

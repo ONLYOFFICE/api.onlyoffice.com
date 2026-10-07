@@ -1,6 +1,6 @@
 # completeWizard
 
-> WizardSettingsWrapper completeWizard(WizardRequestsDto)
+> WizardSettingsWrapper completeWizard(WizardRequestDto)
 
 `PUT /api/2.0/settings/wizard/complete`
 
@@ -12,18 +12,18 @@ Finishes the initial portal setup wizard: sets the owner's password and locale, 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **WizardRequestsDto** | body | [**WizardRequestsDto**](../../models/wizard-requests-dto.md) |  | [optional] |
+| **WizardRequestDto** | body | [**WizardRequestDto**](../../models/wizard-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Resulting wizard settings, including the completed flag | [**WizardSettingsWrapper**](../../models/wizard-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The email address is malformed, or the password is empty | - | - |
-| **402** | The supplied license is missing, invalid, expired, or its user quota does not cover the portal | - | - |
+| **400** | The request body cannot be read or has no `email` or `passwordHash`, the email address is empty or malformed, or the license's start date is in the future | - | - |
+| **403** | The account the confirmation link was issued for has no portal-settings right | - | - |
+| **500** | The wizard is already completed, the AMI instance ID does not match, the email address fails the portal's check, the password is empty, or the license is missing, unreadable, rejected by validation or of the wrong type | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

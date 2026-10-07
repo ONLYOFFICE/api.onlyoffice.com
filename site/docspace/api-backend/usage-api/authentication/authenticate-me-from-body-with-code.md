@@ -1,6 +1,6 @@
 # authenticateMeFromBodyWithCode
 
-> AuthenticationTokenWrapper authenticateMeFromBodyWithCode(code, AuthWithCodeRequestsDto)
+> AuthenticationTokenWrapper authenticateMeFromBodyWithCode(code, AuthWithCodeRequestDto)
 
 `POST /api/2.0/authentication/{code}`
 
@@ -13,7 +13,7 @@ Finishes a two-factor sign-in: checks the one-time code and, when it matches, is
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **code** | path | **String** | The two-factor authentication code. Send the same value as the `code` of the request body, which is the one the handler reads. | [required] |
-| **AuthWithCodeRequestsDto** | body | [**AuthWithCodeRequestsDto**](../models/auth-with-code-requests-dto.md) |  | [optional] |
+| **AuthWithCodeRequestDto** | body | [**AuthWithCodeRequestDto**](../models/auth-with-code-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -35,7 +35,7 @@ Finishes a two-factor sign-in: checks the one-time code and, when it matches, is
 
 ## Authorization
 
-[cookieAuth](authentication.md#cookieauth), [bearerAuth](authentication.md#bearerauth)
+[Basic](authentication.md#basic), [OAuth2](authentication.md#oauth2) (scopes: read, write), [ApiKeyBearer](authentication.md#apikeybearer), [asc_auth_key](authentication.md#asc_auth_key), [Bearer](authentication.md#bearer), [OpenId](authentication.md#openid)
 
 ## HTTP request headers
 

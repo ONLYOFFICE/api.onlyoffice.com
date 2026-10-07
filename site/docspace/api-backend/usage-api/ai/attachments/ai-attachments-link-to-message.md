@@ -1,6 +1,6 @@
 # aiAttachmentsLinkToMessage
 
-> AiSuccessResponse aiAttachmentsLinkToMessage(aiAttachmentsLinkToMessage\_request)
+> AiSuccessResponse aiAttachmentsLinkToMessage(AiAttachmentsLinkToMessageRequest)
 
 `POST /api/2.0/ai/attachments/link-to-message`
 
@@ -12,7 +12,7 @@ Binds draft attachments to the chat message that owns them, after that message h
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiAttachmentsLinkToMessage\_request** | body | [**aiAttachmentsLinkToMessage_request**](../../models/ai-attachments-link-to-message-request-body.md) |  | [required] |
+| **AiAttachmentsLinkToMessageRequest** | body | [**AiAttachmentsLinkToMessageRequest**](../../models/ai-attachments-link-to-message-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Binds draft attachments to the chat message that owns them, after that message h
 | **200** | Confirms the attachments are now bound to the message. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **400** | The attachment or message reference is malformed. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **404** | The message or the attachment does not exist. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

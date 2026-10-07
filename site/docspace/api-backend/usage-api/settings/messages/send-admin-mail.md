@@ -1,6 +1,6 @@
 # sendAdminMail
 
-> StringWrapper sendAdminMail(AdminMessageSettingsRequestsDto)
+> StringWrapper sendAdminMail(AdminMessageSettingsRequestDto)
 
 `POST /api/2.0/settings/sendadmmail`
 
@@ -12,16 +12,17 @@ Sends a message from someone who cannot get into the portal to its administrator
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **AdminMessageSettingsRequestsDto** | body | [**AdminMessageSettingsRequestsDto**](../../models/admin-message-settings-requests-dto.md) |  | [optional] |
+| **AdminMessageSettingsRequestDto** | body | [**AdminMessageSettingsRequestDto**](../../models/admin-message-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | A localized message confirming that the message has been queued for the portal administrators | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The email address is malformed, or the message is empty once its markup is stripped | - | - |
+| **400** | The request body cannot be read or has no `email` or `message`, the email address is malformed or longer than 255 characters, or the message is longer than 255 characters or empty once its markup is stripped | - | - |
+| **403** | The caller is not signed in, the installation has a CAPTCHA configured, and `recaptchaResponse` is missing or not accepted | - | - |
 | **429** | Too many contact attempts came from the same address within the rate-limit window | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **500** | The contact form is switched off and the portal's payment has not lapsed | - | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -31,7 +32,7 @@ Sends a message from someone who cannot get into the portal to its administrator
 
 ## Authorization
 
-[cookieAuth](../settings.md#cookieauth), [bearerAuth](../settings.md#bearerauth)
+[Basic](../settings.md#basic), [OAuth2](../settings.md#oauth2) (scopes: read, write), [ApiKeyBearer](../settings.md#apikeybearer), [asc_auth_key](../settings.md#asc_auth_key), [Bearer](../settings.md#bearer), [OpenId](../settings.md#openid)
 
 ## HTTP request headers
 

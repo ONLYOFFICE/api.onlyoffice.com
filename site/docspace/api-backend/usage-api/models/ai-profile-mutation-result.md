@@ -5,4 +5,4 @@ Outcome of `create` / `update` — either a success carrying the persisted profi
 |------------ | ------------- | ------------- | -------------|
 | **success** | **Boolean** | True when the profile was persisted. | [required] [example: `true`] |
 | **profile** | [**AiProfile**](ai-profile.md) | The persisted profile. Present on success. | [optional] |
-| **error** | [**AiTErrorData**](ai-t-error-data.md) | Why the profile was rejected - the name check or the provider credential check. Present on failure. | [optional] |
+| **error** | [**AiErrorData**](ai-error-data.md) | Why the profile was rejected - the name check or the provider credential check. Present on failure. | [optional] |

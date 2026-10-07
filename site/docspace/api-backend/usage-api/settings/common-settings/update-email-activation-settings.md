@@ -1,6 +1,6 @@
 # updateEmailActivationSettings
 
-> EmailActivationSettingsWrapper updateEmailActivationSettings(EmailActivationSettings)
+> EmailActivationSettingsWrapper updateEmailActivationSettings(EmailActivationSettingsRequestDto)
 
 `PUT /api/2.0/settings/emailactivation`
 
@@ -12,7 +12,7 @@ Updates the current user's own preference for whether the email confirmation pro
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **EmailActivationSettings** | body | [**EmailActivationSettings**](../../models/email-activation-settings.md) |  | [optional] |
+| **EmailActivationSettingsRequestDto** | body | [**EmailActivationSettingsRequestDto**](../../models/email-activation-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 

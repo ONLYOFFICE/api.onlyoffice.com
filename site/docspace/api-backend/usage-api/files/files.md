@@ -92,11 +92,36 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**insertFile**](folders/insert-file.md) | **POST** /api/2.0/files/\{folderId\}/insert | Insert a file |
 | [**insertFileToMyFromBody**](folders/insert-file-to-my-from-body.md) | **POST** /api/2.0/files/@my/insert | Insert a file into My documents |
 | [**renameFolder**](folders/rename-folder.md) | **PUT** /api/2.0/files/folder/\{folderId\} | Rename a folder |
+| [**searchFolder**](folders/search-folder.md) | **POST** /api/2.0/files/\{folderId\}/search | Search a folder by metadata |
 | [**setFolderOrder**](folders/set-folder-order.md) | **PUT** /api/2.0/files/folder/\{folderId\}/order | Set folder order |
 | [**setFolderPrimaryExternalLink**](folders/set-folder-primary-external-link.md) | **PUT** /api/2.0/files/folder/\{id\}/links | Set the folder external link |
 | [**terminateReportFolderHistory**](folders/terminate-report-folder-history.md) | **DELETE** /api/2.0/files/folder/\{folderId\}/log/report | Terminate the folder history report generation |
 | [**uploadFile**](folders/upload-file.md) | **POST** /api/2.0/files/\{folderId\}/upload | Upload a file |
 | [**uploadFileToMy**](folders/upload-file-to-my.md) | **POST** /api/2.0/files/@my/upload | Upload a file to My documents |
+
+## Metadata
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**assignFileTemplates**](metadata/assign-file-templates.md) | **PUT** /api/2.0/files/metadata/file/\{fileId\}/templates | Assign templates to a file |
+| [**assignFolderTemplates**](metadata/assign-folder-templates.md) | **PUT** /api/2.0/files/metadata/folder/\{folderId\}/templates | Assign templates to a folder |
+| [**createField**](metadata/create-field.md) | **POST** /api/2.0/files/metadata/templates/\{templateId\}/fields | Add a metadata field |
+| [**createTemplate**](metadata/create-template.md) | **POST** /api/2.0/files/metadata/templates | Create a metadata template |
+| [**deleteField**](metadata/delete-field.md) | **DELETE** /api/2.0/files/metadata/templates/\{templateId\}/fields/\{fieldId\} | Delete a metadata field |
+| [**deleteTemplate**](metadata/delete-template.md) | **DELETE** /api/2.0/files/metadata/templates/\{templateId\} | Delete a metadata template |
+| [**getCascadeProgress**](metadata/get-cascade-progress.md) | **GET** /api/2.0/files/metadata/folder/\{folderId\}/templates/progress | Get cascade progress |
+| [**getFileMetadata**](metadata/get-file-metadata.md) | **GET** /api/2.0/files/metadata/file/\{fileId\} | Get file metadata |
+| [**getFolderMetadata**](metadata/get-folder-metadata.md) | **GET** /api/2.0/files/metadata/folder/\{folderId\} | Get folder metadata |
+| [**getTemplate**](metadata/get-template.md) | **GET** /api/2.0/files/metadata/templates/\{templateId\} | Get a metadata template |
+| [**getTemplates**](metadata/get-templates.md) | **GET** /api/2.0/files/metadata/templates | Get metadata templates |
+| [**setFileCustomFields**](metadata/set-file-custom-fields.md) | **PUT** /api/2.0/files/metadata/file/\{fileId\}/customfields | Set file custom fields |
+| [**setFileValues**](metadata/set-file-values.md) | **PUT** /api/2.0/files/metadata/file/\{fileId\}/values | Set file metadata values |
+| [**setFolderCustomFields**](metadata/set-folder-custom-fields.md) | **PUT** /api/2.0/files/metadata/folder/\{folderId\}/customfields | Set folder custom fields |
+| [**setFolderValues**](metadata/set-folder-values.md) | **PUT** /api/2.0/files/metadata/folder/\{folderId\}/values | Set folder metadata values |
+| [**unassignFileTemplate**](metadata/unassign-file-template.md) | **DELETE** /api/2.0/files/metadata/file/\{fileId\}/templates/\{templateId\} | Unassign a template from a file |
+| [**unassignFolderTemplate**](metadata/unassign-folder-template.md) | **DELETE** /api/2.0/files/metadata/folder/\{folderId\}/templates/\{templateId\} | Unassign a template from a folder |
+| [**updateField**](metadata/update-field.md) | **PUT** /api/2.0/files/metadata/templates/\{templateId\}/fields/\{fieldId\} | Update a metadata field |
+| [**updateTemplate**](metadata/update-template.md) | **PUT** /api/2.0/files/metadata/templates/\{templateId\} | Update a metadata template |
 
 ## Operations
 

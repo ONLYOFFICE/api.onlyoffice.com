@@ -1,4 +1,4 @@
-# aiPromptsUpdate.request.updates
+# AiPromptsUpdateRequest.updates
 Fields to change.
 
 | Name | Type | Description | Notes |

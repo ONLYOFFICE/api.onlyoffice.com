@@ -19,11 +19,11 @@ Connects a third-party identity to the calling profile, so that the account can 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The third-party identity is linked to the calling profile. No content is returned | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The third-party identity is already linked to a portal profile | - | - |
+| **400** | The third-party identity is already linked to a portal profile, or `serializedProfile` is missing, empty or was issued by another portal | - | - |
 | **403** | The portal tariff does not include third-party authorization | - | - |
+| **500** | The `serializedProfile` value is not one the login flow produced, or the provider authorization ended with an error other than a cancellation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

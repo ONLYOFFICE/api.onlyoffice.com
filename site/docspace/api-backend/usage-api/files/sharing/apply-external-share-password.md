@@ -20,6 +20,7 @@ Submits the password of a protected external share link and answers with the sam
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The entry the token points at, with the status the link reached after the password was checked | [**ExternalShareWrapper**](../../models/external-share-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | Too many attempts were made for this link from the calling address, and the block has not expired yet | - | - |
 | **429** | Too many requests | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -32,7 +33,7 @@ Submits the password of a protected external share link and answers with the sam
 
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

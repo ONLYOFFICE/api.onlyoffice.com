@@ -1,6 +1,6 @@
 # checkConfirm
 
-> ConfirmWrapper checkConfirm(EmailValidationKeyModel)
+> ConfirmWrapper checkConfirm(CheckConfirmRequestDto)
 
 `POST /api/2.0/authentication/confirm`
 
@@ -12,17 +12,17 @@ Checks the key of a confirmation link that the portal sent by email and reports 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **EmailValidationKeyModel** | body | [**EmailValidationKeyModel**](../models/email-validation-key-model.md) |  | [optional] |
+| **CheckConfirmRequestDto** | body | [**CheckConfirmRequestDto**](../models/check-confirm-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the confirmation link may be used, with the room and the email it was issued for when it is an invitation | [**ConfirmWrapper**](../models/confirm-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read, or `email` is sent but empty or not a valid email address | - | - |
 | **403** | The portal's IP restrictions do not allow this address to check an invitation link | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -32,7 +32,7 @@ Checks the key of a confirmation link that the portal sent by email and reports 
 
 ## Authorization
 
-[cookieAuth](authentication.md#cookieauth), [bearerAuth](authentication.md#bearerauth)
+[Basic](authentication.md#basic), [OAuth2](authentication.md#oauth2) (scopes: read, write), [ApiKeyBearer](authentication.md#apikeybearer), [asc_auth_key](authentication.md#asc_auth_key), [Bearer](authentication.md#bearer), [OpenId](authentication.md#openid)
 
 ## HTTP request headers
 

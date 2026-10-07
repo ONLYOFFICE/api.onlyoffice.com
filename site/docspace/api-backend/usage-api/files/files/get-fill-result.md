@@ -1,6 +1,6 @@
 # getFillResult
 
-> FillingFormResultIntegerWrapper getFillResult(fillingSessionId)
+> FillingFormResultWrapper getFillResult(fillingSessionId)
 
 `GET /api/2.0/files/file/fillresult`
 
@@ -18,20 +18,21 @@ Answers with the outcome of one completed form-filling session: the filled copy 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The result of the completed form-filling session | [**FillingFormResultIntegerWrapper**](../../models/filling-form-result-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The result of the completed form-filling session | [**FillingFormResultWrapper**](../../models/filling-form-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The `fillingSessionId` is missing or empty | - | - |
+| **404** | No completed form-filling session with this identifier is remembered | - | - |
+| **500** | The original form of the filled copy has been deleted | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FillingFormResultIntegerWrapper**](../../models/filling-form-result-integer-wrapper.md)
+[**FillingFormResultWrapper**](../../models/filling-form-result-wrapper.md)
 
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

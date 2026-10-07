@@ -31,7 +31,7 @@ Reports where this portal expects ONLYOFFICE Docs to be: the public Document Ser
 
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

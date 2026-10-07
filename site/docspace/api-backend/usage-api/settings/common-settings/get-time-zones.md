@@ -1,6 +1,6 @@
 # getTimeZones
 
-> TimezonesRequestsArrayWrapper getTimeZones()
+> TimezoneArrayWrapper getTimeZones()
 
 `GET /api/2.0/settings/timezones`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Every time zone known to the host, with its IANA ID and display name | [**TimezonesRequestsArrayWrapper**](../../models/timezones-requests-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Every time zone known to the host, with its IANA ID and display name | [**TimezoneArrayWrapper**](../../models/timezone-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +24,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**TimezonesRequestsArrayWrapper**](../../models/timezones-requests-array-wrapper.md)
+[**TimezoneArrayWrapper**](../../models/timezone-array-wrapper.md)
 
 ## Authorization
 

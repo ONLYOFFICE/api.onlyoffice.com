@@ -20,6 +20,7 @@ Returns one web plugin of the current portal by its manifest name, looked up ove
 |------------- | ------------- | ------------- | -------------|
 | **200** | The requested web plugin with the state the portal stored for it | [**WebPluginWrapper**](../../models/web-plugin-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | Web plugins are switched off for the installation | - | - |
+| **404** | No web plugin with this manifest name is available in the portal | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

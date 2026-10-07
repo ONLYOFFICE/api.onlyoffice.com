@@ -1,6 +1,6 @@
 # startFillingFile
 
-> FileIntegerWrapper startFillingFile(fileId)
+> FileWrapper startFillingFile(fileId)
 
 `PUT /api/2.0/files/file/{fileId}/startfilling`
 
@@ -18,8 +18,9 @@ Marks a PDF form in a form-filling room as open for filling out and answers with
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The form file, with the filling properties now stored on it | [**FileIntegerWrapper**](../../models/file-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The form file, with the filling properties now stored on it | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller holds only form-filling access on the room, or no access to it at all | - | - |
+| **404** | The file id resolves to nothing | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -29,7 +30,17 @@ Marks a PDF form in a form-filling room as open for filling out and answers with
 
 ## Return type
 
-[**FileIntegerWrapper**](../../models/file-integer-wrapper.md)
+[**FileWrapper**](../../models/file-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The PDF form to open for filling. It has to be the form as it lies in the form-filling room itself, not a copy kept elsewhere and not a submitted result. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
+Return type: [**ThirdPartyFileWrapper**](../../models/third-party-file-wrapper.md)
 
 ## Authorization
 

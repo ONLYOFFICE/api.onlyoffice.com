@@ -20,11 +20,11 @@ Renames an API key, replaces the scopes it may use, or activates and deactivates
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | True if the key was changed, false if it was left untouched because it has already expired | [**BooleanWrapper**](../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The permissions array is empty or contains a scope the portal does not know | - | - |
+| **400** | The request body cannot be read, the name is longer than 30 characters, or the permissions array is empty or contains a scope the portal does not know | - | - |
 | **403** | The key belongs to another member and the caller is not a DocSpace admin | - | - |
+| **500** | The portal has no key with this ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

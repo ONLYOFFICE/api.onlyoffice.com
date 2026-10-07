@@ -19,10 +19,10 @@ Creates a portal profile from a third-party identity and joins the invitation th
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The profile linked to the third-party identity, or an empty body when the authorization was cancelled or the profile could not be created | [**EmployeeWrapper**](../../models/employee-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `key` or `serializedProfile`, or `serializedProfile` is empty or was issued by another portal | - | - |
 | **403** | The invitation link is invalid or has expired, or the email already belongs to a profile that has not been activated yet | - | - |
+| **500** | The `serializedProfile` value is not one the login flow produced, the provider authorization ended with an error other than a cancellation, or the identity has no email and the provider cannot generate one | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -32,7 +32,7 @@ Creates a portal profile from a third-party identity and joins the invitation th
 
 ## Authorization
 
-[cookieAuth](../people.md#cookieauth), [bearerAuth](../people.md#bearerauth)
+[Basic](../people.md#basic), [OAuth2](../people.md#oauth2) (scopes: read, write), [ApiKeyBearer](../people.md#apikeybearer), [asc_auth_key](../people.md#asc_auth_key), [Bearer](../people.md#bearer), [OpenId](../people.md#openid)
 
 ## HTTP request headers
 

@@ -1,6 +1,6 @@
 # configureDeepLink
 
-> TenantDeepLinkSettingsWrapper configureDeepLink(DeepLinkConfigurationRequestsDto)
+> TenantDeepLinkSettingsWrapper configureDeepLink(DeepLinkConfigurationRequestDto)
 
 `POST /api/2.0/settings/deeplink`
 
@@ -12,7 +12,7 @@ Sets how the portal responds when a client opens a DocSpace link on a mobile dev
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **DeepLinkConfigurationRequestsDto** | body | [**DeepLinkConfigurationRequestsDto**](../../models/deep-link-configuration-requests-dto.md) |  | [optional] |
+| **DeepLinkConfigurationRequestDto** | body | [**DeepLinkConfigurationRequestDto**](../../models/deep-link-configuration-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -20,9 +20,10 @@ Sets how the portal responds when a client opens a DocSpace link on a mobile dev
 |------------- | ------------- | ------------- | -------------|
 | **200** | Saved deep link handling settings | [**TenantDeepLinkSettingsWrapper**](../../models/tenant-deep-link-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The handling mode is not one of the supported deep link handling values | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **500** | The request body has no `deepLinkSettings` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

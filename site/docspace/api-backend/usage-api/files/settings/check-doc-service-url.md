@@ -19,11 +19,11 @@ Writes the portal-wide ONLYOFFICE Docs connection settings - the public Document
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The settings are stored and the Document Server answered the verification requests | [**DocServiceUrlWrapper**](../../models/doc-service-url-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | An address cannot be parsed or carries a query string, the signature secret is sent without its header, or an http address is given for a portal served over https | - | - |
+| **400** | The request body cannot be read or has no `docServiceUrl`, an address cannot be parsed or carries a query string, the signature secret is sent without its header, or an http address is given for a portal served over https | - | - |
 | **403** | The caller is not the portal owner or a DocSpace administrator | - | - |
+| **500** | The Document Server fails one of the verification requests at the new settings, which are then rolled back | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

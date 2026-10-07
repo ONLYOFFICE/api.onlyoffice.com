@@ -1,6 +1,6 @@
 # setAuditSettings
 
-> TenantAuditSettingsResponseWrapper setAuditSettings(TenantAuditSettingsWrapper)
+> TenantAuditSettingsWrapper setAuditSettings(TenantAuditSettingsRequestDto)
 
 `POST /api/2.0/security/audit/settings/lifetime`
 
@@ -12,14 +12,14 @@ Sets how long this portal keeps its login history and its audit trail, in days, 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TenantAuditSettingsWrapper** | body | [**TenantAuditSettingsWrapper**](../../models/tenant-audit-settings-wrapper.md) |  | [optional] |
+| **TenantAuditSettingsRequestDto** | body | [**TenantAuditSettingsRequestDto**](../../models/tenant-audit-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The login history and audit trail lifetimes as they were stored | [**TenantAuditSettingsResponseWrapper**](../../models/tenant-audit-settings-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A lifetime is outside the allowed range of 1 to 180 days | - | - |
+| **200** | The login history and audit trail lifetimes as they were stored | [**TenantAuditSettingsWrapper**](../../models/tenant-audit-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `settings`, or a lifetime is outside the allowed range of 1 to 180 days | - | - |
 | **402** | The portal's pricing plan has no audit option, or the login history and audit trail section is not enabled | - | - |
 | **403** | The caller does not have the portal-settings right of a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -30,7 +30,7 @@ Sets how long this portal keeps its login history and its audit trail, in days, 
 
 ## Return type
 
-[**TenantAuditSettingsResponseWrapper**](../../models/tenant-audit-settings-response-wrapper.md)
+[**TenantAuditSettingsWrapper**](../../models/tenant-audit-settings-wrapper.md)
 
 ## Authorization
 

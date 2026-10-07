@@ -1,6 +1,6 @@
 # startStorageEncryption
 
-> BooleanWrapper startStorageEncryption(StorageEncryptionRequestsDto)
+> BooleanWrapper startStorageEncryption(StorageEncryptionRequestDto)
 
 `POST /api/2.0/settings/encryption/start`
 
@@ -12,7 +12,7 @@ Queues encryption of everything the installation keeps in its local storage, or 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **StorageEncryptionRequestsDto** | body | [**StorageEncryptionRequestsDto**](../../models/storage-encryption-requests-dto.md) |  | [optional] |
+| **StorageEncryptionRequestDto** | body | [**StorageEncryptionRequestDto**](../../models/storage-encryption-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -21,10 +21,10 @@ Queues encryption of everything the installation keeps in its local storage, or 
 | **200** | True when the encryption job has been queued; false in a build where storage encryption is switched off | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **402** | The portal pricing plan does not include storage encryption | - | - |
 | **403** | The caller may not edit portal settings, or this installation does not allow storage encryption | - | - |
-| **405** | Storage encryption is not available on this installation | - | - |
+| **415** | Storage encryption is not available on this installation, or the storage or the CDN of the current portal is a third-party provider | - | - |
+| **500** | A backup of one of the portals is still running | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

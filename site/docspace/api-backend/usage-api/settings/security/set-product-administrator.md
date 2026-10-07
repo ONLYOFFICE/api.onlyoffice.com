@@ -1,6 +1,6 @@
 # setProductAdministrator
 
-> ProductAdministratorWrapper setProductAdministrator(SecurityRequestsDto)
+> ProductAdministratorWrapper setProductAdministrator(SecurityRequestDto)
 
 `PUT /api/2.0/settings/security/administrator`
 
@@ -12,19 +12,19 @@ Promotes a portal member to administrator of one module, or takes that role away
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **SecurityRequestsDto** | body | [**SecurityRequestsDto**](../../models/security-requests-dto.md) |  | [optional] |
+| **SecurityRequestDto** | body | [**SecurityRequestDto**](../../models/security-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The module, the user and the administrator flag as they were stored | [**ProductAdministratorWrapper**](../../models/product-administrator-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `productId` or `userId` | - | - |
 | **402** | The portal plan does not offer product administrators, or no paid seat is left for the member being promoted | - | - |
-| **403** | Only the portal owner can grant or revoke the portal-wide administrator role | - | - |
+| **403** | The caller has no portal-settings right, or is not the portal owner and grants the portal-wide administrator role or takes a role away from a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

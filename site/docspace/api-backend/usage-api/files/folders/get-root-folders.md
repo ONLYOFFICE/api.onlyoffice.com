@@ -1,6 +1,6 @@
 # getRootFolders
 
-> FolderContentIntegerArrayWrapper getRootFolders(userIdOrGroupId, filterType, withoutTrash, count, startIndex, sortBy, sortOrder, filterValue)
+> FolderContentArrayWrapper getRootFolders(userIdOrGroupId, filterType, withoutTrash, count, startIndex, sortBy, sortOrder, filterValue)
 
 `GET /api/2.0/files/@root`
 
@@ -25,19 +25,19 @@ Returns every top-level section the calling account can see in one response, eac
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The sections available to the caller, each with one page of its content | [**FolderContentIntegerArrayWrapper**](../../models/folder-content-integer-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The sections available to the caller, each with one page of its content | [**FolderContentArrayWrapper**](../../models/folder-content-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | A parameter has the wrong type, the `count` is outside its allowed range, or the `startIndex` is negative | - | - |
 | **403** | The caller is not allowed to read one of the sections | - | - |
 | **404** | One of the sections could not be resolved for this account | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FolderContentIntegerArrayWrapper**](../../models/folder-content-integer-array-wrapper.md)
+[**FolderContentArrayWrapper**](../../models/folder-content-array-wrapper.md)
 
 ## Authorization
 

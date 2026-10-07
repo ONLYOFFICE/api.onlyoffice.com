@@ -20,7 +20,8 @@ Reports whether any room still carries the named tag, which is the check to run 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | True when at least one room still carries the tag | [**BooleanWrapper**](../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **404** | No tag with this name exists in the catalog | - | - |
+| **403** | Only a portal administrator can check tag usage | - | - |
+| **404** | No tag with this name exists in the catalog, or the `tagName` query parameter is missing | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |

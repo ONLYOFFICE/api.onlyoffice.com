@@ -1,18 +1,18 @@
 # deleteMemberPhoto
 
-> ThumbnailsDataWrapper deleteMemberPhoto(userid)
+> ThumbnailsDataWrapper deleteMemberPhoto(userId)
 
-`DELETE /api/2.0/people/{userid}/photo`
+`DELETE /api/2.0/people/{userId}/photo`
 
 Delete a user photo
 
-Removes the avatar of a profile, so that the profile falls back to the default placeholder image. A caller may only do this to their own profile - the ID in the route has to be the calling account, and an administrator gets 403 for anybody else - and the account must be allowed to edit its own profile. The removal is permanent and cannot be undone: the stored image and all of its sizes are deleted, and a new avatar has to be uploaded through `POST api/2.0/people/{userid}/photo` to replace it. The call is idempotent, so removing an avatar from a profile that has none succeeds as well, and it raises a `UserUpdated` webhook. The answer still holds the URLs of every size, now pointing at the default image.
+Removes the avatar of a profile, so that the profile falls back to the default placeholder image. A caller may only do this to their own profile - the ID in the route has to be the calling account, and an administrator gets 403 for anybody else - and the account must be allowed to edit its own profile. The removal is permanent and cannot be undone: the stored image and all of its sizes are deleted, and a new avatar has to be uploaded through `POST api/2.0/people/{userId}/photo` to replace it. The call is idempotent, so removing an avatar from a profile that has none succeeds as well, and it raises a `UserUpdated` webhook. The answer still holds the URLs of every size, now pointing at the default image.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **userid** | path | **String** | The profile whose avatar the operation addresses, taken from the route. Either the ID of the account or its user name is accepted. Reading a photo works for any account the caller may see, while deleting one only works for the calling account itself. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **userId** | path | **String** | The profile whose avatar the operation addresses, taken from the route. Either the ID of the account or its user name is accepted. Reading a photo works for any account the caller may see, while deleting one only works for the calling account itself. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
 
 ## Responses
 

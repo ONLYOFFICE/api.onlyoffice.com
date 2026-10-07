@@ -1,6 +1,6 @@
 # getUserQuotaSettings
 
-> TenantUserQuotaSettingsWrapper getUserQuotaSettings()
+> EntityQuotaSettingsWrapper getUserQuotaSettings()
 
 `GET /api/2.0/settings/userquotasettings`
 
@@ -15,7 +15,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Current per-user default storage quota settings | [**TenantUserQuotaSettingsWrapper**](../../models/tenant-user-quota-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Current per-user default storage quota settings | [**EntityQuotaSettingsWrapper**](../../models/entity-quota-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **304** | The per-user quota settings have not changed since the `Last-Modified` value sent back in `If-Modified-Since`; the body is empty | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +26,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**TenantUserQuotaSettingsWrapper**](../../models/tenant-user-quota-settings-wrapper.md)
+[**EntityQuotaSettingsWrapper**](../../models/entity-quota-settings-wrapper.md)
 
 ## Authorization
 

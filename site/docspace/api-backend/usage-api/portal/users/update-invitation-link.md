@@ -19,10 +19,12 @@ Changes the deadline and the use limit of an existing invitation link, addressed
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The invitation link as it now stands, with the deadline and the use limit that were applied | [**InvitationLinkWrapper**](../../models/invitation-link-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `id`, the use limit is outside 1-1000 or lower than the number of uses the link already has, or the deadline is in the past | - | - |
+| **403** | Inviting members is disabled for the portal, the caller has no right to add users of the link's role, or a non-owner tries to change the DocSpace administrator link | - | - |
+| **404** | No invitation link with this ID exists on the portal | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

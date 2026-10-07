@@ -1,6 +1,6 @@
 # checkFillFormDraft
 
-> StringWrapper checkFillFormDraft(fileId, CheckFillFormDraft)
+> StringWrapper checkFillFormDraft(fileId, CheckFillFormDraftRequest)
 
 `POST /api/2.0/files/masterform/{fileId}/checkfillformdraft`
 
@@ -13,17 +13,21 @@ Resolves the editor address the caller must open to fill out the given PDF form,
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **Integer** (int32) | The identifier of the PDF form to open, as it is returned by a room listing such as `GET api/2.0/files/{folderId}`. The identifier of an already created draft is accepted here as well. | [required] [example: `1`] |
-| **CheckFillFormDraft** | body | [**CheckFillFormDraft**](../../models/check-fill-form-draft.md) | The revision of the form to open and what the caller intends to do with it. | [required] |
+| **CheckFillFormDraftRequest** | body | [**CheckFillFormDraftRequest**](../../models/check-fill-form-draft-request.md) | The revision of the form to open and what the caller intends to do with it. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The editor address to open, with an optional notice fragment | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller cannot open the form, or asked for a past revision without history access | - | - |
+| **400** | The request body cannot be read or has no `version` | - | - |
+| **401** | An anonymous caller has no external link | - | - |
+| **402** | The personal draft does not fit into the storage quota of the portal or the room | - | - |
+| **403** | The caller cannot open the form, asked for a past revision without history access, the form is in Trash, or the caller may fill the form but not the folder it lies in | - | - |
+| **404** | The file id, or the requested version of it, resolves to nothing | - | - |
+| **415** | The file is in a format the editors can neither edit nor open for viewing | - | - |
+| **500** | The file lies in a third-party storage that cannot deliver it | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -31,9 +35,18 @@ Resolves the editor address the caller must open to fill out the given PDF form,
 
 [**StringWrapper**](../../models/string-wrapper.md)
 
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The identifier of the PDF form to open, as it is returned by a room listing such as &#x60;GET api/2.0/files/\{folderId\}&#x60;. The identifier of an already created draft is accepted here as well. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
+
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

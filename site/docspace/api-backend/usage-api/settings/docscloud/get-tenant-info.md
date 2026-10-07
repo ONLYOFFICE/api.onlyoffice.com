@@ -20,10 +20,10 @@ Returns the Docs Connect license of the current portal, the Docs Connect server 
 |------------- | ------------- | ------------- | -------------|
 | **200** | The Docs Connect license and server information of the portal, with the user limits of the license and the usage statistics for the current period | [**DocsCloudTenantInfoWrapper**](../../models/docs-cloud-tenant-info-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal has no activated Docs Connect tenant, so there is no license information to return | - | - |
-| **403** | The caller is not allowed to edit the portal settings | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

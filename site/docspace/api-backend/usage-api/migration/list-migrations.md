@@ -1,6 +1,6 @@
 # listMigrations
 
-> STRINGArrayWrapper listMigrations()
+> StringArrayWrapper listMigrations()
 
 `GET /api/2.0/migration/list`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The names of the migrators this installation can import from, in registration order | [**STRINGArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The names of the migrators this installation can import from, in registration order | [**StringArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller is not a DocSpace administrator | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
@@ -25,7 +25,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**STRINGArrayWrapper**](../models/string-array-wrapper.md)
+[**StringArrayWrapper**](../models/string-array-wrapper.md)
 
 ## Authorization
 

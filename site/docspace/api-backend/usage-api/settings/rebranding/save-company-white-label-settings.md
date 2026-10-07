@@ -1,18 +1,18 @@
 # saveCompanyWhiteLabelSettings
 
-> BooleanWrapper saveCompanyWhiteLabelSettings(CompanyWhiteLabelSettingsWrapper)
+> BooleanWrapper saveCompanyWhiteLabelSettings(CompanyWhiteLabelSettingsRequestDto)
 
 `POST /api/2.0/settings/rebranding/company`
 
 Save the company white label settings
 
-Stores the company details - name, site, support email, postal address and phone - that the About page and the notification letters print as the vendor. The whole set is replaced by the `settings` object of the request, so send every field, not only the changed ones; a request without that object, or with an email or a site that is not a valid value, is rejected as an invalid request. Requires a DocSpace administrator, a server installation with unrestricted space access and a plan that includes branding, which `GET api/2.0/settings/enablewhitelabel` reports; on a SaaS portal the call is refused. The values are installation-wide, so the change reaches every portal of that installation. Two fields are not taken from the request: the licensor flag is always stored as `false`, and hiding the About page is silently kept off unless the plan allows it. The call is mutating and idempotent, and answers `true`. Read the result back with `GET api/2.0/settings/rebranding/company` and undo it with `DELETE api/2.0/settings/rebranding/company`.
+Stores the company details - name, site, support email, postal address and phone - that the About page and the notification letters print as the vendor. The whole set is replaced by the `settings` object of the request, so send every field, not only the changed ones; a request without that object, or with an email or a site that is not a valid value, is rejected as an invalid request. Requires a DocSpace administrator, a server installation with unrestricted space access and a plan that includes customization, which `GET api/2.0/settings/enablewhitelabel` reports; on a SaaS portal the call is refused. The values are installation-wide, so the change reaches every portal of that installation. Two fields are not taken from the request: the licensor flag is always stored as `false`, and hiding the About page is silently kept off unless the plan allows it. The call is mutating and idempotent, and answers `true`. Read the result back with `GET api/2.0/settings/rebranding/company` and undo it with `DELETE api/2.0/settings/rebranding/company`.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **CompanyWhiteLabelSettingsWrapper** | body | [**CompanyWhiteLabelSettingsWrapper**](../../models/company-white-label-settings-wrapper.md) |  | [optional] |
+| **CompanyWhiteLabelSettingsRequestDto** | body | [**CompanyWhiteLabelSettingsRequestDto**](../../models/company-white-label-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -20,6 +20,7 @@ Stores the company details - name, site, support email, postal address and phone
 |------------- | ------------- | ------------- | -------------|
 | **200** | Always `true` once the company details have been stored for the installation | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request carries no settings object, or the email or the site is not a valid value | - | - |
+| **402** | The portal's pricing plan has no customization option, or the branding section is switched off in the installation | - | - |
 | **403** | The caller is not a DocSpace administrator, or the installation does not allow branding to be edited | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

@@ -1,6 +1,6 @@
 # deleteFolder
 
-> FileOperationArrayWrapper deleteFolder(folderId, DeleteFolder)
+> FileOperationArrayWrapper deleteFolder(folderId, DeleteFolderRequest)
 
 `DELETE /api/2.0/files/folder/{folderId}`
 
@@ -13,13 +13,15 @@ Queues the deletion of one folder together with everything inside it, and answer
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **folderId** | path | **Integer** (int32) | The folder to delete, together with everything it holds. | [required] [example: `10`] |
-| **DeleteFolder** | body | [**DeleteFolder**](../../models/delete-folder.md) | How the deletion is to be carried out. | [required] |
+| **DeleteFolderRequest** | body | [**DeleteFolderRequest**](../../models/delete-folder-request.md) | How the deletion is to be carried out. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The file operations of the caller, including the deletion just queued | [**FileOperationArrayWrapper**](../../models/file-operation-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller may not delete the folder, or the folder is a room and `immediately` is not set | - | - |
+| **404** | The folder does not exist | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -30,6 +32,15 @@ Queues the deletion of one folder together with everything inside it, and answer
 ## Return type
 
 [**FileOperationArrayWrapper**](../../models/file-operation-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **folderId** | path | **String** | The folder to delete, together with everything it holds. | [required] [example: `sbox-42`] |
+
 
 ## Authorization
 

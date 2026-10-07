@@ -1,6 +1,6 @@
 # sendPaymentRequest
 
-> sendPaymentRequest(SalesRequestsDto)
+> sendPaymentRequest(SalesRequestDto)
 
 `POST /api/2.0/portal/payment/request`
 
@@ -12,7 +12,7 @@ Sends the portal's message to the ONLYOFFICE sales team - the contact-sales form
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **SalesRequestsDto** | body | [**SalesRequestsDto**](../../models/sales-requests-dto.md) |  | [optional] |
+| **SalesRequestDto** | body | [**SalesRequestDto**](../../models/sales-request-dto.md) |  | [optional] |
 
 ## Responses
 

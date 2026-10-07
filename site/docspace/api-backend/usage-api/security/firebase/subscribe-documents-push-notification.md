@@ -1,6 +1,6 @@
 # subscribeDocumentsPushNotification
 
-> FireBaseUserWrapper subscribeDocumentsPushNotification(FirebaseRequestsDto)
+> FirebaseDeviceWrapper subscribeDocumentsPushNotification(FirebaseRequestDto)
 
 `PUT /api/2.0/settings/push/docsubscribe`
 
@@ -12,13 +12,13 @@ Switches the push notifications of the Documents application on or off for one a
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **FirebaseRequestsDto** | body | [**FirebaseRequestsDto**](../../models/firebase-requests-dto.md) |  | [optional] |
+| **FirebaseRequestDto** | body | [**FirebaseRequestDto**](../../models/firebase-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The device registration as it stands after the change, or an empty response when no registration of the calling user carries the token that was sent | [**FireBaseUserWrapper**](../../models/fire-base-user-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The device registration as it stands after the change, or an empty response when no registration of the calling user carries the token that was sent | [**FirebaseDeviceWrapper**](../../models/firebase-device-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -28,7 +28,7 @@ Switches the push notifications of the Documents application on or off for one a
 
 ## Return type
 
-[**FireBaseUserWrapper**](../../models/fire-base-user-wrapper.md)
+[**FirebaseDeviceWrapper**](../../models/firebase-device-wrapper.md)
 
 ## Authorization
 

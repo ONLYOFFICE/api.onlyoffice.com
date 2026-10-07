@@ -1,6 +1,6 @@
 # aiSettingsGetUser
 
-> AiAiUserSettingsWrapper aiSettingsGetUser()
+> AiUserSettingsWrapper aiSettingsGetUser()
 
 `GET /api/2.0/ai/config/user`
 
@@ -15,14 +15,14 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The calling user's AI settings. | [**AiAiUserSettingsWrapper**](../../models/ai-ai-user-settings-wrapper.md) | - |
+| **200** | The calling user's AI settings. | [**AiUserSettingsWrapper**](../../models/ai-user-settings-wrapper.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 
 ## Return type
 
-[**AiAiUserSettingsWrapper**](../../models/ai-ai-user-settings-wrapper.md)
+[**AiUserSettingsWrapper**](../../models/ai-user-settings-wrapper.md)
 
 ## Authorization
 

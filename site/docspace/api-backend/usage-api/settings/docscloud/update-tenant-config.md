@@ -1,6 +1,6 @@
 # updateTenantConfig
 
-> DocsCloudConfigWrapper updateTenantConfig(DocsCloudConfig)
+> DocsCloudConfigWrapper updateTenantConfig(DocsCloudConfigRequestDto)
 
 `PUT /api/2.0/settings/docscloud/tenant/config`
 
@@ -12,18 +12,18 @@ Replaces the configuration of the Docs Connect tenant of the current portal: its
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **DocsCloudConfig** | body | [**DocsCloudConfig**](../../models/docs-cloud-config.md) |  | [optional] |
+| **DocsCloudConfigRequestDto** | body | [**DocsCloudConfigRequestDto**](../../models/docs-cloud-config-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The configuration of the Docs Connect tenant as Docs Connect stored it after the update | [**DocsCloudConfigWrapper**](../../models/docs-cloud-config-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A text field is longer than 255 characters, the file size limit is outside 0-209715200 bytes, or the portal has no activated Docs Connect tenant | - | - |
-| **403** | The caller is not allowed to edit the portal settings | - | - |
+| **400** | The request body cannot be read, a text field is longer than 255 characters, the file size limit is outside 0-209715200 bytes, or the portal has no activated Docs Connect tenant | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found, including a rejection of the new values | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

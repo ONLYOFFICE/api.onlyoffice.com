@@ -1,8 +1,8 @@
 # getReassignProgress
 
-> TaskProgressResponseWrapper getReassignProgress(userid)
+> TaskProgressResponseWrapper getReassignProgress(userId)
 
-`GET /api/2.0/people/reassign/progress/{userid}`
+`GET /api/2.0/people/reassign/progress/{userId}`
 
 Get the reassignment progress
 
@@ -12,7 +12,7 @@ Returns the current state of the data reassignment queued for the user with the 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **userid** | path | **UUID** (uuid) | The ID of the user the operation applies to, taken from the route. For a progress operation it has to be the same ID that was passed when the job was started. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **userId** | path | **UUID** (uuid) | The ID of the user the operation applies to, taken from the route. For a progress operation it has to be the same ID that was passed when the job was started. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
 
 ## Responses
 

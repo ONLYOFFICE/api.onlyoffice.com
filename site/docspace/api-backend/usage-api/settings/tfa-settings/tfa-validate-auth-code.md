@@ -1,6 +1,6 @@
 # tfaValidateAuthCode
 
-> BooleanWrapper tfaValidateAuthCode(TfaValidateRequestsDto)
+> BooleanWrapper tfaValidateAuthCode(TfaValidateRequestDto)
 
 `POST /api/2.0/settings/tfaapp/validate`
 
@@ -12,17 +12,18 @@ Verifies a two-factor authentication code for the account named in the confirmat
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TfaValidateRequestsDto** | body | [**TfaValidateRequestsDto**](../../models/tfa-validate-requests-dto.md) |  | [optional] |
+| **TfaValidateRequestDto** | body | [**TfaValidateRequestDto**](../../models/tfa-validate-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | `true` when the code completed a first activation and backup codes were generated, `false` when an application was already linked | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `code`, or the code matches neither the authenticator application nor an unused backup code | - | - |
+| **403** | The account the confirmation link was issued for has used up the portal's login attempt limit for TFA codes | - | - |
+| **500** | The code is `null`, empty or consists of whitespace only | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

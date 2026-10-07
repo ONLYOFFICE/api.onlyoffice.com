@@ -1,6 +1,6 @@
 # saveFileAsPdf
 
-> FileIntegerWrapper saveFileAsPdf(id, SaveAsPdfInteger)
+> FileWrapper saveFileAsPdf(id, SaveAsPdfRequest)
 
 `POST /api/2.0/files/file/{id}/saveaspdf`
 
@@ -13,24 +13,37 @@ Converts a file into a PDF, stores that PDF as a new file in the folder named in
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **id** | path | **Integer** (int32) | The file to convert; it is left untouched. | [required] [example: `1`] |
-| **SaveAsPdfInteger** | body | [**SaveAsPdfInteger**](../../models/save-as-pdf-integer.md) | The destination folder and the name of the PDF. | [required] |
+| **SaveAsPdfRequest** | body | [**SaveAsPdfRequest**](../../models/save-as-pdf-request.md) | The destination folder and the name of the PDF. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The PDF file that was created | [**FileIntegerWrapper**](../../models/file-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The PDF file that was created | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `folderId` or `title` | - | - |
+| **402** | The PDF does not fit into the storage quota of the portal, the room or the user | - | - |
+| **403** | The caller cannot read the source file or may not create files in the destination folder | - | - |
 | **404** | The source file or the destination folder does not exist | - | - |
+| **500** | The document service fails to convert the file to PDF, or the converted file cannot be downloaded | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FileIntegerWrapper**](../../models/file-integer-wrapper.md)
+[**FileWrapper**](../../models/file-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **id** | path | **String** | The file to convert; it is left untouched. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+| **ThirdPartySaveAsPdfRequest** | body | [**ThirdPartySaveAsPdfRequest**](../../models/third-party-save-as-pdf-request.md) | The destination folder and the name of the PDF. | [required] |
+
+Return type: [**ThirdPartyFileWrapper**](../../models/third-party-file-wrapper.md)
 
 ## Authorization
 

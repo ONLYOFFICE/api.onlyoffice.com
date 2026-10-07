@@ -1,6 +1,6 @@
 # getRoomGroups
 
-> RoomGroupArrayWrapper getRoomGroups(includeMembers)
+> RoomGroupArrayWrapper getRoomGroups(includeMembers, searchArea)
 
 `GET /api/2.0/files/group`
 
@@ -13,16 +13,17 @@ Returns every room group of the calling account, each with the rooms it gathers.
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **includeMembers** | query | **Boolean** | Whether the rooms of each group are listed in the answer: true fills the `rooms` array of every entry, false leaves it out and reports only how many there are in `totalRooms`. | [optional] [example: `true`] |
+| **searchArea** | query | **SearchArea** | The section to list the groups of: Active for Rooms and Forms for Forms. Active when omitted. | [optional] [example: `Active`] [enum: `Active`, `Archive`, `Any`, `RecentByLinks`, `Templates`, `Knowledge`, `ResultStorage`, `AiAgents`, `Forms`, `FormTemplates`] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The room groups of the calling account | [**RoomGroupArrayWrapper**](../../models/room-group-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The `searchArea` names a section other than `Active` and `Forms` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

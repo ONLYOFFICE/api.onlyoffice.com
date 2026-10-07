@@ -1,4 +1,4 @@
-# aiPromptsImportBundle.request.options
+# AiPromptsImportBundleRequest.options
 Import options.
 
 | Name | Type | Description | Notes |

@@ -1,6 +1,6 @@
 # aiToolsRemoveCustomServer
 
-> AiSuccessResponse aiToolsRemoveCustomServer(aiToolsRemoveCustomServer\_request)
+> AiSuccessResponse aiToolsRemoveCustomServer(AiToolsRemoveCustomServerRequest)
 
 `DELETE /api/2.0/ai/tools/remove-custom-server`
 
@@ -12,7 +12,7 @@ Unregisters a custom MCP server from the scope, so the model is no longer offere
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiToolsRemoveCustomServer\_request** | body | [**aiToolsRemoveCustomServer_request**](../../models/ai-tools-remove-custom-server-request-body.md) |  | [required] |
+| **AiToolsRemoveCustomServerRequest** | body | [**AiToolsRemoveCustomServerRequest**](../../models/ai-tools-remove-custom-server-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,8 +21,8 @@ Unregisters a custom MCP server from the scope, so the model is no longer offere
 | **200** | Confirms the request was accepted, whether or not a registration was removed. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **400** | The server name is missing. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **404** | The referenced object does not exist, or the caller cannot access it - the two are deliberately indistinguishable, so a room the caller may not open answers 404 rather than 403. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

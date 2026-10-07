@@ -19,7 +19,7 @@ Rebuilds the spreadsheet that gathers the answers submitted to a form, starting 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The queued report task together with the form the answers belong to | [**XlsxReportResponseWrapper**](../../models/xlsx-report-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The folder is not a completed-forms folder, or the caller may not maintain the form | - | - |
+| **403** | The folder is not a completed-forms folder, the room of the submitted copy is not a form-filling room, the caller may not maintain the form, or the filling of the form is not started | - | - |
 | **404** | The folder, the submitted copy or the original form was not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

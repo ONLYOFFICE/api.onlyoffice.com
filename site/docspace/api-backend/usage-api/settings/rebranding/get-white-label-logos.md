@@ -1,6 +1,6 @@
 # getWhiteLabelLogos
 
-> WhiteLabelItemArrayWrapper getWhiteLabelLogos(IsDark, IsDefault)
+> WhiteLabelItemArrayWrapper getWhiteLabelLogos(isDark, isDefault)
 
 `GET /api/2.0/settings/whitelabel/logos`
 
@@ -12,8 +12,8 @@ Lists the branding logo slots of the current portal together with the image URLs
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **IsDark** | query | **Boolean** | Which theme the answer is filled in for: `true` fills the dark image only, `false` the light one only. Omitting it fills both, leaving the dark one empty for the slots that have no separate dark image. | [optional] [example: `true`] |
-| **IsDefault** | query | **Boolean** | Whether the installation-wide default branding is addressed instead of this portal own. Writing the default branding is only allowed on a self-hosted installation; elsewhere it is refused with 403. | [optional] [example: `true`] |
+| **isDark** | query | **Boolean** | Which theme the answer is filled in for: `true` fills the dark image only, `false` the light one only. Omitting it fills both, leaving the dark one empty for the slots that have no separate dark image. | [optional] [example: `true`] |
+| **isDefault** | query | **Boolean** | Whether the installation-wide default branding is addressed instead of this portal own. Writing the default branding is only allowed on a self-hosted installation; elsewhere it is refused with 403. | [optional] [example: `true`] |
 
 ## Responses
 
@@ -32,7 +32,7 @@ Lists the branding logo slots of the current portal together with the image URLs
 
 ## Authorization
 
-[cookieAuth](../settings.md#cookieauth), [bearerAuth](../settings.md#bearerauth)
+[Basic](../settings.md#basic), [OAuth2](../settings.md#oauth2) (scopes: read, write), [ApiKeyBearer](../settings.md#apikeybearer), [asc_auth_key](../settings.md#asc_auth_key), [Bearer](../settings.md#bearer), [OpenId](../settings.md#openid)
 
 ## HTTP request headers
 

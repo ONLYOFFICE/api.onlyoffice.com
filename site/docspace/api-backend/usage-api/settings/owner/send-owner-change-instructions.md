@@ -19,7 +19,7 @@ Starts handing this portal over to another of its members: the confirmation lett
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The outcome of the request: `status` 1 with the address the instructions were sent to, or `status` 0 with a localized refusal when the transfer cannot be started | [**OwnerChangeInstructionsWrapper**](../../models/owner-change-instructions-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The portal owner's own email address has not been confirmed yet, so no instructions can be sent | - | - |
+| **400** | The request body cannot be read or has no `ownerId`, or the portal owner's own email address has not been confirmed yet, so no instructions can be sent | - | - |
 | **403** | The caller does not hold the portal-settings right of a DocSpace administrator, or the user named as the new owner is a guest | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

@@ -1,6 +1,6 @@
 # setTenantDevToolsAccessSettings
 
-> TenantDevToolsAccessSettingsWrapper setTenantDevToolsAccessSettings(TenantDevToolsAccessSettingsDto)
+> TenantDevToolsAccessSettingsWrapper setTenantDevToolsAccessSettings(TenantDevToolsAccessSettingsRequestDto)
 
 `POST /api/2.0/settings/devtoolsaccess`
 
@@ -12,13 +12,14 @@ Sets whether the portal restricts the `User` role from using the developer tools
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TenantDevToolsAccessSettingsDto** | body | [**TenantDevToolsAccessSettingsDto**](../../models/tenant-dev-tools-access-settings-dto.md) |  | [optional] |
+| **TenantDevToolsAccessSettingsRequestDto** | body | [**TenantDevToolsAccessSettingsRequestDto**](../../models/tenant-dev-tools-access-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Saved developer tools access restriction for the `User` role | [**TenantDevToolsAccessSettingsWrapper**](../../models/tenant-dev-tools-access-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

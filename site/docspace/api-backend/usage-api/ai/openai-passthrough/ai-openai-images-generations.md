@@ -1,6 +1,6 @@
 # aiOpenaiImagesGenerations
 
-> Map aiOpenaiImagesGenerations(profileId, request\_body)
+> Map aiOpenaiImagesGenerations(profileId, AiOpenaiImagesGenerationsRequest)
 
 `POST /api/2.0/ai/openai/{profileId}/v1/images/generations`
 
@@ -13,7 +13,7 @@ OpenAI-compatible image generation for the document editor's AI plugin, working 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **profileId** | path | **String** | The AI provider profile identifier. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
-| **request\_body** | body | **Map** | An OpenAI image-generation request, forwarded to the provider byte for byte. The shape is the provider's, not this API's, and the credentials come from the profile in the path. | [required] |
+| **AiOpenaiImagesGenerationsRequest** | body | **Map** | An OpenAI image-generation request, forwarded to the provider byte for byte. The shape is the provider's, not this API's, and the credentials come from the profile in the path. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ OpenAI-compatible image generation for the document editor's AI plugin, working 
 |------------- | ------------- | ------------- | -------------|
 | **200** | The provider's own response, relayed verbatim with its status and content type. | **Map** | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**aiOpenaiChatCompletions_403_response**](../../models/ai-openai-chat-completions-403-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**aiOpenaiChatCompletions_403_response**](../../models/ai-openai-chat-completions-403-response.md) | - |
 | **404** | No profile with this identifier exists for the caller. | [**aiOpenaiChatCompletions_403_response**](../../models/ai-openai-chat-completions-403-response.md) | - |
 | **413** | The request body is larger than this route accepts. | [**aiOpenaiChatCompletions_403_response**](../../models/ai-openai-chat-completions-403-response.md) | - |
 | **429** | Relayed verbatim from the AI provider, which is rate-limiting this portal's key. | [**aiOpenaiChatCompletions_403_response**](../../models/ai-openai-chat-completions-403-response.md) | - |

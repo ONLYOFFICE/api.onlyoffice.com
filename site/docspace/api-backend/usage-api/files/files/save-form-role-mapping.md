@@ -1,6 +1,6 @@
 # saveFormRoleMapping
 
-> saveFormRoleMapping(fileId, SaveFormRoleMappingDtoInteger)
+> saveFormRoleMapping(fileId, SaveFormRoleMappingDto)
 
 `POST /api/2.0/files/file/{fileId}/formrolemapping`
 
@@ -13,18 +13,18 @@ Assigns the roles of a PDF form to the people who are to fill them in, and start
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **String** | The form the role mapping belongs to. Send the same value as the `formId` of the request body, which is the one the handler reads. | [required] |
-| **SaveFormRoleMappingDtoInteger** | body | [**SaveFormRoleMappingDtoInteger**](../../models/save-form-role-mapping-dto-integer.md) |  | [optional] |
+| **SaveFormRoleMappingDto** | body | [**SaveFormRoleMappingDto**](../../models/save-form-role-mapping-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The roles were stored and the filling was started or reset | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller may not start or reset the filling of this form | - | - |
+| **400** | The request body cannot be read or has no `formId` or `roles`, or `roles` is null | - | - |
+| **403** | The caller may not start or reset the filling of this form, or the file is not a PDF or lies outside a room | - | - |
+| **500** | No file with the `formId` exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

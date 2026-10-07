@@ -1,6 +1,6 @@
 # aiWebSearchSetActiveConfig
 
-> AiSuccessResponse aiWebSearchSetActiveConfig(aiWebSearchConfigure\_request)
+> AiSuccessResponse aiWebSearchSetActiveConfig(AiWebSearchSetActiveConfigRequest)
 
 `PUT /api/2.0/ai/web-search/set-active-config`
 
@@ -12,7 +12,7 @@ Stores a web-search configuration without contacting the provider first, for a f
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiWebSearchConfigure\_request** | body | [**aiWebSearchConfigure_request**](../../models/ai-web-search-configure-request-body.md) |  | [required] |
+| **AiWebSearchSetActiveConfigRequest** | body | [**AiWebSearchSetActiveConfigRequest**](../../models/ai-web-search-set-active-config-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,8 +21,8 @@ Stores a web-search configuration without contacting the provider first, for a f
 | **200** | Confirms the configuration was stored, unverified. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **400** | The configuration is missing or malformed, or the provider URL points at a private network address. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **404** | The referenced object does not exist, or the caller cannot access it - the two are deliberately indistinguishable, so a room the caller may not open answers 404 rather than 403. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

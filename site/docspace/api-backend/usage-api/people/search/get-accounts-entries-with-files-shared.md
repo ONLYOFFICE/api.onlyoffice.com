@@ -1,6 +1,6 @@
 # getAccountsEntriesWithFilesShared
 
-> IAccountEntryArrayWrapper getAccountsEntriesWithFilesShared(id, employeeStatus, activationStatus, excludeShared, includeShared, invitedByMe, inviterId, area, employeeTypes, count, startIndex, filterSeparator, filterValue)
+> AccountEntryArrayWrapper getAccountsEntriesWithFilesShared(id, employeeStatus, activationStatus, excludeShared, includeShared, invitedByMe, inviterId, area, employeeTypes, count, startIndex, filterSeparator, filterValue)
 
 `GET /api/2.0/accounts/file/{id}/search`
 
@@ -19,7 +19,7 @@ Searches the portal users and groups that can be given access to the file with t
 | **includeShared** | query | **Boolean** | Keeps only the accounts that already have access to the entry, which is the set to offer when changing or revoking access. Every returned entry has `shared` set to true, and the flag is ignored when `excludeShared` is also set. | [optional] [example: `false`] |
 | **invitedByMe** | query | **Boolean** | Keeps only the users invited by the caller when true, and only the users invited by somebody else when false. Omit it to search regardless of who sent the invitation. | [optional] [example: `false`] |
 | **inviterId** | query | **UUID** (uuid) | Keeps only the users invited by the account with this ID. Omit it to search regardless of who sent the invitation. | [optional] [example: `00000000-0000-0000-0000-000000000000`] |
-| **area** | query | **Area** | The part of the portal to search in: `All`, the default, searches members and guests together, `People` leaves the guests out, and `Guests` returns guests only - and for a caller who is not a DocSpace administrator, only the guests that caller is related to. | [optional] [example: `All`] [enum: `0`, `1`, `2`] |
+| **area** | query | **AccountSearchArea** | The part of the portal to search in: `All`, the default, searches members and guests together, `People` leaves the guests out, and `Guests` returns guests only - and for a caller who is not a DocSpace administrator, only the guests that caller is related to. | [optional] [example: `All`] [enum: `0`, `1`, `2`] |
 | **employeeTypes** | query | [**List**](../../models/employee-type.md) | Keeps only the users of the listed types, combined as alternatives. An empty list, which is the default, searches every type. | [optional] [example: `[RoomAdmin, Guest]`] |
 | **count** | query | **Integer** (int32) | The size of the page, counting groups and users together. It defaults to 100, which is also the largest value the operation accepts. | [optional] [example: `25`] [min: 1] [max: 100] |
 | **startIndex** | query | **Integer** (int32) | The number of matches to skip before the page starts, counted over the groups and users together. It defaults to 0, and the total number of matches is reported in the total count of the response. | [optional] [example: `0`] |
@@ -30,19 +30,28 @@ Searches the portal users and groups that can be given access to the file with t
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The matching users and groups, each with its access state for the file | [**IAccountEntryArrayWrapper**](../../models/i-account-entry-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The matching users and groups, each with its access state for the file | [**AccountEntryArrayWrapper**](../../models/account-entry-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | A parameter has the wrong type, or the `count` is outside its allowed range | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **404** | No file has the specified ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**IAccountEntryArrayWrapper**](../../models/i-account-entry-array-wrapper.md)
+[**AccountEntryArrayWrapper**](../../models/account-entry-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **id** | path | **String** | The ID of the room, folder or file whose access the search is run against, taken from the route. It is an integer for an entry stored in DocSpace and a provider-specific string for an entry in a connected third-party storage. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
 
 ## Authorization
 

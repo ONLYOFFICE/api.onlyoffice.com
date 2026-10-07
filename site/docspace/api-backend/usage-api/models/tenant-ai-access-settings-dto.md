@@ -1,6 +1,7 @@
 # TenantAiAccessSettingsDto
-Whether AI functionality is available on the portal.
+Whether AI functionality is switched on for the portal.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **enabled** | **Boolean** | Whether AI is available on the portal at all - chat, agents and vectorization together. Switching it off hides the AI Agents folder and makes every AI endpoint unreachable for all members at once, not only for the caller, and the change is pushed to connected clients rather than waiting for their next request. | [optional] [example: `false`] |
+| **enabled** | **Boolean** | Specifies whether AI functionality is enabled for the tenant. When set to `false`, all AI features (chat, agents, vectorization) are disabled tenant-wide. | [optional] [example: `true`] |
+| **lastModified** | **Date** (date-time) | The timestamp indicating when the settings were last modified. | [optional] [example: `1990-01-01T00:00:00Z`] |

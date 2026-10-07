@@ -1,6 +1,6 @@
 # aiThreadsAppendUserMessage
 
-> aiThreadsAppendUserMessage_200_response aiThreadsAppendUserMessage(aiThreadsAppendUserMessage\_request)
+> aiThreadsAppendUserMessage_200_response aiThreadsAppendUserMessage(AiThreadsAppendUserMessageRequest)
 
 `POST /api/2.0/ai/threads/append-user-message`
 
@@ -12,7 +12,7 @@ Stores a user message in a thread and bumps its last-edit date so the thread res
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiThreadsAppendUserMessage\_request** | body | [**aiThreadsAppendUserMessage_request**](../../models/ai-threads-append-user-message-request-body.md) |  | [required] |
+| **AiThreadsAppendUserMessageRequest** | body | [**AiThreadsAppendUserMessageRequest**](../../models/ai-threads-append-user-message-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Stores a user message in a thread and bumps its last-edit date so the thread res
 | **200** | The stored message, with the ID storage assigned to it. | [**aiThreadsAppendUserMessage_200_response**](../../models/ai-threads-append-user-message-200-response.md) | - |
 | **400** | The message is longer than the limit allows. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

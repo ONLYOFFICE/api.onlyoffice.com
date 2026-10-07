@@ -1,6 +1,6 @@
 # aiWebSearchClear
 
-> AiSuccessResponse aiWebSearchClear(body)
+> AiSuccessResponse aiWebSearchClear(AiWebSearchClearRequest)
 
 `DELETE /api/2.0/ai/web-search/clear`
 
@@ -12,7 +12,7 @@ Removes the portal's web-search configuration, after which web search is unavail
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **body** | body | **String** | Ignored. The operation always clears the portal-wide configuration, so send an empty body; a value here does not scope it to a room. | [required] |
+| **AiWebSearchClearRequest** | body | **String** | Ignored. The operation always clears the portal-wide configuration, so send an empty body; a value here does not scope it to a room. | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Removes the portal's web-search configuration, after which web search is unavail
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirms the portal has no web-search configuration any more. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

@@ -6,7 +6,7 @@
 
 Get a profile by user email
 
-Returns the full profile of the account that owns an email address. Pass the address either in plain text as `email` or, when it arrived inside an invitation link, encrypted as `encemail`; one of the two is required and a malformed or overlong address answers 400. The caller has to be allowed to see that account - a guest, for instance, only sees the accounts it is related to - and an address that belongs to nobody answers 404. The call is read-only, and `culture` changes nothing about the profile: it only picks the language of the error message when the lookup fails. To find out whether an address is taken without the right to see its owner, use `GET api/2.0/people/exists`, and to look an account up by its ID or user name use `GET api/2.0/people/{userid}`.
+Returns the full profile of the account that owns an email address. Pass the address either in plain text as `email` or, when it arrived inside an invitation link, encrypted as `encemail`; one of the two is required and a malformed or overlong address answers 400. The caller has to be allowed to see that account - a guest, for instance, only sees the accounts it is related to - and an address that belongs to nobody answers 404. The call is read-only, and `culture` changes nothing about the profile: it only picks the language of the error message when the lookup fails. To find out whether an address is taken without the right to see its owner, use `GET api/2.0/people/exists`, and to look an account up by its ID or user name use `GET api/2.0/people/{userId}`.
 
 ## Parameters
 

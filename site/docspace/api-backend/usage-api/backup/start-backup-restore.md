@@ -1,6 +1,6 @@
 # startBackupRestore
 
-> BackupProgressWrapper startBackupRestore(BackupRestoreDto)
+> BackupProgressWrapper startBackupRestore(StartBackupRestoreRequestDto)
 
 `POST /api/2.0/backup/startrestore`
 
@@ -12,20 +12,20 @@ Queues the restoring of the current portal from a backup and returns straight aw
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **BackupRestoreDto** | body | [**BackupRestoreDto**](../models/backup-restore-dto.md) |  | [optional] |
+| **StartBackupRestoreRequestDto** | body | [**StartBackupRestoreRequestDto**](../models/start-backup-restore-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The state of the queued restoring job | [**BackupProgressWrapper**](../models/backup-progress-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `backupId`, or `storageParams` repeats a key | - | - |
 | **402** | The pricing plan of this portal does not allow restoring | - | - |
 | **403** | No permissions to perform this action | - | - |
-| **404** | The backup record was not found, or the file it points to is missing | - | - |
+| **404** | The backup record was not found, the file given in `filePath` or its folder was not found, or, for `Local` storage, no backup archive has been uploaded to the portal | - | - |
+| **500** | `backupId` is not a GUID and `storageParams` has no `filePath`, or a key or value of `storageParams` is null | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

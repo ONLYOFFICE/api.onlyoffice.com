@@ -1,4 +1,4 @@
-# STRINGArrayWrapper
+# StringArrayWrapper
 The successful API response.
 
 | Name | Type | Description | Notes |

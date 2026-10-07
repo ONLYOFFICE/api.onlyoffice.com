@@ -25,6 +25,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getExternalDbSyncStatus**](get-external-db-sync-status.md) | **GET** /api/2.0/files/rooms/\{id\}/externaldbsync | Get external DB sync status |
 | [**getNewRoomItems**](get-new-room-items.md) | **GET** /api/2.0/files/rooms/\{id\}/news | Get new items in a room |
 | [**getPublicSettings**](get-public-settings.md) | **GET** /api/2.0/files/roomtemplate/\{id\}/public | Get room template public access |
+| [**getRoomAiFolder**](get-room-ai-folder.md) | **GET** /api/2.0/files/rooms/\{id\}/ai | Get the .ai folder of a room |
 | [**getRoomCovers**](get-room-covers.md) | **GET** /api/2.0/files/rooms/covers | Get room cover gallery |
 | [**getRoomCreatingStatus**](get-room-creating-status.md) | **GET** /api/2.0/files/rooms/fromtemplate/status | Get the room creation progress |
 | [**getRoomIndexExport**](get-room-index-export.md) | **GET** /api/2.0/files/rooms/indexexport | Get the room index export |
@@ -40,6 +41,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**pinRoom**](pin-room.md) | **PUT** /api/2.0/files/rooms/\{id\}/pin | Pin a room |
 | [**reorderRoom**](reorder-room.md) | **PUT** /api/2.0/files/rooms/\{id\}/reorder | Reorder room contents |
 | [**resendEmailInvitations**](resend-email-invitations.md) | **POST** /api/2.0/files/rooms/\{id\}/resend | Resend the room invitations |
+| [**searchRooms**](search-rooms.md) | **POST** /api/2.0/files/rooms/search | Search the rooms by metadata |
 | [**setPublicSettings**](set-public-settings.md) | **PUT** /api/2.0/files/roomtemplate/public | Set room template public access |
 | [**setRoomLink**](set-room-link.md) | **PUT** /api/2.0/files/rooms/\{id\}/links | Set the room external or invitation link |
 | [**setRoomSecurity**](set-room-security.md) | **PUT** /api/2.0/files/rooms/\{id\}/share | Set the room access rights |

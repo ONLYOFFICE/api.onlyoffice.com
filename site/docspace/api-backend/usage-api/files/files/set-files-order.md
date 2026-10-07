@@ -1,6 +1,6 @@
 # setFilesOrder
 
-> FileEntryIntegerArrayWrapper setFilesOrder(OrdersRequestDtoInteger)
+> FileEntryArrayWrapper setFilesOrder(OrdersRequestDto)
 
 `PUT /api/2.0/files/order`
 
@@ -12,23 +12,25 @@ Puts several files and folders at given positions in one go and answers with the
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **OrdersRequestDtoInteger** | body | [**OrdersRequestDtoInteger**](../../models/orders-request-dto-integer.md) |  | [optional] |
+| **OrdersRequestDto** | body | [**OrdersRequestDto**](../../models/orders-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The files and folders that were moved, with the positions they now hold | [**FileEntryIntegerArrayWrapper**](../../models/file-entry-integer-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The files and folders that were moved, with the positions they now hold | [**FileEntryArrayWrapper**](../../models/file-entry-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `items`, an item has no `entryId` or `entryType`, or an `order` is below 1 or is neither a number nor a dotted path ending in one | - | - |
+| **403** | The caller may not administer the room of an entry, or an entry lies outside any room | - | - |
+| **404** | An entry does not exist or is sent with the wrong `entryType` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FileEntryIntegerArrayWrapper**](../../models/file-entry-integer-array-wrapper.md)
+[**FileEntryArrayWrapper**](../../models/file-entry-array-wrapper.md)
 
 ## Authorization
 

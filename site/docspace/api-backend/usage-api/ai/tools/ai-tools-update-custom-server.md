@@ -1,6 +1,6 @@
 # aiToolsUpdateCustomServer
 
-> AiToolsMutationResult aiToolsUpdateCustomServer(aiToolsUpdateCustomServer\_request)
+> AiToolsMutationResult aiToolsUpdateCustomServer(AiToolsUpdateCustomServerRequest)
 
 `PUT /api/2.0/ai/tools/update-custom-server`
 
@@ -12,7 +12,7 @@ Replaces the stored configuration of a registered custom MCP server, under the s
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiToolsUpdateCustomServer\_request** | body | [**aiToolsUpdateCustomServer_request**](../../models/ai-tools-update-custom-server-request-body.md) |  | [required] |
+| **AiToolsUpdateCustomServerRequest** | body | [**AiToolsUpdateCustomServerRequest**](../../models/ai-tools-update-custom-server-request.md) |  | [required] |
 
 ## Responses
 
@@ -21,8 +21,8 @@ Replaces the stored configuration of a registered custom MCP server, under the s
 | **200** | Whether the server was updated, with the stored entry. | [**AiToolsMutationResult**](../../models/ai-tools-mutation-result.md) | - |
 | **400** | The server name is missing or is not routable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **404** | The referenced object does not exist, or the caller cannot access it - the two are deliberately indistinguishable, so a room the caller may not open answers 404 rather than 403. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

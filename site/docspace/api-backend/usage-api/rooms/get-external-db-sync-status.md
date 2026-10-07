@@ -19,7 +19,8 @@ Returns the record of the external database export job of a form filling room, o
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The synchronization job record, or an empty body when the room has no job | [**ExternalDbSyncTaskWrapper**](../models/external-db-sync-task-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **404** | No room with this ID is visible to the caller | - | - |
+| **403** | The room is not a form filling room, or the caller cannot edit it | - | - |
+| **404** | No folder with this ID exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |

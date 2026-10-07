@@ -1,6 +1,6 @@
 # uploadDefaultTemplate
 
-> DefaultTemplateSettingsWrapper uploadDefaultTemplate(FileExtension, File)
+> DefaultTemplateSettingsWrapper uploadDefaultTemplate(fileExtension, file)
 
 `POST /api/2.0/files/settings/defaulttemplate`
 
@@ -12,16 +12,16 @@ Uploads a document and makes it the blank the portal creates for one extension, 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **FileExtension** | query | **String** | The extension the uploaded blank is set for, written in lower case with the leading dot, and travelling in the query string rather than in the form. It must match the extension of the uploaded file name. Only the extensions the portal's built-in template set covers are accepted, and `GET api/2.0/files/settings/defaulttemplate` returns exactly that list; an extension outside it leaves the settings unchanged instead of failing. | [required] [example: `.docx`] |
-| **File** | form | **File** (binary) | The template document itself. Its file name must end with the extension named above, a PDF must be a fillable form, and the body is capped at 100 MB - a larger one is refused while it is still streaming in. | [required] |
+| **fileExtension** | query | **String** | The extension the uploaded blank is set for, written in lower case with the leading dot, and travelling in the query string rather than in the form. It must match the extension of the uploaded file name. Only the extensions the portal's built-in template set covers are accepted, and `GET api/2.0/files/settings/defaulttemplate` returns exactly that list; an extension outside it leaves the settings unchanged instead of failing. | [required] [example: `.docx`] |
+| **file** | form | **File** (binary) | The template document itself. Its file name must end with the extension named above, a PDF must be a fillable form, and the body is capped at 100 MB - a larger one is refused while it is still streaming in. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The blank document configured for each supported extension after the upload | [**DefaultTemplateSettingsWrapper**](../../models/default-template-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The uploaded file is missing or larger than the 100 MB limit | - | - |
-| **403** | The caller may not read the portal settings, or the file does not match the requested extension | - | - |
+| **400** | The uploaded file is missing or larger than the 100 MB limit, or its file name does not end with the requested extension | - | - |
+| **403** | The caller has no portal-settings right, or the uploaded PDF is not a fillable form | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

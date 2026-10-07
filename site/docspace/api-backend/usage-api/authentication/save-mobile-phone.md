@@ -1,6 +1,6 @@
 # saveMobilePhone
 
-> AuthenticationTokenWrapper saveMobilePhone(MobileRequestsDto)
+> AuthenticationTokenWrapper saveMobilePhone(MobileRequestDto)
 
 `POST /api/2.0/authentication/setphone`
 
@@ -12,7 +12,7 @@ Stores the mobile phone number of a user who is going through phone activation a
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **MobileRequestsDto** | body | [**MobileRequestsDto**](../models/mobile-requests-dto.md) |  | [optional] |
+| **MobileRequestDto** | body | [**MobileRequestDto**](../models/mobile-request-dto.md) |  | [optional] |
 
 ## Responses
 

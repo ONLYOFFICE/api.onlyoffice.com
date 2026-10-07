@@ -1,6 +1,6 @@
 # aiAgentsUpdate
 
-> AiFolderIntegerWrapper aiAgentsUpdate(id, aiAgentsUpdate\_request)
+> AiFolderWrapper aiAgentsUpdate(id, AiAgentsUpdateRequest)
 
 `PUT /api/2.0/ai/agents/{id}`
 
@@ -13,22 +13,22 @@ Changes an AI agent room - its title, tags or standing instruction - and optiona
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **id** | path | **String** | The agent identifier. | [required] [example: `1234`] |
-| **aiAgentsUpdate\_request** | body | [**aiAgentsUpdate_request**](../../models/ai-agents-update-request-body.md) |  | [required] |
+| **AiAgentsUpdateRequest** | body | [**AiAgentsUpdateRequest**](../../models/ai-agents-update-request.md) |  | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The updated agent room. | [**AiFolderIntegerWrapper**](../../models/ai-folder-integer-wrapper.md) | - |
+| **200** | The updated agent room. | [**AiFolderWrapper**](../../models/ai-folder-wrapper.md) | - |
 | **400** | The agent ID is not a positive integer, or `profileId` is not a UUID, names no existing profile, or names one that does not support chat. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 
 ## Return type
 
-[**AiFolderIntegerWrapper**](../../models/ai-folder-integer-wrapper.md)
+[**AiFolderWrapper**](../../models/ai-folder-wrapper.md)
 
 ## Authorization
 

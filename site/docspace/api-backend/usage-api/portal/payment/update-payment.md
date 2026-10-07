@@ -19,7 +19,8 @@ Changes how many units of the plan the portal is paying for - the number of admi
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | `true` when the provider accepted the new quantity, `false` when it declined it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The product is not the plan currently paid, or the quantity is already the one in effect | - | - |
+| **400** | The request body cannot be read or has no `quantity`, `quantity` does not hold exactly one product, the product is not a subscription plan or not the plan currently paid, or the quantity is already the one in effect | - | - |
+| **402** | The portal already has more administrators, users, rooms or AI agents, or stores more data, than the plan in the new quantity allows | - | - |
 | **403** | The caller is not the payer of this portal, or the portal has no billing service configured | - | - |
 | **404** | This portal has no billing customer yet | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

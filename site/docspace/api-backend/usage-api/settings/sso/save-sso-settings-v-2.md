@@ -1,6 +1,6 @@
 # saveSsoSettingsV2
 
-> SsoSettingsV2Wrapper saveSsoSettingsV2(SsoSettingsRequestsDto)
+> SsoSettingsWrapper saveSsoSettingsV2(SsoSettingsRequestDto)
 
 `POST /api/2.0/settings/ssov2`
 
@@ -12,23 +12,25 @@ Replaces the whole SAML Single Sign-On configuration of the current portal with 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **SsoSettingsRequestsDto** | body | [**SsoSettingsRequestsDto**](../../models/sso-settings-requests-dto.md) |  | [optional] |
+| **SsoSettingsRequestDto** | body | [**SsoSettingsRequestDto**](../../models/sso-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The SSO settings as they were stored, with the login label and the user type normalised | [**SsoSettingsV2Wrapper**](../../models/sso-settings-v-2-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The SSO settings as they were stored, with the login label and the user type normalised | [**SsoSettingsWrapper**](../../models/sso-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The serialized settings are empty or do not contain an SSO configuration object | - | - |
+| **402** | The portal is a cloud one, and its pricing plan has no single sign-on option or the SSO section is not enabled for it | - | - |
+| **403** | The caller has no portal-settings right | - | - |
+| **500** | The serialized settings are not valid JSON, have a value of the wrong type or lack the `idpSettings` or `fieldMapping` object, the IdP entity ID is empty, the SSO URL is missing or the SSO or SLO URL is not an absolute HTTP or HTTPS address, or the first name, last name or email attribute mapping is empty | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**SsoSettingsV2Wrapper**](../../models/sso-settings-v-2-wrapper.md)
+[**SsoSettingsWrapper**](../../models/sso-settings-wrapper.md)
 
 ## Authorization
 

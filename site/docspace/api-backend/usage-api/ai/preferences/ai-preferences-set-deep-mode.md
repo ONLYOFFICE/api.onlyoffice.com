@@ -1,6 +1,6 @@
 # aiPreferencesSetDeepMode
 
-> AiSuccessResponse aiPreferencesSetDeepMode(aiPreferencesSetDeepMode\_request)
+> AiSuccessResponse aiPreferencesSetDeepMode(AiPreferencesSetDeepModeRequest)
 
 `PUT /api/2.0/ai/preferences/set-deep-mode`
 
@@ -12,16 +12,16 @@ Stores the deep-mode toggle of a scope. `false` stores the `off` depth; `true` k
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiPreferencesSetDeepMode\_request** | body | [**aiPreferencesSetDeepMode_request**](../../models/ai-preferences-set-deep-mode-request-body.md) |  | [required] |
+| **AiPreferencesSetDeepModeRequest** | body | [**AiPreferencesSetDeepModeRequest**](../../models/ai-preferences-set-deep-mode-request.md) |  | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirms the preference was stored. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
-| **400** | `value` is missing or is not a boolean. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **400** | `value` is missing or is not a boolean, or `entityId` is not a room ID. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

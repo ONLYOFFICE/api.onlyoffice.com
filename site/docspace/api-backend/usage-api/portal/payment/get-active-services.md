@@ -16,10 +16,11 @@ This endpoint does not need any parameter.
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The wallet services active on the portal, with their limits and usage where those are known | [**ActiveServiceArrayWrapper**](../../models/active-service-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The portal has an active Docs Connect subscription that the Docs Connect service does not know | - | - |
 | **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
+| **500** | The portal has an active Docs Connect subscription, and the Docs Connect service answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

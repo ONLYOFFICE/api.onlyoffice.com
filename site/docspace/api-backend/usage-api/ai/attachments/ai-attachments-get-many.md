@@ -1,6 +1,6 @@
 # aiAttachmentsGetMany
 
-> List aiAttachmentsGetMany(request\_body)
+> List aiAttachmentsGetMany(AiAttachmentsGetManyRequest)
 
 `POST /api/2.0/ai/attachments/get-many`
 
@@ -12,7 +12,7 @@ Returns several attachments in one call, aligned by position with the `ids` that
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **request\_body** | body | **List** | The IDs of the attachments to read, as a bare JSON array of strings. The answer is aligned with this array by position. | [required] |
+| **AiAttachmentsGetManyRequest** | body | **List** | The IDs of the attachments to read, as a bare JSON array of strings. The answer is aligned with this array by position. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Returns several attachments in one call, aligned by position with the `ids` that
 | **200** | The attachments, aligned by position with the IDs that were sent. A missing one leaves its slot empty. | [**List**](../../models/ai-attachment.md) | - |
 | **400** | The list of attachment IDs is malformed. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

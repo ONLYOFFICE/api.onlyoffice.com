@@ -1,6 +1,6 @@
 # saveThirdParty
 
-> FolderStringWrapper saveThirdParty(ThirdPartyRequestDto)
+> ThirdPartyFolderWrapper saveThirdParty(ThirdPartyRequestDto)
 
 `POST /api/2.0/files/thirdparty`
 
@@ -18,17 +18,19 @@ Connects an account at a third-party storage service to the portal, or re-authen
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The root folder of the connected account | [**FolderStringWrapper**](../../models/folder-string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The root folder of the connected account | [**ThirdPartyFolderWrapper**](../../models/third-party-folder-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read or has no `customerTitle` or `providerKey`, `providerId` is neither a number nor a numeric string, or, for a new account, `providerKey` names no known storage service or the `token` or `password` the service needs is missing | - | - |
+| **403** | The caller cannot create rooms, the portal-wide third-party switch is off or no storage service is enabled, the title of a new account is empty once invalid characters are removed, the service rejects the credentials, or `providerId` names an account connected by another member | - | - |
+| **404** | `providerId` names no third-party account on the portal | - | - |
+| **500** | The storage service cannot be reached or fails while the credentials are checked | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FolderStringWrapper**](../../models/folder-string-wrapper.md)
+[**ThirdPartyFolderWrapper**](../../models/third-party-folder-wrapper.md)
 
 ## Authorization
 

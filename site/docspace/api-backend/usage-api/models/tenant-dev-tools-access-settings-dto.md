@@ -1,6 +1,7 @@
 # TenantDevToolsAccessSettingsDto
-Whether the `User` role is barred from the portal developer tools.
+Whether the developer tools are closed to the portal's users with the `User` role.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **limitedAccessForUsers** | **Boolean** | Whether members holding the `User` role are barred from the developer tools - API keys, OAuth applications and webhooks. Room administrators and DocSpace administrators keep their access either way. | [optional] [example: `false`] |
+| **limitedAccessForUsers** | **Boolean** | Specifies if the Developer Tools access are limited for users or not. | [optional] [example: `false`] |
+| **lastModified** | **Date** (date-time) | The timestamp indicating when the settings were last modified. | [optional] [example: `1990-01-01T00:00:00Z`] |

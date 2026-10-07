@@ -1,6 +1,6 @@
 # setTenantBannerSettings
 
-> TenantBannerSettingsWrapper setTenantBannerSettings(TenantBannerSettingsDto)
+> TenantBannerSettingsWrapper setTenantBannerSettings(TenantBannerSettingsRequestDto)
 
 `POST /api/2.0/settings/banner`
 
@@ -12,13 +12,15 @@ Sets whether the portal's promotional banners are hidden for every user. Availab
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TenantBannerSettingsDto** | body | [**TenantBannerSettingsDto**](../../models/tenant-banner-settings-dto.md) |  | [optional] |
+| **TenantBannerSettingsRequestDto** | body | [**TenantBannerSettingsRequestDto**](../../models/tenant-banner-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Saved promotional banners visibility setting | [**TenantBannerSettingsWrapper**](../../models/tenant-banner-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | The portal is not an Enterprise installation | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

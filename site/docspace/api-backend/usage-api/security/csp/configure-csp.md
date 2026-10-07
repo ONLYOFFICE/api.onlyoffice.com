@@ -1,6 +1,6 @@
 # configureCsp
 
-> CspWrapper configureCsp(CspRequestsDto)
+> CspWrapper configureCsp(CspRequestDto)
 
 `POST /api/2.0/security/csp`
 
@@ -12,18 +12,18 @@ Replaces the list of external domains the portal's Content Security Policy trust
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **CspRequestsDto** | body | [**CspRequestsDto**](../../models/csp-requests-dto.md) |  | [optional] |
+| **CspRequestDto** | body | [**CspRequestDto**](../../models/csp-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The stored domains and the policy header the portal now serves | [**CspWrapper**](../../models/csp-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | An entry of `domains` is not a valid address or holds non-ASCII characters | - | - |
+| **400** | The request body cannot be read, or an entry of `domains` is not a valid address or holds non-ASCII characters | - | - |
 | **403** | The caller does not have the portal-settings right of a DocSpace administrator, or the built policy header exceeds the size allowed for the installation | - | - |
+| **500** | An entry of `domains` is `null` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

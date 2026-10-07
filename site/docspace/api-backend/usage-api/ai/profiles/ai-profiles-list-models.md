@@ -21,7 +21,7 @@ Lists the models a stored profile's provider currently offers, asking the provid
 | **200** | The models the profile's provider currently offers. | [**List**](../../models/ai-model.md) | - |
 | **400** | `profileId` is missing, or the provider rejected the profile's API key. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **502** | The AI provider could not be reached, or answered with a failure of its own. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

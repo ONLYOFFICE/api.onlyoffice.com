@@ -1,6 +1,6 @@
 # sendCongratulations
 
-> sendCongratulations(Userid, Key)
+> sendCongratulations(userid, key)
 
 `POST /api/2.0/portal/sendcongratulations`
 
@@ -12,8 +12,8 @@ Sends the welcome letter that follows the registration of a new portal to the ac
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Userid** | query | **UUID** (uuid) | The account the welcome letter is addressed to, by portal user ID. The key in `key` has to have been issued for this same account, so the pair is what authorises the call. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
-| **Key** | query | **String** | The confirmation key from the sign-in link the portal issued for that account, which stands in for a token here. It is accepted for one hour after it was created; a wrong, foreign or expired key answers 403 and sends nothing. | [required] [example: `birthday`] |
+| **userid** | query | **UUID** (uuid) | The account the welcome letter is addressed to, by portal user ID. The key in `key` has to have been issued for this same account, so the pair is what authorises the call. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **key** | query | **String** | The confirmation key from the sign-in link the portal issued for that account, which stands in for a token here. It is accepted for one hour after it was created; a wrong, foreign or expired key answers 403 and sends nothing. | [required] [example: `birthday`] |
 
 ## Responses
 
@@ -33,7 +33,7 @@ null (empty response body)
 
 ## Authorization
 
-[cookieAuth](../portal.md#cookieauth), [bearerAuth](../portal.md#bearerauth)
+[Basic](../portal.md#basic), [OAuth2](../portal.md#oauth2) (scopes: read, write), [ApiKeyBearer](../portal.md#apikeybearer), [asc_auth_key](../portal.md#asc_auth_key), [Bearer](../portal.md#bearer), [OpenId](../portal.md#openid)
 
 ## HTTP request headers
 

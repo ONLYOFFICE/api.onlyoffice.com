@@ -1,6 +1,6 @@
 # getBackupProgress
 
-> BackupProgressWrapper getBackupProgress(Dump)
+> BackupProgressWrapper getBackupProgress(dump)
 
 `GET /api/2.0/backup/getbackupprogress`
 
@@ -12,7 +12,7 @@ Reports the state of the backup job of the current portal, and is the operation 
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
+| **dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
 
 ## Responses
 

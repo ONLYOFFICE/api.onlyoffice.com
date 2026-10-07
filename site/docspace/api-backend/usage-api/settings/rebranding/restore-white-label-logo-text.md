@@ -1,19 +1,19 @@
 # restoreWhiteLabelLogoText
 
-> BooleanWrapper restoreWhiteLabelLogoText(IsDark, IsDefault)
+> BooleanWrapper restoreWhiteLabelLogoText(isDark, isDefault)
 
 `PUT /api/2.0/settings/whitelabel/logotext/restore`
 
 Restore the white label logo text
 
-Clears the wordmark stored for the current portal, so the built-in `ONLYOFFICE` is printed again next to or instead of the logo images. Requires a DocSpace administrator. Unlike `POST api/2.0/settings/whitelabel/logotext/save` it does not need a plan that includes branding, so a portal whose subscription no longer covers branding can still be reset. The call is destructive for the stored text, which is not kept anywhere and has to be typed again to come back, and it is idempotent: `true` comes back both when a text was cleared and when there was none. Logo images are left untouched and have their own `PUT api/2.0/settings/whitelabel/logos/restore`. Pass `isDefault=true` to reset the installation-wide default wordmark instead of this portal's, which only a server installation allows. After the call `GET api/2.0/settings/whitelabel/logotext` reports `ONLYOFFICE` and `GET api/2.0/settings/whitelabel/logotext/isdefault` reports `default` as `true`. The wordmark is the only setting this operation touches, so the company details and the help links of the installation are left as they are.
+Clears the wordmark stored for the current portal, so the built-in `ONLYOFFICE` is printed again next to or instead of the logo images. Requires a DocSpace administrator. Unlike `POST api/2.0/settings/whitelabel/logotext/save` it does not need a plan that includes customization, so a portal whose subscription no longer covers customization can still be reset. The call is destructive for the stored text, which is not kept anywhere and has to be typed again to come back, and it is idempotent: `true` comes back both when a text was cleared and when there was none. Logo images are left untouched and have their own `PUT api/2.0/settings/whitelabel/logos/restore`. Pass `isDefault=true` to reset the installation-wide default wordmark instead of this portal's, which only a server installation allows. After the call `GET api/2.0/settings/whitelabel/logotext` reports `ONLYOFFICE` and `GET api/2.0/settings/whitelabel/logotext/isdefault` reports `default` as `true`. The wordmark is the only setting this operation touches, so the company details and the help links of the installation are left as they are.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **IsDark** | query | **Boolean** | Which theme the answer is filled in for: `true` fills the dark image only, `false` the light one only. Omitting it fills both, leaving the dark one empty for the slots that have no separate dark image. | [optional] [example: `true`] |
-| **IsDefault** | query | **Boolean** | Whether the installation-wide default branding is addressed instead of this portal own. Writing the default branding is only allowed on a self-hosted installation; elsewhere it is refused with 403. | [optional] [example: `true`] |
+| **isDark** | query | **Boolean** | Which theme the answer is filled in for: `true` fills the dark image only, `false` the light one only. Omitting it fills both, leaving the dark one empty for the slots that have no separate dark image. | [optional] [example: `true`] |
+| **isDefault** | query | **Boolean** | Whether the installation-wide default branding is addressed instead of this portal own. Writing the default branding is only allowed on a self-hosted installation; elsewhere it is refused with 403. | [optional] [example: `true`] |
 
 ## Responses
 

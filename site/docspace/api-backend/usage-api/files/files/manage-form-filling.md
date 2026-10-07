@@ -1,6 +1,6 @@
 # manageFormFilling
 
-> manageFormFilling(fileId, ManageFormFillingDtoInteger)
+> manageFormFilling(fileId, ManageFormFillingDto)
 
 `PUT /api/2.0/files/file/{fileId}/manageformfilling`
 
@@ -13,18 +13,18 @@ Drives the filling of a PDF form through its states, the action deciding which w
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **String** | The form the action applies to. Send the same value as the `formId` of the request body, which is the one the handler reads. | [required] |
-| **ManageFormFillingDtoInteger** | body | [**ManageFormFillingDtoInteger**](../../models/manage-form-filling-dto-integer.md) |  | [optional] |
+| **ManageFormFillingDto** | body | [**ManageFormFillingDto**](../../models/manage-form-filling-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The action was applied to the form | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller may not start, stop or resume the filling of this form | - | - |
+| **400** | The request body cannot be read or has no `formId` | - | - |
+| **403** | The form does not exist, is not a PDF or lies outside a room, the caller may not start or stop its filling, or `action` is not one of the known values | - | - |
+| **500** | The form has no filling properties yet, as when a filling that was never started is resumed, or the form lies in a third-party storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

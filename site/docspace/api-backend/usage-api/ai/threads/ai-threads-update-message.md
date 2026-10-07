@@ -1,6 +1,6 @@
 # aiThreadsUpdateMessage
 
-> AiSuccessResponse aiThreadsUpdateMessage(aiThreadsUpdateMessage\_request)
+> AiSuccessResponse aiThreadsUpdateMessage(AiThreadsUpdateMessageRequest)
 
 `PUT /api/2.0/ai/threads/update-message`
 
@@ -12,7 +12,7 @@ Replaces the content of one stored message, which is how the edit and regenerate
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiThreadsUpdateMessage\_request** | body | [**aiThreadsUpdateMessage_request**](../../models/ai-threads-update-message-request-body.md) |  | [required] |
+| **AiThreadsUpdateMessageRequest** | body | [**AiThreadsUpdateMessageRequest**](../../models/ai-threads-update-message-request.md) |  | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Replaces the content of one stored message, which is how the edit and regenerate
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirms the replacement was stored. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

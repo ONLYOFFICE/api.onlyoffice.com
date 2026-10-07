@@ -1,6 +1,6 @@
 # getAllBackupStorages
 
-> StorageArrayWrapper getAllBackupStorages(Dump)
+> StorageArrayWrapper getAllBackupStorages(dump)
 
 `GET /api/2.0/settings/storage/backup`
 
@@ -12,7 +12,7 @@ Returns the storages that can hold portal backups, with the one the saved backup
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Dump** | query | **Boolean** | Whether the schedule of the whole server is read instead of the one of the current portal. It only changes which schedule marks an entry as `current`; the list of storages itself is the same either way, and the flag makes sense only on a self-hosted installation. | [optional] [example: `true`] |
+| **dump** | query | **Boolean** | Whether the schedule of the whole server is read instead of the one of the current portal. It only changes which schedule marks an entry as `current`; the list of storages itself is the same either way, and the flag makes sense only on a self-hosted installation. | [optional] [example: `true`] |
 
 ## Responses
 

@@ -1,6 +1,6 @@
 # getCompanyWhiteLabelSettings
 
-> CompanyWhiteLabelSettingsDtoWrapper getCompanyWhiteLabelSettings()
+> CompanyWhiteLabelSettingsWrapper getCompanyWhiteLabelSettings()
 
 `GET /api/2.0/settings/rebranding/company`
 
@@ -15,7 +15,8 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The company details in effect, with the licensor and default flags | [**CompanyWhiteLabelSettingsDtoWrapper**](../../models/company-white-label-settings-dto-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The company details in effect, with the licensor and default flags | [**CompanyWhiteLabelSettingsWrapper**](../../models/company-white-label-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **304** | The company details have not changed since the `Last-Modified` value sent back in `If-Modified-Since`; the body is empty | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +25,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**CompanyWhiteLabelSettingsDtoWrapper**](../../models/company-white-label-settings-dto-wrapper.md)
+[**CompanyWhiteLabelSettingsWrapper**](../../models/company-white-label-settings-wrapper.md)
 
 ## Authorization
 

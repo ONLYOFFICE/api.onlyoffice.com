@@ -19,10 +19,10 @@ Ends the portal's paid subscription and moves it onto the wallet: the unused bal
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | `true` when the balance was moved to the wallet and the administrators were bought | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | `quantity` does not name the administrators wallet product, or the number asked for is below the administrators the portal already has | - | - |
+| **400** | The request body cannot be read or has no `quantity`, `quantity` does not hold exactly one product or does not name the administrators wallet product, the number asked for is not greater than zero or is below the administrators the portal already has, or the plan currently paid is a wallet product or has no product identifier | - | - |
 | **402** | The plan of the portal is not paid, the balance could not be moved, or the wallet is still short of the price after the top-up | - | - |
 | **403** | The caller is not the payer of this portal, the portal has no billing service configured, or the customer has no payment method set | - | - |
-| **404** | This portal has no billing customer, its paid plan has no subscription, or the price of the administrators product is unknown | - | - |
+| **404** | This portal has no billing customer, its paid plan has no subscription, the price of the administrators product is unknown, or after the move its wallet has no balance or no sub-account in the accounting currency | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

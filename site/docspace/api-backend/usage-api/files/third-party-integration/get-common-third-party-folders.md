@@ -1,6 +1,6 @@
 # getCommonThirdPartyFolders
 
-> FolderStringArrayWrapper getCommonThirdPartyFolders()
+> ThirdPartyFolderArrayWrapper getCommonThirdPartyFolders()
 
 `GET /api/2.0/files/thirdparty/common`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The third-party accounts attached to the Common section, as folder entries | [**FolderStringArrayWrapper**](../../models/folder-string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The third-party accounts attached to the Common section, as folder entries | [**ThirdPartyFolderArrayWrapper**](../../models/third-party-folder-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -24,7 +24,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**FolderStringArrayWrapper**](../../models/folder-string-array-wrapper.md)
+[**ThirdPartyFolderArrayWrapper**](../../models/third-party-folder-array-wrapper.md)
 
 ## Authorization
 

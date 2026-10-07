@@ -1,9 +1,9 @@
 # TenantDeepLinkSettingsWrapper
-The successful API response containing the TenantDeepLinkSettings object.
+The successful API response containing the TenantDeepLinkSettingsDto object.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **response** | [**TenantDeepLinkSettings**](tenant-deep-link-settings.md) | The TenantDeepLinkSettings object returned by the operation. | [optional] |
+| **response** | [**TenantDeepLinkSettingsDto**](tenant-deep-link-settings-dto.md) | The TenantDeepLinkSettingsDto object returned by the operation. | [optional] |
 | **count** | **Integer** (int32) | The total number of items in the response | [optional] |
 | **links** | [**List**](get-portal-prices-200-response-links-item.md) | List of links related to the response | [optional] |
 | **status** | **Integer** (int32) | HTTP status code of the response | [optional] |

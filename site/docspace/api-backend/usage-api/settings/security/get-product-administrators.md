@@ -1,8 +1,8 @@
 # getProductAdministrators
 
-> EmployeeArrayWrapper getProductAdministrators(productid)
+> EmployeeArrayWrapper getProductAdministrators(productId)
 
-`GET /api/2.0/settings/security/administrator/{productid}`
+`GET /api/2.0/settings/security/administrator/{productId}`
 
 Get product administrators
 
@@ -12,13 +12,14 @@ Lists the users who administer the portal module identified by `productid` in th
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **productid** | path | **UUID** (uuid) | The module the operation acts on, by module GUID. The all-zero GUID stands for the portal itself rather than for a single module, and a GUID that names no module group is answered with an empty result instead of a failure. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
+| **productId** | path | **UUID** (uuid) | The module the operation acts on, by module GUID. The all-zero GUID stands for the portal itself rather than for a single module, and a GUID that names no module group is answered with an empty result instead of a failure. | [required] [example: `00000000-0000-0000-0000-000000000000`] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The users who administer the module asked about, or the portal-wide administrators when the all-zero identifier is used | [**EmployeeArrayWrapper**](../../models/employee-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

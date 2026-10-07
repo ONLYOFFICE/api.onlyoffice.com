@@ -1,6 +1,6 @@
 # aiProfilesTestConnection
 
-> aiProfilesTestConnection_200_response aiProfilesTestConnection(body)
+> aiProfilesTestConnection_200_response aiProfilesTestConnection(AiProfilesTestConnectionRequest)
 
 `POST /api/2.0/ai/profiles/test-connection`
 
@@ -12,7 +12,7 @@ Probes a stored profile's credentials against its provider and reports the outco
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **body** | body | **String** | The ID of the profile to probe, as a bare JSON string. | [required] |
+| **AiProfilesTestConnectionRequest** | body | **String** | The ID of the profile to probe, as a bare JSON string. | [required] |
 
 ## Responses
 
@@ -21,7 +21,7 @@ Probes a stored profile's credentials against its provider and reports the outco
 | **200** | The outcome of the probe. A failed probe is reported here, not as a status. | [**aiProfilesTestConnection_200_response**](../../models/ai-profiles-test-connection-200-response.md) | - |
 | **400** | `profileId` is missing. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

@@ -1,6 +1,6 @@
 # deleteBackupHistory
 
-> BooleanWrapper deleteBackupHistory(Dump)
+> BooleanWrapper deleteBackupHistory(dump)
 
 `DELETE /api/2.0/backup/deletebackuphistory`
 
@@ -12,7 +12,7 @@ Deletes every backup of the current portal, both the history records and the arc
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
+| **dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
 
 ## Responses
 

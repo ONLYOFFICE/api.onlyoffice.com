@@ -19,10 +19,12 @@ Queues a background job that packs the requested files and folders into a single
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The download operations of the caller, the one just queued included | [**FileOperationArrayWrapper**](../../models/file-operation-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | An item in the selection cannot be read by the caller, or another download of theirs is still running | - | - |
+| **400** | The request body cannot be read, or an item of `fileConvertIds` has no `key` or `value` | - | - |
+| **401** | The caller is not signed in and holds no external link | - | - |
+| **403** | None of the listed items that exist can be read by the caller, or another download of theirs is still running | - | - |
+| **404** | None of the listed items exists, counted separately for the portal's own items and for those on third-party accounts | - | - |
+| **500** | An id is a number that is not a 32-bit integer | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
@@ -32,7 +34,7 @@ Queues a background job that packs the requested files and folders into a single
 
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

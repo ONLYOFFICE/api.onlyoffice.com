@@ -1,6 +1,6 @@
 # getGroupsMembersWithFileSecurity
 
-> GroupMemberSecurityRequestArrayWrapper getGroupsMembersWithFileSecurity(fileId, groupId, count, startIndex, filterValue)
+> GroupMemberSecurityArrayWrapper getGroupsMembersWithFileSecurity(fileId, groupId, count, startIndex, filterValue)
 
 `GET /api/2.0/files/file/{fileId}/group/{groupId}/share`
 
@@ -22,17 +22,27 @@ Lists the members of one portal group together with the access each of them has 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The members of the group with the access each of them has on the file | [**GroupMemberSecurityRequestArrayWrapper**](../../models/group-member-security-request-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The members of the group with the access each of them has on the file | [**GroupMemberSecurityArrayWrapper**](../../models/group-member-security-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | A parameter has the wrong type, or the `count` is outside its allowed range | - | - |
+| **403** | The caller is a guest | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**GroupMemberSecurityRequestArrayWrapper**](../../models/group-member-security-request-array-wrapper.md)
+[**GroupMemberSecurityArrayWrapper**](../../models/group-member-security-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file whose access is being read. A file stored on the portal is numbered, while a file in a connected third-party account is named by an opaque string. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
 
 ## Authorization
 

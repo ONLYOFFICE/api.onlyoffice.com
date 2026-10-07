@@ -1,6 +1,6 @@
 # getBackupHistory
 
-> BackupHistoryRecordArrayWrapper getBackupHistory(Dump)
+> BackupHistoryRecordArrayWrapper getBackupHistory(dump)
 
 `GET /api/2.0/backup/getbackuphistory`
 
@@ -12,7 +12,7 @@ Lists the backups of the current portal whose archive is still present in the st
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
+| **dump** | query | **Boolean** | Applies the operation to the whole server rather than to the current portal, which requires the space access permission and works on a standalone installation only. Server-wide backups and schedules are kept apart from the ones of a portal, so the two values address different data. | [optional] [example: `false`] |
 
 ## Responses
 

@@ -1,6 +1,6 @@
 # saveAuthKeys
 
-> BooleanWrapper saveAuthKeys(AuthServiceRequestsDto)
+> BooleanWrapper saveAuthKeys(SaveAuthKeysRequestDto)
 
 `POST /api/2.0/settings/authservice`
 
@@ -12,15 +12,16 @@ Saves the authorization keys for one third-party storage or authorization provid
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **AuthServiceRequestsDto** | body | [**AuthServiceRequestsDto**](../../models/auth-service-requests-dto.md) |  | [optional] |
+| **SaveAuthKeysRequestDto** | body | [**SaveAuthKeysRequestDto**](../../models/save-auth-keys-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the provider's keys actually changed | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The submitted keys failed the provider's own validation | - | - |
+| **400** | The request body cannot be read or has no `name` or `props`, a key has no `name` or `value` or a `value` longer than 4000 characters, or the submitted keys failed the provider's own validation | - | - |
 | **402** | The provider is a paid option not covered by the portal's current pricing plan | - | - |
+| **403** | The caller has no portal-settings right, or the provider is unknown or its keys cannot be set | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

@@ -1,6 +1,6 @@
 # uploadLicense
 
-> StringWrapper uploadLicense(Files)
+> StringWrapper uploadLicense(files)
 
 `POST /api/2.0/settings/license`
 
@@ -12,7 +12,7 @@ Takes the license file of this self-hosted Enterprise installation as `multipart
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **Files** | form | **List** (binary) | The license file, sent as `multipart/form-data`. Only the first entry is read and the rest are ignored, and a request carrying none is refused with 400. A file that cannot be read as a license, that carries no customer id or signature, or that was issued for the other edition fails the call; one whose start date has not arrived yet is refused, while one already past its due date is still accepted. Staging only stores the file - `POST api/2.0/settings/license/accept` puts it in force - and a file staged earlier is overwritten. | [required] |
+| **files** | form | **List** (binary) | The license file, sent as `multipart/form-data`. Only the first entry is read and the rest are ignored, and a request carrying none is refused with 400. A file that cannot be read as a license, that carries no customer id or signature, or that was issued for the other edition fails the call; one whose start date has not arrived yet is refused, while one already past its due date is still accepted. Staging only stores the file - `POST api/2.0/settings/license/accept` puts it in force - and a file staged earlier is overwritten. | [required] |
 
 ## Responses
 
@@ -21,10 +21,10 @@ Takes the license file of this self-hosted Enterprise installation as `multipart
 | **200** | A localized confirmation that the file was staged, carrying the date support and updates ended when the license is already overdue | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request carried no license file, or the license does not start until a later date | - | - |
 | **403** | The caller is not a DocSpace administrator, or a confirmation link was used after the setup wizard had already been completed | - | - |
-| **405** | The installation has no license path configured, so it cannot be given a license file | - | - |
+| **415** | The installation has no license path configured, so it cannot be given a license file | - | - |
+| **500** | The file cannot be read as a license, carries no customer id or signature, or was issued for the other edition | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

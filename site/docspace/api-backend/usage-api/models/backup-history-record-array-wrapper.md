@@ -1,9 +1,9 @@
 # BackupHistoryRecordArrayWrapper
-The successful API response containing the list of BackupHistoryRecord objects.
+The successful API response containing the list of BackupHistoryRecordDto objects.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **response** | [**List**](backup-history-record.md) | The list of BackupHistoryRecord objects returned by the operation. | [optional] |
+| **response** | [**List**](backup-history-record-dto.md) | The list of BackupHistoryRecordDto objects returned by the operation. | [optional] |
 | **count** | **Integer** (int32) | The total number of items in the response | [optional] |
 | **links** | [**List**](get-portal-prices-200-response-links-item.md) | List of links related to the response | [optional] |
 | **status** | **Integer** (int32) | HTTP status code of the response | [optional] |

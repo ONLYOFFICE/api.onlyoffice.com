@@ -1,6 +1,6 @@
 # updateWebPlugin
 
-> updateWebPlugin(name, WebPluginRequests)
+> updateWebPlugin(name, WebPluginRequest)
 
 `PUT /api/2.0/settings/webplugins/{name}`
 
@@ -13,18 +13,19 @@ Switches a web plugin of the current portal on or off and stores the settings st
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **name** | path | **String** | The plugin to change, by the manifest name `GET api/2.0/settings/webplugins` publishes as `name`, matched without regard to case. It is neither the localized display name nor the JavaScript object name in `pluginName`, so it cannot be read off the interface; a name that is not installed answers 404. | [required] [example: `example-plugin`] |
-| **WebPluginRequests** | body | [**WebPluginRequests**](../../models/web-plugin-requests.md) | The whole state the plugin is to have afterwards. It replaces what was stored instead of merging into it, so both the enabled flag and the settings have to be sent every time. | [required] |
+| **WebPluginRequest** | body | [**WebPluginRequest**](../../models/web-plugin-request.md) | The whole state the plugin is to have afterwards. It replaces what was stored instead of merging into it, so both the enabled flag and the settings have to be sent every time. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The state and the settings of the web plugin are saved for the portal | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | Web plugins are switched off for the installation, or the caller may not edit the portal settings | - | - |
+| **400** | The request body cannot be read or has no `settings`, or `settings` is longer than 255 characters | - | - |
+| **403** | The caller has no portal-settings right, web plugins are switched off for the installation, or switching the plugin on would push the Content Security Policy header over its size limit | - | - |
+| **404** | No web plugin with this manifest name is available in the portal | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

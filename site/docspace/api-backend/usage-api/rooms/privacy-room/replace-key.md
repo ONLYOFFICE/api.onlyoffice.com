@@ -20,6 +20,7 @@ Rotates one encryption key pair of the calling user: the entry whose `id` matche
 |------------- | ------------- | ------------- | -------------|
 | **200** | The encryption key is replaced | [**EncryptionKeyArrayWrapper**](../../models/encryption-key-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The key material is missing, blank or too large to be stored | - | - |
+| **403** | The caller is a guest, who cannot own encryption keys | - | - |
 | **404** | The encryption key to replace is not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

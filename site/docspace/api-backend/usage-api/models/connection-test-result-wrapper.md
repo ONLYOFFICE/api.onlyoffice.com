@@ -1,9 +1,9 @@
 # ConnectionTestResultWrapper
-The successful API response containing the ConnectionTestResult object.
+The successful API response containing the ConnectionTestResultDto object.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **response** | [**ConnectionTestResult**](connection-test-result.md) | The ConnectionTestResult object returned by the operation. | [optional] |
+| **response** | [**ConnectionTestResultDto**](connection-test-result-dto.md) | The ConnectionTestResultDto object returned by the operation. | [optional] |
 | **count** | **Integer** (int32) | The total number of items in the response | [optional] |
 | **links** | [**List**](get-portal-prices-200-response-links-item.md) | List of links related to the response | [optional] |
 | **status** | **Integer** (int32) | HTTP status code of the response | [optional] |

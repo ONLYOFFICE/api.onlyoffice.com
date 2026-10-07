@@ -1,6 +1,6 @@
 # openEditFile
 
-> ConfigurationIntegerWrapper openEditFile(fileId, version, view, editorType, edit, fill)
+> ConfigurationWrapper openEditFile(fileId, version, view, editorType, edit, fill)
 
 `GET /api/2.0/files/file/{fileId}/openedit`
 
@@ -23,21 +23,33 @@ Builds everything an editor client needs to open the file: the document descript
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The editor configuration for the requested file and mode | [**ConfigurationIntegerWrapper**](../../models/configuration-integer-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller cannot read the file, or asked for a past version without access to the file history | - | - |
+| **200** | The editor configuration for the requested file and mode | [**ConfigurationWrapper**](../../models/configuration-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller cannot read the file, asked for a past version without access to the file history, or the file is in Trash | - | - |
+| **404** | The file id, or the requested version of it, resolves to nothing | - | - |
+| **415** | The file is in a format the editors can neither edit nor open for viewing | - | - |
+| **500** | The file lies in a third-party storage that cannot deliver it | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**ConfigurationIntegerWrapper**](../../models/configuration-integer-wrapper.md)
+[**ConfigurationWrapper**](../../models/configuration-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file the editor configuration is built for. Take the id from a folder listing such as &#x60;GET api/2.0/files/\{folderId\}&#x60;. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+
+Return type: [**ThirdPartyConfigurationWrapper**](../../models/third-party-configuration-wrapper.md)
 
 ## Authorization
 
-[cookieAuth](../files.md#cookieauth), [bearerAuth](../files.md#bearerauth)
+[Basic](../files.md#basic), [OAuth2](../files.md#oauth2) (scopes: read, write), [ApiKeyBearer](../files.md#apikeybearer), [asc_auth_key](../files.md#asc_auth_key), [Bearer](../files.md#bearer), [OpenId](../files.md#openid)
 
 ## HTTP request headers
 

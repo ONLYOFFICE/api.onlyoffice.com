@@ -32,3 +32,4 @@ Possible values:
 - `34` - AI Agents (`AiAgents`)
 - `35` - Default Templates (`DefaultTemplates`)
 - `36` - Forms (`Forms`)
+- `37` - Ai (`Ai`)

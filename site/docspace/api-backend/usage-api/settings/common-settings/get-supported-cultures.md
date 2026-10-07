@@ -1,6 +1,6 @@
 # getSupportedCultures
 
-> STRINGArrayWrapper getSupportedCultures()
+> StringArrayWrapper getSupportedCultures()
 
 `GET /api/2.0/settings/cultures`
 
@@ -15,7 +15,8 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Language codes of every culture currently enabled on the portal | [**STRINGArrayWrapper**](../../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Language codes of every culture currently enabled on the portal | [**StringArrayWrapper**](../../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **304** | The list of enabled cultures has not changed since the `ETag` sent back in `If-None-Match`; the body is empty | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
@@ -23,11 +24,11 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**STRINGArrayWrapper**](../../models/string-array-wrapper.md)
+[**StringArrayWrapper**](../../models/string-array-wrapper.md)
 
 ## Authorization
 
-[cookieAuth](../settings.md#cookieauth), [bearerAuth](../settings.md#bearerauth)
+[Basic](../settings.md#basic), [OAuth2](../settings.md#oauth2) (scopes: read, write), [ApiKeyBearer](../settings.md#apikeybearer), [asc_auth_key](../settings.md#asc_auth_key), [Bearer](../settings.md#bearer), [OpenId](../settings.md#openid)
 
 ## HTTP request headers
 

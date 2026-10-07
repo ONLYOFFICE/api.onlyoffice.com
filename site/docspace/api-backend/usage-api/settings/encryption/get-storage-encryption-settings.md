@@ -6,7 +6,7 @@
 
 Get the storage encryption settings
 
-Returns the encryption state of the installation storage: the status, which is one of decrypted, encryption started, encrypted or decryption started, and the flag saying whether users are mailed when an encryption run begins. The password is deliberately blanked out, so the field always comes back empty even on an encrypted installation. The caller is expected to have the permission to edit portal settings, which in practice means the portal owner or a DocSpace admin, on a server installation with an unrestricted access space; on any other installation, and whenever the check fails, the operation answers with an empty body instead of an error. An empty answer is therefore not proof that encryption is off, only that the settings cannot be read in this context. Nothing is written and the call is safe to repeat. Use `GET api/2.0/settings/encryption/progress` to follow a run that is in flight, and `POST api/2.0/settings/encryption/start` to encrypt or decrypt the storage.
+Returns the encryption state of the installation storage: the status, which is one of decrypted, encryption started, encrypted or decryption started, and the flag saying whether users are mailed when an encryption run begins. The encryption password is never returned. The caller is expected to have the permission to edit portal settings, which in practice means the portal owner or a DocSpace admin, on a server installation with an unrestricted access space; on any other installation, and whenever the check fails, the operation answers with an empty body instead of an error. An empty answer is therefore not proof that encryption is off, only that the settings cannot be read in this context. Nothing is written and the call is safe to repeat. Use `GET api/2.0/settings/encryption/progress` to follow a run that is in flight, and `POST api/2.0/settings/encryption/start` to encrypt or decrypt the storage.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -15,9 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The encryption status and the notify-users flag, with the password blanked out; empty where encryption settings cannot be read | [**EncryptionSettingsWrapper**](../../models/encryption-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller may not edit portal settings | - | - |
-| **405** | Storage encryption is not available on this installation | - | - |
+| **200** | The encryption status and the notify-users flag; empty on a custom-mode installation, or when the caller has no portal-settings right, the installation hides storage encryption or does not grant unrestricted space access, or the settings cannot be read | [**EncryptionSettingsWrapper**](../../models/encryption-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

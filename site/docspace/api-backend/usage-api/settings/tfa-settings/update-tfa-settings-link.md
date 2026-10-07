@@ -1,6 +1,6 @@
 # updateTfaSettingsLink
 
-> StringWrapper updateTfaSettingsLink(TfaRequestsDto)
+> StringWrapper updateTfaSettingsLink(TfaRequestDto)
 
 `PUT /api/2.0/settings/tfaappwithlink`
 
@@ -12,19 +12,19 @@ Applies the same portal-wide two-factor authentication change as `PUT api/2.0/se
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **TfaRequestsDto** | body | [**TfaRequestsDto**](../../models/tfa-requests-dto.md) |  | [optional] |
+| **TfaRequestDto** | body | [**TfaRequestDto**](../../models/tfa-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The caller's own confirmation link, or an empty string when TFA was turned off or the caller is exempt | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller is neither the portal owner nor a DocSpace administrator, or is placing the owner under the policy | - | - |
+| **400** | The request body cannot be read, `type` is `null`, an empty string or a string that is neither a number nor built from the names `None`, `Sms` and `App`, or a `trustedIps` entry is not a single address, an inclusive range or a CIDR block | - | - |
+| **403** | The caller has no portal-settings right, or names the owner's account in `id` or `mandatoryUsers` while `id` is not the caller's own | - | - |
 | **405** | The requested method is not enabled on this portal, or the SMS method has no configured provider | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

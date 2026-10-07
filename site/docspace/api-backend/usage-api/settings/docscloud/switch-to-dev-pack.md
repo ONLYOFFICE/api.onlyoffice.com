@@ -19,7 +19,7 @@ Upgrades the paid Docs Connect subscription of the current portal to Docs Connec
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Boolean value: true if the subscription is switched to Docs Connect Dev Pack, false if the billing service declines it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The quantity is below the allowed minimum, the portal has no active Docs Connect subscription, or it already has a Docs Connect Dev Pack subscription | - | - |
+| **400** | The request body cannot be read, the quantity is below the allowed minimum, the portal has no active Docs Connect subscription, or it already has a Docs Connect Dev Pack subscription | - | - |
 | **402** | The portal tariff is delayed or not paid, so the subscription cannot be switched | - | - |
 | **403** | The caller is not a DocSpace administrator, or the billing service is not configured | - | - |
 | **404** | The portal is not registered as a billing customer, or the Docs Connect and Docs Connect Dev Pack wallet products are not configured on this installation | - | - |

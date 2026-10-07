@@ -1,6 +1,6 @@
 # startFileConversion
 
-> ConversationResultArrayWrapper startFileConversion(fileId, CheckConversionRequestDtoInteger)
+> ConversationResultArrayWrapper startFileConversion(fileId, CheckConversionRequestDto)
 
 `PUT /api/2.0/files/file/{fileId}/checkconversion`
 
@@ -13,7 +13,7 @@ Queues the conversion of a file into the portal's own editable format and answer
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **fileId** | path | **Integer** (int32) | The file to convert. | [required] [example: `1`] |
-| **CheckConversionRequestDtoInteger** | body | [**CheckConversionRequestDtoInteger**](../../models/check-conversion-request-dto-integer.md) | The parameters of the conversion. The whole body may be omitted, in which case the defaults of the portal apply. | [optional] |
+| **CheckConversionRequestDto** | body | [**CheckConversionRequestDto**](../../models/check-conversion-request-dto.md) | The parameters of the conversion. The whole body may be omitted, in which case the defaults of the portal apply. | [optional] |
 
 ## Responses
 
@@ -30,6 +30,16 @@ Queues the conversion of a file into the portal's own editable format and answer
 ## Return type
 
 [**ConversationResultArrayWrapper**](../../models/conversation-result-array-wrapper.md)
+
+## Third-party storage
+
+For a file or folder in a connected third-party storage the identifier is a string such as `sbox-42`, and the call differs in these parts only:
+
+|Name | In | Type | Description | Notes |
+|------------- | ------------- | ------------- | ------------- | -------------|
+| **fileId** | path | **String** | The file to convert. | [required] [example: `sbox-42-L1JlcG9ydC5kb2N4`] |
+| **ThirdPartyCheckConversionRequestDto** | body | [**ThirdPartyCheckConversionRequestDto**](../../models/third-party-check-conversion-request-dto.md) | The parameters of the conversion. The whole body may be omitted, in which case the defaults of the portal apply. | [optional] |
+
 
 ## Authorization
 

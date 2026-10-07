@@ -1,6 +1,6 @@
 # aiThreadsCreate
 
-> AiThread aiThreadsCreate(aiThreadsCreate\_request)
+> AiThread aiThreadsCreate(AiThreadsCreateRequest)
 
 `POST /api/2.0/ai/threads/create`
 
@@ -12,7 +12,7 @@ Creates a chat thread with a title supplied by the caller and returns it. A scop
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **aiThreadsCreate\_request** | body | [**aiThreadsCreate_request**](../../models/ai-threads-create-request-body.md) |  | [required] |
+| **AiThreadsCreateRequest** | body | [**AiThreadsCreateRequest**](../../models/ai-threads-create-request.md) |  | [required] |
 
 ## Responses
 
@@ -20,7 +20,7 @@ Creates a chat thread with a title supplied by the caller and returns it. A scop
 |------------- | ------------- | ------------- | -------------|
 | **200** | The created thread. | [**AiThread**](../../models/ai-thread.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
-| **403** | AI is disabled for this portal, or the caller is a guest. Relayed from the DocSpace AI service. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **404** | The `entityId` names a room the caller cannot open, or no live AI profile is bound to it, so there is no model to run the thread against. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

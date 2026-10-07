@@ -1,6 +1,6 @@
 # setEnabled
 
-> AppWrapper setEnabled(id, SetAppEnabledBody)
+> AppWrapper setEnabled(id, SetAppEnabledRequest)
 
 `PUT /api/2.0/apps/{id}/enabled`
 
@@ -13,14 +13,14 @@ Turns one portal application on or off for the current portal, and notifies the 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
 | **id** | path | **String** | The application to switch, by the identifier `GET api/2.0/apps` reports. It has to be an application declared in the installation configuration; an unknown identifier answers 404 rather than creating anything. | [required] [example: `ai-room`] |
-| **SetAppEnabledBody** | body | [**SetAppEnabledBody**](../models/set-app-enabled-body.md) | The new state of the application. Only the enabled flag travels here; the settings document is changed through `PUT api/2.0/apps/{id}/settings`. | [required] |
+| **SetAppEnabledRequest** | body | [**SetAppEnabledRequest**](../models/set-app-enabled-request.md) | The new state of the application. Only the enabled flag travels here; the settings document is changed through `PUT api/2.0/apps/{id}/settings`. | [required] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The application in its new state, with the saved settings document left untouched | [**AppWrapper**](../models/app-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller is not allowed to edit the portal settings | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **404** | No application with this identifier is configured on this installation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |

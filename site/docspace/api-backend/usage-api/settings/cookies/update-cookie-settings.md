@@ -1,6 +1,6 @@
 # updateCookieSettings
 
-> StringWrapper updateCookieSettings(CookieSettingsRequestsDto)
+> StringWrapper updateCookieSettings(CookieSettingsRequestDto)
 
 `PUT /api/2.0/settings/cookiesettings`
 
@@ -12,7 +12,7 @@ Stores how long an authentication session of this portal stays valid: `lifeTime`
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **CookieSettingsRequestsDto** | body | [**CookieSettingsRequestsDto**](../../models/cookie-settings-requests-dto.md) |  | [optional] |
+| **CookieSettingsRequestDto** | body | [**CookieSettingsRequestDto**](../../models/cookie-settings-request-dto.md) |  | [optional] |
 
 ## Responses
 
@@ -20,6 +20,7 @@ Stores how long an authentication session of this portal stays valid: `lifeTime`
 |------------- | ------------- | ------------- | -------------|
 | **200** | A localized message confirming that the session lifetime has been saved | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **402** | The installation hides the cookie lifetime section, or the portal's payment has lapsed | - | - |
+| **403** | The caller has no portal-settings right | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

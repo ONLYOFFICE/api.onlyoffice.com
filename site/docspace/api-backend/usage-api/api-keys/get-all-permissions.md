@@ -1,6 +1,6 @@
 # getAllPermissions
 
-> STRINGArrayWrapper getAllPermissions()
+> StringArrayWrapper getAllPermissions()
 
 `GET /api/2.0/keys/permissions`
 
@@ -15,7 +15,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The scope values accepted in the permissions array of an API key | [**STRINGArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The scope values accepted in the permissions array of an API key | [**StringArrayWrapper**](../models/string-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller is a guest | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
@@ -25,7 +25,7 @@ This endpoint does not need any parameter.
 
 ## Return type
 
-[**STRINGArrayWrapper**](../models/string-array-wrapper.md)
+[**StringArrayWrapper**](../models/string-array-wrapper.md)
 
 ## Authorization
 

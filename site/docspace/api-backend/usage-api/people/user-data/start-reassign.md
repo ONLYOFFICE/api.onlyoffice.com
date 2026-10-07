@@ -6,7 +6,7 @@
 
 Start the data reassignment
 
-Queues an asynchronous job that transfers the rooms and the shared files owned by one portal user to another. The source user must already have the `Terminated` status - disable the account through `PUT api/2.0/people/status/{status}` before calling this - and the destination user must be an active room admin or DocSpace admin, so a guest, a system account or a disabled account is rejected. The caller needs the permission to edit users, cannot reassign their own data, and must be the portal owner to reassign the data of another DocSpace administrator or of a People module administrator. The transfer does not finish within this call: poll `GET api/2.0/people/reassign/progress/{userid}` with the source user ID until `isCompleted` is true, and cancel it through `PUT api/2.0/people/reassign/terminate`. Pass `deleteProfile` as true to delete the source profile once the transfer succeeds, otherwise the emptied profile is kept. Use `GET api/2.0/people/reassign/necessary` first to find out whether the user owns anything that has to be reassigned at all.
+Queues an asynchronous job that transfers the rooms and the shared files owned by one portal user to another. The source user must already have the `Terminated` status - disable the account through `PUT api/2.0/people/status/{status}` before calling this - and the destination user must be an active room admin or DocSpace admin, so a guest, a system account or a disabled account is rejected. The caller needs the permission to edit users, cannot reassign their own data, and must be the portal owner to reassign the data of another DocSpace administrator or of a People module administrator. The transfer does not finish within this call: poll `GET api/2.0/people/reassign/progress/{userId}` with the source user ID until `isCompleted` is true, and cancel it through `PUT api/2.0/people/reassign/terminate`. Pass `deleteProfile` as true to delete the source profile once the transfer succeeds, otherwise the emptied profile is kept. Use `GET api/2.0/people/reassign/necessary` first to find out whether the user owns anything that has to be reassigned at all.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ Queues an asynchronous job that transfers the rooms and the shared files owned b
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The state of the queued reassignment | [**TaskProgressResponseWrapper**](../../models/task-progress-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The destination user is not an active room or DocSpace admin, or the source user is a system account, the portal owner, the caller, or is not disabled | - | - |
+| **400** | The request body cannot be read or has no `fromUserId` or `toUserId`, the destination user does not exist or is not an active room or DocSpace admin, or the source user does not exist, is a system account, the portal owner, the caller, is not disabled, or is a DocSpace or People administrator while the caller is not the portal owner | - | - |
 | **403** | No permissions to perform this action | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

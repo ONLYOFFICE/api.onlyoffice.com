@@ -1,6 +1,6 @@
 # getRestrictedAiModels
 
-> RestrictedModelsResponseWrapper getRestrictedAiModels()
+> RestrictedAiModelsWrapper getRestrictedAiModels()
 
 `GET /api/2.0/portal/payment/ai-model/restrictions`
 
@@ -15,17 +15,18 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The identifiers of the AI chat models barred on this portal, empty when none is | [**RestrictedModelsResponseWrapper**](../../models/restricted-models-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The identifiers of the AI chat models barred on this portal, empty when none is | [**RestrictedAiModelsWrapper**](../../models/restricted-ai-models-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **402** | AI tools is on for the portal, but the billing service reports no customer for it or fails to answer | - | - |
 | **403** | The caller is not a DocSpace administrator | - | - |
+| **500** | The AI gateway answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**RestrictedModelsResponseWrapper**](../../models/restricted-models-response-wrapper.md)
+[**RestrictedAiModelsWrapper**](../../models/restricted-ai-models-wrapper.md)
 
 ## Authorization
 

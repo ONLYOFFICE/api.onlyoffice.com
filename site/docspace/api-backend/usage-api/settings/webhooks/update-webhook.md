@@ -1,6 +1,6 @@
 # updateWebhook
 
-> WebhooksConfigWrapper updateWebhook(UpdateWebhooksConfigRequestsDto)
+> WebhooksConfigWrapper updateWebhook(UpdateWebhooksConfigRequestDto)
 
 `PUT /api/2.0/settings/webhook`
 
@@ -12,19 +12,19 @@ Replaces the stored parameters of one webhook subscription, which is addressed b
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **UpdateWebhooksConfigRequestsDto** | body | [**UpdateWebhooksConfigRequestsDto**](../../models/update-webhooks-config-requests-dto.md) |  | [optional] |
+| **UpdateWebhooksConfigRequestDto** | body | [**UpdateWebhooksConfigRequestDto**](../../models/update-webhooks-config-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The updated webhook subscription, without its secret key | [**WebhooksConfigWrapper**](../../models/webhooks-config-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The target URL is unusable or unreachable, or the secret key or a trigger flag was rejected | - | - |
+| **400** | The request body cannot be read or has no `id`, `name` or `uri` is missing or empty, `name` or `secretKey` is longer than 50 characters or `targetId` longer than 255, the target URL is unusable or answers the HEAD request with a non-success code, or the secret key or a trigger flag was rejected | - | - |
 | **403** | The subscription belongs to another member, or the caller may not use webhooks at all | - | - |
 | **404** | No webhook subscription with this ID exists in the portal | - | - |
+| **500** | The target URL gives no answer to the HEAD request: the connection fails or times out, or the certificate is not valid while `ssl` is `true` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

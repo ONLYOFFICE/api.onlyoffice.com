@@ -1,6 +1,6 @@
 # docRegisterPusnNotificationDevice
 
-> FireBaseUserWrapper docRegisterPusnNotificationDevice(FirebaseRequestsDto)
+> FirebaseDeviceWrapper docRegisterPusnNotificationDevice(FirebaseRequestDto)
 
 `POST /api/2.0/settings/push/docregisterdevice`
 
@@ -12,23 +12,23 @@ Registers one mobile device of the calling user for the push notifications of th
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **FirebaseRequestsDto** | body | [**FirebaseRequestsDto**](../../models/firebase-requests-dto.md) |  | [optional] |
+| **FirebaseRequestDto** | body | [**FirebaseRequestDto**](../../models/firebase-request-dto.md) |  | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The stored device registration of the calling user, with the Firebase token, the `doc` application and the subscription state as they are kept | [**FireBaseUserWrapper**](../../models/fire-base-user-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The stored device registration of the calling user, with the Firebase token, the `doc` application and the subscription state as they are kept | [**FirebaseDeviceWrapper**](../../models/firebase-device-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **500** | The Firebase token is longer than 255 characters and the database refuses to store it, as PostgreSQL and MySQL in strict mode do | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
 ## Return type
 
-[**FireBaseUserWrapper**](../../models/fire-base-user-wrapper.md)
+[**FirebaseDeviceWrapper**](../../models/firebase-device-wrapper.md)
 
 ## Authorization
 

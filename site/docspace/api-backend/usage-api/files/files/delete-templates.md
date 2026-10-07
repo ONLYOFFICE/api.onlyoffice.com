@@ -1,6 +1,6 @@
 # deleteTemplates
 
-> BooleanWrapper deleteTemplates(request\_body)
+> BooleanWrapper deleteTemplates(DeleteTemplateFilesRequestDto)
 
 `DELETE /api/2.0/files/templates`
 
@@ -12,13 +12,14 @@ Takes the listed files off the personal template list of the calling account, le
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **request\_body** | body | **List** | The files to take off the template list, by id; this array is the whole request body. Only a file stored in the portal itself can be a template, which is why an id here is always numeric. | [optional] |
+| **DeleteTemplateFilesRequestDto** | body | **List** | The files to take off the template list, by id; this array is the whole request body. Only a file stored in the portal itself can be a template, which is why an id here is always numeric. | [optional] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Always true: the files named in the array are no longer templates of the caller | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller is a guest | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

@@ -34,7 +34,7 @@ Returns the third-party identity providers this portal has enabled, each with th
 
 ## Authorization
 
-[cookieAuth](../people.md#cookieauth), [bearerAuth](../people.md#bearerauth)
+[Basic](../people.md#basic), [OAuth2](../people.md#oauth2) (scopes: read, write), [ApiKeyBearer](../people.md#apikeybearer), [asc_auth_key](../people.md#asc_auth_key), [Bearer](../people.md#bearer), [OpenId](../people.md#openid)
 
 ## HTTP request headers
 
