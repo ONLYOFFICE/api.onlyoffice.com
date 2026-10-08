@@ -2,12 +2,16 @@
 
 [View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IMainButtonItem.ts#L94)
 
-Describes an item that will be embedded in the More item of the main button menu. It is available only inside a room (folder) and is not available for the room list.
+Describes an item that will be embedded in the More item of the main button menu. It is available in Files section and inside a Room (folder). It is not available for the room list or Forms section.
+
+To open this menu, click **New** button and select **More** submenu.
+
+![main-button-menu](/assets/images/docspace/main-button-plugin-menu.png#gh-light-mode-only)![main-button-menu](/assets/images/docspace/main-button-plugin-menu.dark.png#gh-dark-mode-only)
+
+![main-button-plugin](/assets/images/docspace/main-button-plugin.png#gh-light-mode-only)![main-button-plugin](/assets/images/docspace/main-button-plugin.dark.png#gh-dark-mode-only)
 
 Items are registered by a plugin implementing
 [`IMainButtonPlugin`](../plugins/IMainButtonPlugin.md).
-
-![main-button-plugin](/assets/images/docspace/main-button-plugin.png#gh-light-mode-only)![main-button-plugin](/assets/images/docspace/main-button-plugin.dark.png#gh-dark-mode-only)
 
 ## Examples
 
