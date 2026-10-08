@@ -63,6 +63,8 @@ To use the MCP server tools in AI Chat, activate the AI features add-on in your 
 
 Once enabled, the server tools are available to workspace users in AI Chat, both in rooms and folders and in AI agents. In an AI agent, only the users with the **Agent manager** or **Content creator** role can use the chat.
 
+When AI Chat calls an ONLYOFFICE Apps MCP server tool, the **Confirmation** dialog appears. Click **Allow** to run the tool. To stop asking for this tool, select **Always allow this tool to perform this action without asking again** before clicking **Allow**.
+
 :::note
 In AI Chat, the server tools work with the access rights of the current user. Users can access only the rooms and files available to them.
 :::
