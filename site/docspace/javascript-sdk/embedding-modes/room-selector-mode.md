@@ -51,13 +51,13 @@ const selector = DocSpace.SDK.initRoomSelector({
 
 ### Filtering by room type
 
-Show only collaboration rooms by passing `roomType` to narrow the selection:
+Show only collaboration rooms by passing `roomType` — a room type value as a string, not its name — to narrow the selection. See [Creating a room programmatically](./manager-mode.md#creating-a-room-programmatically) for the full type-to-number mapping:
 
 ```javascript
 const docSpace = DocSpace.SDK.initRoomSelector({
   frameId: "ds-selector",
   src: "https://your-docspace.com",
-  roomType: "collaboration",
+  roomType: "2", // Collaboration room
   withSearch: true,
 });
 ```

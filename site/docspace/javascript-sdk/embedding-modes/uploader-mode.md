@@ -53,8 +53,8 @@ const docSpace = DocSpace.SDK.initUploader({
     onUploadProgress: function (progress) {
       console.log("Progress:", progress);
     },
-    onUploadSuccess: function (file) {
-      console.log("Uploaded:", file.title);
+    onUploadSuccess: function (files) {
+      console.log("Uploaded:", files[0].response.file.title);
     },
     onUploadError: function (error) {
       console.error("Upload failed:", error);

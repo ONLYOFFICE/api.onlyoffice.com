@@ -40,7 +40,7 @@ Despite the framing of this list as "what you can hide," not everything on it de
 :::
 
 :::note
-`viewTableColumns` only has an effect once the list is already in table view — switch to it with [`setListView("table")`](../samples/basic-samples/set-list-view.md) (the `viewAs` config field does not switch the view itself, despite being documented in `TFrameConfig`). The column names are also mode-specific: a room list accepts `Type`, `Tags`, `Owner`, `Last activity`, `Storage` (`Name` always shows); a file list accepts a different set (e.g. `Size`, `Modified Date`, `Author`) — passing a column name that doesn't exist for the current list has no effect.
+`viewTableColumns` only has an effect once the list is already in table view — switch to it with [`setListView("table")`](../samples/basic-samples/set-list-view.md) (`viewAs` is deprecated since 2.2.0 and has no effect). The column names are also mode-specific: a room list accepts `Type`, `Tags`, `Owner`, `Last activity`, `Storage` (`Name` always shows); a file list accepts a different set (e.g. `Size`, `Modified Date`, `Author`) — passing a column name that doesn't exist for the current list has no effect.
 :::
 
 See also: [Set list view](../samples/basic-samples/set-list-view.md).
@@ -116,7 +116,7 @@ See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 A few parameters control the frame's own footprint rather than DocSpace's internal UI: `width`/`height` (pixels or percentages), and `destroyText` (text inserted into the frame's container when `destroyFrame()` is called — see [Destroy frame](../samples/basic-samples/destroy-frame.md)).
 
-`noLoader` skips the loading spinner while the frame initializes, but two mode pairs ignore whatever you set it to: Manager and System mode always show the spinner regardless of this setting, while Forms and Personal mode always skip it — the spinner never shows in either, even with `noLoader: false`.
+`noLoader` skips the loading spinner while the frame initializes — `true` by default everywhere, except two mode pairs that ignore whatever you set it to: Manager and System mode always show the spinner (forced `false`), while Forms and Personal mode always skip it (forced `true`, same as the default) — the spinner never shows in either, even with `noLoader: false`.
 
 `waiting: true` delays the frame entirely: the `<iframe>` isn't added to the page at all (only the loading spinner shows, no request is sent to the portal) until you release it. Useful when several frames share a page and one of them needs to finish authenticating before the rest load. System mode is the one exception — it ignores `waiting` and renders immediately regardless of the setting.
 

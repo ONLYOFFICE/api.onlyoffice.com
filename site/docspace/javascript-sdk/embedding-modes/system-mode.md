@@ -72,8 +72,8 @@ System mode exposes a focused set of methods for session management. Calling fil
 
 | Method | Description |
 | -------- | ------------- |
-| `setConfig(config)` | Updates the frame configuration. In system mode, only `theme` and `locale` are applied. |
-| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
+| `setConfig(config)` | Updates the frame configuration — `theme`, `locale`, `stylesUrl`, and `customActions` are all applied, though System mode has no visible UI for most of them to affect. |
+| `getUserInfo()` | Returns information about the currently authenticated user. Resolves with an empty value — not `null`, and not a rejection — when nobody is signed in; check `user && user.id` rather than a falsy/`catch` check. |
 | `getHashSettings()` | Returns the DocSpace hash settings used for generating a password hash. |
 | `createHash(password, hashSettings)` | Generates a hash string from a plain-text password using the specified hash settings. |
 | `login(email, passwordHash, password?, session?, code?)` | Logs in to DocSpace using the specified credentials. See [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md) for the `code` argument. |
@@ -103,7 +103,7 @@ if (result.url === "/") {
 }
 ```
 
-`login()` always resolves, even on failure — it never rejects. Check `result.url` rather than wrapping the call in `try`/`catch`, and never log or forward the resolved `result` object as-is on failure: see [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for why.
+`login()` never rejects due to a portal-side failure — it always resolves, even with wrong credentials, so check `result.url` rather than wrapping the call in `try`/`catch` for that case. It can still reject for an SDK-level problem (`SDKErrorCode.Timeout`, `SDKErrorCode.Disconnected`) or if the frame is in [OAuth mode](../get-started/authentication-security.md#oauth-authentication). Never log or forward the resolved `result` object as-is on failure: see [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for why.
 
 ### Switching users
 
@@ -133,13 +133,20 @@ const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-
 
 try {
   const user = await system.getUserInfo();
-  // User is authenticated — open Manager
-  DocSpace.SDK.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
+  if (user && user.id) {
+    // User is authenticated — open Manager
+    DocSpace.SDK.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
+  } else {
+    // User is not authenticated — show your own login form
+    showLoginForm();
+  }
 } catch {
-  // User is not authenticated — show your own login form
+  // A genuine SDK-level failure (e.g. a timeout) — not the same as "not authenticated"
   showLoginForm();
 }
 ```
+
+`getUserInfo()` doesn't reject, and doesn't resolve with `null`, when nobody is signed in — it resolves with an empty value, so check for a real user object rather than relying on a `catch` for that case; the `catch` here is only for genuine SDK-level failures.
 
 ### Changing the theme/locale
 

@@ -29,7 +29,7 @@ For how to obtain a `requestToken` and how to handle it securely, see [Token-bas
 Editing is scoped to documents within the room — a Public room frame can't navigate outside the room `requestToken` was issued for.
 :::
 
-`onNoAccess`, `onNotFound`, `onFileManagerClick`, `onEditorOpen`, and `onDownload` (with `downloadToEvent: true`) are all available in Public room mode, same as in Manager mode. See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md) for availability and payload details.
+`onNoAccess`, `onNotFound`, `onFileManagerClick`, `onEditorOpen`, and `onDownload` (with `downloadToEvent: true`) are all available in Public room mode, same as in Manager mode. `onFilterSearch` fires with `{ search }` whenever a visitor changes the file list's search text (an empty string when they clear it). See [Events and callbacks](../events-and-callbacks/events-and-callbacks.md) for availability and payload details.
 
 ## Use cases
 

@@ -82,6 +82,19 @@ const docSpace = DocSpace.SDK.initManager({
 `roomType: 1` (Form filling room) behaves differently from the other room types — it doesn't show up under the portal's regular Rooms section (or inside a Manager frame scoped to Rooms), only under the portal's separate Forms section. If you're creating a room the embedded Manager frame should list, use one of the other room types (`2` for Collaboration, for example).
 :::
 
+`createRoom()` also accepts an optional third argument for room settings — storage quota, tags, accent color, cover image, and (for a virtual data room) file indexing and download restrictions:
+
+```javascript
+const room = await frame.createRoom("Confidential Project", 8, {
+  quota: 1073741824, // 1 GB, in bytes
+  tags: ["confidential"],
+  indexing: true,
+  denyDownload: true,
+});
+```
+
+See [`createRoom()`](../usage-sdk/classes/SDKInstance.md#createroom) for the full `options` reference.
+
 ### Getting the current selection
 
 Read what the user has selected in the file manager and act on it. See also: [Get selection](../samples/basic-samples/get-selection.md).
@@ -222,7 +235,7 @@ Each action can be restricted, and every condition set must hold for it to show:
 - `roomTypes` — numeric room types it shows for (room actions only) — see [Creating a room programmatically](#creating-a-room-programmatically) above for the value mapping.
 - `requireSecurity` — access flags the clicked item's `security` object must all have, e.g. `["Download"]` or `["EditRoom"]`.
 
-`onCustomAction`'s payload: `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`; `item` is the single clicked entity, absent for `create` and for an action run on a multi-selection; `items` holds every selected entity instead, for a multi-selection of items of one type; `folderId` is the id of the folder or room the user was in.
+`onCustomAction`'s payload: `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`. For a single clicked entity, both `item` and `items` (a one-element array) are set; for a same-type multi-selection, only `items` is set; for `create`, neither is set. `folderId` is the id of the folder or room the user was in.
 
 `setCustomActions()` replaces the whole configuration rather than merging into it, so pass every group you want to keep:
 
