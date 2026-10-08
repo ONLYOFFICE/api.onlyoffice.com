@@ -28,7 +28,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freelance Platform</title>
+    <title>Collaborative Project Workflow</title>
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
@@ -40,7 +40,8 @@ The example requests an access token from `/api/2.0/authentication` with a login
       button:disabled { cursor: default; opacity: 0.5; }
       .workspace { display: flex; gap: 16px; align-items: flex-start; }
       .users-list { flex: 0 0 240px; }
-      .frame-container { flex: 1; }
+      .workspace-frame { flex: 1; }
+      #ds-frame-wrapper { border: 1px solid #ddd; }
       .frame-title { margin-bottom: 8px; font-weight: bold; }
       #usersContainer { margin: 12px 0; }
       .user-item { padding: 8px 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; }
@@ -51,7 +52,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
   </head>
   <body>
     <div class="container">
-      <h1>Freelance Platform</h1>
+      <h1>Collaborative Project Workflow</h1>
 
       <!-- Project creation form -->
       <div id="orderForm">
@@ -66,9 +67,12 @@ The example requests an access token from `/api/2.0/authentication` with a login
           <div id="usersContainer"></div>
           <button id="confirmUserBtn">Confirm Freelancer</button>
         </div>
-        <div class="frame-container">
+        <div class="workspace-frame">
           <div class="frame-title">Drag and drop files for the task</div>
-          <iframe id="ds-frame" style="width: 100%; height: 500px; border: 1px solid #ddd;"></iframe>
+          <!-- The SDK replaces #ds-frame with its own container, so the border goes on a wrapper -->
+          <div id="ds-frame-wrapper">
+            <div id="ds-frame"></div>
+          </div>
           <button id="completeOrderBtn" class="hidden">Complete Order</button>
         </div>
       </div>
@@ -92,6 +96,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
         const config = {
           frameId: "ds-frame",
           src: "{PORTAL_SRC}",
+          height: "500px",
           events: {
             onAppReady: rootPath ? onWorkspaceReady : onInitialReady
           }
@@ -146,7 +151,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
         const room = await docSpace.createRoom(title, COLLABORATION_ROOM)
         if (!room?.id) {
           button.disabled = false
-          return alert("Error creating room")
+          return alert(`Error creating room: ${room?.message ?? "unknown error"}`)
         }
         roomId = room.id
         initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
@@ -213,6 +218,9 @@ The example requests an access token from `/api/2.0/authentication` with a login
           button.disabled = false
           return alert("Error completing order")
         }
+        // The room is no longer available, so remove the frame that shows it
+        docSpace.destroyFrame()
+        document.getElementById("workspace").classList.add("hidden")
         alert("Order completed: the room is archived")
       }
 
@@ -329,6 +337,7 @@ function initDocSpace(rootPath = null, filter = null) {
   const config = {
     frameId: "ds-frame",
     src: "{PORTAL_SRC}",
+    height: "500px",
     events: {
       onAppReady: rootPath ? onWorkspaceReady : onInitialReady
     }
@@ -368,7 +377,7 @@ async function createOrder() {
   const room = await docSpace.createRoom(title, COLLABORATION_ROOM)
   if (!room?.id) {
     button.disabled = false
-    return alert("Error creating room")
+    return alert(`Error creating room: ${room?.message ?? "unknown error"}`)
   }
   roomId = room.id
   initDocSpace("/rooms/shared/" + roomId, { folder: roomId })
@@ -376,7 +385,7 @@ async function createOrder() {
 ```
 
 - Creates a collaboration room (type 2) with the project title, where the freelancer can get the **Content creator** role
-- Checks `id` in the result to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field.
+- Checks `id` in the result to detect errors. `createRoom()` resolves with `{ status, message }` on a portal error instead of rejecting, so the result is checked for `id`. See [How API errors are reported](../../troubleshooting-faq.md#how-api-errors-are-reported).
 - Opens the new room in the file manager
 
 ### 6. Display the workspace
@@ -454,10 +463,14 @@ async function completeOrder() {
     button.disabled = false
     return alert("Error completing order")
   }
+  // The room is no longer available, so remove the frame that shows it
+  docSpace.destroyFrame()
+  document.getElementById("workspace").classList.add("hidden")
   alert("Order completed: the room is archived")
 }
 ```
 
 - Removes the freelancer from the room: access level 0 (None) revokes their access
-- Archives the room, so the project is closed and no longer editable
+- Queues the archive operation for the room, so the project is closed and no longer editable. The endpoint returns the queued operation, not the archived room.
+- Destroys the frame and hides the workspace, because the archived room is no longer available in it
 - Disables the **Complete Order** button while the requests run. If either request fails, enables it again and reports the error.

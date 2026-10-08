@@ -47,6 +47,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
       .user-item + .user-item { border-top: none; }
       .user-item.selected { background: #e6efff; border-color: #2e66f5; }
       #decisionButtons { margin-top: 12px; display: flex; gap: 8px; }
+      #ds-frame-wrapper { border: 1px solid #ddd; }
     </style>
   </head>
   <body>
@@ -68,7 +69,10 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       <!-- Review workspace -->
       <div id="workspace" class="hidden">
-        <iframe id="ds-frame" style="width: 100%; height: 500px; border: 1px solid #ddd;"></iframe>
+        <!-- The SDK replaces #ds-frame with its own container, so the border goes on a wrapper -->
+        <div id="ds-frame-wrapper">
+          <div id="ds-frame"></div>
+        </div>
         <div id="decisionButtons" class="hidden">
           <button id="approveBtn">Approve</button>
           <button id="requestChangesBtn">Request Changes</button>
@@ -95,6 +99,7 @@ The example requests an access token from `/api/2.0/authentication` with a login
         const config = {
           frameId: "ds-frame",
           src: "{PORTAL_SRC}",
+          height: "500px",
           events: {
             onAppReady: rootPath ? onWorkspaceReady : onAppReady
           }
@@ -150,18 +155,21 @@ The example requests an access token from `/api/2.0/authentication` with a login
         const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
         if (!room?.id) {
           button.disabled = false
-          return alert("Error creating room")
+          return alert(`Error creating room: ${room?.message ?? "unknown error"}`)
         }
         roomId = room.id
 
-        const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-        if (!file?.id) {
+        try {
+          const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
+          // A portal without API_ERROR support resolves errors instead of rejecting
+          if (!file?.id) throw new Error(file?.message ?? "unknown error")
+          await docSpace.createTag("Pending review")
+          await docSpace.addTagsToRoom(roomId, ["Pending review"])
+        } catch (error) {
+          console.error(error)
           button.disabled = false
-          return alert("Error creating document")
+          return alert(`Error preparing the room: ${error.message}`)
         }
-
-        await docSpace.createTag("Pending review")
-        await docSpace.addTagsToRoom(roomId, ["Pending review"])
 
         document.getElementById("createStep").classList.add("hidden")
         document.getElementById("reviewerStep").classList.remove("hidden")
@@ -224,18 +232,29 @@ The example requests an access token from `/api/2.0/authentication` with a login
           setDecisionButtonsDisabled(false)
           return alert("Error updating reviewer access")
         }
-        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-        await docSpace.createTag("Approved")
-        await docSpace.addTagsToRoom(roomId, ["Approved"])
+        try {
+          await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+          await docSpace.createTag("Approved")
+          await docSpace.addTagsToRoom(roomId, ["Approved"])
+        } catch (error) {
+          console.error(error)
+          return alert(`Error updating the room tags: ${error.message}`)
+        }
         alert("Document approved")
       }
 
       // Send the document back to the author for changes
       async function requestChanges() {
         setDecisionButtonsDisabled(true)
-        await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-        await docSpace.createTag("Changes requested")
-        await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+        try {
+          await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+          await docSpace.createTag("Changes requested")
+          await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+        } catch (error) {
+          console.error(error)
+          setDecisionButtonsDisabled(false)
+          return alert(`Error updating the room tags: ${error.message}`)
+        }
         alert("Changes requested")
       }
 
@@ -358,18 +377,21 @@ async function createApprovalRequest() {
   const room = await docSpace.createRoom(`Approval: ${title}`, CUSTOM_ROOM)
   if (!room?.id) {
     button.disabled = false
-    return alert("Error creating room")
+    return alert(`Error creating room: ${room?.message ?? "unknown error"}`)
   }
   roomId = room.id
 
-  const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
-  if (!file?.id) {
+  try {
+    const file = await docSpace.createFile(roomId, `${title}.docx`, "{PUBLIC_DOCX_ID}")
+    // A portal without API_ERROR support resolves errors instead of rejecting
+    if (!file?.id) throw new Error(file?.message ?? "unknown error")
+    await docSpace.createTag("Pending review")
+    await docSpace.addTagsToRoom(roomId, ["Pending review"])
+  } catch (error) {
+    console.error(error)
     button.disabled = false
-    return alert("Error creating document")
+    return alert(`Error preparing the room: ${error.message}`)
   }
-
-  await docSpace.createTag("Pending review")
-  await docSpace.addTagsToRoom(roomId, ["Pending review"])
 
   document.getElementById("createStep").classList.add("hidden")
   document.getElementById("reviewerStep").classList.remove("hidden")
@@ -377,13 +399,9 @@ async function createApprovalRequest() {
 ```
 
 - Creates a custom room (type `5`) for the approval request and adds the document to it. A custom room is required because it's the only room type that allows the **Review** access. In a collaboration room (type `2`), the portal rejects it with HTTP 403.
-- Checks `id` in the results to detect errors. SDK methods don't reject on DocSpace API errors: the error comes back as the resolved value, and for some errors it's an empty object without a `status` field. If either call fails, the **Submit for Approval** button is enabled again so the user can retry.
+- Handles errors in two ways. `createRoom()` is one of the two methods that resolve with `{ status, message }` on a portal error, so its result is checked for `id`. The other methods reject with an `SDKError` (`API_ERROR`) and are wrapped in `try`/`catch`. The `id` check for `createFile()` is kept for older portals that resolve errors instead of rejecting. If anything fails, the **Submit for Approval** button is enabled again so the user can retry. See [How API errors are reported](../../troubleshooting-faq.md#how-api-errors-are-reported).
 - Tags the room **Pending review** so its status is visible in the room list
 - Reveals the reviewer selection step
-
-:::note
-The `createFile()` TypeScript signature currently marks the fourth `formId` argument as required. If you port this example to TypeScript, pass an empty string: `createFile(roomId, title, templateId, "")`.
-:::
 
 ### 4. Assign a reviewer with review-only access
 
@@ -445,22 +463,34 @@ async function approveDocument() {
     setDecisionButtonsDisabled(false)
     return alert("Error updating reviewer access")
   }
-  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-  await docSpace.createTag("Approved")
-  await docSpace.addTagsToRoom(roomId, ["Approved"])
+  try {
+    await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+    await docSpace.createTag("Approved")
+    await docSpace.addTagsToRoom(roomId, ["Approved"])
+  } catch (error) {
+    console.error(error)
+    return alert(`Error updating the room tags: ${error.message}`)
+  }
   alert("Document approved")
 }
 
 async function requestChanges() {
   setDecisionButtonsDisabled(true)
-  await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
-  await docSpace.createTag("Changes requested")
-  await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+  try {
+    await docSpace.removeTagsFromRoom(roomId, ["Pending review"])
+    await docSpace.createTag("Changes requested")
+    await docSpace.addTagsToRoom(roomId, ["Changes requested"])
+  } catch (error) {
+    console.error(error)
+    setDecisionButtonsDisabled(false)
+    return alert(`Error updating the room tags: ${error.message}`)
+  }
   alert("Changes requested")
 }
 ```
 
 - Disables both decision buttons as soon as one is clicked, so the room never ends up with both the **Approved** and **Changes requested** tags. If updating the reviewer's access fails, the buttons are enabled again.
+- Wraps the tag calls in `try`/`catch` and shows the error message if the portal rejects one of them
 - On approval, drops the reviewer's access to read-only and swaps the **Pending review** tag for **Approved**
 - On a change request, swaps the tag to **Changes requested**, leaving the reviewer's access untouched so the author can address the feedback and resubmit. The example doesn't notify the author: the tag is the only status signal.
 - Calling `createTag()` for a tag that already exists is safe: DocSpace returns the existing tag

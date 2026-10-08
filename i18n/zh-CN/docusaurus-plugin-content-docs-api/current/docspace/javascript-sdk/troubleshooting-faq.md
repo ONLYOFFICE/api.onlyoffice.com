@@ -45,22 +45,27 @@ SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加�
 
 这表示某个 SDK 方法是在其对应框架尚未就绪，或已经被销毁之后被调用的。请在调用实例方法之前等待 `onAppReady` 或 `onContentReady` 事件，并且在调用 `destroyFrame()` 之后不要再对该实例调用任何方法。
 
-`setConfig()` 是唯一可以在框架连接之前调用的方法。另请注意，使用相同的 `frameId` 再次调用初始化方法会重新加载框架，并以 `Frame reloaded` 拒绝所有待处理的方法调用。
+在框架连接之前，只有 `setConfig(config, true)` 能够可靠地工作：它会重新创建框架。如果不传第二个参数，`setConfig()` 虽然能通过连接检查，但仍会把更新发送给尚未就绪的框架，调用最终会超时。另请注意，使用相同的 `frameId` 再次调用初始化方法会重新加载框架，并以 `Frame reloaded` 拒绝所有待处理的方法调用。
 
-### 方法返回了错误，但 Promise 没有被拒绝 {#a-method-returned-an-error-but-the-promise-didnt-reject}
+### API 错误的报告方式 {#how-api-errors-are-reported}
 
-实例方法仅在 SDK 端发生错误时才会拒绝，例如超时、框架已断开连接，或当前模式不支持该方法（`MODE_MISMATCH`）。当 DocSpace API 调用失败时，门户会将错误作为普通的方法结果返回，Promise 会以该结果正常解析：
+DocSpace API 调用失败后，错误以何种方式传递给您的代码，取决于具体方法和门户版本：
 
-- 对于 HTTP 错误，结果是一个包含 `message`、`name`、`code` 和 `status` 字段的对象；
-- 对于其他某些错误，结果是空对象 `{}`，因此仅检查 `status` 是不够的。
-
-这意味着 `try`/`catch` 只能捕获 SDK 端的错误。要可靠地判断是否成功，请检查成功结果中必定存在的字段，例如 `id`：
+1. 在 ONLYOFFICE Apps 4.0 中，门户错误会使方法的 Promise 以 `SDKError` 被拒绝，其 `code` 为 `API_ERROR`。`error.status` 包含 HTTP 状态码，`error.data` 包含门户的响应。常规的 `try`/`catch` 即可捕获。
+2. `login()` 和 `createRoom()` 是例外：它们保留 SDK 2.1 的约定，以 `{ status, message }` 解析。对于这两个方法，请分别检查 `result.url` 和 `result.id`。
+3. 在不标记错误的 3.x 门户上，Promise 仍会以错误对象解析（`{ message, name, code, status }` 或空对象 `{}`）。需要同时兼容两个版本的代码，应将 `try`/`catch` 与 `id` 检查结合使用。
+4. 当前模式不支持某个方法时，门户返回的 "Wrong method for this mode" 不会以字符串形式传给您的代码：SDK 会以 `MODE_MISMATCH` 拒绝 Promise。
 
 ```js
-const room = await instance.createRoom("Project room", 5);
-if (!room?.id) {
-  console.error("Failed to create the room", room);
+try {
+  const file = await instance.createFile(folderId, "Report.docx");
+} catch (error) {
+  if (error.code === "API_ERROR") console.error(error.status, error.message, error.data);
+  else throw error; // TIMEOUT, DISCONNECTED, MODE_MISMATCH
 }
+
+const room = await instance.createRoom("Project room", 5); // legacy: resolves on failure
+if (!room?.id) console.error("Failed to create the room", room.status, room.message);
 ```
 
 ## SDK 错误代码 {#sdk-error-codes}
@@ -72,11 +77,12 @@ if (!room?.id) {
 | `TIMEOUT` | 框架未在 `methodTimeout`（默认 30 秒）内响应。 |
 | `DISCONNECTED` | 框架未连接（`Message bus is not connected with frame`）、已重新加载（`Frame reloaded`）或已销毁（`Frame destroyed`）。 |
 | `CSP_VIOLATION` | 嵌入来源不在 DocSpace 的 CSP 允许列表中。 |
-| `MODE_MISMATCH` | 当前模式不支持该方法。例如，`upload()` 和 `setCustomActions()` 仅在 Forms 模式下可用，`navigateSection()` 仅在 Forms 和 Personal 模式下可用。在 OAuth 模式下调用 `login()` 和 `logout()` 时也会使用此代码。 |
+| `MODE_MISMATCH` | 当前模式不支持该方法。例如，`upload()` 和 `navigateSection()` 仅在 Forms 和 Personal 模式下可用，`setCustomActions()` 仅在 Manager、Personal 和 Forms 模式下可用。在 OAuth 模式下调用 `login()` 和 `logout()`，以及门户返回 "Wrong method for this mode" 时，也会使用此代码。 |
 | `INVALID_CONFIG` | 框架配置无效。 |
 | `UPLOAD_FAILED` | 文件上传失败。 |
 | `PARSE_ERROR` | 无法解析来自框架的消息。 |
 | `TOKEN_RESOLVE_FAILED` | SDK 无法获取访问令牌。 |
+| `API_ERROR` | 门户报告该方法执行失败（ONLYOFFICE Apps 4.0）。`error.status` 为 HTTP 状态码，`error.data` 为门户返回的数据。`login()` 和 `createRoom()` 则会以 `{ status, message }` 解析。 |
 
 ## 调试技巧 {#debugging-tips}
 
@@ -96,7 +102,7 @@ const instance = DocSpace.SDK.initManager({
 
 即使框架内显示的是通用的 CSP 错误页面，`onAppError` 也会收到错误的真实原因，因此记录它往往比阅读渲染出的页面更快。将其与浏览器的网络（Network）面板结合使用，可以确认请求确实到达了您的 DocSpace 实例（而不是被混合内容限制或广告拦截插件所阻止）。
 
-`onAppError` 仅在 SDK 端发生错误时触发：CSP 检查失败、消息解析错误、框架断开连接或令牌错误。DocSpace API 错误不会触发该事件（参见[方法返回了错误，但 Promise 没有被拒绝](#a-method-returned-an-error-but-the-promise-didnt-reject)）。OAuth 框架中的授权错误会通过 `onAuthError` 事件传递，数据为 `{ code: "UNAUTHORIZED" }`。
+`onAppError` 会在 SDK 端发生错误时触发：CSP 检查失败、消息解析错误、框架断开连接或令牌错误。当框架页面加载失败时（例如在 Chat 模式下），框架本身也会发送该事件并附带自己的消息。DocSpace API 错误不会触发该事件：方法的 Promise 会以 `API_ERROR` 被拒绝（参见[API 错误的报告方式](#how-api-errors-are-reported)）。OAuth 框架中的授权错误会通过 `onAuthError` 事件传递，数据为 `{ code: "UNAUTHORIZED" }`。
 
 关于可用事件及其数据负载的完整列表，请参阅 [TFrameEvents](./usage-sdk/type-aliases/TFrameEvents.md)。
 

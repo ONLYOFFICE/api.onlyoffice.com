@@ -8,7 +8,7 @@ tags: ["DocSpace", "Embed SDK", "Integration"]
 Embed DocSpace inside draggable and resizable modal windows built with Vite, React, TypeScript, and Tailwind CSS.
 This example shows how to embed multiple DocSpace instances, automatically log in via the SDK, and manage them dynamically.
 
-Each modal starts in `system` mode, which is only used to log in: in this mode the frame shows a loader and nothing else. Once `login()` succeeds, the modal switches the frame to `manager` mode with `setConfig()`, and the DocSpace file manager appears.
+The `DocSpace` component logs in through a service frame and then opens the file manager.
 
 ## Before you start
 
@@ -95,11 +95,17 @@ Install the React wrapper and the core SDK:
 npm i @onlyoffice/docspace-react @onlyoffice/docspace-sdk-js
 ```
 - `@onlyoffice/docspace-react` mounts the iframe, wires SDK events, and pulls in the core SDK at runtime.
-- `@onlyoffice/docspace-sdk-js` is installed explicitly only to import the `SDKInstance` type. Without TypeScript, the React wrapper alone is enough.
+- `@onlyoffice/docspace-sdk-js` is installed explicitly only to import the `SDKInstance` and `TFrameConfig` types. Without TypeScript, the React wrapper alone is enough.
 
 ### 5. Create the modal component
 
-Add a reusable modal that embeds DocSpace, logs in on `onAppReady`, and then switches the frame to `manager` mode. The modal gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component. The config has no `src` because the component takes it from the `url` prop.
+Add a reusable modal that embeds DocSpace in `manager` mode. The `DocSpace` component handles the login itself:
+
+- `email` and `onRequestPasswordHash` tell the component which credentials to use. It opens a service frame in `system` mode, signs in if the user isn't signed in yet, and then opens the frame with the passed `config`.
+- `onUnsuccessLogin` is called if the sign-in fails, for example, because of a wrong password hash.
+- `onSetDocspaceInstance` passes the SDK instance, which you can use to call SDK methods.
+
+The config has no `src` because the component takes it from the `url` prop. It's typed as `TFrameConfig`, so TypeScript accepts the `mode` value.
 
 `src/components/DraggableModal.tsx`
 
@@ -109,7 +115,7 @@ Add a reusable modal that embeds DocSpace, logs in on `onAppReady`, and then swi
 ``` tsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import { DocSpace } from "@onlyoffice/docspace-react";
-import type { SDKInstance } from "@onlyoffice/docspace-sdk-js";
+import type { SDKInstance, TFrameConfig } from "@onlyoffice/docspace-sdk-js";
 
 interface DraggableModalProps {
   id: string;
@@ -153,32 +159,18 @@ export default function DraggableModal({
     return () => { window.removeEventListener("mousemove", onMove); window.removeEventListener("mouseup", onUp); };
   }, [drag, resize]);
 
-  // log in when the system frame is ready, then switch it to the file manager
-  async function handleAppReady() {
-    const ds = instance.current;
-    if (!ds) return console.error(`[${id}] SDK instance not found`);
-    try {
-      await ds.login(login, passwordHash);
-      await ds.setConfig({ mode: "manager" });
-      console.log(`[${id}] login success`);
-    } catch (e) {
-      console.error(`[${id}] login failed`, e);
-    }
-  }
-
   // keep the config stable so dragging and resizing don't recreate the frame
-  const config = useMemo(() => ({
+  const config = useMemo<TFrameConfig>(() => ({
     frameId,
     width: "100%",
     height: "100%",
-    mode: "system",
-    events: { onAppReady: handleAppReady },
+    mode: "manager",
   }), [frameId]);
 
   return (
     <div
       style={{ position: "fixed", top: pos.y, left: pos.x, width: size.width, height: size.height, zIndex }}
-      className="bg-white border rounded-2xl shadow-lg overflow-hidden"
+      className="flex flex-col bg-white border rounded-2xl shadow-lg overflow-hidden"
       onMouseDown={() => onFocus(id)}
     >
       <div
@@ -195,11 +187,17 @@ export default function DraggableModal({
         </button>
       </div>
 
-      <DocSpace
-        url={portalUrl}
-        config={config}
-        onSetDocspaceInstance={(ds: SDKInstance) => { instance.current = ds; }}
-      />
+      {/* the frame fills the space left under the header */}
+      <div className="flex-1 min-h-0">
+        <DocSpace
+          url={portalUrl}
+          config={config}
+          email={login}
+          onRequestPasswordHash={() => passwordHash}
+          onUnsuccessLogin={() => console.error(`[${id}] login failed`)}
+          onSetDocspaceInstance={(ds: SDKInstance) => { instance.current = ds; }}
+        />
+      </div>
 
       <div
         className="absolute bottom-0 right-0 w-3 h-3 bg-gray-300 cursor-se-resize"

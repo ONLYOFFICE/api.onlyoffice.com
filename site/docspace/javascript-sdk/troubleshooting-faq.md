@@ -45,22 +45,27 @@ Thanks to the `Partitioned` attribute, browsers that support [CHIPS](https://dev
 
 This means an SDK method was called on an instance whose frame isn't ready yet, or has already been destroyed. Wait for the `onAppReady` or `onContentReady` event before calling instance methods, and stop calling methods on an instance after `destroyFrame()`.
 
-`setConfig()` is the only method that you can call before the frame connects. Also note that calling an init method again with the same `frameId` reloads the frame and rejects all pending method calls with `Frame reloaded`.
+Before the frame connects, only `setConfig(config, true)` works reliably: it recreates the frame. Without the second argument, `setConfig()` passes the connection check, but it still sends the update to a frame that isn't ready, and the call times out. Also note that calling an init method again with the same `frameId` reloads the frame and rejects all pending method calls with `Frame reloaded`.
 
-### A method returned an error, but the promise didn't reject
+### How API errors are reported
 
-Instance methods reject only on SDK-side errors, such as a timeout, a disconnected frame, or a method that isn't available in the current mode (`MODE_MISMATCH`). When a DocSpace API call fails, the portal sends the error back as a regular method result, and the promise resolves with it:
+How a failed DocSpace API call reaches your code depends on the method and the portal version:
 
-- for HTTP errors, the result is an object with `message`, `name`, `code`, and `status` fields;
-- for some other errors, the result is an empty object `{}`, so checking `status` alone isn't enough.
-
-This means `try`/`catch` catches only SDK-side errors. To detect success reliably, check for a field that a successful result always has, such as `id`:
+1. On ONLYOFFICE Apps 4.0, a portal error rejects the method's promise with an `SDKError` whose `code` is `API_ERROR`. `error.status` contains the HTTP status, and `error.data` contains the portal's response. A regular `try`/`catch` works.
+2. `login()` and `createRoom()` are exceptions: they keep the SDK 2.1 contract and resolve with `{ status, message }`. For these methods, check `result.url` and `result.id` respectively.
+3. On a 3.x portal, which doesn't flag errors, the promise still resolves with the error object (`{ message, name, code, status }` or an empty object `{}`). Code that must work with both versions combines `try`/`catch` with an `id` check.
+4. When a method isn't available in the current mode, the portal's "Wrong method for this mode" reply isn't passed to your code as a string: the SDK rejects the promise with `MODE_MISMATCH`.
 
 ```js
-const room = await instance.createRoom("Project room", 5);
-if (!room?.id) {
-  console.error("Failed to create the room", room);
+try {
+  const file = await instance.createFile(folderId, "Report.docx");
+} catch (error) {
+  if (error.code === "API_ERROR") console.error(error.status, error.message, error.data);
+  else throw error; // TIMEOUT, DISCONNECTED, MODE_MISMATCH
 }
+
+const room = await instance.createRoom("Project room", 5); // legacy: resolves on failure
+if (!room?.id) console.error("Failed to create the room", room.status, room.message);
 ```
 
 ## SDK error codes
@@ -72,11 +77,12 @@ When an instance method rejects, the error has one of the following codes:
 | `TIMEOUT` | The frame didn't answer within `methodTimeout` (30 seconds by default). |
 | `DISCONNECTED` | The frame isn't connected (`Message bus is not connected with frame`), was reloaded (`Frame reloaded`), or was destroyed (`Frame destroyed`). |
 | `CSP_VIOLATION` | The embedding origin isn't in the DocSpace CSP allowlist. |
-| `MODE_MISMATCH` | The method isn't available in the current mode. For example, `upload()` and `setCustomActions()` work only in the Forms mode, and `navigateSection()` works only in the Forms and Personal modes. The same code is used for `login()` and `logout()` in the OAuth mode. |
+| `MODE_MISMATCH` | The method isn't available in the current mode. For example, `upload()` and `navigateSection()` work only in the Forms and Personal modes, and `setCustomActions()` works only in the Manager, Personal, and Forms modes. The same code is used for `login()` and `logout()` in the OAuth mode and when the portal replies "Wrong method for this mode". |
 | `INVALID_CONFIG` | The frame config is invalid. |
 | `UPLOAD_FAILED` | A file upload failed. |
 | `PARSE_ERROR` | A message from the frame couldn't be parsed. |
 | `TOKEN_RESOLVE_FAILED` | The SDK couldn't get an access token. |
+| `API_ERROR` | The portal reported a failure for the method (ONLYOFFICE Apps 4.0). `error.status` is the HTTP status, and `error.data` is the portal's payload. `login()` and `createRoom()` resolve with `{ status, message }` instead. |
 
 ## Debugging tips
 
@@ -96,7 +102,7 @@ const instance = DocSpace.SDK.initManager({
 
 `onAppError` receives the real cause of the error, even when the frame shows the generic CSP error page, so logging it is often faster than reading the rendered page. Combine this with the browser's Network tab to confirm requests to your DocSpace instance are actually reaching it (rather than being blocked by mixed content or an ad blocker).
 
-`onAppError` fires only for SDK-side errors: CSP check failures, message parsing errors, a disconnected frame, or token errors. DocSpace API errors don't trigger it (see [A method returned an error, but the promise didn't reject](#a-method-returned-an-error-but-the-promise-didnt-reject)). Authorization errors in an OAuth frame arrive in the `onAuthError` event with `{ code: "UNAUTHORIZED" }`.
+`onAppError` fires for SDK-side errors: CSP check failures, message parsing errors, a disconnected frame, or token errors. The frame also sends it with its own message when its page fails to load, for example, in the Chat mode. DocSpace API errors don't trigger it: the method's promise rejects with `API_ERROR` instead (see [How API errors are reported](#how-api-errors-are-reported)). Authorization errors in an OAuth frame arrive in the `onAuthError` event with `{ code: "UNAUTHORIZED" }`.
 
 For the full list of available events and their payloads, see [TFrameEvents](./usage-sdk/type-aliases/TFrameEvents.md).
 
