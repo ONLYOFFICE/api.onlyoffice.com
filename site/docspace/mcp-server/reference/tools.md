@@ -4,13 +4,13 @@ sidebar_position: 7
 title: Tools
 ---
 
-The DocSpace MCP server implements the Tools concept from the MCP specification.
+The ONLYOFFICE Apps MCP server implements the Tools concept from the MCP specification.
 
 ## Toolsets
 
-A toolset is a DocSpace MCP server extension to the standard MCP Tools concept.
+A toolset is an ONLYOFFICE Apps MCP server extension to the standard MCP Tools concept.
 Toolsets provide logical grouping of related tools to organize
-DocSpace functionality into manageable categories.
+ONLYOFFICE Apps functionality into manageable categories.
 
 <!--generate toolsets-start-->
 
@@ -26,21 +26,21 @@ DocSpace functionality into manageable categories.
 ## Regular tools
 
 Regular tools are standard MCP Tools. Each tool corresponds to a specific
-DocSpace operation.
+ONLYOFFICE Apps operation.
 
 <!--generate tools-start-->
 
 ### Files toolset
 
-| #   | Tool Name              | Tool Description       |
-| --- | ---------------------- | ---------------------- |
-| 1   | `copy_batch_items`     | Copy to a folder.      |
-| 2   | `delete_file`          | Delete a file.         |
-| 3   | `download_file_as_text`| Download a file as text.|
-| 4   | `get_file_info`        | Get file information.  |
-| 5   | `move_batch_items`     | Move to a folder.      |
-| 6   | `update_file`          | Update a file.         |
-| 7   | `upload_file`          | Upload a file.         |
+| #   | Tool Name               | Tool Description         |
+| --- | ----------------------- | ------------------------ |
+| 1   | `copy_batch_items`      | Copy to a folder.        |
+| 2   | `delete_file`           | Delete a file.           |
+| 3   | `download_file_as_text` | Download a file as text. |
+| 4   | `get_file_info`         | Get file information.    |
+| 5   | `move_batch_items`      | Move to a folder.        |
+| 6   | `update_file`           | Update a file.           |
+| 7   | `upload_file`           | Upload a file.           |
 
 :::note
 Supported file formats for uploading: `txt`, `md`.
@@ -48,14 +48,14 @@ Supported file formats for uploading: `txt`, `md`.
 
 ### Folders toolset
 
-| #   | Tool Name            | Tool Description                   |
-| --- | -------------------- | ---------------------------------- |
-| 8   | `create_folder`      | Create a folder.                   |
-| 9   | `delete_folder`      | Delete a folder.                   |
-| 10  | `get_folder_content` | Get content of a folder.           |
-| 11  | `get_folder_info`    | Get folder information.            |
-| 12  | `get_my_folder`      | Get the 'My Documents' folder.     |
-| 13  | `rename_folder`      | Rename a folder.                   |
+| #   | Tool Name            | Tool Description               |
+| --- | -------------------- | ------------------------------ |
+| 8   | `create_folder`      | Create a folder.               |
+| 9   | `delete_folder`      | Delete a folder.               |
+| 10  | `get_folder_content` | Get content of a folder.       |
+| 11  | `get_folder_info`    | Get folder information.        |
+| 12  | `get_my_folder`      | Get the 'My Documents' folder. |
+| 13  | `rename_folder`      | Rename a folder.               |
 
 ### People toolset
 
@@ -65,23 +65,23 @@ Supported file formats for uploading: `txt`, `md`.
 
 ### Rooms toolset
 
-| #   | Tool Name                | Tool Description                                          |
-| --- | ------------------------ | --------------------------------------------------------- |
-| 15  | `archive_room`           | Archive a room.                                           |
-| 16  | `create_room`            | Create a room.                                            |
-| 17  | `get_room_access_levels` | Get a list of available room invitation access levels.    |
-| 18  | `get_room_info`          | Get room information.                                     |
-| 19  | `get_room_security_info` | Get a list of users with their access levels to a room.   |
-| 20  | `get_room_types`         | Get a list of available room types.                       |
-| 21  | `get_rooms_folder`       | Get the 'Rooms' folder.                                   |
-| 22  | `set_room_security`      | Invite or remove users from a room.                       |
-| 23  | `update_room`            | Update a room.                                            |
+| #   | Tool Name                | Tool Description                                        |
+| --- | ------------------------ | ------------------------------------------------------- |
+| 15  | `archive_room`           | Archive a room.                                         |
+| 16  | `create_room`            | Create a room.                                          |
+| 17  | `get_room_access_levels` | Get a list of available room invitation access levels.  |
+| 18  | `get_room_info`          | Get room information.                                   |
+| 19  | `get_room_security_info` | Get a list of users with their access levels to a room. |
+| 20  | `get_room_types`         | Get a list of available room types.                     |
+| 21  | `get_rooms_folder`       | Get the 'Rooms' folder.                                 |
+| 22  | `set_room_security`      | Invite or remove users from a room.                     |
+| 23  | `update_room`            | Update a room.                                          |
 
 <!--generate tools-end-->
 
 ## Meta tools
 
-Meta tools are a DocSpace MCP server extension to the standard MCP Tools
+Meta tools are an ONLYOFFICE Apps MCP server extension to the standard MCP Tools
 concept. They provide a dynamic interface for tool discovery and execution,
 allowing AI models to interact with tools without requiring all tools to be
 loaded simultaneously.
