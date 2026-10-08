@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/sections/Files.docs.mdx"
+description: "The Files section as the portal draws it: a header, the filter bar and the rows of the caller's personal folder."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/sections/Files.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -7,6 +8,12 @@ import ThemedImage from '@theme/ThemedImage';
 import APITable from '@site/src/components/APITable/APITable';
 
 # Files
+
+:::warning[Portal only]
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
 
 The Files section as the portal draws it: a header, the filter bar and the rows of the caller's
 personal folder. Search, a sort order and a type filter narrow the list, and a folder opens in

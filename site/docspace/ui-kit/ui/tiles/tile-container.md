@@ -1,6 +1,6 @@
 ---
 description: "Grid that sorts the tiles it is given into rooms, templates, folders and files and gives two of them a heading."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/tile-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/tile-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,7 +40,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 
 Needs `ThemeProvider` above it in the tree: the headings are the kit's `Heading`, which takes its
 colour from the custom properties the provider's `.light` and `.dark` classes declare.
-
 
 ## Stories
 

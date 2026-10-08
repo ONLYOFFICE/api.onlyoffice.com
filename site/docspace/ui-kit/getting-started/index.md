@@ -1,5 +1,5 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/scripts/docs/sections.mjs"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/scripts/docs/sections.mjs"
 ---
 
 # Getting started
@@ -13,7 +13,8 @@ The following pages are available:
 | Page | Description |
 | --- | --- |
 | [Welcome](./welcome.md) | What the kit is, how it is installed and the providers every application mounts. |
-| [Installation](./installation.md) | Everything a React application needs to do once, before any component of this kit renders correctly: install it, mount two providers, and know which import forms exist. |
+| [Installation and setup](./installation-and-setup.md) | Everything a React application needs to do once, before any component of this kit renders correctly: install it, mount two providers, and know which import forms exist. |
+| [Catalogue](./catalogue.md) | Every component this package ships, what it is for, and how it is imported. |
 | [Structure](./structure.md) | `@onlyoffice/apps-ui-kit` is a standalone repository. |
 | [Themes](./themes.md) | The UI Kit ships with Base (light) and Dark themes. |
 | [Translation](./translation.md) | The UI Kit uses **i18next** and **react-i18next** for internationalization. |

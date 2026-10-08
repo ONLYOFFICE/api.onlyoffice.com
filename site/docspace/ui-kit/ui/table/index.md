@@ -1,6 +1,6 @@
 ---
 description: "Columnar list with resizable, sortable and hideable columns, laid out by a CSS grid the header writes."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/table/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -566,12 +566,12 @@ The following components are available:
 
 | Component | Description |
 | --- | --- |
-| [GroupMenuItem](./groupmenuitem.md) | GroupMenuItem is one action button of a TableGroupMenu, the toolbar that replaces the table header while rows are selected. The Table README describes it in full. |
-| [TableCell](./tablecell.md) | TableCell is one cell of a TableRow: a fixed-height box that sits in the column the table's grid gives it. The Table README describes it in full. |
-| [TableHeaderCell](./tableheadercell.md) | TableHeaderCell is the title of one column in a TableHeader, with its sort arrow and the handle that resizes it. The Table README describes it in full. |
-| [TableSettings](./tablesettings.md) | TableSettings is the cog at the end of a TableHeader that opens a list of the columns, each with a checkbox that shows or hides it. The Table README describes it in full. |
-| [TableBody](./tablebody.md) | TableBody holds the rows of a table and, for a long list, renders only the rows in view and asks for the next page as the user scrolls. The Table README describes it in full. |
-| [TableContainer](./tablecontainer.md) | TableContainer is the outer element of a table, the grid that the header, the group menu and the rows are laid out in. The Table README describes it in full. |
-| [TableGroupMenu](./tablegroupmenu.md) | TableGroupMenu is the toolbar that takes the place of the table header while rows are selected, with a select-all checkbox and the actions that apply to the selection. The Table README describes it in full. |
-| [TableHeader](./tableheader.md) | TableHeader is the row of column titles at the top of a table; it also decides the width of every column and writes them onto the table's grid. The Table README describes it in full. |
-| [TableRow](./tablerow.md) | TableRow is one row of a table: its cells followed by a last cell with the row's context menu button. The Table README describes it in full. |
+| [GroupMenuItem](./group-menu-item.md) | GroupMenuItem is one action button of a TableGroupMenu, the toolbar that replaces the table header while rows are selected. |
+| [TableCell](./table-cell.md) | TableCell is one cell of a TableRow: a fixed-height box that sits in the column the table's grid gives it. |
+| [TableHeaderCell](./table-header-cell.md) | TableHeaderCell is the title of one column in a TableHeader, with its sort arrow and the handle that resizes it. |
+| [TableSettings](./table-settings.md) | TableSettings is the cog at the end of a TableHeader that opens a list of the columns, each with a checkbox that shows or hides it. |
+| [TableBody](./table-body.md) | TableBody holds the rows of a table and, for a long list, renders only the rows in view and asks for the next page as the user scrolls. |
+| [TableContainer](./table-container.md) | TableContainer is the outer element of a table, the grid that the header, the group menu and the rows are laid out in. |
+| [TableGroupMenu](./table-group-menu.md) | TableGroupMenu is the toolbar that takes the place of the table header while rows are selected, with a select-all checkbox and the actions that apply to the selection. |
+| [TableHeader](./table-header.md) | TableHeader is the row of column titles at the top of a table; it also decides the width of every column and writes them onto the table's grid. |
+| [TableRow](./table-row.md) | TableRow is one row of a table: its cells followed by a last cell with the row's context menu button. |

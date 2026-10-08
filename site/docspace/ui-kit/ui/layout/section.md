@@ -1,6 +1,6 @@
 ---
 description: "DocSpace's page body: a sticky header and filter, a scrolling body, and the info and chat panels beside it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/section/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/section/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Section
 
+:::warning[Portal only]
+
+<ThemedImage alt="Section" width={1020} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 DocSpace's page body: a sticky header and filter, a scrolling body, and the info and chat panels
 beside it. It is the other half of the portal's layout, next to [`Article`](./article.md),
 and it is also what supplies the kit's layout context to everything inside it.
-
-<ThemedImage alt="Section" width={1020} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -39,12 +45,11 @@ import Section from "@onlyoffice/apps-ui-kit/components/section";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as Section }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` above it in the tree for its colours, and `TranslationProvider` once any
 operation is in flight — the progress button it renders reads its labels from the kit's shared
 translations and shows empty strings without one.
-
 
 ## Stories
 

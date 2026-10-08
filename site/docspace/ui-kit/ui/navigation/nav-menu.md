@@ -1,6 +1,6 @@
 ---
 description: "Sidebar navigation: groups of items, each with an optional sub-menu, a badge and a collapsed rail form."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/nav-menu/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/nav-menu/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -41,7 +41,6 @@ Needs `ThemeProvider` above it in the tree for every colour it paints. In the co
 labels become tooltips through the kit's shared tooltip, which needs `<RootTooltip />` from
 [`Tooltip`](../overlays/tooltip.md) mounted once near the root of the application — without it a
 collapsed rail has no labels at all.
-
 
 ## Stories
 

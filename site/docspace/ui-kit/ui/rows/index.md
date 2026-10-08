@@ -1,6 +1,6 @@
 ---
 description: "The file list of the DocSpace portal, in three parts: the container, the row and the row's content."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/rows/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -195,4 +195,4 @@ The following components are available:
 | [RowContainer](./row-container.md) | Scrolling list the rows go in, virtualised and paged in as the user reaches the end. |
 | [RowContent](./row-content.md) | The text of a row, laid out by the position of its children rather than by named slots. |
 | [Row](./row.md) | One row of the file list: an optional checkbox, a start element, the content and a context menu. |
-| [RowsSkeleton](./rowsskeleton.md) | Placeholder in the shape of a list of rows, shown while the rows themselves are loading. The Rows page describes it in full. |
+| [RowsSkeleton](./rows-skeleton.md) | Placeholder in the shape of a list of rows, shown while the rows themselves are loading. |

@@ -1,6 +1,6 @@
 ---
 description: "The title slot of a tile: three nested wrappers that give the name its width and its truncation."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/tile-content/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/tile-content/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 
 It needs no provider of its own: it sets no colours and reads no context. Whatever you put inside
 it usually does.
-
 
 ## Stories
 

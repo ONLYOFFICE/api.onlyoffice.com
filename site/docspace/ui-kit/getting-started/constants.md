@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/Constants.mdx"
+description: "Three small modules carry the values and the vocabulary the rest of the library is written in."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Constants.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

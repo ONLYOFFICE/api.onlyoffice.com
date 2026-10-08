@@ -1,12 +1,13 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/Welcome.mdx"
+description: "What the kit is, how it is installed and the providers every application mounts."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Welcome.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # ONLYOFFICE Apps UI Kit
 
-Version 4.0.0 • AGPL-3.0-only • not on the public npm registry yet -- [How to install it](#installation)
+Version 4.0.0 • AGPL-3.0-only • on npm as @onlyoffice/apps-ui-kit -- [How to install it](#installation)
 
 **The package at a glance**
 
@@ -18,74 +19,22 @@ Version 4.0.0 • AGPL-3.0-only • not on the public npm registry yet -- [How t
 
 </APITable>
 
-## What is inside
-
-The published surface, the portal-coupled modules that ship alongside it without the same compatibility promise, and two guides: who may do what on a portal, and building with an AI agent.
-
-### Components
-
-_Public API._ 98 components -- buttons, inputs, tables, tiles, dialogs -- each self-contained and shipping its own CSS.
-
-[Open Structure](./structure.md)
-
-### Hooks and utils
-
-_Public API._ 11 React hooks and 32 helper modules: dates, devices, URLs, cookies, e-mail and the rest.
-
-[Open Hooks](./hooks.md)
-
-### Theming
-
-_Public API._ Light, dark, RTL and the colour tokens every component reads. No component hardcodes a colour.
-
-[Open Themes](./themes.md)
-
-### Portal modules
-
-_Portal-only._ The REST client, MobX-backed selectors, billing, the uploader, the editor wrapper and the AI agent.
-
-[Open API](./api.md)
-
-### Types and roles
-
-_Portal rules._ Who may do what: the five user types, the eight room roles, and how to check access in code.
-
-[Open Types and roles](./types-and-roles.md)
-
-### Agent skills
-
-_For AI agents._ Connect them before an AI agent writes code with the kit: it follows the kit's rules and checks its own work.
-
-[Open Agent skills](./agent-skills.md)
-
-## The rest of the documentation
-
-Helpers, constants, translations and the two places this package comes from.
-
-- [Utils](./utils.md)
-- [Constants and enums](./constants.md)
-- [Translation](./translation.md)
-- [GitHub repository](https://github.com/ONLYOFFICE/docspace-ui-kit-react)
-- [ONLYOFFICE Apps API](https://api.onlyoffice.com/docspace/)
-
 ## Installation
 
-The package is **not on the public npm registry yet**, so there is nothing to `npm install`
-today. Consumers take a packed tarball built from this repository:
+Install the package from npm:
+
+```bash
+npm install @onlyoffice/apps-ui-kit
+```
+
+To try a build of this repository instead, pack it and install the file:
 
 ```bash
 pnpm build && pnpm pack   # -> onlyoffice-apps-ui-kit-4.0.0.tgz
 ```
 
-and install that file in the consuming application. Pack with **pnpm**, not npm: the `exports`
-map lives under `publishConfig`, which is a pnpm feature, and an npm-packed tarball ends up
-with no `exports` and no `main` at all.
-
-Once the package is published this becomes the usual one-liner:
-
-```bash
-npm install @onlyoffice/apps-ui-kit
-```
+Pack with **pnpm**, not npm: the `exports` map lives under `publishConfig`, which is a pnpm
+feature, and an npm-packed tarball ends up with no `exports` and no `main` at all.
 
 DocSpace **plugins** install nothing. The portal hands a plugin its own already-mounted copy of
 the kit and refuses every subpath, so for a plugin the root barrel is the entire API — see
@@ -162,17 +111,3 @@ import Providers from "@onlyoffice/apps-ui-kit/providers/Providers";
   <App />
 </Providers>
 ```
-
-### Run Storybook locally
-
-```bash
-git clone -b feature/ui-kit-separation \
-  https://github.com/ONLYOFFICE/docspace-ui-kit-react.git
-cd docspace-ui-kit-react
-pnpm install
-pnpm storybook
-```
-
-The branch matters until the separation lands: `master` still carries the previous package,
-`@docspace/ui-kit@0.0.1`, rather than the `@onlyoffice/apps-ui-kit@4.0.0` this documentation
-describes.

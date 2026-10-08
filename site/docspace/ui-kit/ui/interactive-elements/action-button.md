@@ -1,6 +1,6 @@
 ---
 description: "Small tinted button for a secondary action, optionally rendered as another element."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/action-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/action-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the accent text colour
 and the hover background.
-
 
 ## Stories
 

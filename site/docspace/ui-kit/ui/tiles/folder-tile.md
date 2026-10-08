@@ -1,6 +1,6 @@
 ---
 description: "Tile for a folder, as a single name row or, with one flag, a tall card with a picture on top."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/folder-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/folder-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 
 Needs `ThemeProvider` for its colours and `TranslationProvider` for the three-dot button's
 tooltip, which it asks the kit's own translation hook for under the key `TitleShowActions`.
-
 
 ## Stories
 

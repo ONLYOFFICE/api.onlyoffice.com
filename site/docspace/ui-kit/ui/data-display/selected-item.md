@@ -1,6 +1,6 @@
 ---
 description: "Chip with a cross, for a value the user has picked and can take back."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/selected-item/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/selected-item/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`; without it the chip has
 no background and the disabled colours resolve to nothing.
-
 
 ## Stories
 

@@ -1,10 +1,17 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/uploader/Uploader.mdx"
+description: "Uploader is a file upload component that supports chunked uploads, folder uploads, and file size validation."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/uploader/Uploader.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
 
 # Uploader
+
+:::warning[Portal only]
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
 
 Uploader is a file upload component that supports chunked uploads, folder uploads, and file size validation. It uses the ONLYOFFICE Apps API SDK for upload operations and provides a drag-and-drop interface.
 

@@ -1,6 +1,6 @@
 ---
 description: "Switch for one on/off setting, with an optional label beside it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/toggle-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/toggle-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree.
 Without it the switch still renders, in the light palette, and ignores the portal accent
 colour.
-
 
 ## Stories
 

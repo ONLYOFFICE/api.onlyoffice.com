@@ -1,6 +1,6 @@
 ---
 description: "Panel that slides in from the side of the viewport, with a header and a scrolling body."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/aside/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/aside/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ path.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree, for
 the panel's background and the header's border.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "A full-width bar with a danger glyph that fades one message out before fading the next one in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/status-message/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/status-message/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ and reaches the root barrel `@onlyoffice/apps-ui-kit` through it.
 
 No provider is required: the light colours are declared on the bar itself, and the dark ones come
 from the `dark` class the kit's theme provider puts on `<body>`.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Square room tile that shows the room's logo, or its initials on a colour when there is none."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/room-icon/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-icon/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,6 @@ Needs `ThemeProvider` above it in the tree, and unusually it reads the theme in 
 well as in CSS: the colour of the initials is computed from `isBase`. Without a provider the
 context falls back to the light theme, so the tile keeps light-theme initials on a dark page —
 this is not something a stylesheet override can correct.
-
 
 ## Stories
 

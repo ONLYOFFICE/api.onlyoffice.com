@@ -1,6 +1,6 @@
 ---
 description: "Dashed upload area with a picture, a prompt and a format list, which turns into a loader while the upload runs."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/dropzone/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/dropzone/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,11 +37,10 @@ import Dropzone from "@onlyoffice/apps-ui-kit/components/dropzone";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as Dropzone }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` above it in the tree: the border, the background and the accent on the
 prompt all come from custom properties the provider's `.light` and `.dark` classes declare.
-
 
 ## Stories
 

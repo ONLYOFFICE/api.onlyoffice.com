@@ -1,6 +1,6 @@
 ---
 description: "The file manager's header: breadcrumb title, back arrow, and the row of buttons that acts on the current folder."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/navigation/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/navigation/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Navigation
 
+:::warning[Portal only]
+
+<ThemedImage alt="Navigation" width={469} sources={{ light: require('./navigation-component--primary-light.png').default, dark: require('./navigation-component--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 The file manager's header: breadcrumb title, back arrow, and the row of buttons that acts on the
 current folder. It is built for DocSpace's own document browser and expects that shape of data —
 a folder trail, two context menu getters and a device type you tell it about.
-
-<ThemedImage alt="Navigation" width={469} sources={{ light: require('./navigation-component--primary-light.png').default, dark: require('./navigation-component--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -37,13 +43,12 @@ import Navigation from "@onlyoffice/apps-ui-kit/components/navigation";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as Navigation }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` above it in the tree: every colour it uses is declared only under the `light`
 and `dark` classes that provider puts on `<body>`, and the mirrored arrows come from its `rtl`
 class. It also reads the enclosing [`Section`](../layout/section.md)'s context for the height the
 breadcrumb drop box may use — without one the drop box falls back to its own content height.
-
 
 ## Stories
 

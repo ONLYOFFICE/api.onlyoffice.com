@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/Utils.mdx"
+description: "`utils/` holds the non-visual half of the library: 32 modules of date maths, device detection, URL and file helpers, cookie access, email parsing and the small generic helpers the components lean on."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Utils.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

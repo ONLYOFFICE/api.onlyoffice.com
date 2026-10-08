@@ -1,6 +1,6 @@
 ---
 description: "Menu opened at the pointer through a ref, with submenus, a mobile sheet form and working keyboard navigation."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/context-menu/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/context-menu/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,14 +38,13 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and
 `TranslationProvider` from `@onlyoffice/apps-ui-kit/providers/translation` for the labels the
 menu supplies itself on the mobile sheet.
 
-
 ## Stories
 
 ### Default
 
 Full-featured context menu with icons, separators, nested submenus and a disabled item. Disabled items are dropped from the list by default; `showDisabledItems` keeps them greyed out. Right-click the colored area to open.
 
-<ThemedImage alt="Default" width={216} sources={{ light: require('./context-menu--default-light.png').default, dark: require('./context-menu--default-dark.png').default }} />
+<ThemedImage alt="Default" width={287} sources={{ light: require('./context-menu--default-light.png').default, dark: require('./context-menu--default-dark.png').default }} />
 
 ### Simple Menu
 
@@ -57,13 +56,13 @@ A flat list of actions with one separator and no submenus — the shape most row
 
 Context menu with a backdrop overlay. `withBackdrop` shows the backdrop only while the menu is a bottom sheet (viewports up to 600px), so on a desktop viewport it also needs `ignoreChangeView`, which this story passes. The mobile stories below set both props too, so the sheet and its backdrop appear however short the menu is.
 
-<ThemedImage alt="With Backdrop" width={216} sources={{ light: require('./context-menu--with-backdrop-light.png').default, dark: require('./context-menu--with-backdrop-dark.png').default }} />
+<ThemedImage alt="With Backdrop" width={1024} sources={{ light: require('./context-menu--with-backdrop-light.png').default, dark: require('./context-menu--with-backdrop-dark.png').default }} />
 
 ### With Item Descriptions
 
 Items carrying `description` are laid out as two lines: the label row and an always-visible description under it. The menu grows to the width of its longest description.
 
-<ThemedImage alt="With Item Descriptions" width={216} sources={{ light: require('./context-menu--with-item-descriptions-light.png').default, dark: require('./context-menu--with-item-descriptions-dark.png').default }} />
+<ThemedImage alt="With Item Descriptions" width={471} sources={{ light: require('./context-menu--with-item-descriptions-light.png').default, dark: require('./context-menu--with-item-descriptions-dark.png').default }} />
 
 ### Item Variants
 
@@ -78,13 +77,13 @@ Every kind of item the model supports, in one menu. From top to bottom:
 - **Help Center** — an external link that opens in a new tab (`url`, `target`); `isOutsideLink` adds the arrow.
 - **Delete** — a disabled item. It stays in the list only because of `showDisabledItems`; hover it to read the reason (`getTooltipContent`).
 
-<ThemedImage alt="Item Variants" width={216} sources={{ light: require('./context-menu--item-variants-light.png').default, dark: require('./context-menu--item-variants-dark.png').default }} />
+<ThemedImage alt="Item Variants" width={306} sources={{ light: require('./context-menu--item-variants-light.png').default, dark: require('./context-menu--item-variants-dark.png').default }} />
 
 ### Dynamic Model
 
 `getContextModel` replaces a static `model`: the getter runs each time the menu opens, so the first item shows the time of that open and the favorite item reads the state changed by its own click. Leading and trailing separators in the result are trimmed.
 
-<ThemedImage alt="Dynamic Model" width={216} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
+<ThemedImage alt="Dynamic Model" width={330} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
 
 ### Attached To Document
 
@@ -96,7 +95,7 @@ The blue square has no handler of its own and nothing calls `show`: with `global
 
 The model has sixteen items, but the menu is only 240px tall — about six and a half rows — and the rest scrolls inside it (`maxHeight`). Hover **Move to**: its submenu has twelve folders and is limited the same way, to 160px (`maxHeightLowerSubmenu`).
 
-<ThemedImage alt="Max Height" width={216} sources={{ light: require('./context-menu--max-height-light.png').default, dark: require('./context-menu--max-height-dark.png').default }} />
+<ThemedImage alt="Max Height" width={244} sources={{ light: require('./context-menu--max-height-light.png').default, dark: require('./context-menu--max-height-dark.png').default }} />
 
 ### Mobile With Header
 

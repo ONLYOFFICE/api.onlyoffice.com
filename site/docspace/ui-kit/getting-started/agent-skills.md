@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/AgentSkills.mdx"
+description: "The `ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React app: which component fits the job, what its props are called, how to install and theme it, and a check it runs on the result."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/AgentSkills.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -16,8 +17,8 @@ read it.
 
 ## What the skill takes care of
 
-It knows this kit the way its authors do, with a page for every component copied from the
-kit's own READMEs:
+It knows this kit the way its authors do: it reads each component's own page, in the
+installed package or on the API site, and adds the rules those pages cannot state:
 
 - **The right prop, first time** -- Knows which name each component shows and hides with: `visible · isOpen · opened · open`
 - **Labels and translations in place** -- Mounts the two providers the kit expects: `<ThemeProvider> + <TranslationProvider>`
@@ -81,10 +82,3 @@ cp -r agent-skills/skills/* .agents/skills/
 
 Just describe the task. To force a skill, name it: `/onlyoffice:ui-kit`. A good answer names
 the kit version it read and what `check-usage.mjs` found. If yours doesn't, ask for both.
-
-## For people changing this kit
-
-- **components/*/README.md** (this repository) -> sync-ui-kit.mjs -> **ui-kit skill pages** (generated, never edited) -> the agent
-- **kit source** (defaults, margins, sizes) -> sync-ui-kit-reference -> **plugin-sdk: references/ui-kit.md** (hand-written, checked on demand)
-
-_A README here is read by people and by agents: a stale sentence misleads both, after the next sync._

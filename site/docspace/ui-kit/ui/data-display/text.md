@@ -1,6 +1,6 @@
 ---
 description: "Body text at the kit's size and weight, rendered through whichever element you name."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/text/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/text/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -43,7 +43,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 No provider is required: the component reads only `--text-size` and `--text-weight`, both with
 built-in fallbacks, so it renders correctly on its own.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Checkbox with a label, an indeterminate state and an optional help button."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/checkbox/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/checkbox/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -34,7 +34,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree.
 Without it the box renders in the light palette and ignores the dark theme.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Dims whatever is inside it and stops the mouse reaching it while something is loading."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/loader-wrapper/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/loader-wrapper/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ import { LoaderWrapper } from "@onlyoffice/apps-ui-kit/components/loader-wrapper
 Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 It needs no provider above it: everything it sets is an inline style, and it has no colours.
-
 
 ## Stories
 

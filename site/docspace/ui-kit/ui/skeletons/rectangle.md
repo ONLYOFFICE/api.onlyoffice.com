@@ -1,6 +1,6 @@
 ---
 description: "Rectangular loading placeholder with a sweeping highlight, sized to the content it stands in for."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/rectangle/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rectangle/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 No provider needed: the component draws itself in a fixed black at low opacity and reads
 nothing from the theme.
-
 
 ## Stories
 

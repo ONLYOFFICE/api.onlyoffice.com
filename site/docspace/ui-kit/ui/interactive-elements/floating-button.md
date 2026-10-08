@@ -1,6 +1,6 @@
 ---
 description: "Round corner badge that shows the progress of a background operation and opens its panel."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/floating-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/floating-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -12,7 +12,7 @@ import APITable from '@site/src/components/APITable/APITable';
 Round corner badge that shows the progress of a background operation and opens its panel. It is
 the disc that appears in the bottom corner of the portal while files are uploading.
 
-<ThemedImage alt="FloatingButton" width={69} sources={{ light: require('./floating-button--primary-light.png').default, dark: require('./floating-button--primary-dark.png').default }} />
+<ThemedImage alt="FloatingButton" width={71} sources={{ light: require('./floating-button--primary-light.png').default, dark: require('./floating-button--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -36,14 +36,13 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and specif
 colour scheme: the circle's background is the accent colour, and without one it has no
 background at all unless you pass `color`.
 
-
 ## Stories
 
 ### Default
 
 An upload that has just started, with no progress value yet, so the ring spins; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={71} sources={{ light: require('./floating-button--default-light.png').default, dark: require('./floating-button--default-dark.png').default }} />
+<ThemedImage alt="Default" width={73} sources={{ light: require('./floating-button--default-light.png').default, dark: require('./floating-button--default-dark.png').default }} />
 
 ### With Progress
 
@@ -55,7 +54,7 @@ Floating button showing upload progress at 45%. The circular progress indicator 
 
 A red exclamation mark on the circle's upper edge, for an operation that needs the user's attention, such as one that finished with errors (`alert`).
 
-<ThemedImage alt="With Alert" width={64} sources={{ light: require('./floating-button--with-alert-light.png').default, dark: require('./floating-button--with-alert-dark.png').default }} />
+<ThemedImage alt="With Alert" width={71} sources={{ light: require('./floating-button--with-alert-light.png').default, dark: require('./floating-button--with-alert-dark.png').default }} />
 
 ### Completed
 
@@ -73,7 +72,7 @@ Floating button in stopped state. Shows the minus status icon when the user abor
 
 Floating buttons with different icon variants. Shows the available built-in icons for common operations.
 
-<ThemedImage alt="Icon Variants" width={436} sources={{ light: require('./floating-button--icon-variants-light.png').default, dark: require('./floating-button--icon-variants-dark.png').default }} />
+<ThemedImage alt="Icon Variants" width={443} sources={{ light: require('./floating-button--icon-variants-light.png').default, dark: require('./floating-button--icon-variants-dark.png').default }} />
 
 ### Without Progress
 
@@ -106,7 +105,7 @@ Two buttons under one wrapper that sets the background, the shadow and the icon 
 - **Upload** — the background and the shadow; its icon is one of the accent icons (upload, trash, deletePermanently, other), whose shapes are painted in the background colour, so the icon colour does not reach it
 - **Move** — the icon colour, on an icon that is not an accent one
 
-<ThemedImage alt="Css Customization" width={197} sources={{ light: require('./floating-button--css-customization-light.png').default, dark: require('./floating-button--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={195} sources={{ light: require('./floating-button--css-customization-light.png').default, dark: require('./floating-button--css-customization-dark.png').default }} />
 
 ## Minimal example
 

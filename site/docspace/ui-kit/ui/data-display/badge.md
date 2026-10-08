@@ -1,6 +1,6 @@
 ---
 description: "Small coloured pill for a count or a short marker, announced as a live status region."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/badge/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/badge/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -41,7 +41,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` above it in the tree for the dark theme: the dark background and the
 muted grey are declared under the `dark` class the provider puts on `<body>`. Without a provider
 the badge still renders, in its light colours.
-
 
 ## Stories
 

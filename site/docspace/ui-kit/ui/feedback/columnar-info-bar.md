@@ -1,6 +1,6 @@
 ---
 description: "Bar of label-and-value columns for context the reader does not have to act on."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/columnar-info-bar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/columnar-info-bar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ Needs `ThemeProvider` above it in the tree. Every colour it paints comes from cu
 declared only under the `.light` and `.dark` classes the provider puts on `<body>`; without it
 `background-color`, `color` and the accent border are all invalid and the bar is transparent
 text on the page background.
-
 
 ## Stories
 

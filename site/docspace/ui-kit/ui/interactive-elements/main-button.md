@@ -1,6 +1,6 @@
 ---
 description: "Accent button at the top of a side menu that opens a menu of the things a user can create."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/main-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/main-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,7 +40,6 @@ draws itself with — background, padding, radius, font size and weight — is d
 theme's `.light` / `.dark` class, so without it the button is unstyled text. The menu is a
 [`ContextMenu`](../overlays/context-menu.md), which needs `TranslationProvider` from
 `@onlyoffice/apps-ui-kit/providers/translation` for its own labels.
-
 
 ## Stories
 

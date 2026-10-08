@@ -1,6 +1,6 @@
 ---
 description: "A labelled bar for an operation whose progress you can measure, with a status or error line under it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/progress-bar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/progress-bar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ Needs `ThemeProvider` above it in the tree. The track and fill colours are decla
 `light` and `dark` classes it puts on `<body>`, and a colour that does not resolve leaves the
 element with no background at all — **an invisible bar**, not a default-coloured one. Setting
 `--progress-bar-track` and `--progress-bar-fill` yourself is the other way out.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Settings-page entry: a linked title, a line of explanation, an arrow, and an optional paid badge."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/category-item/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/category-item/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ Needs `ThemeProvider` above it in the tree. The description and arrow colours ar
 under the `.light` and `.dark` classes the provider puts on `<body>`, and the paid badge picks
 its gold in JavaScript from the same provider's context — which falls back to the light theme
 rather than failing, so on a dark page without a provider the badge keeps its light colour.
-
 
 ## Stories
 

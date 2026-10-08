@@ -1,6 +1,6 @@
 ---
 description: "The bar above a file listing: search, a filter panel, a sort menu, a view switch and the chips for what is in force."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/filter/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/filter/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # FilterInput
 
+:::warning[Portal only]
+
+<ThemedImage alt="Filter" width={1014} sources={{ light: require('./filter--primary-light.png').default, dark: require('./filter--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 The bar above a file listing: search, a filter panel, a sort menu, a view switch and the chips for
 what is in force. It holds no filter state of its own — you tell it what is selected through two
 getters and it tells you what changed.
-
-<ThemedImage alt="Filter" width={1014} sources={{ light: require('./filter--primary-light.png').default, dark: require('./filter--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -40,7 +46,6 @@ and reaches the root barrel `@onlyoffice/apps-ui-kit` through it.
 Needs `ThemeProvider` above it in the tree for its colours, and `TranslationProvider` for the
 labels it does not take as props — "Clear all", "All rooms", "Create group" and the group
 management tooltip render as **empty strings** without one.
-
 
 ## Stories
 

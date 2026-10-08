@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/Structure.mdx"
+description: "`@onlyoffice/apps-ui-kit` is a standalone repository."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Structure.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -92,23 +93,6 @@ no sidebar entry of its own: it is described on **Getting started / API**. `hook
 `utils/` and `constants/` likewise have pages under **Getting started** instead of
 stories.
 
-## Component folder
-
-```
-components/button/
-├── index.tsx             # Barrel: the only file consumers import from
-├── Button.tsx            # Component
-├── Button.types.ts       # Props, with JSDoc
-├── Button.enums.ts       # Enumerations (optional)
-├── Button.module.scss    # SCSS module that uses theme tokens (optional)
-├── Button.stories.tsx    # Story (required)
-├── button.test.tsx       # Vitest + Testing Library (optional)
-└── README.md             # Ships in the package
-```
-
-Every component has a story. Some keep it in a subfolder: `table`, `rows` and `tiles`
-do.
-
 ## Published package
 
 ```
@@ -127,32 +111,3 @@ Entry points are `@onlyoffice/apps-ui-kit` (the root barrel),
 `@onlyoffice/apps-ui-kit/<module path>` subpaths, `/styles.css`, `/locales/*` and
 `/styles/*`. Each component imports its own CSS, so `styles.css` is only needed when a
 bundler cannot do that.
-
-## Repository tooling
-
-Kept in the repository only, not shipped:
-
-```
-./
-├── .storybook/       # Configuration, decorators, portal switcher, demo portal (mocks/)
-├── docs/             # These pages, the section samples and the sample apps
-├── scripts/          # Build steps, locale and icon sync, package verification
-├── test/             # Vitest setup, mocks and fixtures
-├── __tests__/        # Playwright visual-regression specs, run against Storybook
-├── biome-plugins/    # Vendored i18n lint rules
-├── css/, fonts/      # Fonts for Storybook and the E2E image
-└── index.ts          # Root entry point
-```
-
-## Tech stack
-
-- **React 19**: a peer dependency, along with React-DOM, i18next and react-i18next
-- **TypeScript 5.9**: strict mode
-- **SCSS Modules + CSS custom properties**: styling and theming, with no runtime CSS-in-JS
-- **Rollup 4**: the library build, ESM only
-- **MobX 6**: state in the portal-coupled stores
-- **i18next 25 / react-i18next 15**: internationalization
-- **Storybook 10**: component documentation
-- **Vitest 4**: unit and component tests; **Playwright** for visual regression
-- **Biome**: linting only. **Prettier** does the formatting
-- **Lefthook**: git hooks; **pnpm** is the package manager

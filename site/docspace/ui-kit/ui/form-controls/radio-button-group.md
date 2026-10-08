@@ -1,6 +1,6 @@
 ---
 description: "A set of radio buttons built from an array, with the selected value handled for you."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/radio-button-group/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/radio-button-group/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -33,7 +33,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 `RadioButtonGroupProps` is not exported — type a wrapper's props yourself.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the buttons' colours.
-
 
 ## Stories
 

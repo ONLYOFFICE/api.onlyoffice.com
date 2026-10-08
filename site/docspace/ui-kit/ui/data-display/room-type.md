@@ -1,6 +1,6 @@
 ---
 description: "Row offering one kind of room, with its glyph, its translated name and its description."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/room-type/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-type/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # RoomType
 
+:::warning[Portal only]
+
+<ThemedImage alt="RoomType" width={1014} sources={{ light: require('./room-type--primary-light.png').default, dark: require('./room-type--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 Row offering one kind of room, with its glyph, its translated name and its description. It is
 the "choose a room type" step of the portal's create-room flow, in three layouts: a card in the
 list, the collapsed button at the top of a dropdown, and an entry inside that dropdown.
-
-<ThemedImage alt="RoomType" width={1014} sources={{ light: require('./room-type--primary-light.png').default, dark: require('./room-type--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -37,12 +43,11 @@ import RoomType from "@onlyoffice/apps-ui-kit/components/room-type";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as RoomType }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `TranslationProvider` above it, with the portal's `Common` namespace, or every label is
 empty and i18next logs a missing-key error. Needs `ThemeProvider` for its borders and hover
 backgrounds.
-
 
 ## Stories
 

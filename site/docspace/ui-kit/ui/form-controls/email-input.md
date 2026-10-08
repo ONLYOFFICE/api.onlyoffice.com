@@ -1,6 +1,6 @@
 ---
 description: "Text field that parses what is typed as an email address and colours itself when it does not parse."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/email-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/email-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -34,7 +34,6 @@ import { EmailInput } from "@onlyoffice/apps-ui-kit/components/email-input";
 Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the field's colours.
-
 
 ## Stories
 

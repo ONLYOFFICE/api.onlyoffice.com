@@ -1,6 +1,6 @@
 ---
 description: "Full-screen error page: an animated landscape, a heading, an explanation and one action button."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/error-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/error-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,6 @@ The component file has a default export, but the folder's `index` re-exports it 
 Needs `ThemeProvider` above it in the tree for the dark theme, where the page background becomes
 black and the muted line lightens. The light values are declared unconditionally, so without a
 provider the page renders correctly in light and never switches.
-
 
 ## Stories
 

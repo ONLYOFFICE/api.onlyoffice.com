@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/sections/Rooms.docs.mdx"
+description: "The Rooms section: the active rooms the caller can see, with a header, the filter bar and the rows."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/sections/Rooms.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -7,6 +8,12 @@ import ThemedImage from '@theme/ThemedImage';
 import APITable from '@site/src/components/APITable/APITable';
 
 # Rooms
+
+:::warning[Portal only]
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
 
 The Rooms section: the active rooms the caller can see, with a header, the filter bar and the
 rows. Search, a sort order and two filter groups narrow the list, and a room — then a folder in

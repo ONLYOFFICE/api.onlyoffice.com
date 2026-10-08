@@ -1,6 +1,6 @@
 ---
 description: "Search field with a magnifier, an optional clear button and a debounced change callback."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/search-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/search-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,7 +36,6 @@ the field's border, icon and background colours.
 
 Note that `SearchInputProps` is **not** exported — the folder's index re-exports only the
 component. Type a wrapper's props yourself, or import the type from its file path.
-
 
 ## Stories
 

@@ -9,6 +9,7 @@ const uiKitSidebar = { items: [
       "type": "doc",
       "id": "docspace/ui-kit/getting-started/index"
     },
+    "collapsed": false,
     "items": [
       {
         "type": "doc",
@@ -17,8 +18,13 @@ const uiKitSidebar = { items: [
       },
       {
         "type": "doc",
-        "id": "docspace/ui-kit/getting-started/installation",
-        "label": "Installation"
+        "id": "docspace/ui-kit/getting-started/installation-and-setup",
+        "label": "Installation and setup"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/ui-kit/getting-started/catalogue",
+        "label": "Catalogue"
       },
       {
         "type": "doc",
@@ -74,6 +80,7 @@ const uiKitSidebar = { items: [
       "type": "doc",
       "id": "docspace/ui-kit/components/index"
     },
+    "collapsed": false,
     "items": [
       {
         "type": "doc",
@@ -120,32 +127,32 @@ const uiKitSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/aiagentselector",
+            "id": "docspace/ui-kit/components/selectors/ai-agent-selector",
             "label": "AIAgentSelector"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/filesselector",
+            "id": "docspace/ui-kit/components/selectors/files-selector",
             "label": "FilesSelector"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/groupsselector",
+            "id": "docspace/ui-kit/components/selectors/groups-selector",
             "label": "GroupsSelector"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/mcpserversselector",
+            "id": "docspace/ui-kit/components/selectors/mcp-servers-selector",
             "label": "MCPServersSelector"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/peopleselector",
+            "id": "docspace/ui-kit/components/selectors/people-selector",
             "label": "PeopleSelector"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/selectors/roomselector",
+            "id": "docspace/ui-kit/components/selectors/room-selector",
             "label": "RoomSelector"
           }
         ]
@@ -160,7 +167,7 @@ const uiKitSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/providers/apiprovider",
+            "id": "docspace/ui-kit/components/providers/api-provider",
             "label": "ApiProvider"
           },
           {
@@ -190,37 +197,37 @@ const uiKitSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/accessrestricted",
+            "id": "docspace/ui-kit/components/errors/access-restricted",
             "label": "AccessRestricted"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/error401",
+            "id": "docspace/ui-kit/components/errors/error-401",
             "label": "Error401"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/error403",
+            "id": "docspace/ui-kit/components/errors/error-403",
             "label": "Error403"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/error404",
+            "id": "docspace/ui-kit/components/errors/error-404",
             "label": "Error404"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/errorinvalidlink",
+            "id": "docspace/ui-kit/components/errors/error-invalid-link",
             "label": "ErrorInvalidLink"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/erroroffline",
+            "id": "docspace/ui-kit/components/errors/error-offline",
             "label": "ErrorOffline"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/components/errors/errorunavailable",
+            "id": "docspace/ui-kit/components/errors/error-unavailable",
             "label": "ErrorUnavailable"
           }
         ]
@@ -234,6 +241,7 @@ const uiKitSidebar = { items: [
       "type": "doc",
       "id": "docspace/ui-kit/ui/index"
     },
+    "collapsed": false,
     "items": [
       {
         "type": "category",
@@ -525,7 +533,7 @@ const uiKitSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/layout-components/articleitem",
+            "id": "docspace/ui-kit/ui/layout-components/article-item",
             "label": "ArticleItem"
           },
           {
@@ -845,7 +853,7 @@ const uiKitSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/rows/rowsskeleton",
+            "id": "docspace/ui-kit/ui/rows/rows-skeleton",
             "label": "RowsSkeleton"
           }
         ]
@@ -860,47 +868,47 @@ const uiKitSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/groupmenuitem",
+            "id": "docspace/ui-kit/ui/table/group-menu-item",
             "label": "GroupMenuItem"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablecell",
+            "id": "docspace/ui-kit/ui/table/table-cell",
             "label": "TableCell"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tableheadercell",
+            "id": "docspace/ui-kit/ui/table/table-header-cell",
             "label": "TableHeaderCell"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablesettings",
+            "id": "docspace/ui-kit/ui/table/table-settings",
             "label": "TableSettings"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablebody",
+            "id": "docspace/ui-kit/ui/table/table-body",
             "label": "TableBody"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablecontainer",
+            "id": "docspace/ui-kit/ui/table/table-container",
             "label": "TableContainer"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablegroupmenu",
+            "id": "docspace/ui-kit/ui/table/table-group-menu",
             "label": "TableGroupMenu"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tableheader",
+            "id": "docspace/ui-kit/ui/table/table-header",
             "label": "TableHeader"
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/table/tablerow",
+            "id": "docspace/ui-kit/ui/table/table-row",
             "label": "TableRow"
           }
         ]
@@ -935,7 +943,7 @@ const uiKitSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "docspace/ui-kit/ui/tiles/tilesskeleton",
+            "id": "docspace/ui-kit/ui/tiles/tiles-skeleton",
             "label": "TilesSkeleton"
           },
           {

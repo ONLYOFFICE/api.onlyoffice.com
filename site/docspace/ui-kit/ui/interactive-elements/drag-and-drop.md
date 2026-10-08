@@ -1,6 +1,6 @@
 ---
 description: "Wrapper that turns whatever is inside it into a drop target for files, with no interface of its own."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/drag-and-drop/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/drag-and-drop/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` above it in the tree: the two drag colours are declared only under the
 `.light` and `.dark` classes the provider puts on `<body>`, so without it the highlight resolves to
 an invalid value and nothing is painted.
-
 
 ## Stories
 

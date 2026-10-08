@@ -1,6 +1,6 @@
 ---
 description: "The thin bar at the top of the page, driven by three static calls rather than by React."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/top-loading-indicator/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/top-loading-indicator/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -12,7 +12,7 @@ import APITable from '@site/src/components/APITable/APITable';
 The thin bar at the top of the page, driven by three static calls rather than by React. It renders
 nothing: it finds an element you put in the document by id and writes a width onto it every 50ms.
 
-<ThemedImage alt="TopLoader" width={244} sources={{ light: require('./top-loading-indicator--primary-light.png').default, dark: require('./top-loading-indicator--primary-dark.png').default }} />
+<ThemedImage alt="TopLoader" width={231} sources={{ light: require('./top-loading-indicator--primary-light.png').default, dark: require('./top-loading-indicator--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -38,14 +38,13 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 It needs no provider, and no React at all — the calls work from a router hook, an interceptor or
 plain script.
 
-
 ## Stories
 
 ### Default
 
 Press **Start Loading** and a thin bar grows along the top of the viewport and stops at 90%; **End Loading** runs it to the full width and clears it, **Cancel** clears it at once (`start`, `end`, `cancel`). Use it to see how long a wait looks before the work finishes.
 
-<ThemedImage alt="Default" width={277} sources={{ light: require('./top-loading-indicator--default-light.png').default, dark: require('./top-loading-indicator--default-dark.png').default }} />
+<ThemedImage alt="Default" width={231} sources={{ light: require('./top-loading-indicator--default-light.png').default, dark: require('./top-loading-indicator--default-dark.png').default }} />
 
 ### Css Customization
 

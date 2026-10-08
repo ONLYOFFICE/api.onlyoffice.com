@@ -1,6 +1,6 @@
 ---
 description: "The blank first screen: a fixed sheet over the whole viewport with the kit's rombs animation on it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/app-loader/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/app-loader/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,12 +36,11 @@ import AppLoader from "@onlyoffice/apps-ui-kit/components/app-loader";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as AppLoader }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 No provider is required — the sheet is white and the animation dark by default. The dark theme's
 dark grey sheet comes from the `dark` class the kit's theme provider puts on `<body>`, so without a
 provider it stays light whatever else the page does.
-
 
 ## Stories
 

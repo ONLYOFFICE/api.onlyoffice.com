@@ -1,6 +1,6 @@
 ---
 description: "The tile shell: an icon that turns into a checkbox, a slot for the content, a three-dot menu and a lower half."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/base-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/base-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -44,7 +44,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 Needs `ThemeProvider` for its colours and `TranslationProvider` for the three-dot button's
 tooltip, which it asks the kit's own translation hook for under the key
 `TitleShowFolderActions`; without it that tooltip is empty.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Round picture of a person or a group, falling back to initials, with an optional role badge and an edit menu."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/avatar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/avatar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,7 +40,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree: the
 backgrounds, the initials' colour and the badge colours come from the theme, and the built-in
 illustration is chosen by whether the theme is the light one.
-
 
 ## Stories
 

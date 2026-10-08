@@ -1,6 +1,6 @@
 ---
 description: "Scrolling list the rows go in, virtualised and paged in as the user reaches the end."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/rows/row-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/row-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 from its file path.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the rows inside it.
-
 
 ## Stories
 

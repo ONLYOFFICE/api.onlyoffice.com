@@ -1,6 +1,6 @@
 ---
 description: "Square icon for an MCP server: its logo, or the first letter of its name on a grey tile."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/mcp-icon/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/mcp-icon/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` above it in the tree for the dark theme, where the tile drops to 10%
 opacity. Without a provider it renders in its light colours.
-
 
 ## Stories
 

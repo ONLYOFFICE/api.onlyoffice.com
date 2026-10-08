@@ -1,6 +1,6 @@
 ---
 description: "The text of a row, laid out by the position of its children rather than by named slots."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/rows/row-content/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/row-content/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ from its file path.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the text colours of
 whatever you put inside.
-
 
 ## Stories
 

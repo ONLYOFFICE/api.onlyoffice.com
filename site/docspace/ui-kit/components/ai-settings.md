@@ -1,6 +1,6 @@
 ---
-description: "The portal's AI settings screens, from `ai-agent/settings`. Each is a page of `@onlyoffice/ai-chat` with the kit's layout applied, and reads and writes the same AI service the chat talks to, so it has to sit inside `AiAgentProviders`. Without a portal the stories run against the demo portal the mock service worker plays, under a banner that says so: its models, assignments and MCP servers are made up, and a change is saved in memory only, until the page is reloaded.\n\n```tsx\nimport AiAgentProviders from \"@onlyoffice/apps-ui-kit/ai-agent/providers\";\nimport { AiModels } from \"@onlyoffice/apps-ui-kit/ai-agent/settings\";\n\n<AiAgentProviders locale=\"en\" isAvailable>\n  <AiModels />\n</AiAgentProviders>;\n```"
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/ai-agent/settings/AiSettings.stories.tsx"
+description: "The portal's AI settings screens, from `ai-agent/settings`."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/ai-agent/settings/AiSettings.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -8,6 +8,12 @@ import ThemedImage from '@theme/ThemedImage';
 import APITable from '@site/src/components/APITable/APITable';
 
 # AI Settings
+
+:::warning[Portal only]
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
 
 The portal's AI settings screens, from `ai-agent/settings`. Each is a page of `@onlyoffice/ai-chat` with the kit's layout applied, and reads and writes the same AI service the chat talks to, so it has to sit inside `AiAgentProviders`. Without a portal the stories run against the demo portal the mock service worker plays, under a banner that says so: its models, assignments and MCP servers are made up, and a change is saved in memory only, until the page is reloaded.
 

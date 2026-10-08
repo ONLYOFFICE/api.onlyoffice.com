@@ -1,6 +1,6 @@
 ---
 description: "Tile for a room: the logo and name on top, and the room's tags along the bottom."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/room-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/room-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 Needs `ThemeProvider` for its colours and `TranslationProvider` for two labels it asks the kit's
 own translation hook for: the three-dot button's tooltip, and the `NoTags` line an AI agent gets
 when it has no tags.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Labelled action button with an optional icon, a loading state and a tooltip, in a primary or secondary variant."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,7 +40,6 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in
 Without it the button still renders, but always in the light palette and without the
 portal's accent colour, because the dark rules are scoped under a global `.dark` class the
 provider sets.
-
 
 ## Stories
 

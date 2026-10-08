@@ -1,6 +1,6 @@
 ---
 description: "Renders a node into another part of the document, after mount, keeping it inside the React tree."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/portal/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/portal/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ import { Portal } from "@onlyoffice/apps-ui-kit/components/portal";
 Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 No provider needed.
-
 
 ## Stories
 

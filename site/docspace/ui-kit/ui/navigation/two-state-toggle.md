@@ -1,6 +1,6 @@
 ---
 description: "Pill that switches the portal between its classic view and the new dashboard."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/two-state-toggle/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/two-state-toggle/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # TwoStateToggle
 
+:::warning[Portal only]
+
+<ThemedImage alt="TwoStateToggle" width={276} sources={{ light: require('./two-state-toggle--primary-light.png').default, dark: require('./two-state-toggle--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 Pill that switches the portal between its classic view and the new dashboard. It is
 portal-internal: the destination URLs and the storage key are written into the component, so it
 does nothing useful outside ONLYOFFICE's own application.
-
-<ThemedImage alt="TwoStateToggle" width={276} sources={{ light: require('./two-state-toggle--primary-light.png').default, dark: require('./two-state-toggle--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -35,7 +41,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`. Every string it prints is
 an English default you are expected to replace; nothing here is translated for you.
-
 
 ## Stories
 

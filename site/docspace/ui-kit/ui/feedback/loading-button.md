@@ -1,6 +1,6 @@
 ---
 description: "16px progress ring with a cross in the middle, for cancelling what it is measuring."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/loading-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/loading-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -12,7 +12,7 @@ import APITable from '@site/src/components/APITable/APITable';
 16px progress ring with a cross in the middle, for cancelling what it is measuring. It is the
 marker the portal puts next to a row while that row's file is uploading.
 
-<ThemedImage alt="LoadingButton" width={34} sources={{ light: require('./loading-button--primary-light.png').default, dark: require('./loading-button--primary-dark.png').default }} />
+<ThemedImage alt="LoadingButton" width={38} sources={{ light: require('./loading-button--primary-light.png').default, dark: require('./loading-button--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -35,20 +35,19 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, which supplies the accent
 colour the ring is drawn in.
 
-
 ## Stories
 
 ### Default
 
 The ring as it first appears, before any progress is known: at the default `percent` of 0 a half ring spins. Change the percentage, drop the cross or pick colours live in the Controls panel below.
 
-<ThemedImage alt="Default" width={37} sources={{ light: require('./loading-button--default-light.png').default, dark: require('./loading-button--default-dark.png').default }} />
+<ThemedImage alt="Default" width={38} sources={{ light: require('./loading-button--default-light.png').default, dark: require('./loading-button--default-dark.png').default }} />
 
 ### Progress Stages
 
 Five rings labelled with their `percent`, to show how far the arc reaches at each stage: at 0% a half ring spins, the look for an operation whose size is not known yet, and from 25% on the arc grows clockwise until it closes at 100%.
 
-<ThemedImage alt="Progress Stages" width={351} sources={{ light: require('./loading-button--progress-stages-light.png').default, dark: require('./loading-button--progress-stages-dark.png').default }} />
+<ThemedImage alt="Progress Stages" width={352} sources={{ light: require('./loading-button--progress-stages-light.png').default, dark: require('./loading-button--progress-stages-dark.png').default }} />
 
 ### In Conversion
 

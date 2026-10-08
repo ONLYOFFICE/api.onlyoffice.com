@@ -1,6 +1,6 @@
 ---
 description: "Icon that opens a menu of actions, built afresh from a callback each time it is clicked."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/context-menu-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/context-menu-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the icon and menu
 colours, and `TranslationProvider` from `@onlyoffice/apps-ui-kit/providers/translation` because
 the items are [`DropDownItem`](../overlays/drop-down-item.md)s.
-
 
 ## Stories
 

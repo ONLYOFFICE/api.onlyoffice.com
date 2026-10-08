@@ -1,6 +1,6 @@
 ---
 description: "Installs the i18next instance the eleven components with labels of their own read from."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/providers/translation/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/providers/translation/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -36,7 +36,6 @@ import { TranslationProvider } from "@onlyoffice/apps-ui-kit/providers/translati
 Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs no provider of its own.
-
 
 ## Stories
 

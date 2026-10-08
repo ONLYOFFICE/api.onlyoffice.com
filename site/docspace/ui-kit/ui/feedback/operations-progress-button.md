@@ -1,6 +1,6 @@
 ---
 description: "Corner badge that reports every background operation of the portal and lists them when there is more than one."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/operations-progress-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/operations-progress-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # OperationsProgressButton
 
+:::warning[Portal only]
+
+<ThemedImage alt="OperationsProgressButton" width={64} sources={{ light: require('./operations-progress-button--primary-light.png').default, dark: require('./operations-progress-button--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 Corner badge that reports every background operation of the portal and lists them when there
 is more than one. It is the disc that appears while files upload, convert, copy or move, with
 the tooltip that names what is running.
-
-<ThemedImage alt="OperationsProgressButton" width={64} sources={{ light: require('./operations-progress-button--primary-light.png').default, dark: require('./operations-progress-button--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -37,14 +43,13 @@ import OperationsProgressButton from "@onlyoffice/apps-ui-kit/components/operati
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as OperationsProgressButton }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and
 `TranslationProvider` from `@onlyoffice/apps-ui-kit/providers/translation` carrying the
 `Common` namespace: the tooltip is built from `Processes`, `StoppedOperation`,
 `ErrorUploadingFiles`, `ErrorOperation`, `SuccessOperation` and `DropToLocation`, and without
 them it is empty and an i18n error is logged.
-
 
 ## Stories
 
@@ -79,7 +84,7 @@ Keeps several operations behind one button: it shows three dots and the tooltip 
 - **Uploading files**, **Copying documents** — secondary operations, each with a spinner (`operations`)
 - **Moving folder** — an operation with its own panel, with a progress ring and a cancel cross; click the row to open its panel (`panelOperations`, `showPanel`)
 
-<ThemedImage alt="Multiple Operations" width={75} sources={{ light: require('./operations-progress-button--multiple-operations-light.png').default, dark: require('./operations-progress-button--multiple-operations-dark.png').default }} />
+<ThemedImage alt="Multiple Operations" width={74} sources={{ light: require('./operations-progress-button--multiple-operations-light.png').default, dark: require('./operations-progress-button--multiple-operations-dark.png').default }} />
 
 ### Stopped Operation
 

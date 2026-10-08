@@ -1,6 +1,6 @@
 ---
 description: "Floating hint attached to one or more anchors, rendered in a portal and positioned to stay in the viewport."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tooltip/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tooltip/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,14 +40,13 @@ the background and text colours.
 `RootTooltip`, `TooltipContainer` and `withTooltip` come from the same folder and are described
 under [Sub-components](#sub-components).
 
-
 ## Stories
 
 ### Default
 
 The basic setup: the anchor names the tooltip with `data-tooltip-id` and carries its text in `data-tooltip-content`. Hover the link to see the tooltip follow the pointer (`float`); change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={75} sources={{ light: require('./tooltip--default-light.png').default, dark: require('./tooltip--default-dark.png').default }} />
+<ThemedImage alt="Default" width={116} sources={{ light: require('./tooltip--default-light.png').default, dark: require('./tooltip--default-dark.png').default }} />
 
 ### Custom Styling
 
@@ -77,7 +76,7 @@ For a list where every row needs its own hint: hover each name to see one toolti
 
 For content written once in the markup rather than on each anchor: hover the link, which has no `data-tooltip-content`, to see the tooltip's own children.
 
-<ThemedImage alt="Fixed Content" width={75} sources={{ light: require('./tooltip--fixed-content-light.png').default, dark: require('./tooltip--fixed-content-dark.png').default }} />
+<ThemedImage alt="Fixed Content" width={296} sources={{ light: require('./tooltip--fixed-content-light.png').default, dark: require('./tooltip--fixed-content-dark.png').default }} />
 
 ### Anchored By Selector
 
@@ -89,7 +88,7 @@ For anchors that cannot carry a `data-tooltip-id`: hover either link to see the 
 
 For a tooltip with a link inside: hover the anchor, then move the pointer into the tooltip; it stays open, so the link can be clicked (`clickable`).
 
-<ThemedImage alt="Clickable Content" width={75} sources={{ light: require('./tooltip--clickable-content-light.png').default, dark: require('./tooltip--clickable-content-dark.png').default }} />
+<ThemedImage alt="Clickable Content" width={274} sources={{ light: require('./tooltip--clickable-content-light.png').default, dark: require('./tooltip--clickable-content-dark.png').default }} />
 
 ### Delayed Appearance
 

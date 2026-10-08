@@ -1,6 +1,6 @@
 ---
 description: "White card of a fixed width that the portal's sign-in and wizard forms sit on."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/form-wrapper/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/form-wrapper/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,7 +36,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`: the background and the
 shadow are chosen by the `light` and `dark` classes the provider sets.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Panel for picking one or many things out of a list too long to render at once."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/selector/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/selector/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -41,7 +41,6 @@ The folder also exports the three skeletons its own props ask for — `RowLoader
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and `TranslationProvider`
 from `@onlyoffice/apps-ui-kit/providers/translation` for the strings Selector prints on its own:
 the user-type labels beside each person, and the empty screen's "Back" and "Clear filter" links.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "A date chip and a time beside it, editable in place."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/date-time-picker/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/date-time-picker/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,7 +36,6 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`.
 
 Dates are Luxon `DateTime` objects. `translations` is required and is not filled in for you:
 without it the AM/PM drop-down has blank options.
-
 
 ## Stories
 

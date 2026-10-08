@@ -1,6 +1,6 @@
 ---
 description: "The portal's white-label logo, fetched from the DocSpace server and swapped for the theme."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/portal-logo/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/portal-logo/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # PortalLogo
 
+:::warning[Portal only]
+
+<ThemedImage alt="PortalLogo" width={402} sources={{ light: require('./portal-logo--primary-light.png').default, dark: require('./portal-logo--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 The portal's white-label logo, fetched from the DocSpace server and swapped for the theme. It is
 the mark at the top of the login and confirmation pages: one `<img>` pointed at the portal's
 `logo.ashx`, with a bundled fallback when that request fails.
-
-<ThemedImage alt="PortalLogo" width={402} sources={{ light: require('./portal-logo--primary-light.png').default, dark: require('./portal-logo--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -41,7 +47,6 @@ The component file has a default export, but the folder's `index` re-exports it 
 Needs `ThemeProvider` above it in the tree, and it reads the theme in JavaScript: `isBase`
 becomes the `dark` query parameter, so the request itself differs between themes. Without a
 provider the context falls back to light and the dark logo is never requested.
-
 
 ## Stories
 

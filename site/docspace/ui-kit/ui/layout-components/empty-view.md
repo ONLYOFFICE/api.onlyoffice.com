@@ -1,6 +1,6 @@
 ---
 description: "Centred empty state with an icon, a title, a description and a list of things the user can do next."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/empty-view/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/empty-view/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,7 +36,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree for
 the title, description and item colours.
-
 
 ## Stories
 

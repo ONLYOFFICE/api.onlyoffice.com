@@ -1,6 +1,6 @@
 ---
 description: "Grey note above a screen's content: an icon, a bold line and a paragraph, with an optional close cross."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/public-room-bar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/public-room-bar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,13 +37,12 @@ import PublicRoomBar from "@onlyoffice/apps-ui-kit/components/public-room-bar";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as PublicRoomBar }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` above it in the tree. The background and the two text colours are declared
 only under the `.light` and `.dark` classes the provider puts on `<body>`; without it the bar
 has no background at all and both lines fall back to the container's black, which is unreadable
 on a dark page.
-
 
 ## Stories
 

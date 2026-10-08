@@ -1,6 +1,6 @@
 ---
 description: "Hex field with a swatch that opens a colour picker."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/color-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/color-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -36,7 +36,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and `TranslationProvider`
 from `@onlyoffice/apps-ui-kit/providers/translation` for the picker's "Custom" title.
-
 
 ## Stories
 

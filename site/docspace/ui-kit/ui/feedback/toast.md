@@ -1,6 +1,6 @@
 ---
 description: "Container the transient notifications are stacked in, driven by the imperative `toastr`."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/toast/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/toast/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,44 +39,43 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the col
 `TranslationProvider` from `@onlyoffice/apps-ui-kit/providers/translation` for the default
 titles ("Done", "Warning", "Alert", "Info") — without it those come out empty.
 
-
 ## Stories
 
 ### Default
 
 The call most screens make: a short message after an action, with the title left to the type. Click **Show Toast** to open it, and pick another type or change the message, title or timeout live in the Controls panel below.
 
-<ThemedImage alt="Default" width={145} sources={{ light: require('./toast--default-light.png').default, dark: require('./toast--default-dark.png').default }} />
+<ThemedImage alt="Default" width={328} sources={{ light: require('./toast--default-light.png').default, dark: require('./toast--default-dark.png').default }} />
 
 ### Success
 
 Confirms that an action the user started has finished, such as a save or a move. Click **Show Toast** to open it, and change the message, title or timeout live in the Controls panel below.
 
-<ThemedImage alt="Success" width={145} sources={{ light: require('./toast--success-light.png').default, dark: require('./toast--success-dark.png').default }} />
+<ThemedImage alt="Success" width={328} sources={{ light: require('./toast--success-light.png').default, dark: require('./toast--success-dark.png').default }} />
 
 ### Error Toast
 
 Tells the user that an action failed. Click **Show Toast** to open it; in code, pass the caught error itself and the message is read from it.
 
-<ThemedImage alt="Error Toast" width={145} sources={{ light: require('./toast--error-toast-light.png').default, dark: require('./toast--error-toast-dark.png').default }} />
+<ThemedImage alt="Error Toast" width={328} sources={{ light: require('./toast--error-toast-light.png').default, dark: require('./toast--error-toast-dark.png').default }} />
 
 ### Warning
 
 Asks the user to look at something before going on, without reporting a failure. Click **Show Toast** to open it.
 
-<ThemedImage alt="Warning" width={145} sources={{ light: require('./toast--warning-light.png').default, dark: require('./toast--warning-dark.png').default }} />
+<ThemedImage alt="Warning" width={328} sources={{ light: require('./toast--warning-light.png').default, dark: require('./toast--warning-dark.png').default }} />
 
 ### Info
 
 Reports something neutral the user may want to know, such as a finished background task. Click **Show Toast** to open it.
 
-<ThemedImage alt="Info" width={145} sources={{ light: require('./toast--info-light.png').default, dark: require('./toast--info-dark.png').default }} />
+<ThemedImage alt="Info" width={328} sources={{ light: require('./toast--info-light.png').default, dark: require('./toast--info-dark.png').default }} />
 
 ### With Close Button
 
 For a message the user must read before it goes: the toast stays until its cross is clicked (`timeout` 0, `withCross`), and a click on the toast itself no longer closes it.
 
-<ThemedImage alt="With Close Button" width={145} sources={{ light: require('./toast--with-close-button-light.png').default, dark: require('./toast--with-close-button-dark.png').default }} />
+<ThemedImage alt="With Close Button" width={328} sources={{ light: require('./toast--with-close-button-light.png').default, dark: require('./toast--with-close-button-dark.png').default }} />
 
 ### All Types
 
@@ -88,19 +87,19 @@ Compares the four types side by side: **Info** on top, as the newest, then **War
 
 A message that needs more than a line of text, such as a link to what the action produced: any React node passed as the first argument is rendered as it is, under the title.
 
-<ThemedImage alt="Custom Content" width={145} sources={{ light: require('./toast--custom-content-light.png').default, dark: require('./toast--custom-content-dark.png').default }} />
+<ThemedImage alt="Custom Content" width={328} sources={{ light: require('./toast--custom-content-light.png').default, dark: require('./toast--custom-content-dark.png').default }} />
 
 ### Default Titles
 
 Most calls need no title of their own. **No title at all** — the info toast, given `null` as its title, shows the message alone. **Done** — the success toast below it left the title out, so the translated word for its type is shown.
 
-<ThemedImage alt="Default Titles" width={151} sources={{ light: require('./toast--default-titles-light.png').default, dark: require('./toast--default-titles-dark.png').default }} />
+<ThemedImage alt="Default Titles" width={328} sources={{ light: require('./toast--default-titles-light.png').default, dark: require('./toast--default-titles-dark.png').default }} />
 
 ### Right To Left
 
 Toasts in a right-to-left layout: they open in the top-left corner and slide in from the left, the icon moves to the right of the text and the cross to the left. The toasts are portalled outside the story, so the direction comes from the document, set here by the Direction toolbar, and a `dir` on a wrapper of yours would not reach them.
 
-<ThemedImage alt="Right To Left" width={145} sources={{ light: require('./toast--right-to-left-light.png').default, dark: require('./toast--right-to-left-dark.png').default }} />
+<ThemedImage alt="Right To Left" width={328} sources={{ light: require('./toast--right-to-left-light.png').default, dark: require('./toast--right-to-left-dark.png').default }} />
 
 ### Css Customization
 

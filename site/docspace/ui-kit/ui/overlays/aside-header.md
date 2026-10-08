@@ -1,6 +1,6 @@
 ---
 description: "Title bar of a side panel or a dialog, with a back arrow, extra icons and the close cross."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/aside/aside-header/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/aside/aside-header/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ the root barrel `@onlyoffice/apps-ui-kit` as well.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree for
 the title colour and the border colour.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "Drop-down for choosing an access level, with an icon, a description and a paid badge on each row."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/access-right-select/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/access-right-select/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`, and `TranslationProvider`
 from `@onlyoffice/apps-ui-kit/providers/translation` because a refused choice is reported
 through a toast. Mount [`Toast`](../feedback/toast.md) once in your app, or that message is lost.
-
 
 ## Stories
 

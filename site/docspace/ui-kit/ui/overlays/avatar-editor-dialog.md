@@ -1,6 +1,6 @@
 ---
 description: "Modal that frames an uploaded picture: the kit's crop window between a title and a save and cancel pair."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/avatar-editor-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/avatar-editor-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # AvatarEditorDialog
 
+:::warning[Portal only]
+
+<ThemedImage alt="AvatarEditorDialog" width={1024} sources={{ light: require('./avatar-editor-dialog--primary-light.png').default, dark: require('./avatar-editor-dialog--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 Modal that frames an uploaded picture: the kit's crop window between a title and a save and
 cancel pair. It owns the preview it hands back on save, and nothing else — the picture, the crop
 and the open state all stay in your code.
-
-<ThemedImage alt="AvatarEditorDialog" width={1024} sources={{ light: require('./avatar-editor-dialog--primary-light.png').default, dark: require('./avatar-editor-dialog--primary-dark.png').default }} />
 
 **Portal-internal.** `t` is required, and the two footer labels and the editor's replace control
 are asked for by key, so the component needs the portal's translation context. Outside DocSpace,
@@ -45,7 +51,6 @@ Needs `ThemeProvider` above it in the tree for the dialog's own colours and for 
 which is chosen in JavaScript from the theme context. `TranslationProvider` — or a `t` of your
 own — supplies `Common:SaveButton`, `Common:CancelButton` and `Common:ChooseAnother`; without it
 those three labels are empty.
-
 
 ## Stories
 

@@ -1,6 +1,6 @@
 ---
 description: "One row of a dropdown menu: a label, an optional icon and badges, or a separator."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/drop-down-item/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/drop-down-item/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -38,7 +38,6 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the tex
 icon colours, and `TranslationProvider` from `@onlyoffice/apps-ui-kit/providers/translation` for
 the default text of the paid badge — pass `paidLabel` if you would rather not depend on it.
 
-
 ## Stories
 
 ### Default
@@ -51,7 +50,7 @@ A plain item with a label, the row a menu is made of; change any other prop live
 
 Each item reads as two lines: the label, and under it an always-visible explanation of what choosing it means (`description`). Use it where picking an item has consequences the label alone cannot convey.
 
-<ThemedImage alt="With Description" width={242} sources={{ light: require('./drop-down-item--with-description-light.png').default, dark: require('./drop-down-item--with-description-dark.png').default }} />
+<ThemedImage alt="With Description" width={266} sources={{ light: require('./drop-down-item--with-description-light.png').default, dark: require('./drop-down-item--with-description-dark.png').default }} />
 
 ### Item Types
 
@@ -87,7 +86,7 @@ Any element can sit at the end of the row, such as the keyboard shortcut of a co
 
 A nested menu level needs a way back: **Header with Back** shows an arrow before the title (`isHeader`, `withHeaderArrow`); click it to see `headerArrowAction` in the Actions panel.
 
-<ThemedImage alt="Header With Arrow" width={172} sources={{ light: require('./drop-down-item--header-with-arrow-light.png').default, dark: require('./drop-down-item--header-with-arrow-dark.png').default }} />
+<ThemedImage alt="Header With Arrow" width={266} sources={{ light: require('./drop-down-item--header-with-arrow-light.png').default, dark: require('./drop-down-item--header-with-arrow-dark.png').default }} />
 
 ### With Text Overflow
 

@@ -1,6 +1,6 @@
 ---
 description: "Dialog rendered in a portal, as a centred modal or a side panel, assembled from Header, Body, Footer and Container slots."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/modal-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/modal-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,116 +42,115 @@ for the surface, backdrop and border colours.
 Note that `ModalDialogProps` is **not** exported — `index.tsx` re-exports only the values
 listed above. Type a wrapper's props yourself, or import the type from its file path.
 
-
 ## Stories
 
 ### Default
 
 The centered modal, for a short task that needs an answer before the page is used again. Click Show to open it and close it with the cross, Escape or a click on the dimmed page; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={124} sources={{ light: require('./modal-dialog--default-light.png').default, dark: require('./modal-dialog--default-dark.png').default }} />
+<ThemedImage alt="Default" width={1024} sources={{ light: require('./modal-dialog--default-light.png').default, dark: require('./modal-dialog--default-dark.png').default }} />
 
 ### Aside Display
 
 A panel that slides in from the side of the window, for longer content such as settings (`displayType`). On a phone-sized window it rises from the bottom instead.
 
-<ThemedImage alt="Aside Display" width={170} sources={{ light: require('./modal-dialog--aside-display-light.png').default, dark: require('./modal-dialog--aside-display-dark.png').default }} />
+<ThemedImage alt="Aside Display" width={1024} sources={{ light: require('./modal-dialog--aside-display-light.png').default, dark: require('./modal-dialog--aside-display-dark.png').default }} />
 
 ### Loading State
 
 While the content is being fetched, the header, body and footer give way to a skeleton of the same size (`isLoading`), so the dialog does not jump when the data arrives.
 
-<ThemedImage alt="Loading State" width={124} sources={{ light: require('./modal-dialog--loading-state-light.png').default, dark: require('./modal-dialog--loading-state-dark.png').default }} />
+<ThemedImage alt="Loading State" width={1024} sources={{ light: require('./modal-dialog--loading-state-light.png').default, dark: require('./modal-dialog--loading-state-dark.png').default }} />
 
 ### Aside Loading State
 
 The side panel's own skeleton, a header bar and rows of placeholders, shown while its content loads (`isLoading`).
 
-<ThemedImage alt="Aside Loading State" width={170} sources={{ light: require('./modal-dialog--aside-loading-state-light.png').default, dark: require('./modal-dialog--aside-loading-state-dark.png').default }} />
+<ThemedImage alt="Aside Loading State" width={1024} sources={{ light: require('./modal-dialog--aside-loading-state-light.png').default, dark: require('./modal-dialog--aside-loading-state-dark.png').default }} />
 
 ### Large Modal
 
 Large modal variant with increased width (520px) and max-height (400px).
 
-<ThemedImage alt="Large Modal" width={124} sources={{ light: require('./modal-dialog--large-modal-light.png').default, dark: require('./modal-dialog--large-modal-dark.png').default }} />
+<ThemedImage alt="Large Modal" width={1024} sources={{ light: require('./modal-dialog--large-modal-light.png').default, dark: require('./modal-dialog--large-modal-dark.png').default }} />
 
 ### Huge Modal
 
 Huge modal variant with auto max width and height. Requires autoMaxWidth to be enabled.
 
-<ThemedImage alt="Huge Modal" width={124} sources={{ light: require('./modal-dialog--huge-modal-light.png').default, dark: require('./modal-dialog--huge-modal-dark.png').default }} />
+<ThemedImage alt="Huge Modal" width={1024} sources={{ light: require('./modal-dialog--huge-modal-light.png').default, dark: require('./modal-dialog--huge-modal-dark.png').default }} />
 
 ### Auto Size Modal
 
 Modal with automatic max width and height that adjusts to content size.
 
-<ThemedImage alt="Auto Size Modal" width={124} sources={{ light: require('./modal-dialog--auto-size-modal-light.png').default, dark: require('./modal-dialog--auto-size-modal-dark.png').default }} />
+<ThemedImage alt="Auto Size Modal" width={1024} sources={{ light: require('./modal-dialog--auto-size-modal-light.png').default, dark: require('./modal-dialog--auto-size-modal-dark.png').default }} />
 
 ### With Footer Border
 
 Modal with a visible border between the body and footer sections for visual separation.
 
-<ThemedImage alt="With Footer Border" width={124} sources={{ light: require('./modal-dialog--with-footer-border-light.png').default, dark: require('./modal-dialog--with-footer-border-dark.png').default }} />
+<ThemedImage alt="With Footer Border" width={1024} sources={{ light: require('./modal-dialog--with-footer-border-light.png').default, dark: require('./modal-dialog--with-footer-border-dark.png').default }} />
 
 ### Non Closeable
 
 For a choice the user has to make: there is no close cross, and Escape and a click on the dimmed page do nothing (`isCloseable={false}`). Only the footer buttons close it here.
 
-<ThemedImage alt="Non Closeable" width={124} sources={{ light: require('./modal-dialog--non-closeable-light.png').default, dark: require('./modal-dialog--non-closeable-dark.png').default }} />
+<ThemedImage alt="Non Closeable" width={1024} sources={{ light: require('./modal-dialog--non-closeable-light.png').default, dark: require('./modal-dialog--non-closeable-dark.png').default }} />
 
 ### Aside Scroll Locked
 
 The same long panel with its scrolling switched off (`isScrollLocked`), for a moment when the content must stay where it is, such as while a menu inside it is open.
 
-<ThemedImage alt="Aside Scroll Locked" width={170} sources={{ light: require('./modal-dialog--aside-scroll-locked-light.png').default, dark: require('./modal-dialog--aside-scroll-locked-dark.png').default }} />
+<ThemedImage alt="Aside Scroll Locked" width={1024} sources={{ light: require('./modal-dialog--aside-scroll-locked-light.png').default, dark: require('./modal-dialog--aside-scroll-locked-dark.png').default }} />
 
 ### Aside With Body Scroll
 
 Aside panel with body scroll enabled, allowing content to scroll within the panel.
 
-<ThemedImage alt="Aside With Body Scroll" width={170} sources={{ light: require('./modal-dialog--aside-with-body-scroll-light.png').default, dark: require('./modal-dialog--aside-with-body-scroll-dark.png').default }} />
+<ThemedImage alt="Aside With Body Scroll" width={1024} sources={{ light: require('./modal-dialog--aside-with-body-scroll-light.png').default, dark: require('./modal-dialog--aside-with-body-scroll-dark.png').default }} />
 
 ### Aside Non Closeable
 
 The side panel with no close cross; Escape and a click on the dimmed page do nothing either (`isCloseable={false}`). Only the footer buttons close it here.
 
-<ThemedImage alt="Aside Non Closeable" width={170} sources={{ light: require('./modal-dialog--aside-non-closeable-light.png').default, dark: require('./modal-dialog--aside-non-closeable-dark.png').default }} />
+<ThemedImage alt="Aside Non Closeable" width={1024} sources={{ light: require('./modal-dialog--aside-non-closeable-light.png').default, dark: require('./modal-dialog--aside-non-closeable-dark.png').default }} />
 
 ### With Back Button
 
 A panel reached from another one gets a back arrow before its title (`isBackButton`). The arrow and Backspace pressed outside a text field both call `onBackClick`; watch the Actions panel.
 
-<ThemedImage alt="With Back Button" width={170} sources={{ light: require('./modal-dialog--with-back-button-light.png').default, dark: require('./modal-dialog--with-back-button-dark.png').default }} />
+<ThemedImage alt="With Back Button" width={1024} sources={{ light: require('./modal-dialog--with-back-button-light.png').default, dark: require('./modal-dialog--with-back-button-dark.png').default }} />
 
 ### Backdrop Click Disabled
 
 A click on the dimmed page leaves the dialog open (`closeOnBackdropClick={false}`), so a stray click cannot throw away what the user typed. The close cross and Escape still close it.
 
-<ThemedImage alt="Backdrop Click Disabled" width={124} sources={{ light: require('./modal-dialog--backdrop-click-disabled-light.png').default, dark: require('./modal-dialog--backdrop-click-disabled-dark.png').default }} />
+<ThemedImage alt="Backdrop Click Disabled" width={1024} sources={{ light: require('./modal-dialog--backdrop-click-disabled-light.png').default, dark: require('./modal-dialog--backdrop-click-disabled-dark.png').default }} />
 
 ### Form Dialog
 
 A dialog that collects a value: Enter in the field or the Save button submits it (`withForm`), and `onSubmit` receives the event with the page reload already prevented; watch the Actions panel.
 
-<ThemedImage alt="Form Dialog" width={124} sources={{ light: require('./modal-dialog--form-dialog-light.png').default, dark: require('./modal-dialog--form-dialog-dark.png').default }} />
+<ThemedImage alt="Form Dialog" width={1024} sources={{ light: require('./modal-dialog--form-dialog-light.png').default, dark: require('./modal-dialog--form-dialog-dark.png').default }} />
 
 ### Two Footer Rows
 
 Three actions do not fit one row of a 400px dialog, so the footer stacks its children (`isDoubleFooterLine`): each `<div>` inside it becomes a row of its own, here the main action above the other two.
 
-<ThemedImage alt="Two Footer Rows" width={124} sources={{ light: require('./modal-dialog--two-footer-rows-light.png').default, dark: require('./modal-dialog--two-footer-rows-dark.png').default }} />
+<ThemedImage alt="Two Footer Rows" width={1024} sources={{ light: require('./modal-dialog--two-footer-rows-light.png').default, dark: require('./modal-dialog--two-footer-rows-dark.png').default }} />
 
 ### Aside With Container
 
 A side panel that swaps in a second view without closing: Open details shows the `ModalDialog.Container` slot in place of the header, body and footer (`containerVisible`), and Back returns. The slot is ignored in the centered modal.
 
-<ThemedImage alt="Aside With Container" width={170} sources={{ light: require('./modal-dialog--aside-with-container-light.png').default, dark: require('./modal-dialog--aside-with-container-dark.png').default }} />
+<ThemedImage alt="Aside With Container" width={1024} sources={{ light: require('./modal-dialog--aside-with-container-light.png').default, dark: require('./modal-dialog--aside-with-container-dark.png').default }} />
 
 ### Right To Left
 
 The side panel under a right-to-left interface: it is attached to the left edge and slides in from there, the back arrow points the other way and the close cross sits on the left of the header. The dialog renders outside the story's `<div dir="rtl">`, so it takes the direction from the theme's `interfaceDirection` (the Direction toolbar).
 
-<ThemedImage alt="Right To Left" width={170} sources={{ light: require('./modal-dialog--right-to-left-light.png').default, dark: require('./modal-dialog--right-to-left-dark.png').default }} />
+<ThemedImage alt="Right To Left" width={1024} sources={{ light: require('./modal-dialog--right-to-left-light.png').default, dark: require('./modal-dialog--right-to-left-dark.png').default }} />
 
 ### Css Customization
 
@@ -160,7 +159,7 @@ Every overridable variable in use -- the variables are listed under CSS variable
 - **Show** — the modal with `withFooterBorder`: colors from its `style` prop, and radius, width, height cap, paddings, gaps, backdrop and a centered title with no line under it from the page
 - **Show Aside** — the side panel with `withBorder`, for `--modal-dialog-aside-border` and `--modal-dialog-aside-default-width`
 
-<ThemedImage alt="Css Customization" width={286} sources={{ light: require('./modal-dialog--css-customization-light.png').default, dark: require('./modal-dialog--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={1024} sources={{ light: require('./modal-dialog--css-customization-light.png').default, dark: require('./modal-dialog--css-customization-dark.png').default }} />
 
 ## Minimal example
 

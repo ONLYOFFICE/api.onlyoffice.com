@@ -1,6 +1,6 @@
 ---
 description: "Caption for a form field, with an optional required asterisk and an error colour."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/label/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/label/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -35,7 +35,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 `LabelProps` is not exported — type a wrapper's props yourself.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the text colour.
-
 
 ## Stories
 

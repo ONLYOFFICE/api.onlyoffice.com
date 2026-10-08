@@ -1,6 +1,6 @@
 ---
 description: "DocSpace's left panel: a fixed column with a header slot, a main button, a scrolling body and the profile block."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/article/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/article/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Article
 
+:::warning[Portal only]
+
+<ThemedImage alt="Article" width={268} sources={{ light: require('./article--primary-light.png').default, dark: require('./article--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 DocSpace's left panel: a fixed column with a header slot, a main button, a scrolling body and the
 profile block. Almost everything in it is decided by the portal — the tariff, the Zendesk account,
 the developer tools, the signed-in person — which is why it takes some thirty props.
-
-<ThemedImage alt="Article" width={268} sources={{ light: require('./article--primary-light.png').default, dark: require('./article--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -36,13 +42,12 @@ import Article from "@onlyoffice/apps-ui-kit/components/article";
 It is a **default** export, so the name is yours to choose. The root barrel carries it by name
 as well — `components/index.ts` re-exports it as `export { default as Article }` — but prefer the
 subpath: the barrel does not build without four optional peers, see
-[Which import form](../../getting-started/installation.md#which-import-form).
+[Which import form](../../getting-started/installation-and-setup.md#which-import-form).
 
 Needs `ThemeProvider` above it in the tree — every colour and the panel's three widths are declared
 only under the `light` and `dark` classes it puts on `<body>` — and `TranslationProvider`, because
 the collapse handle, the apps block, the developer tools entry and the profile menu read their
 labels from the kit's shared translations and render **empty strings** without it.
-
 
 ## Stories
 
@@ -154,8 +159,6 @@ export function Sidebar() {
       officeforandroidUrl=""
       officeforiosUrl=""
       languageBaseName="en"
-      zendeskEmail=""
-      chatDisplayName=""
       zendeskKey=""
     >
       <Article.Header>
@@ -180,7 +183,6 @@ export function Sidebar() {
 | Property | Type | Description |
 | --- | --- | --- |
 | `articleOpen` | `boolean` | Whether the panel is open over the page. It only matters on a phone, where the panel is a portal with a backdrop. |
-| `chatDisplayName` | `string` | Name the Zendesk widget shows for the visitor. |
 | `children` | `JSX.Element[]` | The three slots, as an array. Each is `Article.Header`, `Article.MainButton` or `Article.Body`; anything else is dropped, and the slots are matched by display name, so a wrapper around one hides it. |
 | `currentDeviceType` | `DeviceType` | Which layout to render. The panel is a portal into `#root` on `mobile`, a collapsible sidebar on `tablet` and a fixed column on `desktop`; nothing here measures the viewport. |
 | `downloaddesktopUrl` | `string` | Address behind the desktop application link. |
@@ -190,7 +192,7 @@ export function Sidebar() {
 | `isBurgerLoading` | `boolean` | Renders the burger and logo as skeletons instead of images. |
 | `isLiveChatAvailable` | `boolean` | Whether the live chat is mounted at all. It is also suppressed on a mobile user agent. |
 | `isMobileArticle` | `boolean` | Whether the panel is in its narrow, overlay-capable mode. It is written back through `setIsMobileArticle` on mount and on every device change. |
-| `isShowLiveChat` | `boolean` | Whether the Zendesk widget script is loaded. The widget's own launcher stays hidden either way; the app opens the chat from its own Support button. |
+| `isShowLiveChat` | `boolean` | Whether the Zendesk widget is on the page. The script loads the first time this is true; from then on the "Live chat" switch shows and hides the widget through its API. |
 | `languageBaseName` | `string` | Locale handed to the Zendesk widget. |
 | `limitedAccessDevToolsForUsers` | `boolean` | Hides the developer tools entry from anyone who is not an administrator. |
 | `logoText` | `string` | Name shown in the "download the apps" block at the foot of the panel. |
@@ -207,7 +209,6 @@ export function Sidebar() {
 | `withCustomArticleHeader` | `boolean` | Tells the header that the `Article.Header` slot carries its own markup, which changes the header's own padding. |
 | `withCustomSlot` | `boolean` | Not read. The component works out whether there is a custom slot from `customSlot` itself. |
 | `withSendAgain` | `boolean` | Not read. Nothing in the component uses it. |
-| `zendeskEmail` | `string` | Address the Zendesk widget pre-fills. |
 | `zendeskKey` | `string` | Key of the Zendesk account. The live chat block loads a third-party script with it. |
 | `currentTariffPlanTitle`? | `string` | Not read. Nothing in the component uses it. |
 | `customSlot`? | `ReactNode` | Extra content between the body and the apps block. Its presence also shifts the collapse handle and the developer tools entry. |
@@ -287,8 +288,6 @@ export function LoadingSidebar() {
       officeforandroidUrl=""
       officeforiosUrl=""
       languageBaseName="en"
-      zendeskEmail=""
-      chatDisplayName=""
       zendeskKey=""
     >
       <Article.Header>
@@ -346,8 +345,6 @@ export function CollapsibleSidebar() {
       officeforandroidUrl=""
       officeforiosUrl=""
       languageBaseName="en"
-      zendeskEmail=""
-      chatDisplayName=""
       zendeskKey=""
     >
       <Article.Header>

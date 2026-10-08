@@ -1,6 +1,6 @@
 ---
 description: "The card view of the DocSpace listing: a sorting container, four kinds of tile and the slot their names go in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/tiles/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -282,7 +282,7 @@ The following components are available:
 | [FileTile](./file-tile.md) | Tile for a document: a thumbnail with badges over it, and a name row with a checkbox and a menu. |
 | [FolderTile](./folder-tile.md) | Tile for a folder, as a single name row or, with one flag, a tall card with a picture on top. |
 | [RoomTile](./room-tile.md) | Tile for a room: the logo and name on top, and the room's tags along the bottom. |
-| [TilesSkeleton](./tilesskeleton.md) | Placeholder in the shape of a tile listing, shown while the tiles themselves are loading. The Tiles page describes it in full. |
+| [TilesSkeleton](./tiles-skeleton.md) | Placeholder in the shape of a tile listing, shown while the tiles themselves are loading. |
 | [TemplateTile](./template-tile.md) | Tile for a room template: the name on top, and an owner and storage pair along the bottom. |
 | [TileContainer](./tile-container.md) | Grid that sorts the tiles it is given into rooms, templates, folders and files and gives two of them a heading. |
 | [TileContent](./tile-content.md) | The title slot of a tile: three nested wrappers that give the name its width and its truncation. |

@@ -1,6 +1,6 @@
 ---
 description: "Dialog for a room's generated logo: a colour from the palette and an optional glyph, over a live preview."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/room-logo-cover-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-logo-cover-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,11 +9,17 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # RoomLogoCoverDialog
 
+:::warning[Portal only]
+
+<ThemedImage alt="RoomLogoCoverDialog" width={1024} sources={{ light: require('./room-logo-cover-dialog--primary-light.png').default, dark: require('./room-logo-cover-dialog--primary-dark.png').default }} />
+
+Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
+
+:::
+
 Dialog for a room's generated logo: a colour from the palette and an optional glyph, over a live
 preview. It is what a room gets instead of an uploaded picture — the tile that
 [`RoomIcon`](../data-display/room-icon.md) then draws.
-
-<ThemedImage alt="RoomLogoCoverDialog" width={1024} sources={{ light: require('./room-logo-cover-dialog--primary-light.png').default, dark: require('./room-logo-cover-dialog--primary-dark.png').default }} />
 
 **Portal-internal.** `t` is required, and the icon picker asks for keys outside the `Common`
 namespace the package ships, so two of its labels are empty anywhere but in DocSpace.
@@ -49,7 +55,6 @@ Needs `ThemeProvider` above it in the tree: the preview reads the theme in JavaS
 whether to wash the colour out, and that context falls back to light rather than failing.
 `TranslationProvider` — or a `t` of your own — supplies `Common:RoomCover`,
 `Common:ApplyButton`, `Common:CancelButton` and `Common:Color`.
-
 
 ## Stories
 

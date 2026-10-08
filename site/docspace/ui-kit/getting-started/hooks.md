@@ -1,5 +1,6 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/docs/Hooks.mdx"
+description: "Eleven hooks, barrelled in `hooks/index.ts` and re-exported from the package root."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Hooks.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

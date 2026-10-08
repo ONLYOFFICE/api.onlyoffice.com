@@ -1,6 +1,6 @@
 ---
 description: "Full-screen layer behind an overlay, transparent by default, that catches the click meant to close it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/backdrop/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/backdrop/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -40,20 +40,19 @@ its file path.
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` above it in the tree for
 the dimming colour, which differs between the light and the dark theme.
 
-
 ## Stories
 
 ### Default
 
 The common case: a dimmed layer behind a dialog that closes it on a click (`withBackground`). Press the button to open it, then click anywhere to close it; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={210} sources={{ light: require('./backdrop--default-light.png').default, dark: require('./backdrop--default-dark.png').default }} />
+<ThemedImage alt="Default" width={1024} sources={{ light: require('./backdrop--default-light.png').default, dark: require('./backdrop--default-dark.png').default }} />
 
 ### Without Background
 
 For a menu or dropdown that must close on an outside click without darkening the page: the layer stays transparent and still catches the click (`withoutBackground`).
 
-<ThemedImage alt="Without Background" width={210} sources={{ light: require('./backdrop--without-background-light.png').default, dark: require('./backdrop--without-background-dark.png').default }} />
+<ThemedImage alt="Without Background" width={618} sources={{ light: require('./backdrop--without-background-light.png').default, dark: require('./backdrop--without-background-dark.png').default }} />
 
 ### Multiple Backdrops
 

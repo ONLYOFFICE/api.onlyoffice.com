@@ -1,6 +1,6 @@
 ---
 description: "Full-width notification bar that sits at the top of a section until it is dismissed."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/snackbar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/snackbar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -37,7 +37,6 @@ spelled `snackbar`/`SnackbarProps`.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` — the background and the
 accent stripe come from the theme class it puts on the tree.
-
 
 ## Stories
 

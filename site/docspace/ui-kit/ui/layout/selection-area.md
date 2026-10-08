@@ -1,6 +1,6 @@
 ---
 description: "Rubber-band selection: a dragged rectangle that reports which items it covers, frame by frame."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/selection-area/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/selection-area/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,6 @@ Also exported from the root barrel `@onlyoffice/apps-ui-kit`.
 Needs `ThemeProvider` above it in the tree for the rectangle's border colour, and for the writing
 direction — in a right-to-left interface the tile column index is mirrored, which it learns from
 the provider's direction context.
-
 
 ## Stories
 

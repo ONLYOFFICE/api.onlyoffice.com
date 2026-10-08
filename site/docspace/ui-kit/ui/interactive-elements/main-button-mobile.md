@@ -1,6 +1,6 @@
 ---
 description: "Floating round button in the corner of the screen that opens a full-width sheet of actions."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/main-button-mobile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/main-button-mobile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,6 @@ Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme`. Everything
 component draws — the button's colour, the sheet's background and, under the light theme, the
 sheet's whole placement — comes from custom properties defined on the theme's `.light` /
 `.dark` class. See the dark-theme note under "Behaviour the types don't state".
-
 
 ## Stories
 
@@ -312,7 +311,7 @@ set, which is why overriding it is the workaround for the dark-theme note above.
 
 | Variable                                               | Default         | Effect                                                                                  |
 | ------------------------------------------------------ | --------------- | --------------------------------------------------------------------------------------- |
-| `--main-button-mobile-button-color`                    | accent blue     | Colour of the round button.                                                             |
+| `--main-button-mobile-button-color`                    | scheme accent   | Colour of the round button, from `--color-scheme-main-accent`.                          |
 | `--main-button-mobile-icon-fill`                       | white / black   | Fill of the plus and minus.                                                             |
 | `--main-button-mobile-z-index`                         | `1010`          | Stacking of the button against its open sheet; below `202` the sheet covers the button. |
 | `--main-button-mobile-dropdown-position`               | `fixed` (light) | Positioning scheme of the sheet.                                                        |
@@ -321,7 +320,7 @@ set, which is why overriding it is the workaround for the dark-theme note above.
 | `--main-button-mobile-dropdown-bottom`                 | `48px` (light)  | Distance from the bottom.                                                               |
 | `--main-button-mobile-dropdown-z-index`                | `202` (light)   | Stacking of the sheet.                                                                  |
 | `--main-button-mobile-dropdown-item-padding`           | `6px 23px`      | Padding of one item.                                                                    |
-| `--main-button-mobile-button-options-background-color` | theme blue      | Background of the lower group.                                                          |
+| `--main-button-mobile-button-options-background-color` | dark accent     | Background of the lower group: the scheme accent mixed with 30% black.                  |
 | `--main-button-mobile-button-wrapper-background`       | theme grey      | Background of the lower group under `withoutButton`.                                    |
 | `--main-button-mobile-badge-size`                      | `12px`          | Size of the alert badge.                                                                |
 | `--main-button-mobile-badge-offset`                    | `10px`          | Inset of the badge from the button's top trailing corner.                               |

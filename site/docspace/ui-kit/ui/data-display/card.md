@@ -1,6 +1,6 @@
 ---
 description: "Grey panel with an optional header row, for a block of related information."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/card/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/card/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -43,7 +43,6 @@ Needs `ThemeProvider` above it in the tree. The background and both text colours
 only under the `light` and `dark` classes the provider puts on `<body>`, so without one the
 card has **no background at all** — the `var()` has nothing to resolve to — and the title and
 body fall back to the inherited colour.
-
 
 ## Stories
 

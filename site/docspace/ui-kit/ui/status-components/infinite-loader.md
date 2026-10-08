@@ -1,6 +1,6 @@
 ---
 description: "Virtualised list or grid that asks for the next page as the user scrolls towards the end."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/446f115916d79a87d07b9e3dddb1e39a263784ee/components/infinite-loader/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/infinite-loader/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -39,7 +39,6 @@ is **not** exported — import the type from its file path if you need it.
 
 Needs `ThemeProvider` from `@onlyoffice/apps-ui-kit/providers/theme` for the skeletons it shows
 between pages.
-
 
 ## Stories
 
