@@ -7,6 +7,7 @@ title: Introducing ONLYOFFICE DocSpace
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace?from=api) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - creating and customizing [rooms](#step-3-create-a-room) for collaboration;
+- collecting data from PDF forms in [Form Filling Spaces](../usage-api/create-room.api.mdx);
 - inviting users to [collaborate on files](../samples/basic-samples/invite-users.md) in real time;
 - creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files using the built-in [ONLYOFFICE Docs](../../../docs/docs-api/get-started/basic-concepts.md);
 - creating and managing [AI agents](../../mcp-server/getting-started/index.md) to automate workflows;
@@ -23,10 +24,11 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with:
 
-- **Portal:** A secure, web-based [gateway](../usage-api/get-portal-information.api.mdx) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources.
-- **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](../usage-api/create-room.api.mdx) (Collaboration, Public, Custom, Form filling, and Virtual data) based on your specific needs.
+- **Workspace:** A secure, web-based [gateway](../usage-api/get-portal-information.api.mdx) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This workspace enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources.
+- **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](../usage-api/create-room.api.mdx) (Collaboration, Public, Custom, and Virtual data) based on your specific needs.
+- **Form Filling Spaces:** Spaces in the **Forms** section for working with PDF forms. You can create, edit, or upload forms, invite members and guests to fill them out, review completed copies, and analyze the collected data in a spreadsheet. In the API, Form Filling Spaces are created with the [create room](../usage-api/create-room.api.mdx) method using the `FillingFormsRoom` type.
 - **AI agents:** Integrations that connect DocSpace to external tools and automate workflows via the [MCP server](../../mcp-server/getting-started/index.md).
-- **Users:** People with access to your DocSpace portal. DocSpace has several [user roles](../usage-api/update-user-type.api.mdx): owner, admin, power user, editor, viewer, and guest, each with different access rights to rooms and files.
+- **Users:** People with access to your DocSpace workspace. Each user has a [type](../usage-api/update-user-type.api.mdx) that defines their access rights: owner, full admin, room admin, user, or guest.
 
 ## Quickstart
 
@@ -67,7 +69,7 @@ Content-Length: 113
 **Where**:
 
 - **API_KEY**: ONLYOFFICE API key.
-- **yourportal**: Your DocSpace portal.
+- **yourportal.onlyoffice.com**: Your DocSpace workspace address.
 
 :::important
 The color must be specified as a hex code string (e.g., `FF0000`), not as a color name.

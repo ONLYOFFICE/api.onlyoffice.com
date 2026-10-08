@@ -34,5 +34,5 @@ Go to your collection → **Variables** tab and fill in the following:
 | `ApiKeyBearer` | The key is passed via the Authorization header | `your-api-key-here` |
 | `x-signature` | JWT signature passed as a cookie. Obtain the token via `POST /api/2.0/security/oauth2/token` | `your-api-key-here` |
 
-To generate an API key, go to DocSpace **Settings → Developer Tools → API Keys**.
+To generate an API key, click **Developer Tools** in the left panel and open the **API keys** tab.
 For most use cases, `asc_auth_key` is the recommended method.
