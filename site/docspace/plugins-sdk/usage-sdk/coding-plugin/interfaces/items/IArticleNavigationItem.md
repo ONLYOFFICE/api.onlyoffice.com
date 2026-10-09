@@ -13,6 +13,8 @@ item through `updateArticleNavigationItem`, return an
 [`Actions.updateArticleNavigationItems`](../../enums/Actions.md#updatearticlenavigationitems)
 to apply the change to the sidebar.
 
+![articleNavigationItem](/assets/images/docspace/article-navigation-item.png#gh-light-mode-only)![articleNavigationItem](/assets/images/docspace/article-navigation-item.dark.png#gh-dark-mode-only)
+
 :::info
 The section page is a full portal page, not a panel. The component is
 rendered inside the DocSpace application tree, so it inherits the portal theme.
