@@ -127,7 +127,7 @@ export const docspaceSections = {
     {
       id: 'ui-kit',
       name: 'UI Kit',
-      link: 'ui-kit',
+      link: 'ui-kit/getting-started',
       sidebar: 'docspaceUiKit',
       description:
         'Build DocSpace plugin screens and Apps interfaces with the React components the portal itself uses: form controls, overlays, selectors, and theming.',
