@@ -45,7 +45,7 @@ The constructor does not render the editor inside the placeholder element — it
 
 <!-- after the editor is loaded -->
 <iframe name="frameEditor" width="100%" height="100%" frameborder="0" allowfullscreen
-        allow="autoplay; camera; microphone; display-capture; clipboard-write;"
+        allow="autoplay; camera; microphone; display-capture;"
         src="https://documentserver/web-apps/apps/documenteditor/main/index.html">
 </iframe>
 ```

@@ -45,7 +45,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 <!-- 编辑器加载之后 -->
 <iframe name="frameEditor" width="100%" height="100%" frameborder="0" allowfullscreen
-        allow="autoplay; camera; microphone; display-capture; clipboard-write;"
+        allow="autoplay; camera; microphone; display-capture;"
         src="https://documentserver/web-apps/apps/documenteditor/main/index.html">
 </iframe>
 ```
