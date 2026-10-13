@@ -56,16 +56,19 @@ import APITable from '@site/src/components/APITable/APITable';
 | wopi.favIconUrlCell            | string           | "/web-apps/apps/<wbr />spreadsheeteditor/main/<wbr />resources/img/favicon.ico"                                                                                       | 电子表格编辑器的图标路径。                                                                                                                                                                                        |
 | wopi.favIconUrlSlide           | string           | "/web-apps/apps/<wbr />presentationeditor/main/<wbr />resources/img/favicon.ico"                                                                                      | 演示文稿编辑器的图标路径。                                                                                                                                                                                       |
 | wopi.favIconUrlPdf             | string           | "/web-apps/apps/<wbr />pdfeditor/main/<wbr />resources/img/favicon.ico"                                                                                               |  pdf 编辑器的图标路径。                                                                                                                                                                                                |
+| wopi.favIconUrlDiagram         | string           | "/web-apps/apps/<wbr />visioeditor/main/<wbr />resources/img/favicon.ico"                                                                                             | 图表编辑器的图标路径。                                                                                                                                                                                                   |
 | wopi.fileInfoBlockList         | string[] | \["FileUrl"]                                                                                                                                                          |  WOPI 文件信息参数列表，在将此数组发送到浏览器时会被阻止。但是，这些参数在服务器上可用。                                                                               |
-| wopi.pdfView                   | string[] | \["djvu", "xps", "oxps"]                                                                                                                                              | 可以在 pdf 编辑器中查看的文件类型。                                                                                                                                                                                     |
-| wopi.pdfEdit                   | string[] | \["pdf"]                                                                                                                                                              | 可以在 pdf 编辑器中编辑的文件类型。                                                                                                                                                                                     |
-| wopi.forms                     | string[] | \["pdf"]                                                                                                                                                              | 表单文件类型。                                                                                                                                                                                                                     |
-| wopi.wordView                  | string[] | \["doc", "dotm", "dot", "fodt", "ott", "rtf", "mht", "mhtml", "html", "htm", "xml", "epub", "fb2", "sxw", "stw", "wps", "wpt", "pages"]             | 可以在文档编辑器中查看的文件类型。                                                                                                                                                                                |
-| wopi.wordEdit                  | string[] | \["docx", "dotx", "docm", "odt", "txt"]                                                                                                                               | 可以在文档编辑器中编辑的文件类型。                                                                                                                                                                                |
-| wopi.cellView                  | string[] | \["xls", "xlsb", "xltm", "xlt", "fods", "ots", "sxc", "xml", "et", "ett", "numbers"]                                                                                  | 可以在电子表格编辑器中查看的文件类型。                                                                                                                                                                             |
-| wopi.cellEdit                  | string[] | \["xlsx", "xltx", "xlsm", "ods", "csv"]                                                                                                                               | 可以在电子表格编辑器中编辑的文件类型。                                                                                                                                                                             |
-| wopi.slideView                 | string[] | \["ppt", "ppsx", "ppsm", "pps", "potm", "pot", "fodp", "otp", "sxi", "dps", "dpt", "key"]                                                                             | 可以在演示文稿编辑器中查看的文件类型。                                                                                                                                                                            |
-| wopi.slideEdit                 | string[] | \["pptx", "potx", "pptm", "odp"]                                                                                                                                      | 可以在演示文稿编辑器中编辑的文件类型。                                                                                                                                                                             |
+| wopi.pdfView                   | string[] | \[]                                                                                                                                                                   | 可以在 pdf 编辑器中查看的文件类型。                                                                                                                                                                                     |
+| wopi.pdfEdit                   | string[] | \[]                                                                                                                                                                   | 可以在 pdf 编辑器中编辑的文件类型。                                                                                                                                                                                     |
+| wopi.forms                     | string[] | \[]                                                                                                                                                                   | 表单文件类型。                                                                                                                                                                                                                     |
+| wopi.wordView                  | string[] | \[]                                                                                                                                                 | 可以在文档编辑器中查看的文件类型。                                                                                                                                                                                |
+| wopi.wordEdit                  | string[] | \[]                                                                                                                                                                   | 可以在文档编辑器中编辑的文件类型。                                                                                                                                                                                |
+| wopi.cellView                  | string[] | \[]                                                                                                                                                                   | 可以在电子表格编辑器中查看的文件类型。                                                                                                                                                                             |
+| wopi.cellEdit                  | string[] | \[]                                                                                                                                                                   | 可以在电子表格编辑器中编辑的文件类型。                                                                                                                                                                             |
+| wopi.slideView                 | string[] | \[]                                                                                                                                                                   | 可以在演示文稿编辑器中查看的文件类型。                                                                                                                                                                            |
+| wopi.slideEdit                 | string[] | \[]                                                                                                                                                                   | 可以在演示文稿编辑器中编辑的文件类型。                                                                                                                                                                             |
+| wopi.diagramView               | string[] | \[]                                                                                                                                                                   | 可以在图表编辑器中查看的文件类型。                                                                                                                                                                               |
+| wopi.diagramEdit               | string[] | \[]                                                                                                                                                                   | 可以在图表编辑器中编辑的文件类型。                                                                                                                                                                               |
 | wopi.publicKey                 | string           | ""                                                                                                                                                                    | 集成商用来检查私钥的公钥。<br/><br/>请注意，自 8.3 版本起，default.json 与 local.json 文件中的该参数值不再相同。                          |
 | wopi.modulus                   | string           | ""                                                                                                                                                                    | 用于检索公钥的 Base64 编码格式的 RSA 模数。<br/><br/>请注意，自 8.3 版本起，default.json 与 local.json 文件中的该参数值不再相同。      |
 | wopi.exponent                  | string           | "65537"                                                                                                                                                               | 用于检索公钥的 Base64 编码格式的旧 RSA 指数。                                                                                                                                                  |
@@ -74,12 +77,18 @@ import APITable from '@site/src/components/APITable/APITable';
 | wopi.modulusOld                | string           | ""                                                                                                                                                                    | 用于检索公钥的 Base64 编码格式的旧 RSA 模数。<br/><br/>请注意，自 8.3 版本起，default.json 与 local.json 文件中的该参数值不再相同。 |
 | wopi.exponentOld               | string           | "65537"                                                                                                                                                               | 用于检索公钥的 Base64 编码格式的旧 RSA 指数。                                                                                                                                              |
 | wopi.privateKeyOld             | string           | ""                                                                                                                                                                    | 签署文档服务器请求的旧私钥。<br/><br/>请注意，自 8.3 版本起，default.json 与 local.json 文件中的该参数值不再相同。                              |
+| wopi.requireIpFilterRule       | boolean          | true                                                                                                                                                                  | 是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信。通配符规则 `*` 不计入。有关详细信息，请参阅 [IP filter](overview.md#ip-filter) 部分。 |
+| wopi.sendAuthorizationHeader   | boolean          | false                                                                                                                                                                 | 是否在发送到 WOPI 主机的请求中，通过 `Authorization: Bearer` 标头传递 WOPI 访问令牌。                                                                         |
 | wopi.refreshLockInterval       | string           | "10m"                                                                                                                                                                 | 通过将文件自动过期定时器重置为 30 分钟，刷新文件锁定的间隔时间（以分钟为单位）。                                                                                                                |
 | wopi.dummy                     | object           |                                                                                                                                                                       | 压力测试的虚拟处理程序的属性。                                                                                                                                                                                     |
 | wopi.dummy.enable              | boolean          | false                                                                                                                                                                 | 是否启用虚拟处理程序。                                                                                                                                                                                                |
 | wopi.dummy.sampleFilePath      | string           | ""                                                                                                                                                                    | 示例文件的虚拟路径。                                                                                                                                                                                                           |
 
 </APITable>
+
+:::note
+自 9.4 版本起，`wopi.pdfView`、`wopi.pdfEdit`、`wopi.forms`、`wopi.wordView`、`wopi.wordEdit`、`wopi.cellView`、`wopi.cellEdit`、`wopi.slideView`、`wopi.slideEdit`、`wopi.diagramView`、`wopi.diagramEdit` 列表默认为空。空列表表示文件类型取自 [onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json) 文件。指定非空列表即可覆盖这些文件类型。图表文件类型在开源版本中不可用。
+:::
 
 ## 示例
 
@@ -94,16 +103,19 @@ import APITable from '@site/src/components/APITable/APITable';
     "favIconUrlCell": "/web-apps/apps/spreadsheeteditor/main/resources/img/favicon.ico",
     "favIconUrlSlide": "/web-apps/apps/presentationeditor/main/resources/img/favicon.ico",
     "favIconUrlPdf": "/web-apps/apps/pdfeditor/main/resources/img/favicon.ico",
+    "favIconUrlDiagram": "/web-apps/apps/visioeditor/main/resources/img/favicon.ico",
     "fileInfoBlockList": ["FileUrl"],
-    "pdfView": ["djvu", "xps", "oxps"],
-    "pdfEdit": ["pdf"],
-    "forms": ["pdf"],
-    "wordView": ["doc", "dotm", "dot", "fodt", "ott", "rtf", "mht", "mhtml", "html", "htm", "xml", "epub", "fb2", "sxw", "stw", "wps", "wpt", "pages"],
-    "wordEdit": ["docx", "dotx", "docm", "odt", "txt"],
-    "cellView": ["xls", "xlsb", "xltm", "xlt", "fods", "ots", "sxc", "xml", "et", "ett", "numbers"],
-    "cellEdit": ["xlsx", "xltx", "xlsm", "ods", "csv"],
-    "slideView": ["ppt", "ppsx", "ppsm", "pps", "potm", "pot", "fodp", "otp", "sxi", "dps", "dpt", "key"],
-    "slideEdit": ["pptx", "potx", "pptm", "odp"],
+    "pdfView": [],
+    "pdfEdit": [],
+    "forms": [],
+    "wordView": [],
+    "wordEdit": [],
+    "cellView": [],
+    "cellEdit": [],
+    "slideView": [],
+    "slideEdit": [],
+    "diagramView": [],
+    "diagramEdit": [],
     "publicKey": "",
     "modulus": "",
     "exponent": 65537,
@@ -112,6 +124,8 @@ import APITable from '@site/src/components/APITable/APITable';
     "modulusOld": "",
     "exponentOld": 65537,
     "privateKeyOld": "",
+    "requireIpFilterRule": true,
+    "sendAuthorizationHeader": false,
     "refreshLockInterval": "10m",
     "dummy": {
       "enable": false,
