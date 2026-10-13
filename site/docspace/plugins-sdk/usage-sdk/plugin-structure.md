@@ -38,9 +38,9 @@ A file with the information about the plugin and dependencies. This file can be 
 
 The *TypeScript* configuration file. Key compiler options:
 
-- `target: ES2020` — compiles TypeScript to ES2020 JavaScript
+- `target: ES2017` — compiles TypeScript to ES2017 JavaScript
 - `module: ESNext` — uses the latest ECMAScript module syntax
-- `lib: ["ES2020", "DOM", "DOM.Iterable"]` — includes ES2020 and DOM type definitions
+- `lib: ["ES2017", "DOM"]` — includes ES2017 and DOM type definitions
 - `jsx: react-jsx` — enables React JSX transformation
 - `strict: true` — enables all strict type-checking options
 - `isolatedModules: true` — enables isolated modules
@@ -57,7 +57,7 @@ This file can be edited if needed.
 The Vite configuration file generated automatically when creating the plugin template. This file configures the build output requirements:
 - The plugin code is bundled into *plugin.js* as an ES module via `build.lib`
 - CSS styles are output to *plugin.css*
-- External dependencies (`react`, `react-dom`, `react/jsx-runtime`, SDK React entry, UI kit) are kept out of the bundle — DocSpace supplies them at load time
+- External dependencies (`react`, `react-dom`, `react/jsx-runtime`, the SDK React entry `@onlyoffice/docspace-plugin-sdk/react`, and the UI kit `@onlyoffice/apps-ui-kit`) are kept out of the bundle — DocSpace supplies them at load time
 
 This file can be edited if needed. For more information on migrating older plugins, see [Updating a plugin to SDK 3.0.0](../more-information/migration.md).
 

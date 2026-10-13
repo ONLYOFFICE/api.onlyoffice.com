@@ -76,16 +76,16 @@ function FileList() {
 
 ### External Dependencies
 
-`react`, `react-dom`, `react/jsx-runtime`, *@onlyoffice/docspace-plugin-sdk/react*, and *@docspace/ui-kit* must stay out of the plugin bundle — DocSpace supplies them at load time.
+`react`, `react-dom`, `react/jsx-runtime`, *@onlyoffice/docspace-plugin-sdk/react*, and *@onlyoffice/apps-ui-kit* must stay out of the plugin bundle — DocSpace supplies them at load time.
 
-**Import only from `@docspace/ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@docspace/ui-kit`. A plugin that imports `@docspace/ui-kit/components/button` will fail to load with an error: "…which the portal does not provide."
+**Import only from `@onlyoffice/apps-ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@onlyoffice/apps-ui-kit`. A plugin that imports `@onlyoffice/apps-ui-kit/components/button` will fail to load with an error: "…which the portal does not provide."
 
 ```tsx
 // ✅ Correct
-import { Button, Text } from "@docspace/ui-kit";
+import { Button, Text } from "@onlyoffice/apps-ui-kit";
 
 // ❌ Wrong — the portal cannot load this
-import Button from "@docspace/ui-kit/components/button";
+import { Button } from "@onlyoffice/apps-ui-kit/components/button";
 ```
 
 For the build configuration, see [building a plugin](building-plugin.md).

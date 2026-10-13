@@ -1,5 +1,5 @@
 ---
-description: Add sidebar entries that open full React pages, built with Vite and the DocSpace UI kit.
+description: Add sidebar entries that open full React pages, built with Vite and the ONLYOFFICE Apps UI kit.
 tags: ["DocSpace", "Plugins", "Advanced"]
 ---
 
@@ -10,19 +10,19 @@ This plugin adds two entries to the DocSpace sidebar (the *article*) using the `
 | Sidebar entry     | Appears in       | Visible to             | Page shows                   |
 | ------------------ | ----------------- | ----------------------- | ------------------------------ |
 | **Sample files**    | Files section      | all user types           | signed-in user, a toast button |
-| **Sample settings** | Settings section   | owner, DocSpace admin    | a toggle                       |
+| **Sample settings** | Settings section   | owner, full admin        | a toggle                       |
 
-Because a navigation item's page renders inside the portal's own React tree, it can be a plain component built with [`@docspace/ui-kit`](https://github.com/ONLYOFFICE/docspace-ui-kit-react) — it gets the portal theme for free, and the [React hooks](/docspace/plugins-sdk/usage-sdk/coding-plugin.md#react-components) reach the portal through context.
+Because a navigation item's page renders inside the portal's own React tree, it can be a plain component built with [`@onlyoffice/apps-ui-kit`](https://github.com/ONLYOFFICE/docspace-ui-kit-react) — it gets the portal theme for free, and the [React hooks](/docspace/plugins-sdk/usage-sdk/coding-plugin.md#react-components) reach the portal through context.
 
 :::note
-**Import only from `@docspace/ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@docspace/ui-kit`. A plugin that imports `@docspace/ui-kit/components/button` will fail to load.
+**Import only from `@onlyoffice/apps-ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@onlyoffice/apps-ui-kit`. A plugin that imports `@onlyoffice/apps-ui-kit/components/button` will fail to load.
 
 ```tsx
 // ✅ Correct
-import { Button } from "@docspace/ui-kit";
+import { Button } from "@onlyoffice/apps-ui-kit";
 
 // ❌ Wrong — the portal cannot load this
-import Button from "@docspace/ui-kit/components/button";
+import { Button } from "@onlyoffice/apps-ui-kit/components/button";
 ```
 :::
 
@@ -40,7 +40,7 @@ import {
   HeadingSize,
   Text,
   ToggleButton,
-} from "@docspace/ui-kit";
+} from "@onlyoffice/apps-ui-kit";
 import {
   useCurrentUser,
   usePluginActions,
@@ -52,7 +52,7 @@ import {
   PluginStatus,
   Section,
   ToastType,
-  UsersType,
+  UserRole,
 } from "@onlyoffice/docspace-plugin-sdk";
 
 const Page = ({
@@ -136,7 +136,7 @@ const SettingsPage = () => {
 const filesItem: IArticleNavigationItem = {
   key: "article-navigation-sample-files",
   label: "Sample files",
-  icon: "docspace-icon.svg",
+  icon: "plugin-icon.svg",
   component: FilesPage,
   appears: [Section.Files],
 };
@@ -144,10 +144,10 @@ const filesItem: IArticleNavigationItem = {
 const settingsItem: IArticleNavigationItem = {
   key: "article-navigation-sample-settings",
   label: "Sample settings",
-  icon: "docspace-icon.svg",
+  icon: "plugin-icon.svg",
   component: SettingsPage,
   appears: [Section.Settings],
-  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin],
+  usersTypes: [UserRole.owner, UserRole.fullAdmin],
 };
 
 class ArticleNavigationSample implements IPlugin, IArticleNavigationPlugin {
@@ -194,7 +194,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running — version **4.0.0 or later**, since SDK 3.0.0 plugins require [`minDocSpaceVersion: "4.0.0"`](/docspace/plugins-sdk/usage-sdk/building-plugin.md#updating-a-plugin-to-sdk-300) — and install DocSpace Plugins SDK globally:
+Make sure you have a DocSpace server running — version **4.0.0 or later**, since SDK 3.0.0 plugins require [`minDocSpaceVersion: "4.0.0"`](/docspace/plugins-sdk/more-information/migration.md#updating-a-plugin-to-sdk-300) — and install DocSpace Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -224,42 +224,26 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Add the UI kit dependency
 
-`@docspace/ui-kit` is not published to npm, so it has to be added as a local tarball dependency. Two packed tarballs need to sit next to `package.json` before running `npm install`:
+Install the [`@onlyoffice/apps-ui-kit`](https://www.npmjs.com/package/@onlyoffice/apps-ui-kit) package from npm:
 
-- the UI kit itself, packed from a [`docspace-ui-kit-react`](https://github.com/ONLYOFFICE/docspace-ui-kit-react) checkout:
+```bash
+npm install @onlyoffice/apps-ui-kit
+```
 
-  ```bash
-  pnpm build && pnpm pack
-  ```
-
-- the API SDK it depends on, which the UI kit resolves as a relative tarball path rather than an npm package — packing it needs no checkout, since it is on npm:
-
-  ```bash
-  npm pack @onlyoffice/docspace-api-sdk@3.7.0
-  ```
-
-Then add the UI kit as a dependency pointing at the packed file, and install:
+This adds it to `dependencies` in `package.json`:
 
 ```json
 {
   "dependencies": {
-    "@docspace/ui-kit": "file:./docspace-ui-kit-0.0.1.tgz"
+    "@onlyoffice/apps-ui-kit": "^4.0.0"
   }
 }
 ```
 
+The UI kit is only needed for type checking and editor support: it is not bundled into *plugin.js*. DocSpace supplies its own copy at load time and rewrites the `@onlyoffice/apps-ui-kit` specifier to it. The template's *vite.config.ts* already marks it as external with the pattern `/^@onlyoffice\/apps-ui-kit(\/.*)?$/`.
+
 :::important
-**Import only from `@docspace/ui-kit`; do not use subpath imports.**
-
-```tsx
-// ✅ Correct
-import { Button, Text, ToggleButton } from "@docspace/ui-kit";
-
-// ❌ Wrong — the portal cannot load this
-import Button from "@docspace/ui-kit/components/button";
-```
-
-**Do not** use subpath imports such as `@docspace/ui-kit/components/button`. They will not resolve at runtime because the UI kit must stay out of the plugin bundle — DocSpace supplies it at load time and rewrites the `@docspace/ui-kit` specifier. The build configuration in *vite.config.ts* marks it as external with the pattern `/^@docspace\/ui-kit(\/.*)?$/`.
+Only the package root is substituted, so import every component from `@onlyoffice/apps-ui-kit` itself. Subpath imports such as `@onlyoffice/apps-ui-kit/components/button` stay unresolved at runtime, and the plugin fails to load.
 :::
 
 ## Step 4: Review and extend plugin code
@@ -289,7 +273,7 @@ By default, the plugin template includes a basic implementation in the `src/inde
      },
      build: {
        lib: {
-         entry: `${__dirname}/src/index.tsx`,  // Changed from index.ts
+         entry: `${__dirname}src/index.tsx`, // Changed from index.ts
          formats: ["es"],
          fileName: () => "plugin.js",
        },
@@ -299,14 +283,14 @@ By default, the plugin template includes a basic implementation in the `src/inde
            "react-dom",
            "react/jsx-runtime",
            "@onlyoffice/docspace-plugin-sdk/react",
-           /^@docspace\/ui-kit(\/.*)?$/,
+           /^@onlyoffice\/apps-ui-kit(\/.*)?$/,
          ],
          output: {
            codeSplitting: false,
            assetFileNames: (assetInfo: { name?: string }) =>
              assetInfo.name?.endsWith(".css")
-             ? "plugin.css" 
-             : (assetInfo.name ?? "asset"),
+               ? "plugin.css"
+               : (assetInfo.name ?? "asset"),
          },
        },
      },
@@ -381,7 +365,7 @@ Each page is an ordinary React component. [`useCurrentUser`](/docspace/plugins-s
 
 ```tsx
 import { useState, type ReactNode } from "react";
-import { Button, ButtonSize, Heading, HeadingLevel, HeadingSize, Text, ToggleButton } from "@docspace/ui-kit";
+import { Button, ButtonSize, Heading, HeadingLevel, HeadingSize, Text, ToggleButton } from "@onlyoffice/apps-ui-kit";
 import { useCurrentUser, usePluginActions } from "@onlyoffice/docspace-plugin-sdk/react";
 import { ToastType } from "@onlyoffice/docspace-plugin-sdk";
 
@@ -436,18 +420,18 @@ const SettingsPage = () => {
 
 ## Step 6: Register the navigation items
 
-Register an [`IArticleNavigationItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IArticleNavigationItem.md) for each page. `key` becomes the last segment of the page URL, so it must be unique across every installed plugin. `icon` is a file name from the plugin's [`assets`](/docspace/plugins-sdk/usage-sdk/plugin-structure.md#assets) folder, 20x20. `appears` places the entry in a portal section, and `usersTypes` narrows it to a set of roles:
+Register an [`IArticleNavigationItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IArticleNavigationItem.md) for each page. `key` becomes the last segment of the page URL, so it must be unique across every installed plugin. `icon` is an SVG file from the plugin's [`assets`](/docspace/plugins-sdk/usage-sdk/plugin-structure.md#assets) folder, drawn at 16x16. `appears` places the entry in a portal section, and `usersTypes` narrows it to a set of roles:
 
 <details>
   <summary>Navigation items</summary>
 
 ```tsx
-import { Section, UsersType, type IArticleNavigationItem } from "@onlyoffice/docspace-plugin-sdk";
+import { Section, UserRole, type IArticleNavigationItem } from "@onlyoffice/docspace-plugin-sdk";
 
 const filesItem: IArticleNavigationItem = {
   key: "article-navigation-sample-files",
   label: "Sample files",
-  icon: "docspace-icon.svg",
+  icon: "plugin-icon.svg",
   component: FilesPage,
   appears: [Section.Files],
 };
@@ -455,10 +439,10 @@ const filesItem: IArticleNavigationItem = {
 const settingsItem: IArticleNavigationItem = {
   key: "article-navigation-sample-settings",
   label: "Sample settings",
-  icon: "docspace-icon.svg",
+  icon: "plugin-icon.svg",
   component: SettingsPage,
   appears: [Section.Settings],
-  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin],
+  usersTypes: [UserRole.owner, UserRole.fullAdmin],
 };
 ```
 
@@ -485,5 +469,5 @@ This runs `vite build && npx build-docspace-plugin`, which bundles `src/index.ts
 
 1. Go to the **Files** section. The sidebar shows a **Sample files** entry for every user type.
 2. Click it — the page shows your display name and a **Show a toast** button. Click the button and check that a success toast appears.
-3. As a portal owner or DocSpace admin, go to the **Settings** section. The sidebar shows a **Sample settings** entry (other user types do not see it).
+3. As a portal owner or full admin, go to the **Settings** section. The sidebar shows a **Sample settings** entry (other user types do not see it).
 4. Click it, then toggle **Enable the sample feature** and check that an info toast appears.

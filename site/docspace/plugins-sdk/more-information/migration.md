@@ -28,33 +28,25 @@ For plugins created with an SDK 2.x template:
 
 2. Update *tsconfig.json* to use the 3.0 template configuration:
 
-   Replace the `compilerOptions` in *tsconfig.json* with:
+   Replace the contents of *tsconfig.json* with:
 
    ```json
    {
      "compilerOptions": {
-       "target": "ES2020",
-       "useDefineForClassFields": true,
-       "lib": ["ES2020", "DOM", "DOM.Iterable"],
+       "target": "ES2017",
        "module": "ESNext",
-       "skipLibCheck": true,
-
-       /* Bundler mode */
-       "moduleResolution": "bundler",
-       "allowImportingTsExtensions": true,
-       "isolatedModules": true,
-       "moduleDetection": "force",
-       "noEmit": true,
+       "lib": ["ES2017", "DOM"],
        "jsx": "react-jsx",
-
-       /* Linting */
        "strict": true,
-       "noUnusedLocals": true,
-       "noUnusedParameters": true,
-       "noFallthroughCasesInSwitch": true,
-       "noUncheckedSideEffectImports": true
+       "isolatedModules": true,
+       "esModuleInterop": true,
+       "resolveJsonModule": true,
+       "allowSyntheticDefaultImports": true,
+       "moduleResolution": "bundler",
+       "skipLibCheck": true
      },
-     "include": ["src"]
+     "exclude": ["node_modules", "dist"],
+     "include": ["src/**/*"]
    }
    ```
 
@@ -91,36 +83,32 @@ For plugins created with an SDK 2.x template:
      },
      build: {
        lib: {
-         entry: `${__dirname}/src/index.ts`,
+         entry: `${__dirname}src/index.ts`,
          formats: ["es"],
          fileName: () => "plugin.js",
        },
        rolldownOptions: {
          // Kept out of the bundle: DocSpace supplies its own copies at load
-         // time and rewrites these specifiers to them. A second React or a
-         // second react-dom arrives with its own contexts and its own event
-         // system, and every hook breaks.
+         // time and rewrites these specifiers to them. A second React arrives with
+         // its own contexts, so every SDK hook throws. The SDK root stays bundled
+         // like any other dependency: string enums and types, no module state.
          //
-         // The SDK root is deliberately absent: it holds string enums and types
-         // and no module state, so a bundled copy behaves exactly like the
-         // host's. Only the React entry, which owns the runtime context, has to
-         // be shared.
-         //
-         // The UI kit pattern matches both the package root and
-         // subpaths, but the portal ONLY substitutes @docspace/ui-kit itself.
-         // A plugin that imports @docspace/ui-kit/components/button will fail
-         // to load. Always import from the root: `import { Button } from "@docspace/ui-kit"`.
+         // The UI kit pattern matches both the package root and subpaths, but
+         // the portal ONLY substitutes @onlyoffice/apps-ui-kit itself. Always
+         // import from the root: `import { Button } from "@onlyoffice/apps-ui-kit"`.
          external: [
            "react",
            "react-dom",
            "react/jsx-runtime",
            "@onlyoffice/docspace-plugin-sdk/react",
-           /^@docspace\/ui-kit(\/.*)?$/,
+           /^@onlyoffice\/apps-ui-kit(\/.*)?$/,
          ],
          output: {
            codeSplitting: false,
            assetFileNames: (assetInfo: { name?: string }) =>
-             assetInfo.name?.endsWith(".css") ? "plugin.css" : (assetInfo.name ?? "asset"),
+             assetInfo.name?.endsWith(".css")
+               ? "plugin.css"
+               : (assetInfo.name ?? "asset"),
          },
        },
      },
@@ -137,6 +125,8 @@ For plugins created with an SDK 2.x template:
    - Add `"type": "module"` to *package.json* (required for ES modules)
    - Add `"runtime": "module"` to *package.json*
    - Add Vite version to `devDependencies`: `"vite": "^8.3.0"`
+   - If your plugin uses React, add `"@vitejs/plugin-react": "^6.0.0"` to `devDependencies` and `"react": "^19.0.0"`, `"react-dom": "^19.0.0"` to `dependencies`, as in the 3.0.0 template
+   - Update TypeScript in `devDependencies` to `"typescript": "^5.6.0"`
    - Export the plugin instance as the default export
    - Remove the *window.Plugins* registration from *src/index.ts*
 
@@ -149,6 +139,7 @@ For plugins created with an SDK 2.x template:
    - `settings` in [ISettings](../usage-sdk/coding-plugin/interfaces/settings/ISettings.md) — replace with `component`
    - `dialogBody` and `dialogFooter` in [IModalDialog](../usage-sdk/coding-plugin/interfaces/components/IModalDialog.md) — replace with `dialogBodyComponent`
    - `onLoad` on those items and components — move the work into a `useEffect` inside the React component
+   - the [UsersType](../usage-sdk/coding-plugin/enums/UsersType.md) enum in `usersTypes` — replace with [UserRole](../usage-sdk/coding-plugin/enums/UserRole.md). The member names differ where the portal renamed the type: `docSpaceAdmin` is `fullAdmin`, `collaborator` is `user`, and the old `user` (the guest type) is `guest`
 
 ### Migrating from SDK 1.1.1
 
