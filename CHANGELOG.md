@@ -1,5 +1,14 @@
 # Change log
 
+## 9.3.1
+
+### Improvements
+
+#### Common
+
+* Updated the announcement bar to announce ONLYOFFICE Docs 10.0
+* Pointed the forum links in the footer, landing pages, and plugin, macro and AI get-started guides to community.onlyoffice.com
+
 ## 9.3.0
 
 ### New features
