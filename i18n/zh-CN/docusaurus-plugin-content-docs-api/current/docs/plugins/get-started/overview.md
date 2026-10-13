@@ -60,7 +60,7 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 如果插件不显示、窗口空白或 API 调用失败，请参阅[常见错误及解决方案](../development-workflow/common-errors-solutions.md)了解症状和解决方法，并参阅[调试插件](../development-workflow/debugging-plugins.md)了解如何在开发者工具中检查正在运行的插件。
 
-仍未解决？请在 [ONLYOFFICE 论坛](https://forum.onlyoffice.com/)或 [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) 上提问，或在 [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins/issues) 中报告问题。
+仍未解决？请在 [ONLYOFFICE 论坛](https://community.onlyoffice.com/)或 [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) 上提问，或在 [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins/issues) 中报告问题。
 
 ## 资源
 

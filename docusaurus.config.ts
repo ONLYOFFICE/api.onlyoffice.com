@@ -212,7 +212,7 @@ const config: Config = {
           },
           {
             name: 'Developer forum',
-            url: 'https://forum.onlyoffice.com/',
+            url: 'https://community.onlyoffice.com/',
             description: 'Community questions, answers, and announcements.',
           },
         ],
@@ -390,7 +390,7 @@ const config: Config = {
           items: [
             {
               label: 'Forum',
-              href: 'https://forum.onlyoffice.com/',
+              href: 'https://community.onlyoffice.com/',
             },
             {
               label: 'Code on GitHub',

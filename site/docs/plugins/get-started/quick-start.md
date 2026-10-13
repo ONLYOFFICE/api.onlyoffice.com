@@ -193,6 +193,6 @@ function insertFormattedText() {
 
 **Need help?**
 
-- [Developer Forum](https://forum.onlyoffice.com/) — Community support
+- [Developer Forum](https://community.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
 - [FAQ](../more-information/faq.md) — Frequently asked questions
