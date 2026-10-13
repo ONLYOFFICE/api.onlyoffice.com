@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
+---
+
 # Components
 
 UI components for building plugin interfaces — dialogs, buttons, inputs, and other visual elements. Compose them with `IModalDialog`, `IBox`, or other layout containers; overlays such as dialogs, toasts and selectors are displayed by returning an `IMessage` with the matching [Actions](../../enums/Actions.md) value from an event handler.
@@ -28,4 +32,4 @@ The following components are available:
 | [`ITextArea`](ITextArea.md) | Custom textarea. |
 | [`IToast`](IToast.md) | A brief notification that appears on the screen. |
 | [`IToggleButton`](IToggleButton.md) | Custom toggle button input for binary state controls. |
-| [`TSelector`](Selector.md) | Provides selector components for choosing files, rooms, users, and groups within DocSpace. |
+| [`TSelector`](Selector.md) | Provides selector components for choosing files, rooms, users, and groups within ONLYOFFICE Apps. |

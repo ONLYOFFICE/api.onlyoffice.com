@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/react/settings.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/react/settings.ts
 ---
 
 # PluginSettingsClient
@@ -21,22 +21,10 @@ type Config = { apiKey: string };
 
 function SettingsPanel() {
   const settings = usePluginSettings();
-  const [apiKey, setApiKey] = useState("");
-  const [savedKey, setSavedKey] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  const [apiKey, setApiKey] = useState(() => settings.load<Config>()?.apiKey ?? "");
+  const [savedKey, setSavedKey] = useState(apiKey);
 
   useEffect(() => {
-    settings.load<Config>().then((saved) => {
-      if (saved) {
-        setApiKey(saved.apiKey);
-        setSavedKey(saved.apiKey);
-      }
-      setLoaded(true);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!loaded) return;
     settings.setSaveButton({
       component: Components.button,
       props: {
@@ -50,7 +38,7 @@ function SettingsPanel() {
         },
       },
     });
-  }, [apiKey, savedKey, loaded]);
+  }, [apiKey, savedKey]);
 
   return <input value={apiKey} onChange={(e) => setApiKey(e.target.value)} />;
 }
@@ -61,10 +49,12 @@ function SettingsPanel() {
 ### load()
 
 ```ts
-load<T>(): Promise<T | null>;
+load<T>(): T | null;
 ```
 
-Load the plugin's persisted settings.
+Read the plugin's persisted settings. The portal already holds them by the
+time a plugin component renders, so this reads them synchronously and
+suits a lazy `useState` initialiser.
 
 #### Type Parameters
 
@@ -74,7 +64,7 @@ Load the plugin's persisted settings.
 
 #### Returns
 
-`Promise`\<`T` \| `null`\>
+`T` \| `null`
 
 The parsed settings object, or `null` when nothing has been saved
   yet or the stored value is not valid JSON.
@@ -82,7 +72,7 @@ The parsed settings object, or `null` when nothing has been saved
 #### Example
 
 ```ts
-const saved = await settings.load<{ apiKey: string }>();
+const saved = settings.load<{ apiKey: string }>();
 if (saved) setApiKey(saved.apiKey);
 ```
 
@@ -134,7 +124,7 @@ gated on validity is already active over a form nobody has edited.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `props` | [`ButtonGroup`](../interfaces/components/Component.md#buttongroup) | A `ButtonGroup` component descriptor from the DocSpace SDK. |
+| `props` | [`ButtonGroup`](../interfaces/components/Component.md#buttongroup) | A `ButtonGroup` component descriptor from the ONLYOFFICE Apps SDK. |
 
 #### Returns
 

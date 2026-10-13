@@ -1,6 +1,8 @@
-# IIconButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IIconButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IIconButton.ts#L61)
+# IIconButton
 
 A component that displays an interactive icon button with hover and click states.
 
@@ -43,11 +45,9 @@ const deleteButton: IIconButton = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -69,6 +69,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `tooltipContent?` | `string` | Tooltip content text |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```

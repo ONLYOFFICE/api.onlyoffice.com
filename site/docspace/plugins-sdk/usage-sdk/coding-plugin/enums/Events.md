@@ -1,8 +1,13 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Events.ts
+---
+
 # Events
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Events.ts#L22)
-
 Defines the supported event types for the plugin system.
+
+Most of them are the signal the portal uses to open a dialog, so they fire
+when the dialog opens, before anything is created or changed.
 
 ## Enumeration Members
 
@@ -12,7 +17,7 @@ Defines the supported event types for the plugin system.
 CREATE: "create";
 ```
 
-Triggered when a new item is created
+Triggered when the dialog for creating a new item opens
 
 ### RENAME
 
@@ -20,7 +25,7 @@ Triggered when a new item is created
 RENAME: "rename";
 ```
 
-Triggered when an item is renamed
+Triggered when the rename dialog opens
 
 ### ROOM\_CREATE
 
@@ -28,7 +33,7 @@ Triggered when an item is renamed
 ROOM_CREATE: "create_room";
 ```
 
-Triggered when a new room is created
+Triggered when the dialog for creating a new room opens
 
 ### ROOM\_EDIT
 
@@ -36,7 +41,7 @@ Triggered when a new room is created
 ROOM_EDIT: "edit_room";
 ```
 
-Triggered when a room is edited
+Triggered when the room editing dialog opens
 
 ### CHANGE\_COLUMN
 
@@ -44,7 +49,7 @@ Triggered when a room is edited
 CHANGE_COLUMN: "change_column";
 ```
 
-Triggered when a column configuration is changed
+Triggered after a column is shown or hidden in a table view
 
 ### CHANGE\_USER\_TYPE
 
@@ -52,7 +57,7 @@ Triggered when a column configuration is changed
 CHANGE_USER_TYPE: "change_user_type";
 ```
 
-Triggered when a user's type or role is modified
+Triggered when the dialog for changing a user's type opens
 
 ### CREATE\_PLUGIN\_FILE
 
@@ -60,4 +65,4 @@ Triggered when a user's type or role is modified
 CREATE_PLUGIN_FILE: "create_plugin_file";
 ```
 
-Triggered when a new file is created through a plugin
+Triggered when a plugin opens the create dialog for a file it owns

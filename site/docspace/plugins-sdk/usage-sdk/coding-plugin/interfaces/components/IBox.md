@@ -1,6 +1,8 @@
-# IBox
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts#L70)
+# IBox
 
 A container that lays out its contents in one direction.
 Box provides general CSS capabilities like flexbox layout, paddings, background color, border, and animation.
@@ -42,17 +44,15 @@ const inputBox: IBox = {
   flexBasis: "50%",
   flexProp: "1",
   flexWrap: "wrap",
-  children: inputComponent
+  children: [inputComponent]
 }
 ```
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -80,15 +80,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | `id?` | `string` | Unique identifier. |
 | `children?` | [`Component`](Component.md)[] | The child components to render within this box |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
 ## IBorderProp
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts#L219)
 
 Defines the border properties for a box element.
 
@@ -107,9 +103,7 @@ const borderProps: IBorderProp = {
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -118,6 +112,4 @@ const borderProps: IBorderProp = {
 | `style` | `string` | Defines the border style of the element area |
 | `width` | `string` | Defines the border width of the element area |
 
-```mdx-code-block
 </APITable>
-```

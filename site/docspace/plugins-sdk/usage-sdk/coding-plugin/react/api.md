@@ -1,8 +1,8 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/react/api.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/react/api.ts
 ---
 
-# Api 
+# Api
 
 The portal API as a plugin sees it: the client every request goes through,
 the options a request takes, and the error a failure arrives as.
@@ -270,7 +270,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `params?` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. |
-| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by DocSpace and cannot be overridden here. |
+| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by ONLYOFFICE Apps and cannot be overridden here. |
 | `signal?` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. |
 
 </APITable>
@@ -294,7 +294,7 @@ for.
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `params?` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. | [`PluginApiOptions`](#pluginapioptions).[`params`](#Extendedby-params?) |
-| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by DocSpace and cannot be overridden here. | [`PluginApiOptions`](#pluginapioptions).[`headers`](#Extendedby-headers?) |
+| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by ONLYOFFICE Apps and cannot be overridden here. | [`PluginApiOptions`](#pluginapioptions).[`headers`](#Extendedby-headers?) |
 | `signal?` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. | [`PluginApiOptions`](#pluginapioptions).[`signal`](#Extendedby-signal?) |
 | `path` | `string` | API path relative to the portal API base URL, e.g. `"/files/@my"`. | - |
 | `method?` | [`PluginApiMethod`](#pluginapimethod) | Defaults to `"GET"`. | - |

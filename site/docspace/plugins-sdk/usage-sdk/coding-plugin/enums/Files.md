@@ -1,10 +1,12 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts
+---
+
 # Files
 
 Enumerations for file types, supported extensions, and security permissions.
 
 ## FilesType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts#L27)
 
 Defines the supported file types.
 
@@ -16,7 +18,7 @@ Defines the supported file types.
 room: "room";
 ```
 
-DocSpace room or workspace
+ONLYOFFICE Apps room or workspace
 
 #### file
 
@@ -24,7 +26,7 @@ DocSpace room or workspace
 file: "file";
 ```
 
-Generic file type
+A file — whether an image or a video counts as one depends on the scope, see the item's `fileType`/`filesType`
 
 #### folder
 
@@ -53,8 +55,6 @@ Video file (various formats)
 ***
 
 ## FilesExst
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts#L47)
 
 Defines the supported file extensions.
 
@@ -423,8 +423,6 @@ Extensible Markup Language
 ***
 
 ## FilesSecurity
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts#L154)
 
 Defines the supported file security parameters.
 

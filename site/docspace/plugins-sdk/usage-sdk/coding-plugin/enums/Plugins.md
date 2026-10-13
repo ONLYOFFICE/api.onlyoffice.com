@@ -1,12 +1,16 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts
+---
+
 # Plugins
 
 Enumerations for plugin status and supported locales.
 
 ## PluginStatus
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts#L27)
-
-Defines the supported plugin statuses.
+Defines the supported plugin statuses. The portal reads the current one
+through [`IPlugin.getStatus`](../interfaces/plugins/IPlugin.md#getstatus)
+and switches the plugin on and off by it.
 
 ### Enumeration Members
 
@@ -16,7 +20,8 @@ Defines the supported plugin statuses.
 active: "active";
 ```
 
-Plugin is enabled and visible to users
+Plugin is enabled and visible to users: its items are registered and its
+CSS is loaded. A plugin that reports no status is treated as active.
 
 #### hide
 
@@ -24,13 +29,13 @@ Plugin is enabled and visible to users
 hide: "hide";
 ```
 
-Plugin is disabled and hidden from the user interface
+Plugin is hidden from the user interface: its items are unregistered and
+its CSS unloaded until the status is read as `active` again. Unlike the
+administrator's switch, it does not disable the plugin.
 
 ***
 
 ## PluginLocale
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts#L38)
 
 Defines the supported plugin locales.
 

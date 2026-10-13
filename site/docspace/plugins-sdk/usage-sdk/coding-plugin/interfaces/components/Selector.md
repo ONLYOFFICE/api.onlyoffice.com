@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts
+---
+
 # TSelector
 
 ```ts
@@ -24,9 +28,7 @@ type TSelector =
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts#L58)
-
-Provides selector components for choosing files, rooms, users, and groups within DocSpace.
+Provides selector components for choosing files, rooms, users, and groups within ONLYOFFICE Apps.
 
 Set `type` to the desired [SelectorType](../../enums/Selector.md) value and `props` to the matching
 selector props interface ([TBaseSelector](#tbaseselector), [TFilesSelector](#tfilesselector),
@@ -75,8 +77,6 @@ type TBaseSelector = TSelectorBreadCrumbs & TSelectorPagination & TSelectorHeade
   }) => TReturnMessage;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L98)
 
 Defines the base properties for all selector components.
 
@@ -180,8 +180,6 @@ type TSelectorItem = {
 } & Partial<TSelectorItemFile> & Partial<TSelectorItemInput> & Partial<TSelectorItemNew>;
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L149)
-
 Represents a single item within a selector component.
 
 ### Type Declaration
@@ -210,17 +208,13 @@ type TSelectorItemFile = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L165)
-
 Defines properties for an item that represents a file.
 
 ### Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -229,9 +223,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `fileType` | [`FilesType`](../../enums/Files.md#filestype) | The general type of the file (e.g., 'text', 'spreadsheet'). |
 | `security` | [`FilesSecurity`](../../enums/Files.md#filessecurity) | The security or access level of the file. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -246,15 +238,11 @@ type TSelectorItemInput = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L187)
-
 Defines properties for an item that functions as an input field.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -263,9 +251,7 @@ Defines properties for an item that functions as an input field.
 | `onAcceptInput` | (`value`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user accepts the input value. |
 | `onCancelInput` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user cancels the input. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -278,24 +264,18 @@ type TSelectorItemNew = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L209)
-
 Defines properties for an item that allows creating a new entity.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `isCreateNewItem` | `boolean` | If true, this item will be rendered as a 'create new' button. |
 | `onCreateClick` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks the 'create new' button. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -309,15 +289,11 @@ type TBreadCrumbItem = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L223)
-
 Represents a single item in a breadcrumb trail.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -325,9 +301,7 @@ Represents a single item in a breadcrumb trail.
 | `id` | `string` \| `number` | A unique identifier for the breadcrumb item. |
 | `isRoom?` | `boolean` | If true, indicates that the breadcrumb item represents a room. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -342,15 +316,11 @@ type TSelectorBreadCrumbs = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L252)
-
 Defines properties for configuring breadcrumbs in a selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -359,9 +329,7 @@ Defines properties for configuring breadcrumbs in a selector.
 | `breadCrumbs?` | [`TBreadCrumbItem`](#tbreadcrumbitem)[] | An array of breadcrumb items to display. |
 | `onSelectBreadCrumb?` | (`id`: `string` \| `number`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when a breadcrumb item is selected. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -377,15 +345,11 @@ type TSelectorPagination = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L274)
-
 Defines properties for pagination within a selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -395,9 +359,7 @@ Defines properties for pagination within a selector.
 | `onLoadNextPage?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered to load the next page of items. |
 | `totalItems?` | `number` | The total number of items available. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -416,15 +378,11 @@ type TSelectorHeader = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L300)
-
 Defines properties for the selector's header.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -436,9 +394,7 @@ Defines properties for the selector's header.
 | `headerProps.withBackButton?` | `boolean` | If true, displays a back button in the header. |
 | `headerProps.onBackClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the back button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -452,15 +408,11 @@ type TSelectorCheckbox = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L335)
-
 Defines properties for a checkbox in the selector's footer.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -468,9 +420,7 @@ Defines properties for a checkbox in the selector's footer.
 | `footerCheckboxLabel?` | `string` | The label for the footer checkbox. |
 | `isChecked?` | `boolean` | The initial checked state of the footer checkbox. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -484,15 +434,11 @@ type TSelectorCancelButton = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L353)
-
 Defines properties for the cancel button in the selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -500,9 +446,7 @@ Defines properties for the cancel button in the selector.
 | `cancelButtonLabel?` | `string` | The text label for the cancel button. |
 | `onCancel?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the cancel button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -515,24 +459,18 @@ type TSelectorBaseProps = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L371)
-
 Common base properties shared across all selector types.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `id?` | `string` | A unique identifier for the selector component. |
 | `className?` | `string` | A CSS class name to apply to the selector component. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -545,24 +483,18 @@ type TSelectorLifecycleEvents = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L385)
-
 Lifecycle callback properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `onLoad?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is loaded. |
-| `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is closed. |
+| `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks outside the selector. Return [`Actions.closeSelector`](../../enums/Actions.md#closeselector) to close it. Not called by the Files selector. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -575,24 +507,18 @@ type TSelectorEmptyScreen = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L399)
-
 Empty screen message properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `emptyScreenHeader?` | `string` | The header text to display when there are no items to show. |
 | `emptyScreenDescription?` | `string` | The description text to display when there are no items to show. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -605,24 +531,18 @@ type TSelectorSearchCreate = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L413)
-
 Search and create functionality properties for selectors.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `withSearch?` | `boolean` | If true, displays a search input field. |
 | `withCreate?` | `boolean` | If true, allows users to create new items. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -640,15 +560,11 @@ type TSelectorSubmitButton = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IBaseSelector.ts#L440)
-
 Defines properties for the submit button in the selector.
 
 ### Properties
 
-```mdx-code-block
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -656,9 +572,7 @@ Defines properties for the submit button in the selector.
 | `disabledSubmitButton?` | `boolean` | If true, the submit button will be disabled. |
 | `onSubmit` | (`params`: \{ `selectedIds`: (`string` \| `number`)[]; `fileName`: `string`; `isFooterCheckboxChecked`: `boolean`; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -710,8 +624,6 @@ type TFilesSelector = TSelectorHeader & TSelectorBaseProps & TSelectorLifecycleE
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IFilesSelector.ts#L96)
-
 Defines the properties for a file and folder selector component.
 
 ### Example
@@ -733,6 +645,8 @@ const filesSelectorProps: TFilesSelector = {
   // Enables and sets the text for the cancel button.
   withCancelButton: true,
   cancelButtonLabel: "Cancel",
+  // A callback function that is executed when the user clicks the cancel button.
+  onCancel: () => ({ actions: [Actions.closeSelector] }),
 
   // Enables breadcrumbs for easy navigation through folders.
   withBreadCrumbs: true,
@@ -812,8 +726,6 @@ type TGroupsSelector = TSelectorHeader & TSelectorBaseProps & TSelectorLifecycle
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IGroupsSelector.ts#L57)
-
 Defines the properties for a group selector component.
 
 ### Example
@@ -878,8 +790,6 @@ type TPeopleSelector = TSelectorHeader & TSelectorCancelButton & TSelectorSubmit
   onlyRoomMembers?: boolean;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IPeopleSelector.ts#L84)
 
 Defines the properties for a user and group selector component.
 
@@ -974,8 +884,6 @@ type TRoomSelector = TSelectorHeader & TSelectorCancelButton & TSelectorBaseProp
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/IRoomSelector.ts#L96)
-
 Defines the properties for a room selector component.
 
 ### Example
@@ -996,6 +904,8 @@ const roomSelectorProps: TRoomSelector = {
   // Enables and sets the text for the cancel button.
   withCancelButton: true,
   cancelButtonLabel: "Close",
+  // A callback function that is executed when the user clicks the cancel button.
+  onCancel: () => ({ actions: [Actions.closeSelector] }),
 
   // Custom text to display when no rooms are found.
   emptyScreenHeader: "No Rooms Available",

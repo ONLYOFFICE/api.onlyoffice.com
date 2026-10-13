@@ -1,6 +1,8 @@
-# IArticleNavigationPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleNavigationPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleNavigationPlugin.ts)
+# IArticleNavigationPlugin
 
 Describes a plugin that adds navigation items to the article sidebar.
 Each registered item appears as a first-class navigation entry (icon + label)

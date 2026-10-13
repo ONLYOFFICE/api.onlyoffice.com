@@ -1,8 +1,25 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts
+---
+
 # UsersType
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts#L22)
-
 Defines the supported user types.
+
+## Deprecated:
+
+Use [`UserRole`](UserRole.md) instead — its members carry the names the
+portal itself uses, and `docSpaceAdmin` is gone from them. Every member here
+keeps its value, and the portal matches a role against both the old and the
+new value, so an item that still lists these appears for the right people.
+
+| This enum       | `UserRole`  | The portal shows |
+| --------------- | ----------- | ---------------- |
+| `owner`         | `owner`     | Owner            |
+| `docSpaceAdmin` | `fullAdmin` | Full admin       |
+| `roomAdmin`     | `roomAdmin` | Room admin       |
+| `collaborator`  | `user`      | User             |
+| `user`          | `guest`     | Guest            |
 
 ## Enumeration Members
 
@@ -12,7 +29,7 @@ Defines the supported user types.
 owner: "Owner";
 ```
 
-System owner with full administrative rights and control over the entire DocSpace instance
+System owner with full administrative rights and control over the entire ONLYOFFICE Apps instance — shown as `Owner` in the portal
 
 ### docSpaceAdmin
 
@@ -20,7 +37,7 @@ System owner with full administrative rights and control over the entire DocSpac
 docSpaceAdmin: "DocSpaceAdmin";
 ```
 
-Administrator with system-wide management capabilities but limited compared to owner
+Administrator with system-wide management capabilities but limited compared to owner — shown as `Full admin` in the portal
 
 ### roomAdmin
 
@@ -28,7 +45,7 @@ Administrator with system-wide management capabilities but limited compared to o
 roomAdmin: "RoomAdmin";
 ```
 
-User with administrative rights within specific rooms or workspaces
+User with administrative rights within specific rooms or workspaces — shown as `Room admin` in the portal
 
 ### collaborator
 
@@ -36,7 +53,7 @@ User with administrative rights within specific rooms or workspaces
 collaborator: "Collaborator";
 ```
 
-User with enhanced permissions for content creation and modification
+Member who creates and edits content in the rooms they are invited to, without managing the portal — shown as `User` in the portal
 
 ### user
 
@@ -44,4 +61,4 @@ User with enhanced permissions for content creation and modification
 user: "User";
 ```
 
-Regular user with basic access rights for viewing and interacting with content
+External member with view and interaction rights only — shown as `Guest` in the portal

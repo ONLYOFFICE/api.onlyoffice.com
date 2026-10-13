@@ -249,6 +249,41 @@ const typedocSidebar = {
     },
     {
       "type": "category",
+      "label": "React",
+      "link": {
+        "type": "doc",
+        "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/index"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/actions",
+          "label": "PluginActions"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/api",
+          "label": "Api"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/hooks",
+          "label": "Hooks"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/runtime",
+          "label": "Runtime"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/settings",
+          "label": "PluginSettingsClient"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Enums",
       "link": {
         "type": "doc",
@@ -307,6 +342,11 @@ const typedocSidebar = {
         },
         {
           "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/UserRole",
+          "label": "UserRole"
+        },
+        {
+          "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/UsersType",
           "label": "UsersType"
         },
@@ -314,41 +354,6 @@ const typedocSidebar = {
           "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/Utility",
           "label": "FilterType"
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "React",
-      "link": {
-        "type": "doc",
-        "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/index"
-      },
-      "items": [
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/hooks",
-          "label": "Hooks"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/api",
-          "label": "Api"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/actions",
-          "label": "Actions"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/runtime",
-          "label": "Runtime"
-        },
-        {
-          "type": "doc",
-          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/settings",
-          "label": "Settings"
         }
       ]
     }

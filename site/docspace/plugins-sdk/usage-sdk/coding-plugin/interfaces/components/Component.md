@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts
+---
+
 # Component
 
 ```ts
@@ -17,8 +21,6 @@ type Component =
   | IconButtonGroup
   | LinkGroup;
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L104)
 
 A component that is used to add components into Box.
 Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).
@@ -94,8 +96,6 @@ type BoxGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L149)
-
 Defines the box component.
 
 ### Example
@@ -127,11 +127,9 @@ const boxGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable name="BoxGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -139,9 +137,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `props` | [`IBox`](IBox.md) | Defines the box component properties |
 | `contextName?` | `string` | Defines the box component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -154,8 +150,6 @@ type ButtonGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L180)
 
 Defines the button component.
 
@@ -181,9 +175,7 @@ const buttonGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="ButtonGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -191,9 +183,7 @@ const buttonGroup: Component = {
 | `props` | [`IButton`](IButton.md) | Defines the button component properties |
 | `contextName?` | `string` | Defines the button component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -206,8 +196,6 @@ type CheckboxGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L223)
 
 Defines the checkbox component.
 
@@ -245,9 +233,7 @@ const checkboxGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="CheckboxGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -255,9 +241,7 @@ const checkboxGroup: Component = {
 | `props` | [`ICheckbox`](ICheckbox.md) | Defines the checkbox component properties |
 | `contextName?` | `string` | Defines the checkbox component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -270,8 +254,6 @@ type ComboBoxGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L261)
 
 Defines the combo box component.
 
@@ -304,9 +286,7 @@ const comboBoxGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="ComboBoxGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -314,9 +294,7 @@ const comboBoxGroup: Component = {
 | `props` | [`IComboBox`](IComboBox.md) | Defines the combo box component properties |
 | `contextName?` | `string` | Defines the combo box component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -329,8 +307,6 @@ type IFrameGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L298)
 
 Defines the iframe component.
 
@@ -362,9 +338,7 @@ const iframeGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="IFrameGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -372,9 +346,7 @@ const iframeGroup: Component = {
 | `props` | [`IFrame`](IFrame.md) | Defines the iFrame component properties |
 | `contextName?` | `string` | Defines the iFrame component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -387,8 +359,6 @@ type ImageGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L335)
 
 Defines the image component.
 
@@ -420,9 +390,7 @@ const imageGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="ImageGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -430,9 +398,7 @@ const imageGroup: Component = {
 | `props` | [`IImage`](IImage.md) | Defines the image component properties |
 | `contextName?` | `string` | Defines the image component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -445,8 +411,6 @@ type InputGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L373)
 
 Defines the input component.
 
@@ -479,9 +443,7 @@ const inputGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="InputGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -489,9 +451,7 @@ const inputGroup: Component = {
 | `props` | [`IInput`](IInput.md) | Defines the input component properties |
 | `contextName?` | `string` | Defines the input component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -504,8 +464,6 @@ type LabelGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L406)
 
 Defines the label component.
 
@@ -533,9 +491,7 @@ const labelGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="LabelGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -543,9 +499,7 @@ const labelGroup: Component = {
 | `props` | [`ILabel`](ILabel.md) | Defines the label component properties |
 | `contextName?` | `string` | Defines the label component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -558,8 +512,6 @@ type SkeletonGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L435)
 
 Defines the skeleton component.
 
@@ -583,9 +535,7 @@ const skeletonGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="SkeletonGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -593,9 +543,7 @@ const skeletonGroup: Component = {
 | `props` | [`ISkeleton`](ISkeleton.md) | Defines the skeleton component properties |
 | `contextName?` | `string` | Defines the skeleton component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -609,8 +557,6 @@ type TextGroup = {
 };
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L470)
-
 Defines the text component.
 
 ### Example
@@ -619,7 +565,7 @@ Defines the text component.
 import { IText, Components, Component } from "@onlyoffice/docspace-plugin-sdk";
 
 const text: IText = {
-  text: "Welcome to DocSpace Plugin",
+  text: "Welcome to ONLYOFFICE Apps Plugin",
   fontSize: "18px",
   fontWeight: 500,
   lineHeight: "24px",
@@ -627,7 +573,7 @@ const text: IText = {
   isBold: false,
   textAlign: "left",
   truncate: true,
-  title: "Welcome to DocSpace Plugin"
+  title: "Welcome to ONLYOFFICE Apps Plugin"
 };
 
 const textGroup: Component = {
@@ -639,9 +585,7 @@ const textGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="TextGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -649,9 +593,7 @@ const textGroup: Component = {
 | `props` | [`IText`](IText.md) | Defines the text component properties |
 | `contextName?` | `string` | Defines the text component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -664,8 +606,6 @@ type TextAreaGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L505)
 
 Defines the textarea component.
 
@@ -695,9 +635,7 @@ const textAreaGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="TextAreaGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -705,9 +643,7 @@ const textAreaGroup: Component = {
 | `props` | [`ITextArea`](ITextArea.md) | Defines the textarea component properties |
 | `contextName?` | `string` | Defines the textarea component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -720,8 +656,6 @@ type ToggleButtonGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L539)
 
 Defines the toggle button component.
 
@@ -750,9 +684,7 @@ const toggleButtonGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="ToggleButtonGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -760,9 +692,7 @@ const toggleButtonGroup: Component = {
 | `props` | [`IToggleButton`](IToggleButton.md) | Defines the toggle button component properties |
 | `contextName?` | `string` | Defines the toggle button component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -775,8 +705,6 @@ type IconButtonGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L574)
 
 Defines the icon button component.
 
@@ -806,9 +734,7 @@ const iconButtonGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="IconButtonGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -816,9 +742,7 @@ const iconButtonGroup: Component = {
 | `props` | [`IIconButton`](IIconButton.md) | Defines the icon button component properties |
 | `contextName?` | `string` | Defines the icon button component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -831,8 +755,6 @@ type LinkGroup = {
   contextName?: string;
 };
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts#L607)
 
 Defines the link component.
 
@@ -860,9 +782,7 @@ const linkGroup: Component = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="LinkGroup">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -870,6 +790,4 @@ const linkGroup: Component = {
 | `props` | [`ILink`](ILink.md) | Defines the link component properties |
 | `contextName?` | `string` | Defines the link component context name that updates the component via React context |
 
-```mdx-code-block
 </APITable>
-```

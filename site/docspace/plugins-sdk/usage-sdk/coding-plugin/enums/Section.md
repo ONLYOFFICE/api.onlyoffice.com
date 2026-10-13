@@ -1,6 +1,8 @@
-# Section
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Section.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Section.ts)
+# Section
 
 Defines the portal sections in which an article navigation item can appear.
 Pass one or more values in the `appears` array on [`IArticleNavigationItem`](../interfaces/items/IArticleNavigationItem.md)

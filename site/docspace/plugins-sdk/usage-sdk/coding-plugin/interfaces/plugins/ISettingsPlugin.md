@@ -1,9 +1,15 @@
-# ISettingsPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts#L105)
+# ISettingsPlugin
 
 The plugin that manages settings for the administrator or owner.
 The plugin that can interact with the settings panel.
+
+Everything the plugin saves is serialized into a single string that the portal caps at 255 characters,
+and a longer one is refused rather than truncated. Keep the settings object to a few short scalar fields
+and hold anything bulkier in a file or a portal entity the plugin refers to by ID.
 
 ![settings-block](/assets/images/docspace/settings-block.png#gh-light-mode-only)![settings-block](/assets/images/docspace/settings-block.dark.png#gh-dark-mode-only)
 
@@ -11,7 +17,7 @@ The plugin that can interact with the settings panel.
 
 The plugin class implements `ISettingsPlugin`: `adminPluginSettings` describes the
 settings block (a webhook URL input and a save button) shown in the modal window
-with the plugin description. DocSpace calls `getAdminPluginSettings` to render the
+with the plugin description. ONLYOFFICE Apps calls `getAdminPluginSettings` to render the
 block and `setAdminPluginSettingsValue` to pass the saved value back to the plugin.
 
 ```typescript
@@ -111,7 +117,8 @@ Update the administrator or owner plugin settings
 setAdminPluginSettingsValue(settings: string | null): void;
 ```
 
-Transfer the administrator or owner plugin settings to all the portal users. It functions on the DocSpace side
+The method is called on the portal side with the stored settings string,
+`null` until the first save.
 
 #### Parameters
 
@@ -122,6 +129,13 @@ Transfer the administrator or owner plugin settings to all the portal users. It 
 #### Returns
 
 `void`
+
+#### Remarks:
+
+Called as the plugin loads and after a save through the React
+settings client, with [`getStatus`](IPlugin.md#getstatus) re-read straight
+after, so a plugin can hide itself by its own configuration. A save
+reaches only the browser session that made it.
 
 ### getAdminPluginSettings()
 
@@ -137,16 +151,12 @@ Get the administrator or owner plugin settings
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `adminPluginSettings` | [`ISettings`](../settings/ISettings.md) \| `null` | The administrator or owner settings block that is embedded in the modal window with the plugin description |
 
-```mdx-code-block
 </APITable>
-```

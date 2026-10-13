@@ -1,6 +1,8 @@
-# IInput
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L90)
+# IInput
 
 Input field for single-line strings.
 
@@ -70,11 +72,9 @@ const passwordInput: IInput = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -107,13 +107,9 @@ import APITable from '@site/src/components/APITable/APITable';
 | `onIconClick?` | () => `void` | Sets a function which is triggered whenever the input icon is clicked. |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## InputSize
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L238)
 
 The supported input sizes.
 
@@ -163,8 +159,6 @@ Large size of the input field.
 
 ## InputAutocomplete
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L264)
-
 The input autocomplete feature.
 
 ### Enumeration Members
@@ -188,8 +182,6 @@ Autocomplete is disabled.
 ***
 
 ## InputType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts#L278)
 
 The supported input types.
 

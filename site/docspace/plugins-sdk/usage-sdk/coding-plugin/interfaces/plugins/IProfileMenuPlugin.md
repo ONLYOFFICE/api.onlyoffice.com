@@ -1,6 +1,8 @@
-# IProfileMenuPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts#L74)
+# IProfileMenuPlugin
 
 Plugin for embedding items in the profile menu.
 This interface must be implemented in each plugin that adds items to the profile menu.
@@ -8,7 +10,7 @@ This interface must be implemented in each plugin that adds items to the profile
 ## Example
 
 The plugin class implements `IProfileMenuPlugin` and registers a "User Settings"
-entry in the constructor. DocSpace calls `getProfileMenuItems` to embed the items
+entry in the constructor. ONLYOFFICE Apps calls `getProfileMenuItems` to embed the items
 into the user profile dropdown.
 
 ```typescript
@@ -106,16 +108,12 @@ Updates an existing profile menu item
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `profileMenuItems` | `Map`\<`string`, [`IProfileMenuItem`](../items/IProfileMenuItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ProfileMenuItem objects. A list for hooking interactions with profile menu is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

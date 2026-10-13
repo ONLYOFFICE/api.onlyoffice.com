@@ -1,6 +1,8 @@
-# ILabel
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILabel.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILabel.ts#L55)
+# ILabel
 
 Field name in the form.
 
@@ -37,11 +39,9 @@ const longFieldLabel: ILabel = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -54,6 +54,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `display?` | `string` | Specifies whether the "display" property is set |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```
