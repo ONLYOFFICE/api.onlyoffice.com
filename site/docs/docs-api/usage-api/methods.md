@@ -67,10 +67,10 @@ Download the edited file. This method can be called only when the [onDownloadAs]
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format    | `string` | optional | The format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../additional-api/conversion-api/conversion-tables.md). But you cannot download a file in the image formats such as `bmp`, `gif`, `jpg`, `png`. If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
+| format    | `string` | optional | The format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../additional-api/conversion-api/conversion-tables.md). But you cannot download a file in the image formats such as `bmp`, `gif`, `jpg`, `png`, except for `djvu`, `oxps`, `pdf`, and `xps` files (see the note below). If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
 
 :::note
-Please note that conversion from the `djvu`, `pdf`, `xps` formats are not available. The original format will be downloaded.
+For `djvu`, `oxps`, `pdf`, and `xps` files, only some formats are available. `djvu` files can be downloaded only in the `pdf` format. `oxps`, `pdf`, and `xps` files can be downloaded in the `docm`, `docx`, `dotx`, `epub`, `fb2`, `html`, `jpg`, `odt`, `ott`, `png`, `rtf`, and `txt` formats, and `oxps` and `xps` files also in the `pdf` and `pdfa` formats. Files in the `jpg` and `png` formats are downloaded as a ZIP archive. If the format is not specified, the original file is downloaded.
 :::
 
 **Example:**
