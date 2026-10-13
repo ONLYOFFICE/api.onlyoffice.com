@@ -26,6 +26,10 @@ If omitted, the file type is automatically inferred from the [`documentType`](..
 
 Whether to open the PDF file as a form. Applies when `fileType` is `pdf`. If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
 
+:::note
+In the embedded mode (the [type](../config.md#type) parameter is set to `embedded`), PDF files are opened for form filling regardless of the `isForm` value if form filling is allowed with the [permissions.fillForms](permissions.md#fillforms) parameter.
+:::
+
 **Example**: `true`
 
 ## key

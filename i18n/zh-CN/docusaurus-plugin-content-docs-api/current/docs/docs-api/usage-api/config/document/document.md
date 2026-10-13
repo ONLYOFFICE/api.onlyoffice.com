@@ -26,6 +26,10 @@
 
 是否将 PDF 文件作为表单打开。当 `fileType` 为 `pdf` 时适用。如果未指定此参数，则会启动[对 PDF 文件的内部检查](../../../get-started/how-it-works/checking-pdf-forms.md)。
 
+:::note
+在嵌入模式下（[type](../config.md#type) 参数设置为 `embedded`），如果通过 [permissions.fillForms](permissions.md#fillforms) 参数允许填写表单，则无论 `isForm` 的值如何，PDF 文件都将以表单填写模式打开。
+:::
+
 **示例**：`true`
 
 ## key
