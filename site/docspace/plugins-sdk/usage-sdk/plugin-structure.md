@@ -89,7 +89,7 @@ The following folders are not part of the plugin template — one is created by 
 
 A folder for storing plugin images. This folder is not created automatically by the **npx create-docspace-plugin** command — create it yourself in the plugin root folder and add the images described below. When building the plugin, its contents are included in the plugin archive only if the folder exists.
 
-Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. **The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does** (the server allows the icon count plus 3 archive entries: *plugin.js*, *config.json*, and *package.json*). The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
+Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. **The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does** (the server allows up to 10 asset files plus 3 archive entries: *plugin.js*, *config.json*, and the *assets/* folder itself; *plugin.css*, when present, takes one of the 10 asset slots). The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 

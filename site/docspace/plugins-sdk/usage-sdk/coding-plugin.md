@@ -8,11 +8,17 @@ Develop a plugin. Follow the plugin structure described [here](plugin-structure.
 
 - Write code for each [plugin type](coding-plugin/interfaces/plugins/index.md) using the corresponding variables, methods and [items](coding-plugin/interfaces/items/index.md). Put the scripts into the *src* folder. Specify the required [Plugin](coding-plugin/interfaces/plugins/IPlugin.md) interface for each plugin to be embedded in the portal:
 
-  - [context menu](coding-plugin/interfaces/plugins/IContextMenuPlugin.md)
-  - [info panel](coding-plugin/interfaces/plugins/IInfoPanelPlugin.md)
-  - [main button](coding-plugin/interfaces/plugins/IMainButtonPlugin.md)
+  - [API](coding-plugin/interfaces/plugins/IApiPlugin.md)
   - [article button](coding-plugin/interfaces/plugins/IArticleButtonPlugin.md)
   - [article navigation](coding-plugin/interfaces/plugins/IArticleNavigationPlugin.md)
+  - [context menu](coding-plugin/interfaces/plugins/IContextMenuPlugin.md)
+  - [event listener](coding-plugin/interfaces/plugins/IEventListenerPlugin.md)
+  - [file](coding-plugin/interfaces/plugins/IFilePlugin.md)
+  - [info panel](coding-plugin/interfaces/plugins/IInfoPanelPlugin.md)
+  - [main button](coding-plugin/interfaces/plugins/IMainButtonPlugin.md)
+  - [postMessage](coding-plugin/interfaces/plugins/IPostMessagePlugin.md)
+  - [profile menu](coding-plugin/interfaces/plugins/IProfileMenuPlugin.md)
+  - [settings](coding-plugin/interfaces/plugins/ISettingsPlugin.md)
 
   ![Plugin structure](/assets/images/docspace/plugin-structure.png#gh-light-mode-only)![Plugin structure](/assets/images/docspace/plugin-structure.dark.png#gh-dark-mode-only)
 

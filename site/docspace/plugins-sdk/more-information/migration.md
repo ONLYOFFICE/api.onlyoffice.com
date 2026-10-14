@@ -16,6 +16,10 @@ SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.
 
 For plugins created with an SDK 2.x template:
 
+:::important
+The 3.0.0 template builds with Vite 8 and `@vitejs/plugin-react` 6, which require Node.js `^20.19.0 || >=22.12.0`. On older Node.js versions, such as Node.js 18, `vite build` does not run. Check your version with `node -v` before migrating.
+:::
+
 1. Update the SDK to version 3.0.0:
 
    ```sh
@@ -54,11 +58,23 @@ For plugins created with an SDK 2.x template:
    The 2.x template uses `module: "CommonJS"` and `moduleResolution: "node"`, and does not set `jsx`. With that configuration, TypeScript and IDEs cannot resolve `@onlyoffice/docspace-plugin-sdk/react` or accept JSX.
    :::
 
-3. Delete old Webpack configuration files:
+3. Remove Webpack:
 
-   ```sh
-   rm webpack.config.js custom.d.ts
-   ```
+   - Delete the old configuration files:
+
+     ```sh
+     rm webpack.config.js custom.d.ts
+     ```
+
+   - Uninstall the Webpack packages from the 2.x template:
+
+     ```sh
+     npm uninstall webpack webpack-cli ts-loader css-loader mini-css-extract-plugin css-minimizer-webpack-plugin
+     ```
+
+   :::note
+   *custom.d.ts* declared the types for CSS Modules and image imports. If your plugin uses them, add *src/vite-env.d.ts* instead, as described in [Plugin structure](../usage-sdk/plugin-structure.md#vite-envdts).
+   :::
 
 4. Replace Webpack with Vite:
    - Create a *vite.config.ts* file in the plugin root folder
@@ -125,14 +141,14 @@ For plugins created with an SDK 2.x template:
    - Add `"type": "module"` to *package.json* (required for ES modules)
    - Add `"runtime": "module"` to *package.json*
    - Add Vite version to `devDependencies`: `"vite": "^8.3.0"`
-   - If your plugin uses React, add `"@vitejs/plugin-react": "^6.0.0"` to `devDependencies` and `"react": "^19.0.0"`, `"react-dom": "^19.0.0"` to `dependencies`, as in the 3.0.0 template
+   - If your plugin uses React, add `"@vitejs/plugin-react": "^6.0.0"`, `"@types/react": "^19.0.0"`, and `"@types/react-dom": "^19.0.0"` to `devDependencies`, and `"react": "^19.0.0"`, `"react-dom": "^19.0.0"` to `dependencies`, as in the 3.0.0 template
    - Update TypeScript in `devDependencies` to `"typescript": "^5.6.0"`
    - Export the plugin instance as the default export
    - Remove the *window.Plugins* registration from *src/index.ts*
 
-7. (Optional) Update deprecated properties to use React components:
+7. (Optional) Replace deprecated APIs:
    
-   The following deprecated properties still work but should be replaced:
+   The following deprecated APIs still work but should be replaced:
    
    - `body` in [IInfoPanelItem](../usage-sdk/coding-plugin/interfaces/items/IInfoPanelItem.md) and [IArticleButtonItem](../usage-sdk/coding-plugin/interfaces/items/IArticleButtonItem.md) — replace with `component`
    - `content` in [IMediaViewer](../usage-sdk/coding-plugin/interfaces/components/IMediaViewer.md) — replace with `component`

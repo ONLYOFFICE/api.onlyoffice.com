@@ -240,11 +240,7 @@ This adds it to `dependencies` in `package.json`:
 }
 ```
 
-The UI kit is only needed for type checking and editor support: it is not bundled into *plugin.js*. DocSpace supplies its own copy at load time and rewrites the `@onlyoffice/apps-ui-kit` specifier to it. The template's *vite.config.ts* already marks it as external with the pattern `/^@onlyoffice\/apps-ui-kit(\/.*)?$/`.
-
-:::important
-Only the package root is substituted, so import every component from `@onlyoffice/apps-ui-kit` itself. Subpath imports such as `@onlyoffice/apps-ui-kit/components/button` stay unresolved at runtime, and the plugin fails to load.
-:::
+The UI kit is only needed for type checking and editor support: it is not bundled into *plugin.js*. DocSpace supplies its own copy at load time and rewrites the `@onlyoffice/apps-ui-kit` specifier to it. The template's *vite.config.ts* already marks it as external with the pattern `/^@onlyoffice\/apps-ui-kit(\/.*)?$/`. Import components only from the package root, as noted at the top of this page.
 
 ## Step 4: Review and extend plugin code
 
