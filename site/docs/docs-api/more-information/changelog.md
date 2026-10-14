@@ -6,6 +6,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added opening for [ofd](../usage-api/config/document/document.md#filetype) format. Like `xps`, it is opened for viewing only and can be [converted](../additional-api/conversion-api/conversion-tables.md#document-file-formats) to other formats, but cannot be edited or saved to.
 - Added conversion to [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) format from all spreadsheet formats.
+- In the commercial editions, the [Admin Panel](../get-started/configuration/server-config/server-config.md#admin-panel) now starts automatically with the server by default. Community Edition does not include the Admin Panel.
+- The first administrator is now created with the `documentserver-admin` host CLI (`create-admin`, `reset-admin-password`) instead of on a web page with a bootstrap code from the logs. The administrator login is always `admin`.
 
 ## Version 9.4
 
