@@ -19,7 +19,7 @@ expression.BIN2OCT(arg1, arg2);
 
 ## Returns
 
-number
+string
 
 ## Example
 

@@ -18,7 +18,7 @@ expression.MUNIT(arg1);
 
 ## Returns
 
-number
+number[][]
 
 ## Example
 

@@ -21,7 +21,7 @@ expression.TREND(arg1, arg2, arg3, arg4);
 
 ## 返回值
 
-number
+number[][]
 
 ## 示例
 

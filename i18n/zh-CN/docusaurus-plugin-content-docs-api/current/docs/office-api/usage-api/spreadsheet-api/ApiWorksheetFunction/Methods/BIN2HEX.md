@@ -19,7 +19,7 @@ expression.BIN2HEX(arg1, arg2);
 
 ## 返回值
 
-number
+string
 
 ## 示例
 

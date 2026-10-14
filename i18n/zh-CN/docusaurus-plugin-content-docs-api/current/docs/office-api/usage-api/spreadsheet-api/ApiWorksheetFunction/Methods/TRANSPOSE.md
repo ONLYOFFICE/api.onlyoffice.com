@@ -18,7 +18,7 @@ expression.TRANSPOSE(arg1);
 
 ## 返回值
 
-[ApiRange](../../ApiRange/ApiRange.md)
+(number \| string \| boolean)[][]
 
 ## 示例
 
