@@ -103,7 +103,7 @@ Templates are returned as folders from the Templates area, so the integration ca
 
 ## How it works
 
-A GET request is sent to [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/get-rooms-folder) to load templates from the Templates area.
+A GET request is sent to [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/rooms/get-rooms-folder) to load templates from the Templates area.
 
 The response includes:
 

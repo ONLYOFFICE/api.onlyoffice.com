@@ -138,7 +138,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Set a room link
 
-A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/set-room-link) with:
+A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/rooms/set-room-link) with:
 
 - `access`: Access level (e.g., 2 for editing).
 - `expirationDate`: Optional expiration date (ISO 8601 format).

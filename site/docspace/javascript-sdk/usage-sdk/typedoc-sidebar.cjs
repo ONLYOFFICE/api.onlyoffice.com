@@ -12,6 +12,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/classes/SDKError",
+        "label": "SDKError"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/classes/SDKInstance",
         "label": "SDKInstance"
       }
@@ -27,8 +32,68 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAuthError",
+        "label": "TAuthError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAuthErrorCode",
+        "label": "TAuthErrorCode"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TBannerDisplaying",
         "label": "TBannerDisplaying"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCreatedBy",
+        "label": "TCreatedBy"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCreateRoomOptions",
+        "label": "TCreateRoomOptions"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionEvent",
+        "label": "TCustomActionEvent"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionsConfig",
+        "label": "TCustomActionsConfig"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomActionSection",
+        "label": "TCustomActionSection"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomContextMenuAction",
+        "label": "TCustomContextMenuAction"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomContextMenuActions",
+        "label": "TCustomContextMenuActions"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TCustomCreateAction",
+        "label": "TCustomCreateAction"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEditorAction",
+        "label": "TEditorAction"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEditorAnonymous",
+        "label": "TEditorAnonymous"
       },
       {
         "type": "doc",
@@ -37,13 +102,28 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEditorOpenPayload",
+        "label": "TEditorOpenPayload"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEditorType",
         "label": "TEditorType"
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEventReturnData",
-        "label": "TEventReturnData"
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TEntityBase",
+        "label": "TEntityBase"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFileInfo",
+        "label": "TFileInfo"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFilesResponse",
+        "label": "TFilesResponse"
       },
       {
         "type": "doc",
@@ -54,6 +134,16 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFilterSortOrder",
         "label": "TFilterSortOrder"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFolderInfo",
+        "label": "TFolderInfo"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFormsSection",
+        "label": "TFormsSection"
       },
       {
         "type": "doc",
@@ -77,18 +167,83 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TGetExternalDataRequest",
+        "label": "TGetExternalDataRequest"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/THashSettings",
+        "label": "THashSettings"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TListResponse",
+        "label": "TListResponse"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TLoginResult",
+        "label": "TLoginResult"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TLogo",
+        "label": "TLogo"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TManagerSection",
+        "label": "TManagerSection"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TManagerViewMode",
         "label": "TManagerViewMode"
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TMessageData",
-        "label": "TMessageData"
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TPathParts",
+        "label": "TPathParts"
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TMessageTypes",
-        "label": "TMessageTypes"
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TPersonalSection",
+        "label": "TPersonalSection"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRejectedFile",
+        "label": "TRejectedFile"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRequestTokenInfo",
+        "label": "TRequestTokenInfo"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRoomInfo",
+        "label": "TRoomInfo"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TRoomsResponse",
+        "label": "TRoomsResponse"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TSDKErrorDetails",
+        "label": "TSDKErrorDetails"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TSelectedFile",
+        "label": "TSelectedFile"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TSelectedRoom",
+        "label": "TSelectedRoom"
       },
       {
         "type": "doc",
@@ -97,13 +252,53 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TTask",
-        "label": "TTask"
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TSetExternalDataPayload",
+        "label": "TSetExternalDataPayload"
       },
       {
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TTheme",
         "label": "TTheme"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadedFile",
+        "label": "TUploadedFile"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadError",
+        "label": "TUploadError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploaderUploadError",
+        "label": "TUploaderUploadError"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploaderUploadResult",
+        "label": "TUploaderUploadResult"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadProgress",
+        "label": "TUploadProgress"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadRejection",
+        "label": "TUploadRejection"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadResult",
+        "label": "TUploadResult"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUserInfo",
+        "label": "TUserInfo"
       }
     ],
     "link": {
@@ -137,18 +332,18 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/enumerations/InstanceMethods",
-        "label": "InstanceMethods"
-      },
-      {
-        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/enumerations/ManagerViewMode",
         "label": "ManagerViewMode"
       },
       {
         "type": "doc",
-        "id": "docspace/javascript-sdk/usage-sdk/enumerations/MessageTypes",
-        "label": "MessageTypes"
+        "id": "docspace/javascript-sdk/usage-sdk/enumerations/RoomType",
+        "label": "RoomType"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/enumerations/SDKErrorCode",
+        "label": "SDKErrorCode"
       },
       {
         "type": "doc",

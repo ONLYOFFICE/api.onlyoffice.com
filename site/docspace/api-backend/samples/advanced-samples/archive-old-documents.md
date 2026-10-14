@@ -457,7 +457,7 @@ This example scans a DocSpace room (or folder), identifies files older than a de
 
 ## Step 1: Retrieve folder contents
 
-A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/get-folder-info) to retrieve folder contents.
+A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-info) to retrieve folder contents.
 
 The response includes:
 - `files`: list of files in the folder
@@ -647,7 +647,7 @@ Files older than the threshold are selected for archiving.
 
 ## Step 4: Move old files to the archive folder
 
-A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items).
+A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items).
 The script moves files in batches (50 IDs per request) to `ARCHIVE_FOLDER_ID`.
 
 <Tabs>

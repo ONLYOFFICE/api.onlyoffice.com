@@ -179,7 +179,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Generate an invitation link
 
-A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/api-backend/usage-api/get-invitation-link) to generate a unique registration link for the specified employee type:
+A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/api-backend/usage-api/portal/users/get-invitation-link) to generate a unique registration link for the specified employee type:
 
 `employeeType` — e.g. "Guest", "User", "RoomAdmin".
 
@@ -229,7 +229,7 @@ A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/
 
 ## Step 2: Check user registration status
 
-After the user registers, a GET request is sent to [/api/2.0/portal/users/:userId](/docspace/api-backend/usage-api/get-user-by-id) to confirm that the `isActive` flag is set to `true`.
+After the user registers, a GET request is sent to [/api/2.0/portal/users/:userId](/docspace/api-backend/usage-api/portal/users/get-user-by-id) to confirm that the `isActive` flag is set to `true`.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -285,7 +285,7 @@ After the user registers, a GET request is sent to [/api/2.0/portal/users/:userI
 
 ## Step 3: Send a welcome message
 
-If the user is active, a POST request is sent to [/api/2.0/portal/sendcongratulations](/docspace/api-backend/usage-api/send-congratulations) with:
+If the user is active, a POST request is sent to [/api/2.0/portal/sendcongratulations](/docspace/api-backend/usage-api/portal/users/send-congratulations) with:
 
 `Userid` — ID of the invited user.
 `Key` — message template key (e.g. "welcome_guest").

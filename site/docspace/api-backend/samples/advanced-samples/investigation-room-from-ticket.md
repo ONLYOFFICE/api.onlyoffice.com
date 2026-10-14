@@ -451,7 +451,7 @@ The handler extracts `ticketId` and `subject` from the incoming payload and star
 ## Step 2: Create a dedicated investigation room
 
 The backend creates a new DocSpace room with a title that includes the ticket id and subject.
-It uses POST [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room) with a body like `{ "title": "Ticket #123 - Login error", "roomType": 2 }`
+It uses POST [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) with a body like `{ "title": "Ticket #123 - Login error", "roomType": 2 }`
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -504,7 +504,7 @@ It uses POST [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room)
 ## Step 3: Create the standard folder structure inside the room
 
 To keep investigations consistent, the script creates folders inside the new room using
-POST [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/create-folder) where `parentFolderId` is the room ID.
+POST [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/files/folders/create-folder) where `parentFolderId` is the room ID.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -531,7 +531,7 @@ POST [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/cre
 
 ## Step 4: Configure room access (optional)
 
-If you want only a specific team to work in the room, you can share it using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) with `{ "entries": [ ... ] }`
+If you want only a specific team to work in the room, you can share it using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/set-room-security) with `{ "entries": [ ... ] }`
 
 If you do not need this step, keep `SHARE_ENTRIES` empty.
 
@@ -567,7 +567,7 @@ If you do not need this step, keep `SHARE_ENTRIES` empty.
 
 ## Step 5: Generate an access link to the room
 
-The script requests a DocSpace-generated room link using PUT [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/set-room-link).
+The script requests a DocSpace-generated room link using PUT [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/rooms/set-room-link).
 
 This avoids constructing UI links manually and ensures the returned URL is correct for your portal.
 

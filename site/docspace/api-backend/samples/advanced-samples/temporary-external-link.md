@@ -257,7 +257,7 @@ This example demonstrates how to share a file via a temporary external link in O
 
 ## Step 1: Create a temporary external link
 
-A POST request is sent to [/api/2.0/files/file/:fileId/link](/docspace/api-backend/usage-api/create-file-primary-external-link) to create an external link for a file.
+A POST request is sent to [/api/2.0/files/file/:fileId/link](/docspace/api-backend/usage-api/files/files/create-file-primary-external-link) to create an external link for a file.
 
 The request body includes:
 - `expirationDate`: Date when the link expires (YYYY-MM-DD).
@@ -319,7 +319,7 @@ The API returns link information, including the link ID, which is needed to revo
 
 ## Step 2: Check external link activity in audit events
 
-A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter) with `targetId` to retrieve audit events related to the file. This step reads the audit log and counts how many download events occurred. In this example, downloads are detected using a simple substring check on the action field.
+A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter) with `targetId` to retrieve audit events related to the file. This step reads the audit log and counts how many download events occurred. In this example, downloads are detected using a simple substring check on the action field.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -361,7 +361,7 @@ A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-b
 
 ## Step 3: Revoke the external link if it is expired or overused
 
-A PUT request is sent to [/api/2.0/files/file/:fileId/links](/docspace/api-backend/usage-api/set-file-external-link) to update link settings.
+A PUT request is sent to [/api/2.0/files/file/:fileId/links](/docspace/api-backend/usage-api/files/files/set-file-external-link) to update link settings.
 
 In this example, the link is revoked by marking it as expired:
 - `sharedTo.id`: Link ID to update

@@ -110,7 +110,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/get-group) with the following query parameter:
+A GET request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/get-group) with the following query parameter:
 
 - `includeMembers: true` — include the list of group members in the response.
 

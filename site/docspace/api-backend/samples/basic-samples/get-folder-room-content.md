@@ -152,7 +152,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id).
+A GET request is sent to [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id).
 
 This method returns:
 

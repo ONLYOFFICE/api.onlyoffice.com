@@ -110,7 +110,7 @@ def download_from_dropbox(file_path):
 
 ## Step 2: Upload the file to DocSpace
 
-Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/upload-file) to upload the binary content to a DocSpace room.
+Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file) to upload the binary content to a DocSpace room.
 
 ``` py
 # Step 2: Upload file to DocSpace room

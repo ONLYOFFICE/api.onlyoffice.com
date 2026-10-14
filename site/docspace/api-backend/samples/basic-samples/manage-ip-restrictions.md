@@ -137,7 +137,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Update IP restrictions
 
-A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/save-ip-restrictions) with:
+A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/settings/ip-restrictions/save-ip-restrictions) with:
 
 - `enable`: Whether to enable or disable restrictions.
 - `ipRestrictions`: A list of allowed IP addresses.
@@ -188,7 +188,7 @@ A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backen
 
 ## Step 2: Retrieve IP restrictions
 
-A GET request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/get-ip-restrictions).
+A GET request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backend/usage-api/settings/ip-restrictions/get-ip-restrictions).
 
 Fetches the current security policy to verify allowed addresses.
 

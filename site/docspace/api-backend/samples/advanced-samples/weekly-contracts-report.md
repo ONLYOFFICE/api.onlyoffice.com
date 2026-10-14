@@ -397,7 +397,7 @@ This example demonstrates how to generate a weekly contracts report for rooms cr
 
 ## Step 1: Load rooms created during the selected period
 
-First, the script sends a GET request to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/get-room-info) and reads the room list from `response.folders`.
+First, the script sends a GET request to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/get-room-info) and reads the room list from `response.folders`.
 Then it parses the creation timestamp for each room (for example, `created.on` or a similar field returned by the API) and keeps only rooms created within the last `DAYS` days. rooms with an unrecognized creation date are skipped to keep the report predictable.
 
 <Tabs>
@@ -438,7 +438,7 @@ Then it parses the creation timestamp for each room (for example, `created.on` o
 
 ## Step 2: Scan files inside each room and find a contract
 
-For every room in the filtered list, the script sends a GET request to [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id) (where `folderId` is the room root ID in this example) and reads the file list from response.files.
+For every room in the filtered list, the script sends a GET request to [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id) (where `folderId` is the room root ID in this example) and reads the file list from response.files.
 A file is treated as a contract if its title contains any value from `CONTRACT_KEYWORDS` (for example: `contract`, `agreement`). The keyword matching is case-insensitive.
 
 <Tabs>

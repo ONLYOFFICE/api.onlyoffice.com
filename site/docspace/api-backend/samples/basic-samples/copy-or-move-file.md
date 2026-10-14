@@ -169,7 +169,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Copy a file to a folder
 
-A PUT request is sent to [/api/2.0/files/fileops/copy](/docspace/api-backend/usage-api/copy-batch-items).
+A PUT request is sent to [/api/2.0/files/fileops/copy](/docspace/api-backend/usage-api/files/operations/copy-batch-items).
 
 Payload parameters include:
 
@@ -239,7 +239,7 @@ Payload parameters include:
 
 ## Step 2: Move a file to a folder
 
-- A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items).
+- A PUT request is sent to [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items).
 - Same parameters, except:
   - `deleteAfter`: True — remove the file from the source folder.
 

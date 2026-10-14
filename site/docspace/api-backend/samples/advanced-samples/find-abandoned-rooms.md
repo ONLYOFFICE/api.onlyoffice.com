@@ -372,7 +372,7 @@ This example demonstrates how to find rooms that have not been updated for a cer
 
 ## Step 1: Retrieve rooms
 
-A GET request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/get-rooms-folder) to retrieve the room list.
+A GET request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/get-rooms-folder) to retrieve the room list.
 The response can contain the list in different places (for example, directly in `response`, or inside `folders`, `items`), so the script reads the most common formats.
 
 <Tabs>

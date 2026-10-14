@@ -111,7 +111,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/backup/getbackupprogress](/docspace/api-backend/usage-api/get-backup-progress) with the following optional parameter:
+A GET request is sent to [/api/2.0/backup/getbackupprogress](/docspace/api-backend/usage-api/backup/get-backup-progress) with the following optional parameter:
 
 - `Dump` — boolean flag to check progress for a backup that includes a full portal dump.
 

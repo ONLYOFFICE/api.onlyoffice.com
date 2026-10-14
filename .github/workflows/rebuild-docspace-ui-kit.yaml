@@ -8,10 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # The Storybook build and ~1 200 screenshots take about half an hour.
-    timeout-minutes: 60
+    # Chromium and its system libraries come with the image. Keep its tag at the kit's
+    # `@playwright/test` version, or `docs:build` downloads a second browser.
+    container: mcr.microsoft.com/playwright:v1.58.1-noble
+    timeout-minutes: 90
 
     steps:
+      # Without git, actions/checkout falls back to a tarball with no .git, and the
+      # commit at the end has nothing to commit into.
+      - name: Install git
+        run: command -v git || (apt-get update && apt-get install -y git)
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -47,7 +54,9 @@ jobs:
           package_json_file: docspace-ui-kit-react/package.json
 
       - name: Set up Git
+        # The container runs as root over a workspace the runner user owns.
         run: |
+          git config --global --add safe.directory '*'
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
