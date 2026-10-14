@@ -2129,29 +2129,29 @@ The list of changes for Office JavaScript API.
 - Added the [ApiListObject/Resize](../usage-api/spreadsheet-api/ApiListObject/Methods/Resize.md) method to Spreadsheet API.
 - Added the [ApiListObject/Unlist](../usage-api/spreadsheet-api/ApiListObject/Methods/Unlist.md) method to Spreadsheet API.
 - Added the [ApiListObject/Delete](../usage-api/spreadsheet-api/ApiListObject/Methods/Delete.md) method to Spreadsheet API.
-- Added the *Active* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Name* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *DisplayName* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *AlternativeText* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Comment* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Summary* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Parent* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Range* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *HeaderRowRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *DataBodyRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *TotalsRowRange* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *SourceType* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *TableStyle* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowHeaders* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowTotals* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowAutoFilter* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowAutoFilterDropDown* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowTableStyleColumnStripes* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowTableStyleFirstColumn* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowTableStyleLastColumn* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *ShowTableStyleRowStripes* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *AutoFilter* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
-- Added the *Sort* property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Active` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Name` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `DisplayName` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `AlternativeText` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Comment` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Summary` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Range` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `HeaderRowRange` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `DataBodyRange` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `TotalsRowRange` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `SourceType` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `TableStyle` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowHeaders` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowTotals` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowAutoFilter` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowAutoFilterDropDown` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowTableStyleColumnStripes` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowTableStyleFirstColumn` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowTableStyleLastColumn` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `ShowTableStyleRowStripes` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `AutoFilter` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
+- Added the `Sort` property to the [ApiListObject](../usage-api/spreadsheet-api/ApiListObject/ApiListObject.md) object of Spreadsheet API.
 
 - Added the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) class to Spreadsheet API.
 - Added the [ApiListColumn/GetName](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetName.md) method to Spreadsheet API.
@@ -2164,22 +2164,22 @@ The list of changes for Office JavaScript API.
 - Added the [ApiListColumn/SetTotalsCalculation](../usage-api/spreadsheet-api/ApiListColumn/Methods/SetTotalsCalculation.md) method to Spreadsheet API.
 - Added the [ApiListColumn/GetTotal](../usage-api/spreadsheet-api/ApiListColumn/Methods/GetTotal.md) method to Spreadsheet API.
 - Added the [ApiListColumn/Delete](../usage-api/spreadsheet-api/ApiListColumn/Methods/Delete.md) method to Spreadsheet API.
-- Added the *Name* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *Index* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *Parent* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *Range* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *DataBodyRange* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *TotalsCalculation* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
-- Added the *Total* property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `Name` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `Index` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `Range` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `DataBodyRange` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `TotalsCalculation` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
+- Added the `Total` property to the [ApiListColumn](../usage-api/spreadsheet-api/ApiListColumn/ApiListColumn.md) object of Spreadsheet API.
 
 - Added the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) class to Spreadsheet API.
 - Added the [ApiListRow/GetIndex](../usage-api/spreadsheet-api/ApiListRow/Methods/GetIndex.md) method to Spreadsheet API.
 - Added the [ApiListRow/GetParent](../usage-api/spreadsheet-api/ApiListRow/Methods/GetParent.md) method to Spreadsheet API.
 - Added the [ApiListRow/GetRange](../usage-api/spreadsheet-api/ApiListRow/Methods/GetRange.md) method to Spreadsheet API.
 - Added the [ApiListRow/Delete](../usage-api/spreadsheet-api/ApiListRow/Methods/Delete.md) method to Spreadsheet API.
-- Added the *Index* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
-- Added the *Parent* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
-- Added the *Range* property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+- Added the `Index` property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
+- Added the `Range` property to the [ApiListRow](../usage-api/spreadsheet-api/ApiListRow/ApiListRow.md) object of Spreadsheet API.
 
 - Added the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) class to Spreadsheet API.
 - Added the [ApiSort/GetSortFields](../usage-api/spreadsheet-api/ApiSort/Methods/GetSortFields.md) method to Spreadsheet API.
@@ -2193,13 +2193,13 @@ The list of changes for Office JavaScript API.
 - Added the [ApiSort/GetParent](../usage-api/spreadsheet-api/ApiSort/Methods/GetParent.md) method to Spreadsheet API.
 - Added the [ApiSort/GetRng](../usage-api/spreadsheet-api/ApiSort/Methods/GetRng.md) method to Spreadsheet API.
 - Added the [ApiSort/Apply](../usage-api/spreadsheet-api/ApiSort/Methods/Apply.md) method to Spreadsheet API.
-- Added the *SortFields* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *MatchCase* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *Header* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *Orientation* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *SortMethod* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *Parent* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
-- Added the *Rng* property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `SortFields` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `MatchCase` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `Header` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `Orientation` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `SortMethod` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
+- Added the `Rng` property to the [ApiSort](../usage-api/spreadsheet-api/ApiSort/ApiSort.md) object of Spreadsheet API.
 
 - Added the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) class to Spreadsheet API.
 - Added the [ApiSortFields/GetParent](../usage-api/spreadsheet-api/ApiSortFields/Methods/GetParent.md) method to Spreadsheet API.
@@ -2208,8 +2208,8 @@ The list of changes for Office JavaScript API.
 - Added the [ApiSortFields/Add](../usage-api/spreadsheet-api/ApiSortFields/Methods/Add.md) method to Spreadsheet API.
 - Added the [ApiSortFields/Add2](../usage-api/spreadsheet-api/ApiSortFields/Methods/Add2.md) method to Spreadsheet API.
 - Added the [ApiSortFields/Clear](../usage-api/spreadsheet-api/ApiSortFields/Methods/Clear.md) method to Spreadsheet API.
-- Added the *Parent* property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
-- Added the *Count* property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
+- Added the `Count` property to the [ApiSortFields](../usage-api/spreadsheet-api/ApiSortFields/ApiSortFields.md) object of Spreadsheet API.
 
 - Added the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) class to Spreadsheet API.
 - Added the [ApiSortField/GetParent](../usage-api/spreadsheet-api/ApiSortField/Methods/GetParent.md) method to Spreadsheet API.
@@ -2224,12 +2224,12 @@ The list of changes for Office JavaScript API.
 - Added the [ApiSortField/SetSortOnColor](../usage-api/spreadsheet-api/ApiSortField/Methods/SetSortOnColor.md) method to Spreadsheet API.
 - Added the [ApiSortField/ModifyKey](../usage-api/spreadsheet-api/ApiSortField/Methods/ModifyKey.md) method to Spreadsheet API.
 - Added the [ApiSortField/Delete](../usage-api/spreadsheet-api/ApiSortField/Methods/Delete.md) method to Spreadsheet API.
-- Added the *Parent* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
-- Added the *Key* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
-- Added the *SortOn* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
-- Added the *Order* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
-- Added the *Priority* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
-- Added the *SortOnValue* property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `Parent` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `Key` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `SortOn` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `Order` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `Priority` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
+- Added the `SortOnValue` property to the [ApiSortField](../usage-api/spreadsheet-api/ApiSortField/ApiSortField.md) object of Spreadsheet API.
 
 ### Spreadsheet methods
 
@@ -3539,7 +3539,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormatConditions/GetItem](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetItem.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions/GetParent](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetParent.md) method to the Spreadsheet API.
 - Added the [ApiRange/GetFormatConditions](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormatConditions.md) method to the Spreadsheet API.
-- Added the *FormatConditions* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `FormatConditions` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 - Added the [XlContainsOperator](../usage-api/spreadsheet-api/Enumeration/XlContainsOperator.md) type to the simple type definitions.
 - Added the [XlFormatConditionOperator](../usage-api/spreadsheet-api/Enumeration/XlFormatConditionOperator.md) type to the simple type definitions.
 - Added the [XlFormatConditionType](../usage-api/spreadsheet-api/Enumeration/XlFormatConditionType.md) type to the simple type definitions.
@@ -4083,10 +4083,10 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPivotFilters/Add](../usage-api/spreadsheet-api/ApiPivotFilters/Methods/Add.md) method to the Spreadsheet API.
 - Added the [ApiPivotItem/GetVisible](../usage-api/spreadsheet-api/ApiPivotItem/Methods/GetVisible.md) method to the Spreadsheet API.
 - Added the [ApiPivotItem/SetVisible](../usage-api/spreadsheet-api/ApiPivotItem/Methods/SetVisible.md) method to the Spreadsheet API.
-- Added the *AutoSortField* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
-- Added the *AutoSortOrder* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
-- Added the *PivotFilters* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
-- Added the *Visible* property to the [ApiPivotItem](../usage-api/spreadsheet-api/ApiPivotItem/ApiPivotItem.md) object of Spreadsheet API.
+- Added the `AutoSortField` property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the `AutoSortOrder` property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the `PivotFilters` property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the `Visible` property to the [ApiPivotItem](../usage-api/spreadsheet-api/ApiPivotItem/ApiPivotItem.md) object of Spreadsheet API.
 - Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
 
 ### Range methods
@@ -4104,12 +4104,12 @@ The list of changes for Office JavaScript API.
 - Added the [ApiRange/Offset](../usage-api/spreadsheet-api/ApiRange/Methods/Offset.md) method to the Spreadsheet API.
 - Added the [ApiRange/Resize](../usage-api/spreadsheet-api/ApiRange/Methods/Resize.md) method to the Spreadsheet API.
 - Added the [ApiRange/SetReadingOrder](../usage-api/spreadsheet-api/ApiRange/Methods/SetReadingOrder.md) method to the Spreadsheet API.
-- Added the *CellsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *ColumnsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *CurrentRegion* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *EntireColumn* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *EntireRow* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *RowsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `CellsCount` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `ColumnsCount` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `CurrentRegion` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `EntireColumn` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `EntireRow` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `RowsCount` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 
 ### Presentation methods
 
@@ -4265,7 +4265,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormRoles/MoveUp](../usage-api/form-api/ApiFormRoles/Methods/MoveUp.md) method to Form API.
 - Added the [ApiFormRoles/Remove](../usage-api/form-api/ApiFormRoles/Methods/Remove.md) method to Form API.
 - Added the [ApiFormRoles/SetRoleColor](../usage-api/form-api/ApiFormRoles/Methods/SetRoleColor.md) method to Form API.
-- Added the *role* property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
+- Added the `role` property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
 - Added the [DateFormPr](../usage-api/form-api/Enumeration/DateFormPr.md) type to the simple type definitions.
 - Added the [RoleProperties](../usage-api/form-api/Enumeration/RoleProperties.md) type to the simple type definitions.
 
@@ -4423,7 +4423,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDocument/ShowComment](../usage-api/document-api/ApiDocument/Methods/ShowComment.md) method to Document API.
 - Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
 - Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
-- Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
+- Added the `posX` and `posY` parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
 
 ### Presentation methods
 
@@ -4433,7 +4433,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPresentation/GetAllImages](../usage-api/presentation-api/ApiPresentation/Methods/GetAllImages.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllOleObjects](../usage-api/presentation-api/ApiPresentation/Methods/GetAllOleObjects.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllShapes](../usage-api/presentation-api/ApiPresentation/Methods/GetAllShapes.md) method to Presentation API.
-- Added the *nIndex* parameter to the [ApiPresentation/AddSlide](../usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md) method of Presentation API.
+- Added the `nIndex` parameter to the [ApiPresentation/AddSlide](../usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md) method of Presentation API.
 
 ### Layout methods
 
@@ -4456,7 +4456,7 @@ The list of changes for Office JavaScript API.
 - Added the [Api/GetByInternalId](../usage-api/document-api/Api/Methods/GetByInternalId.md) method to Document API.
 - Added the [ApiRun/GetParentParagraph](../usage-api/document-api/ApiRun/Methods/GetParentParagraph.md) method to Document API.
 - Added the [ApiTablePr/SetTableBorderAll](../usage-api/document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Document API.
-- Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/document-api/ApiTextPr/Methods/GetFontFamily.md) method of Document API.
+- Added the `fontSlot` parameter to the [ApiTextPr/GetFontFamily](../usage-api/document-api/ApiTextPr/Methods/GetFontFamily.md) method of Document API.
 - Added the [ApiParagraph/Select](../usage-api/presentation-api/ApiParagraph/Methods/Select.md) method to Presentation API.
 - Added the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method to Presentation API.
 - Added the [Base64Img](../usage-api/document-api/Enumeration/Base64Img.md) type to the simple type definitions.
@@ -4536,9 +4536,9 @@ The list of changes for Office JavaScript API.
 ### Other methods
 
 - Added the [ApiNumberingLevel/LinkWithStyle](../usage-api/document-api/ApiNumberingLevel/Methods/LinkWithStyle.md) method to Document API.
-- Moved the [GetContent](../usage-api/document-api/ApiDrawing/Methods/GetContent.md) method of Document API from the *ApiShape* class to the *ApiDrawing* class.
+- Moved the [GetContent](../usage-api/document-api/ApiDrawing/Methods/GetContent.md) method of Document API from the `ApiShape` class to the `ApiDrawing` class.
 - Added the [ApiLayout/GetName](../usage-api/presentation-api/ApiLayout/Methods/GetName.md) method to Presentation API.
-- Added the *keepPosition* parameter to the [ApiFormBase/ToFixed](../usage-api/form-api/ApiFormBase/Methods/ToFixed.md) method of Form API.
+- Added the `keepPosition` parameter to the [ApiFormBase/ToFixed](../usage-api/form-api/ApiFormBase/Methods/ToFixed.md) method of Form API.
 - Added the [PivotTableFieldOptions](../usage-api/spreadsheet-api/Enumeration/PivotTableFieldOptions.md) type to the simple type definitions.
 - Added the [PivotTableFilterAreaInfo](../usage-api/spreadsheet-api/Enumeration/PivotTableFilterAreaInfo.md) type to the simple type definitions.
 
@@ -4750,9 +4750,9 @@ The list of changes for Office JavaScript API.
 - Added the [ApiWorksheet/GetAllPivotTables](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllPivotTables.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetPivotByName](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetPivotByName.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/RefreshAllPivots](../usage-api/spreadsheet-api/ApiWorksheet/Methods/RefreshAllPivots.md) method to Spreadsheet API.
-- Added the *PivotTable* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
-- Added the *PivotTables* property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
-- Added the *PivotTables* property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
+- Added the `PivotTable` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `PivotTables` property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
+- Added the `PivotTables` property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
 - Added the [DataConsolidateFunctionType](../usage-api/spreadsheet-api/Enumeration/DataConsolidateFunctionType.md) type to the simple type definitions.
 - Added the [FieldsInReportFilterType](../usage-api/spreadsheet-api/Enumeration/FieldsInReportFilterType.md) type to the simple type definitions.
 - Added the [LayoutSubtotalLocationType](../usage-api/spreadsheet-api/Enumeration/LayoutSubtotalLocationType.md) type to the simple type definitions.
@@ -4784,8 +4784,8 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDrawing/Select](../usage-api/presentation-api/ApiDrawing/Methods/Select.md) method to Presentation API.
 - Added the [ApiParaPr/GetOutlineLvl](../usage-api/presentation-api/ApiParaPr/Methods/GetOutlineLvl.md) method to Presentation API.
 - Added the [ApiParaPr/SetOutlineLvl](../usage-api/presentation-api/ApiParaPr/Methods/SetOutlineLvl.md) method to Presentation API.
-- Added the *tag* property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
-- Added the *ReviewedElement* property to the [ReviewReportRecord](../usage-api/document-api/Enumeration/ReviewReportRecord.md) object.
+- Added the `tag` property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
+- Added the `ReviewedElement` property to the [ReviewReportRecord](../usage-api/document-api/Enumeration/ReviewReportRecord.md) object.
 - Added the [DeleteShiftDirection](../usage-api/spreadsheet-api/Enumeration/DeleteShiftDirection.md) type to the simple type definitions.
 - Added the [Drawing](../usage-api/presentation-api/Enumeration/Drawing.md) type to the simple type definitions.
 
@@ -5290,7 +5290,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiWorksheetFunction/YIELDMAT](../usage-api/spreadsheet-api/ApiWorksheetFunction/Methods/YIELDMAT.md) method to Spreadsheet API.
 - Added the [ApiWorksheetFunction/Z_TEST](../usage-api/spreadsheet-api/ApiWorksheetFunction/Methods/Z_TEST.md) method to Spreadsheet API.
 - Added the [ApiWorksheetFunction/ZTEST](../usage-api/spreadsheet-api/ApiWorksheetFunction/Methods/ZTEST.md) method to Spreadsheet API.
-- Added the *WorksheetFunction* property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
+- Added the `WorksheetFunction` property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
 
 ### Protected range methods
 
@@ -5309,14 +5309,14 @@ The list of changes for Office JavaScript API.
 - Added the [ApiWorksheet/AddProtectedRange](../usage-api/spreadsheet-api/ApiWorksheet/Methods/AddProtectedRange.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetAllProtectedRanges](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllProtectedRanges.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetProtectedRange](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetProtectedRange.md) method to Spreadsheet API.
-- Added the *AllProtectedRanges* property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
+- Added the `AllProtectedRanges` property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
 - Added the [ProtectedRangeUserType](../usage-api/spreadsheet-api/Enumeration/ProtectedRangeUserType.md) type to the simple type definitions.
 
 ### Reference style methods
 
 - Added the [Api/GetReferenceStyle](../usage-api/spreadsheet-api/Api/Methods/GetReferenceStyle.md) method to Spreadsheet API.
 - Added the [Api/SetReferenceStyle](../usage-api/spreadsheet-api/Api/Methods/SetReferenceStyle.md) method to Spreadsheet API.
-- Added the *ReferenceStyle* property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
+- Added the `ReferenceStyle` property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
 - Added the [ReferenceStyle](../usage-api/spreadsheet-api/Enumeration/ReferenceStyle.md) type to the simple type definitions.
 
 ### Methods for pasting / cutting ranges
@@ -5366,7 +5366,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiChartSeries/ChangeChartType](../usage-api/presentation-api/ApiChartSeries/Methods/ChangeChartType.md) method to Presentation API.
 - Added the [ApiChartSeries/GetChartType](../usage-api/presentation-api/ApiChartSeries/Methods/GetChartType.md) method to Presentation API.
 - Added the [ApiChartSeries/GetClassType](../usage-api/presentation-api/ApiChartSeries/Methods/GetClassType.md) method to Presentation API.
-- Added the *"comboBarLine"*, *"comboBarLineSecondary"*, *"comboCustom"*, and *"unknown"* available values for the [ChartType](../usage-api/document-api/Enumeration/ChartType.md) definition.
+- Added the `"comboBarLine"`, `"comboBarLineSecondary"`, `"comboCustom"`, and `"unknown"` available values for the [ChartType](../usage-api/document-api/Enumeration/ChartType.md) definition.
 
 ### Other methods
 
@@ -5374,10 +5374,10 @@ The list of changes for Office JavaScript API.
 - Added the [Api/GetDocumentInfo](../usage-api/spreadsheet-api/Api/Methods/GetDocumentInfo.md) method to Spreadsheet API.
 - Added the [ApiPresentation/GetDocumentInfo](../usage-api/presentation-api/ApiPresentation/Methods/GetDocumentInfo.md) method to Presentation API.
 - Added the [DrawingLockType](../usage-api/document-api/Enumeration/DrawingLockType.md) type to the simple type definitions.
-- Added the *nWidth* and *nHeight* parameters to the [ApiPictureForm/SetImage](../usage-api/document-api/ApiPictureForm/Methods/SetImage.md) method of Document API.
-- Removed the *ApiTable/GetNext* method from Document API.
-- Removed the *ApiTable/GetPrevious* method from Document API.
-- Removed the *ApiTable/Select* method from Presentation API.
+- Added the `nWidth` and `nHeight` parameters to the [ApiPictureForm/SetImage](../usage-api/document-api/ApiPictureForm/Methods/SetImage.md) method of Document API.
+- Removed the `ApiTable/GetNext` method from Document API.
+- Removed the `ApiTable/GetPrevious` method from Document API.
+- Removed the `ApiTable/Select` method from Presentation API.
 
 ## Version 8.0
 
@@ -5397,19 +5397,19 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFreezePanes/GetLocation](../usage-api/spreadsheet-api/ApiFreezePanes/Methods/GetLocation.md) method to Spreadsheet API.
 - Added the [ApiFreezePanes/Unfreeze](../usage-api/spreadsheet-api/ApiFreezePanes/Methods/Unfreeze.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetFreezePanes](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetFreezePanes.md) method to Spreadsheet API.
-- Added the *FreezePanes* property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
-- Added the *FreezePanes* property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
+- Added the `FreezePanes` property to the [Api](../usage-api/spreadsheet-api/Api/Api.md) object of Spreadsheet API.
+- Added the `FreezePanes` property to the [ApiWorksheet](../usage-api/spreadsheet-api/ApiWorksheet/ApiWorksheet.md) object of Spreadsheet API.
 
 ### Comment methods
 
-- Added the *sUserId* parameter to the [Api/AddComment](../usage-api/document-api/Api/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiBlockLvlSdt/AddComment](../usage-api/document-api/ApiBlockLvlSdt/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiDocument/AddComment](../usage-api/document-api/ApiDocument/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiInlineLvlSdt/AddComment](../usage-api/document-api/ApiInlineLvlSdt/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiParagraph/AddComment](../usage-api/document-api/ApiParagraph/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiRange/AddComment](../usage-api/document-api/ApiRange/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiRun/AddComment](../usage-api/document-api/ApiRun/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiTable/AddComment](../usage-api/document-api/ApiTable/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [Api/AddComment](../usage-api/document-api/Api/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiBlockLvlSdt/AddComment](../usage-api/document-api/ApiBlockLvlSdt/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiDocument/AddComment](../usage-api/document-api/ApiDocument/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiInlineLvlSdt/AddComment](../usage-api/document-api/ApiInlineLvlSdt/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiParagraph/AddComment](../usage-api/document-api/ApiParagraph/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiRange/AddComment](../usage-api/document-api/ApiRange/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiRun/AddComment](../usage-api/document-api/ApiRun/Methods/AddComment.md) method of Document API.
+- Added the `sUserId` parameter to the [ApiTable/AddComment](../usage-api/document-api/ApiTable/Methods/AddComment.md) method of Document API.
 - Added the [Api/GetAllComments](../usage-api/spreadsheet-api/Api/Methods/GetAllComments.md) method to Spreadsheet API.
 - Added the [ApiComment/AddReply](../usage-api/presentation-api/ApiComment/Methods/AddReply.md) method to Presentation API.
 - Added the [ApiComment/Delete](../usage-api/presentation-api/ApiComment/Methods/Delete.md) method to Presentation API.
@@ -5443,9 +5443,9 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Removed the *ApiBlockLvlSdt/SetBackgroundColor* method from Document API.
+- Removed the `ApiBlockLvlSdt/SetBackgroundColor` method from Document API.
 - Added the [ApiDocument/AddDrawingToPage](../usage-api/document-api/ApiDocument/Methods/AddDrawingToPage.md) method to Document API.
-- Added the *bWithotPaddings* parameter to the [ApiWorksheet/SetColumnWidth](../usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md) method of Spreadsheet API.
+- Added the `bWithotPaddings` parameter to the [ApiWorksheet/SetColumnWidth](../usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md) method of Spreadsheet API.
 
 ## Version 7.5
 
@@ -6059,7 +6059,7 @@ The list of changes for Office JavaScript API.
 ### Areas methods
 
 - Added the [ApiAreas](../usage-api/spreadsheet-api/ApiAreas/ApiAreas.md) class to Spreadsheet API.
-- Added the *Areas* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `Areas` property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 - Added the [ApiAreas/GetCount](../usage-api/spreadsheet-api/ApiAreas/Methods/GetCount.md) method to Spreadsheet API.
 - Added the [ApiAreas/GetItem](../usage-api/spreadsheet-api/ApiAreas/Methods/GetItem.md) method to Spreadsheet API.
 - Added the [ApiAreas/GetParent](../usage-api/spreadsheet-api/ApiAreas/Methods/GetParent.md) method to Spreadsheet API.
@@ -6072,7 +6072,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiRange/GetAreas](../usage-api/spreadsheet-api/ApiRange/Methods/GetAreas.md) method to Spreadsheet API.
 - Added the [ApiRange/Insert](../usage-api/spreadsheet-api/ApiRange/Methods/Insert.md) method to Spreadsheet API.
 - Added the [ApiRange/Paste](../usage-api/spreadsheet-api/ApiRange/Methods/Paste.md) method to Spreadsheet API.
-- Changed the *data* parameter type of the [ApiRange/SetValue](../usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md) method of Spreadsheet API.
+- Changed the `data` parameter type of the [ApiRange/SetValue](../usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md) method of Spreadsheet API.
 
 ### Layout methods
 
@@ -6201,9 +6201,9 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the *sParaTab* and *sParaNewLine* parameters to the [Api/ReplaceTextSmart](../usage-api/document-api/Api/Methods/ReplaceTextSmart.md) method of Document API.
+- Added the `sParaTab` and `sParaNewLine` parameters to the [Api/ReplaceTextSmart](../usage-api/document-api/Api/Methods/ReplaceTextSmart.md) method of Document API.
 - Added the [ApiInlineLvlSdt/GetParentParagraph](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetParentParagraph.md) method to Document API.
-- Removed the *ApiShape/GetDocContent* method from Spreadsheet API.
+- Removed the `ApiShape/GetDocContent` method from Spreadsheet API.
 
 ## Version 7.0
 
@@ -6220,24 +6220,24 @@ The list of changes for Office JavaScript API.
 ## Version 6.4
 
 - Changed the return value of the [Api/CreateRange](../usage-api/document-api/Api/Methods/CreateRange.md) method of Document API.
-- Removed the *Api/GetFirstRunInArray* method from Document API.
-- Removed the *Api/GetLastRunInArray* method from Document API.
+- Removed the `Api/GetFirstRunInArray` method from Document API.
+- Removed the `Api/GetLastRunInArray` method from Document API.
 - Added parameters to the [ApiChart/SetLegendFontSize](../usage-api/document-api/ApiChart/Methods/SetLegendFontSize.md) method of Document API.
 - Added parameters to the [ApiDocument/GetElement](../usage-api/document-api/ApiDocument/Methods/GetElement.md) method of Document API.
 - Added the return value to the [ApiDocument/Push](../usage-api/document-api/ApiDocument/Methods/Push.md) method of Document API.
 - Added parameters to the [ApiDocumentContent/GetElement](../usage-api/document-api/ApiDocumentContent/Methods/GetElement.md) method of Document API.
 - Added the return value to the [ApiDocumentContent/Push](../usage-api/document-api/ApiDocumentContent/Methods/Push.md) method of Document API.
 - Removed parameters from the [ApiRange/Select](../usage-api/document-api/ApiRange/Methods/Select.md) method of Document API.
-- Added the *oCell* parameter to the [ApiTable/AddElement](../usage-api/document-api/ApiTable/Methods/AddElement.md) method of Document API.
+- Added the `oCell` parameter to the [ApiTable/AddElement](../usage-api/document-api/ApiTable/Methods/AddElement.md) method of Document API.
 - Added parameters to the [Api/GetRange](../usage-api/spreadsheet-api/Api/Methods/GetRange.md) method of Spreadsheet API.
 - Added the [ApiComment/GetClassType](../usage-api/spreadsheet-api/ApiComment/Methods/GetClassType.md) method to Spreadsheet API.
-- Removed the *ApiDocument/Last* method from Spreadsheet and Presentation API.
+- Removed the `ApiDocument/Last` method from Spreadsheet and Presentation API.
 - Added the [ApiRange/GetCols](../usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md) method to Spreadsheet API.
 - Added the [ApiRange/End](../usage-api/spreadsheet-api/ApiRange/Methods/End.md) method to Spreadsheet API.
 - Added the [ApiRange/GetCells](../usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md) method to Spreadsheet API.
 - Added the [ApiRange/GetOrientation](../usage-api/spreadsheet-api/ApiRange/Methods/GetOrientation.md) method to Spreadsheet API.
 - Added the [ApiRange/SetOrientation](../usage-api/spreadsheet-api/ApiRange/Methods/SetOrientation.md) method to Spreadsheet API.
-- Added the *Cols* and *Orientation* properties to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the `Cols` and `Orientation` properties to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 - Added parameters to the [ApiWorksheet/GetCells](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md) method of Spreadsheet API.
 - Added parameters to the [Api/CreateGroup](../usage-api/presentation-api/Api/Methods/CreateGroup.md) method of Presentation API.
 - Added parameters to the [ApiChart/SetLegendFontSize](../usage-api/presentation-api/ApiChart/Methods/SetLegendFontSize.md) method of Presentation API.
