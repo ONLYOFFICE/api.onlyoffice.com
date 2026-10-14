@@ -15,7 +15,7 @@ The document type to be opened:
 - `word` - document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
 - `cell` - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
 - `slide` - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- `pdf` - portable document format (*.djvu, .oxps, .pdf, .xps*);
+- `pdf` - portable document format (*.djvu, .ofd, .oxps, .pdf, .xps*);
 - `diagram` - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
 :::info

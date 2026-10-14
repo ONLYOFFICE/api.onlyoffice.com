@@ -2,6 +2,11 @@
 
 ONLYOFFICE 文档 API 的更改列表。
 
+## 版本 10.0
+
+- 新增对 [ofd](../usage-api/config/document/document.md#filetype) 格式的打开支持。与 `xps` 相同，该格式仅支持查看，可[转换](../additional-api/conversion-api/conversion-tables.md#document-file-formats)为其他格式，但不支持编辑或保存为该格式。
+- 新增从所有电子表格格式到 [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) 格式的转换。
+
 ## 版本 9.4
 
 - 新增[插件命令日志](../usage-api/automation-api/automation-api.md#command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。

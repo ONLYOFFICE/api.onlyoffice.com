@@ -2,6 +2,11 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 10.0
+
+- Added opening for [ofd](../usage-api/config/document/document.md#filetype) format. Like `xps`, it is opened for viewing only and can be [converted](../additional-api/conversion-api/conversion-tables.md#document-file-formats) to other formats, but cannot be edited or saved to.
+- Added conversion to [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) format from all spreadsheet formats.
+
 ## Version 9.4
 
 - Added the [plugin command logging](../usage-api/automation-api/automation-api.md#command-logging) feature for enabling debug output of plugin commands in the browser console.
