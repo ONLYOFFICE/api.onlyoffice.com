@@ -6,6 +6,32 @@ sidebar_position: -1
 
 ONLYOFFICE 插件与宏 API 的变更列表。
 
+## 版本 10.0 {#version-100}
+
+- 为插件 API 添加了全局 `Editor` 对象。现在可以像调用普通函数一样调用编辑器方法，并返回 Promise，例如 `await Editor.GetSelectedText()`，无需再通过 `window.Asc.plugin.executeMethod` 调用。仍支持将回调函数作为最后一个参数传入。
+- 添加了 `Editor.RunMacro` 方法，该方法使用编辑器 API 运行函数，向其传递参数，并以 Promise 的形式返回结果。
+- 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsFillingForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsFillingForm.md)的 `IsFillingFormMode` 方法重命名为 `IsFillingForm`。旧名称仍然可用。
+- 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsFillingPdfForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsFillingPdfForm.md)的 `IsFillingOFormMode` 方法重命名为 `IsFillingPdfForm`。旧名称仍然可用。
+- 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsEditingPdfForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsEditingPdfForm.md)的 `IsEditingOFormMode` 方法重命名为 `IsEditingPdfForm`。旧名称仍然可用。
+- 为[文本文档 API](../interacting-with-editors/document-api/Methods/GetRestrictions.md)、[表单 API](../interacting-with-editors/form-api/Methods/GetRestrictions.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Methods/GetRestrictions.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Methods/GetRestrictions.md)、[PDF API](../interacting-with-editors/pdf-api/Methods/GetRestrictions.md) 添加了 `GetRestrictions` 方法。
+- 为[文本文档 API](../interacting-with-editors/document-api/Methods/SetButtonDisabled.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Methods/SetButtonDisabled.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Methods/SetButtonDisabled.md) 添加了 `SetButtonDisabled` 方法。
+- 为[文本文档 API](../interacting-with-editors/document-api/Methods/GetOFormRole.md)、[表单 API](../interacting-with-editors/form-api/Methods/GetOFormRole.md) 添加了 `GetOFormRole` 方法。
+- 为文本文档 API 添加了 [MoveCursorToAnnotationRange](../interacting-with-editors/document-api/Methods/MoveCursorToAnnotationRange.md) 方法。
+- 为文本文档 API 添加了 [SetRangeHtml](../interacting-with-editors/document-api/Methods/SetRangeHtml.md) 方法。
+- 为演示文稿 API 添加了 [InsertPresentationFromUrl](../interacting-with-editors/presentation-api/Methods/InsertPresentationFromUrl.md) 方法。
+- 为演示文稿 API 添加了 [SetParagraphHtml](../interacting-with-editors/presentation-api/Methods/SetParagraphHtml.md) 方法。
+- 为演示文稿 API 添加了 [SetParagraphRangeHtml](../interacting-with-editors/presentation-api/Methods/SetParagraphRangeHtml.md) 方法。
+- 为演示文稿 API 添加了 [AnnotateParagraph](../interacting-with-editors/presentation-api/Methods/AnnotateParagraph.md) 方法。
+- 为演示文稿 API 添加了 [SelectAnnotationRange](../interacting-with-editors/presentation-api/Methods/SelectAnnotationRange.md) 方法。
+- 为演示文稿 API 添加了 [RemoveAnnotationRange](../interacting-with-editors/presentation-api/Methods/RemoveAnnotationRange.md) 方法。
+- 为[文本文档 API](../interacting-with-editors/document-api/Events/onFloatActionButtonClick.md)、[表单 API](../interacting-with-editors/form-api/Events/onFloatActionButtonClick.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Events/onFloatActionButtonClick.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Events/onFloatActionButtonClick.md)、[PDF API](../interacting-with-editors/pdf-api/Events/onFloatActionButtonClick.md) 添加了 `onFloatActionButtonClick` 事件。
+- 为PDF API 添加了 [onSelectionEnd](../interacting-with-editors/pdf-api/Events/onSelectionEnd.md) 事件。
+- 为PDF API 添加了 [onSelectionCancel](../interacting-with-editors/pdf-api/Events/onSelectionCancel.md) 事件。
+- 在[文本文档 API](../interacting-with-editors/document-api/Enumeration/EditorRestrictions.md)、[表单 API](../interacting-with-editors/form-api/Enumeration/EditorRestrictions.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Enumeration/EditorRestrictions.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Enumeration/EditorRestrictions.md)、[PDF API](../interacting-with-editors/pdf-api/Enumeration/EditorRestrictions.md) 的简单类型定义中添加了 `EditorRestrictions` 类型。
+- 在PDF API 的简单类型定义中添加了 [CommentData](../interacting-with-editors/pdf-api/Enumeration/CommentData.md) 类型。
+- 在PDF API 的简单类型定义中添加了 [comment](../interacting-with-editors/pdf-api/Enumeration/comment.md) 类型。
+- 在PDF API 的简单类型定义中添加了 [Event_pt](../interacting-with-editors/pdf-api/Enumeration/Event_pt.md) 类型。
+
 ## 版本 9.4 {#version-94}
 
 - 为文本文档 API 添加了 [MoveCursorToField](../interacting-with-editors/document-api/Methods/MoveCursorToField.md) 方法。

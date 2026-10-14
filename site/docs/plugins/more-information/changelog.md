@@ -6,6 +6,32 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 10.0
+
+- Added the global `Editor` object to the plugins API. Editor methods are now called as functions that return a Promise, for example, `await Editor.GetSelectedText()`, instead of through `window.Asc.plugin.executeMethod`. A callback passed as the last argument is still supported.
+- Added the `Editor.RunMacro` method, which runs a function with the editor API, passes arguments to it, and returns its result as a Promise.
+- Renamed the `IsFillingFormMode` method to `IsFillingForm` for [Document API](../interacting-with-editors/document-api/Methods/IsFillingForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsFillingForm.md). The old name still works.
+- Renamed the `IsFillingOFormMode` method to `IsFillingPdfForm` for [Document API](../interacting-with-editors/document-api/Methods/IsFillingPdfForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsFillingPdfForm.md). The old name still works.
+- Renamed the `IsEditingOFormMode` method to `IsEditingPdfForm` for [Document API](../interacting-with-editors/document-api/Methods/IsEditingPdfForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsEditingPdfForm.md). The old name still works.
+- Added the `GetRestrictions` method for [Document API](../interacting-with-editors/document-api/Methods/GetRestrictions.md), [Form API](../interacting-with-editors/form-api/Methods/GetRestrictions.md), [Spreadsheet API](../interacting-with-editors/spreadsheet-api/Methods/GetRestrictions.md), [Presentation API](../interacting-with-editors/presentation-api/Methods/GetRestrictions.md), and [PDF API](../interacting-with-editors/pdf-api/Methods/GetRestrictions.md).
+- Added the `SetButtonDisabled` method for [Document API](../interacting-with-editors/document-api/Methods/SetButtonDisabled.md), [Spreadsheet API](../interacting-with-editors/spreadsheet-api/Methods/SetButtonDisabled.md), and [Presentation API](../interacting-with-editors/presentation-api/Methods/SetButtonDisabled.md).
+- Added the `GetOFormRole` method for [Document API](../interacting-with-editors/document-api/Methods/GetOFormRole.md) and [Form API](../interacting-with-editors/form-api/Methods/GetOFormRole.md).
+- Added the [MoveCursorToAnnotationRange](../interacting-with-editors/document-api/Methods/MoveCursorToAnnotationRange.md) method for Document API.
+- Added the [SetRangeHtml](../interacting-with-editors/document-api/Methods/SetRangeHtml.md) method for Document API.
+- Added the [InsertPresentationFromUrl](../interacting-with-editors/presentation-api/Methods/InsertPresentationFromUrl.md) method for Presentation API.
+- Added the [SetParagraphHtml](../interacting-with-editors/presentation-api/Methods/SetParagraphHtml.md) method for Presentation API.
+- Added the [SetParagraphRangeHtml](../interacting-with-editors/presentation-api/Methods/SetParagraphRangeHtml.md) method for Presentation API.
+- Added the [AnnotateParagraph](../interacting-with-editors/presentation-api/Methods/AnnotateParagraph.md) method for Presentation API.
+- Added the [SelectAnnotationRange](../interacting-with-editors/presentation-api/Methods/SelectAnnotationRange.md) method for Presentation API.
+- Added the [RemoveAnnotationRange](../interacting-with-editors/presentation-api/Methods/RemoveAnnotationRange.md) method for Presentation API.
+- Added the `onFloatActionButtonClick` event for [Document API](../interacting-with-editors/document-api/Events/onFloatActionButtonClick.md), [Form API](../interacting-with-editors/form-api/Events/onFloatActionButtonClick.md), [Spreadsheet API](../interacting-with-editors/spreadsheet-api/Events/onFloatActionButtonClick.md), [Presentation API](../interacting-with-editors/presentation-api/Events/onFloatActionButtonClick.md), and [PDF API](../interacting-with-editors/pdf-api/Events/onFloatActionButtonClick.md).
+- Added the [onSelectionEnd](../interacting-with-editors/pdf-api/Events/onSelectionEnd.md) event for PDF API.
+- Added the [onSelectionCancel](../interacting-with-editors/pdf-api/Events/onSelectionCancel.md) event for PDF API.
+- Added the `EditorRestrictions` type to the simple type definitions for [Document API](../interacting-with-editors/document-api/Enumeration/EditorRestrictions.md), [Form API](../interacting-with-editors/form-api/Enumeration/EditorRestrictions.md), [Spreadsheet API](../interacting-with-editors/spreadsheet-api/Enumeration/EditorRestrictions.md), [Presentation API](../interacting-with-editors/presentation-api/Enumeration/EditorRestrictions.md), and [PDF API](../interacting-with-editors/pdf-api/Enumeration/EditorRestrictions.md).
+- Added the [CommentData](../interacting-with-editors/pdf-api/Enumeration/CommentData.md) type to the simple type definitions for PDF API.
+- Added the [comment](../interacting-with-editors/pdf-api/Enumeration/comment.md) type to the simple type definitions for PDF API.
+- Added the [Event_pt](../interacting-with-editors/pdf-api/Enumeration/Event_pt.md) type to the simple type definitions for PDF API.
+
 ## Version 9.4
 
 - Added the [MoveCursorToField](../interacting-with-editors/document-api/Methods/MoveCursorToField.md) method for Document API.
