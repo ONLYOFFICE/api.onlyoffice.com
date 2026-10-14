@@ -42,7 +42,7 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 
 **需要更多帮助？**
 
-- [开发者论坛](https://forum.onlyoffice.com/) - 社区支持
+- [开发者论坛](https://community.onlyoffice.com/) - 社区支持
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) - 问答归档
 
 ## 资源

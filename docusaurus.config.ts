@@ -14,8 +14,8 @@ function localize(translations: Record<string, string>): string {
 }
 
 const announcementBarContent = localize({
-  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
-  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
+  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/category/onlyoffice_10_0?from=api"><b>Meet ONLYOFFICE Docs 10.0</b></a>: modular apps and AI tools, 50+ new features, 1,000 bug fixes, 35 fixed vulnerabilities, and more.`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与AI工具，50+新功能、1000项错误修复、35个漏洞修复等。`,
 });
 
 // The landing-page cards, flattened for llms-txt: each section carries its group's name.
@@ -212,7 +212,7 @@ const config: Config = {
           },
           {
             name: 'Developer forum',
-            url: 'https://forum.onlyoffice.com/',
+            url: 'https://community.onlyoffice.com/',
             description: 'Community questions, answers, and announcements.',
           },
         ],
@@ -227,6 +227,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     announcementBar: {
+      id: 'docs-10-0',
       content: announcementBarContent,
       isCloseable: true,
     },
@@ -389,7 +390,7 @@ const config: Config = {
           items: [
             {
               label: 'Forum',
-              href: 'https://forum.onlyoffice.com/',
+              href: 'https://community.onlyoffice.com/',
             },
             {
               label: 'Code on GitHub',
