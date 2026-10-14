@@ -53,6 +53,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 | services.CoAuthoring.token.enable.browser        | boolean | false   | 是否启用客户端[浏览器请求](browser.md)中的令牌。                                                                                                                                                                                                                                                                                         |
 | services.CoAuthoring.token.enable.request.inbox  | boolean | false   | 是否启用[传入HTTP请求](request/token-in-body.md#incoming-request)中的令牌。                                                                                                                                                                                                                                                                               |
 | services.CoAuthoring.token.enable.request.outbox | boolean | false   | [传出HTTP请求](request/token-in-body.md#outgoing-requests) 中的令牌是否已启用。                                                                                                                                                                                                                                                                               |
+| services.CoAuthoring.token.purposeCheck          | string  | validate | ONLYOFFICE 文档检查传入 HTTP 请求令牌所签发[操作](request/request.md#operation)的严格程度：`off`、`validate` 或 `strict`。 |
 
 ## 示例 local.json 配置
 

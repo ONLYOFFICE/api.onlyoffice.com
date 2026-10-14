@@ -9,7 +9,7 @@ Starting from version 5.2, it is possible to use the token in body parameters wi
 | services.CoAuthoring.token.inbox.inBody  | boolean | false   | Whether a token is enabled in the incoming request body or not. |
 | services.CoAuthoring.token.outbox.inBody | boolean | false   | Whether a token is enabled in the outgoing request body or not. |
 
-The `payload` for the JSON Web Token contains the request body parameters.
+The `payload` for the JSON Web Token contains the request body parameters. Starting from version 10.0, the token also contains the [operation](request.md#operation) field.
 
 :::info
 In the examples below, `example.com` represents the server where your **document storage service** is installed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to learn more about ONLYOFFICE Docs service client-server interactions.
@@ -26,7 +26,8 @@ Sample parameters of request to receive the status of the edited document:
   ``` json
   {
     "c": "info",
-    "key": "Khirz6zTPdfd7"
+    "key": "Khirz6zTPdfd7",
+    "operation": "command"
   }
   ```
 
@@ -38,7 +39,7 @@ These parameters must be encoded into the token so that the request looked like 
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvcGVyYXRpb24iOiJjb21tYW5kIn0.trVKeI7OFWsAUhnNKJYxbDW14tcf4RnKgYrRPYL7JAw"
   }'
 ```
 
@@ -56,7 +57,8 @@ Sample parameters of request to convert the document:
     "key": "Khirz6zTPdfd7",
     "outputtype": "pdf",
     "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.docx",
+    "operation": "converter"
   }
   ```
 
@@ -66,7 +68,7 @@ Sample parameters of request to convert the document:
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4Iiwib3BlcmF0aW9uIjoiY29udmVydGVyIn0.uPg0UB8h99StTOqnm3nzyGW7MTYdogOlvyXeZ9R9TQA"
   }'
 ```
 
@@ -79,7 +81,8 @@ Sample parameters of request to document builder service:
   ``` json
   {
     "async": true,
-    "url": "https://example.com/url-to-example-script.js"
+    "url": "https://example.com/url-to-example-script.js",
+    "operation": "docbuilder"
   }
   ```
 
@@ -89,7 +92,7 @@ Sample parameters of request to document builder service:
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuanMifQ.jQ9VN6BUntLel-sKN5CGvWPnq3hDU1WJIA18LaQqs_I"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuanMiLCJvcGVyYXRpb24iOiJkb2NidWlsZGVyIn0.47dIcXHShPAz5i1FBcszQ4gabCP2ONcRjj1XRC4apK0"
   }'
 ```
 
@@ -104,7 +107,8 @@ Sample parameters of request to "callbackUrl" address by document editing servic
   ``` json
   {
     "key": "Khirz6zTPdfd7",
-    "status": 4
+    "status": 4,
+    "operation": "callback"
   }
   ```
 
@@ -114,7 +118,7 @@ Sample parameters of request to "callbackUrl" address by document editing servic
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.4350Gsw3fFOH9EC_tnY9iJ_PfAbKW8ZiNU4wiBagHdU"
   }'
 ```
 

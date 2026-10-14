@@ -34,7 +34,7 @@ The JSON Web Token should be sent in the JSON object format to **document comman
 
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvcGVyYXRpb24iOiJjb21tYW5kIn0.trVKeI7OFWsAUhnNKJYxbDW14tcf4RnKgYrRPYL7JAw"
 }
 ```
 
@@ -42,7 +42,7 @@ The JSON Web Token should be sent in the JSON object format to **document comman
 
 | Name  | Type   | Presence                  | Description                                                                                                                                                                    |
 | ----- | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#get-document-status). |
+| token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#get-document-status). Starting from version 10.0, the token can contain the [operation](../signature/request/request.md#operation) field with the `command` value. |
 
 The **document editing service** informs the **document storage service** about the result caused by command and sends the response with all the necessary data via the [callback handler](../../usage-api/callback-handler.md).
 

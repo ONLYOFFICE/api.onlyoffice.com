@@ -34,7 +34,7 @@ JSON Web令牌应以JSON对象格式发送到**文档命令服务**它用于接�
 
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvcGVyYXRpb24iOiJjb21tYW5kIn0.trVKeI7OFWsAUhnNKJYxbDW14tcf4RnKgYrRPYL7JAw"
 }
 ```
 
@@ -42,7 +42,7 @@ JSON Web令牌应以JSON对象格式发送到**文档命令服务**它用于接�
 
 | 名称  | 类型   | 是否必填                  | 描述                                                                                                                                                                    |
 | ----- | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| token | string | 配置所需 | 以[令牌](../../additional-api/signature/request/token-in-body.md#get-document-status)形式添加到 **ONLYOFFICE 文档**配置的加密签名。 |
+| token | string | 配置所需 | 以[令牌](../../additional-api/signature/request/token-in-body.md#get-document-status)形式添加到 **ONLYOFFICE 文档**配置的加密签名。从 10.0 版本开始，令牌可以包含值为 `command` 的 [operation](../signature/request/request.md#operation) 字段。 |
 
 **文档编辑服务**将命令产生的结果通知**文档存储服务**，并通过[callback handler](../../usage-api/callback-handler.md)发送包含所有必要数据的响应。
 

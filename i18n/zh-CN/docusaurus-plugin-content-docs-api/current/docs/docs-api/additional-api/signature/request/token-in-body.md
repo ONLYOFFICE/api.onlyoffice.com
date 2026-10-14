@@ -9,7 +9,7 @@
 | services.CoAuthoring.token.inbox.inBody  | boolean | false   | 是否在传入请求体中启用令牌。 |
 | services.CoAuthoring.token.outbox.inBody | boolean | false   | 是否在传出请求体中启用令牌。 |
 
-JSON Web 令牌的 `payload` 包含请求正文参数。
+JSON Web 令牌的 `payload` 包含请求正文参数。从 10.0 版本开始，令牌还包含 [operation](request.md#operation) 字段。
 
 :::info
 在以下示例中，`example.com` 代表安装**文档存储服务**的服务器。请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节了解更多关于 ONLYOFFICE 文档服务客户端-服务器交互的信息。
@@ -26,7 +26,8 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
   ``` json
   {
     "c": "info",
-    "key": "Khirz6zTPdfd7"
+    "key": "Khirz6zTPdfd7",
+    "operation": "command"
   }
   ```
 
@@ -38,7 +39,7 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvcGVyYXRpb24iOiJjb21tYW5kIn0.trVKeI7OFWsAUhnNKJYxbDW14tcf4RnKgYrRPYL7JAw"
   }'
 ```
 
@@ -56,7 +57,8 @@ curl -X POST "https://documentserver/command" \
     "key": "Khirz6zTPdfd7",
     "outputtype": "pdf",
     "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.docx",
+    "operation": "converter"
   }
   ```
 
@@ -66,7 +68,7 @@ curl -X POST "https://documentserver/command" \
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4Iiwib3BlcmF0aW9uIjoiY29udmVydGVyIn0.uPg0UB8h99StTOqnm3nzyGW7MTYdogOlvyXeZ9R9TQA"
   }'
 ```
 
@@ -79,7 +81,8 @@ curl -X POST "https://documentserver/converter" \
   ``` json
   {
     "async": true,
-    "url": "https://example.com/url-to-example-script.js"
+    "url": "https://example.com/url-to-example-script.js",
+    "operation": "docbuilder"
   }
   ```
 
@@ -89,7 +92,7 @@ curl -X POST "https://documentserver/converter" \
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuanMifQ.jQ9VN6BUntLel-sKN5CGvWPnq3hDU1WJIA18LaQqs_I"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuanMiLCJvcGVyYXRpb24iOiJkb2NidWlsZGVyIn0.47dIcXHShPAz5i1FBcszQ4gabCP2ONcRjj1XRC4apK0"
   }'
 ```
 
@@ -104,7 +107,8 @@ curl -X POST "https://documentserver/docbuilder" \
   ``` json
   {
     "key": "Khirz6zTPdfd7",
-    "status": 4
+    "status": 4,
+    "operation": "callback"
   }
   ```
 
@@ -114,7 +118,7 @@ curl -X POST "https://documentserver/docbuilder" \
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.4350Gsw3fFOH9EC_tnY9iJ_PfAbKW8ZiNU4wiBagHdU"
   }'
 ```
 

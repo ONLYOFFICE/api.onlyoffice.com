@@ -53,6 +53,7 @@ Restart the services for the config changes to take effect:
 | services.CoAuthoring.token.enable.browser        | boolean | false   | Whether a token in the client-side [browser requests](browser.md) is enabled or not.                                                                                                                                                                                                  |
 | services.CoAuthoring.token.enable.request.inbox  | boolean | false   | Whether a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) is enabled or not.                                                                                                                                                                     |
 | services.CoAuthoring.token.enable.request.outbox | boolean | false   | Whether a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) is enabled or not.                                                                                                                                                                    |
+| services.CoAuthoring.token.purposeCheck          | string  | validate | How strictly ONLYOFFICE Docs checks the [operation](request/request.md#operation) that the token of an incoming HTTP request is issued for: `off`, `validate`, or `strict`. |
 
 ## Sample local.json configuration
 

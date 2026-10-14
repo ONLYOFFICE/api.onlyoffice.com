@@ -64,7 +64,7 @@ In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters 
 | thumbnail.height | integer | optional | The thumbnail height in pixels. The default value is **100**. |
 | thumbnail.width | integer | optional | The thumbnail width in pixels. The default value is **100**. |
 | title | string | optional | The converted file name. |
-| token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
+| token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). Starting from version 10.0, the token can contain the [operation](../signature/request/request.md#operation) field with the `converter` value. |
 | url | string | required | The absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 | watermark | object | optional | A JSON object containing the [properties](../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | The vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
@@ -271,7 +271,7 @@ This example shows how to convert a *docx* file to *pdf* format using a JSON Web
 
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4Iiwib3BlcmF0aW9uIjoiY29udmVydGVyIn0.uPg0UB8h99StTOqnm3nzyGW7MTYdogOlvyXeZ9R9TQA"
 }
 ```
 

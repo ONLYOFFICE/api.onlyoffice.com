@@ -64,7 +64,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | thumbnail.height | integer | optional | 缩略图高度（以像素为单位）。默认值为 **100**。 |
 | thumbnail.width | integer | optional | 缩略图宽度（以像素为单位）。默认值为 **100**。 |
 | title | string | optional | 转换后的文件名。 |
-| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。 |
+| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。从 10.0 版本开始，令牌可以包含值为 `converter` 的 [operation](../signature/request/request.md#operation) 字段。 |
 | url | string | required | 要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
 | watermark | object | optional | 一个 JSON 对象，其中包含水印的[属性](../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
 | watermark.align | integer | optional | 水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
@@ -277,7 +277,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4Iiwib3BlcmF0aW9uIjoiY29udmVydGVyIn0.uPg0UB8h99StTOqnm3nzyGW7MTYdogOlvyXeZ9R9TQA"
 }
 ```
 

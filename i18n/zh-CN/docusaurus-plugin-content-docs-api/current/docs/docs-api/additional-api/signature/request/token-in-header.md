@@ -2,7 +2,7 @@
 
 在从或向 ONLYOFFICE 文档执行 HTTP 请求时，系统会添加一个包含令牌的授权头以验证请求的合法性。
 
-JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。
+JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。从 10.0 版本开始，它还在 `payload` 对象旁边包含 [operation](request.md#operation) 字段。
 
 :::info
 在以下示例中，`example.com` 代表安装**文档存储服务**的服务器。请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节了解更多关于 ONLYOFFICE 文档服务客户端-服务器交互的信息。
@@ -25,7 +25,8 @@ JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。
     "payload": {
       "c": "info",
       "key": "Khirz6zTPdfd7"
-    }
+    },
+    "operation": "command"
   }
   ```
 
@@ -34,7 +35,7 @@ JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。
 ```bash
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiOiJpbmZvIiwia2V5IjoiS2hpcno2elRQZGZkNyJ9fQ.hGQ8kquQWpg4MQYiSYaIzik0wotP1coAop6QfLruenA" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiOiJpbmZvIiwia2V5IjoiS2hpcno2elRQZGZkNyJ9LCJvcGVyYXRpb24iOiJjb21tYW5kIn0.5RZeaQOSqox2VENJtWqPLBKNqyeq06MiAahLXBmVJ3w" \
   -d '{
     "c": "info",
     "key": "Khirz6zTPdfd7"
@@ -55,7 +56,8 @@ curl -X POST "https://documentserver/command" \
       "outputtype": "pdf",
       "title": "Example Document Title.docx",
       "url": "https://example.com/url-to-example-document.docx"
-    }
+    },
+    "operation": "converter"
   }
   ```
 
@@ -64,7 +66,7 @@ curl -X POST "https://documentserver/command" \
 ```bash
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpbGV0eXBlIjoiZG9jeCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvdXRwdXR0eXBlIjoicGRmIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.Ec50Gvafu4niR2I1LPgETn1jkvvs1wKm0YeeI1RbRQs" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpbGV0eXBlIjoiZG9jeCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvdXRwdXR0eXBlIjoicGRmIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwib3BlcmF0aW9uIjoiY29udmVydGVyIn0.NkOE1PQ4AzJ6REmFrnL6E-jKzUdC0hI1u47sQcRGF9E" \
   -d '{
     "filetype": "docx",
     "key": "Khirz6zTPdfd7",
@@ -85,7 +87,8 @@ curl -X POST "https://documentserver/converter" \
     "payload": {
       "async": true,
       "url": "https://example.com/url-to-example-script.js"
-    }
+    },
+    "operation": "docbuilder"
   }
   ```
 
@@ -94,7 +97,7 @@ curl -X POST "https://documentserver/converter" \
 ```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFzeW5jIjp0cnVlLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXNjcmlwdC5qcyJ9fQ.0_2NH7PCswspvVWcc8W5Fzfbx9dCNvynP9DNlI0qJDU" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFzeW5jIjp0cnVlLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXNjcmlwdC5qcyJ9LCJvcGVyYXRpb24iOiJkb2NidWlsZGVyIn0.Tyhd2K2Q_9bWVFrGPyxm_2o3CGcQ3D5x16oaTQVCQ64" \
   -d '{
     "async": true,
     "url": "https://example.com/url-to-example-script.js"
@@ -114,7 +117,8 @@ curl -X POST "https://documentserver/docbuilder" \
     "payload": {
       "key": "Khirz6zTPdfd7",
       "status": 4
-    }
+    },
+    "operation": "callback"
   }
   ```
 
@@ -123,7 +127,7 @@ curl -X POST "https://documentserver/docbuilder" \
 ```bash
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9fQ.MfVoGT-aYuPJfjQAaxwBv7-CqBylDae2AF9K5TpLf-E" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.o3l4KlxMeFtaZEY5UQiWuWMktxGEdvjoN9ckHlmGIQs" \
   -d '{
     "key": "Khirz6zTPdfd7",
     "status": 4
@@ -140,7 +144,8 @@ curl -X POST "https://example.com/url-to-callback" \
   {
     "payload": {
       "url": "https://example.com/url-to-example-document.docx"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -148,7 +153,7 @@ curl -X POST "https://example.com/url-to-callback" \
 
 ```bash
 curl -X GET "https://example.com/url-to-example-document.docx" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9LCJvcGVyYXRpb24iOiJkb3dubG9hZCJ9.gDT6MsJSGJUJyR_BpvixtASOxCKZDO0-pHVuAsSrf9w"
 ```
 
 令牌包含 payload（文档的完整 URL，在上面的示例中为 `{"url": "https://example.com/url-to-example-document.docx"}`），该 payload 在请求头中也重复为 `Host`（`example.com`）和 GET 请求发送到的文档地址（`url-to-example-document.docx`）。
@@ -163,7 +168,8 @@ curl -X GET "https://example.com/url-to-example-document.docx" \
   {
     "payload": {
       "url": "https://example.com/url-to-document-changes.zip"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -171,7 +177,7 @@ curl -X GET "https://example.com/url-to-example-document.docx" \
 
 ```bash
 curl -X GET "https://example.com/url-to-document-changes.zip" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn19.4CJ4F8x7VDMW72ss9VnIYGIwjRpBMYBBRXZ5aX2r2Y4"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn0sIm9wZXJhdGlvbiI6ImRvd25sb2FkIn0.Mr_bM2onk92qLP2VoqSFhjB3JC4wO1uXtLuw_L5F3j4"
 ```
 
 令牌包含 payload（文档的完整 URL，在上面的示例中为 `{"url": "https://example.com/url-to-document-changes.zip"}`），该 payload 在请求头中也重复为 `Host`（`example.com`）和 GET 请求发送到的文档地址（`url-to-document-changes.zip`）。
