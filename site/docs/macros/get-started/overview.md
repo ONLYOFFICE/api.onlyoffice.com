@@ -42,7 +42,7 @@ Automate repetitive tasks without leaving the editor.
 
 **Need more help?**
 
-- [Developer Forum](https://forum.onlyoffice.com/) - Community support
+- [Developer Forum](https://community.onlyoffice.com/) - Community support
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) - Q&A archive
 
 ## Resources
