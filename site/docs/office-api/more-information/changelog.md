@@ -693,7 +693,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiChart/GetClassType](../usage-api/pdf-api/ApiChart/Methods/GetClassType.md) method to the PDF API.
 - Added the [ApiChart/GetSeries](../usage-api/pdf-api/ApiChart/Methods/GetSeries.md) method to the PDF API.
 - Added the [ApiChart/RemoveSeria](../usage-api/pdf-api/ApiChart/Methods/RemoveSeria.md) method to the PDF API.
-- Added the [ApiChart/SetAxieNumFormat](../usage-api/pdf-api/ApiChart/Methods/SetAxieNumFormat.md) method to the PDF API.
+- Added the [ApiChart/SetAxisNumFormat](../usage-api/pdf-api/ApiChart/Methods/SetAxisNumFormat.md) method to the PDF API.
 - Added the [ApiChart/SetCategoryName](../usage-api/pdf-api/ApiChart/Methods/SetCategoryName.md) method to the PDF API.
 - Added the [ApiChart/SetDataPointFill](../usage-api/pdf-api/ApiChart/Methods/SetDataPointFill.md) method to the PDF API.
 - Added the [ApiChart/SetDataPointNumFormat](../usage-api/pdf-api/ApiChart/Methods/SetDataPointNumFormat.md) method to the PDF API.
@@ -1181,7 +1181,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiRun/SetItalic](../usage-api/pdf-api/ApiRun/Methods/SetItalic.md) method to the PDF API.
 - Added the [ApiRun/SetLanguage](../usage-api/pdf-api/ApiRun/Methods/SetLanguage.md) method to the PDF API.
 - Added the [ApiRun/SetOutLine](../usage-api/pdf-api/ApiRun/Methods/SetOutLine.md) method to the PDF API.
-- Added the [ApiRun/SetPosition](../usage-api/pdf-api/ApiRun/Methods/SetPosition.md) method to the PDF API.
 - Added the [ApiRun/SetSmallCaps](../usage-api/pdf-api/ApiRun/Methods/SetSmallCaps.md) method to the PDF API.
 - Added the [ApiRun/SetSpacing](../usage-api/pdf-api/ApiRun/Methods/SetSpacing.md) method to the PDF API.
 - Added the [ApiRun/SetStrikeout](../usage-api/pdf-api/ApiRun/Methods/SetStrikeout.md) method to the PDF API.
@@ -1332,14 +1331,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiTextPr/SetTextFill](../usage-api/pdf-api/ApiTextPr/Methods/SetTextFill.md) method to the PDF API.
 - Added the [ApiTextPr/SetUnderline](../usage-api/pdf-api/ApiTextPr/Methods/SetUnderline.md) method to the PDF API.
 - Added the [ApiTextPr/SetVertAlign](../usage-api/pdf-api/ApiTextPr/Methods/SetVertAlign.md) method to the PDF API.
-
-#### ApiTextWidget methods
-
-- Added the [ApiTextWidget/GetClassType](../usage-api/pdf-api/ApiTextWidget/Methods/GetClassType.md) method to the PDF API.
-- Added the [ApiTextWidget/GetPlaceholder](../usage-api/pdf-api/ApiTextWidget/Methods/GetPlaceholder.md) method to the PDF API.
-- Added the [ApiTextWidget/GetRegularExp](../usage-api/pdf-api/ApiTextWidget/Methods/GetRegularExp.md) method to the PDF API.
-- Added the [ApiTextWidget/SetPlaceholder](../usage-api/pdf-api/ApiTextWidget/Methods/SetPlaceholder.md) method to the PDF API.
-- Added the [ApiTextWidget/SetRegularExp](../usage-api/pdf-api/ApiTextWidget/Methods/SetRegularExp.md) method to the PDF API.
 
 #### ApiUnderlineAnnotation methods
 
@@ -3685,7 +3676,7 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiChart/ApplyChartStyle](../usage-api/document-api/ApiChart/Methods/ApplyChartStyle.md) method to Document API.
 - Added the [ApiChart/RemoveSeria](../usage-api/document-api/ApiChart/Methods/RemoveSeria.md) method to Document API.
-- Added the [ApiChart/SetAxieNumFormat](../usage-api/document-api/ApiChart/Methods/SetAxieNumFormat.md) method to Document API.
+- Added the [ApiChart/SetAxisNumFormat](../usage-api/document-api/ApiChart/Methods/SetAxisNumFormat.md) method to Document API.
 - Added the [ApiChart/SetCategoryName](../usage-api/document-api/ApiChart/Methods/SetCategoryName.md) method to Document API.
 - Added the [ApiChart/SetDataPointFill](../usage-api/document-api/ApiChart/Methods/SetDataPointFill.md) method to Document API.
 - Added the [ApiChart/SetDataPointNumFormat](../usage-api/document-api/ApiChart/Methods/SetDataPointNumFormat.md) method to Document API.
@@ -3706,7 +3697,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiChart/SetXValues](../usage-api/document-api/ApiChart/Methods/SetXValues.md) method to Document API.
 - Added the [ApiChart/AddSeria](../usage-api/spreadsheet-api/ApiChart/Methods/AddSeria.md) method to Spreadsheet API.
 - Added the [ApiChart/RemoveSeria](../usage-api/spreadsheet-api/ApiChart/Methods/RemoveSeria.md) method to Spreadsheet API.
-- Added the [ApiChart/SetAxieNumFormat](../usage-api/spreadsheet-api/ApiChart/Methods/SetAxieNumFormat.md) method to Spreadsheet API.
+- Added the [ApiChart/SetAxisNumFormat](../usage-api/spreadsheet-api/ApiChart/Methods/SetAxisNumFormat.md) method to Spreadsheet API.
 - Added the [ApiChart/SetCatFormula](../usage-api/spreadsheet-api/ApiChart/Methods/SetCatFormula.md) method to Spreadsheet API.
 - Added the [ApiChart/SetDataPointFill](../usage-api/spreadsheet-api/ApiChart/Methods/SetDataPointFill.md) method to Spreadsheet API.
 - Added the [ApiChart/SetDataPointOutLine](../usage-api/spreadsheet-api/ApiChart/Methods/SetDataPointOutLine.md) method to Spreadsheet API.
@@ -3725,7 +3716,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiChart/SetTitleOutLine](../usage-api/spreadsheet-api/ApiChart/Methods/SetTitleOutLine.md) method to Spreadsheet API.
 - Added the [ApiChart/ApplyChartStyle](../usage-api/presentation-api/ApiChart/Methods/ApplyChartStyle.md) method to Presentation API.
 - Added the [ApiChart/RemoveSeria](../usage-api/presentation-api/ApiChart/Methods/RemoveSeria.md) method to Presentation API.
-- Added the [ApiChart/SetAxieNumFormat](../usage-api/presentation-api/ApiChart/Methods/SetAxieNumFormat.md) method to Presentation API.
+- Added the [ApiChart/SetAxisNumFormat](../usage-api/presentation-api/ApiChart/Methods/SetAxisNumFormat.md) method to Presentation API.
 - Added the [ApiChart/SetCategoryName](../usage-api/presentation-api/ApiChart/Methods/SetCategoryName.md) method to Presentation API.
 - Added the [ApiChart/SetDataPointFill](../usage-api/presentation-api/ApiChart/Methods/SetDataPointFill.md) method to Presentation API.
 - Added the [ApiChart/SetDataPointNumFormat](../usage-api/presentation-api/ApiChart/Methods/SetDataPointNumFormat.md) method to Presentation API.
