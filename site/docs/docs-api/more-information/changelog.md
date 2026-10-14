@@ -8,6 +8,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added conversion to [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) format from all spreadsheet formats.
 - In the commercial editions, the [Admin Panel](../get-started/configuration/server-config/server-config.md#admin-panel) now starts automatically with the server by default. Community Edition does not include the Admin Panel.
 - The first administrator is now created with the `documentserver-admin` host CLI (`create-admin`, `reset-admin-password`) instead of on a web page with a bootstrap code from the logs. The administrator login is always `admin`.
+- Added the [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) section with the `disabled` parameter to turn off the AI features in the editors.
 
 ## Version 9.4
 

@@ -8,6 +8,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 新增从所有电子表格格式到 [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) 格式的转换。
 - 在商业版本中，[管理面板](../get-started/configuration/server-config/server-config.md#admin-panel)现默认随服务器自动启动。社区版不包含管理面板。
 - 第一个管理员现通过主机命令行工具 `documentserver-admin`（`create-admin`、`reset-admin-password`）创建，不再通过网页使用日志中的引导代码创建。管理员登录名固定为 `admin`。
+- 新增 [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) 部分及其 `disabled` 参数，用于关闭编辑器中的 AI 功能。
 
 ## 版本 9.4
 

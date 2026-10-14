@@ -15,6 +15,28 @@ customization 部分定义编辑器自定义参数。
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
 :::
 
+## ai
+
+**类型**：`object`
+
+编辑器中 AI 功能的设置。
+
+**示例**：
+
+```ts
+{
+  disabled: true,
+}
+```
+
+### ai.disabled
+
+**类型**：`boolean` | **默认值**：`false`
+
+是否禁用编辑器中的 AI 功能。如果设置为 `true`，则隐藏 **AI 工具**。这是将 [AI 插件](../../../../../ai/guides/ai-plugin.md)标识符（`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`）添加到 [editorConfig.plugins.disable](../plugins.md#disable) 列表的快捷方式。
+
+**示例**：`true`
+
 ## 匿名 {#anonymous}
 
 **类型**：`object`
@@ -1073,6 +1095,9 @@ const config = {
   editorConfig: {
     // ...
     customization: {
+      ai: {
+        disabled: false,
+      },
       anonymous: {
         request: true,
         label: "Elizabeth",

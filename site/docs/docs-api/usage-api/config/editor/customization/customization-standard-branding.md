@@ -15,6 +15,28 @@ Most parameters on this page are available for all ONLYOFFICE Docs editions, inc
 Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
 :::
 
+## ai
+
+**type**: `object`
+
+The settings for the AI features in the editor.
+
+**Example**:
+
+```ts
+{
+  disabled: true,
+}
+```
+
+### ai.disabled
+
+**type**: `boolean` | **default**: `false`
+
+Whether to disable the AI features in the editor. If set to `true`, the **AI Tools** are hidden. This is a shortcut for adding the [AI plugin](../../../../../ai/guides/ai-plugin.md) identifier (`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`) to the [editorConfig.plugins.disable](../plugins.md#disable) list.
+
+**Example**: `true`
+
 ## anonymous
 
 **type**: `object`
@@ -1071,6 +1093,9 @@ const config = {
   editorConfig: {
     // ...
     customization: {
+      ai: {
+        disabled: false,
+      },
       anonymous: {
         request: true,
         label: "Elizabeth",
