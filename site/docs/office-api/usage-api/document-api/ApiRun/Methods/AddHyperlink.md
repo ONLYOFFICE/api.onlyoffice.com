@@ -5,7 +5,7 @@ Adds a hyperlink to the current run.
 ## Syntax
 
 ```javascript
-expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
+expression.AddHyperlink(link, screenTipText, bookmarkName);
 ```
 
 `expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
@@ -14,13 +14,13 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLink | Required | string |  | The link address. |
-| sScreenTipText | Required | string |  | The screen tip text. |
-| sBookmarkName | Required | string |  | name of a bookmark |
+| link | Required | string |  | The link address. |
+| screenTipText | Required | string |  | The screen tip text. |
+| bookmarkName | Required | string |  | name of a bookmark |
 
 ## Returns
 
-[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md)
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null \| undefined
 
 ## Example
 

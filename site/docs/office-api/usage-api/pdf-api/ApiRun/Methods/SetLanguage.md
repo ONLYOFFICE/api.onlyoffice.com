@@ -1,11 +1,13 @@
 # SetLanguage
 
-Specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run.
+Specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run.
+
+Inherited from [ApiTextPr.SetLanguage](../../ApiTextPr/Methods/SetLanguage.md).
 
 ## Syntax
 
 ```javascript
-expression.SetLanguage(sLangId);
+expression.SetLanguage(langId);
 ```
 
 `expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
@@ -14,7 +16,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| langId | Required | string \| null |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". Pass *null* to remove the language. |
 
 ## Returns
 

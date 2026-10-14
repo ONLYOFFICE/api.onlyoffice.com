@@ -23,7 +23,7 @@ expression.GetClassType();
 识别电子表格中自定义 XML 块的对象类型。
 
 ```javascript editor-xlsx
-// How do I find out the object type of a custom XML block stored in a spreadsheet?
+// Find out the object type of a custom XML block stored in a spreadsheet.
 
 // Confirm the category of a stored XML object before working with it in a spreadsheet.
 

@@ -4,6 +4,12 @@ Class representing a table row.
 
 ApiTableRow is a subclass of [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md).
 
+## Properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| Cells | [ApiTableCell](../ApiTableCell/ApiTableCell.md)[] | Returns all cells of the row as an array. |
+
 ## Methods
 
 The following table lists the available methods.
@@ -15,6 +21,7 @@ The following table lists the available methods.
 | [GetCell](./Methods/GetCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Returns a cell by its position. |
 | [GetCellsCount](./Methods/GetCellsCount.md) | number | Returns a number of cells in the current row. |
 | [GetClassType](./Methods/GetClassType.md) | "tableRow" | Returns a type of the ApiTableRow class. |
+| [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) \| null | Returns the height of the current table row. |
 | [GetIndex](./Methods/GetIndex.md) | Number | Returns the current row index. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current table row. |
 | [GetNext](./Methods/GetNext.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) \| null | Returns the next row if exists. |
@@ -25,6 +32,7 @@ The following table lists the available methods.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a table row object. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to all cells in the current table row. |
 | [SetHeight](./Methods/SetHeight.md) | boolean | Sets the height to the current table row within the current table. |
+| [SetRowPr](./Methods/SetRowPr.md) | boolean | Sets the properties to the current table row. |
 | [SetTableHeader](./Methods/SetTableHeader.md) | boolean | Specifies that the current table row will be repeated at the top of each new page  wherever this table is displayed. This gives this table row the behavior of a 'header' row on  each of these pages. This element can be applied to any number of rows at the top of the  table structure in order to generate multi-row table headers. |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | Sets the text properties to the current row. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiTableRowPr object into the JSON object. |

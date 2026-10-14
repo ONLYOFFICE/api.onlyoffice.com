@@ -33,7 +33,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ContentControl](./Enumeration/ContentControl.md)[] | 返回已添加到页面的所有内容控件的信息。 |
 | [GetAllForms](./Methods/GetAllForms.md) | [ContentControl](./Enumeration/ContentControl.md)[] | 返回已添加到文档的所有表单的信息。 |
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [OLEObjectData](./Enumeration/OLEObjectData.md)[] | 返回可由指定插件打开的对象的所有 OLE 对象数据。 |
-| [GetCurrentAddinField](./Methods/GetCurrentAddinField.md) | [AddinFieldData](./Enumeration/AddinFieldData.md) | 返回文档中的当前加载项字段。 |
+| [GetCurrentAddinField](./Methods/GetCurrentAddinField.md) | [AddinFieldData](./Enumeration/AddinFieldData.md) \| null \| undefined | 返回文档中的当前加载项字段。 |
 | [GetCurrentBookmark](./Methods/GetCurrentBookmark.md) | string \| null | 返回当前书签。 |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | string | 返回所选内容控件的标识符（即鼠标光标当前所在的内容控件）。 |
 | [GetCurrentContentControlPr](./Methods/GetCurrentContentControlPr.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md) | 返回当前内容控件的属性。 |
@@ -46,9 +46,11 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | 返回指定表单的值。 |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | 返回已添加到文档中具有指定标签的所有表单的信息。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
+| [GetOFormRole](./Methods/GetOFormRole.md) | string | 返回 OForm 文档的当前角色名称。 |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | 返回编辑器当前对文档应用的限制。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | 返回所选 OLE 对象的数组。 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 返回文档中的所选文本。 |
@@ -59,13 +61,11 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。 |
 | [InsertOleObject](./Methods/InsertOleObject.md) | 无 | 在当前文档位置插入 OLE 对象。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
-| [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
-| [IsFillingFormMode](./Methods/IsFillingFormMode.md) | boolean | 检查文档是否处于表单填写模式。 |
-| [IsFillingOFormMode](./Methods/IsFillingOFormMode.md) | boolean | 检查文档是否处于 OForm 填写模式。 |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | 检查指定的表单是否已进行数字签名。 |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
 | [MoveCursorOutsideField](./Methods/MoveCursorOutsideField.md) | 无 | 将光标移动到字段外部，定位在字段之前或之后。 |
+| [MoveCursorToAnnotationRange](./Methods/MoveCursorToAnnotationRange.md) | 无 | 将光标移动到指定批注范围的开头或结尾，但不选中该范围。 |
 | [MoveCursorToContentControl](./Methods/MoveCursorToContentControl.md) | 无 | 将光标移动到指定的内容控件。 |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | 无 | 将光标移动到当前编辑区域（文档正文、页眉/页脚、脚注或自选图形）的末尾。 |
 | [MoveCursorToField](./Methods/MoveCursorToField.md) | 无 | 将光标移动到字段的开头或末尾。 |
@@ -99,6 +99,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [SelectAnnotationRange](./Methods/SelectAnnotationRange.md) | 无 | 使用给定的注解在文档中选择文本。 |
 | [SelectContentControl](./Methods/SelectContentControl.md) | 无 | 选择指定的内容控件。 |
 | [SelectOleObject](./Methods/SelectOleObject.md) | 无 | 选择指定的 OLE 对象。 |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | 无 | 按索引启用或禁用模态插件的页脚按钮。 |
 | [SetDisplayModeInReview](./Methods/SetDisplayModeInReview.md) | 无 | 设置修订的显示模式。 |
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | 无 | 设置文档编辑限制。 |
 | [SetFormValue](./Methods/SetFormValue.md) | 无 | 为指定的表单设置值。 |
@@ -106,6 +107,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [SetParagraphHtml](./Methods/SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。 |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
+| [SetRangeHtml](./Methods/SetRangeHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的一部分。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./Methods/ShowError.md) | 无 | 显示错误/警告消息。 |
 | [ShowInputHelper](./Methods/ShowInputHelper.md) | 无 | 显示输入助手。 |
@@ -133,6 +135,7 @@ Document API 列出了插件在 ONLYOFFICE 文档中处理文本文档时可以�
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | 当文档完全加载时调用的函数。 |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | 用于开启/关闭鼠标或触控板事件的函数。 |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | 当鼠标按钮在插件 iframe 外部释放时调用的函数。 |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | 单击浮动操作按钮时调用的函数。 |
 | [onFocusAnnotation](./Events/onFocusAnnotation.md) | 当批注获得焦点时调用的函数。 |
 | [onFocusContentControl](./Events/onFocusContentControl.md) | 用于显示哪个内容控件已获得焦点的函数。 |
 | [onHideContentControlTrack](./Events/onHideContentControlTrack.md) | 当内容控件在文档中失去焦点时调用的函数。 |

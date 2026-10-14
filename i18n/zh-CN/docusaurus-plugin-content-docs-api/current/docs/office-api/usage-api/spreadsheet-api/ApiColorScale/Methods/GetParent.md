@@ -2,8 +2,6 @@
 
 返回当前格式条件的父区域对象。
 
-继承自 [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md)。
-
 ## 语法
 
 ```javascript

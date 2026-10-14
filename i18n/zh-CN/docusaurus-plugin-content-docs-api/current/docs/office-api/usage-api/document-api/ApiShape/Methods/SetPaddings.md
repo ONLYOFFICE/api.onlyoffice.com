@@ -14,10 +14,10 @@ expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) |  | 左内边距。 |
-| nTop | 必需 | [EMU](../../Enumeration/EMU.md) |  | 上内边距。 |
-| nRight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 右内边距。 |
-| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) |  | 下内边距。 |
+| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 左内边距。 |
+| nTop | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 上内边距。 |
+| nRight | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 右内边距。 |
+| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 下内边距。 |
 
 ## 返回值
 

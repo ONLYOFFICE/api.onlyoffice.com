@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-从演示文稿的自定义结构移除 XML 元素。
+从演示文稿的自定义 XML 结构中移除 XML 元素。
 
 ```javascript editor-pptx
-// How do I delete a specific XML node?
+// Delete a specific XML node in a presentation.
 
 // Remove selected XML nodes and verify the remaining content in a presentation.
 

@@ -14,11 +14,11 @@ expression.Paste(destination);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | The cell range where the clipboard contents should be pasted. If this argument is omitted, the current selection is used. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | The cell range where the clipboard contents should be pasted. If this argument is omitted, the current selection is used. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 

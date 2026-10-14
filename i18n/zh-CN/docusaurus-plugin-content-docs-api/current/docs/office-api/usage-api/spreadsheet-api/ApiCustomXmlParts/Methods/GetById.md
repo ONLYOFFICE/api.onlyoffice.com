@@ -25,7 +25,7 @@ expression.GetById(xmlPartId);
 使用唯一标识符在电子表格中查找特定的存储 XML 块。
 
 ```javascript editor-xlsx
-// How do I find a particular XML entry by its ID in a spreadsheet?
+// Find a particular XML entry by its ID in a spreadsheet.
 
 // Locate a single XML block precisely when its identifier is already known in a spreadsheet.
 

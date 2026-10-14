@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Find the vertical position of an icon in a button widget in a PDF.
 
 ```javascript editor-pdf
-// How do I get the Y coordinate of an icon in a PDF button?
+// Useful for getting the Y coordinate of an icon in a PDF button.
 
 // Retrieve the icon's top position in a button widget in a PDF.
 

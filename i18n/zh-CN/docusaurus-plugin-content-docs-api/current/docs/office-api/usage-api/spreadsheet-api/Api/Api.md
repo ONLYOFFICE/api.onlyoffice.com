@@ -7,6 +7,7 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | ActiveSheet | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回表示活动工作表的对象。 |
+| ActiveWorkbook | [ApiWorkbook](../ApiWorkbook/ApiWorkbook.md) | 返回表示活动工作簿的对象。 |
 | AllComments | [ApiComment](../ApiComment/ApiComment.md)[] | 返回当前工作簿中的所有批注，包括所有工作表中的批注。 |
 | Comments | [ApiComment](../ApiComment/ApiComment.md)[] | 返回与整个工作簿相关的所有批注。 |
 | FreezePanes | [FreezePaneType](../Enumeration/FreezePaneType.md) | 返回或设置冻结窗格的类型。 |
@@ -22,11 +23,12 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | 返回 ApiComment 对象的数组。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | 向当前工作簿添加批注。 |
 | [AddCustomFunction](./Methods/AddCustomFunction.md) | 无 | 创建新的自定义函数。 |
 | [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | 无 | 注册新的自定义函数库（参见 **SetCustomFunctions** 插件方法）。 |
 | [AddDefName](./Methods/AddDefName.md) | boolean | 向单元格范围添加新名称。 |
 | [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 创建新工作表。 |
+| [Calculate](./Methods/Calculate.md) | boolean | 在整个活动工作簿中重新计算需要重新计算的单元格（已更改、已添加或易失性单元格），类似于 VBA 中的 Application.Calculate。强制执行原本会推迟到宏结束时才进行的重新计算，以便在同一宏中读取最新的公式结果。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | 清除所有自定义函数。 |
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
@@ -37,17 +39,20 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 创建新的自定义几何图形。 |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | 创建用于不同类型渐变的渐变光圈。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | 根据线性文本字符串创建数学公式。生成的对象可以像文本块一样插入到段落中（例如，通过 [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) 或 [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)）。 |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | 创建新的历史记录点。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
-| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) \| null \| undefined | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图案填充，使用所选图案作为对象背景应用于对象。 |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | 从可用的颜色预设中选择创建颜色。 |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | 使用可用的预设形状之一创建几何图形。 |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | 使用可用的预设形状之一创建几何图形。 |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | 通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。 |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。 |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 创建要插入到当前段落或表格中的新的较小文本块。 |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | 从可用的配色方案中选择创建复杂配色方案。 |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | 创建可应用于图形对象的阴影。 |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | 创建可应用于文本、段落、表格或表格单元格的底纹。 |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建纯色填充，使用所选纯色作为对象背景应用于对象。 |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | 创建为元素添加阴影的笔触。 |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 创建空的文本属性。 |
@@ -58,7 +63,8 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 | [GetActiveWorkbook](./Methods/GetActiveWorkbook.md) | [ApiWorkbook](../ApiWorkbook/ApiWorkbook.md) | 返回表示活动工作簿的对象。 |
 | [GetAllComments](./Methods/GetAllComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | 返回当前工作簿中的所有批注，包括所有工作表中的批注。 |
 | [GetAllPivotTables](./Methods/GetAllPivotTables.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | 返回所有数据透视表。 |
-| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | 通过 ID 从当前文档返回批注。 |
+| [GetByInternalId](./Methods/GetByInternalId.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) \| [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 根据内部 ID 返回对象。 |
+| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 通过 ID 从当前文档返回批注。 |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | 返回与整个工作簿相关的所有批注。 |
 | [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | 返回工作簿的核心属性接口。 |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | 返回工作簿的自定义属性。 |
@@ -83,6 +89,7 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到新工作表中。 |
 | [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示两个或多个范围的矩形交集的 ApiRange 对象。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | 将绘图对象数组合并为新形状。生成的形状采用数组中第一个绘图对象的格式。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |
@@ -100,6 +107,7 @@ Spreadsheet API 的主类。用于获取活动工作簿、工作表、区域和�
 | [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝分量创建 RGB 颜色。 |
 | [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝和透明度分量创建 RGBA 颜色。 |
 | [RecalculateAllFormulas](./Methods/RecalculateAllFormulas.md) | boolean | 重新计算活动工作簿中的所有公式。 |
+| [Redraw](./Methods/Redraw.md) | boolean | 重绘编辑器屏幕，使宏已做出的更改立即可见，而无需等待宏执行完毕。仅可在异步代码中观察到效果。仅重绘而不重新计算：如果公式结果必须是最新的，请先调用 [Api#Calculate](../Api/Methods/Calculate.md)。 |
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | 无 | 刷新所有数据透视表。 |
 | [RemoveCustomFunction](./Methods/RemoveCustomFunction.md) | boolean | 删除自定义函数。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选区中的每个段落（或单元格中的文本）。 |

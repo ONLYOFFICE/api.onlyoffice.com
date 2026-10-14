@@ -12,59 +12,74 @@ PDF API 的主类。用于获取当前文档，以及创建段落、表格、图
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
+| [CreateButtonField](./Methods/CreateButtonField.md) | [ApiButtonField](../ApiButtonField/ApiButtonField.md) | 创建按钮字段。 |
 | [CreateCaretAnnot](./Methods/CreateCaretAnnot.md) | [ApiCaretAnnotation](../ApiCaretAnnotation/ApiCaretAnnotation.md) | 创建插入符号批注。 |
-| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | 使用指定的参数创建图表。 |
+| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | 使用指定的参数创建图表。 |
 | [CreateCheckboxField](./Methods/CreateCheckboxField.md) | [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md) | 创建复选框字段。 |
 | [CreateCircleAnnot](./Methods/CreateCircleAnnot.md) | [ApiCircleAnnotation](../ApiCircleAnnotation/ApiCircleAnnotation.md) | 创建圆形批注。 |
 | [CreateComboboxField](./Methods/CreateComboboxField.md) | [ApiComboboxField](../ApiComboboxField/ApiComboboxField.md) | 创建组合框字段。 |
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 创建新的自定义几何图形。 |
 | [CreateDateField](./Methods/CreateDateField.md) | [ApiTextField](../ApiTextField/ApiTextField.md) | 创建文本日期字段。 |
 | [CreateFreeTextAnnot](./Methods/CreateFreeTextAnnot.md) | [ApiFreeTextAnnotation](../ApiFreeTextAnnotation/ApiFreeTextAnnotation.md) | 创建自由文本批注。 |
+| [CreateGoToAction](./Methods/CreateGoToAction.md) | [ApiGoToAction](../ApiGoToAction/ApiGoToAction.md) | 创建 GoTo 操作。 |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | 创建用于不同类型渐变的渐变光圈。 |
+| [CreateHideShowFormsAction](./Methods/CreateHideShowFormsAction.md) | [ApiHideShowFormsAction](../ApiHideShowFormsAction/ApiHideShowFormsAction.md) | 创建隐藏/显示表单操作。 |
 | [CreateHighlightAnnot](./Methods/CreateHighlightAnnot.md) | [ApiHighlightAnnotation](../ApiHighlightAnnotation/ApiHighlightAnnotation.md) | 创建高亮批注。 |
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | 使用指定的参数创建图像。 |
 | [CreateImageField](./Methods/CreateImageField.md) | [ApiButtonField](../ApiButtonField/ApiButtonField.md) | 创建图像字段。 |
+| [CreateImageStampAnnot](./Methods/CreateImageStampAnnot.md) | [ApiStampAnnotation](../ApiStampAnnotation/ApiStampAnnotation.md) | 从图像创建图章注释。注释尺寸取自已加载的图像，或在图像加载后更新。 |
 | [CreateInkAnnot](./Methods/CreateInkAnnot.md) | [ApiInkAnnotation](../ApiInkAnnotation/ApiInkAnnotation.md) | 创建墨迹批注。 |
+| [CreateJsAction](./Methods/CreateJsAction.md) | [ApiJsAction](../ApiJsAction/ApiJsAction.md) | 创建 JS 操作。 |
 | [CreateLineAnnot](./Methods/CreateLineAnnot.md) | [ApiLineAnnotation](../ApiLineAnnotation/ApiLineAnnotation.md) | 创建线条批注。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
+| [CreateLinkAnnot](./Methods/CreateLinkAnnot.md) | [ApiLinkAnnotation](../ApiLinkAnnotation/ApiLinkAnnotation.md) | 创建链接注释。 |
 | [CreateListboxField](./Methods/CreateListboxField.md) | [ApiListboxField](../ApiListboxField/ApiListboxField.md) | 创建列表框字段。 |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | 根据线性文本字符串创建数学公式。生成的对象可以像文本块一样插入到段落中（例如，通过 [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) 或 [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)）。 |
+| [CreateNamedAction](./Methods/CreateNamedAction.md) | [ApiNamedAction](../ApiNamedAction/ApiNamedAction.md) | 创建命名操作。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
-| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) \| null \| undefined | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图案填充，使用所选图案作为对象背景应用于对象。 |
 | [CreatePolyLineAnnot](./Methods/CreatePolyLineAnnot.md) | [ApiPolyLineAnnotation](../ApiPolyLineAnnotation/ApiPolyLineAnnotation.md) | 创建折线批注。 |
 | [CreatePolygonAnnot](./Methods/CreatePolygonAnnot.md) | [ApiPolygonAnnotation](../ApiPolygonAnnotation/ApiPolygonAnnotation.md) | 创建多边形批注。 |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | 从可用的颜色预设中选择创建颜色。 |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | 使用可用的预设形状之一创建几何图形。 |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | 使用可用的预设形状之一创建几何图形。 |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | 通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。 |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。 |
 | [CreateRadiobuttonField](./Methods/CreateRadiobuttonField.md) | [ApiRadiobuttonField](../ApiRadiobuttonField/ApiRadiobuttonField.md) | 创建单选按钮字段。 |
 | [CreateRedactAnnot](./Methods/CreateRedactAnnot.md) | [ApiRedactAnnotation](../ApiRedactAnnotation/ApiRedactAnnotation.md) | 创建涂黑批注。 |
+| [CreateResetFormsAction](./Methods/CreateResetFormsAction.md) | [ApiHideShowFormsAction](../ApiHideShowFormsAction/ApiHideShowFormsAction.md) | 创建重置表单操作。 |
 | [CreateRichParaPr](./Methods/CreateRichParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 创建空的富文本段落属性。 |
 | [CreateRichParagraph](./Methods/CreateRichParagraph.md) | [ApiRichParagraph](../ApiRichParagraph/ApiRichParagraph.md) | 创建新的富文本段落。 |
 | [CreateRichRun](./Methods/CreateRichRun.md) | [ApiRichRun](../ApiRichRun/ApiRichRun.md) | 创建新的富文本文字部分。 |
 | [CreateRichTextPr](./Methods/CreateRichTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 创建空的富文本属性。 |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 创建要插入到当前段落或表格中的新的较小文本块。 |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | 从可用的配色方案中选择创建复杂配色方案。 |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | 创建可应用于图形对象的阴影。 |
 | [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 使用指定的参数创建形状。 |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | 创建可应用于文本、段落、表格或表格单元格的底纹。 |
+| [CreateSignatureField](./Methods/CreateSignatureField.md) | [ApiSignatureField](../ApiSignatureField/ApiSignatureField.md) | 创建签名字段。 |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建纯色填充，使用所选纯色作为对象背景应用于对象。 |
 | [CreateSquareAnnot](./Methods/CreateSquareAnnot.md) | [ApiSquareAnnotation](../ApiSquareAnnotation/ApiSquareAnnotation.md) | 创建方形批注。 |
 | [CreateStampAnnot](./Methods/CreateStampAnnot.md) | [ApiStampAnnotation](../ApiStampAnnotation/ApiStampAnnotation.md) | 创建图章批注。 |
 | [CreateStrikeoutAnnot](./Methods/CreateStrikeoutAnnot.md) | [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation/ApiStrikeoutAnnotation.md) | 创建删除线批注。 |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | 创建为元素添加阴影的笔触。 |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | 创建表格。 |
+| [CreateTableRowPr](./Methods/CreateTableRowPr.md) | [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md) | 创建空的表格行属性。 |
 | [CreateTextAnnot](./Methods/CreateTextAnnot.md) | [ApiTextAnnotation](../ApiTextAnnotation/ApiTextAnnotation.md) | 创建文本批注。 |
 | [CreateTextField](./Methods/CreateTextField.md) | [ApiTextField](../ApiTextField/ApiTextField.md) | 创建文本字段。 |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 创建空的文本属性。 |
 | [CreateUnderlineAnnot](./Methods/CreateUnderlineAnnot.md) | [ApiUnderlineAnnotation](../ApiUnderlineAnnotation/ApiUnderlineAnnotation.md) | 创建下划线批注。 |
+| [CreateUriAction](./Methods/CreateUriAction.md) | [ApiUriAction](../ApiUriAction/ApiUriAction.md) | 创建 URI 操作。 |
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
-| [GetByInternalId](./Methods/GetByInternalId.md) | object | 通过内部 ID 返回对象。 |
+| [GetByInternalId](./Methods/GetByInternalId.md) | [FloatObject](../Enumeration/FloatObject.md) \| [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| [ApiTableRow](../ApiTableRow/ApiTableRow.md) \| [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 通过内部 ID 返回对象。 |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | 使用指定的文本字段属性创建文本字段。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
 | [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 从十六进制字符串创建颜色。 |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | 将绘图对象数组合并为新形状。生成的形状采用数组中第一个绘图对象的格式。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |

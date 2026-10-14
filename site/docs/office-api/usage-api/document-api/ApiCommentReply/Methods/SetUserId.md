@@ -5,7 +5,7 @@ Sets the user ID to the comment reply author.
 ## Syntax
 
 ```javascript
-expression.SetUserId(sUserId);
+expression.SetUserId(userId);
 ```
 
 `expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
@@ -14,7 +14,7 @@ expression.SetUserId(sUserId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sUserId | Required | string |  | The user ID of the comment reply author. |
+| userId | Required | string |  | The user ID of the comment reply author. |
 
 ## Returns
 

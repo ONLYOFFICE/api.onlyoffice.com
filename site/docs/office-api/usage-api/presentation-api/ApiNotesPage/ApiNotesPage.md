@@ -12,3 +12,4 @@ The following table lists the available methods.
 | [GetBodyShape](./Methods/GetBodyShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null | Returns a shape with the type="body" attribute from the current notes page. |
 | [GetBodyShapeText](./Methods/GetBodyShapeText.md) | string | Returns the text from the body shape of the current notes page. |
 | [GetClassType](./Methods/GetClassType.md) | "notesPage" | Returns the type of the ApiNotesPage class. |
+| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the current notes page. |

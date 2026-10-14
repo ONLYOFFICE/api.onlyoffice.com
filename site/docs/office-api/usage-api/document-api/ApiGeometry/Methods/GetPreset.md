@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ShapeType](../../Enumeration/ShapeType.md) \| null
+[ShapeType](../../Enumeration/ShapeType.md) \| null \| undefined
 
 ## Example
 

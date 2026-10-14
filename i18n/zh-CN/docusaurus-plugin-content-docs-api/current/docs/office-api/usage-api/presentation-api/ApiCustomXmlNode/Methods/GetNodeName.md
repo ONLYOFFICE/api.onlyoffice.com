@@ -23,7 +23,7 @@ string
 获取演示文稿中 XML 元素的标签名称。
 
 ```javascript editor-pptx
-// How do I find the name of an XML node in a presentation?
+// Find the name of an XML node in a presentation.
 
 // Read the element name from an XML node in a presentation.
 

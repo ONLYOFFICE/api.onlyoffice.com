@@ -16,7 +16,7 @@ expression.GetValue();
 
 ## 返回值
 
-string
+string \| string[]
 
 ## 示例
 

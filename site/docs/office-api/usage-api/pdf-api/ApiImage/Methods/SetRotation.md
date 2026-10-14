@@ -16,7 +16,7 @@ expression.SetRotation(rotAngle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rotAngle | Required | number |  | New drawing rotation angle. |
+| rotAngle | Required | [Degree](../../Enumeration/Degree.md) |  | New drawing rotation angle. |
 
 ## Returns
 
@@ -34,7 +34,7 @@ Rotate a drawing object to a specific angle in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 65 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);

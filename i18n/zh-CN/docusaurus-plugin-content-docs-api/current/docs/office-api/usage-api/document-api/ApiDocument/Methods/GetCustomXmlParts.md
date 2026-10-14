@@ -25,7 +25,7 @@ expression.GetCustomXmlParts();
 嵌入自定义 XML 部件并通过其生成的 ID 在文档中检索。
 
 ```javascript editor-docx
-// How do I add and look up custom XML data stored inside a document?
+// Add and look up custom XML data stored inside a document.
 
 // Store structured XML payloads within a document and confirm they can be fetched back by identifier in a document.
 

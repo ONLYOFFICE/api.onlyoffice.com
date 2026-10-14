@@ -2,10 +2,12 @@
 
 Sets the font size to the characters of the current text run.
 
+Inherited from [ApiTextPr.SetFontSize](../../ApiTextPr/Methods/SetFontSize.md).
+
 ## Syntax
 
 ```javascript
-expression.SetFontSize(nSize);
+expression.SetFontSize(size);
 ```
 
 `expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
@@ -14,7 +16,7 @@ expression.SetFontSize(nSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
+| size | Required | [hps](../../Enumeration/hps.md) \| null |  | The text size value measured in half-points (1/144 of an inch). Pass *null* to remove the font size. |
 
 ## Returns
 

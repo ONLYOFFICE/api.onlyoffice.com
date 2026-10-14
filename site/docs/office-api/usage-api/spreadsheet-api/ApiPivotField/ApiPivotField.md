@@ -76,6 +76,7 @@ The following table lists the available methods.
 | [GetSubtotals](./Methods/GetSubtotals.md) | [PivotFieldSubtotals](../Enumeration/PivotFieldSubtotals.md) | Returns an object that represents all subtotals. |
 | [GetTable](./Methods/GetTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the ApiPivotTable object which represents the pivot table for the current field. |
 | [GetValue](./Methods/GetValue.md) | string | Returns a value representing the name of the specified field in the pivot table report. |
+| [Group](./Methods/Group.md) | boolean | Groups the dates of the pivot table field by periods or its numbers by intervals, as VBA Range.Group does for a cell of the field. The field must be in the rows or columns; grouping again replaces the previous grouping of the field. For dates, the field shows the shortest period, and a new field is added next to it for every longer one. |
 | [Move](./Methods/Move.md) | None | Moves the current pivot field inside the category. |
 | [Remove](./Methods/Remove.md) | None | Removes the current pivot field from the pivot table. |
 | [SetCaption](./Methods/SetCaption.md) | None | Sets a value that represents the label text for the pivot field. |

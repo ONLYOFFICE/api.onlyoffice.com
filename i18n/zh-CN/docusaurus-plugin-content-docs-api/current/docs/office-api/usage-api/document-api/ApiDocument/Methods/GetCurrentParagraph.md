@@ -18,7 +18,7 @@ expression.GetCurrentParagraph();
 
 ## 返回值
 
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null \| undefined
 
 ## 示例
 

@@ -7,14 +7,16 @@
 ## 语法
 
 ```javascript
-expression.Select();
+expression.Select(isReplace);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | 可选 | boolean | false | 指定选择是否应替换当前选择（true）还是添加到当前选择（false）。 |
 
 ## 返回值
 
@@ -22,30 +24,19 @@ boolean
 
 ## 示例
 
-在 PDF 中高亮显示形状以进行编辑。
+在 PDF 中选择表格，使其成为当前选区。
 
 ```javascript editor-pdf
-// How do I select a drawing object on a page in a PDF?
+// Programmatically select a table in a PDF.
 
-// Pick an object to activate it for changes in a PDF.
+// Add a table to the page, select it, then change its background color.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-
-const height = shape.GetHeight();
-const docContent = shape.GetContent();
-const paragraph = docContent.GetElement(0);
-paragraph.AddText("Example drawing");
-page.AddObject(shape);
-
-const allDrawings = page.GetAllDrawings();
-if (allDrawings.length > 0) {
-	const drawing = allDrawings[0];
-	drawing.Select();
-}
+const table = Api.CreateTable(3, 3);
+table.SetPosition(0, 0);
+page.AddObject(table);
+table.Select();
+table.SetBackgroundColor(Api.RGB(0, 122, 204));
 ```

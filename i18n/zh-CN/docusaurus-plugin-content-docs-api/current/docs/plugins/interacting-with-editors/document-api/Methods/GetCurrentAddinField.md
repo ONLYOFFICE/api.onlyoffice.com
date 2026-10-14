@@ -16,7 +16,7 @@ expression.GetCurrentAddinField();
 
 ## 返回值
 
-[AddinFieldData](../Enumeration/AddinFieldData.md)
+[AddinFieldData](../Enumeration/AddinFieldData.md) \| null \| undefined
 
 ## 示例
 

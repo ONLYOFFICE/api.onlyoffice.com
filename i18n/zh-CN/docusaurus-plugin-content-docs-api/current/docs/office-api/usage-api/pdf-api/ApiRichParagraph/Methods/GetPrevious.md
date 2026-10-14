@@ -16,7 +16,7 @@ expression.GetPrevious();
 
 ## 返回值
 
-[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md)
+[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md) \| null \| undefined
 
 ## 示例
 

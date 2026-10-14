@@ -5,7 +5,7 @@ Specifies the shading which shall be applied to the extents of the current table
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b);
+expression.SetShd(shd);
 ```
 
 `expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
@@ -14,10 +14,7 @@ expression.SetShd(sType, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) \| [ApiFill](../../ApiFill/ApiFill.md) |  | The shading type applied to the contents of the current table. Can be ShdType or ApiFill. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -38,8 +35,8 @@ const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
 const row = table.GetRow(0);
 const cell = row.GetCell(0);
-const fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
-cell.SetShd(fill);
+const shd = Api.CreateShd("clear", Api.RGB(51, 51, 51));
+cell.SetShd(shd);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);

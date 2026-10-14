@@ -22,5 +22,5 @@
 
 // Set axis values to the top.
 
-chart.SetAxieNumFormat("top", "0.00");
+chart.SetAxisNumFormat("0.00", "top");
 ```

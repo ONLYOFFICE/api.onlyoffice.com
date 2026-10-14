@@ -14,7 +14,7 @@ expression.SetFontFamily(sFontFamily);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | Required | string |  | The font family or families used for the current text run. |
+| sFontFamily | Optional | string \| null |  | The font family or families used for the current text run. Pass *null* or omit it to remove the font family. |
 
 ## Returns
 

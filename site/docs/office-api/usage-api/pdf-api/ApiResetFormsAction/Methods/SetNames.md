@@ -1,0 +1,48 @@
+# SetNames
+
+Sets names of fields to reset
+
+## Syntax
+
+```javascript
+expression.SetNames(names);
+```
+
+`expression` - A variable that represents an [ApiResetFormsAction](../ApiResetFormsAction.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| names | Required | string[] |  | No description provided. |
+
+## Returns
+
+boolean
+
+## Example
+
+This example creates a reset forms action and changes the list of fields to reset.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+
+let field1 = Api.CreateTextField([10, 10, 160, 30]);
+field1.SetPartialName("fieldA");
+page.AddObject(field1);
+
+let field2 = Api.CreateTextField([10, 40, 160, 60]);
+field2.SetPartialName("fieldB");
+page.AddObject(field2);
+
+let buttonField = Api.CreateButtonField([10, 70, 160, 90]);
+page.AddObject(buttonField);
+
+let resetAction = Api.CreateResetFormsAction(false, ["fieldA"]);
+let widgets = buttonField.GetAllWidgets();
+widgets[0].GetActions().SetMouseUp(resetAction);
+
+resetAction.SetNames(["fieldA", "fieldB"]);
+console.log('Updated field names: ' + resetAction.GetNames());
+```

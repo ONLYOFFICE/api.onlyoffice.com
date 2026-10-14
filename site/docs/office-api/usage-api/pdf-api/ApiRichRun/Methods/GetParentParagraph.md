@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md)
+[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md) \| null \| undefined
 
 ## Example
 

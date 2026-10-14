@@ -1,10 +1,6 @@
 # GetFillColor
 
-返回格式条件的背景颜色。
-
-当格式条件的背景颜色为 null 时返回“无填充”。
-
-继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
+返回唯一值条件格式规则的填充颜色。
 
 ## 语法
 
@@ -20,7 +16,7 @@ expression.GetFillColor();
 
 ## 返回值
 
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+[ApiColor](../../ApiColor/ApiColor.md) \| null
 
 ## 示例
 
@@ -43,11 +39,11 @@ let range = worksheet.GetRange("A2:A5");
 let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(255, 255, 0));
 
 let fillColor = uniqueValuesCondition.GetFillColor();
 let rgbValue = fillColor.GetRGB();
 
 worksheet.GetRange("C1").SetValue("Fill Color RGB:");
-worksheet.GetRange("C2").SetValue(rgbValue);
+worksheet.GetRange("C2").SetValue(rgbValue.r + ", " + rgbValue.g + ", " + rgbValue.b);
 ```

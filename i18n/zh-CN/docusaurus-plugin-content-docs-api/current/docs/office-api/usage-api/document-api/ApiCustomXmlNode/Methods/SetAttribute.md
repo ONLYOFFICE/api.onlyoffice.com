@@ -28,7 +28,7 @@ boolean
 向文档中嵌入的 XML 节点添加新属性。
 
 ```javascript editor-docx
-// How do I attach extra metadata to a node in the XML data stored in a document?
+// Attach extra metadata to a node in the XML data stored in a document.
 
 // Tag a node with a category or label so it can be filtered or identified later in a document.
 

@@ -12,7 +12,7 @@ Presentation API 的主类。用于获取当前演示文稿，以及创建幻灯
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
-| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | 使用指定的参数创建图表。 |
+| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | 使用指定的参数创建图表。 |
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 创建新的自定义几何图形。 |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | 创建用于不同类型渐变的渐变光圈。 |
 | [CreateGroup](./Methods/CreateGroup.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | 创建绘图组。 |
@@ -20,43 +20,49 @@ Presentation API 的主类。用于获取当前演示文稿，以及创建幻灯
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | 使用指定的参数创建图像。 |
 | [CreateLayout](./Methods/CreateLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) | 创建新的幻灯片版式，如果指定了幻灯片母版则将其添加到幻灯片母版。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
-| [CreateMaster](./Methods/CreateMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | 创建新的幻灯片母版。 |
+| [CreateMaster](./Methods/CreateMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null \| undefined | 创建新的幻灯片母版。 |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | 根据线性文本字符串创建数学公式。生成的对象可以像文本块一样插入到段落中（例如，通过 [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) 或 [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)）。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
-| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) \| null \| undefined | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
 | [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | 使用指定的参数创建 OLE 对象。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图案填充，使用所选图案作为对象背景应用于对象。 |
 | [CreatePlaceholder](./Methods/CreatePlaceholder.md) | [ApiPlaceholder](../ApiPlaceholder/ApiPlaceholder.md) | 创建新的占位符。 |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | 从可用的颜色预设中选择创建颜色。 |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | 使用可用的预设形状之一创建几何图形。 |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | 使用可用的预设形状之一创建几何图形。 |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | 通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。 |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。 |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 创建要插入到当前段落或表格中的新的较小文本块。 |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | 从可用的配色方案中选择创建复杂配色方案。 |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | 创建可应用于图形对象的阴影。 |
 | [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 使用指定的参数创建形状。 |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | 创建可应用于文本、段落、表格或表格单元格的底纹。 |
 | [CreateSlide](./Methods/CreateSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | 创建新的幻灯片。 |
 | [CreateSlideShowTransition](./Methods/CreateSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) | 创建新的幻灯片放映切换对象。 |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建纯色填充，使用所选纯色作为对象背景应用于对象。 |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | 创建为元素添加阴影的笔触。 |
-| [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | 创建表格。 |
+| [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null \| undefined | 创建表格。 |
+| [CreateTablePr](./Methods/CreateTablePr.md) | [ApiTablePr](../ApiTablePr/ApiTablePr.md) | 创建空的表格属性。 |
+| [CreateTableRowPr](./Methods/CreateTableRowPr.md) | [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md) | 创建空的表格行属性。 |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 创建空的文本属性。 |
 | [CreateTheme](./Methods/CreateTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | 创建新的演示文稿主题。 |
-| [CreateThemeColorScheme](./Methods/CreateThemeColorScheme.md) | [ApiThemeColorScheme](../ApiThemeColorScheme/ApiThemeColorScheme.md) | 创建新的主题配色方案。 |
+| [CreateThemeColorScheme](./Methods/CreateThemeColorScheme.md) | [ApiThemeColorScheme](../ApiThemeColorScheme/ApiThemeColorScheme.md) \| null \| undefined | 创建新的主题配色方案。 |
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | 创建新的主题字体方案。 |
-| [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | 创建新的主题格式方案。 |
+| [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) \| null \| undefined | 创建新的主题格式方案。 |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 使用指定的参数创建艺术字对象。 |
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
 | [FromJSON](./Methods/FromJSON.md) | 无 | 将指定的 JSON 对象转换为相应类型的文档生成器对象。 |
-| [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | 返回演示文稿的第一张幻灯片。 |
+| [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | 返回演示文稿的第一张幻灯片。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
-| [GetLastSlide](./Methods/GetLastSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | 返回演示文稿的最后一张幻灯片。 |
+| [GetLastSlide](./Methods/GetLastSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | 返回演示文稿的最后一张幻灯片。 |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | 返回主演示文稿。 |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | 返回当前演示文稿中的选择。 |
-| [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | 按位置返回演示文稿中的幻灯片。 |
+| [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | 按位置返回演示文稿中的幻灯片。 |
 | [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 从十六进制字符串创建颜色。 |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | 将绘图对象数组合并为新形状。生成的形状采用数组中第一个绘图对象的格式。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |

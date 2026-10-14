@@ -17,8 +17,8 @@ ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回当前条件格式规则应用的单元格区域。 |
+| [Delete](./Methods/Delete.md) | 无 | 删除色阶条件格式规则。 |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回当前条件格式规则应用的单元格区域。 |
 | [GetColorScaleCriteria](./Methods/GetColorScaleCriteria.md) | [ApiColorScaleCriterion](../ApiColorScaleCriterion/ApiColorScaleCriterion.md)[] \| null | 返回定义此色阶规则的条件集合。 |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | 返回时间段条件的日期运算符。 |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。 |
@@ -31,11 +31,12 @@ ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.
 | [GetParent](./Methods/GetParent.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回当前格式条件的父区域对象。 |
 | [GetPriority](./Methods/GetPriority.md) | number | 返回条件格式规则的优先级值。 |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | 返回条件格式规则的作用域类型。 |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | 返回如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。此规则类型无法停止计算，因此只能通过打开已设置该值的文件来更改该值。 |
 | [GetText](./Methods/GetText.md) | string | 返回基于文本的条件格式规则中使用的文本值。 |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | 返回基于文本的条件格式规则的文本运算符。 |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回色阶条件格式规则的类型。 |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | 使用指定的参数修改当前格式条件。 |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 设置当前条件格式规则应用的单元格区域。 |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 修改当前条件格式规则所应用的单元格范围。 |
 | [SetBorders](./Methods/SetBorders.md) | 无 | 设置条件格式规则的边框样式。 |
 | [SetDateOperator](./Methods/SetDateOperator.md) | 无 | 设置时间段条件的日期运算符。 |
 | [SetFillColor](./Methods/SetFillColor.md) | 无 | 使用先前创建的颜色对象为格式条件设置背景颜色。 |
@@ -44,5 +45,6 @@ ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | 无 | 设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。 |
 | [SetPriority](./Methods/SetPriority.md) | 无 | 设置条件格式规则的优先级值。 |
 | [SetScopeType](./Methods/SetScopeType.md) | 无 | 设置条件格式规则的作用域类型。 |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | 无 | 设置如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。 |
 | [SetText](./Methods/SetText.md) | 无 | 设置基于文本的条件格式规则中使用的文本值。 |
 | [SetTextOperator](./Methods/SetTextOperator.md) | 无 | 设置基于文本的条件格式规则的文本运算符。 |

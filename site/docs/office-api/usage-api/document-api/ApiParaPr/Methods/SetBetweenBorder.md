@@ -5,7 +5,7 @@ Specifies the border which will be displayed between each paragraph in a set of 
 ## Syntax
 
 ```javascript
-expression.SetBetweenBorder(sType, nSize, nSpace, r, g, b);
+expression.SetBetweenBorder(type, size, space, color);
 ```
 
 `expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
@@ -14,12 +14,10 @@ expression.SetBetweenBorder(sType, nSize, nSpace, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset between the paragraphs measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| type | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
+| size | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current border measured in eighths of a point. |
+| space | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset between the paragraphs measured in points used to place this border. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
 
 ## Returns
 
@@ -37,7 +35,7 @@ Add a border between consecutive same-styled paragraphs in a document.
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();
-paraPr.SetBetweenBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetBetweenBorder("single", 24, 0, Api.Color(255, 111, 61));
 let paragraph = doc.GetElement(0);
 paragraph.SetStyle(myStyle);
 paragraph.AddText("This is the first paragraph. ");

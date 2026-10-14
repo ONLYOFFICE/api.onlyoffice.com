@@ -10,6 +10,7 @@ Class representing a single format condition.
 | AppliesTo | [ApiRange](../ApiRange/ApiRange.md) | Returns the range to which this condition applies. |
 | DateOperator | [XlTimePeriods](../Enumeration/XlTimePeriods.md) | Returns or sets the date operator for time period conditions. |
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns or sets the background color of the format condition. |
+| Font | [ApiFont](../ApiFont/ApiFont.md) \| null | Returns the font applied by the format condition. |
 | Formula1 | string | Returns or sets the first formula used by the format condition. |
 | Formula2 | string | Returns or sets the second formula used by the format condition. |
 | NumberFormat | string | Returns or sets the number format applied to a cell when the conditional formatting rule evaluates to true. |
@@ -45,6 +46,7 @@ The following table lists the available methods.
 | [GetParent](./Methods/GetParent.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the parent range object of the current format condition. |
 | [GetPriority](./Methods/GetPriority.md) | number | Returns the priority value of the conditional formatting rule. |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | Returns the scope type of the conditional formatting rule. |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | Returns whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. |
 | [GetText](./Methods/GetText.md) | string | Returns the text value used in text-based conditional formatting rules. |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | Returns the text operator for text-based conditional formatting rules. |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the format condition type. |
@@ -58,5 +60,6 @@ The following table lists the available methods.
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Sets the number format applied to a cell when the conditional formatting rule evaluates to true. |
 | [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value of the conditional formatting rule. |
 | [SetScopeType](./Methods/SetScopeType.md) | None | Sets the scope type for the conditional formatting rule. |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | None | Sets whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. |
 | [SetText](./Methods/SetText.md) | None | Sets the text value used in text-based conditional formatting rules. |
 | [SetTextOperator](./Methods/SetTextOperator.md) | None | Sets the text operator for text-based conditional formatting rules. |

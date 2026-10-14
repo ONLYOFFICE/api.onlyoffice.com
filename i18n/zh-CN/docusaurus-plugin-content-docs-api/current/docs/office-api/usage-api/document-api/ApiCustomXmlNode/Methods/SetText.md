@@ -25,7 +25,7 @@ boolean
 更改文档中嵌入的特定 XML 节点的文本内容。
 
 ```javascript editor-docx
-// How do I update the plain text inside a node in the XML data stored in a document?
+// Update the plain text inside a node in the XML data stored in a document.
 
 // Correct or refresh the human-readable values in structured XML fields in a document.
 

@@ -32,5 +32,5 @@ Select every cell on a worksheet at once in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();
-cells.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+cells.SetFillColor(Api.RGB(255, 213, 191));
 ```

@@ -15,5 +15,5 @@ The paragraph will have a single 6 point wide green bottom border with a zero of
 
 // Add bottom border with its type, weight, color, etc.
 
-paraPr.SetBottomBorder("single", 48, 0, 0, 255, 0);
+paraPr.SetBottomBorder("single", 48, 0, Api.Color(0, 255, 0));
 ```

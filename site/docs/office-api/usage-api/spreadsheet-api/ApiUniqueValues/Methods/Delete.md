@@ -1,8 +1,6 @@
 # Delete
 
-Deletes the current format condition.
-
-Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
+Deletes the unique values conditional formatting rule.
 
 ## Syntax
 

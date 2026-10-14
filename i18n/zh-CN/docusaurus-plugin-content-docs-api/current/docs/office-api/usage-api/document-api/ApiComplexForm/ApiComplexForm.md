@@ -4,6 +4,12 @@
 
 ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Value | string | 返回复杂表单的当前文本值。 |
+
 ## 方法
 
 下表列出了可用的方法。
@@ -13,16 +19,18 @@ ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [Add](./Methods/Add.md) | boolean | 将给定表单的文本内容追加到当前复合表单的末尾。 |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
 | [ClearContent](./Methods/ClearContent.md) | boolean | 清除当前复合表单的所有内容，将其重置为占位符状态。 |
-| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
+| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) \| null \| undefined | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "form" | 返回 ApiComplexForm 类的类型。 |
 | [GetFormKey](./Methods/GetFormKey.md) | string | 返回当前表单的键。 |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | 返回当前表单的类型。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前表单的内部 ID。 |
 | [GetLock](./Methods/GetLock.md) | boolean | 返回当前表单的锁定状态。 |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | 返回直接包含当前表单的父元素（段落或内联内容控件）。 |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | 返回当前表单的占位符文本。 |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | 返回当前表单在其父元素中的位置（索引）。 |
 | [GetRole](./Methods/GetRole.md) | string | 返回当前表单的角色。 |
 | [GetSubForms](./Methods/GetSubForms.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回子表单的有序列表。 |
 | [GetTag](./Methods/GetTag.md) | string | 返回当前表单的标签属性。 |
@@ -30,7 +38,7 @@ ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回当前表单的文本属性。 |
 | [GetTipText](./Methods/GetTipText.md) | string | 返回当前表单的提示文本。 |
 | [GetValue](./Methods/GetValue.md) | string | 返回复杂表单的当前文本值。 |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
 | [IsFilled](./Methods/IsFilled.md) | boolean | 检查当前表单是否已填写。 |
 | [IsFixed](./Methods/IsFixed.md) | boolean | 检查当前表单是否为固定大小。 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查当前表单是否为必填项。 |

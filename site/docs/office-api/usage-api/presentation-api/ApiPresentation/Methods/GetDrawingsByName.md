@@ -1,11 +1,11 @@
 # GetDrawingsByName
 
-Returns a collection of drawing objects from the document content filtered by their names.
+Returns a collection of drawing objects from the presentation slides filtered by their names, excluding drawing objects from slide layouts and slide masters.
 
 ## Syntax
 
 ```javascript
-expression.GetDrawingsByName(ids);
+expression.GetDrawingsByName(names);
 ```
 
 `expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
@@ -14,7 +14,7 @@ expression.GetDrawingsByName(ids);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| ids | Required | string[] |  | An array of drawing names to filter by. |
+| names | Required | string[] |  | An array of drawing names to filter by. |
 
 ## Returns
 

@@ -24,7 +24,7 @@ expression.AddComment(text, author, userId);
 
 ## 返回值
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## 示例
 

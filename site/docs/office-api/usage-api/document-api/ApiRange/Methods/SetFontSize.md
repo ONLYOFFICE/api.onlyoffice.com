@@ -14,7 +14,7 @@ expression.SetFontSize(fontSize);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
+| fontSize | Required | [hps](../../Enumeration/hps.md) \| null |  | The text size value measured in half-points (1/144 of an inch). Pass *null* to remove the font size. |
 
 ## Returns
 
@@ -33,5 +33,5 @@ let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 24);
-range.SetFontSize(14);
+range.SetFontSize(28);
 ```

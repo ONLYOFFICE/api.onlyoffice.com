@@ -1,10 +1,6 @@
 # GetFillColor
 
-Returns the background color for the format condition.
-
-Returns 'No Fill' when the background color of the format condition is null.
-
-Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
+Returns the fill color for the top 10 conditional formatting rule.
 
 ## Syntax
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+[ApiColor](../../ApiColor/ApiColor.md) \| null
 
 ## Example
 
@@ -44,7 +40,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let fillColor = condition1.GetFillColor();
 

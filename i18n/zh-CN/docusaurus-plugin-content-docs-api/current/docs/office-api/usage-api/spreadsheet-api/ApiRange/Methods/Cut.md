@@ -14,7 +14,7 @@ expression.Cut(destination);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | 可选 | [ApiRange](../../ApiRange/ApiRange.md) |  | 指定要将剪切范围粘贴到的新范围。如果省略此参数，范围将复制到剪贴板。 |
+| destination | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | 指定要将剪切范围粘贴到的新范围。如果省略此参数，范围将复制到剪贴板。 |
 
 ## 返回值
 

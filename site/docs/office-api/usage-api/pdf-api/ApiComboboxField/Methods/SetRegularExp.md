@@ -1,6 +1,6 @@
 # SetRegularExp
 
-Sets regular expression for field.
+Sets regular expression validate string for field.
 
 ## Syntax
 

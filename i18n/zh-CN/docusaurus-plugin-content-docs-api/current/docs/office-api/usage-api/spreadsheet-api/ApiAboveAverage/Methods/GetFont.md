@@ -2,8 +2,6 @@
 
 返回当前格式条件应用的字体。
 
-继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
-
 ## 语法
 
 ```javascript
@@ -18,7 +16,7 @@ expression.GetFont();
 
 ## 返回值
 
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+[ApiFont](../../ApiFont/ApiFont.md)
 
 ## 示例
 
@@ -43,7 +41,7 @@ let aboveAverageCondition = formatConditions.AddAboveAverage();
 
 let font = aboveAverageCondition.GetFont();
 font.SetBold(true);
-font.SetColor(Api.CreateColorFromRGB(0, 0, 255));
+font.SetColor(Api.RGB(0, 0, 255));
 
 worksheet.GetRange("C1").SetValue("Font formatting applied");
 worksheet.GetRange("C2").SetValue("Bold blue text for above average");

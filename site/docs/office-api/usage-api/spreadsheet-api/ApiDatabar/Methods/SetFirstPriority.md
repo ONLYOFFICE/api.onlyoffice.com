@@ -2,8 +2,6 @@
 
 Sets the priority value for the current conditional formatting rule to "1" so that it will be evaluated before all other rules on the worksheet.
 
-Inherited from [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md).
-
 ## Syntax
 
 ```javascript

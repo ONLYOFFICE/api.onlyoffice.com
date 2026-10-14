@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.Intersect(Range1, Range2);
+expression.Intersect(Range1, Range2, Range3-Range30);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -18,6 +18,7 @@ expression.Intersect(Range1, Range2);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Range1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) |  | 相交范围之一。必须至少指定两个 Range 对象。 |
 | Range2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) |  | 相交范围之一。必须至少指定两个 Range 对象。 |
+| Range3-Range30 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 28 个额外的相交范围。这些参数是可选的。 |
 
 ## 返回值
 
@@ -36,5 +37,5 @@ let worksheet = Api.GetActiveSheet();
 let range1 = worksheet.GetRange("A1:C5");
 let range2 = worksheet.GetRange("B2:B4");
 let range = Api.Intersect(range1, range2);
-range.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.SetFillColor(Api.RGB(255, 213, 191));
 ```

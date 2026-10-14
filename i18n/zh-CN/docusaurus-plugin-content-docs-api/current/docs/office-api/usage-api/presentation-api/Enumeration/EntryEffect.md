@@ -1,6 +1,6 @@
 # EntryEffect
 
-可用的幻灯片切换效果（类似于 PowerPoint VBA ppEffect）。
+可用的幻灯片切换效果。
 
 ## 类型
 

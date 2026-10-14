@@ -6,7 +6,7 @@ The function called when the restrictions in the editor are changed.
 
 | **Name** | **Data type** | **Description** |
 | --------- | ------------- | ----------- |
-| value | number | The restrictions value. |
+| value | EditorRestrictions | The restrictions value. |
 
 ## Example
 

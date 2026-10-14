@@ -11,6 +11,7 @@
 - [ApiUnsupported](../ApiUnsupported/ApiUnsupported.md)
 - [ApiRun](../ApiRun/ApiRun.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## 示例
 

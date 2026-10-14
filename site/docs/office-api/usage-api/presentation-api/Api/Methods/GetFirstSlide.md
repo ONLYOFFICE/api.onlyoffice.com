@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiSlide](../../ApiSlide/ApiSlide.md)
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null \| undefined
 
 ## Example
 

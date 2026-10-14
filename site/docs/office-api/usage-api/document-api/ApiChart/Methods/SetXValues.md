@@ -33,7 +33,7 @@ Assign horizontal axis values to all series of a scatter chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("scatter", [
+let chart = Api.CreateChart("XYScatter", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

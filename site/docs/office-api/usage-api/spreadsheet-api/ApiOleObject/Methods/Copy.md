@@ -1,6 +1,6 @@
 # Copy
 
-Creates a copy of the specified OLE object.
+Creates a copy of the current OLE object.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

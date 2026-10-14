@@ -1,6 +1,8 @@
 # SetCaps
 
-Specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
+Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+
+Inherited from [ApiTextPr.SetCaps](../../ApiTextPr/Methods/SetCaps.md).
 
 ## Syntax
 

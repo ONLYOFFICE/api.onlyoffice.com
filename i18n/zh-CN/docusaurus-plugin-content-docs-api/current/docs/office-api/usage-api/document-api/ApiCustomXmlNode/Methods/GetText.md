@@ -25,7 +25,7 @@ string
 提取文档中自定义 XML 节点及其后代的组合文本内容。
 
 ```javascript editor-docx
-// How do I get the text from a custom XML node in a document?
+// Get the text from a custom XML node in a document.
 
 // Collect all readable text nested inside an XML element, including child nodes, in a document.
 

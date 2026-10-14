@@ -14,8 +14,8 @@ expression.AutoFit(bRows, bCols);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRows | Optional | boolean |  | Specifies if the width of the columns will be autofit. |
-| bCols | Optional | boolean |  | Specifies if the height of the rows will be autofit. |
+| bRows | Optional | boolean |  | Specifies if the height of the rows will be autofit. |
+| bCols | Optional | boolean |  | Specifies if the width of the columns will be autofit. |
 
 ## Returns
 

@@ -14,9 +14,9 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在该单元格之后添加新列。如果未指定，将在表格末尾添加新列。 |
+| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 在其之前或之后添加新列的单元格。如果未指定，则在表格末尾添加新列。 |
 | nCount | 必需 | Number |  | 要添加的列数。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新列。如果未指定单元格，则此参数将被忽略。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前（true）或之后（false）添加新列。如果未指定单元格，则忽略此参数。 |
 
 ## 返回值
 
@@ -27,7 +27,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 在文档中向现有表格添加额外的列。
 
 ```javascript editor-docx
-// How do I insert additional columns into a table in a document?
+// Insert several columns in a single call instead of adding them one by one in a document.
 
 // Expand a table sideways by placing new columns at a chosen position in a document.
 
@@ -38,6 +38,7 @@ let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 doc.Push(table);
-let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("Two new columns were added after this cell.");
+let cell = table.Cells[0][0];
+cell.GetContent().GetElement(0).AddText("Two new columns were added after this cell.");
 table.AddColumns(cell, 2, false);
 ```

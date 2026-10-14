@@ -23,7 +23,7 @@ expression.GetClassType();
 读取电子表格中 XML 存储管理器对象的类型标签。
 
 ```javascript editor-xlsx
-// How do I find out what type of object manages XML data in a spreadsheet?
+// Find out what type of object manages XML data in a spreadsheet.
 
 // Confirm the category of the XML manager to handle it correctly in a spreadsheet.
 

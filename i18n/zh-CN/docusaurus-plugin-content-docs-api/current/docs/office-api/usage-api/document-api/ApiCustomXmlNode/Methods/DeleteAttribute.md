@@ -27,7 +27,7 @@ boolean
 从文档中的自定义 XML 节点移除命名属性。
 
 ```javascript editor-docx
-// How do I delete an attribute from a custom XML node in a document?
+// Delete an attribute from a custom XML node in a document.
 
 // Strip unwanted metadata from an XML element by dropping one of its attributes in a document.
 

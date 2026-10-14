@@ -14,7 +14,7 @@ expression.SetScale(scale);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| scale | Required | number |  | size scale |
+| scale | Required | number |  | The size scale. |
 
 ## Returns
 

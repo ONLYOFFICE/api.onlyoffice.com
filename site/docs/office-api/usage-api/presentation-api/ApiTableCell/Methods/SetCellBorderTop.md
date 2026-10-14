@@ -5,7 +5,7 @@ Sets the border which shall be displayed at the top of the current table cell.
 ## Syntax
 
 ```javascript
-expression.SetCellBorderTop(fSize, oApiFill);
+expression.SetCellBorderTop(sType, fSize, oApiFill);
 ```
 
 `expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
@@ -14,12 +14,13 @@ expression.SetCellBorderTop(fSize, oApiFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The cell bottom border style. |
 | fSize | Required | [mm](../../Enumeration/mm.md) |  | The width of the current border. |
 | oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the current border. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
@@ -37,7 +38,7 @@ const table = Api.CreateTable(2, 4);
 const row = table.GetRow(0);
 const cell = row.GetCell(0);
 const fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
-cell.SetCellBorderTop(2, fill);
+cell.SetCellBorderTop("single", 2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);

@@ -4,6 +4,13 @@
 
 ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Cells | [ApiTableCell](../ApiTableCell/ApiTableCell.md)[][] | 以按 [row][cell] 索引的二维数组形式返回表格的所有单元格。 |
+| Rows | [ApiTableRow](../ApiTableRow/ApiTableRow.md)[] | 以数组形式返回表格的所有行。 |
+
 ## 方法
 
 下表列出了可用的方法。
@@ -13,7 +20,7 @@ ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 | [AddCaption](./Methods/AddCaption.md) | boolean | 在当前表格之后（或之前）添加题注段落。 |
 | [AddColumn](./Methods/AddColumn.md) | boolean | 向当前表格添加新列。 |
 | [AddColumns](./Methods/AddColumns.md) | [ApiTable](../ApiTable/ApiTable.md) | 向当前表格添加新列。 |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向当前表格的所有内容添加批注。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 向当前表格的所有内容添加批注。 |
 | [AddElement](./Methods/AddElement.md) | boolean | 使用在单元格中的位置添加段落、表格或块级内容控件。 |
 | [AddRow](./Methods/AddRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | 向当前表格添加新行。 |
 | [AddRows](./Methods/AddRows.md) | [ApiTable](../ApiTable/ApiTable.md) | 向当前表格添加新行。 |
@@ -23,7 +30,10 @@ ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 | [GetAllCells](./Methods/GetAllCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md)[] | 返回表格中所有单元格的集合。 |
 | [GetCell](./Methods/GetCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 通过位置返回单元格。 |
 | [GetClassType](./Methods/GetClassType.md) | "table" | 返回 ApiTable 类的类型。 |
+| [GetColumnWidth](./Methods/GetColumnWidth.md) | [EMU](../Enumeration/EMU.md) \| null | 返回当前表格中指定列（按索引）的宽度。 |
+| [GetColumnsCount](./Methods/GetColumnsCount.md) | number | 返回当前表格的列数。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前表格的内部 ID。 |
+| [GetParent](./Methods/GetParent.md) | [ApiDocument](../ApiDocument/ApiDocument.md) \| [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null | 返回包含当前表格的文档内容。 |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | 返回包含当前表格的内容控件。 |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | 返回包含当前表格的表格。 |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | 返回包含当前表格的表格单元格。 |
@@ -31,19 +41,26 @@ ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定表格中所包含文档部分的 Range 对象。 |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | 通过在表格中的位置返回表格行。 |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | 返回当前表格中的行数。 |
+| [GetSelectedCells](./Methods/GetSelectedCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md)[] | 返回当前表格中选定的单元格。 |
+| [GetSelectedColumnsCells](./Methods/GetSelectedColumnsCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md)[] | 返回包含当前选定单元格的列中的所有单元格。此方法会确定哪些列包含选定单元格，然后返回这些列中的所有单元格，  而不仅仅是选定单元格本身。 |
+| [GetSelectedRows](./Methods/GetSelectedRows.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md)[] | 返回包含当前选定单元格的所有行。此方法会确定哪些行包含选定单元格，并返回这些完整的行对象。 |
 | [GetTableDescription](./Methods/GetTableDescription.md) | string | 返回表格说明。 |
+| [GetTableLook](./Methods/GetTableLook.md) | [TableLook](../Enumeration/TableLook.md) | 获取表格外观属性 |
 | [GetTableTitle](./Methods/GetTableTitle.md) | string | 返回表格标题（题注）。 |
 | [GetTables](./Methods/GetTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回表示嵌套在指定表格中的所有表格的数组。 |
 | [InsertInContentControl](./Methods/InsertInContentControl.md) | [ApiTable](../ApiTable/ApiTable.md) \| [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 用内容控件包装当前表格对象。 |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 合并单元格数组。 |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null \| undefined | 合并单元格数组。 |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | 删除包含指定单元格的表格列。 |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | 删除包含指定单元格的表格行。 |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | 用新元素替换当前表格。 |
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 在表格对象的范围内搜索。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前表格。 |
+| [SelectRange](./Methods/SelectRange.md) | boolean | 选择当前表格中的单元格范围。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前表格中所有单元格的背景颜色。 |
 | [SetCellSpacing](./Methods/SetCellSpacing.md) | boolean | 指定默认表格单元格间距（相邻单元格之间以及单元格与表格边缘之间的间距）。 |
+| [SetColumnWidth](./Methods/SetColumnWidth.md) | [EMU](../Enumeration/EMU.md) \| null | 设置当前表格中指定列（按索引）的宽度。 |
 | [SetHAlign](./Methods/SetHAlign.md) | boolean | 设置表格的水平对齐方式。 |
+| [SetHeight](./Methods/SetHeight.md) | [EMU](../Enumeration/EMU.md) \| null | 设置当前表格的总高度，并将其平均分配给各表格行。该值作为每行的最小高度应用，因此如果行内容需要更多空间，行可以更高。 |
 | [SetJc](./Methods/SetJc.md) | boolean | 指定当前表格相对于当前节中文本边距的对齐方式。 |
 | [SetPaddings](./Methods/SetPaddings.md) | boolean | 设置表格内边距。 |
 | [SetShd](./Methods/SetShd.md) | boolean | 指定应用于当前表格范围的底纹。 |

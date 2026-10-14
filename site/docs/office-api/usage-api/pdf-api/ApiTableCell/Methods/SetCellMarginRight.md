@@ -14,7 +14,7 @@ expression.SetCellMarginRight(margin);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| margin | Required | [twips](../../Enumeration/twips.md) |  | The cell margin. If this value is `null`, the default margin is used. otherwise override the table cell right margin with specified value for the current cell. |
+| margin | Required | [twips](../../Enumeration/twips.md) \| null \| undefined |  | The cell margin. If this value is `null`, the default margin is used. otherwise override the table cell right margin with specified value for the current cell. |
 
 ## Returns
 

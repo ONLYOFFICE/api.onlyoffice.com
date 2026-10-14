@@ -21,10 +21,11 @@
 | [GetClassType](./Methods/GetClassType.md) | "documentContent" | 返回 ApiDocumentContent 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | 从当前 ApiDocumentContent 对象返回文档元素数组。 |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | 返回当前选中的内容控件。 |
-| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 返回光标所在的当前段落。 |
-| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 返回光标所在的当前文本域。 |
-| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | 返回用于遍历当前文档元素的访问器对象。 |
-| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | 通过元素在文档中的位置返回元素。 |
+| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | 返回光标所在的当前段落。 |
+| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) \| null \| undefined | 返回光标所在的当前文本域。 |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | [ApiDocumentVisitor](../ApiDocumentVisitor/ApiDocumentVisitor.md) | 返回用于遍历当前文档元素的访问器对象。 |
+| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | 通过元素在文档中的位置返回元素。 |
+| [GetElementIndex](./Methods/GetElementIndex.md) | Number | 返回指定元素在当前文档内容中的位置（索引）。 |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前文档中的元素数量。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前文档内容的内部 ID。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示文档内容中包含的文档部分的 Range 对象。 |

@@ -1,10 +1,6 @@
 # Copy
 
-创建指定表格的副本。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前表格的副本。
 
 ## 语法
 
@@ -27,7 +23,7 @@ expression.Copy();
 复制表格并将副本放在 PDF 的另一页上。
 
 ```javascript editor-pdf
-// How do I make a copy of a table in a PDF?
+// Make a copy of a table in a PDF.
 
 // Create an exact duplicate of a table and add it to a new page in a PDF.
 
@@ -39,6 +35,6 @@ table.SetPosition(608400, 1267200);
 page.AddObject(table);
 
 const copyTable = table.Copy();
-const newPage = doc.AddPage(1);
+const newPage = doc.AddPage(0);
 newPage.AddObject(copyTable);
 ```

@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 在演示文稿中查找匹配路径的 XML 元素。
 
 ```javascript editor-pptx
-// How do I select multiple XML nodes using a path in a presentation?
+// Select multiple XML nodes using a path in a presentation.
 
 // Retrieve child elements from an XML node in a presentation.
 

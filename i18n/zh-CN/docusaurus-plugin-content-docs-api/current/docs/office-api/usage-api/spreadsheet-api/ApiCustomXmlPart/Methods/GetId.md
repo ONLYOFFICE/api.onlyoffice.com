@@ -23,7 +23,7 @@ string
 检索分配给电子表格中自定义 XML 块的唯一标识符。
 
 ```javascript editor-xlsx
-// How do I find the ID that distinguishes one XML block from another in a spreadsheet?
+// Find the ID that distinguishes one XML block from another in a spreadsheet.
 
 // Look up a stored XML block by its identifier to reference it later in a spreadsheet.
 

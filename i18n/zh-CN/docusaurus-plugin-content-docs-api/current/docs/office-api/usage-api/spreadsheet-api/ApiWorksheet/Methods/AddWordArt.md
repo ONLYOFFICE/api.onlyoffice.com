@@ -29,7 +29,7 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 ## 返回值
 
-[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
 
 ## 示例
 

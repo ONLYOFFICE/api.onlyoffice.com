@@ -26,7 +26,7 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 ## 返回值
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null
 
 ## 示例
 

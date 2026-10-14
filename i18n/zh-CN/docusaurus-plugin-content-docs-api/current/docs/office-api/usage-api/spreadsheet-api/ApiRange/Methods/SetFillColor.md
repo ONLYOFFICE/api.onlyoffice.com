@@ -1,13 +1,13 @@
 # SetFillColor
 
-使用先前创建的颜色对象设置当前单元格范围的背景颜色。
+使用之前创建的颜色对象为当前单元格范围设置背景色。
 
-当先前创建的颜色对象为 null 时设置为 'No Fill'。
+当之前创建的颜色对象为 'No Fill' 或 null 时，设置为“无填充”。
 
 ## 语法
 
 ```javascript
-expression.SetFillColor(oColor);
+expression.SetFillColor(color);
 ```
 
 `expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
@@ -16,7 +16,7 @@ expression.SetFillColor(oColor);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定要设置给单元格/单元格范围背景的颜色的颜色对象。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill' \| null |  | 指定要为单元格/单元格范围设置的背景色的颜色对象。传递 'No Fill' 或 null 可清除背景色。 |
 
 ## 返回值
 
@@ -33,7 +33,7 @@ boolean
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);
-worksheet.GetRange("A2").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+worksheet.GetRange("A2").SetFillColor(Api.RGB(255, 213, 191));
 worksheet.GetRange("A2").SetValue("This is the cell with a color set to its background");
 worksheet.GetRange("A4").SetValue("This is the cell with a default background color");
 ```

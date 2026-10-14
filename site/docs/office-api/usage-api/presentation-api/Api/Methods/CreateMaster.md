@@ -18,7 +18,7 @@ expression.CreateMaster(oTheme);
 
 ## Returns
 
-[ApiMaster](../../ApiMaster/ApiMaster.md)
+[ApiMaster](../../ApiMaster/ApiMaster.md) \| null \| undefined
 
 ## Example
 

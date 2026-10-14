@@ -1,8 +1,6 @@
 # Delete
 
-删除当前格式条件。
-
-继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
+删除唯一值条件格式规则。
 
 ## 语法
 

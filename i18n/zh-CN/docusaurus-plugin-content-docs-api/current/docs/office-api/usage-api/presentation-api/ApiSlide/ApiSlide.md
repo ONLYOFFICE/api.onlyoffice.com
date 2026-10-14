@@ -25,6 +25,7 @@
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | 返回幻灯片中所有 OLE 对象的数组。 |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | 返回幻灯片中所有形状对象的数组。 |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回当前幻灯片中所有表格的数组。 |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 返回当前演示文稿幻灯片的背景填充。 |
 | [GetClassType](./Methods/GetClassType.md) | "slide" | 返回 ApiSlide 类的类型。 |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | 按指定的占位符类型返回绘图数组。 |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | 返回以英制单位表示的幻灯片高度。 |
@@ -32,14 +33,16 @@
 | [GetNotesPage](./Methods/GetNotesPage.md) | [ApiNotesPage](../ApiNotesPage/ApiNotesPage.md) \| null | 返回当前幻灯片的备注页。 |
 | [GetSlideIndex](./Methods/GetSlideIndex.md) | number | 返回当前幻灯片在演示文稿中的位置。 |
 | [GetSlideShowTransition](./Methods/GetSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) \| null | 返回当前幻灯片的幻灯片放映切换效果。 |
-| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) | 返回当前幻灯片的主题。 |
+| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | 返回当前幻灯片的主题。 |
 | [GetTimeLine](./Methods/GetTimeLine.md) | [ApiTimeLine](../ApiTimeLine/ApiTimeLine.md) | 返回幻灯片的动画时间线。 |
 | [GetVisible](./Methods/GetVisible.md) | boolean | 返回当前演示文稿幻灯片的可见性。 |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | 返回用于遍历当前幻灯片的图形对象、演讲者备注和文本的访问器对象。 |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | 返回以英制单位表示的幻灯片宽度。 |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | 将当前幻灯片中的绘图数组进行组合。 |
 | [MoveTo](./Methods/MoveTo.md) | boolean | 将当前幻灯片移动到同一集合中的指定位置。 |
 | [RemoveAllObjects](./Methods/RemoveAllObjects.md) | 无 | 从当前幻灯片中移除所有对象。 |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | 从当前幻灯片中移除对象（图像、形状或图表）。 |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | 在当前幻灯片中搜索指定文本，并将找到的所有匹配项作为文本范围返回。 |
 | [Select](./Methods/Select.md) | 无 | 选择当前幻灯片。 |
 | [SetBackground](./Methods/SetBackground.md) | boolean | 设置当前演示文稿幻灯片的背景。 |
 | [SetSlideShowTransition](./Methods/SetSlideShowTransition.md) | boolean | 设置当前幻灯片的幻灯片放映切换效果。 |

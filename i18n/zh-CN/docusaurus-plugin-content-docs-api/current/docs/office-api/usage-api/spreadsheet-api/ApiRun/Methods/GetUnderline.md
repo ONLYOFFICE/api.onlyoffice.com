@@ -18,7 +18,7 @@ expression.GetUnderline();
 
 ## 返回值
 
-boolean
+boolean \| null \| undefined
 
 ## 示例
 

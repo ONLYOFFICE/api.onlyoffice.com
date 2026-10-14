@@ -14,7 +14,7 @@ expression.AddMaster(pos, apiMaster);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| pos | Optional | number | ApiPresentation.GetMastersCount() | The position where the slide master will be added. |
+| pos | Optional | number | ApiPresentation.GetMastersCount() | The position where the slide master will be added. If the position is invalid, the slide master is added to the end. |
 | apiMaster | Required | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | The slide master to be added. |
 
 ## Returns

@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[WatermarkDirection](../../Enumeration/WatermarkDirection.md)
+[WatermarkDirection](../../Enumeration/WatermarkDirection.md) \| null \| undefined
 
 ## Example
 

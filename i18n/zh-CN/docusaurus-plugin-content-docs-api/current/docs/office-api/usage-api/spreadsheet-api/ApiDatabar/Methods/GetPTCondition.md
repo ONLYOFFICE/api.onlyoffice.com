@@ -2,8 +2,6 @@
 
 返回数据透视表条件对象。
 
-继承自 [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md)。
-
 ## 语法
 
 ```javascript

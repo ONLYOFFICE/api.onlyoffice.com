@@ -23,11 +23,12 @@ expression.GetAllFields();
 访问 PDF 中的所有输入字段。
 
 ```javascript editor-pdf
-// How do I retrieve all the form fields from a PDF?
+// Useful for retrieving all the form fields from a PDF.
 
 // Locate and list each field's type in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 
 let textField = Api.CreateTextField([10, 10, 160, 30]);

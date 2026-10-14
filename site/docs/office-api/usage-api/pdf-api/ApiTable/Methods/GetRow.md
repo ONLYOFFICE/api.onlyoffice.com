@@ -18,7 +18,7 @@ expression.GetRow(rowIndex);
 
 ## Returns
 
-[ApiTableRow](../../ApiTableRow/ApiTableRow.md)
+[ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| null \| undefined
 
 ## Example
 

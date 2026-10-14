@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Access the parent element of an XML node in a presentation.
 
 ```javascript editor-pptx
-// How do I find the parent of an XML element in a presentation?
+// Find the parent of an XML element in a presentation.
 
 // Retrieve the containing XML element of a node in a presentation.
 

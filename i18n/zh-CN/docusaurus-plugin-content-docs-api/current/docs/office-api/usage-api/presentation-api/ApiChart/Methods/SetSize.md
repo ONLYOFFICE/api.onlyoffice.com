@@ -21,7 +21,7 @@ expression.SetSize(nWidth, nHeight);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 

@@ -14,7 +14,7 @@ expression.SetSubject(subject);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| subject | Required | string |  | The annotation subject text. |
+| subject | Required | string \| null \| undefined |  | The annotation subject text. |
 
 ## Returns
 

@@ -1,0 +1,43 @@
+# SetLanguage
+
+Specifies the language which will be used to check spelling and grammar (if requested) when processing the contents of the current text range.
+
+## Syntax
+
+```javascript
+expression.SetLanguage(langId);
+```
+
+`expression` - A variable that represents an [ApiTextRange](../ApiTextRange.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| langId | Required | string \| null |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". Pass *null* to remove the language. |
+
+## Returns
+
+[ApiTextRange](../../ApiTextRange/ApiTextRange.md) \| null
+
+## Example
+
+Set the spell-check language for a text range in a shape on a worksheet.
+
+```javascript editor-xlsx
+// The language applies to the covered fragment only.
+
+// Set the language of the first word and print it.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = worksheet.AddShape("rect", 200 * 36000, 80 * 36000, fill, stroke, 3, 0, 1, 0);
+
+let paragraph = shape.GetContent().GetElement(0);
+paragraph.AddText("This is a sample text.");
+
+let firstWord = shape.GetTextRange().GetRange(0, 4);
+firstWord.SetLanguage("en-CA");
+paragraph.AddText(" Language of the first word: " + firstWord.GetTextPr().GetLanguage());
+```

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Get all custom XML parts in a presentation.
 
 ```javascript editor-pptx
-// How do I retrieve all custom XML parts from a presentation?
+// Retrieve all custom XML parts from a presentation.
 
 // Display the count and content of each XML part in a presentation.
 

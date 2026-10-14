@@ -12,3 +12,4 @@
 | [GetBodyShape](./Methods/GetBodyShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null | 返回当前备注页中具有 type="body" 属性的形状。 |
 | [GetBodyShapeText](./Methods/GetBodyShapeText.md) | string | 返回当前备注页正文形状中的文本。 |
 | [GetClassType](./Methods/GetClassType.md) | "notesPage" | 返回 ApiNotesPage 类的类型。 |
+| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | 返回当前备注页的主题。 |

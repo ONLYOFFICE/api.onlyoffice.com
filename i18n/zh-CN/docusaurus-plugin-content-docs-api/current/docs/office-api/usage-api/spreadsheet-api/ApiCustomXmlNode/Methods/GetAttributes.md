@@ -23,7 +23,7 @@ expression.GetAttributes();
 检索附加到电子表格中 XML 节点的每个属性。
 
 ```javascript editor-xlsx
-// How do I list all attributes of a custom XML element in a spreadsheet?
+// List all attributes of a custom XML element in a spreadsheet.
 
 // Loop through the complete set of attributes on an embedded XML node and display them in a spreadsheet.
 

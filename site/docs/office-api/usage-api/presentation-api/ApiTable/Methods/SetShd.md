@@ -5,7 +5,7 @@ Specifies the shading which shall be applied to the extents of the current table
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b);
+expression.SetShd(shd);
 ```
 
 `expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
@@ -14,10 +14,7 @@ expression.SetShd(sType, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) \| [ApiFill](../../ApiFill/ApiFill.md) |  | The shading type applied to the contents of the current table. Can be ShdType or ApiFill. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -35,7 +32,7 @@ Apply shading color to a table in a presentation.
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
-table.SetShd("clear", Api.HexColor('#FF6F3D'));
+table.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```

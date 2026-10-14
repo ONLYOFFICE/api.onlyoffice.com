@@ -1,6 +1,6 @@
 # SetTableStyle
 
-Sets the table style by name.
+Sets the table style by name. Built-in table style names: TableStyleLight1-21, TableStyleMedium1-28, TableStyleDark1-11.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -18,7 +18,7 @@ expression.SetTableStyle(styleName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| styleName | Required | string |  | The name of the table style to apply. |
+| styleName | Required | string |  | The name of a built-in table style (for example, "TableStyleMedium9"), or a custom style defined in the workbook. |
 
 ## Returns
 

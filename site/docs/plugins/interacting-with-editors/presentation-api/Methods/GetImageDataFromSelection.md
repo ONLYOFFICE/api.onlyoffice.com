@@ -18,7 +18,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ImageData](../Enumeration/ImageData.md)
+[ImageData](../Enumeration/ImageData.md) \| null \| undefined
 
 ## Example
 

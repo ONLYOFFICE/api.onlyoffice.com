@@ -2,8 +2,6 @@
 
 Sets the scope type for the conditional formatting rule.
 
-Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
-
 ## Syntax
 
 ```javascript

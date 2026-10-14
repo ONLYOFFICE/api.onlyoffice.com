@@ -2,6 +2,8 @@
 
 设置当前文本块的文本颜色。
 
+继承自 [ApiTextPr.SetFill](../../ApiTextPr/Methods/SetFill.md)。
+
 ## 语法
 
 ```javascript

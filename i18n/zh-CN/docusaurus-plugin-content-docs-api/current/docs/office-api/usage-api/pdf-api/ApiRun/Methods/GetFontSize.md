@@ -18,7 +18,7 @@ expression.GetFontSize();
 
 ## 返回值
 
-[hps](../../Enumeration/hps.md)
+[hps](../../Enumeration/hps.md) \| null \| undefined
 
 ## 示例
 

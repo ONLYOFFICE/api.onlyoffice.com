@@ -18,7 +18,7 @@ expression.GetDefaultStyle(sStyleType);
 
 ## Returns
 
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+[ApiStyle](../../ApiStyle/ApiStyle.md) \| null \| undefined
 
 ## Example
 

@@ -1,0 +1,51 @@
+# SetBold
+
+Sets the bold property to the text character.
+
+Inherited from [ApiRichTextPr.SetBold](../../ApiRichTextPr/Methods/SetBold.md).
+
+## Syntax
+
+```javascript
+expression.SetBold(isBold);
+```
+
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isBold | Required | boolean |  | Specifies that the contents of the run are displayed bold. |
+
+## Returns
+
+[ApiRichTextPr](../../ApiRichTextPr/ApiRichTextPr.md)
+
+## Example
+
+Make text bold in a PDF.
+
+```javascript editor-pdf
+// How do I add bold formatting to text in a PDF?
+
+// Apply bold styling to formatted text in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+let textPr = run.GetTextPr();
+textPr.SetBold(true);
+
+console.log(`We set bold to ${textPr.GetBold()} for rich text properties`);
+```

@@ -9,3 +9,4 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "bullet" | 返回 ApiBullet 类的类型。 |
+| [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiBullet 对象转换为 JSON 对象。 |

@@ -8,11 +8,11 @@ PDF 文档由一系列*页面*组成。每个页面可以包含多种内容类�
 
 核心内容元素包括：
 
-- *段落* (`ApiParagraph`) — 文本块。段落由一个或多个*文本块* (`ApiRun`) 组成，每个文本块包含文本本身及其字符格式（字体、大小、粗体、斜体、颜色等）。
-- *表格* (`ApiTable`) — 网格结构，其单元格 (`ApiTableCell`) 包含文档内容（段落）。
-- *绘图* (`ApiDrawing`) — 放置在页面特定位置的图像、形状或图表。
+- *段落*（[`ApiParagraph`](./ApiParagraph/ApiParagraph.md)）——文本块。段落由一个或多个*文本块*（[`ApiRun`](./ApiRun/ApiRun.md)）组成，每个文本块包含文本本身及其字符格式（字体、大小、粗体、斜体、颜色等）。
+- *表格*（[`ApiTable`](./ApiTable/ApiTable.md)）——网格结构，其单元格（[`ApiTableCell`](./ApiTableCell/ApiTableCell.md)）包含文档内容（段落）。
+- *绘图*（[`ApiDrawing`](./ApiDrawing/ApiDrawing.md)）——放置在页面特定位置的图像、形状或图表。
 
-页面及其内容通过*文档* (`ApiDocument`) 和*页面* (`ApiPage`) 对象访问。
+页面及其内容通过*文档*（[`ApiDocument`](./ApiDocument/ApiDocument.md)）和*页面*（[`ApiPage`](./ApiPage/ApiPage.md)）对象访问。
 
 ### 注释
 
@@ -20,12 +20,12 @@ PDF 文档由一系列*页面*组成。每个页面可以包含多种内容类�
 
 | 类别 | 类型 |
 |---|---|
-| 备注/文本 | `ApiTextAnnotation`、`ApiFreeTextAnnotation` |
-| 标记 | `ApiHighlightAnnotation`、`ApiUnderlineAnnotation`、`ApiStrikeoutAnnotation`、`ApiCaretAnnotation` |
-| 形状 | `ApiSquareAnnotation`、`ApiCircleAnnotation`、`ApiLineAnnotation`、`ApiPolyLineAnnotation`、`ApiPolygonAnnotation` |
-| 其他 | `ApiInkAnnotation`、`ApiStampAnnotation`、`ApiRedactAnnotation` |
+| 备注/文本 | [`ApiTextAnnotation`](./ApiTextAnnotation/ApiTextAnnotation.md)、[`ApiFreeTextAnnotation`](./ApiFreeTextAnnotation/ApiFreeTextAnnotation.md) |
+| 标记 | [`ApiHighlightAnnotation`](./ApiHighlightAnnotation/ApiHighlightAnnotation.md)、[`ApiUnderlineAnnotation`](./ApiUnderlineAnnotation/ApiUnderlineAnnotation.md)、[`ApiStrikeoutAnnotation`](./ApiStrikeoutAnnotation/ApiStrikeoutAnnotation.md)、[`ApiCaretAnnotation`](./ApiCaretAnnotation/ApiCaretAnnotation.md) |
+| 形状 | [`ApiSquareAnnotation`](./ApiSquareAnnotation/ApiSquareAnnotation.md)、[`ApiCircleAnnotation`](./ApiCircleAnnotation/ApiCircleAnnotation.md)、[`ApiLineAnnotation`](./ApiLineAnnotation/ApiLineAnnotation.md)、[`ApiPolyLineAnnotation`](./ApiPolyLineAnnotation/ApiPolyLineAnnotation.md)、[`ApiPolygonAnnotation`](./ApiPolygonAnnotation/ApiPolygonAnnotation.md) |
+| 其他 | [`ApiInkAnnotation`](./ApiInkAnnotation/ApiInkAnnotation.md)、[`ApiStampAnnotation`](./ApiStampAnnotation/ApiStampAnnotation.md)、[`ApiRedactAnnotation`](./ApiRedactAnnotation/ApiRedactAnnotation.md) |
 
-所有注释类型共享一个通用基类 (`ApiBaseAnnotation`)，该基类提供边框、填充、不透明度、作者、日期和回复属性。
+所有注释类型共享一个通用基类（[`ApiBaseAnnotation`](./ApiBaseAnnotation/ApiBaseAnnotation.md)），该基类提供边框、填充、不透明度、作者、日期和回复属性。
 
 ### 表单字段和部件
 
@@ -33,14 +33,15 @@ PDF 表单包括*字段*和*部件*。字段定义数据模型（名称、值、
 
 | 字段类型 | 部件 |
 |---|---|
-| `ApiTextField` | `ApiTextWidget` |
-| `ApiCheckboxField` | `ApiCheckboxWidget` |
-| `ApiRadiobuttonField` | — |
-| `ApiComboboxField` | — |
-| `ApiListboxField` | — |
-| `ApiImageField` | — |
-| `ApiDateField` | — |
-| `ApiButtonField` | `ApiButtonWidget` |
+| [`ApiTextField`](./ApiTextField/ApiTextField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiComboboxField`](./ApiComboboxField/ApiComboboxField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiListboxField`](./ApiListboxField/ApiListboxField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiCheckboxField`](./ApiCheckboxField/ApiCheckboxField.md) | [`ApiCheckboxWidget`](./ApiCheckboxWidget/ApiCheckboxWidget.md) |
+| [`ApiRadiobuttonField`](./ApiRadiobuttonField/ApiRadiobuttonField.md) | [`ApiCheckboxWidget`](./ApiCheckboxWidget/ApiCheckboxWidget.md) |
+| [`ApiButtonField`](./ApiButtonField/ApiButtonField.md) | [`ApiButtonWidget`](./ApiButtonWidget/ApiButtonWidget.md) |
+| [`ApiSignatureField`](./ApiSignatureField/ApiSignatureField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+
+使用 [`Api.CreateDateField`](./Api/Methods/CreateDateField.md) 创建的日期字段是 [`ApiTextField`](./ApiTextField/ApiTextField.md) 对象，使用 [`Api.CreateImageField`](./Api/Methods/CreateImageField.md) 创建的图像字段是 [`ApiButtonField`](./ApiButtonField/ApiButtonField.md) 对象。
 
 ## 创建新的 PDF 文档
 

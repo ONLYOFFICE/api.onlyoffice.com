@@ -16,7 +16,7 @@ expression.SetFillColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 要设置的填充颜色（省略参数以设置无填充） |
+| color | 可选 | [ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined |  | 要设置的填充颜色（省略参数以设置无填充） |
 
 ## 返回值
 

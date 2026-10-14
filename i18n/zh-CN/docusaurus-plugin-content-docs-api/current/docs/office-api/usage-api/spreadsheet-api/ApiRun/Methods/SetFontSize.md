@@ -2,10 +2,12 @@
 
 设置当前文本块字符的字体大小。
 
+继承自 [ApiTextPr.SetFontSize](../../ApiTextPr/Methods/SetFontSize.md)。
+
 ## 语法
 
 ```javascript
-expression.SetFontSize(nSize);
+expression.SetFontSize(size);
 ```
 
 `expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
@@ -14,7 +16,7 @@ expression.SetFontSize(nSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
+| size | 必需 | [hps](../../Enumeration/hps.md) \| null |  | 文本大小值，以半磅（1/144 英寸）为单位。传递 *null* 可移除字号。 |
 
 ## 返回值
 
