@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Building plugin
 
-To build a plugin, you need to have *npm* (included with Node.js) installed. After that, follow the instructions below:
+To build a plugin, you need to have *npm* (included with Node.js) installed. The plugin template builds with Vite 8, which requires Node.js `^20.19.0 || >=22.12.0`. After that, follow the instructions below:
 
 1. Open the terminal and go to the plugin root folder:
 

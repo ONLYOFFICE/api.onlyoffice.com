@@ -12,13 +12,13 @@ This guide helps you migrate your plugins to newer versions of the DocSpace Plug
 SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 have `minDocSpaceVersion: "4.0.0"` set automatically in *config.json* by the build process. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
-### Migrating from SDK 2.x
-
-For plugins created with an SDK 2.x template:
-
 :::important
 The 3.0.0 template builds with Vite 8 and `@vitejs/plugin-react` 6, which require Node.js `^20.19.0 || >=22.12.0`. On older Node.js versions, such as Node.js 18, `vite build` does not run. Check your version with `node -v` before migrating.
 :::
+
+### Migrating from SDK 2.x
+
+For plugins created with an SDK 2.x template:
 
 1. Update the SDK to version 3.0.0:
 
