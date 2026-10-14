@@ -16,7 +16,7 @@ expression.MoveCursorOutside(isAfter);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isAfter | 可选 | boolean | true | 指定光标是放置在当前表单之前（false）还是之后（true）。 |
+| isAfter | 可选 | boolean \| null \| undefined | true | 指定光标是放置在当前表单之前（false）还是之后（true）。 |
 
 ## 返回值
 

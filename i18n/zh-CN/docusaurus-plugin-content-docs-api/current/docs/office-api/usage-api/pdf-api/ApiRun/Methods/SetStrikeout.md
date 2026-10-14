@@ -1,6 +1,8 @@
 # SetStrikeout
 
-指定当前文本块的内容显示为中间有一条水平线穿过。
+指定文本块的内容显示为中间有一条水平线穿过。
+
+继承自 [ApiTextPr.SetStrikeout](../../ApiTextPr/Methods/SetStrikeout.md)。
 
 ## 语法
 

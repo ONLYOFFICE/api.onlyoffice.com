@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetAlignVertical(sAligment);
+expression.SetAlignVertical(sAlignment);
 ```
 
 `expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetAlignVertical(sAligment);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sAligment | 必需 | 'center' \| 'bottom' \| 'top' \| 'distributed' \| 'justify' |  | 将应用于单元格内容的垂直对齐方式。 |
+| sAlignment | 必需 | 'center' \| 'bottom' \| 'top' \| 'distributed' \| 'justify' |  | 将应用于单元格内容的垂直对齐方式。 |
 
 ## 返回值
 

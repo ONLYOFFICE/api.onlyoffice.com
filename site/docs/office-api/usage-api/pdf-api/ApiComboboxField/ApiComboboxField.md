@@ -11,18 +11,21 @@ The following table lists the available methods.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | boolean | Adds new option to list options. |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Adds new widget - visual representation for field |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | Adds new widget - visual representation for field |
 | [ClearFormat](./Methods/ClearFormat.md) | boolean | Clears format of field. |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetClassType](./Methods/GetClassType.md) | "comboboxField" | Returns a type of the ApiComboboxField class. |
+| [GetFormattedValue](./Methods/GetFormattedValue.md) | string | Gets formatted value of a field. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field. |
 | [GetOption](./Methods/GetOption.md) | [ListOption](../Enumeration/ListOption.md) | Gets option from list options. |
 | [GetOptions](./Methods/GetOptions.md) | [ListOption](../Enumeration/ListOption.md)[] | Gets all options from list options. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
+| [GetPlaceholder](./Methods/GetPlaceholder.md) | string | Gets text field placeholder. |
+| [GetRegularExp](./Methods/GetRegularExp.md) | boolean | Gets text widget regular validate expression. |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
-| [GetValue](./Methods/GetValue.md) | string | Gets field value |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | Gets field value |
 | [GetValueIndexes](./Methods/GetValueIndexes.md) | number[] | Gets selected value indexes. |
 | [IsCommitOnSelChange](./Methods/IsCommitOnSelChange.md) | boolean | Checks if field can commit on selection change. |
 | [IsEditable](./Methods/IsEditable.md) | boolean | Checks if field is editable. |
@@ -38,8 +41,9 @@ The following table lists the available methods.
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | Sets number format for field. |
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | Sets new field partial name. |
 | [SetPercentageFormat](./Methods/SetPercentageFormat.md) | boolean | Sets percentage format for field. |
+| [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets text field placeholder. |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
-| [SetRegularExp](./Methods/SetRegularExp.md) | boolean | Sets regular expression for field. |
+| [SetRegularExp](./Methods/SetRegularExp.md) | boolean | Sets regular expression validate string for field. |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |
 | [SetSpecialFormat](./Methods/SetSpecialFormat.md) | boolean | Sets special format for field. |
 | [SetTimeFormat](./Methods/SetTimeFormat.md) | boolean | Sets time format for field. |

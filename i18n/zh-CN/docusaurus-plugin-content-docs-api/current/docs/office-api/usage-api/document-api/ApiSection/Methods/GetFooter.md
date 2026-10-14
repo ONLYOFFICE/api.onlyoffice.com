@@ -19,7 +19,7 @@ expression.GetFooter(sType, isCreate);
 
 ## 返回值
 
-[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
 
 ## 示例
 

@@ -1,6 +1,8 @@
 # SetDoubleStrikeout
 
-指定当前文本块的内容显示为每个字符都有两条水平线穿过。
+指定文本块的内容显示为每个字符都有两条水平线穿过。
+
+继承自 [ApiTextPr.SetDoubleStrikeout](../../ApiTextPr/Methods/SetDoubleStrikeout.md)。
 
 ## 语法
 

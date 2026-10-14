@@ -5,7 +5,7 @@ Sets all 4 font slots with the specified font family.
 ## Syntax
 
 ```javascript
-expression.SetFontFamily(sFontFamily);
+expression.SetFontFamily(fontFamily);
 ```
 
 `expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
@@ -14,11 +14,11 @@ expression.SetFontFamily(sFontFamily);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | Required | string |  | The font family or families used for the current paragraph. |
+| fontFamily | Optional | string \| null |  | The font family or families used for the current paragraph. Pass *null* or omit it to remove the font family. |
 
 ## Returns
 
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null \| undefined
 
 ## Example
 

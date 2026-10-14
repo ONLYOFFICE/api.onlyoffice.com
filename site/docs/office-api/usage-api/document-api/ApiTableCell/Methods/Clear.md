@@ -1,6 +1,6 @@
 # Clear
 
-Clears the content from the current cell.
+Clears the content of the current cell.
 
 ## Syntax
 

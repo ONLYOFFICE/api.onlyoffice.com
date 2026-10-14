@@ -2,8 +2,6 @@
 
 设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。
 
-继承自 [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md)。
-
 ## 语法
 
 ```javascript
@@ -16,7 +14,7 @@ expression.SetNumberFormat(NumberFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | 必需 | string |  | 数字格式代码（例如 “General”、“#,##0.00” 等） |
+| NumberFormat | 必需 | string |  | 数字格式代码。 |
 
 ## 返回值
 

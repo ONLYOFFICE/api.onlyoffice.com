@@ -2,13 +2,19 @@
 
 The main class of the Document API. Use it to get the current document and to create document elements, such as paragraphs, tables, images, and charts.
 
+## Properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| FullName | string | Returns the full name of the currently opened file. |
+
 ## Methods
 
 The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the specifed document element or array of Runs. |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | Adds a comment to the specifed document element or array of Runs. |
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an auto-color. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. |
@@ -16,7 +22,7 @@ The following table lists the available methods.
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a new block level container. |
-| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |
+| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Creates a chart with the parameters specified. |
 | [CreateCheckBoxContentControl](./Methods/CreateCheckBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a checkbox content control. |
 | [CreateComboBoxContentControl](./Methods/CreateComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a new combo box container with the given list of options. |
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Creates a new custom geometry. |
@@ -28,21 +34,24 @@ The following table lists the available methods.
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Creates an image with the parameters specified. |
 | [CreateInlineLvlSdt](./Methods/CreateInlineLvlSdt.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a new inline container. |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background. |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | Creates a math equation from a linear text string. The resulting object can be inserted into a paragraph the same way as a run (e.g. via [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) or [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)). |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates no fill and removes the fill from the element. |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | Creates an abstract multilevel numbering with a specified type. |
-| [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Creates an OLE object with the parameters specified. |
+| [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) \| null \| undefined | Creates an OLE object with the parameters specified. |
 | [CreateParaPr](./Methods/CreateParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Creates the empty paragraph properties. |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph. |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a pattern fill to apply to the object using the selected pattern as the object background. |
 | [CreatePictureContentControl](./Methods/CreatePictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a new picture container. |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | Creates a color selecting it from one of the available color presets. |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | Creates a geometry using one of the available preset shapes. |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | Creates a geometry using one of the available preset shapes. |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Creates an RGB color setting the appropriate values for the red, green and blue color components. |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a radial gradient fill to apply to the object using the selected radial gradient as the object background. |
 | [CreateRange](./Methods/CreateRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Creates an element range. |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Creates a new smaller text block to be inserted to the current paragraph or table. |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | Creates a complex color scheme selecting from one of the available schemes. |
-| [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a shape with the parameters specified. |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | Creates a shadow which can be applied to a graphic object. |
+| [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | Creates a shape with the parameters specified. |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | Creates the shading which can be applied to text, a paragraph, a table or a table cell. |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a solid fill to apply to the object using a selected solid color as the object background. |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Creates a stroke adding shadows to the element. |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a new table with a specified number of rows and columns. |
@@ -55,7 +64,7 @@ The following table lists the available methods.
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | object | Converts the specified JSON object into the Document Builder object of the corresponding type. |
-| [GetByInternalId](./Methods/GetByInternalId.md) | object | Returns the object by it's internal ID. |
+| [GetByInternalId](./Methods/GetByInternalId.md) | object \| null \| undefined | Returns the object by it's internal ID. |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | Returns the main document. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetMailMergeReceptionsCount](./Methods/GetMailMergeReceptionsCount.md) | number | Returns the mail merge receptions count. |
@@ -66,6 +75,7 @@ The following table lists the available methods.
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | Loads data for the mail merge. |
 | [MailMerge](./Methods/MailMerge.md) | boolean | Starts the mail merge process. |
 | [MergeDocuments](./Methods/MergeDocuments.md) | None | Merges the current document with another document opened via builderJS.OpenTmpFile. |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | Merges an array of drawings into new shapes. The resulting shapes take the formatting of the first drawing in the array. |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |

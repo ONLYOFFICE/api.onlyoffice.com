@@ -4,8 +4,6 @@
 
 当先前创建的颜色对象为 null 时设置为“无填充”。
 
-继承自 [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md)。
-
 ## 语法
 
 ```javascript
@@ -47,7 +45,7 @@ let formatConditions = dataRange.GetFormatConditions();
 
 let aboveAvgCondition = formatConditions.AddAboveAverage();
 
-let greenColor = Api.CreateColorFromRGB(0, 255, 0);
+let greenColor = Api.RGB(0, 255, 0);
 aboveAvgCondition.SetFillColor(greenColor);
 
 worksheet.GetRange("B1").SetValue("Above average cells are highlighted in green");

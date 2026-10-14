@@ -1,8 +1,6 @@
 # SetSize
 
-Sets the size of the object (image, shape, chart) bounding box.
-
-Inherited from [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md).
+Sets the table size.
 
 ## Syntax
 
@@ -16,8 +14,8 @@ expression.SetSize(width, height);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| width | Required | [EMU](../../Enumeration/EMU.md) |  | The object width measured in English measure units. |
-| height | Required | [EMU](../../Enumeration/EMU.md) |  | The object height measured in English measure units. |
+| width | Required | [EMU](../../Enumeration/EMU.md) |  | The table width measured in English measure units. |
+| height | Required | [EMU](../../Enumeration/EMU.md) |  | The table height measured in English measure units. |
 
 ## Returns
 
@@ -25,27 +23,25 @@ boolean
 
 ## Example
 
-Resize a drawing object to specific dimensions in a PDF.
+Set the width and height of a table in a PDF.
 
 ```javascript editor-pdf
-// How do I make a shape larger or smaller in a PDF?
+// Give a table specific dimensions in a PDF.
 
-// Modify the width and height of a drawing element in a PDF.
+// Create a table and set custom width and height values in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-shape.SetSize(150 * 36000, 65 * 36000);
+const table = Api.CreateTable(2, 4);
+table.SetSize(220 * 36000, 110 * 36000);
 
-const docContent = shape.GetContent();
-docContent.RemoveAllElements();
+const row = table.GetRow(0);
+const cell = row.GetCell(0);
+const content = cell.GetContent();
 const paragraph = Api.CreateParagraph();
-paragraph.SetJc("left");
-paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
-docContent.Push(paragraph);
-page.AddObject(shape);
+paragraph.AddText('Table size: 220 x 110 millimeters.');
+content.Push(paragraph);
+
+page.AddObject(table);
 ```

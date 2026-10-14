@@ -1,8 +1,6 @@
 # Delete
 
-Deletes the current format condition.
-
-Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
+Deletes the above average conditional formatting rule.
 
 ## Syntax
 
@@ -41,7 +39,7 @@ worksheet.GetRange("A6").SetValue(88);
 let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 let aboveAverageCondition = formatConditions.AddAboveAverage();
-aboveAverageCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
+aboveAverageCondition.GetFont().SetColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Before: " + formatConditions.GetCount() + " rules");
 aboveAverageCondition.Delete();

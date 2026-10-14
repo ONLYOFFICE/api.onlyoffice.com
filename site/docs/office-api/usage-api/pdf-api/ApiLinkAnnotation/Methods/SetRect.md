@@ -2,6 +2,10 @@
 
 Sets annotation rect.
 
+:::note
+Not for stamps. The SetScale method is used to change the stamp size.
+:::
+
 Inherited from [ApiBaseAnnotation.SetRect](../../ApiBaseAnnotation/Methods/SetRect.md).
 
 ## Syntax

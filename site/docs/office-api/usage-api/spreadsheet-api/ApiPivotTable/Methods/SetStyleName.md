@@ -1,6 +1,6 @@
 # SetStyleName
 
-Sets the pivot table style name.
+Sets the pivot table style name. Built-in pivot table style names: PivotStyleLight1-28, PivotStyleMedium1-28, PivotStyleDark1-28.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.SetStyleName(name);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | Required | string |  | The pivot table style name. |
+| name | Required | string |  | The name of a built-in pivot table style (for example, "PivotStyleMedium9"), or a custom style defined in the workbook. |
 
 ## Returns
 

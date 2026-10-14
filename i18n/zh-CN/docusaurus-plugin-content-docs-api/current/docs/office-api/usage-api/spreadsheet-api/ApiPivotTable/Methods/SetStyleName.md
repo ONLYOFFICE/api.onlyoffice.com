@@ -1,6 +1,6 @@
 # SetStyleName
 
-设置数据透视表样式名称。
+设置数据透视表样式名称。内置数据透视表样式名称：PivotStyleLight1-28、PivotStyleMedium1-28、PivotStyleDark1-28。
 
 ## 语法
 
@@ -14,7 +14,7 @@ expression.SetStyleName(name);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | 必需 | string |  | 数据透视表样式名称。 |
+| name | 必需 | string |  | 内置数据透视表样式的名称（例如，"PivotStyleMedium9"），或工作簿中定义的自定义样式。 |
 
 ## 返回值
 

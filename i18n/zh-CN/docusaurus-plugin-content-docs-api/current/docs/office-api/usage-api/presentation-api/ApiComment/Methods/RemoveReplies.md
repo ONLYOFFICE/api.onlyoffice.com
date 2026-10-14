@@ -20,7 +20,7 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 ## 返回值
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## 示例
 

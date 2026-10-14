@@ -9,16 +9,19 @@ The following table lists the available methods.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | boolean | Removes widget from parent field. |
+| [GetActions](./Methods/GetActions.md) | [ApiActionCollection](../ApiActionCollection/ApiActionCollection.md) | Gets actions collection. |
 | [GetActionsJSON](./Methods/GetActionsJSON.md) | JSON | Gets all field actions in json format. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget background color. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget border color. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets widget background color. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets widget border color. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [WidgetBorderStyle](../Enumeration/WidgetBorderStyle.md) | Gets widget border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [WidgetBorderWidth](../Enumeration/WidgetBorderWidth.md) | Gets widget border width. |
 | [GetClassType](./Methods/GetClassType.md) | "baseWidget" | Returns a type of the ApiBaseWidget class. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field widget. |
+| [GetParent](./Methods/GetParent.md) | [ApiField](../Enumeration/ApiField.md) | Gets parent field. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
-| [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
+| [GetTextAlign](./Methods/GetTextAlign.md) | [WidgetTextAlign](../Enumeration/WidgetTextAlign.md) \| undefined | Gets widget text alignment. |
+| [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets widget text color. |
 | [GetTextSize](./Methods/GetTextSize.md) | [hps](../Enumeration/hps.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Sets text autofit. |
@@ -28,5 +31,6 @@ The following table lists the available methods.
 | [SetBorderWidth](./Methods/SetBorderWidth.md) | boolean | Sets widget border width. |
 | [SetPosition](./Methods/SetPosition.md) | boolean | Sets widget position. |
 | [SetRect](./Methods/SetRect.md) | boolean | Sets field rect. |
+| [SetTextAlign](./Methods/SetTextAlign.md) | boolean | Sets widget text alignment. |
 | [SetTextColor](./Methods/SetTextColor.md) | boolean | Sets widget text color. |
 | [SetTextSize](./Methods/SetTextSize.md) | boolean | Sets widget text size. |

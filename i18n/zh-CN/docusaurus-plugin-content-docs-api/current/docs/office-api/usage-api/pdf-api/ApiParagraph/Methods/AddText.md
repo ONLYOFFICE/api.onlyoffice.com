@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddText(text);
+expression.AddText(text, widths);
 ```
 
 `expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
@@ -14,7 +14,8 @@ expression.AddText(text);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | 必需 | string |  | 要插入到当前文档元素中的文本。 |
+| text | 必需 | string \| number[] |  | 要插入到当前文档元素中的文本。可以是字符串或 Unicode 码位数组。 |
+| widths | 可选 | number[] |  | 字符宽度数组（以毫米为单位）。其长度应与 "text" 参数中传递的码位数组相同。指定宽度后，添加的字符将严格保持这些宽度。 |
 
 ## 返回值
 

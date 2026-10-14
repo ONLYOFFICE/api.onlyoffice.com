@@ -20,14 +20,17 @@ The following table lists the available methods.
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide layout. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide layout. |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array with all tables from the current slide layout. |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Returns the background fill of the current slide layout. |
 | [GetClassType](./Methods/GetClassType.md) | "layout" | Returns the type of the ApiLayout class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetLayoutType](./Methods/GetLayoutType.md) | [LayoutType](../Enumeration/LayoutType.md) | Returns the type of the current layout. |
-| [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | Returns the parent slide master of the current layout. |
+| [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null \| undefined | Returns the parent slide master of the current layout. |
 | [GetName](./Methods/GetName.md) | string | Returns a name of the current layout. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings and text of the current slide layout. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current layout. |
 | [MoveTo](./Methods/MoveTo.md) | boolean | Moves the specified layout to a specific location within the same collection. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide layout. |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | Searches for the specified text within the current slide layout and returns all found occurrences as text ranges. |
 | [SetBackground](./Methods/SetBackground.md) | boolean | Sets the background to the current slide layout. |
 | [SetName](./Methods/SetName.md) | boolean | Sets a name to the current layout. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiLayout object into the JSON object. |

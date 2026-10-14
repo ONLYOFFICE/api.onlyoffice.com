@@ -1,8 +1,6 @@
 # GetInternalId
 
-Returns an internal ID of the current drawing object.
-
-Inherited from [ApiDrawing.GetInternalId](../../ApiDrawing/Methods/GetInternalId.md).
+Returns an internal ID of the current table.
 
 ## Syntax
 
@@ -22,26 +20,21 @@ string
 
 ## Example
 
-Get the unique identifier of a shape in a presentation.
+Get the internal identifier of the table in a presentation.
 
 ```javascript editor-pptx
-// How do I retrieve the internal ID assigned to a shape in a presentation?
+// Useful for getting a unique identifier of a table.
 
-// Extract and display the unique internal ID of a drawing object in a presentation.
+// Create a table and display its internal id in the first cell.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
+const table = Api.CreateTable(2, 2);
+const id = table.GetInternalId();
+const cell = table.GetCell(0, 0);
+const paragraph = Api.CreateParagraph();
+paragraph.AddText("Table id: " + id);
+cell.GetContent().Push(paragraph);
 slide.RemoveAllObjects();
-
-const fill = Api.CreateSolidFill(Api.HexColor('#FADBD8'));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape('rect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
-shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
-
-const internalId = shape.GetInternalId();
-
-const docContent = shape.GetContent();
-const paragraph = docContent.GetElement(0);
-paragraph.AddText('Drawing internal ID: ' + internalId);
-slide.AddObject(shape);
+slide.AddObject(table);
 ```

@@ -14,11 +14,11 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shapeType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。 |
-| width | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状宽度。 |
-| height | 可选 | [EMU](../../Enumeration/EMU.md) | 72 | 以英制度量单位表示的形状高度。 |
-| fill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | 用于填充形状的颜色或图案。 |
-| stroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | 用于创建元素阴影的笔触。 |
+| shapeType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。"textRect" 类型会创建文本框：它没有填充和轮廓，且其高度随文本变化。 |
+| width | 可选 | [EMU](../../Enumeration/EMU.md) | 914400 | 以英制度量单位表示的形状宽度。 |
+| height | 可选 | [EMU](../../Enumeration/EMU.md) | 914400 | 以英制度量单位表示的形状高度。 |
+| fill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的颜色或图案。如果未指定，则使用默认形状样式填充（主题强调色），文本框没有填充。 |
+| stroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于绘制形状轮廓的笔触。如果未指定，则使用默认形状样式轮廓（主题强调色），文本框没有轮廓。 |
 
 ## 返回值
 
@@ -36,7 +36,7 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

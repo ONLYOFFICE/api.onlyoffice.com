@@ -6,14 +6,14 @@
 - **"topRightCell"** - 指定表格格式应用于右上角单元格。
 - **"bottomLeftCell"** - 指定表格格式应用于左下角单元格。
 - **"bottomRightCell"** - 指定表格格式应用于右下角单元格。
-- **"firstRow"** - 指定表格格式应用于第一行。
+- **"firstRow"** - 指定表格格式应用于第一行。任何处于*表头*中的后续行也将使用此条件格式。
 - **"lastRow"** - 指定表格格式应用于最后一行。
-- **"firstColumn"** - 指定表格格式应用于第一列。任何处于*表头*（[ApiTableRowPr#SetTableHeader](../ApiTableRowPr/Methods/SetTableHeader.md)）中的后续行也将使用此条件格式。
+- **"firstColumn"** - 指定表格格式应用于第一列。
 - **"lastColumn"** - 指定表格格式应用于最后一列。
-- **"bandedColumn"** - 指定表格格式应用于奇数行组。
-- **"bandedColumnEven"** - 指定表格格式应用于偶数行组。
-- **"bandedRow"** - 指定表格格式应用于奇数列组。
-- **"bandedRowEven"** - 指定表格格式应用于偶数列组。
+- **"bandedColumn"** - 指定表格格式应用于奇数列组。
+- **"bandedColumnEven"** - 指定表格格式应用于偶数列组。
+- **"bandedRow"** - 指定表格格式应用于奇数行组。
+- **"bandedRowEven"** - 指定表格格式应用于偶数行组。
 - **"wholeTable"** - 指定条件格式应用于整个表格。
 
 ## 类型
@@ -45,5 +45,5 @@
 
 // Get table part style by condition and update it.
 
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 0, 0)));
 ```

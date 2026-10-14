@@ -14,6 +14,7 @@ Class representing a pivot table.
 | Description | string | Returns or sets the pivot table description. |
 | DisplayFieldCaptions | boolean | Returns or sets the setting which specifies whether to display field headers for rows and columns. |
 | GrandTotalName | string | Returns or sets the text string label that is displayed in the grand total column or row heading in the specified pivot table report. |
+| HasAutoFormat | boolean | Returns or sets the setting which specifies whether the pivot table is automatically formatted on every update. |
 | HiddenFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that represents all hidden fields in the pivot table. |
 | LayoutBlankLine | boolean | Sets the setting which specifies whether to insert blank rows after each item in the pivot table. |
 | LayoutSubtotals | boolean | Sets the setting which specifies whether to show subtotals in the pivot table. |
@@ -58,6 +59,7 @@ The following table lists the available methods.
 | [GetDisplayFieldCaptions](./Methods/GetDisplayFieldCaptions.md) | boolean | Returns the setting which specifies whether to display field headers for rows and columns. |
 | [GetDisplayFieldsInReportFilterArea](./Methods/GetDisplayFieldsInReportFilterArea.md) | [PivotTableFilterAreaInfo](../Enumeration/PivotTableFilterAreaInfo.md) | Returns the pivot table display fields in the report filter area settings. |
 | [GetGrandTotalName](./Methods/GetGrandTotalName.md) | string | Returns the text string label that is displayed in the grand total column or row heading in the specified pivot table report. |
+| [GetHasAutoFormat](./Methods/GetHasAutoFormat.md) | boolean | Returns whether the pivot table is automatically formatted on update, which in the editor fits the column widths to their content. |
 | [GetHiddenFields](./Methods/GetHiddenFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that represents all the hidden fields in the pivot table. |
 | [GetName](./Methods/GetName.md) | string | Returns the pivot table name. |
 | [GetPageFields](./Methods/GetPageFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns a collection that represents either a single pivot table page field or a collection of all visible page fields. |
@@ -87,6 +89,7 @@ The following table lists the available methods.
 | [SetDisplayFieldCaptions](./Methods/SetDisplayFieldCaptions.md) | None | Sets whether to display field headers for rows and columns. |
 | [SetDisplayFieldsInReportFilterArea](./Methods/SetDisplayFieldsInReportFilterArea.md) | None | Sets the pivot table display fields in the report filter area settings. |
 | [SetGrandTotalName](./Methods/SetGrandTotalName.md) | None | Sets the text string label that is displayed in the grand total column or row heading in the specified pivot table report. |
+| [SetHasAutoFormat](./Methods/SetHasAutoFormat.md) | None | Sets whether the pivot table is automatically formatted on update, which in the editor fits the column widths to their content. |
 | [SetLayoutBlankLine](./Methods/SetLayoutBlankLine.md) | None | Sets the setting which specifies whether to insert blank rows after each item. |
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | None | Sets the setting which specifies whether to show subtotals. |
 | [SetName](./Methods/SetName.md) | None | Sets the pivot table name. |
@@ -94,7 +97,7 @@ The following table lists the available methods.
 | [SetRowAxisLayout](./Methods/SetRowAxisLayout.md) | None | Sets the way the specified pivot table items appear — in table format or in outline format. |
 | [SetRowGrand](./Methods/SetRowGrand.md) | None | Sets the **Grand Totals** setting to the pivot table rows. |
 | [SetSource](./Methods/SetSource.md) | None | Sets the source range for the pivot table. |
-| [SetStyleName](./Methods/SetStyleName.md) | None | Sets the pivot table style name. |
+| [SetStyleName](./Methods/SetStyleName.md) | None | Sets the pivot table style name. Built-in pivot table style names: PivotStyleLight1-28, PivotStyleMedium1-28, PivotStyleDark1-28. |
 | [SetSubtotalLocation](./Methods/SetSubtotalLocation.md) | None | Sets the layout subtotal location in the pivot table. |
 | [SetTableStyleColumnHeaders](./Methods/SetTableStyleColumnHeaders.md) | None | Sets the setting which specifies whether the column headers of the pivot table will be highlighted with the special formatting. |
 | [SetTableStyleColumnStripes](./Methods/SetTableStyleColumnStripes.md) | None | Sets the setting which specifies whether the background color alternation for odd and even columns will be enabled for the pivot table. |

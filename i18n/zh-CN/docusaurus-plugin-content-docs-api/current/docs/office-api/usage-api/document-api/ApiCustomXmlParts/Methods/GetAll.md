@@ -23,7 +23,7 @@ expression.GetAll();
 列出文档中存储的每个自定义 XML 部件。
 
 ```javascript editor-docx
-// How do I retrieve all custom XML parts at once in a document?
+// Retrieve all custom XML parts at once in a document.
 
 // Iterate over every embedded XML part to audit or process stored data in a document.
 

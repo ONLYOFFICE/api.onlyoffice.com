@@ -14,6 +14,7 @@ The following table lists the available methods.
 | [GetRGB](./Methods/GetRGB.md) | Object | Gets the RGB components of the color. |
 | [GetRGBA](./Methods/GetRGBA.md) | Object | Gets the RGBA components of the color. |
 | [GetThemeName](./Methods/GetThemeName.md) | [SchemeColorId](../Enumeration/SchemeColorId.md) \| null | Gets the theme color name if the color is a theme color. |
+| [GetTintAndShade](./Methods/GetTintAndShade.md) | number | Returns the luminance shift applied to the color. |
 | [IsAutoColor](./Methods/IsAutoColor.md) | boolean | Returns true if the color is set to auto. |
 | [IsThemeColor](./Methods/IsThemeColor.md) | boolean | Returns true if the color is a theme color. |
 | [ToJSON](./Methods/ToJSON.md) | string | Converts the ApiColor object into the JSON object. |

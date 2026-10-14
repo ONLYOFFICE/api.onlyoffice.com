@@ -8,27 +8,29 @@ The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [GetBold](./Methods/GetBold.md) | boolean | Gets the bold property from the current text properties. |
-| [GetCaps](./Methods/GetCaps.md) | boolean | Returns whether the text with the current text properties are capitalized. |
+| [GetBold](./Methods/GetBold.md) | boolean \| null \| undefined | Gets the bold property from the current text properties. |
+| [GetCaps](./Methods/GetCaps.md) | boolean \| null \| undefined | Returns whether the text with the current text properties are capitalized. |
 | [GetClassType](./Methods/GetClassType.md) | "textPr" | Returns a type of the ApiTextPr class. |
-| [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | Gets the double strikeout property from the current text properties. |
+| [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean \| null \| undefined | Gets the double strikeout property from the current text properties. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Gets the text color from the current text properties. |
-| [GetFontFamily](./Methods/GetFontFamily.md) | string | Returns the font family from the current text properties. |
-| [GetFontSize](./Methods/GetFontSize.md) | [hps](../Enumeration/hps.md) | Gets the font size from the current text properties. |
-| [GetItalic](./Methods/GetItalic.md) | boolean | Gets the italic property from the current text properties. |
+| [GetFontFamily](./Methods/GetFontFamily.md) | string \| null \| undefined | Returns the font family from the current text properties. |
+| [GetFontSize](./Methods/GetFontSize.md) | [hps](../Enumeration/hps.md) \| null \| undefined | Gets the font size from the current text properties. |
+| [GetItalic](./Methods/GetItalic.md) | boolean \| null \| undefined | Gets the italic property from the current text properties. |
 | [GetOutLine](./Methods/GetOutLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Gets the text outline from the current text properties. |
-| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
-| [GetSpacing](./Methods/GetSpacing.md) | [twips](../Enumeration/twips.md) | Gets the text spacing from the current text properties measured in twentieths of a point. |
-| [GetStrikeout](./Methods/GetStrikeout.md) | boolean | Gets the strikeout property from the current text properties. |
+| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean \| null \| undefined | Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
+| [GetSpacing](./Methods/GetSpacing.md) | [twips](../Enumeration/twips.md) \| null \| undefined | Gets the text spacing from the current text properties measured in twentieths of a point. |
+| [GetStrikeout](./Methods/GetStrikeout.md) | boolean \| null \| undefined | Gets the strikeout property from the current text properties. |
 | [GetTextFill](./Methods/GetTextFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Gets the text fill from the current text properties. |
-| [GetUnderline](./Methods/GetUnderline.md) | boolean | Gets the underline property from the current text properties. |
+| [GetUnderline](./Methods/GetUnderline.md) | boolean \| null \| undefined | Gets the underline property from the current text properties. |
 | [SetBold](./Methods/SetBold.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the bold property to the text character. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents. |
+| [SetColor](./Methods/SetColor.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text color to the current text run. |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line. |
 | [SetFill](./Methods/SetFill.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text color to the current text run. |
 | [SetFontFamily](./Methods/SetFontFamily.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets all 4 font slots with the specified font family. |
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the font size to the characters of the current text run. |
 | [SetItalic](./Methods/SetItalic.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the italic property to the text character. |
+| [SetLanguage](./Methods/SetLanguage.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run. |
 | [SetOutLine](./Methods/SetOutLine.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text outline to the current text run. |
 | [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that all the small letter characters in the text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text. |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text spacing measured in twentieths of a point. |

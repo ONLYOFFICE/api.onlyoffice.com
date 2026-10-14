@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.CompareDocuments(file);
+expression.CompareDocuments(file, comparisonPr);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -17,6 +17,7 @@ expression.CompareDocuments(file);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | file | 必需 | object |  | 第二个文档，由 builderJS.OpenTmpFile 返回。 |
+| comparisonPr | 可选 | [ComparisonPr](../../Enumeration/ComparisonPr.md) | \{\} | 文档比较属性。 |
 
 ## 返回值
 

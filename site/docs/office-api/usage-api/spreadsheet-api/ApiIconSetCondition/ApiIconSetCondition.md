@@ -22,8 +22,8 @@ The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | None | Deletes the current format condition. |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of cells to which the current conditional formatting rule applies. |
+| [Delete](./Methods/Delete.md) | None | Deletes the icon set conditional formatting rule. |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the range of cells to which the current conditional formatting rule applies. |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | Returns the date operator for time period conditions. |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the format condition. |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | Returns the font applied by the current format condition. |
@@ -41,11 +41,12 @@ The following table lists the available methods.
 | [GetReverseOrder](./Methods/GetReverseOrder.md) | boolean \| null | Returns whether the icon order in the icon set rule is reversed. |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | Returns the scope type of the conditional formatting rule. |
 | [GetShowIconOnly](./Methods/GetShowIconOnly.md) | boolean \| null | Returns whether only icons are displayed in the icon set rule (without cell values). |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | Returns whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. This rule type cannot stop the evaluation, so the value can be changed only by opening a file where it is set. |
 | [GetText](./Methods/GetText.md) | string | Returns the text value used in text-based conditional formatting rules. |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | Returns the text operator for text-based conditional formatting rules. |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the icon set conditional formatting rule. |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | Modifies the current format condition with the specified parameters. |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Sets the cell range to which the current conditional formatting rule applies. |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Modifies the cell range to which the current conditional formatting rule applies. |
 | [SetBorders](./Methods/SetBorders.md) | None | Sets the border style for the conditional formatting rule. |
 | [SetDateOperator](./Methods/SetDateOperator.md) | None | Sets the date operator for time period conditions. |
 | [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the format condition with the previously created color object. |
@@ -54,9 +55,10 @@ The following table lists the available methods.
 | [SetLastPriority](./Methods/SetLastPriority.md) | None | Sets the evaluation order for the current conditional formatting rule so it is evaluated after all other rules on the worksheet. |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Sets the number format applied to a cell when the conditional formatting rule evaluates to true. |
 | [SetPercentileValues](./Methods/SetPercentileValues.md) | boolean | Specifies whether the thresholds for the icon set conditional format are determined by using percentiles. |
-| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value of the conditional formatting rule. |
+| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value for the conditional formatting rule. |
 | [SetReverseOrder](./Methods/SetReverseOrder.md) | boolean | Specifies whether the icon order in the icon set rule is reversed. |
 | [SetScopeType](./Methods/SetScopeType.md) | None | Sets the scope type for the conditional formatting rule. |
 | [SetShowIconOnly](./Methods/SetShowIconOnly.md) | boolean | Specifies whether to display only icons in the icon set rule (without cell values). |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | None | Sets whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. |
 | [SetText](./Methods/SetText.md) | None | Sets the text value used in text-based conditional formatting rules. |
 | [SetTextOperator](./Methods/SetTextOperator.md) | None | Sets the text operator for text-based conditional formatting rules. |

@@ -1,0 +1,45 @@
+# SetDescription
+
+设置当前绘图对象的描述。
+
+继承自 [ApiDrawing.SetDescription](../../ApiDrawing/Methods/SetDescription.md)。
+
+## 语法
+
+```javascript
+expression.SetDescription(description);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| description | 必需 | string |  | 要为当前绘图对象设置的描述。 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+设置文档中绘图对象的描述。
+
+```javascript editor-docx
+// Useful for assigning the alternative text of a drawing.
+
+// Create a drawing and set its description.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.SetDescription("My Drawing Description");
+let description = drawing.GetDescription();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Drawing description: " + description);
+doc.AddElement(0, paragraph);
+```

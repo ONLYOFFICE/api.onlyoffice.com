@@ -19,9 +19,10 @@ The following table lists the available methods.
 | [GetCustomFunctions](./Methods/GetCustomFunctions.md) | string | Returns a library of local custom functions. |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | Returns the restrictions the editor currently applies to the document. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | Returns an array of the selected OLE objects. |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Returns the selected text from the document. |
@@ -41,6 +42,7 @@ The following table lists the available methods.
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | None | Removes the OLE object from the workbook by its internal ID. |
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | None | Enables or disables the modal plugin footer button by index. |
 | [SetCustomFunctions](./Methods/SetCustomFunctions.md) | None | Updates a library of local custom functions. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
@@ -64,4 +66,5 @@ The following table lists the available events.
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | The function called when the document is completely loaded. |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | The function called to turn the mouse or touchpad events on/off. |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | The function called when the floating action button has been clicked. |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | The function called when the target position in the editor is changed. |

@@ -14,7 +14,7 @@ expression.Copy(destination);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | Specifies the new range to which the specified range will be copied. If this argument is omitted, the range will be copied to the clipboard. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | Specifies the new range to which the specified range will be copied. If this argument is omitted, the range will be copied to the clipboard. |
 
 ## Returns
 

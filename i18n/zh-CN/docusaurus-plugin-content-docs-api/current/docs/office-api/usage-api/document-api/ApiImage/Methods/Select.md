@@ -16,7 +16,7 @@ expression.Select(isReplace);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isReplace | 可选 | boolean | true | 指定选择是否应替换当前选择（true）还是添加到当前选择（false）。 |
+| isReplace | 可选 | boolean | false | 指定选择是否应替换当前选择（true）还是添加到当前选择（false）。 |
 
 ## 返回值
 
@@ -27,7 +27,7 @@ boolean
 以编程方式在文档中选择一个或多个绘图对象。
 
 ```javascript editor-docx
-// How do I select a shape or group of shapes in a document?
+// Choose a single shape or build a multi-shape selection in a document.
 
 // Control which shapes are highlighted by combining replace and additive selection modes in a document.
 

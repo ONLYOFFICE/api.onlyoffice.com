@@ -14,6 +14,7 @@
 | Description | string | 返回或设置数据透视表描述。 |
 | DisplayFieldCaptions | boolean | 返回或设置指定是否显示行和列字段标题的设置。 |
 | GrandTotalName | string | 返回或设置在指定数据透视表报表的总计列或行标题中显示的文本字符串标签。 |
+| HasAutoFormat | boolean | 返回或设置指定是否在每次更新时自动设置数据透视表格式的设置。 |
 | HiddenFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示数据透视表中所有隐藏字段的数组。 |
 | LayoutBlankLine | boolean | 设置指定是否在数据透视表中每个项目后插入空白行的设置。 |
 | LayoutSubtotals | boolean | 设置指定是否在数据透视表中显示分类汇总的设置。 |
@@ -58,6 +59,7 @@
 | [GetDisplayFieldCaptions](./Methods/GetDisplayFieldCaptions.md) | boolean | 返回指定是否显示行和列字段标题的设置。 |
 | [GetDisplayFieldsInReportFilterArea](./Methods/GetDisplayFieldsInReportFilterArea.md) | [PivotTableFilterAreaInfo](../Enumeration/PivotTableFilterAreaInfo.md) | 返回报表筛选区域设置中的数据透视表显示字段。 |
 | [GetGrandTotalName](./Methods/GetGrandTotalName.md) | string | 返回在指定数据透视表报表的总计列或行标题中显示的文本字符串标签。 |
+| [GetHasAutoFormat](./Methods/GetHasAutoFormat.md) | boolean | 返回更新时是否自动设置数据透视表格式；在编辑器中，这会使列宽自动适应其内容。 |
 | [GetHiddenFields](./Methods/GetHiddenFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示数据透视表中所有隐藏字段的数组。 |
 | [GetName](./Methods/GetName.md) | string | 返回数据透视表名称。 |
 | [GetPageFields](./Methods/GetPageFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示单个数据透视表页字段或所有可见页字段集合的集合。 |
@@ -87,6 +89,7 @@
 | [SetDisplayFieldCaptions](./Methods/SetDisplayFieldCaptions.md) | 无 | 设置是否显示行和列的字段标题。 |
 | [SetDisplayFieldsInReportFilterArea](./Methods/SetDisplayFieldsInReportFilterArea.md) | 无 | 设置报表筛选区域设置中的数据透视表显示字段。 |
 | [SetGrandTotalName](./Methods/SetGrandTotalName.md) | 无 | 设置在指定数据透视表报表的总计列或行标题中显示的文本字符串标签。 |
+| [SetHasAutoFormat](./Methods/SetHasAutoFormat.md) | 无 | 设置更新时是否自动设置数据透视表格式；在编辑器中，这会使列宽自动适应其内容。 |
 | [SetLayoutBlankLine](./Methods/SetLayoutBlankLine.md) | 无 | 设置指定是否在每个项目后插入空白行的设置。 |
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | 无 | 设置指定是否显示分类汇总的设置。 |
 | [SetName](./Methods/SetName.md) | 无 | 设置数据透视表名称。 |
@@ -94,7 +97,7 @@
 | [SetRowAxisLayout](./Methods/SetRowAxisLayout.md) | 无 | 设置指定数据透视表项目的显示方式 - 表格格式或大纲格式。 |
 | [SetRowGrand](./Methods/SetRowGrand.md) | 无 | 为数据透视表行设置 **总计** 设置。 |
 | [SetSource](./Methods/SetSource.md) | 无 | 设置数据透视表的源区域。 |
-| [SetStyleName](./Methods/SetStyleName.md) | 无 | 设置数据透视表样式名称。 |
+| [SetStyleName](./Methods/SetStyleName.md) | 无 | 设置数据透视表样式名称。内置数据透视表样式名称：PivotStyleLight1-28、PivotStyleMedium1-28、PivotStyleDark1-28。 |
 | [SetSubtotalLocation](./Methods/SetSubtotalLocation.md) | 无 | 设置数据透视表中的布局分类汇总位置。 |
 | [SetTableStyleColumnHeaders](./Methods/SetTableStyleColumnHeaders.md) | 无 | 设置指定是否使用特殊格式突出显示数据透视表列标题的设置。 |
 | [SetTableStyleColumnStripes](./Methods/SetTableStyleColumnStripes.md) | 无 | 设置指定是否为数据透视表启用奇偶列背景颜色交替的设置。 |

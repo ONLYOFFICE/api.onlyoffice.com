@@ -2,6 +2,17 @@
 
 Class representing a slide show transition.
 
+## Properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| AdvanceOnClick | boolean | Returns or sets whether the slide advances on mouse click. |
+| AdvanceOnTime | boolean | Returns or sets whether the slide advances after a specified time. |
+| AdvanceTime | number \| undefined | Returns or sets the slide advance time in milliseconds. |
+| Duration | number | Returns or sets the transition duration in milliseconds. |
+| EntryEffect | [EntryEffect](../Enumeration/EntryEffect.md) | Returns or sets the entry effect for the slide show transition. |
+| Speed | [TransitionSpeed](../Enumeration/TransitionSpeed.md) | Returns or sets the transition speed. |
+
 ## Methods
 
 The following table lists the available methods.
@@ -14,10 +25,10 @@ The following table lists the available methods.
 | [GetClassType](./Methods/GetClassType.md) | "slideShowTransition" | Returns the type of the ApiSlideShowTransition class. |
 | [GetDuration](./Methods/GetDuration.md) | number | Returns the transition duration in milliseconds for the slide show transition. |
 | [GetEntryEffect](./Methods/GetEntryEffect.md) | [EntryEffect](../Enumeration/EntryEffect.md) | Returns the entry effect for the slide show transition. |
-| [GetSpeed](./Methods/GetSpeed.md) | [TransitionSpeed](../Enumeration/TransitionSpeed.md) | Returns the transition speed (similar to PowerPoint VBA Speed property). |
+| [GetSpeed](./Methods/GetSpeed.md) | [TransitionSpeed](../Enumeration/TransitionSpeed.md) | Returns the transition speed. |
 | [SetAdvanceOnClick](./Methods/SetAdvanceOnClick.md) | boolean | Sets whether the slide advances on mouse click. |
 | [SetAdvanceOnTime](./Methods/SetAdvanceOnTime.md) | boolean | Sets whether the slide advances after a specified time. |
 | [SetAdvanceTime](./Methods/SetAdvanceTime.md) | boolean | Sets the slide advance time in milliseconds. |
 | [SetDuration](./Methods/SetDuration.md) | boolean | Sets the transition duration in milliseconds for the slide show transition. |
 | [SetEntryEffect](./Methods/SetEntryEffect.md) | boolean | Sets the entry effect for the slide show transition. |
-| [SetSpeed](./Methods/SetSpeed.md) | boolean | Sets the transition speed (similar to PowerPoint VBA Speed property). |
+| [SetSpeed](./Methods/SetSpeed.md) | boolean | Sets the transition speed. |

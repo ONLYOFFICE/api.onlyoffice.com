@@ -18,4 +18,4 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../ApiColor/ApiColor.md)
+[ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined

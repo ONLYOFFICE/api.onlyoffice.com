@@ -4,6 +4,13 @@ Class representing a document checkbox / radio button.
 
 ApiCheckBoxForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
+## Properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| GroupValue | string | Returns or sets the choice name of the currently selected radio button in the group. |
+| Value | boolean | Returns or sets the current state of the checkbox form. |
+
 ## Methods
 
 The following table lists the available methods.
@@ -11,10 +18,10 @@ The following table lists the available methods.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
-| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) \| null \| undefined | Copies the current form (copies with the shape if it exists). |
 | [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) \| null \| undefined | Returns the background color of the current form. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) \| null \| undefined | Returns the border color of the current form. |
 | [GetChoiceName](./Methods/GetChoiceName.md) | string | Returns the choice name of the current radio button. |
 | [GetClassType](./Methods/GetClassType.md) | "checkBoxForm" | Returns a type of the ApiCheckBoxForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
@@ -23,7 +30,9 @@ The following table lists the available methods.
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
 | [GetLabel](./Methods/GetLabel.md) | string | Returns the label of the current check box. |
 | [GetLock](./Methods/GetLock.md) | boolean | Returns the lock state of the current form. |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | Returns the parent element (a paragraph or an inline content control) that directly contains the current form. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | Returns the position (index) of the current form within its parent element. |
 | [GetRadioGroup](./Methods/GetRadioGroup.md) | string | Returns the radio group key if the current checkbox is a radio button. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |
@@ -31,7 +40,7 @@ The following table lists the available methods.
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form. |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
 | [GetValue](./Methods/GetValue.md) | boolean | Returns the current state of the checkbox form as a boolean value. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) \| null \| undefined | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. |
 | [IsChecked](./Methods/IsChecked.md) | boolean | Returns the state of the current checkbox (checked or not). |
 | [IsFilled](./Methods/IsFilled.md) | boolean | Checks if the current form is filled. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |

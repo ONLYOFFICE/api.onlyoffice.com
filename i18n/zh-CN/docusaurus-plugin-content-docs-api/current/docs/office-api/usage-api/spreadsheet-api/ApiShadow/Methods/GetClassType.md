@@ -1,0 +1,38 @@
+# GetClassType
+
+返回 ApiShadow 类的类型。
+
+## 语法
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - 表示 [ApiShadow](../ApiShadow.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"shadow"
+
+## 示例
+
+获取电子表格中阴影对象的类类型。
+
+```javascript editor-xlsx
+// Confirm that an object created by Api.CreateShadow reports itself as a shadow.
+
+// Create a shadow, apply it to a shape, and print the shadow class type inside the shape.
+
+const worksheet = Api.GetActiveSheet();
+const fill = Api.CreateSolidFill(Api.RGB(255, 213, 191));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = worksheet.AddShape("rect", 120 * 36000, 60 * 36000, fill, stroke, 2, 0, 2, 0);
+const shadow = Api.CreateShadow({ color: Api.RGB(0, 0, 0), offsetX: 3, offsetY: 3 });
+shape.SetShadow(shadow);
+const classType = shadow.GetClassType();
+shape.GetContent().GetElement(0).AddText("Shadow class type: " + classType);
+```

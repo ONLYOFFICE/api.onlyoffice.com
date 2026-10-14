@@ -16,7 +16,7 @@ expression.GetMaster();
 
 ## 返回值
 
-[ApiMaster](../../ApiMaster/ApiMaster.md)
+[ApiMaster](../../ApiMaster/ApiMaster.md) \| null \| undefined
 
 ## 示例
 

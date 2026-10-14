@@ -1,10 +1,6 @@
 # Copy
 
-Creates a copy of the specified shape.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current shape.
 
 ## Syntax
 

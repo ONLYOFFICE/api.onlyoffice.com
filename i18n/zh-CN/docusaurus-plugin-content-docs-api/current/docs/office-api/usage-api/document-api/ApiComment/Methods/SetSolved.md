@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetSolved(bSolved);
+expression.SetSolved(solved);
 ```
 
 `expression` - 表示 [ApiComment](../ApiComment.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetSolved(bSolved);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bSolved | 必需 | boolean |  | 指定批注是否已解决。 |
+| solved | 必需 | boolean |  | 指定批注是否已解决。 |
 
 ## 返回值
 

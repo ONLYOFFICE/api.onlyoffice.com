@@ -18,7 +18,7 @@ expression.AddText(text);
 
 ## 返回值
 
-boolean
+[ApiRun](../../ApiRun/ApiRun.md) \| null \| undefined
 
 ## 示例
 

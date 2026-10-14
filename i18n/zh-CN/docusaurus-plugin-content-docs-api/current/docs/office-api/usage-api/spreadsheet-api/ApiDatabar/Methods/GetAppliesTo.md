@@ -2,8 +2,6 @@
 
 返回当前条件格式规则应用的单元格区域。
 
-继承自 [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md)。
-
 ## 语法
 
 ```javascript
@@ -18,7 +16,7 @@ expression.GetAppliesTo();
 
 ## 返回值
 
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+[ApiRange](../../ApiRange/ApiRange.md)
 
 ## 示例
 

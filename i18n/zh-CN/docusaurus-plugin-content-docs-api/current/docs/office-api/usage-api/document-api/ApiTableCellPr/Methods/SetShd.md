@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetShd(sType, r, g, b, isAuto);
+expression.SetShd(shd);
 ```
 
 `expression` - 表示 [ApiTableCellPr](../ApiTableCellPr.md) 类的变量。
@@ -14,11 +14,7 @@ expression.SetShd(sType, r, g, b, isAuto);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 将应用于当前表格单元格内容的底纹类型。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
-| isAuto | 可选 | boolean | false | true 值禁用表格单元格内容的底纹。 |
+| shd | 必需 | [ApiShd](../../ApiShd/ApiShd.md) |  | 使用 Api.CreateShd 方法创建的底纹。 |
 
 ## 返回值
 
@@ -41,7 +37,7 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetShd("clear", Api.HexColor('#FF6F3D'));
+tableCellPr.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

@@ -18,8 +18,8 @@ expression.CreateTable(rows, cols);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rows | Required | number |  | Number of rows. |
-| cols | Required | number |  | Number of columns. |
+| rows | Required | number |  | Number of rows. Must be a positive integer. |
+| cols | Required | number |  | Number of columns. Must be a positive integer. |
 
 ## Returns
 

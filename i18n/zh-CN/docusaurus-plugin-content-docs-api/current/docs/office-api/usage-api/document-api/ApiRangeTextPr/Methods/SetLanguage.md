@@ -7,16 +7,16 @@
 ## 语法
 
 ```javascript
-expression.SetLanguage(sLangId);
+expression.SetLanguage(langId);
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | 必需 | string |  | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
+| langId | 必需 | string \| null |  | 此参数的可能值为 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。传递 *null* 可移除语言。 |
 
 ## 返回值
 

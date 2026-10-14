@@ -32,5 +32,5 @@ expression.GetCells(row, col);
 
 let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();
-cells.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+cells.SetFillColor(Api.RGB(255, 213, 191));
 ```

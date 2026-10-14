@@ -11,7 +11,7 @@ Inherited from [ApiTextPr.SetVertAlign](../../ApiTextPr/Methods/SetVertAlign.md)
 ## Syntax
 
 ```javascript
-expression.SetVertAlign(sType);
+expression.SetVertAlign(type);
 ```
 
 `expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
@@ -20,7 +20,7 @@ expression.SetVertAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
+| type | Required | "baseline" \| "subscript" \| "superscript" \| null |  | The vertical alignment type applied to the text contents. Pass *null* to remove the vertical alignment. |
 
 ## Returns
 

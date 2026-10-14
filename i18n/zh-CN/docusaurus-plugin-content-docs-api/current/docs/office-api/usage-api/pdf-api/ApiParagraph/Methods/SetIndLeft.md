@@ -27,7 +27,7 @@ boolean
 在 PDF 中为段落添加左边距间距。
 
 ```javascript editor-pdf
-// How do I indent text from the left edge in a PDF?
+// Useful for indenting text from the left edge in a PDF.
 
 // Push paragraph content away from the left side in a PDF.
 
@@ -42,16 +42,16 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
-let paragraph = docContent.GetElement(0);
+const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the indent of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.SetIndLeft(2880);
 
-paragraph = Api.CreateParagraph();
-paragraph.AddText("This is a paragraph without any indent set to it. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-docContent.Push(paragraph);
+const paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("This is a paragraph without any indent set to it. ");
+paragraph2.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph2.AddText("These sentences are used to add lines for demonstrative purposes.");
+docContent.Push(paragraph2);
 page.AddObject(shape);
 ```

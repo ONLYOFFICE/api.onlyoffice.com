@@ -20,9 +20,11 @@ The following table lists the available methods.
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | Returns a value of the specified form. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document with specified tag. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
+| [GetOFormRole](./Methods/GetOFormRole.md) | string | Returns the current role name for the OForm document. |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | Returns the restrictions the editor currently applies to the document. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | Returns an array of the selected OLE objects. |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Returns the selected text from the document. |
@@ -31,9 +33,6 @@ The following table lists the available methods.
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
-| [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
-| [IsFillingFormMode](./Methods/IsFillingFormMode.md) | boolean | Checks if the document is in the filling form mode. |
-| [IsFillingOFormMode](./Methods/IsFillingOFormMode.md) | boolean | Checks if the document is in the filling OForm mode. |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
@@ -66,5 +65,6 @@ The following table lists the available events.
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | The function called when the document is completely loaded. |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | The function called to turn the mouse or touchpad events on/off. |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | The function called when the floating action button has been clicked. |
 | [onSubmitForm](./Events/onSubmitForm.md) | The function called when the user clicks the "Complete & Submit" button. |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | The function called when the target position in the editor is changed. |

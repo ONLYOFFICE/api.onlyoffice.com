@@ -18,7 +18,7 @@ expression.SetTextPr(oTextPr);
 
 ## Returns
 
-[ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md)
+[ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
 
 ## Example
 

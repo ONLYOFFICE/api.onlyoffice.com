@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 List all properties of an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I view all attributes assigned to an XML node in a presentation?
+// View all attributes assigned to an XML node in a presentation.
 
 // Retrieve the name-value pairs of an XML element in a presentation.
 

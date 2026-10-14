@@ -1,8 +1,6 @@
 # SetNumberFormat
 
-Sets the number format applied to a cell when the conditional formatting rule evaluates to true.
-
-Inherited from [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md).
+Sets the number format for the top 10 conditional formatting rule.
 
 ## Syntax
 
@@ -16,7 +14,7 @@ expression.SetNumberFormat(NumberFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | Required | string |  | The number format code (e.g., "General", "#,##0.00", etc.) |
+| NumberFormat | Required | string |  | The number format to apply. |
 
 ## Returns
 
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let formatBefore = condition1.GetNumberFormat();
 condition1.SetNumberFormat("$#,##0.00");

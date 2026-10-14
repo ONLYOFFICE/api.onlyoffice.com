@@ -25,7 +25,7 @@ boolean
 向 XML 节点写入新值以更新电子表格中的存储数据。
 
 ```javascript editor-xlsx
-// How do I change the value held by an XML node in a spreadsheet?
+// Change the value held by an XML node in a spreadsheet.
 
 // Replace an existing node's content with fresh data in a spreadsheet.
 

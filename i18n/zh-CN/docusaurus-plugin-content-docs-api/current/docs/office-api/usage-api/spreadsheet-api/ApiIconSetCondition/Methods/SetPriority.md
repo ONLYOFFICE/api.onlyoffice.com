@@ -2,8 +2,6 @@
 
 设置条件格式规则的优先级值。
 
-继承自 [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md)。
-
 ## 语法
 
 ```javascript

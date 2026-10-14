@@ -2,8 +2,6 @@
 
 Returns the priority value of the conditional formatting rule.
 
-Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
-
 ## Syntax
 
 ```javascript

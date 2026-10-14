@@ -20,9 +20,11 @@ Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的�
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | 返回指定表单的值。 |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | 返回已添加到文档中具有指定标签的所有表单的信息。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
+| [GetOFormRole](./Methods/GetOFormRole.md) | string | 返回 OForm 文档的当前角色名称。 |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | 返回编辑器当前对文档应用的限制。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | 返回所选 OLE 对象的数组。 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 返回文档中的所选文本。 |
@@ -31,9 +33,6 @@ Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的�
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
-| [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
-| [IsFillingFormMode](./Methods/IsFillingFormMode.md) | boolean | 检查文档是否处于表单填写模式。 |
-| [IsFillingOFormMode](./Methods/IsFillingOFormMode.md) | boolean | 检查文档是否处于 OForm 填写模式。 |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | 检查指定的表单是否已进行数字签名。 |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
@@ -66,5 +65,6 @@ Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的�
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | 当文档完全加载时调用的函数。 |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | 用于开启/关闭鼠标或触控板事件的函数。 |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | 当鼠标按钮在插件 iframe 外部释放时调用的函数。 |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | 单击浮动操作按钮时调用的函数。 |
 | [onSubmitForm](./Events/onSubmitForm.md) | 用户点击"完成并提交"按钮时调用的函数。 |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | 当编辑器中的目标位置发生更改时调用的函数。 |

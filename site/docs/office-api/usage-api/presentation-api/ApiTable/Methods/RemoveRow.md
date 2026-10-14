@@ -1,11 +1,11 @@
 # RemoveRow
 
-Removes a table row with the specified cell.
+Removes a table row with the specified cell. When the last row is removed, the whole table is deleted from the slide
 
 ## Syntax
 
 ```javascript
-expression.RemoveRow(oCell);
+expression.RemoveRow(cell);
 ```
 
 `expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
@@ -14,7 +14,7 @@ expression.RemoveRow(oCell);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The table cell from the row which will be removed. |
+| cell | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The table cell from the row which will be removed. |
 
 ## Returns
 

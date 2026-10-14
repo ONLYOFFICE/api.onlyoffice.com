@@ -18,36 +18,32 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiPage](../../ApiPage/ApiPage.md)
+[ApiPage](../../ApiPage/ApiPage.md) \| null \| undefined
 
 ## Example
 
-Identify the class type of a chart object in a PDF.
+Find the page that contains a shape in a PDF.
 
 ```javascript editor-pdf
-// How do I determine what kind of object a chart is in a PDF?
+// How do I get the page number of a shape I'm viewing in a PDF?
 
-// Retrieve and display the class type of a chart in a PDF.
+// Locate which page an object belongs to in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const chart = Api.CreateChart("bar3D", [
-	[200, 240, 280],
-	[250, 260, 280]
-], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-const classType = chart.GetClassType();
-chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
-chart.SetHorAxisTitle("Year", 11);
-chart.SetLegendPos("bottom");
-chart.SetShowDataLabels(false, false, true, false);
-chart.SetTitle("Financial Overview: Class Type = " + classType, 20);
-chart.SetSize(150 * 36000, 65 * 36000);
-chart.SetPosition(608400, 1267200);
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(150 * 36000, 65 * 36000);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
-chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-chart.SetSeriesFill(fill, 1, false);
-page.AddObject(chart);
+page.AddObject(shape);
+
+const parentPage = shape.GetParentPage();
+const sType = parentPage.GetClassType();
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("The index of the shape parent page = " + parentPage.GetIndex());
 ```

@@ -18,7 +18,7 @@ expression.GetItem(ind);
 
 ## 返回值
 
-[ApiRange](../../ApiRange/ApiRange.md)
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## 示例
 

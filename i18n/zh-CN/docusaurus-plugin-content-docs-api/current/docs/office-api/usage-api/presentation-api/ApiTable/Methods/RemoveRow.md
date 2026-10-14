@@ -1,11 +1,11 @@
 # RemoveRow
 
-删除包含指定单元格的表格行。
+删除包含指定单元格的表格行。删除最后一行时，整个表格将从幻灯片中删除
 
 ## 语法
 
 ```javascript
-expression.RemoveRow(oCell);
+expression.RemoveRow(cell);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,7 +14,7 @@ expression.RemoveRow(oCell);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将被删除的行中的表格单元格。 |
+| cell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将被删除的行中的表格单元格。 |
 
 ## 返回值
 

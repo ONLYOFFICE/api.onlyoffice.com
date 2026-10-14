@@ -27,7 +27,7 @@ boolean
 从电子表格中存储的 XML 节点移除命名属性。
 
 ```javascript editor-xlsx
-// How do I strip a specific attribute from a custom XML element in a spreadsheet?
+// Strip a specific attribute from a custom XML element in a spreadsheet.
 
 // Clean up XML metadata by dropping an attribute and confirming the change in a spreadsheet.
 

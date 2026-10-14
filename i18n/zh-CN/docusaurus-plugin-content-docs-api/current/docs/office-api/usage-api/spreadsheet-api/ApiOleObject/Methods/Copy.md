@@ -1,6 +1,6 @@
 # Copy
 
-创建指定 OLE 对象的副本。
+创建当前 OLE 对象的副本。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

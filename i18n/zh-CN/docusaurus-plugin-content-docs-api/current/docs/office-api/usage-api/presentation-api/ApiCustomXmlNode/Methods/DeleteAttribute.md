@@ -27,7 +27,7 @@ boolean
 从演示文稿中的 XML 节点移除属性。
 
 ```javascript editor-pptx
-// How do I remove an attribute from XML data in a presentation?
+// Drop an attribute from custom XML data in a presentation.
 
 // Delete a specific property from an XML element in a presentation.
 

@@ -2,8 +2,6 @@
 
 设置当前条件格式规则的计算顺序，使其在工作表上的所有其他规则之后计算。
 
-继承自 [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md)。
-
 ## 语法
 
 ```javascript
@@ -41,10 +39,10 @@ let dataRange = worksheet.GetRange("A2:A5");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "B");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let condition2 = formatConditions.AddUniqueValues();
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+condition2.SetFillColor(Api.RGB(0, 255, 0));
 
 let priorityBefore = condition2.GetPriority();
 condition2.SetLastPriority();

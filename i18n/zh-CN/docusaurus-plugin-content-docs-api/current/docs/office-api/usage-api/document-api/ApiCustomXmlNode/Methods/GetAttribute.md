@@ -27,7 +27,7 @@ string \| null
 从文档中的自定义 XML 节点读取特定属性的值。
 
 ```javascript editor-docx
-// How do I get a single attribute value from a custom XML node in a document?
+// Get a single attribute value from a custom XML node in a document.
 
 // Look up stored metadata on an XML element by fetching one of its named attributes in a document.
 

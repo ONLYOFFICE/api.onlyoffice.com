@@ -1,8 +1,6 @@
 # GetNumberFormat
 
-返回当条件格式规则计算结果为 true 时应用于单元格的数字格式。
-
-继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
+返回前 10 项条件格式规则的数字格式。
 
 ## 语法
 
@@ -42,7 +40,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let currentFormat = condition1.GetNumberFormat();
 

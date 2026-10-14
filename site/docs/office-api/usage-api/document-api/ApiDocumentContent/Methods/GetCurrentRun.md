@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRun](../../ApiRun/ApiRun.md)
+[ApiRun](../../ApiRun/ApiRun.md) \| null \| undefined
 
 ## Example
 
@@ -30,7 +30,7 @@ Retrieve the run at the current cursor position from a document content in a doc
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
-const rgb = Api.CreateRGBColor(100, 150, 200);
+const rgb = Api.RGB(100, 150, 200);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);

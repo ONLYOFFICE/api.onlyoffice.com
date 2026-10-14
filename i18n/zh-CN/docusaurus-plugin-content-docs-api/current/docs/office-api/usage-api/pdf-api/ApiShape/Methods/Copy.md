@@ -1,10 +1,6 @@
 # Copy
 
-创建指定形状的副本。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前形状的副本。
 
 ## 语法
 
@@ -27,20 +23,20 @@ expression.Copy();
 复制形状并将副本放在 PDF 的另一页上。
 
 ```javascript editor-pdf
-// How do I make a copy of a shape in a PDF?
+// Make a copy of a shape in a PDF.
 
 // Create an exact duplicate of a shape and add it to a new page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
 const copyShape = shape.Copy();
-const newPage = doc.AddPage(1);
+const newPage = doc.AddPage(0);
 newPage.AddObject(copyShape);
 ```

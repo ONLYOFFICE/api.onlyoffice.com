@@ -25,7 +25,7 @@ boolean
 Change the text content of specific XML nodes embedded in a document.
 
 ```javascript editor-docx
-// How do I update the plain text inside a node in the XML data stored in a document?
+// Update the plain text inside a node in the XML data stored in a document.
 
 // Correct or refresh the human-readable values in structured XML fields in a document.
 

@@ -14,11 +14,11 @@ expression.Paste(destination);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | 可选 | [ApiRange](../../ApiRange/ApiRange.md) |  | 应粘贴剪贴板内容的单元格区域。如果省略此参数，则使用当前选择。 |
+| destination | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | 应粘贴剪贴板内容的单元格区域。如果省略此参数，则使用当前选择。 |
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 

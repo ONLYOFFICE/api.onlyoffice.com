@@ -33,7 +33,7 @@ The following table lists the available methods.
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ContentControl](./Enumeration/ContentControl.md)[] | Returns information about all the content controls that have been added to the page. |
 | [GetAllForms](./Methods/GetAllForms.md) | [ContentControl](./Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document. |
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [OLEObjectData](./Enumeration/OLEObjectData.md)[] | Returns all OLE object data for objects which can be opened by the specified plugin. |
-| [GetCurrentAddinField](./Methods/GetCurrentAddinField.md) | [AddinFieldData](./Enumeration/AddinFieldData.md) | Returns the current addin field from the document. |
+| [GetCurrentAddinField](./Methods/GetCurrentAddinField.md) | [AddinFieldData](./Enumeration/AddinFieldData.md) \| null \| undefined | Returns the current addin field from the document. |
 | [GetCurrentBookmark](./Methods/GetCurrentBookmark.md) | string \| null | Returns the current bookmark. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | string | Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned). |
 | [GetCurrentContentControlPr](./Methods/GetCurrentContentControlPr.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md) | Returns the current content control properties. |
@@ -46,9 +46,11 @@ The following table lists the available methods.
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetFormValue](./Methods/GetFormValue.md) | null \| string \| boolean | Returns a value of the specified form. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ContentControl](./Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document with specified tag. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
+| [GetOFormRole](./Methods/GetOFormRole.md) | string | Returns the current role name for the OForm document. |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | Returns the restrictions the editor currently applies to the document. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | Returns an array of the selected OLE objects. |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Returns the selected text from the document. |
@@ -59,13 +61,11 @@ The following table lists the available methods.
 | [InsertAndReplaceContentControls](./Methods/InsertAndReplaceContentControls.md) | [ContentControlProperties](./Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. |
 | [InsertOleObject](./Methods/InsertOleObject.md) | None | Inserts the OLE object at the current document position. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
-| [IsEditingOFormMode](./Methods/IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
-| [IsFillingFormMode](./Methods/IsFillingFormMode.md) | boolean | Checks if the document is in the filling form mode. |
-| [IsFillingOFormMode](./Methods/IsFillingOFormMode.md) | boolean | Checks if the document is in the filling OForm mode. |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
 | [MoveCursorOutsideField](./Methods/MoveCursorOutsideField.md) | None | Moves the cursor outside a field to the position before or after it. |
+| [MoveCursorToAnnotationRange](./Methods/MoveCursorToAnnotationRange.md) | None | Moves the cursor to the beginning or end of the specified annotation range without selecting it. |
 | [MoveCursorToContentControl](./Methods/MoveCursorToContentControl.md) | None | Moves a cursor to the specified content control. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | None | Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape). |
 | [MoveCursorToField](./Methods/MoveCursorToField.md) | None | Moves the cursor to the beginning or end of a field. |
@@ -99,6 +99,7 @@ The following table lists the available methods.
 | [SelectAnnotationRange](./Methods/SelectAnnotationRange.md) | None | Selects text in a document using a given annotation. |
 | [SelectContentControl](./Methods/SelectContentControl.md) | None | Selects the specified content control. |
 | [SelectOleObject](./Methods/SelectOleObject.md) | None | Selects the specified OLE object. |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | None | Enables or disables the modal plugin footer button by index. |
 | [SetDisplayModeInReview](./Methods/SetDisplayModeInReview.md) | None | Sets the display mode for track changes. |
 | [SetEditingRestrictions](./Methods/SetEditingRestrictions.md) | None | Sets the document editing restrictions. |
 | [SetFormValue](./Methods/SetFormValue.md) | None | Sets a value to the specified form. |
@@ -106,6 +107,7 @@ The following table lists the available methods.
 | [SetParagraphHtml](./Methods/SetParagraphHtml.md) | None | Replaces all content of the specified paragraph with the content parsed from the given HTML string. |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
+| [SetRangeHtml](./Methods/SetRangeHtml.md) | None | Replaces a part of the specified paragraph with the content parsed from the given HTML string. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./Methods/ShowError.md) | None | Shows an error/warning message. |
 | [ShowInputHelper](./Methods/ShowInputHelper.md) | None | Shows the input helper. |
@@ -133,6 +135,7 @@ The following table lists the available events.
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | The function called when the document is completely loaded. |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | The function called to turn the mouse or touchpad events on/off. |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | The function called when the floating action button has been clicked. |
 | [onFocusAnnotation](./Events/onFocusAnnotation.md) | The function called when an annotation receives focus. |
 | [onFocusContentControl](./Events/onFocusContentControl.md) | The function called to show which content control has been focused. |
 | [onHideContentControlTrack](./Events/onHideContentControlTrack.md) | The function called when the content control loses focus in the document. |

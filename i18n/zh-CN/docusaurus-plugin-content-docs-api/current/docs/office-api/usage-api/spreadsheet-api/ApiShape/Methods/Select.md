@@ -27,7 +27,7 @@ expression.Select(isReplace);
 在电子表格的工作表上选择绘图对象。
 
 ```javascript editor-xlsx
-// How do I programmatically choose which drawings are selected in a spreadsheet?
+// Choose which drawings are selected in a spreadsheet.
 
 // Build a multi-shape selection by adding shapes one at a time or replacing the current selection in a spreadsheet.
 

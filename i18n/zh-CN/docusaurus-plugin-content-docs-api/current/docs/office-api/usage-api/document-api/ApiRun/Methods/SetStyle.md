@@ -1,11 +1,17 @@
 # SetStyle
 
-为当前文本块设置样式。
+文本样式基础方法。
+
+:::note
+此方法本身不单独使用，它仅构成 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法的基础，该方法将选定或创建的样式设置到文本。
+:::
+
+继承自 [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md)。
 
 ## 语法
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
 `expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
@@ -14,7 +20,7 @@ expression.SetStyle(oStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 必须应用于文本块的样式。 |
+| style | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | 必须应用于文本字符的样式、现有样式的名称，或传递 *undefined*/*null* 以移除样式。 |
 
 ## 返回值
 

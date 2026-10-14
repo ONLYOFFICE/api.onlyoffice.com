@@ -17,13 +17,13 @@ The following table lists the available methods.
 | [Copy](./Methods/Copy.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a paragraph copy. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current paragraph. |
 | [GetClassType](./Methods/GetClassType.md) | "paragraph" | Returns a type of the ApiParagraph class. |
-| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns a paragraph element using the position specified. |
+| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) \| null \| undefined | Returns a paragraph element using the position specified. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current paragraph. |
 | [GetFontNames](./Methods/GetFontNames.md) | string[] | Returns all font names from all elements inside the current paragraph. |
 | [GetIndFirstLine](./Methods/GetIndFirstLine.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph first line indentation. |
 | [GetIndLeft](./Methods/GetIndLeft.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph left side indentation. |
 | [GetIndRight](./Methods/GetIndRight.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph right side indentation. |
-| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current content paragraph. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current paragraph. |
 | [GetJc](./Methods/GetJc.md) | "left" \| "right" \| "both" \| "center" \| undefined | Returns the paragraph contents justification. |
 | [GetLastRunWithText](./Methods/GetLastRunWithText.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the last Run with text in the current paragraph. |
 | [GetNext](./Methods/GetNext.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Returns the next paragraph. |
@@ -36,8 +36,10 @@ The following table lists the available methods.
 | [GetSpacingLineValue](./Methods/GetSpacingLineValue.md) | [twips](../Enumeration/twips.md) \| [line240](../Enumeration/line240.md) \| undefined | Returns the paragraph line spacing value. |
 | [GetTabs](./Methods/GetTabs.md) | [TabStop](../Enumeration/TabStop.md)[] | Returns the custom tab stops of the current paragraph. |
 | [GetText](./Methods/GetText.md) | string | Returns the paragraph text. |
+| [GetTextRange](./Methods/GetTextRange.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md) \| null | Returns an ApiTextRange object that represents the part of the text contained in the current paragraph. The paragraph must be attached to the document before calling this method. |
 | [InsertParagraph](./Methods/InsertParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Inserts a paragraph at the specified position. |
-| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns the last element of the paragraph. |
+| [IsEmpty](./Methods/IsEmpty.md) | boolean | Returns true if the paragraph has no content elements (only the paragraph end mark). |
+| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) \| null \| undefined | Returns the last element of the paragraph. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves the cursor to the end of the paragraph. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves the cursor to the start of the paragraph. |
 | [Push](./Methods/Push.md) | boolean | Adds an element to the current paragraph. |
@@ -48,7 +50,7 @@ The following table lists the available methods.
 | [SetBullet](./Methods/SetBullet.md) | None | Sets the bullet or numbering to the current paragraph. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents. |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies that the contents of this paragraph are displayed with two horizontal lines through each character displayed on the line. |
-| [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets all 4 font slots with the specified font family. |
+| [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | Sets all 4 font slots with the specified font family. |
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the font size to the characters of the current paragraph. |
 | [SetHighlight](./Methods/SetHighlight.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies a highlighting color which is applied as a background to the contents of the current paragraph. |
 | [SetIndFirstLine](./Methods/SetIndFirstLine.md) | boolean | Sets the paragraph first line indentation. |
@@ -56,6 +58,7 @@ The following table lists the available methods.
 | [SetIndRight](./Methods/SetIndRight.md) | boolean | Sets the paragraph right side indentation. |
 | [SetItalic](./Methods/SetItalic.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the italic property to the text character. |
 | [SetJc](./Methods/SetJc.md) | boolean | Sets the paragraph contents justification. |
+| [SetLanguage](./Methods/SetLanguage.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Specifies the language which will be used to check spelling and grammar (if requested) when processing the contents of the current paragraph. |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | Sets the outline level for the specified properties. |
 | [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies that all the small letter characters in this paragraph are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text. |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the text spacing measured in twentieths of a point. |

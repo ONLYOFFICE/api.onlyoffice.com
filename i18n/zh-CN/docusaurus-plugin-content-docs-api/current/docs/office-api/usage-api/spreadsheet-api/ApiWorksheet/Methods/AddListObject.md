@@ -1,6 +1,6 @@
 # AddListObject
 
-向工作表添加格式化表格并返回 ApiListObject 对象。
+向工作表添加带格式的表格并返回 ApiListObject 对象。内置表格样式名称：TableStyleLight1-21、TableStyleMedium1-28、TableStyleDark1-11。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -23,7 +23,7 @@ expression.AddListObject(sSourceType, sSource, bLinkSource, sHasHeaders, sDestin
 | bLinkSource | 可选 | boolean | false | 不支持。 |
 | sHasHeaders | 可选 | [XlYesNoGuess](../../Enumeration/XlYesNoGuess.md) | "xlGuess" | 指定源范围是否有列标签。 |
 | sDestination | 可选 | string |  | 不支持。 |
-| sTableStyleName | 可选 | string | "TableStyleLight9" | 表格样式名称。 |
+| sTableStyleName | 可选 | string | "TableStyleLight9" | 内置表格样式的名称（例如，"TableStyleMedium9"），或工作簿中定义的自定义样式。 |
 
 ## 返回值
 

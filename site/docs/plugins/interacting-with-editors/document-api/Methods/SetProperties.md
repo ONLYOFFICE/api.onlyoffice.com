@@ -15,11 +15,11 @@ expression.SetProperties(obj);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | obj | Required | object |  | The document properties. |
-| obj.copyoutenabled | Required | boolean |  | Disables copying from the editor if it is set to **false**. |
-| obj.hideContentControlTrack | Required | boolean |  | Disables tracking the content control if it is set to **true**. |
-| obj.watermark_on_draw | Required | string |  | A string value for [watermark properties](../Enumeration/watermark_on_draw.md) in JSON format. |
-| obj.disableAutostartMacros | Required | boolean |  | Sets a flag that specifies that macros are started automatically when the editor opens. |
-| obj.fillForms | Required | string |  | Sets rules in JSON format for filling document [forms](../Enumeration/fillForms.md) by tags. |
+| obj.copyoutenabled | Required | boolean \| null \| undefined |  | Disables copying from the editor if it is set to **false**. |
+| obj.hideContentControlTrack | Required | boolean \| null \| undefined |  | Disables tracking the content control if it is set to **true**. |
+| obj.watermark_on_draw | Required | string \| null \| undefined |  | A string value for [watermark properties](../Enumeration/watermark_on_draw.md) in JSON format. |
+| obj.disableAutostartMacros | Required | boolean \| null \| undefined |  | Sets a flag that specifies that macros are started automatically when the editor opens. |
+| obj.fillForms | Required | string \| null \| undefined |  | Sets rules in JSON format for filling document [forms](../Enumeration/fillForms.md) by tags. |
 
 ## Returns
 

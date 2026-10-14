@@ -5,7 +5,7 @@ Pastes text in the HTML format into the document.
 ## Syntax
 
 ```javascript
-expression.PasteHtml(htmlText);
+expression.PasteHtml(htmlText, options);
 ```
 
 `expression` - A variable that represents an [Api](../form-api.md) class.
@@ -15,6 +15,8 @@ expression.PasteHtml(htmlText);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | htmlText | Required | string |  | A string value that specifies the text in the *HTML* format to be pasted into the document. |
+| options | Optional | Object |  | Additional paste options. |
+| options.MergeLast | Optional | boolean | false | Defines if the last pasted paragraph is merged into the paragraph it is pasted into instead of being inserted as a paragraph of its own. Use it to replace a part of a paragraph without breaking it in two. Word document editor only. |
 
 ## Returns
 

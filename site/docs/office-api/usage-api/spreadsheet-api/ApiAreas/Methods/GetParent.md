@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-number
+[ApiRange](../../ApiRange/ApiRange.md)
 
 ## Example
 

@@ -1,8 +1,6 @@
 # SetPriority
 
-Sets the priority value of the conditional formatting rule.
-
-Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
+Sets the priority value for the conditional formatting rule.
 
 ## Syntax
 

@@ -11,16 +11,16 @@
 ## 语法
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 必须应用于文本字符的样式。 |
+| style | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | 必须应用于文本字符的样式、现有样式的名称，或传递 *undefined*/*null* 以移除样式。 |
 
 ## 返回值
 

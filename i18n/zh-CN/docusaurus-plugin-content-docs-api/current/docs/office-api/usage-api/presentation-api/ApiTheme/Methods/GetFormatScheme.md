@@ -16,7 +16,7 @@ expression.GetFormatScheme();
 
 ## 返回值
 
-[ApiThemeFormatScheme](../../ApiThemeFormatScheme/ApiThemeFormatScheme.md)
+[ApiThemeFormatScheme](../../ApiThemeFormatScheme/ApiThemeFormatScheme.md) \| null \| undefined
 
 ## 示例
 

@@ -25,7 +25,7 @@ boolean
 在 PDF 中以一致的格式（如小时和分钟）显示时间。
 
 ```javascript editor-pdf
-// How do I show time input in a specific format in a PDF?
+// Useful for showing time input in a specific format in a PDF.
 
 // Configure time display patterns for a text field in a PDF.
 

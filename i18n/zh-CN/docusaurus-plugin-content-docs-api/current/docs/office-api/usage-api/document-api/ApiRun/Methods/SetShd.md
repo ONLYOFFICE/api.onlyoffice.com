@@ -2,10 +2,12 @@
 
 指定应用于当前文本块内容的底纹。
 
+继承自 [ApiTextPr.SetShd](../../ApiTextPr/Methods/SetShd.md)。
+
 ## 语法
 
 ```javascript
-expression.SetShd(type, color);
+expression.SetShd(shd);
 ```
 
 `expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
@@ -14,8 +16,7 @@ expression.SetShd(type, color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 应用于当前文本块内容的底纹类型。 |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 底纹颜色。 |
+| shd | 必需 | [ApiShd](../../ApiShd/ApiShd.md) |  | 使用 Api.CreateShd 方法创建的底纹。 |
 
 ## 返回值
 
@@ -36,7 +37,7 @@ let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetShd("clear", Api.HexColor('#FF6F3D'));
+run.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 run.AddText("This is a text run with the text shading set to orange.");
 paragraph.AddElement(run);
 ```

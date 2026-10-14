@@ -1,10 +1,6 @@
 # Copy
 
-复制当前图像。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前图像的副本。
 
 ## 语法
 
@@ -20,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiImage](../../ApiImage/ApiImage.md)
+[ApiImage](../../ApiImage/ApiImage.md) \| null
 
 ## 示例
 

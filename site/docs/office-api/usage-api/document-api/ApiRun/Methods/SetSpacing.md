@@ -2,10 +2,12 @@
 
 Sets the text spacing measured in twentieths of a point.
 
+Inherited from [ApiTextPr.SetSpacing](../../ApiTextPr/Methods/SetSpacing.md).
+
 ## Syntax
 
 ```javascript
-expression.SetSpacing(nSpacing);
+expression.SetSpacing(spacing);
 ```
 
 `expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
@@ -14,7 +16,7 @@ expression.SetSpacing(nSpacing);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSpacing | Required | [twips](../../Enumeration/twips.md) |  | The value of the text spacing measured in twentieths of a point (1/1440 of an inch). |
+| spacing | Required | [twips](../../Enumeration/twips.md) \| null |  | The value of the text spacing measured in twentieths of a point (1/1440 of an inch). Pass *null* to remove the text spacing. |
 
 ## Returns
 

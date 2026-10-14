@@ -1,6 +1,8 @@
 # SetUnderline
 
-Specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+Specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+
+Inherited from [ApiTextPr.SetUnderline](../../ApiTextPr/Methods/SetUnderline.md).
 
 ## Syntax
 

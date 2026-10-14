@@ -2,6 +2,13 @@
 
 表示文档中连续区域的类。每个 Range 对象由起始字符和结束字符的位置确定。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| End | number | 返回或设置当前范围的结束位置。 |
+| Start | number | 返回或设置当前范围的起始位置。 |
+
 ## 方法
 
 下表列出了可用的方法。
@@ -9,9 +16,9 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddBookmark](./Methods/AddBookmark.md) | boolean | 向指定范围添加书签。 |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向当前范围添加批注。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 向当前范围添加批注。 |
 | [AddField](./Methods/AddField.md) | boolean | 通过域指令代码向指定范围添加域。 |
-| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) | 向指定范围添加超链接。 |
+| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null \| undefined | 向指定范围添加超链接。 |
 | [AddText](./Methods/AddText.md) | boolean | 在指定位置添加文本。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除当前范围中的所有内容。 |
 | [ExpandTo](./Methods/ExpandTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回一个新范围，该范围在任意方向上超出指定范围并跨越不同的范围。 |
@@ -37,6 +44,7 @@
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 为当前文本范围的字符设置字体大小。 |
 | [SetHighlight](./Methods/SetHighlight.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 指定作为背景应用于当前范围内容的突出显示颜色。 |
 | [SetItalic](./Methods/SetItalic.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 为文本字符设置斜体属性。 |
+| [SetLanguage](./Methods/SetLanguage.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 指定处理当前范围内容时用于检查拼写和语法（如果请求）的语言。 |
 | [SetPosition](./Methods/SetPosition.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 指定当前范围的文本相对于周围非定位文本的默认基线升高或降低的量。 |
 | [SetShd](./Methods/SetShd.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 指定应用于当前文本范围内容的底纹。 |
 | [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 指定当前文本范围中的所有小写字母字符仅格式化显示为其对应的大写字母字符，这些大写字母比为此文本指定的实际字体大小小两磅。 |

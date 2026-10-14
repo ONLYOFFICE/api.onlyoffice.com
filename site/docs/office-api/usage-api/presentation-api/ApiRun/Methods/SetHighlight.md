@@ -1,6 +1,8 @@
 # SetHighlight
 
-Specifies a highlighting color which is applied as a background to the contents of the current run.
+Specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.
+
+Inherited from [ApiTextPr.SetHighlight](../../ApiTextPr/Methods/SetHighlight.md).
 
 ## Syntax
 

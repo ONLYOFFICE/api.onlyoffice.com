@@ -1,8 +1,6 @@
 # ModifyAppliesToRange
 
-设置当前条件格式规则应用的单元格区域。
-
-继承自 [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md)。
+修改当前条件格式规则所应用的单元格范围。
 
 ## 语法
 

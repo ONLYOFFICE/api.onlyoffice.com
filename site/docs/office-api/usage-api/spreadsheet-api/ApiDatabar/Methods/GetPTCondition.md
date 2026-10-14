@@ -2,8 +2,6 @@
 
 Returns the pivot table condition object.
 
-Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md).
-
 ## Syntax
 
 ```javascript

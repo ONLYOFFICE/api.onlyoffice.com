@@ -23,7 +23,7 @@ number
 计算文档中存储的自定义 XML 部件数量。
 
 ```javascript editor-docx
-// How do I find the total number of custom XML parts in a document?
+// Find the total number of custom XML parts in a document.
 
 // Verify that all expected XML data blocks were added by checking the part count in a document.
 

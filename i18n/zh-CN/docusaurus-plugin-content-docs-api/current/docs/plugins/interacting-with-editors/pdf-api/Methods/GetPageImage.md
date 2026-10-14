@@ -20,7 +20,8 @@ expression.GetPageImage(nPage, oParams);
 | oParams.annotations | 可选 | boolean | false | 指定是否渲染批注。 |
 | oParams.fields | 可选 | boolean | false | 指定是否渲染字段。 |
 | oParams.drawings | 可选 | boolean | false | 指定是否渲染图形。 |
+| oParams.withInfo | 可选 | boolean | false | 返回包含图像和页面大小的对象，而不是单纯的数据 URL。 |
 
 ## 返回值
 
-canvas
+string \| Object

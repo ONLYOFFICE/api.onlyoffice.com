@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-Remove an XML element from a presentation's custom structure in a presentation.
+Remove an XML element from a custom XML structure in a presentation.
 
 ```javascript editor-pptx
-// How do I delete a specific XML node?
+// Delete a specific XML node in a presentation.
 
 // Remove selected XML nodes and verify the remaining content in a presentation.
 

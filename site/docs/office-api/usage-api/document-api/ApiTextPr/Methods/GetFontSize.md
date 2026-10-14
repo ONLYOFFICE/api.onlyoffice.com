@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[hps](../../Enumeration/hps.md)
+[hps](../../Enumeration/hps.md) \| null \| undefined
 
 ## Example
 

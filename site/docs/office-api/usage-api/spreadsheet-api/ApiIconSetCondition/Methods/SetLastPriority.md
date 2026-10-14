@@ -2,8 +2,6 @@
 
 Sets the evaluation order for the current conditional formatting rule so it is evaluated after all other rules on the worksheet.
 
-Inherited from [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md).
-
 ## Syntax
 
 ```javascript

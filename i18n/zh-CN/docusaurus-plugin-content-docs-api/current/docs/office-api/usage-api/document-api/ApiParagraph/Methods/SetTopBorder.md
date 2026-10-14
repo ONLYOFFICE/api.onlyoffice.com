@@ -11,7 +11,7 @@
 ## 语法
 
 ```javascript
-expression.SetTopBorder(sType, nSize, nSpace, r, g, b);
+expression.SetTopBorder(type, size, space, color);
 ```
 
 `expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
@@ -20,12 +20,10 @@ expression.SetTopBorder(sType, nSize, nSpace, r, g, b);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
-| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前顶部边框的宽度，以磅的八分之一为单位。 |
-| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落上方间距偏移量，以磅为单位。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+| type | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
+| size | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前顶部边框的宽度，以磅的八分之一为单位。 |
+| space | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落上方间距偏移量，以磅为单位。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
 
 ## 返回值
 
@@ -43,5 +41,5 @@ boolean
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the first paragraph. We will add a thick orange border above it.");
-paragraph.SetTopBorder("single", 24, 0, 255, 111, 61);
+paragraph.SetTopBorder("single", 24, 0, Api.Color(255, 111, 61));
 ```

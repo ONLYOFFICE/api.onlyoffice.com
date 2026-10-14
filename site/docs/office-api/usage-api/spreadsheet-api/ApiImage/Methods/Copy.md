@@ -1,6 +1,6 @@
 # Copy
 
-Creates a copy of the specified image.
+Creates a copy of the current image.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.

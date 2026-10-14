@@ -28,7 +28,7 @@ boolean
 向电子表格中的 XML 元素附加带有值的命名属性。
 
 ```javascript editor-xlsx
-// How do I add an attribute to an XML node in a spreadsheet?
+// Add an attribute to an XML node in a spreadsheet.
 
 // Annotate an XML element with descriptive metadata fields in a spreadsheet.
 

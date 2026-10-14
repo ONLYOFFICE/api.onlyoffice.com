@@ -2,6 +2,10 @@
 
 为按钮控件字段设置图像。
 
+:::note
+不适用于 "textOnly" 布局。
+:::
+
 ## 语法
 
 ```javascript
@@ -14,7 +18,7 @@ expression.SetImage(imageUrl, appearance);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | 可选 | string | "" | 图像 URL。 |
+| imageUrl | 可选 | string | "" | 要为按钮控件设置的图像 URL（目前仅支持互联网 URL 或 Base64 编码的图像） |
 | appearance | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | 外观状态。 |
 
 ## 返回值

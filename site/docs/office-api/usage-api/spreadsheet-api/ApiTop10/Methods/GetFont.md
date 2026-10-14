@@ -1,8 +1,6 @@
 # GetFont
 
-Returns the font applied by the current format condition.
-
-Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
+Returns the font formatting for the top 10 conditional formatting rule.
 
 ## Syntax
 
@@ -18,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+[ApiFont](../../ApiFont/ApiFont.md)
 
 ## Example
 
@@ -42,11 +40,11 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let font = condition1.GetFont();
 font.SetBold(true);
-font.SetColor(Api.CreateColorFromRGB(255, 0, 0));
+font.SetColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Font formatting applied");
 worksheet.GetRange("C2").SetValue("Top 2 values have bold red text");

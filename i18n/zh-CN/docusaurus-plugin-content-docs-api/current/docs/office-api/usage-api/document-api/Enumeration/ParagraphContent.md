@@ -13,6 +13,7 @@
 - [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 - [ApiFormBase](../ApiFormBase/ApiFormBase.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## 示例
 

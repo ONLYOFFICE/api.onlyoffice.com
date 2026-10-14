@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetVertAlign(sType);
+expression.SetVertAlign(type);
 ```
 
 `expression` - 表示 [ApiTextPr](../ApiTextPr.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetVertAlign(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | "baseline" \| "subscript" \| "superscript" |  | 应用于文本内容的垂直对齐类型。 |
+| type | 必需 | "baseline" \| "subscript" \| "superscript" \| null |  | 应用于文本内容的垂直对齐类型。传递 *null* 可移除垂直对齐。 |
 
 ## 返回值
 

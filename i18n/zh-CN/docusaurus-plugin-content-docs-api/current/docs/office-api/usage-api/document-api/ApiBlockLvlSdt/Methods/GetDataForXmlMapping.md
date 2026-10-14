@@ -23,7 +23,7 @@ string
 读取文档中内容控件的文本，与其在导出的 XML 中显示的完全一样。
 
 ```javascript editor-docx
-// How do I get the text from a content control in the form used for XML export in a document?
+// Get the text from a content control in the form used for XML export in a document.
 
 // Extract the plain text value of a content control for use in XML mapping in a document.
 

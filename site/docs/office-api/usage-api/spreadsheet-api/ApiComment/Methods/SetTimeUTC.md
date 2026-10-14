@@ -5,7 +5,7 @@ Sets the timestamp of the comment creation in UTC format.
 ## Syntax
 
 ```javascript
-expression.SetTimeUTC(nTimeStamp);
+expression.SetTimeUTC(timeStamp);
 ```
 
 `expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
@@ -14,7 +14,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nTimeStamp | Required | Number \| String |  | The timestamp of the comment creation in UTC format. |
+| timeStamp | Required | Number \| String |  | The timestamp of the comment creation in UTC format. |
 
 ## Returns
 

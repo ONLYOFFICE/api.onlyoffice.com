@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-ApiDocumentVisitor
+[ApiDocumentVisitor](../../ApiDocumentVisitor/ApiDocumentVisitor.md)
 
 ## Example
 

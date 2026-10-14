@@ -14,7 +14,7 @@ expression.SetDuration(duration);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| duration | 必需 | number |  | 持续时间（以毫秒为单位）。 |
+| duration | 必需 | number |  | 持续时间（以毫秒为单位）。最短持续时间为 10 毫秒，较小的值将设置为 10 毫秒。 |
 
 ## 返回值
 
@@ -35,7 +35,7 @@ const slide = presentation.GetSlideByIndex(0);
 const shape = Api.CreateShape(
 	'rect',
 	150 * 36000, 100 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107)),
+	Api.CreateSolidFill(Api.RGB(61, 74, 107)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 shape.SetPosition(100 * 36000, 80 * 36000);
@@ -52,7 +52,7 @@ const duration = effect.GetDuration();
 const infoShape = Api.CreateShape(
 	'rect',
 	150 * 36000, 40 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(200, 200, 200)),
+	Api.CreateSolidFill(Api.RGB(200, 200, 200)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 infoShape.SetPosition(20 * 36000, 10 * 36000);

@@ -16,4 +16,4 @@ expression.GetAllComments();
 
 ## 返回值
 
-comment[]
+[comment](../Enumeration/comment.md)[]

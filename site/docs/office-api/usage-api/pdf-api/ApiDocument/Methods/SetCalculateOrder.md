@@ -1,0 +1,55 @@
+# SetCalculateOrder
+
+Sets document calculate fields order
+
+## Syntax
+
+```javascript
+expression.SetCalculateOrder(names);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| names | Required | string[] |  | order of fields names |
+
+## Returns
+
+boolean
+
+## Example
+
+This example sets the calculation order of fields in the document.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+
+let priceField = Api.CreateTextField([10, 10, 160, 30]);
+priceField.SetPartialName("Price");
+priceField.SetValue("100");
+page.AddObject(priceField);
+
+let taxField = Api.CreateTextField([10, 40, 160, 60]);
+taxField.SetPartialName("Tax");
+page.AddObject(taxField);
+
+let totalField = Api.CreateTextField([10, 70, 160, 90]);
+totalField.SetPartialName("Total");
+page.AddObject(totalField);
+
+let taxCalc = Api.CreateJsAction("event.value = this.getField('Price').value * 0.2;");
+let taxWidgets = taxField.GetAllWidgets();
+taxWidgets[0].GetActions().SetCalculate(taxCalc);
+
+let totalCalc = Api.CreateJsAction("event.value = this.getField('Price').value + this.getField('Tax').value;");
+let totalWidgets = totalField.GetAllWidgets();
+totalWidgets[0].GetActions().SetCalculate(totalCalc);
+
+let result = doc.SetCalculateOrder(["Total", "Tax"]);
+console.log('Calculate order set: ' + result);
+console.log('Current order: ' + doc.GetCalculateOrder());
+```

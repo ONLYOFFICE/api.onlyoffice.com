@@ -10,12 +10,13 @@ The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a copy of the specified shape. |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a copy of the current shape. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object from the parent. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns the type of the ApiShape class. |
-| [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the shape inner contents where a paragraph or text runs can be inserted. |
-| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Deprecated in 6.2. Returns the shape inner contents where a paragraph or text runs can be inserted. |
+| [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Returns the shape inner contents where a paragraph or text runs can be inserted. |
+| [GetDescription](./Methods/GetDescription.md) | string \| null | Gets the description of the current drawing. |
+| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Deprecated in 6.2. Returns the shape inner contents where a paragraph or text runs can be inserted. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Gets the fill properties from the current shape. |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | Get horizontal flip of current drawing. |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | Get vertical flip of current drawing. |
@@ -24,6 +25,7 @@ The following table lists the available methods.
 | [GetHyperlink](./Methods/GetHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | Returns the hyperlink from the current drawing object (shape or image). |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current drawing object. |
 | [GetLine](./Methods/GetLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) \| null | Gets the outline properties from the current shape. |
+| [GetLockAspect](./Methods/GetLockAspect.md) | boolean | Returns whether the aspect ratio of the drawing is locked. |
 | [GetLockValue](./Methods/GetLockValue.md) | boolean | Returns the lock value for the specified lock type of the current drawing. |
 | [GetName](./Methods/GetName.md) | string | Returns the name of the current drawing. |
 | [GetParent](./Methods/GetParent.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| [ApiLayout](../ApiLayout/ApiLayout.md) \| [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Returns the drawing parent object. |
@@ -34,15 +36,25 @@ The following table lists the available methods.
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | Gets the x position of the drawing on the slide. |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | Gets the y position of the drawing on the slide. |
 | [GetRotation](./Methods/GetRotation.md) | number | Returns the rotation angle of the current drawing object. |
+| [GetShadow](./Methods/GetShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) \| null | Returns the shadow of the current graphic object. |
+| [GetTextFit](./Methods/GetTextFit.md) | [TextFitType](../Enumeration/TextFitType.md) | Returns the text autofit type of the current shape. |
+| [GetTextRange](./Methods/GetTextRange.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md) \| null | Returns an ApiTextRange covering the full text content of the shape. Creates a text body if the shape does not yet have one. |
+| [GetTitle](./Methods/GetTitle.md) | string \| null | Gets the title of the current drawing. |
+| [GetVerticalTextAlign](./Methods/GetVerticalTextAlign.md) | [VerticalTextAlign](../Enumeration/VerticalTextAlign.md) | Gets the vertical alignment from the shape content where a paragraph or text runs can be inserted. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the text of the current drawing, including the drawings nested in a group. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the width of the current drawing. |
+| [HasTextContent](./Methods/HasTextContent.md) | boolean | Checks whether the drawing has an associated text body. |
+| [RecalculateAutoFit](./Methods/RecalculateAutoFit.md) | boolean | Recalculates the text autofit of the current shape according to its text autofit type. The "autoFit" type resizes the shape to fit the text, the "normAutoFit" type reduces the font size and line spacing to fit the text into the shape. The recalculation is performed after the script is executed. \<note\>This method is not supported in the document builder and works only in the editor.\</note\> |
 | [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | Replaces the placeholder by a drawing on the slide. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
+| [SetDescription](./Methods/SetDescription.md) | boolean | Sets the description of the current drawing. |
 | [SetFill](./Methods/SetFill.md) | boolean | Sets the fill properties to the current shape. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
 | [SetGeometry](./Methods/SetGeometry.md) | boolean | Sets a custom geometry for the current shape. |
 | [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Sets a hyperlink to the current drawing object (shape or image). |
 | [SetLine](./Methods/SetLine.md) | boolean | Sets the outline properties to the current shape. |
+| [SetLockAspect](./Methods/SetLockAspect.md) | boolean | Sets whether the aspect ratio of the drawing is locked. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
 | [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
@@ -52,7 +64,10 @@ The following table lists the available methods.
 | [SetPosY](./Methods/SetPosY.md) | boolean | Sets the y position of the drawing on the slide. |
 | [SetPosition](./Methods/SetPosition.md) | None | Sets the position of the drawing on the slide. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
-| [SetSize](./Methods/SetSize.md) | None | Sets the size of the object (image, shape, chart) bounding box. |
-| [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | None | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |
+| [SetShadow](./Methods/SetShadow.md) | boolean | Sets the shadow to the current graphic object. |
+| [SetSize](./Methods/SetSize.md) | boolean | Sets the size of the object (image, shape, chart) bounding box. |
+| [SetTextFit](./Methods/SetTextFit.md) | boolean | Sets the text autofit type to the current shape. |
+| [SetTitle](./Methods/SetTitle.md) | boolean | Sets the title of the current drawing. |
+| [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | boolean | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDrawing object into the JSON object. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current graphic object from the selection. |

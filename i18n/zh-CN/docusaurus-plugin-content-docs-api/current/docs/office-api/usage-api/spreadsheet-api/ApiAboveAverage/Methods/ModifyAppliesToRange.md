@@ -1,8 +1,6 @@
 # ModifyAppliesToRange
 
-设置当前条件格式规则应用的单元格区域。
-
-继承自 [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md)。
+修改当前条件格式规则所应用的单元格范围。
 
 ## 语法
 
@@ -46,7 +44,7 @@ worksheet.GetRange("B4").SetValue(75);
 let originalRange = worksheet.GetRange("A2:A4");
 let formatConditions = originalRange.GetFormatConditions();
 let aboveAverageCondition = formatConditions.AddAboveAverage();
-aboveAverageCondition.GetFont().SetColor(Api.CreateColorFromRGB(0, 255, 0));
+aboveAverageCondition.GetFont().SetColor(Api.RGB(0, 255, 0));
 
 worksheet.GetRange("D1").SetValue("Before: A2:A4");
 let newRange = worksheet.GetRange("A2:B4");

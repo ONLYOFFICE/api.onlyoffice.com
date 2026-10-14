@@ -7,7 +7,7 @@ Inherited from [ApiTableCellPr.SetShd](../../ApiTableCellPr/Methods/SetShd.md).
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b, isAuto);
+expression.SetShd(shd);
 ```
 
 `expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
@@ -16,11 +16,7 @@ expression.SetShd(sType, r, g, b, isAuto);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type which will be applied to the contents of the current table cell. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| isAuto | Optional | boolean | false | The true value disables the table cell contents shading. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -43,7 +39,7 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let cell = table.GetRow(0).GetCell(0);
-cell.SetShd("clear", Api.HexColor('#FF6F3D'));
+cell.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

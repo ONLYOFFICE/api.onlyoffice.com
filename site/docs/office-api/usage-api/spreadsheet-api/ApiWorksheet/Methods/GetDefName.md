@@ -14,7 +14,7 @@ expression.GetDefName(defName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| defName | Required | string |  | The worksheet name. |
+| defName | Required | string |  | The defined name. |
 
 ## Returns
 
