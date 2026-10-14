@@ -100,60 +100,37 @@ Class selectors in plain *.css* files are not scoped, so they can unintentionall
 
 Both *.module.css* and *.css* files are extracted and bundled into a single *plugin.css* file in the *dist* folder, next to *plugin.js*. This file is minified together with the rest of the build.
 
-## custom.d.ts
+## Type declarations for imports
 
-TypeScript does not know how to handle *.css* imports by default. The [custom.d.ts](plugin-structure.md#customdts) file in the plugin template declares the module type for them:
+A plain *.css* import such as `import "./styles/card.css"` needs no type declaration — it has no binding to type, so TypeScript does not check whether the module even exists.
+
+A CSS Modules import does have a binding (`import styles from "./button.module.css"`), so TypeScript does need a type for `styles`. Rather than writing that declaration by hand, add a single reference to Vite's own ambient types in *src/vite-env.d.ts*:
 
 ``` ts
-declare module "*.css" {
-  const classes: { readonly [key: string]: string };
-  export default classes;
-}
+/// <reference types="vite/client" />
 ```
 
-This declaration already ships with the plugin template. However, *custom.d.ts* is located in the plugin root folder, so make sure it is listed in the *tsconfig.json* file *include* array, otherwise TypeScript will not apply it and *.css* imports will fail to compile:
-
-``` json
-"include": ["./src/**/*", "./custom.d.ts"]
-```
+This one line is enough for both *.css* and *.module.css* imports — see [vite-env.d.ts](plugin-structure.md#vite-envdts) for details. It replaces the *custom.d.ts* file that shipped with the SDK 2.x, webpack-based template; that file is not part of the SDK 3.0.0 template and is no longer needed.
 
 ## Importing other file types
 
-The template's *webpack.config.js* only includes loaders for *.ts* and *.css* files. To import other file types (for example, images) directly in your source files, you need to:
+Vite handles imports of other file types (for example, images) out of the box, without any build configuration. TypeScript still needs the same *src/vite-env.d.ts* reference described above to type the import:
 
-1. Add a matching rule to *webpack.config.js*. Use the *asset/inline* type: it embeds the file as a base64 data URI directly inside *plugin.js*, so it is always included in the final archive:
+``` ts
+import icon from "./images/icon.svg";
 
-   ``` js
-   {
-     test: /\.svg$/i,
-     type: "asset/inline",
-   },
-   ```
+const demoBox: IBox = {
+  children: [{
+    component: Components.img,
+    props: {
+      src: icon,
+      alt: "Sample icon",
+    },
+  }],
+};
+```
 
-2. Add a matching module declaration to *custom.d.ts*, for example:
-
-   ``` ts
-   declare module "*.svg" {
-     const src: string;
-     export default src;
-   }
-   ```
-
-3. Reference the imported binding somewhere in your code, for example by passing it to an [Image](coding-plugin/interfaces/components/IImage.md) component's *src* prop:
-
-   ``` ts
-   import icon from "./images/icon.svg";
-
-   const demoBox: IBox = {
-     children: [{
-       component: Components.img,
-       props: {
-         src: icon,
-         alt: "Sample icon",
-       },
-     }],
-   };
-   ```
+Imported assets are inlined as base64 data URIs directly inside *plugin.js*, so they are always included in the final archive — this held true even for a 170 KB test image, well past Vite's usual inlining threshold for regular (non-library) builds. There is no need to place them in the [assets](plugin-structure.md#assets) folder, which is reserved for the plugin's logo and other icons referenced from *config.json* and item properties.
 
 This produces the following result:
 

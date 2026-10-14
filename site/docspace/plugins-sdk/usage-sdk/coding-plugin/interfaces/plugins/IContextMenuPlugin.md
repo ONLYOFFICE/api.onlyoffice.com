@@ -9,7 +9,7 @@ The plugin that is embedded in the context menu of files, folders, rooms, images
 ## Example
 
 The plugin class implements `IContextMenuPlugin` and registers a "Share Document"
-item in the constructor. DocSpace calls `getContextMenuItems` to embed the items
+item in the constructor. ONLYOFFICE Apps calls `getContextMenuItems` to embed the items
 into the context menu.
 
 ```typescript
@@ -127,16 +127,12 @@ Update an existing context menu item.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `contextMenuItems` | `Map`\<`string`, [`IContextMenuItem`](../items/IContextMenuItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ContextMenuItem objects. A list for embedding into the context menu is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

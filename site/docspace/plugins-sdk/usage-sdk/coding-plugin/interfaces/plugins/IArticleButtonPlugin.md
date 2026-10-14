@@ -10,7 +10,7 @@ Maximum 5 items can be displayed across all plugins.
 
 ## Example
 
-The plugin class implements `IArticleButtonPlugin`. DocSpace calls
+The plugin class implements `IArticleButtonPlugin`. ONLYOFFICE Apps calls
 `getArticleButtonItems` to embed the buttons into the article sidebar.
 
 ```typescript
@@ -91,16 +91,12 @@ Update an existing article button item in the plugin's collection.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `articleButtonItems` | `Map`\<`string`, [`IArticleButtonItem`](../items/IArticleButtonItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ArticleButtonItem objects. A list for article button items is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

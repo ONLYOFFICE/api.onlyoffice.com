@@ -9,8 +9,8 @@ The plugin that can add items to the main button menu.
 ## Example
 
 The plugin class implements `IMainButtonPlugin` and registers an "Export to PDF"
-action in the constructor. DocSpace calls `getMainButtonItems` to embed the items
-into the **More** section of the main button menu inside a room.
+action in the constructor. ONLYOFFICE Apps calls `getMainButtonItems` to embed the items
+into the **More** submenu of the main button menu.
 
 ```typescript
 import {
@@ -109,16 +109,12 @@ Update an existing main button menu item.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `mainButtonItems` | `Map`\<`string`, [`IMainButtonItem`](../items/IMainButtonItem.md)\> | Stores a collection of elements where the keys are the key parameters from the MainButtonItem objects. A list of main button menu items is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

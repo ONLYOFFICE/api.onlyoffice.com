@@ -9,7 +9,7 @@ The plugin that can interact with the file list.
 ## Example
 
 The plugin class implements `IFilePlugin` and registers a handler for the ".drawio"
-extension in the constructor. DocSpace calls `getFileItems` to hook the plugin into
+extension in the constructor. ONLYOFFICE Apps calls `getFileItems` to hook the plugin into
 the file list: files with the registered extension get the custom icon, and clicking
 them triggers the item's `onClick`.
 
@@ -111,16 +111,12 @@ Update an existing file interaction item.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `fileItems` | `Map`\<`string`, [`IFileItem`](../items/IFileItem.md)\> | Stores a collection of elements where the keys are the key parameters from the FileItem objects. A list for hooking interactions with files is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

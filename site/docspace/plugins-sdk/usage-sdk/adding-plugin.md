@@ -61,7 +61,7 @@ To upload your own plugins to the DocSpace portal:
 5. Choose the plugin archive and click **Open**.
 
    :::note
-   The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10.
+   The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does.
    :::
 
    ![Plugin archive](/assets/images/docspace/plugin-archive.png#gh-light-mode-only)![Plugin archive](/assets/images/docspace/plugin-archive.dark.png#gh-dark-mode-only)

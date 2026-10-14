@@ -4,7 +4,7 @@ custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/s
 
 # Rooms
 
-Enumerations for DocSpace room types and search scopes.
+Enumerations for ONLYOFFICE Apps room types and search scopes.
 
 ## RoomSearchArea
 

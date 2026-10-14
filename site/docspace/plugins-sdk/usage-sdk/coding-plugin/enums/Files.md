@@ -18,7 +18,7 @@ Defines the supported file types.
 room: "room";
 ```
 
-DocSpace room or workspace
+ONLYOFFICE Apps room or workspace
 
 #### file
 
@@ -26,7 +26,7 @@ DocSpace room or workspace
 file: "file";
 ```
 
-Generic file type
+A file — whether an image or a video counts as one depends on the scope, see the item's `fileType`/`filesType`
 
 #### folder
 

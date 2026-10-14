@@ -33,11 +33,9 @@ const link: ILink = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
@@ -49,7 +47,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `enableUserSelect?` | `boolean` | Enables user selection | - |
 | `type?` | [`LinkType`](#linktype) | Link type (page or action) | - |
 | `target?` | [`LinkTarget`](#linktarget) | Target attribute for link | - |
-| `textDecoration?` | \| `"none"` \| `"underline"` \| `"line-through"` \| `"overline"` \| `"underline dotted"` \| `"underline dashed"` | Text decoration style | - |
+| `textDecoration?` | \| `"none"` \| `"line-through"` \| `"overline"` \| `"underline"` \| `"underline dotted"` \| `"underline dashed"` | Text decoration style | - |
 | `onClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | Click handler (for action type links) | - |
 | `text` | `string` | Defines the text | [`IText`](IText.md).[`text`](IText.md#text) |
 | `title?` | `string` | Defines the text title | [`IText`](IText.md).[`title`](IText.md#title?) |
@@ -66,9 +64,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `color?` | `string` | Defines the text color | [`IText`](IText.md).[`color`](IText.md#color?) |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. | [`IText`](IText.md).[`className`](IText.md#className?) |
 
-```mdx-code-block
 </APITable>
-```
 
 ## LinkType
 

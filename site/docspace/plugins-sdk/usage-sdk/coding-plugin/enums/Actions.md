@@ -64,15 +64,15 @@ const message: IMessage = {
 updateStatus: "update-status";
 ```
 
-Calls a function to update the plugin status.
+Makes the portal re-read the plugin status through
+[`getStatus`](../interfaces/plugins/IPlugin.md#getstatus) and apply it.
 
 #### Example
 
 ```typescript
+// the plugin has just set its own status to PluginStatus.hide
 const message: IMessage = {
-  newProps: {...acceptButton, isDisabled: true},
-  actions: [Actions.showToast, Actions.updateProps, Actions.updateStatus],
-  toastProps,
+  actions: [Actions.updateStatus],
 }
 ```
 
@@ -172,6 +172,40 @@ const message: IMessage = {
 }
 ```
 
+### updateArticleNavigationItems
+
+```ts
+updateArticleNavigationItems: "update-article-navigation-items";
+```
+
+Calls a function to update all the article navigation items.
+The sidebar is refreshed, so a new "label" or "icon" set through
+"IArticleNavigationPlugin.updateArticleNavigationItem" becomes visible.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleNavigationItems],
+}
+```
+
+### updateArticleButtonItems
+
+```ts
+updateArticleButtonItems: "update-article-button-items";
+```
+
+Calls a function to update all the article button items.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleButtonItems],
+}
+```
+
 ### showToast
 
 ```ts
@@ -239,6 +273,7 @@ It does not work if the [`createDialogProps`](../interfaces/components/ICreateDi
 const message: IMessage = {
   actions: [Actions.updateCreateDialogModal],
   createDialogProps: {
+    ...newDiagramDialog,
     title: "some title value",
   },
 };
@@ -465,7 +500,8 @@ navigate: "navigate";
 ```
 
 Calls a function to navigate to the specified path.
-All actions listed after navigate will be called after the navigation is complete.
+The portal starts the navigation and goes straight on to the actions listed
+after it, without waiting for the new page.
 It does not work if the [`navigatePath`](../interfaces/utils.md#imessage) parameter is not passed to the message.
 
 #### Example
@@ -509,7 +545,7 @@ The viewer configuration is passed in the [`mediaViewerProps`](../interfaces/com
 ```typescript
 const message: IMessage = {
   actions: [Actions.showMediaViewer],
-  mediaViewerProps: { ...mediaViewerProps },
+  mediaViewerProps: { ...mediaViewerProps, fileId: file.id },
 }
 ```
 
@@ -520,14 +556,15 @@ updateMediaViewer: "update-media-viewer";
 ```
 
 Calls a function to update the plugin media viewer.
-The new configuration is passed in the [`mediaViewerProps`](../interfaces/components/IMediaViewer.md) parameter.
+The new configuration is passed in the [`mediaViewerProps`](../interfaces/components/IMediaViewer.md) parameter
+and replaces the current one, so pass all fields again. A different `fileId` opens that file.
 
 #### Example
 
 ```typescript
 const message: IMessage = {
   actions: [Actions.updateMediaViewer],
-  mediaViewerProps: { ...mediaViewerProps },
+  mediaViewerProps: { ...mediaViewerProps, fileId: nextId },
 }
 ```
 

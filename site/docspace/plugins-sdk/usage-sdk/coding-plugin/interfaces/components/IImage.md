@@ -46,11 +46,9 @@ const documentPreview: IImage = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -63,6 +61,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `style?` | \{ \[`key`: `string`\]: `string`; \} | Defines the image style |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```

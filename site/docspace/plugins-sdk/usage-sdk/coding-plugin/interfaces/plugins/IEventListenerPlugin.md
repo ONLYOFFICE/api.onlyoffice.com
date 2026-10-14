@@ -9,7 +9,7 @@ The plugin that is given the access to the portal events.
 ## Example
 
 The plugin class implements `IEventListenerPlugin` and registers a listener for
-the room creation event in the constructor. DocSpace calls `getEventListenerItems`
+the room creation event in the constructor. ONLYOFFICE Apps calls `getEventListenerItems`
 to subscribe the handlers to the portal events.
 
 ```typescript
@@ -86,16 +86,12 @@ A Map containing all registered event listener items, where keys are item identi
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `eventListenerItems` | `Map`\<`string`, [`IEventListenerItem`](../items/IEventListenerItem.md)\> | Stores a collection of elements where the keys are the key parameters from the EventListenerItem objects. A list of event listeners is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

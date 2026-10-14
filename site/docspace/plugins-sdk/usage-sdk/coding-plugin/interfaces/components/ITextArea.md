@@ -81,11 +81,9 @@ const commentBox: ITextArea = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -108,6 +106,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `copyInfoText?` | `boolean` | Specifies whether the toast / information text will be displayed when copying. |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```

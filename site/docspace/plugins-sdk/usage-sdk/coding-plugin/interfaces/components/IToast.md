@@ -60,11 +60,9 @@ const infoToast: IToast = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -73,9 +71,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `withCross?` | `boolean` | Specifies whether the "Close" button will be displayed in the toast to close it (true). Otherwise, the toast will disappear after clicking on any toast area (false). |
 | `timeout?` | `number` | Defines the time (in milliseconds) for showing the toast. Setting the value to 0 allows the toast to be displayed continuously until clicking on it. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## ToastType
 
