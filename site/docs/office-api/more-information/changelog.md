@@ -15,6 +15,7 @@ The list of changes for Office JavaScript API.
 
 ### Changed methods
 
+- Updated the [ApiDocument/Search](../usage-api/document-api/ApiDocument/Methods/Search.md), [ApiParagraph/Search](../usage-api/document-api/ApiParagraph/Methods/Search.md), [ApiTable/Search](../usage-api/document-api/ApiTable/Methods/Search.md), [ApiTableRow/Search](../usage-api/document-api/ApiTableRow/Methods/Search.md), [ApiTableCell/Search](../usage-api/document-api/ApiTableCell/Methods/Search.md), and [ApiBlockLvlSdt/Search](../usage-api/document-api/ApiBlockLvlSdt/Methods/Search.md) methods in Document API - added regular expression (`RegExp` in `sText`) support. When a `RegExp` is passed, `isMatchCase` is ignored; use the `i` flag instead.
 - Updated the [ApiRange/Find](../usage-api/spreadsheet-api/ApiRange/Methods/Find.md) and [ApiRange/Replace](../usage-api/spreadsheet-api/ApiRange/Methods/Replace.md) methods in Spreadsheet API - added wildcard (`Wildcards`) and regular expression (`RegExp` in `What`) support.
 - Updated the [Api/Intersect](../usage-api/spreadsheet-api/Api/Methods/Intersect.md) method in Spreadsheet API - it now accepts from 2 to 30 ranges.
 - Updated the [ApiRange/SetValue](../usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md) method in Spreadsheet API - it now returns `false` if the value was not set; a formula set to a multi-cell range now shifts relative references from the top-left cell.
