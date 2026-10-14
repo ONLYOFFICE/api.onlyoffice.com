@@ -33,6 +33,9 @@ The following table lists the available methods.
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
+| [IsEditingPdfForm](./Methods/IsEditingPdfForm.md) | boolean | Checks if the document is in the editing PDF form mode. |
+| [IsFillingForm](./Methods/IsFillingForm.md) | boolean | Checks if the document is in the filling form mode. |
+| [IsFillingPdfForm](./Methods/IsFillingPdfForm.md) | boolean | Checks if the document is in the filling PDF form mode. |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |

@@ -33,6 +33,9 @@ Form API 列出了插件在 ONLYOFFICE 文档中处理表单时可以使用的�
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
+| [IsEditingPdfForm](./Methods/IsEditingPdfForm.md) | boolean | 检查文档是否处于 PDF 表单编辑模式。 |
+| [IsFillingForm](./Methods/IsFillingForm.md) | boolean | 检查文档是否处于表单填写模式。 |
+| [IsFillingPdfForm](./Methods/IsFillingPdfForm.md) | boolean | 检查文档是否处于 PDF 表单填写模式。 |
 | [IsFormSigned](./Methods/IsFormSigned.md) | boolean | 检查指定的表单是否已进行数字签名。 |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
