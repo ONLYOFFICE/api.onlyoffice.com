@@ -93,7 +93,7 @@ const data = {
 
 除了[上述问题](#which-methods-can-be-used-when-working-with-the-document-history-events)中描述的操作外，您还需要：
 
-- 解析来自**文档编辑服务**收到的 `status` 为 **2**的响应的 `changesurl` 参数：
+- 解析来自**文档编辑服务**收到的 `status` 为 **2** 的响应的 `changesurl` 参数：
 
   ``` ts
   const data = {
