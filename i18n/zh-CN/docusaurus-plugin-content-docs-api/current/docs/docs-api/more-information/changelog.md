@@ -9,6 +9,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 在商业版本中，[管理面板](../get-started/configuration/server-config/server-config.md#admin-panel)现默认随服务器自动启动。社区版不包含管理面板。
 - 第一个管理员现通过主机命令行工具 `documentserver-admin`（`create-admin`、`reset-admin-password`）创建，不再通过网页使用日志中的引导代码创建。管理员登录名固定为 `admin`。
 - 新增 [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) 部分及其 `disabled` 参数，用于关闭编辑器中的 AI 功能。
+- 移除了已弃用的 `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges` 和 `editorConfig.customization.trackChanges` 参数。请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数中的对应字段。
 
 ## 版本 9.4
 
@@ -193,7 +194,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 将 [filetype](../usage-api/callback-handler.md#filetype) 参数添加到 *回调处理程序*。
 - 在转换响应中添加了 [fileType](../additional-api/conversion-api/response.md#fileType) 字段。
 - 添加了到 [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) 格式的转换。
-- [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) 参数已弃用，请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数。
+- `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges`、`editorConfig.customization.trackChanges` 参数已弃用，请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数。
 - 添加了 [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了 [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了查看电子表格文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
@@ -204,7 +205,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 增加了打开 [oxps](../usage-api/config/config.md#documenttype) 格式的功能。
 - 增加了对 [WOPI 协议](../using-wopi/overview.md) 的支持。
 - 添加了 [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) 部分。
-- 将 *simple* 值添加到 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 参数中。
+- 将 *simple* 值添加到 `editorConfig.customization.reviewDisplay` 参数中。
 - 添加了保存在电子表格文件中的 [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) 线程评论。
 - 添加了 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 字段。
 - 添加了查看演示文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
@@ -232,7 +233,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 6.2
 
 - 添加了一个新的 [actions.type](../usage-api/callback-handler.md#actions) 字段值 (*actions.type = 2*)。
-- 添加了 [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) 字段。
+- 添加了 `editorConfig.customization.trackChanges` 字段。
 - 添加了 [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) 字段。
 - 根据 [forcesavetype](../usage-api/callback-handler.md) 选择 *status* **6** 的 *callbackUrl*。
 - 增加了打开 [fb2](../usage-api/config/config.md#documenttype) 格式的功能。
@@ -297,7 +298,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 5.3
 
 - 添加了 [转换](../additional-api/conversion-api/conversion-tables.md) 到 OOXML（dotx、 xltx、potx）和 ODF（ott、ots、otp）模板的功能。
-- 添加了 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 字段。
+- 添加了 `editorConfig.customization.reviewDisplay` 字段。
 - `editorConfig.customization.commentAuthorOnly` 字段现在也用于限制评论删除。
 - 添加了 [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) 字段。
 - 添加了 [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) 字段。
@@ -355,7 +356,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 从插件连接模式中删除了 `editorConfig.plugins.url` 方法。
 - 添加了 `editorConfig.customization.commentAuthorOnly` 方法。
 - 添加了 [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 方法。
-- 添加了 [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) 方法。
+- 添加了 `editorConfig.customization.showReviewChanges` 方法。
 - 强制保存文件时，在回调处理程序请求中添加了 [forcesavetype](../usage-api/callback-handler.md#forcesavetype) 方法。
 - 为文档转换服务的添加了 [JSON 格式响应](../additional-api/conversion-api/response.md)。
 

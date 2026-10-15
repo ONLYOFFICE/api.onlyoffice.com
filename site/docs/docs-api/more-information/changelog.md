@@ -9,6 +9,7 @@ The list of changes of ONLYOFFICE Docs API.
 - In the commercial editions, the [Admin Panel](../get-started/configuration/server-config/server-config.md#admin-panel) now starts automatically with the server by default. Community Edition does not include the Admin Panel.
 - The first administrator is now created with the `documentserver-admin` host CLI (`create-admin`, `reset-admin-password`) instead of on a web page with a bootstrap code from the logs. The administrator login is always `admin`.
 - Added the [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) section with the `disabled` parameter to turn off the AI features in the editors.
+- Removed the deprecated `editorConfig.customization.reviewDisplay`, `editorConfig.customization.showReviewChanges`, and `editorConfig.customization.trackChanges` parameters. Use the corresponding fields of the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
 
 ## Version 9.4
 
@@ -193,7 +194,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [filetype](../usage-api/callback-handler.md#filetype) parameter to the *Callback handler*.
 - Added the [fileType](../additional-api/conversion-api/response.md#fileType) field to the conversion response.
 - Added conversion to [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) formats.
-- The [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
+- The `editorConfig.customization.reviewDisplay`, `editorConfig.customization.showReviewChanges`, `editorConfig.customization.trackChanges` parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
@@ -204,7 +205,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added opening for [oxps](../usage-api/config/config.md#documenttype) format.
 - Added support for [WOPI protocol](../using-wopi/overview.md).
 - Added the [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) section.
-- Added the *simple* value to the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) parameter.
+- Added the *simple* value to the `editorConfig.customization.reviewDisplay` parameter.
 - Added the [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
 - Added the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) for the presentation files.
@@ -232,7 +233,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 6.2
 
 - Added a new [actions.type](../usage-api/callback-handler.md#actions) field value (*actions.type = 2*).
-- Added the [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) field.
+- Added the `editorConfig.customization.trackChanges` field.
 - Added the [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) field.
 - The *callbackUrl* for *status* **6** is selected based on [forcesavetype](../usage-api/callback-handler.md).
 - Added opening for [fb2](../usage-api/config/config.md#documenttype) format.
@@ -297,7 +298,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.3
 
 - Added [conversion](../additional-api/conversion-api/conversion-tables.md) to the OOXML (dotx, xltx, potx) and ODF (ott, ots, otp) templates.
-- Added the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) field.
+- Added the `editorConfig.customization.reviewDisplay` field.
 - The `editorConfig.customization.commentAuthorOnly` field is now used to restrict comment deletion as well.
 - Added the [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) field.
 - Added the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) field.
@@ -355,7 +356,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Removed the `editorConfig.plugins.url` field from the plugin connection pattern.
 - Added the `editorConfig.customization.commentAuthorOnly` field.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
-- Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.
+- Added the `editorConfig.customization.showReviewChanges` field.
 - Added the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) field in the callback handler request when force saving the file.
 - Added the [JSON format for response](../additional-api/conversion-api/response.md) from document conversion service.
 
