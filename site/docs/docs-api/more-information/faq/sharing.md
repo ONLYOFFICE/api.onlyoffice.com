@@ -212,8 +212,8 @@ Further information about the permissions can be found [at this page](../../usag
 
 Most permission parameters are independent and are only enabled when their value is set to **true** and disabled when the value is set to **false**. There are, though, several combinations, when the permission will be either enabled or disabled notwithstanding the corresponding parameter value:
 
-- Form filling permission is enabled (even if the *fillForm* parameter is set to **false**) when either the *edit* or *review* parameter is set to **true**.
-- Form filling permission is disabled (even if the *fillForm* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *comment* is set to **true**.
+- Form filling permission is enabled (even if the *fillForms* parameter is set to **false**) when either the *edit* or *review* parameter is set to **true**.
+- Form filling permission is disabled (even if the *fillForms* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *comment* is set to **true**.
 - Commenting permission is disabled (even if the *comment* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *fillForms* is set to **true**.
 
 You should bear this in mind when you set the necessary permissions and combine different permissions for the same document.
