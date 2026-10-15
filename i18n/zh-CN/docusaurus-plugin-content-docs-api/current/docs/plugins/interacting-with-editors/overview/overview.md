@@ -23,8 +23,10 @@ sidebar_position: -2
 
 为了使插件正常运行，开发者必须为 `Asc.plugin` 对象指定两个必要事件：[init](asc-plugin.md#init) 和 [button](asc-plugin.md#button)。之后：
 
-- [callCommand](how-to-call-commands.md#callcommand) 用于在一次调用中执行多个 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令。
-- [executeMethod](how-to-call-methods.md#executemethod) 用于运行单个编辑器方法（如 `AddComment`、`GetSelectedText`）。
+- [Editor.RunMacro](how-to-call-commands.md#editorrunmacro) 用于在一次调用中执行多个 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令。
+- [Editor](how-to-call-methods.md#editor-object) 对象用于运行单个编辑器方法（如 `await Editor.AddComment(...)`、`await Editor.GetSelectedText(...)`）。
+
+两者都返回 Promise。在 10.0 之前版本的编辑器中，请改用 [callCommand](how-to-call-commands.md#callcommand) 和 [executeMethod](how-to-call-methods.md#executemethod)。
 
 如果插件涉及 OLE 对象的操作，使用 [callCommand](how-to-call-commands.md#callcommand) 进行处理。
 

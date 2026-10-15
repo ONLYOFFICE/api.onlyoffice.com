@@ -8,8 +8,8 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 ## 版本 10.0 {#version-100}
 
-- 为插件 API 添加了全局 `Editor` 对象。现在可以像调用普通函数一样调用编辑器方法，并返回 Promise，例如 `await Editor.GetSelectedText()`，无需再通过 `window.Asc.plugin.executeMethod` 调用。仍支持将回调函数作为最后一个参数传入。
-- 添加了 `Editor.RunMacro` 方法，该方法使用编辑器 API 运行函数，向其传递参数，并以 Promise 的形式返回结果。
+- 为插件 API 添加了全局 [Editor](../interacting-with-editors/overview/how-to-call-methods.md#editor-object) 对象。现在可以像调用普通函数一样调用编辑器方法，并返回 Promise，例如 `await Editor.GetSelectedText()`，无需再通过 `window.Asc.plugin.executeMethod` 调用。仍支持将回调函数作为最后一个参数传入。
+- 添加了 [Editor.RunMacro](../interacting-with-editors/overview/how-to-call-commands.md#editorrunmacro) 方法，该方法使用编辑器 API 运行函数，向其传递参数，并以 Promise 的形式返回结果。
 - 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsFillingForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsFillingForm.md)的 `IsFillingFormMode` 方法重命名为 `IsFillingForm`。旧名称仍然可用。
 - 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsFillingPdfForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsFillingPdfForm.md)的 `IsFillingOFormMode` 方法重命名为 `IsFillingPdfForm`。旧名称仍然可用。
 - 将[文本文档 API](../interacting-with-editors/document-api/Methods/IsEditingPdfForm.md)和[表单 API](../interacting-with-editors/form-api/Methods/IsEditingPdfForm.md)的 `IsEditingOFormMode` 方法重命名为 `IsEditingPdfForm`。旧名称仍然可用。

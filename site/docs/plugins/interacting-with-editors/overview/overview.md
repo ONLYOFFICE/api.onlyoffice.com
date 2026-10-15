@@ -23,8 +23,10 @@ Starting from version 7.1, the access to the *window* and *document* objects and
 
 For the plugin to work the developer must specify two obligatory events for the `Asc.plugin` object: [init](asc-plugin.md#init) and [button](asc-plugin.md#button). After that:
 
-- [callCommand](how-to-call-commands.md#callcommand) is used to execute multiple [Office JavaScript API](../../../office-api/get-started/overview.md) commands in a single call.
-- [executeMethod](how-to-call-methods.md#executemethod) is used to run a single editor method (e.g. `AddComment`, `GetSelectedText`).
+- [Editor.RunMacro](how-to-call-commands.md#editorrunmacro) is used to execute multiple [Office JavaScript API](../../../office-api/get-started/overview.md) commands in a single call.
+- The [Editor](how-to-call-methods.md#editor-object) object is used to run a single editor method (e.g. `await Editor.AddComment(...)`, `await Editor.GetSelectedText(...)`).
+
+Both return a Promise. In editors before version 10.0, use [callCommand](how-to-call-commands.md#callcommand) and [executeMethod](how-to-call-methods.md#executemethod) instead.
 
 If the plugin operates with an OLE object, [callCommand](how-to-call-commands.md#callcommand) is used to manage it.
 

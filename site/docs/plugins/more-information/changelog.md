@@ -8,8 +8,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 10.0
 
-- Added the global `Editor` object to the plugins API. Editor methods are now called as functions that return a Promise, for example, `await Editor.GetSelectedText()`, instead of through `window.Asc.plugin.executeMethod`. A callback passed as the last argument is still supported.
-- Added the `Editor.RunMacro` method, which runs a function with the editor API, passes arguments to it, and returns its result as a Promise.
+- Added the global [Editor](../interacting-with-editors/overview/how-to-call-methods.md#editor-object) object to the plugins API. Editor methods are now called as functions that return a Promise, for example, `await Editor.GetSelectedText()`, instead of through `window.Asc.plugin.executeMethod`. A callback passed as the last argument is still supported.
+- Added the [Editor.RunMacro](../interacting-with-editors/overview/how-to-call-commands.md#editorrunmacro) method, which runs a function with the editor API, passes arguments to it, and returns its result as a Promise.
 - Renamed the `IsFillingFormMode` method to `IsFillingForm` for [Document API](../interacting-with-editors/document-api/Methods/IsFillingForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsFillingForm.md). The old name still works.
 - Renamed the `IsFillingOFormMode` method to `IsFillingPdfForm` for [Document API](../interacting-with-editors/document-api/Methods/IsFillingPdfForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsFillingPdfForm.md). The old name still works.
 - Renamed the `IsEditingOFormMode` method to `IsEditingPdfForm` for [Document API](../interacting-with-editors/document-api/Methods/IsEditingPdfForm.md) and [Form API](../interacting-with-editors/form-api/Methods/IsEditingPdfForm.md). The old name still works.
