@@ -14,13 +14,16 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         review: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -32,13 +35,16 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         review: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -50,7 +56,9 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
@@ -58,6 +66,7 @@ sidebar_position: -10
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -77,13 +86,16 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         comment: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -95,13 +107,16 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -113,7 +128,9 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
@@ -121,6 +138,7 @@ sidebar_position: -10
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -132,13 +150,16 @@ sidebar_position: -10
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         comment: false,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -156,7 +177,9 @@ sidebar_position: -10
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       edit: false,
       review: false,
@@ -165,6 +188,7 @@ const config = {
     },
   },
   editorConfig: {
+    // ...
     mode: "edit",
   },
 };
@@ -192,13 +216,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       edit: true,
       comment: true,
     },
   },
   editorConfig: {
+    // ...
     mode: "edit",
   },
 };
@@ -236,7 +263,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       edit: false,
@@ -260,7 +289,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       download: false,
     },
@@ -280,7 +311,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       print: false,
     },
@@ -310,7 +343,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       sharingSettings: [
         {
@@ -338,7 +373,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       comment: true,
       editCommentsAuthorOnly: true,

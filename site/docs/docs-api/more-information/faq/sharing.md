@@ -14,13 +14,16 @@ There are three main variants how the document can be opened with the track chan
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         review: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -32,13 +35,16 @@ There are three main variants how the document can be opened with the track chan
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         review: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -50,7 +56,9 @@ There are three main variants how the document can be opened with the track chan
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
@@ -58,6 +66,7 @@ There are three main variants how the document can be opened with the track chan
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -77,13 +86,16 @@ There are the following main variants how the document can be opened with the co
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         comment: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -95,13 +107,16 @@ There are the following main variants how the document can be opened with the co
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -113,7 +128,9 @@ There are the following main variants how the document can be opened with the co
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: false,
         comment: true,
@@ -121,6 +138,7 @@ There are the following main variants how the document can be opened with the co
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -132,13 +150,16 @@ There are the following main variants how the document can be opened with the co
 
   ``` ts
   const config = {
+    // ...
     document: {
+      // ...
       permissions: {
         edit: true,
         comment: false,
       },
     },
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
@@ -156,7 +177,9 @@ To enable this mode the `document.permissions.fillForms` parameter is used:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       edit: false,
       review: false,
@@ -165,6 +188,7 @@ const config = {
     },
   },
   editorConfig: {
+    // ...
     mode: "edit",
   },
 };
@@ -192,13 +216,16 @@ You will need to set both the `document.permissions.edit` and `document.permissi
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       edit: true,
       comment: true,
     },
   },
   editorConfig: {
+    // ...
     mode: "edit",
   },
 };
@@ -236,7 +263,9 @@ The configuration in this case will look like this:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       edit: false,
@@ -260,7 +289,9 @@ You will need to set the `document.permissions.download` to `false`, so that the
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       download: false,
     },
@@ -280,7 +311,9 @@ You will need to set the `document.permissions.print` to `false`, so that the **
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       print: false,
     },
@@ -310,7 +343,9 @@ The `sharingSettings` configuration might look the following way:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       sharingSettings: [
         {
@@ -338,7 +373,9 @@ The comments are enabled by default. If you want to restrict commenting and allo
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       comment: true,
       editCommentsAuthorOnly: true,
