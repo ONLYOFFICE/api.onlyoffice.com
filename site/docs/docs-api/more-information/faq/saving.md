@@ -10,7 +10,7 @@ Normally the final document version is compiled once all the users editing it cl
 
 There are several ways to initiate forced saving:
 
-- Sending the request to the [document command service](../../additional-api/command-service/command-service.md), using the [forcesave](../../additional-api/command-service/forcesave.md) value for the *c* parameter:
+- Sending the request to the [document command service](../../additional-api/command-service/command-service.md), using the [forcesave](../../additional-api/command-service/forcesave.md) value for the `c` parameter:
 
   ``` json
   {
@@ -20,7 +20,7 @@ There are several ways to initiate forced saving:
   }
   ```
 
-- Enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) setting to **true** in the editor initialization configuration:
+- Enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) setting to `true` in the editor initialization configuration:
 
   ``` ts
   const config = {
@@ -67,7 +67,7 @@ The details of how the conversion works and why it is needed can be found in [th
 
 ## How to enable or disable the 'Autosave' option?
 
-The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) parameter in the document configuration to **false**:
+The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) parameter in the document configuration to `false`:
 
   ``` ts
   const config = {

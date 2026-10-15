@@ -10,7 +10,7 @@ sidebar_position: -3
 
 有几种方法可以启动强制保存：
 
-- 设置参数 *c* 为 [forcesave](../../additional-api/command-service/forcesave.md) 值，将请求发送到[文档命令服务](../../additional-api/command-service/command-service.md):
+- 设置参数 `c` 为 [forcesave](../../additional-api/command-service/forcesave.md) 值，将请求发送到[文档命令服务](../../additional-api/command-service/command-service.md):
 
   ``` json
   {
@@ -20,7 +20,7 @@ sidebar_position: -3
   }
   ```
 
-- 在编辑器初始化配置中启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 将其值设置为为 **true**:
+- 在编辑器初始化配置中启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 将其值设置为为 `true`:
 
   ``` ts
   const config = {
@@ -67,7 +67,7 @@ sidebar_position: -3
 
 ## 如何启用或禁用'自动保存'选项？ {#how-to-enable-or-disable-the-autosave-option}
 
-**自动保存**选项默认启用。要禁用它，您需要将文档配置中的 [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 参数设置为 **false**：
+**自动保存**选项默认启用。要禁用它，您需要将文档配置中的 [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 参数设置为 `false`：
 
   ``` ts
   const config = {

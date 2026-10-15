@@ -6,13 +6,13 @@ sidebar_position: -4
 
 ## Which methods can be used when working with the document history events?
 
-The document history can be shown using the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) function (with the *events.onRequestHistory* event). Unless you use them, the **Version History** menu option (**Version History** button in the **Collaboration** tab) is not shown in the ONLYOFFICE Docs interface.
+The document history can be shown using the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) function (with the `events.onRequestHistory` event). Unless you use them, the **Version History** menu option (**Version History** button in the **Collaboration** tab) is not shown in the ONLYOFFICE Docs interface.
 
 Once you call this function in the configuration file (together with the [refreshHistory](../../usage-api/methods.md#refreshhistory) method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the **document editing service** [callback](../../usage-api/callback-handler.md#status-2-3).
 
 So the implementation of the document version history display should look like this:
 
-1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
+1. The callback handler receives the data in the response from the **document editing service** with `status` **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
 ```ts
 const data = {
@@ -27,9 +27,9 @@ const data = {
 }
   ```
 
-2. The callback handler parses the received data and passes it to the configuration file (it does not need to parse the *history.serverVersion* and *history.changes* data which can be used by the *onRequestHistory* function as is).
+2. The callback handler parses the received data and passes it to the configuration file (it does not need to parse the `history.serverVersion` and `history.changes` data which can be used by the `onRequestHistory` function as is).
 
-3. The configuration file must have the following sections present: *events.onRequestHistory* and the *onRequestHistory* function itself:
+3. The configuration file must have the following sections present: `events.onRequestHistory` and the `onRequestHistory` function itself:
 
    ``` ts
    function onRequestHistory() {
@@ -72,28 +72,28 @@ const data = {
 
    Where
 
-   - *currentVersion* is the number of the latest version which will be displayed in the editor interface as the current one;
-   - *history* is the array of objects, each representing a document saved single version:
-   - *history.changes* and *history.serverVersion* is the data received from the **document editing service**;
-   - *history.user.id* is the ID of the user who was the last to save changes to the document for the specified version;
-   - *history.created* is the time of the document specified version compilation (corresponds to when *status* **2** was received);
-   - *history.version* is the number of the specified version as will be displayed in the version history section of the document editor interface.
+   - `currentVersion` is the number of the latest version which will be displayed in the editor interface as the current one;
+   - `history` is the array of objects, each representing a document saved single version:
+   - `history.changes` and `history.serverVersion` is the data received from the **document editing service**;
+   - `history.user.id` is the ID of the user who was the last to save changes to the document for the specified version;
+   - `history.created` is the time of the document specified version compilation (corresponds to when `status` **2** was received);
+   - `history.version` is the number of the specified version as will be displayed in the version history section of the document editor interface.
 
 4. The document is opened with all the above parameters specified. Switch to the **File** > **Version History** menu option (or **Collaboration** > **Version History**) and there the version data will be displayed.
 
 :::note
-The *history.changes* objects are displayed as smaller changes (revisions) within the versions.
+The `history.changes` objects are displayed as smaller changes (revisions) within the versions.
 :::
 
 ## How to display a document with highlighted changes?
 
-The **document editing service** saves all the interim changes of the document into separate files and, once the version is compiled and *status* **2** is received, the link to the archive with all the changes between the versions is also sent to the callback handler.
+The **document editing service** saves all the interim changes of the document into separate files and, once the version is compiled and `status` **2** is received, the link to the archive with all the changes between the versions is also sent to the callback handler.
 
-So, if you want to additionally show the difference between the versions, you will also have to use the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) function (with the *events.onRequestHistoryData* event) which must contain data also returned by the **document editing service** [callback](../../usage-api/callback-handler.md#changeshistory).
+So, if you want to additionally show the difference between the versions, you will also have to use the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) function (with the `events.onRequestHistoryData` event) which must contain data also returned by the **document editing service** [callback](../../usage-api/callback-handler.md#changeshistory).
 
 In addition to the actions described in the [above question](#which-methods-can-be-used-when-working-with-the-document-history-events) you will need to:
 
-- Parse the *changesurl* parameter from the **document editing service** received response with *status* **2**:
+- Parse the `changesurl` parameter from the **document editing service** received response with `status` **2**:
 
   ``` ts
   const config = {
@@ -109,7 +109,7 @@ In addition to the actions described in the [above question](#which-methods-can-
   }
   ```
 
-- Add the *onRequestHistoryData* function to the configuration file together with the *setHistoryData* method and *events.onRequestHistoryData* event:
+- Add the `onRequestHistoryData` function to the configuration file together with the `setHistoryData` method and `events.onRequestHistoryData` event:
 
   ``` ts
   function onRequestHistoryData(event) {
@@ -136,7 +136,7 @@ In addition to the actions described in the [above question](#which-methods-can-
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-  The object containing the valid links to the current document version (*url*) and to the previous document version (*previous.url*) as well as the IDs (*key* and *previous.key*) must be passed to the configuration file. *changesUrl* archive file must be also available and downloadable from the browser to be able to display the changes.
+  The object containing the valid links to the current document version (`url`) and to the previous document version (`previous.url`) as well as the IDs (`key` and `previous.key`) must be passed to the configuration file. `changesUrl` archive file must be also available and downloadable from the browser to be able to display the changes.
 
 ## Why is a new version not shown in the document history after I forcefully save a document?
 
