@@ -303,7 +303,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 *document.info.sharingSettings.permissions* 也是一个字符串参数，它显示了与定义用户对当前文档的访问权限的规则集对应的访问权限的名称。
 
 :::note
-请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 *document.permission.edit*、*document.permission.review*、*document.permission.fillForms* 设置为 **false**; 或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
+请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 *document.permission.edit*、*document.permission.review*、*document.permission.fillForms* 设置为 **false**；或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
 :::
 
 *sharingSettings* 配置可能如下所示：
