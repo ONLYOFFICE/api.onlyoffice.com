@@ -24,6 +24,10 @@ import APITable from '@site/src/components/APITable/APITable';
 从 10.0 版本开始，可以通过[服务器设置](../../get-started/configuration/server-config/server-config.md#server) `services.CoAuthoring.server.convertServiceEnable` 关闭转换 API。在这种情况下，发送到 `https://documentserver/converter` 地址的请求将被拒绝，并返回 HTTP 403 状态码。编辑器执行的转换不受影响。
 :::
 
+:::tip
+从 10.0 版本开始，您还可以在请求中直接发送文件本身，而不是文件的 URL。请参阅[文件上传请求](./request-from-file.md)。
+:::
+
 ## 请求参数
 
 <APITable>

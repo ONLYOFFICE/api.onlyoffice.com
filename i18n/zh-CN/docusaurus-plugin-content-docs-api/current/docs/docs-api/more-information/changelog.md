@@ -6,7 +6,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ### 重大变更
 
-- [文档命令服务](../additional-api/command-service/command-service.md)、[文档转换服务](../additional-api/conversion-api/request.md)和[文档生成服务](../additional-api/document-builder-api.md)不再接受编辑器配置中的令牌。这些请求的[令牌](../additional-api/signature/request/token-in-body.md#incoming-request)可以包含可选的 `operation` 字段（`command`、`converter` 或 `docbuilder`），而对于新的 `/converter/from-file` 和 `/docbuilder/from-file` 端点，该字段为必填项。
+- [文档命令服务](../additional-api/command-service/command-service.md)、[文档转换服务](../additional-api/conversion-api/request.md)和[文档生成服务](../additional-api/document-builder-api.md)不再接受编辑器配置中的令牌。这些请求的[令牌](../additional-api/signature/request/token-in-body.md#incoming-request)可以包含可选的 `operation` 字段（`command`、`converter` 或 `docbuilder`），而对于新的 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，该字段为必填项。
 - WOPI 主机现在必须通过 [IP 过滤器](../using-wopi/overview.md#ip-filter)规则明确允许。仅有 `*` 规则已不足以打开文档。
 - `runtime.json` 文件不再能够更改日志配置，日志级别除外。
 - 移除了已弃用的 `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges` 和 `editorConfig.customization.trackChanges` 参数。请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数中的对应字段。
@@ -16,6 +16,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 新增对 [ofd](../usage-api/config/document/document.md#filetype) 格式的打开支持。与 `xps` 相同，该格式仅支持查看，可[转换](../additional-api/conversion-api/conversion-tables.md#document-file-formats)为其他格式，但不支持编辑或保存为该格式。
 - 新增从所有电子表格格式到 [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) 格式的转换。
+- 新增 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，以 `multipart/form-data` 格式直接在请求中接收要转换的文件或脚本，而无需通过 URL 下载。
 - 在商业版本中，[管理面板](../get-started/configuration/server-config/server-config.md#admin-panel)现默认随服务器自动启动。社区版不包含管理面板。
 - 第一个管理员现通过主机命令行工具 `documentserver-admin`（`create-admin`、`reset-admin-password`）创建，不再通过网页使用日志中的引导代码创建。管理员登录名固定为 `admin`。
 - 新增 [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) 部分及其 `disabled` 参数，用于关闭编辑器中的 AI 功能。
