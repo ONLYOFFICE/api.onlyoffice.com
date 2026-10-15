@@ -103,6 +103,10 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ## Outgoing requests
 
+:::note
+Starting from version 10.0, the token of every outgoing request also contains the `operation` field with the type of the request: `callback` for the requests to the `callbackUrl` address and `download` for the file and document changes downloads. ONLYOFFICE Docs rejects an incoming request whose token contains one of these values.
+:::
+
 ### Callback on close without changes
 
 Validation is performed for outgoing requests to "[callbackUrl](../../../usage-api/config/editor/editor.md#callbackurl)" address by **document editing service**.
@@ -114,7 +118,8 @@ Sample payload:
     "payload": {
       "key": "Khirz6zTPdfd7",
       "status": 4
-    }
+    },
+    "operation": "callback"
   }
   ```
 
@@ -123,7 +128,7 @@ Sample payload:
 ```bash
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9fQ.MfVoGT-aYuPJfjQAaxwBv7-CqBylDae2AF9K5TpLf-E" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.o3l4KlxMeFtaZEY5UQiWuWMktxGEdvjoN9ckHlmGIQs" \
   -d '{
     "key": "Khirz6zTPdfd7",
     "status": 4
@@ -140,7 +145,8 @@ Sample payload:
   {
     "payload": {
       "url": "https://example.com/url-to-example-document.docx"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -148,7 +154,7 @@ Sample payload:
 
 ```bash
 curl -X GET "https://example.com/url-to-example-document.docx" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9LCJvcGVyYXRpb24iOiJkb3dubG9hZCJ9.gDT6MsJSGJUJyR_BpvixtASOxCKZDO0-pHVuAsSrf9w"
 ```
 
 The token includes the payload (the full URL to the document, in the example above it is `{"url": "https://example.com/url-to-example-document.docx"}`), which is also duplicated in the header as the `Host` (`example.com`) and the document address the GET request is sent to (`url-to-example-document.docx`).
@@ -163,7 +169,8 @@ Sample payload:
   {
     "payload": {
       "url": "https://example.com/url-to-document-changes.zip"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -171,7 +178,7 @@ Sample payload:
 
 ```bash
 curl -X GET "https://example.com/url-to-document-changes.zip" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn19.4CJ4F8x7VDMW72ss9VnIYGIwjRpBMYBBRXZ5aX2r2Y4"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn0sIm9wZXJhdGlvbiI6ImRvd25sb2FkIn0.Mr_bM2onk92qLP2VoqSFhjB3JC4wO1uXtLuw_L5F3j4"
 ```
 
 The token includes the payload (the full URL to the document, in the example above it is `{"url": "https://example.com/url-to-document-changes.zip"}`), which is also duplicated in the header as the `Host` (`example.com`) and the document address the GET request is sent to (`url-to-document-changes.zip`).

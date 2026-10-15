@@ -95,6 +95,10 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ## Outgoing requests
 
+:::note
+Starting from version 10.0, the token of every outgoing request also contains the `operation` field with the type of the request: `callback` for the requests to the `callbackUrl` address and `download` for the file and document changes downloads. ONLYOFFICE Docs rejects an incoming request whose token contains one of these values.
+:::
+
 ### Callback on close without changes
 
 Validation is performed for outgoing requests to "[callbackUrl](../../../usage-api/config/editor/editor.md#callbackurl)" address by **document editing service**.
@@ -114,7 +118,7 @@ Sample parameters of request to "callbackUrl" address by document editing servic
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.4350Gsw3fFOH9EC_tnY9iJ_PfAbKW8ZiNU4wiBagHdU"
   }'
 ```
 

@@ -40,7 +40,7 @@ git submodule update --init --depth 1 .
     "exampleUrl": null,
     "token": {
       "enable": true,
-      "secret": "secret"
+      "secret": "developer-only-not-a-real-secret"
     }
   }
 }

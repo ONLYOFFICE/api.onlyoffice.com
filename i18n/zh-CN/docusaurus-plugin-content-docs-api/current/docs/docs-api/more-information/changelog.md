@@ -12,7 +12,9 @@ ONLYOFFICE 文档 API 的更改列表。
 - 移除了已弃用的 `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges` 和 `editorConfig.customization.trackChanges` 参数。请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数中的对应字段。
 - 新增 `aiSettings.enable` [服务器设置](../get-started/configuration/server-config/server-config.md#ai-tools-settings)，用于关闭 AI 功能。如果设置为 `false`，则 `/plugins.json` 中不包含 AI 工具，并拒绝发往 `/ai-proxy` 的请求。
 - 另存为普通 PDF 的表单在提交时现在也会被[签名](../get-started/configuration/server-config/server-config.md#converter)，而不仅限于另存为 OFORM PDF 的表单。
-- `default.json` 中现已启用[令牌](../additional-api/signature/signature.md)，默认密钥由 `secret` 改为占位符 `developer-only-not-a-real-secret`。安装包此前已默认启用令牌。在仍使用该占位符时，启动时会记录一条警告。
+- `default.json` 中现已启用[令牌](../additional-api/signature/signature.md)，默认密钥由 `secret` 改为占位符 `developer-only-not-a-real-secret`。此更改不影响安装包：安装时仍会启用令牌并生成各自的密钥。在仍使用该占位符时，启动时会记录一条警告。
+- 发往 `callbackUrl` 地址的传出请求以及文件下载请求的令牌现在包含 [operation](../additional-api/signature/request/token-in-header.md#outgoing-requests) 字段，其值为 `callback` 或 `download`。如果此类令牌出现在传入请求中，ONLYOFFICE 文档将拒绝该请求。
+- 如果密钥（包括租户的密钥）为空或未设置，ONLYOFFICE 文档现在会拒绝该令牌，而不再对其进行验证或签名。
 - 服务器关闭前未保存的更改现在会在关闭过程中恢复为[被遗忘文件](../additional-api/command-service/getforgottenlist.md)。独立的 `changes2forgotten` 脚本已移除。
 
 ## 版本 9.4
