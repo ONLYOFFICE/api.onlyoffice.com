@@ -68,7 +68,7 @@
 
 检查[令牌](../usage-api/config/config.md#token)是否正确。令牌必须根据 [JWT（JSON Web 令牌）标准](../get-started/how-it-works/security.md)生成并存在于 **ONLYOFFICE 文档**配置中。
 
-## 拒绝访问
+## 拒绝访问 {#access-denied}
 
 编辑器加载时显示“您正在尝试执行您无权执行的操作。请联系您的文档服务器管理员。”消息。
 

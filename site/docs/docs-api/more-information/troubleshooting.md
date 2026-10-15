@@ -68,7 +68,7 @@ The **document editing service** requests an encrypted **signature**.
 
 Check if the [token](../usage-api/config/config.md#token) is correct. The token must be generated in accordance with the [JWT (JSON Web Tokens) standard](../get-started/how-it-works/security.md) and present in **ONLYOFFICE Docs** config.
 
-## Deny access
+## Access denied
 
 The editor is loaded with the "You are trying to perform an action you do not have rights for. Please contact your Document Server administrator." message.
 
