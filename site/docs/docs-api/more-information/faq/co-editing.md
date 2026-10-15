@@ -35,7 +35,7 @@ In case the document is being edited, for instance, by two users, the **document
 
 - `key` is the identifier of the document (the same as in the POST request above);
 
-- `status` with value of **1** means that the document is currently being edited;
+- `status` with value of `1` means that the document is currently being edited;
 
 - and the `users` is the array of the IDs of the users who take part in the co-editing.
 

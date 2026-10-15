@@ -12,7 +12,7 @@ Once you call this function in the configuration file (together with the [refres
 
 So the implementation of the document version history display should look like this:
 
-1. The callback handler receives the data in the response from the **document editing service** with `status` **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
+1. The callback handler receives the data in the response from the **document editing service** with `status` `2` (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
 ```ts
 const data = {
@@ -76,7 +76,7 @@ const data = {
    - `history` is the array of objects, each representing a document saved single version:
    - `history.changes` and `history.serverVersion` is the data received from the **document editing service**;
    - `history.user.id` is the ID of the user who was the last to save changes to the document for the specified version;
-   - `history.created` is the time of the document specified version compilation (corresponds to when `status` **2** was received);
+   - `history.created` is the time of the document specified version compilation (corresponds to when `status` `2` was received);
    - `history.version` is the number of the specified version as will be displayed in the version history section of the document editor interface.
 
 4. The document is opened with all the above parameters specified. Switch to the **File** > **Version History** menu option (or **Collaboration** > **Version History**) and there the version data will be displayed.
@@ -87,13 +87,13 @@ The `history.changes` objects are displayed as smaller changes (revisions) withi
 
 ## How to display a document with highlighted changes?
 
-The **document editing service** saves all the interim changes of the document into separate files and, once the version is compiled and `status` **2** is received, the link to the archive with all the changes between the versions is also sent to the callback handler.
+The **document editing service** saves all the interim changes of the document into separate files and, once the version is compiled and `status` `2` is received, the link to the archive with all the changes between the versions is also sent to the callback handler.
 
 So, if you want to additionally show the difference between the versions, you will also have to use the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) function (with the `events.onRequestHistoryData` event) which must contain data also returned by the **document editing service** [callback](../../usage-api/callback-handler.md#changeshistory).
 
 In addition to the actions described in the [above question](#which-methods-can-be-used-when-working-with-the-document-history-events) you will need to:
 
-- Parse the `changesurl` parameter from the **document editing service** received response with `status` **2**:
+- Parse the `changesurl` parameter from the **document editing service** received response with `status` `2`:
 
   ``` ts
   const data = {
