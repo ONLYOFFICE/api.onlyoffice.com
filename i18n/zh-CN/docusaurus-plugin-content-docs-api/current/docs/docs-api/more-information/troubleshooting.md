@@ -16,11 +16,9 @@
 
 编辑后关闭编辑器时，**文档管理器**中的文件不变。
 
-:::note
 **文档编辑服务**无法将数据发送到**文档存储服务**。
-:::
 
- 检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
+检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
 
 ## 无法保存
 
@@ -30,17 +28,17 @@
 
 **文档编辑服务**无法连接到 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 地址的**文档存储服务**。
 
-检查[回调处理程序](../usage-api/callback-handler.md#document-save-examples)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
+检查[回调处理程序](../usage-api/callback-handler.md#document-save-examples)是否正常工作。**文档存储服务**必须返回 [`{"error": 0}`](../usage-api/callback-handler.md#response-from-the-document-storage-service) 作为响应。
 
 ## 文件版本已更改 {#the-file-version-has-been-changed}
 
 ![文件版本已更改](/assets/images/editor/e-key.png#gh-light-mode-only)![文件版本已更改](/assets/images/editor/e-key.dark.png#gh-dark-mode-only)
 
-编辑器加载了“文件版本已更改。将重新加载页面”消息。
+编辑器显示“失去网络连接。正在尝试连接。请检查连接设置。”消息。
 
-**文档编辑服务**无法打开之前编辑和保存过的文件来进行编辑。
+连接断开后，**文档编辑服务**尝试在不重新加载编辑器的情况下更新文件版本。
 
-不要忘记，每次编辑和保存文档时，都必须重新生成[document.key](../usage-api/config/document/document.md#key)。
+不要忘记，每次编辑和保存文档时，都必须重新生成 [document.key](../usage-api/config/document/document.md#key)。
 
 ## 文件版本打不开
 
@@ -48,7 +46,7 @@
 
 **文档编辑服务**无法打开文件版本。
 
-检查 [setHistoryData](../usage-api/methods.md#sethistorydata) 方法中的*changesUrl*链接是否与*previous.url*参数对应。
+检查 [setHistoryData](../usage-api/methods.md#sethistorydata) 方法中的 `changesUrl` 链接是否与 `previous.url` 参数对应。
 
 ## 没有协作编辑
 
@@ -58,7 +56,7 @@
 
 **文档编辑服务**打开**两个不同**的文件进行编辑。
 
-检查[document.key](../usage-api/config/document/document.md#key)值是否一致以便能够共同编辑同一个文档。*key* 值在保存后必须改变，不同文档必须不同，并且在共同编辑同一个文档时必须相同。
+检查 [document.key](../usage-api/config/document/document.md#key) 值是否一致，以便能够共同编辑同一个文档。`key` 值在保存后必须改变，不同文档必须不同，并且在共同编辑同一个文档时必须相同。
 
 ## 令牌无效
 
@@ -68,7 +66,7 @@
 
 **文档编辑服务**会请求一个加密**签名**。
 
-检查[牌](../usage-api/config/config.md#token)是否正确。令牌必须根据 [JWT（JSON Web 令牌）标准](../get-started/how-it-works/security.md)生成并存在于 **ONLYOFFICE 文档服务器**配置中。
+检查[令牌](../usage-api/config/config.md#token)是否正确。令牌必须根据 [JWT（JSON Web 令牌）标准](../get-started/how-it-works/security.md)生成并存在于 **ONLYOFFICE 文档**配置中。
 
 ## 拒绝访问
 
@@ -94,7 +92,7 @@
 
 检查 [refreshHistory](../usage-api/methods.md#refreshhistory) 方法是否正常工作。它必须传递需要在编辑器中显示的版本历史记录数据。
 
-如果由于某种原因集成商无法提供版本历史记录，则此数据中将返回带有错误描述的 *error* 字段。描述由集成商提供：
+如果由于某种原因集成商无法提供版本历史记录，则此数据中将返回带有错误描述的 `error` 字段。描述由集成商提供：
 
 ```ts
 docEditor.refreshHistory({

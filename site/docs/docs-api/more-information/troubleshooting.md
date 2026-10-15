@@ -8,7 +8,7 @@ The most common problems with the editors integration and the ways to solve them
 
 The "Download failed" message is displayed at the editors loading process.
 
-The **Document editing service** cannot upload the file for editing.
+The **document editing service** cannot upload the file for editing.
 
 Check if the link to the file specified in the [document.url](../usage-api/config/document/document.md#url) is correct. The link must be accessible from the **document editing service**.
 
@@ -18,7 +18,7 @@ When closing the editor after the editing, the file is unchanged in the **docume
 
 The **document editing service** could not send the data to the **document storage service**.
 
-Check if the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](../usage-api/callback-handler.md#document-save-examples)
+Check if the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](../usage-api/callback-handler.md#document-save-examples).
 
 ## Could not be saved
 
@@ -28,7 +28,7 @@ The editor is loaded with the "The document could not be saved" message.
 
 The **document editing service** cannot connect to the **document storage service** at the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) address.
 
-Check if the [Callback handler](../usage-api/callback-handler.md#document-save-examples) is working correctly. The **document storage service** must return [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service) in response.
+Check if the [Callback handler](../usage-api/callback-handler.md#document-save-examples) is working correctly. The **document storage service** must return [`{"error": 0}`](../usage-api/callback-handler.md#response-from-the-document-storage-service) in response.
 
 ## The file version has been changed
 
@@ -46,7 +46,7 @@ Do not forget that every time the document is edited and saved, the [document.ke
 
 The **document editing service** cannot open the file version.
 
-Check if the *changesUrl* link from the [setHistoryData](../usage-api/methods.md#sethistorydata) method corresponds to the *previous.url* parameter.
+Check if the `changesUrl` link from the [setHistoryData](../usage-api/methods.md#sethistorydata) method corresponds to the `previous.url` parameter.
 
 ## No collaborative editing
 
@@ -56,7 +56,7 @@ No co-editing is available when the document is opened for editing by different 
 
 The **document editing service** opens **two different** files for editing.
 
-Check if the [document.key](../usage-api/config/document/document.md#key) values coincide to be able to co-edit the same document. The *key* value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
+Check if the [document.key](../usage-api/config/document/document.md#key) values coincide to be able to co-edit the same document. The `key` value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
 
 ## Invalid token
 
@@ -92,7 +92,7 @@ The **document editing service** cannot upload the version history.
 
 Check if the [refreshHistory](../usage-api/methods.md#refreshhistory) method works correctly. It must pass the version history data that needs to be displayed in the editor.
 
-If for some reason the integrator cannot give the version history, the *error* field with the error description will be returned in this data. The description is provided by the integrator:
+If for some reason the integrator cannot give the version history, the `error` field with the error description will be returned in this data. The description is provided by the integrator:
 
 ```ts
 docEditor.refreshHistory({
