@@ -39,6 +39,42 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 为 [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) 方法添加了 `lockScroll` 和 `keepSelection` 参数。
 - 为 [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) 方法添加了 `scrollToTarget` 和 `cancel` 参数。
 
+## 版本 9.3 {#version-93}
+
+- 为文本文档 API 添加了 [SelectAddinField](../interacting-with-editors/document-api/Methods/SelectAddinField.md) 方法。
+- 为文本文档 API 添加了 [RemoveAddinField](../interacting-with-editors/document-api/Methods/RemoveAddinField.md) 方法。
+- 为文本文档 API 添加了 [GetCurrentAddinField](../interacting-with-editors/document-api/Methods/GetCurrentAddinField.md) 方法。
+- 为文本文档 API 添加了 [IsFormSigned](../interacting-with-editors/document-api/Methods/IsFormSigned.md) 方法。
+- 为 PDF API 添加了 [CoAuthoringChatSendMessage](../interacting-with-editors/pdf-api/Methods/CoAuthoringChatSendMessage.md) 方法。
+- 为 PDF API 添加了 [EndAction](../interacting-with-editors/pdf-api/Methods/EndAction.md) 方法。
+- 为 PDF API 添加了 [FocusEditor](../interacting-with-editors/pdf-api/Methods/FocusEditor.md) 方法。
+- 为 PDF API 添加了 [GetAllComments](../interacting-with-editors/pdf-api/Methods/GetAllComments.md) 方法。
+- 为 PDF API 添加了 [GetCurrentPage](../interacting-with-editors/pdf-api/Methods/GetCurrentPage.md) 方法。
+- 为 PDF API 添加了 [GetFileToDownload](../interacting-with-editors/pdf-api/Methods/GetFileToDownload.md) 方法。
+- 为 PDF API 添加了 [GetFontList](../interacting-with-editors/pdf-api/Methods/GetFontList.md) 方法。
+- 为 PDF API 添加了 [GetInstalledPlugins](../interacting-with-editors/pdf-api/Methods/GetInstalledPlugins.md) 方法。
+- 为 PDF API 添加了 [GetMacros](../interacting-with-editors/pdf-api/Methods/GetMacros.md) 方法。
+- 为 PDF API 添加了 [GetPageImage](../interacting-with-editors/pdf-api/Methods/GetPageImage.md) 方法。
+- 为 PDF API 添加了 [GetSelectedText](../interacting-with-editors/pdf-api/Methods/GetSelectedText.md) 方法。
+- 为 PDF API 添加了 [GetVersion](../interacting-with-editors/pdf-api/Methods/GetVersion.md) 方法。
+- 为 PDF API 添加了 [InstallPlugin](../interacting-with-editors/pdf-api/Methods/InstallPlugin.md) 方法。
+- 为 PDF API 添加了 [MouseMoveWindow](../interacting-with-editors/pdf-api/Methods/MouseMoveWindow.md) 方法。
+- 为 PDF API 添加了 [MouseUpWindow](../interacting-with-editors/pdf-api/Methods/MouseUpWindow.md) 方法。
+- 为 PDF API 添加了 [OnDropEvent](../interacting-with-editors/pdf-api/Methods/OnDropEvent.md) 方法。
+- 为 PDF API 添加了 [PasteHtml](../interacting-with-editors/pdf-api/Methods/PasteHtml.md) 方法。
+- 为 PDF API 添加了 [PasteText](../interacting-with-editors/pdf-api/Methods/PasteText.md) 方法。
+- 为 PDF API 添加了 [RemovePlugin](../interacting-with-editors/pdf-api/Methods/RemovePlugin.md) 方法。
+- 为 PDF API 添加了 [ReplacePageContent](../interacting-with-editors/pdf-api/Methods/ReplacePageContent.md) 方法。
+- 为 PDF API 添加了 [SetMacros](../interacting-with-editors/pdf-api/Methods/SetMacros.md) 方法。
+- 为 PDF API 添加了 [SetPluginsOptions](../interacting-with-editors/pdf-api/Methods/SetPluginsOptions.md) 方法。
+- 为 PDF API 添加了 [SetProperties](../interacting-with-editors/pdf-api/Methods/SetProperties.md) 方法。
+- 为 PDF API 添加了 [ShowButton](../interacting-with-editors/pdf-api/Methods/ShowButton.md) 方法。
+- 为 PDF API 添加了 [ShowError](../interacting-with-editors/pdf-api/Methods/ShowError.md) 方法。
+- 为 PDF API 添加了 [ShowInputHelper](../interacting-with-editors/pdf-api/Methods/ShowInputHelper.md) 方法。
+- 为 PDF API 添加了 [StartAction](../interacting-with-editors/pdf-api/Methods/StartAction.md) 方法。
+- 为 PDF API 添加了 [UnShowInputHelper](../interacting-with-editors/pdf-api/Methods/UnShowInputHelper.md) 方法。
+- 为 PDF API 添加了 [UpdatePlugin](../interacting-with-editors/pdf-api/Methods/UpdatePlugin.md) 方法。
+
 ## 版本 9.2 {#version-92}
 
 - 为文本文档 API 添加了 [AnnotateParagraph](../interacting-with-editors/document-api/Methods/AnnotateParagraph.md) 方法。
