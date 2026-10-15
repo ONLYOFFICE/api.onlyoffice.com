@@ -10,7 +10,7 @@ sidebar_position: -10
 
 在启用跟踪更改模式的情况下，可以通过三种主要变体打开文档：
 
-1. 启用审阅和编辑：如果 `document.permissions.edit` 和`document.permissions.review` 参数都设置为 `true`，用户自己将能够编辑文档，接受/拒绝所做的更改并切换到审阅模式。这种情况下的配置将如下所示：
+1. 启用审阅和编辑：如果 `document.permissions.edit` 和 `document.permissions.review` 参数都设置为 `true`，用户自己将能够编辑文档，接受/拒绝所做的更改并切换到审阅模式。这种情况下的配置将如下所示：
 
   ``` ts
   const config = {
@@ -52,7 +52,7 @@ sidebar_position: -10
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-3. 启用审阅和评论：如果 `document.permissions.edit` 参数设置为 `false`，`document.permissions.review` 和`document.permissions.comment` 都设置为 `true`，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
+3. 启用审阅和评论：如果 `document.permissions.edit` 参数设置为 `false`，`document.permissions.review` 和 `document.permissions.comment` 都设置为 `true`，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
 
   ``` ts
   const config = {
@@ -82,7 +82,7 @@ sidebar_position: -10
 
 在启用评论模式的情况下，如何打开文档有以下主要变体：
 
-1. 启用评论和编辑：如果 `document.permissions.edit` 和`document.permissions.comment` 参数都设置为 `true`，用户将能够编辑文档和评论。这种情况下的配置将如下所示：
+1. 启用评论和编辑：如果 `document.permissions.edit` 和 `document.permissions.comment` 参数都设置为 `true`，用户将能够编辑文档和评论。这种情况下的配置将如下所示：
 
   ``` ts
   const config = {
@@ -124,7 +124,7 @@ sidebar_position: -10
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-3. 启用审阅和评论：如果 `document.permissions.edit` 参数设置为 `false`，`document.permissions.review` 和`document.permissions.comment` 都设置为 `true`，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
+3. 启用审阅和评论：如果 `document.permissions.edit` 参数设置为 `false`，`document.permissions.review` 和 `document.permissions.comment` 都设置为 `true`，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
 
   ``` ts
   const config = {
@@ -196,7 +196,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-`comment` 字段是可选的，因为只要启用了 `fillForms` 参数并禁用了 `edit` 和`review` 参数，注释都被禁用了。
+`comment` 字段是可选的，因为只要启用了 `fillForms` 参数并禁用了 `edit` 和 `review` 参数，注释都被禁用了。
 
 通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api)中的字段。
 
@@ -212,7 +212,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在启用编辑和评论模式的情况下打开文档，请使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
-您需要将 `document.permissions.edit` 和`document.permissions.comment` 参数都设置为 `true`，以便用户能够编辑文档和评论。这种情况下的配置将如下所示：
+您需要将 `document.permissions.edit` 和 `document.permissions.comment` 参数都设置为 `true`，以便用户能够编辑文档和评论。这种情况下的配置将如下所示：
 
 ```ts
 const config = {
@@ -240,8 +240,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 大多数权限参数都是独立的，仅在其值设置为 `true` 时启用，在值设置为 `false` 时禁用。尽管有相应的参数值，当权限启用或禁用时，仍有几种组合：
 
 - 当 `edit` 或 `review` 参数设置为 `true` 时，会启用表单填写权限（即使 `fillForms` 参数设置为 `false`）。
-- 当 `edit` 和`review` 参数都设置为 `false` 并且 `comment` 参数设置为 `true` 时，表单填写权限被禁用（即使 `fillForms` 参数设置为 `true`）。
-- 当 `edit` 和`review` 参数都被设置为 `false` 而且 `fillForms` 被设置为 `true` 时，评论权限被禁用（即使 `comment` 参数设置为 `true`）。
+- 当 `edit` 和 `review` 参数都设置为 `false` 并且 `comment` 参数设置为 `true` 时，表单填写权限被禁用（即使 `fillForms` 参数设置为 `true`）。
+- 当 `edit` 和 `review` 参数都被设置为 `false` 而且 `fillForms` 被设置为 `true` 时，评论权限被禁用（即使 `comment` 参数设置为 `true`）。
 
 当您设置必要的权限并为同一个文档组合不同的权限时，您应该牢记这一点。
 
@@ -253,7 +253,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在启用两种查看模式的情况下打开文档，请使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
-您需要将 `document.permissions.edit`、`document.permissions.review` 和`document.permissions.fillForms` 参数设置为 `false`，这样用户将无法编辑、查看文档或更改其中的表单字段。如果您还想禁用文档的评论功能，请将 `comment` 参数也设置为 `false`（但现有评论将可供查看）。
+您需要将 `document.permissions.edit`、`document.permissions.review` 和 `document.permissions.fillForms` 参数设置为 `false`，这样用户将无法编辑、查看文档或更改其中的表单字段。如果您还想禁用文档的评论功能，请将 `comment` 参数也设置为 `false`（但现有评论将可供查看）。
 
 :::tip
 如果您禁用所有的编辑权限，我们建议您也将 `document.permissions.chat` 设置为 `false`，这样有权访问该文档的用户就不会向文档嵌入聊天发送垃圾邮件。
