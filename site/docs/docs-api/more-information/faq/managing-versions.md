@@ -61,6 +61,7 @@ const data = {
    };
   
    const config = {
+     // ...
      events: {
        onRequestHistory,
      },
@@ -126,6 +127,7 @@ In addition to the actions described in the [above question](#which-methods-can-
   };
   
   const config = {
+    // ...
     events: {
       onRequestHistoryData,
     },

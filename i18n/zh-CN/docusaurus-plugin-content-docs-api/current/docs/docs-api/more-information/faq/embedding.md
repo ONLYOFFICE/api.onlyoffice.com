@@ -18,6 +18,7 @@ sidebar_position: -9
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -38,7 +39,9 @@ sidebar_position: -9
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
         saveUrl: "https://example.com/download?doc=exampledocument1.docx",

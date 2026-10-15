@@ -61,6 +61,7 @@ const data = {
    };
   
    const config = {
+     // ...
      events: {
        onRequestHistory,
      },
@@ -126,6 +127,7 @@ const data = {
   };
   
   const config = {
+    // ...
     events: {
       onRequestHistoryData,
     },

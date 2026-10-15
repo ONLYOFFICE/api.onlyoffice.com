@@ -32,7 +32,9 @@ With all the above fields filled, the *customization* configuration will look li
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       customer: {
         address: "My City, 123a-45",
@@ -63,7 +65,9 @@ If the interface language is present in the [list of available ONLYOFFICE Docs l
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     lang: "de",
   },
 };
@@ -81,7 +85,9 @@ The chat and comments are enabled by default. To disable them use the *document.
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       comment: false,
@@ -102,7 +108,9 @@ You can either display the full top toolbar or its compact version. To control t
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       compactToolbar: true,
     },
@@ -120,7 +128,9 @@ The document owner and uploading date is affected by the *document.info.owner* a
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
@@ -143,6 +153,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "desktop",
   };
 
@@ -153,6 +164,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "mobile",
   };
 
@@ -163,6 +175,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -183,7 +196,9 @@ To enable plugins for all ONLYOFFICE Docs users, you need the following:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
@@ -210,7 +225,9 @@ To disable the tooltips about new features in the editor on first loading, use t
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       features: {
         featuresTips: false
@@ -230,7 +247,9 @@ To customize the font name and size of the interface elements (buttons, tabs, et
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       font: {
         name: "Arial",
@@ -255,7 +274,9 @@ To hide the icon with the user's avatar/initials in the editor header, use the *
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       layout: {
         header: {

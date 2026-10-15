@@ -32,7 +32,9 @@ sidebar_position: -7
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       customer: {
         address: "My City, 123a-45",
@@ -63,7 +65,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     lang: "de",
   },
 };
@@ -81,7 +85,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       comment: false,
@@ -102,7 +108,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       compactToolbar: true,
     },
@@ -120,7 +128,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
@@ -143,6 +153,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "desktop",
   };
 
@@ -153,6 +164,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "mobile",
   };
 
@@ -163,6 +175,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -183,7 +196,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",

@@ -18,6 +18,7 @@ That is why the *type* should be set to **embedded** and the configuration file 
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -38,7 +39,9 @@ The embedded mode allows to display the document with only three control buttons
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
         saveUrl: "https://example.com/download?doc=exampledocument1.docx",

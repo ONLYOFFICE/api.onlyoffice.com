@@ -24,7 +24,9 @@ There are several ways to initiate forced saving:
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       customization: {
         forcesave: false,
       },
@@ -69,7 +71,9 @@ The **Autosave** option is enabled by default. To disable it, you need to set th
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       customization: {
         autosave: false,
       },

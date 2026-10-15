@@ -24,7 +24,9 @@ sidebar_position: -3
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       customization: {
         forcesave: false,
       },
@@ -69,7 +71,9 @@ sidebar_position: -3
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       customization: {
         autosave: false,
       },

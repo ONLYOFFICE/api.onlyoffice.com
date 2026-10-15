@@ -10,7 +10,9 @@ The **document editing service** informs the **document storage service** about 
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       callbackUrl: "https://example.com/url-to-callback",
     },
   };
@@ -43,7 +45,9 @@ Set the mode using the *editorConfig* section of the configuration file:
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };

@@ -10,7 +10,9 @@ sidebar_position: -5
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       callbackUrl: "https://example.com/url-to-callback",
     },
   };
@@ -43,7 +45,9 @@ sidebar_position: -5
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       mode: "edit",
     },
   };
