@@ -8,6 +8,10 @@ For the interaction with the **web document builder service** the POST requests 
 Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 :::
 
+:::note
+Starting from version 10.0, the Document Builder API can be turned off with the `services.CoAuthoring.server.docbuilderEnable` [server setting](../get-started/configuration/server-config/server-config.md#server). In this case, the requests to the `https://documentserver/docbuilder` address are rejected with the HTTP 403 status code.
+:::
+
 ## Request parameters
 
 <APITable>

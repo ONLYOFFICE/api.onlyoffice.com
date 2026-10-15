@@ -10,6 +10,10 @@ In the examples below, `example.com` represents the server where your **document
 
 ## Incoming request
 
+:::note
+Starting from version 10.0, the token of an incoming request can contain the `operation` field with the type of the request: `command` for the **document command service**, `converter` for the **document conversion service**, and `docbuilder` for the **document builder service**. If the field is present, it must match the service the request is sent to. These services also no longer accept the token from the editor configuration. How strictly the token is checked is set by the `services.CoAuthoring.token.purposeCheck` [server setting](../../../get-started/configuration/server-config/server-config.md#token).
+:::
+
 :::warning
 It is not recommended to send a signature in the header when performing the HTTP requests to ONLYOFFICE Docs. Send the signature [in the body](./token-in-body.md).
 :::

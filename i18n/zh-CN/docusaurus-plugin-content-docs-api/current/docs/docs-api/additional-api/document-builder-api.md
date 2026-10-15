@@ -8,6 +8,10 @@ import APITable from '@site/src/components/APITable/APITable';
 从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到查询字符串中，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 :::
 
+:::note
+从 10.0 版本开始，可以通过[服务器设置](../get-started/configuration/server-config/server-config.md#server) `services.CoAuthoring.server.docbuilderEnable` 关闭文档生成器 API。在这种情况下，发送到 `https://documentserver/docbuilder` 地址的请求将被拒绝，并返回 HTTP 403 状态码。
+:::
+
 ## 请求参数
 
 <APITable>

@@ -17,6 +17,10 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 
 ## 传入请求 {#incoming-request}
 
+:::note
+从 10.0 版本开始，传入请求的令牌可以包含 `operation` 字段，用于标明请求类型：**文档命令服务**为 `command`，**文档转换服务**为 `converter`，**文档生成服务**为 `docbuilder`。如果包含该字段，其值必须与请求发送到的服务一致。这些服务也不再接受编辑器配置中的令牌。令牌的检查严格程度由[服务器设置](../../../get-started/configuration/server-config/server-config.md#token) `services.CoAuthoring.token.purposeCheck` 决定。
+:::
+
 ### 获取文档状态 {#get-document-status}
 
 使用从**文档存储服务**到[文档命令服务](../../command-service/command-service.md)的命令对传入请求执行验证。

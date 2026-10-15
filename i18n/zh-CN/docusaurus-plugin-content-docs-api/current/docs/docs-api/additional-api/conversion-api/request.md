@@ -20,6 +20,10 @@ import APITable from '@site/src/components/APITable/APITable';
 **ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求，请求参数在查询字符串中。
 :::
 
+:::note
+从 10.0 版本开始，可以通过[服务器设置](../../get-started/configuration/server-config/server-config.md#server) `services.CoAuthoring.server.convertServiceEnable` 关闭转换 API。在这种情况下，发送到 `https://documentserver/converter` 地址的请求将被拒绝，并返回 HTTP 403 状态码。编辑器执行的转换不受影响。
+:::
+
 ## 请求参数
 
 <APITable>
