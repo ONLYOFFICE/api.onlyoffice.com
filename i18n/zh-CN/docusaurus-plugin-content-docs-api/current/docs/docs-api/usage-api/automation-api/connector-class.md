@@ -264,6 +264,34 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 });
 ```
 
+## sendEvent
+
+调用该函数以向编辑器中正在运行的插件发送自定义事件。该事件会传递给所有订阅了它的插件，订阅方式可以是 [attachEditorEvent](../../../plugins/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) 方法，也可以是插件 *config.json* 文件中的 [events](../../../plugins/configuration/configuration.md#variationsevents) 参数。如果插件尚未加载完成，则会在其准备就绪后传递该事件。
+
+### 参数
+
+| 名称 | 类型   | 描述                             |
+| ---- | ------ | -------------------------------- |
+| name | string | 事件名称。                       |
+| data | object | 传递给插件事件监听器的事件数据。 |
+
+### 示例
+
+```ts
+const connector = docEditor.createConnector();
+connector.sendEvent("onExternalDataReady", {
+  rows: 42,
+});
+```
+
+在插件代码中订阅该事件以接收数据：
+
+```ts
+Asc.plugin.attachEditorEvent("onExternalDataReady", (data) => {
+  console.log(`Rows: ${data.rows}`);
+});
+```
+
 ## updateContextMenuItem
 
 调用该函数来使用指定项更新上下文菜单中的项。
