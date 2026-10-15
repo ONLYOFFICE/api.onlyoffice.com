@@ -715,8 +715,24 @@ Please note that displaying a tooltip with a message is not supported in the emb
 
 ## startFilling
 
-Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event.
+Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
+
+:::note
+This method works only if the [onStartFilling](./config/events.md#onstartfilling) event is declared. Otherwise, the call is ignored.
+:::
 
   ``` ts
-  docEditor.startFilling();
+  docEditor.startFilling(disconnect);
+  ```
+
+**Parameters**:
+
+| Parameter  | Type      | Presence | Description |
+| ---------- | --------- | -------- | ----------- |
+| disconnect | `boolean` | optional | Specifies whether to lock editing for all the users who are editing the form: `true` to switch all the co-editors to viewing mode and show them a warning that form filling is in progress, `false` to lock editing only for the current user. The default value is `false`. |
+
+**Example**:
+
+  ``` ts
+  docEditor.startFilling(true);
   ```

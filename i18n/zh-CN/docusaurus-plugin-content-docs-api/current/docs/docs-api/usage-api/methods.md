@@ -715,8 +715,24 @@ docEditor.insertImage({
 
 ## startFilling
 
-开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。
+开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
+
+:::note
+仅当声明了 [onStartFilling](./config/events.md#onstartfilling) 事件时，此方法才有效。否则，调用将被忽略。
+:::
 
   ``` ts
-  docEditor.startFilling();
+  docEditor.startFilling(disconnect);
+  ```
+
+**参数**：
+
+| 参数       | 类型      | 是否必填 | 描述 |
+| ---------- | --------- | -------- | ---- |
+| disconnect | `boolean` | 非必填 | 指定是否为所有正在编辑表单的用户锁定编辑：`true` 表示将所有协作编辑者切换到查看模式，并向他们显示表单正在填写中的警告；`false` 表示仅为当前用户锁定编辑。默认值为 `false`。 |
+
+**示例**：
+
+  ``` ts
+  docEditor.startFilling(true);
   ```

@@ -75,6 +75,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [refreshFile](../usage-api/methods.md#refreshfile) 方法。
 - 添加了 [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) 事件。
 - 添加了 [requestRoles](../usage-api/methods.md#requestroles) 方法。
+- 为 [startFilling](../usage-api/methods.md#startfilling) 方法添加了 *disconnect* 参数。
 - 添加了 [events.onStartFilling](../usage-api/config/events.md#onstartfilling) 事件。
 - 为 [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) 事件添加了 *roles* 参数。
 - 添加了 [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) 事件。
