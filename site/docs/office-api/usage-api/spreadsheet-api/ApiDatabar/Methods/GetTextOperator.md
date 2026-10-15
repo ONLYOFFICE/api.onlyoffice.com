@@ -4,6 +4,22 @@ Returns the text operator for text-based conditional formatting rules.
 
 Inherited from [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md).
 
+## Syntax
+
+```javascript
+expression.GetTextOperator();
+```
+
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlContainsOperator](../../Enumeration/XlContainsOperator.md) \| null
+
 ## Example
 
 Read the comparison type used by a text-based conditional formatting rule in a spreadsheet.
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTextString", "xlContains", "Apple");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let textOperator = condition1.GetTextOperator();
 

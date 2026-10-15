@@ -506,7 +506,7 @@ If an error occurred, send an error message:
 
 ## setRequestedDocument
 
-Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event.
+Select a document for comparing, combining, or inserting text. This method is usually called in the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event handler. It can also be called directly once the [onDocumentReady](./config/events.md#ondocumentready) event has fired, for example, to compare documents without user action. See the [Comparing documents](../samples/comparing-documents.md) sample.
 
   ``` ts
   docEditor.setRequestedDocument(options);

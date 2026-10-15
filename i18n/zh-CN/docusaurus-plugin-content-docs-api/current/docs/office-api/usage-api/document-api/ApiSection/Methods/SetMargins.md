@@ -1,6 +1,8 @@
 # SetMargins
 
-指定此节中所有页面的页边距。[ApiSection#SetPageMargins](../../ApiSection/Methods/SetPageMargins.md) 的别名。
+指定此节中所有页面的页边距。
+
+[ApiSection#SetPageMargins](../../ApiSection/Methods/SetPageMargins.md) 的别名。
 
 ## 语法
 

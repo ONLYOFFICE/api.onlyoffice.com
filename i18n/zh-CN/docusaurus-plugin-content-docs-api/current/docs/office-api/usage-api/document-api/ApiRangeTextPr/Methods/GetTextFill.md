@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md)。
 
+## 语法
+
+```javascript
+expression.GetTextFill();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## 示例
 
 读取文档中应用于装饰性文本的填充颜色。
@@ -20,7 +36,7 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textPr.SetCaps(true);
 textPr.SetOutLine(Api.CreateStroke(0, Api.CreateNoFill()));
-textPr.SetTextFill(Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+textPr.SetTextFill(Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 textPr.SetFontFamily('Comic Sans MS');
 
 const textArt = Api.CreateWordArt(textPr, 'ONLYOFFICE', 'textArchUp', null, null, 0, 200 * 36000, 100 * 36000);

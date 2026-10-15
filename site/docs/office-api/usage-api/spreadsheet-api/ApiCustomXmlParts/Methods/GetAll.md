@@ -8,7 +8,7 @@ Returns all custom XML parts from the XML manager.
 expression.GetAll();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Collect every stored XML block from a workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I retrieve all embedded XML data at once from a workbook in a spreadsheet?
+// Retrieve all embedded XML data at once from a workbook in a spreadsheet.
 
 // Loop through each saved XML entry to inspect or process it in a spreadsheet.
 

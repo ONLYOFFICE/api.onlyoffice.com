@@ -4,6 +4,25 @@ Adds new option to list options.
 
 Inherited from [ApiBaseListField.AddOption](../../ApiBaseListField/Methods/AddOption.md).
 
+## Syntax
+
+```javascript
+expression.AddOption(option, index);
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| option | Required | [ListOption](../../Enumeration/ListOption.md) |  | list option to add |
+| index | Optional | number | this.GetOptions().lenght | index to add option. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add choices to a dropdown or list field in a PDF.

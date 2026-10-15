@@ -204,7 +204,7 @@
 使用 'lightYellow' 颜色预设创建主题颜色。
 
 ```javascript editor-xlsx
-// How to create a preset color.
+// How do I create a preset color?
 
 // Create light yellow preset color.
 

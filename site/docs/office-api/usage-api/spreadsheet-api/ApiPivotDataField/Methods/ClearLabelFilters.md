@@ -4,6 +4,22 @@ Deletes all label filters or all date filters from the pivot filters collection.
 
 Inherited from [ApiPivotField.ClearLabelFilters](../../ApiPivotField/Methods/ClearLabelFilters.md).
 
+## Syntax
+
+```javascript
+expression.ClearLabelFilters();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Remove label-based filters from a pivot table field in a spreadsheet.

@@ -1,6 +1,7 @@
 # DocumentEditingRestrictions
 
 文档编辑限制：
+
 - **none** - 无编辑限制，
 - **comments** - 允许编辑批注，
 - **forms** - 允许编辑表单字段，

@@ -1,21 +1,20 @@
 # SetPosition
 
-Specifies the amount by which text is raised or lowered for the current Range in relation to the default
-baseline of the surrounding non-positioned text.
+Specifies the amount by which text is raised or lowered for the current Range in relation to the default baseline of the surrounding non-positioned text.
 
 ## Syntax
 
 ```javascript
-expression.SetPosition(nPosition);
+expression.SetPosition(position);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| position | Required | [hps](../../Enumeration/hps.md) \| null |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). Pass *null* to remove the position. |
 
 ## Returns
 

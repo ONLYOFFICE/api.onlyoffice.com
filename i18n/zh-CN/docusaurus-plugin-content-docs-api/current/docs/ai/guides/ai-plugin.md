@@ -1,6 +1,8 @@
 ---
-sidebar_position: -4
+sidebar_position: 1
 ---
+
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # AI 插件
 
@@ -10,11 +12,7 @@ AI 是一个后台插件，它将 AI 提供商（例如 OpenAI、DeepSeek）与 
 
 **GitHub 仓库**：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)。
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="oQbH8JIe3eE"/>
-```
 
 ## 安装
 
@@ -25,6 +23,10 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 插件的 guid 是 `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`。
 
 ## 配置 {#configuring}
+
+:::tip
+如果管理员已在服务器上配置了 AI 提供商，则不会显示 **设置** 按钮，也无需进行任何设置。请参阅[为所有用户配置 AI 提供商](server-ai-providers.md)。
+:::
 
 要开始使用该插件，需要设置 AI 提供商：
 

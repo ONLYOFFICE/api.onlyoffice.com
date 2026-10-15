@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetDragToRow](../../ApiPivotField/Methods/GetDragToRow.md)。
 
+## 语法
+
+```javascript
+expression.GetDragToRow();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中的透视字段是否可以移动到行区域。

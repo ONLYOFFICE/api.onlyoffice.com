@@ -105,14 +105,14 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
     else:
         print(f"Group update failed. Status code: {response.status_code}, Message: {response.text}")
 
-# Run the method
-if __name__ == '__main__':
-  add_members_to_group(
-    'c652dba3-210e-436d-b264-df5ceda0a48e',  # Replace with your group ID
-    ['d9be1cab-3ab4-4012-ad60-48218b2713dc', '4c65a238-ca50-4374-b904-0d51d4c1822b'],  # Member UUIDs
-    new_name="Project Alpha Team",
-    new_manager='c652dba3-210e-436d-b264-df5ceda0a48e'
-  )
+  # Run the method
+  if __name__ == '__main__':
+    add_members_to_group(
+      'c652dba3-210e-436d-b264-df5ceda0a48e',  # Replace with your group ID
+      ['d9be1cab-3ab4-4012-ad60-48218b2713dc', '4c65a238-ca50-4374-b904-0d51d4c1822b'],  # Member UUIDs
+      new_name="Project Alpha Team",
+      new_manager='c652dba3-210e-436d-b264-df5ceda0a48e'
+    )
 ```
 
   </TabItem>
@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/add-members-to) with the following payload:
+A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/add-members-to) with the following payload:
 
 - `membersToAdd`: Array of user UUIDs to add to the group.
 - `groupName` (optional): New display name for the group.

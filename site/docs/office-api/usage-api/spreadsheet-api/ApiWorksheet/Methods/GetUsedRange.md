@@ -8,7 +8,7 @@ Returns the ApiRange object that represents the used range on the specified work
 expression.GetUsedRange();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -29,5 +29,5 @@ Find which cells actually contain data on a sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let usedRange = worksheet.GetUsedRange();
-usedRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+usedRange.SetFillColor(Api.RGB(255, 213, 191));
 ```

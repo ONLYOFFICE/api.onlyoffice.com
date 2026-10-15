@@ -4,6 +4,22 @@ Checks if the field can be toggled off.
 
 Inherited from [ApiCheckboxField.IsToggleToOff](../../ApiCheckboxField/Methods/IsToggleToOff.md).
 
+## Syntax
+
+```javascript
+expression.IsToggleToOff();
+```
+
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if a checkbox can toggle off when clicked in a PDF.

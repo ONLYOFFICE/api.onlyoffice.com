@@ -4,6 +4,22 @@ Returns the height of the current drawing.
 
 Inherited from [ApiDrawing.GetHeight](../../ApiDrawing/Methods/GetHeight.md).
 
+## Syntax
+
+```javascript
+expression.GetHeight();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Retrieve the height of a shape and display it in a presentation.

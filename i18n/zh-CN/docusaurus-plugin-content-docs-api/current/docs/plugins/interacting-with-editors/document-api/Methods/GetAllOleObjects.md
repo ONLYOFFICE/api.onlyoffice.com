@@ -1,6 +1,7 @@
 # GetAllOleObjects
 
 返回可由指定插件打开的对象的所有 OLE 对象数据。
+
 如果未定义 *sPluginId*，此方法将返回当前文档中包含的所有 OLE 对象。
 
 ## 语法
@@ -9,13 +10,13 @@
 expression.GetAllOleObjects(sPluginId);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPluginId | 必需 | string |  | 插件标识符。必须是 *asc.\{UUID\}* 类型。 |
+| sPluginId | 必需 | string \| null \| undefined |  | 插件标识符。必须是 *asc.\{UUID\}* 类型。 |
 
 ## 返回值
 

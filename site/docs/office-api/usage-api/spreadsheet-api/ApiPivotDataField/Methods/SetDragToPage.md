@@ -4,6 +4,24 @@ Sets the setting which specifies whether the specified field can be dragged to t
 
 Inherited from [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDragToPage.md).
 
+## Syntax
+
+```javascript
+expression.SetDragToPage(flag);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the page position. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Control whether a pivot field can be dragged into the filter area in a spreadsheet.

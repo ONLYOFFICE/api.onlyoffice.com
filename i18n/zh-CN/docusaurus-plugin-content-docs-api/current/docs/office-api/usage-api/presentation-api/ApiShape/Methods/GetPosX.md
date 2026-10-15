@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetPosX](../../ApiDrawing/Methods/GetPosX.md)。
 
+## 语法
+
+```javascript
+expression.GetPosX();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md)
+
 ## 示例
 
 获取演示文稿中形状的水平位置。

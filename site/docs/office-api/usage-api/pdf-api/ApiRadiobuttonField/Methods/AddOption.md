@@ -4,6 +4,26 @@ Adds options to checkbox group.
 
 Inherited from [ApiCheckboxField.AddOption](../../ApiCheckboxField/Methods/AddOption.md).
 
+## Syntax
+
+```javascript
+expression.AddOption(pageIndex, rect, exportValue);
+```
+
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| pageIndex | Required | number |  | The page where the option will be added. |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The option rectangle. |
+| exportValue | Optional | string |  | The option checked value. |
+
+## Returns
+
+[ApiCheckboxWidget](../../ApiCheckboxWidget/ApiCheckboxWidget.md)
+
 ## Example
 
 Add a selectable option to a checkbox field in a PDF.

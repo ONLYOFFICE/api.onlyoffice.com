@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetDashPattern](../../ApiBaseAnnotation/Methods/GetDashPattern.md)。
 
+## 语法
+
+```javascript
+expression.GetDashPattern();
+```
+
+`expression` - 表示 [ApiCircleAnnotation](../ApiCircleAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number[]
+
 ## 示例
 
 检索 PDF 中注释上虚线边框的虚线图案。

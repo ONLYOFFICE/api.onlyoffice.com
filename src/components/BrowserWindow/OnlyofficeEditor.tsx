@@ -19,7 +19,7 @@ interface OnlyOfficeEditorProps {
   };
 }
 
-async function createJWT(json: object, secret: string): Promise<string | null> {
+export async function createJWT(json: object, secret: string): Promise<string | null> {
   if (!secret) return null;
 
   // Define the JWT header

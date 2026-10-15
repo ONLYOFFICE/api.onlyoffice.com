@@ -1,6 +1,8 @@
 # GetSourceType
 
-Returns the source type of the table. Always returns "xlSrcRange" for range-based tables.
+Returns the source type of the table.
+
+Always returns "xlSrcRange" for range-based tables.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -12,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetSourceType();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

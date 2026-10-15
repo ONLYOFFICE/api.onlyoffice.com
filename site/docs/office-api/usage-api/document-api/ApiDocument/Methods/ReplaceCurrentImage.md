@@ -8,7 +8,7 @@ Replaces the current image with an image specified.
 expression.ReplaceCurrentImage(sImageUrl, Width, Height);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

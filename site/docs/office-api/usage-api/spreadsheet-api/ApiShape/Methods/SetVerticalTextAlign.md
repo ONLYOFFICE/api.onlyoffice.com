@@ -8,7 +8,7 @@ Sets the vertical alignment to the shape content where a paragraph or text runs 
 expression.SetVerticalTextAlign(verticalAlign);
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

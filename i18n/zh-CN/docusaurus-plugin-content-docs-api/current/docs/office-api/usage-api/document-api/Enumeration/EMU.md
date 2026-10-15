@@ -11,7 +11,7 @@ number
 将要创建的绘图尺寸设置为宽 100 毫米（10 厘米）、高 100 毫米（10 厘米）。
 
 ```javascript editor-docx
-// How to set a size of the drawing.
+// How do I set the size of a drawing?
 
 // Set a drawing size.
 

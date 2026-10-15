@@ -1,6 +1,7 @@
 # TickLabelPosition
 
 Possible values for the position of chart tick labels (either horizontal or vertical).
+
 - **"none"** - not display the selected tick labels.
 - **"nextTo"** - sets the position of the selected tick labels next to the main label.
 - **"low"** - sets the position of the selected tick labels in the part of the chart with lower values.
@@ -22,7 +23,7 @@ Enumeration
 Set the position of the vertical tick labels next to the main vertical label.
 
 ```javascript editor-pdf
-// How to set tick label positions for the chart.
+// How do I set the tick label position of a chart?
 
 // Set a chart vertical tick label position to "nextTo".
 

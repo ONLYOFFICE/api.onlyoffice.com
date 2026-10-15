@@ -1,6 +1,6 @@
 # GetParent
 
-返回自动筛选的父 ApiWorksheet 对象。
+返回自动筛选的父对象：如果筛选应用于工作表，则为 ApiWorksheet；如果筛选属于表格，则为 ApiListObject。
 
 ## 语法
 
@@ -16,7 +16,7 @@ expression.GetParent();
 
 ## 返回值
 
-[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) \| [ApiListObject](../../ApiListObject/ApiListObject.md)
 
 ## 示例
 

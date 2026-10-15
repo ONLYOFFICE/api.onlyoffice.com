@@ -8,7 +8,7 @@ Returns the ApiName object of the current range.
 expression.GetDefName();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

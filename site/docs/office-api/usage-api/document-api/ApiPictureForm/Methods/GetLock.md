@@ -4,6 +4,22 @@ Returns the lock state of the current form.
 
 Inherited from [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md).
 
+## Syntax
+
+```javascript
+expression.GetLock();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check the lock status of a form field in a document.

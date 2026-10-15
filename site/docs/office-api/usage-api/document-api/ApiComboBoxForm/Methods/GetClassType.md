@@ -8,7 +8,7 @@ Returns a type of the ApiComboBoxForm class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
 
 ## Parameters
 

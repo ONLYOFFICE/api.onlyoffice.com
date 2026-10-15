@@ -8,7 +8,7 @@ Creates a bullet for a paragraph with the numbering character or symbol specifie
 expression.CreateNumbering(numType, startAt);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ expression.CreateNumbering(numType, startAt);
 
 ## Returns
 
-[ApiBullet](../../ApiBullet/ApiBullet.md)
+[ApiBullet](../../ApiBullet/ApiBullet.md) \| null \| undefined
 
 ## Example
 

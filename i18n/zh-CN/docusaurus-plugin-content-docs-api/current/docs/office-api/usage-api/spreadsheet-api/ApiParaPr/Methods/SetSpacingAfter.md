@@ -1,8 +1,8 @@
 # SetSpacingAfter
 
-设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则
-nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
-将其解释为 false。
+设置当前段落的段后间距。
+
+如果 isAfterAuto 参数的值为 true，则 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则将其解释为 false。
 
 ## 语法
 
@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-在电子表格中为形状内段落的下方添加额外空间。
+在电子表格中使用段落属性为段落下方添加额外空间。
 
 ```javascript editor-xlsx
 // How do I increase the gap between one paragraph and the next in a spreadsheet?

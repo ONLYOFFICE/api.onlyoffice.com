@@ -72,7 +72,7 @@ if __name__ == "__main__":
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant read access to cards and attachments by authorizing with `read` scope.
 4. Replace `your_trello_api_key`, `your_trello_token`, and `your_board_id` with your actual Trello API key, token, and board ID.
 
@@ -95,7 +95,7 @@ def get_trello_board_name(board_id):
 
 ## Step 2: Create a DocSpace room
 
-Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room) to create a private collaboration room in DocSpace.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a private collaboration room in DocSpace.
 Retrieve metadata about the file attachments (name, ID, download URL) for further processing.
 
 ``` py

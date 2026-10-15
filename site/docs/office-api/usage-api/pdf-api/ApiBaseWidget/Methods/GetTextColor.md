@@ -8,7 +8,7 @@ Gets widget text color.
 expression.GetTextColor();
 ```
 
-`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+`expression` - A variable that represents an [ApiBaseWidget](../ApiBaseWidget.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../ApiColor/ApiColor.md)
+[ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined
 
 ## Example
 

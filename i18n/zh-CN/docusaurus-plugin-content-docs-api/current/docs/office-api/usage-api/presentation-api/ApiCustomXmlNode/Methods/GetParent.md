@@ -23,7 +23,7 @@ expression.GetParent();
 访问演示文稿中 XML 节点的父元素。
 
 ```javascript editor-pptx
-// How do I find the parent of an XML element in a presentation?
+// Find the parent of an XML element in a presentation.
 
 // Retrieve the containing XML element of a node in a presentation.
 

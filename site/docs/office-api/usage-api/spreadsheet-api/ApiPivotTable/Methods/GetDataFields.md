@@ -1,7 +1,6 @@
 # GetDataFields
 
-Returns a collection that represents either a single pivot table data field
-or a collection of all visible data fields.
+Returns a collection that represents either a single pivot table data field or a collection of all visible data fields.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ or a collection of all visible data fields.
 expression.GetDataFields(field);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

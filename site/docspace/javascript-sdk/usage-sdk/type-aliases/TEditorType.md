@@ -1,7 +1,14 @@
-# Type Alias: TEditorType
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+---
 
-> **TEditorType** = `` `${EditorType}` ``
+# TEditorType
 
-Defined in: [types/index.ts:54](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L54)
+String literal union of all [EditorType](../enumerations/EditorType.md) values.
 
-The template literal type based on the `EditorType` enum.
+Accepted by [TFrameConfig.editorType](TFrameConfig.md#editorType) and [TFrameConfig.type](TFrameConfig.md#type).
+Using the [EditorType](../enumerations/EditorType.md) enum constants is preferred.
+
+```ts
+type TEditorType = `${EditorType}`;
+```

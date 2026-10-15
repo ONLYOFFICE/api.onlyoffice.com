@@ -8,7 +8,7 @@ Returns a value that represents the format code for the current range.
 expression.GetNumberFormat();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

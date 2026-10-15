@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacingBefore();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
+
 ## 示例
 
-检查演示文稿中段落上方的空间。
+在演示文稿中获取当前段落的段前间距值。
 
 ```javascript editor-pptx
-// How do I read the spacing value before a paragraph in a presentation?
+// How do I find the space above a paragraph in a presentation?
 
-// Retrieve the distance between the previous element and the start of a paragraph in a presentation.
+// Check and display the top spacing of a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -33,12 +49,11 @@ paragraph.AddText("This is due to the fact that the second paragraph has this of
 
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
-const paraPr = paragraph2.GetParaPr();
-paraPr.SetSpacingBefore(1440);
+paragraph2.SetSpacingBefore(1440);
 docContent.Push(paragraph2);
 
-const spacingBefore = paraPr.GetSpacingBefore();
+const spacingBefore = paragraph2.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
-paragraph3.AddText("Spacing before: " + spacingBefore);
+paragraph3.AddText("Spacing before second paragraph: " + spacingBefore);
 docContent.Push(paragraph3);
 ```

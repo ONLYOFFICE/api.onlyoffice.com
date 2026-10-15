@@ -8,7 +8,7 @@ Returns the ApiRange object that represents all the cells on the rows range.
 expression.GetRows(value);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -30,5 +30,5 @@ Select several rows together to style them all at once in a spreadsheet.
 // Color a row range uniformly by treating it as a single collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-worksheet.GetRows("1:4").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+worksheet.GetRows("1:4").SetFillColor(Api.RGB(255, 213, 191));
 ```

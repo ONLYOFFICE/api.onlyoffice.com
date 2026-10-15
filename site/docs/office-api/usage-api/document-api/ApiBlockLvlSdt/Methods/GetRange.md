@@ -8,7 +8,7 @@ Returns a Range object that represents the part of the document contained in the
 expression.GetRange(start, end);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

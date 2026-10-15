@@ -4,6 +4,7 @@ sidebar_position: -1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # Callback handler
 
@@ -11,11 +12,7 @@ The **document editing service** informs the **document storage service** about 
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter          | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,9 +29,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | userdata           | string          | The custom information sent to the command service for the [forcesave](../additional-api/command-service/forcesave.md) and [info](../additional-api/command-service/info.md) commands in case it was present in the request.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | users              | string[] | The list of the identifiers of the users who opened the document for editing; when the document has been changed the **users** will return the identifier of the user who was the last to edit the document (for `status` **2** and `status` **6** replies).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-```mdx-code-block
 </APITable>
-```
 
 \* *- required parameter*
 

@@ -4,33 +4,52 @@ Sets the text outline to the current text run.
 
 Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
-Add a border outline around text in a presentation.
+Apply an outline stroke to text in a presentation.
 
 ```javascript editor-pptx
-// Can I add a stroke or border to text in a presentation?
+// Add a decorative border or stroke around text characters.
 
-// Apply a stroke outline effect to the text characters in a presentation.
+// Create a text run and set its outline using a stroke object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
-const run = Api.CreateRun();
-const textPr = run.GetTextPr();
-textPr.SetFontSize(50);
-stroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
-textPr.SetOutLine(stroke);
-paragraph.SetJc("left");
-run.AddText("This is a text run with the black text outline set using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+
+run = Api.CreateRun();
+const runStroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
+run.SetOutLine(runStroke);
+run.AddText("This is a text run with the black text outline.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```

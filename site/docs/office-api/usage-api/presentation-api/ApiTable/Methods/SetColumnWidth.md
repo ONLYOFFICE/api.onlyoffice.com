@@ -8,7 +8,7 @@ Sets the width of the specified column in the current table.
 expression.SetColumnWidth(columnIndex, width);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

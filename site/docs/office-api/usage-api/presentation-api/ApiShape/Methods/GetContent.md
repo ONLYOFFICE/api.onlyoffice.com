@@ -8,7 +8,7 @@ Returns the shape inner contents where a paragraph or text runs can be inserted.
 expression.GetContent();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
 
 ## Example
 

@@ -4,6 +4,22 @@ Gets annotation author name.
 
 Inherited from [ApiBaseAnnotation.GetAuthorName](../../ApiBaseAnnotation/Methods/GetAuthorName.md).
 
+## Syntax
+
+```javascript
+expression.GetAuthorName();
+```
+
+`expression` - A variable that represents an [ApiLinkAnnotation](../ApiLinkAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the author of an annotation in a PDF.

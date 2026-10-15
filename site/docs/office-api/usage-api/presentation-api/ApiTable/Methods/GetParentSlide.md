@@ -4,6 +4,22 @@ Returns the drawing parent slide.
 
 Inherited from [ApiDrawing.GetParentSlide](../../ApiDrawing/Methods/GetParentSlide.md).
 
+## Syntax
+
+```javascript
+expression.GetParentSlide();
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null
+
 ## Example
 
 Find the slide that contains a shape in a presentation.

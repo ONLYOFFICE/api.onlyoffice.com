@@ -8,7 +8,7 @@ Returns the net present value of an investment based on a discount rate and a se
 expression.NPV(arg1, args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

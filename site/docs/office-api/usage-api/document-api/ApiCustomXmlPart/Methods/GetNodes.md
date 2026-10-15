@@ -8,7 +8,7 @@ Retrieves nodes from custom XML based on the provided XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Select XML nodes from a custom XML part using an XPath query in a document.
 
 ```javascript editor-docx
-// How do I retrieve specific nodes from a custom XML part in a document?
+// Retrieve specific nodes from a custom XML part in a document.
 
 // Extract node text and attributes to read structured data stored in a document.
 

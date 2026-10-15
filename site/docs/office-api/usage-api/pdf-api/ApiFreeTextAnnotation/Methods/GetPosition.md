@@ -4,6 +4,22 @@ Gets annotation position.
 
 Inherited from [ApiBaseAnnotation.GetPosition](../../ApiBaseAnnotation/Methods/GetPosition.md).
 
+## Syntax
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Point](../../Enumeration/Point.md)
+
 ## Example
 
 Get the position coordinates of an annotation in a PDF.

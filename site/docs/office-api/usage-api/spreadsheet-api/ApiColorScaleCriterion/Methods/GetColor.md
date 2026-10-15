@@ -8,7 +8,7 @@ Returns the format color of the color scale criterion.
 expression.GetColor();
 ```
 
-`expression` - A variable that represents a [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
+`expression` - A variable that represents an [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
 
 ## Parameters
 

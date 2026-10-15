@@ -8,7 +8,7 @@ Appends the text content of the given form to the end of the current complex for
 expression.Add(value);
 ```
 
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
 
 ## Parameters
 

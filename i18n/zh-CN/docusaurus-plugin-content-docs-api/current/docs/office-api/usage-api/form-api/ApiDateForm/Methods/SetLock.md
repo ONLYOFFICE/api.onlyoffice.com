@@ -4,6 +4,24 @@
 
 继承自 [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md)。
 
+## 语法
+
+```javascript
+expression.SetLock(isLock);
+```
+
+`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isLock | 必需 | boolean |  | 指定是锁定表单（true）还是解锁表单（false）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 锁定文档中的表单字段以防止编辑。

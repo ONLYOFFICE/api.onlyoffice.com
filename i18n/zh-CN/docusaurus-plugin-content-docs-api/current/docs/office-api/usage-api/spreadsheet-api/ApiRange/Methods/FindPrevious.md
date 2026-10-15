@@ -1,6 +1,8 @@
 # FindPrevious
 
-继续使用 [ApiRange#Find](../../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。这不会影响选择或活动单元格。
+继续使用 [ApiRange#Find](../../ApiRange/Methods/Find.md) 方法开始的搜索。查找匹配相同条件的上一个单元格并返回表示该单元格的 ApiRange 对象。
+
+这不会影响选择或活动单元格。
 
 ## 语法
 
@@ -47,9 +49,9 @@ worksheet.GetRange("D3").SetValue(200);
 worksheet.GetRange("D4").SetValue(160);
 let range = worksheet.GetRange("A2:D4");
 let searchRange = range.Find("200", "B1", "xlValues", "xlWhole", "xlByColumns", "xlNext", true);
-searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+searchRange.SetFillColor(Api.RGB(255, 213, 191));
 let nextSearchRange = range.FindNext(searchRange);
-nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+nextSearchRange.SetFillColor(Api.RGB(255, 213, 191));
 let prevSearchRange = range.FindPrevious(nextSearchRange);
 prevSearchRange.SetValue(0);
 ```

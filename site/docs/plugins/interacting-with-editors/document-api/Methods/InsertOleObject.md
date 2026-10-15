@@ -8,14 +8,14 @@ Inserts the OLE object at the current document position.
 expression.InsertOleObject(NewObject, bSelect);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | NewObject | Required | [OLEObjectData](../Enumeration/OLEObjectData.md) |  | The OLEObjectData object. |
-| bSelect | Required | boolean |  | Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**). |
+| bSelect | Required | boolean \| null \| undefined |  | Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**). |
 
 ## Returns
 

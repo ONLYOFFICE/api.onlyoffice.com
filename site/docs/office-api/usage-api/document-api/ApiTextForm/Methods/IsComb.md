@@ -8,7 +8,7 @@ Checks if the text field is a comb of characters with the same cell width.
 expression.IsComb();
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

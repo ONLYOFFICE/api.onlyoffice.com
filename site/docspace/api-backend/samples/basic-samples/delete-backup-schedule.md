@@ -47,7 +47,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       method: 'DELETE',
       headers: HEADERS,
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Backup schedule deletion failed. Status code: ${res.status}, Message: ${text}`);
@@ -113,7 +113,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/backup/deletebackupschedule](/docspace/api-backend/usage-api/delete-backup-schedule) with an optional query parameter:
+A DELETE request is sent to [/api/2.0/backup/deletebackupschedule](/docspace/api-backend/usage-api/backup/delete-backup-schedule) with an optional query parameter:
 
 - `Dump` — boolean flag indicating whether the operation targets a dump-based schedule.
 

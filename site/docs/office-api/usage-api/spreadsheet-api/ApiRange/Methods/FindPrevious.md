@@ -1,6 +1,8 @@
 # FindPrevious
 
-Continues a search that was begun with the [ApiRange#Find](../../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell. This does not affect the selection or the active cell.
+Continues a search that was begun with the [ApiRange#Find](../../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell.
+
+This does not affect the selection or the active cell.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Continues a search that was begun with the [ApiRange#Find](../../ApiRange/Method
 expression.FindPrevious(Before);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -47,9 +49,9 @@ worksheet.GetRange("D3").SetValue(200);
 worksheet.GetRange("D4").SetValue(160);
 let range = worksheet.GetRange("A2:D4");
 let searchRange = range.Find("200", "B1", "xlValues", "xlWhole", "xlByColumns", "xlNext", true);
-searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+searchRange.SetFillColor(Api.RGB(255, 213, 191));
 let nextSearchRange = range.FindNext(searchRange);
-nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+nextSearchRange.SetFillColor(Api.RGB(255, 213, 191));
 let prevSearchRange = range.FindPrevious(nextSearchRange);
 prevSearchRange.SetValue(0);
 ```

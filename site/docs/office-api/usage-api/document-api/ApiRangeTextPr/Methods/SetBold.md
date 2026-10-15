@@ -4,6 +4,24 @@ Sets the bold property to the text character.
 
 Inherited from [ApiTextPr.SetBold](../../ApiTextPr/Methods/SetBold.md).
 
+## Syntax
+
+```javascript
+expression.SetBold(isBold);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isBold | Required | boolean |  | Specifies that the contents of the run are displayed bold. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Apply bold formatting to the default text characters in a document.

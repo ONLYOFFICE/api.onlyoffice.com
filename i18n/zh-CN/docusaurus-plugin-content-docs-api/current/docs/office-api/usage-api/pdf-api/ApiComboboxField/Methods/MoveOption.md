@@ -4,6 +4,25 @@
 
 继承自 [ApiBaseListField.MoveOption](../../ApiBaseListField/Methods/MoveOption.md)。
 
+## 语法
+
+```javascript
+expression.MoveOption(currentIndex, newIndex);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| currentIndex | 必需 | number |  | 要移动的选项的当前索引。 |
+| newIndex | 必需 | number |  | 选项的目标索引。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中重新排序下拉字段中的选项。

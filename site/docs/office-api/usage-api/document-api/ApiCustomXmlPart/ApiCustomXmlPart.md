@@ -1,8 +1,10 @@
 # ApiCustomXmlPart
 
-Represents the ApiCustomXmlPart class.
+Class representing a custom XML part.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

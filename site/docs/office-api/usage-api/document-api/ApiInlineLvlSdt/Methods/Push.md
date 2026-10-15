@@ -8,7 +8,7 @@ Adds an element to the end of inline text content control.
 expression.Push(oElement);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

@@ -4,14 +4,32 @@
 
 继承自 [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 可选 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中为表单字段应用边框颜色以突出显示。
+在文档中为文本字段应用边框颜色。
 
 ```javascript editor-docx
-// How do I change the border color of a form field in a document?
+// How do I change the color of the border around a text field in a document?
 
-// Style the outline of a form field with a specific color to draw attention to it in a document.
+// Highlight a text field's boundary by assigning it a specific border color in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

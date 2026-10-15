@@ -8,7 +8,7 @@ Sets the style to the current Range.
 expression.SetStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

@@ -1,4 +1,4 @@
-﻿# Unlock
+# Unlock
 
 `POST /wopi/files/(file_id)`
 

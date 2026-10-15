@@ -8,7 +8,7 @@ Gets field partial name.
 expression.GetPartialName();
 ```
 
-`expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
+`expression` - A variable that represents an [ApiBaseField](../ApiBaseField.md) class.
 
 ## Parameters
 
@@ -33,5 +33,5 @@ let textField = Api.CreateTextField([10, 10, 160, 30]);
 page.AddObject(textField);
 
 textField.SetPartialName('EXAMPLE');
-textField.SetValue('Field partial name is: ' + textField.GetFullName());
+textField.SetValue('Field partial name is: ' + textField.GetPartialName());
 ```

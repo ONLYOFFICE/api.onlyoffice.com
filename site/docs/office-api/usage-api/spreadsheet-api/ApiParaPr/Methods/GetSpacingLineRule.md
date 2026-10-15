@@ -8,7 +8,7 @@ Returns the paragraph line spacing rule.
 expression.GetSpacingLineRule();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -38,8 +38,8 @@ paraPr.SetSpacingLine(3 * 240, "auto");
 paragraph.AddText("Paragraph 1. Spacing: 3 times of a common paragraph line spacing.");
 paragraph.AddLineBreak();
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-let spacingLineValue = paraPr.GetSpacingLineValue();
+let spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Spacing line value : " + spacingLineValue);
+paragraph.AddText("Spacing line rule: " + spacingLineRule);
 content.Push(paragraph);
 ```

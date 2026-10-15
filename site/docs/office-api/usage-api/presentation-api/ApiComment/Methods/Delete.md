@@ -8,7 +8,7 @@ Deletes the current comment from the document.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Moves the current data field inside the category.
 expression.Move(type, index);
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

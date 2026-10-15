@@ -1,7 +1,8 @@
 # CreateSection
 
-Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current
-section - page size, footer, header, columns, etc.
+Creates a new document section which ends at the specified paragraph.
+
+Allows to set local parameters to the current section - page size, footer, header, columns, etc.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ section - page size, footer, header, columns, etc.
 expression.CreateSection(oParagraph);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

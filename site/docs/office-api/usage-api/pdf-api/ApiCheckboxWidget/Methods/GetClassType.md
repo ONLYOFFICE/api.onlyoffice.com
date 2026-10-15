@@ -8,7 +8,7 @@ Returns a type of the ApiCheckboxWidget class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
 
 ## Parameters
 

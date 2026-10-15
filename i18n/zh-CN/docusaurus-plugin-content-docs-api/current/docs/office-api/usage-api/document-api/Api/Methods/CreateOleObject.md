@@ -22,7 +22,7 @@ expression.CreateOleObject(imageSrc, width, height, data, appId);
 
 ## 返回值
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null \| undefined
 
 ## 示例
 

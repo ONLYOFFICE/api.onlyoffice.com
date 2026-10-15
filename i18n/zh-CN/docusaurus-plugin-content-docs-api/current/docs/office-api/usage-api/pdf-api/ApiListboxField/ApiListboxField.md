@@ -1,13 +1,17 @@
 # ApiListboxField
 
+表示列表框字段的类。
+
 ApiListboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 的子类。
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | boolean | 向列表选项添加新选项。 |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | 添加新控件 - 字段的可视化表示 |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | 添加新控件 - 字段的可视化表示 |
 | [Delete](./Methods/Delete.md) | boolean | 从文档中移除字段。 |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "listboxField" | 返回 ApiListboxField 类的类型。 |
@@ -17,7 +21,7 @@ ApiListboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 
 | [GetOptions](./Methods/GetOptions.md) | [ListOption](../Enumeration/ListOption.md)[] | 获取列表中的所有选项。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
-| [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | 获取字段值 |
 | [GetValueIndexes](./Methods/GetValueIndexes.md) | number[] | 获取选定值的索引。 |
 | [IsCommitOnSelChange](./Methods/IsCommitOnSelChange.md) | boolean | 检查字段是否可在选择更改时提交。 |
 | [IsMultipleSelection](./Methods/IsMultipleSelection.md) | boolean | 检查字段是否支持多选。 |

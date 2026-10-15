@@ -8,13 +8,13 @@ Cuts the range and save it to the clipboard or paste it to the specified range.
 expression.Cut(destination);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | Specifies the new range to which the cut range will be pasted. If this argument is omitted, the range will be copied to the clipboard. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | Specifies the new range to which the cut range will be pasted. If this argument is omitted, the range will be copied to the clipboard. |
 
 ## Returns
 

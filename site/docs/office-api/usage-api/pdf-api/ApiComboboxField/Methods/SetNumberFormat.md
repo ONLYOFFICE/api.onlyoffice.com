@@ -8,7 +8,7 @@ Sets number format for field.
 expression.SetNumberFormat(decimalPlaces, separatorStyle, negativeStyle, currency, currencyPrepend);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

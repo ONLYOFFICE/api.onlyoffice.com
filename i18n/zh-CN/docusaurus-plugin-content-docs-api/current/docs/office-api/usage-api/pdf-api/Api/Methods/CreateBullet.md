@@ -22,7 +22,7 @@ expression.CreateBullet(sSymbol);
 
 ## 示例
 
-在 PDF 中为段落添加项目符号。
+创建短划线项目符号并将其应用于 PDF 中的段落。
 
 ```javascript editor-pdf
 // How do I create a bulleted list in a PDF?

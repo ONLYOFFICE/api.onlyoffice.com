@@ -4,6 +4,22 @@ Gets annotation border style.
 
 Inherited from [ApiBaseAnnotation.GetBorderStyle](../../ApiBaseAnnotation/Methods/GetBorderStyle.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderStyle();
+```
+
+`expression` - A variable that represents an [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md)
+
 ## Example
 
 Retrieve the border style of an annotation in a PDF.

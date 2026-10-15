@@ -4,26 +4,43 @@ Returns a number of elements in the current document.
 
 Inherited from [ApiDocumentContent.GetElementsCount](../../ApiDocumentContent/Methods/GetElementsCount.md).
 
+## Syntax
+
+```javascript
+expression.GetElementsCount();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
-Count all elements inside a document content container in a document.
+Count all elements in the document and display the totals before and after adding paragraphs in a document.
 
 ```javascript editor-docx
-// How do I get the total number of elements in a document content in a document?
+// How do I check how many elements exist at different points while building a document?
 
-// Check how many elements a shape holds after modifying its content programmatically.
+// Track the element count dynamically as new paragraphs are pushed into a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
-paragraph.AddDrawing(drawing);
-let docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-paragraph = docContent.GetElement(0);
-paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
+paragraph.AddText("Number of document elements at this point: ");
+paragraph.AddTabStop();
+paragraph.AddText("" + doc.GetElementsCount());
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
+paragraph.AddText("Now we add one more paragraph and push it.");
+doc.Push(paragraph);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Number of document elements after we added the second paragraph ");
+paragraph.AddText("but before we push the third one: ");
+paragraph.AddTabStop();
+paragraph.AddText("" + doc.GetElementsCount());
 doc.Push(paragraph);
 ```

@@ -8,7 +8,7 @@ Sets a limit to the text field characters.
 expression.SetCharactersLimit(nChars);
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

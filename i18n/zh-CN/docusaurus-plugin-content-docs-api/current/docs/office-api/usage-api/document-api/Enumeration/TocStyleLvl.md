@@ -18,7 +18,7 @@ Object
 向文档添加从指定样式生成的目录。
 
 ```javascript editor-docx
-// How to create a table of contents properties indicating its style levels.
+// How do I create table of contents properties with specific style levels?
 
 // Add a table of contents with styles for different elements (Heading 1, 2, etc.).
 

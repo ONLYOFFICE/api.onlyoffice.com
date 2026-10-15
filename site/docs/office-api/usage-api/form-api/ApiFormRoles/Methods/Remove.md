@@ -8,7 +8,7 @@ Removes a role with the specified name.
 expression.Remove(name, delegateRole);
 ```
 
-`expression` - A variable that represents a [ApiFormRoles](../ApiFormRoles.md) class.
+`expression` - A variable that represents an [ApiFormRoles](../ApiFormRoles.md) class.
 
 ## Parameters
 

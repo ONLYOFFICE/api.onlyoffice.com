@@ -8,13 +8,13 @@ Sets the text color to the current text Range.
 expression.SetColor(color);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The text color. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | The text color. Pass *null* to remove the text color. |
 
 ## Returns
 

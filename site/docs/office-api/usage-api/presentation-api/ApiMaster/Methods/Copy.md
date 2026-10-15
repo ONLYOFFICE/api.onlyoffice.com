@@ -8,7 +8,7 @@ Creates a copy of the specified slide master object.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

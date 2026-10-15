@@ -4,6 +4,22 @@ Returns the format condition operator.
 
 Inherited from [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md).
 
+## Syntax
+
+```javascript
+expression.GetOperator();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+
 ## Example
 
 Read the comparison type of a conditional formatting rule in a spreadsheet.
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let operator = condition1.GetOperator();
 

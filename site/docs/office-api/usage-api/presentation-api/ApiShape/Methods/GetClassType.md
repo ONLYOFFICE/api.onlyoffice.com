@@ -8,7 +8,7 @@ Returns the type of the ApiShape class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

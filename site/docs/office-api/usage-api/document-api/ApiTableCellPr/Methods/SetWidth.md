@@ -8,7 +8,7 @@ Sets the preferred width to the current table cell.
 expression.SetWidth(sType, nValue);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

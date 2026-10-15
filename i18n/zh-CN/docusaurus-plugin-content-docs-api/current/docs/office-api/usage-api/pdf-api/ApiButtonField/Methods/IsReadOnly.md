@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.IsReadOnly](../../ApiBaseField/Methods/IsReadOnly.md)。
 
+## 语法
+
+```javascript
+expression.IsReadOnly();
+```
+
+`expression` - 表示 [ApiButtonField](../ApiButtonField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查 PDF 中的表单字段是否已锁定以防止编辑。

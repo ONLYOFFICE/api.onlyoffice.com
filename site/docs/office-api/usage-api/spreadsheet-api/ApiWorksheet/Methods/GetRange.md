@@ -1,7 +1,8 @@
 # GetRange
 
-Returns an object that represents the selected range of the current sheet. Can be a single cell - - **A1**, or cells
-from a single row - - **A1:E1**, or cells from a single column - - **A1:A10**, or cells from several rows and columns - - **A1:E10**.
+Returns an object that represents the selected range of the current sheet.
+
+Can be a single cell - **A1**, or cells from a single row - **A1:E1**, or cells from a single column - **A1:A10**, or cells from several rows and columns - **A1:E10**.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ from a single row - - **A1:E1**, or cells from a single column - - **A1:A10**, o
 expression.GetRange(Range1, Range2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

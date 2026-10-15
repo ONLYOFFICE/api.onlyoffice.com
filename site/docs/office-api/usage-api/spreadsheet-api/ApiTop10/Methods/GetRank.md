@@ -8,7 +8,7 @@ Returns the rank value for the top 10 condition.
 expression.GetRank();
 ```
 
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
 
 ## Parameters
 

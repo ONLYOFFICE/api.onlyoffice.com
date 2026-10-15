@@ -8,7 +8,7 @@ Converts the ApiSchemeColor object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiSchemeColor](../ApiSchemeColor.md) class.
+`expression` - A variable that represents an [ApiSchemeColor](../ApiSchemeColor.md) class.
 
 ## Parameters
 

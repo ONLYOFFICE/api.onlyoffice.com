@@ -8,7 +8,7 @@ Updates an XML element at the specified XPath.
 expression.UpdateElement(xPath, xmlStr);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ boolean
 Replace the content of a stored XML element with new data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I change the value inside a saved XML structure in a spreadsheet?
+// Change the value inside a saved XML structure in a spreadsheet.
 
 // Overwrite an existing XML node to keep embedded data current in a spreadsheet.
 

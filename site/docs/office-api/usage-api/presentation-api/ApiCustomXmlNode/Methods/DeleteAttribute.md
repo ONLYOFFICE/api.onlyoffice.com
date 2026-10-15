@@ -1,6 +1,7 @@
 # DeleteAttribute
 
 Deletes an attribute from the custom XML node.
+
 If the attribute exists, it will be removed.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute exists, it will be removed.
 expression.DeleteAttribute(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -26,7 +27,7 @@ boolean
 Remove an attribute from an XML node in a presentation.
 
 ```javascript editor-pptx
-// How do I remove an attribute from XML data in a presentation?
+// Drop an attribute from custom XML data in a presentation.
 
 // Delete a specific property from an XML element in a presentation.
 

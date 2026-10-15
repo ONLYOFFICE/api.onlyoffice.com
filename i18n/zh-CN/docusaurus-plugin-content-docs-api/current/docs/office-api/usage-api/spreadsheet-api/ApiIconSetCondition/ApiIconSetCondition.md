@@ -1,5 +1,7 @@
 # ApiIconSetCondition
 
+表示图标集条件格式规则的类。
+
 ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
@@ -16,12 +18,14 @@ ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCond
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回当前条件格式规则应用的单元格区域。 |
+| [Delete](./Methods/Delete.md) | 无 | 删除图标集条件格式规则。 |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回当前条件格式规则应用的单元格区域。 |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | 返回时间段条件的日期运算符。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。 |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | 返回当前格式条件应用的字体。 |
 | [GetFormula](./Methods/GetFormula.md) | string | 返回与图标集条件关联的公式。 |
 | [GetFormula1](./Methods/GetFormula1.md) | string | 返回当前条件格式规则使用的第一个公式。 |
@@ -37,11 +41,12 @@ ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCond
 | [GetReverseOrder](./Methods/GetReverseOrder.md) | boolean \| null | 返回图标集规则中的图标顺序是否反转。 |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | 返回条件格式规则的作用域类型。 |
 | [GetShowIconOnly](./Methods/GetShowIconOnly.md) | boolean \| null | 返回图标集规则中是否仅显示图标（不显示单元格值）。 |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | 返回如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。此规则类型无法停止计算，因此只能通过打开已设置该值的文件来更改该值。 |
 | [GetText](./Methods/GetText.md) | string | 返回基于文本的条件格式规则中使用的文本值。 |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | 返回基于文本的条件格式规则的文本运算符。 |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回图标集条件格式规则的类型。 |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | 使用指定的参数修改当前格式条件。 |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 设置当前条件格式规则应用的单元格区域。 |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 修改当前条件格式规则所应用的单元格范围。 |
 | [SetBorders](./Methods/SetBorders.md) | 无 | 设置条件格式规则的边框样式。 |
 | [SetDateOperator](./Methods/SetDateOperator.md) | 无 | 设置时间段条件的日期运算符。 |
 | [SetFillColor](./Methods/SetFillColor.md) | 无 | 使用先前创建的颜色对象为格式条件设置背景颜色。 |
@@ -54,5 +59,6 @@ ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCond
 | [SetReverseOrder](./Methods/SetReverseOrder.md) | boolean | 指定图标集规则中的图标顺序是否反转。 |
 | [SetScopeType](./Methods/SetScopeType.md) | 无 | 设置条件格式规则的作用域类型。 |
 | [SetShowIconOnly](./Methods/SetShowIconOnly.md) | boolean | 指定是否在图标集规则中仅显示图标（不显示单元格值）。 |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | 无 | 设置如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。 |
 | [SetText](./Methods/SetText.md) | 无 | 设置基于文本的条件格式规则中使用的文本值。 |
 | [SetTextOperator](./Methods/SetTextOperator.md) | 无 | 设置基于文本的条件格式规则的文本运算符。 |

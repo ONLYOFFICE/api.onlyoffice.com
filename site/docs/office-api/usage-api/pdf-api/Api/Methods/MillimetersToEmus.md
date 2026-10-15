@@ -1,6 +1,7 @@
 # MillimetersToEmus
 
 Converts millimeters to English Metric Units (EMUs).
+
 The result is an integer value.
 
 ## Syntax
@@ -9,7 +10,7 @@ The result is an integer value.
 expression.MillimetersToEmus(mm);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -33,7 +34,7 @@ Convert millimeters to emus in a PDF document.
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);
 
-const rgb = Api.CreateRGBColor(50, 150, 250);
+const rgb = Api.RGB(50, 150, 250);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 150 * 36000, 150 * 36000, fill, stroke);

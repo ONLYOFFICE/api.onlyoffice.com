@@ -205,7 +205,7 @@ This example shows how to trigger a manual portal backup in ONLYOFFICE DocSpace 
 
 ## Step 1: Start a manual backup
 
-A POST request is sent to [/api/2.0/backup/startbackup](/docspace/api-backend/usage-api/start-backup).
+A POST request is sent to [/api/2.0/backup/startbackup](/docspace/api-backend/usage-api/backup/start-backup).
 
 The request body includes:
 - `storageType`: backup destination type (example: Documents).

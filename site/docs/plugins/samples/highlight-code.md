@@ -3,6 +3,8 @@ description: Apply syntax highlighting to code snippets.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Highlight code
 
 Connects the [highlight.js library](https://highlightjs.org/) for highlighting code syntax with the necessary language, style, and background color.
@@ -11,11 +13,7 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="almj8Lphrmc" />
-```
 
 ## Installation
 
@@ -177,7 +175,7 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](../interacting-with-editors/document-api/Methods/PasteHtml.md)

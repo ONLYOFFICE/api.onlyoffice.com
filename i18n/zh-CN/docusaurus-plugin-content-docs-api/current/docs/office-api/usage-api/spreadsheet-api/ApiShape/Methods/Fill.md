@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md)。
 
+## 语法
+
+```javascript
+expression.Fill(fill);
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充图形对象的填充类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 为已放置在电子表格工作表上的形状应用渐变填充。
@@ -14,11 +32,11 @@
 // Replace a solid fill with a smooth color blend across a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = worksheet.AddShape("cube", 90 * 36000, 27 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
-let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 fill = Api.CreateRadialGradientFill([gs1, gs2]);
 drawing.Fill(fill);
 ```

@@ -8,7 +8,7 @@ Retrieves nodes from custom XML based on the provided XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Get nodes from a custom XML part using XPath in a presentation.
 
 ```javascript editor-pptx
-// How do I retrieve nodes matching an XPath expression in a presentation?
+// Retrieve nodes matching an XPath expression in a presentation.
 
 // Display matching XML nodes in a shape in a presentation.
 

@@ -8,7 +8,7 @@ Sets whether the top 10 ranking is percentage-based.
 expression.SetPercent(percent);
 ```
 
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
 
 ## Parameters
 

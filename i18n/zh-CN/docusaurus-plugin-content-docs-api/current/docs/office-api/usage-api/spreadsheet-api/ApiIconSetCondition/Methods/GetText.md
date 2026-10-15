@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetText](../../ApiFormatCondition/Methods/GetText.md)。
 
+## 语法
+
+```javascript
+expression.GetText();
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中条件格式规则匹配的文本字符串。
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTextString", "xlContains", "Apple");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let textValue = condition1.GetText();
 

@@ -8,7 +8,7 @@ Sets regular expression validate string for field.
 expression.SetRegularExp(regularExpression);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

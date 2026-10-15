@@ -2,19 +2,81 @@
 sidebar_position: -2
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # How to call commands
 
-To call commands and send the data back to the editor, define the **callCommand** method. It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
+To call commands and send the data back to the editor, use the [Editor.RunMacro](#editorrunmacro) method. In editors before version 10.0, use the [callCommand](#callcommand) method instead. Both methods allow the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
+
+`RunMacro` always keeps the plugin window open and recalculates the document. To close the window after the command or skip recalculation, use `callCommand`.
+
+## Editor.RunMacro
+
+Office JavaScript API code is run with the `RunMacro` method of the global [Editor](how-to-call-methods.md#editor-object) object. The method passes its other arguments to the function and returns a Promise with the value that the function returns:
+
+```ts
+const count = await Editor.RunMacro((text, bold) => {
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText(text).SetBold(bold);
+  oDocument.InsertContent([oParagraph]);
+  return oDocument.GetElementsCount();
+}, "Hello world", true);
+```
+
+The arguments replace the [Asc.scope](#ascscope-object) object that `callCommand` uses to pass data, so nothing needs to be stored before the call:
+
+```ts
+const text = "Hello world";
+
+await Editor.RunMacro((text) => {
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText(text);
+  oDocument.InsertContent([oParagraph]);
+}, text);
+```
+
+`RunMacro` sends the function to the editor in the same way as `callCommand`, so the same rules apply:
+
+- The function runs in its own context and cannot see the plugin variables. Pass everything it needs as arguments. The `Asc.scope` object is still available inside it.
+- The arguments are serialized to JSON. Strings, numbers, booleans, `null`, arrays, and plain objects arrive intact. Functions, DOM nodes, and class instances are lost or arrive as plain objects.
+- Only the JS standard types can be returned. Office JavaScript API objects, such as `ApiParagraph`, arrive in the plugin as `undefined`.
+- The document is always recalculated after the function runs, and the plugin window stays open, as with `callCommand(func, false, true)`.
+
+### Errors
+
+Unlike `callCommand`, `RunMacro` passes the errors thrown by the function back to the plugin. If the function throws, the Promise rejects with an `Error` whose message contains the name and the message of the original error, for example, `TypeError: Cannot read properties of null (reading 'GetRange')`. The Promise also rejects if the editor rolls back the changes made by the function, with the message `The editor rolled back the changes made by the command.` Handle both cases with `try...catch` around `await`:
+
+```ts
+try {
+  await Editor.RunMacro(() => {
+    Api.GetDocument().GetElement(100).GetRange().Select();
+  });
+} catch (e) {
+  console.error(e.message);
+}
+```
+
+If the last argument is a function, it is used as a callback, and `RunMacro` does not return a Promise. When the function throws, the callback receives an object with the error text in the `onlyoffice_id_error_message` property instead of the result:
+
+```ts
+Editor.RunMacro(() => {
+  return Api.GetDocument().GetElementsCount();
+}, (result) => {
+  if (result && result.onlyoffice_id_error_message) {
+    console.error(result.onlyoffice_id_error_message);
+    return;
+  }
+  console.log(result);
+});
+```
 
 ## callCommand
 
 ### Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
 |----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,9 +85,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `isCalc`   | boolean  | Whether the document will be recalculated or not. The `true` value is used to recalculate the document after executing the function in the `func` parameter. The `false` value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is `true`.                                              |
 | `callback` | function | The result that the method returns. Only the JS standard types are available (any objects will be replaced with `undefined`).                                                                                                                                                                                                                                                    |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Returns
 

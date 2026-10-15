@@ -8,7 +8,7 @@ Selects the list entry in the combo box / drop-down list content control and set
 expression.Select();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

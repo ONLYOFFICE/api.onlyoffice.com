@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a table row object. The search results are a collection of ApiRange objects.
+Searches for a scope of a table row object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 
@@ -8,13 +10,13 @@ Searches for a scope of a table row object. The search results are a collection 
 expression.Search(sText, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | Search string. |
+| sText | Required | string \| RegExp |  | Search string, or a regular expression to match. When a RegExp is passed, the isMatchCase parameter is ignored (control case sensitivity with the "i" flag instead). |
 | isMatchCase | Required | boolean |  | Case sensitive or not. |
 
 ## Returns
@@ -23,12 +25,12 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-Search for a text string within the cells of a table row in a document.
+Find text in a table row by a string and by a regular expression, then bold the matches.
 
 ```javascript editor-docx
-// How do I find specific words inside a table row and work with the results in a document?
+// Look up a keyword across the row cells and match the same word with a RegExp.
 
-// Locate matching text across row cells to apply formatting to the found content in a document.
+// Bold one keyword match, then bold every occurrence found by the /text/g expression.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,6 +42,11 @@ row.GetCell(0).GetContent().GetElement(0).AddText("text");
 row.GetCell(1).GetContent().GetElement(0).AddText("text");
 row.GetCell(2).GetContent().GetElement(0).AddText("text");
 doc.Push(table);
-let rowSearch = row.Search("tex", true);
-rowSearch[1].SetBold("true");
+
+let byKeyword = row.Search("tex", true);
+byKeyword[1].SetBold(true);
+
+let byRegExp = row.Search(/text/g);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

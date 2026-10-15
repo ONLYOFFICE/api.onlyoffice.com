@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md)。
 
+## 语法
+
+```javascript
+expression.GetOperator();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+
 ## 示例
 
 读取电子表格中条件格式规则的比较类型。
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let operator = condition1.GetOperator();
 

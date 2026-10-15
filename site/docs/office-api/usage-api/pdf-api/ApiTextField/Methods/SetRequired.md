@@ -4,6 +4,24 @@ Sets field required
 
 Inherited from [ApiBaseField.SetRequired](../../ApiBaseField/Methods/SetRequired.md).
 
+## Syntax
+
+```javascript
+expression.SetRequired(required);
+```
+
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| required | Required | boolean |  | Specifies whether the field is required. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Mark a form field as required in a PDF.

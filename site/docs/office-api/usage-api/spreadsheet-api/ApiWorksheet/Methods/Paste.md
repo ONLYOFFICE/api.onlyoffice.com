@@ -8,17 +8,17 @@ Pastes the contents of the clipboard to the current sheet.
 expression.Paste(destination);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | The cell range where the clipboard contents should be pasted. If this argument is omitted, the current selection is used. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | The cell range where the clipboard contents should be pasted. If this argument is omitted, the current selection is used. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 

@@ -8,7 +8,7 @@ Returns an array of tables that represents all the tables nested within the spec
 expression.GetTables();
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

@@ -23,7 +23,7 @@ boolean
 从当前选区中移除形状，同时保持文档中其他形状的选定状态。
 
 ```javascript editor-docx
-// How do I deselect a single drawing without clearing the whole selection in a document?
+// Deselect a single drawing without clearing the whole selection in a document.
 
 // Fine-tune a multi-shape selection by excluding one specific shape in a document.
 

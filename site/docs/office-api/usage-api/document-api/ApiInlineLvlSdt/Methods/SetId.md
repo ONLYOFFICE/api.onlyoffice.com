@@ -8,7 +8,7 @@ Specifies a unique ID for the current content control.
 expression.SetId(id);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

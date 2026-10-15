@@ -5,16 +5,17 @@ Adds some text to the current run.
 ## Syntax
 
 ```javascript
-expression.AddText(text);
+expression.AddText(text, widths);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | Required | string |  | The text which will be added to the current run. |
+| text | Required | string \| number[] |  | The text which will be added to the current run. It can be a string or an array of Unicode code points. |
+| widths | Optional | number[] |  | An array of character widths (in millimeters). It should be the same length as the array of code points passed in the "text" parameter. When the widths are specified, the characters are added preserving these exact widths. |
 
 ## Returns
 

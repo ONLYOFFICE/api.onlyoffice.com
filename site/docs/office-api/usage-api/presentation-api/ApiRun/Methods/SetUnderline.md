@@ -1,7 +1,8 @@
 # SetUnderline
 
-Specifies that the contents of the current run are displayed along with a line appearing directly below the character
-(less than all the spacing above and below the characters on the line).
+Specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+
+Inherited from [ApiTextPr.SetUnderline](../../ApiTextPr/Methods/SetUnderline.md).
 
 ## Syntax
 
@@ -9,7 +10,7 @@ Specifies that the contents of the current run are displayed along with a line a
 expression.SetUnderline(isUnderline);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

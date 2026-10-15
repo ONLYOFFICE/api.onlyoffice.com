@@ -4,6 +4,24 @@
 
 继承自 [ApiFormatCondition.SetDateOperator](../../ApiFormatCondition/Methods/SetDateOperator.md)。
 
+## 语法
+
+```javascript
+expression.SetDateOperator(DateOperator);
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| DateOperator | 必需 | [XlTimePeriods](../../Enumeration/XlTimePeriods.md) |  | 时间段条件的日期运算符。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 分配电子表格中基于日期的条件格式规则检查的时间段。
@@ -27,7 +45,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTimePeriod", "xlThisMonth");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original operator:");
 worksheet.GetRange("C2").SetValue(condition1.GetDateOperator() || "None");

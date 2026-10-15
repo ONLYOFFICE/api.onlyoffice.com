@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetVertAxisLabelsFontSize(nFontSize);
+expression.SetVertAxisLabelsFontSize(fontSize);
 ```
 
 `expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetVertAxisLabelsFontSize(nFontSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的文本大小值。 |
+| fontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 
 ## 返回值
 
@@ -41,9 +41,9 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
-chart.SetVertAxisLabelsFontSize(10);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "3DColumnClustered", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
+chart.SetVertAxisLabelsFontSize(20);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

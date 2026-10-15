@@ -1,7 +1,7 @@
 # SetPicture
 
 Sets the content (image) for the picture content control.
-This method updates the picture inside a content control by setting an image from a provided URL.
+
 The URL should be an internet link to the image.
 
 ## Syntax
@@ -10,7 +10,7 @@ The URL should be an internet link to the image.
 expression.SetPicture(imageUrl);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

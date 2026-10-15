@@ -61,7 +61,8 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       height: "700px",
     }
 
-    function onComboboxClick(e) {
+    async function onComboboxClick(e) {
+      const frame = DocSpace.SDK.frames["ds-frame"]
       const data = await frame.getFolders()
       for (const item of data) {
         const option = document.createElement("option")
@@ -71,7 +72,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       }
     }
 
-    function onButtonClick() {
+    async function onButtonClick() {
       const frame = DocSpace.SDK.frames["ds-frame"]
       const selectedFolder = document.querySelector("#combobox").value
       const fileName = document.querySelector("#fileName").value
@@ -137,7 +138,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initmanager) mode.
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onAppReady), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
@@ -145,7 +146,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/clas
     }
     ```
 
-2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#rootpath) field, specify the section whose directories you want to display:
+2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#rootPath) field, specify the section whose directories you want to display:
 
     ``` ts
     const config = {
@@ -168,8 +169,9 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/clas
 Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfolders) method, upload the list into the combo box:
 
 ``` ts
-const combobox = document.querySelector("#combobox").value
-function onComboboxClick(e) {
+const combobox = document.querySelector("#combobox")
+async function onComboboxClick(e) {
+  const frame = DocSpace.SDK.frames["ds-frame"]
   const data = await frame.getFolders()
   for (const item of data) {
     const option = document.createElement("option")
@@ -185,7 +187,7 @@ function onComboboxClick(e) {
 Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createfile) method, create a file in the selected folder:
 
 ``` ts
-function onButtonClick() {
+async function onButtonClick() {
   const frame = DocSpace.SDK.frames["ds-frame"]
   const selectedFolder = document.querySelector("#combobox").value
   const fileName = document.querySelector("#fileName").value

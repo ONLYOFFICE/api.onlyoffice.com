@@ -8,17 +8,17 @@ Creates a shape with the parameters specified.
 expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. |
+| sType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. The "textRect" type creates a text box: it has no fill and no outline, uses the theme text color, and its height follows the text. |
 | nWidth | Optional | [EMU](../../Enumeration/EMU.md) | 914400 | The shape width in English measure units. |
 | nHeight | Optional | [EMU](../../Enumeration/EMU.md) | 914400 | The shape height in English measure units. |
-| oFill | Optional | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | The color or pattern used to fill the shape. |
-| oStroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | The stroke used to create the element shadow. |
+| oFill | Optional | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the shape. If not specified, the default shape style fill (theme accent) is used, a text box has no fill. |
+| oStroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to draw the shape outline. If not specified, the default shape style outline (theme accent) is used, a text box has no outline. |
 
 ## Returns
 

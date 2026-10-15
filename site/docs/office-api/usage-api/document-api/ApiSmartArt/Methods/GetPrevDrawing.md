@@ -4,6 +4,22 @@ Returns the previous inline drawing object if exists.
 
 Inherited from [ApiDrawing.GetPrevDrawing](../../ApiDrawing/Methods/GetPrevDrawing.md).
 
+## Syntax
+
+```javascript
+expression.GetPrevDrawing();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
+
 ## Example
 
 Access the drawing that appears immediately before another drawing in a document.

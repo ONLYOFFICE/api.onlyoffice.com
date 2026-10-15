@@ -4,6 +4,22 @@ Get horizontal flip of current drawing.
 
 Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
 
+## Syntax
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null
+
 ## Example
 
 Check whether a drawing is flipped horizontally in a document.
@@ -15,7 +31,7 @@ Check whether a drawing is flipped horizontally in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);

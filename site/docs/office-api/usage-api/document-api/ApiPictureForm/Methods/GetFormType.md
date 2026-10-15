@@ -4,20 +4,37 @@ Returns a type of the current form.
 
 Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
+## Syntax
+
+```javascript
+expression.GetFormType();
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[FormType](../../Enumeration/FormType.md)
+
 ## Example
 
-Read the type of a form field in a document.
+Retrieve the type assigned to a picture form in a document.
 
 ```javascript editor-docx
-// How do I get the type of a form field in a document?
+// How do I find out what type a picture form is in a document?
 
-// Distinguish one form from another by printing its type identifier next to it.
+// Check which category a picture form belongs to in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let formType = textForm.GetFormType();
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let formType = pictureForm.GetFormType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);

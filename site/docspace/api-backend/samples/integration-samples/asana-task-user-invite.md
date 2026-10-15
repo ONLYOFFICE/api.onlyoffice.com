@@ -74,7 +74,7 @@ if __name__ == "__main__":
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Personal access token](https://developers.asana.com/docs/personal-access-token) in your Asana developer settings. This token will be used to authenticate API requests. Make sure the token has access to the necessary projects and tasks in your Asana workspace.
 4. Replace `your_asana_token` and `your_asana_task_gid` with your actual Asana token and task ID.
 
@@ -98,7 +98,7 @@ def get_asana_assignee_email(task_gid):
 
 ## Step 2: Send an invitation to DocSpace
 
-Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/invite-users) to invite the user using their email address.
+Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/people/profiles/invite-users) to invite the user using their email address.
 
 ``` py
 # Step 2: Invite user to DocSpace by email

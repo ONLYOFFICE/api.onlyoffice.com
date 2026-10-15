@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.Delete](../../ApiBaseAnnotation/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiRedactAnnotation](../ApiRedactAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从 PDF 移除注释。

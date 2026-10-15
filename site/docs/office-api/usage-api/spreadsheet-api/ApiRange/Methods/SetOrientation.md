@@ -8,7 +8,7 @@ Sets an angle to the current cell range.
 expression.SetOrientation(angle);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

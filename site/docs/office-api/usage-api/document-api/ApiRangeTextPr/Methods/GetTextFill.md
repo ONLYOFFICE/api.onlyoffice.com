@@ -4,6 +4,22 @@ Gets the text fill from the current text properties.
 
 Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
+## Syntax
+
+```javascript
+expression.GetTextFill();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## Example
 
 Read the fill color applied to decorative text in a document.
@@ -20,7 +36,7 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textPr.SetCaps(true);
 textPr.SetOutLine(Api.CreateStroke(0, Api.CreateNoFill()));
-textPr.SetTextFill(Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+textPr.SetTextFill(Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 textPr.SetFontFamily('Comic Sans MS');
 
 const textArt = Api.CreateWordArt(textPr, 'ONLYOFFICE', 'textArchUp', null, null, 0, 200 * 36000, 100 * 36000);

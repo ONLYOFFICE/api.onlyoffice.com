@@ -5,16 +5,16 @@ Sets the timestamp of the comment reply creation in the current time zone format
 ## Syntax
 
 ```javascript
-expression.SetTime(nTimeStamp);
+expression.SetTime(timeStamp);
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nTimeStamp | Required | Number \| String |  | The timestamp of the comment reply creation in the current time zone format. |
+| timeStamp | Required | Number \| String |  | The timestamp of the comment reply creation in the current time zone format. |
 
 ## Returns
 

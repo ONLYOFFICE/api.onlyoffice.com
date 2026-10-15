@@ -133,7 +133,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/keys/:keyId](/docspace/api-backend/usage-api/update-api-key) with the following parameters:
+A PUT request is sent to [/api/2.0/keys/:keyId](/docspace/api-backend/usage-api/api-keys/update-api-key) with the following parameters:
 
 - `name`: Updated name for the key.
 - `permissions`: Updated list of permission scopes.

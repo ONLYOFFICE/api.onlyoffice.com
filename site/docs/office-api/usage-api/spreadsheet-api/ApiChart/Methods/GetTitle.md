@@ -8,7 +8,7 @@ Returns the chart title text.
 expression.GetTitle();
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -39,7 +39,7 @@ const chart = worksheet.AddChart(
 	true, 'bar3D', 2,
 	100 * 36000, 70 * 36000, 0, 0, 4, 0
 );
-chart.SetTitle('Financial Overview', 13);
+chart.SetTitle('Financial Overview', 26);
 
 const chartTitle = chart.GetTitle();
 worksheet.GetRange('E1').SetValue('Chart Title: ' + chartTitle);

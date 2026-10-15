@@ -8,7 +8,7 @@ Adds a new above average conditional formatting rule to the collection.
 expression.AddAboveAverage();
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 
@@ -44,6 +44,6 @@ let formatConditions = dataRange.GetFormatConditions();
 
 let aboveAverageCondition = formatConditions.AddAboveAverage();
 if (aboveAverageCondition) {
-    aboveAverageCondition.SetFillColor(Api.CreateColorFromRGB(144, 238, 144));
+    aboveAverageCondition.SetFillColor(Api.RGB(144, 238, 144));
 }
 ```

@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetClassType](../../ApiTextPr/Methods/GetClassType.md)。
 
+## 语法
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"textPr"
+
 ## 示例
 
 读取文档中文本属性对象的类型名称。

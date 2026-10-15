@@ -4,6 +4,24 @@ Sets field read only
 
 Inherited from [ApiBaseField.SetReadOnly](../../ApiBaseField/Methods/SetReadOnly.md).
 
+## Syntax
+
+```javascript
+expression.SetReadOnly(readOnly);
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| readOnly | Required | boolean |  | Specifies whether the field is read-only. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Lock a form field to prevent editing in a PDF.

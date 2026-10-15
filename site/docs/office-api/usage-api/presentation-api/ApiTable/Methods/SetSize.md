@@ -8,7 +8,7 @@ Sets the table size.
 expression.SetSize(width, height);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ expression.SetSize(width, height);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 

@@ -35,7 +35,7 @@ paragraph.AddElement(run1);
 let run2 = Api.CreateRun();
 run2.AddText("This is run №2.");
 paragraph.AddElement(run2);
-run1.RemoveAllElements();
+run1.Delete();
 paragraph.AddLineBreak();
 paragraph.AddText("The first run was removed from the document.");
 ```

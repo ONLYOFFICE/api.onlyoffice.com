@@ -8,7 +8,7 @@ Specifies whether the current selection is empty or not.
 expression.IsEmpty();
 ```
 
-`expression` - A variable that represents a [ApiSelection](../ApiSelection.md) class.
+`expression` - A variable that represents an [ApiSelection](../ApiSelection.md) class.
 
 ## Parameters
 

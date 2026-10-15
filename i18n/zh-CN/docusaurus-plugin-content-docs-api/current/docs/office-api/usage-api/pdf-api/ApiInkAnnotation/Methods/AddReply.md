@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.AddReply](../../ApiBaseAnnotation/Methods/AddReply.md)。
 
+## 语法
+
+```javascript
+expression.AddReply(textAnnot);
+```
+
+`expression` - 表示 [ApiInkAnnotation](../ApiInkAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| textAnnot | 必需 | [ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md) |  | 用作回复的文本批注。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为注释添加回复。

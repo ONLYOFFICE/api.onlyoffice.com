@@ -8,7 +8,7 @@ Sets the text rectangle for the current geometry.
 expression.SetTextRect(sLeft, sTop, sRight, sBottom);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

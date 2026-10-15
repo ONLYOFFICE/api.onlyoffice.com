@@ -23,7 +23,7 @@ string
 在电子表格中将节点及其所有内容导出为原始 XML 字符串。
 
 ```javascript editor-xlsx
-// How do I get the full XML markup for a specific node in a spreadsheet?
+// Get the full XML markup for a specific node in a spreadsheet.
 
 // Capture a node's complete structure as text to inspect or reuse it in a spreadsheet.
 

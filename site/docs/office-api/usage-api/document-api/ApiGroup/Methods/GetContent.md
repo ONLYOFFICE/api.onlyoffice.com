@@ -4,6 +4,22 @@ Returns the drawing inner contents where a paragraph or text runs can be inserte
 
 Inherited from [ApiDrawing.GetContent](../../ApiDrawing/Methods/GetContent.md).
 
+## Syntax
+
+```javascript
+expression.GetContent();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
+
 ## Example
 
 Get the inner content of a drawing object to add text inside it in a document.
@@ -17,7 +33,7 @@ const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
+const fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 const drawing = Api.CreateShape("rect", 100 * 36000, 20 * 36000, fill, stroke);
 firstParagraph.AddDrawing(drawing);
 

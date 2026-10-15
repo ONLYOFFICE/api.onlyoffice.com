@@ -8,7 +8,7 @@ Creates a combo box / dropdown list with the specified combo box / dropdown list
 expression.CreateComboBoxForm(formPr);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

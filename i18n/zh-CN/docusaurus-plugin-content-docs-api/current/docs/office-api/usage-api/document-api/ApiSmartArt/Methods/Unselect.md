@@ -4,12 +4,28 @@
 
 继承自 [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md)。
 
+## 语法
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从当前选区中移除形状，同时保持文档中其他形状的选定状态。
 
 ```javascript editor-docx
-// How do I deselect a single drawing without clearing the whole selection in a document?
+// Deselect a single drawing without clearing the whole selection in a document.
 
 // Fine-tune a multi-shape selection by excluding one specific shape in a document.
 

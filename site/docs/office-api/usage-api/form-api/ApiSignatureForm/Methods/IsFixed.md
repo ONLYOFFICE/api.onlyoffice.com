@@ -4,21 +4,37 @@ Checks if the current form is fixed size.
 
 Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
+## Syntax
+
+```javascript
+expression.IsFixed();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Determine whether a form field has a fixed size in a document.
+Confirm whether a signature field has a locked, unchangeable size in a document.
 
 ```javascript editor-forms
-// How do I find out if a form field is locked to a specific size in a document?
+// How do I find out if a signature field is set to a fixed size in a document?
 
-// Confirm the fixed-size status of a form field before deciding whether layout adjustments are needed in a document.
+// Distinguish between resizable and size-locked signature fields in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let fixed = textForm.IsFixed();
+paragraph.AddElement(signatureForm);
+signatureForm.ToFixed(10 * 240, 2 * 240);
+let fixed = signatureForm.IsFixed();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);

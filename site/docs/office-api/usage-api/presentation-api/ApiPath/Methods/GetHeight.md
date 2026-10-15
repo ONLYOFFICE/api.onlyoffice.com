@@ -8,7 +8,7 @@ Returns the height of the current path.
 expression.GetHeight();
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a type of the ApiRun class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

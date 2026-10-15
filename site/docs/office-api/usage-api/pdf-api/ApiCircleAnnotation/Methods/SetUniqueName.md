@@ -4,6 +4,24 @@ Sets annotation unique name.
 
 Inherited from [ApiBaseAnnotation.SetUniqueName](../../ApiBaseAnnotation/Methods/SetUniqueName.md).
 
+## Syntax
+
+```javascript
+expression.SetUniqueName(name);
+```
+
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | The unique name for the annotation. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Assign a unique identifier to an annotation in a PDF.

@@ -8,7 +8,7 @@ Returns whether the icon order in the icon set rule is reversed.
 expression.GetReverseOrder();
 ```
 
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
 
 ## Parameters
 

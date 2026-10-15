@@ -1,6 +1,7 @@
 # Unlist
 
 Removes the list functionality from the ListObject and converts it to a regular data range.
+
 Cell data, formatting, and formulas remain on the sheet.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Unlist();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

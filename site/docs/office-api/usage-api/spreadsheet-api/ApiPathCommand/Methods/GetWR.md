@@ -8,7 +8,7 @@ Returns the width radius of the arc.
 expression.GetWR();
 ```
 
-`expression` - A variable that represents a [ApiPathCommand](../ApiPathCommand.md) class.
+`expression` - A variable that represents an [ApiPathCommand](../ApiPathCommand.md) class.
 
 ## Parameters
 

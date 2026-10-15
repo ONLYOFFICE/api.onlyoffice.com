@@ -8,7 +8,7 @@ Returns the content for the specified footer type.
 expression.GetFooter(sType, isCreate);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ expression.GetFooter(sType, isCreate);
 
 ## Returns
 
-[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
 
 ## Example
 

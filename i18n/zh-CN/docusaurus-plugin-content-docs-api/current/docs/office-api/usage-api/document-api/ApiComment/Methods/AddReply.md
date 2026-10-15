@@ -21,7 +21,7 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## 返回值
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## 示例
 

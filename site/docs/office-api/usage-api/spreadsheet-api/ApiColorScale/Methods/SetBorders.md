@@ -4,6 +4,26 @@ Sets the border style for the conditional formatting rule.
 
 Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md).
 
+## Syntax
+
+```javascript
+expression.SetBorders(bordersIndex, lineStyle, oColor);
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bordersIndex | Required | [BordersIndex](../../Enumeration/BordersIndex.md) |  | Specifies the cell border position. |
+| lineStyle | Required | [LineStyle](../../Enumeration/LineStyle.md) |  | Specifies the line style used to form the cell border. |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object which specifies the color to be set to the cell border. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Add colored borders to cells that match a conditional formatting rule in a spreadsheet.
@@ -27,9 +47,9 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
-let borderColor = Api.CreateColorFromRGB(255, 0, 0);
+let borderColor = Api.RGB(255, 0, 0);
 condition1.SetBorders("Top", "Thick", borderColor);
 condition1.SetBorders("Bottom", "Thick", borderColor);
 

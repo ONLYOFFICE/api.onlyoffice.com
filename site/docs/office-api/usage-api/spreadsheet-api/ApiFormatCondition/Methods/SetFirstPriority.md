@@ -8,7 +8,7 @@ Sets the priority value for the current conditional formatting rule to "1" so th
 expression.SetFirstPriority();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -41,10 +41,10 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let condition2 = formatConditions.Add("xlCellValue", "xlLess", "150");
-condition2.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+condition2.SetFillColor(Api.RGB(0, 255, 0));
 
 worksheet.GetRange("C1").SetValue("Priority before:");
 worksheet.GetRange("C2").SetValue("Rule 1: " + condition1.Priority);

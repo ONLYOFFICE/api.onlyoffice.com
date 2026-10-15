@@ -1,6 +1,33 @@
-﻿# 变更日志
+# 变更日志
 
 ONLYOFFICE 文档 API 的更改列表。
+
+## 版本 10.0
+
+### 重大变更
+
+- [文档命令服务](../additional-api/command-service/command-service.md)、[文档转换服务](../additional-api/conversion-api/request.md)和[文档生成服务](../additional-api/document-builder-api.md)不再接受编辑器配置中的令牌。这些请求的[令牌](../additional-api/signature/request/token-in-body.md#incoming-request)可以包含可选的 `operation` 字段（`command`、`converter` 或 `docbuilder`），而对于新的 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，该字段为必填项。
+- WOPI 主机现在必须通过 [IP 过滤器](../using-wopi/overview.md#ip-filter)规则明确允许。仅有 `*` 规则已不足以打开文档。
+- `runtime.json` 文件不再能够更改日志配置，日志级别除外。
+- 移除了已弃用的 `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges` 和 `editorConfig.customization.trackChanges` 参数。请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数中的对应字段。
+- 如果密钥（包括租户的密钥）为空或未设置，ONLYOFFICE 文档现在会拒绝该令牌，而不再对其进行验证或签名。
+
+### 其他变更
+
+- 新增对 [ofd](../usage-api/config/document/document.md#filetype) 格式的打开支持。与 `xps` 相同，该格式仅支持查看，可[转换](../additional-api/conversion-api/conversion-tables.md#document-file-formats)为其他格式，但不支持编辑或保存为该格式。
+- 新增从所有电子表格格式到 [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) 格式的转换。
+- 新增 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，以 `multipart/form-data` 格式直接在请求中接收要转换的文件或脚本，而无需通过 URL 下载。
+- 在商业版本中，[管理面板](../get-started/configuration/server-config/server-config.md#admin-panel)现默认随服务器自动启动。社区版不包含管理面板。
+- 第一个管理员现通过主机命令行工具 `documentserver-admin`（`create-admin`、`reset-admin-password`）创建，不再通过网页使用日志中的引导代码创建。管理员登录名固定为 `admin`。
+- 新增 [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) 部分及其 `disabled` 参数，用于关闭编辑器中的 AI 功能。
+- 新增 `aiSettings.enable` [服务器设置](../get-started/configuration/server-config/server-config.md#ai-tools-settings)，用于关闭 AI 功能。如果设置为 `false`，则 `/plugins.json` 中不包含 AI 工具，并拒绝发往 `/ai-proxy` 的请求。
+- 另存为普通 PDF 的表单在提交时现在也会被[签名](../get-started/configuration/server-config/server-config.md#converter)，而不仅限于另存为 OFORM PDF 的表单。
+- `default.json` 中现已启用[令牌](../additional-api/signature/signature.md)，默认密钥由 `secret` 改为占位符 `developer-only-not-a-real-secret`。此更改不影响安装包：安装时仍会启用令牌并生成各自的密钥。在仍使用该占位符时，启动时会记录一条警告。
+- 发往 `callbackUrl` 地址的传出请求以及文件下载请求的令牌现在包含 [operation](../additional-api/signature/request/token-in-header.md#outgoing-requests) 字段，其值为 `callback` 或 `download`。如果此类令牌出现在传入请求中，ONLYOFFICE 文档将拒绝该请求。
+- 服务器关闭前未保存的更改现在会在关闭过程中恢复为[被遗忘文件](../additional-api/command-service/getforgottenlist.md)。独立的 `changes2forgotten` 脚本已移除。
+- 新增 `services.CoAuthoring.server.convertServiceEnable` 和 `services.CoAuthoring.server.docbuilderEnable` [服务器设置](../get-started/configuration/server-config/server-config.md#server)，用于关闭公共[转换](../additional-api/conversion-api/request.md) API 和[文档生成器](../additional-api/document-builder-api.md) API。为保持兼容，两者默认均为 `true`。
+- 新增 `coauth.connections` [StatsD](../get-started/configuration/server-config/server-config.md#statsd) 指标，带有 `mode`（`edit`、`liveview`、`view`）和 `replica` 标签。对于分片集群，总数为各副本之和。
+- 下载的文件现在会根据集成商发送的完整性响应头（例如 `Content-Digest`、`Repr-Digest`、`x-amz-checksum-*` 或 WOPI SHA256 哈希）进行校验。此功能由 `services.CoAuthoring.requestDefaults.checksumVerification` [服务器设置](../get-started/configuration/server-config/server-config.md#default-request)控制，默认为 `true`。
 
 ## 版本 9.4
 
@@ -185,7 +212,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 将 [filetype](../usage-api/callback-handler.md#filetype) 参数添加到 *回调处理程序*。
 - 在转换响应中添加了 [fileType](../additional-api/conversion-api/response.md#fileType) 字段。
 - 添加了到 [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) 格式的转换。
-- [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) 参数已弃用，请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数。
+- `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges`、`editorConfig.customization.trackChanges` 参数已弃用，请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数。
 - 添加了 [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了 [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了查看电子表格文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
@@ -196,7 +223,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 增加了打开 [oxps](../usage-api/config/config.md#documenttype) 格式的功能。
 - 增加了对 [WOPI 协议](../using-wopi/overview.md) 的支持。
 - 添加了 [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) 部分。
-- 将 *simple* 值添加到 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 参数中。
+- 将 *simple* 值添加到 `editorConfig.customization.reviewDisplay` 参数中。
 - 添加了保存在电子表格文件中的 [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) 线程评论。
 - 添加了 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 字段。
 - 添加了查看演示文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
@@ -224,7 +251,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 6.2
 
 - 添加了一个新的 [actions.type](../usage-api/callback-handler.md#actions) 字段值 (*actions.type = 2*)。
-- 添加了 [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) 字段。
+- 添加了 `editorConfig.customization.trackChanges` 字段。
 - 添加了 [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) 字段。
 - 根据 [forcesavetype](../usage-api/callback-handler.md) 选择 *status* **6** 的 *callbackUrl*。
 - 增加了打开 [fb2](../usage-api/config/config.md#documenttype) 格式的功能。
@@ -289,7 +316,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 5.3
 
 - 添加了 [转换](../additional-api/conversion-api/conversion-tables.md) 到 OOXML（dotx、 xltx、potx）和 ODF（ott、ots、otp）模板的功能。
-- 添加了 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 字段。
+- 添加了 `editorConfig.customization.reviewDisplay` 字段。
 - `editorConfig.customization.commentAuthorOnly` 字段现在也用于限制评论删除。
 - 添加了 [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) 字段。
 - 添加了 [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) 字段。
@@ -347,7 +374,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 从插件连接模式中删除了 `editorConfig.plugins.url` 方法。
 - 添加了 `editorConfig.customization.commentAuthorOnly` 方法。
 - 添加了 [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 方法。
-- 添加了 [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) 方法。
+- 添加了 `editorConfig.customization.showReviewChanges` 方法。
 - 强制保存文件时，在回调处理程序请求中添加了 [forcesavetype](../usage-api/callback-handler.md#forcesavetype) 方法。
 - 为文档转换服务的添加了 [JSON 格式响应](../additional-api/conversion-api/response.md)。
 

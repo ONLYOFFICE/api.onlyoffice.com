@@ -8,7 +8,7 @@ Returns a slide master by its position in the presentation.
 expression.GetMaster(nPos);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

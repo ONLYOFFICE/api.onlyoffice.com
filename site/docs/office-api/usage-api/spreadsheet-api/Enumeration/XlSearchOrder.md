@@ -13,10 +13,10 @@ Enumeration
 
 ## Example
 
-Specify that the whole text match will be searched in the range.
+Search a range column by column.
 
 ```javascript editor-xlsx
-// How to search a text indicating search order.
+// How do I search for text in a specific order?
 
 // Find a text from a range with column wise search order.
 

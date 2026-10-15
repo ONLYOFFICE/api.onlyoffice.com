@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacingLineRule();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"auto" \| "atLeast" \| "exact" \| undefined
+
 ## 示例
 
-了解 PDF 中行距的测量方式。
+在 PDF 中查看段落使用的行距类型。
 
 ```javascript editor-pdf
-// How do I check the line spacing rule for a paragraph in a PDF?
+// How do I determine which line spacing rule applies to a paragraph in a PDF?
 
-// Identify the line spacing rule applied to a paragraph in a PDF.
+// Read the line spacing method assigned to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,16 +41,14 @@ shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
 const docContent = shape.GetContent();
-let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetSpacingLine(3 * 240, "auto");
+const paragraph = docContent.GetElement(0);
+paragraph.SetSpacingLine(3 * 240, "auto");
 paragraph.AddText("Paragraph 1. Spacing: 3 times of a common paragraph line spacing.");
 paragraph.AddLineBreak();
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddLineBreak();
 
-const spacingLineRule = paraPr.GetSpacingLineRule();
-paragraph = Api.CreateParagraph();
-paragraph.AddText("Spacing line rule : " + spacingLineRule);
-docContent.Push(paragraph);
+const spacingLineRule = paragraph.GetSpacingLineRule();
+paragraph.AddText("Spacing line rule: " + spacingLineRule);
 ```

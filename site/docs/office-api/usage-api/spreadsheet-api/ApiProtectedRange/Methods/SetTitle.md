@@ -8,7 +8,7 @@ Sets a title to the current protected range.
 expression.SetTitle(sTitle);
 ```
 
-`expression` - A variable that represents a [ApiProtectedRange](../ApiProtectedRange.md) class.
+`expression` - A variable that represents an [ApiProtectedRange](../ApiProtectedRange.md) class.
 
 ## Parameters
 

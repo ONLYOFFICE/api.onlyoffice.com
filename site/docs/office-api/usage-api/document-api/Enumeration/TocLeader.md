@@ -1,6 +1,7 @@
 # TocLeader
 
 Possible values for the table of contents leader:
+
 - **"dot"** - "......."
 - **"dash"** - "-------"
 - **"underline"** - "_______"
@@ -21,7 +22,7 @@ Enumeration
 Add a table of contents with the dot leader to the document.
 
 ```javascript editor-docx
-// How to create a table of contents properties indicating its leader type.
+// How do I create table of contents properties with a specific leader type?
 
 // Add a table of contents with dot leader type.
 

@@ -42,7 +42,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       method: 'DELETE',
       headers: HEADERS,
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Backup history deletion failed. Status code: ${res.status}, Message: ${text}`);
@@ -106,7 +106,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/backup/deletebackuphistory](/docspace/api-backend/usage-api/delete-backup-history) with an optional query parameter:
+A DELETE request is sent to [/api/2.0/backup/deletebackuphistory](/docspace/api-backend/usage-api/backup/delete-backup-history) with an optional query parameter:
 
 `Dump` — boolean; set to true if the history should also include dump backups in the deletion, or false otherwise.
 

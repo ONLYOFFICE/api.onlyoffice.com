@@ -4,25 +4,39 @@
 
 继承自 [ApiDocumentContent.Push](../../ApiDocumentContent/Methods/Push.md)。
 
+## 语法
+
+```javascript
+expression.Push(oElement);
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oElement | 必需 | [DocumentElement](../../Enumeration/DocumentElement.md) |  | 将推送到文档的元素类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-向文档中形状的内容追加新段落。
+在文档末尾追加新段落。
 
 ```javascript editor-docx
-// How do I add a paragraph at the end of a shape's content in a document?
+// How do I add multiple paragraphs one after another in a document?
 
-// Clear a shape's existing content and place a fresh paragraph inside it to replace all prior text.
+// Build a sequence of numbered paragraphs by pushing each one onto the document in a document.
 
-let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
-paragraph.AddDrawing(drawing);
-let docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-paragraph = Api.CreateParagraph();
-paragraph.SetJc("left");
-paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
-docContent.Push(paragraph);
+const doc = Api.GetDocument();
+
+const paragraphCount = 5;
+for (let i = 0; i < paragraphCount; i++) {
+	const newParagraph = Api.CreateParagraph();
+	newParagraph.AddText("This is " + (i + 1) + " paragraph.");
+	doc.Push(newParagraph);
+}
 ```

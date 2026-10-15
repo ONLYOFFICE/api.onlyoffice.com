@@ -1,6 +1,8 @@
 # GetFill
 
-从当前形状获取填充属性。
+从当前图形对象获取填充格式属性。
+
+继承自 [ApiDrawing.GetFill](../../ApiDrawing/Methods/GetFill.md)。
 
 ## 语法
 
@@ -20,21 +22,40 @@ expression.GetFill();
 
 ## 示例
 
-读取应用于形状的填充并在电子表格的单元格中报告其类型。
+在电子表格中获取绘图对象的填充格式属性。
 
 ```javascript editor-xlsx
-// How do I check what fill a shape is using in a spreadsheet?
+// GetFill returns the ApiFill of a drawing object, or null when the object has no fill.
 
-// Retrieve the color or gradient covering a shape and display the fill type on the sheet in a spreadsheet.
+// Read the fill type from a filled shape and an image and write the values into cells.
 
-let worksheet = Api.GetActiveSheet();
-let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
-let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape = worksheet.AddShape("rect", 60 * 36000, 40 * 36000, fill, stroke, 3, 0, 2, 2);
-let retrievedFill = shape.GetFill();
-if (retrievedFill) {
-    worksheet.GetRange("A1").SetValue("Fill type: " + retrievedFill.GetType());
+const worksheet = Api.GetActiveSheet();
+const gs1 = Api.CreateGradientStop(Api.RGB(200, 230, 180), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(110, 170, 150), 100000);
+const fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = worksheet.AddShape(
+	'rect',
+	Api.MillimetersToEmus(60), Api.MillimetersToEmus(40),
+	fill, stroke,
+	0, Api.MillimetersToEmus(1), 1, Api.MillimetersToEmus(1)
+);
+
+const image = worksheet.AddImage(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	Api.MillimetersToEmus(40), Api.MillimetersToEmus(40),
+	7, Api.MillimetersToEmus(1), 1, Api.MillimetersToEmus(1)
+);
+const imageFill = Api.CreateSolidFill(Api.HexColor('#c7edfc'));
+image.SetFill(imageFill);
+
+const shapeFill = shape.GetFill();
+if (shapeFill) {
+    worksheet.GetRange('A1').SetValue('Shape fill type: ' + shapeFill.GetType());
+}
+
+const retrievedImageFill = image.GetFill();
+if (retrievedImageFill) {
+    worksheet.GetRange('H1').SetValue('Image fill type: ' + retrievedImageFill.GetType());
 }
 ```

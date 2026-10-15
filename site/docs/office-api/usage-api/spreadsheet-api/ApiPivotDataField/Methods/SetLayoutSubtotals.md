@@ -4,6 +4,24 @@ Sets the setting which specifies whether to show subtotals.
 
 Inherited from [ApiPivotField.SetLayoutSubtotals](../../ApiPivotField/Methods/SetLayoutSubtotals.md).
 
+## Syntax
+
+```javascript
+expression.SetLayoutSubtotals(show);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| show | Required | boolean |  | Specifies whether to show subtotals. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Show or hide subtotals for a pivot field group in a spreadsheet.

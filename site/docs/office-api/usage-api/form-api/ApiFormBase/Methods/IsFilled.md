@@ -8,7 +8,7 @@ Checks if the current form is filled.
 expression.IsFilled();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

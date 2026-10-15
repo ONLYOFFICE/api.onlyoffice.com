@@ -1,8 +1,24 @@
 # GetRect
 
-Sets annotation rect.
+Gets annotation rect.
 
 Inherited from [ApiBaseAnnotation.GetRect](../../ApiBaseAnnotation/Methods/GetRect.md).
+
+## Syntax
+
+```javascript
+expression.GetRect();
+```
+
+`expression` - A variable that represents an [ApiLineAnnotation](../ApiLineAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Rect](../../Enumeration/Rect.md)
 
 ## Example
 

@@ -8,7 +8,7 @@ Sets the text content of the current XML node.
 expression.SetText(str);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ boolean
 Write readable text into an XML element to update its content in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I change the text inside an XML node in a spreadsheet?
+// Change the text inside an XML node in a spreadsheet.
 
 // Store a new text value inside an existing XML entry in a spreadsheet.
 

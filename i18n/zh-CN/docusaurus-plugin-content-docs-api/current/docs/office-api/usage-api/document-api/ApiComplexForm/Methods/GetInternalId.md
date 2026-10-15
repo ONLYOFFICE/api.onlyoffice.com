@@ -4,20 +4,36 @@
 
 继承自 [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternalId.md)。
 
+## 语法
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-检索文档中表单字段的内部标识符。
+读取文档中复合表单的内部标识符。
 
 ```javascript editor-docx
-// How do I get the internal ID of a form field in a document?
+// How do I retrieve the internal ID assigned to a form in a document?
 
-// Uniquely track a form by reading its auto-assigned internal identifier.
+// Track or reference a specific form programmatically using its unique internal ID in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex", "tip": "Insert here other forms"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let internalId = textForm.GetInternalId();
+paragraph.AddElement(complexForm);
+let internalId = complexForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);

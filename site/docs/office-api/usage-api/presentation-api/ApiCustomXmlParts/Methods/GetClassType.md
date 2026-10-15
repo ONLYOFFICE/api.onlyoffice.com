@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlParts class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Get the class type of a custom XML parts object in a presentation.
 
 ```javascript editor-pptx
-// How do I determine the class type of a custom XML parts manager in a presentation?
+// Determine the class type of a custom XML parts manager in a presentation.
 
 // Display the class type of the XML parts manager in a presentation.
 

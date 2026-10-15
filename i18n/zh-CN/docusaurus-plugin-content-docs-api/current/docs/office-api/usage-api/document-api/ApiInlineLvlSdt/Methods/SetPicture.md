@@ -1,8 +1,8 @@
 # SetPicture
 
 设置图片内容控件的内容（图像）。
-此方法通过从提供的 URL 设置图像来更新内容控件中的图片。
-URL 应该是指向图像的互联网链接。
+
+URL 应为指向图像的互联网链接。
 
 ## 语法
 
@@ -34,5 +34,5 @@ boolean
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddPictureContentControl();
-contentControl.SetPicture('https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg');
+contentControl.SetPicture('https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png');
 ```

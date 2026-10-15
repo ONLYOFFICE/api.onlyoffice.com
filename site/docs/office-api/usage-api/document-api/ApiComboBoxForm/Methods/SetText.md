@@ -1,7 +1,10 @@
 # SetText
 
 Sets the text to the current combo box.
-*Available only for editable combo box forms.*
+
+:::note
+Available only for editable combo box forms.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the text to the current combo box.
 expression.SetText(sText);
 ```
 
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
 
 ## Parameters
 

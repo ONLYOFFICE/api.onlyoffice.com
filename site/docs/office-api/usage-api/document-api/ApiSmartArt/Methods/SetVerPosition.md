@@ -4,6 +4,26 @@ Sets the absolute measurement for the vertical positioning of the floating objec
 
 Inherited from [ApiDrawing.SetVerPosition](../../ApiDrawing/Methods/SetVerPosition.md).
 
+## Syntax
+
+```javascript
+expression.SetVerPosition(sRelativeFrom, nDistance, bPercent);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | Required | [RelFromV](../../Enumeration/RelFromV.md) |  | The document element which will be taken as a countdown point for the object vertical alignment. |
+| nDistance | Required | [EMU](../../Enumeration/EMU.md) \| number |  | The distance from the bottom part of the document element to the floating object. Use EMU for absolute units or a number (1 = 1%) when bPercent=true for percent relative positioning. |
+| bPercent | Optional | boolean | false | The option defining whether the vertical alignment offset is specified in percent. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Place a floating shape at an exact vertical position on the page in a document.
@@ -32,7 +52,7 @@ paragraph.AddText("The shape is aligned to the top of the page, and outstands fr
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The next blue shape is aligned vertically by 50% relative to the page.");
-fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
+fill = Api.CreateSolidFill(Api.RGB(91, 155, 213));
 stroke = Api.CreateStroke(0, Api.CreateNoFill());
 drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
 drawing.SetDistances(457200, 457200, 457200, 0);

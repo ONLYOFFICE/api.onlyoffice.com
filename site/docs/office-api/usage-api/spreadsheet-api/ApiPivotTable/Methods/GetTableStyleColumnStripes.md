@@ -8,7 +8,7 @@ Returns the setting which specifies whether the background color alternation for
 expression.GetTableStyleColumnStripes();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

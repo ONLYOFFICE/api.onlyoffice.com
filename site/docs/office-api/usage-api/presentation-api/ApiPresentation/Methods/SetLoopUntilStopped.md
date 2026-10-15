@@ -8,7 +8,7 @@ Sets whether the presentation loops continuously until the user stops it.
 expression.SetLoopUntilStopped(loopUntilStopped);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

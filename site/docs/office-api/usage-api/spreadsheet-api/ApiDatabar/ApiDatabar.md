@@ -1,5 +1,7 @@
 # ApiDatabar
 
+Class representing a data bar conditional formatting rule.
+
 ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
@@ -21,10 +23,12 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | None | Deletes the current format condition. |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of cells to which the current conditional formatting rule applies. |
+| [Delete](./Methods/Delete.md) | None | Deletes the data bar conditional formatting rule. |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the range of cells to which the current conditional formatting rule applies. |
 | [GetAxisColor](./Methods/GetAxisColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the axis color of the data bar conditional formatting rule. |
 | [GetAxisPosition](./Methods/GetAxisPosition.md) | [XlDataBarAxisPosition](../Enumeration/XlDataBarAxisPosition.md) | Returns the axis position of the data bar conditional formatting rule. |
 | [GetBarBorderColor](./Methods/GetBarBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the bar border color of the data bar. |
@@ -32,7 +36,7 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | [GetBarFillType](./Methods/GetBarFillType.md) | [XlDataBarFillType](../Enumeration/XlDataBarFillType.md) | Returns the bar fill type of the data bar. |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | Returns the date operator for time period conditions. |
 | [GetDirection](./Methods/GetDirection.md) | [XlReadingOrder](../Enumeration/XlReadingOrder.md) | Returns the direction of the data bar. |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null. |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the format condition. |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | Returns the font applied by the current format condition. |
 | [GetFormula](./Methods/GetFormula.md) | string | Returns the formula of the data bar. |
 | [GetFormula1](./Methods/GetFormula1.md) | string | Returns the first formula used by the current conditional formatting rule. |
@@ -52,11 +56,12 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | [GetPriority](./Methods/GetPriority.md) | number | Returns the priority value of the conditional formatting rule. |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | Returns the scope type of the conditional formatting rule. |
 | [GetShowValue](./Methods/GetShowValue.md) | boolean | Returns whether the data bar displays the cell value. |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | Returns whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. This rule type cannot stop the evaluation, so the value can be changed only by opening a file where it is set. |
 | [GetText](./Methods/GetText.md) | string | Returns the text value used in text-based conditional formatting rules. |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | Returns the text operator for text-based conditional formatting rules. |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the data bar conditional formatting rule. |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | Modifies the current format condition with the specified parameters. |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Sets the cell range to which the current conditional formatting rule applies. |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Modifies the cell range to which the current conditional formatting rule applies. |
 | [SetAxisColor](./Methods/SetAxisColor.md) | None | Sets the axis color for the data bar conditional formatting rule. |
 | [SetAxisPosition](./Methods/SetAxisPosition.md) | None | Sets the axis position for the data bar conditional formatting rule. |
 | [SetBarBorderColor](./Methods/SetBarBorderColor.md) | None | Sets the bar border color for the data bar. |
@@ -77,8 +82,9 @@ ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormat
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Sets the number format applied to a cell when the conditional formatting rule evaluates to true. |
 | [SetPercentMax](./Methods/SetPercentMax.md) | None | Sets the percent maximum value for the data bar. |
 | [SetPercentMin](./Methods/SetPercentMin.md) | None | Sets the percent minimum value for the data bar. |
-| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value of the conditional formatting rule. |
+| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value for the conditional formatting rule. |
 | [SetScopeType](./Methods/SetScopeType.md) | None | Sets the scope type for the conditional formatting rule. |
 | [SetShowValue](./Methods/SetShowValue.md) | None | Specifies whether the data bar displays the cell value. |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | None | Sets whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. |
 | [SetText](./Methods/SetText.md) | None | Sets the text value used in text-based conditional formatting rules. |
 | [SetTextOperator](./Methods/SetTextOperator.md) | None | Sets the text operator for text-based conditional formatting rules. |

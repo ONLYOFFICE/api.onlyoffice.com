@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetCreationDate](../../ApiBaseAnnotation/Methods/GetCreationDate.md)。
 
+## 语法
+
+```javascript
+expression.GetCreationDate();
+```
+
+`expression` - 表示 [ApiCaretAnnotation](../ApiCaretAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 检索 PDF 中注释的创建日期。

@@ -4,6 +4,24 @@ Sets the text outline to the current text run.
 
 Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Add a colored outline around decorative text in a document.

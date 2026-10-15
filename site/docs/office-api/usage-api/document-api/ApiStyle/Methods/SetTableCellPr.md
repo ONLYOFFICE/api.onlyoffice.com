@@ -8,7 +8,7 @@ Sets the table cell properties to the current style.
 expression.SetTableCellPr(tableCellPr);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ Store cell-level formatting inside a table style so every cell inherits those se
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 let tableCellPr = Api.CreateTableCellPr();
-tableCellPr.SetShd("clear", Api.HexColor('#FF6F3D'));
+tableCellPr.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 tableStyle.SetTableCellPr(tableCellPr);
 
 let table = Api.CreateTable(2, 3);

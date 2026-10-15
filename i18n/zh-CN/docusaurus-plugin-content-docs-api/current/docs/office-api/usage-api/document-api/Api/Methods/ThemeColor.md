@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.ThemeColor(name);
+expression.ThemeColor(name, tintAndShade);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -15,6 +15,7 @@ expression.ThemeColor(name);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | name | 可选 | [SchemeColorId](../../Enumeration/SchemeColorId.md) | "tx1" | 主题颜色名称。如果提供的名称不受支持，将使用 'tx1' 颜色。 |
+| tintAndShade | 可选 | number | 0 | 亮度偏移，范围从 -1（最暗的阴影）到 1（最亮的色调）。0 表示保持主题颜色不变。 |
 
 ## 返回值
 

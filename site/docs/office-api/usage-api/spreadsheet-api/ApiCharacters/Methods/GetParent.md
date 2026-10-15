@@ -8,7 +8,7 @@ Returns the parent object of the specified characters.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 
@@ -32,5 +32,5 @@ let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(23, 4);
 let parent = characters.GetParent();
-parent.SetBorders("Bottom", "Thick", Api.CreateColorFromRGB(255, 111, 61));
+parent.SetBorders("Bottom", "Thick", Api.RGB(255, 111, 61));
 ```

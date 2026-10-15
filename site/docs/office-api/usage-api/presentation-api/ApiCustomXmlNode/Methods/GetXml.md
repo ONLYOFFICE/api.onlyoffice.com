@@ -8,7 +8,7 @@ Returns the XML string of the current node.
 expression.GetXml();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Export an XML element as a string in a presentation.
 
 ```javascript editor-pptx
-// How do I get the XML markup of a node in a presentation?
+// Get the XML markup of a node in a presentation.
 
 // Retrieve the serialized form of an XML element in a presentation.
 

@@ -4,6 +4,25 @@ Sets the position of the drawing on the slide.
 
 Inherited from [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md).
 
+## Syntax
+
+```javascript
+expression.SetPosition(nPosX, nPosY);
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPosX | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the slide to the left side of the drawing measured in English measure units. |
+| nPosY | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the top side of the slide to the upper side of the drawing measured in English measure units. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Set position to the shape in a presentation.

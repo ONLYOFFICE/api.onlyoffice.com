@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseField.SetPartialName](../../ApiBaseField/Methods/SetPartialName.md)。
 
+## 语法
+
+```javascript
+expression.SetPartialName(name);
+```
+
+`expression` - 表示 [ApiCheckboxField](../ApiCheckboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 字段的新部分名称。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为表单字段分配本地名称。

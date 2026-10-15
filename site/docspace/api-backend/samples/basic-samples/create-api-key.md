@@ -126,7 +126,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 </details>
 
 ## How it works
-A POST request is sent to [/api/2.0/keys](/docspace/api-backend/usage-api/create-api-key) with the following payload:
+A POST request is sent to [/api/2.0/keys](/docspace/api-backend/usage-api/api-keys/create-api-key) with the following payload:
 
 - `name`: Descriptive name for the key (e.g., "Integration Bot").
 - `permissions`: List of allowed scopes (e.g., files:read, rooms:write).

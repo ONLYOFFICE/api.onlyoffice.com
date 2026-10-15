@@ -1,6 +1,8 @@
 # Resize
 
-将 ListObject 调整为新范围。不插入或移动单元格。
+将 ListObject 调整为新范围。
+
+不插入或移动单元格。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

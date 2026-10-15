@@ -8,7 +8,7 @@ Returns the type of the current layout.
 expression.GetLayoutType();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

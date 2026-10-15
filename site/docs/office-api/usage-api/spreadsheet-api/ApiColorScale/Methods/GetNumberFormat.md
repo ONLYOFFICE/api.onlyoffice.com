@@ -4,6 +4,22 @@ Returns the number format applied to a cell when the conditional formatting rule
 
 Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
+## Syntax
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the number display pattern that a conditional formatting rule applies to matching cells in a spreadsheet.
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "2000");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 condition1.SetNumberFormat("$#,##0.00");
 
 let numberFormat = condition1.GetNumberFormat();

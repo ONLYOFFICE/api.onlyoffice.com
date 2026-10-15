@@ -8,7 +8,7 @@ Sets vertices to polygon annot.
 expression.SetVertices(path);
 ```
 
-`expression` - A variable that represents a [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) class.
+`expression` - A variable that represents an [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) class.
 
 ## Parameters
 

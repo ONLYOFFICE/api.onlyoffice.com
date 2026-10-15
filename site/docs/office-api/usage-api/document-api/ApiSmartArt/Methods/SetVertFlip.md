@@ -4,6 +4,24 @@ Flips the current drawing vertically.
 
 Inherited from [ApiDrawing.SetVertFlip](../../ApiDrawing/Methods/SetVertFlip.md).
 
+## Syntax
+
+```javascript
+expression.SetVertFlip(bFlip);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | Required | boolean |  | Specifies if the figure will be flipped vertically or not. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Flip a shape upside down along its vertical axis in a document.

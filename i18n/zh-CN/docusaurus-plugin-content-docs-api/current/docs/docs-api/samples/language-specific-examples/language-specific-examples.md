@@ -1,63 +1,41 @@
 ---
 sidebar_position: -5
 sidebar_label: Docs API 集成
+description: 将 ONLYOFFICE 文档集成到您网站的各语言示例。
 ---
 
-# 特定语言示例
+# Docs API 集成示例
 
-借助ONLYOFFICE 文档，任何协作解决方案都可以通过文档编辑和协同编辑功能得到增强。在本节中，您将了解如何将ONLYOFFICE 文档集成到您自己的网站中。
+集成示例是一些小型 Web 应用程序，它们可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。每个示例以不同的语言或框架完成相同的工作。在编写您自己的集成之前，运行与您的技术栈最接近的示例，即可看到一个完整可用的集成。所有示例的源代码均位于 [document-server-integration](https://github.com/ONLYOFFICE/document-server-integration) 仓库中。
 
-每个ONLYOFFICE 文档实例都包含文本文档、电子表格、演示文稿、PDF和可填写表单的在线编辑器，以及一个测试示例。
-
-测试示例是一个简单的文档管理系统，可集成到您的应用程序中用于测试。默认包含的测试示例是用Node.js编写的。默认情况下它是禁用的。要启用它，请按照启动屏幕上的说明操作。
+ONLYOFFICE 文档本身也包含 Node.js 示例。该示例默认处于禁用状态。要启用它，请按照 ONLYOFFICE 文档起始页面上的说明操作。
 
 :::warning
-这些集成示例用于演示文档编辑器的功能以及将**ONLYOFFICE 文档**连接到您自己应用程序的方法。在没有进行**适当的代码修改**之前，**请勿**在您自己的服务器上使用这些示例！如果您启用了任何测试示例，在投入生产环境之前请将其禁用。
+这些示例仅用于测试。它们没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它们的人都可以读取和修改其中的文件。请勿在公共服务器上运行这些示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 示例
 
-在使用测试示例时，请牢记以下安全方面的内容：
+| 示例 | 构建方式 | 设置 | 运行方式 |
+| ---- | -------- | ---- | -------- |
+| [.NET (C#)](/docs/docs-api/samples/language-specific-examples/net-example.md) | ASP.NET Web Forms 和 ASP.NET MVC | `settings.config`、`web.appsettings.config` | Visual Studio 和 IIS，仅限 Windows |
+| [Go](/docs/docs-api/samples/language-specific-examples/go-example.md) | gorilla/mux | `config/configuration.json` | `go run` |
+| [Java](/docs/docs-api/samples/language-specific-examples/java-example.md) | Servlet 和 JSP | `src/main/resources/settings.properties` | Docker Compose |
+| [Java Spring](/docs/docs-api/samples/language-specific-examples/java-spring-example.md) | Spring Boot | `src/main/resources/application.properties` | Maven |
+| [Node.js](/docs/docs-api/samples/language-specific-examples/nodejs-example.md) | Express | `config/default.json` | npm |
+| [PHP](/docs/docs-api/samples/language-specific-examples/php-example.md) | 无框架 | 环境变量 | PHP 内置服务器或 Docker Compose |
+| [PHP Laravel](/docs/docs-api/samples/language-specific-examples/php-laravel-example.md) | Laravel | `.env` | Docker Compose |
+| [Python](/docs/docs-api/samples/language-specific-examples/python-example.md) | Django | 环境变量 | Django 服务器或 Docker Compose |
+| [Ruby](/docs/docs-api/samples/language-specific-examples/ruby-example.md) | Ruby on Rails | 环境变量 | Make |
 
-- 由于无需授权，存储不受未经授权访问的保护。
-- 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
+如需基于类库而非从示例开始构建 Java 集成，请参阅 [Java SDK](/docs/docs-api/samples/language-specific-examples/java-integration-sdk.md)。
 
-要开始将文档编辑器集成到您自己的网站中，您需要执行以下操作：
+## 每个示例都需要的设置
 
-1. 下载ONLYOFFICE 文档并在您的本地服务器上进行设置：
+无论选择哪个示例，您都需要设置相同的三项内容：
 
-   [获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
+- **ONLYOFFICE 文档的地址**：浏览器从该地址加载编辑器，示例也向该地址发送请求。
+- **JWT 密钥**：必须与 ONLYOFFICE 文档的[密钥](/docs/docs-api/additional-api/signature/signature.md)一致。
+- **示例的地址**：ONLYOFFICE 文档通过该地址下载文件并发送回调。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为 `localhost` 在那里指向的是其他位置。
 
-2. 选择编程语言，并下载将在线编辑器集成到您网站的示例代码：
-
-   - [DotNet.Csharp.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip)
-   - [DotNet.Csharp.MVC.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip)
-   - [Java.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip)
-   - [Java.Spring.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip)
-   - [Node.js.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip)
-   - [PHP.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip)
-   - [PHP.Laravel.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip)
-   - [Python.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip)
-   - [Ruby.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip)
-   - [Go.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip)
-
-   您也可以在GitHub上找到源代码：[集成示例](https://github.com/ONLYOFFICE/document-server-integration)。
-
-3. 编辑示例中的配置文件，将默认路径更改为第1步中安装的编辑器的路径，以及更改编辑器配置中可用的其他参数。
-
-   您可以在以下路径找到配置文件：
-
-   - **.Net (C# MVC)** - `web/documentserver-example/csharp-mvc/web.appsettings.config`
-   - **.Net (C#)** - `web/documentserver-example/csharp/settings.config`
-   - **Go** - `web/documentserver-example/go/config/configuration.json`
-   - **Java** - `web/documentserver-example/java/src/main/resources/settings.properties`
-   - **Java Spring** - `web/documentserver-example/java-spring/src/main/resources/application.properties`
-   - **Node.js** - `web/documentserver-example/nodejs/config/default.json`
-   - **PHP** - `web/documentserver-example/php/src/configuration/ConfigurationManager.php`
-   - **PHP (Laravel)** - `web/documentserver-example/php-laravel/.env.example`
-   - **Python** - `web/documentserver-example/python/manage.py`
-   - **Ruby** - `web/documentserver-example/ruby/config/application.rb`
-
-4. 如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的(替换 `documentserver`) 的地址的ONLYOFFICE 文档。并且您还必须确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的 (替换 `example.com`) 的地址。
+每个示例页面都说明了这些设置的位置和名称。

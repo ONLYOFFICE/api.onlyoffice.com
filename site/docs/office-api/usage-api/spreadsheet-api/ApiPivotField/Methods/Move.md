@@ -8,7 +8,7 @@ Moves the current pivot field inside the category.
 expression.Move(type, index);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Moves option to specified position in list options.
 expression.MoveOption(currentIndex, newIndex);
 ```
 
-`expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
+`expression` - A variable that represents an [ApiBaseListField](../ApiBaseListField.md) class.
 
 ## Parameters
 

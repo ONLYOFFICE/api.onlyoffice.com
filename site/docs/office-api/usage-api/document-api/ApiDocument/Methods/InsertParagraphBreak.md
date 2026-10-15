@@ -8,7 +8,7 @@ Add paragraph to the document on the cursor position.
 expression.InsertParagraphBreak();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

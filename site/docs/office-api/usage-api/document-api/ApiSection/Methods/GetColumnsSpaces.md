@@ -8,7 +8,7 @@ Returns an array of distance values between the columns measured in twentieths o
 expression.GetColumnsSpaces();
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

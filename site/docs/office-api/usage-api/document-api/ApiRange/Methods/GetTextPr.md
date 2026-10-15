@@ -8,7 +8,7 @@ Returns the merged text properties of the entire range.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

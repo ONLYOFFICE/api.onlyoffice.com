@@ -1,6 +1,6 @@
 # PI
 
-Returns the mathematical constant - **pi**, equal to - **3.14159265358979**, accurate to 15 digits.
+Returns the mathematical constant **pi**, equal to **3.14159265358979**, accurate to 15 digits.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the mathematical constant - **pi**, equal to - **3.14159265358979**, acc
 expression.PI();
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -1,3 +1,7 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
+---
+
 # Items
 
 Plugin items that extend specific DocSpace UI locations — context menus, file rows, info panels, profile menus, and navigation buttons.
@@ -11,6 +15,7 @@ Each plugin type has specific items described in this section:
 | Interface | Description |
 | --- | --- |
 | [`IArticleButtonItem`](IArticleButtonItem.md) | Describes a button item that will be embedded in the article sidebar. |
+| [`IArticleNavigationItem`](IArticleNavigationItem.md) | Describes a navigation item that will be embedded in the article sidebar as a first-class navigation entry. |
 | [`IContextMenuItem`](IContextMenuItem.md) | Describes an item that will be embedded in the context menu. |
 | [`IEventListenerItem`](IEventListenerItem.md) | Describes an event listener that reacts to portal events. |
 | [`IFileItem`](IFileItem.md) | Describes an item that will be embedded in the file list. |

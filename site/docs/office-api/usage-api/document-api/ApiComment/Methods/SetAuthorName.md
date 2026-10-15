@@ -5,16 +5,16 @@ Sets the comment author's name.
 ## Syntax
 
 ```javascript
-expression.SetAuthorName(sAuthorName);
+expression.SetAuthorName(authorName);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sAuthorName | Required | string |  | The comment author's name. |
+| authorName | Required | string |  | The comment author's name. |
 
 ## Returns
 

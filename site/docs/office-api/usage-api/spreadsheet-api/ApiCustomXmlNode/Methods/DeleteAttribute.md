@@ -1,6 +1,7 @@
 # DeleteAttribute
 
 Deletes an attribute from the custom XML node.
+
 If the attribute exists, it will be removed.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute exists, it will be removed.
 expression.DeleteAttribute(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -26,7 +27,7 @@ boolean
 Remove a named attribute from an XML node stored in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I strip a specific attribute from a custom XML element in a spreadsheet?
+// Strip a specific attribute from a custom XML element in a spreadsheet.
 
 // Clean up XML metadata by dropping an attribute and confirming the change in a spreadsheet.
 

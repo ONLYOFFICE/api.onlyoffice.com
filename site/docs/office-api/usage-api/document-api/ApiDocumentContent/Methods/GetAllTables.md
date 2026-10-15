@@ -8,7 +8,7 @@ Returns an array of all tables from the current document content.
 expression.GetAllTables();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

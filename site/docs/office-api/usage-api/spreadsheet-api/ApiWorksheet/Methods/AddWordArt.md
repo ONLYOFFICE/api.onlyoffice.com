@@ -8,7 +8,7 @@ Adds a Text Art object to the current sheet with the parameters specified.
 expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWidth, nHeight, nFromCol, nFromRow, nColOffset, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -29,7 +29,7 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 ## Returns
 
-[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
 
 ## Example
 

@@ -1,6 +1,6 @@
 # ApiCommentReply
 
-Represents the ApiCommentReply class.
+Class representing a comment reply.
 
 ## Properties
 
@@ -13,6 +13,8 @@ Represents the ApiCommentReply class.
 | UserId | string | Returns or sets the user ID of the comment reply author. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

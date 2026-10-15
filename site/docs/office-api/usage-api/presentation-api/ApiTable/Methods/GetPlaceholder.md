@@ -4,6 +4,22 @@ Returns a placeholder from the current drawing object.
 
 Inherited from [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlaceholder.md).
 
+## Syntax
+
+```javascript
+expression.GetPlaceholder();
+```
+
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiPlaceholder](../../ApiPlaceholder/ApiPlaceholder.md) \| null
+
 ## Example
 
 Get the placeholder assigned to a shape in a presentation.

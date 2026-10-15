@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateStampAnnot(rect, type, author, creationDate);
+expression.CreateStampAnnot(position, type, author, creationDate);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,7 +14,7 @@ expression.CreateStampAnnot(rect, type, author, creationDate);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 批注矩形（由于图章尺寸是预设的，因此只使用 x1、y1 坐标）。 |
+| position | 必需 | [Point](../../Enumeration/Point.md) \| [Rect](../../Enumeration/Rect.md) |  | 注释左上角的位置。对于 Rect，仅使用 x1 和 y1。 |
 | type | 必需 | [StampType](../../Enumeration/StampType.md) |  | 图章类型 |
 | author | 可选 | string |  | 作者姓名 |
 | creationDate | 可选 | number |  | 创建日期（时间戳） |

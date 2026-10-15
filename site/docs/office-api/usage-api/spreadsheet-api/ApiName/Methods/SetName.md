@@ -8,7 +8,7 @@ Sets a string value representing the object name.
 expression.SetName(sName);
 ```
 
-`expression` - A variable that represents a [ApiName](../ApiName.md) class.
+`expression` - A variable that represents an [ApiName](../ApiName.md) class.
 
 ## Parameters
 

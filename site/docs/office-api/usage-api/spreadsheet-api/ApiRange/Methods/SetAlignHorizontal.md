@@ -8,7 +8,7 @@ Sets the horizontal alignment of the text in the current cell range.
 expression.SetAlignHorizontal(sAlignment);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

@@ -1,349 +1,64 @@
 ---
 sidebar_position: -8
+description: 运行 ONLYOFFICE 文档 Java 集成示例，并将其连接到您的 ONLYOFFICE 文档服务器。
+tags: ["Docs", "Integration", "Java"]
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Java 集成
 
-## 概述
-
-此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
+Java 集成示例是一个运行在 Apache Tomcat 上的小型 Servlet 和 JSP 应用程序，它可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。在编写您自己的集成之前，运行此示例即可看到一个完整可用的集成。
 
 :::warning
-它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
+本示例仅用于测试。它没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它的人都可以读取和修改其中的文件。请勿在公共服务器上运行此示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 先决条件
 
-在使用测试示例时，请记住以下几方面的安全事项：
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **Docker**：请参阅[官方网站](https://docs.docker.com/get-started/get-docker/)。
+- **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-- 由于不需要授权，因此无法保护存储免受未经授权的访问。
-- 没有检查链接中的参数替换，因为参数是由代码根据预先安排的脚本生成的。
-- 在编辑后保存文件的请求中没有数据检查，因为每个测试示例仅适用于来自 ONLYOFFICE 文档的请求。
-- 没有禁止使用来自其他网站的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档进行交互。
+Docker Compose 会使用 Maven 和 JDK 8 构建示例，并在 Apache Tomcat 中运行它，因此您无需自行安装 Java、Maven 或 Tomcat。
 
-## 安装
+## 步骤1. 下载示例
 
-<Tabs>
-    <TabItem value="windows" label="Windows">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
+克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/java)，进入 Java 示例目录，并获取其子模块：
 
-        下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
+```sh
+git clone --depth 1 https://github.com/ONLYOFFICE/document-server-integration
+cd document-server-integration/web/documentserver-example/java
+git submodule update --init --depth 1 .
+```
 
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
+## 步骤2. 配置连接
 
-        请参阅详细指南以了解如何安装[适用于 Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
+打开 `src/main/resources/settings.properties` 文件并编辑以下键：
 
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
+```ini
+storage-folder=app_data
+files.docservice.url.site=http://documentserver/
+files.docservice.url.example=
+files.docservice.secret=
+```
 
-        下载包含 Java 示例的存档并解压缩存档，或直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码：
+- `files.docservice.url.site`：安装了 ONLYOFFICE 文档的服务器地址。请将 `documentserver` 替换为该服务器的名称或 IP 地址，并保留末尾的斜杠。示例在 Docker 容器中运行，因此请勿使用 `localhost`：您的浏览器和该容器都必须能够访问此地址。
+- `storage-folder`：示例创建和存储文件的文件夹。相对路径会在已部署的应用程序内部解析，因此使用 Docker 时，文件保存在容器中。您可以设置一个绝对路径。在 `.properties` 文件中，每个反斜杠都需要转义，例如 `D:\\folder`。运行示例的用户需要对该文件夹具有读写权限。
+- `files.docservice.secret`：必须与 ONLYOFFICE 文档的 JWT 密钥一致。此项默认为空，这会在示例中禁用 JWT。ONLYOFFICE 文档默认启用 JWT，因此请将此键设置为您服务器的[密钥](/docs/docs-api/additional-api/signature/signature.md)。
+- `files.docservice.url.example`：ONLYOFFICE 文档访问示例时使用的地址。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为您在浏览器中打开的地址（例如 `localhost`）在那里指向的是其他位置。
 
-        ``` sh
-        curl --output Java.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
-        tar -xf Java.Example.zip
-        ```
+设置文件会在构建时打包到应用程序中，因此每次修改后都需要重新构建示例。
 
-        将当前目录更改为项目目录：
+如果您想尝试配置编辑器，请修改 `src/main/java/entities/FileModel.java` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。该类会构建配置，再由 `src/main/webapp/editor.jsp` 传递给编辑器。
 
-        ``` sh
-        cd "Java Example"
-        ```
+## 步骤3. 构建并运行示例
 
-        要将编辑器连接到您的网站，请在 *src/main/resources/settings.properties* 文件中指定编辑器安装的路径和存储文件夹的路径：
+```sh
+docker compose up --build
+```
 
-        ``` ini
-        storage-folder = app_data
-        files.docservice.url.site=https://documentserver/
-        ```
+在浏览器中打开 `http://localhost:8080`。您将看到示例的起始页面，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单。
 
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以设置绝对路径。例如，`D:\\folder`。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+## 故障排除
 
-        如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
-
-        ### 步骤 3. 安装的先决条件
-
-        要运行 Java 示例代码，请安装适用于您的操作系统和 Web 服务器 **Apache Tomcat** 的 Java 版本：
-
-        - **Java**（从 [Oracle 官网](https://www.java.com/en/download/manual.jsp)下载）；
-        - **Apache Tomcat**：9.0.x 版（从[官网](https://tomcat.apache.org/download-90.cgi)下载）。
-
-        ### 步骤 4. 运行 Apache Tomcat
-
-        1. 在 Windows 上安装 Java 后，将 **JAVA\_HOME** 环境变量设置为指向 Java 安装目录。
-
-           找出 Java 的安装位置。如果您在安装过程中没有更改路径，它将是这样的：
-
-           ``` sh
-           C:\Program Files\Java\jdk1.8.0_65
-           ```
-
-           在 **Windows 7** 中，右键单击**我的电脑**并选择**属性**，然后单击**高级**。
-
-           在 **Windows 8**中，进入**控制面板**并选择**系统**，然后单击**高级系统设置**。
-
-           单击**环境变量**按钮。
-
-           在**系统变量**，单击**新建**。
-
-           在**变量名称**字段中，如果您安装了**JDK**（Java 开发工具包），请输入 **JAVA\_HOME**；如果您安装了 **JRE**（Java 运行时环境），请输入**JRE\_HOME**。
-
-           在**变量值**字段中，输入您的 **JDK** 或 **JRE** 安装路径，例如 `C:\Program Files\Java\jdk1.8.0_65`。
-
-           <img alt="Add new environment variable" src="/assets/images/java/make-var.png" width="832px" />
-
-           检查**命令提示符**中的 **echo** 命令是否成功创建变量：
-
-           ``` sh
-           echo %JAVA_HOME%
-           ```
-
-        2. 运行**命令提示符**更改 **Apache Tomcat** 安装目录的当前目录：
-
-           ``` sh
-           cd /d C:\Apache Tomcat\apache-tomcat-9.0.x\bin
-           ```
-
-        3. 使用 *startup.bat* 脚本启动 Apache Tomcat：
-
-           ``` sh
-           startup.bat
-           ```
-
-           您将看到显示的新 **Tomcat** 控制台窗口，其中提供有关 Tomcat 启动的信息和消息：
-
-           <img alt="Tomcat console window" src="/assets/images/java/tomcat-cmd.jpg" width="832px" />
-
-           使用 Web 浏览器中的地址测试 Tomcat 安装：
-
-           ``` sh
-           http://localhost:8080
-           ```
-
-           如果一切正确，您将在浏览器中看到 Tomcat 网页，如下所示。
-
-        ### 步骤 5. 配置 JWT
-
-        打开 *src/main/resources/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
-
-        ``` ini
-        files.docservice.secret=secret
-        ```
-
-        ### 步骤 6. 运行 Java 代码
-
-        1. 通过单击 **Manager App:** 打开 Tomcat Web Application Manager：
-
-           <img alt="Manager app" src="/assets/images/java/manager.jpg" width="832px" />
-
-        2. Tomcat Web Application Manager 将请求 **username** 和 **password:**
-
-           <img alt="Sign in to Tomcat app" src="/assets/images/java/author.jpg" width="300px" />
-
-           在 Apache Tomcat 安装文件夹中的 *tomcat-users.xml* 文件中指定用户数据。定义 **manager-gui** 用户角色，指定 **user name** 和 **password** 的值：
-
-           ``` xml
-           <tomcat-users>
-               <role rolename="manager-gui"/>
-               <user username="tomcat" password="tomcat" roles="manager-gui"/>
-           </tomcat-users>
-           ```
-
-        3. 在 Tomcat Web Application Manager中上传 Java 项目。为此，单击 **WAR file to deploy** 部分中的 **Choose File** 并在 Java 项目文件夹中找到*.war* 文件，然后单击 **Deploy**。
-
-           <img alt="Deploy WAR file" src="/assets/images/java/upload-app.jpg" width="700px" />
-           <img alt="Choose WAR file" src="/assets/images/java/war-file.jpg" width="700px" />
-
-        4. 您将在 **Application 列表**中看到该项目：
-
-           <img alt="Application list" src="/assets/images/java/manager-app.jpg" width="832px" />
-
-        5. 单击应用程序名来运行它。
-
-        ### 步骤 7. 检查可访问性
-
-        如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 `example.com` 安装。
-    </TabItem>
-    <TabItem value="linux" label="Linux">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
-
-        下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
-
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-        请参阅详细指南以了解如何安装[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example)的 ONLYOFFICE 文档。
-
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
-
-        下载包含 Java 示例的存档并解压缩存档，或直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码：
-
-        ``` sh
-        curl --output Java.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
-        unzip Java.Example.zip
-        ```
-
-        将当前目录更改为项目目录：
-
-        ``` sh
-        cd "Java Example"
-        ```
-
-        编辑 *src/main/resources/settings.properties* 配置文件。指定安装了 ONLYOFFICE 文档的本地服务器的名称。
-
-        ``` sh
-        nano src/main/resources/settings.properties
-        ```
-
-        编辑以下行：
-
-        ``` ini
-        storage-folder = app_data
-        files.docservice.url.site=https://documentserver/
-        ```
-
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。请注意，您必须具有对该文件夹的读取和写入权限。如果您没有它们，请使用下一个命令：
-
-        ``` sh
-        sudo chmod -R ugo+rw /{path}
-        ```
-
-        ### 步骤 3. 安装的先决条件
-
-        按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
-
-        安装 **Maven**:
-
-        ``` sh
-        sudo apt-get install maven
-        ```
-
-        ### 步骤 4. 运行 Apache Tomcat
-
-        1. 使用管理页面安装 **Tomcat**：
-
-           ``` sh
-           sudo apt-get install tomcat8 tomcat8-admin
-           ```
-
-        2. 在 Tomcat 上配置管理员用户：
-
-           ``` sh
-           sudo nano /var/lib/tomcat8/conf/tomcat-users.xml
-           ```
-
-           插入以下行：
-
-           ``` xml
-           <role rolename="manager-gui"/>
-           <user username="USERNAME" password="PASSWORD" roles="manager-gui"/>
-           ```
-
-           其中 `USERNAME` 和 `PASSWORD` 是您自己的凭据数据。
-
-           重启 Tomcat:
-
-           ``` sh
-           systemctl restart tomcat8
-           ```
-
-        ### 步骤 5. 配置 JWT
-
-        打开 *src/main/resources/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
-
-        ``` ini
-        files.docservice.secret=secret
-        ```
-
-        ### 步骤 6. 运行 Java 代码
-
-        1. 构建项目：
-
-           ``` sh
-           mvn package
-           ```
-
-        2. 使用管理员用户凭据在浏览器中打开 Tomcat 管理页面：
-
-           ``` sh
-           http://localhost:8080/manager/html
-           ```
-
-        3. 从 *target/OnlineEditorsExampleJava-1.0.war* 选择要上传的 WAR 文件。
-
-        4. 使用地址在浏览器中查看结果：
-
-           ``` sh
-           http://localhost:8080/OnlineEditorsExampleJava-1.0/
-           ```
-
-        ### 步骤 7. 检查可访问性
-
-        如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 `example.com` 安装。
-    </TabItem>
-    <TabItem value="docker" label="Docker">
-        ### 步骤 1. 安装 ONLYOFFICE 文档
-
-        下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
-
-        [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-        请参阅详细指南以了解如何安装[适用于Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example)的 ONLYOFFICE 文档。
-
-        ### 步骤 2. 下载用于编辑器集成的 Java 代码
-
-        下载包含 Java 示例的存档并解压缩存档，或直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码：
-
-        ``` sh
-        curl --output Java.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
-        unzip Java.Example.zip
-        ```
-
-        将当前目录更改为项目目录：
-
-        ``` sh
-        cd "Java Example"
-        ```
-
-        编辑 *src/main/resources/settings.properties* 配置文件。指定安装了 ONLYOFFICE 文档的本地服务器的名称：
-
-        ``` sh
-        nano src/main/resources/settings.properties
-        ```
-
-        编辑以下行：
-
-        ``` ini
-        storage-folder = app_data
-        files.docservice.url.site=https://documentserver/
-        ```
-
-        其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
-
-        ### 步骤 3. 安装的先决条件
-
-        按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
-
-        ### 步骤 4. 配置 JWT
-
-        打开 *src/main/resources/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
-
-        ``` ini
-        files.docservice.secret=secret
-        ```
-
-        ### 步骤 5. 运行 Java 代码
-
-        在 Java 示例目录中运行以下命令：
-
-        ``` sh
-        docker-compose up
-        ```
-
-        之后，所有的 *bin* 文件将被传递到 *./target* 文件夹。
-
-        ### 步骤 6. 检查可访问性
-
-        如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以使用您在配置文件中指定的地址（而不是 `documentserver` ）访问ONLYOFFICE 文档。确保 ONLYOFFICE 文档可以访问安装了示例的服务器，该示例的地址是您在配置文件中指定的地址，而不是 `example.com`。
-    </TabItem>
-</Tabs>
+- **文档安全令牌的格式不正确**：`files.docservice.secret` 为空（这会在示例中禁用 JWT），或者与 ONLYOFFICE 文档的密钥不一致。
+- **下载失败**：ONLYOFFICE 文档无法访问示例。请在 `src/main/resources/settings.properties` 中将 `files.docservice.url.example` 设置为 ONLYOFFICE 文档可以解析的地址，然后重新构建示例。

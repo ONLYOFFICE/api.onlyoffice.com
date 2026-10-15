@@ -8,7 +8,7 @@ Returns the current text value of the complex form.
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
 
 ## Parameters
 

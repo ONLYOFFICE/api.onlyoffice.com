@@ -8,7 +8,7 @@ Adds an object (image, shape or chart) to the current slide master.
 expression.AddObject(oDrawing);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

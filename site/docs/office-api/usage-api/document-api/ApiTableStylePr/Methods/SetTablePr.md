@@ -5,16 +5,16 @@ Sets the table properties to the current table style properties.
 ## Syntax
 
 ```javascript
-expression.SetTablePr(oTablePr);
+expression.SetTablePr(tablePr);
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTablePr | Required | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | The table properties that will be set. |
+| tablePr | Required | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | The table properties that will be set. |
 
 ## Returns
 
@@ -42,7 +42,7 @@ table.SetWidth("percent", 100);
 let tableStylePr = tableStyle.GetConditionalTableStyle("wholeTable");
 table.SetTableLook(true, true, true, true, true, true);
 let tablePr = tableStylePr.GetTablePr();
-tablePr.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
+tablePr.SetTableBorderBottom("single", 32, 0, Api.Color(51, 51, 51));
 tableStylePr.SetTablePr(tablePr);
 
 table.SetStyle(tableStyle);

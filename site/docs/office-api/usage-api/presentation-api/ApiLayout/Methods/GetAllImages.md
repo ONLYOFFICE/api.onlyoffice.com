@@ -8,7 +8,7 @@ Returns an array with all the image objects from the slide layout.
 expression.GetAllImages();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

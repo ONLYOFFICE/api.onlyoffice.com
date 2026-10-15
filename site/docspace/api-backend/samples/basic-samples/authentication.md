@@ -38,7 +38,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(USER_CREDENTIALS),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
@@ -61,7 +61,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
       method: 'GET',
       headers: { Authorization: token },
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {
@@ -132,7 +132,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
 
 ## Step 1: Authenticate a user
 
-A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authenticate-me.api.mdx) to authenticate with `USER_CREDENTIALS`.
+A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authentication/authenticate-me.md) to authenticate with `USER_CREDENTIALS`.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -144,7 +144,7 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(USER_CREDENTIALS),
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
         const text = await res.text();
         console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
@@ -170,8 +170,8 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
     response = requests.post(f'{BASE_URL}/api/2.0/authentication', json=USER_CREDENTIALS)
     if response.status_code == 200:
       auth_token = response.json().get('response', {}).get('token')
-        if auth_token:
-          return auth_token
+      if auth_token:
+        return auth_token
     else:
       print(f'Authentication failed. Status code: {response.status_code}, Message: {response.text}')
     return None
@@ -183,7 +183,7 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
 
 ## Step 2: Check authentication
 
-A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/get-is-authentificated.api.mdx) to check authentication success.
+A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authentication/get-is-authentificated.md) to check authentication success.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -194,7 +194,7 @@ A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-a
       method: 'GET',
       headers: { Authorization: token },
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {

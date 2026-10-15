@@ -1,33 +1,37 @@
 # ApiCaretAnnotation
 
+Class representing a caret annotation.
+
 ApiCaretAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | boolean | Adds reply on this annot. |
 | [Delete](./Methods/Delete.md) | boolean | Removes annotation from document. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Gets annotation author name. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation border color. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets annotation border color. |
 | [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | number | Gets annotation border effect intensity. |
 | [GetBorderEffectStyle](./Methods/GetBorderEffectStyle.md) | [AnnotBorderEffectStyle](../Enumeration/AnnotBorderEffectStyle.md) | Gets annotation border effect style. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [AnnotBorderStyle](../Enumeration/AnnotBorderStyle.md) | Gets annotation border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [pt](../Enumeration/pt.md) | Gets annotation border width. |
 | [GetClassType](./Methods/GetClassType.md) | "caretAnnot" | Returns a type of the ApiCaretAnnotation class. |
-| [GetContents](./Methods/GetContents.md) | string | Gets annotation contents. |
+| [GetContents](./Methods/GetContents.md) | string \| null \| undefined | Gets annotation contents. |
 | [GetCreationDate](./Methods/GetCreationDate.md) | number | Gets annotation creation date. |
 | [GetDashPattern](./Methods/GetDashPattern.md) | number[] | Gets annotation dash pattern. |
 | [GetDisplay](./Methods/GetDisplay.md) | [DisplayType](../Enumeration/DisplayType.md) | Gets annotation display type. |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation fill color. |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets annotation fill color. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current annotation. |
 | [GetModDate](./Methods/GetModDate.md) | number | Gets annotation last modification date. |
 | [GetOpacity](./Methods/GetOpacity.md) | string | Gets annotation opacity. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets annotation position. |
 | [GetQuads](./Methods/GetQuads.md) | [Quad](../Enumeration/Quad.md)[] | Gets quads from current markup annotation. |
-| [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets annotation rect. |
+| [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Gets annotation rect. |
 | [GetReplies](./Methods/GetReplies.md) | [ApiTextAnnotation](../ApiTextAnnotation/ApiTextAnnotation.md)[] | Gets replies on this annot. |
-| [GetSubject](./Methods/GetSubject.md) | string | Gets annotation subject. |
+| [GetSubject](./Methods/GetSubject.md) | string \| null \| undefined | Gets annotation subject. |
 | [GetUniqueName](./Methods/GetUniqueName.md) | string | Gets annotation unique name. |
 | [SetAuthorName](./Methods/SetAuthorName.md) | boolean | Sets annotation author name. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets annotation border color. |

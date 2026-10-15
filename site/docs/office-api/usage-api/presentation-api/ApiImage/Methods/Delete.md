@@ -4,6 +4,22 @@ Deletes the specified drawing object from the parent.
 
 Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
 
+## Syntax
+
+```javascript
+expression.Delete();
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Remove a chart or shape from a presentation.
@@ -23,15 +39,15 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing1 = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 slide.AddObject(drawing1);
 
-const drawing2 = Api.CreateChart("bar3D", [
+const drawing2 = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-drawing2.SetVerAxisTitle("USD In Hundred Thousands", 10);
-drawing2.SetHorAxisTitle("Year", 11);
+drawing2.SetVerAxisTitle("USD In Hundred Thousands", 20);
+drawing2.SetHorAxisTitle("Year", 22);
 drawing2.SetLegendPos("bottom");
 drawing2.SetShowDataLabels(false, false, true, false);
-drawing2.SetTitle("Financial Overview", 13);
+drawing2.SetTitle("Financial Overview", 26);
 
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 drawing2.SetSeriesFill(fill, 0, false);

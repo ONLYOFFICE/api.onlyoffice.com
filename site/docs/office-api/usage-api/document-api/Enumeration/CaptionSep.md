@@ -1,6 +1,7 @@
 # CaptionSep
 
 Possible values for the caption separator.
+
 - **"hyphen"** - the "-" punctuation mark.
 - **"period"** - the "." punctuation mark.
 - **"colon"** - the ":" punctuation mark.
@@ -24,7 +25,7 @@ Enumeration
 Add a caption with a hyphen as a numbering separator to the paragraph.
 
 ```javascript editor-docx
-// How to create a caption indicating the type of a numbering separator.
+// How do I create a caption with a specific numbering separator?
 
 // Create a caption specifying its bullet type for numbering paragraphs.
 

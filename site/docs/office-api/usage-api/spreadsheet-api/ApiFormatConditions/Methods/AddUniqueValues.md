@@ -8,7 +8,7 @@ Adds a new unique values conditional formatting rule to the collection.
 expression.AddUniqueValues();
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 
@@ -43,5 +43,5 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
+uniqueValuesCondition.GetFont().SetColor(Api.RGB(255, 0, 0));
 ```

@@ -92,7 +92,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initfileselector).
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onAppReady), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
@@ -100,7 +100,7 @@ Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sd
     }
     ```
 
-2. Add an event handler for [onSelectCallback](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onselectcallback). When the user selects a file, **ONLYOFFICE editors** are initialized by passing the ID of the file selected in the **file selector** to the [initEditor](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) method:
+2. Add an event handler for [onSelectCallback](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onSelectCallback). When the user selects a file, **ONLYOFFICE editors** are initialized by passing the ID of the file selected in the **file selector** to the [initEditor](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) method:
 
     ``` ts
     function onSelectCallback() {

@@ -1,6 +1,8 @@
 # Search
 
-在表格单元格对象的范围内搜索。搜索结果是 ApiRange 对象的集合。
+在表格单元格对象的范围内搜索。
+
+搜索结果是 ApiRange 对象的集合。
 
 ## 语法
 
@@ -14,7 +16,7 @@ expression.Search(sText, isMatchCase);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | 必需 | string |  | 搜索字符串。 |
+| sText | 必需 | string \| RegExp |  | 搜索字符串或要匹配的正则表达式。传递 RegExp 时，将忽略 isMatchCase 参数（请改用 "i" 标志控制大小写敏感性）。 |
 | isMatchCase | 必需 | boolean |  | 是否区分大小写。 |
 
 ## 返回值
@@ -23,12 +25,12 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-在文档中的表格单元格内搜索特定文本。
+在表格单元格中使用字符串和正则表达式查找文本，然后将匹配项设为粗体。
 
 ```javascript editor-docx
-// How do I find a particular word within a table cell in a document?
+// Look up a keyword in the cell and match it case-insensitively with a RegExp.
 
-// Locate matching text in a cell and apply formatting to the results in a document.
+// Bold the second keyword match, then bold every match found by the /cell/gi expression.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -38,6 +40,12 @@ table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1. This cell is in the first row.");
 doc.Push(table);
-let searchResults = table.GetCell(0, 0).Search("Cell");
-searchResults[1].SetBold(true);
+
+let cell = table.GetCell(0, 0);
+let byKeyword = cell.Search("Cell");
+byKeyword[1].SetBold(true);
+
+let byRegExp = cell.Search(/cell/gi);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

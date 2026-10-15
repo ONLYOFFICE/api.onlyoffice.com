@@ -8,7 +8,7 @@ Returns an image in the base64 format from the current picture form.
 expression.GetImage();
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

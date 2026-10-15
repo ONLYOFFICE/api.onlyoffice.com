@@ -19,10 +19,10 @@
 
 ## 示例
 
-为绘图对象设置垂直对齐方式。
+将绘图相对于页面垂直居中。
 
 ```javascript editor-docx
-// How to align a drawing to the center.
+// How do I center a drawing vertically relative to the page?
 
 // Set a drawing vertical aligment.
 

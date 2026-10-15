@@ -8,7 +8,7 @@ Adds a custom property to the document with automatic type detection.
 expression.Add(name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomProperties](../ApiCustomProperties.md) class.
+`expression` - A variable that represents an [ApiCustomProperties](../ApiCustomProperties.md) class.
 
 ## Parameters
 

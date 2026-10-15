@@ -1,8 +1,10 @@
 # ApiMaster
 
-Represents the ApiMaster class.
+Class representing a slide master.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -19,15 +21,18 @@ Represents the ApiMaster class.
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide master. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide master. |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array with all tables from the slide master. |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Returns the background fill of the current slide master. |
 | [GetClassType](./Methods/GetClassType.md) | "master" | Returns the type of the ApiMaster class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the specified slide master by its position. |
 | [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns the layout corresponding to the specified layout type of the slide master. |
 | [GetLayoutsCount](./Methods/GetLayoutsCount.md) | number | Returns a number of layout objects. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the slide master. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings and text of the current slide master and, on request, of its layouts. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide master. |
 | [RemoveLayout](./Methods/RemoveLayout.md) | boolean | Removes the layouts from the current slide master. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide master. |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | Searches for the specified text within the current slide master and returns all found occurrences as text ranges. |
 | [SetBackground](./Methods/SetBackground.md) | boolean | Sets the background to the current slide master. |
 | [SetTheme](./Methods/SetTheme.md) | boolean | Sets a theme to the slide master. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiMaster object into the JSON object. |

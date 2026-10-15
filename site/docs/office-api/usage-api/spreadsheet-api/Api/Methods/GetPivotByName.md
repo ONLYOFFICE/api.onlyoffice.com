@@ -8,7 +8,7 @@ Returns a pivot table by its name, or null if it does not exist.
 expression.GetPivotByName(name);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

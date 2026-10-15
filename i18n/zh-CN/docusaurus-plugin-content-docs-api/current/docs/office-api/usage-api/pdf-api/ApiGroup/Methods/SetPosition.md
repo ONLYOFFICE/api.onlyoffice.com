@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetPosition(posX, posY);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posX | 必需 | [EMU](../../Enumeration/EMU.md) |  | 从页面左侧到绘图左侧的距离（以英制单位表示）。 |
+| posY | 必需 | [EMU](../../Enumeration/EMU.md) |  | 从页面顶部到绘图上侧的距离（以英制单位表示）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 将形状移动到 PDF 中的不同位置。
@@ -16,7 +35,7 @@
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

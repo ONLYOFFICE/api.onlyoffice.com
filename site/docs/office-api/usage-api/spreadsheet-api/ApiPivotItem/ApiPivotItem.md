@@ -1,6 +1,6 @@
 # ApiPivotItem
 
-Represents the ApiPivotItem class.
+Class representing a pivot table field item.
 
 ## Properties
 
@@ -14,6 +14,8 @@ Represents the ApiPivotItem class.
 | Visible | boolean | Returns or sets the visibility of the pivot item. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

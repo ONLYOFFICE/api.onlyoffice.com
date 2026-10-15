@@ -8,7 +8,7 @@ Adds a rich paragraph using its position in rich content.
 expression.AddElement(pos, richPara);
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 

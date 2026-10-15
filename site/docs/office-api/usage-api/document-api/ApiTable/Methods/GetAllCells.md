@@ -8,7 +8,7 @@ Returns a collection of all cells in the table.
 expression.GetAllCells();
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the pivot field from which the data field was created.
 expression.GetPivotField();
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

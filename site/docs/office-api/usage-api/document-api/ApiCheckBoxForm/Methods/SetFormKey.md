@@ -4,22 +4,46 @@ Sets a key to the current form.
 
 Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | Required | string |  | Form key. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign an identifying key to a form field in a document.
+Assign a unique key to each checkbox form to identify it later in a document.
 
 ```javascript editor-docx
-// How do I set the key that identifies a form field in a document?
+// How do I set a unique identifier on a checkbox form in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Label multiple checkbox forms with distinct keys and read back the key to verify the assignment in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetFormKey("Personal information");
-let key = textForm.GetFormKey();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let formKey = checkBoxForm.GetFormKey();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form key: " + key);
+paragraph.AddText("Form key: " + formKey);
 doc.Push(paragraph);
 ```

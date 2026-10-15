@@ -8,7 +8,7 @@ Creates a complex form with the specified complex form properties.
 expression.CreateComplexForm(formPr);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

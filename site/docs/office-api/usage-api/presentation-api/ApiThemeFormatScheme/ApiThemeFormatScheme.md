@@ -1,8 +1,10 @@
 # ApiThemeFormatScheme
 
-Represents the ApiThemeFormatScheme class.
+Class representing a theme format scheme.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

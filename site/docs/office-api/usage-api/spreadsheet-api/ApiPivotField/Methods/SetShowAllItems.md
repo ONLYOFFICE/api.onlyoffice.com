@@ -8,7 +8,7 @@ Sets the setting which specifies whether to show items with no data.
 expression.SetShowAllItems(show);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

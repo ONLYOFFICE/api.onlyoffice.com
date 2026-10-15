@@ -18,7 +18,7 @@
 将默认文档段落样式分配给 'oNormalStyle' 变量。
 
 ```javascript editor-docx
-// How to get a default style of the paragraph from the document.
+// How do I get the default paragraph style of a document?
 
 // Return a paragraph default style.
 

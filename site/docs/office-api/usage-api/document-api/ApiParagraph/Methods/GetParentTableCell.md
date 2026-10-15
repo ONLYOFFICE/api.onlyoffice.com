@@ -8,7 +8,7 @@ Returns a table cell that contains the current paragraph.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
@@ -39,5 +39,5 @@ paragraph.AddText("This is just a sample text.");
 let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 let parentTableCell = paragraph.GetParentTableCell();
-parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
+parentTableCell.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 ```

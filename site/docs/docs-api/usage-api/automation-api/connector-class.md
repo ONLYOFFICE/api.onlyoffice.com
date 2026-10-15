@@ -129,11 +129,11 @@ connector.addToolbarMenuItem({
 
 The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins:
 
-- [Document events](../../../plugins/interacting-with-editors/document-api/Events/Events.md)
-- [Spreadsheet events](../../../plugins/interacting-with-editors/spreadsheet-api/Events/Events.md)
-- [Presentation events](../../../plugins/interacting-with-editors/presentation-api/Events/Events.md)
-- [PDF events](../../../plugins/interacting-with-editors/pdf-api/Events/Events.md)
-- [Form events](../../../plugins/interacting-with-editors/form-api/Events/Events.md)
+- [Document events](../../../plugins/interacting-with-editors/document-api/document-api.md#events)
+- [Spreadsheet events](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#events)
+- [Presentation events](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#events)
+- [PDF events](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#events)
+- [Form events](../../../plugins/interacting-with-editors/form-api/form-api.md#events)
 
 ### Parameters
 
@@ -241,11 +241,11 @@ connector.disconnect();
 
 The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins:
 
-- [Document methods](../../../plugins/interacting-with-editors/document-api/Methods/Methods.md)
-- [Spreadsheet methods](../../../plugins/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
-- [Presentation methods](../../../plugins/interacting-with-editors/presentation-api/Methods/Methods.md)
-- [PDF methods](../../../plugins/interacting-with-editors/pdf-api/Methods/Methods.md)
-- [Form methods](../../../plugins/interacting-with-editors/form-api/Methods/Methods.md)
+- [Document methods](../../../plugins/interacting-with-editors/document-api/document-api.md#methods)
+- [Spreadsheet methods](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#methods)
+- [Presentation methods](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#methods)
+- [PDF methods](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#methods)
+- [Form methods](../../../plugins/interacting-with-editors/form-api/form-api.md#methods)
 
 ### Parameters
 

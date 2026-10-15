@@ -4,14 +4,30 @@ Returns the paragraph contents justification.
 
 Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
+## Syntax
+
+```javascript
+expression.GetJc();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"left" \| "right" \| "both" \| "center" \| undefined
+
 ## Example
 
-Check the text alignment of a paragraph in a presentation.
+Get the paragraph contents justification in a presentation.
 
 ```javascript editor-pptx
-// How do I read the alignment setting of a paragraph in a presentation?
+// How do I find the alignment setting of text in a presentation?
 
-// Retrieve whether text is left-aligned, centered, right-aligned, or justified in a presentation.
+// Retrieve and display the text alignment type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -27,16 +43,13 @@ slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
 
-const jc = paraPr.GetJc();
+const sJc = paragraph.GetJc();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Justification: " + jc);
+paragraph.AddText("Justification: " + sJc);
 docContent.Push(paragraph);
 ```

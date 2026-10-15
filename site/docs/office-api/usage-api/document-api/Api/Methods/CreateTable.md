@@ -12,14 +12,14 @@ Starting from version 9.4.0, the parameter order has been changed from `Api.Crea
 expression.CreateTable(rows, cols);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rows | Required | number |  | Number of rows. |
-| cols | Required | number |  | Number of columns. |
+| rows | Required | number |  | Number of rows. Must be a positive integer. |
+| cols | Required | number |  | Number of columns. Must be a positive integer. |
 
 ## Returns
 

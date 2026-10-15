@@ -4,6 +4,22 @@ Checks if field is required
 
 Inherited from [ApiBaseField.IsRequired](../../ApiBaseField/Methods/IsRequired.md).
 
+## Syntax
+
+```javascript
+expression.IsRequired();
+```
+
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check if a form field must be filled before submitting in a PDF.

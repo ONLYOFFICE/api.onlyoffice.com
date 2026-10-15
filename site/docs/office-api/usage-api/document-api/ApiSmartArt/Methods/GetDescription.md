@@ -1,0 +1,43 @@
+# GetDescription
+
+Gets the description of the current drawing.
+
+Inherited from [ApiDrawing.GetDescription](../../ApiDrawing/Methods/GetDescription.md).
+
+## Syntax
+
+```javascript
+expression.GetDescription();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string \| null
+
+## Example
+
+Get the description of a drawing in a document.
+
+```javascript editor-docx
+// Needed when reading the alternative text of a drawing.
+
+// Create a drawing, set its description, and read it back.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.SetDescription("My Drawing Description");
+let description = drawing.GetDescription();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Drawing description: " + description);
+doc.AddElement(0, paragraph);
+```

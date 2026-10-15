@@ -8,7 +8,7 @@ Creates a copy of the current run.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

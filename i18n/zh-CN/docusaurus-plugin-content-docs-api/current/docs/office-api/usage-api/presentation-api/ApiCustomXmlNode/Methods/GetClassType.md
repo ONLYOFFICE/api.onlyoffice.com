@@ -23,7 +23,7 @@ expression.GetClassType();
 确定演示文稿中 XML 节点的类类型。
 
 ```javascript editor-pptx
-// How do I find out what type an XML node object is in a presentation?
+// Find out what type an XML node object is in a presentation.
 
 // Get the class name of an XML element in a presentation.
 

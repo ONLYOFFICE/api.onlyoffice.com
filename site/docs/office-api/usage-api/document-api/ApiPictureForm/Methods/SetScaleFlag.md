@@ -8,7 +8,7 @@ Sets the scaling condition to the current picture form.
 expression.SetScaleFlag(sScaleFlag);
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

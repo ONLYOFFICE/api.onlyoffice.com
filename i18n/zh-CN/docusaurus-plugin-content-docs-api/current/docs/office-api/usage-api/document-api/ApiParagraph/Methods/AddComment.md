@@ -1,7 +1,10 @@
 # AddComment
 
 向当前段落添加批注。
-💡 请注意，此段落必须在文档中。
+
+:::note
+此段落必须在文档中。
+:::
 
 ## 语法
 
@@ -21,7 +24,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 返回值
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## 示例
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutPageBreak();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 读取电子表格中数据透视表字段是否在每组之后插入分页符。

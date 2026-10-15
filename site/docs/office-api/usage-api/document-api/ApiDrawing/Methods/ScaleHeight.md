@@ -8,7 +8,7 @@ Scales the height of the figure using the specified coefficient.
 expression.ScaleHeight(coefficient);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

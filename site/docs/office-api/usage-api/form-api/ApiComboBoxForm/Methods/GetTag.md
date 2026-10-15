@@ -4,34 +4,37 @@ Returns the tag attribute for the current form.
 
 Inherited from [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md).
 
+## Syntax
+
+```javascript
+expression.GetTag();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Read the tag attached to a form field in a document.
+Read the tag attached to a combo box form in a document.
 
 ```javascript editor-forms
-// How do I get the tag of a form field in a document?
+// How do I retrieve the tag of a combo box form in a document?
 
-// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
+// Verify that the expected tag value is stored on the form for lookup or filtering purposes.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let comboBoxForm = Api.CreateComboBoxForm({"tag" : "Country", "key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-
-const textForm = Api.CreateTextForm({
-	"key": "Personal information",
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-textForm.SetTag('MY_TAG');
-paragraph.AddElement(textForm);
-
-const formTag = textForm.GetTag();
+paragraph.AddElement(comboBoxForm);
+let tag = comboBoxForm.GetTag();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form tag: " + formTag);
+paragraph.AddText("Form tag: " + tag);
 doc.Push(paragraph);
 ```

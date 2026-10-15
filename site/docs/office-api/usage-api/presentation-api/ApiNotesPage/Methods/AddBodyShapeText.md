@@ -8,7 +8,7 @@ Adds a text to the body shape of the current notes page.
 expression.AddBodyShapeText(sText);
 ```
 
-`expression` - A variable that represents a [ApiNotesPage](../ApiNotesPage.md) class.
+`expression` - A variable that represents an [ApiNotesPage](../ApiNotesPage.md) class.
 
 ## Parameters
 

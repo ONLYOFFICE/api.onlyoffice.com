@@ -15,7 +15,7 @@ expression.AddSlide(oSlide, nIndex);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oSlide | 必需 | [ApiSlide](../../ApiSlide/ApiSlide.md) |  | 使用 [Api#CreateSlide](../../Api/Methods/CreateSlide.md) 方法创建的幻灯片。 |
-| nIndex | 必需 | number |  | 要添加的幻灯片的索引。如果未指定，幻灯片将添加到演示文稿末尾。 |
+| nIndex | 必需 | number \| null \| undefined |  | 要添加的幻灯片的索引。如果未指定，幻灯片将添加到演示文稿末尾。 |
 
 ## 返回值
 

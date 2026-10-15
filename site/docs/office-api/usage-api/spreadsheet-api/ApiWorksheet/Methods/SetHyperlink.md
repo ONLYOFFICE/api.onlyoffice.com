@@ -5,20 +5,20 @@ Adds a hyperlink to the specified range.
 ## Syntax
 
 ```javascript
-expression.SetHyperlink(sRange, sAddress, subAddress, sScreenTip, sTextToDisplay);
+expression.SetHyperlink(range, address, subAddress, screenTip, textToDisplay);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | Required | string |  | The range where the hyperlink will be added to. |
-| sAddress | Required | string |  | The link address. |
+| range | Required | string |  | The range where the hyperlink will be added to. |
+| address | Required | string |  | The link address. |
 | subAddress | Optional | string |  | The link subaddress to insert internal sheet hyperlinks. |
-| sScreenTip | Optional | string |  | The screen tip text. |
-| sTextToDisplay | Optional | string |  | The link text that will be displayed on the sheet. |
+| screenTip | Optional | string |  | The screen tip text. |
+| textToDisplay | Optional | string |  | The link text that will be displayed on the sheet. |
 
 ## Returns
 

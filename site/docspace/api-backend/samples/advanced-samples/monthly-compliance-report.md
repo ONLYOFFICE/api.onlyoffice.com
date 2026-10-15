@@ -335,7 +335,7 @@ This example demonstrates how to generate a monthly compliance report in ONLYOFF
 
 ## Step 1: Retrieve audit events for the month
 
-A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter) to retrieve audit events for a selected period.
+A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter) to retrieve audit events for a selected period.
 
 The request uses query parameters:
 - `from`: Period start date (YYYY-MM-DD)
@@ -536,7 +536,7 @@ This format is easy to archive and review.
 
 ## Step 4: Upload the report to the Compliance folder
 
-A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backend/usage-api/upload-file) to upload the report as a TXT file into a selected folder.
+A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backend/usage-api/files/folders/upload-file) to upload the report as a TXT file into a selected folder.
 The request is sent as `multipart/form-data` with a single uploaded file. The response confirms the upload and returns file information.
 
 <Tabs>

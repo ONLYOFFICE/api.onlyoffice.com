@@ -1,7 +1,14 @@
-# Type Alias: TSelectorType
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+---
 
-> **TSelectorType** = `` `${SelectorFilterType}` ``
+# TSelectorType
 
-Defined in: [types/index.ts:51](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L51)
+String literal union of all [SelectorFilterType](../enumerations/SelectorFilterType.md) values.
 
-The template literal type for the selector filters.
+Accepted by [TFrameConfig.selectorType](TFrameConfig.md#selectorType) in [SDKMode.FileSelector](../enumerations/SDKMode.md#FileSelector) mode.
+Using the [SelectorFilterType](../enumerations/SelectorFilterType.md) enum constants is preferred.
+
+```ts
+type TSelectorType = `${SelectorFilterType}`;
+```

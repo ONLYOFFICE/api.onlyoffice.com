@@ -3,6 +3,8 @@ description: Add references and citations from a Zotero library.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Zotero
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
@@ -13,11 +15,7 @@ Connects a Zotero account for adding references to the document in full accordan
 
 **Analogues:** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley), [EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="y6RKGiBHiG8" />
-```
 
 ## Installation
 
@@ -167,7 +165,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](../interacting-with-editors/document-api/Methods/PasteHtml.md)
 

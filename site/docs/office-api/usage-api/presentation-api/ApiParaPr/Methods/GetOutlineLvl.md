@@ -8,7 +8,7 @@ Returns the outline level of the specified properties.
 expression.GetOutlineLvl();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -31,7 +31,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const rgb = Api.CreateRGBColor(50, 100, 150);
+const rgb = Api.RGB(50, 100, 150);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 200 * 36000, 50 * 36000, fill, stroke);

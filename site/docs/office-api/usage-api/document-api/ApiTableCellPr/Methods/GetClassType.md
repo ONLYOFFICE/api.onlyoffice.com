@@ -8,7 +8,7 @@ Returns a type of the ApiTableCellPr class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 

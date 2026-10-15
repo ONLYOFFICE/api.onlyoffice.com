@@ -2,7 +2,29 @@
 
 Sets annotation rect.
 
+:::note
+Not for stamps. The SetScale method is used to change the stamp size.
+:::
+
 Inherited from [ApiBaseAnnotation.SetRect](../../ApiBaseAnnotation/Methods/SetRect.md).
+
+## Syntax
+
+```javascript
+expression.SetRect(rect);
+```
+
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | The new bounding rectangle for the annotation. |
+
+## Returns
+
+boolean
 
 ## Example
 

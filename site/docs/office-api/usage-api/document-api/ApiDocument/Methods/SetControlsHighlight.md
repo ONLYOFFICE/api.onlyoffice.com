@@ -8,7 +8,7 @@ Sets the highlight to the content controls from the current document.
 expression.SetControlsHighlight(color);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

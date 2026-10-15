@@ -5,22 +5,22 @@ Adds a hyperlink to a paragraph.
 ## Syntax
 
 ```javascript
-expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
+expression.AddHyperlink(link, screenTipText, bookmarkName);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLink | Required | string |  | The link address. |
-| sScreenTipText | Required | string |  | The screen tip text. |
-| sBookmarkName | Required | string |  | name of a bookmark |
+| link | Required | string |  | The link address. |
+| screenTipText | Required | string |  | The screen tip text. |
+| bookmarkName | Required | string |  | name of a bookmark |
 
 ## Returns
 
-[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md)
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null \| undefined
 
 ## Example
 
@@ -34,7 +34,7 @@ Insert a clickable hyperlink into a paragraph in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
-run.AddText("ONLYOFFICE Document Builder");
+run.AddText("Visit ONLYOFFICE for developers");
 paragraph.AddElement(run);
-paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic", "docbuilder");
+paragraph.AddHyperlink("https://api.onlyoffice.com", "docbuilder");
 ```

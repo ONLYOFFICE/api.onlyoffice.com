@@ -4,6 +4,22 @@ Gets the text outline from the current text properties.
 
 Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.GetOutLine();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiStroke](../../ApiStroke/ApiStroke.md)
+
 ## Example
 
 Check if text has an outline effect applied in a presentation.

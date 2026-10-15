@@ -1,6 +1,6 @@
 # GetAllTables
 
-返回包含当前演示文稿中所有表格的数组（包括幻灯片母版和幻灯片版式）。
+返回包含演示文稿幻灯片中所有表格的数组，不包括幻灯片版式和幻灯片母版中的表格。
 
 ## 语法
 
@@ -23,7 +23,7 @@ expression.GetAllTables();
 查找演示文稿中的所有表格。
 
 ```javascript editor-pptx
-// How do I access every table on slides, layouts, and masters in a presentation?
+// Access every table on the slides, layouts, and masters.
 
 // Count tables from all locations and display the results in a presentation.
 

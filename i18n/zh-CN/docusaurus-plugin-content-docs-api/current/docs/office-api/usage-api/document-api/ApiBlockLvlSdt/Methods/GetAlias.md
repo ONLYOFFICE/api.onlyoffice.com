@@ -29,8 +29,8 @@ string
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
-blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with alias 'OnlyOffice'.");
-blockLvlSdt.SetAlias("OnlyOffice");
+blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with alias 'ONLYOFFICE'.");
+blockLvlSdt.SetAlias("ONLYOFFICE");
 doc.AddElement(0, blockLvlSdt);
 doc.GetElement(1).AddText("Alias: " + blockLvlSdt.GetAlias());
 ```

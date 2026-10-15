@@ -3,7 +3,7 @@
 Creates a chart with the parameters specified.
 
 :::note
-Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+Values of *nStyleIndex* outside **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 ## Syntax
@@ -12,13 +12,13 @@ Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id
 expression.CreateChart(chartType, series, seriesNames, categoryNames, width, height, styleIndex, numFormats);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "bar" | The chart type used for the chart display. |
+| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "ColumnClustered" | The chart type used for the chart display. |
 | series | Required | number[][] |  | The array of the data used to build the chart from. |
 | seriesNames | Required | number[] \| string[] |  | The array of the names (the source table column names) used for the data which the chart will be build from. |
 | categoryNames | Required | number[] \| string[] |  | The array of the names (the source table row names) used for the data which the chart will be build from. |
@@ -29,7 +29,7 @@ expression.CreateChart(chartType, series, seriesNames, categoryNames, width, hei
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 
@@ -43,16 +43,16 @@ Add a 3D bar chart to a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24, ["0", "0.00"]);
 chart.SetSize(150 * 36000, 65 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.SetShowPointDataLabel(1, 0, false, false, true, false);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```

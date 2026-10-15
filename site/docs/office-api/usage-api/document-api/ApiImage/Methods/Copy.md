@@ -1,10 +1,6 @@
 # Copy
 
-Copies the current image.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current image.
 
 ## Syntax
 
@@ -12,7 +8,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiImage](../ApiImage.md) class.
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
 
 ## Parameters
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiImage](../../ApiImage/ApiImage.md)
+[ApiImage](../../ApiImage/ApiImage.md) \| null
 
 ## Example
 

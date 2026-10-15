@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseField.SetFullName](../../ApiBaseField/Methods/SetFullName.md)。
 
+## 语法
+
+```javascript
+expression.SetFullName(name);
+```
+
+`expression` - 表示 [ApiCheckboxField](../ApiCheckboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 字段的新完整名称。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中为表单字段分配完整的名称标识符。

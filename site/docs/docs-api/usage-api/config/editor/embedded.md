@@ -8,7 +8,7 @@ This section is for the `embedded` document type only. See the [config](../confi
 
 ## autostart
 
-**type:** `"document" | "player"` | **default:** `"player"`
+**type**: `"document" | "player"` | **default**: `"player"`
 
 The start mode for the embedded viewer. In `player` mode, the slideshow starts automatically.
 
@@ -16,7 +16,7 @@ The start mode for the embedded viewer. In `player` mode, the slideshow starts a
 
 ## embedUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the source file for the embedded document.
 
@@ -24,7 +24,7 @@ The absolute URL to the source file for the embedded document.
 
 ## fullscreenUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL of the document to open in full screen mode.
 
@@ -32,7 +32,7 @@ The absolute URL of the document to open in full screen mode.
 
 ## saveUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL for saving the document to the user's local computer.
 
@@ -40,7 +40,7 @@ The absolute URL for saving the document to the user's local computer.
 
 ## shareUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL for sharing the document with other users.
 
@@ -48,7 +48,7 @@ The absolute URL for sharing the document with other users.
 
 ## toolbarDocked
 
-**type:** `"top" | "bottom"` | **default:** `"top"`
+**type**: `"top" | "bottom"` | **default**: `"top"`
 
 The position of the embedded viewer toolbar.
 

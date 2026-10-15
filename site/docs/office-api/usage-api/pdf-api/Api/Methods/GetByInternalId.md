@@ -2,17 +2,13 @@
 
 Returns the object by it's internal ID.
 
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
-
 ## Syntax
 
 ```javascript
 expression.GetByInternalId(id);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -22,4 +18,23 @@ expression.GetByInternalId(id);
 
 ## Returns
 
-object
+[FloatObject](../../Enumeration/FloatObject.md) \| [ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| [ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| [ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| [ApiTableCell](../../ApiTableCell/ApiTableCell.md)
+
+## Example
+
+Get an object by its internal ID in a PDF.
+
+```javascript editor-pdf
+// Useful for finding a PDF API object by its internal identifier.
+
+// Create a field, get its internal ID, and retrieve the same field by that ID.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+let internalId = textField.GetInternalId();
+let fieldById = Api.GetByInternalId(internalId);
+fieldById.SetValue("Field was found by internal ID");
+```

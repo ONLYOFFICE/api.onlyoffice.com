@@ -8,7 +8,7 @@ Sets the text content of the current XML node.
 expression.SetText(str);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ boolean
 Change the text content of specific XML nodes embedded in a document.
 
 ```javascript editor-docx
-// How do I update the plain text inside a node in the XML data stored in a document?
+// Update the plain text inside a node in the XML data stored in a document.
 
 // Correct or refresh the human-readable values in structured XML fields in a document.
 

@@ -8,7 +8,7 @@ Returns the paragraph properties.
 expression.GetParaPr();
 ```
 
-`expression` - A variable that represents a [ApiRichParagraph](../ApiRichParagraph.md) class.
+`expression` - A variable that represents an [ApiRichParagraph](../ApiRichParagraph.md) class.
 
 ## Parameters
 

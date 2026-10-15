@@ -8,7 +8,7 @@ Returns the rotation angle of the current drawing object.
 expression.GetRotation();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

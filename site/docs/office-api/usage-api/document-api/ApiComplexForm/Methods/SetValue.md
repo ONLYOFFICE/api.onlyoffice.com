@@ -4,6 +4,24 @@ Sets the value of the form field.
 
 Inherited from [ApiFormBase.SetValue](../../ApiFormBase/Methods/SetValue.md).
 
+## Syntax
+
+```javascript
+expression.SetValue(value);
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | Required | string \| boolean |  | The value to set. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Set the value of a form field using the unified SetValue interface.

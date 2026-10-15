@@ -8,7 +8,7 @@ Returns the text properties for a paragraph end mark.
 expression.GetTextPr();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

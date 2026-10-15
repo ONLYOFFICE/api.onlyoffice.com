@@ -8,13 +8,13 @@ Returns the absolute value (modulus) of a complex number.
 expression.IMABS(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A complex number expressed in the *x + yi* or *x + yj* form. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | A complex number expressed in the *x + yi* or *x + yj* form. |
 
 ## Returns
 

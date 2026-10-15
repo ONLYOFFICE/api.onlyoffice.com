@@ -8,7 +8,7 @@ Returns a slide by its position in the presentation.
 expression.GetSlideByIndex(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetSlideByIndex(nIndex);
 
 ## Returns
 
-[ApiSlide](../../ApiSlide/ApiSlide.md)
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null \| undefined
 
 ## Example
 

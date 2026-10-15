@@ -1,24 +1,36 @@
 # ApiPictureForm
 
+表示文档图片表单的类。
+
 ApiPictureForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Value | string | 以 base64 编码字符串形式返回或设置图片表单的当前图像。 |
+
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
-| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
+| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) \| null \| undefined | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "pictureForm" | 返回 ApiPictureForm 类的类型。 |
 | [GetFormKey](./Methods/GetFormKey.md) | string | 返回当前表单的键。 |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | 返回当前表单的类型。 |
 | [GetImage](./Methods/GetImage.md) | [Base64Img](../Enumeration/Base64Img.md) | 从当前图片表单返回 base64 格式的图像。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前表单的内部 ID。 |
 | [GetLock](./Methods/GetLock.md) | boolean | 返回当前表单的锁定状态。 |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | 返回直接包含当前表单的父元素（段落或内联内容控件）。 |
 | [GetPicturePosition](./Methods/GetPicturePosition.md) | [percentage](../Enumeration/percentage.md)[] | 返回当前表单中图片的位置。 |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | 返回当前表单的占位符文本。 |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | 返回当前表单在其父元素中的位置（索引）。 |
 | [GetRole](./Methods/GetRole.md) | string | 返回当前表单的角色。 |
 | [GetScaleFlag](./Methods/GetScaleFlag.md) | [ScaleFlag](../Enumeration/ScaleFlag.md) | 返回图片表单的当前缩放条件。 |
 | [GetTag](./Methods/GetTag.md) | string | 返回当前表单的标签属性。 |
@@ -26,7 +38,7 @@ ApiPictureForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回当前表单的文本属性。 |
 | [GetTipText](./Methods/GetTipText.md) | string | 返回当前表单的提示文本。 |
 | [GetValue](./Methods/GetValue.md) | string | 将图片表单的当前图像作为 base64 编码字符串返回。 |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
 | [IsFilled](./Methods/IsFilled.md) | boolean | 检查当前表单是否已填写。 |
 | [IsFixed](./Methods/IsFixed.md) | boolean | 检查当前表单是否为固定大小。 |
 | [IsLockAspectRatio](./Methods/IsLockAspectRatio.md) | boolean | 检查当前图片表单的宽高比是否已锁定。 |

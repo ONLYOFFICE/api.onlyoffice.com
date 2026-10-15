@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: -11
 ---
 
@@ -68,11 +68,9 @@ import TabItem from '@theme/TabItem';
 ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 中。同时，必须拒绝所有其他集成商的访问。
 
 :::note
-默认情况下，所有 IP 地址都被认为是可信的。
-:::
+默认情况下，`*` 规则允许所有 IP 地址。从 10.0 版本开始，这对 WOPI 已不再足够：ONLYOFFICE 文档只会向通过 IP 地址或 DNS 名称被规则明确允许的 WOPI 主机发送请求。仅由通配符组成的规则（例如 `*`）不计算在内。
 
-:::warning
-从 ONLYOFFICE 文档 10.0.0 版本开始，即使默认情况下所有 IP 地址都是可信的，在 IP filter 规则中指定您的 WOPI 主机也是**必须**的，否则 WOPI 将无法正常工作。通配符规则 `*` 并未指定具体的主机，因此不满足该要求 —— 如果没有明确允许您的 WOPI 主机的规则，将无法通过 WOPI 打开文档。
+如果需要在添加规则期间临时允许未列出的 WOPI 主机，请将[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 设为 `false`。这会使服务器容易受到服务器端请求伪造（SSRF）攻击。
 :::
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
@@ -129,11 +127,7 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
 ### 为 WOPI 主机要求显式规则 {#requiring-an-explicit-rule-for-the-wopi-host}
 
-是否要求为 WOPI 主机设置显式规则，由以下参数控制：
-
-| 名称                      | 类型    | 示例 | 描述                                                                                                                     |
-| ------------------------- | ------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
-| wopi.requireIpFilterRule  | boolean | true | 是否必须先由 *services.CoAuthoring.ipfilter.rules* 中的某条规则明确指定每个 WOPI 主机，服务器才会与其通信。默认值为 **true**。 |
+是否要求为 WOPI 主机设置显式规则，由[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 控制。默认值为 **true**。
 
 无论该参数如何设置，*services.CoAuthoring.ipfilter.rules* 都会对每一个 WOPI 请求进行检查 —— 如果没有任何 *allowed* 规则与目标主机匹配，请求都会被拒绝。*wopi.requireIpFilterRule* 实际控制的范围更窄：它决定的是，命中通配符规则 `*` 是否足以信任该主机，还是必须命中一条明确指定该主机的规则。通配符规则 `*` 不算作明确匹配 —— 这正是默认规则集（`{"address": "*", "allowed": true}`）不满足该要求的原因：即使 IP filter 本身完全放开，没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。
 

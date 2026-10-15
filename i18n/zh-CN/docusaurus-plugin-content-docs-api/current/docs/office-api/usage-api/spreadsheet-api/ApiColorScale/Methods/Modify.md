@@ -4,6 +4,27 @@
 
 继承自 [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md)。
 
+## 语法
+
+```javascript
+expression.Modify(Type, Operator, Formula1, Formula2);
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Type | 可选 | [XlFormatConditionType](../../Enumeration/XlFormatConditionType.md) |  | 格式条件类型。 |
+| Operator | 可选 | [XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md) |  | 格式条件运算符。 |
+| Formula1 | 可选 | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个公式。 |
+| Formula2 | 可选 | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个公式。 |
+
+## 返回值
+
+[ApiFormatCondition](../../ApiFormatCondition/ApiFormatCondition.md) \| null
+
 ## 示例
 
 更新电子表格中现有格式规则的条件以使用新标准。
@@ -27,7 +48,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlLess", "50");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original formula:");
 worksheet.GetRange("C2").SetValue(condition1.Formula1);

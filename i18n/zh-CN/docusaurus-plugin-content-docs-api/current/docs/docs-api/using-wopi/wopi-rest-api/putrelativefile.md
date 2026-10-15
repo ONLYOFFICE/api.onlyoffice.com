@@ -1,4 +1,4 @@
-﻿# PutRelativeFile
+# PutRelativeFile
 
 `POST /wopi/files/(file_id)`
 

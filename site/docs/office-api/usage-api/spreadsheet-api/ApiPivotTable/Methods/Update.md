@@ -8,7 +8,7 @@ Updates the current pivot table.
 expression.Update();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

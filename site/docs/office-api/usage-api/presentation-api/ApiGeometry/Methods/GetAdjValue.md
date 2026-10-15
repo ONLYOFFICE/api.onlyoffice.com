@@ -8,7 +8,7 @@ Returns the adjustment value by its name from the current geometry.
 expression.GetAdjValue(sName);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

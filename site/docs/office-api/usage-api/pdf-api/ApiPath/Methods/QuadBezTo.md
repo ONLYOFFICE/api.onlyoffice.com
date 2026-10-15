@@ -8,7 +8,7 @@ Draws a quadratic Bezier curve from the current point to the specified end point
 expression.QuadBezTo(x1, y1, x2, y2);
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

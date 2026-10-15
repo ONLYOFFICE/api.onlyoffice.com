@@ -8,7 +8,7 @@ Returns a type of the ApiGroup class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiGroup](../ApiGroup.md) class.
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
 
 ## Parameters
 

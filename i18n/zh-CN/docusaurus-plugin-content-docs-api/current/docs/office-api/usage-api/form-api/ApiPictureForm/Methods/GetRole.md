@@ -4,37 +4,37 @@
 
 继承自 [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md)。
 
+## 语法
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-检索分配给文档中表单字段的角色。
+获取文档中分配给图片表单的角色。
 
 ```javascript editor-forms
-// How do I get the role of a form field in a document?
+// How do I find out what role a picture form has in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Verify which responsibility is associated with a picture form in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let role = pictureForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

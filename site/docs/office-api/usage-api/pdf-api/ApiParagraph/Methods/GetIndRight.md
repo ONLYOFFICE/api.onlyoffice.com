@@ -4,14 +4,30 @@ Returns the paragraph right side indentation.
 
 Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
+## Syntax
+
+```javascript
+expression.GetIndRight();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md) \| undefined
+
 ## Example
 
-Retrieve the right margin indentation value from a paragraph in a PDF.
+Check the right margin indent of a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I get the right side indent measurement in a PDF?
+// How do I find the right indentation of a paragraph in a PDF?
 
-// Obtain the right edge offset amount in a PDF.
+// Retrieve the right margin spacing for a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -26,16 +42,14 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndRight(2880);
-paraPr.SetJc("right");
-paragraph.AddText("This is the first paragraph with the right offset of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the right offset of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+paragraph.SetIndRight(2880);
 
-const indRight = paraPr.GetIndRight();
+const indRight = paragraph.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);

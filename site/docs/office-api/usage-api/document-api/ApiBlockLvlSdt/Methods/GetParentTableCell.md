@@ -8,7 +8,7 @@ Returns a table cell that contains the current content control.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 
@@ -38,5 +38,5 @@ blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content con
 let cell = table.GetRow(0).GetCell(0);
 cell.AddElement(0, blockLvlSdt);
 let parentTableCell = blockLvlSdt.GetParentTableCell();
-parentTableCell.SetCellBorderTop("single", 32, 0, 51, 51, 51);
+parentTableCell.SetCellBorderTop("single", 32, 0, Api.Color(51, 51, 51));
 ```

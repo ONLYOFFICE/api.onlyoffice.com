@@ -8,7 +8,7 @@ Returns the tag attribute for the current container.
 expression.GetTag();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

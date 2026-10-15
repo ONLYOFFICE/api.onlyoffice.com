@@ -8,7 +8,7 @@ Deletes the specified item in the combo box / drop-down list content control.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

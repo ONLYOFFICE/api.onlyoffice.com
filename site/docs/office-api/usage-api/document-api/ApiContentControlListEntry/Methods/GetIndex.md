@@ -8,7 +8,7 @@ Returns an index of the content control list item in the combo box / drop-down l
 expression.GetIndex();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

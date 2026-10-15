@@ -8,7 +8,7 @@ Creates a new empty paragraph.
 expression.CreateParagraph();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

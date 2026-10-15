@@ -8,7 +8,7 @@ Returns the current run where the cursor is located.
 expression.GetCurrentRun();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRun](../../ApiRun/ApiRun.md)
+[ApiRun](../../ApiRun/ApiRun.md) \| null \| undefined
 
 ## Example
 

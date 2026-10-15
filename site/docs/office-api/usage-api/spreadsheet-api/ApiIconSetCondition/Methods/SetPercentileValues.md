@@ -8,7 +8,7 @@ Specifies whether the thresholds for the icon set conditional format are determi
 expression.SetPercentileValues(percentileValues);
 ```
 
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
 
 ## Parameters
 

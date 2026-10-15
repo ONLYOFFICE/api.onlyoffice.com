@@ -13,10 +13,10 @@
 
 ## 示例
 
-指定在区域中搜索完整文本匹配。
+在区域中按列搜索。
 
 ```javascript editor-xlsx
-// How to search a text indicating search order.
+// How do I search for text in a specific order?
 
 // Find a text from a range with column wise search order.
 

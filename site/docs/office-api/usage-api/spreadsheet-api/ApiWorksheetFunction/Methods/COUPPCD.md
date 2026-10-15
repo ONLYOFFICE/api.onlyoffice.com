@@ -8,7 +8,7 @@ Returns the previous coupon date before the settlement date.
 expression.COUPPCD(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

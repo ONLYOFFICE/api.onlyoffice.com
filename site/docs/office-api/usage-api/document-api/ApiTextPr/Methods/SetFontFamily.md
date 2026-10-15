@@ -8,13 +8,13 @@ Sets all 4 font slots with the specified font family.
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | Required | string |  | The font family or families used for the current text run. |
+| sFontFamily | Optional | string \| null |  | The font family or families used for the current text run. Pass *null* or omit it to remove the font family. |
 
 ## Returns
 

@@ -1,13 +1,17 @@
 # ApiCheckboxField
 
+Class representing a checkbox field.
+
 ApiCheckboxField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | [ApiCheckboxWidget](../ApiCheckboxWidget/ApiCheckboxWidget.md) | Adds options to checkbox group. |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Adds new widget - visual representation for field |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | Adds new widget - visual representation for field |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetClassType](./Methods/GetClassType.md) | "checkboxField" | Returns a type of the ApiCheckboxField class. |
@@ -15,7 +19,7 @@ ApiCheckboxField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
-| [GetValue](./Methods/GetValue.md) | string | Gets field value |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | Gets field value |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
 | [IsToggleToOff](./Methods/IsToggleToOff.md) | boolean | Checks if the field can be toggled off. |

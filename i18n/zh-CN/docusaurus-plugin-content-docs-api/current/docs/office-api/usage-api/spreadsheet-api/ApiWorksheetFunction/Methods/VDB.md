@@ -28,7 +28,7 @@ number
 
 ## 示例
 
-使用双倍余额递减法计算电子表格中的资产折旧。
+使用可变余额递减法计算电子表格中指定期间的资产折旧。
 
 ```javascript editor-xlsx
 // How do I calculate asset depreciation over a specific time period in a spreadsheet?

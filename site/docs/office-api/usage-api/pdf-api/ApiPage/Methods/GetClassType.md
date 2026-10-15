@@ -8,7 +8,7 @@ Returns a type of the ApiPage class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
+`expression` - A variable that represents an [ApiPage](../ApiPage.md) class.
 
 ## Parameters
 
@@ -23,11 +23,12 @@ This method doesn't have any parameters.
 Identify the object type of a page in a PDF.
 
 ```javascript editor-pdf
-// How do I determine what kind of object this is in a PDF?
+// Useful for determining what kind of object this is in a PDF.
 
 // Retrieve the classification name for this element in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);
 page.AddObject(textField);

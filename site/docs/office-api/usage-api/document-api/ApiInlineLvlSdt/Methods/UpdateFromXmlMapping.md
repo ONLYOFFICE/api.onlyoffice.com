@@ -8,7 +8,7 @@ Updates the content control using the value from the XML mapping.
 expression.UpdateFromXmlMapping();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 Refresh an inline content control with updated Custom XML data in a document.
 
 ```javascript editor-docx
-// How do I sync an inline content control with changed XML data in a document?
+// Sync an inline content control with changed XML data in a document.
 
 // Bind a content control to an XML node so that edits to the XML are reflected automatically in a document.
 

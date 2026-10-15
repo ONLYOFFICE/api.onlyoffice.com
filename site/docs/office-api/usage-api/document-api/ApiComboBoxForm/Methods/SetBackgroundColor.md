@@ -4,18 +4,36 @@ Sets the background color to the current form.
 
 Inherited from [ApiFormBase.SetBackgroundColor](../../ApiFormBase/Methods/SetBackgroundColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBackgroundColor(color);
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply a background color to a form field in a document.
+Apply a background color to a combo box form field in a document.
 
 ```javascript editor-docx
-// How do I fill a form field with a specific background color in a document?
+// How do I change the fill color of a combo box form in a document?
 
-// Color the background of a form field to make it visually distinct from surrounding text in a document.
+// Highlight a combo box by giving it a distinct background tint to draw attention in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBackgroundColor(Api.HexColor('#FF6F3D'));
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 ```

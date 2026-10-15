@@ -8,7 +8,7 @@ Sets the outline to the marker in the specified chart series.
 expression.SetMarkerOutLine(oStroke, nSeries, nMarker, bAllMarkers);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -44,8 +44,8 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "scatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "XYScatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetMarkerFill(fill, 0, 0, true);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));

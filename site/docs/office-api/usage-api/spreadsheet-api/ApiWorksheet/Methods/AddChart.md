@@ -1,11 +1,13 @@
 # AddChart
 
 Creates a chart of the specified type from the selected data range of the current sheet.
-💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
-row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
 
 :::note
-Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+The horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+:::
+
+:::note
+Values of *nStyleIndex* outside **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 ## Syntax
@@ -14,7 +16,7 @@ Values of *nStyleIndex* outside - **1 - 48** are interpreted as a chart style id
 expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFromCol, nColOffset, nFromRow, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -56,8 +58,8 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "3DColumnClustered", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

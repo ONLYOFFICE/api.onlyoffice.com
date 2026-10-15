@@ -8,7 +8,7 @@ Returns the sweep angle of the arc.
 expression.GetSweepAngle();
 ```
 
-`expression` - A variable that represents a [ApiPathCommand](../ApiPathCommand.md) class.
+`expression` - A variable that represents an [ApiPathCommand](../ApiPathCommand.md) class.
 
 ## Parameters
 

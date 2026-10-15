@@ -8,7 +8,7 @@ Returns the value of the density function for a standard normal distribution.
 expression.PHI(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the transition duration in milliseconds for the slide show transition.
 expression.GetDuration();
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

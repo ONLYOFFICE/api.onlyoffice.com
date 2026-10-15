@@ -8,7 +8,7 @@ Returns the type of the ApiSlideShowTransition class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

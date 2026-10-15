@@ -1,8 +1,10 @@
 # ApiTheme
 
-Represents the ApiTheme class.
+Class representing a theme.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

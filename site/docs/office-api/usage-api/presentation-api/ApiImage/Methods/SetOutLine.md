@@ -4,6 +4,24 @@ Sets the outline properties to the specified graphic object.
 
 Inherited from [ApiDrawing.SetOutLine](../../ApiDrawing/Methods/SetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.SetOutLine(stroke);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| stroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the graphic object outline. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Add a border to a shape on a slide in a presentation.
@@ -15,11 +33,11 @@ Add a border to a shape on a slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing2 = Api.CreateShape("cube", 150 * 36000, 80 * 36000, fill, stroke);
 drawing2.SetPosition(608400, 3267200);
-let stroke2 = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let stroke2 = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 drawing2.SetOutLine(stroke2);
 slide.AddObject(drawing2);
 ```

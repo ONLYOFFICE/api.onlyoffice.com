@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetPosition](../../ApiBaseAnnotation/Methods/GetPosition.md)。
 
+## 语法
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - 表示 [ApiCircleAnnotation](../ApiCircleAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Point](../../Enumeration/Point.md)
+
 ## 示例
 
 获取 PDF 中注释的位置坐标。

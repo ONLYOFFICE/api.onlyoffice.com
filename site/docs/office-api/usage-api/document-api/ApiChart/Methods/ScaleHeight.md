@@ -4,6 +4,24 @@ Scales the height of the figure using the specified coefficient.
 
 Inherited from [ApiDrawing.ScaleHeight](../../ApiDrawing/Methods/ScaleHeight.md).
 
+## Syntax
+
+```javascript
+expression.ScaleHeight(coefficient);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| coefficient | Required | number |  | The coefficient by which the figure height will be scaled. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Scale the height of a drawing by a given factor in a document.

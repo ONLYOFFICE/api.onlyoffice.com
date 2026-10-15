@@ -8,7 +8,7 @@ Returns the paragraph style method.
 expression.GetStyle();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+[ApiStyle](../../ApiStyle/ApiStyle.md) \| null \| undefined
 
 ## Example
 

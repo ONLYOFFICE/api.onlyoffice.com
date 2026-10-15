@@ -8,7 +8,7 @@ Returns a type of the ApiUnsupported class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiUnsupported](../ApiUnsupported.md) class.
+`expression` - A variable that represents an [ApiUnsupported](../ApiUnsupported.md) class.
 
 ## Parameters
 

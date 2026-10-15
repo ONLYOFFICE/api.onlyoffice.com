@@ -1,6 +1,7 @@
 # GetSortOnValue
 
-返回此排序字段排序依据的值（颜色或 null）。
+返回此排序字段用于排序的值（颜色或 null）。
+
 对于基于颜色的排序，返回填充/字体颜色；否则返回 null。
 
 :::note
@@ -38,12 +39,12 @@ worksheet.GetRange("A2").SetValue("Apples");
 worksheet.GetRange("A3").SetValue("Oranges");
 let table = worksheet.AddListObject("xlSrcRange", "A1:A3");
 
-let yellowColor = Api.CreateColorFromRGB(255, 255, 0);
+let yellowColor = Api.RGB(255, 255, 0);
 let sort = table.GetSort();
 let field = sort.GetSortFields().Add(worksheet.GetRange("A1"), "xlSortOnCellColor", "xlAscending");
 field.SetSortOnColor(yellowColor, "xlSortOnCellColor");
 
 let rgb = field.GetSortOnValue().GetRGB();
 worksheet.GetRange("C1").SetValue("Sort color RGB:");
-worksheet.GetRange("D1").SetValue(rgb);
+worksheet.GetRange("D1").SetValue(rgb.r + ", " + rgb.g + ", " + rgb.b);
 ```

@@ -1,7 +1,6 @@
 # GetDocContent
 
-在 6.2 中已弃用。
-返回可以插入段落或文本块的形状内部内容。
+在 6.2 中已弃用。返回可以插入段落或文本块的形状内部内容。
 
 ## 语法
 
@@ -17,7 +16,7 @@ expression.GetDocContent();
 
 ## 返回值
 
-[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
 
 ## 示例
 

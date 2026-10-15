@@ -1,6 +1,7 @@
 # GetHeaderRowRange
 
 返回表格标题行的范围。
+
 如果表格没有标题行，则返回 null。
 
 :::note

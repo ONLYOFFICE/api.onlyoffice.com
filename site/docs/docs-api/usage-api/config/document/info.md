@@ -4,7 +4,7 @@ The info section defines the document info parameters.
 
 ## favorite
 
-**type:** `boolean`
+**type**: `boolean`
 
 The highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
 
@@ -14,7 +14,7 @@ The highlighting state of the *Favorite* icon. When the user clicks the icon, th
 
 ## folder
 
-**type:** `string`
+**type**: `string`
 
 The folder where the document is stored. Can be empty if the document is in the root folder.
 
@@ -22,7 +22,7 @@ The folder where the document is stored. Can be empty if the document is in the 
 
 ## owner
 
-**type:** `string`
+**type**: `string`
 
 The name of the document owner/creator.
 
@@ -30,7 +30,7 @@ The name of the document owner/creator.
 
 ## sharingSettings
 
-**type:** `object[]`
+**type**: `object[]`
 
 The information about the settings which allow sharing the document with other users.
 
@@ -48,7 +48,7 @@ The information about the settings which allow sharing the document with other u
 
 ### sharingSettings.isLink
 
-**type:** `boolean`
+**type**: `boolean`
 
 Whether to replace the user icon with the link icon.
 
@@ -56,7 +56,7 @@ Whether to replace the user icon with the link icon.
 
 ### sharingSettings.permissions
 
-**type:** `string`
+**type**: `string`
 
 The access rights for the user with the name above.
 
@@ -64,7 +64,7 @@ The access rights for the user with the name above.
 
 ### sharingSettings.user
 
-**type:** `string`
+**type**: `string`
 
 The name of the user the document will be shared with.
 
@@ -74,7 +74,7 @@ The name of the user the document will be shared with.
 
 ## uploaded
 
-**type:** `string`
+**type**: `string`
 
 The document uploading date.
 

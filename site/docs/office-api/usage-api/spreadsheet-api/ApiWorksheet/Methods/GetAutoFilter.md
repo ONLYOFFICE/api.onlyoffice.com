@@ -8,7 +8,7 @@ Returns the instante of ApiAutoFilter object that represents the worksheet AutoF
 expression.GetAutoFilter();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

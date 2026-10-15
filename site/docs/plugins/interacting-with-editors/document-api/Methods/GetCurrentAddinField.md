@@ -8,7 +8,7 @@ Returns the current addin field from the document.
 expression.GetCurrentAddinField();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[AddinFieldData](../Enumeration/AddinFieldData.md)
+[AddinFieldData](../Enumeration/AddinFieldData.md) \| null \| undefined
 
 ## Example
 

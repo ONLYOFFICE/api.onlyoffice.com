@@ -8,7 +8,7 @@ Returns the hyperlink element using the position specified.
 expression.GetElement(nPos);
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetElement(nPos);
 
 ## Returns
 
-[ParagraphContent](../../Enumeration/ParagraphContent.md)
+[ParagraphContent](../../Enumeration/ParagraphContent.md) \| null \| undefined
 
 ## Example
 

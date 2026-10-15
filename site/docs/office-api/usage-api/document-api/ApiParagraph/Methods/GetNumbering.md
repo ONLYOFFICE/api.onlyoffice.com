@@ -8,7 +8,7 @@ Returns the numbering definition and numbering level for the numbered list.
 expression.GetNumbering();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md)
+[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md) \| null \| undefined
 
 ## Example
 

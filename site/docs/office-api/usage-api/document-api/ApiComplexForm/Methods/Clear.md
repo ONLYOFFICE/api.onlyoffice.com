@@ -4,22 +4,38 @@ Clears the current form.
 
 Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
+## Syntax
+
+```javascript
+expression.Clear();
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Erase the entered value from a text form field in a document.
+Remove all child elements from a complex form in a document.
 
 ```javascript editor-docx
-// How do I clear the content of a form in a document?
+// How do I clear all elements out of a complex form in a document?
 
-// Reset a filled-in form field to blank so it is ready for new input in a document.
+// Reset a complex form to an empty state by stripping every field it contains.
 
-let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let doc = Api.GetDocument()
+let complexForm = Api.CreateComplexForm({"key": "Complex", "tip": "Insert here other forms", "required": true, "placeholder": "Complex form"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("John Smith");
-textForm.Clear();
-paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document was cleared.");
+paragraph.AddElement(complexForm);
+let checkBox = Api.CreateCheckBoxForm()
+checkBox.SetChecked(true);
+complexForm.Add(checkBox);
+complexForm.Clear();
 doc.Push(paragraph);
 ```

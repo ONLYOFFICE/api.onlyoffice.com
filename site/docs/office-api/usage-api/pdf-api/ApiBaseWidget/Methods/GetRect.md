@@ -8,7 +8,7 @@ Sets field rect.
 expression.GetRect();
 ```
 
-`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+`expression` - A variable that represents an [ApiBaseWidget](../ApiBaseWidget.md) class.
 
 ## Parameters
 

@@ -4,14 +4,30 @@ Returns the spacing after value of the current paragraph.
 
 Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md).
 
+## Syntax
+
+```javascript
+expression.GetSpacingAfter();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md)
+
 ## Example
 
-Get the space amount that appears after a paragraph in a PDF.
+Find the space below a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I find the bottom margin spacing for text in a PDF?
+// How do I check the spacing that appears after a paragraph in a PDF?
 
-// Retrieve the gap size following paragraph content in a PDF.
+// Retrieve the amount of space positioned below a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,17 +41,17 @@ shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
 const docContent = shape.GetContent();
-let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetSpacingAfter(1440);
-paragraph.AddText("This is an example of setting a space after a paragraph. ");
-paragraph.AddText("The second paragraph will have an offset of one inch from the top. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+const paragraph1 = docContent.GetElement(0);
+paragraph1.AddText("This is an example of setting a space after a paragraph. ");
+paragraph1.AddText("The second paragraph will have an offset of one inch from the top. ");
+paragraph1.AddText("This is due to the fact that the first paragraph has this offset enabled.");
+paragraph1.SetSpacingAfter(1440);
 
-const spacingAfter = paraPr.GetSpacingAfter();
-paragraph = Api.CreateParagraph();
-paragraph.AddText("Spacing after : " + spacingAfter);
-docContent.Push(paragraph);
+const paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
+paragraph2.AddLineBreak();
+
+const spacingAfter = paragraph1.GetSpacingAfter();
+paragraph2.AddText("Spacing after: " + spacingAfter);
+docContent.Push(paragraph2);
 ```

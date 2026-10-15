@@ -8,7 +8,7 @@ Creates a new table with a specified number of rows and columns.
 expression.CreateTable(rows, cols);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

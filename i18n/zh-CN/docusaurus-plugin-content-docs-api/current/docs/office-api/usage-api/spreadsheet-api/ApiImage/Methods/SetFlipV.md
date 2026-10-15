@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetFlipV](../../ApiDrawing/Methods/SetFlipV.md)。
 
+## 语法
+
+```javascript
+expression.SetFlipV(bFlip);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | 必需 | boolean |  | 指定图形是否垂直翻转。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在电子表格中将绘图从上到下镜像。

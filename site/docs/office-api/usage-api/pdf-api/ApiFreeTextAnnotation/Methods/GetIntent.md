@@ -8,7 +8,7 @@ Gets intent type of this annotation.
 expression.GetIntent();
 ```
 
-`expression` - A variable that represents a [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
 
 ## Parameters
 

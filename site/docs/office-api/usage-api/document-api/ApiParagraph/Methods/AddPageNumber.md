@@ -8,7 +8,7 @@ Inserts a number of the current document page into the paragraph.
 expression.AddPageNumber();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

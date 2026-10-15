@@ -1,7 +1,14 @@
-# Type Alias: TBannerDisplaying
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+---
 
-> **TBannerDisplaying** = `` `${HeaderBannerDisplaying}` ``
+# TBannerDisplaying
 
-Defined in: [types/index.ts:66](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L66)
+String literal union of all [HeaderBannerDisplaying](../enumerations/HeaderBannerDisplaying.md) values.
 
-The template literal type for the display options of the header banner.
+Accepted by [TFrameConfig.showHeaderBanner](TFrameConfig.md#showHeaderBanner).
+Using the [HeaderBannerDisplaying](../enumerations/HeaderBannerDisplaying.md) enum constants is preferred.
+
+```ts
+type TBannerDisplaying = `${HeaderBannerDisplaying}`;
+```

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md)。
 
+## 语法
+
+```javascript
+expression.GetFormula2();
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中基于范围的条件格式规则的上边界值。
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlBetween", "100", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let formula1 = condition1.GetFormula1();
 let formula2 = condition1.GetFormula2();

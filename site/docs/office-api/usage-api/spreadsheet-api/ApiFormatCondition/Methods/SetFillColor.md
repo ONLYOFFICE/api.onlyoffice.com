@@ -1,6 +1,7 @@
 # SetFillColor
 
 Sets the background color to the format condition with the previously created color object.
+
 Sets 'No Fill' when previously created color object is null.
 
 ## Syntax
@@ -9,7 +10,7 @@ Sets 'No Fill' when previously created color object is null.
 expression.SetFillColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -48,7 +49,7 @@ let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 worksheet.GetRange("C1").SetValue("Original color:");
 worksheet.GetRange("C2").SetValue("No Fill");
 
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
+let fillColor = Api.RGB(255, 255, 0);
 condition1.SetFillColor(fillColor);
 
 worksheet.GetRange("C4").SetValue("New color:");

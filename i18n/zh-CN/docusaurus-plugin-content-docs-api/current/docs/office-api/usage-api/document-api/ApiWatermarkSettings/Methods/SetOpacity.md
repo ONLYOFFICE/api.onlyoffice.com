@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetOpacity(nOpacity);
+expression.SetOpacity(opacity);
 ```
 
 `expression` - 表示 [ApiWatermarkSettings](../ApiWatermarkSettings.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetOpacity(nOpacity);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nOpacity | 必需 | number |  | 水印不透明度。此值必须在 0 到 255 之间。 |
+| opacity | 必需 | number |  | 水印不透明度。此值必须在 0 到 255 之间。 |
 
 ## 返回值
 

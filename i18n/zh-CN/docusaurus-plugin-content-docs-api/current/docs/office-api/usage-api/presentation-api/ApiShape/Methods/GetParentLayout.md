@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentLayout](../../ApiDrawing/Methods/GetParentLayout.md)。
 
+## 语法
+
+```javascript
+expression.GetParentLayout();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiLayout](../../ApiLayout/ApiLayout.md) \| null
+
 ## 示例
 
 查找演示文稿中包含形状的父布局。

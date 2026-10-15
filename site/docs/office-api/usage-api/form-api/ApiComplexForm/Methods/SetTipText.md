@@ -4,21 +4,39 @@ Sets the tip text to the current form.
 
 Inherited from [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md).
 
+## Syntax
+
+```javascript
+expression.SetTipText(sText);
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | Required | string |  | Tip text. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Set tooltip text on a form field to provide guidance in a document.
+Set a tooltip message on a complex form in a document.
 
 ```javascript editor-forms
-// How do I add a tooltip that appears when hovering over a form field in a document?
+// How do I add a helpful tip that appears when a user hovers over a form in a document?
 
-// Give users helpful instructions that appear when they hover over a field.
+// Provide context or instructions to users through a tooltip shown on a form field.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex1"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetTipText("Enter your first name");
-let tipText = textForm.GetTipText();
+paragraph.AddElement(complexForm);
+complexForm.SetTipText("Insert here other forms");
+let tipText = complexForm.GetTipText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Tip text: " + tipText);
 doc.Push(paragraph);

@@ -1,7 +1,8 @@
 # SetUnderline
 
-指定当前文本块的内容显示时在字符正下方有一条线
-（小于行中字符上下的所有间距）。
+指定文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
+
+继承自 [ApiTextPr.SetUnderline](../../ApiTextPr/Methods/SetUnderline.md)。
 
 ## 语法
 

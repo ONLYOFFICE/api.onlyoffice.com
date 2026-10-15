@@ -4,6 +4,24 @@ Sets annotation author name.
 
 Inherited from [ApiBaseAnnotation.SetAuthorName](../../ApiBaseAnnotation/Methods/SetAuthorName.md).
 
+## Syntax
+
+```javascript
+expression.SetAuthorName(name);
+```
+
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | The author name. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Assign an author name to an annotation in a PDF.

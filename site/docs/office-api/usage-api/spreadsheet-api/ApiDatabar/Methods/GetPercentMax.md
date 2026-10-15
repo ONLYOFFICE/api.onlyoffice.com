@@ -8,7 +8,7 @@ Returns the percent maximum value of the data bar.
 expression.GetPercentMax();
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

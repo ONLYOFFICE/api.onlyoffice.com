@@ -76,13 +76,13 @@ if __name__ == '__main__':
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant `write` access to boards.
 4. Replace `your_trello_api_key`, `your_trello_token`, and `your_board_id` with your actual Trello API key, token, and board ID.
 
 ## Step 1: Retrieve DocSpace users
 
-Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/get-all-profiles) request to retrieve DocSpace users.
+Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/get-all-profiles) request to retrieve DocSpace users.
 
 ```py
 # Step 1: Retrieve DocSpace users

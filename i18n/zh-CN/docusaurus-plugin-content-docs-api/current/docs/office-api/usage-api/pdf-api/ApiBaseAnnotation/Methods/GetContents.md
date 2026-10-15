@@ -16,7 +16,7 @@ expression.GetContents();
 
 ## 返回值
 
-string
+string \| null \| undefined
 
 ## 示例
 

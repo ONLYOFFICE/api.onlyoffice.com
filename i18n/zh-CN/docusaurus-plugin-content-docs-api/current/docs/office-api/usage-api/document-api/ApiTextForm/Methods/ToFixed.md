@@ -4,14 +4,34 @@
 
 继承自 [ApiFormBase.ToFixed](../../ApiFormBase/Methods/ToFixed.md)。
 
+## 语法
+
+```javascript
+expression.ToFixed(width, height, keepPosition);
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | 必需 | [twips](../../Enumeration/twips.md) |  | 包装形状的宽度，以点的二十分之一为单位（1/1440 英寸）。 |
+| height | 必需 | [twips](../../Enumeration/twips.md) |  | 包装形状的高度，以点的二十分之一为单位（1/1440 英寸）。 |
+| keepPosition | 必需 | boolean |  | 保存在页面上的位置（可能会稍慢，因为需要运行文档计算）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中将表单字段转换为固定大小的块。
+在文档中将文本表单锁定为固定大小。
 
 ```javascript editor-docx
-// How do I set a specific width and height for a form field in a document?
+// How do I prevent a text form from resizing when content changes in a document?
 
-// Lock a form's dimensions so layout does not shift when content changes.
+// Keep a text form at exact dimensions regardless of how much text it contains in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

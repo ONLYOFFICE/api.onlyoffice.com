@@ -1,6 +1,6 @@
 # ApiFont
 
-Represents the ApiFont class.
+Class that contains the font attributes (font name, font size, color, and so on).
 
 ## Properties
 
@@ -11,13 +11,15 @@ Represents the ApiFont class.
 | Italic | boolean \| null | The font italic property. |
 | Name | string \| null | The font name. |
 | Parent | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | The parent object of the specified font object. |
-| Size | number \| null | The font size property. |
+| Size | number \| null | The font size property measured in points. |
 | Strikethrough | boolean \| null | The font strikethrough property. |
 | Subscript | boolean \| null | The font subscript property. |
 | Superscript | boolean \| null | The font superscript property. |
 | Underline | string \| null | The font type of underline. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -26,7 +28,7 @@ Represents the ApiFont class.
 | [GetItalic](./Methods/GetItalic.md) | boolean \| null | Returns the italic property of the specified font. |
 | [GetName](./Methods/GetName.md) | string \| null | Returns the font name property of the specified font. |
 | [GetParent](./Methods/GetParent.md) | [ApiCharacters](../ApiCharacters/ApiCharacters.md) | Returns the parent ApiCharacters object of the specified font. |
-| [GetSize](./Methods/GetSize.md) | number \| null | Returns the font size property of the specified font. |
+| [GetSize](./Methods/GetSize.md) | number \| null | Returns the font size property of the specified font measured in points. |
 | [GetStrikethrough](./Methods/GetStrikethrough.md) | boolean \| null | Returns the strikethrough property of the specified font. |
 | [GetSubscript](./Methods/GetSubscript.md) | boolean \| null | Returns the subscript property of the specified font. |
 | [GetSuperscript](./Methods/GetSuperscript.md) | boolean \| null | Returns the superscript property of the specified font. |

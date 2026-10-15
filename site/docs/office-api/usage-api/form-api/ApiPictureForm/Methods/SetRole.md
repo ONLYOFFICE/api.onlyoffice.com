@@ -4,37 +4,42 @@ Sets the role to the current form.
 
 Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
+## Syntax
+
+```javascript
+expression.SetRole(role);
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| role | Required | string |  | The role which will be attached to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign a role to a form field to control who fills it in a document.
+Assign a named role to a picture field in a document.
 
 ```javascript editor-forms
-// How do I associate a form field with a specific role in a document?
+// How do I link a picture field to a specific signer or contributor role in a document?
 
-// Restrict which signers or participants are responsible for a given field.
+// Tie a picture field to a particular participant so only they fill it in in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let roles = doc.GetFormRoles();
+roles.Add("Employee");
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetRole("Employee");
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let role = pictureForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

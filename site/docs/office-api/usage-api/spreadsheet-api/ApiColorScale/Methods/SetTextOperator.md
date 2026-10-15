@@ -4,6 +4,24 @@ Sets the text operator for text-based conditional formatting rules.
 
 Inherited from [ApiFormatCondition.SetTextOperator](../../ApiFormatCondition/Methods/SetTextOperator.md).
 
+## Syntax
+
+```javascript
+expression.SetTextOperator(TextOperator);
+```
+
+`expression` - A variable that represents an [ApiColorScale](../ApiColorScale.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| TextOperator | Required | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | The text operator: "xlContains", "xlDoesNotContain", "xlBeginsWith", "xlEndsWith". |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Change how a text formatting rule matches cell content, such as begins with or ends with, in a spreadsheet.
@@ -27,7 +45,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTextString", "xlContains", "Apple");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original operator:");
 worksheet.GetRange("C2").SetValue(condition1.GetTextOperator() || "None");

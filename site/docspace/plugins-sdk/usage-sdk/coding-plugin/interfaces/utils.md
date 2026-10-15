@@ -1,10 +1,12 @@
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/utils/index.ts
+---
+
 # Utils
 
 Utility types for plugin messaging, return values, and panel navigation.
 
 ## IPostMessage
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L75)
 
 The properties that are used to send a message to a frame.
 If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes.
@@ -26,26 +28,20 @@ const previewMessage: IPostMessage = {
 
 ### Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable name="IPostMessage">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `frameId` | `string` | Defines the frame ID |
 | `message` | \{ \[`key`: `string`\]: `any`; \} | Defines a message that will be sent to a frame |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
 ## IMessage
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L148)
 
 A message which is returned when any item interacts with a user (onClick, onChange, onSelect, etc.).
 
@@ -111,9 +107,7 @@ const fieldUpdateMessage: IMessage = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="IMessage">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -127,20 +121,16 @@ const fieldUpdateMessage: IMessage = {
 | `floatingOperationsButtonProps?` | [`IFloatingOperationsButton`](components/IFloatingOperationsButton.md) | Defines the configuration for the floating operations button that displays progress of long-running operations. Used with Actions.addFloatingOperationsButton to create a new button or Actions.updateFloatingOperationsButton to update existing one. The button appears as a floating action button in the bottom-right corner. Multiple plugins can show operations simultaneously. |
 | `floatingOperationsButtonPropsId?` | `string` | Unique identifier for the floating operations button to remove. Used only with Actions.removeFloatingOperationsButton to close a specific operations panel. The ID should match the `id` property of the IFloatingOperationsButton that was previously added. |
 | `postMessage?` | [`IPostMessage`](#ipostmessage) | Defines the properties that are used to send a message to a frame. If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes. This parameter is used only with Actions.sendPostMessage. |
-| `settings?` | `string` | Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users. This parameter is used only with Actions.saveSettings. |
+| `settings?` | `string` | Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users. This parameter is used only with Actions.saveSettings. This is the one string the portal caps at 255 characters — see [`ISettingsPlugin`](plugins/ISettingsPlugin.md) for what fits into it. |
 | `navigatePath?` | `string` | Defines the path to navigate to. All actions listed after navigate will be called after the navigation is complete. This parameter is used only with Actions.navigate. |
 | `infoPanelTab?` | `string` | Defines the info panel tab to open. This parameter is used only with Actions.openInfoPanel. |
 | `mediaViewerProps?` | [`IMediaViewer`](components/IMediaViewer.md) | Defines the properties for the media viewer. This parameter is used only with Actions.showMediaViewer and Actions.updateMediaViewer. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
 ## IPostMessageCallbackMessage
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L273)
 
 A message which is returned from the postMessage callback.
 It is similar to [IMessage](#imessage) but with a reduced set of available actions.
@@ -161,9 +151,7 @@ const postMessageResponse: IPostMessageCallbackMessage = {
 
 ### Properties
 
-```mdx-code-block
 <APITable name="IPostMessageCallbackMessage">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -177,9 +165,7 @@ const postMessageResponse: IPostMessageCallbackMessage = {
 | `navigatePath?` | `string` | Defines the path to navigate to. All actions listed after navigate will be called after the navigation is complete. This parameter is used only with Actions.navigate. |
 | `infoPanelTab?` | `string` | Defines the info panel tab to open. This parameter is used only with Actions.openInfoPanel. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
@@ -188,8 +174,6 @@ const postMessageResponse: IPostMessageCallbackMessage = {
 ```ts
 type TInfoPanelTab = "info_members" | "info_history" | "info_details" | "info_share" | string;
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L49)
 
 Defines the info panel tab to open.
 
@@ -205,8 +189,6 @@ type TReturnPostMessage =
   | IPostMessageCallbackMessage;
 ```
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L357)
-
 Describes a return message of a postMessage event handler.
 
 ***
@@ -220,7 +202,5 @@ type TReturnMessage =
   | void
   | IMessage;
 ```
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts#L366)
 
 Describes a return message.

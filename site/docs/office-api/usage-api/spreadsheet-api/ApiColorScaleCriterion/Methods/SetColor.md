@@ -8,7 +8,7 @@ Sets the format color for the color scale criterion.
 expression.SetColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
+`expression` - A variable that represents an [ApiColorScaleCriterion](../ApiColorScaleCriterion.md) class.
 
 ## Parameters
 
@@ -48,7 +48,7 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Before Color:");
     worksheet.GetRange("C2").SetValue(criteria[0].GetColor() ? "Set" : "None");
     
-    let newColor = Api.CreateColorFromRGB(255, 0, 0);
+    let newColor = Api.RGB(255, 0, 0);
     criteria[0].SetColor(newColor);
     
     worksheet.GetRange("C3").SetValue("After Color:");

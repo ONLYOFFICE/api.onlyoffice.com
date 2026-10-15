@@ -23,7 +23,7 @@ boolean
 从电子表格中嵌入的 XML 结构移除特定节点。
 
 ```javascript editor-xlsx
-// How do I delete an unwanted element from custom XML data in a spreadsheet?
+// Delete an unwanted element from custom XML data in a spreadsheet.
 
 // Trim embedded XML content by eliminating a node and verifying what remains in a spreadsheet.
 

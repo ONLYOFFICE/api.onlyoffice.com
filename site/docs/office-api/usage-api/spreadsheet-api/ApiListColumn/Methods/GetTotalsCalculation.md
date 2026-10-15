@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetTotalsCalculation();
 ```
 
-`expression` - A variable that represents a [ApiListColumn](../ApiListColumn.md) class.
+`expression` - A variable that represents an [ApiListColumn](../ApiListColumn.md) class.
 
 ## Parameters
 

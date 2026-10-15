@@ -4,6 +4,22 @@ Returns the setting which specifies whether a pivot table field is compacted.
 
 Inherited from [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutCompactRow();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a pivot field uses compact row layout in a spreadsheet.

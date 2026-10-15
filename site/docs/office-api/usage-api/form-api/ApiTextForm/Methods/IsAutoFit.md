@@ -8,7 +8,7 @@ Checks if the text field content is autofit, i.e. whether the font size adjusts 
 expression.IsAutoFit();
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

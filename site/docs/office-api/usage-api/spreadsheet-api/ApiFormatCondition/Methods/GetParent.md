@@ -8,7 +8,7 @@ Returns the parent range object of the current format condition.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -37,7 +37,7 @@ worksheet.GetRange('A4').SetValue(150);
 const dataRange = worksheet.GetRange('A2:A4');
 const formatConditions = dataRange.GetFormatConditions();
 const condition = formatConditions.Add('xlCellValue', 'xlGreater', '200');
-condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
+condition.SetFillColor(Api.RGB(200, 100, 100));
 
 const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');

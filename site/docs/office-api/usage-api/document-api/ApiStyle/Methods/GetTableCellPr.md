@@ -8,7 +8,7 @@ Returns the table cell properties of the current style.
 expression.GetTableCellPr();
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiTableCellPr](../../ApiTableCellPr/ApiTableCellPr.md)
+[ApiTableCellPr](../../ApiTableCellPr/ApiTableCellPr.md) \| null \| undefined
 
 ## Example
 
@@ -34,8 +34,8 @@ table.SetWidth("percent", 100);
 doc.Push(table);
 table.SetStyle(tableStyle);
 table.SetTableLook(true, true, true, true, true, true);
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 111, 61);
-tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("clear", 51, 51, 51);
-tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
-tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 111, 61)));
+tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(51, 51, 51)));
+tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(128, 128, 128)));
+tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 213, 191)));
 ```

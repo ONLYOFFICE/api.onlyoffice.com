@@ -8,7 +8,7 @@ Returns a paragraph element using the position specified.
 expression.GetElement(pos);
 ```
 
-`expression` - A variable that represents a [ApiRichParagraph](../ApiRichParagraph.md) class.
+`expression` - A variable that represents an [ApiRichParagraph](../ApiRichParagraph.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetElement(pos);
 
 ## Returns
 
-[ApiRichRun](../../ApiRichRun/ApiRichRun.md)
+[ApiRichRun](../../ApiRichRun/ApiRichRun.md) \| null \| undefined
 
 ## Example
 

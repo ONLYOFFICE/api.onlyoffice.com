@@ -8,7 +8,7 @@ Returns the widow control value of the current paragraph.
 expression.GetWidowControl();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

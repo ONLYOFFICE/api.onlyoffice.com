@@ -11,7 +11,7 @@ number
 将渐变方向角度设置为 90 度。
 
 ```javascript editor-xlsx
-// How to create a gradient fill using positive fixed angle.
+// How do I create a gradient fill using a positive fixed angle?
 
 // Set gradient direction angle.
 

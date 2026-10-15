@@ -4,6 +4,24 @@ Sets the rotation angle to the current drawing object.
 
 Inherited from [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md).
 
+## Syntax
+
+```javascript
+expression.SetRotation(nRotAngle);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nRotAngle | Required | number |  | New drawing rotation angle. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Rotate a drawing by a given angle to change its orientation in a spreadsheet.

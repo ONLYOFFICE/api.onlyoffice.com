@@ -8,7 +8,7 @@ Gets the date format of the current form.
 expression.GetFormat();
 ```
 
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
 
 ## Parameters
 

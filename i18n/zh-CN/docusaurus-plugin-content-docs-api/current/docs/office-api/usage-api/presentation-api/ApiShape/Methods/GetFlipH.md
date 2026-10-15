@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md)。
 
+## 语法
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| null
+
 ## 示例
 
 确定演示文稿中的形状是否从左到右翻转。

@@ -1,6 +1,8 @@
 # SetDoubleStrikeout
 
-Specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
+Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+
+Inherited from [ApiTextPr.SetDoubleStrikeout](../../ApiTextPr/Methods/SetDoubleStrikeout.md).
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies that the contents of the current run are displayed with two horizontal
 expression.SetDoubleStrikeout(isDoubleStrikeout);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

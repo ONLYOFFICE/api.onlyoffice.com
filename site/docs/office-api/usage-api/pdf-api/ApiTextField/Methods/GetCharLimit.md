@@ -1,7 +1,10 @@
 # GetCharLimit
 
 Gets the text field character limit.
-\<note\> Char limit 0 means field doesn't have char limit
+
+:::note
+If the character limit is 0, the field has no character limit.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Gets the text field character limit.
 expression.GetCharLimit();
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

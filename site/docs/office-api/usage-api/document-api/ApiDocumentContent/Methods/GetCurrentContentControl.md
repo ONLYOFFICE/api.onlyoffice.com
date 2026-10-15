@@ -8,7 +8,7 @@ Returns the currently selected content control.
 expression.GetCurrentContentControl();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

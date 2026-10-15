@@ -1,7 +1,10 @@
 # SetColor
 
 Sets the font color property to the specified font.
-💡 This method will work only with the text format of the cell.
+
+:::note
+This method will work only with the text format of the cell.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the font color property to the specified font.
 expression.SetColor(Color);
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 
@@ -35,6 +38,6 @@ let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
-let color = Api.CreateColorFromRGB(255, 111, 61);
+let color = Api.RGB(255, 111, 61);
 font.SetColor(color);
 ```

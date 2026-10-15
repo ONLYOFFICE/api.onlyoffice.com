@@ -4,6 +4,24 @@ Sets the setting which specifies whether to insert blank rows after each item.
 
 Inherited from [ApiPivotField.SetLayoutBlankLine](../../ApiPivotField/Methods/SetLayoutBlankLine.md).
 
+## Syntax
+
+```javascript
+expression.SetLayoutBlankLine(insert);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| insert | Required | boolean |  | Specifies whether to insert blank rows after each item. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Add a blank line after each group in a pivot field to improve readability in a spreadsheet.

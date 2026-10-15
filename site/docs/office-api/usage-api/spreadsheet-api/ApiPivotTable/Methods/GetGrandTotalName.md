@@ -8,7 +8,7 @@ Returns the text string label that is displayed in the grand total column or row
 expression.GetGrandTotalName();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

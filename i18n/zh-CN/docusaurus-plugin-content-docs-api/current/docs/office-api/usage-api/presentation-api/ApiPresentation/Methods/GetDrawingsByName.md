@@ -1,11 +1,11 @@
 # GetDrawingsByName
 
-返回按名称筛选的文档内容中绘图对象的集合。
+返回按名称筛选的演示文稿幻灯片中的绘图对象集合，不包括幻灯片版式和幻灯片母版中的绘图对象。
 
 ## 语法
 
 ```javascript
-expression.GetDrawingsByName(ids);
+expression.GetDrawingsByName(names);
 ```
 
 `expression` - 表示 [ApiPresentation](../ApiPresentation.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetDrawingsByName(ids);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| ids | 必需 | string[] |  | 用于筛选的图形名称数组。 |
+| names | 必需 | string[] |  | 用于筛选的图形名称数组。 |
 
 ## 返回值
 

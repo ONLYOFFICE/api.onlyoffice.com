@@ -4,6 +4,24 @@ Sets the rotation angle to the current drawing object.
 
 Inherited from [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md).
 
+## Syntax
+
+```javascript
+expression.SetRotation(rotAngle);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rotAngle | Required | [Degree](../../Enumeration/Degree.md) |  | New drawing rotation angle. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Rotate a drawing object to a specific angle in a PDF.
@@ -16,7 +34,7 @@ Rotate a drawing object to a specific angle in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 65 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);

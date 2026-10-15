@@ -8,7 +8,7 @@ Returns a set of the table cell properties which will be applied to all the cell
 expression.GetTableCellPr();
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 
@@ -36,7 +36,7 @@ let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let tableStylePr = tableStyle.GetConditionalTableStyle("topLeftCell");
 table.SetTableLook(true, true, true, true, true, true);
-tableStylePr.GetTableCellPr().SetShd("clear", 0xEE, 0xEE, 0xEE);
+tableStylePr.GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(0xEE, 0xEE, 0xEE)));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

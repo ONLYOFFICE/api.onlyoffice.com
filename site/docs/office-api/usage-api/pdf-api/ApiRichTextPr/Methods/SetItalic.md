@@ -1,0 +1,49 @@
+# SetItalic
+
+Sets the italic property to the text character.
+
+## Syntax
+
+```javascript
+expression.SetItalic(isItalic);
+```
+
+`expression` - A variable that represents an [ApiRichTextPr](../ApiRichTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isItalic | Required | boolean |  | Specifies that the contents of the current run are displayed italicized. |
+
+## Returns
+
+[ApiRichTextPr](../../ApiRichTextPr/ApiRichTextPr.md)
+
+## Example
+
+Make text slanted in a free text annotation in a PDF.
+
+```javascript editor-pdf
+// How do I apply italic formatting to text in a PDF?
+
+// Enable italics for text in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+let textPr = run.GetTextPr();
+textPr.SetItalic(true);
+
+console.log(`We set italic to ${textPr.GetItalic()} for rich text properties`);
+```

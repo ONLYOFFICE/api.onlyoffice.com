@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.GetAllWidgets](../../ApiBaseField/Methods/GetAllWidgets.md)。
 
+## 语法
+
+```javascript
+expression.GetAllWidgets();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiWidget](../../Enumeration/ApiWidget.md)[]
+
 ## 示例
 
 访问 PDF 中表单字段的所有视觉实例。

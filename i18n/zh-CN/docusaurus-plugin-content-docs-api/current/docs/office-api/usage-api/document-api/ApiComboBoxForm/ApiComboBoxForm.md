@@ -1,31 +1,43 @@
 # ApiComboBoxForm
 
+表示文档组合框/下拉列表的类。
+
 ApiComboBoxForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Value | string | 返回或设置组合框表单的当前文本值。 |
+
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
-| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
+| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) \| null \| undefined | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "comboBoxForm" | 返回 ApiComboBoxForm 类的类型。 |
 | [GetFormKey](./Methods/GetFormKey.md) | string | 返回当前表单的键。 |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | 返回当前表单的类型。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前表单的内部 ID。 |
 | [GetListValues](./Methods/GetListValues.md) | string[] | 返回当前组合框的列表值。 |
 | [GetLock](./Methods/GetLock.md) | boolean | 返回当前表单的锁定状态。 |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | 返回直接包含当前表单的父元素（段落或内联内容控件）。 |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | 返回当前表单的占位符文本。 |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | 返回当前表单在其父元素中的位置（索引）。 |
 | [GetRole](./Methods/GetRole.md) | string | 返回当前表单的角色。 |
 | [GetTag](./Methods/GetTag.md) | string | 返回当前表单的标签属性。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前表单中的文本。 |
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回当前表单的文本属性。 |
 | [GetTipText](./Methods/GetTipText.md) | string | 返回当前表单的提示文本。 |
 | [GetValue](./Methods/GetValue.md) | string | 返回组合框表单的当前文本值。 |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
-| [IsEditable](./Methods/IsEditable.md) | boolean | 检查组合框文本是否可编辑。如果不可编辑，则此表单为下拉列表。 |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
+| [IsEditable](./Methods/IsEditable.md) | boolean | 检查组合框文本是否可编辑。 |
 | [IsFilled](./Methods/IsFilled.md) | boolean | 检查当前表单是否已填写。 |
 | [IsFixed](./Methods/IsFixed.md) | boolean | 检查当前表单是否为固定大小。 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查当前表单是否为必填项。 |
@@ -43,6 +55,6 @@ ApiComboBoxForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [SetText](./Methods/SetText.md) | boolean | 设置当前组合框的文本。 |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | 为当前表单设置文本属性。 |
 | [SetTipText](./Methods/SetTipText.md) | boolean | 设置当前表单的提示文本。 |
-| [SetValue](./Methods/SetValue.md) | boolean | 设置组合框表单的值。如果值与列表项匹配则选择该列表项， |
+| [SetValue](./Methods/SetValue.md) | boolean | 设置组合框表单的值。 |
 | [ToFixed](./Methods/ToFixed.md) | boolean | 将当前表单转换为固定大小的表单。 |
 | [ToInline](./Methods/ToInline.md) | boolean | 将当前表单转换为内联表单。 |

@@ -8,7 +8,7 @@ Returns a Range object that represents the columns in the specified range.
 expression.GetCols(nCol);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -31,5 +31,5 @@ Pull out a set of columns from a range as their own sub-range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
-range.GetCols(2).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.GetCols(2).SetFillColor(Api.RGB(255, 213, 191));
 ```

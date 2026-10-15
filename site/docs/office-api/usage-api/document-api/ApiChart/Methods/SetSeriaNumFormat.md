@@ -8,7 +8,7 @@ Sets the specified numeric format to the chart series.
 expression.SetSeriaNumFormat(sFormat, nSeria);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ Apply a numeric format to the values of a chart series in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

@@ -3,6 +3,8 @@ description: Check grammar, spelling, and style using LanguageTool.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Language tool
 
 Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual grammar, and style checker to check the text for grammar, style, and spell errors.
@@ -13,11 +15,7 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 **Analogue:** [Glavred](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/glavred), [Grammalecte](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/grammalecte).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="5HaV18VwOgg" />
-```
 
 ## Installation
 
@@ -185,7 +183,7 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)

@@ -8,7 +8,7 @@ Returns a Range object with information about a data item in the pivot table rep
 expression.GetPivotData(dataField, fieldItemsArray);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

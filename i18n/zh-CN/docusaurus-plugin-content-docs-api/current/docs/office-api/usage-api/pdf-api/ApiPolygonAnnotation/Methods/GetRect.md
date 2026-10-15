@@ -1,8 +1,24 @@
 # GetRect
 
-设置批注矩形。
+获取注释矩形。
 
 继承自 [ApiBaseAnnotation.GetRect](../../ApiBaseAnnotation/Methods/GetRect.md)。
+
+## 语法
+
+```javascript
+expression.GetRect();
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Rect](../../Enumeration/Rect.md)
 
 ## 示例
 

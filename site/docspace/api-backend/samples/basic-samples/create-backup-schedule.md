@@ -55,8 +55,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
           console.log('Backup schedule created successfully.');
         } else {
           return res.text().then((t) => {
-            const text = await res.text();
-            console.log(`Backup schedule creation failed. Status code: ${res.status}, Message: ${text}`);
+            console.log(`Backup schedule creation failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -120,7 +119,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/backup/createbackupschedule](/docspace/api-backend/usage-api/create-backup-schedule) with a JSON payload:
+A POST request is sent to [/api/2.0/backup/createbackupschedule](/docspace/api-backend/usage-api/backup/create-backup-schedule) with a JSON payload:
 
 - `storageType` — backup storage target, e.g. "CustomCloud", "Local", "DataStore".
 - `cronParams` — schedule configuration:

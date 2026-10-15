@@ -8,7 +8,7 @@ Returns a type of the current table conditional style.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 

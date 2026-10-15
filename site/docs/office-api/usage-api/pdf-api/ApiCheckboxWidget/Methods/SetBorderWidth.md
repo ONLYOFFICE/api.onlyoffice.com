@@ -4,6 +4,24 @@ Sets widget border width.
 
 Inherited from [ApiBaseWidget.SetBorderWidth](../../ApiBaseWidget/Methods/SetBorderWidth.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderWidth(borderWidth);
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| borderWidth | Required | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | the width to set to the border. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Set the border thickness for field widgets in a PDF.

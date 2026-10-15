@@ -3,13 +3,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/owncloud.svg
 ---
 
-# ownCloud 集成
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# ownCloud 集成
+
 <YoutubeVideo videoId="33w03FcPWTo"/>
-```
 
 这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助ONLYOFFICE 文档，在[ownCloud](https://owncloud.com)中编辑办公文档。
 

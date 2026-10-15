@@ -4,6 +4,24 @@ Sets annotation opacity.
 
 Inherited from [ApiBaseAnnotation.SetOpacity](../../ApiBaseAnnotation/Methods/SetOpacity.md).
 
+## Syntax
+
+```javascript
+expression.SetOpacity(value);
+```
+
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| value | Required | [percentage](../../Enumeration/percentage.md) |  | The opacity value from 0 (transparent) to 100 (opaque). |
+
+## Returns
+
+boolean
+
 ## Example
 
 Make an annotation transparent or opaque in a PDF.

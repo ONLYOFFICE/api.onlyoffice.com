@@ -4,6 +4,26 @@
 
 继承自 [ApiDrawing.SetHorPosition](../../ApiDrawing/Methods/SetHorPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetHorPosition(sRelativeFrom, nDistance, bPercent);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | 必需 | [RelFromH](../../Enumeration/RelFromH.md) |  | 将作为对象水平对齐参考点的文档元素。 |
+| nDistance | 必需 | [EMU](../../Enumeration/EMU.md) \| number |  | 从文档元素右侧到浮动对象的距离。当 bPercent=true 时，使用 EMU 表示绝对距离或使用数字表示百分比（1 = 1%）。 |
+| bPercent | 可选 | boolean | false | 定义水平对齐偏移是否以百分比指定的选项。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中将浮动形状定位在特定的水平位置。
@@ -35,7 +55,7 @@ paragraph.AddText("The shape is aligned next to the right margin horizontally.")
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The next blue shape is aligned next to the left margin horizontally by 10% percent.");
-fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
+fill = Api.CreateSolidFill(Api.RGB(91, 155, 213));
 stroke = Api.CreateStroke(0, Api.CreateNoFill());
 drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
 drawing.SetDistances(457200, 457200, 457200, 0);

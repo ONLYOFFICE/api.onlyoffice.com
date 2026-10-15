@@ -1,8 +1,10 @@
 # ApiTimeLine
 
-Represents the ApiTimeLine class.
+Class representing animation timeline for a slide.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

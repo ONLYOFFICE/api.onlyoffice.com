@@ -55,7 +55,7 @@
 创建文本变换类型为 “textArchUp” 的艺术字对象。
 
 ```javascript editor-pptx
-// How to create a word art with adding properties like fill color, size, and transform type to it.
+// How do I create Word Art with properties such as fill color, size, and transform type?
 
 // Create a text art with transform type.
 

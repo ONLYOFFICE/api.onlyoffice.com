@@ -11,13 +11,14 @@ Enumeration
 - [ApiUnsupported](../ApiUnsupported/ApiUnsupported.md)
 - [ApiRun](../ApiRun/ApiRun.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## Example
 
 Add an element called 'text run' to the paragraph.
 
 ```javascript editor-pdf
-// How to add an element to paragraph.
+// How do I add an element to a paragraph?
 
 // Insert an element to paragraph.
 

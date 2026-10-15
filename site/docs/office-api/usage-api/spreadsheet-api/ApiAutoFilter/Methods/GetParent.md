@@ -1,6 +1,6 @@
 # GetParent
 
-Returns the parent ApiWorksheet object for the AutoFilter.
+Returns the parent object for the AutoFilter — either the ApiWorksheet the filter is applied to, or the ApiListObject if the filter belongs to a table.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the parent ApiWorksheet object for the AutoFilter.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) \| [ApiListObject](../../ApiListObject/ApiListObject.md)
 
 ## Example
 

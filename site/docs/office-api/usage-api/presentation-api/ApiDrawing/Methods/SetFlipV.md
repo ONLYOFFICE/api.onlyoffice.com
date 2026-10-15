@@ -8,7 +8,7 @@ Sets the vertical flip of the current drawing.
 expression.SetFlipV(bFlip);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

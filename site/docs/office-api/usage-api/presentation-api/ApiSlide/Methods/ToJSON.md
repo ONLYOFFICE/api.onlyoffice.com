@@ -8,7 +8,7 @@ Converts the ApiSlide object into the JSON object.
 expression.ToJSON(bWriteLayout, bWriteMaster, bWriteAllMasLayouts, bWriteTableStyles);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

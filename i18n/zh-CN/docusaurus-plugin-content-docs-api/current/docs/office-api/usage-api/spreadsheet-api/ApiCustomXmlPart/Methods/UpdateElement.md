@@ -26,7 +26,7 @@ boolean
 用新数据替换电子表格中存储的 XML 元素的内容。
 
 ```javascript editor-xlsx
-// How do I change the value inside a saved XML structure in a spreadsheet?
+// Change the value inside a saved XML structure in a spreadsheet.
 
 // Overwrite an existing XML node to keep embedded data current in a spreadsheet.
 

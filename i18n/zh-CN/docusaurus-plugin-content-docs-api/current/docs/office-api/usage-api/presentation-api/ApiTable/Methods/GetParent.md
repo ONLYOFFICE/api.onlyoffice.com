@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParent](../../ApiDrawing/Methods/GetParent.md)。
 
+## 语法
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| [ApiLayout](../../ApiLayout/ApiLayout.md) \| [ApiMaster](../../ApiMaster/ApiMaster.md) \| null
+
 ## 示例
 
 查找演示文稿中形状的父容器。

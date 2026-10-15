@@ -8,7 +8,7 @@ Returns a type of the ApiRichTextPr class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRichTextPr](../ApiRichTextPr.md) class.
+`expression` - A variable that represents an [ApiRichTextPr](../ApiRichTextPr.md) class.
 
 ## Parameters
 

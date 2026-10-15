@@ -545,7 +545,7 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
 
 Your CRM provides CLIENT_ROOM_ID. The script treats it as a folder ID and recursively walks through the room:
 
-- It reads the room contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id).
+- It reads the room contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id).
 - It repeats the same request for every subfolder.
 - It builds a flat list of **file IDs** found across the entire room tree.
 
@@ -620,9 +620,9 @@ Your CRM provides CLIENT_ROOM_ID. The script treats it as a folder ID and recurs
 
 Under your archive root folder (for example, `/Archive` with ID `ARCHIVE_ROOT_FOLDER_ID`), the script:
 
-- reads existing child folders using GET [/api/2.0/files/:archiveRootId](/docspace/api-backend/usage-api/get-folder-by-folder-id),
+- reads existing child folders using GET [/api/2.0/files/:archiveRootId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id),
 - looks for a folder with `title == CLIENT_NAME`,
-- if it does not exist, creates it using POST [/api/2.0/files/folder/:archiveRootId](/docspace/api-backend/usage-api/create-folder) with body `{ "title": "<ClientName>" }`,
+- if it does not exist, creates it using POST [/api/2.0/files/folder/:archiveRootId](/docspace/api-backend/usage-api/files/folders/create-folder) with body `{ "title": "<ClientName>" }`,
 - returns the folder ID of `/Archive/<ClientName>`.
 
 <Tabs>
@@ -669,7 +669,7 @@ Under your archive root folder (for example, `/Archive` with ID `ARCHIVE_ROOT_FO
 
 ## Step 3: Move files to the archive folder
 
-It sends one or more PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items) requests (in chunks).
+It sends one or more PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/files/operations/move-batch-items) requests (in chunks).
 
 Each request uses body:
 - `fileIds`: a chunk of file IDs,
@@ -721,7 +721,7 @@ As a result, all documents from the client room are relocated into the archive f
 If the client is a guest user and you want to revoke access after deal closure, the script:
 
 - receives `GUEST_USER_ID`,
-- deletes the guest user using DELETE [/api/2.0/people/guests](/docspace/api-backend/usage-api/delete-guests) with body `{ "userIds": [<guestUserId>], "resendAll": false }`.
+- deletes the guest user using DELETE [/api/2.0/people/guests](/docspace/api-backend/usage-api/people/guests/delete-guests) with body `{ "userIds": [<guestUserId>], "resendAll": false }`.
 
 After that, the guest can no longer access the portal or shared rooms.
 

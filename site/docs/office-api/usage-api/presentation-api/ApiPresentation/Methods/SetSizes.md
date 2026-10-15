@@ -8,7 +8,7 @@ Sets the size to the current presentation.
 expression.SetSizes(nWidth, nHeight);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

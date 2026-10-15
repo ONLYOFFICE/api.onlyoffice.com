@@ -8,7 +8,7 @@ Checks if the field can be toggled off.
 expression.IsToggleToOff();
 ```
 
-`expression` - A variable that represents a [ApiCheckboxField](../ApiCheckboxField.md) class.
+`expression` - A variable that represents an [ApiCheckboxField](../ApiCheckboxField.md) class.
 
 ## Parameters
 

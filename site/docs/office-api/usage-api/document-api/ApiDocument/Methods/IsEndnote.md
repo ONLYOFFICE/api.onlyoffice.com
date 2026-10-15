@@ -4,6 +4,22 @@ Check if the current document content is an endnote.
 
 Inherited from [ApiDocumentContent.IsEndnote](../../ApiDocumentContent/Methods/IsEndnote.md).
 
+## Syntax
+
+```javascript
+expression.IsEndnote();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Detect whether a note is an endnote in a document.

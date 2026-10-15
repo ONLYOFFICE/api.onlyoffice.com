@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetBorderStyle](../../ApiBaseAnnotation/Methods/SetBorderStyle.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderStyle(borderStyle);
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| borderStyle | 必需 | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | 边框样式：`"solid"` 或 `"dashed"`。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 设置 PDF 中注释的边框样式。

@@ -8,7 +8,7 @@ Splits the cell into a given number of rows and columns.
 expression.Split(oCell, nRow, nCol);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

@@ -1,15 +1,17 @@
 # ApiWorksheetFunction
 
-表示 ApiWorksheetFunction 类。
+表示工作表函数的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [ABS](./Methods/ABS.md) | number | 返回数字的绝对值，即不带符号的数字。 |
 | [ACCRINT](./Methods/ACCRINT.md) | number | 返回定期支付利息的有价证券的应计利息。 |
 | [ACCRINTM](./Methods/ACCRINTM.md) | number | 返回到期支付利息的有价证券的应计利息。 |
-| [ACOS](./Methods/ACOS.md) | number | 返回数字的反余弦值，以弧度表示，范围从 0 到 Pi。反余弦是其余弦值为参数中指定数字的角度。 |
+| [ACOS](./Methods/ACOS.md) | number | 返回数字的反余弦值，以弧度表示，范围从 0 到 Pi。 |
 | [ACOSH](./Methods/ACOSH.md) | number | 返回数字的反双曲余弦值。 |
 | [ACOT](./Methods/ACOT.md) | number | 返回数字的反余切值，以弧度表示，范围从 0 到 Pi。 |
 | [ACOTH](./Methods/ACOTH.md) | number | 返回数字的反双曲余切值。 |
@@ -29,7 +31,7 @@
 | [AVERAGEA](./Methods/AVERAGEA.md) | number | 返回指定参数的平均值（算术平均值），将参数中的文本和 **false** 计算为 0；**true** 计算为 1。 |
 | [AVERAGEIF](./Methods/AVERAGEIF.md) | number | 查找满足给定条件或标准的单元格的平均值（算术平均值）。 |
 | [AVERAGEIFS](./Methods/AVERAGEIFS.md) | number | 查找满足给定一组条件或标准的单元格的平均值（算术平均值）。 |
-| [BASE](./Methods/BASE.md) | number | 将数字转换为具有给定基数的文本表示形式。 |
+| [BASE](./Methods/BASE.md) | string | 将数字转换为具有给定基数的文本表示形式。 |
 | [BESSELI](./Methods/BESSELI.md) | number | 返回修正贝塞尔函数 In(x)。 |
 | [BESSELJ](./Methods/BESSELJ.md) | number | 返回贝塞尔函数 Jn(x)。 |
 | [BESSELK](./Methods/BESSELK.md) | number | 返回修正贝塞尔函数 Kn(x)。 |
@@ -39,8 +41,8 @@
 | [BETA_DIST](./Methods/BETA_DIST.md) | number | 返回贝塔概率分布函数。 |
 | [BETA_INV](./Methods/BETA_INV.md) | number | 返回累积贝塔概率密度函数 (BETA_DIST) 的逆函数。 |
 | [BIN2DEC](./Methods/BIN2DEC.md) | number | 将二进制数转换为十进制数。 |
-| [BIN2HEX](./Methods/BIN2HEX.md) | number | 将二进制数转换为十六进制数。 |
-| [BIN2OCT](./Methods/BIN2OCT.md) | number | 将二进制数转换为八进制数。 |
+| [BIN2HEX](./Methods/BIN2HEX.md) | string | 将二进制数转换为十六进制数。 |
+| [BIN2OCT](./Methods/BIN2OCT.md) | string | 将二进制数转换为八进制数。 |
 | [BINOMDIST](./Methods/BINOMDIST.md) | number | 返回单项二项分布概率。 |
 | [BINOM_DIST](./Methods/BINOM_DIST.md) | number | 返回单项二项分布概率。 |
 | [BINOM_DIST_RANGE](./Methods/BINOM_DIST_RANGE.md) | number | 使用二项分布返回试验结果的概率。 |
@@ -67,7 +69,7 @@
 | [COLUMNS](./Methods/COLUMNS.md) | number | 返回单元格范围中的列数。 |
 | [COMBIN](./Methods/COMBIN.md) | number | 返回给定项目数的组合数。 |
 | [COMBINA](./Methods/COMBINA.md) | number | 返回给定项目数的可重复组合数。 |
-| [COMPLEX](./Methods/COMPLEX.md) | number | 将实部和虚部系数转换为复数。 |
+| [COMPLEX](./Methods/COMPLEX.md) | string | 将实部和虚部系数转换为复数。 |
 | [CONCATENATE](./Methods/CONCATENATE.md) | string | 将多个文本字符串合并为一个文本字符串。 |
 | [CONFIDENCE](./Methods/CONFIDENCE.md) | number | 使用正态分布返回总体平均值的置信区间。 |
 | [CONFIDENCE_NORM](./Methods/CONFIDENCE_NORM.md) | number | 使用正态分布返回总体平均值的置信区间。 |
@@ -103,12 +105,12 @@
 | [DCOUNT](./Methods/DCOUNT.md) | number | 统计数据库中符合指定条件的记录字段（列）中包含数字的单元格数量。 |
 | [DCOUNTA](./Methods/DCOUNTA.md) | number | 统计数据库中符合指定条件的记录字段（列）中的非空单元格数量。 |
 | [DDB](./Methods/DDB.md) | number | 使用双倍余额递减法或您指定的其他方法返回资产在指定期间的折旧。 |
-| [DEC2BIN](./Methods/DEC2BIN.md) | number | 将十进制数转换为二进制数。 |
-| [DEC2HEX](./Methods/DEC2HEX.md) | number | 将十进制数转换为十六进制数。 |
-| [DEC2OCT](./Methods/DEC2OCT.md) | number | 将十进制数转换为八进制数。 |
+| [DEC2BIN](./Methods/DEC2BIN.md) | string | 将十进制数转换为二进制数。 |
+| [DEC2HEX](./Methods/DEC2HEX.md) | string | 将十进制数转换为十六进制数。 |
+| [DEC2OCT](./Methods/DEC2OCT.md) | string | 将十进制数转换为八进制数。 |
 | [DECIMAL](./Methods/DECIMAL.md) | number | 将给定基数的数字文本表示形式转换为十进制数。 |
 | [DEGREES](./Methods/DEGREES.md) | number | 将弧度转换为角度。 |
-| [DELTA](./Methods/DELTA.md) | number | 测试两个数字是否相等。如果数字相等，函数返回 1，否则返回 0。 |
+| [DELTA](./Methods/DELTA.md) | number | 测试两个数字是否相等。 |
 | [DEVSQ](./Methods/DEVSQ.md) | number | 返回数据点与其样本平均值偏差的平方和。 |
 | [DGET](./Methods/DGET.md) | number | 从数据库中提取符合指定条件的单条记录。 |
 | [DISC](./Methods/DISC.md) | number | 返回有价证券的贴现率。 |
@@ -135,7 +137,7 @@
 | [ERROR_TYPE](./Methods/ERROR_TYPE.md) | number | 返回与错误值匹配的数字。 |
 | [EVEN](./Methods/EVEN.md) | number | 将正数向上舍入、负数向下舍入到最接近的偶数整数。 |
 | [EXACT](./Methods/EXACT.md) | boolean | 检查两个文本字符串是否完全相同，并返回 **true** 或 **false**。此函数区分大小写。 |
-| [EXP](./Methods/EXP.md) | number | 返回 **e** 常数的给定数字次幂。**e** 常数等于 **2.71828182845904**，是自然对数的底数。 |
+| [EXP](./Methods/EXP.md) | number | 返回 **e** 常数的给定数字次幂。 |
 | [EXPONDIST](./Methods/EXPONDIST.md) | number | 返回指数分布。 |
 | [EXPON_DIST](./Methods/EXPON_DIST.md) | number | 返回指数分布。 |
 | [FACT](./Methods/FACT.md) | number | 返回数字的阶乘，等于 *1*2*3*...* 数字。 |
@@ -155,7 +157,7 @@
 | [FORECAST_ETS_CONFINT](./Methods/FORECAST_ETS_CONFINT.md) | number | 返回指定目标日期预测值的置信区间。 |
 | [FORECAST_ETS_SEASONALITY](./Methods/FORECAST_ETS_SEASONALITY.md) | number | 返回应用程序为指定时间序列检测到的重复模式的长度。 |
 | [FORECAST_ETS_STAT](./Methods/FORECAST_ETS_STAT.md) | number | 返回预测的请求统计量。 |
-| [FREQUENCY](./Methods/FREQUENCY.md) | number | 计算值在值范围内出现的频率，然后返回返回的垂直数字数组的第一个值。 |
+| [FREQUENCY](./Methods/FREQUENCY.md) | number[][] | 计算值在值范围内出现的频率，然后返回返回的垂直数字数组的第一个值。 |
 | [FV](./Methods/FV.md) | number | 基于定期、固定付款和固定利率返回投资的未来值。 |
 | [FVSCHEDULE](./Methods/FVSCHEDULE.md) | number | 在应用一系列复合利率后返回初始本金的未来值。 |
 | [F_DIST](./Methods/F_DIST.md) | number | 返回两个数据集的（左尾）F 概率分布（多样性程度）。 |
@@ -172,12 +174,12 @@
 | [GAUSS](./Methods/GAUSS.md) | number | 计算标准正态总体成员落在平均值和距平均值 arg1 个标准偏差之间的概率。 |
 | [GCD](./Methods/GCD.md) | number | 返回最大公约数。 |
 | [GEOMEAN](./Methods/GEOMEAN.md) | number | 返回正数数值数据的几何平均值。 |
-| [GESTEP](./Methods/GESTEP.md) | number | 测试数字是否大于阈值。如果数字大于或等于阈值，函数返回 1，否则返回 0。 |
-| [GROWTH](./Methods/GROWTH.md) | number | 使用现有数据计算预测的指数增长。 |
+| [GESTEP](./Methods/GESTEP.md) | number | 测试数字是否大于阈值。 |
+| [GROWTH](./Methods/GROWTH.md) | number[][] | 使用现有数据计算预测的指数增长。 |
 | [HARMEAN](./Methods/HARMEAN.md) | number | 返回正数数据集的调和平均值：倒数的算术平均值的倒数。 |
-| [HEX2BIN](./Methods/HEX2BIN.md) | number | 将十六进制数转换为二进制数。 |
+| [HEX2BIN](./Methods/HEX2BIN.md) | string | 将十六进制数转换为二进制数。 |
 | [HEX2DEC](./Methods/HEX2DEC.md) | number | 将十六进制数转换为十进制数。 |
-| [HEX2OCT](./Methods/HEX2OCT.md) | number | 将十六进制数转换为八进制数。 |
+| [HEX2OCT](./Methods/HEX2OCT.md) | string | 将十六进制数转换为八进制数。 |
 | [HLOOKUP](./Methods/HLOOKUP.md) | number \| string | 在表格或值数组的首行中查找值，并从指定行返回同一列中的值。 |
 | [HOUR](./Methods/HOUR.md) | number | 返回小时数，从 0（上午 12:00）到 23（下午 11:00）。 |
 | [HYPERLINK](./Methods/HYPERLINK.md) | string | 创建跳转到当前工作簿中另一位置的快捷方式，或打开存储在硬盘驱动器、网络服务器或 Internet 上的文档。 |
@@ -189,28 +191,28 @@
 | [IMABS](./Methods/IMABS.md) | number | 返回复数的绝对值（模）。 |
 | [IMAGINARY](./Methods/IMAGINARY.md) | number | 返回复数的虚部系数。 |
 | [IMARGUMENT](./Methods/IMARGUMENT.md) | number | 返回参数 Theta，以弧度表示的角度。 |
-| [IMCONJUGATE](./Methods/IMCONJUGATE.md) | number | 返回复数的共轭复数。 |
-| [IMCOS](./Methods/IMCOS.md) | number | 返回复数的余弦值。 |
-| [IMCOSH](./Methods/IMCOSH.md) | number | 返回复数的双曲余弦值。 |
-| [IMCOT](./Methods/IMCOT.md) | number | 返回复数的余切值。 |
-| [IMCSC](./Methods/IMCSC.md) | number | 返回复数的余割值。 |
-| [IMCSCH](./Methods/IMCSCH.md) | number | 返回复数的双曲余割值。 |
-| [IMDIV](./Methods/IMDIV.md) | number | 返回两个复数的商。 |
-| [IMEXP](./Methods/IMEXP.md) | number | 返回复数的指数。 |
-| [IMLN](./Methods/IMLN.md) | number | 返回复数的自然对数。 |
-| [IMLOG10](./Methods/IMLOG10.md) | number | 返回复数的以 10 为底的对数。 |
-| [IMLOG2](./Methods/IMLOG2.md) | number | 返回复数的以 2 为底的对数。 |
-| [IMPOWER](./Methods/IMPOWER.md) | number | 返回复数的整数次幂。 |
-| [IMPRODUCT](./Methods/IMPRODUCT.md) | number | 返回指定复数的乘积。 |
+| [IMCONJUGATE](./Methods/IMCONJUGATE.md) | string | 返回复数的共轭复数。 |
+| [IMCOS](./Methods/IMCOS.md) | string | 返回复数的余弦值。 |
+| [IMCOSH](./Methods/IMCOSH.md) | string | 返回复数的双曲余弦值。 |
+| [IMCOT](./Methods/IMCOT.md) | string | 返回复数的余切值。 |
+| [IMCSC](./Methods/IMCSC.md) | string | 返回复数的余割值。 |
+| [IMCSCH](./Methods/IMCSCH.md) | string | 返回复数的双曲余割值。 |
+| [IMDIV](./Methods/IMDIV.md) | string | 返回两个复数的商。 |
+| [IMEXP](./Methods/IMEXP.md) | string | 返回复数的指数。 |
+| [IMLN](./Methods/IMLN.md) | string | 返回复数的自然对数。 |
+| [IMLOG10](./Methods/IMLOG10.md) | string | 返回复数的以 10 为底的对数。 |
+| [IMLOG2](./Methods/IMLOG2.md) | string | 返回复数的以 2 为底的对数。 |
+| [IMPOWER](./Methods/IMPOWER.md) | string | 返回复数的整数次幂。 |
+| [IMPRODUCT](./Methods/IMPRODUCT.md) | string | 返回指定复数的乘积。 |
 | [IMREAL](./Methods/IMREAL.md) | number | 返回复数的实部系数。 |
-| [IMSEC](./Methods/IMSEC.md) | number | 返回复数的正割值。 |
-| [IMSECH](./Methods/IMSECH.md) | number | 返回复数的双曲正割值。 |
-| [IMSIN](./Methods/IMSIN.md) | number | 返回复数的正弦值。 |
-| [IMSINH](./Methods/IMSINH.md) | number | 返回复数的双曲正弦值。 |
-| [IMSQRT](./Methods/IMSQRT.md) | number | 返回复数的平方根。 |
-| [IMSUB](./Methods/IMSUB.md) | number | 返回以 *x + yi* 或 *x + yj* 形式表示的两个复数的差。 |
-| [IMSUM](./Methods/IMSUM.md) | number | 返回指定复数的和。 |
-| [IMTAN](./Methods/IMTAN.md) | number | 返回复数的正切值。 |
+| [IMSEC](./Methods/IMSEC.md) | string | 返回复数的正割值。 |
+| [IMSECH](./Methods/IMSECH.md) | string | 返回复数的双曲正割值。 |
+| [IMSIN](./Methods/IMSIN.md) | string | 返回复数的正弦值。 |
+| [IMSINH](./Methods/IMSINH.md) | string | 返回复数的双曲正弦值。 |
+| [IMSQRT](./Methods/IMSQRT.md) | string | 返回复数的平方根。 |
+| [IMSUB](./Methods/IMSUB.md) | string | 返回以 *x + yi* 或 *x + yj* 形式表示的两个复数的差。 |
+| [IMSUM](./Methods/IMSUM.md) | string | 返回指定复数的和。 |
+| [IMTAN](./Methods/IMTAN.md) | string | 返回复数的正切值。 |
 | [INDEX](./Methods/INDEX.md) | number \| string | 返回给定范围中特定行和列交叉处单元格的值或引用。 |
 | [INT](./Methods/INT.md) | number | 将数字向下舍入到最接近的整数。 |
 | [INTRATE](./Methods/INTRATE.md) | number | 返回完全投资的有价证券的利率。 |
@@ -231,22 +233,22 @@
 | [ISREF](./Methods/ISREF.md) | boolean | 检查值是否为引用，并返回 **true** 或 **false**。 |
 | [ISTEXT](./Methods/ISTEXT.md) | boolean | 检查值是否为文本，并返回 **true** 或 **false**。 |
 | [KURT](./Methods/KURT.md) | number | 返回数据集的峰度。 |
-| [LARGE](./Methods/LARGE.md) | number | 返回数据集中第 k 个最大值。例如，第五大的数字。 |
+| [LARGE](./Methods/LARGE.md) | number | 返回数据集中第 k 个最大值。 |
 | [LCM](./Methods/LCM.md) | number | 返回最小公倍数。 |
 | [LEFT](./Methods/LEFT.md) | string | 从文本字符串的开头返回指定数量的字符。 |
 | [LEFTB](./Methods/LEFTB.md) | string | 从指定字符串的左侧字符开始提取子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。 |
 | [LEN](./Methods/LEN.md) | number | 返回文本字符串中的字符数。 |
 | [LENB](./Methods/LENB.md) | number | 分析指定的字符串并返回其包含的字符数，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。 |
-| [LINEST](./Methods/LINEST.md) | number | 通过使用最小二乘法拟合直线，返回描述与已知数据点匹配的线性趋势的统计信息。 |
+| [LINEST](./Methods/LINEST.md) | number[][] | 通过使用最小二乘法拟合直线，返回描述与已知数据点匹配的线性趋势的统计信息。 |
 | [LN](./Methods/LN.md) | number | 返回数字的自然对数。 |
 | [LOG](./Methods/LOG.md) | number | 返回数字以指定底数的对数。 |
 | [LOG10](./Methods/LOG10.md) | number | 返回数字的以 10 为底的对数。 |
-| [LOGEST](./Methods/LOGEST.md) | number | 返回描述与已知数据点匹配的指数曲线的统计信息。 |
+| [LOGEST](./Methods/LOGEST.md) | number[][] | 返回描述与已知数据点匹配的指数曲线的统计信息。 |
 | [LOGINV](./Methods/LOGINV.md) | number | 返回 x 的对数正态累积分布函数的逆函数，其中 ln(x) 以指定参数呈正态分布。 |
 | [LOGNORMDIST](./Methods/LOGNORMDIST.md) | number | 返回 x 的累积对数正态分布，其中 ln(x) 以指定参数呈正态分布。 |
 | [LOGNORM_DIST](./Methods/LOGNORM_DIST.md) | number | 返回 x 的对数正态分布，其中 ln(x) 以指定参数呈正态分布。 |
 | [LOGNORM_INV](./Methods/LOGNORM_INV.md) | number | 返回 x 的对数正态累积分布函数的逆函数，其中 ln(x) 以指定参数呈正态分布。 |
-| [LOOKUP](./Methods/LOOKUP.md) | number \| string \| boolean | 从单行或单列范围中查找值。为向后兼容性而提供。 |
+| [LOOKUP](./Methods/LOOKUP.md) | number \| string \| boolean | 从单行或单列范围中查找值。 |
 | [LOWER](./Methods/LOWER.md) | string | 将文本字符串中的所有字母转换为小写。 |
 | [MATCH](./Methods/MATCH.md) | number | 返回范围中与指定值按指定顺序匹配的项的相对位置。 |
 | [MAX](./Methods/MAX.md) | number | 返回一组值中的最大值。忽略逻辑值和文本。 |
@@ -263,7 +265,7 @@
 | [MONTH](./Methods/MONTH.md) | number | 返回月份数，从 1（一月）到 12（十二月）。 |
 | [MROUND](./Methods/MROUND.md) | number | 返回舍入到所需倍数的数字。 |
 | [MULTINOMIAL](./Methods/MULTINOMIAL.md) | number | 返回数字之和的阶乘与阶乘乘积的比率。 |
-| [MUNIT](./Methods/MUNIT.md) | number | 返回指定维度的单位矩阵。 |
+| [MUNIT](./Methods/MUNIT.md) | number[][] | 返回指定维度的单位矩阵。 |
 | [N](./Methods/N.md) | number | 将值转换为数字，日期转换为序列号，**true** 转换为 1，错误转换为 [ErrorValue](../Enumeration/ErrorValue.md)，其他转换为 0。 |
 | [NA](./Methods/NA.md) | string | 返回 *#N/A* 错误值，表示“无可用值”。 |
 | [NEGBINOMDIST](./Methods/NEGBINOMDIST.md) | number | 返回负二项分布，即在最后一次成功之前有指定次数失败的概率，以及指定的成功概率。 |
@@ -284,15 +286,15 @@
 | [NPER](./Methods/NPER.md) | number | 基于定期、固定付款和固定利率，返回投资的期数。 |
 | [NPV](./Methods/NPV.md) | number | 基于折现率和一系列未来付款（负值）和收入（正值），返回投资的净现值。 |
 | [NUMBERVALUE](./Methods/NUMBERVALUE.md) | number | 以与区域设置无关的方式将文本转换为数字。 |
-| [OCT2BIN](./Methods/OCT2BIN.md) | number | 将八进制数转换为二进制数。 |
+| [OCT2BIN](./Methods/OCT2BIN.md) | string | 将八进制数转换为二进制数。 |
 | [OCT2DEC](./Methods/OCT2DEC.md) | number | 将八进制数转换为十进制数。 |
-| [OCT2HEX](./Methods/OCT2HEX.md) | number | 将八进制数转换为十六进制数。 |
+| [OCT2HEX](./Methods/OCT2HEX.md) | string | 将八进制数转换为十六进制数。 |
 | [ODD](./Methods/ODD.md) | number | 将正数向上舍入、负数向下舍入到最接近的奇数整数。 |
 | [ODDFPRICE](./Methods/ODDFPRICE.md) | number | 返回首期不规则的有价证券每 $100 面值的价格。 |
 | [ODDFYIELD](./Methods/ODDFYIELD.md) | number | 返回首期不规则的有价证券的收益率。 |
 | [ODDLPRICE](./Methods/ODDLPRICE.md) | number | 返回末期不规则的有价证券每 $100 面值的价格。 |
 | [ODDLYIELD](./Methods/ODDLYIELD.md) | number | 返回末期不规则的有价证券的收益率。 |
-| [OR](./Methods/OR.md) | boolean | 检查是否有任何参数为 **true**。仅当所有参数都为 **false** 时才返回 **false**。 |
+| [OR](./Methods/OR.md) | boolean | 检查是否有任何参数为 **true**。 |
 | [PDURATION](./Methods/PDURATION.md) | number | 返回投资达到指定值所需的期数。 |
 | [PERCENTILE](./Methods/PERCENTILE.md) | number | 返回范围内值的第 k 个百分位数。 |
 | [PERCENTILE_EXC](./Methods/PERCENTILE_EXC.md) | number | 返回范围内值的第 k 个百分位数，其中 k 在 0..1 范围内，不含端点。 |
@@ -325,11 +327,11 @@
 | [RANK](./Methods/RANK.md) | number | 返回数字在数字列表中的排名：相对于列表中其他值的大小。 |
 | [RANK_AVG](./Methods/RANK_AVG.md) | number | 返回数字在数字列表中的排名：相对于列表中其他值的大小。如果多个值具有相同的排名，则返回平均排名。 |
 | [RANK_EQ](./Methods/RANK_EQ.md) | number | 返回数字在数字列表中的排名：相对于列表中其他值的大小。如果多个值具有相同的排名，则返回该组值的最高排名。 |
-| [RATE](./Methods/RATE.md) | number | 返回贷款或投资的每期利率。例如，使用 6%/4 表示年利率 6% 的季度付款。 |
+| [RATE](./Methods/RATE.md) | number | 返回贷款或投资的每期利率。 |
 | [RECEIVED](./Methods/RECEIVED.md) | number | 返回完全投资的有价证券到期时收到的金额。 |
 | [REPLACE](./Methods/REPLACE.md) | string | 用不同的文本字符串替换文本字符串的一部分。 |
 | [REPLACEB](./Methods/REPLACEB.md) | string | 根据指定的字符数和起始位置，用新的字符集替换一组字符，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。 |
-| [REPT](./Methods/REPT.md) | string | 将文本重复指定的次数。使用此函数用文本字符串的多个实例填充单元格。 |
+| [REPT](./Methods/REPT.md) | string | 将文本重复指定的次数。 |
 | [RIGHT](./Methods/RIGHT.md) | string | 从文本字符串的末尾返回指定数量的字符。 |
 | [RIGHTB](./Methods/RIGHTB.md) | string | 根据指定的字符数，从字符串的最右侧字符开始提取子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。 |
 | [ROMAN](./Methods/ROMAN.md) | string | 将阿拉伯数字转换为字符串格式的罗马数字。 |
@@ -352,12 +354,12 @@
 | [SKEW](./Methods/SKEW.md) | number | 返回分布的偏度：分布围绕其平均值的不对称程度的特征。 |
 | [SKEW_P](./Methods/SKEW_P.md) | number | 基于总体返回分布的偏度：分布围绕其平均值的不对称程度的特征。 |
 | [SLN](./Methods/SLN.md) | number | 返回资产一个期间的直线折旧。 |
-| [SMALL](./Methods/SMALL.md) | number | 返回数据集中第 k 个最小值。例如，第五小的数字。 |
+| [SMALL](./Methods/SMALL.md) | number | 返回数据集中第 k 个最小值。 |
 | [SQRT](./Methods/SQRT.md) | number | 返回数字的平方根。 |
 | [SQRTPI](./Methods/SQRTPI.md) | number | 返回（数字 * pi）的平方根。 |
 | [STANDARDIZE](./Methods/STANDARDIZE.md) | number | 从以平均值和标准偏差为特征的分布中返回标准化值。 |
 | [STDEV](./Methods/STDEV.md) | number | 基于样本估算标准偏差（忽略样本中的逻辑值和文本）。 |
-| [STDEVA](./Methods/STDEVA.md) | number | 基于样本估算标准偏差，包括逻辑值和文本。文本和 **false** 逻辑值为 0；**true** 逻辑值为 1。 |
+| [STDEVA](./Methods/STDEVA.md) | number | 基于样本估算标准偏差，包括逻辑值和文本。 |
 | [STDEVP](./Methods/STDEVP.md) | number | 基于作为参数给出的整体总体计算标准偏差（忽略逻辑值和文本）。 |
 | [STDEVPA](./Methods/STDEVPA.md) | number | 基于整个总体计算标准偏差，包括逻辑值和文本。 |
 | [STDEV_P](./Methods/STDEV_P.md) | number | 基于作为参数给出的整体总体计算标准偏差（忽略逻辑值和文本）。 |
@@ -378,11 +380,11 @@
 | [TDIST](./Methods/TDIST.md) | number | 返回学生 t 分布。 |
 | [TEXT](./Methods/TEXT.md) | string | 以特定数字格式将值转换为文本。 |
 | [TIME](./Methods/TIME.md) | number | 将以数字给出的小时、分钟和秒转换为序列号，并以时间格式格式化。 |
-| [TIMEVALUE](./Methods/TIMEVALUE.md) | number | 将文本时间转换为时间的序列号，范围从 0（上午 12:00:00）到 0.999988426（下午 11:59:59）。输入公式后使用时间格式格式化该数字。 |
+| [TIMEVALUE](./Methods/TIMEVALUE.md) | number | 将文本时间转换为时间的序列号，范围从 0（上午 12:00:00）到 0.999988426（下午 11:59:59）。 |
 | [TINV](./Methods/TINV.md) | number | 返回学生 t 分布的双尾逆函数。 |
 | [TODAY](./Methods/TODAY.md) | number | 返回 *MM/dd/yy* 格式的当前日期。 |
-| [TRANSPOSE](./Methods/TRANSPOSE.md) | [ApiRange](../ApiRange/ApiRange.md) | 将垂直单元格范围转换为水平范围，反之亦然。 |
-| [TREND](./Methods/TREND.md) | number | 使用最小二乘法返回与已知数据点匹配的线性趋势中的数字。 |
+| [TRANSPOSE](./Methods/TRANSPOSE.md) | (number \| string \| boolean)[][] | 将垂直单元格范围转换为水平范围，反之亦然。 |
+| [TREND](./Methods/TREND.md) | number[][] | 使用最小二乘法返回与已知数据点匹配的线性趋势中的数字。 |
 | [TRIM](./Methods/TRIM.md) | string | 从文本字符串中删除所有空格，但单词之间的单个空格除外。 |
 | [TRIMMEAN](./Methods/TRIMMEAN.md) | number | 返回一组数据值内部部分的平均值。 |
 | [TRUE](./Methods/TRUE.md) | boolean | 返回 **true** 逻辑值。 |
@@ -398,13 +400,13 @@
 | [UPPER](./Methods/UPPER.md) | string | 将文本字符串转换为全部大写字母。 |
 | [VALUE](./Methods/VALUE.md) | number | 将表示数字的文本字符串转换为数字。 |
 | [VAR](./Methods/VAR.md) | number | 基于样本估算方差（忽略样本中的逻辑值和文本）。 |
-| [VARA](./Methods/VARA.md) | number | 基于样本估算方差，包括逻辑值和文本。文本和 **false** 逻辑值为 0；**true** 逻辑值为 1。 |
+| [VARA](./Methods/VARA.md) | number | 基于样本估算方差，包括逻辑值和文本。 |
 | [VARP](./Methods/VARP.md) | number | 基于整体总体计算方差（忽略总体中的逻辑值和文本）。 |
-| [VARPA](./Methods/VARPA.md) | number | 基于整体总体计算方差，包括逻辑值和文本。文本和 **false** 逻辑值为 0；**true** 逻辑值为 1。 |
+| [VARPA](./Methods/VARPA.md) | number | 基于整个总体计算方差，包括逻辑值和文本。 |
 | [VAR_P](./Methods/VAR_P.md) | number | 基于整体总体计算方差（忽略总体中的逻辑值和文本）。 |
 | [VAR_S](./Methods/VAR_S.md) | number | 基于样本估算方差（忽略样本中的逻辑值和文本）。 |
 | [VDB](./Methods/VDB.md) | number | 使用双倍余额递减法或其他指定方法，返回资产在任何指定期间（包括部分期间）的折旧。 |
-| [VLOOKUP](./Methods/VLOOKUP.md) | number \| string | 在表格的最左列中查找值，然后从指定列返回同一行中的值。默认情况下，表格必须按升序排序。 |
+| [VLOOKUP](./Methods/VLOOKUP.md) | number \| string | 在表格的最左列中查找值，然后从指定列返回同一行中的值。 |
 | [WEEKDAY](./Methods/WEEKDAY.md) | number | 返回 1 到 7 之间的数字，标识指定日期是星期几。 |
 | [WEEKNUM](./Methods/WEEKNUM.md) | number | 返回年份中的周数。 |
 | [WEIBULL](./Methods/WEIBULL.md) | number | 返回威布尔分布。 |
@@ -413,11 +415,11 @@
 | [WORKDAY_INTL](./Methods/WORKDAY_INTL.md) | number | 返回指定工作日数之前或之后日期的序列号，可自定义周末参数。 |
 | [XIRR](./Methods/XIRR.md) | number | 返回现金流计划的内部收益率。 |
 | [XNPV](./Methods/XNPV.md) | number | 返回现金流计划的净现值。 |
-| [XOR](./Methods/XOR.md) | boolean | 返回所有参数的逻辑**异或**值。当 **true** 输入的数量为奇数时函数返回 **true**，当 **true** 输入的数量为偶数时返回 **false**。 |
+| [XOR](./Methods/XOR.md) | boolean | 返回所有参数的逻辑**异或**值。 |
 | [YEAR](./Methods/YEAR.md) | number | 返回日期的年份，范围为 1900-9999 的整数。 |
 | [YEARFRAC](./Methods/YEARFRAC.md) | number | 返回表示开始日期和结束日期之间完整天数的年份分数。 |
 | [YIELD](./Methods/YIELD.md) | number | 返回定期支付利息的有价证券的收益率。 |
-| [YIELDDISC](./Methods/YIELDDISC.md) | number | 返回折价有价证券的年收益率。例如，国库券。 |
+| [YIELDDISC](./Methods/YIELDDISC.md) | number | 返回折价有价证券的年收益率。 |
 | [YIELDMAT](./Methods/YIELDMAT.md) | number | 返回到期支付利息的有价证券的年收益率。 |
 | [ZTEST](./Methods/ZTEST.md) | number | 返回 z 检验的单尾 P 值。 |
 | [Z_TEST](./Methods/Z_TEST.md) | number | 返回 z 检验的单尾 P 值。 |

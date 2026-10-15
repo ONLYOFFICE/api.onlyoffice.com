@@ -8,7 +8,7 @@ Applies the text settings to the entire contents of the table.
 expression.SetTextPr(oTextPr);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

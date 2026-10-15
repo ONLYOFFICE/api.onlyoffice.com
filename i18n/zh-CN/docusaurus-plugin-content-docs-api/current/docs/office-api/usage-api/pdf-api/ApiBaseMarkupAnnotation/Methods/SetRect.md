@@ -1,8 +1,30 @@
 # SetRect
 
-设置批注矩形。
+设置注释矩形。
+
+:::note
+不适用于图章。使用 SetScale 方法更改图章大小。
+:::
 
 继承自 [ApiBaseAnnotation.SetRect](../../ApiBaseAnnotation/Methods/SetRect.md)。
+
+## 语法
+
+```javascript
+expression.SetRect(rect);
+```
+
+`expression` - 表示 [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 批注的新边界矩形。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 

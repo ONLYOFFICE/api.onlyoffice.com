@@ -8,7 +8,7 @@ Returns the comparison operator of the icon criterion.
 expression.GetOperator();
 ```
 
-`expression` - A variable that represents a [ApiIconCriterion](../ApiIconCriterion.md) class.
+`expression` - A variable that represents an [ApiIconCriterion](../ApiIconCriterion.md) class.
 
 ## Parameters
 

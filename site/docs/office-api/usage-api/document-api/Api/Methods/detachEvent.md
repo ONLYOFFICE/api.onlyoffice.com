@@ -8,7 +8,7 @@ Unsubscribes from the specified event.
 expression.detachEvent(eventName);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.detachEvent(eventName);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

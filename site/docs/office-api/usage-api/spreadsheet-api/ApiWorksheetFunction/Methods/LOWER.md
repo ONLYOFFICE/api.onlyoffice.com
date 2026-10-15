@@ -8,7 +8,7 @@ Converts all letters in a text string to lowercase.
 expression.LOWER(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

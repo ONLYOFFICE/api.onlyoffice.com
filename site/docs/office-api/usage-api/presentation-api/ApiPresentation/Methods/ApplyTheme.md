@@ -8,7 +8,7 @@ Applies a theme to all the slides in the presentation.
 expression.ApplyTheme(oApiTheme);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 
@@ -34,9 +34,9 @@ const slide = presentation.GetSlideByIndex(0);
 
 const master = presentation.GetMaster(0);
 const colorScheme = Api.CreateThemeColorScheme([
-	Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51), Api.CreateRGBColor(230, 179, 117), Api.CreateRGBColor(235, 235, 235),
-	Api.CreateRGBColor(163, 21, 21), Api.CreateRGBColor(128, 43, 43), Api.CreateRGBColor(0, 0, 0), Api.CreateRGBColor(128, 128, 128),
-	Api.CreateRGBColor(176, 196, 222), Api.CreateRGBColor(65, 105, 225), Api.CreateRGBColor(255, 255, 255), Api.CreateRGBColor(255, 213, 191)
+	Api.RGB(255, 111, 61), Api.RGB(51, 51, 51), Api.RGB(230, 179, 117), Api.RGB(235, 235, 235),
+	Api.RGB(163, 21, 21), Api.RGB(128, 43, 43), Api.RGB(0, 0, 0), Api.RGB(128, 128, 128),
+	Api.RGB(176, 196, 222), Api.RGB(65, 105, 225), Api.RGB(255, 255, 255), Api.RGB(255, 213, 191)
 ], "New color scheme");
 const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
 const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);

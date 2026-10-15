@@ -1,7 +1,6 @@
 # SetTableCellMarginBottom
 
-Specifies an amount of space which will be left between the bottom extent of the cell contents and the border
-of all table cells within the parent table (or table row).
+Specifies an amount of space which will be left between the bottom extent of the cell contents and the border of all table cells within the parent table (or table row).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ of all table cells within the parent table (or table row).
 expression.SetTableCellMarginBottom(nValue);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

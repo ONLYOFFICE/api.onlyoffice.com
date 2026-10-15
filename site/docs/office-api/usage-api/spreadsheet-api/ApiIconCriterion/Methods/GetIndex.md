@@ -8,7 +8,7 @@ Returns the index of the icon criterion in the collection.
 expression.GetIndex();
 ```
 
-`expression` - A variable that represents a [ApiIconCriterion](../ApiIconCriterion.md) class.
+`expression` - A variable that represents an [ApiIconCriterion](../ApiIconCriterion.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetTabs](../../ApiParaPr/Methods/GetTabs.md)。
 
+## 语法
+
+```javascript
+expression.GetTabs();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[TabStop](../../Enumeration/TabStop.md)[]
+
 ## 示例
 
 检索文档中段落设置的制表位。

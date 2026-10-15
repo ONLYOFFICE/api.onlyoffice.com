@@ -8,7 +8,7 @@ Specifies whether to repeat item labels for all pivot fields in the specified pi
 expression.SetRepeatAllLabels(repeat);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

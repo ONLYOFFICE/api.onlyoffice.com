@@ -4,6 +4,22 @@ Returns the widow control value of the current paragraph.
 
 Inherited from [ApiParaPr.GetWidowControl](../../ApiParaPr/Methods/GetWidowControl.md).
 
+## Syntax
+
+```javascript
+expression.GetWidowControl();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| undefined
+
 ## Example
 
 Read the widow control setting of a paragraph in a document.

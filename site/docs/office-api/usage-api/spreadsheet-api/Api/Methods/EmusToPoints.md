@@ -8,7 +8,7 @@ Converts EMUs (English Metric Units) to points.
 expression.EmusToPoints(emu);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

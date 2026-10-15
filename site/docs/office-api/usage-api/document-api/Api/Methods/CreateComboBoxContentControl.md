@@ -8,7 +8,7 @@ Creates a new combo box container with the given list of options.
 expression.CreateComboBoxContentControl(list, selected);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

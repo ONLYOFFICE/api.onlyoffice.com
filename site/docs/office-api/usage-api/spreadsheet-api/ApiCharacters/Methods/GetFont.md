@@ -8,7 +8,7 @@ Returns the ApiFont object that represents the font of the specified characters.
 expression.GetFont();
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

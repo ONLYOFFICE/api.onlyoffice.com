@@ -8,7 +8,7 @@ Returns the font applied by the current format condition.
 expression.GetFont();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -41,7 +41,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let font = condition1.GetFont();
 if (font) {

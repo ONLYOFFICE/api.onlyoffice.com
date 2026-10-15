@@ -4,12 +4,28 @@ Removes the current drawing from the selection.
 
 Inherited from [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md).
 
+## Syntax
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Deselect a drawing while keeping other shapes selected in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I remove a single drawing from the current selection in a spreadsheet?
+// Remove a single drawing from the current selection in a spreadsheet.
 
 // Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 

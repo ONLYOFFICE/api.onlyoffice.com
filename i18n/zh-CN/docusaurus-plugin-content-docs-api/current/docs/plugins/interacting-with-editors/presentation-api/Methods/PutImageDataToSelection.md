@@ -1,6 +1,7 @@
 # PutImageDataToSelection
 
 用参数中指定的图像替换第一个选定的图形。
+
 如果没有选择图形，该方法将在当前位置插入图像。
 
 ## 语法
@@ -9,7 +10,7 @@
 expression.PutImageDataToSelection(oImageData);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../presentation-api.md) 类的变量。
 
 ## 参数
 

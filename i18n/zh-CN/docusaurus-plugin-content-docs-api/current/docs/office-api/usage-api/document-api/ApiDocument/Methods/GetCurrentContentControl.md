@@ -4,22 +4,35 @@
 
 继承自 [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentContent/Methods/GetCurrentContentControl.md)。
 
+## 语法
+
+```javascript
+expression.GetCurrentContentControl();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
+
 ## 示例
 
-检索文档中当前选定的内容控件。
+获取文档中当前选中的内容控件。
 
 ```javascript editor-docx
-// How do I get the content control that is active at the cursor position in a document?
+// How do I get the active content control at the cursor position in a document?
 
-// Verify which control is selected before applying conditional formatting or reading its contents.
+// Check which control the user is interacting with by reading the current selection in a document.
 
 const doc = Api.GetDocument();
 
-const blockSdt = Api.CreateBlockLvlSdt();
-blockSdt.GetContent().GetElement(0).AddText('Content inside the control.');
-doc.AddElement(0, blockSdt);
-
-blockSdt.Select();
+const inlineSdt = doc.AddCheckBoxContentControl();
+inlineSdt.Select();
 const currentCC = doc.GetCurrentContentControl();
 
 const paragraph = Api.CreateParagraph();

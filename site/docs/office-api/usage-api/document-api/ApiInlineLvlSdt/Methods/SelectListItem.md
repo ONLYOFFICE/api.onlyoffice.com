@@ -8,7 +8,7 @@ Sets the selected item for a combo box list or drop-down list.
 expression.SelectListItem(name);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

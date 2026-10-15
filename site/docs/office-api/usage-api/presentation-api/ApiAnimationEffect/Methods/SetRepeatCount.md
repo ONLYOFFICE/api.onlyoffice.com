@@ -8,7 +8,7 @@ Sets the repeat count for the animation effect.
 expression.SetRepeatCount(count);
 ```
 
-`expression` - A variable that represents a [ApiAnimationEffect](../ApiAnimationEffect.md) class.
+`expression` - A variable that represents an [ApiAnimationEffect](../ApiAnimationEffect.md) class.
 
 ## Parameters
 
@@ -35,7 +35,7 @@ const slide = presentation.GetSlideByIndex(0);
 const shape = Api.CreateShape(
 	'rect',
 	150 * 36000, 100 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107)),
+	Api.CreateSolidFill(Api.RGB(61, 74, 107)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 shape.SetPosition(100 * 36000, 80 * 36000);
@@ -52,7 +52,7 @@ const repeatCount = effect.GetRepeatCount();
 const infoShape = Api.CreateShape(
 	'rect',
 	150 * 36000, 40 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(200, 200, 200)),
+	Api.CreateSolidFill(Api.RGB(200, 200, 200)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 infoShape.SetPosition(20 * 36000, 10 * 36000);

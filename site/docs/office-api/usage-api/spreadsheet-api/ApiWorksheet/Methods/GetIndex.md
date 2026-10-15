@@ -8,7 +8,7 @@ Returns a sheet index.
 expression.GetIndex();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -28,6 +28,6 @@ Find the position of a sheet among all sheets in a spreadsheet.
 // Identify the sheet order index and display it in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let leftMargin = worksheet.GetLeftMargin();
-worksheet.GetRange("A1").SetValue("Left margin: " + leftMargin + " mm");
+let index = worksheet.GetIndex();
+worksheet.GetRange("A1").SetValue("Sheet index: " + index);
 ```

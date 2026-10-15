@@ -14,7 +14,7 @@ expression.SetOutlineLvl(lvl);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| lvl | 可选 | Number \| null \| undefined |  | 大纲级别。可能的值：1-9。要取消大纲级别，请不带参数使用此方法。 |
+| lvl | 可选 | Number \| null \| undefined |  | 大纲级别。可能的值：1-9。值 1 表示基本大纲级别。要设置为无大纲级别，请不带参数调用此方法。 |
 
 ## 返回值
 
@@ -32,7 +32,7 @@ boolean
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 const content = shape.GetContent();

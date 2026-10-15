@@ -170,7 +170,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Lock a file
 
-A PUT request is sent to [/api/2.0/files/file/:fileId/lock](/docspace/api-backend/usage-api/lock-file) with the payload:
+A PUT request is sent to [/api/2.0/files/file/:fileId/lock](/docspace/api-backend/usage-api/files/files/lock-file) with the payload:
 
 - `lockFile`: True — Lock a file.
   
@@ -278,7 +278,7 @@ This re-enables editing for the file.
 
 ## Step 3: View file access list
 
-A GET request is sent to [/api/2.0/files/file/:fileId/protectusers](/docspace/api-backend/usage-api/get-protected-file-users).
+A GET request is sent to [/api/2.0/files/file/:fileId/protectusers](/docspace/api-backend/usage-api/files/files/get-protected-file-users).
 
 It returns a list of users and their access levels for the file.
 

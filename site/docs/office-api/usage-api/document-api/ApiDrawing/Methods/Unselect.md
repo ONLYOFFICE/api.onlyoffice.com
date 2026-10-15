@@ -8,7 +8,7 @@ Removes the current graphic object from the selection.
 expression.Unselect();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 Remove a shape from the current selection while keeping other shapes selected in a document.
 
 ```javascript editor-docx
-// How do I deselect a single drawing without clearing the whole selection in a document?
+// Deselect a single drawing without clearing the whole selection in a document.
 
 // Fine-tune a multi-shape selection by excluding one specific shape in a document.
 

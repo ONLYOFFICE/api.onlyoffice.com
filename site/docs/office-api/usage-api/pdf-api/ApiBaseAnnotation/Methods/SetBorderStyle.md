@@ -8,13 +8,13 @@ Sets annotation border style.
 expression.SetBorderStyle(borderStyle);
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| borderStyle | Required | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | The border style: **"solid"** or **"dashed"**. |
+| borderStyle | Required | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | The border style: `"solid"` or `"dashed"`. |
 
 ## Returns
 

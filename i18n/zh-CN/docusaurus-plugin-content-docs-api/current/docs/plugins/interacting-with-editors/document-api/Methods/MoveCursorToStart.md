@@ -1,6 +1,7 @@
 # MoveCursorToStart
 
 将光标移动到当前编辑区域（文档正文、页眉/页脚、脚注或自选图形）的开头。
+
 此方法类似于按下 **Ctrl + Home** 键盘快捷键。
 
 ## 语法
@@ -9,7 +10,7 @@
 expression.MoveCursorToStart(isMoveToMainContent);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

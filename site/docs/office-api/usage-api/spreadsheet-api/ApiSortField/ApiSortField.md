@@ -1,6 +1,6 @@
 # ApiSortField
 
-Represents the ApiSortField class.
+Class representing a single sort field within a SortFields collection.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -17,6 +17,8 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | SortOn | [XlSortOn](../Enumeration/XlSortOn.md) | Returns or sets what value is used as the sort criteria. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

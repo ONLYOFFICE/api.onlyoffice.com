@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetBorderWidth](../../ApiBaseWidget/Methods/SetBorderWidth.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderWidth(borderWidth);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| borderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 要设置的边框宽度。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 设置 PDF 中字段控件的边框粗细。

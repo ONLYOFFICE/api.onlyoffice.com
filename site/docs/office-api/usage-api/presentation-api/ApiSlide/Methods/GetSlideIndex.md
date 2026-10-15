@@ -8,7 +8,7 @@ Returns a position of the current slide in the presentation.
 expression.GetSlideIndex();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

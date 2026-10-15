@@ -4,6 +4,24 @@ Replaces the placeholder by a drawing on the slide.
 
 Inherited from [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md).
 
+## Syntax
+
+```javascript
+expression.ReplacePlaceholder(drawing);
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| drawing | Required | [Drawing](../../Enumeration/Drawing.md) |  | The drawing object that will replace the placeholder. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Replace a placeholder with an image in a presentation.
@@ -30,6 +48,6 @@ const shapeCopy = shape.Copy();
 shapeCopy.SetPosition(0, Api.MillimetersToEmus(48));
 slide.AddObject(shapeCopy);
 
-const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
+const image = Api.CreateImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
 ```

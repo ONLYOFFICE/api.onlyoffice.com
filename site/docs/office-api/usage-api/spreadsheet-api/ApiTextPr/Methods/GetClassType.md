@@ -8,7 +8,7 @@ Returns a type of the ApiTextPr class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 

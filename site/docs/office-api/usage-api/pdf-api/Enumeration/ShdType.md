@@ -16,9 +16,9 @@ Enumeration
 Add a green shadow to the table.
 
 ```javascript editor-pdf
-// How to change a table shadow type.
+// How do I change the shading type of a table?
 
 // Indicate a clear shadow type of the table.
 
-tablePr.SetShd("clear", 0, 255, 0, false);
+tablePr.SetShd(Api.CreateShd("clear", Api.Color(0, 255, 0)));
 ```

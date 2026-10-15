@@ -5,14 +5,17 @@ Applies added redact.
 ## Syntax
 
 ```javascript
-expression.ApplyRedact();
+expression.ApplyRedact(includeForms, includeAnnots);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
-This method doesn't have any parameters.
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| includeForms | Optional | boolean | true | specifies whether form fields should be included in the redaction. |
+| includeAnnots | Optional | boolean | true | specifies whether annotations should be included in the redaction. |
 
 ## Returns
 
@@ -29,6 +32,7 @@ Hide sensitive content permanently in a PDF.
 
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
+doc.AddPage(0);
 let page = doc.GetPage(0);
 page.AddObject(redactAnnot);
 doc.ApplyRedact();

@@ -8,7 +8,7 @@ Creates a copy of the current slide object.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

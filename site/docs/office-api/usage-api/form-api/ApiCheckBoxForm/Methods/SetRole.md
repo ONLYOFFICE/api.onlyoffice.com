@@ -4,37 +4,49 @@ Sets the role to the current form.
 
 Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
+## Syntax
+
+```javascript
+expression.SetRole(role);
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| role | Required | string |  | The role which will be attached to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign a role to a form field to control who fills it in a document.
+Assign a named role to checkbox forms in a document.
 
 ```javascript editor-forms
-// How do I associate a form field with a specific role in a document?
+// How do I restrict a form field to a specific group of users in a document?
 
-// Restrict which signers or participants are responsible for a given field.
+// Control who is responsible for filling each checkbox by attaching a role to it in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let roles = doc.GetFormRoles();
+roles.Add("Visitor");
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
+checkBoxForm.SetRole("Visitor");
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+checkBoxForm.SetRole("Visitor");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let role = checkBoxForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

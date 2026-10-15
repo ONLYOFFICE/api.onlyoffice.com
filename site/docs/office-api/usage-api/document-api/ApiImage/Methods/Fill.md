@@ -4,6 +4,24 @@ Sets the fill formatting properties to the current graphic object.
 
 Inherited from [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md).
 
+## Syntax
+
+```javascript
+expression.Fill(oFill);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the graphic object. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a radial gradient fill to a copied shape in a document.

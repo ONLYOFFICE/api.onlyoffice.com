@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseField.IsRequired](../../ApiBaseField/Methods/IsRequired.md)。
 
+## 语法
+
+```javascript
+expression.IsRequired();
+```
+
+`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查 PDF 中的表单字段是否必须在提交前填写。

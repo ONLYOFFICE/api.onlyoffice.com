@@ -4,6 +4,24 @@ Gets option from list options.
 
 Inherited from [ApiBaseListField.GetOption](../../ApiBaseListField/Methods/GetOption.md).
 
+## Syntax
+
+```javascript
+expression.GetOption(index);
+```
+
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | Required | number |  | The option index. |
+
+## Returns
+
+[ListOption](../../Enumeration/ListOption.md)
+
 ## Example
 
 Retrieve a specific choice from a dropdown field in a PDF.

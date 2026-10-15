@@ -8,7 +8,7 @@ Specifies minor tick mark for the vertical axis.
 expression.SetVertAxisMinorTickMark(sTickMark);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -31,7 +31,7 @@ Set the style of minor tick marks on the vertical axis of a chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("scatter", [
+let chart = Api.CreateChart("XYScatter", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
@@ -43,9 +43,9 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
-chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
-chart.SetHorAxisTitle("Year", 11);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 20);
+chart.SetHorAxisTitle("Year", 22);
 chart.SetVertAxisMinorTickMark("out");
-chart.SetTitle("Financial Overview", 13);
+chart.SetTitle("Financial Overview", 26);
 paragraph.AddDrawing(chart);
 ```

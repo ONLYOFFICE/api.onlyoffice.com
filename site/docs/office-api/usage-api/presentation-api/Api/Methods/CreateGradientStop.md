@@ -8,7 +8,7 @@ Creates a gradient stop used for different types of gradients.
 expression.CreateGradientStop(color, pos);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

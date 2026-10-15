@@ -20,15 +20,15 @@ sidebar_position: -3
 3. 用调试模式运行脚本：
 
    - **对于 ONLYOFFICE 文档**：请按 **F12** 键打开开发者控制台。
-   - **对于桌面编辑器**: 请参阅在 ONLYOFFICE 桌面编辑器中的调试[说明](../../desktop-editors/usage-api/debugging.md)。
+   - **对于桌面编辑器**：请参阅在 ONLYOFFICE 桌面编辑器中的调试[说明](../../desktop-editors/usage-api/debugging.md)。
 
-4. 点击![Play icon](/assets/images/plugins/play.svg)运行脚本。
+4. 点击![运行图标](/assets/images/plugins/play.svg)运行脚本。
 
    :::note
    **debugger** 命令仅在开发者工具开启的情况下生效。若未开启，浏览器会忽略该命令。
    :::
 
-   ![Debugger](/assets/images/plugins/debugger.png#gh-light-mode-only)![Debugger](/assets/images/plugins/debugger.dark.png#gh-dark-mode-only)
+   ![调试器](/assets/images/plugins/debugger.png#gh-light-mode-only)![调试器](/assets/images/plugins/debugger.dark.png#gh-dark-mode-only)
 
 **debugger** 命令会充当断点，脚本执行到该命令时会暂停。
 

@@ -8,7 +8,7 @@ Adds a comment to the current range.
 expression.AddComment(sText, sAuthor, sUserId);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Returns
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## Example
 

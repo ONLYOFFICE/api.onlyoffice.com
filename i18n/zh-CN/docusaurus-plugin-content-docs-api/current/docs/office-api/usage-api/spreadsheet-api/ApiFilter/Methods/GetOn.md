@@ -2,8 +2,8 @@
 
 指示此列是否应用了任何筛选器。
 
-当该列存在以下至少一种基础结构时，
-该属性为 true：
+当该列存在以下至少一种基础结构时，该属性为 true：
+
 - Filters
 - CustomFiltersObj
 - DynamicFilter

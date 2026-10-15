@@ -8,7 +8,7 @@ Returns an element by its position in the document.
 expression.GetElement(nPos);
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetElement(nPos);
 
 ## Returns
 
-[DocumentElement](../../Enumeration/DocumentElement.md)
+[DocumentElement](../../Enumeration/DocumentElement.md) \| null \| undefined
 
 ## Example
 

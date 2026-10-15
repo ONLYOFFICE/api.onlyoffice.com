@@ -4,37 +4,43 @@ Returns the role of the current form.
 
 Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
+## Syntax
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the role assigned to a form field in a document.
+Read the role assigned to a checkbox form in a document.
 
 ```javascript editor-docx
-// How do I get the role of a form field in a document?
+// How do I find out the role of a checkbox form in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Determine the purpose or permission level of a checkbox form field before processing it in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let role = checkBoxForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

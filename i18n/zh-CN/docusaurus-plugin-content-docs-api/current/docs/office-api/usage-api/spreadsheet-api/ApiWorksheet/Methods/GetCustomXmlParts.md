@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 获取与当前工作表关联的自定义 XML 管理器。
+
 此管理器允许操作和访问当前工作表中的自定义 XML 部分。
 
 ## 语法
@@ -24,7 +25,7 @@ expression.GetCustomXmlParts();
 访问工作表上的自定义 XML 存储以在电子表格中添加和查找 XML 部件。
 
 ```javascript editor-xlsx
-// How do I store and retrieve custom XML data on a sheet in a spreadsheet?
+// Store and retrieve custom XML data on a sheet in a spreadsheet.
 
 // Manage structured XML content attached to a worksheet by adding a part and fetching it by ID in a spreadsheet.
 

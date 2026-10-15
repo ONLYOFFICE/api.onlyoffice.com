@@ -1,6 +1,8 @@
 # SMALL
 
-Returns the k-th smallest value in a data set. For example, the fifth smallest number.
+Returns the k-th smallest value in a data set.
+
+For example, the fifth smallest number.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the k-th smallest value in a data set. For example, the fifth smallest n
 expression.SMALL(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

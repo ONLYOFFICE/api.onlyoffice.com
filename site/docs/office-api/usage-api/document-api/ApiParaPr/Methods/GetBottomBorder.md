@@ -8,7 +8,7 @@ Returns the bottom border of the current paragraph.
 expression.GetBottomBorder();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -30,7 +30,7 @@ Retrieve the bottom border settings applied to a paragraph in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let paraPr = paragraph.GetParaPr();
-paraPr.SetBottomBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetBottomBorder("single", 24, 0, Api.Color(255, 111, 61));
 paragraph.AddText("This is a paragraph with a bottom border.");
 let border = paraPr.GetBottomBorder();
 let paragraph2 = Api.CreateParagraph();

@@ -8,7 +8,7 @@ Sets the application ID to the current OLE object.
 expression.SetApplicationId(sAppId);
 ```
 
-`expression` - A variable that represents a [ApiOleObject](../ApiOleObject.md) class.
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
 
 ## Parameters
 

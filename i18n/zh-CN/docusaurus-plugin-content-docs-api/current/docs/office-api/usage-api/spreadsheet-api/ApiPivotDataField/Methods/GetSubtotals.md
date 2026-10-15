@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md)。
 
+## 语法
+
+```javascript
+expression.GetSubtotals();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
+
 ## 示例
 
 检索电子表格中为透视字段激活的小计计算。

@@ -1,6 +1,7 @@
 # SetParagraphHtml
 
 Replaces all content of the specified paragraph with the content parsed from the given HTML string.
+
 If the HTML contains multiple block-level elements, their inline content is merged into the target paragraph.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetParagraphHtml(html, paraId);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

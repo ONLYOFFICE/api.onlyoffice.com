@@ -1,8 +1,10 @@
 # ApiPathCommand
 
-Represents the ApiPathCommand class.
+Class representing a path command.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

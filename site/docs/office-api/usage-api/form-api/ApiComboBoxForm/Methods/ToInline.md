@@ -1,34 +1,53 @@
 # ToInline
 
 Converts the current form to an inline form.
-*Picture form can't be converted to an inline form, it's always a fixed size object.*
+
+:::note
+A picture form can't be converted to an inline form, as it's always a fixed-size object.
+:::
 
 Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
+## Syntax
+
+```javascript
+expression.ToInline();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Convert a fixed-size form field back to an inline form in a document.
+Convert a combo box form to an inline form in a document.
 
 ```javascript editor-forms
-// How do I switch a form field from fixed size to inline positioning in a document?
+// How do I change a combo box form to an inline form in a document?
 
-// Allow a form field to flow with surrounding text instead of occupying a fixed block.
+// Switch a fixed-size combo box back to inline flow so it sits naturally within a paragraph in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.ToFixed(10 * 240, 2 * 240);
-let copyForm = textForm.Copy();
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.ToFixed(7 * 240, 2 * 240);
+let copyForm = comboBoxForm.Copy();
 paragraph = Api.CreateParagraph();
 paragraph.AddElement(copyForm);
 doc.Push(paragraph);
 copyForm.ToInline();
-let fixed = textForm.IsFixed();
-let fixedCopy = copyForm.IsFixed();
+let isFixed = comboBoxForm.IsFixed();
+let isFixedCopy = copyForm.IsFixed();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document has a fixed size: " + fixed);
+paragraph.AddText("The first form from this document has a fixed size: " + isFixed);
 paragraph.AddLineBreak();
-paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
+paragraph.AddText("The second form from this document has a fixed size: " + isFixedCopy);
 doc.Push(paragraph);
 ```

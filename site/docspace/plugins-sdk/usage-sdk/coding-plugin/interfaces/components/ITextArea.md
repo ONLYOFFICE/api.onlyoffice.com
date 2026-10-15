@@ -1,6 +1,8 @@
-# ITextArea
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ITextArea.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ITextArea.ts#L99)
+# ITextArea
 
 Custom textarea.
 
@@ -79,11 +81,9 @@ const commentBox: ITextArea = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -106,6 +106,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `copyInfoText?` | `boolean` | Specifies whether the toast / information text will be displayed when copying. |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```

@@ -8,7 +8,7 @@ Creates a copy of the specified drawing object.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-Duplicate a shape and place the copy on another slide in a presentation.
+Duplicate a drawing and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
 // How do I make a copy of a shape in a presentation?

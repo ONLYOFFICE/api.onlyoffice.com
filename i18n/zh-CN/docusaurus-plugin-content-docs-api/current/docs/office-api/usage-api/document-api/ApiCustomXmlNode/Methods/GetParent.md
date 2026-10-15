@@ -23,7 +23,7 @@ expression.GetParent();
 导航到文档中自定义 XML 节点的父节点。
 
 ```javascript editor-docx
-// How do I get the parent node of a custom XML node in a document?
+// Get the parent node of a custom XML node in a document.
 
 // Move up the XML tree from a child element to find its containing node in a document.
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseWidget.Delete](../../ApiBaseWidget/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从 PDF 移除表单字段控件。

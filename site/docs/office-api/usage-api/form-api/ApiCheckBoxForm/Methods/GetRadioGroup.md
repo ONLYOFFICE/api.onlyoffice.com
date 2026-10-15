@@ -8,7 +8,7 @@ Returns the radio group key if the current checkbox is a radio button.
 expression.GetRadioGroup();
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

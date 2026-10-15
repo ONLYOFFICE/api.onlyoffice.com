@@ -8,7 +8,7 @@ Sets the date operator for time period conditions.
 expression.SetDateOperator(DateOperator);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -43,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTimePeriod", "xlThisMonth");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original operator:");
 worksheet.GetRange("C2").SetValue(condition1.GetDateOperator() || "None");

@@ -8,11 +8,13 @@ For the interaction with the **web document builder service** the POST requests 
 Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 :::
 
+:::note
+Starting from version 10.0, the Document Builder API can be turned off with the `services.CoAuthoring.server.docbuilderEnable` [server setting](../get-started/configuration/server-config/server-config.md#server). In this case, the requests to the `https://documentserver/docbuilder` address are rejected with the HTTP 403 status code.
+:::
+
 ## Request parameters
 
-```mdx-code-block
 <APITable>
-```
 
 | Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,9 +24,7 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 | token     | string  | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#document-builder).                                                                                                                                                                                                                                                                                                                                                                     |
 | url       | string  | required                  | The absolute URL to the `.js` script file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-```mdx-code-block
 </APITable>
-```
 
 The `.js` script file is a JavaScript file that uses the [Office JavaScript API](../../office-api/get-started/overview.md) to generate output document files (documents, spreadsheets, or presentations). It uses `builder.CreateFile()` to create a document, the Office API classes to manipulate content, `builder.SaveFile()` to specify the output format and name, and `builder.CloseFile()` to finalize. You can find more information about the script file syntax [here](../../document-builder/using-cli/script-file.md). Once document generation is complete, the response with the absolute URL to the resulting file will be returned (see below).
 
@@ -40,9 +40,7 @@ When using `builder.OpenFile()` in your script, you must provide an absolute URL
 
 The request result is returned in JSON format.
 
-```mdx-code-block
 <APITable name="response">
-```
 
 | Parameter | Type    | Example                                         | Description                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,9 +49,7 @@ The request result is returned in JSON format.
 | key       | string  | `af86C7e71Ca8`                                  | The unique identifier of the document generation task. If the `key` parameter was provided in the request, the same value is returned. If the `key` parameter was not provided in the first asynchronous request, a new key is generated by the **document builder service**. Use this value in all subsequent polling requests.        |
 | urls      | object  | `{"output.docx": "https://documentserver/..."}` | An object containing the absolute URLs to the generated output files. The object keys are the output file names as specified in the `.js` script. This parameter is present only when the `end` value is `true`.                                                                                                                        |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Sample script
 
@@ -269,6 +265,40 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 See [Comparing documents](../../document-builder/using-cli/comparing-documents.md) for more details about document comparison.
+
+## Sending the script as a file
+
+Starting from version 10.0, the `.js` script file can be sent in the request itself instead of the URL. The script is sent with a POST request in the `multipart/form-data` format to the `https://documentserver/docbuilder/from-file` address.
+
+<APITable name="from-file">
+
+| Part   | Type   | Presence | Description |
+| ------ | ------ | -------- | ----------- |
+| file   | file   | required | The `.js` script file. Only one file can be sent. Its size is limited by the `FileConverter.converter.maxDownloadBytes` [server setting](../get-started/configuration/server-config/server-config.md#converter). A larger file is rejected with the HTTP 413 status code. The file can be omitted only when checking the status of an asynchronous request by its `key`. |
+| params | string | required | The request parameters as a JSON object: `argument`, `async`, and `key`. The `url` parameter is not used. The `params` part can be omitted if the parameters are sent in a token. |
+| token  | string | optional | The token with the request parameters. The token can also be sent as the `token` field of the `params` part or in the `Authorization` header. When the token validation is enabled, the parameters are taken from the token only. The token payload must contain the `operation` field with the `docbuilder` value and must not contain the `url` field. |
+
+</APITable>
+
+The response is the same as for the requests to the `/docbuilder` address. To check the status of an asynchronous request, send the `params` part with the returned `key` value without the `file` part.
+
+```bash
+curl -X POST "https://documentserver/docbuilder/from-file" \
+  -F 'params={"async":false}' \
+  -F 'file=@script.js'
+```
+
+**Response:**
+
+```json
+{
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "output.docx": "https://documentserver/output.docx"
+  },
+  "end": true
+}
+```
 
 ## Possible error codes and their description
 

@@ -1,7 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of this paragraph are displayed along with a line appearing directly below the character
-(less than all the spacing above and below the characters on the line).
+Specifies that the contents of this paragraph are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ Specifies that the contents of this paragraph are displayed along with a line ap
 expression.SetUnderline(isUnderline);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

@@ -8,13 +8,13 @@ Freezes the first column or columns of the current worksheet.
 expression.FreezeColumns(count);
 ```
 
-`expression` - A variable that represents a [ApiFreezePanes](../ApiFreezePanes.md) class.
+`expression` - A variable that represents an [ApiFreezePanes](../ApiFreezePanes.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| count | Optional | Number | 0 | Optional number of columns to freeze, or zero to unfreeze all columns. |
+| count | Optional | Number \| null \| undefined | 0 | Optional number of columns to freeze, or zero to unfreeze all columns. |
 
 ## Returns
 

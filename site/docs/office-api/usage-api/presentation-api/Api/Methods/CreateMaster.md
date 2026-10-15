@@ -8,7 +8,7 @@ Creates a new slide master.
 expression.CreateMaster(oTheme);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.CreateMaster(oTheme);
 
 ## Returns
 
-[ApiMaster](../../ApiMaster/ApiMaster.md)
+[ApiMaster](../../ApiMaster/ApiMaster.md) \| null \| undefined
 
 ## Example
 

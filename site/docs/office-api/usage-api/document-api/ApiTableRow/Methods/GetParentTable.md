@@ -8,7 +8,7 @@ Returns the parent table of the current row.
 expression.GetParentTable();
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 
@@ -35,6 +35,6 @@ table.SetStyle(tableStyle);
 table.SetWidth("percent", 100);
 let row = table.GetRow(0);
 let parentTable = row.GetParentTable();
-parentTable.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
+parentTable.SetTableBorderBottom("single", 32, 0, Api.Color(51, 51, 51));
 doc.Push(parentTable);
 ```

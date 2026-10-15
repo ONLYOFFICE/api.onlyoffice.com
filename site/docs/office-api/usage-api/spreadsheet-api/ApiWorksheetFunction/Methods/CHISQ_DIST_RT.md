@@ -8,7 +8,7 @@ Returns the right-tailed probability of the chi-squared distribution.
 expression.CHISQ_DIST_RT(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

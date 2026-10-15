@@ -8,7 +8,7 @@ Returns the current state of the checkbox form as a boolean value.
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the error function integrated between 0 and the specified lower limit.
 expression.ERF_PRECISE(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

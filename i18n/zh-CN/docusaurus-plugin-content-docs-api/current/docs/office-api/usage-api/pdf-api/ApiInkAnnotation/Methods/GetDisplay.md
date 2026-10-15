@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetDisplay](../../ApiBaseAnnotation/Methods/GetDisplay.md)。
 
+## 语法
+
+```javascript
+expression.GetDisplay();
+```
+
+`expression` - 表示 [ApiInkAnnotation](../ApiInkAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[DisplayType](../../Enumeration/DisplayType.md)
+
 ## 示例
 
 检索 PDF 中注释的显示首选项设置。

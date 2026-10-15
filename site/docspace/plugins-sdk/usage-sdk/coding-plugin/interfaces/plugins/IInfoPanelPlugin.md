@@ -1,6 +1,8 @@
-# IInfoPanelPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IInfoPanelPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IInfoPanelPlugin.ts#L88)
+# IInfoPanelPlugin
 
 The plugin that is embedded as a separate tab in the file info panel.
 
@@ -120,16 +122,12 @@ Update the info panel item
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `infoPanelItems` | `Map`\<`string`, [`IInfoPanelItem`](../items/IInfoPanelItem.md)\> | Stores a collection of elements where the keys are the key parameters from the InfoPanelItem objects. A list for embedding into the info panel is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

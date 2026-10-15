@@ -2,13 +2,15 @@
 
 Sets the text color to the current text run.
 
+Inherited from [ApiTextPr.SetFill](../../ApiTextPr/Methods/SetFill.md).
+
 ## Syntax
 
 ```javascript
 expression.SetFill(oApiFill);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

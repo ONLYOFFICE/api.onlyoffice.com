@@ -1,4 +1,4 @@
-﻿# getForgotten
+# getForgotten
 
 请求一个被遗忘的文件。
 

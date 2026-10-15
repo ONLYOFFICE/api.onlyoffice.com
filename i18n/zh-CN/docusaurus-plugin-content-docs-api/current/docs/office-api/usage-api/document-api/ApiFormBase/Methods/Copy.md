@@ -16,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiForm](../../Enumeration/ApiForm.md)
+[ApiForm](../../Enumeration/ApiForm.md) \| null \| undefined
 
 ## 示例
 

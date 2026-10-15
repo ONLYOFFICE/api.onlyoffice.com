@@ -1,6 +1,10 @@
 # SetSeriesFill
 
-设置指定图表系列的填充。
+为指定的图表系列设置填充。
+
+:::note
+填充不适用于二维折线图和散点图系列。请使用 SetSeriesOutLine 方法更改其线条，使用 SetMarkerFill 方法更改其标记。
+:::
 
 ## 语法
 
@@ -43,8 +47,8 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "3DColumnClustered", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

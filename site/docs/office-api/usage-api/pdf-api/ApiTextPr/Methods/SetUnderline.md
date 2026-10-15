@@ -1,7 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the run are displayed along with a line appearing directly below the character
-(less than all the spacing above and below the characters on the line).
+Specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ Specifies that the contents of the run are displayed along with a line appearing
 expression.SetUnderline(isUnderline);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -23,7 +22,7 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-Add an underline to text in a PDF.
+Add an underline to text using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I underline text in a PDF?

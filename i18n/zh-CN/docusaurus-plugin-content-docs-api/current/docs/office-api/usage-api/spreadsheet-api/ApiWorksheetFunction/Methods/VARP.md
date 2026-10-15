@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-在电子表格中基于整个总体计算方差（忽略总体中的逻辑值和文本）。
+在电子表格中使用 VARP 兼容性函数基于整个总体计算方差。
 
 ```javascript editor-xlsx
 // The VARP function computes population variance from numeric data only.

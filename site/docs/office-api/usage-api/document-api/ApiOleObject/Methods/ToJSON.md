@@ -4,6 +4,25 @@ Converts the ApiDrawing object into the JSON object.
 
 Inherited from [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md).
 
+## Syntax
+
+```javascript
+expression.ToJSON(bWriteNumberings, bWriteStyles);
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bWriteNumberings | Required | boolean |  | Specifies if the used numberings will be written to the JSON object or not. |
+| bWriteStyles | Required | boolean |  | Specifies if the used styles will be written to the JSON object or not. |
+
+## Returns
+
+JSON
+
 ## Example
 
 Serialize a drawing to JSON and restore it as a new shape in a document.

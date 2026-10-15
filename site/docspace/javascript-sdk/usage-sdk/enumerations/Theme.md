@@ -1,35 +1,27 @@
-# Enumeration: Theme
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:84](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L84)
+import APITable from '@site/src/components/APITable/APITable';
 
-The available application themes.
+# Theme
+
+The UI color theme. Passed via [TFrameConfig.theme](../type-aliases/TFrameConfig.md#theme).
+
+## Example
+
+```typescript
+sdk.initFrame({ theme: Theme.Dark, ... });
+```
 
 ## Enumeration Members
 
-### Base
+<APITable>
 
-> **Base**: `"Base"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `Base` | `"Base"` | Light theme. |
+| `Dark` | `"Dark"` | Dark theme. |
+| `System` | `"System"` | Follows the OS / browser preferred color scheme. |
 
-Defined in: [enums/index.ts:86](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L86)
-
-The light/base theme.
-
-***
-
-### Dark
-
-> **Dark**: `"Dark"`
-
-Defined in: [enums/index.ts:88](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L88)
-
-The dark mode theme.
-
-***
-
-### System
-
-> **System**: `"System"`
-
-Defined in: [enums/index.ts:90](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L90)
-
-Follows the system UI theme.
+</APITable>

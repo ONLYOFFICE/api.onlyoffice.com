@@ -1,6 +1,7 @@
 # GetAttribute
 
 Retrieves the attribute value from the custom XML node.
+
 If the attribute doesn't exist, it returns `false`.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute doesn't exist, it returns `false`.
 expression.GetAttribute(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -26,7 +27,7 @@ string \| null
 Read the value of a specific attribute from a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I get a single attribute value from a custom XML node in a document?
+// Get a single attribute value from a custom XML node in a document.
 
 // Look up stored metadata on an XML element by fetching one of its named attributes in a document.
 

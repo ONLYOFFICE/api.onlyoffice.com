@@ -1,4 +1,4 @@
-﻿# info
+# info
 
 请求文档状态，以及打开编辑过文档的用户的标识符列表。响应将被发送到 [callback handler](../../usage-api/callback-handler.md) 回调处理程序。
 

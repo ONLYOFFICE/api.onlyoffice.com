@@ -4,6 +4,26 @@
 
 继承自 [ApiBaseField.AddWidget](../../ApiBaseField/Methods/AddWidget.md)。
 
+## 语法
+
+```javascript
+expression.AddWidget(pageIndex, rect, isCopy);
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| pageIndex | 必需 | number |  | 要添加小部件的页面索引 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 字段矩形 |
+| isCopy | 可选 | boolean | true | 新控件是否具有与原控件相同的外观和操作设置 |
+
+## 返回值
+
+[ApiWidget](../../Enumeration/ApiWidget.md) \| null \| undefined
+
 ## 示例
 
 在 PDF 中为表单字段添加视觉表示。

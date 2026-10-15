@@ -18,7 +18,7 @@ sidebar_position: -6
 
 2. 调用 [AddContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#addcontextmenuitem) 方法向右键菜单添加按钮。
 
-   **示例**:
+   **示例**：
 
    ``` ts
    Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
@@ -41,7 +41,7 @@ sidebar_position: -6
 
 要更新右键菜单项，调用 [UpdateContextMenuItem](../interacting-with-editors/overview/asc-plugin.md#updatecontextmenuitem) 方法。
 
-**示例**:
+**示例**：
 
 ```ts
 Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
@@ -66,7 +66,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 
 2. 使用 **attachContextMenuClickEvent** 添加事件监听器，该函数会在右键菜单中指定按钮被点击并触发事件时调用。对于每个右键菜单按钮，可以通过其 ID 指定单独的事件监听器。
 
-   **参数**:
+   **参数**：
 
    | 名称 | 类型 | 描述 |
    | ---- | ---- | ---- |
@@ -75,7 +75,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
 
    **返回值**：此方法不返回任何数据。
 
-   **示例**:
+   **示例**：
 
    ``` ts
    Asc.plugin.attachContextMenuClickEvent("onNameClick", (data) => {

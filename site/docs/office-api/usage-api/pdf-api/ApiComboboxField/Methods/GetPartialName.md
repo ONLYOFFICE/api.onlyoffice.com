@@ -4,6 +4,22 @@ Gets field partial name.
 
 Inherited from [ApiBaseField.GetPartialName](../../ApiBaseField/Methods/GetPartialName.md).
 
+## Syntax
+
+```javascript
+expression.GetPartialName();
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the local name of a form field in a PDF.
@@ -19,5 +35,5 @@ let textField = Api.CreateTextField([10, 10, 160, 30]);
 page.AddObject(textField);
 
 textField.SetPartialName('EXAMPLE');
-textField.SetValue('Field partial name is: ' + textField.GetFullName());
+textField.SetValue('Field partial name is: ' + textField.GetPartialName());
 ```

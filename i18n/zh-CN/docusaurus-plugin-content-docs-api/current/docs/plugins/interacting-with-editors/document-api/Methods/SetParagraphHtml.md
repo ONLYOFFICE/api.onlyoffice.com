@@ -1,6 +1,7 @@
 # SetParagraphHtml
 
 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。
+
 如果 HTML 包含多个块级元素，其内联内容将合并到目标段落中。
 
 :::note
@@ -13,7 +14,7 @@
 expression.SetParagraphHtml(html, paraId);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 

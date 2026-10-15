@@ -8,7 +8,7 @@ Returns a type of the ApiDocument class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -28,6 +28,7 @@ Identify the type of a PDF document object.
 // Display the classification of a PDF document in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);
 page.AddObject(textField);

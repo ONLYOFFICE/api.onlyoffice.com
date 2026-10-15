@@ -8,7 +8,7 @@ Returns a parent of the combo box / drop-down list content control.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiContentControlList](../ApiContentControlList.md) class.
+`expression` - A variable that represents an [ApiContentControlList](../ApiContentControlList.md) class.
 
 ## Parameters
 

@@ -1,6 +1,6 @@
 # FALSE
 
-Returns the - **false** logical value.
+Returns the **false** logical value.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the - **false** logical value.
 expression.FALSE();
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

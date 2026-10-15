@@ -68,11 +68,9 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. The IP address of such an integrator must be included in the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list). At the same time, access for all the other integrators must be denied.
 
 :::note
-By default, all the IP addresses are considered trusted.
-:::
+By default, the `*` rule allows all the IP addresses. Starting from version 10.0, this is not enough for WOPI: ONLYOFFICE Docs sends requests only to a WOPI host that is explicitly allowed by a rule with its IP address or DNS name. A rule that consists only of wildcards, such as `*`, does not count.
 
-:::warning
-Starting from ONLYOFFICE Docs version 10.0.0, specifying your WOPI host in the IP filter rules is **mandatory** for WOPI to work, even though all the IP addresses are trusted by default. The catch-all `*` rule does not name a host, so it does not satisfy this requirement — without a rule that explicitly allows your WOPI host, documents cannot be opened via WOPI.
+To allow unlisted WOPI hosts temporarily while you add the rules, set the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi) to `false`. This makes the server vulnerable to server-side request forgery (SSRF).
 :::
 
 Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
@@ -129,11 +127,7 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 
 ### Requiring an explicit rule for the WOPI host
 
-Whether WOPI requires an explicit rule for its host is controlled by the following parameter:
-
-| Name                     | Type    | Example | Description                                                                                                                           |
-| ------------------------ | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| wopi.requireIpFilterRule | boolean | true    | Whether every WOPI host must be named by a *services.CoAuthoring.ipfilter.rules* entry before the server will contact it. The default value is **true**. |
+Whether WOPI requires an explicit rule for its host is controlled by the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi). The default value is **true**.
 
 *services.CoAuthoring.ipfilter.rules* is consulted for every WOPI request regardless of this setting — a host with no matching *allowed* rule at all is refused either way. What *wopi.requireIpFilterRule* controls is narrower: whether a match against the catch-all `*` rule is enough to trust the host, or whether the matched rule must explicitly name it. The catch-all `*` rule does not count as an explicit match — this is why the default rule set (`{"address": "*", "allowed": true}`) does not satisfy this requirement: without a rule that explicitly names your WOPI host, WOPI will not work, even though the IP filter itself remains wide open.
 

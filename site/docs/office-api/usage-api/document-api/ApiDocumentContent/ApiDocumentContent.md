@@ -1,8 +1,10 @@
 # ApiDocumentContent
 
-Represents the ApiDocumentContent class.
+Class representing a container for paragraphs and tables.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -19,20 +21,21 @@ Represents the ApiDocumentContent class.
 | [GetClassType](./Methods/GetClassType.md) | "documentContent" | Returns a type of the ApiDocumentContent class. |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | Returns an array of document elements from the current ApiDocumentContent object. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
-| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |
-| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |
-| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
-| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
+| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | Returns the current paragraph where the cursor is located. |
+| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) \| null \| undefined | Returns the current run where the cursor is located. |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | [ApiDocumentVisitor](../ApiDocumentVisitor/ApiDocumentVisitor.md) | Returns a visitor object for traversing the elements of the current document. |
+| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | Returns an element by its position in the document. |
+| [GetElementIndex](./Methods/GetElementIndex.md) | Number | Returns the position (index) of the specified element within the current document content. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current document content. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the document content. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | Check if the current document content is an endnote. |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | Check if the current document content is a footnote. |
-| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. If this document content is not a footnote/endnote, does nothing. |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified. |
-| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing. |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, |
+| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Selects the reference to this footnote/endnote. |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocumentContent object into the JSON object. |

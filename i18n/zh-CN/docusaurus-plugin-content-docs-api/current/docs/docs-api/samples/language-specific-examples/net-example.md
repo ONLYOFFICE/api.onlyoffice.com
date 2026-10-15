@@ -1,121 +1,67 @@
 ---
-sidebar_label: .Net example
 sidebar_position: -10
+description: 运行 ONLYOFFICE 文档 .NET 集成示例，并将其连接到您的 ONLYOFFICE 文档服务器。
+tags: ["Docs", "Integration", "C#"]
 ---
 
-# .Net (C#) 集成
+# .NET (C#) 集成
 
-## 概述
-
-本示例将帮助您把ONLYOFFICE 文档集成到用.Net（C#）或.Net（C#MVC）编写的Web应用程序中。
+.NET 集成示例是两个基于 .NET Framework 4.8 的小型 ASP.NET 应用程序：使用 Web Forms 构建的 `csharp`，以及使用 ASP.NET MVC 构建的 `csharp-mvc`。它们都可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。在编写您自己的集成之前，运行其中任意一个示例即可看到一个完整可用的集成。这些示例只能在 Windows 上通过 IIS 运行。
 
 :::warning
-本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+本示例仅用于测试。它没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它的人都可以读取和修改其中的文件。请勿在公共服务器上运行此示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 先决条件
 
-在使用测试示例时，请牢记以下安全方面的内容：
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **.NET Framework 4.8**：请参阅[官方网站](https://dotnet.microsoft.com/download/dotnet-framework/net48)。
+- **Internet Information Services (IIS)**：请参阅[官方网站](https://learn.microsoft.com/iis/get-started/whats-new-in-iis-10/installing-iis-10)。
+- **Visual Studio**：请参阅[官方网站](https://visualstudio.microsoft.com/downloads/)。
+- **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-- 由于无需授权，存储不受未经授权访问的保护。
-- 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
+在 **Windows 功能**中启用 IIS 时，请展开 **Internet Information Services** > **万维网服务**，并选中 **.NET Extensibility 4.8**、**ASP.NET 4.8**、**ISAPI 扩展**、**ISAPI 筛选器**、**默认文档**和**请求筛选**。在 Visual Studio 中，请安装 **ASP.NET 和 Web 开发**工作负载。
 
-## 步骤 1.安装ONLYOFFICE 文档
+## 步骤1. 下载示例
 
-下载并安装ONLYOFFICE 文档（打包为文档服务器）：
-
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-如需了解如何安装ONLYOFFICE 文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
-
-## 步骤2.下载用于集成编辑器的.Net（C#）/.Net（C#MVC）代码
-
-下载发布存档并解压，或从GitHub克隆源代码：[.Net (C#)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp) 或 [.Net (C# MVC)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp-mvc)。
-
-对于 .Net (C#)：
+克隆示例仓库，进入您要运行的示例目录，并获取其子模块。以下命令使用的是 [Web Forms 示例](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/csharp)。对于 [MVC 示例](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/csharp-mvc)，请改为进入 `csharp-mvc` 目录：
 
 ```sh
-curl --output DotNet.Csharp.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip
-unzip DotNet.Csharp.Example.zip
+git clone --depth 1 https://github.com/ONLYOFFICE/document-server-integration
+cd document-server-integration/web/documentserver-example/csharp
+git submodule update --init --depth 1 .
 ```
 
-对于 .Net (C# MVC)：
+## 步骤2. 配置连接
 
-```sh
-curl --output DotNet.Csharp.MVC.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip
-unzip DotNet.Csharp.MVC.Example.zip
-```
-
-要将编辑器连接到您的网站，请在`settings.config`文件（对于MVC版本则是`web.appsettings.config`文件）中指定编辑器的安装路径和存储文件夹的路径：
+打开 `settings.config` 文件（MVC 示例中为 `web.appsettings.config`）并编辑以下键：
 
 ```xml
-<add key="storage-path" value=""/>
-<add key="files.docservice.url.site" value="https://documentserver/" />
+<appSettings>
+  <add key="files.docservice.url.site" value="http://documentserver/"/>
+  <add key="storage-path" value=""/>
+  <add key="files.docservice.secret" value="" />
+  <add key="files.docservice.url.example" value=""/>
+</appSettings>
 ```
 
-其中，`documentserver`是安装了ONLYOFFICE 文档的服务器名称，`storage-path`是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+- `files.docservice.url.site`：安装了 ONLYOFFICE 文档的服务器地址。请将 `documentserver` 替换为该服务器的名称或 IP 地址，并保留末尾的斜杠。
+- `storage-path`：示例创建和存储文件的文件夹。如果该值为空，示例会将文件存储在其自身的文件夹中，位于以用户 IP 地址命名的子文件夹内。您可以设置一个绝对路径，例如 `D:\folder`。IIS 应用程序池标识需要对该文件夹具有读写权限。
+- `files.docservice.secret`：必须与 ONLYOFFICE 文档的 JWT 设置一致。该键默认为空，这会在示例中禁用 JWT。ONLYOFFICE 文档默认启用 JWT，因此请将此键设置为您服务器的[密钥](/docs/docs-api/additional-api/signature/signature.md)。
+- `files.docservice.url.example`：ONLYOFFICE 文档访问示例时使用的地址。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为您在浏览器中打开的地址（例如 `localhost`）在那里指向的是其他位置。
 
-如果您想尝试配置编辑器，请修改`DocEditor.aspx`文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
+如果您想尝试配置编辑器，请修改 `DocEditor.aspx.cs` 文件（MVC 示例中为 `Models/FileModel.cs`）中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3.安装先决条件
+## 步骤3. 构建并运行示例
 
-检查您的系统是否满足以下要求：
+1. 在 Visual Studio 中打开 `OnlineEditorsExample.sln`（MVC 示例中为 `OnlineEditorsExampleMVC.sln`），然后选择**生成** > **生成解决方案**。Visual Studio 会还原 NuGet 包，并将示例编译到 `bin` 文件夹中。
+2. 在 IIS 管理器中，右键单击**网站**，然后选择**添加网站**。将**物理路径**设置为示例文件夹，并将**端口**设置为任意空闲端口。
+3. 在**应用程序池**中，确保新网站所用的应用程序池的 **.NET CLR 版本**为 `v4.0`。
+4. 右键单击该网站，然后选择**管理网站** > **浏览**。
 
-- **Microsoft.NET Framework**:Microsoft.NET Framework：4.5版本（可从[Microsoft官方网站](https://www.microsoft.com/zh-cn/download/details.aspx?id=30653)下载）；
-- **Internet Information Services**:7版本或更高版本。
+浏览器将打开 `http://localhost:<port>/`。您将看到示例的起始页面，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单。
 
-配置IIS组件以使服务器正常工作：
+## 故障排除
 
-1. 打开Windows功能：
-
-   **开始**->**控制面板**->**程序**->**程序和功能**->**启用或关闭Windows功能**
-
-2. 在打开的窗口中，找到**Internet Information Services**，并勾选下图中所选的所有功能：
-
-   ![Windows features](/assets/images/csharp/server-components.png)
-
-## 步骤4. 配置 JWT
-
-打开 `settings.config` 文件（或 MVC 版本的 `web.appsettings.config` 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
-
-```xml
-<add key="files.docservice.secret" value="secret" />
-```
-
-## 步骤5.运行带有编辑器的网站
-
-1. 运行Internet Information Service（IIS）管理器：
-
-   **开始**->**控制面板**->**系统和安全**->**管理工具**->**Internet Information Services (IIS)管理器**
-
-2. 在IIS管理器中添加您的网站。
-
-   在**连接**面板中，右键单击树状结构中的**网站**节点，然后单击**添加网站**。
-
-   <img alt="Connections" src="/assets/images/csharp/add.png" width="320px" />
-
-3. 在**添加网站**对话框中，在**网站名称**框中指定包含.Net（C#）/.Net（C# MVC）项目的文件夹名称。
-
-   在**物理路径**框中指定项目文件夹的路径。
-
-   在**端口**框中指定仅用于此网站的唯一值。
-
-   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="483px" />
-
-4. 检查IIS管理器中为您的网站指定的.NET平台版本。选择**v4.0**版本。
-
-   **应用程序池**->右键单击平台名称->**设置应用程序池默认值**->**.NET CLR版本**
-
-   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="439px" />
-
-5. 使用IIS管理器浏览您的网站：
-
-   右键单击网站->**管理网站**->**浏览**
-
-   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="400px" />
-
-## 步骤 6.检查可访问性
-
-如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
+- **文档安全令牌的格式不正确**：示例中未启用 JWT（`files.docservice.secret` 为空），或者 `files.docservice.secret` 与 ONLYOFFICE 文档的密钥不一致。
+- **下载失败**：ONLYOFFICE 文档无法访问示例。请在 `settings.config`（MVC 示例中为 `web.appsettings.config`）中将 `files.docservice.url.example` 设置为 ONLYOFFICE 文档可以解析的地址。

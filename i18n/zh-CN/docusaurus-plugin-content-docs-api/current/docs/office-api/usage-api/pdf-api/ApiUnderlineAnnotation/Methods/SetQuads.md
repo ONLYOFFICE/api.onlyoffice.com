@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseMarkupAnnotation.SetQuads](../../ApiBaseMarkupAnnotation/Methods/SetQuads.md)。
 
+## 语法
+
+```javascript
+expression.SetQuads(quads);
+```
+
+`expression` - 表示 [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| quads | 必需 | [Quad](../../Enumeration/Quad.md)[] |  | 定义高亮区域的四边形数组。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 指定 PDF 中标记注释的高亮区域。

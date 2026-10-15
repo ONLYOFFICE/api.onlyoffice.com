@@ -4,6 +4,22 @@ Gets the x position of the drawing on the slide.
 
 Inherited from [ApiDrawing.GetPosX](../../ApiDrawing/Methods/GetPosX.md).
 
+## Syntax
+
+```javascript
+expression.GetPosX();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[EMU](../../Enumeration/EMU.md)
+
 ## Example
 
 Get the horizontal position of a shape in a presentation.

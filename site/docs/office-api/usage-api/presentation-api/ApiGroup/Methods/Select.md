@@ -4,12 +4,30 @@ Selects the current graphic object.
 
 Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 
+## Syntax
+
+```javascript
+expression.Select(isReplace);
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | Optional | boolean | false | Specifies whether the selection should replace the current selection (true) or be added to it (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
 Select and deselect shapes on a slide in a presentation.
 
 ```javascript editor-pptx
-// How do I select multiple shapes and replace the selection in a presentation?
+// Select multiple shapes and replace the selection in a presentation.
 
 // Create several shapes and choose them individually or add them to the selection in a presentation.
 

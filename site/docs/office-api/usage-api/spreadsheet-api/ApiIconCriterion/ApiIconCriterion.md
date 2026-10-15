@@ -1,6 +1,6 @@
 # ApiIconCriterion
 
-Represents the ApiIconCriterion class.
+Class representing a single icon criterion.
 
 ## Properties
 
@@ -13,6 +13,8 @@ Represents the ApiIconCriterion class.
 | Value | string \| number | Returns or sets the threshold value of the icon criterion. |
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

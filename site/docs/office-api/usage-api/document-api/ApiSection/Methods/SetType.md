@@ -1,7 +1,8 @@
 # SetType
 
-Specifies a type of the current section. The section type defines how the contents of the current 
-section are placed relative to the previous section.
+Specifies a type of the current section.
+
+The section type defines how the contents of the current section are placed relative to the previous section.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ section are placed relative to the previous section.
 expression.SetType(sType);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

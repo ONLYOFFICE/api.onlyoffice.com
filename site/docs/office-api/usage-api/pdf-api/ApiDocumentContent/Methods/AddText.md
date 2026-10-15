@@ -8,7 +8,7 @@ Appends the specified text to the end of the document content.
 expression.AddText(text);
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds a data field to the pivot table report.
 expression.AddDataField(field);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

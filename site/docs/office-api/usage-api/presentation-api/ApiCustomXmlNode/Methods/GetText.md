@@ -1,6 +1,7 @@
 # GetText
 
 Returns the inner text of the current node and its child nodes.
+
 For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 
 ## Syntax
@@ -9,7 +10,7 @@ For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 expression.GetText();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -24,7 +25,7 @@ string
 Extract text from an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I read the text inside an XML node in a presentation?
+// Read the text inside an XML node in a presentation.
 
 // Retrieve the string content of an XML element in a presentation.
 

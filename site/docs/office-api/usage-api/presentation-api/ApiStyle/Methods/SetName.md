@@ -1,0 +1,43 @@
+# SetName
+
+Sets a name to the current style.
+
+## Syntax
+
+```javascript
+expression.SetName(styleName);
+```
+
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| styleName | Required | string |  | The name which will be used for the current style. |
+
+## Returns
+
+boolean
+
+## Example
+
+Set a new name for the table style in a presentation.
+
+```javascript editor-pptx
+// Helps when renaming a table style.
+
+// Get a table style, rename it, and display the new name.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const table = Api.CreateTable(3, 3);
+const style = presentation.GetStyle("Dark Style 1 - Accent 2");
+style.SetName("My Custom Table Style");
+table.SetStyle(style);
+const paragraph = Api.CreateParagraph();
+paragraph.AddText("New style name: " + style.GetName());
+table.GetCell(0, 0).GetContent().Push(paragraph);
+slide.RemoveAllObjects();
+slide.AddObject(table);
+```

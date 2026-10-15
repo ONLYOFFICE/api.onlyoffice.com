@@ -4,12 +4,28 @@
 
 继承自 [ApiDrawing.Unselect](../../ApiDrawing/Methods/Unselect.md)。
 
+## 语法
+
+```javascript
+expression.Unselect();
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 取消选择绘图同时在电子表格中保持其他形状的选中状态。
 
 ```javascript editor-xlsx
-// How do I remove a single drawing from the current selection in a spreadsheet?
+// Remove a single drawing from the current selection in a spreadsheet.
 
 // Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 

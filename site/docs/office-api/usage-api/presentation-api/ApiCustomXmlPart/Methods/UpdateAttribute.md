@@ -8,7 +8,7 @@ Updates an attribute of the XML node at the specified XPath.
 expression.UpdateAttribute(xPath, name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -27,7 +27,7 @@ boolean
 Update the value of an attribute in a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How do I modify an existing attribute in an XML element in a presentation?
+// Modify an existing attribute in an XML element in a presentation.
 
 // Display the updated XML with the new attribute value in a presentation.
 
@@ -36,7 +36,7 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
 const xmlManager = presentation.GetCustomXmlParts();
-const xml = xmlManager.Add('<content xmlns="http://example" version="1.0"></content>');
+const xml = xmlManager.Add('<content xmlns="http://example.com" version="1.0"></content>');
 xml.UpdateAttribute('/content', 'version', '2.0');
 
 const fill = Api.CreateSolidFill(Api.HexColor('#00897B'));

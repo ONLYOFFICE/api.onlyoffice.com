@@ -1,7 +1,10 @@
 # GetTextSize
 
 Gets widget text size.
-💡  Text size === 0 means autofit 
+
+:::note
+Text size === 0 means autofit.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Gets widget text size.
 expression.GetTextSize();
 ```
 
-`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+`expression` - A variable that represents an [ApiBaseWidget](../ApiBaseWidget.md) class.
 
 ## Parameters
 
@@ -17,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[pt](../../Enumeration/pt.md)
+[hps](../../Enumeration/hps.md)
 
 ## Example
 
@@ -36,7 +39,7 @@ page.AddObject(textField);
 textField.AddWidget(0, [10, 40, 160, 60]);
 let widgets = textField.GetAllWidgets();
 widgets.forEach(function(widget) {
-    widget.SetTextSize(15);
+    widget.SetTextSize(30);
 });
 let textSize = widgets[0].GetTextSize();
 textField.SetValue('Text size is: ' + textSize);

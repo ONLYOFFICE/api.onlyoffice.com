@@ -4,20 +4,36 @@ Returns an internal id of the current form.
 
 Inherited from [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternalId.md).
 
+## Syntax
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the internal identifier of a form field in a document.
+Obtain the unique internal identifier of a combo box form in a document.
 
 ```javascript editor-docx
-// How do I get the internal ID of a form field in a document?
+// How do I get the internal identifier of a combo box form in a document?
 
-// Uniquely track a form by reading its auto-assigned internal identifier.
+// Use the identifier to reference or track a specific combo box form programmatically.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let internalId = textForm.GetInternalId();
+paragraph.AddElement(comboBoxForm);
+let internalId = comboBoxForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);

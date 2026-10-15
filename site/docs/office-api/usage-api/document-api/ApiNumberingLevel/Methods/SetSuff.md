@@ -1,6 +1,8 @@
 # SetSuff
 
-Specifies the content which will be added between the given numbering level text and the text of every numbered paragraph which references that numbering level. By default this value is "tab".
+Specifies the content which will be added between the given numbering level text and the text of every numbered paragraph which references that numbering level.
+
+By default this value is "tab".
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies the content which will be added between the given numbering level text
 expression.SetSuff(sType);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 

@@ -1,6 +1,6 @@
 # SetRegularExp
 
-Sets regular expression for field.
+Sets regular expression validate string for field.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Sets regular expression for field.
 expression.SetRegularExp(regularExpression);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

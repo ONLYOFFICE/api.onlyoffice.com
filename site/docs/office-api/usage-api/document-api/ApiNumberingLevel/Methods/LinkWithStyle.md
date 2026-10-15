@@ -8,7 +8,7 @@ Links the specified paragraph style with the current numbering level.
 expression.LinkWithStyle(oStyle);
 ```
 
-`expression` - A variable that represents a [ApiNumberingLevel](../ApiNumberingLevel.md) class.
+`expression` - A variable that represents an [ApiNumberingLevel](../ApiNumberingLevel.md) class.
 
 ## Parameters
 
@@ -36,7 +36,7 @@ for (let nLvl = 0; nLvl < 3; ++nLvl) {
     const headingLvlStyle = doc.CreateStyle("Heading " + (nLvl + 1));
     const textPr = headingLvlStyle.GetTextPr();
     textPr.SetBold(true);
-    textPr.SetColor(nLvl*125, 0, 0, false);
+    textPr.SetColor(Api.RGB(nLvl*125, 0, 0));
     headings.push(headingLvlStyle);
 }
 

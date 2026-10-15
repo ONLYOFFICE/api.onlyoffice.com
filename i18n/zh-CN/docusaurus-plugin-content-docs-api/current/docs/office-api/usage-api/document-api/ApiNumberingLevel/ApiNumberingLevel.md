@@ -1,8 +1,10 @@
 # ApiNumberingLevel
 
-表示 ApiNumberingLevel 类。
+表示对编号指定级别的引用的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -13,7 +15,7 @@
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回将应用于当前编号级别本身文本的文本属性，而非后续段落中的文本。 |
 | [LinkWithStyle](./Methods/LinkWithStyle.md) | boolean | 将指定的段落样式与当前编号级别链接。 |
 | [SetCustomType](./Methods/SetCustomType.md) | boolean | 设置您自己的自定义编号类型。 |
-| [SetRestart](./Methods/SetRestart.md) | boolean | 指定一个基于 1 的索引，用于确定编号级别何时应重新开始其起始值。当在给定文档内容中使用高于（早于此级别）指定编号级别的实例时，编号级别将重新开始。默认情况下，此值为 true。 |
-| [SetStart](./Methods/SetStart.md) | boolean | 指定在给定编号级别定义中父编号级别使用的编号起始值。默认情况下，此值为 1。 |
-| [SetSuff](./Methods/SetSuff.md) | boolean | 指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。默认情况下，此值为 “tab”。 |
+| [SetRestart](./Methods/SetRestart.md) | boolean | 指定一个基于 1 的索引，用于确定编号级别何时应重新开始其起始值。 |
+| [SetStart](./Methods/SetStart.md) | boolean | 指定在给定编号级别定义中父编号级别使用的编号起始值。 |
+| [SetSuff](./Methods/SetSuff.md) | boolean | 指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。 |
 | [SetTemplateType](./Methods/SetTemplateType.md) | boolean | 设置现有的预定义编号模板之一。 |

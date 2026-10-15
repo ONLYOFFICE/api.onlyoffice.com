@@ -8,7 +8,7 @@ Rounds a positive number up and negative number down to the nearest even integer
 expression.EVEN(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

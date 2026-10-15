@@ -8,7 +8,7 @@ Returns the absolute XPath of the current XML node.
 expression.GetXPath();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Get the full location path of an XML node in a presentation.
 
 ```javascript editor-pptx
-// How do I find the path to an XML element in a presentation?
+// Find the path to an XML element in a presentation.
 
 // Retrieve the XPath address of an XML node in a presentation.
 

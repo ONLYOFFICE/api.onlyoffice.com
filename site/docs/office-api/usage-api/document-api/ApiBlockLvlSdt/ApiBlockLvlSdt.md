@@ -1,34 +1,38 @@
 # ApiBlockLvlSdt
 
-Represents the ApiBlockLvlSdt class.
+Class representing a container for the document content.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddCaption](./Methods/AddCaption.md) | boolean | Adds a caption paragraph after (or before) the current content control. |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | Adds a comment to the current block content control. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a block content control to the current container. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the current content control. |
-| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of an block content control. Ignores comments, footnote references, complex fields. |
-| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
+| [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of a block content control. |
+| [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a collection of content control objects in the current content control. |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects in the current content control. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns a collection of paragraph objects in the current content control. |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | Gets the visualization of the content control. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current content control. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the border color of the current content control. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Returns the background color of the current content control. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Returns the border color of the current content control. |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | Returns a type of the ApiBlockLvlSdt class. |
+| [GetColor](./Methods/GetColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the tag color of the content control. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content of the current container. |
-| [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | Retrieves the data binding of the content control. |
+| [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) \| null \| undefined | Retrieves the data binding of the content control. |
 | [GetDataForXmlMapping](./Methods/GetDataForXmlMapping.md) | string | Returns the content control data for the XML mapping. |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
 | [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current content control. |
 | [GetLabel](./Methods/GetLabel.md) | number | Returns the label attribute for the current container. |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | Returns the lock type of the current container. |
+| [GetParent](./Methods/GetParent.md) | [ApiDocument](../ApiDocument/ApiDocument.md) \| [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null | Returns the document content that contains the current content control. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | Returns a content control that contains the current content control. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns a table that contains the current content control. |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns a table cell that contains the current content control. |
@@ -41,12 +45,13 @@ Represents the ApiBlockLvlSdt class.
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table or a block content control to actually add it to the current container. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Clears the contents from the current content control. |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | Replaces the current content control with a new element. |
-| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
+| [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. |
 | [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
 | [SetAppearance](./Methods/SetAppearance.md) | None | Sets the visualization of the content control. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current content control. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current content control. |
+| [SetColor](./Methods/SetColor.md) | boolean | Sets the tag color of the content control. |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
 | [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
 | [SetLabel](./Methods/SetLabel.md) | boolean | Sets the label attribute to the current container. |

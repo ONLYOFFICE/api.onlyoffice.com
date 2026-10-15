@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetRect](../../ApiBaseWidget/Methods/SetRect.md)。
 
+## 语法
+
+```javascript
+expression.SetRect(rect);
+```
+
+`expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件的新边界矩形。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中使用矩形边界调整控件大小和位置。

@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 在演示文稿中使用 XPath 从自定义 XML 部件获取节点。
 
 ```javascript editor-pptx
-// How do I retrieve nodes matching an XPath expression in a presentation?
+// Retrieve nodes matching an XPath expression in a presentation.
 
 // Display matching XML nodes in a shape in a presentation.
 

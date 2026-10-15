@@ -13,7 +13,7 @@ ONLYOFFICE 宏使用 JavaScript 语法和 [Office JavaScript API](../../office-a
 1. 打开 ONLYOFFICE 桌面编辑器或 ONLYOFFICE Docs。
 2. 导航至顶部工具栏的**视图**标签页。
 3. 点击**宏**按钮以打开宏编辑器。
-4. 编写或粘贴宏代码，然后点击 ![Play icon](/assets/images/plugins/play.svg) 运行。
+4. 编写或粘贴宏代码，然后点击 ![运行图标](/assets/images/plugins/play.svg) 运行。
 
 详细的操作步骤请参阅[入门指南](../guides/getting-started.md)。
 

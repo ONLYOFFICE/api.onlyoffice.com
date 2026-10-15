@@ -4,37 +4,39 @@ Returns the role of the current form.
 
 Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
+## Syntax
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the role assigned to a form field in a document.
+Retrieve the assigned role of a complex form in a document.
 
 ```javascript editor-docx
-// How do I get the role of a form field in a document?
+// How do I check which role is assigned to a form in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Confirm that a form is linked to the correct signer or respondent role before sending the document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let roles = doc.GetFormRoles();
+roles.Add("Customer");
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+let complexForm = Api.CreateComplexForm({"key": "Complex1", "role" : "Customer"});
+complexForm.Add("Name");
+paragraph.AddElement(complexForm);
+let role = complexForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

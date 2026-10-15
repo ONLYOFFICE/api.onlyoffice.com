@@ -4,18 +4,36 @@
 
 继承自 [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md)。
 
+## 语法
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 可选 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在文档中为表单字段应用边框颜色以突出显示。
+在文档中为组合框表单字段应用自定义边框颜色。
 
 ```javascript editor-docx
-// How do I change the border color of a form field in a document?
+// How do I change the outline color of a combo box form in a document?
 
-// Style the outline of a form field with a specific color to draw attention to it in a document.
+// Make a combo box visually distinct by giving its border a specific color in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```

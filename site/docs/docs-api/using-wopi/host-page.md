@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Host page
 
 In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](./wopi-discovery.md#wopi-actions).
@@ -87,11 +89,7 @@ The *"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= ap
 
 ## Parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name               | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,8 +97,6 @@ import APITable from '@site/src/components/APITable/APITable';
 | access\_token\_ttl | integer | The time when an [access token expires](./key-concepts.md#the-access_token_ttl-property), represented as the number of milliseconds since January 1, 1970 UTC. It is recommended to set this parameter to 10 hours. This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown. In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry. So, this is strongly recommended to specify a value for *access\_token\_ttl*. |
 | docs\_api\_config  | string  | The optional [config](../usage-api/config/config.md) parameters for opening the editor via Docs API that are not supported by the WOPI protocol. For example, to enable the [forcesaving](../get-started/how-it-works/saving-file.md#force-saving) functionality by clicking the **Save** button, the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter must be passed in this object.                                                                                                  |
 
-```mdx-code-block
 </APITable>
-```
 
 Further information about building a host page can be found [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage).

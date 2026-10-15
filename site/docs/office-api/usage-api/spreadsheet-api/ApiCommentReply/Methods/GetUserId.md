@@ -8,7 +8,7 @@ Returns the user ID of the comment reply author.
 expression.GetUserId();
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 

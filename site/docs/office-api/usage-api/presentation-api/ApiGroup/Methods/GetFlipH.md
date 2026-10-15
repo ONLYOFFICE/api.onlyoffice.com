@@ -4,6 +4,22 @@ Get horizontal flip of current drawing.
 
 Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
 
+## Syntax
+
+```javascript
+expression.GetFlipH();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null
+
 ## Example
 
 Determine if a shape is flipped left-to-right in a presentation.

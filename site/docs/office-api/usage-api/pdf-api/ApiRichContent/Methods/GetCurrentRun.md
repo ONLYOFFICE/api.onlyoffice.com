@@ -8,7 +8,7 @@ Returns the current run where the cursor is located.
 expression.GetCurrentRun();
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRichRun](../../ApiRichRun/ApiRichRun.md)
+[ApiRichRun](../../ApiRichRun/ApiRichRun.md) \| null \| undefined
 
 ## Example
 

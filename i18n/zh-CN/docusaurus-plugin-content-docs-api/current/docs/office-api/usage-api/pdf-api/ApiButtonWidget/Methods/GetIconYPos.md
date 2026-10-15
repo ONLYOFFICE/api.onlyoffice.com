@@ -23,7 +23,7 @@ expression.GetIconYPos();
 查找 PDF 中按钮控件内图标的垂直位置。
 
 ```javascript editor-pdf
-// How do I get the Y coordinate of an icon in a PDF button?
+// Useful for getting the Y coordinate of an icon in a PDF button.
 
 // Retrieve the icon's top position in a button widget in a PDF.
 
@@ -35,5 +35,5 @@ page.AddObject(buttonField);
 let widgets = buttonField.GetAllWidgets();
 widgets[0].SetLayout('iconTextV');
 widgets[0].SetImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', 'normal');
-widgets[0].SetLabel('Icon Y position is: ' + widgets[0].GetIconXPos());
+widgets[0].SetLabel('Icon Y position is: ' + widgets[0].GetIconYPos());
 ```

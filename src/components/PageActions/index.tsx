@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './styles.module.css';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
-import { ungzip } from 'pako';
 import AIIcon from '@site/static/icons/ai-icon.svg';
 import ClaudeIcon from '@site/static/icons/claude.svg';
 import ChatGPTIcon from '@site/static/icons/chatgpt.svg';
@@ -18,6 +17,10 @@ export default function PageActions(): React.JSX.Element {
     docMetadata = useDoc();
   } catch (e) {
   }
+
+  // Workspace is deprecated and gets no .md twins. Matched on the source path, not the URL,
+  // so it holds for every locale.
+  const hasMarkdown = !(docMetadata?.metadata?.source ?? '').includes('/workspace/');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -63,204 +66,45 @@ export default function PageActions(): React.JSX.Element {
     setIsMenuOpen(false);
   };
 
-  const base64ToUint8Array = (base64: string): Uint8Array => {
-    const binary = atob(base64);
-    const len = binary.length;
-    const bytes = new Uint8Array(len);
-    for (let i = 0; i < len; i++) {
-      bytes[i] = binary.charCodeAt(i);
-    }
-    return bytes;
-  };
+  // The Markdown twin of the current page, published next to its HTML at build time
+  // (/docs/docs-api/get-started/basic-concepts/ -> /docs/docs-api/get-started/basic-concepts.md).
+  const getMarkdownUrl = (): string =>
+    `${window.location.pathname.replace(/\/$/, '')}.md`;
 
-  const decompressApiSpec = (compressedApi: string): any => {
-    try {
-      const decompressed = ungzip(base64ToUint8Array(compressedApi));
-      return JSON.parse(new TextDecoder().decode(decompressed));
-    } catch (error) {
-      console.error('Failed to decompress API spec:', error);
-      return null;
-    }
-  };
-
-  const generateMarkdownFromApiSpec = (apiSpec: any): string => {
-    if (!apiSpec) {
-      throw new Error('Invalid API specification');
-    }
-
-    let markdown = '';
-
-    // Title
-    const title = apiSpec.title || apiSpec.summary || 'API Endpoint';
-    markdown += `# ${title}\n\n`;
-
-    // Method and Path
-    if (apiSpec.method && apiSpec.path) {
-      markdown += `**${apiSpec.method.toUpperCase()}** \`${apiSpec.path}\`\n\n`;
-    }
-
-    // Description
-    if (apiSpec.description) {
-      markdown += `${apiSpec.description}\n\n`;
-    }
-
-    // Parameters
-    if (apiSpec.parameters && apiSpec.parameters.length > 0) {
-      markdown += `## Parameters\n\n`;
-      apiSpec.parameters.forEach((param: any) => {
-        markdown += `### ${param.name}`;
-        if (param.required) {
-          markdown += ' (required)';
-        }
-        markdown += `\n\n`;
-
-        if (param.in) {
-          markdown += `**Location:** ${param.in}\n\n`;
-        }
-
-        if (param.schema?.type) {
-          markdown += `**Type:** ${param.schema.type}\n\n`;
-        }
-
-        if (param.description) {
-          markdown += `${param.description}\n\n`;
-        }
-      });
-    }
-
-    // Request Body
-    if (apiSpec.requestBody) {
-      markdown += `## Request Body\n\n`;
-      const content = apiSpec.requestBody.content;
-      if (content) {
-        Object.keys(content).forEach(mediaType => {
-          markdown += `**Content-Type:** ${mediaType}\n\n`;
-          if (content[mediaType].schema) {
-            markdown += '```json\n';
-            markdown += JSON.stringify(content[mediaType].schema, null, 2);
-            markdown += '\n```\n\n';
-          }
-        });
-      }
-    }
-
-    // Responses
-    if (apiSpec.responses) {
-      markdown += `## Responses\n\n`;
-      Object.keys(apiSpec.responses).forEach(statusCode => {
-        const response = apiSpec.responses[statusCode];
-        markdown += `### ${statusCode}`;
-        if (response.description) {
-          markdown += ` - ${response.description}`;
-        }
-        markdown += '\n\n';
-
-        if (response.content) {
-          Object.keys(response.content).forEach(mediaType => {
-            markdown += `**Content-Type:** ${mediaType}\n\n`;
-            if (response.content[mediaType].schema) {
-              markdown += '```json\n';
-              markdown += JSON.stringify(response.content[mediaType].schema, null, 2);
-              markdown += '\n```\n\n';
-            }
-          });
-        }
-      });
-    }
-
-    return markdown;
-  };
-
-  const getMarkdownContent = async () => {
-    const sourcePath = docMetadata?.metadata?.source || '';
-
-    // For OpenAPI files (.api.mdx), extract and decompress API spec from frontMatter
-    if (sourcePath.endsWith('.api.mdx')) {
-      const frontMatter = docMetadata.frontMatter as any;
-      if (frontMatter?.api) {
-        const apiSpec = decompressApiSpec(frontMatter.api);
-        return generateMarkdownFromApiSpec(apiSpec);
-      } else {
-        throw new Error('API specification not found in frontMatter');
-      }
-    }
-
-    // Use editUrl from docMetadata and convert to raw GitHub URL
-    const editUrl = docMetadata?.metadata?.editUrl;
-    if (!editUrl) {
-      throw new Error('Edit URL not available');
-    }
-
-    const githubRawUrl = editUrl
-      .replace('github.com', 'raw.githubusercontent.com')
-      .replace('/tree/', '/');
-
-    const response = await fetch(githubRawUrl);
+  const fetchMarkdown = async (): Promise<string> => {
+    const response = await fetch(getMarkdownUrl());
     if (!response.ok) {
       throw new Error(`Failed to fetch markdown: ${response.statusText}`);
     }
-
-    let markdown = await response.text();
-
-    markdown = markdown.replace(/^---\n[\s\S]*?\n---\n/, '');
-
-    return markdown;
+    // A missing file can still come back as the SPA shell, so check what we actually got.
+    const contentType = response.headers.get('content-type') ?? '';
+    if (!/text\/(markdown|plain)/.test(contentType)) {
+      throw new Error(`Unexpected content type: ${contentType}`);
+    }
+    return response.text();
   };
 
   const handleCopyPage = async () => {
     setIsMenuOpen(false);
 
     try {
-      const markdown = await getMarkdownContent();
-      await navigator.clipboard.writeText(markdown);
+      // WebKit rejects a write made after the await, so pass the pending fetch instead.
+      if (typeof ClipboardItem !== 'undefined' && navigator.clipboard?.write) {
+        const markdown = fetchMarkdown().then((text) => new Blob([text], { type: 'text/plain' }));
+        await navigator.clipboard.write([new ClipboardItem({ 'text/plain': markdown })]);
+      } else {
+        await navigator.clipboard.writeText(await fetchMarkdown());
+      }
     } catch (error) {
       console.error('Failed to copy page:', error);
     }
   };
 
-  const handleViewAsMarkdown = async () => {
+  // Opened directly rather than fetched first: the URL is shareable, renders as plain text,
+  // and opening synchronously keeps the browser from treating it as a blocked popup.
+  const handleViewAsMarkdown = () => {
     setIsMenuOpen(false);
-
-    try {
-      const markdown = await getMarkdownContent();
-
-      // Open markdown in a new window/tab
-      const newWindow = window.open('', '_blank');
-      if (newWindow) {
-        newWindow.document.write(`
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <title>Markdown - ${docMetadata?.metadata?.title || 'Document'}</title>
-              <style>
-                body {
-                  font-family: monospace;
-                  padding: 20px;
-                  max-width: 900px;
-                  margin: 0 auto;
-                  background: #f5f5f5;
-                  color: #333;
-                }
-                pre {
-                  white-space: pre-wrap;
-                  word-wrap: break-word;
-                  background: white;
-                  padding: 20px;
-                  border-radius: 4px;
-                  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-                }
-              </style>
-            </head>
-            <body>
-              <pre>${markdown.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
-            </body>
-          </html>
-        `);
-        newWindow.document.close();
-      }
-    } catch (error) {
-      console.error('Failed to view markdown:', error);
-    }
+    window.open(getMarkdownUrl(), '_blank');
   };
 
   const handleOpenInAI = (baseUrl: string) => {
@@ -297,14 +141,18 @@ export default function PageActions(): React.JSX.Element {
             <AIIcon className={styles.menuIconStroke} />
             <span className={styles.label}>Summarize page</span>
           </button>
-          <button role="menuitem" className={styles.menuItem} onClick={handleCopyPage}>
-            <CopyIcon className={styles.menuIconStroke} />
-            <span className={styles.label}>Copy page</span>
-          </button>
-          <button role="menuitem" className={styles.menuItem} onClick={handleViewAsMarkdown}>
-            <MarkdownIcon className={styles.menuIconStroke} />
-            <span className={styles.label}>View as markdown</span>
-          </button>
+          {hasMarkdown && (
+            <>
+              <button role="menuitem" className={styles.menuItem} onClick={handleCopyPage}>
+                <CopyIcon className={styles.menuIconStroke} />
+                <span className={styles.label}>Copy page</span>
+              </button>
+              <button role="menuitem" className={styles.menuItem} onClick={handleViewAsMarkdown}>
+                <MarkdownIcon className={styles.menuIconStroke} />
+                <span className={styles.label}>View as markdown</span>
+              </button>
+            </>
+          )}
           <button role="menuitem" className={styles.menuItem} onClick={() => handleOpenInAI('https://claude.ai/new')}>
             <ClaudeIcon className={styles.menuIcon} />
             <span className={styles.label}>Open in Claude</span>

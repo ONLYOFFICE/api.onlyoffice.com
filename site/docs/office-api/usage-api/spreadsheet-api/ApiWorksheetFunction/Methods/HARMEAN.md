@@ -8,7 +8,7 @@ Returns the harmonic mean of a data set of positive numbers: the reciprocal of t
 expression.HARMEAN(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -1,10 +1,6 @@
 # Copy
 
-复制当前 OLE 对象。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前 OLE 对象的副本。
 
 ## 语法
 
@@ -20,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null
 
 ## 示例
 

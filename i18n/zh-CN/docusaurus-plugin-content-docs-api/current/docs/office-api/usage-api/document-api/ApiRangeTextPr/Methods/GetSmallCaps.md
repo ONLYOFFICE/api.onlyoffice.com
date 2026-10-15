@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)。
 
+## 语法
+
+```javascript
+expression.GetSmallCaps();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| null \| undefined
+
 ## 示例
 
 确定文档中的文本运行是否格式化为小型大写字母。

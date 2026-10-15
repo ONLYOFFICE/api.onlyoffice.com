@@ -16,7 +16,7 @@ Enumeration
 Specify that the sort should be by column.
 
 ```javascript editor-xlsx
-// How to specify a sorting orientation (column wise or row wise) for each range.
+// How do I set the sort orientation (by columns or by rows) for each range?
 
 // Sort a range of cells indicating sorting orientation for sub ranges.
 

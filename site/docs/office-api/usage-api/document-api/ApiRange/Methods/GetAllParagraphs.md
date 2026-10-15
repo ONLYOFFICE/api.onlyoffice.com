@@ -8,7 +8,7 @@ Returns a collection of paragraphs that represents all the paragraphs in the spe
 expression.GetAllParagraphs();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

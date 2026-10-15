@@ -1,8 +1,10 @@
 # ApiContentControlListEntry
 
-表示 ApiContentControlListEntry 类。
+表示组合框/下拉列表内容控件条目的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

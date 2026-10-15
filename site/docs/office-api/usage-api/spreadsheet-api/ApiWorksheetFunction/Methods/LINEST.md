@@ -8,20 +8,20 @@ Returns statistics that describe a linear trend matching known data points, by f
 expression.LINEST(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The set of y-values from the *y = mx + b* equation. |
-| arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | An optional set of x-values from the *y = mx + b* equation. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | The set of y-values from the *y = mx + b* equation. |
+| arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | An optional set of x-values from the *y = mx + b* equation. |
 | arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, and *b* is set equal to 0 if the parameter is **false**. |
 | arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**, and return m-coefficients and the constant *b* if the parameter is **false** or omitted. |
 
 ## Returns
 
-number
+number[][]
 
 ## Example
 

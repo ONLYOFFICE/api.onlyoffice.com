@@ -8,7 +8,7 @@ Sets the background color to all cells in the current table row.
 expression.SetBackgroundColor(color);
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 

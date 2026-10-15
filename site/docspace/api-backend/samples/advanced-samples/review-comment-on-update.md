@@ -507,7 +507,7 @@ Only triggers listed in `ALLOWED_TRIGGERS` are processed. Others are ignored.
 
 ## Step 3: Read file information
 
-The handler calls GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/get-file-info)
+The handler calls GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info)
 This confirms that the file exists and the access token can read it. The file info is also used as a fallback source for a version value.
 
 <Tabs>
@@ -536,7 +536,7 @@ This confirms that the file exists and the access token can read it. The file in
 
 ## Step 4: Set the comment to "Need Review"
 
-For every matching update event, the script sets the file comment to `NEED_REVIEW_TEXT` PUT [/api/2.0/files/file/:fileId/comment](/docspace/api-backend/usage-api/update-file-comment)
+For every matching update event, the script sets the file comment to `NEED_REVIEW_TEXT` PUT [/api/2.0/files/file/:fileId/comment](/docspace/api-backend/usage-api/files/operations/update-file-comment)
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

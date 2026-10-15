@@ -8,7 +8,7 @@ Returns a number of custom XML parts in the XML manager.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ number
 Count how many XML blocks are stored in a workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out how many embedded XML entries exist in a spreadsheet?
+// Find out how many embedded XML entries exist in a spreadsheet.
 
 // Check the total number of saved XML blocks before iterating over them in a spreadsheet.
 

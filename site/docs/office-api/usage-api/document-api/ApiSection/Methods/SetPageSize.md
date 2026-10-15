@@ -8,7 +8,7 @@ Specifies the properties (size and orientation) for all the pages in the current
 expression.SetPageSize(nWidth, nHeight, isPortrait);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Adds an OLE object to the current sheet with the parameters specified.
 expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nColOffset, nFromRow, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 ## Returns
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null
 
 ## Example
 

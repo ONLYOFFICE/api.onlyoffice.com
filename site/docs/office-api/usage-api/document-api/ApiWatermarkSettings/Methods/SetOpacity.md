@@ -5,16 +5,16 @@ Sets the opacity of the watermark in the document.
 ## Syntax
 
 ```javascript
-expression.SetOpacity(nOpacity);
+expression.SetOpacity(opacity);
 ```
 
-`expression` - A variable that represents a [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
+`expression` - A variable that represents an [ApiWatermarkSettings](../ApiWatermarkSettings.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nOpacity | Required | number |  | The watermark opacity. This value must be from 0 to 255. |
+| opacity | Required | number |  | The watermark opacity. This value must be from 0 to 255. |
 
 ## Returns
 

@@ -8,7 +8,7 @@ Returns a column number for the selected cell.
 expression.GetCol();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

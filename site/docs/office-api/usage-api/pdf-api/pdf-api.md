@@ -8,11 +8,11 @@ A PDF document is organized as a sequence of *pages*. Each page can contain seve
 
 The core content elements are:
 
-- *Paragraph* (`ApiParagraph`) — a block of text. Paragraphs consist of one or more *runs* (`ApiRun`), each of which carries the text itself and its character formatting (font, size, bold, italic, color, etc.).
-- *Table* (`ApiTable`) — a grid structure whose cells (`ApiTableCell`) contain document content (paragraphs).
-- *Drawing* (`ApiDrawing`) — an image, shape, or chart placed at a specific position on the page.
+- *Paragraph* ([`ApiParagraph`](./ApiParagraph/ApiParagraph.md)) — a block of text. Paragraphs consist of one or more *runs* ([`ApiRun`](./ApiRun/ApiRun.md)), each of which carries the text itself and its character formatting (font, size, bold, italic, color, etc.).
+- *Table* ([`ApiTable`](./ApiTable/ApiTable.md)) — a grid structure whose cells ([`ApiTableCell`](./ApiTableCell/ApiTableCell.md)) contain document content (paragraphs).
+- *Drawing* ([`ApiDrawing`](./ApiDrawing/ApiDrawing.md)) — an image, shape, or chart placed at a specific position on the page.
 
-Pages and their content are accessed through the *document* (`ApiDocument`) and *page* (`ApiPage`) objects.
+Pages and their content are accessed through the *document* ([`ApiDocument`](./ApiDocument/ApiDocument.md)) and *page* ([`ApiPage`](./ApiPage/ApiPage.md)) objects.
 
 ### Annotations
 
@@ -20,12 +20,12 @@ Annotations let you mark up PDF content without modifying it. The PDF API suppor
 
 | Category | Types |
 |---|---|
-| Note/text | `ApiTextAnnotation`, `ApiFreeTextAnnotation` |
-| Markup | `ApiHighlightAnnotation`, `ApiUnderlineAnnotation`, `ApiStrikeoutAnnotation`, `ApiCaretAnnotation` |
-| Shapes | `ApiSquareAnnotation`, `ApiCircleAnnotation`, `ApiLineAnnotation`, `ApiPolyLineAnnotation`, `ApiPolygonAnnotation` |
-| Other | `ApiInkAnnotation`, `ApiStampAnnotation`, `ApiRedactAnnotation` |
+| Note/text | [`ApiTextAnnotation`](./ApiTextAnnotation/ApiTextAnnotation.md), [`ApiFreeTextAnnotation`](./ApiFreeTextAnnotation/ApiFreeTextAnnotation.md) |
+| Markup | [`ApiHighlightAnnotation`](./ApiHighlightAnnotation/ApiHighlightAnnotation.md), [`ApiUnderlineAnnotation`](./ApiUnderlineAnnotation/ApiUnderlineAnnotation.md), [`ApiStrikeoutAnnotation`](./ApiStrikeoutAnnotation/ApiStrikeoutAnnotation.md), [`ApiCaretAnnotation`](./ApiCaretAnnotation/ApiCaretAnnotation.md) |
+| Shapes | [`ApiSquareAnnotation`](./ApiSquareAnnotation/ApiSquareAnnotation.md), [`ApiCircleAnnotation`](./ApiCircleAnnotation/ApiCircleAnnotation.md), [`ApiLineAnnotation`](./ApiLineAnnotation/ApiLineAnnotation.md), [`ApiPolyLineAnnotation`](./ApiPolyLineAnnotation/ApiPolyLineAnnotation.md), [`ApiPolygonAnnotation`](./ApiPolygonAnnotation/ApiPolygonAnnotation.md) |
+| Other | [`ApiInkAnnotation`](./ApiInkAnnotation/ApiInkAnnotation.md), [`ApiStampAnnotation`](./ApiStampAnnotation/ApiStampAnnotation.md), [`ApiRedactAnnotation`](./ApiRedactAnnotation/ApiRedactAnnotation.md) |
 
-All annotation types share a common base (`ApiBaseAnnotation`) that provides border, fill, opacity, author, date, and reply properties.
+All annotation types share a common base ([`ApiBaseAnnotation`](./ApiBaseAnnotation/ApiBaseAnnotation.md)) that provides border, fill, opacity, author, date, and reply properties.
 
 ### Form fields and widgets
 
@@ -33,14 +33,15 @@ PDF forms include *fields* and *widgets*. A field defines the data model (name, 
 
 | Field type | Widget |
 |---|---|
-| `ApiTextField` | `ApiTextWidget` |
-| `ApiCheckboxField` | `ApiCheckboxWidget` |
-| `ApiRadiobuttonField` | — |
-| `ApiComboboxField` | — |
-| `ApiListboxField` | — |
-| `ApiImageField` | — |
-| `ApiDateField` | — |
-| `ApiButtonField` | `ApiButtonWidget` |
+| [`ApiTextField`](./ApiTextField/ApiTextField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiComboboxField`](./ApiComboboxField/ApiComboboxField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiListboxField`](./ApiListboxField/ApiListboxField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+| [`ApiCheckboxField`](./ApiCheckboxField/ApiCheckboxField.md) | [`ApiCheckboxWidget`](./ApiCheckboxWidget/ApiCheckboxWidget.md) |
+| [`ApiRadiobuttonField`](./ApiRadiobuttonField/ApiRadiobuttonField.md) | [`ApiCheckboxWidget`](./ApiCheckboxWidget/ApiCheckboxWidget.md) |
+| [`ApiButtonField`](./ApiButtonField/ApiButtonField.md) | [`ApiButtonWidget`](./ApiButtonWidget/ApiButtonWidget.md) |
+| [`ApiSignatureField`](./ApiSignatureField/ApiSignatureField.md) | [`ApiBaseWidget`](./ApiBaseWidget/ApiBaseWidget.md) |
+
+Date fields created with [`Api.CreateDateField`](./Api/Methods/CreateDateField.md) are [`ApiTextField`](./ApiTextField/ApiTextField.md) objects, and image fields created with [`Api.CreateImageField`](./Api/Methods/CreateImageField.md) are [`ApiButtonField`](./ApiButtonField/ApiButtonField.md) objects.
 
 ## Creating a new PDF document
 

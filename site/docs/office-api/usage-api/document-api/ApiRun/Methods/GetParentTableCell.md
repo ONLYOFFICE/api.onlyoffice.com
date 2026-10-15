@@ -8,7 +8,7 @@ Returns a table cell that contains the current run.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
@@ -41,5 +41,5 @@ paragraph.AddElement(run);
 let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 let parentTableCell = run.GetParentTableCell();
-parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
+parentTableCell.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 ```

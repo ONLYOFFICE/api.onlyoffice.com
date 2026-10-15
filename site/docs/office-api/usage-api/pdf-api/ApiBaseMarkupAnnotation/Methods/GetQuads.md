@@ -8,7 +8,7 @@ Gets quads from current markup annotation.
 expression.GetQuads();
 ```
 
-`expression` - A variable that represents a [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
 
 ## Parameters
 

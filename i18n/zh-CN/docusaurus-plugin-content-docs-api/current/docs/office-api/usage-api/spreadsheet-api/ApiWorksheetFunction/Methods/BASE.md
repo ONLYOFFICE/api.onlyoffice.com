@@ -20,7 +20,7 @@ expression.BASE(arg1, arg2, arg3);
 
 ## 返回值
 
-number
+string
 
 ## 示例
 

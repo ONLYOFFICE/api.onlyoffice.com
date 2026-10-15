@@ -8,13 +8,13 @@ Places a cursor before/after the current content control.
 expression.MoveCursorOutside(isAfter);
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current content control. |
+| isAfter | Optional | boolean \| null \| undefined | true | Specifies whether a cursor will be placed before (false) or after (true) the current content control. |
 
 ## Returns
 

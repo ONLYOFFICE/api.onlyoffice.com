@@ -8,7 +8,7 @@ Removes the current drawing from the selection.
 expression.Unselect();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 Deselect a drawing while keeping other shapes selected in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I remove a single drawing from the current selection in a spreadsheet?
+// Remove a single drawing from the current selection in a spreadsheet.
 
 // Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 

@@ -8,7 +8,7 @@ Adds a comment to the specifed document element or array of Runs.
 expression.AddComment(element, text, author, userId);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -21,7 +21,7 @@ expression.AddComment(element, text, author, userId);
 
 ## Returns
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## Example
 

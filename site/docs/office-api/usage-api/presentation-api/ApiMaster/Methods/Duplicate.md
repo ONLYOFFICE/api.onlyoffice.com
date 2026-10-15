@@ -8,7 +8,7 @@ Creates a duplicate of the specified slide master object, adds the new slide mas
 expression.Duplicate(nPos);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

@@ -14,11 +14,11 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。 |
+| sType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。"textRect" 类型会创建文本框：它没有填充和轮廓，使用主题文本颜色，且其高度随文本变化。 |
 | nWidth | 可选 | [EMU](../../Enumeration/EMU.md) | 914400 | 以英制度量单位表示的形状宽度。 |
 | nHeight | 可选 | [EMU](../../Enumeration/EMU.md) | 914400 | 以英制度量单位表示的形状高度。 |
-| oFill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | 用于填充形状的颜色或图案。 |
-| oStroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | 用于创建元素阴影的笔触。 |
+| oFill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的颜色或图案。如果未指定，则使用默认形状样式填充（主题强调色），文本框没有填充。 |
+| oStroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于绘制形状轮廓的笔触。如果未指定，则使用默认形状样式轮廓（主题强调色），文本框没有轮廓。 |
 
 ## 返回值
 

@@ -1,13 +1,17 @@
 # ApiBaseListField
 
+Class representing a base list field.
+
 ApiBaseListField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | boolean | Adds new option to list options. |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Adds new widget - visual representation for field |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | Adds new widget - visual representation for field |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
@@ -16,7 +20,7 @@ ApiBaseListField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md
 | [GetOptions](./Methods/GetOptions.md) | [ListOption](../Enumeration/ListOption.md)[] | Gets all options from list options. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
-| [GetValue](./Methods/GetValue.md) | string | Gets field value |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | Gets field value |
 | [GetValueIndexes](./Methods/GetValueIndexes.md) | number[] | Gets selected value indexes. |
 | [IsCommitOnSelChange](./Methods/IsCommitOnSelChange.md) | boolean | Checks if field can commit on selection change. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |

@@ -8,7 +8,7 @@ Returns the font scheme of the current theme.
 expression.GetFontScheme();
 ```
 
-`expression` - A variable that represents a [ApiTheme](../ApiTheme.md) class.
+`expression` - A variable that represents an [ApiTheme](../ApiTheme.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiThemeFontScheme](../../ApiThemeFontScheme/ApiThemeFontScheme.md)
+[ApiThemeFontScheme](../../ApiThemeFontScheme/ApiThemeFontScheme.md) \| null \| undefined
 
 ## Example
 

@@ -8,7 +8,7 @@ Returns a table that contains the current run.
 expression.GetParentTable();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

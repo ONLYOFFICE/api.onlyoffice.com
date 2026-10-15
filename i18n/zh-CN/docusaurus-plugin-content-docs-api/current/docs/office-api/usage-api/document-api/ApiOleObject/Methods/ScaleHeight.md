@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.ScaleHeight](../../ApiDrawing/Methods/ScaleHeight.md)。
 
+## 语法
+
+```javascript
+expression.ScaleHeight(coefficient);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| coefficient | 必需 | number |  | 用于缩放图形高度的系数。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中按给定比例缩放绘图的高度。

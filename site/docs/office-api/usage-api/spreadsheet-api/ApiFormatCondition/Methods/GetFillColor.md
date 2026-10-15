@@ -1,6 +1,8 @@
 # GetFillColor
 
-Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null.
+Returns the background color for the format condition.
+
+Returns 'No Fill' when the background color of the format condition is null.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the background color for the format condition. Returns 'No Fill' when th
 expression.GetFillColor();
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -41,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
+let fillColor = Api.RGB(255, 255, 0);
 condition1.SetFillColor(fillColor);
 
 let currentColor = condition1.GetFillColor();

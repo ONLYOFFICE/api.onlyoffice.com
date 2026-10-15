@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.RemoveSlide(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

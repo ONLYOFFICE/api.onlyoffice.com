@@ -4,6 +4,24 @@ Sets annotation creation date.
 
 Inherited from [ApiBaseAnnotation.SetCreationDate](../../ApiBaseAnnotation/Methods/SetCreationDate.md).
 
+## Syntax
+
+```javascript
+expression.SetCreationDate(timeStamp);
+```
+
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| timeStamp | Required | number |  | The annotation creation date as a numeric timestamp. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Record the date when an annotation was created in a PDF.

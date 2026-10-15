@@ -4,6 +4,24 @@
 
 继承自 [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md)。
 
+## 语法
+
+```javascript
+expression.SetToggleToOff(allowToggleOff);
+```
+
+`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| allowToggleOff | 必需 | boolean |  | 指定选中状态是否可以取消。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 启用或禁用 PDF 中复选框的取消切换行为。

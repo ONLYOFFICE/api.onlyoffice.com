@@ -1,6 +1,8 @@
 # Search
 
-搜索文档对象的范围。搜索结果是 ApiRange 对象的集合。
+搜索文档对象的范围。
+
+搜索结果是 ApiRange 对象的集合。
 
 ## 语法
 
@@ -14,7 +16,7 @@ expression.Search(sText, isMatchCase);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | 必需 | string |  | 搜索字符串。 |
+| sText | 必需 | string \| RegExp |  | 搜索字符串或要匹配的正则表达式。传递 RegExp 时，将忽略 isMatchCase 参数（请改用 "i" 标志控制大小写敏感性）。 |
 | isMatchCase | 必需 | boolean |  | 是否区分大小写。 |
 
 ## 返回值
@@ -23,12 +25,12 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-搜索单词的所有出现位置并在文档中将其中一个结果设为粗体。
+在文档中使用字符串和正则表达式查找文本，然后将匹配项设为粗体。
 
 ```javascript editor-docx
-// How do I find every match of a string and format a specific result in a document?
+// Combine a keyword lookup with a RegExp that matches every numbered label.
 
-// Collect search results by keyword and style the second match to highlight it in a document.
+// Bold the second keyword match, then bold each label found by the /№\d+/g expression.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,6 +38,11 @@ paragraph.AddText("This is paragraph №1.");
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This is paragraph №2.");
 doc.Push(paragraph);
-let searchResults = doc.Search("paragraph");
-searchResults[1].SetBold(true);
+
+let byKeyword = doc.Search("paragraph");
+byKeyword[1].SetBold(true);
+
+let byRegExp = doc.Search(/№\d+/g);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

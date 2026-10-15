@@ -8,7 +8,7 @@ Sets the italic property to the text characters in the current cell or cell rang
 expression.SetItalic(isItalic);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

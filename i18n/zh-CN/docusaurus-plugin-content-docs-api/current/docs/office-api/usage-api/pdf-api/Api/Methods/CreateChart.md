@@ -18,7 +18,7 @@ expression.CreateChart(chartType, series, seriesNames, categoryNames, width, hei
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| chartType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "bar" | 用于图表显示的图表类型。 |
+| chartType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "ColumnClustered" | 用于图表显示的图表类型。 |
 | series | 必需 | number[][] |  | 用于构建图表的数据数组。 |
 | seriesNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表列名）。 |
 | categoryNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表行名）。 |
@@ -29,7 +29,7 @@ expression.CreateChart(chartType, series, seriesNames, categoryNames, width, hei
 
 ## 返回值
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## 示例
 
@@ -43,16 +43,16 @@ expression.CreateChart(chartType, series, seriesNames, categoryNames, width, hei
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24, ["0", "0.00"]);
 chart.SetSize(150 * 36000, 65 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.SetShowPointDataLabel(1, 0, false, false, true, false);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```

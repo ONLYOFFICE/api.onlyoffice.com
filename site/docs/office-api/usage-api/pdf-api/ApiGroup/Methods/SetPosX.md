@@ -4,6 +4,24 @@ Sets the x position of the drawing on the page.
 
 Inherited from [ApiDrawing.SetPosX](../../ApiDrawing/Methods/SetPosX.md).
 
+## Syntax
+
+```javascript
+expression.SetPosX(posX);
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posX | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the page to the left side of the drawing measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move a shape left or right in a PDF.
@@ -16,7 +34,7 @@ Move a shape left or right in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosX(608400);

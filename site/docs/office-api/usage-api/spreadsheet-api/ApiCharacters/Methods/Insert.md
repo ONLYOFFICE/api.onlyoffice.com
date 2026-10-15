@@ -8,7 +8,7 @@ Inserts a string replacing the specified characters.
 expression.Insert(String);
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

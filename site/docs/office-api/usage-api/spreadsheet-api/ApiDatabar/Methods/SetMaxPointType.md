@@ -8,7 +8,7 @@ Sets the type for the maximum value condition for the data bar.
 expression.SetMaxPointType(type);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

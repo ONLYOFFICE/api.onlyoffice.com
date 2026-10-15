@@ -1,115 +1,31 @@
-# Enumeration: FilterSortBy
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:106](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L106)
+import APITable from '@site/src/components/APITable/APITable';
 
-The criteria for filtering and sorting items.
+# FilterSortBy
+
+The sort criterion for file/folder lists. Passed via [TFrameFilter.sortBy](../type-aliases/TFrameFilter.md#sortBy).
+
+Note: string values are API identifiers and may differ from the enum key names.
 
 ## Enumeration Members
 
-### Author
+<APITable>
 
-> **Author**: `"Author"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `Author` | `"Author"` | Sort by author name. API value: `"Author"`. |
+| `CreationDate` | `"DateAndTimeCreation"` | Sort by creation date. API value: `"DateAndTimeCreation"`. |
+| `LastOpened` | `"LastOpened"` | Sort by last opened date. API value: `"LastOpened"`. |
+| `ModifiedDate` | `"DateAndTime"` | Sort by last modification date. API value: `"DateAndTime"`. |
+| `Name` | `"AZ"` | Sort alphabetically by name. API value: `"AZ"`. |
+| `Room` | `"Room"` | Sort by room. API value: `"Room"`. |
+| `RoomType` | `"roomType"` | Sort by room type. API value: `"roomType"`. |
+| `Size` | `"Size"` | Sort by file size. API value: `"Size"`. |
+| `Tags` | `"Tags"` | Sort by tags. API value: `"Tags"`. |
+| `Type` | `"Type"` | Sort by file type/extension. API value: `"Type"`. |
+| `UsedSpace` | `"usedspace"` | Sort by used storage space. API value: `"usedspace"`. |
 
-Defined in: [enums/index.ts:108](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L108)
-
-Sorts items by author name.
-
-***
-
-### CreationDate
-
-> **CreationDate**: `"DateAndTimeCreation"`
-
-Defined in: [enums/index.ts:110](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L110)
-
-Sorts items by creation date.
-
-***
-
-### LastOpened
-
-> **LastOpened**: `"LastOpened"`
-
-Defined in: [enums/index.ts:112](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L112)
-
-Sorts items by the last opened date.
-
-***
-
-### ModifiedDate
-
-> **ModifiedDate**: `"DateAndTime"`
-
-Defined in: [enums/index.ts:114](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L114)
-
-Sorts items by modification date.
-
-***
-
-### Name
-
-> **Name**: `"AZ"`
-
-Defined in: [enums/index.ts:116](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L116)
-
-Sorts items by name.
-
-***
-
-### Room
-
-> **Room**: `"Room"`
-
-Defined in: [enums/index.ts:118](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L118)
-
-Sorts items by room.
-
-***
-
-### RoomType
-
-> **RoomType**: `"roomType"`
-
-Defined in: [enums/index.ts:120](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L120)
-
-Sorts items by room type.
-
-***
-
-### Size
-
-> **Size**: `"Size"`
-
-Defined in: [enums/index.ts:122](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L122)
-
-Sorts items by size.
-
-***
-
-### Tags
-
-> **Tags**: `"Tags"`
-
-Defined in: [enums/index.ts:124](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L124)
-
-Sorts items by tags.
-
-***
-
-### Type
-
-> **Type**: `"Type"`
-
-Defined in: [enums/index.ts:126](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L126)
-
-Sorts items by type.
-
-***
-
-### UsedSpace
-
-> **UsedSpace**: `"usedspace"`
-
-Defined in: [enums/index.ts:128](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L128)
-
-Sorts items by used space.
+</APITable>

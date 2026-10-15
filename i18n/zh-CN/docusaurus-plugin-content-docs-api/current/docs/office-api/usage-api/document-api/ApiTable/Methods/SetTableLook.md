@@ -1,12 +1,8 @@
 # SetTableLook
 
-指定引用的表格样式（如果存在）的条件格式组件，
-这些组件将应用于具有当前表格级属性例外的表格行集。表格样式
-最多可指定六种不同的可选条件格式，例如第一列的不同格式，
-然后可以应用于或从父表格中的各个表格行中省略。
+指定引用的表格样式（如果存在）的条件格式组件，这些组件将应用于具有当前表格级属性例外的表格行集合。一个表格样式最多可以指定六种不同的可选条件格式，例如，为第一列设置不同的格式，然后可以将其应用于父表格中的各个表格行或从中省略。
 
-默认设置是应用行带和列带格式，但不应用首行、末行、首列
-或末列格式。
+默认设置是应用行和列的镶边格式，但不应用首行、末行、首列或末列格式。
 
 ## 语法
 
@@ -49,6 +45,6 @@ let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 table.SetTableLook(true, true, true, true, true, true);
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", Api.HexColor('#FF6F3D'));
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 doc.Push(table);
 ```

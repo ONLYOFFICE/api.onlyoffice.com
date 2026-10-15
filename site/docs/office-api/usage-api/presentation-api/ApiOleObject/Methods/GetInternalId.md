@@ -4,6 +4,22 @@ Returns an internal ID of the current drawing object.
 
 Inherited from [ApiDrawing.GetInternalId](../../ApiDrawing/Methods/GetInternalId.md).
 
+## Syntax
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Get the unique identifier of a shape in a presentation.

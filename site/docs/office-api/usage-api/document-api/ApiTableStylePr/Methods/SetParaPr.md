@@ -8,7 +8,7 @@ Sets the paragraph properties to the current table style properties.
 expression.SetParaPr(oParaPr);
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 

@@ -4,21 +4,37 @@ Returns the placeholder text from the current form.
 
 Inherited from [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md).
 
+## Syntax
+
+```javascript
+expression.GetPlaceholderText();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Read the placeholder text of a form field in a document.
+Read the placeholder text of a signature form in a document.
 
 ```javascript editor-forms
-// How do I get the placeholder text of a form field in a document?
+// How do I find out what placeholder text a signature form displays in a document?
 
-// Confirm a hint label by retrieving the placeholder text after setting it on a form.
+// Confirm the hint label shown inside an empty signature form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetPlaceholderText("First name");
-let placeholderText = textForm.GetPlaceholderText();
+paragraph.AddElement(signatureForm);
+signatureForm.SetPlaceholderText("Signature");
+let placeholderText = signatureForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);

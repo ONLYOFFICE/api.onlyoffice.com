@@ -1,6 +1,6 @@
 # ApiListObject
 
-Represents the ApiListObject class.
+Class representing a formatted table.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -36,12 +36,14 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | Adds a new column to the table at the specified 1-based position. |
 | [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | Adds a new data row to the table at the specified 1-based position. |
 | [Delete](./Methods/Delete.md) | None | Deletes the ListObject object and clears the cell formatting. |
-| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active. |
+| [GetActive](./Methods/GetActive.md) | boolean | Returns a Boolean value that indicates whether the ListObject is active. The ListObject is considered active when the active cell is within the range of the ListObject. |
 | [GetAlternativeText](./Methods/GetAlternativeText.md) | string | Returns the alternative text for the table. |
 | [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | Returns the ApiAutoFilter object representing the autofilter applied to the table. |
 | [GetComment](./Methods/GetComment.md) | string | Returns the comment (summary alternative text) for the table. |
@@ -62,15 +64,15 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | [GetShowTableStyleRowStripes](./Methods/GetShowTableStyleRowStripes.md) | boolean | Returns whether banded row formatting is applied to the table. |
 | [GetShowTotals](./Methods/GetShowTotals.md) | boolean | Returns whether the totals row is displayed for the table. |
 | [GetSort](./Methods/GetSort.md) | [ApiSort](../ApiSort/ApiSort.md) | Returns the Sort object for this list object. |
-| [GetSourceType](./Methods/GetSourceType.md) | string | Returns the source type of the table. Always returns "xlSrcRange" for range-based tables. |
+| [GetSourceType](./Methods/GetSourceType.md) | string | Returns the source type of the table. |
 | [GetSummary](./Methods/GetSummary.md) | string | Returns the summary description (alternative text summary) for the table. |
 | [GetTableStyle](./Methods/GetTableStyle.md) | string | Returns the name of the table style applied to the table. |
 | [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of the totals row of the table. |
-| [Resize](./Methods/Resize.md) | None | Resizes the ListObject to a new range. Cells are not inserted or moved. |
+| [Resize](./Methods/Resize.md) | None | Resizes the ListObject to a new range. |
 | [SetAlternativeText](./Methods/SetAlternativeText.md) | None | Sets the alternative text for the table. |
 | [SetComment](./Methods/SetComment.md) | None | Sets the comment (summary alternative text) for the table. |
 | [SetDisplayName](./Methods/SetDisplayName.md) | boolean | Sets the display name of the table. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the table. Equivalent to SetDisplayName. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the table. |
 | [SetShowAutoFilter](./Methods/SetShowAutoFilter.md) | None | Sets whether the AutoFilter is present on the table. |
 | [SetShowAutoFilterDropDown](./Methods/SetShowAutoFilterDropDown.md) | None | Sets whether the AutoFilter dropdown arrows are displayed on the header row of the table. |
 | [SetShowHeaders](./Methods/SetShowHeaders.md) | None | Sets whether the header row is displayed for the table. |
@@ -80,5 +82,5 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 | [SetShowTableStyleRowStripes](./Methods/SetShowTableStyleRowStripes.md) | None | Sets whether banded row formatting is applied to the table. |
 | [SetShowTotals](./Methods/SetShowTotals.md) | None | Sets whether the totals row is displayed for the table. |
 | [SetSummary](./Methods/SetSummary.md) | None | Sets the summary description (alternative text summary) for the table. |
-| [SetTableStyle](./Methods/SetTableStyle.md) | None | Sets the table style by name. |
+| [SetTableStyle](./Methods/SetTableStyle.md) | None | Sets the table style by name. Built-in table style names: TableStyleLight1-21, TableStyleMedium1-28, TableStyleDark1-11. |
 | [Unlist](./Methods/Unlist.md) | None | Removes the list functionality from the ListObject and converts it to a regular data range. |

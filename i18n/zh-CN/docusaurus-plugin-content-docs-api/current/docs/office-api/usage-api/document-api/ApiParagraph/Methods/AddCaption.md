@@ -1,8 +1,10 @@
 # AddCaption
 
 在当前段落之后（或之前）添加题注段落。
-💡 请注意，当前段落必须在文档中（不在页脚/页眉中）。
-如果当前段落位于形状中，则题注将添加到父形状之后（或之前）。
+
+:::note
+当前段落必须在文档中（不在页脚/页眉中）。如果当前段落位于形状中，则题注将添加到父形状之后（或之前）。
+:::
 
 ## 语法
 
@@ -21,7 +23,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | bExludeLabel | 可选 | boolean | false | 指定是否从题注中排除标签。 |
 | sNumberingFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | bBefore | 可选 | boolean | false | 指定是在当前段落之前（true）还是之后（false）插入题注（如果位于形状中，则在形状之前/之后）。 |
-| nHeadingLvl | 可选 | Number |  | 标题级别（用于指定章节编号时使用）。💡 如果要指定 "Heading 1"，则 nHeadingLvl === 0，依此类推。 |
+| nHeadingLvl | 可选 | Number |  | 标题级别（用于指定章节编号）。该值从零开始：0 表示 "Heading 1"，1 表示 "Heading 2"，依此类推。 |
 | sCaptionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值

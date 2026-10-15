@@ -365,7 +365,7 @@ The result is a structured alert payload that can be sent to a security or compl
 
 ## Step 1: Create a Virtual Data Room (VDR)
 
-A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room) to create a new room.
+A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) to create a new room.
 
 The request body includes:
 - `title`: room title.
@@ -426,7 +426,7 @@ The API returns a room object. The room ID is used in the monitoring payload.
 
 ## Step 2: Retrieve audit events for the selected period
 
-A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter) to retrieve audit trail events.
+A GET request is sent to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter) to retrieve audit trail events.
 
 The request uses query parameters:
 - `from`: Period start date (YYYY-MM-DD)
@@ -489,7 +489,7 @@ The API returns a list of events (typically under response).
 
 ## Step 3: Retrieve login events for suspicious users
 
-A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/get-login-events-by-filter) to retrieve login history.
+A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/security/login-history/get-login-events-by-filter) to retrieve login history.
 This step is run for each suspicious user ID detected by the threshold rule.
 
 <Tabs>

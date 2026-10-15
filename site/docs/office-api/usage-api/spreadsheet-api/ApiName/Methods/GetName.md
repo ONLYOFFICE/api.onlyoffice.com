@@ -8,7 +8,7 @@ Returns a type of the ApiName class.
 expression.GetName();
 ```
 
-`expression` - A variable that represents a [ApiName](../ApiName.md) class.
+`expression` - A variable that represents an [ApiName](../ApiName.md) class.
 
 ## Parameters
 

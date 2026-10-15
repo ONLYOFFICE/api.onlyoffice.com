@@ -1,6 +1,7 @@
 # UpdateAttribute
 
 更新自定义 XML 节点中现有属性的值。
+
 如果属性不存在，则不会执行更新。
 
 ## 语法
@@ -27,7 +28,7 @@ boolean
 更新文档中 XML 节点上现有属性的值。
 
 ```javascript editor-docx
-// How do I change the value of an attribute that already exists on a node in a document?
+// Change the value of an attribute that already exists on a node in a document.
 
 // Correct outdated metadata on a node without removing and re-adding the attribute in a document.
 

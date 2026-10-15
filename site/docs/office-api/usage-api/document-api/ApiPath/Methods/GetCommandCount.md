@@ -8,7 +8,7 @@ Returns the number of commands for the current path.
 expression.GetCommandCount();
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

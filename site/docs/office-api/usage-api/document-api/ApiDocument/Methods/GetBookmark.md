@@ -8,7 +8,7 @@ Returns a bookmark by its name from the current document.
 expression.GetBookmark(sBookmarkName);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetBookmark(sBookmarkName);
 
 ## Returns
 
-[ApiBookmark](../../ApiBookmark/ApiBookmark.md)
+[ApiBookmark](../../ApiBookmark/ApiBookmark.md) \| null \| undefined
 
 ## Example
 

@@ -8,7 +8,7 @@ Returns an internal id of the current form.
 expression.GetInternalId();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

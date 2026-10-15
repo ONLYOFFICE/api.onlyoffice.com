@@ -2,13 +2,17 @@
 
 Sets button widget layout type
 
+:::note
+For signature field can't set "textOnly" layout
+:::
+
 ## Syntax
 
 ```javascript
 expression.SetLayout(layout);
 ```
 
-`expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
 
 ## Parameters
 

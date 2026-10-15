@@ -1,7 +1,12 @@
 # MergeCells
 
-合并单元格数组。如果合并成功，将返回合并后的单元格，否则返回 “null”。
-- **警告**：任何行中的单元格数量和当前表格中的行数可能会更改。
+合并单元格数组。
+
+如果合并成功，将返回合并后的单元格，否则返回 “null”。
+
+:::warning
+任何行中的单元格数量和当前表格中的行数可能会更改。
+:::
 
 ## 语法
 
@@ -19,7 +24,7 @@ expression.MergeCells(aCells);
 
 ## 返回值
 
-[ApiTableCell](../../ApiTableCell/ApiTableCell.md)
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null \| undefined
 
 ## 示例
 

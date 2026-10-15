@@ -1,6 +1,6 @@
 # GetRect
 
-Sets annotation rect.
+Gets annotation rect.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Sets annotation rect.
 expression.GetRect();
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 

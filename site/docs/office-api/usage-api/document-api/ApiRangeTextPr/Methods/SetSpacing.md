@@ -4,6 +4,24 @@ Sets the text spacing measured in twentieths of a point.
 
 Inherited from [ApiTextPr.SetSpacing](../../ApiTextPr/Methods/SetSpacing.md).
 
+## Syntax
+
+```javascript
+expression.SetSpacing(spacing);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| spacing | Required | [twips](../../Enumeration/twips.md) \| null |  | The value of the text spacing measured in twentieths of a point (1/1440 of an inch). Pass *null* to remove the text spacing. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Set the amount of space between characters in a document.

@@ -366,7 +366,7 @@ This approach helps standardize employee document storage and simplifies access 
 
 ## Step 1: Create an employee user
 
-A POST request is sent to [/api/2.0/people/](/docspace/api-backend/usage-api/add-member) to create a new DocSpace user.
+A POST request is sent to [/api/2.0/people/](/docspace/api-backend/usage-api/people/profiles/add-member) to create a new DocSpace user.
 
 The request body includes:
 - `email`: The employee email address.
@@ -439,7 +439,7 @@ The API returns a user object. The new user ID is required if you want to connec
 
 ## Step 2: Create a personal folder in the "Employees" folder
 
-A POST request is sent to [/api/2.0/files/folder/:parentId](/docspace/api-backend/usage-api/create-folder) to create a personal folder inside the shared "Employees" folder.
+A POST request is sent to [/api/2.0/files/folder/:parentId](/docspace/api-backend/usage-api/files/folders/create-folder) to create a personal folder inside the shared "Employees" folder.
 
 The request body includes:
 - `title`: folder title (for example, LastName FirstName).
@@ -520,7 +520,7 @@ This step creates a predictable folder layout inside the employee folder (for ex
 
 ## Step 4: Copy starter documents from templates
 
-A POST request is sent to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/copy-file-as) to copy template files into the correct subfolders.
+A POST request is sent to [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/files/files/copy-file-as) to copy template files into the correct subfolders.
 
 The request body includes:
 - `destFolderId`: Destination folder ID (where the file should be placed).
@@ -586,7 +586,7 @@ This step typically copies:
 
 ## Step 5: Create an external link to the employee folder
 
-A POST request is sent to [/api/2.0/files/folder/:folderId/link](/docspace/api-backend/usage-api/create-folder-primary-external-link)to generate an external link to the employee folder.
+A POST request is sent to [/api/2.0/files/folder/:folderId/link](/docspace/api-backend/usage-api/files/folders/create-folder-primary-external-link)to generate an external link to the employee folder.
 
 For a basic scenario, the request body can be empty, so the API uses default link settings.
 

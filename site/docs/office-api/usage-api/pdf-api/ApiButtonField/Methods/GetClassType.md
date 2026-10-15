@@ -8,7 +8,7 @@ Returns a type of the ApiButtonField class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiButtonField](../ApiButtonField.md) class.
+`expression` - A variable that represents an [ApiButtonField](../ApiButtonField.md) class.
 
 ## Parameters
 

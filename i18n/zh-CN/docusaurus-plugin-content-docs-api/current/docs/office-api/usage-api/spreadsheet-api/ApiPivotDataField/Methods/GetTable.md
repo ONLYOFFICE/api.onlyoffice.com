@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md)。
 
+## 语法
+
+```javascript
+expression.GetTable();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+
 ## 示例
 
 从电子表格中其字段之一访问父数据透视表。

@@ -10,6 +10,10 @@ JSON Web 令牌的 payload 包含 `payload` 对象及请求正文参数。
 
 ## 传入请求
 
+:::note
+从 10.0 版本开始，传入请求的令牌可以包含 `operation` 字段，用于标明请求类型：**文档命令服务**为 `command`，**文档转换服务**为 `converter`，**文档生成服务**为 `docbuilder`。如果包含该字段，其值必须与请求发送到的服务一致。这些服务也不再接受编辑器配置中的令牌。令牌的检查严格程度由[服务器设置](../../../get-started/configuration/server-config/server-config.md#token) `services.CoAuthoring.token.purposeCheck` 决定。
+:::
+
 :::warning
 在向 ONLYOFFICE 文档执行 HTTP 请求时，不建议在请求头中发送签名。请在[请求体](./token-in-body.md)中发送签名。
 :::
@@ -101,7 +105,11 @@ curl -X POST "https://documentserver/docbuilder" \
   }'
 ```
 
-## 传出请求
+## 传出请求 {#outgoing-requests}
+
+:::note
+从 10.0 版本开始，每个传出请求的令牌还包含 `operation` 字段，用于标明请求类型：对 `callbackUrl` 地址的请求为 `callback`，文件和文档更改下载请求为 `download`。如果传入请求的令牌包含其中任一值，ONLYOFFICE 文档将拒绝该请求。
+:::
 
 ### 关闭时回调（无更改）
 
@@ -114,7 +122,8 @@ curl -X POST "https://documentserver/docbuilder" \
     "payload": {
       "key": "Khirz6zTPdfd7",
       "status": 4
-    }
+    },
+    "operation": "callback"
   }
   ```
 
@@ -123,7 +132,7 @@ curl -X POST "https://documentserver/docbuilder" \
 ```bash
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9fQ.MfVoGT-aYuPJfjQAaxwBv7-CqBylDae2AF9K5TpLf-E" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.o3l4KlxMeFtaZEY5UQiWuWMktxGEdvjoN9ckHlmGIQs" \
   -d '{
     "key": "Khirz6zTPdfd7",
     "status": 4
@@ -140,7 +149,8 @@ curl -X POST "https://example.com/url-to-callback" \
   {
     "payload": {
       "url": "https://example.com/url-to-example-document.docx"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -148,7 +158,7 @@ curl -X POST "https://example.com/url-to-callback" \
 
 ```bash
 curl -X GET "https://example.com/url-to-example-document.docx" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9LCJvcGVyYXRpb24iOiJkb3dubG9hZCJ9.gDT6MsJSGJUJyR_BpvixtASOxCKZDO0-pHVuAsSrf9w"
 ```
 
 令牌包含 payload（文档的完整 URL，在上面的示例中为 `{"url": "https://example.com/url-to-example-document.docx"}`），该 payload 在请求头中也重复为 `Host`（`example.com`）和 GET 请求发送到的文档地址（`url-to-example-document.docx`）。
@@ -163,7 +173,8 @@ curl -X GET "https://example.com/url-to-example-document.docx" \
   {
     "payload": {
       "url": "https://example.com/url-to-document-changes.zip"
-    }
+    },
+    "operation": "download"
   }
   ```
 
@@ -171,7 +182,7 @@ curl -X GET "https://example.com/url-to-example-document.docx" \
 
 ```bash
 curl -X GET "https://example.com/url-to-document-changes.zip" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn19.4CJ4F8x7VDMW72ss9VnIYGIwjRpBMYBBRXZ5aX2r2Y4"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn0sIm9wZXJhdGlvbiI6ImRvd25sb2FkIn0.Mr_bM2onk92qLP2VoqSFhjB3JC4wO1uXtLuw_L5F3j4"
 ```
 
 令牌包含 payload（文档的完整 URL，在上面的示例中为 `{"url": "https://example.com/url-to-document-changes.zip"}`），该 payload 在请求头中也重复为 `Host`（`example.com`）和 GET 请求发送到的文档地址（`url-to-document-changes.zip`）。

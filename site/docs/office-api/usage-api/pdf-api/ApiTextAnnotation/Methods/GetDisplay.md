@@ -4,6 +4,22 @@ Gets annotation display type.
 
 Inherited from [ApiBaseAnnotation.GetDisplay](../../ApiBaseAnnotation/Methods/GetDisplay.md).
 
+## Syntax
+
+```javascript
+expression.GetDisplay();
+```
+
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[DisplayType](../../Enumeration/DisplayType.md)
+
 ## Example
 
 Retrieve the display preference setting of an annotation in a PDF.

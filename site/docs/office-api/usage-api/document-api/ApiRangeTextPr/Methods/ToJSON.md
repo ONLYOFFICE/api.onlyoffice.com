@@ -4,6 +4,24 @@ Converts the ApiTextPr object into the JSON object.
 
 Inherited from [ApiTextPr.ToJSON](../../ApiTextPr/Methods/ToJSON.md).
 
+## Syntax
+
+```javascript
+expression.ToJSON(bWriteStyles);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bWriteStyles | Required | boolean |  | Specifies if the used styles will be written to the JSON object or not. |
+
+## Returns
+
+JSON
+
 ## Example
 
 Export text formatting settings to JSON and reapply them in a document.

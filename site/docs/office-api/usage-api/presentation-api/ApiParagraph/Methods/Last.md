@@ -8,7 +8,7 @@ Returns the last element of the paragraph.
 expression.Last();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ParagraphContent](../../Enumeration/ParagraphContent.md)
+[ParagraphContent](../../Enumeration/ParagraphContent.md) \| null \| undefined
 
 ## Example
 

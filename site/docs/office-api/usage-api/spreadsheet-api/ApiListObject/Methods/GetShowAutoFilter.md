@@ -1,6 +1,7 @@
 # GetShowAutoFilter
 
 Returns whether the AutoFilter dropdown buttons are displayed on the header row of the table.
+
 Returns true by default for a new table.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetShowAutoFilter();
 ```
 
-`expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
+`expression` - A variable that represents an [ApiListObject](../ApiListObject.md) class.
 
 ## Parameters
 

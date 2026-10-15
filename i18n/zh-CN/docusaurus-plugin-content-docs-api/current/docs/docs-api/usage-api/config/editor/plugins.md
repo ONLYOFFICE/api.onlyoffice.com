@@ -1,26 +1,26 @@
-﻿# 插件
+# 插件
 
 plugins 部分定义运行时插件参数。
 
 ## autostart
 
-**类型：** `string[]`
+**类型**：`string[]`
 
 在编辑器打开时自动启动的 [config.json](../../../../plugins/configuration/configuration.md#guid) 文件中的插件标识符。插件按列出的顺序依次运行。
 
-**示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+**示例**：`["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
 ## disable
 
-**类型：** `string[]`
+**类型**：`string[]`
 
 [config.json](../../../../plugins/configuration/configuration.md#guid) 文件中在加载时将被禁用的插件标识符。指定的插件将被阻止加载，并且在编辑器界面中不可用。
 
-**示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+**示例**：`["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
 ## options
 
-**类型：** `object`
+**类型**：`object`
 
 插件的外部配置设置。设置可以针对所有插件或特定插件——例如传递授权令牌。
 
@@ -28,7 +28,7 @@ plugins 部分定义运行时插件参数。
 您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugins/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) 方法将此对象传递给插件。
 :::
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -39,11 +39,11 @@ plugins 部分定义运行时插件参数。
 
 ### options.all
 
-**类型：** `object`
+**类型**：`object`
 
 应用于所有插件的参数。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -55,11 +55,11 @@ plugins 部分定义运行时插件参数。
 
 ### options.pluginGuid
 
-**类型：** `object`
+**类型**：`object`
 
 特定插件的参数，通过 `asc.{UUID}` 格式的 GUID 标识。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -71,11 +71,11 @@ plugins 部分定义运行时插件参数。
 
 ## pluginsData
 
-**类型：** `string[]`
+**类型**：`string[]`
 
 插件 [config.json](../../../../plugins/configuration/configuration.md) 文件的绝对 URL。
 
-**示例**: `["https://example.com/plugins/chess-plugin/config.json"]`
+**示例**：`["https://example.com/plugins/chess-plugin/config.json"]`
 
 ![插件](/assets/images/editor/plugins.png#gh-light-mode-only)![插件](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 

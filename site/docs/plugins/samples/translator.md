@@ -3,6 +3,8 @@ description: Translate text using machine translation services.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
 # Translator
 
 Connects the [Google Translate API](https://cloud.google.com/translate) for translating the selected text into other languages.
@@ -13,11 +15,7 @@ Connects the [Google Translate API](https://cloud.google.com/translate) for tran
 
 **Analogues:** [Apertium](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/apertium), [DeepL](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/deepl).
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="jCciDL48KHE" />
-```
 
 ## Installation
 
@@ -117,7 +115,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 ## Methods and events
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - [onExternalMouseUp](../interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](../configuration/localization.md#applying-translations-to-plugin)
 - [callCommand](../interacting-with-editors/overview/how-to-call-commands.md#callcommand)

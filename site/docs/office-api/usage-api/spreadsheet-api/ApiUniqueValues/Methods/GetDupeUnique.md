@@ -8,7 +8,7 @@ Returns the setting that specifies whether to format duplicate or unique values 
 expression.GetDupeUnique();
 ```
 
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
 
 ## Parameters
 
@@ -40,7 +40,7 @@ let range = worksheet.GetRange("A2:A6");
 let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(0, 255, 0));
 
 let dupeUniqueSetting = uniqueValuesCondition.GetDupeUnique();
 

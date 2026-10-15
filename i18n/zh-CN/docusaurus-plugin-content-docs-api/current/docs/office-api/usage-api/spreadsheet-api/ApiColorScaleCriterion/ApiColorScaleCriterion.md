@@ -1,6 +1,6 @@
 # ApiColorScaleCriterion
 
-表示 ApiColorScaleCriterion 类。
+表示色阶条件格式规则中单个条件的类。
 
 ## 属性
 
@@ -12,6 +12,8 @@
 | Value | string | 返回或设置色阶条件的值。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

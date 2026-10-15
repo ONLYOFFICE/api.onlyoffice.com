@@ -8,13 +8,13 @@ Copies the range to the specified range or to the clipboard.
 expression.Copy(destination);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | Specifies the new range to which the specified range will be copied. If this argument is omitted, the range will be copied to the clipboard. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | Specifies the new range to which the specified range will be copied. If this argument is omitted, the range will be copied to the clipboard. |
 
 ## Returns
 

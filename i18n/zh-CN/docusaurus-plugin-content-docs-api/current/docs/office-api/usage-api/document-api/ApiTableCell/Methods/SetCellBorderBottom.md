@@ -4,6 +4,27 @@
 
 继承自 [ApiTableCellPr.SetCellBorderBottom](../../ApiTableCellPr/Methods/SetCellBorderBottom.md)。
 
+## 语法
+
+```javascript
+expression.SetCellBorderBottom(type, size, space, color);
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 单元格底部边框样式。 |
+| size | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前单元格底部边框的宽度，以点的八分之一为单位。 |
+| space | 必需 | [pt](../../Enumeration/pt.md) |  | 表格单元格底部用于放置此边框的间距偏移量，以磅为单位。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中为表格单元格的底部边缘添加边框。
@@ -11,17 +32,17 @@
 ```javascript editor-docx
 // How do I draw a line at the bottom of a table cell in a document?
 
-// Define the style and thickness of the lower border for a table cell in a document.
+// Give a cell a visible bottom border to separate it from the row below in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("We create a 3x3 table and add the bottom 4 point black border to all cells:");
+paragraph.AddText("We create a 3x3 table and add the bottom 4 point black border to cell #1:");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
-let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetCellBorderBottom("single", 32, 0, 51, 51, 51);
+let cell = table.GetRow(0).GetCell(0);
+cell.SetCellBorderBottom("single", 32, 0, Api.Color(51, 51, 51));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

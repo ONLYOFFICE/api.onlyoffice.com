@@ -3,7 +3,7 @@
 Creates a chart with the parameters specified.
 
 :::note
-Values of *styleIndex* outside - **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+Values of *styleIndex* outside **1 - 48** are interpreted as a chart style id from the *cs:chartStyle* element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
 :::
 
 ## Syntax
@@ -12,13 +12,13 @@ Values of *styleIndex* outside - **1 - 48** are interpreted as a chart style id 
 expression.CreateChart(chartType, series, seriesNames, catNames, width, height, styleIndex, numFormats);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "bar" | The chart type used for the chart display. |
+| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "ColumnClustered" | The chart type used for the chart display. |
 | series | Required | number[][] |  | The array of the data used to build the chart from. |
 | seriesNames | Required | number[] \| string[] |  | The array of the names (the source table column names) used for the data which the chart will be build from. |
 | catNames | Required | number[] \| string[] |  | The array of the names (the source table row names) used for the data which the chart will be build from. |
@@ -29,7 +29,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 
@@ -42,7 +42,7 @@ Insert a 3D bar chart with colored data series into a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

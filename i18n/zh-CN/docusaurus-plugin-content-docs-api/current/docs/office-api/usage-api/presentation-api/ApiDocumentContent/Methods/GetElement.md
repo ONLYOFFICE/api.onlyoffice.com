@@ -18,7 +18,7 @@ expression.GetElement(nPos);
 
 ## 返回值
 
-[DocumentElement](../../Enumeration/DocumentElement.md)
+[DocumentElement](../../Enumeration/DocumentElement.md) \| null \| undefined
 
 ## 示例
 

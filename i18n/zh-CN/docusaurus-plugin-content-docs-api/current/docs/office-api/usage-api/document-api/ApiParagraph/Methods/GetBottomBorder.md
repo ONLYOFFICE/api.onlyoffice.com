@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetBottomBorder](../../ApiParaPr/Methods/GetBottomBorder.md)。
 
+## 语法
+
+```javascript
+expression.GetBottomBorder();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## 示例
 
 检索文档中应用于段落的底部边框设置。
@@ -16,7 +32,7 @@
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let paraPr = paragraph.GetParaPr();
-paraPr.SetBottomBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetBottomBorder("single", 24, 0, Api.Color(255, 111, 61));
 paragraph.AddText("This is a paragraph with a bottom border.");
 let border = paraPr.GetBottomBorder();
 let paragraph2 = Api.CreateParagraph();

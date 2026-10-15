@@ -1,10 +1,6 @@
 # Copy
 
-Creates a copy of the specified shape.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current shape.
 
 ## Syntax
 
@@ -12,7 +8,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

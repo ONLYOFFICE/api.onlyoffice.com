@@ -8,7 +8,7 @@ Returns the number of conditional formatting rules in the collection.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiFormatConditions](../ApiFormatConditions.md) class.
+`expression` - A variable that represents an [ApiFormatConditions](../ApiFormatConditions.md) class.
 
 ## Parameters
 

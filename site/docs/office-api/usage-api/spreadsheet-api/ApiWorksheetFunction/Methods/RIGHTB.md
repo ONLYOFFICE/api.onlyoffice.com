@@ -8,7 +8,7 @@ Extracts a substring from a string starting from the right-most character, based
 expression.RIGHTB(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

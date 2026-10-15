@@ -8,7 +8,7 @@ Returns a type of the ApiSquareAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
 
 ## Parameters
 

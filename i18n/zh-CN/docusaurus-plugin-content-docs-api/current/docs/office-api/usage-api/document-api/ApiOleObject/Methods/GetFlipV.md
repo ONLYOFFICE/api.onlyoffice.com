@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetFlipV](../../ApiDrawing/Methods/GetFlipV.md)。
 
+## 语法
+
+```javascript
+expression.GetFlipV();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| null
+
 ## 示例
 
 检查文档中的绘图是否垂直翻转。

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md)。
 
+## 语法
+
+```javascript
+expression.GetLock();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查文档中表单字段的锁定状态。

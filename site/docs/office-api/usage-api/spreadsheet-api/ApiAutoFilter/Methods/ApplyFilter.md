@@ -2,10 +2,7 @@
 
 Reapplies the AutoFilter to the worksheet using the existing filter criteria.
 
-This method corresponds to the Excel AutoFilter.ApplyFilter behavior:
-it does not change the currently defined filter conditions; it only
-reevaluates which rows should be visible based on the active filters.
-If no AutoFilter is defined for the worksheet, the method does nothing.
+This method corresponds to the Excel AutoFilter.ApplyFilter behavior: it does not change the currently defined filter conditions; it only reevaluates which rows should be visible based on the active filters. If no AutoFilter is defined for the worksheet, the method does nothing.
 
 ## Syntax
 
@@ -13,7 +10,7 @@ If no AutoFilter is defined for the worksheet, the method does nothing.
 expression.ApplyFilter();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

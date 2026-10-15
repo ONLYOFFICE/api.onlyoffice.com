@@ -1,4 +1,4 @@
-﻿---
+---
 description: Move the cursor to the document start or end.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
@@ -105,7 +105,7 @@ GitHub 仓库：[示例：移动光标](https://github.com/ONLYOFFICE/sdkjs-plug
 ## 方法和事件
 
 - [button](../customization/custom-buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../interacting-with-editors/overview/overview.md#how-it-works)
 - executeMethod ("[MoveCursorToStart](../interacting-with-editors/document-api/Methods/MoveCursorToStart.md)")
 - executeMethod ("[MoveCursorToEnd](../interacting-with-editors/document-api/Methods/MoveCursorToEnd.md)")
 

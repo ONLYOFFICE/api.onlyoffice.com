@@ -1,16 +1,20 @@
 # ApiHyperlink
 
-表示 ApiHyperlink 类。
+表示段落超链接的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "hyperlink" | 返回 ApiHyperlink 类的类型。 |
 | [GetDisplayedText](./Methods/GetDisplayedText.md) | string | 返回超链接显示文本。 |
-| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | 使用指定的位置返回超链接元素。 |
+| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) \| null \| undefined | 使用指定的位置返回超链接元素。 |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前超链接中的元素数量。 |
 | [GetLinkedText](./Methods/GetLinkedText.md) | string | 返回超链接地址。 |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | 返回直接包含当前超链接的父元素（段落或内联内容控件）。 |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | 返回当前超链接在其父元素中的位置（索引）。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示指定超链接中所包含文档部分的 Range 对象。 |
 | [GetScreenTipText](./Methods/GetScreenTipText.md) | string | 返回超链接的屏幕提示文本。 |
 | [SetDefaultStyle](./Methods/SetDefaultStyle.md) | boolean | 设置默认超链接样式。 |

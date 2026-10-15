@@ -1,13 +1,17 @@
 # ApiRadiobuttonField
 
+表示单选按钮字段的类。
+
 ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md) 的子类。
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | [ApiCheckboxWidget](../ApiCheckboxWidget/ApiCheckboxWidget.md) | 向复选框组添加选项。 |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | 添加新控件 - 字段的可视化表示 |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | 添加新控件 - 字段的可视化表示 |
 | [Delete](./Methods/Delete.md) | boolean | 从文档中移除字段。 |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "radiobuttonField" | 返回 ApiRadiobuttonField 类的类型。 |
@@ -15,7 +19,7 @@ ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前字段的内部 ID。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
-| [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | 获取字段值 |
 | [IsCheckInUnison](./Methods/IsCheckInUnison.md) | boolean | 检查字段是否统一选中。 |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | 检查字段是否为只读 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查字段是否为必填 |

@@ -8,7 +8,7 @@ Returns the inverse of the normal cumulative distribution for the specified mean
 expression.NORM_INV(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -32,14 +32,14 @@ Calculate the inverse of the normal distribution for a given mean and standard d
 // Get the quantile value for a specific probability with custom mean and standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
-
-worksheet.GetRange("A1").SetValue(0.6);
-
-//method params
-let value = worksheet.GetRange("A1").GetValue();
-
+let valueArr = [0.34, 7, 3];
+for (let i = 0; i < valueArr.length; i++) {
+  worksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
+}
+let probability = worksheet.GetRange("A1").GetValue();
+let mean = worksheet.GetRange("A2").GetValue();
+let standardDeviation = worksheet.GetRange("A3").GetValue();
 let func = Api.WorksheetFunction;
-let ans = func.NORMSDIST(value);
-
-worksheet.GetRange("C1").SetValue(ans);
+let inv = func.NORM_INV(probability, mean, standardDeviation);
+worksheet.GetRange("C1").SetValue(inv);
 ```

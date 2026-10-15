@@ -1,23 +1,31 @@
 # ApiChart
 
+Class representing a chart.
+
 ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [ApplyChartStyle](./Methods/ApplyChartStyle.md) | boolean | Sets a style to the current chart by style ID. |
-| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a copy of the specified chart. |
+| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a copy of the current chart. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object from the parent. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | Returns all series from the chart space. |
-| [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | Returns a type of the chart object. |
+| [GetChartType](./Methods/GetChartType.md) | [ChartTypeLegacy](../Enumeration/ChartTypeLegacy.md) | Returns a type of the chart object. |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | Returns a type of the ApiChart class. |
+| [GetDescription](./Methods/GetDescription.md) | string \| null | Gets the description of the current drawing. |
+| [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Gets the fill formatting properties from the current graphic object. |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | Get horizontal flip of current drawing. |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | Get vertical flip of current drawing. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the height of the current drawing. |
 | [GetHyperlink](./Methods/GetHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | Returns the hyperlink from the current drawing object (shape or image). |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current drawing object. |
+| [GetLine](./Methods/GetLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) \| null | Gets the outline properties from the current graphic object. |
+| [GetLockAspect](./Methods/GetLockAspect.md) | boolean | Returns whether the aspect ratio of the drawing is locked. |
 | [GetLockValue](./Methods/GetLockValue.md) | boolean | Returns the lock value for the specified lock type of the current drawing. |
 | [GetName](./Methods/GetName.md) | string | Returns the name of the current drawing. |
 | [GetParent](./Methods/GetParent.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| [ApiLayout](../ApiLayout/ApiLayout.md) \| [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Returns the drawing parent object. |
@@ -28,17 +36,25 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | Gets the x position of the drawing on the slide. |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | Gets the y position of the drawing on the slide. |
 | [GetRotation](./Methods/GetRotation.md) | number | Returns the rotation angle of the current drawing object. |
-| [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | Returns the series with a specific index. |
+| [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) \| null \| undefined | Returns the series with a specific index. |
+| [GetShadow](./Methods/GetShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) \| null | Returns the shadow of the current graphic object. |
+| [GetTextRange](./Methods/GetTextRange.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md) \| null | Returns an ApiTextRange covering the full text content of the shape. Creates a text body if the shape does not yet have one. |
 | [GetTitle](./Methods/GetTitle.md) | string \| null | Returns the chart title text. |
+| [GetType](./Methods/GetType.md) | [ChartType](../Enumeration/ChartType.md) | Returns a type of the chart object using the chart type names from the \{@link ChartType\} enumeration. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the text of the current drawing, including the drawings nested in a group. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the width of the current drawing. |
+| [HasTextContent](./Methods/HasTextContent.md) | boolean | Checks whether the drawing has an associated text body. |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | Removes the specified series from the current chart. |
 | [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | Replaces the placeholder by a drawing on the slide. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
-| [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | Sets the specified numeric format to the axis values. |
+| [SetAxisNumFormat](./Methods/SetAxisNumFormat.md) | boolean | Sets the specified numeric format to the axis values. |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | Sets a name to the specified chart category. |
+| [SetDataLabelsTextPr](./Methods/SetDataLabelsTextPr.md) | boolean | Sets the text properties to the chart data labels. |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | Sets the fill to the data point in the specified chart series. |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | Sets the specified numeric format to the chart data point. |
 | [SetDataPointOutLine](./Methods/SetDataPointOutLine.md) | boolean | Sets the outline to the data point in the specified chart series. |
+| [SetDescription](./Methods/SetDescription.md) | boolean | Sets the description of the current drawing. |
+| [SetFill](./Methods/SetFill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
 | [SetHorAxisLabelsFontSize](./Methods/SetHorAxisLabelsFontSize.md) | boolean | Specifies font size for labels of the horizontal axis. |
@@ -52,6 +68,8 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetLegendFontSize](./Methods/SetLegendFontSize.md) | boolean | Specifies the legend font size. |
 | [SetLegendOutLine](./Methods/SetLegendOutLine.md) | boolean | Sets the outline to the chart legend. |
 | [SetLegendPos](./Methods/SetLegendPos.md) | boolean | Specifies the chart legend position. |
+| [SetLine](./Methods/SetLine.md) | boolean | Sets the outline properties to the current graphic object. |
+| [SetLockAspect](./Methods/SetLockAspect.md) | boolean | Sets whether the aspect ratio of the drawing is locked. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
 | [SetMajorHorizontalGridlines](./Methods/SetMajorHorizontalGridlines.md) | boolean | Specifies major horizontal gridline visual properties. |
 | [SetMajorVerticalGridlines](./Methods/SetMajorVerticalGridlines.md) | boolean | Specifies major vertical gridline visual properties. |
@@ -64,6 +82,7 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets the specified placeholder to the current drawing object. |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | Sets the fill to the chart plot area. |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | Sets the outline to the chart plot area. |
+| [SetPointDataLabelTextPr](./Methods/SetPointDataLabelTextPr.md) | boolean | Sets the text properties to the chart point data label. |
 | [SetPosX](./Methods/SetPosX.md) | boolean | Sets the x position of the drawing on the slide. |
 | [SetPosY](./Methods/SetPosY.md) | boolean | Sets the y position of the drawing on the slide. |
 | [SetPosition](./Methods/SetPosition.md) | None | Sets the position of the drawing on the slide. |
@@ -73,9 +92,11 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | Sets values to the specified chart series. |
 | [SetSeriesFill](./Methods/SetSeriesFill.md) | boolean | Sets the fill to the specified chart series. |
 | [SetSeriesOutLine](./Methods/SetSeriesOutLine.md) | boolean | Sets the outline to the specified chart series. |
+| [SetShadow](./Methods/SetShadow.md) | boolean | Sets the shadow to the current graphic object. |
 | [SetShowDataLabels](./Methods/SetShowDataLabels.md) | boolean | Specifies which chart data labels are shown for the chart. |
+| [SetShowDataTable](./Methods/SetShowDataTable.md) | boolean | Specifies whether the data table is displayed below the chart, optionally with the legend keys. |
 | [SetShowPointDataLabel](./Methods/SetShowPointDataLabel.md) | boolean | Spicifies the show options for data labels. |
-| [SetSize](./Methods/SetSize.md) | None | Sets the size of the object (image, shape, chart) bounding box. |
+| [SetSize](./Methods/SetSize.md) | boolean | Sets the size of the object (image, shape, chart) bounding box. |
 | [SetTitle](./Methods/SetTitle.md) | boolean | Specifies the chart title. |
 | [SetTitleFill](./Methods/SetTitleFill.md) | boolean | Sets the fill to the chart title. |
 | [SetTitleOutLine](./Methods/SetTitleOutLine.md) | boolean | Sets the outline to the chart title. |
@@ -85,6 +106,6 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetVertAxisMajorTickMark](./Methods/SetVertAxisMajorTickMark.md) | boolean | Specifies major tick mark for the vertical axis. |
 | [SetVertAxisMinorTickMark](./Methods/SetVertAxisMinorTickMark.md) | boolean | Specifies minor tick mark for the vertical axis. |
 | [SetVertAxisTickLabelPosition](./Methods/SetVertAxisTickLabelPosition.md) | boolean | Spicifies tick labels position for the vertical axis. |
-| [SetXValues](./Methods/SetXValues.md) | boolean | Sets the x-axis values to all chart series. It is used with the scatter charts only. |
+| [SetXValues](./Methods/SetXValues.md) | boolean | Sets the x-axis values to all chart series. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDrawing object into the JSON object. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current graphic object from the selection. |

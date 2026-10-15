@@ -8,7 +8,7 @@ Applies text settings to the content of the content control.
 expression.SetTextPr(oTextPr);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.SetTextPr(oTextPr);
 
 ## Returns
 
-[ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md)
+[ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
 
 ## Example
 

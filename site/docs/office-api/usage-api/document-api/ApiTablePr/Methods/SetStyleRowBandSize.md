@@ -8,7 +8,7 @@ Specifies a number of rows which will comprise each table row band for this tabl
 expression.SetStyleRowBandSize(nCount);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 

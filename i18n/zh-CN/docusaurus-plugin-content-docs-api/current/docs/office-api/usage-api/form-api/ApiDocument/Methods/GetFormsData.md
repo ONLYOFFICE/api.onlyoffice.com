@@ -1,6 +1,7 @@
 # GetFormsData
 
 返回当前文档中所有表单的数据。
+
 如果表单已创建但未分配到文档的任何部分，则不会出现在此列表中。
 
 ## 语法
@@ -34,7 +35,7 @@ let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});
 checkBox.SetChecked(true);
 paragraph1.Push(checkBox);
 let textForm = Api.CreateTextForm({key: "CompanyName"});
-textForm.SetText("OnlyOffice");
+textForm.SetText("ONLYOFFICE");
 paragraph1.Push(textForm);
 
 let text = JSON.stringify(doc.GetFormsData());

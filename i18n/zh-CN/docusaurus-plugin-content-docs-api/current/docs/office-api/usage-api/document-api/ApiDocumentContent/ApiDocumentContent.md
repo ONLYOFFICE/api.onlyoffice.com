@@ -1,8 +1,10 @@
 # ApiDocumentContent
 
-表示 ApiDocumentContent 类。
+表示段落和表格容器的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -19,20 +21,21 @@
 | [GetClassType](./Methods/GetClassType.md) | "documentContent" | 返回 ApiDocumentContent 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | 从当前 ApiDocumentContent 对象返回文档元素数组。 |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | 返回当前选中的内容控件。 |
-| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 返回光标所在的当前段落。 |
-| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 返回光标所在的当前文本域。 |
-| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | 返回用于遍历当前文档元素的访问器对象。 |
-| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | 通过元素在文档中的位置返回元素。 |
+| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | 返回光标所在的当前段落。 |
+| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) \| null \| undefined | 返回光标所在的当前文本域。 |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | [ApiDocumentVisitor](../ApiDocumentVisitor/ApiDocumentVisitor.md) | 返回用于遍历当前文档元素的访问器对象。 |
+| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | 通过元素在文档中的位置返回元素。 |
+| [GetElementIndex](./Methods/GetElementIndex.md) | Number | 返回指定元素在当前文档内容中的位置（索引）。 |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前文档中的元素数量。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前文档内容的内部 ID。 |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示文档内容中包含的文档部分的 Range 对象。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前文档内容对象的内部文本。 |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | 检查当前文档内容是否为尾注。 |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | 检查当前文档内容是否为脚注。 |
-| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。 |
 | [Push](./Methods/Push.md) | boolean | 推送段落或表格以将其实际添加到文档中。 |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。 |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
-| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
-| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前文档内容对象的所有内容， |
+| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。 |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换当前文档内容对象的所有内容，保留第一个段落的格式。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDocumentContent 对象转换为 JSON 对象。 |

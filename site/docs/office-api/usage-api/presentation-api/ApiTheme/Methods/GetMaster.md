@@ -8,7 +8,7 @@ Returns the slide master of the current theme.
 expression.GetMaster();
 ```
 
-`expression` - A variable that represents a [ApiTheme](../ApiTheme.md) class.
+`expression` - A variable that represents an [ApiTheme](../ApiTheme.md) class.
 
 ## Parameters
 

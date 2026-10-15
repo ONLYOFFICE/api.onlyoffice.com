@@ -8,7 +8,7 @@ Returns the day of the date given in the numerical format, a number from 1 to 31
 expression.DAY(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

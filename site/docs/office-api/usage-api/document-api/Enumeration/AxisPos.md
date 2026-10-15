@@ -18,9 +18,9 @@ Enumeration
 Set the axis values to the top position of the chart.
 
 ```javascript editor-docx
-// How to change the axis labels format of the chart.
+// How do I change the axis label format of a chart?
 
 // Set axis values to the top.
 
-chart.SetAxieNumFormat("top", "0.00");
+chart.SetAxisNumFormat("0.00", "top");
 ```

@@ -8,7 +8,7 @@ Returns nodes from the custom XML node based on the given XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Select child nodes from a custom XML node using a path query in a document.
 
 ```javascript editor-docx
-// How do I retrieve matching child nodes from a custom XML node in a document?
+// Retrieve matching child nodes from a custom XML node in a document.
 
 // Traverse embedded XML data by querying for a set of elements under a given node in a document.
 

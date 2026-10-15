@@ -4,6 +4,22 @@
 
 继承自 [ApiUniColor.GetRGB](../../ApiUniColor/Methods/GetRGB.md)。
 
+## 语法
+
+```javascript
+expression.GetRGB();
+```
+
+`expression` - 表示 [ApiRGBColor](../ApiRGBColor.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 读取文档中预设颜色的红、绿、蓝值。

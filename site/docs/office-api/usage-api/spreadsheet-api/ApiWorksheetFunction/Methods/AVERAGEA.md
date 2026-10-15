@@ -1,6 +1,6 @@
 # AVERAGEA
 
-Returns the average (arithmetic mean) of the specified arguments, evaluating text and - **false** in arguments as 0; - **true** evaluates as 1.
+Returns the average (arithmetic mean) of the specified arguments, evaluating text and **false** in arguments as 0; **true** evaluates as 1.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Returns the average (arithmetic mean) of the specified arguments, evaluating tex
 expression.AVERAGEA(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

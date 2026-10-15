@@ -8,7 +8,7 @@ Returns all custom XML parts from the XML manager.
 expression.GetAll();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 List every custom XML part stored in a document.
 
 ```javascript editor-docx
-// How do I retrieve all custom XML parts at once in a document?
+// Retrieve all custom XML parts at once in a document.
 
 // Iterate over every embedded XML part to audit or process stored data in a document.
 

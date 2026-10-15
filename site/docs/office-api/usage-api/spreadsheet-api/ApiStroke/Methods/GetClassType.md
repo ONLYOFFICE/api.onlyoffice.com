@@ -8,7 +8,7 @@ Returns a type of the ApiStroke class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiStroke](../ApiStroke.md) class.
+`expression` - A variable that represents an [ApiStroke](../ApiStroke.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@ Specifies a highlighting color which is added to the text properties and applied
 
 Inherited from [ApiTextPr.SetHighlight](../../ApiTextPr/Methods/SetHighlight.md).
 
+## Syntax
+
+```javascript
+expression.SetHighlight(sColor);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sColor | Required | [highlightColor](../../Enumeration/highlightColor.md) |  | Available highlight color. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Apply a background highlight color to text in a document.

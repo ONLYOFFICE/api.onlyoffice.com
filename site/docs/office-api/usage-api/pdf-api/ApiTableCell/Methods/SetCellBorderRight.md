@@ -8,7 +8,7 @@ Sets the border which shall be displayed at the right of the current table cell.
 expression.SetCellBorderRight(borderWidth, fill);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 
@@ -36,7 +36,7 @@ const page = doc.GetPage(0);
 const table = Api.CreateTable(2, 4);
 const row = table.GetRow(0);
 const cell = row.GetCell(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+const fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 cell.SetCellBorderRight(2, fill);
 
 page.AddObject(table);

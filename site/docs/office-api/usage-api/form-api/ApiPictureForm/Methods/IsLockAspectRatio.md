@@ -8,7 +8,7 @@ Checks if the aspect ratio of the current picture form is locked or not.
 expression.IsLockAspectRatio();
 ```
 
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
 
 ## Parameters
 

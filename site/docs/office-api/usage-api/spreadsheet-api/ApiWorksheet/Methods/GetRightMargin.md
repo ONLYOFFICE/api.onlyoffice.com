@@ -8,7 +8,7 @@ Returns the right margin of the sheet.
 expression.GetRightMargin();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

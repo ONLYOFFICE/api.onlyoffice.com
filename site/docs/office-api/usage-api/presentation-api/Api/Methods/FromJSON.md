@@ -8,7 +8,7 @@ Converts the specified JSON object into the Document Builder object of the corre
 expression.FromJSON(sMessage);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

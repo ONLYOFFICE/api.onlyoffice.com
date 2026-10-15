@@ -8,7 +8,7 @@ Returns the type of the above average conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
 
 ## Parameters
 
@@ -40,7 +40,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition = formatConditions.AddAboveAverage();
-condition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition.SetFillColor(Api.RGB(255, 255, 0));
 
 let conditionType = condition.GetType();
 

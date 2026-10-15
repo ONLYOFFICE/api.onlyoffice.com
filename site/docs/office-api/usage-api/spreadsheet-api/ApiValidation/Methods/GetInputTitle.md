@@ -8,7 +8,7 @@ Returns the title of the data-validation input dialog box.
 expression.GetInputTitle();
 ```
 
-`expression` - A variable that represents a [ApiValidation](../ApiValidation.md) class.
+`expression` - A variable that represents an [ApiValidation](../ApiValidation.md) class.
 
 ## Parameters
 

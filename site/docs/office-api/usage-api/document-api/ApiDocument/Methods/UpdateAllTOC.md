@@ -8,7 +8,7 @@ Updates all tables of contents in the current document.
 expression.UpdateAllTOC(bOnlyPageNumbers);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the active chart of the workbook.
 expression.GetActiveChart();
 ```
 
-`expression` - A variable that represents a [ApiWorkbook](../ApiWorkbook.md) class.
+`expression` - A variable that represents an [ApiWorkbook](../ApiWorkbook.md) class.
 
 ## Parameters
 
@@ -41,7 +41,7 @@ const chart = worksheet.AddChart(
 	Api.MillimetersToEmus(100), Api.MillimetersToEmus(70),
 	0, 0, 3, Api.MillimetersToEmus(1)
 );
-chart.SetTitle('Full Names Length', 15);
+chart.SetTitle('Full Names Length', 30);
 chart.Select();
 
 const activeChart = workbook.GetActiveChart();

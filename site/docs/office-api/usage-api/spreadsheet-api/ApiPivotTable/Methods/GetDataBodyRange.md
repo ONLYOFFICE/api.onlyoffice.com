@@ -8,7 +8,7 @@ Returns a Range object that represents the range of values in the pivot table.
 expression.GetDataBodyRange();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

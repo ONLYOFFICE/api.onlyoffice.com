@@ -8,6 +8,22 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 
 Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
 ## Example
 
 Duplicate a drawing on a worksheet and place the copy next to the original in a spreadsheet.

@@ -2,6 +2,8 @@
 
 设置当前文本块的文本颜色。
 
+继承自 [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md)。
+
 ## 语法
 
 ```javascript
@@ -14,7 +16,7 @@ expression.SetColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 文本颜色。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | 文本颜色。传递 *null* 可移除文本颜色。 |
 
 ## 返回值
 

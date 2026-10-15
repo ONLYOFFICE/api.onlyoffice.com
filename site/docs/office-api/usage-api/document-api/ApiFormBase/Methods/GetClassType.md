@@ -8,7 +8,7 @@ Returns a type of the ApiFormBase class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

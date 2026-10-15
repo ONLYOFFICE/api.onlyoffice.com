@@ -8,7 +8,7 @@ Returns a table cell that contains the current table.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
@@ -40,5 +40,5 @@ table2.SetStyle(tableStyle);
 let cell = table1.GetCell(0, 0);
 table1.AddElement(cell, 0, table2);
 let parentTableCell = table2.GetParentTableCell();
-parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
+parentTableCell.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 ```

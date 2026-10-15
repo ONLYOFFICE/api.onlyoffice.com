@@ -8,7 +8,7 @@ Gets list of all fields in document.
 expression.GetAllFields();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -23,11 +23,12 @@ This method doesn't have any parameters.
 Access all input fields in a PDF.
 
 ```javascript editor-pdf
-// How do I retrieve all the form fields from a PDF?
+// Useful for retrieving all the form fields from a PDF.
 
 // Locate and list each field's type in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 
 let textField = Api.CreateTextField([10, 10, 160, 30]);

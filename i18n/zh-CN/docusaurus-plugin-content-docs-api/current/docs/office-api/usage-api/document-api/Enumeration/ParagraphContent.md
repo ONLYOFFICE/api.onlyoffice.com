@@ -13,13 +13,14 @@
 - [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 - [ApiFormBase](../ApiFormBase/ApiFormBase.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## 示例
 
 向段落添加名为 'text run' 的元素。
 
 ```javascript editor-docx
-// How to add an element to paragraph.
+// How do I add an element to a paragraph?
 
 // Insert an element to paragraph.
 

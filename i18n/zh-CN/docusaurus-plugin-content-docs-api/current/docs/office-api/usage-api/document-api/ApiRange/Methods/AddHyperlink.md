@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
+expression.AddHyperlink(link, screenTipText, bookmarkName);
 ```
 
 `expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
@@ -14,13 +14,13 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLink | 必需 | string |  | 链接地址。 |
-| sScreenTipText | 必需 | string |  | 屏幕提示文本。 |
-| sBookmarkName | 必需 | string |  | 书签名称 |
+| link | 必需 | string |  | 链接地址。 |
+| screenTipText | 必需 | string |  | 屏幕提示文本。 |
+| bookmarkName | 必需 | string |  | 书签名称 |
 
 ## 返回值
 
-[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md)
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null \| undefined
 
 ## 示例
 

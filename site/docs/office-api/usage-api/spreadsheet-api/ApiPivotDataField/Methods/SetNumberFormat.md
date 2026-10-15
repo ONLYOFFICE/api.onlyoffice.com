@@ -8,7 +8,7 @@ Sets a value that represents the format code for the object.
 expression.SetNumberFormat(format);
 ```
 
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
 
 ## Parameters
 

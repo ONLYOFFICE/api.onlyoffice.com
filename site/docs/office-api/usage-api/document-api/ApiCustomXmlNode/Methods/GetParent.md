@@ -8,7 +8,7 @@ Returns the parent of the current XML node.
 expression.GetParent();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Navigate to the parent of a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I get the parent node of a custom XML node in a document?
+// Get the parent node of a custom XML node in a document.
 
 // Move up the XML tree from a child element to find its containing node in a document.
 

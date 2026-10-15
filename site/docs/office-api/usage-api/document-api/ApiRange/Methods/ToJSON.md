@@ -8,7 +8,7 @@ Converts the ApiRange object into the JSON object.
 expression.ToJSON(bWriteNumberings, bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

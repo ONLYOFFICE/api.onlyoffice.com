@@ -10,7 +10,7 @@ Throws: Error if the content control is not a checkbox.
 expression.IsCheckBoxChecked();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
