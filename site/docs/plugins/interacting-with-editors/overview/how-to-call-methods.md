@@ -74,7 +74,7 @@ The `callback` is the result that the method returns. It is an optional paramete
 |----------|----------|-----------------------------------------------------------|
 | name     | string   | The name of the specific method that must be executed.    |
 | params   | array    | The arguments that the method in use has (if it has any). |
-| callback | function | The result that the method returns.                       |
+| callback | function | The function that receives the method result.            |
 
 </APITable>
 

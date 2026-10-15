@@ -74,7 +74,7 @@ window.Asc.plugin.executeMethod(name, params, callback);
 |----------|----------|-----------------------------------------------------------|
 | name     | string   | 要执行的具体方法名称。    |
 | params   | array    | 该方法所需的参数（如果有的话）。 |
-| callback | function | 方法返回的结果。                       |
+| callback | function | 接收方法结果的函数。                       |
 
 </APITable>
 
