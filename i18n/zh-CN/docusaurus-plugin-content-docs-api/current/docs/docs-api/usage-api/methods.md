@@ -269,6 +269,16 @@ docEditor.insertImage({
   docEditor.requestClose();
   ```
 
+## requestRoles
+
+请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*开始填写*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
+
+使用此方法可以获取表单角色，而无需等待用户单击*开始填写*按钮。
+
+  ``` ts
+  docEditor.requestRoles();
+  ```
+
 ## setActionLink
 
 设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 `ACTION_DATA` 以设置链接。该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。

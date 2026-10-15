@@ -269,6 +269,16 @@ Request to close the editor. It is recommended to call this method before the [d
   docEditor.requestClose();
   ```
 
+## requestRoles
+
+Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Start filling* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
+
+This method can be used to get the form roles without waiting for the user to click the *Start filling* button.
+
+  ``` ts
+  docEditor.requestRoles();
+  ```
+
 ## setActionLink
 
 Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](./config/events.md#onmakeactionlink) event. The software integrator must process the `ACTION_DATA` received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.

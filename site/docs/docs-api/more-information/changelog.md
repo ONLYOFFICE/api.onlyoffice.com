@@ -74,6 +74,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
+- Added the [requestRoles](../usage-api/methods.md#requestroles) method.
 - Added the [events.onStartFilling](../usage-api/config/events.md#onstartfilling) event.
 - Added the *roles* parameter to the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
 - Added the [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) event.
