@@ -96,7 +96,7 @@ const data = {
 - 解析来自**文档编辑服务**收到的 `status` 为 **2**的响应的 `changesurl` 参数：
 
   ``` ts
-  const config = {
+  const data = {
     changesurl: "https://documentserver/url-to-changes.zip",
     key: "2745492410",
     status: 2,

@@ -96,7 +96,7 @@ In addition to the actions described in the [above question](#which-methods-can-
 - Parse the `changesurl` parameter from the **document editing service** received response with `status` **2**:
 
   ``` ts
-  const config = {
+  const data = {
     changesurl: "https://documentserver/url-to-changes.zip",
     key: "2745492410",
     status: 2,
