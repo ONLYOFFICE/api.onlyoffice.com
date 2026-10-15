@@ -25,12 +25,12 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 为演示文稿 API 添加了 [SelectAnnotationRange](../interacting-with-editors/presentation-api/Methods/SelectAnnotationRange.md) 方法。
 - 为演示文稿 API 添加了 [RemoveAnnotationRange](../interacting-with-editors/presentation-api/Methods/RemoveAnnotationRange.md) 方法。
 - 为[文本文档 API](../interacting-with-editors/document-api/Events/onFloatActionButtonClick.md)、[表单 API](../interacting-with-editors/form-api/Events/onFloatActionButtonClick.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Events/onFloatActionButtonClick.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Events/onFloatActionButtonClick.md)、[PDF API](../interacting-with-editors/pdf-api/Events/onFloatActionButtonClick.md) 添加了 `onFloatActionButtonClick` 事件。
-- 为PDF API 添加了 [onSelectionEnd](../interacting-with-editors/pdf-api/Events/onSelectionEnd.md) 事件。
-- 为PDF API 添加了 [onSelectionCancel](../interacting-with-editors/pdf-api/Events/onSelectionCancel.md) 事件。
+- 为 PDF API 添加了 [onSelectionEnd](../interacting-with-editors/pdf-api/Events/onSelectionEnd.md) 事件。
+- 为 PDF API 添加了 [onSelectionCancel](../interacting-with-editors/pdf-api/Events/onSelectionCancel.md) 事件。
 - 在[文本文档 API](../interacting-with-editors/document-api/Enumeration/EditorRestrictions.md)、[表单 API](../interacting-with-editors/form-api/Enumeration/EditorRestrictions.md)、[电子表格 API](../interacting-with-editors/spreadsheet-api/Enumeration/EditorRestrictions.md)、[演示文稿 API](../interacting-with-editors/presentation-api/Enumeration/EditorRestrictions.md)、[PDF API](../interacting-with-editors/pdf-api/Enumeration/EditorRestrictions.md) 的简单类型定义中添加了 `EditorRestrictions` 类型。
-- 在PDF API 的简单类型定义中添加了 [CommentData](../interacting-with-editors/pdf-api/Enumeration/CommentData.md) 类型。
-- 在PDF API 的简单类型定义中添加了 [comment](../interacting-with-editors/pdf-api/Enumeration/comment.md) 类型。
-- 在PDF API 的简单类型定义中添加了 [Event_pt](../interacting-with-editors/pdf-api/Enumeration/Event_pt.md) 类型。
+- 在 PDF API 的简单类型定义中添加了 [CommentData](../interacting-with-editors/pdf-api/Enumeration/CommentData.md) 类型。
+- 在 PDF API 的简单类型定义中添加了 [comment](../interacting-with-editors/pdf-api/Enumeration/comment.md) 类型。
+- 在 PDF API 的简单类型定义中添加了 [Event_pt](../interacting-with-editors/pdf-api/Enumeration/Event_pt.md) 类型。
 
 ## 版本 9.4 {#version-94}
 
