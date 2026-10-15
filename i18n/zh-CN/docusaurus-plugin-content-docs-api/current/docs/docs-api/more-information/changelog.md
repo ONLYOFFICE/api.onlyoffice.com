@@ -6,14 +6,15 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ### 重大变更
 
-- [文档命令服务](../additional-api/command-service/command-service.md)、[文档转换服务](../additional-api/conversion-api/request.md)和[文档生成服务](../additional-api/document-builder-api.md)不再接受编辑器配置中的令牌。这些请求的[令牌](../additional-api/signature/request/token-in-body.md#incoming-request)可以包含可选的 `operation` 字段（`command`、`converter` 或 `docbuilder`），而对于新的 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，该字段为必填项。
-- WOPI 主机现在必须通过 [IP 过滤器](../using-wopi/overview.md#ip-filter)规则明确允许。仅有 `*` 规则已不足以打开文档。
+- [文档命令服务](../additional-api/command-service/command-service.md)、[文档转换服务](../additional-api/conversion-api/request.md)和[文档生成服务](../additional-api/document-builder-api.md)不再接受编辑器配置中的令牌。这些请求的[令牌](../additional-api/signature/request/token-in-body.md#incoming-request)可以包含可选的 `operation` 字段（`command`、`converter` 或 `docbuilder`），而对于新的 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，该字段为必填项。这些检查由新增的 `services.CoAuthoring.token.purposeCheck` [服务器设置](../get-started/configuration/server-config/server-config.md#token)控制，默认值为 `validate`。将其设置为 `off` 可关闭这些检查。
+- WOPI 主机现在必须通过 [IP 过滤器](../using-wopi/overview.md#ip-filter)规则明确允许。仅有 `*` 规则已不足以打开文档。将 `wopi.requireIpFilterRule` [服务器设置](../get-started/configuration/server-config/server-config.md#wopi)设为 `false`，可取消必须有明确允许规则的要求。
 - `runtime.json` 文件不再能够更改日志配置，日志级别除外。
 - 移除了已弃用的 `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges` 和 `editorConfig.customization.trackChanges` 参数。请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数中的对应字段。
 - 如果密钥（包括租户的密钥）为空或未设置，ONLYOFFICE 文档现在会拒绝该令牌，而不再对其进行验证或签名。
 
 ### 其他变更
 
+- WOPI 发现中新增 [interactivepreview](../using-wopi/wopi-discovery.md#interactivepreview) 操作，用于打开文档的只读预览，例如在 SharePoint 详细信息窗格中。
 - 新增对 [ofd](../usage-api/config/document/document.md#filetype) 格式的打开支持。与 `xps` 相同，该格式仅支持查看，可[转换](../additional-api/conversion-api/conversion-tables.md#document-file-formats)为其他格式，但不支持编辑或保存为该格式。
 - 新增从所有电子表格格式到 [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) 格式的转换。
 - 新增 [/converter/from-file](../additional-api/conversion-api/request-from-file.md) 和 [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) 端点，以 `multipart/form-data` 格式直接在请求中接收要转换的文件或脚本，而无需通过 URL 下载。
@@ -28,6 +29,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 新增 `services.CoAuthoring.server.convertServiceEnable` 和 `services.CoAuthoring.server.docbuilderEnable` [服务器设置](../get-started/configuration/server-config/server-config.md#server)，用于关闭公共[转换](../additional-api/conversion-api/request.md) API 和[文档生成器](../additional-api/document-builder-api.md) API。为保持兼容，两者默认均为 `true`。
 - 新增 `coauth.connections` [StatsD](../get-started/configuration/server-config/server-config.md#statsd) 指标，带有 `mode`（`edit`、`liveview`、`view`）和 `replica` 标签。对于分片集群，总数为各副本之和。
 - 下载的文件现在会根据集成商发送的完整性响应头（例如 `Content-Digest`、`Repr-Digest`、`x-amz-checksum-*` 或 WOPI SHA256 哈希）进行校验。此功能由 `services.CoAuthoring.requestDefaults.checksumVerification` [服务器设置](../get-started/configuration/server-config/server-config.md#default-request)控制，默认为 `true`。
+- 传出请求默认的 `User-Agent` 请求头现在为 `DocumentServer`，不再是 `Node.js/6.13`。该值由 `services.CoAuthoring.requestDefaults.headers.User-Agent` [服务器设置](../get-started/configuration/server-config/server-config.md#default-request)指定。
 
 ## 版本 9.4
 
