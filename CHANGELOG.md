@@ -11,6 +11,7 @@
 * Documented the `customization.ai` parameter
 * Added the Configuring AI providers for all users guide for the Admin Panel
 * Documented the `interactivepreview` WOPI discovery action
+* Documented the `requestRoles` method, the `disconnect` parameter of `startFilling` and the `sendEvent` method of the Connector class
 * Added the `ofd` format and `xls` as a spreadsheet conversion target
 * Added the 10.0 changelog covering server, Admin Panel and API changes
 
@@ -69,6 +70,7 @@
 
 ### Fixes
 
+* Fixed `serverVersion` in `refreshHistory` and the callback handler sample to be a version string rather than a number
 * Fixed the `ipfilter` example to nest under `services.CoAuthoring`
 * Fixed Office API changelog links to renamed and removed methods
 * Fixed the form widgets listed in the PDF API overview
