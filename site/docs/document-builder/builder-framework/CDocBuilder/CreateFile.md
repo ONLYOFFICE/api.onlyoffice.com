@@ -77,6 +77,10 @@ Creates a new file. The type of the file which will be created needs to be set.
     </TabItem>
 </Tabs>
 
+:::note
+The `pdf` file type creates a PDF form in the document editor. Its content is edited with the [Document API](../../../office-api/usage-api/document-api/document-api.md) and the [Form API](../../../office-api/usage-api/form-api/form-api.md). To edit an existing PDF file with the [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md), open it with the [OpenFile](./OpenFile.md#opening-pdf-files) method.
+:::
+
 ## Example
 
 <Tabs groupId="lang">
