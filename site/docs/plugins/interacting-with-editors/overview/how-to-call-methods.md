@@ -58,6 +58,12 @@ Editor.GetSelectedText({ Numbering: false, Math: false }, (text) => {
 
 ## executeMethod
 
+The `executeMethod` method calls an editor method by its name. Use it in editors before version 10.0, where the `Editor` object is not available:
+
+```ts
+window.Asc.plugin.executeMethod(name, params, callback);
+```
+
 The `callback` is the result that the method returns. It is an optional parameter. In case it is missing, the `window.Asc.plugin.onMethodReturn` function will be used to return the result of the method execution.
 
 ### Parameters

@@ -58,6 +58,12 @@ Editor.GetSelectedText({ Numbering: false, Math: false }, (text) => {
 
 ## 调用方法 {#executemethod}
 
+`executeMethod` 方法按名称调用编辑器方法。在 10.0 之前的编辑器版本中，`Editor` 对象不可用，请使用此方法：
+
+```ts
+window.Asc.plugin.executeMethod(name, params, callback);
+```
+
 `callback` 是方法返回的结果，是一个可选参数。如果未传入该参数，则会使用 `window.Asc.plugin.onMethodReturn` 函数来返回方法执行结果。
 
 ### 参数
