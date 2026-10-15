@@ -185,7 +185,7 @@ docEditor.insertImage({
 | options.history.changes       | `object` | 非必填的 | 保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
 | options.history.created       | `string` | 必填 | 文档版本创建日期。                                                                                                       |
 | options.history.key           | `string` | 必填 | 服务用来识别文档的唯一文档标识符。                                                             |
-| options.history.serverVersion | `number` | 非必填的 | 当前服务器版本号。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
+| options.history.serverVersion | `string` | 非必填的 | 保存更改的文档编辑服务的版本，例如 `"10.0.0"`。请原样传递[历史对象](./callback-handler.md#history)中的 `serverVersion` 值。仅当此值与当前服务器版本一致时，才会显示更改。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
 | options.history.user          | `object` | 非必填的 | 作为文档版本作者的用户。                                                                                      |
 | options.history.user.id       | `string` | 非必填的 | 作为文档版本作者的用户的标识符。                                                                    |
 | options.history.user.name     | `string` | 非必填的 | 作为文档版本作者的用户的名称                                                                          |

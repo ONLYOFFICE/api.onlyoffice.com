@@ -109,7 +109,7 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
   "changesurl": "https://documentserver/url-to-changes.zip",
   "history": {
     "changes": {},
-    "serverVersion": 1
+    "serverVersion": "10.0.0"
   },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
