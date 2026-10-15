@@ -56,7 +56,7 @@ Editor.GetSelectedText({ Numbering: false, Math: false }, (text) => {
 });
 ```
 
-## 调用方法 {#executemethod}
+## executeMethod
 
 `executeMethod` 方法按名称调用编辑器方法。在 10.0 之前的编辑器版本中，`Editor` 对象不可用，请使用此方法：
 
