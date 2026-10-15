@@ -21,6 +21,10 @@ customization 部分定义编辑器自定义参数。
 
 编辑器中 AI 功能的设置。
 
+:::tip
+如需在管理面板中为所有用户连接 AI 提供商，或为整个服务器关闭 AI，请参阅[为所有用户配置 AI 提供商](/docs/ai/guides/server-ai-providers.md)。
+:::
+
 **示例**：
 
 ```ts

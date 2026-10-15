@@ -21,6 +21,10 @@ Only the following parameters are available for the mobile editors: [close](#clo
 
 The settings for the AI features in the editor.
 
+:::tip
+To connect AI providers for all users in the Admin Panel, or to turn AI off for the whole server, see [Configuring AI providers for all users](/docs/ai/guides/server-ai-providers.md).
+:::
+
 **Example**:
 
 ```ts
