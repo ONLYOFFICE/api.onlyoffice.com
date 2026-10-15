@@ -218,3 +218,81 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 其中 `editorConfig.plugins.autostart` 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugins/configuration/configuration.md#guid) 文件中定义），`editorConfig.plugins.pluginsData` 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
 
 有关启用 ONLYOFFICE 文档插件的更多信息，请参见[此页面](../../usage-api/config/editor/plugins.md)。
+
+## 如何在编辑器中禁用功能提示？ {#how-to-disable-feature-tips-in-editors}
+
+要在首次加载编辑器时禁用有关新功能的提示，请使用 `features.featuresTips` 配置参数并将其值设置为 `false`：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      features: {
+        featuresTips: false
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+有关功能自定义的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md#features)。
+
+## 如何更改编辑器界面的字体和文字大小？ {#how-to-change-the-font-and-text-size-in-the-editor-interface}
+
+要自定义界面元素（按钮、选项卡等）的字体名称和大小，请使用 `font` 配置块并编辑 `font.name` 和 `font.size` 参数：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      font: {
+        name: "Arial",
+        size: 14
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+:::note
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+:::
+
+有关界面字体自定义的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#font)。
+
+## 如何在编辑器标题栏中隐藏当前用户的图标和用户名？ {#how-to-hide-the-active-users-icon-and-the-current-username-in-the-editor-header}
+
+要隐藏编辑器标题栏中带有用户头像/姓名首字母的图标，请使用 `layout` 配置块并将 `layout.header.user` 参数设置为 `false`。您还可以将 `layout.header.users` 参数设置为 `false`，以隐藏显示正在编辑的用户的按钮：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      layout: {
+        header: {
+          user: false,
+          users: false,
+        }
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+:::note
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+:::
+
+有关编辑器标题栏设置的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader)。
