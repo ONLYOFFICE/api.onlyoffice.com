@@ -9,6 +9,8 @@
 * Added the Comparing documents sample
 * Added the File upload request page for `/converter/from-file` and documented `/docbuilder/from-file`
 * Documented the `customization.ai` parameter
+* Added the Configuring AI providers for all users guide for the Admin Panel
+* Documented the `interactivepreview` WOPI discovery action
 * Added the `ofd` format and `xls` as a spreadsheet conversion target
 * Added the 10.0 changelog covering server, Admin Panel and API changes
 
@@ -19,6 +21,7 @@
 #### Plugins and macros
 
 * Added the 10.0 changelog
+* Documented the `Editor` object and `Editor.RunMacro`
 
 #### Desktop
 
@@ -38,6 +41,7 @@
 
 * Documented the `operation` field in incoming and outgoing request tokens and `purposeCheck` for incoming ones
 * Documented the `convertServiceEnable` and `docbuilderEnable` settings and the WOPI IP filter requirement
+* Documented the `purposeCheck` and `wopi.requireIpFilterRule` settings and the new default `User-Agent` of outgoing requests in the 10.0 changelog
 * Removed the deprecated `reviewDisplay`, `showReviewChanges` and `trackChanges` customization parameters
 * Rewrote the integration examples overview and the Node.js, Go, Java, Java Spring, .NET, PHP, PHP Laravel, Python and Ruby examples
 
