@@ -8,7 +8,7 @@ The most common problems with the editors integration and the ways to solve them
 
 The "Download failed" message is displayed at the editors loading process.
 
-The **document editing service** cannot upload the file for editing.
+The **document editing service** cannot download the file for editing.
 
 Check if the link to the file specified in the [document.url](../usage-api/config/document/document.md#url) is correct. The link must be accessible from the **document editing service**.
 
@@ -88,7 +88,7 @@ The reasons for the error are not limited to the examples provided. This list ca
 
 The "History loading failed" message is displayed at the history loading process.
 
-The **document editing service** cannot upload the version history.
+The **document editing service** cannot load the version history.
 
 Check if the [refreshHistory](../usage-api/methods.md#refreshhistory) method works correctly. It must pass the version history data that needs to be displayed in the editor.
 
