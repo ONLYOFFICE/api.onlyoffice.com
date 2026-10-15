@@ -10,6 +10,10 @@ The list of changes of ONLYOFFICE Docs API.
 - The first administrator is now created with the `documentserver-admin` host CLI (`create-admin`, `reset-admin-password`) instead of on a web page with a bootstrap code from the logs. The administrator login is always `admin`.
 - Added the [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) section with the `disabled` parameter to turn off the AI features in the editors.
 - Removed the deprecated `editorConfig.customization.reviewDisplay`, `editorConfig.customization.showReviewChanges`, and `editorConfig.customization.trackChanges` parameters. Use the corresponding fields of the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
+- Added the `aiSettings.enable` [server setting](../get-started/configuration/server-config/server-config.md#ai-tools-settings) to turn off the AI features. If set to `false`, AI Tools is excluded from `/plugins.json`, and requests to `/ai-proxy` are rejected.
+- Form submissions saved as plain PDF are now [signed](../get-started/configuration/server-config/server-config.md#converter) as well, not only those saved as OFORM PDF.
+- The [tokens](../additional-api/signature/signature.md) are now enabled in `default.json`, and the default secret is the `developer-only-not-a-real-secret` placeholder instead of `secret`. Installations already enabled the tokens before. A warning is logged at startup while the placeholder is used.
+- Changes that were not saved before the server shut down are now recovered into [forgotten files](../additional-api/command-service/getforgottenlist.md) during shutdown. The standalone `changes2forgotten` script is removed.
 
 ## Version 9.4
 
