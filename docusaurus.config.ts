@@ -22,7 +22,7 @@ function localize(translations: Record<string, string>): string {
 
 const announcementBarContent = localize({
   en: `<a target="_blank" href="https://www.onlyoffice.com/blog/category/onlyoffice_10_0?from=api"><b>Meet ONLYOFFICE Docs 10.0</b></a>: modular apps and AI tools, 50+ new features, 1,000 bug fixes, 35 fixed vulnerabilities, and more.`,
-  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与AI工具，50+新功能、1000项错误修复、35个漏洞修复等。`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与 AI 工具，50+ 新功能、1000 项错误修复、35 个漏洞修复等。`,
 });
 
 // The landing-page cards, flattened for llms-txt: each section carries its group's name.
