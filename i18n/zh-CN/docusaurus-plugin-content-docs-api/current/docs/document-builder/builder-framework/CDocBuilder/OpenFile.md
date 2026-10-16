@@ -86,7 +86,7 @@ import TabItem from '@theme/TabItem';
 
 从 10.0 版本开始，可以打开 PDF 文件进行编辑。编辑器根据文件内容选择：
 
-- 在 ONLYOFFICE 中创建的 PDF 表单在文档编辑器中打开。请使用[文档 API](../../../office-api/usage-api/document-api/document-api.md)和[表单 API](../../../office-api/usage-api/form-api/form-api.md)对其进行编辑。
+- 在 ONLYOFFICE 中创建的 PDF 表单在文档编辑器中打开。请使用 [Document API](../../../office-api/usage-api/document-api/document-api.md) 和 [Form API](../../../office-api/usage-api/form-api/form-api.md) 对其进行编辑。
 - 其他任何 PDF 文件均在 PDF 编辑器中打开。请使用 [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md) 对其进行编辑。
 
 要打开受密码保护的 PDF 文件，请在 `params` 参数的 `m_sPassword` 标签中传递密码，例如 `<m_sPassword>password</m_sPassword>`。

@@ -78,7 +78,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 :::note
-`pdf` 文件类型会在文档编辑器中创建 PDF 表单，其内容使用[文档 API](../../../office-api/usage-api/document-api/document-api.md)和[表单 API](../../../office-api/usage-api/form-api/form-api.md)进行编辑。要使用 [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md) 编辑现有的 PDF 文件，请使用 [OpenFile](./OpenFile.md#opening-pdf-files) 方法将其打开。
+`pdf` 文件类型会在文档编辑器中创建 PDF 表单，其内容使用 [Document API](../../../office-api/usage-api/document-api/document-api.md) 和 [Form API](../../../office-api/usage-api/form-api/form-api.md) 进行编辑。要使用 [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md) 编辑现有的 PDF 文件，请使用 [OpenFile](./OpenFile.md#opening-pdf-files) 方法将其打开。
 :::
 
 ## 示例
