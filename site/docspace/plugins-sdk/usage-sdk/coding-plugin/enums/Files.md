@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/enums/Files.ts
 ---
 
 # Files
@@ -26,7 +26,7 @@ DocSpace room or workspace
 file: "file";
 ```
 
-Generic file type
+A file — whether an image or a video counts as one depends on the scope, see the item's `fileType`/`filesType`
 
 #### folder
 

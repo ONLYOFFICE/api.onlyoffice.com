@@ -16,7 +16,7 @@ expression.GetParent();
 
 ## 返回值
 
-number
+[ApiRange](../../ApiRange/ApiRange.md)
 
 ## 示例
 

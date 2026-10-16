@@ -16,7 +16,7 @@ expression.GetCurrentRun();
 
 ## 返回值
 
-[ApiRun](../../ApiRun/ApiRun.md)
+[ApiRun](../../ApiRun/ApiRun.md) \| null \| undefined
 
 ## 示例
 

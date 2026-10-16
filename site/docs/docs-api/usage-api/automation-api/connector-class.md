@@ -264,6 +264,34 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 });
 ```
 
+## sendEvent
+
+The function called to send a custom event to the plugins that are running in the editor. The event is delivered to every plugin that subscribed to it, either with the [attachEditorEvent](../../../plugins/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method or with the [events](../../../plugins/configuration/configuration.md#variationsevents) parameter in its *config.json* file. If a plugin has not finished loading yet, the event is delivered once it is ready.
+
+### Parameters
+
+| Name | Type   | Description                                         |
+| ---- | ------ | --------------------------------------------------- |
+| name | string | The event name.                                     |
+| data | object | The event data passed to the plugin event listener. |
+
+### Example
+
+```ts
+const connector = docEditor.createConnector();
+connector.sendEvent("onExternalDataReady", {
+  rows: 42,
+});
+```
+
+In the plugin code, subscribe to the event to receive the data:
+
+```ts
+Asc.plugin.attachEditorEvent("onExternalDataReady", (data) => {
+  console.log(`Rows: ${data.rows}`);
+});
+```
+
 ## updateContextMenuItem
 
 The function called to update an item in the context menu with the specified items.

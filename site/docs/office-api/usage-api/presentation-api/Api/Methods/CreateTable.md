@@ -23,7 +23,7 @@ expression.CreateTable(rows, cols);
 
 ## Returns
 
-[ApiTable](../../ApiTable/ApiTable.md)
+[ApiTable](../../ApiTable/ApiTable.md) \| null \| undefined
 
 ## Example
 

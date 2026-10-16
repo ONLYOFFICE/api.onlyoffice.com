@@ -1,6 +1,6 @@
 # AddListObject
 
-Adds a formatted table to the worksheet and returns the ApiListObject object.
+Adds a formatted table to the worksheet and returns the ApiListObject object. Built-in table style names: TableStyleLight1-21, TableStyleMedium1-28, TableStyleDark1-11.
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -23,7 +23,7 @@ expression.AddListObject(sSourceType, sSource, bLinkSource, sHasHeaders, sDestin
 | bLinkSource | Optional | boolean | false | Not supported. |
 | sHasHeaders | Optional | [XlYesNoGuess](../../Enumeration/XlYesNoGuess.md) | "xlGuess" | Specifies whether the source range has column labels. |
 | sDestination | Optional | string |  | Not supported. |
-| sTableStyleName | Optional | string | "TableStyleLight9" | The table style name. |
+| sTableStyleName | Optional | string | "TableStyleLight9" | The name of a built-in table style (for example, "TableStyleMedium9"), or a custom style defined in the workbook. |
 
 ## Returns
 

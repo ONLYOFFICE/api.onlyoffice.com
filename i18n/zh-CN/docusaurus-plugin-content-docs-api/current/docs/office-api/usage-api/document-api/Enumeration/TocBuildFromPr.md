@@ -10,7 +10,8 @@ Object
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| OutlineLvls | number | 目录中的最大级别数。 |
+| OutlineLvlStart | number | 目录中包含的最高标题级别（大纲范围的起点）。 |
+| OutlineLvls | number | 目录中包含的最低标题级别（大纲范围的终点）。 |
 | StylesLvls | [TocStyleLvl](../Enumeration/TocStyleLvl.md)[] | 样式级别（例如，[\{Name: "Heading 1", Lvl: 2\}, \{Name: "Heading 2", Lvl: 3\}]）。如果 *StylesLvls.length* 大于 0，则 *OutlineLvls* 属性将被忽略。 |
 
 ## 示例
@@ -20,9 +21,9 @@ Object
 ```javascript editor-docx
 // How do I create table of contents properties that set the source it is built from?
 
-// Add a table of contents from the nine outline levels of the document.
+// Add a table of contents spanning the outline levels from the start level up to level 9.
 
-let tocBuildFromPr = { "OutlineLvls": 9 };
+let tocBuildFromPr = { "OutlineLvlStart": 1, "OutlineLvls": 9 };
 let tocPr = {
 	"ShowPageNums": true,
 	"RightAlgn": true,

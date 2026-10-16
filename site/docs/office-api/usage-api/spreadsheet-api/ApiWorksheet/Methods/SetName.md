@@ -1,6 +1,6 @@
 # SetName
 
-Sets a name to the current active sheet.
+Sets a name to the current sheet.
 
 ## Syntax
 

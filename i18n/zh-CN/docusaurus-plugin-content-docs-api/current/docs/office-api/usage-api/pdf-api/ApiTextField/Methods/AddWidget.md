@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.AddWidget(pageIndex, rect);
+expression.AddWidget(pageIndex, rect, isCopy);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -18,10 +18,11 @@ expression.AddWidget(pageIndex, rect);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | pageIndex | 必需 | number |  | 要添加小部件的页面索引 |
 | rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 字段矩形 |
+| isCopy | 可选 | boolean | true | 新控件是否具有与原控件相同的外观和操作设置 |
 
 ## 返回值
 
-[ApiWidget](../../Enumeration/ApiWidget.md)
+[ApiWidget](../../Enumeration/ApiWidget.md) \| null \| undefined
 
 ## 示例
 

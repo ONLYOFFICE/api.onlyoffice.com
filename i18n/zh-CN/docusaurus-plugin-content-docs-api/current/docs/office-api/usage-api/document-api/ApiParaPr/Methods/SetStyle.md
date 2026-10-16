@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
 `expression` - 表示 [ApiParaPr](../ApiParaPr.md) 类的变量。
@@ -18,11 +18,11 @@ expression.SetStyle(oStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 要设置的段落样式。 |
+| style | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | 要设置的段落样式、现有样式的名称，或传递 *undefined*/*null* 以移除样式。 |
 
 ## 返回值
 
-boolean
+[ApiParaPr](../../ApiParaPr/ApiParaPr.md)
 
 ## 示例
 

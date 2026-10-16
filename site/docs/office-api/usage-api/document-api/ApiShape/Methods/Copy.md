@@ -1,10 +1,6 @@
 # Copy
 
-Copies the current shape.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current shape.
 
 ## Syntax
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiShape](../../ApiShape/ApiShape.md)
+[ApiShape](../../ApiShape/ApiShape.md) \| null
 
 ## Example
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTablePr(oTablePr);
+expression.SetTablePr(tablePr);
 ```
 
 `expression` - 表示 [ApiTableStylePr](../ApiTableStylePr.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTablePr(oTablePr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTablePr | 必需 | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | 将要设置的表格属性。 |
+| tablePr | 必需 | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | 将要设置的表格属性。 |
 
 ## 返回值
 
@@ -42,7 +42,7 @@ table.SetWidth("percent", 100);
 let tableStylePr = tableStyle.GetConditionalTableStyle("wholeTable");
 table.SetTableLook(true, true, true, true, true, true);
 let tablePr = tableStylePr.GetTablePr();
-tablePr.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
+tablePr.SetTableBorderBottom("single", 32, 0, Api.Color(51, 51, 51));
 tableStylePr.SetTablePr(tablePr);
 
 table.SetStyle(tableStyle);

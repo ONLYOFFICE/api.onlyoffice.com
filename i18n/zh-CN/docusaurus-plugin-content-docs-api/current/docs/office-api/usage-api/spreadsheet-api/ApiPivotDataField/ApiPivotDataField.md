@@ -59,6 +59,7 @@ ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子�
 | [GetSubtotals](./Methods/GetSubtotals.md) | [PivotFieldSubtotals](../Enumeration/PivotFieldSubtotals.md) | 返回表示所有分类汇总的对象。 |
 | [GetTable](./Methods/GetTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 返回表示当前字段的数据透视表的 ApiPivotTable 对象。 |
 | [GetValue](./Methods/GetValue.md) | string | 返回表示数据透视表报表中指定数据字段名称的值。 |
+| [Group](./Methods/Group.md) | boolean | 按时间段对数据透视表字段的日期进行分组，或按间隔对其数字进行分组，与 VBA 中对字段单元格执行的 Range.Group 作用相同。该字段必须位于行或列中；再次分组会替换该字段之前的分组。对于日期，该字段显示最短的时间段，并且会在其旁边为每个较长的时间段添加一个新字段。 |
 | [Move](./Methods/Move.md) | 无 | 在类别内移动当前数据字段。 |
 | [Remove](./Methods/Remove.md) | 无 | 从类别中删除当前数据字段。 |
 | [SetCaption](./Methods/SetCaption.md) | 无 | 设置表示数据字段标签文本的值。 |

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Identify the class type of a custom XML parts manager in a document.
 
 ```javascript editor-docx
-// How do I get the class type of a custom XML parts object in a document?
+// Get the class type of a custom XML parts object in a document.
 
 // Confirm the object kind before calling type-specific operations on the XML manager in a document.
 

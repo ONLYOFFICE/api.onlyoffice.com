@@ -1,11 +1,13 @@
 # SetLanguage
 
-指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在处理文本块内容时将用于检查拼写和语法（如果请求）的语言。
+
+继承自 [ApiTextPr.SetLanguage](../../ApiTextPr/Methods/SetLanguage.md)。
 
 ## 语法
 
 ```javascript
-expression.SetLanguage(sLangId);
+expression.SetLanguage(langId);
 ```
 
 `expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
@@ -14,7 +16,7 @@ expression.SetLanguage(sLangId);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | 必需 | string |  | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
+| langId | 必需 | string \| null |  | 此参数的可能值为 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。传递 *null* 可移除语言。 |
 
 ## 返回值
 

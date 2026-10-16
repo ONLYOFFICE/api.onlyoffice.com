@@ -47,7 +47,7 @@ import TabItem from '@theme/TabItem';
     <TabItem value="python" label="Python">
         | 名称 | 类型       | 描述                                                                                                                                              |
         | ---- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| str | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`）。 |
+        | type | int \| str | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`、`form`）。 |
     </TabItem>
     <TabItem value="cpp" label="C++">
         | 名称       | 类型 | 描述                                                                                                                    |
@@ -57,13 +57,13 @@ import TabItem from '@theme/TabItem';
     <TabItem value="com" label="COM">
         | 名称   | 类型          | 描述                                                                        |
         | ------ | ------------- | --------------------------------------------------------------------------- |
-        | type   | BSTR          | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
+        | type   | BSTR          | 文件类型（参见[支持的格式](../../get-started/supported-formats.md)）。 |
         | result | VARIANT_BOOL* | 指定创建文件操作是否成功。                                                  |
     </TabItem>
     <TabItem value="java" label="Java">
         | 名称 | 类型          | 描述                                                                                                                                              |
         | ---- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| String | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`）。 |
+        | type | int \| String | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`、`form`）。 |
     </TabItem>
     <TabItem value="net" label=".Net">
         | 名称  | 类型 | 描述                                                                                                                    |
@@ -73,9 +73,13 @@ import TabItem from '@theme/TabItem';
     <TabItem value="js" label="JS">
         | 名称 | 类型   | 描述                                                                        |
         | ---- | ------ | --------------------------------------------------------------------------- |
-        | type | String | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
+        | type | String | 文件类型（参见[支持的格式](../../get-started/supported-formats.md)）。 |
     </TabItem>
 </Tabs>
+
+:::note
+`pdf` 文件类型创建的文档与 `docx` 相同。要创建 PDF 表单，请将 `form` 文件类型传递给 `CreateFile` 和 [SaveFile](./SaveFile.md) 方法。表单内容使用 [Document API](../../../office-api/usage-api/document-api/document-api.md) 和 [Form API](../../../office-api/usage-api/form-api/form-api.md) 进行编辑。要使用 [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md) 编辑现有的 PDF 文件，请使用 [OpenFile](./OpenFile.md#opening-pdf-files) 方法将其打开。
+:::
 
 ## 示例
 

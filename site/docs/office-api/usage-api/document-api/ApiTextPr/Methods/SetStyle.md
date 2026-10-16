@@ -9,7 +9,7 @@ This method is not used by itself, as it only forms the basis for the [ApiRun#Se
 ## Syntax
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
 `expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
@@ -18,7 +18,7 @@ expression.SetStyle(oStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text character. |
+| style | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | The style which must be applied to the text character, or the name of an existing style, or *undefined*/*null* to remove the style. |
 
 ## Returns
 

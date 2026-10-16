@@ -30,7 +30,7 @@ expression.GetClassType();
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();
-paraPr.SetLeftBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetLeftBorder("single", 24, 0, Api.Color(255, 111, 61));
 let paragraph = doc.GetElement(0);
 paragraph.SetStyle(myStyle);
 paragraph.AddText("This is the first paragraph. ");

@@ -34,7 +34,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-## 字体 
+## 字体 {#font}
 
 **类型**：`object`
 

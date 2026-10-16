@@ -2,8 +2,6 @@
 
 设置当前条件格式规则的计算顺序，使其在工作表上的所有其他规则之后计算。
 
-继承自 [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md)。
-
 ## 语法
 
 ```javascript

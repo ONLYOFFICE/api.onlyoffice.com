@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 使用路径查询从文档中的自定义 XML 节点选择子节点。
 
 ```javascript editor-docx
-// How do I retrieve matching child nodes from a custom XML node in a document?
+// Retrieve matching child nodes from a custom XML node in a document.
 
 // Traverse embedded XML data by querying for a set of elements under a given node in a document.
 

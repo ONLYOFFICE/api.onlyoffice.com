@@ -18,7 +18,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) \| null \| undefined
 
 ## Example
 

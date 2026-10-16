@@ -25,7 +25,7 @@ boolean
 替换文档中存储的 XML 节点的原始值。
 
 ```javascript editor-docx
-// How do I overwrite the content of a node in the embedded XML data in a document?
+// Overwrite the content of a node in the embedded XML data in a document.
 
 // Refresh a node's payload with updated markup when the stored data changes in a document.
 

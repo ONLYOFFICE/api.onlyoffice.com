@@ -23,7 +23,7 @@ number
 计算电子表格中工作簿中存储的 XML 块数量。
 
 ```javascript editor-xlsx
-// How do I find out how many embedded XML entries exist in a spreadsheet?
+// Find out how many embedded XML entries exist in a spreadsheet.
 
 // Check the total number of saved XML blocks before iterating over them in a spreadsheet.
 

@@ -2,8 +2,6 @@
 
 设置条件格式规则的优先级值。
 
-继承自 [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md)。
-
 ## 语法
 
 ```javascript
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let priorityBefore = condition1.GetPriority();
 condition1.SetPriority(5);

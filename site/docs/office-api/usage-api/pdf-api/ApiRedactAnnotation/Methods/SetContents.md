@@ -16,7 +16,7 @@ expression.SetContents(contents);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| contents | Required | string |  | The annotation text contents. |
+| contents | Required | string \| null \| undefined |  | The annotation text contents. |
 
 ## Returns
 

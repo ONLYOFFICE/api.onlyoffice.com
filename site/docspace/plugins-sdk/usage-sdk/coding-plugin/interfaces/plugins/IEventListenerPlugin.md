@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IEventListenerPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IEventListenerPlugin.ts
 ---
 
 # IEventListenerPlugin
@@ -86,16 +86,12 @@ A Map containing all registered event listener items, where keys are item identi
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `eventListenerItems` | `Map`\<`string`, [`IEventListenerItem`](../items/IEventListenerItem.md)\> | Stores a collection of elements where the keys are the key parameters from the EventListenerItem objects. A list of event listeners is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

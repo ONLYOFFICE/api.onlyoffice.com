@@ -6,6 +6,10 @@ sidebar_position: -2
 
 ONLYOFFICE 桌面编辑器 API 的变更列表。
 
+## 版本 10.0
+
+- 添加了 [--prefer-alternate-url](../usage-api/command-line-flags.md#标志) 命令行标志，用于在 Windows 上从备用下载源下载更新。
+
 ## 版本 9.2
 
 - 添加了对[连接 MCP 服务器](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md)的支持，以通过自定义工具和集成扩展 AI 功能。

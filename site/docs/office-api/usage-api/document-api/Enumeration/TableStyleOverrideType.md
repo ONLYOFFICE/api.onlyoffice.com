@@ -6,14 +6,14 @@ This simple type specifies possible values for the table sections to which the c
 - **"topRightCell"** - specifies that the table formatting is applied to the top right cell.
 - **"bottomLeftCell"** - specifies that the table formatting is applied to the bottom left cell.
 - **"bottomRightCell"** - specifies that the table formatting is applied to the bottom right cell.
-- **"firstRow"** - specifies that the table formatting is applied to the first row.
+- **"firstRow"** - specifies that the table formatting is applied to the first row. Any subsequent row which is in *table header* will also use this conditional format.
 - **"lastRow"** - specifies that the table formatting is applied to the last row.
-- **"firstColumn"** - specifies that the table formatting is applied to the first column. Any subsequent row which is in *table header* ([ApiTableRowPr#SetTableHeader](../ApiTableRowPr/Methods/SetTableHeader.md)) will also use this conditional format.
+- **"firstColumn"** - specifies that the table formatting is applied to the first column.
 - **"lastColumn"** - specifies that the table formatting is applied to the last column.
-- **"bandedColumn"** - specifies that the table formatting is applied to odd numbered groupings of rows.
-- **"bandedColumnEven"** - specifies that the table formatting is applied to even numbered groupings of rows.
-- **"bandedRow"** - specifies that the table formatting is applied to odd numbered groupings of columns.
-- **"bandedRowEven"** - specifies that the table formatting is applied to even numbered groupings of columns.
+- **"bandedColumn"** - specifies that the table formatting is applied to odd numbered groupings of columns.
+- **"bandedColumnEven"** - specifies that the table formatting is applied to even numbered groupings of columns.
+- **"bandedRow"** - specifies that the table formatting is applied to odd numbered groupings of rows.
+- **"bandedRowEven"** - specifies that the table formatting is applied to even numbered groupings of rows.
 - **"wholeTable"** - specifies that the conditional formatting is applied to the whole table.
 
 ## Type
@@ -45,5 +45,5 @@ Apply the created style (set shadow) to the top left cell of the table.
 
 // Get table part style by condition and update it.
 
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 0, 0)));
 ```

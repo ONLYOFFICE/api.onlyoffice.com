@@ -25,7 +25,7 @@ expression.GetById(xmlPartId);
 Get a custom XML part by its ID in a presentation.
 
 ```javascript editor-pptx
-// How do I find a custom XML part using its unique ID in a presentation?
+// Find a custom XML part using its unique ID in a presentation.
 
 // Display the retrieved XML part's content in a presentation.
 

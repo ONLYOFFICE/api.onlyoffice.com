@@ -6,13 +6,13 @@ sidebar_position: -1
 
 ## How to enable WOPI?
 
-To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) parameter in the ONLYOFFICE Docs config to **true**.
+To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) parameter in the ONLYOFFICE Docs config to `true`.
 
 Parameters:
 
 | Name        | Type    | Example | Description                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
-| wopi.enable | boolean | true    | Defines if WOPI is enabled or not. The default value is **false**. |
+| wopi.enable | boolean | true    | Defines if WOPI is enabled or not. The default value is `false`. |
 
 Example:
 
@@ -60,7 +60,7 @@ Example:
   ui=en-us&amp;thm=1&amp;"/>
   ```
 
-The editor behavior such as language, theme or chat can be customized via the **discovery query parameters** which are the parameters that can be exposed by file storage in the *urlsrc* attribute.
+The editor behavior such as language, theme or chat can be customized via the **discovery query parameters** which are the parameters that can be exposed by file storage in the `urlsrc` attribute.
 
 All the available discovery query parameters can be found [here](../../using-wopi/wopi-discovery.md#wopi-standard).
 
@@ -70,13 +70,13 @@ In order to create an online office session within your application, a host must
 
 The host page must contain the following elements:
 
-- A *form* element via which the host must *POST* the *access\_token* and *access\_token\_ttl* parameters to the online office iframe for security purposes.
+- A `form` element via which the host must `POST` the `access_token` and `access_token_ttl` parameters to the online office iframe for security purposes.
 
 - JavaScript code for interacting with the online office iframe using [PostMessage](../../using-wopi/postmessage.md).
 
 - Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](../../using-wopi/wopi-discovery.md).
 
-- A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
+- A `viewport` meta tag to avoid visual and functional problems in mobile browsers.
 
   An example of the host page code can be found [on this page](../../using-wopi/host-page.md).
 

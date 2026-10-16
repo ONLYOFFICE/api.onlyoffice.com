@@ -1,6 +1,6 @@
 # GetRect
 
-设置批注矩形。
+获取注释矩形。
 
 继承自 [ApiBaseAnnotation.GetRect](../../ApiBaseAnnotation/Methods/GetRect.md)。
 

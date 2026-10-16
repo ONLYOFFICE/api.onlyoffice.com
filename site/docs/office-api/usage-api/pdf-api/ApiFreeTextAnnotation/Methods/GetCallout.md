@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[FreeTextCallout](../../Enumeration/FreeTextCallout.md)
+[FreeTextCallout](../../Enumeration/FreeTextCallout.md) \| null \| undefined
 
 ## Example
 

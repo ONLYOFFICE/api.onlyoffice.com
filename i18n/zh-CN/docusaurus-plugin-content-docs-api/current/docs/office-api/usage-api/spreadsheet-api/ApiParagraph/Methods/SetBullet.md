@@ -16,7 +16,7 @@ expression.SetBullet(oBullet);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oBullet | 必需 | [ApiBullet](../../ApiBullet/ApiBullet.md) |  | 使用 [Api#CreateBullet](../../Api/Methods/CreateBullet.md) 或 [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) 方法创建的项目符号对象。 |
+| oBullet | 必需 | [ApiBullet](../../ApiBullet/ApiBullet.md) \| null \| undefined |  | 使用 [Api#CreateBullet](../../Api/Methods/CreateBullet.md) 或 [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) 方法创建的项目符号对象。 |
 
 ## 返回值
 

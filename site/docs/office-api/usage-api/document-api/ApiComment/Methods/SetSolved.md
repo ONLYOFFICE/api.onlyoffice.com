@@ -5,7 +5,7 @@ Marks a comment as solved.
 ## Syntax
 
 ```javascript
-expression.SetSolved(bSolved);
+expression.SetSolved(solved);
 ```
 
 `expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
@@ -14,7 +14,7 @@ expression.SetSolved(bSolved);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bSolved | Required | boolean |  | Specifies if a comment is solved or not. |
+| solved | Required | boolean |  | Specifies if a comment is solved or not. |
 
 ## Returns
 

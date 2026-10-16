@@ -1,12 +1,19 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import type * as Plugin from "@docusaurus/types/src/plugin";
-import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import {docsSections, docspaceSections} from './src/sections';
 
-// SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
-const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
+// SITE_MODE is set in CI (development/testing/production), NODE_ENV works for local dev.
+const siteMode =
+  process.env.SITE_MODE ?? (process.env.NODE_ENV === 'development' ? 'development' : 'production');
+const isProduction = siteMode === 'production';
+
+const siteUrl =
+  {
+    production: 'https://api.onlyoffice.com',
+    testing: 'https://api.teamlab.info',
+    development: 'https://api.onlyoffice.io',
+  }[siteMode] ?? 'https://api.onlyoffice.com';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
 
 function localize(translations: Record<string, string>): string {
@@ -15,7 +22,7 @@ function localize(translations: Record<string, string>): string {
 
 const announcementBarContent = localize({
   en: `<a target="_blank" href="https://www.onlyoffice.com/blog/category/onlyoffice_10_0?from=api"><b>Meet ONLYOFFICE Docs 10.0</b></a>: modular apps and AI tools, 50+ new features, 1,000 bug fixes, 35 fixed vulnerabilities, and more.`,
-  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与AI工具，50+新功能、1000项错误修复、35个漏洞修复等。`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与 AI 工具，50+ 新功能、1000 项错误修复、35 个漏洞修复等。`,
 });
 
 // The landing-page cards, flattened for llms-txt: each section carries its group's name.
@@ -45,12 +52,12 @@ const config: Config = {
     'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
-  url: isDev ? 'https://api.teamlab.info' : 'https://api.onlyoffice.com',
+  url: siteUrl,
   baseUrl: '/',
 
   trailingSlash: false,
 
-  noIndex: isDev,
+  noIndex: !isProduction,
 
   onBrokenLinks: 'throw',
 
@@ -62,8 +69,8 @@ const config: Config = {
   },
 
   customFields: {
-    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
-    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+    documentServer: isProduction ? 'https://api.docs.onlyoffice.com/' : 'https://api.docs.teamlab.info/',
+    documentServerSecret: isProduction ? 'NsOb2yUBaI9yme0wbkGAapi' : 'MYSECRET',
   },
 
   future: {
@@ -156,22 +163,6 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      'docusaurus-plugin-openapi-docs',
-      {
-        id: 'openapi',
-        docsPluginId: "api",
-        config: {
-          docspaceBackend: {
-            specPath: "openapi/docspace/docspace-backend.yaml",
-            outputDir: "site/docspace/api-backend/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tagGroup",
-            },
-          } satisfies OpenApiPlugin.Options,
-        } satisfies Plugin.PluginOptions,
-      },
-    ],
     [
       '@docusaurus/plugin-google-gtag',
       {
@@ -329,6 +320,13 @@ const config: Config = {
               label: 'Plugins SDK',
               docsPluginId: 'api',
               className: 'navbar-icon--plugins',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceUiKit',
+              label: 'UI Kit',
+              docsPluginId: 'api',
+              className: 'navbar-icon--ui-kit',
             },
             {
               type: 'docSidebar',

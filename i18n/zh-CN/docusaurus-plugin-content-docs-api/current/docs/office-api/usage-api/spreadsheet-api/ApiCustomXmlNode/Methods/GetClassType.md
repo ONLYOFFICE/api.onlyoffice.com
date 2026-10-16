@@ -23,7 +23,7 @@ expression.GetClassType();
 检查电子表格中表示自定义 XML 节点的对象类型。
 
 ```javascript editor-xlsx
-// How do I confirm the category of an XML node object before processing it in a spreadsheet?
+// Confirm the category of an XML node object before processing it in a spreadsheet.
 
 // Verify the identity of an XML node to ensure it is the expected kind before using it in a spreadsheet.
 

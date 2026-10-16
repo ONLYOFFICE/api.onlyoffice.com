@@ -122,7 +122,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/files/:folderId/text](/docspace/api-backend/usage-api/create-text-file) to create a `.txt` file in the specified folder.
+A POST request is sent to [/api/2.0/files/:folderId/text](/docspace/api-backend/usage-api/files/files/create-text-file) to create a `.txt` file in the specified folder.
 
 Payload parameters include:
 

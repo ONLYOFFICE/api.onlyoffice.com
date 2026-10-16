@@ -2,6 +2,10 @@
 
 Sets the fill to the specified chart series.
 
+:::note
+The fill is not applied to 2D line and scatter series. Use the SetSeriesOutLine method to change their line and the SetMarkerFill method to change their markers.
+:::
+
 ## Syntax
 
 ```javascript
@@ -35,7 +39,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

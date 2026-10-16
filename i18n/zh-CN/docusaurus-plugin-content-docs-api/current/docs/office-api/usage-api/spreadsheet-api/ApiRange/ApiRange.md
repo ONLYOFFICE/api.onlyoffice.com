@@ -30,9 +30,11 @@
 | FontName | string | 将指定的字体系列设置为当前单元格范围的字体名称。 |
 | FontSize | number | 设置当前单元格范围中字符的字体大小（以磅为单位）。 |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
-| Formula | string | 返回指定范围第一个单元格的公式或将其设置到此单元格。 |
+| Formula | string \| string[][] | 返回指定范围单元格中的公式，或按行返回多个单元格范围中的公式数组，或为该单元格设置公式。 |
+| FormulaArray | string \| null | 返回指定范围的数组公式或为该范围设置数组公式。 |
 | Height | number | 返回表示以磅为单位测量的范围高度的值。 |
 | Hidden | boolean | 返回或设置值隐藏属性。 |
+| Hyperlinks | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)[] | 返回范围中所有超链接的数组。 |
 | Italic | boolean | 设置当前单元格或单元格范围中文本字符的斜体属性。 |
 | MergeArea | [ApiRange](../ApiRange/ApiRange.md) | 从合并区域返回单元格或单元格范围。 |
 | NumberFormat | string | 设置表示对象格式代码的值。 |
@@ -98,6 +100,7 @@
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | 返回指定范围的公式。 |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | 返回当前范围的数组公式。 |
 | [GetHidden](./Methods/GetHidden.md) | boolean | 返回值隐藏属性。 |
+| [GetHyperlinks](./Methods/GetHyperlinks.md) | ApiHyperlinks | 返回范围中所有超链接的集合。 |
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | 返回表示当前范围的格式代码的值。 |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | 返回当前范围的角度。 |
 | [GetPivotTable](./Methods/GetPivotTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | 返回表示包含指定范围左上角的数据透视表报告的 ApiPivotTable 对象。 |
@@ -116,7 +119,8 @@
 | [Merge](./Methods/Merge.md) | boolean | 将选定的单元格范围合并为单个单元格或单元格行。 |
 | [Offset](./Methods/Offset.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回从当前范围偏移的 Range 对象。 |
 | [Paste](./Methods/Paste.md) | 无 | 将 Range 对象粘贴到指定范围。 |
-| [PasteSpecial](./Methods/PasteSpecial.md) | 无 | 使用特殊粘贴选项将 Range 对象粘贴到指定范围。 |
+| [PasteSpecial](./Methods/PasteSpecial.md) | boolean | 使用特殊粘贴选项将 Range 对象粘贴到指定范围。 |
+| [RemoveDuplicates](./Methods/RemoveDuplicates.md) | number \| null | 从范围中删除具有重复值的行，与“删除重复项”命令的作用相同。表格内的范围代表整个表格，自动筛选范围或其中的一个单元格代表筛选范围。当所比较列的显示值相等（不区分大小写）时，这些行即为重复行；其中第一行会被保留。范围中的其他行会上移以填补已删除行的位置；范围外的单元格保持不变。 |
 | [Replace](./Methods/Replace.md) | boolean | 将范围中的特定信息替换为另一个。 |
 | [Resize](./Methods/Resize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 通过更改行数和列数来调整当前范围的大小。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前范围。 |

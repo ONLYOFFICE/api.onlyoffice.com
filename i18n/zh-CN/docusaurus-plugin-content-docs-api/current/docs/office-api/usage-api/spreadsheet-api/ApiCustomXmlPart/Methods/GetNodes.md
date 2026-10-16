@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 按路径从电子表格中存储的 XML 数据选择匹配的元素。
 
 ```javascript editor-xlsx
-// How do I pull out specific nodes from a custom XML block saved in a spreadsheet?
+// Pull out specific nodes from a custom XML block saved in a spreadsheet.
 
 // Navigate an XML structure to collect all elements at a given location in a spreadsheet.
 

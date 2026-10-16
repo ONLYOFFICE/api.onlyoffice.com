@@ -2,6 +2,8 @@
 
 为文本字符设置斜体属性。
 
+继承自 [ApiTextPr.SetItalic](../../ApiTextPr/Methods/SetItalic.md)。
+
 ## 语法
 
 ```javascript

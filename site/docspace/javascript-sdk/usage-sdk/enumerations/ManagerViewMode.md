@@ -6,7 +6,14 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # ManagerViewMode
 
-The view modes available in the manager.
+The item layout in [SDKMode.Manager](SDKMode.md#Manager) mode.
+Passed via [TFrameConfig.viewAs](../type-aliases/TFrameConfig.md#viewAs).
+
+## Example
+
+```typescript
+sdk.init({ mode: SDKMode.Manager, viewAs: ManagerViewMode.Table, ... });
+```
 
 ## Enumeration Members
 
@@ -14,8 +21,8 @@ The view modes available in the manager.
 
 | Enumeration Member | Value | Description |
 | ------ | ------ | ------ |
-| `Row` | `"row"` | Displays items in a vertical list, showing details for each entry in a row. |
-| `Table` | `"table"` | Displays items in a table layout with columns for structured comparison. |
-| `Tile` | `"tile"` | Displays items as tiles, emphasizing visual previews and key information. |
+| `Row` | `"row"` | Vertical list — one item per row with details. |
+| `Table` | `"table"` | Table with sortable columns. Column visibility is controlled by [TFrameConfig.viewTableColumns](../type-aliases/TFrameConfig.md#viewTableColumns). |
+| `Tile` | `"tile"` | Grid of visual tiles with thumbnails. |
 
 </APITable>

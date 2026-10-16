@@ -16,7 +16,7 @@ expression.GetNumbering();
 
 ## 返回值
 
-[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md)
+[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md) \| null \| undefined
 
 ## 示例
 

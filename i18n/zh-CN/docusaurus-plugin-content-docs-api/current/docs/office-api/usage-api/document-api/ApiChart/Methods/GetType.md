@@ -1,0 +1,46 @@
+# GetType
+
+使用 \{@link ChartType\} 枚举中的图表类型名称返回图表对象的类型。
+
+## 语法
+
+```javascript
+expression.GetType();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ChartType](../../Enumeration/ChartType.md)
+
+## 示例
+
+在文档中使用图表类型名称读取图表类型。
+
+```javascript editor-docx
+// Useful for confirming a chart's type before applying type-specific formatting in a document.
+
+// Confirm a chart's type at runtime by showing its name in the chart title in a document.
+
+const doc = Api.GetDocument();
+const firstParagraph = doc.GetElement(0);
+
+const chart = Api.CreateChart('3DColumnClustered', [
+	[200, 240, 280],
+	[250, 260, 280]
+], ['Projected Revenue', 'Estimated Costs'], [2014, 2015, 2016], 4051300, 2347595, 24);
+
+const solidGrey = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+const solidOrange = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+chart.SetSeriesFill(solidGrey, 0, false);
+chart.SetSeriesFill(solidOrange, 1, false);
+const chartType = chart.GetType();
+chart.SetTitle('This chart is of the ' + chartType + ' type', 28);
+
+firstParagraph.AddDrawing(chart);
+```

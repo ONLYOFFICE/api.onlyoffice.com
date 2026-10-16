@@ -1,11 +1,13 @@
 # SetFill
 
-Sets the fill properties to the current shape.
+Sets the fill formatting properties to the current graphic object.
+
+Inherited from [ApiDrawing.SetFill](../../ApiDrawing/Methods/SetFill.md).
 
 ## Syntax
 
 ```javascript
-expression.SetFill(oFill);
+expression.SetFill(fill);
 ```
 
 `expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
@@ -14,7 +16,7 @@ expression.SetFill(oFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the shape. |
+| fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to fill the graphic object. |
 
 ## Returns
 
@@ -22,18 +24,32 @@ boolean
 
 ## Example
 
-Apply a solid red fill to a rectangle shape after it is added to the sheet in a spreadsheet.
+Set the fill formatting properties to a shape and an image in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I change the background color of a shape in a spreadsheet?
+// SetFill applies an ApiFill to any drawing object added to a worksheet, not only shapes.
 
-// Paint the interior of a shape with a chosen color to update its appearance in a spreadsheet.
+// Fill a shape with a solid color and an image with a semi-transparent overlay.
 
-let worksheet = Api.GetActiveSheet();
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape = worksheet.AddShape("rect", 60 * 36000, 40 * 36000, Api.CreateNoFill(), stroke, 3, 0, 2, 2);
-worksheet.GetRange("A1").SetValue("Original shape with no fill");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
-shape.SetFill(fill);
-worksheet.GetRange("A2").SetValue("Fill changed to red");
+const worksheet = Api.GetActiveSheet();
+const noFill = Api.CreateNoFill();
+const stroke = Api.CreateStroke(0, noFill);
+const shape = worksheet.AddShape(
+	'rect',
+	Api.MillimetersToEmus(60), Api.MillimetersToEmus(40),
+	noFill, stroke,
+	1, 0, 1, 0
+);
+const shapeFill = Api.CreateSolidFill(Api.RGB(96, 125, 139));
+shape.SetFill(shapeFill);
+worksheet.GetRange('A1').SetValue('Shape fill changed to blue-grey.');
+
+const image = worksheet.AddImage(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	Api.MillimetersToEmus(40), Api.MillimetersToEmus(40),
+	8, 0, 1, 0
+);
+const imageFill = Api.CreateSolidFill(Api.RGBA(38, 50, 56, 180));
+image.SetFill(imageFill);
+worksheet.GetRange('H1').SetValue('Image with semi-transparent fill overlay.');
 ```

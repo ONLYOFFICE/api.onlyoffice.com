@@ -100,7 +100,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A PUT request is sent to the [/api/2.0/group/:fromGroupId/members/:toGroupId](/docspace/api-backend/usage-api/move-members-to) endpoint, which moves all members from the source group to the target group.
+A PUT request is sent to the [/api/2.0/group/:fromGroupId/members/:toGroupId](/docspace/api-backend/usage-api/group/move-members-to) endpoint, which moves all members from the source group to the target group.
 
 If successful, the API returns status code 200 and the console output confirms the migration.
 

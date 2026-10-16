@@ -18,7 +18,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "bar" | The chart type used for the chart display. |
+| chartType | Optional | [ChartType](../../Enumeration/ChartType.md) | "ColumnClustered" | The chart type used for the chart display. |
 | series | Required | number[][] |  | The array of the data used to build the chart from. |
 | seriesNames | Required | number[] \| string[] |  | The array of the names (the source table column names) used for the data which the chart will be build from. |
 | catNames | Required | number[] \| string[] |  | The array of the names (the source table row names) used for the data which the chart will be build from. |
@@ -29,7 +29,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 
@@ -42,7 +42,7 @@ Insert a 3D bar chart with colored data series into a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

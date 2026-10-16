@@ -27,8 +27,8 @@ ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md)
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回当前条件格式规则应用的单元格区域。 |
+| [Delete](./Methods/Delete.md) | 无 | 删除数据条条件格式规则。 |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回当前条件格式规则应用的单元格区域。 |
 | [GetAxisColor](./Methods/GetAxisColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | 返回数据条条件格式规则的轴颜色。 |
 | [GetAxisPosition](./Methods/GetAxisPosition.md) | [XlDataBarAxisPosition](../Enumeration/XlDataBarAxisPosition.md) | 返回数据条条件格式规则的轴位置。 |
 | [GetBarBorderColor](./Methods/GetBarBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | 返回数据条的边框颜色。 |
@@ -56,11 +56,12 @@ ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md)
 | [GetPriority](./Methods/GetPriority.md) | number | 返回条件格式规则的优先级值。 |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | 返回条件格式规则的作用域类型。 |
 | [GetShowValue](./Methods/GetShowValue.md) | boolean | 返回数据条是否显示单元格值。 |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | 返回如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。此规则类型无法停止计算，因此只能通过打开已设置该值的文件来更改该值。 |
 | [GetText](./Methods/GetText.md) | string | 返回基于文本的条件格式规则中使用的文本值。 |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | 返回基于文本的条件格式规则的文本运算符。 |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回数据条条件格式规则的类型。 |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | 使用指定的参数修改当前格式条件。 |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 设置当前条件格式规则应用的单元格区域。 |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 修改当前条件格式规则所应用的单元格范围。 |
 | [SetAxisColor](./Methods/SetAxisColor.md) | 无 | 设置数据条条件格式规则的轴颜色。 |
 | [SetAxisPosition](./Methods/SetAxisPosition.md) | 无 | 设置数据条条件格式规则的轴位置。 |
 | [SetBarBorderColor](./Methods/SetBarBorderColor.md) | 无 | 设置数据条的边框颜色。 |
@@ -84,5 +85,6 @@ ApiDatabar 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md)
 | [SetPriority](./Methods/SetPriority.md) | 无 | 设置条件格式规则的优先级值。 |
 | [SetScopeType](./Methods/SetScopeType.md) | 无 | 设置条件格式规则的作用域类型。 |
 | [SetShowValue](./Methods/SetShowValue.md) | 无 | 指定数据条是否显示单元格值。 |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | 无 | 设置如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。 |
 | [SetText](./Methods/SetText.md) | 无 | 设置基于文本的条件格式规则中使用的文本值。 |
 | [SetTextOperator](./Methods/SetTextOperator.md) | 无 | 设置基于文本的条件格式规则的文本运算符。 |

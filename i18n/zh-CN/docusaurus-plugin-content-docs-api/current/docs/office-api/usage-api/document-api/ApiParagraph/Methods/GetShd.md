@@ -18,7 +18,7 @@ expression.GetShd();
 
 ## 返回值
 
-[Shd](../../Enumeration/Shd.md) \| undefined
+[ApiShd](../../ApiShd/ApiShd.md) \| undefined
 
 ## 示例
 
@@ -32,12 +32,12 @@ expression.GetShd();
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This is the first paragraph with a custom shading applied.');
-paragraph.SetShd('clear', Api.HexColor('#FF6F3D'));
+paragraph.SetShd(Api.CreateShd('clear', Api.HexColor('#FF6F3D')));
 
 let shd = paragraph.GetShd();
 
 let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This is the second paragraph. The shading from the first paragraph is applied here.');
-paragraph2.SetShd(shd.Type, shd.Color);
+paragraph2.SetShd(shd);
 doc.Push(paragraph2);
 ```

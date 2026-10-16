@@ -5,7 +5,7 @@ Specifies the languages which will be used to check spelling and grammar (if req
 ## Syntax
 
 ```javascript
-expression.SetLanguage(sLangId);
+expression.SetLanguage(langId);
 ```
 
 `expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
@@ -14,7 +14,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| langId | Required | string \| null |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". Pass *null* to remove the language. |
 
 ## Returns
 

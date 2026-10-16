@@ -13,13 +13,16 @@ The following table lists the available methods.
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Gets all drawing objects from the page. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets page widgets |
 | [GetClassType](./Methods/GetClassType.md) | "page" | Returns a type of the ApiPage class. |
+| [GetHeight](./Methods/GetHeight.md) | [pt](../Enumeration/pt.md) | Gets page height |
 | [GetIndex](./Methods/GetIndex.md) | number | Gets page index |
 | [GetRotation](./Methods/GetRotation.md) | number | Gets page rotation angle |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Gets selected text on page |
+| [GetSelection](./Methods/GetSelection.md) | [PageSelection](../Enumeration/PageSelection.md) \| null \| undefined | Gets page selection. |
 | [GetSelectionQuads](./Methods/GetSelectionQuads.md) | [Quad](../Enumeration/Quad.md)[] | Gets page selection quads |
 | [GetText](./Methods/GetText.md) | string | Gets all text content on the page. |
 | [GetTextWithQuads](./Methods/GetTextWithQuads.md) | [TextWithQuads](../Enumeration/TextWithQuads.md)[] | Gets all text content on the page with quads per line. |
+| [GetWidth](./Methods/GetWidth.md) | [pt](../Enumeration/pt.md) | Gets page width |
 | [RecognizeContent](./Methods/RecognizeContent.md) | [Drawing](../Enumeration/Drawing.md)[] | Recognizes content on the page and returns an array of recognized objects. |
-| [Search](./Methods/Search.md) | Quads[] | Search words and returns their quads. |
+| [Search](./Methods/Search.md) | [SearchResults](../Enumeration/SearchResults.md) | Search words and returns their quads. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets page rotation angle |
 | [SetSelection](./Methods/SetSelection.md) | boolean | Sets page selection. |

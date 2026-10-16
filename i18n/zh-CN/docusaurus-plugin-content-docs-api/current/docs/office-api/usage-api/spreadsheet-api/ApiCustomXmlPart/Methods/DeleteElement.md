@@ -25,7 +25,7 @@ boolean
 从电子表格中存储的 XML 数据移除子元素。
 
 ```javascript editor-xlsx
-// How do I cut out an unwanted XML node from custom data saved in a spreadsheet?
+// Cut out an unwanted XML node from custom data saved in a spreadsheet.
 
 // Prune a specific branch of an XML structure to keep only the relevant content in a spreadsheet.
 

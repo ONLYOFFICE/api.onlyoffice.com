@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRichRun](../../ApiRichRun/ApiRichRun.md)
+[ApiRichRun](../../ApiRichRun/ApiRichRun.md) \| null \| undefined
 
 ## Example
 

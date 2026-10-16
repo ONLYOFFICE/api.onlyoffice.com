@@ -16,7 +16,7 @@ expression.SetOutlineLvl(lvl);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| lvl | 可选 | Number \| null \| undefined |  | 大纲级别。可能的值：1-9。要取消大纲级别，请不带参数使用此方法。 |
+| lvl | 可选 | Number \| null \| undefined |  | 大纲级别。可能的值：1-9。值 1 表示基本大纲级别。要设置为无大纲级别，请不带参数调用此方法。 |
 
 ## 返回值
 
@@ -34,7 +34,7 @@ boolean
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const rgb = Api.CreateRGBColor(50, 100, 150);
+const rgb = Api.RGB(50, 100, 150);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 200 * 36000, 50 * 36000, fill, stroke);

@@ -23,7 +23,7 @@ expression.GetClassType();
 获取演示文稿中自定义 XML 部件对象的类类型。
 
 ```javascript editor-pptx
-// How do I determine the class type of a custom XML parts manager in a presentation?
+// Determine the class type of a custom XML parts manager in a presentation.
 
 // Display the class type of the XML parts manager in a presentation.
 

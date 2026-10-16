@@ -18,7 +18,7 @@ expression.GetBookmark(sBookmarkName);
 
 ## Returns
 
-[ApiBookmark](../../ApiBookmark/ApiBookmark.md)
+[ApiBookmark](../../ApiBookmark/ApiBookmark.md) \| null \| undefined
 
 ## Example
 

@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[AddinFieldData](../Enumeration/AddinFieldData.md)
+[AddinFieldData](../Enumeration/AddinFieldData.md) \| null \| undefined
 
 ## Example
 

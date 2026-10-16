@@ -11,13 +11,14 @@ The following table lists the available methods.
 | [CoAuthoringChatSendMessage](./Methods/CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
 | [EndAction](./Methods/EndAction.md) | None | Specifies the end action for long operations. |
 | [FocusEditor](./Methods/FocusEditor.md) | None | Returns focus to the editor. |
-| [GetAllComments](./Methods/GetAllComments.md) | comment[] | Returns all the comments from the document. |
+| [GetAllComments](./Methods/GetAllComments.md) | [comment](./Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | Returns the current page index. |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
-| [GetPageImage](./Methods/GetPageImage.md) | canvas | Returns the page image. |
+| [GetPageImage](./Methods/GetPageImage.md) | string \| Object | Returns the page image. |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | Returns the restrictions the editor currently applies to the document. |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Returns the selected text from the document. |
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [GoToPage](./Methods/GoToPage.md) | boolean | Moves to specified page. |
@@ -50,4 +51,7 @@ The following table lists the available events.
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | The function called when the document is completely loaded. |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | The function called to turn the mouse or touchpad events on/off. |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | The function called when the floating action button has been clicked. |
+| [onSelectionCancel](./Events/onSelectionCancel.md) | The function called was when selection was canceled. |
+| [onSelectionEnd](./Events/onSelectionEnd.md) | The function called to when selection was ended. |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | The function called when the target position in the editor is changed. |

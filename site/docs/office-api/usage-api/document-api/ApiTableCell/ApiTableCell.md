@@ -14,8 +14,8 @@ The following table lists the available methods.
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the cell. |
 | [AddRows](./Methods/AddRows.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Adds the new rows to the current table. |
 | [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | Appends text to the end of the cell content. |
-| [Clear](./Methods/Clear.md) | boolean | Clears the content from the current cell. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current table cell. |
+| [Clear](./Methods/Clear.md) | boolean | Clears the content of the current cell. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Returns the background color of the current table cell. |
 | [GetClassType](./Methods/GetClassType.md) | "tableCell" | Returns a type of the ApiTableCell class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the current cell content. |
 | [GetIndex](./Methods/GetIndex.md) | Number | Returns the current cell index. |

@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ParagraphContent](../../Enumeration/ParagraphContent.md)
+[ParagraphContent](../../Enumeration/ParagraphContent.md) \| null \| undefined
 
 ## Example
 

@@ -1,8 +1,6 @@
 # ModifyAppliesToRange
 
-Sets the cell range to which the current conditional formatting rule applies.
-
-Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
+Modifies the cell range to which the current conditional formatting rule applies.
 
 ## Syntax
 
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let originalRange = condition1.GetAppliesTo().GetAddress();
 condition1.ModifyAppliesToRange(worksheet.GetRange("A2:B6"));

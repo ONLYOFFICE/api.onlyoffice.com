@@ -23,7 +23,7 @@ expression.GetAttributes();
 检索文档中自定义 XML 节点的所有属性。
 
 ```javascript editor-docx
-// How do I list every attribute on a custom XML node in a document?
+// List every attribute on a custom XML node in a document.
 
 // Inspect the full set of metadata attached to an XML element by reading all its attributes in a document.
 

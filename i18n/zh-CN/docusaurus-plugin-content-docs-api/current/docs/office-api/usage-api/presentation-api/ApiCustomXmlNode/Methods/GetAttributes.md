@@ -23,7 +23,7 @@ expression.GetAttributes();
 列出演示文稿中 XML 元素的所有属性。
 
 ```javascript editor-pptx
-// How do I view all attributes assigned to an XML node in a presentation?
+// View all attributes assigned to an XML node in a presentation.
 
 // Retrieve the name-value pairs of an XML element in a presentation.
 

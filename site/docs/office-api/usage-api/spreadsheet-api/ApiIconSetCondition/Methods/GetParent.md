@@ -2,8 +2,6 @@
 
 Returns the parent range object of the current format condition.
 
-Inherited from [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md).
-
 ## Syntax
 
 ```javascript

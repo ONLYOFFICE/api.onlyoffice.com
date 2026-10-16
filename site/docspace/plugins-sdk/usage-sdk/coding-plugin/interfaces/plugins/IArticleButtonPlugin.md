@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleButtonPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IArticleButtonPlugin.ts
 ---
 
 # IArticleButtonPlugin
@@ -91,16 +91,12 @@ Update an existing article button item in the plugin's collection.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `articleButtonItems` | `Map`\<`string`, [`IArticleButtonItem`](../items/IArticleButtonItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ArticleButtonItem objects. A list for article button items is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

@@ -2,8 +2,6 @@
 
 Returns the number format applied to a cell when the conditional formatting rule evaluates to true.
 
-Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
-
 ## Syntax
 
 ```javascript

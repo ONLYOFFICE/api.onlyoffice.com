@@ -30,9 +30,11 @@ Class representing a range.
 | FontName | string | Sets the specified font family as the font name for the current cell range. |
 | FontSize | number | Sets the font size (measured in points) to the characters of the current cell range. |
 | FormatConditions | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | Returns the collection of conditional formatting rules for the current range. |
-| Formula | string | Returns a formula from the first cell of the specified range or sets it to this cell. |
+| Formula | string \| string[][] | Returns a formula from the cell of the specified range or an array of formulas by rows from a range of several cells, or sets it to this cell. |
+| FormulaArray | string \| null | Returns the array formula of the specified range or sets it to this range. |
 | Height | number | Returns a value that represents the range height measured in points. |
 | Hidden | boolean | Returns or sets the value hiding property. |
+| Hyperlinks | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)[] | Returns an array of all the hyperlinks in the range. |
 | Italic | boolean | Sets the italic property to the text characters in the current cell or cell range. |
 | MergeArea | [ApiRange](../ApiRange/ApiRange.md) | Returns the cell or cell range from the merge area. |
 | NumberFormat | string | Sets a value that represents the format code for the object. |
@@ -98,6 +100,7 @@ The following table lists the available methods.
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | Returns a formula of the specified range. |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | Returns an array formula from the current range. |
 | [GetHidden](./Methods/GetHidden.md) | boolean | Returns the value hiding property. |
+| [GetHyperlinks](./Methods/GetHyperlinks.md) | ApiHyperlinks | Returns a collection of all the hyperlinks in the range. |
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | Returns a value that represents the format code for the current range. |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | Returns the current range angle. |
 | [GetPivotTable](./Methods/GetPivotTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | Returns the ApiPivotTable object that represents the pivot table report containing the upper-left corner of the specified range. |
@@ -116,7 +119,8 @@ The following table lists the available methods.
 | [Merge](./Methods/Merge.md) | boolean | Merges the selected cell range into a single cell or a cell row. |
 | [Offset](./Methods/Offset.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object offset from the current range. |
 | [Paste](./Methods/Paste.md) | None | Pastes the Range object to the specified range. |
-| [PasteSpecial](./Methods/PasteSpecial.md) | None | Pastes the Range object to the specified range using the special paste options. |
+| [PasteSpecial](./Methods/PasteSpecial.md) | boolean | Pastes the Range object to the specified range using the special paste options. |
+| [RemoveDuplicates](./Methods/RemoveDuplicates.md) | number \| null | Removes the rows with duplicate values from the range, as the Remove Duplicates command does. A range inside a table stands for the whole table, and the autofilter range or one cell of it stands for the filtered range. Rows are duplicates when the displayed values of the compared columns are equal, case-insensitively; the first of them is kept. The other rows of the range move up in place of the removed ones; the cells outside the range stay in place. |
 | [Replace](./Methods/Replace.md) | boolean | Replaces specific information to another one in a range. |
 | [Resize](./Methods/Resize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Resizes the current range by changing the number of rows and columns. |
 | [Select](./Methods/Select.md) | boolean | Selects the current range. |

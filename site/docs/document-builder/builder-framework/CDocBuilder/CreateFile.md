@@ -47,7 +47,7 @@ Creates a new file. The type of the file which will be created needs to be set.
     <TabItem value="python" label="Python">
         | Name | Type       | Description                                                                                                                                              |
         | ---- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| str | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`). |
+        | type | int \| str | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`, `form`). |
     </TabItem>
     <TabItem value="cpp" label="C++">
         | Name       | Type | Description                                                                                                                                      |
@@ -57,13 +57,13 @@ Creates a new file. The type of the file which will be created needs to be set.
     <TabItem value="com" label="COM">
         | Name   | Type          | Description                                                                            |
         | ------ | ------------- | -------------------------------------------------------------------------------------- |
-        | type   | BSTR          | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
+        | type   | BSTR          | The file type (see [Supported formats](../../get-started/supported-formats.md)). |
         | result | VARIANT_BOOL* | Specifies if the operation of creating a file is successful or not.                    |
     </TabItem>
     <TabItem value="java" label="Java">
         | Name | Type          | Description                                                                                                                                              |
         | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| String | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`). |
+        | type | int \| String | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`, `form`). |
     </TabItem>
     <TabItem value="net" label=".Net">
         | Name  | Type | Description                                                                                                                                      |
@@ -73,9 +73,13 @@ Creates a new file. The type of the file which will be created needs to be set.
     <TabItem value="js" label="JS">
         | Name | Type   | Description                                                                            |
         | ---- | ------ | -------------------------------------------------------------------------------------- |
-        | type | String | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
+        | type | String | The file type (see [Supported formats](../../get-started/supported-formats.md)). |
     </TabItem>
 </Tabs>
+
+:::note
+The `pdf` file type creates the same document as `docx`. To create a PDF form, pass the `form` file type to the `CreateFile` and [SaveFile](./SaveFile.md) methods. The form content is edited with the [Document API](../../../office-api/usage-api/document-api/document-api.md) and the [Form API](../../../office-api/usage-api/form-api/form-api.md). To edit an existing PDF file with the [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md), open it with the [OpenFile](./OpenFile.md#opening-pdf-files) method.
+:::
 
 ## Example
 

@@ -1,6 +1,6 @@
 # GetSpeed
 
-Returns the transition speed (similar to PowerPoint VBA Speed property).
+Returns the transition speed.
 
 Maps duration to speed based on OOXML spd attribute logic:
 

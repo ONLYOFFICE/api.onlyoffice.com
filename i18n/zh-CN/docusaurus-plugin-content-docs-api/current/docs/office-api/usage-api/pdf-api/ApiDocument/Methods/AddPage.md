@@ -14,7 +14,7 @@ expression.AddPage(index, width, height);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | 必需 | number |  | 要添加页面的索引。 |
+| index | 可选 | number | this.GetPagesCount() | 要添加页面的索引。 |
 | width | 可选 | [pt](../../Enumeration/pt.md) |  | 页面宽度。 |
 | height | 可选 | [pt](../../Enumeration/pt.md) |  | 页面高度。 |
 
@@ -32,5 +32,5 @@ expression.AddPage(index, width, height);
 // Place additional pages at specific positions in a PDF.
 
 let doc = Api.GetDocument();
-doc.AddPage(1);
+doc.AddPage(0);
 ```

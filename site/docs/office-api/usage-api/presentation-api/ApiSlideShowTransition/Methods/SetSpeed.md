@@ -1,6 +1,6 @@
 # SetSpeed
 
-Sets the transition speed (similar to PowerPoint VBA Speed property).
+Sets the transition speed.
 
 Converts speed to duration based on standard values:
 

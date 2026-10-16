@@ -446,7 +446,7 @@ The workflow monitors recent file-related activity, identifies users who modify 
 
 ## Step 1: Load audit events for a short time window
 
-The script calculates a time range covering the last `WINDOW_MINUTES` and sends a GET request to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/get-audit-events-by-filter) using the from and to query parameters.
+The script calculates a time range covering the last `WINDOW_MINUTES` and sends a GET request to [/api/2.0/security/audit/events/filter](/docspace/api-backend/usage-api/security/audit-trail-data/get-audit-events-by-filter) using the from and to query parameters.
 The response returns audit events recorded during this period.
 
 <Tabs>
@@ -553,7 +553,7 @@ If suspicious users are detected:
   - user IDs,
   - number of files changed,
   - configured threshold.
-2.	A PUT request is sent to [/api/2.0/people/:userid](/docspace/api-backend/usage-api/update-member) with the list of suspicious user IDs.
+2.	A PUT request is sent to [/api/2.0/people/:userid](/docspace/api-backend/usage-api/people/profiles/update-member) with the list of suspicious user IDs.
 This updates the account status to `RESTRICTED_STATUS`, temporarily limiting further activity until the incident is reviewed.
 
 

@@ -97,6 +97,6 @@ Only the common viewer is used in the following cases:
 
 - in the [embedded mode](../../usage-api/config/editor/embedded.md);
 - with [WOPI](../../using-wopi/overview.md);
-- when opening `.djvu` or `.xps` formats.
+- when opening `.djvu`, `.ofd`, or `.xps` formats.
 
 Mobile editors support the same viewing modes and `coEditing` configuration as the web version.

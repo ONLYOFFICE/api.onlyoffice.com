@@ -16,7 +16,7 @@ expression.GetSpacing();
 
 ## 返回值
 
-[twips](../../Enumeration/twips.md)
+[twips](../../Enumeration/twips.md) \| null \| undefined
 
 ## 示例
 

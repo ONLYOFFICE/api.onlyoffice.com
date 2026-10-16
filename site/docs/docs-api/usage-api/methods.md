@@ -185,7 +185,7 @@ Show the document version history. This method must be called after the [onReque
 | options.history.changes       | `object` | optional | The `changes` from [the history object](./callback-handler.md#history) returned after saving the document.                                |
 | options.history.created       | `string` | required | The document version creation date.                                                                                                       |
 | options.history.key           | `string` | required | The unique document identifier used by the service to recognize the document.                                                             |
-| options.history.serverVersion | `number` | optional | The current server version number. If the `changes` parameter is sent, then the `serverVersion` parameter is required to be sent as well. |
+| options.history.serverVersion | `string` | optional | The version of the document editing service that saved the changes, e.g. `"10.0.0"`. Pass the `serverVersion` value from [the history object](./callback-handler.md#history) as is. The changes are displayed only if this value matches the current server version. If the `changes` parameter is sent, then the `serverVersion` parameter is required to be sent as well. |
 | options.history.user          | `object` | optional | The user who is the author of the document version.                                                                                       |
 | options.history.user.id       | `string` | optional | The identifier of the user who is the author of the document version.                                                                     |
 | options.history.user.name     | `string` | optional | The name of the user who is the author of the document version.                                                                           |
@@ -267,6 +267,16 @@ Request to close the editor. It is recommended to call this method before the [d
 
   ``` ts
   docEditor.requestClose();
+  ```
+
+## requestRoles
+
+Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Start filling* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
+
+This method can be used to get the form roles without waiting for the user to click the *Start filling* button.
+
+  ``` ts
+  docEditor.requestRoles();
   ```
 
 ## setActionLink
@@ -506,7 +516,7 @@ If an error occurred, send an error message:
 
 ## setRequestedDocument
 
-Select a document for comparing, combining, or inserting text. This method is usually called in the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event handler. It can also be called directly once the [onDocumentReady](./config/events.md#ondocumentready) event has fired, for example, to compare documents without user action.
+Select a document for comparing, combining, or inserting text. This method is usually called in the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event handler. It can also be called directly once the [onDocumentReady](./config/events.md#ondocumentready) event has fired, for example, to compare documents without user action. See the [Comparing documents](../samples/comparing-documents.md) sample.
 
   ``` ts
   docEditor.setRequestedDocument(options);
@@ -705,8 +715,24 @@ Please note that displaying a tooltip with a message is not supported in the emb
 
 ## startFilling
 
-Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event.
+Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
+
+:::note
+This method works only if the [onStartFilling](./config/events.md#onstartfilling) event is declared. Otherwise, the call is ignored.
+:::
 
   ``` ts
-  docEditor.startFilling();
+  docEditor.startFilling(disconnect);
+  ```
+
+**Parameters**:
+
+| Parameter  | Type      | Presence | Description |
+| ---------- | --------- | -------- | ----------- |
+| disconnect | `boolean` | optional | Specifies whether to lock editing for all the users who are editing the form: `true` to switch all the co-editors to viewing mode and show them a warning that form filling is in progress, `false` to lock editing only for the current user. The default value is `false`. |
+
+**Example**:
+
+  ``` ts
+  docEditor.startFilling(true);
   ```

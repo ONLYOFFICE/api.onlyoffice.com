@@ -1,0 +1,49 @@
+# SetFontFamily
+
+Sets all 4 font slots with the specified font family.
+
+## Syntax
+
+```javascript
+expression.SetFontFamily(fontFamily);
+```
+
+`expression` - A variable that represents an [ApiRichTextPr](../ApiRichTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| fontFamily | Required | string |  | The font family or families used for the current text run. |
+
+## Returns
+
+[ApiRichTextPr](../../ApiRichTextPr/ApiRichTextPr.md)
+
+## Example
+
+Change the font typeface for text in a free text annotation in a PDF.
+
+```javascript editor-pdf
+// How do I choose a different font for text in a PDF?
+
+// Select a font family for text in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+let textPr = run.GetTextPr();
+textPr.SetFontFamily("Calibri");
+
+console.log(`We set font family to ${textPr.GetFontFamily()} for rich text properties`);
+```

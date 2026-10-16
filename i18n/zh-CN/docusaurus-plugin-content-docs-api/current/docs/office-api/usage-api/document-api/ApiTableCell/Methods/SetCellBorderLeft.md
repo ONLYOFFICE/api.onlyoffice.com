@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellBorderLeft(sType, nSize, nSpace, r, g, b);
+expression.SetCellBorderLeft(type, size, space, color);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -16,12 +16,10 @@ expression.SetCellBorderLeft(sType, nSize, nSpace, r, g, b);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 单元格左侧边框样式。 |
-| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前单元格左侧边框的宽度，以点的八分之一为单位。 |
-| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 表格单元格左侧用于放置此边框的间距偏移量，以磅为单位。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+| type | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 单元格左侧边框样式。 |
+| size | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前单元格左侧边框的宽度，以点的八分之一为单位。 |
+| space | 必需 | [pt](../../Enumeration/pt.md) |  | 表格单元格左侧用于放置此边框的间距偏移量，以磅为单位。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
 
 ## 返回值
 
@@ -44,7 +42,7 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let cell = table.GetRow(0).GetCell(0);
-cell.SetCellBorderLeft("single", 32, 0, 51, 51, 51);
+cell.SetCellBorderLeft("single", 32, 0, Api.Color(51, 51, 51));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

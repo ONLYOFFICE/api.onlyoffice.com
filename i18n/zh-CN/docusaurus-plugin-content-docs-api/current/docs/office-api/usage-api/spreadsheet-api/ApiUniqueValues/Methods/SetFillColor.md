@@ -1,10 +1,6 @@
 # SetFillColor
 
-使用先前创建的颜色对象设置格式条件的背景颜色。
-
-当先前创建的颜色对象为 null 时设置为“无填充”。
-
-继承自 [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md)。
+设置唯一值条件格式规则的填充颜色。
 
 ## 语法
 
@@ -18,7 +14,7 @@ expression.SetFillColor(oColor);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定格式条件背景颜色的颜色对象。 |
+| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 要应用的填充颜色。 |
 
 ## 返回值
 
@@ -45,7 +41,7 @@ let range = worksheet.GetRange("A2:A5");
 let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(0, 255, 0));
 
 worksheet.GetRange("C1").SetValue("Fill color set to green");
 ```

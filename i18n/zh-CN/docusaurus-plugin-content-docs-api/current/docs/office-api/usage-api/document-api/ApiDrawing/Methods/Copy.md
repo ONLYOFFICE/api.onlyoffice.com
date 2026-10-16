@@ -16,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
 
 ## 示例
 

@@ -183,6 +183,7 @@ Enumeration
 - "sun"
 - "swooshArrow"
 - "teardrop"
+- "textRect"
 - "trapezoid"
 - "triangle"
 - "upArrowCallout"

@@ -31,5 +31,5 @@ Jump to the last occupied cell in a chosen direction within a range in a spreads
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("C4:D5");
-range.End("xlToLeft").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.End("xlToLeft").SetFillColor(Api.RGB(255, 213, 191));
 ```

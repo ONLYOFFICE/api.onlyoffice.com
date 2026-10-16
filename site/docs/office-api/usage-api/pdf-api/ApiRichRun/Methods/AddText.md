@@ -1,0 +1,46 @@
+# AddText
+
+Adds some text to the current run.
+
+## Syntax
+
+```javascript
+expression.AddText(text);
+```
+
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | Required | string |  | The text which will be added to the current run. |
+
+## Returns
+
+boolean
+
+## Example
+
+Insert text content into a text run in a PDF.
+
+```javascript editor-pdf
+// How do I add words to a text run in a PDF?
+
+// Write text into a text element in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+console.log("We added some text to rich run object");
+```

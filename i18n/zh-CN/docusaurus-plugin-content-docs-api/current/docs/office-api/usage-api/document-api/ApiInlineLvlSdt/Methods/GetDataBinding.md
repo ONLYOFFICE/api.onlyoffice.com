@@ -16,14 +16,14 @@ expression.GetDataBinding();
 
 ## 返回值
 
-[XmlMapping](../../Enumeration/XmlMapping.md)
+[XmlMapping](../../Enumeration/XmlMapping.md) \| null \| undefined
 
 ## 示例
 
 读取文档中内联内容控件的数据绑定设置。
 
 ```javascript editor-docx
-// How do I get the data binding of an inline content control in a document?
+// Get the data binding of an inline content control in a document.
 
 // Inspect the XML store reference linked to a content control to confirm its data source in a document.
 

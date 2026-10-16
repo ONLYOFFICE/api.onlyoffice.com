@@ -1,6 +1,6 @@
 # GetAllImages
 
-返回包含当前演示文稿中所有图像对象的数组。
+返回包含演示文稿幻灯片中所有图像对象的数组，不包括幻灯片版式和幻灯片母版中的图像对象。
 
 ## 语法
 
@@ -23,9 +23,9 @@ expression.GetAllImages();
 查找演示文稿中的所有图像文件。
 
 ```javascript editor-pptx
-// How do I access every picture I inserted in a presentation?
+// Access every picture inserted on the presentation slides.
 
-// Count images and display the total in a presentation.
+// Retrieve images from slides and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,12 +41,12 @@ for (let i = 0; i < copiesCount; i++) {
 
 const fill = Api.CreateSolidFill(Api.RGB(255, 153, 204));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape('heart', 38 * 36000, 38 * 36000, fill, stroke);
+const shape = Api.CreateShape('heart', 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetPosition(184 * 36000, 0 * 36000);
 slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const imagesCount = presentation.GetAllImages().length;
-paragraph.AddText('' + imagesCount);
+paragraph.AddText('Images in presentation excluding slide layouts and master slides: ' + imagesCount);
 ```

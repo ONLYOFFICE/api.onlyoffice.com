@@ -1,8 +1,6 @@
 # Delete
 
-删除当前格式条件。
-
-继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
+删除前 10 项条件格式规则。
 
 ## 语法
 
@@ -42,7 +40,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let countBefore = formatConditions.GetCount();
 condition1.Delete();

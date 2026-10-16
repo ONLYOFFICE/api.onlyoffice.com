@@ -7,7 +7,7 @@ Inherited from [ApiBaseField.AddWidget](../../ApiBaseField/Methods/AddWidget.md)
 ## Syntax
 
 ```javascript
-expression.AddWidget(pageIndex, rect);
+expression.AddWidget(pageIndex, rect, isCopy);
 ```
 
 `expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
@@ -18,10 +18,11 @@ expression.AddWidget(pageIndex, rect);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | pageIndex | Required | number |  | page index to add widget |
 | rect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
+| isCopy | Optional | boolean | true | whether the new widget have the same visual and actions settings as the original |
 
 ## Returns
 
-[ApiWidget](../../Enumeration/ApiWidget.md)
+[ApiWidget](../../Enumeration/ApiWidget.md) \| null \| undefined
 
 ## Example
 

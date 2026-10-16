@@ -10,7 +10,7 @@
 expression.GetSpacing();
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
@@ -18,7 +18,7 @@ expression.GetSpacing();
 
 ## 返回值
 
-[twips](../../Enumeration/twips.md)
+[twips](../../Enumeration/twips.md) \| null \| undefined
 
 ## 示例
 

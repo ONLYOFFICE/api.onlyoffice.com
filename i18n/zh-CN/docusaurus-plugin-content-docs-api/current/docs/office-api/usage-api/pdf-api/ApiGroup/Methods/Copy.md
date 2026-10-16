@@ -1,10 +1,8 @@
 # Copy
 
-创建指定绘图组的副本。
+创建指定绘图对象的副本。
 
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+继承自 [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md)。
 
 ## 语法
 
@@ -20,4 +18,28 @@ expression.Copy();
 
 ## 返回值
 
-[ApiGroup](../../ApiGroup/ApiGroup.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+
+## 示例
+
+在 PDF 的不同页面上创建形状的副本。
+
+```javascript editor-pdf
+// Copy a shape to another location in a PDF.
+
+// Make an identical copy of a drawing object in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(150 * 36000, 65 * 36000);
+page.AddObject(shape);
+
+const copyShape = shape.Copy();
+const newPage = doc.AddPage(0);
+newPage.AddObject(copyShape);
+```

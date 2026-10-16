@@ -24,7 +24,7 @@ expression.MergeCells(aCells);
 
 ## 返回值
 
-[ApiTableCell](../../ApiTableCell/ApiTableCell.md)
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null \| undefined
 
 ## 示例
 

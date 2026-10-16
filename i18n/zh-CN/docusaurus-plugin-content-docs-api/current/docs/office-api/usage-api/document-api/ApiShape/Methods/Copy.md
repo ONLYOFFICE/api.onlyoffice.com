@@ -1,10 +1,6 @@
 # Copy
 
-复制当前形状。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前形状的副本。
 
 ## 语法
 
@@ -20,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiShape](../../ApiShape/ApiShape.md)
+[ApiShape](../../ApiShape/ApiShape.md) \| null
 
 ## 示例
 

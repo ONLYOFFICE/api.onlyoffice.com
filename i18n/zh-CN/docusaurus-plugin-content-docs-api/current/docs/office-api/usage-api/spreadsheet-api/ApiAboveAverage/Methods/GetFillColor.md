@@ -4,8 +4,6 @@
 
 当格式条件的背景颜色为 null 时返回“无填充”。
 
-继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
-
 ## 语法
 
 ```javascript
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let aboveAvgCondition = formatConditions.AddAboveAverage();
-aboveAvgCondition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+aboveAvgCondition.SetFillColor(Api.RGB(255, 255, 0));
 
 let fillColor = aboveAvgCondition.GetFillColor();
 

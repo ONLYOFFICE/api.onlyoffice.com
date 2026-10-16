@@ -17,13 +17,13 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [Copy](./Methods/Copy.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建段落副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除当前段落。 |
 | [GetClassType](./Methods/GetClassType.md) | "paragraph" | 返回 ApiParagraph 类的类型。 |
-| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | 使用指定的位置返回段落元素。 |
+| [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) \| null \| undefined | 使用指定的位置返回段落元素。 |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前段落中的元素数量。 |
 | [GetFontNames](./Methods/GetFontNames.md) | string[] | 返回当前段落中所有元素的所有字体名称。 |
 | [GetIndFirstLine](./Methods/GetIndFirstLine.md) | [twips](../Enumeration/twips.md) \| undefined | 返回段落首行缩进。 |
 | [GetIndLeft](./Methods/GetIndLeft.md) | [twips](../Enumeration/twips.md) \| undefined | 返回段落左侧缩进。 |
 | [GetIndRight](./Methods/GetIndRight.md) | [twips](../Enumeration/twips.md) \| undefined | 返回段落右侧缩进。 |
-| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前内容段落的内部 ID。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前段落的内部 ID。 |
 | [GetJc](./Methods/GetJc.md) | "left" \| "right" \| "both" \| "center" \| undefined | 返回段落内容对齐方式。 |
 | [GetLastRunWithText](./Methods/GetLastRunWithText.md) | [ApiRun](../ApiRun/ApiRun.md) | 返回当前段落中最后一个包含文本的 Run。 |
 | [GetNext](./Methods/GetNext.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 返回下一个段落。 |
@@ -36,8 +36,10 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [GetSpacingLineValue](./Methods/GetSpacingLineValue.md) | [twips](../Enumeration/twips.md) \| [line240](../Enumeration/line240.md) \| undefined | 返回段落行距值。 |
 | [GetTabs](./Methods/GetTabs.md) | [TabStop](../Enumeration/TabStop.md)[] | 返回当前段落的自定义制表位。 |
 | [GetText](./Methods/GetText.md) | string | 返回段落文本。 |
+| [GetTextRange](./Methods/GetTextRange.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md) \| null | 返回表示当前段落中所含部分文本的 ApiTextRange 对象。调用此方法前，段落必须已附加到文档中。 |
 | [InsertParagraph](./Methods/InsertParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 在指定位置插入段落。 |
-| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | 返回段落的最后一个元素。 |
+| [IsEmpty](./Methods/IsEmpty.md) | boolean | 如果段落没有内容元素（仅有段落结束标记），则返回 true。 |
+| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) \| null \| undefined | 返回段落的最后一个元素。 |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | 将光标移动到段落末尾。 |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | 将光标移动到段落开头。 |
 | [Push](./Methods/Push.md) | boolean | 向当前段落添加元素。 |
@@ -48,13 +50,14 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [SetCaps](./Methods/SetCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的任何小写字符仅格式化显示为其对应的大写字母。 |
 | [SetColor](./Methods/SetColor.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置当前段落的文本颜色。 |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示为每个字符都有两条水平线穿过。 |
-| [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 使用指定的字体系列设置所有 4 个字体槽。 |
+| [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | 使用指定的字体系列设置所有 4 个字体槽。 |
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置当前段落字符的字体大小。 |
 | [SetIndFirstLine](./Methods/SetIndFirstLine.md) | boolean | 设置段落首行缩进。 |
 | [SetIndLeft](./Methods/SetIndLeft.md) | boolean | 设置段落左侧缩进。 |
 | [SetIndRight](./Methods/SetIndRight.md) | boolean | 设置段落右侧缩进。 |
 | [SetItalic](./Methods/SetItalic.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 为文本字符设置斜体属性。 |
 | [SetJc](./Methods/SetJc.md) | boolean | 设置段落内容对齐方式。 |
+| [SetLanguage](./Methods/SetLanguage.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 指定处理当前段落内容时用于检查拼写和语法（如果请求）的语言。 |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | 设置指定属性的大纲级别。 |
 | [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。 |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置以二十分之一磅为单位测量的文本间距。 |
@@ -66,4 +69,5 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换段落内容。 |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | 设置段落文本属性。 |
 | [SetUnderline](./Methods/SetUnderline.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。 |
+| [ToHtml](./Methods/ToHtml.md) | string | 将段落转换为 HTML。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiParagraph 对象转换为 JSON 对象。 |

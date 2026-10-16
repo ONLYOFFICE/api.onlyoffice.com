@@ -109,7 +109,7 @@ import APITable from '@site/src/components/APITable/APITable';
   "changesurl": "https://documentserver/url-to-changes.zip",
   "history": {
     "changes": {},
-    "serverVersion": 1
+    "serverVersion": "10.0.0"
   },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",

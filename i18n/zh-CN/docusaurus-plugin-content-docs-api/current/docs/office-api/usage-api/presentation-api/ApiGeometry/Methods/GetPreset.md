@@ -16,7 +16,7 @@ expression.GetPreset();
 
 ## 返回值
 
-[ShapeType](../../Enumeration/ShapeType.md) \| null
+[ShapeType](../../Enumeration/ShapeType.md) \| null \| undefined
 
 ## 示例
 

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IProfileMenuPlugin.ts
 ---
 
 # IProfileMenuPlugin
@@ -108,16 +108,12 @@ Updates an existing profile menu item
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `profileMenuItems` | `Map`\<`string`, [`IProfileMenuItem`](../items/IProfileMenuItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ProfileMenuItem objects. A list for hooking interactions with profile menu is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

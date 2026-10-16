@@ -134,7 +134,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/files/:folderId/file](/docspace/api-backend/usage-api/create-file) to create a new file inside the specified folder.
+A POST request is sent to [/api/2.0/files/:folderId/file](/docspace/api-backend/usage-api/files/files/create-file) to create a new file inside the specified folder.
 
 Payload parameters include:
 

@@ -31,5 +31,5 @@ Select all cells within a specified column range on a worksheet in a spreadsheet
 
 let worksheet = Api.GetActiveSheet();
 let cols = worksheet.GetCols("A1:C1");
-cols.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+cols.SetFillColor(Api.RGB(255, 213, 191));
 ```

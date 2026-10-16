@@ -16,7 +16,7 @@ expression.GetRepliesCount();
 
 ## 返回值
 
-Number
+Number \| null \| undefined
 
 ## 示例
 

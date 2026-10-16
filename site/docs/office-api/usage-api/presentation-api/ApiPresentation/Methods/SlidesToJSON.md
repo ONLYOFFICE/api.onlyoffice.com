@@ -5,7 +5,7 @@ Converts the slides from the current ApiPresentation object into the JSON object
 ## Syntax
 
 ```javascript
-expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMasLayouts, bWriteTableStyles);
+expression.SlidesToJSON(nStart, nEnd, bWriteLayout, bWriteMaster, bWriteAllMasLayouts, bWriteTableStyles);
 ```
 
 `expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
@@ -14,8 +14,8 @@ expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMas
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nStart | Optional | boolean | 0 | The index to the start slide. |
-| nStart | Optional | boolean | ApiPresentation.GetSlidesCount() - 1 | The index to the end slide. |
+| nStart | Optional | number | 0 | The index to the start slide. |
+| nEnd | Optional | number | ApiPresentation.GetSlidesCount() - 1 | The index to the end slide. |
 | bWriteLayout | Optional | boolean | false | Specifies if the slide layout will be written to the JSON object or not. |
 | bWriteMaster | Optional | boolean | false | Specifies if the slide master will be written to the JSON object or not (bWriteMaster is false if bWriteLayout === false). |
 | bWriteAllMasLayouts | Optional | boolean | false | Specifies if all child layouts from the slide master will be written to the JSON object or not. |
@@ -23,7 +23,7 @@ expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMas
 
 ## Returns
 
-JSON[]
+JSON \| null
 
 ## Example
 

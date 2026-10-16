@@ -10,7 +10,7 @@
 expression.GetPosition();
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
@@ -18,7 +18,7 @@ expression.GetPosition();
 
 ## 返回值
 
-[hps](../../Enumeration/hps.md)
+[hps](../../Enumeration/hps.md) \| null \| undefined
 
 ## 示例
 

@@ -1,10 +1,6 @@
 # Copy
 
-Copies the current OLE object.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current OLE object.
 
 ## Syntax
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null
 
 ## Example
 

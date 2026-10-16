@@ -15,7 +15,7 @@ expression.InsertOleObject(NewObject, bSelect);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | NewObject | Required | [OLEObjectData](../Enumeration/OLEObjectData.md) |  | The OLEObjectData object. |
-| bSelect | Required | boolean |  | Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**). |
+| bSelect | Required | boolean \| null \| undefined |  | Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**). |
 
 ## Returns
 

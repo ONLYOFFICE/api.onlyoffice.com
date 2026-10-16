@@ -25,7 +25,7 @@ string
 从演示文稿中的 XML 元素提取文本。
 
 ```javascript editor-pptx
-// How do I read the text inside an XML node in a presentation?
+// Read the text inside an XML node in a presentation.
 
 // Retrieve the string content of an XML element in a presentation.
 

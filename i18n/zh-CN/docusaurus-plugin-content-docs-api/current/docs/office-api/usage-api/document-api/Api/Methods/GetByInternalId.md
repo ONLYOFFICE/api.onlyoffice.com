@@ -18,7 +18,7 @@ expression.GetByInternalId(id);
 
 ## 返回值
 
-object
+object \| null \| undefined
 
 ## 示例
 

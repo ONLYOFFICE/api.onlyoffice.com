@@ -14,7 +14,7 @@ expression.SetRefersTo(sRef);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". |
+| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". A constant or a formula is accepted as well, and so is a leading "=", as in the Excel RefersTo form. |
 
 ## Returns
 

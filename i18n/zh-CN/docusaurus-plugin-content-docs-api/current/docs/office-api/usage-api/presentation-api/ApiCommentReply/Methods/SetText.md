@@ -18,7 +18,7 @@ expression.SetText(sText);
 
 ## 返回值
 
-[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md)
+[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md) \| null \| undefined
 
 ## 示例
 

@@ -14,7 +14,7 @@ expression.FreezeColumns(count);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| count | Optional | Number | 0 | Optional number of columns to freeze, or zero to unfreeze all columns. |
+| count | Optional | Number \| null \| undefined | 0 | Optional number of columns to freeze, or zero to unfreeze all columns. |
 
 ## Returns
 

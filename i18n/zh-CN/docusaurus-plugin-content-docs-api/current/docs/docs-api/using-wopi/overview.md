@@ -68,7 +68,9 @@ import TabItem from '@theme/TabItem';
 ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 中。同时，必须拒绝所有其他集成商的访问。
 
 :::note
-默认情况下，所有 IP 地址都被认为是可信的。
+默认情况下，`*` 规则允许所有 IP 地址。从 10.0 版本开始，这对 WOPI 已不再足够：ONLYOFFICE 文档只会向通过 IP 地址或 DNS 名称被规则明确允许的 WOPI 主机发送请求。仅由通配符组成的规则（例如 `*`）不计算在内。
+
+如果需要在添加规则期间临时允许未列出的 WOPI 主机，请将[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 设为 `false`。这会使服务器容易受到服务器端请求伪造（SSRF）攻击。
 :::
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
@@ -77,19 +79,23 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
    ``` json
    {
-     "ipfilter": {
-       "rules": [
-         {
-           "address": "ip_address",
-           "allowed": true
-         },
-         {
-           "address": "*",
-           "allowed": false
+     "services": {
+       "CoAuthoring": {
+         "ipfilter": {
+           "rules": [
+             {
+               "address": "ip_address",
+               "allowed": true
+             },
+             {
+               "address": "*",
+               "allowed": false
+             }
+           ],
+           "useforrequest": false,
+           "errorcode": 403
          }
-       ],
-       "useforrequest": false,
-       "errorcode": 403
+       }
      }
    }
   

@@ -16,4 +16,4 @@ This method doesn't have any parameters.
 
 ## Returns
 
-comment[]
+[comment](../Enumeration/comment.md)[]

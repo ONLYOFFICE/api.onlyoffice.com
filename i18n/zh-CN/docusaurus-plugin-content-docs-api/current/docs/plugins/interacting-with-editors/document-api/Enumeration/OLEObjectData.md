@@ -13,12 +13,12 @@ Object
 | ApplicationId | string | 可以编辑当前 OLE 对象的插件标识符，必须是 *asc.\{UUID\}* 类型。 |
 | Data | string | OLE 对象数据（内部格式）。 |
 | Height | number | OLE 对象的高度，以毫米为单位。 |
-| HeightPix | number | OLE 对象图像的高度，以像素为单位。 |
+| HeightPix | number \| null \| undefined | OLE 对象图像的高度，以像素为单位。 |
 | ImageData | string | 存储在 OLE 对象中并由插件使用的 base64 格式图像。 |
 | InternalId | string | 用于处理添加到文档中的 OLE 对象的 OLE 对象标识符。 |
 | ParaDrawingId | string | 包含当前 OLE 对象的绘图对象的标识符。 |
 | Width | number | OLE 对象的宽度，以毫米为单位。 |
-| WidthPix | number | OLE 对象图像的宽度，以像素为单位。 |
+| WidthPix | number \| null \| undefined | OLE 对象图像的宽度，以像素为单位。 |
 
 ## 示例
 

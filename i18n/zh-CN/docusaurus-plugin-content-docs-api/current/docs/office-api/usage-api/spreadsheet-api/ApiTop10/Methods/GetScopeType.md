@@ -2,8 +2,6 @@
 
 返回条件格式规则的作用域类型。
 
-继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
-
 ## 语法
 
 ```javascript
@@ -42,7 +40,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let scopeType = condition1.GetScopeType();
 

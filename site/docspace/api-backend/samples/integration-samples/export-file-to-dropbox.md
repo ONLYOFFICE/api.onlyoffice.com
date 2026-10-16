@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
 ## Step 1: Retrieve file metadata from DocSpace
 
-Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/get-file-info).
+Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/files/files/get-file-info).
 
 ```py
 # Step 1: Get file info
@@ -133,7 +133,7 @@ def get_file_info(file_id):
 
 ## Step 2: Generate a presigned download URL
 
-Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](/docspace/api-backend/usage-api/get-presigned-uri) to obtain a secure link.
+Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](/docspace/api-backend/usage-api/files/files/get-presigned-uri) to obtain a secure link.
 
 ``` py
 # Step 2: Get presigned URL

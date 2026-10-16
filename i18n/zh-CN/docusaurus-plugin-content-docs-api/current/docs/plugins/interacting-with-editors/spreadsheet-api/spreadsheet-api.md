@@ -19,9 +19,10 @@ Spreadsheet API 列出了插件在 ONLYOFFICE 文档中处理电子表格时可�
 | [GetCustomFunctions](./Methods/GetCustomFunctions.md) | string | 返回本地自定义函数库。 |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | 返回编辑器当前对文档应用的限制。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | 返回所选 OLE 对象的数组。 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 返回文档中的所选文本。 |
@@ -41,6 +42,7 @@ Spreadsheet API 列出了插件在 ONLYOFFICE 文档中处理电子表格时可�
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | 无 | 通过内部 ID 从工作簿中删除 OLE 对象。 |
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | 删除具有指定 GUID 的插件。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选定内容中的每个段落（或单元格中的文本）。 |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | 无 | 按索引启用或禁用模态插件的页脚按钮。 |
 | [SetCustomFunctions](./Methods/SetCustomFunctions.md) | 无 | 更新本地自定义函数库。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
@@ -64,4 +66,5 @@ Spreadsheet API 列出了插件在 ONLYOFFICE 文档中处理电子表格时可�
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | 当文档完全加载时调用的函数。 |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | 用于开启/关闭鼠标或触控板事件的函数。 |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | 当鼠标按钮在插件 iframe 外部释放时调用的函数。 |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | 单击浮动操作按钮时调用的函数。 |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | 当编辑器中的目标位置发生更改时调用的函数。 |

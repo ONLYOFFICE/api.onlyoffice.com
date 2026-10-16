@@ -15,6 +15,32 @@ Most parameters on this page are available for all ONLYOFFICE Docs editions, inc
 Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
 :::
 
+## ai
+
+**type**: `object`
+
+The settings for the AI features in the editor.
+
+:::tip
+To connect AI providers for all users in the Admin Panel, or to turn AI off for the whole server, see [Configuring AI providers for all users](/docs/ai/guides/server-ai-providers.md).
+:::
+
+**Example**:
+
+```ts
+{
+  disabled: true,
+}
+```
+
+### ai.disabled
+
+**type**: `boolean` | **default**: `false`
+
+Whether to disable the AI features in the editor. If set to `true`, the **AI Tools** are hidden. This is a shortcut for adding the [AI plugin](../../../../../ai/guides/ai-plugin.md) identifier (`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`) to the [editorConfig.plugins.disable](../plugins.md#disable) list.
+
+**Example**: `true`
+
 ## anonymous
 
 **type**: `object`
@@ -734,8 +760,6 @@ Contains the information about the review mode.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.review.hoverMode` and the `editorConfig.customization.review.reviewDisplay` parameters.
-
-The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) parameters are deprecated since version 7.0. Please use the `review` parameter instead.
 :::
 
 **Example**:
@@ -821,28 +845,6 @@ In this example:
 - users from *Group2* can accept/reject review changes made by users from *Group1* and *Group2*;
 - users from *Group3* can accept/reject review changes made by users who don't belong to any group.
 
-## reviewDisplay
-
-**type**: `"markup" | "simple" | "final" | "original"`
-
-The review editing mode in the document editor. This parameter can take the following values:
-
-- `markup` - the document is displayed with proposed changes highlighted;
-- `simple` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-- `final` - the document is displayed with all the proposed changes applied;
-- `original` - the original document is displayed without the proposed changes.
-
-The default value is `original` for viewer and `markup` for editor.
-
-:::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.reviewDisplay` parameter.
-:::
-:::danger[Deprecated]
-Starting from version 7.0, please use the [review.reviewDisplay](#reviewreviewdisplay) parameter instead.
-:::
-
-**Example**: `"original"`
-
 ## showHorizontalScroll
 
 **type**: `boolean` | **default**: `true`
@@ -850,18 +852,6 @@ Starting from version 7.0, please use the [review.reviewDisplay](#reviewreviewdi
 Whether to display the horizontal scroll when the spreadsheet editor is loaded.
 
 **Example**: `true`
-
-## showReviewChanges
-
-**type**: `boolean` | **default**: `false`
-
-Whether to display the review changes panel when the editor is loaded.
-
-:::danger[Deprecated]
-Starting from version 7.0, please use the [review.showReviewChanges](#reviewshowreviewchanges) parameter instead.
-:::
-
-**Example**: `false`
 
 ## showVerticalScroll
 
@@ -988,18 +978,6 @@ Starting from version 8.2, please use the [editorConfig.customization.features.t
 
 **Example**: `false`
 
-## trackChanges
-
-**type**: `boolean`
-
-Whether to enable the review editing mode for the current user. This parameter overrides [document.permissions.review](../../document/permissions.md#review). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If `undefined`, the `document.permissions.review` value is applied instead.
-
-:::danger[Deprecated]
-Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
-:::
-
-**Example**: `true`
-
 ## uiTheme
 
 **type**: `string`
@@ -1071,6 +1049,9 @@ const config = {
   editorConfig: {
     // ...
     customization: {
+      ai: {
+        disabled: false,
+      },
       anonymous: {
         request: true,
         label: "Elizabeth",

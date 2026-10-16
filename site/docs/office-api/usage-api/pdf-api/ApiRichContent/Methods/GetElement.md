@@ -18,7 +18,7 @@ expression.GetElement(pos);
 
 ## Returns
 
-[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md)
+[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md) \| null \| undefined
 
 ## Example
 

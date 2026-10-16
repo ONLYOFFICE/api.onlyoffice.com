@@ -1,6 +1,6 @@
 # GetAllOleObjects
 
-返回包含当前演示文稿中所有 OLE 对象的数组。
+返回包含演示文稿幻灯片中所有 OLE 对象的数组，不包括幻灯片版式和幻灯片母版中的 OLE 对象。
 
 ## 语法
 
@@ -23,15 +23,13 @@ expression.GetAllOleObjects();
 列出演示文稿中所有嵌入或链接的文件。
 
 ```javascript editor-pptx
-// How do I find every linked video, spreadsheet, or external file in a presentation?
+// Access every linked video, spreadsheet, or external file in the presentation.
 
-// Retrieve OLE objects from slides and masters and count them in a presentation.
+// Retrieve OLE objects from slides and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-const slideMaster = presentation.GetMaster(0);
-slideMaster.RemoveObject(0, slideMaster.GetAllDrawings().length);
 
 const oleObject1 = Api.CreateOleObject(
 	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
@@ -42,7 +40,7 @@ const oleObject1 = Api.CreateOleObject(
 slide.AddObject(oleObject1);
 const oleObject2 = oleObject1.Copy();
 oleObject2.SetPosition(0, 48 * 36000);
-slideMaster.AddObject(oleObject2);
+slide.AddObject(oleObject2);
 
 const labelFill = Api.CreateSolidFill(Api.RGB(255, 230, 150));
 const labelStroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -53,5 +51,5 @@ slide.AddObject(label);
 const oleObjects = presentation.GetAllOleObjects();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
-paragraph.AddText('OLE Objects: ' + oleObjects.length);
+paragraph.AddText('OLE Objects in presentation excluding slide layouts and master slides: ' + oleObjects.length);
 ```

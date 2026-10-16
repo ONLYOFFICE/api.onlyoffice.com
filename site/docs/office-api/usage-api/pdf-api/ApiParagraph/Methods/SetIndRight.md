@@ -27,7 +27,7 @@ boolean
 Add right margin spacing to a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I indent text from the right edge in a PDF?
+// Useful for indenting text from the right edge in a PDF.
 
 // Push paragraph content away from the right side in a PDF.
 
@@ -42,17 +42,17 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
-let paragraph = docContent.GetElement(0);
+const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the right offset of 2 inches set to it. ");
 paragraph.AddText("We also aligned the text in it by the right side. ");
 paragraph.AddText("This sentence is used to add lines for demonstrative purposes.");
 paragraph.SetJc("right");
 paragraph.SetIndRight(2880);
 
-paragraph = Api.CreateParagraph();
-paragraph.AddText("This is a paragraph without any offset set to it. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-docContent.Push(paragraph);
+const paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("This is a paragraph without any offset set to it. ");
+paragraph2.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph2.AddText("These sentences are used to add lines for demonstrative purposes.");
+docContent.Push(paragraph2);
 page.AddObject(shape);
 ```

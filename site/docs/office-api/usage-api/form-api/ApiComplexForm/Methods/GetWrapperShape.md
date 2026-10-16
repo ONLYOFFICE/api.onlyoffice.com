@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiShape](../../../document-api/ApiShape/ApiShape.md)
+[ApiShape](../../../document-api/ApiShape/ApiShape.md) \| null \| undefined
 
 ## Example
 

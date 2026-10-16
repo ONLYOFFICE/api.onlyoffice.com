@@ -25,7 +25,7 @@ boolean
 取消选择绘图同时在电子表格中保持其他形状的选中状态。
 
 ```javascript editor-xlsx
-// How do I remove a single drawing from the current selection in a spreadsheet?
+// Remove a single drawing from the current selection in a spreadsheet.
 
 // Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 

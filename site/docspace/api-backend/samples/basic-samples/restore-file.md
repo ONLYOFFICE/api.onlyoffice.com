@@ -140,7 +140,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Get file version history
 
-A GET request is sent to [/api/2.0/files/file/:fileId/edit/history](/docspace/api-backend/usage-api/get-edit-history).
+A GET request is sent to [/api/2.0/files/file/:fileId/edit/history](/docspace/api-backend/usage-api/files/files/get-edit-history).
 
 Returns a list of all saved versions with `version` and `created` timestamps.
 
@@ -193,7 +193,7 @@ Returns a list of all saved versions with `version` and `created` timestamps.
 
 ## Step 2: Restore to specific version
 
-A GET request is sent to [/api/2.0/files/file/:fileId/restoreversion](/docspace/api-backend/usage-api/restore-file-version).
+A GET request is sent to [/api/2.0/files/file/:fileId/restoreversion](/docspace/api-backend/usage-api/files/files/restore-file-version).
 
 This method requires the following query parameter:
 

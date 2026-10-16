@@ -14,12 +14,14 @@ Class representing a sheet.
 | Cells | [ApiRange](../ApiRange/ApiRange.md) | Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use). |
 | Cols | [ApiRange](../ApiRange/ApiRange.md) | Returns ApiRange that represents all the cells of the columns range. |
 | Comments | [ApiComment](../ApiComment/ApiComment.md)[] | Returns all comments from the current worksheet. |
-| Defnames | [ApiName](../ApiName/ApiName.md)[] | Returns an array of the ApiName objects. |
+| DefNames | [ApiName](../ApiName/ApiName.md)[] | Returns an array of the ApiName objects. |
 | FreezePanes | [ApiFreezePanes](../ApiFreezePanes/ApiFreezePanes.md) | Returns the freeze panes for the current worksheet. |
+| Hyperlinks | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)[] | Returns an array of all the hyperlinks on the worksheet. |
 | Index | number | Returns a sheet index. |
 | LeftMargin | number | Returns or sets the size of the sheet left margin measured in points. |
 | Name | string | Returns or sets a name of the active sheet. |
 | PageOrientation | [PageOrientation](../Enumeration/PageOrientation.md) | Returns or sets the page orientation. |
+| PageSetup | [ApiPageSetup](../ApiPageSetup/ApiPageSetup.md) | Returns the page setup object for the current worksheet. |
 | PivotTables | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | Returns all pivot tables from the current worksheet. |
 | PrintGridlines | boolean | Returns or sets the page PrintGridlines property. |
 | PrintHeadings | boolean | Returns or sets the page PrintHeadings property. |
@@ -39,12 +41,12 @@ The following table lists the available methods.
 | [AddChart](./Methods/AddChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Creates a chart of the specified type from the selected data range of the current sheet. |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to the current worksheet. |
 | [AddDrawing](./Methods/AddDrawing.md) | boolean | Adds a detached drawing object (e.g. a copy returned by ApiDrawing.Copy) to the worksheet at the specified anchor. |
-| [AddImage](./Methods/AddImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Adds an image to the current sheet with the parameters specified. |
-| [AddListObject](./Methods/AddListObject.md) | [ApiListObject](../ApiListObject/ApiListObject.md) \| null | Adds a formatted table to the worksheet and returns the ApiListObject object. |
-| [AddOleObject](./Methods/AddOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Adds an OLE object to the current sheet with the parameters specified. |
+| [AddImage](./Methods/AddImage.md) | [ApiImage](../ApiImage/ApiImage.md) \| null | Adds an image to the current sheet with the parameters specified. |
+| [AddListObject](./Methods/AddListObject.md) | [ApiListObject](../ApiListObject/ApiListObject.md) \| null | Adds a formatted table to the worksheet and returns the ApiListObject object. Built-in table style names: TableStyleLight1-21, TableStyleMedium1-28, TableStyleDark1-11. |
+| [AddOleObject](./Methods/AddOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) \| null | Adds an OLE object to the current sheet with the parameters specified. |
 | [AddProtectedRange](./Methods/AddProtectedRange.md) | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md) \| null | Creates a protected range of the specified type from the selected data range of the current sheet. |
-| [AddShape](./Methods/AddShape.md) | [ApiShape](../ApiShape/ApiShape.md) | Adds a shape to the current sheet with the parameters specified. |
-| [AddWordArt](./Methods/AddWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Adds a Text Art object to the current sheet with the parameters specified. |
+| [AddShape](./Methods/AddShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null | Adds a shape to the current sheet with the parameters specified. |
+| [AddWordArt](./Methods/AddWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) \| null | Adds a Text Art object to the current sheet with the parameters specified. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current worksheet. |
 | [FormatAsTable](./Methods/FormatAsTable.md) | boolean | Formats the selected range of cells from the current sheet as a table (with the first row formatted as a header). |
 | [GetActiveCell](./Methods/GetActiveCell.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents an active cell. |
@@ -64,11 +66,13 @@ The following table lists the available methods.
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) \| null | Returns the ApiName object by the worksheet name. |
 | [GetDefNames](./Methods/GetDefNames.md) | [ApiName](../ApiName/ApiName.md)[] | Returns an array of ApiName objects. |
 | [GetFreezePanes](./Methods/GetFreezePanes.md) | [ApiFreezePanes](../ApiFreezePanes/ApiFreezePanes.md) | Returns the freeze panes from the current worksheet. |
+| [GetHyperlinks](./Methods/GetHyperlinks.md) | ApiHyperlinks | Returns a collection of all the hyperlinks on the worksheet. |
 | [GetIndex](./Methods/GetIndex.md) | number | Returns a sheet index. |
 | [GetLeftMargin](./Methods/GetLeftMargin.md) | number | Returns the left margin of the sheet. |
 | [GetListObjects](./Methods/GetListObjects.md) | [ApiListObject](../ApiListObject/ApiListObject.md)[] | Returns an array of ApiListObject objects representing the formatted tables on the worksheet. |
 | [GetName](./Methods/GetName.md) | string | Returns a sheet name. |
 | [GetPageOrientation](./Methods/GetPageOrientation.md) | [PageOrientation](../Enumeration/PageOrientation.md) | Returns the page orientation. |
+| [GetPageSetup](./Methods/GetPageSetup.md) | [ApiPageSetup](../ApiPageSetup/ApiPageSetup.md) | Returns the page setup object that represents the print layout settings of the current worksheet. |
 | [GetPivotByName](./Methods/GetPivotByName.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | Returns a pivot table by its name from the current worksheet, or null if it does not exist. |
 | [GetPrintGridlines](./Methods/GetPrintGridlines.md) | boolean | Returns the page PrintGridlines property which specifies whether the current sheet gridlines must be printed or not. |
 | [GetPrintHeadings](./Methods/GetPrintHeadings.md) | boolean | Returns the page PrintHeadings property which specifies whether the current sheet row/column headings must be printed or not. |
@@ -83,8 +87,9 @@ The following table lists the available methods.
 | [GetTopMargin](./Methods/GetTopMargin.md) | number | Returns the top margin of the sheet. |
 | [GetUsedRange](./Methods/GetUsedRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents the used range on the specified worksheet. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the state of sheet visibility. |
+| [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) \| null | Groups an array of drawings in the current sheet. |
 | [Move](./Methods/Move.md) | None | Moves the current sheet to another location in the workbook. |
-| [Paste](./Methods/Paste.md) | None | Pastes the contents of the clipboard to the current sheet. |
+| [Paste](./Methods/Paste.md) | boolean | Pastes the contents of the clipboard to the current sheet. |
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | None | Refreshes all pivot tables on the current worksheet. |
 | [ReplaceCurrentImage](./Methods/ReplaceCurrentImage.md) | boolean | Replaces the current image with a new one. |
 | [SetActive](./Methods/SetActive.md) | boolean | Makes the current sheet active. |
@@ -94,7 +99,7 @@ The following table lists the available methods.
 | [SetDisplayHeadings](./Methods/SetDisplayHeadings.md) | boolean | Specifies whether the current sheet row/column headers must be displayed or not. |
 | [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Adds a hyperlink to the specified range. |
 | [SetLeftMargin](./Methods/SetLeftMargin.md) | boolean | Sets the left margin of the sheet. |
-| [SetName](./Methods/SetName.md) | None | Sets a name to the current active sheet. |
+| [SetName](./Methods/SetName.md) | None | Sets a name to the current sheet. |
 | [SetPageOrientation](./Methods/SetPageOrientation.md) | boolean | Sets the page orientation. |
 | [SetPrintGridlines](./Methods/SetPrintGridlines.md) | boolean | Specifies whether the current sheet gridlines must be printed or not. |
 | [SetPrintHeadings](./Methods/SetPrintHeadings.md) | boolean | Specifies whether the current sheet row/column headers must be printed or not. |

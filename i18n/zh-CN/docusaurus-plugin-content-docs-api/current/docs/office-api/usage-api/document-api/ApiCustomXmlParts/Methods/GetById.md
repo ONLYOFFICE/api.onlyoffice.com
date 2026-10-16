@@ -22,19 +22,23 @@ expression.GetById(xmlPartId);
 
 ## 示例
 
-通过 ID 查找文档中的自定义 XML 部件。
+通过 ID 获取文档中的自定义 XML 部件。
 
 ```javascript editor-docx
-// How do I get a specific custom XML part using its identifier in a document?
+// Find a custom XML part using its unique ID in a document.
 
-// Read the XML content of the part returned for a given ID in a document.
+// Display the retrieved XML part's content in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
-let xmlText = "<content xmlns='http://example.com'><text>Example XML</text></content>";
-let xmlPart = xmlManager.Add(xmlText);
-let foundPart = xmlManager.GetById(xmlPart.GetId());
-let infoParagraph = Api.CreateParagraph();
-infoParagraph.AddText("XML part: " + foundPart.GetXml());
-doc.Push(infoParagraph);
+let xml = xmlManager.Add("<inventory xmlns='http://example.com'><item>Book</item></inventory>");
+let id = xml.GetId();
+let retrievedXml = xmlManager.GetById(id);
+let paragraph = Api.CreateParagraph();
+if (retrievedXml) {
+    paragraph.AddText("Found XML part: " + retrievedXml.GetXml());
+} else {
+    paragraph.AddText("XML part not found");
+}
+doc.Push(paragraph);
 ```

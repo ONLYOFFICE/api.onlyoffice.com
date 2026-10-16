@@ -82,6 +82,15 @@ Opens the document file which will be edited and saved afterwards.
     </TabItem>
 </Tabs>
 
+## Opening PDF files
+
+Starting from version 10.0, PDF files can be opened for editing. The editor is selected by the file contents:
+
+- A PDF form created in ONLYOFFICE is opened in the document editor. Edit it with the [Document API](../../../office-api/usage-api/document-api/document-api.md) and the [Form API](../../../office-api/usage-api/form-api/form-api.md).
+- Any other PDF file is opened in the PDF editor. Edit it with the [PDF API](../../../office-api/usage-api/pdf-api/pdf-api.md).
+
+To open a password-protected PDF file, pass the password in the `m_sPassword` tag of the `params` parameter, for example, `<m_sPassword>password</m_sPassword>`.
+
 ## Example
 
 <Tabs groupId="lang">

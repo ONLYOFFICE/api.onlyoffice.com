@@ -57,7 +57,7 @@ export const PlaygroundPreview = () => {
                         "form": "Api.GetDocument().RemoveAllElements();",
                         "pdf": "let doc = Api.GetDocument();for(let i = doc.GetPagesCount()-1; i > 0; i--) {doc.RemovePage(i);} doc.AddPage(1);doc.RemovePage(0);",
                     };
-                    var script = removeMethod[editorType] + code.replace(/\/\/.*$/gm, "").replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+                    var script = removeMethod[editorType] + code.replace(/\/\/.*$/gm, "").replaceAll("builder.CreateFile", "").replaceAll("builder.OpenFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
                     window.connector.callCommand(new Function(script));
                     break;
                 }

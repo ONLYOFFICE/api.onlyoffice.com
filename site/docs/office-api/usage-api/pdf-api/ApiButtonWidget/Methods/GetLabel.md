@@ -18,7 +18,7 @@ expression.GetLabel(appearance);
 
 ## Returns
 
-string
+string \| null \| undefined
 
 ## Example
 

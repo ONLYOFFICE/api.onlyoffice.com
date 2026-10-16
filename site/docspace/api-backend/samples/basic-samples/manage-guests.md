@@ -161,7 +161,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Approve a guest
 
-A POST request is sent to [/api/2.0/people/guests/share/approve](/docspace/api-backend/usage-api/approve-guest-share-link) with:
+A POST request is sent to [/api/2.0/people/guests/share/approve](/docspace/api-backend/usage-api/people/guests/approve-guest-share-link) with:
 
 - `email`: The guest's email address (must match an existing share invitation).
 
@@ -220,7 +220,7 @@ On success, the API returns the guest's details including their `id`, which will
 
 ## Step 2: Delete a guest
 
-A DELETE request is sent to [/api/2.0/people/guests](/docspace/api-backend/usage-api/delete-guests) with:
+A DELETE request is sent to [/api/2.0/people/guests](/docspace/api-backend/usage-api/people/guests/delete-guests) with:
 
 - `userIds`: List of guest user IDs to delete.
 - `resendAll`: Set to false to avoid sending additional notifications.

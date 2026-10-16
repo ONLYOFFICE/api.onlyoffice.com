@@ -1,10 +1,6 @@
 # Copy
 
-Copies the current chart.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current chart.
 
 ## Syntax
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 
@@ -33,7 +29,7 @@ Duplicate a chart and add the copy to the same paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
     [200, 240, 280],
     [250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595);

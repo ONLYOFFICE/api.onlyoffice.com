@@ -20,7 +20,7 @@ expression.SetReadingOrder(readingOrder);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| readingOrder | 可选 | [ReadingOrder](../../Enumeration/ReadingOrder.md) |  | 阅读顺序。 |
+| readingOrder | 可选 | [ReadingOrder](../../Enumeration/ReadingOrder.md) \| null \| undefined |  | 阅读顺序。 |
 
 ## 返回值
 

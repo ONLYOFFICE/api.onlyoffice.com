@@ -8,6 +8,10 @@ import APITable from '@site/src/components/APITable/APITable';
 从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到查询字符串中，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 :::
 
+:::note
+从 10.0 版本开始，可以通过[服务器设置](../get-started/configuration/server-config/server-config.md#server) `services.CoAuthoring.server.docbuilderEnable` 关闭文档生成器 API。在这种情况下，发送到 `https://documentserver/docbuilder` 地址的请求将被拒绝，并返回 HTTP 403 状态码。
+:::
+
 ## 请求参数
 
 <APITable>
@@ -261,6 +265,40 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 有关文档比较的更多详细信息，请参阅[文档比较](../../document-builder/using-cli/comparing-documents.md)。
+
+## 以文件形式发送脚本 {#sending-the-script-as-a-file}
+
+从 10.0 版本开始，可以直接在请求中发送 `.js` 脚本文件，而不是其 URL。脚本通过 `multipart/form-data` 格式的 POST 请求发送到 `https://documentserver/docbuilder/from-file` 地址。
+
+<APITable name="from-file">
+
+| 部分   | 类型   | 是否必填 | 描述 |
+| ------ | ------ | -------- | ---- |
+| file   | file   | 必填     | `.js` 脚本文件。只能发送一个文件。文件大小受[服务器设置](../get-started/configuration/server-config/server-config.md#converter) `FileConverter.converter.maxDownloadBytes` 限制。超出限制的文件将被拒绝，并返回 HTTP 413 状态码。仅在通过 `key` 检查异步请求状态时可以省略该文件。 |
+| params | string | 必填     | JSON 对象形式的请求参数：`argument`、`async` 和 `key`。不使用 `url` 参数。如果参数通过令牌发送，则可以省略 `params` 部分。 |
+| token  | string | 非必填   | 包含请求参数的令牌。令牌也可以作为 `params` 部分的 `token` 字段发送，或通过 `Authorization` 标头发送。启用令牌验证后，参数仅从令牌中获取。令牌的有效负载必须包含值为 `docbuilder` 的 `operation` 字段，且不得包含 `url` 字段。 |
+
+</APITable>
+
+响应与发送到 `/docbuilder` 地址的请求相同。要检查异步请求的状态，请发送带有返回的 `key` 值的 `params` 部分，不含 `file` 部分。
+
+```bash
+curl -X POST "https://documentserver/docbuilder/from-file" \
+  -F 'params={"async":false}' \
+  -F 'file=@script.js'
+```
+
+**响应：**
+
+```json
+{
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "output.docx": "https://documentserver/output.docx"
+  },
+  "end": true
+}
+```
 
 ## 可能的错误代码及其描述
 

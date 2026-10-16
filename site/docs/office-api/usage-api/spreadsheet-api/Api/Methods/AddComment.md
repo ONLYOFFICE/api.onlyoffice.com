@@ -1,6 +1,6 @@
 # AddComment
 
-Returns an array of ApiComment objects.
+Adds a comment to the current workbook.
 
 ## Syntax
 
