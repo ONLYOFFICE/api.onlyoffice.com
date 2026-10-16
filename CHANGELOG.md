@@ -30,7 +30,7 @@
 
 #### Document Builder
 
-* Documented opening PDF files in `OpenFile` and creating PDF forms in `CreateFile`, and added the 10.0 changelog
+* Documented opening PDF files in `OpenFile` and creating PDF forms with the `form` file type in `CreateFile`, and added the 10.0 changelog
 
 #### DocSpace
 
@@ -45,6 +45,8 @@
 * Documented the `purposeCheck` and `wopi.requireIpFilterRule` settings and the new default `User-Agent` of outgoing requests in the 10.0 changelog
 * Removed the deprecated `reviewDisplay`, `showReviewChanges` and `trackChanges` customization parameters
 * Rewrote the integration examples overview and the Node.js, Go, Java, Java Spring, .NET, PHP, PHP Laravel, Python and Ruby examples
+* Formatted parameters, status values and identifiers as inline code in the FAQ and the changelog
+* Added ellipsis comments to partial config examples in the FAQ
 
 #### Office API
 
@@ -54,6 +56,7 @@
 #### Plugins and macros
 
 * Updated the plugin API references for 10.0
+* Described the `executeMethod` signature and callback in How to call methods
 
 #### DocSpace
 
@@ -64,9 +67,15 @@
 
 * Gave each deployment target its own site URL
 
+#### Playground
+
+* Updated the plugin template to use the built-in `Editor` object
+
 #### Localization
 
 * Synced the zh-CN pages with all of the above changes
+* Kept the per-editor API names (Document API, Form API and others) in English on zh-CN pages
+* Translated the missing customizing FAQ sections and the 9.3 section of the plugins changelog
 
 ### Fixes
 
@@ -77,6 +86,11 @@
 * Fixed DocSpace API backend links to point at the generated pages
 * Fixed the AI service reference to point at `aichat`
 * Fixed the UI Kit sidebar to open on its first generated page
+* Fixed the form builder sample in the Playground to create and save a PDF form
+* Fixed the PDF builder sample in the Playground to open a PDF file
+* Fixed the upload/download direction, the "Access denied" heading and the formatting on the troubleshooting page
+* Fixed the `fillForms` typo in the sharing FAQ
+* Fixed full-width punctuation and spacing on zh-CN pages and in the zh-CN announcement bar
 
 ## 9.3.1
 
