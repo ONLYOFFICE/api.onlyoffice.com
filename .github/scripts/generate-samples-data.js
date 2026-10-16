@@ -66,7 +66,7 @@ for (const source of SOURCES) {
       const name = path.basename(f, '.md');
       const parent = path.basename(path.dirname(f));
       const dirName = path.basename(source.dir);
-      return name !== parent && name !== dirName;
+      return name !== 'index' && name !== parent && name !== dirName;
     })
     .map(f => {
       const content = fs.readFileSync(path.join(samplesDir, f), 'utf-8');

@@ -1,11 +1,11 @@
 ---
-description: Initialize the DocSpace view-only frame using the JS SDK.
+description: Initialize a DocSpace frame in the mode set by the config using the JS SDK.
 tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Initialize frame
 
-This example demonstrates how to initialize the DocSpace view-only frame using the Embed SDK method.
+This example demonstrates how to initialize a DocSpace frame using the universal Embed SDK init method. The frame opens in the mode set by the `mode` config field (`manager` by default).
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-frame.html)
 
@@ -38,6 +38,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <script>
     const config = {
       frameId: "ds-frame", // ID of the iframe container
+      src: "{PORTAL_SRC}",
       width: "100%",       // Full width
       height: "700px",     // Set desired height
     };
@@ -79,12 +80,13 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Embed SDK logic
 
-This example demonstrates how to initialize the DocSpace view-only frame using the [initFrame()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#initframe) method.
-Use the  method to embed the ONLYOFFICE document editor for a specified file ID.
+This example demonstrates how to initialize a DocSpace frame using the [initFrame()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#initframe) method.
+Unlike the mode-specific init methods, `initFrame()` doesn't set the mode itself: it reads it from the `mode` field and falls back to `manager` when the field is omitted.
 
 ``` ts
 const config = {
   frameId: "ds-frame", // ID of the iframe container
+  src: "{PORTAL_SRC}",
   width: "100%",       // Full width
   height: "700px",     // Set desired height
 };
