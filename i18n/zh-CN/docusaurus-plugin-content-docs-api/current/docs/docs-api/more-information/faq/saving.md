@@ -20,7 +20,7 @@ sidebar_position: -3
   }
   ```
 
-- 在编辑器初始化配置中启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 将其值设置为为 `true`:
+- 在编辑器初始化配置中启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 将其值设置为 `true`：
 
   ``` ts
   const config = {
