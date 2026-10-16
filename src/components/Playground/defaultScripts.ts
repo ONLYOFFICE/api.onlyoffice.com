@@ -152,12 +152,12 @@ const FORM_SCRIPTS: Template = {
     plugin: PLUGIN_SCRIPT,
 
     builder:
-        "builder.CreateFile(\"docx\");\n" +
+        "builder.CreateFile(\"form\");\n" +
         "var oDocument = Api.GetDocument();\n" +
         "var oParagraph = Api.CreateParagraph();\n" +
         "oParagraph.AddText(\"Hello world!\");\n" +
         "oDocument.InsertContent([oParagraph]);\n" +
-        "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
+        "builder.SaveFile(\"form\", \"Api.pdf\");\n" +
         "builder.CloseFile();\n",
 };
 
