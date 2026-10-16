@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -30,7 +30,7 @@ await instance.setCustomActions({
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `contextMenu`? | [`TCustomContextMenuActions`](TCustomContextMenuActions.md) | Context menu actions grouped by entity type. See [TCustomContextMenuActions](TCustomContextMenuActions.md). |
-| `createMenu`? | [`TCustomCreateAction`](TCustomCreateAction.md)[] | Items added to the create ("+") menu. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal). |
+| `contextMenu` | [`TCustomContextMenuActions`](TCustomContextMenuActions.md) | Context menu actions grouped by entity type. See [TCustomContextMenuActions](TCustomContextMenuActions.md). |
+| `createMenu` | [`TCustomCreateAction`](TCustomCreateAction.md)[] | Items added to the create ("+") menu. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal). |
 
 </APITable>

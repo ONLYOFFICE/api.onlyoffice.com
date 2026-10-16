@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/sdk/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -90,7 +90,7 @@ sdk.init({ frameId: 'ds-frame', src: 'https://portal.example.com', mode: SDKMode
 ### initChat()
 
 ```ts
-initChat(config: TFrameConfig): SDKInstance;
+initChat(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Chat](../enumerations/SDKMode.md#Chat) mode — a full-page AI chat interface.
@@ -112,7 +112,7 @@ same no-access state.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -143,7 +143,7 @@ const chat = sdk.initChat({
 ### initEditor()
 
 ```ts
-initEditor(config: TFrameConfig): SDKInstance;
+initEditor(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Editor](../enumerations/SDKMode.md#Editor) mode — full document editor.
@@ -155,7 +155,7 @@ Forces `mode` to [SDKMode.Editor](../enumerations/SDKMode.md#Editor). Requires [
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -189,7 +189,7 @@ const instance = sdk.initEditor({
 ### initFileSelector()
 
 ```ts
-initFileSelector(config: TFrameConfig): SDKInstance;
+initFileSelector(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.FileSelector](../enumerations/SDKMode.md#FileSelector) mode — a dialog for selecting a file.
@@ -202,7 +202,7 @@ The selected file is returned via [TFrameEvents.onSelectCallback](../type-aliase
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -236,7 +236,7 @@ const instance = sdk.initFileSelector({
 ### initForms()
 
 ```ts
-initForms(config: TFrameConfig): SDKInstance;
+initForms(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) mode — a forms gallery for the room specified by [TFrameConfig.id](../type-aliases/TFrameConfig.md#id).
@@ -248,7 +248,7 @@ Forces `mode` to [SDKMode.Forms](../enumerations/SDKMode.md#Forms). Sets `showMe
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -308,7 +308,7 @@ Use [SDK.init](#init) or a mode-specific wrapper instead.
 ### initManager()
 
 ```ts
-initManager(config: TFrameConfig): SDKInstance;
+initManager(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) mode — a file/folder browser
@@ -321,7 +321,7 @@ Forces `mode` to [SDKMode.Manager](../enumerations/SDKMode.md#Manager).
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -366,14 +366,15 @@ const dealRooms = sdk.initManager({
 ### initPersonal()
 
 ```ts
-initPersonal(config: TFrameConfig): SDKInstance;
+initPersonal(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Personal](../enumerations/SDKMode.md#Personal) mode — a file/folder manager for the
-user's personal space: My Documents, Favorites, Recent, and Trash. The initial
-section is controlled by [TFrameConfig.personalDestination](../type-aliases/TFrameConfig.md#personalDestination).
+user's personal space: My Documents, Favorites, Recent, Shared with me, and Trash. The initial
+section is controlled by [TFrameConfig.personalDestination](../type-aliases/TFrameConfig.md#personalDestination); the frame has no navigation
+menu of its own, so the host switches sections with [SDKInstance.navigateSection](SDKInstance.md#navigatesection).
 
-Forces `mode` to [SDKMode.Personal](../enumerations/SDKMode.md#Personal). Defaults `showMenu` and `infoPanelVisible` to `true`.
+Forces `mode` to [SDKMode.Personal](../enumerations/SDKMode.md#Personal).
 
 #### Parameters
 
@@ -381,7 +382,7 @@ Forces `mode` to [SDKMode.Personal](../enumerations/SDKMode.md#Personal). Defaul
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -414,7 +415,7 @@ const personal = sdk.initPersonal({
 ### initPublicRoom()
 
 ```ts
-initPublicRoom(config: TFrameConfig): SDKInstance;
+initPublicRoom(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom) mode — anonymous access to view,
@@ -427,7 +428,7 @@ Forces `mode` to [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom). Re
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -469,7 +470,7 @@ const instance = sdk.initPublicRoom({
 ### initRoomSelector()
 
 ```ts
-initRoomSelector(config: TFrameConfig): SDKInstance;
+initRoomSelector(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.RoomSelector](../enumerations/SDKMode.md#RoomSelector) mode — a dialog for selecting a room.
@@ -482,7 +483,7 @@ The selected room is returned via [TFrameEvents.onSelectCallback](../type-aliase
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -515,7 +516,7 @@ const instance = sdk.initRoomSelector({
 ### initSystem()
 
 ```ts
-initSystem(config: TFrameConfig): SDKInstance;
+initSystem(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.System](../enumerations/SDKMode.md#System) mode — a blank page with a loader,
@@ -529,7 +530,7 @@ Forces `mode` to [SDKMode.System](../enumerations/SDKMode.md#System).
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -559,7 +560,7 @@ system.getUserInfo().then((user) => console.log('current user:', user));
 ### initUploader()
 
 ```ts
-initUploader(config: TFrameConfig): SDKInstance;
+initUploader(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader) mode — a file upload interface.
@@ -572,7 +573,7 @@ Forces `mode` to [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader). Requir
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 
@@ -595,9 +596,11 @@ const uploader = sdk.initUploader({
   acceptExtensions: '.docx,.xlsx,.pdf',
   isMultipleUpload: true,
   events: {
-    onUploadSuccess: (files) => console.log('uploaded:', files.map((f) => f.response?.title)),
+    onUploadSuccess: (files) => {
+      if (Array.isArray(files)) console.log('uploaded:', files.map((f) => f.response?.title));
+    },
     onUploadProgress: (p) => console.log(p.fileName, p.percent),
-    onUploadError: (err) => console.error(err.error, err.rejectedFiles),
+    onUploadError: (err) => console.error('error' in err ? err.error : err.message),
   },
 });
 ```
@@ -607,7 +610,7 @@ const uploader = sdk.initUploader({
 ### initViewer()
 
 ```ts
-initViewer(config: TFrameConfig): SDKInstance;
+initViewer(config: TInitConfig): SDKInstance;
 ```
 
 Initializes a frame in [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer) mode — read-only document viewer.
@@ -619,7 +622,7 @@ Forces `mode` to [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer). Requires [
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | Frame configuration. See [TFrameConfig](../type-aliases/TFrameConfig.md). |
+| `config` | [`TInitConfig`](../type-aliases/TInitConfig.md) | Frame configuration; `mode` is set by the wrapper. See [TInitConfig](../type-aliases/TInitConfig.md). |
 
 </APITable>
 

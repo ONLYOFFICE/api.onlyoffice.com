@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -22,18 +22,18 @@ type TFolderInfo = TEntityBase & object;
 | `filesCount` | `number` | Number of files inside. |
 | `foldersCount` | `number` | Number of sub-folders inside. |
 | `indexing` | `boolean` | Whether folder indexing is enabled. |
-| `isArchive`? | `boolean` | Whether the folder is archived. |
+| `isArchive` | `boolean` | Whether the folder is archived. |
 | `new` | `number` | Count of new/unread items. |
-| `ownedBy`? | [`TCreatedBy`](TCreatedBy.md) | Folder owner reference. |
+| `ownedBy` | [`TCreatedBy`](TCreatedBy.md) | Folder owner reference. |
 | `parentId` | `number` | Parent folder ID. |
-| `parentRoomType`? | `number` | Parent room type number. |
-| `parentShared`? | `boolean` | Whether the parent is shared. |
+| `parentRoomType` | `number` | Parent room type number. |
+| `parentShared` | `boolean` | Whether the parent is shared. |
 | `pinned` | `boolean` | Whether the folder is pinned. |
-| `private`? | `boolean` | Whether the folder is private. |
-| `roomType`? | `number` | Room type number. See [RoomType](../enumerations/RoomType.md). |
+| `private` | `boolean` | Whether the folder is private. |
+| `roomType` | `number` | Room type number. See [RoomType](../enumerations/RoomType.md). |
 | `rootFolderId` | `number` | Root folder ID. |
 | `rootFolderType` | `number` | Root folder type. |
-| `sharedBy`? | [`TCreatedBy`](TCreatedBy.md) | User who shared the folder. |
-| `type`? | `number` | Folder type number. |
+| `sharedBy` | [`TCreatedBy`](TCreatedBy.md) | User who shared the folder. |
+| `type` | `number` | Folder type number. |
 
 </APITable>

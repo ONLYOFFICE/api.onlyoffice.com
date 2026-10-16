@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/instance/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -64,7 +64,7 @@ new SDKInstance(config: TFrameConfig): SDKInstance;
 ### addTagsToRoom()
 
 ```ts
-addTagsToRoom(roomId: string, tags: string[]): Promise<object>;
+addTagsToRoom(roomId: string | number, tags: string[]): Promise<object>;
 ```
 
 Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
@@ -77,7 +77,7 @@ Adds the specified tags to a room.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `roomId` | `string` | The room ID. |
+| `roomId` | `string` \| `number` | The room ID. |
 | `tags` | `string`[] | Tag names to add. |
 
 </APITable>
@@ -109,7 +109,7 @@ await instance.addTagsToRoom(room.id, ['design']);
 
 ```ts
 createFile(
-   folderId: string, 
+   folderId: string | number, 
    title: string, 
    templateId?: string, 
    formId?: string
@@ -126,10 +126,10 @@ Creates a new file in the specified folder.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `folderId` | `string` | The ID of the target folder. |
+| `folderId` | `string` \| `number` | The ID of the target folder. |
 | `title` | `string` | The file title. An extension is optional: `"Report.docx"` keeps it, `"Report"` gets `.docx` from the portal. |
-| `templateId`? | `string` | The ID of a file to copy the content from. Omit for an empty document. |
-| `formId`? | `string` | The ID of a form to create the file from. Omit when the file is not based on a form. |
+| `templateId` | `string` | The ID of a file to copy the content from. Omit for an empty document. |
+| `formId` | `string` | The ID of a form to create the file from. Omit when the file is not based on a form. |
 
 </APITable>
 
@@ -158,7 +158,7 @@ await instance.setConfig({ id: file.id, mode: SDKMode.Editor }, true);
 ### createFolder()
 
 ```ts
-createFolder(parentFolderId: string, title: string): Promise<TFolderInfo>;
+createFolder(parentFolderId: string | number, title: string): Promise<TFolderInfo>;
 ```
 
 Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
@@ -171,7 +171,7 @@ Creates a new folder inside the specified parent folder.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `parentFolderId` | `string` | The ID of the parent folder. |
+| `parentFolderId` | `string` \| `number` | The ID of the parent folder. |
 | `title` | `string` | The folder title. |
 
 </APITable>
@@ -273,7 +273,7 @@ Creating a room requires the room admin role on the portal; a user without it ge
 | ------ | ------ | ------ |
 | `title` | `string` | The room display name. |
 | `roomType` | `string` \| `number` | The room type: a [RoomType](../enumerations/RoomType.md) value or its numeric API value. |
-| `options`? | [`TCreateRoomOptions`](../type-aliases/TCreateRoomOptions.md) | Optional room settings. See [TCreateRoomOptions](../type-aliases/TCreateRoomOptions.md). |
+| `options` | [`TCreateRoomOptions`](../type-aliases/TCreateRoomOptions.md) | Optional room settings. See [TCreateRoomOptions](../type-aliases/TCreateRoomOptions.md). A JavaScript caller may still pass the positional arguments of SDK 2.1 (`quota`, `tags`, `color`, `cover`, `indexing`, `denyDownload`). |
 
 </APITable>
 
@@ -354,7 +354,8 @@ Tears down the iframe and releases all resources associated with this instance.
 Replaces the container with a plain `<div>` (preserving the original `frameId` and CSS classes,
 showing [TFrameConfig.destroyText](../type-aliases/TFrameConfig.md#destroyText)), removes the `message` listener, rejects pending
 method calls with [SDKErrorCode.Disconnected](../enumerations/SDKErrorCode.md#Disconnected), cancels the proactive OAuth token refresh,
-and removes the instance from the global `DocSpace.SDK.frames` registry. In OAuth mode this is
+and removes the instance from the global `DocSpace.SDK.frames` registry (the `frames` map of the
+[SDK](SDK.md) that created it keeps the entry, so a later `init*` with the same `frameId` reuses the instance). In OAuth mode this is
 how a host ends the embedded session: no cookie exists, so nothing outlives the frame.
 
 The call is synchronous and complete when it returns: the placeholder keeps the `frameId`, so
@@ -384,9 +385,10 @@ sdk.initEditor({ frameId: 'ds-frame', src: 'https://portal.example.com', id: 99 
 executeInEditor(callback: (editor: any, asc: any, data?: any) => void, data?: object): Promise<object>;
 ```
 
-Runs a callback function inside the active document editor.
+Available in [SDKMode.Editor](../enumerations/SDKMode.md#Editor) and [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer); in any other mode the portal answers that
+the method does not exist and the promise rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
 
-Only meaningful when the frame is in [SDKMode.Editor](../enumerations/SDKMode.md#Editor) or [SDKMode.Viewer](../enumerations/SDKMode.md#Viewer) mode.
+Runs a callback function inside the active document editor.
 
 The callback is serialized with `Function.prototype.toString` and re-created inside the
 editor frame, so it must not reference outer-scope variables, closures or imports — pass
@@ -407,13 +409,16 @@ everything it needs through `data`. The editor frame invokes it as
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `callback` | (`editor`: `any`, `asc`: `any`, `data?`: `any`) => `void` | The function to run inside the editor context. Invoked as `callback(editor, asc, data)` — note that `data` is the **third** argument. |
-| `data`? | `object` | Optional JSON-serializable data passed as the third argument to `callback`. |
+| `data` | `object` | Optional JSON-serializable data passed as the third argument to `callback`. |
 
 </APITable>
 
 #### Returns
 
 `Promise`\<`object`\>
+
+A promise that resolves with `{}` once the editor frame has run the callback.
+  An error thrown by the callback is logged inside the editor frame and does not reject the promise.
 
 #### Examples
 
@@ -880,9 +885,9 @@ the only way to complete a two-factor sign-in.
 | ------ | ------ | ------ |
 | `email` | `string` | The user's email address. |
 | `passwordHash` | `string` | The hashed password (from [SDKInstance.createHash](#createhash)). |
-| `password`? | `string` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); use `passwordHash`. |
-| `session`? | `boolean` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); the session is always persistent. |
-| `code`? | `string` | One-time code from the authenticator app or SMS; finishes a login that answered with a `/confirm/…` url. |
+| `password` | `string` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); use `passwordHash`. |
+| `session` | `boolean` | Not forwarded by the portal's SDK dispatcher (client 4.0.0); the session is always persistent. |
+| `code` | `string` | One-time code from the authenticator app or SMS; finishes a login that answered with a `/confirm/…` url. |
 
 </APITable>
 
@@ -898,7 +903,7 @@ A promise that resolves with the authentication result — see [TLoginResult](..
 Login with a pre-hashed password from [SDKInstance.createHash](#createhash).
 ```typescript
 const result = await instance.login('user@example.com', passwordHash);
-if (result.status) throw new Error(result.message ?? 'login failed');
+if (!result.url) throw new Error(result.message ?? 'login failed');
 ```
 
 Two-factor sign-in using [SDKInstance.getHashSettings](#gethashsettings) and [SDKInstance.createHash](#createhash).
@@ -971,8 +976,9 @@ navigateSection(section:
 | "trash"): Promise<object>;
 ```
 
+Available in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
+
 Navigates the frame to a specific section.
-Works in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal) modes.
 
 #### Parameters
 
@@ -1058,7 +1064,7 @@ if (selection.length > 0) {
 ### removeTagsFromRoom()
 
 ```ts
-removeTagsFromRoom(roomId: string, tags: string[]): Promise<object>;
+removeTagsFromRoom(roomId: string | number, tags: string[]): Promise<object>;
 ```
 
 Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager); any other mode rejects with [SDKErrorCode.ModeMismatch](../enumerations/SDKErrorCode.md#ModeMismatch).
@@ -1071,7 +1077,7 @@ Removes the specified tags from a room.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `roomId` | `string` | The room ID. |
+| `roomId` | `string` \| `number` | The room ID. |
 | `tags` | `string`[] | Tag names to remove. |
 
 </APITable>
@@ -1102,7 +1108,7 @@ for (const room of rooms.folders) {
 ### setConfig()
 
 ```ts
-setConfig(config?: TFrameConfig, reload?: boolean): Promise<object>;
+setConfig(config?: Partial<TFrameConfig>, reload?: boolean): Promise<object>;
 ```
 
 Merges `config` into the stored config and sends it to the iframe.
@@ -1116,7 +1122,7 @@ instead of sending a postMessage update.
 
 | Parameter | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| `config` | [`TFrameConfig`](../type-aliases/TFrameConfig.md) | `defaultConfig` | Partial frame configuration to merge. Defaults to [defaultConfig](../variables/defaultConfig.md). |
+| `config` | `Partial`\<[`TFrameConfig`](../type-aliases/TFrameConfig.md)\> | `{}` | Partial frame configuration to merge into the stored config. |
 | `reload` | `boolean` | `false` | When `true`, reinitializes the frame. Defaults to `false`. |
 
 </APITable>

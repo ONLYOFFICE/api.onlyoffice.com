@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -18,22 +18,22 @@ type TUserInfo = object;
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `activationStatus`? | `number` | Activation status. |
+| `activationStatus` | `number` | Activation status. |
 | `avatar` | `string` | Default avatar URL. |
-| `avatarMax`? | `string` | Max avatar URL. |
-| `avatarMedium`? | `string` | Medium avatar URL. |
-| `avatarOriginal`? | `string` | Original avatar URL. |
+| `avatarMax` | `string` | Max avatar URL. |
+| `avatarMedium` | `string` | Medium avatar URL. |
+| `avatarOriginal` | `string` | Original avatar URL. |
 | `avatarSmall` | `string` | Small avatar URL. |
-| `cultureName`? | `string` | UI culture/locale (e.g. `"en-US"`). |
-| `department`? | `string` | Department. |
+| `cultureName` | `string` | UI culture/locale (e.g. `"en-US"`). |
+| `department` | `string` | Department. |
 | `displayName` | `string` | Full display name. |
 | `email` | `string` | Login email. |
 | `firstName` | `string` | First name. |
-| `groups`? | `object`[] | User groups. |
+| `groups` | [`TUserGroup`](TUserGroup.md)[] | User groups. See [TUserGroup](TUserGroup.md). |
 | `hasAvatar` | `boolean` | Whether user has an avatar. |
 | `id` | `string` | User UUID. |
 | `isAdmin` | `boolean` | Portal admin flag. |
-| `isAnonim`? | `boolean` | Anonymous flag. |
+| `isAnonim` | `boolean` | Anonymous flag. |
 | `isCollaborator` | `boolean` | Collaborator flag. |
 | `isLDAP` | `boolean` | LDAP-sourced account. |
 | `isOwner` | `boolean` | Portal owner flag. |
@@ -41,10 +41,10 @@ type TUserInfo = object;
 | `isSSO` | `boolean` | SSO-sourced account. |
 | `isVisitor` | `boolean` | Guest/visitor flag. |
 | `lastName` | `string` | Last name. |
-| `listAdminModules`? | `string`[] | Registered admin modules. |
+| `listAdminModules` | `string`[] | Registered admin modules. |
 | `profileUrl` | `string` | Profile page URL. |
-| `status`? | `number` | Employee status. |
-| `title`? | `string` | Job title. |
+| `status` | `number` | Employee status. |
+| `title` | `string` | Job title. |
 | `userName` | `string` | Login username. |
 
 </APITable>

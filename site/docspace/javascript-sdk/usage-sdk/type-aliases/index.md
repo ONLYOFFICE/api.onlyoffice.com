@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/tools/docs/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/tools/docs/sections.mjs
 ---
 
 # Type Aliases
@@ -12,6 +12,7 @@ The following types are available:
 
 | Type | Description |
 | --- | --- |
+| [`TAppReadyPayload`](TAppReadyPayload.md) | Payload of [TFrameEvents.onAppReady](TFrameEvents.md#onAppReady). |
 | [`TAuthError`](TAuthError.md) | Payload of [TFrameEvents.onAuthError](TFrameEvents.md#onAuthError). |
 | [`TAuthErrorCode`](TAuthErrorCode.md) | Failure categories reported through [TFrameEvents.onAuthError](TFrameEvents.md#onAuthError) in OAuth mode. |
 | [`TBannerDisplaying`](TBannerDisplaying.md) | String literal union of all [HeaderBannerDisplaying](../enumerations/HeaderBannerDisplaying.md) values. |
@@ -26,11 +27,12 @@ The following types are available:
 | [`TEditorAction`](TEditorAction.md) | Editor action the manager requests when it opens a file: `"view"` read-only, `"fill"` form filling, `"edit"` editing. |
 | [`TEditorAnonymous`](TEditorAnonymous.md) | Anonymous user settings for the editor, passed via [TEditorCustomization.anonymous](TEditorCustomization.md#anonymous). |
 | [`TEditorCustomization`](TEditorCustomization.md) | Editor customization options passed via [TFrameConfig.editorCustomization](TFrameConfig.md#editorCustomization). |
-| [`TEditorOpenPayload`](TEditorOpenPayload.md) | Payload of [TFrameEvents.onEditorOpen](TFrameEvents.md#onEditorOpen): the file the manager is about to open plus the requested action. |
+| [`TEditorOpenPayload`](TEditorOpenPayload.md) | Payload of [TFrameEvents.onEditorOpen](TFrameEvents.md#onEditorOpen): the file the frame is about to open plus the requested action. |
 | [`TEditorType`](TEditorType.md) | String literal union of all [EditorType](../enumerations/EditorType.md) values. |
 | [`TEntityBase`](TEntityBase.md) | Common fields shared by file, folder, and room metadata. |
 | [`TFileInfo`](TFileInfo.md) | File information returned by SDK methods. |
 | [`TFilesResponse`](TFilesResponse.md) | Response wrapper for file/folder listing methods. |
+| [`TFilterSearchPayload`](TFilterSearchPayload.md) | Payload of [TFrameEvents.onFilterSearch](TFrameEvents.md#onFilterSearch). |
 | [`TFilterSortBy`](TFilterSortBy.md) | String literal union of all [FilterSortBy](../enumerations/FilterSortBy.md) values. |
 | [`TFilterSortOrder`](TFilterSortOrder.md) | String literal union of all [FilterSortOrder](../enumerations/FilterSortOrder.md) values. |
 | [`TFolderInfo`](TFolderInfo.md) | Folder information returned by SDK methods. |
@@ -41,11 +43,13 @@ The following types are available:
 | [`TFrameMode`](TFrameMode.md) | String literal union of all [SDKMode](../enumerations/SDKMode.md) values. |
 | [`TGetExternalDataRequest`](TGetExternalDataRequest.md) | Payload the ONLYOFFICE Apps iframe sends when it asks the host to read a value from external storage. |
 | [`THashSettings`](THashSettings.md) | Password hash settings returned by [SDKInstance.getHashSettings](../classes/SDKInstance.md#gethashsettings). |
-| [`TListResponse\<TFolder\>`](TListResponse.md) | Response wrapper for paginated listing methods. |
+| [`TInitConfig`](TInitConfig.md) | Configuration accepted by the mode-specific `SDK.init*` wrappers ([SDK.initManager](../classes/SDK.md#initmanager), [SDK.initPersonal](../classes/SDK.md#initpersonal), ...): a [TFrameConfig](TFrameConfig.md) whose `mode` is optional because the wrapper sets it. |
+| [`TListResponse<TFolder>`](TListResponse.md) | Response wrapper for paginated listing methods. |
 | [`TLoginResult`](TLoginResult.md) | Result of [SDKInstance.login](../classes/SDKInstance.md#login). |
 | [`TLogo`](TLogo.md) | Room logo information. |
 | [`TManagerSection`](TManagerSection.md) | Sections of [SDKMode.Manager](../enumerations/SDKMode.md#Manager) a custom action can be limited to, named after the root folder the user is in: `rooms`, `archive`, `my-documents`, `recent`, `favorites`, `shared` (shared with me) and `trash`. |
 | [`TManagerViewMode`](TManagerViewMode.md) | String literal union of all [ManagerViewMode](../enumerations/ManagerViewMode.md) values. |
+| [`TNavigatePayload`](TNavigatePayload.md) | Payload of [TFrameEvents.onNavigate](TFrameEvents.md#onNavigate). |
 | [`TPathParts`](TPathParts.md) | Breadcrumb path segment in file/room listing responses. |
 | [`TPersonalSection`](TPersonalSection.md) | Navigation sections available in [SDKMode.Personal](../enumerations/SDKMode.md#Personal) mode. |
 | [`TRejectedFile`](TRejectedFile.md) | A file the [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader) dialog refused before uploading. |
@@ -65,4 +69,5 @@ The following types are available:
 | [`TUploadProgress`](TUploadProgress.md) | Payload of [TFrameEvents.onUploadProgress](TFrameEvents.md#onUploadProgress) in [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader): one event per uploaded chunk of each file. |
 | [`TUploadRejection`](TUploadRejection.md) | One reason a file was rejected by the [SDKMode.Uploader](../enumerations/SDKMode.md#Uploader) dialog. |
 | [`TUploadResult`](TUploadResult.md) | Payload of [TFrameEvents.onUploadSuccess](TFrameEvents.md#onUploadSuccess) in [SDKMode.Forms](../enumerations/SDKMode.md#Forms) and [SDKMode.Personal](../enumerations/SDKMode.md#Personal): one object per file transferred with [SDKInstance.upload](../classes/SDKInstance.md#upload). |
+| [`TUserGroup`](TUserGroup.md) | A group the user belongs to, as listed in [TUserInfo.groups](TUserInfo.md#groups). |
 | [`TUserInfo`](TUserInfo.md) | User information returned by [SDKInstance.getUserInfo](../classes/SDKInstance.md#getuserinfo). |

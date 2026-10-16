@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -19,11 +19,11 @@ type TSelectedRoom = object;
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `icon`? | `string` | Room icon URL. |
+| `icon` | `string` | Room icon URL. |
 | `id` | `string` \| `number` | Room ID. |
 | `label` | `string` | Room title. |
-| `requestTokens`? | [`TRequestTokenInfo`](TRequestTokenInfo.md)[] | External links of a public or shared room; `requestTokens[0].requestToken` is the key for [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom). Absent for rooms without links. |
-| `roomType`? | `number` | Numeric room type. See [RoomType](../enumerations/RoomType.md). |
-| `shared`? | `boolean` | Whether the room has an external link. |
+| `requestTokens` | [`TRequestTokenInfo`](TRequestTokenInfo.md)[] | External links of a public or shared room; `requestTokens[0].requestToken` is the key for [SDKMode.PublicRoom](../enumerations/SDKMode.md#PublicRoom). Absent for rooms without links. |
+| `roomType` | `number` | Numeric room type. See [RoomType](../enumerations/RoomType.md). |
+| `shared` | `boolean` | Whether the room has an external link. |
 
 </APITable>

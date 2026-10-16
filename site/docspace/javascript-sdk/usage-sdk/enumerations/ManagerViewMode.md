@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -12,7 +12,7 @@ Passed via [TFrameConfig.viewAs](../type-aliases/TFrameConfig.md#viewAs).
 ## Example
 
 ```typescript
-sdk.initFrame({ mode: SDKMode.Manager, viewAs: ManagerViewMode.Table, ... });
+sdk.init({ mode: SDKMode.Manager, viewAs: ManagerViewMode.Table, ... });
 ```
 
 ## Enumeration Members
@@ -22,7 +22,7 @@ sdk.initFrame({ mode: SDKMode.Manager, viewAs: ManagerViewMode.Table, ... });
 | Enumeration Member | Value | Description |
 | ------ | ------ | ------ |
 | `Row` | `"row"` | Vertical list — one item per row with details. |
-| `Table` | `"table"` | Table with sortable columns. Column visibility is controlled by `viewTableColumns`. |
+| `Table` | `"table"` | Table with sortable columns. Column visibility is controlled by [TFrameConfig.viewTableColumns](../type-aliases/TFrameConfig.md#viewTableColumns). |
 | `Tile` | `"tile"` | Grid of visual tiles with thumbnails. |
 
 </APITable>

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/errors/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/errors/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -55,7 +55,7 @@ new SDKError(
 | `code` | [`SDKErrorCode`](../enumerations/SDKErrorCode.md) | `undefined` | The error category. Use a [SDKErrorCode](../enumerations/SDKErrorCode.md) value. |
 | `message` | `string` | `undefined` | Human-readable description of what went wrong. |
 | `recoverable` | `boolean` | `false` | Whether the operation may be retried. Default: `false`. |
-| `details`? | [`TSDKErrorDetails`](../type-aliases/TSDKErrorDetails.md) | `undefined` | HTTP status and portal payload for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError). See [TSDKErrorDetails](../type-aliases/TSDKErrorDetails.md). |
+| `details` | [`TSDKErrorDetails`](../type-aliases/TSDKErrorDetails.md) | `undefined` | HTTP status and portal payload for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError). See [TSDKErrorDetails](../type-aliases/TSDKErrorDetails.md). |
 
 </APITable>
 
@@ -76,8 +76,8 @@ Error.constructor
 | Property | Modifier | Type | Description |
 | ------ | ------ | ------ | ------ |
 | `code` | `readonly` | [`SDKErrorCode`](../enumerations/SDKErrorCode.md) | The error category. One of the [SDKErrorCode](../enumerations/SDKErrorCode.md) string values. Use this for programmatic branching rather than parsing `message`. |
-| `data`? | `readonly` | `object` | The portal's error payload for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError), with `config`, `request` and `stack` removed; `undefined` for every other code. |
+| `data` | `readonly` | `object` | The portal's error payload for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError), with `config`, `request` and `stack` removed; `undefined` for every other code. |
 | `recoverable` | `readonly` | `boolean` | Whether the caller can retry the failed operation without reinitializing the frame. Default: `false`. |
-| `status`? | `readonly` | `number` | HTTP status of the failed portal request. Set for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError) when the portal reported one; `undefined` otherwise. |
+| `status` | `readonly` | `number` | HTTP status of the failed portal request. Set for [SDKErrorCode.ApiError](../enumerations/SDKErrorCode.md#ApiError) when the portal reported one; `undefined` otherwise. |
 
 </APITable>

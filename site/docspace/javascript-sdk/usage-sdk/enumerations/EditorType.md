@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -13,7 +13,7 @@ The editor/viewer platform layout. Used in two config fields:
 ## Example
 
 ```typescript
-sdk.initFrame({ mode: SDKMode.Editor, type: EditorType.Mobile, editorType: EditorType.Mobile, ... });
+sdk.init({ mode: SDKMode.Editor, type: EditorType.Mobile, editorType: EditorType.Mobile, ... });
 ```
 
 ## Enumeration Members

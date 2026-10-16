@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/tools/docs/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/tools/docs/sections.mjs
 ---
 
 # Enumerations

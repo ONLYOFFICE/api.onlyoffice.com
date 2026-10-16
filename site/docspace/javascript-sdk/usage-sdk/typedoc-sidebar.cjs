@@ -32,6 +32,11 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAppReadyPayload",
+        "label": "TAppReadyPayload"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TAuthError",
         "label": "TAuthError"
       },
@@ -127,6 +132,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFilterSearchPayload",
+        "label": "TFilterSearchPayload"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TFilterSortBy",
         "label": "TFilterSortBy"
       },
@@ -177,6 +187,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TInitConfig",
+        "label": "TInitConfig"
+      },
+      {
+        "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TListResponse",
         "label": "TListResponse"
       },
@@ -199,6 +214,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TManagerViewMode",
         "label": "TManagerViewMode"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TNavigatePayload",
+        "label": "TNavigatePayload"
       },
       {
         "type": "doc",
@@ -294,6 +314,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUploadResult",
         "label": "TUploadResult"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/type-aliases/TUserGroup",
+        "label": "TUserGroup"
       },
       {
         "type": "doc",
@@ -394,6 +419,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "docspace/javascript-sdk/usage-sdk/variables/FRAME_NAME",
         "label": "FRAME_NAME"
+      },
+      {
+        "type": "doc",
+        "id": "docspace/javascript-sdk/usage-sdk/variables/TOKEN_REFRESH_LEAD_MS",
+        "label": "TOKEN_REFRESH_LEAD_MS"
       }
     ],
     "link": {

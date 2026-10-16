@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -30,8 +30,8 @@ await instance.setCustomActions({ contextMenu });
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `file`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for file context menus. |
-| `folder`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for folder context menus. |
-| `room`? | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for room context menus. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager). |
+| `file` | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for file context menus. |
+| `folder` | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for folder context menus. |
+| `room` | [`TCustomContextMenuAction`](TCustomContextMenuAction.md)[] | Custom actions for room context menus. Available in [SDKMode.Manager](../enumerations/SDKMode.md#Manager). |
 
 </APITable>

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/errors/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/errors/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -19,7 +19,7 @@ type TSDKErrorDetails = object;
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `data`? | `object` | The portal's error payload: `message`, `name`, `code`, `status`. |
-| `status`? | `number` | HTTP status of the failed portal request (`401`, `403`, `404`, …). Absent when the portal did not report one. |
+| `data` | `object` | The portal's error payload: `message`, `name`, `code`, `status`. |
+| `status` | `number` | HTTP status of the failed portal request (`401`, `403`, `404`, …). Absent when the portal did not report one. |
 
 </APITable>

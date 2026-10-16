@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -19,7 +19,7 @@ type TPathParts = object;
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `id` | `number` | Folder/room ID. |
-| `roomType`? | `number` | Room type (only for room segments). |
+| `roomType` | `number` | Room type (only for room segments). |
 | `title` | `string` | Folder/room title. |
 
 </APITable>

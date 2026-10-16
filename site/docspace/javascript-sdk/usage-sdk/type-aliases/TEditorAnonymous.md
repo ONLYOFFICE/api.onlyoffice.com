@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -30,7 +30,7 @@ sdk.initEditor({
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `label`? | `string` | Postfix for anonymous user name. Default: `"Guest"`. |
-| `request`? | `boolean` | Prompt for anonymous name on open. Default: `true`. |
+| `label` | `string` | Postfix for anonymous user name. Default: `"Guest"`. |
+| `request` | `boolean` | Prompt for anonymous name on open. Default: `true`. |
 
 </APITable>

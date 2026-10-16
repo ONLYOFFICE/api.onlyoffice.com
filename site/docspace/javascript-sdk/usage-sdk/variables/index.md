@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/tools/docs/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/tools/docs/sections.mjs
 ---
 
 # Variables
@@ -17,3 +17,4 @@ The following constants are available:
 | [`cspErrorText`](cspErrorText.md) | Error message shown when the host domain is not in the ONLYOFFICE Apps CSP allowlist. |
 | [`defaultConfig`](defaultConfig.md) | The default configuration applied to every frame before user overrides. |
 | [`FRAME_NAME`](FRAME_NAME.md) | The prefix for iframe `name` attribute. |
+| [`TOKEN_REFRESH_LEAD_MS`](TOKEN_REFRESH_LEAD_MS.md) | — |

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -11,7 +11,7 @@ The UI color theme. Passed via [TFrameConfig.theme](../type-aliases/TFrameConfig
 ## Example
 
 ```typescript
-sdk.initFrame({ theme: Theme.Dark, ... });
+sdk.init({ theme: Theme.Dark, ... });
 ```
 
 ## Enumeration Members

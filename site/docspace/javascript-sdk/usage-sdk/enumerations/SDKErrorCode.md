@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/errors/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/errors/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -33,7 +33,7 @@ try {
 | `CSPViolation` | `"CSP_VIOLATION"` | The host domain is blocked by the ONLYOFFICE Apps Content Security Policy. |
 | `Disconnected` | `"DISCONNECTED"` | The iframe is not connected or was disconnected while a call was in flight. |
 | `InvalidConfig` | `"INVALID_CONFIG"` | The provided [TFrameConfig](../type-aliases/TFrameConfig.md) is missing required fields or has invalid values. |
-| `ModeMismatch` | `"MODE_MISMATCH"` | A method was called in an incompatible [SDKMode](SDKMode.md) (e.g. [SDKInstance.setCustomActions](../classes/SDKInstance.md#setcustomactions) outside [SDKMode.Forms](SDKMode.md#Forms)), the portal answered that the current mode has no such method, or a session method ([SDKInstance.login](../classes/SDKInstance.md#login), [SDKInstance.logout](../classes/SDKInstance.md#logout)) was called in OAuth mode, where the host owns the session. The promise rejects; nothing is thrown synchronously. |
+| `ModeMismatch` | `"MODE_MISMATCH"` | A method was called in an incompatible [SDKMode](SDKMode.md) (e.g. [SDKInstance.getRooms](../classes/SDKInstance.md#getrooms) outside [SDKMode.Manager](SDKMode.md#Manager)), the portal answered that the current mode has no such method, or a session method ([SDKInstance.login](../classes/SDKInstance.md#login), [SDKInstance.logout](../classes/SDKInstance.md#logout)) was called in OAuth mode, where the host owns the session. The promise rejects; nothing is thrown synchronously. |
 | `ParseError` | `"PARSE_ERROR"` | An incoming postMessage payload could not be parsed as valid JSON. |
 | `Timeout` | `"TIMEOUT"` | A method call exceeded its configured timeout ([TFrameConfig.methodTimeout](../type-aliases/TFrameConfig.md#methodTimeout)). |
 | `TokenResolveFailed` | `"TOKEN_RESOLVE_FAILED"` | The SDK could not resolve an OAuth access token: the [TFrameConfig.getToken](../type-aliases/TFrameConfig.md#getToken) callback threw/rejected, or neither `getToken` nor [TFrameConfig.accessToken](../type-aliases/TFrameConfig.md#accessToken) was provided in OAuth mode. |

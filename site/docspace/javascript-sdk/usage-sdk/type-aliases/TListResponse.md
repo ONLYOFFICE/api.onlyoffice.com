@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -29,13 +29,13 @@ type TListResponse<TFolder> = object;
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `count`? | `number` | Number of items returned. |
+| `count` | `number` | Number of items returned. |
 | `current` | [`TFolderInfo`](TFolderInfo.md) | Current folder info. |
 | `files` | [`TFileInfo`](TFileInfo.md)[] | File entries. |
 | `folders` | `TFolder`[] | Folder or room entries. |
-| `new`? | `number` | Count of new items. |
+| `new` | `number` | Count of new items. |
 | `pathParts` | [`TPathParts`](TPathParts.md)[] | Breadcrumb path. |
-| `startIndex`? | `number` | Pagination start index. |
-| `total`? | `number` | Total items available. |
+| `startIndex` | `number` | Pagination start index. |
+| `total` | `number` | Total items available. |
 
 </APITable>

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/enums/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -12,7 +12,7 @@ Passed via [TFrameConfig.selectorType](../type-aliases/TFrameConfig.md#selectorT
 ## Example
 
 ```typescript
-sdk.initFrame({ mode: SDKMode.FileSelector, selectorType: SelectorFilterType.RoomsOnly, ... });
+sdk.init({ mode: SDKMode.FileSelector, selectorType: SelectorFilterType.RoomsOnly, ... });
 ```
 
 ## Enumeration Members

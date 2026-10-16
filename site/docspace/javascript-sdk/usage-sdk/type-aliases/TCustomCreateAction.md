@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -31,9 +31,9 @@ const action: TCustomCreateAction = {
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `icon`? | `string` | URL of the action icon. The portal's content security policy must allow images from its origin. |
+| `icon` | `string` | URL of the action icon, or a `data:` URI. The portal fetches an `.svg` URL and inlines it, so the icon host must answer cross-origin requests with `Access-Control-Allow-Origin` (as for [TFrameConfig.stylesUrl](TFrameConfig.md#stylesUrl)) and the portal's content security policy must allow the connection; any other image URL is loaded as an image and needs the policy to allow images from its origin. |
 | `key` | `string` | Unique action identifier. Returned as `action` in [TCustomActionEvent](TCustomActionEvent.md). |
 | `label` | `string` | Display label in the create menu. |
-| `section`? | [`TCustomActionSection`](TCustomActionSection.md)[] | Sections where the action is shown. If omitted, it is shown in every section that has a create menu. |
+| `section` | [`TCustomActionSection`](TCustomActionSection.md)[] | Sections where the action is shown. If omitted, it is shown in every section that has a create menu. |
 
 </APITable>

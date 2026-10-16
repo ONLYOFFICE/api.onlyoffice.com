@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/release/v4.0.0/src/types/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -21,6 +21,6 @@ type TUploadError = object;
 | ------ | ------ | ------ |
 | `fileName` | `string` | Name of the rejected file. |
 | `message` | `string` | Error message reported by the frame. |
-| `uploadId`? | `number` | Correlation ID the SDK assigned to the `upload` call. |
+| `uploadId` | `number` | Correlation ID the SDK assigned to the `upload` call. |
 
 </APITable>
