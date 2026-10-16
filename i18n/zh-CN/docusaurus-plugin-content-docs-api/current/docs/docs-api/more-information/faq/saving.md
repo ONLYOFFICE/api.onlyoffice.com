@@ -28,7 +28,7 @@ sidebar_position: -3
     editorConfig: {
       // ...
       customization: {
-        forcesave: false,
+        forcesave: true,
       },
     },
   };

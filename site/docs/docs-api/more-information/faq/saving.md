@@ -28,7 +28,7 @@ There are several ways to initiate forced saving:
     editorConfig: {
       // ...
       customization: {
-        forcesave: false,
+        forcesave: true,
       },
     },
   };
