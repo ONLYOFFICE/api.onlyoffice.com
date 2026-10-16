@@ -123,7 +123,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the ability to add the plugin [toolbar menu items](../customization/toolbar.md).
 - Added the ability to create [multiple left panels](../configuration/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
-- Added the onToolbarMenuClick event.
+- Added the `onToolbarMenuClick` event.
 - Added the [ActivateWindow](../customization/windows-and-panels.md#activating-a-window) method.
 - Added the [AddToolbarMenuItem](../customization/toolbar.md#addtoolbarmenuitem) method.
 - Added the [GetSelectedOleObjects](../interacting-with-editors/document-api/Methods/GetSelectedOleObjects.md) method.
