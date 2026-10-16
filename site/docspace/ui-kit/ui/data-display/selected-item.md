@@ -1,6 +1,6 @@
 ---
 description: "Chip with a cross, for a value the user has picked and can take back."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/selected-item/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/selected-item/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

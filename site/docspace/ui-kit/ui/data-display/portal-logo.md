@@ -1,6 +1,6 @@
 ---
-description: "The portal's white-label logo, fetched from the DocSpace server and swapped for the theme."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/portal-logo/README.md"
+description: "The portal's white-label logo, fetched from the ONLYOFFICE Apps server and swapped for the theme."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/portal-logo/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,19 +11,19 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="PortalLogo" width={402} sources={{ light: require('./portal-logo--primary-light.png').default, dark: require('./portal-logo--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
 
-The portal's white-label logo, fetched from the DocSpace server and swapped for the theme. It is
+The portal's white-label logo, fetched from the ONLYOFFICE Apps server and swapped for the theme. It is
 the mark at the top of the login and confirmation pages: one `<img>` pointed at the portal's
 `logo.ashx`, with a bundled fallback when that request fails.
 
+<ThemedImage alt="PortalLogo" width={402} sources={{ light: require('./portal-logo--primary-light.png').default, dark: require('./portal-logo--primary-dark.png').default }} />
+
 ## Use this when / not when
 
-- Use on a page served by a DocSpace portal, where `/logo.ashx` resolves and the administrator's
+- Use on a page served by an ONLYOFFICE Apps portal, where `/logo.ashx` resolves and the administrator's
   white-label settings should be honoured.
 - Not in your own application — the URL is absolute from the site root and has no prop to change
   it, so outside a portal it 404s and you always get the bundled fallback. Render your own
@@ -31,7 +31,7 @@ the mark at the top of the login and confirmation pages: one `<img>` pointed at 
 - Not for a room's mark — use [`RoomLogo`](./room-logo.md) or
   [`RoomIcon`](./room-icon.md).
 
-**Portal-internal.** The source is `/logo.ashx?logotype=…&dark=…&default=false`, a DocSpace
+**Portal-internal.** The source is `/logo.ashx?logotype=…&dark=…&default=false`, an ONLYOFFICE Apps
 endpoint. There is no `src` prop, no base-URL prop and no way to point it elsewhere.
 
 ## Import

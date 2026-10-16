@@ -1,6 +1,6 @@
 ---
 description: "What a person may do in ONLYOFFICE Apps depends on two separate things."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Access.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Access.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

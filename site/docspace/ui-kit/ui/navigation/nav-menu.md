@@ -1,6 +1,6 @@
 ---
 description: "Sidebar navigation: groups of items, each with an optional sub-menu, a badge and a collapsed rail form."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/nav-menu/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/nav-menu/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -215,7 +215,7 @@ export function Sidebar() {
 
 </APITable>
 
-#### Added by the wrapper the folder exports
+### Added by the wrapper the folder exports
 
 The `index` module exports a wrapped component, so these are accepted on top of the props above.
 

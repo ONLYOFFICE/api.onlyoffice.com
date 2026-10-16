@@ -1,6 +1,6 @@
 ---
 description: "Search field with a magnifier, an optional clear button and a debounced change callback."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/search-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/search-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -20,7 +20,7 @@ the control above a list that the list filters itself by.
 - Not as an ordinary text field — [`TextInput`](./text-input.md) reports every
   keystroke through the change event, which this one does not.
 - Not for the portal's own filter bar with its sort and view controls, which is
-  [`Filter`](../navigation/filter.md) and only works inside DocSpace.
+  [`Filter`](../navigation/filter.md) and only works inside ONLYOFFICE Apps.
 
 ## Import
 

@@ -1,6 +1,6 @@
 ---
 description: "TableHeader is the row of column titles at the top of a table; it also decides the width of every column and writes them onto the table's grid."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/table-header/TableHeader.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/table-header/TableHeader.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

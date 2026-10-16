@@ -1,6 +1,6 @@
 ---
 description: "The tile shell: an icon that turns into a checkbox, a slot for the content, a three-dot menu and a lower half."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/base-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/base-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

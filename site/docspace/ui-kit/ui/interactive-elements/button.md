@@ -1,6 +1,6 @@
 ---
 description: "Labelled action button with an optional icon, a loading state and a tooltip, in a primary or secondary variant."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -203,7 +203,7 @@ export function SaveRow() {
 
 </APITable>
 
-#### Added by the wrapper the folder exports
+### Added by the wrapper the folder exports
 
 The `index` module exports a wrapped component, so these are accepted on top of the props above.
 

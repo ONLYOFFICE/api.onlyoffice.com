@@ -1,6 +1,6 @@
 ---
 description: "Square room tile that shows the room's logo, or its initials on a colour when there is none."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-icon/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/room-icon/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

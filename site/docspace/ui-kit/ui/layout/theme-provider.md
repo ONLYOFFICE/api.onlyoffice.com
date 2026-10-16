@@ -1,6 +1,6 @@
 ---
 description: "The older theme provider: it writes the theme onto the document and supplies the kit's theme context."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/theme-provider/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/theme-provider/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -206,7 +206,7 @@ export function BrandedApp() {
   `undefined` while the document still gets `ltr`.
 - **The `.light` and `.dark` classes this folder defines carry the portal's payment-page colours**
   alongside the page background and text colour — seven `--payment-callback-*` properties that only
-  the DocSpace billing screens read.
+  the ONLYOFFICE Apps billing screens read.
 
 ## Accessibility
 

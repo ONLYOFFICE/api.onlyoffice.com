@@ -1,6 +1,6 @@
 ---
 description: "Password field with a reveal eye, a strength tooltip and a generator."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/password-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/password-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -149,7 +149,7 @@ export function NewPassword() {
 
 </APITable>
 
-#### Inherited from `CommonProps`
+### Inherited from `CommonProps`
 
 Declared by [`components/input-block`](./input-block.md) and accepted here too.
 
@@ -174,7 +174,7 @@ Declared by [`components/input-block`](./input-block.md) and accepted here too.
 
 </APITable>
 
-#### Inherited from `TextInputProps`
+### Inherited from `TextInputProps`
 
 Declared by [`components/text-input`](./text-input.md) and accepted here too.
 

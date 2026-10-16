@@ -1,5 +1,5 @@
 ---
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/scripts/docs/sections.mjs"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/scripts/docs/sections.mjs"
 ---
 
 # Data display
@@ -19,7 +19,7 @@ The following components are available:
 | [`CollapsibleCard`](./collapsible-card.md) | Panel whose header is a button that expands and collapses the body under it. |
 | [`Heading`](./heading.md) | Section title rendered as a real heading element, sized by a preset rather than by its level. |
 | [`MCPIcon`](./mcp-icon.md) | Square icon for an MCP server: its logo, or the first letter of its name on a grey tile. |
-| [`PortalLogo`](./portal-logo.md) | The portal's white-label logo, fetched from the DocSpace server and swapped for the theme. |
+| [`PortalLogo`](./portal-logo.md) | The portal's white-label logo, fetched from the ONLYOFFICE Apps server and swapped for the theme. |
 | [`QuickActions`](./quick-actions.md) | Horizontal strip of large icon tiles that scrolls when the tiles no longer fit. |
 | [`RoomIcon`](./room-icon.md) | Square room tile that shows the room's logo, or its initials on a colour when there is none. |
 | [`RoomLogo`](./room-logo.md) | Fixed 32px glyph saying which kind of room this is, with an optional selection checkbox. |

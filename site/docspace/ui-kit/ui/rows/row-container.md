@@ -1,6 +1,6 @@
 ---
 description: "Scrolling list the rows go in, virtualised and paged in as the user reaches the end."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/row-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/rows/row-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -10,7 +10,7 @@ import APITable from '@site/src/components/APITable/APITable';
 # RowContainer
 
 Scrolling list the rows go in, virtualised and paged in as the user reaches the end. Its
-virtualisation is built for the DocSpace portal and needs the portal's own scroll element.
+virtualisation is built for the ONLYOFFICE Apps portal and needs the portal's own scroll element.
 
 <ThemedImage alt="RowContainer" width={1007} sources={{ light: require('./row-container--primary-light.png').default, dark: require('./row-container--primary-dark.png').default }} />
 

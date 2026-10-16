@@ -1,6 +1,6 @@
 ---
 description: "The Forms section: the form-filling rooms the caller can see, with a header, the filter bar and the rows."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/sections/Forms.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/sections/Forms.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -22,7 +22,7 @@ only opens it or copies its link, so this screen never writes to a portal.
 
 <ThemedImage alt="Default" width={1014} sources={{ light: require('./forms--default-light.png').default, dark: require('./forms--default-dark.png').default }} />
 
-### Features
+## Features
 
 - **Owner filter** — `Me`: only the form rooms the caller owns
 - **No room type filter** — the section holds one type only, which is how the portal's own filter behaves there
@@ -30,7 +30,7 @@ only opens it or copies its link, so this screen never writes to a portal.
 - **Rooms open in place** — see below
 - **Demo or portal** — the same screen on in-memory data or on a real portal
 
-### Opening a form room, and the context menu
+## Opening a form room, and the context menu
 
 A click on a room's name, or **Open** in its context menu, lists what is inside: its PDF forms
 and the two folders the portal keeps a form room's submissions in, **Complete** and **In
@@ -45,7 +45,7 @@ The context menu is the same as on [Rooms](./rooms.md): **Open** for
 rooms and folders, **Open in ONLYOFFICE** for a file (a toast in the demo), and **Copy link**
 for a file on a real portal.
 
-### Choosing a form room or folder in a picker
+## Choosing a form room or folder in a picker
 
 <ThemedImage alt="With Folder Picker" width={1014} sources={{ light: require('./forms--with-folder-picker-light.png').default, dark: require('./forms--with-folder-picker-dark.png').default }} />
 
@@ -58,7 +58,7 @@ of its folders — and the list opens there. At the picker's root **Open** is di
 room it falls through to Rooms; the picker here is the kit's `Selector` over the list's own
 source, which keeps the section fixed.
 
-### Where the rows come from
+## Where the rows come from
 
 The header says which source answered: `Demo data`, or the host of the connected portal.
 
@@ -82,7 +82,7 @@ area:
 
 </APITable>
 
-### `searchArea=Forms` is not in the SDK yet
+## `searchArea=Forms` is not in the SDK yet
 
 The server splits rooms between the two sections by search area: `Forms` returns form-filling
 rooms and nothing else, `Active` returns everything but them (`SearchArea.cs` in the ASC.Files
@@ -97,7 +97,7 @@ const FORMS_SEARCH_AREA = "Forms" as unknown as SearchArea;
 A portal that predates the Forms section does not know the name; the list then shows the error
 it answered instead of rows. Drop the cast once the SDK carries `SearchArea.Forms`.
 
-### Usage
+## Usage
 
 ```tsx
 import { SearchArea, SortOrder } from "@onlyoffice/docspace-api-sdk";

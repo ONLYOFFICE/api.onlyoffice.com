@@ -1,6 +1,6 @@
 ---
 description: "GroupsSelector is a searchable, paginated selector panel for choosing a user group."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/Groups/Groups.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/Groups/Groups.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 GroupsSelector is a searchable, paginated selector panel for choosing a user group.
 
-### Features
+## Features
 
 - **Live API mode** — Fetches groups from the ONLYOFFICE Apps Groups API in batches of 100 with infinite scroll
 - **Single-select** — The user can pick exactly one group at a time
@@ -26,7 +26,7 @@ GroupsSelector is a searchable, paginated selector panel for choosing a user gro
 - **Aside mode** — Can render inside an Aside panel with backdrop and optional blur via `useAside`
 - **Callbacks** — `onSubmit` and `onClose` hooks
 
-### Default
+## Default
 
 A basic GroupsSelector with default settings.
 

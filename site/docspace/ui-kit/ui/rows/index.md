@@ -1,13 +1,13 @@
 ---
-description: "The file list of the DocSpace portal, in three parts: the container, the row and the row's content."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/README.md"
+description: "The file list of the ONLYOFFICE Apps portal, in three parts: the container, the row and the row's content."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/rows/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # Rows
 
-The file list of the DocSpace portal, in three parts: the container, the row and the row's
+The file list of the ONLYOFFICE Apps portal, in three parts: the container, the row and the row's
 content. It is shaped around that list, not around lists in general — read the three pages
 below before choosing it.
 

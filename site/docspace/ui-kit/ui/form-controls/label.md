@@ -1,6 +1,6 @@
 ---
 description: "Caption for a form field, with an optional required asterisk and an error colour."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/label/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/label/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

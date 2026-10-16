@@ -1,6 +1,6 @@
 ---
 description: "Full-screen layer behind an overlay, transparent by default, that catches the click meant to close it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/backdrop/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/backdrop/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "The bar above a file listing: search, a filter panel, a sort menu, a view switch and the chips for what is in force."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/filter/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/filter/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="Filter" width={1014} sources={{ light: require('./filter--primary-light.png').default, dark: require('./filter--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,10 +19,12 @@ The bar above a file listing: search, a filter panel, a sort menu, a view switch
 what is in force. It holds no filter state of its own — you tell it what is selected through two
 getters and it tells you what changed.
 
+<ThemedImage alt="Filter" width={1014} sources={{ light: require('./filter--primary-light.png').default, dark: require('./filter--primary-dark.png').default }} />
+
 ## Use this when / not when
 
 - **This is portal-internal.** Its filter groups, its contacts pages and its room grouping row are
-  DocSpace's; the type even names the pages it can be on.
+  the portal's own; the type even names the pages it can be on.
 - Use it above a listing that already has a filter model of the shape the panel expects.
 - Not for a plain search box — [`SearchInput`](../form-controls/search-input.md) is that, and this renders
   one inside itself.

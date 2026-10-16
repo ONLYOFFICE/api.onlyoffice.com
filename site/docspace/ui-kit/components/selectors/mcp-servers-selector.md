@@ -1,6 +1,6 @@
 ---
 description: "MCPServersSelector is a multi-select panel for choosing available MCP (Model Context Protocol) servers to connect to an AI agent."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/MCPServers/MCPServers.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/MCPServers/MCPServers.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 MCPServersSelector is a multi-select panel for choosing available MCP (Model Context Protocol) servers to connect to an AI agent.
 
-### Features
+## Features
 
 - **Live API mode** — Fetches available MCP servers from the API in batches of 100 with infinite scroll
 - **Multi-select** — Users can select and deselect multiple servers simultaneously
@@ -26,7 +26,7 @@ MCPServersSelector is a multi-select panel for choosing available MCP (Model Con
 - **Back navigation** — Separate `onBackClick` and `onClose` callbacks for two-level navigation
 - **Cancel button** — Built-in cancel button that triggers `onBackClick`
 
-### Default
+## Default
 
 A basic MCPServersSelector with default settings.
 

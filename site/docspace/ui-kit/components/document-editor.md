@@ -1,6 +1,6 @@
 ---
 description: "DocumentEditor wraps the \\`@onlyoffice/document-editor-react\\` component, embedding an ONLYOFFICE Document Server editor into the UI."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/document-editor/DocumentEditor.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/document-editor/DocumentEditor.mdx"
 ---
 
 # Document Editor
@@ -13,7 +13,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 DocumentEditor wraps the \`@onlyoffice/document-editor-react\` component, embedding an ONLYOFFICE Document Server editor into the UI.
 
-### Document editor sample
+## Document editor sample
 
 This example opens a document in full edit mode, showing how the wrapper passes the config and callbacks to the embedded editor.
 
@@ -23,7 +23,7 @@ Mounting the editor with an ID, file ID, and fixed size. Editing is allowed by d
 <DocumentEditor id="docx-editor" fileId={1} width="100%" height="600px"/>
 ```
 
-### Document viewer sample
+## Document viewer sample
 
 Demonstrates read-only viewing for a file with navigation controls enabled but editing disabled.
 
@@ -33,7 +33,7 @@ The same component in view-only mode via `isView`, with an explicit size and uni
 <DocumentEditor id="pptx-viewer" fileId={4} isView width="100%" height="600px"/>
 ```
 
-### Document editor with custom event
+## Document editor with custom event
 
 Demonstrates how to use custom events to interact with the editor.
 
@@ -53,7 +53,7 @@ const onDocumentReady = () => {
 />
 ```
 
-### Document editor with auto-fill sample
+## Document editor with auto-fill sample
 
 Shows how to open a spreadsheet, pick a sheet from the selector, then auto-fill it with a chosen dataset using the Document Editor connector API.
 

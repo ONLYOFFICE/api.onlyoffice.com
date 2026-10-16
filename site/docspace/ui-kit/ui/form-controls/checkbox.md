@@ -1,6 +1,6 @@
 ---
 description: "Checkbox with a label, an indeterminate state and an optional help button."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/checkbox/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/checkbox/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -135,7 +135,7 @@ export function TermsCheckbox() {
 
 </APITable>
 
-#### Inherited from `TextProps`
+### Inherited from `TextProps`
 
 Declared by [`components/text`](../data-display/text.md) and accepted here too.
 

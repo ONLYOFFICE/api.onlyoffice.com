@@ -1,6 +1,6 @@
 ---
 description: "Three small modules carry the values and the vocabulary the rest of the library is written in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Constants.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Constants.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -84,10 +84,10 @@ getBrandName("ProductName"); // "ProductName" — nothing registered yet
 
 setBrandLookup((key, locale) => myTranslations[locale ?? "en"][key] ?? key);
 
-getBrandName("ProductName"); // "ONLYOFFICE DocSpace"
+getBrandName("ProductName"); // "ONLYOFFICE Apps"
 ```
 
-DocSpace applications register theirs as a side effect of importing
+The portal's own applications register theirs as a side effect of importing
 `@docspace/shared/constants/brands`, so in the portal this is already done.
 
 The lookup is held on `globalThis` under a `Symbol.for` key rather than in a module-scope
@@ -107,7 +107,7 @@ literal key `ProductName`. A realm-global slot survives that.
 | ------------------------------------------------- | ------------------------------------------------------------------ |
 | `DeviceType`                                       | `mobile`, `tablet`, `desktop` — the value the layout branches on  |
 | `ThemeKeys`                                        | Light, dark and system theme selection                            |
-| `RoomsType`, `RoleType`                            | DocSpace room kinds and member roles                              |
+| `RoomsType`, `RoleType`                            | ONLYOFFICE Apps room kinds and member roles                              |
 | `FolderType`, `FileType`, `FileStatus`, `ContentType` | What an item is and what state it is in                        |
 | `EmployeeType`, `EmployeeStatus`, `EmployeeActivationStatus` | User classification and account state                  |
 | `ShareAccessRights`, `ShareRights`                 | Access levels on a shared item                                    |

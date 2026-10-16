@@ -1,6 +1,6 @@
 ---
 description: "Placeholder in the shape of a list of rows, shown while the rows themselves are loading."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/skeletons/RowsSkeleton.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/rows/skeletons/RowsSkeleton.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

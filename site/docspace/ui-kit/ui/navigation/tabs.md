@@ -1,6 +1,6 @@
 ---
 description: "Sticky tab bar that scrolls sideways and renders the selected tab's content under itself."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tabs/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tabs/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

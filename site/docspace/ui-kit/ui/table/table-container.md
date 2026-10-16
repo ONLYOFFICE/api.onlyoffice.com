@@ -1,6 +1,6 @@
 ---
 description: "TableContainer is the outer element of a table, the grid that the header, the group menu and the rows are laid out in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/table-container/TableContainer.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/table-container/TableContainer.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

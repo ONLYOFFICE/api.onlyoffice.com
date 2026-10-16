@@ -1,6 +1,6 @@
 ---
 description: "Tile for a document: a thumbnail with badges over it, and a name row with a checkbox and a menu."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/file-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/file-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -10,7 +10,7 @@ import APITable from '@site/src/components/APITable/APITable';
 # FileTile
 
 Tile for a document: a thumbnail with badges over it, and a name row with a checkbox and a menu.
-It is the card form of one file in the DocSpace listing, and the only tile in the family with a
+It is the card form of one file in the ONLYOFFICE Apps listing, and the only tile in the family with a
 preview image.
 
 <ThemedImage alt="FileTile" width={316} sources={{ light: require('./file-tile--primary-light.png').default, dark: require('./file-tile--primary-dark.png').default }} />

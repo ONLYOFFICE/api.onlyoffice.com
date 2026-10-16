@@ -1,6 +1,6 @@
 ---
 description: "Bar of label-and-value columns for context the reader does not have to act on."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/columnar-info-bar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/columnar-info-bar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

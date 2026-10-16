@@ -1,6 +1,6 @@
 ---
 description: "Dialog for a room's generated logo: a colour from the palette and an optional glyph, over a live preview."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-logo-cover-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/room-logo-cover-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="RoomLogoCoverDialog" width={1024} sources={{ light: require('./room-logo-cover-dialog--primary-light.png').default, dark: require('./room-logo-cover-dialog--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,8 +19,10 @@ Dialog for a room's generated logo: a colour from the palette and an optional gl
 preview. It is what a room gets instead of an uploaded picture — the tile that
 [`RoomIcon`](../data-display/room-icon.md) then draws.
 
+<ThemedImage alt="RoomLogoCoverDialog" width={1024} sources={{ light: require('./room-logo-cover-dialog--primary-light.png').default, dark: require('./room-logo-cover-dialog--primary-dark.png').default }} />
+
 **Portal-internal.** `t` is required, and the icon picker asks for keys outside the `Common`
-namespace the package ships, so two of its labels are empty anywhere but in DocSpace.
+namespace the package ships, so two of its labels are empty anywhere but in ONLYOFFICE Apps.
 
 ## Use this when / not when
 

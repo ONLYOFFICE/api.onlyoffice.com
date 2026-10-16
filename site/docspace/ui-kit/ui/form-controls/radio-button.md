@@ -1,6 +1,6 @@
 ---
 description: "One option of a single-choice set, drawn as a labelled circle."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/radio-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/radio-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

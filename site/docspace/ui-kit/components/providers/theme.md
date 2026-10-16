@@ -1,6 +1,6 @@
 ---
 description: "Resolves the light, dark or system theme and writes it onto the document for every component to read."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/providers/theme/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/providers/theme/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -18,7 +18,7 @@ that this provider's output defines, so a tree without it renders with those pro
 ## Use this when / not when
 
 - Mount it once, at the root of an application of your own, around everything that uses the kit.
-- Not inside a DocSpace plugin. The portal has already mounted it, and a second one would write
+- Not inside an ONLYOFFICE Apps plugin. The portal has already mounted it, and a second one would write
   the same attributes twice.
 - Not [`ThemeProviderComponent`](../../ui/layout/theme-provider.md) directly — that is
   the older layer this provider is built on, and it takes a whole theme object rather than a

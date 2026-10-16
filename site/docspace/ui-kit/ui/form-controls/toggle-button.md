@@ -1,6 +1,6 @@
 ---
 description: "Switch for one on/off setting, with an optional label beside it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/toggle-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/toggle-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -141,7 +141,7 @@ export function NotificationSetting() {
 
 </APITable>
 
-#### Inherited from `TextProps`
+### Inherited from `TextProps`
 
 Declared by [`components/text`](../data-display/text.md) and accepted here too.
 

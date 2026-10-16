@@ -1,6 +1,6 @@
 ---
 description: "Dialog rendered in a portal, as a centred modal or a side panel, assembled from Header, Body, Footer and Container slots."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/modal-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/modal-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -261,7 +261,7 @@ export function DeleteRoomDialog({ onDelete }: { onDelete: () => void }) {
 
 </APITable>
 
-#### Inherited from `AsideHeaderProps`
+### Inherited from `AsideHeaderProps`
 
 Declared by [`components/aside/aside-header`](./aside-header.md) and accepted here too.
 

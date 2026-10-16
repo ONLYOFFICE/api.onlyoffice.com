@@ -1,6 +1,6 @@
 ---
 description: "The Rooms section: the active rooms the caller can see, with a header, the filter bar and the rows."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/sections/Rooms.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/sections/Rooms.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -22,7 +22,7 @@ row's context menu only opens it or copies its link, so this screen never writes
 
 <ThemedImage alt="Default" width={1014} sources={{ light: require('./rooms--default-light.png').default, dark: require('./rooms--default-dark.png').default }} />
 
-### Features
+## Features
 
 - **Room type filter** — Collaboration, Public, Custom, Virtual data room
 - **Owner filter** — `Me`: only the rooms the caller owns. It combines with the room type
@@ -31,7 +31,7 @@ row's context menu only opens it or copies its link, so this screen never writes
 - **Rooms open in place** — see below
 - **Demo or portal** — the same screen on in-memory data or on a real portal
 
-### Opening rooms and folders, and the context menu
+## Opening rooms and folders, and the context menu
 
 A click on a room's name, or **Open** in its context menu, lists what is inside; a folder in it
 opens the same way. The header becomes the kit's `Navigation`: the title, a breadcrumb back to
@@ -54,7 +54,7 @@ Each row has a context menu with the minimum a read-only list needs:
 
 </APITable>
 
-### Choosing a room or folder in a picker
+## Choosing a room or folder in a picker
 
 <ThemedImage alt="With Folder Picker" width={1014} sources={{ light: require('./rooms--with-folder-picker-light.png').default, dark: require('./rooms--with-folder-picker-dark.png').default }} />
 
@@ -67,7 +67,7 @@ It is the kit's `Selector` over the same source as the list; see the
 [Files](./files.md) page for why it is not `FilesSelector`, which cannot
 show Rooms alone.
 
-### Where the rows come from
+## Where the rows come from
 
 The header says which source answered: `Demo data`, or the host of the connected portal.
 
@@ -97,7 +97,7 @@ Every filter goes to the portal in the request:
 The split between Rooms and Forms is made by the server, not here: `SearchArea.Active` never
 returns a form-filling room.
 
-### Usage
+## Usage
 
 ```tsx
 import {
@@ -124,7 +124,7 @@ const response = await roomsApi.getRoomsFolder({
 const { folders: rooms, total } = response.data.response;
 ```
 
-### Why `Owner` is a plain tag group
+## Why `Owner` is a plain tag group
 
 The portal's own owner filter is `FilterGroups.roomFilterOwner`, and `FilterInput` treats that
 group specially: it expects exactly three entries — `Me`, `Other` and a people selector — reads

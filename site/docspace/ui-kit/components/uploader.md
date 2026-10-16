@@ -1,6 +1,6 @@
 ---
 description: "Uploader is a file upload component that supports chunked uploads, folder uploads, and file size validation."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/uploader/Uploader.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/uploader/Uploader.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -15,7 +15,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 Uploader is a file upload component that supports chunked uploads, folder uploads, and file size validation. It uses the ONLYOFFICE Apps API SDK for upload operations and provides a drag-and-drop interface.
 
-### Default file upload
+## Default file upload
 
 This example shows the basic file uploader with multiple file support and file type restrictions.
 
@@ -38,7 +38,7 @@ Basic usage with file type restrictions and multiple file upload enabled:
 />
 ```
 
-### Single file upload
+## Single file upload
 
 Demonstrates uploading a single file at a time.
 
@@ -55,7 +55,7 @@ Restrict to single file upload by setting `isMultipleUpload` to false:
 />
 ```
 
-### Folder upload
+## Folder upload
 
 Shows how to enable folder upload mode for uploading entire directories.
 
@@ -74,7 +74,7 @@ Enable folder upload with `isFolderUpload` prop:
 />
 ```
 
-### Single folder upload
+## Single folder upload
 
 Demonstrates uploading a single folder at a time.
 
@@ -90,7 +90,7 @@ Demonstrates uploading a single folder at a time.
 />
 ```
 
-### Image upload
+## Image upload
 
 Specialized uploader for image files only.
 
@@ -110,7 +110,7 @@ Restrict to image file types:
 />
 ```
 
-### With size limit
+## With size limit
 
 Shows how to set maximum file size per upload.
 
@@ -126,7 +126,7 @@ Set maximum file size with `maxPerUploadSize`:
 />
 ```
 
-### With total size limit
+## With total size limit
 
 Demonstrates setting both per-file and total upload size limits.
 
@@ -143,7 +143,7 @@ Set both individual and total size limits:
 />
 ```
 
-### Any file types
+## Any file types
 
 Allows uploading any file type without restrictions.
 
@@ -161,7 +161,7 @@ Accept all file types with wildcard:
 />
 ```
 
-### Custom upload settings
+## Custom upload settings
 
 Shows how to customize chunk size, thread count, and concurrent file uploads.
 

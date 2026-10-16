@@ -1,6 +1,6 @@
 ---
 description: "Tile for a room: the logo and name on top, and the room's tags along the bottom."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/room-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/room-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

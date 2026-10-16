@@ -1,6 +1,6 @@
 ---
 description: "Previous and next buttons with a page selector between them and a page-size selector at the end."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/paging/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/paging/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

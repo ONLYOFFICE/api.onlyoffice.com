@@ -1,6 +1,6 @@
 ---
 description: "Square icon for an MCP server: its logo, or the first letter of its name on a grey tile."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/mcp-icon/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/mcp-icon/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "TableGroupMenu is the toolbar that takes the place of the table header while rows are selected, with a select-all checkbox and the actions that apply to the selection."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/table-group-menu/TableGroupMenu.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/table-group-menu/TableGroupMenu.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

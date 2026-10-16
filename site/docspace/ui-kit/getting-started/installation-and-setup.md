@@ -1,13 +1,13 @@
 ---
 description: "Everything a React application needs to do once, before any component of this kit renders correctly: install it, mount two providers, and know which import forms exist."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/getting-started.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/getting-started.md"
 ---
 
 # Installation and setup
 
 Everything a React application needs to do once, before any component of this kit renders
 correctly: install it, mount two providers, and know which import forms exist. It is written for an
-application of your own — a DocSpace **plugin** installs nothing and composes no providers, because
+application of your own — an ONLYOFFICE Apps **plugin** installs nothing and composes no providers, because
 the portal has already done both.
 
 ## Install
@@ -21,7 +21,7 @@ npm install @onlyoffice/apps-ui-kit
 To try a build of this repository instead, pack it and install the file:
 
 ```bash
-pnpm build && pnpm pack   # -> onlyoffice-apps-ui-kit-4.0.0.tgz
+pnpm build && pnpm pack   # -> onlyoffice-apps-ui-kit-4.0.1.tgz
 ```
 
 Pack with **pnpm, not npm**: the `exports` map lives under `publishConfig`, which npm does not
@@ -236,7 +236,7 @@ next time the build layout changes.
 
 ## Public and portal-internal
 
-Some modules only work inside DocSpace: `selectors`, `billing`, `uploader`, `ai-agent`,
+Some modules only work inside ONLYOFFICE Apps: `selectors`, `billing`, `uploader`, `ai-agent`,
 `document-editor`, `api`, `providers/api`. They expect a portal URL, an API key and a signed-in
 person, and outside that context they fail at runtime rather than at build time.
 

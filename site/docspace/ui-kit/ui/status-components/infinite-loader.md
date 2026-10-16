@@ -1,6 +1,6 @@
 ---
 description: "Virtualised list or grid that asks for the next page as the user scrolls towards the end."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/infinite-loader/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/infinite-loader/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -10,7 +10,7 @@ import APITable from '@site/src/components/APITable/APITable';
 # InfiniteLoader
 
 Virtualised list or grid that asks for the next page as the user scrolls towards the end. It is
-built for the DocSpace portal's layout and looks for the portal's own elements by id.
+built for the ONLYOFFICE Apps portal's layout and looks for the portal's own elements by id.
 
 <ThemedImage alt="InfiniteLoader" width={989} sources={{ light: require('./infinite-loader--primary-light.png').default, dark: require('./infinite-loader--primary-dark.png').default }} />
 

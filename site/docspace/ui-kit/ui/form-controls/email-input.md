@@ -1,6 +1,6 @@
 ---
 description: "Text field that parses what is typed as an email address and colours itself when it does not parse."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/email-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/email-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -125,7 +125,7 @@ export function InviteField() {
 
 </APITable>
 
-#### Inherited from `TextInputProps`
+### Inherited from `TextInputProps`
 
 Declared by [`components/text-input`](./text-input.md) and accepted here too.
 

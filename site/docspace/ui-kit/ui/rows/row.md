@@ -1,6 +1,6 @@
 ---
 description: "One row of the file list: an optional checkbox, a start element, the content and a context menu."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rows/row/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/rows/row/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

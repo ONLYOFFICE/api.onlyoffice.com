@@ -1,6 +1,6 @@
 ---
 description: "Grid that sorts the tiles it is given into rooms, templates, folders and files and gives two of them a heading."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/tile-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/tile-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ which of four groups it belongs to.
 
 ## Use this when / not when
 
-- Use to render a DocSpace-shaped listing: rooms or templates at the top, then folders, then
+- Use to render an ONLYOFFICE Apps-shaped listing: rooms or templates at the top, then folders, then
   files, each in its own grid.
 - Not as a general card grid — **a child without an `item` prop is dropped without a word**, so
   your own markup between the tiles never appears. Write a plain CSS grid instead.

@@ -1,6 +1,6 @@
 ---
 description: "Dims whatever is inside it and stops the mouse reaching it while something is loading."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/loader-wrapper/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/loader-wrapper/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

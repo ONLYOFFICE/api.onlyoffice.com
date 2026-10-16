@@ -1,6 +1,6 @@
 ---
 description: "FilesSelector is a full file-system browser selector for navigating ONLYOFFICE Apps rooms, folders, and files."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/Files/FilesSelector.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/Files/FilesSelector.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

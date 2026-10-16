@@ -1,6 +1,6 @@
 ---
 description: "Container the transient notifications are stacked in, driven by the imperative `toastr`."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/toast/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/toast/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

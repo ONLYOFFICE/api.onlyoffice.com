@@ -1,6 +1,6 @@
 ---
 description: "Info icon that opens an explanation on click, for a label that needs more than a label."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/help-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/help-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -143,7 +143,7 @@ export function QuotaHelp() {
 
 </APITable>
 
-#### Inherited from `IconButtonProps`
+### Inherited from `IconButtonProps`
 
 Declared by [`components/icon-button`](./icon-button.md) and accepted here too.
 

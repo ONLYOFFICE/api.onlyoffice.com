@@ -1,6 +1,6 @@
 ---
 description: "The file manager's header: breadcrumb title, back arrow, and the row of buttons that acts on the current folder."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/navigation/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/navigation/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,15 +11,15 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="Navigation" width={469} sources={{ light: require('./navigation-component--primary-light.png').default, dark: require('./navigation-component--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
 
 The file manager's header: breadcrumb title, back arrow, and the row of buttons that acts on the
-current folder. It is built for DocSpace's own document browser and expects that shape of data —
+current folder. It is built for the ONLYOFFICE Apps document browser and expects that shape of data —
 a folder trail, two context menu getters and a device type you tell it about.
+
+<ThemedImage alt="Navigation" width={469} sources={{ light: require('./navigation-component--primary-light.png').default, dark: require('./navigation-component--primary-dark.png').default }} />
 
 ## Use this when / not when
 

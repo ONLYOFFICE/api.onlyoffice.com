@@ -1,6 +1,6 @@
 ---
 description: "RoomSelector is a searchable, paginated selector for choosing rooms from the ONLYOFFICE Apps system."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/Room/Room.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/Room/Room.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 RoomSelector is a searchable, paginated selector for choosing rooms from the ONLYOFFICE Apps system.
 
-### Features
+## Features
 
 - **Live API mode** — Fetches rooms from the ONLYOFFICE Apps API with infinite scroll
 - **Single / multi-select** — Controlled by `isMultiSelect`
@@ -28,7 +28,7 @@ RoomSelector is a searchable, paginated selector for choosing rooms from the ONL
 - **Pre-selection** — Pass `selectedItems` with `sortSelectedFirst` to float already-selected rooms to the top
 - **Header / aside / cancel** — Fully composable via `withHeader`, `useAside`, `withCancelButton`
 
-### Default
+## Default
 
 A basic RoomSelector with default settings.
 

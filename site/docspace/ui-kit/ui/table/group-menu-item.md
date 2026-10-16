@@ -1,6 +1,6 @@
 ---
 description: "GroupMenuItem is one action button of a TableGroupMenu, the toolbar that replaces the table header while rows are selected."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/sub-components/group-menu-item/GroupMenuItem.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/sub-components/group-menu-item/GroupMenuItem.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -45,4 +45,4 @@ An action with variants: click the button and pick one of its options from the m
 
 The same button greyed out and ignoring clicks, while an operation on the selection is still running (`isBlocked`).
 
-<ThemedImage alt="Blocked" width={80} sources={{ light: require('./group-menu-item--blocked-light.png').default, dark: require('./group-menu-item--blocked-dark.png').default }} />
+<ThemedImage alt="Blocked" width={112} sources={{ light: require('./group-menu-item--blocked-light.png').default, dark: require('./group-menu-item--blocked-dark.png').default }} />

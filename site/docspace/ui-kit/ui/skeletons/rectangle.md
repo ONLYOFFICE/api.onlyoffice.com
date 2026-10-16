@@ -1,6 +1,6 @@
 ---
 description: "Rectangular loading placeholder with a sweeping highlight, sized to the content it stands in for."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/rectangle/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/rectangle/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

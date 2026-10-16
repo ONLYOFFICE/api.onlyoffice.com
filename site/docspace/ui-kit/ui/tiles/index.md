@@ -1,13 +1,13 @@
 ---
-description: "The card view of the DocSpace listing: a sorting container, four kinds of tile and the slot their names go in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/README.md"
+description: "The card view of the ONLYOFFICE Apps listing: a sorting container, four kinds of tile and the slot their names go in."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # Tiles
 
-The card view of the DocSpace listing: a sorting container, four kinds of tile and the slot their
+The card view of the ONLYOFFICE Apps listing: a sorting container, four kinds of tile and the slot their
 names go in. It is the counterpart of [`Rows`](../rows/index.md), and like that family it is
 shaped around the portal's data rather than around cards in general.
 

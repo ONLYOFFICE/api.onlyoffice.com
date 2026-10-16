@@ -1,6 +1,6 @@
 ---
 description: "The portal's AI settings screens, from `ai-agent/settings`."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/ai-agent/settings/AiSettings.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/ai-agent/settings/AiSettings.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

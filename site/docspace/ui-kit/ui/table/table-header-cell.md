@@ -1,6 +1,6 @@
 ---
 description: "TableHeaderCell is the title of one column in a TableHeader, with its sort arrow and the handle that resizes it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/sub-components/table-header-cell/TableHeaderCell.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/sub-components/table-header-cell/TableHeaderCell.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -13,7 +13,7 @@ TableHeaderCell is the title of one column in a TableHeader, with its sort arrow
 
 The Table README describes it in full.
 
-<ThemedImage alt="TableHeaderCell" width={53} sources={{ light: require('./table-header-cell--primary-light.png').default, dark: require('./table-header-cell--primary-dark.png').default }} />
+<ThemedImage alt="TableHeaderCell" width={69} sources={{ light: require('./table-header-cell--primary-light.png').default, dark: require('./table-header-cell--primary-dark.png').default }} />
 
 ## Props
 
@@ -46,7 +46,7 @@ The title of a column the table is not sorted by; hover it to see the arrow that
 
 The short bar at the end of the cell is the handle a user drags to widen the column (`resizable`); here it only reports the press, since TableHeader does the resizing.
 
-<ThemedImage alt="Resizable" width={69} sources={{ light: require('./table-header-cell--resizable-light.png').default, dark: require('./table-header-cell--resizable-dark.png').default }} />
+<ThemedImage alt="Resizable" width={53} sources={{ light: require('./table-header-cell--resizable-light.png').default, dark: require('./table-header-cell--resizable-dark.png').default }} />
 
 ### Sorted By This Column
 

@@ -1,6 +1,6 @@
 ---
-description: "DocSpace's left panel: a fixed column with a header slot, a main button, a scrolling body and the profile block."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/article/README.md"
+description: "The ONLYOFFICE Apps left panel: a fixed column with a header slot, a main button, a scrolling body and the profile block."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/article/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,15 +11,15 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="Article" width={268} sources={{ light: require('./article--primary-light.png').default, dark: require('./article--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
 
-DocSpace's left panel: a fixed column with a header slot, a main button, a scrolling body and the
+The ONLYOFFICE Apps left panel: a fixed column with a header slot, a main button, a scrolling body and the
 profile block. Almost everything in it is decided by the portal — the tariff, the Zendesk account,
 the developer tools, the signed-in person — which is why it takes some thirty props.
+
+<ThemedImage alt="Article" width={268} sources={{ light: require('./article--primary-light.png').default, dark: require('./article--primary-dark.png').default }} />
 
 ## Use this when / not when
 

@@ -1,6 +1,6 @@
 ---
 description: "Full-screen error page: an animated landscape, a heading, an explanation and one action button."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/error-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/error-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -26,7 +26,7 @@ a browser it does not support.
   that is a toast or an inline message.
 - **The illustration is fixed.** There is no prop for it, it is inlined in the component, and
   its colours are hard-coded: the sky stays pale blue in the dark theme.
-- **Pass `hideLogo` outside a DocSpace portal.** By default the page is topped with
+- **Pass `hideLogo` outside an ONLYOFFICE Apps portal.** By default the page is topped with
   [`PortalLogo`](../data-display/portal-logo.md), which asks a portal endpoint for the white-label mark.
 
 ## Import
@@ -116,7 +116,7 @@ export function NotFoundPage() {
 | `className`? | `string` | Added after the component's own classes on the outer element. |
 | `customizedBodyText`? | `string` | A third line under `bodyText`, 13px and 600-weight, in the muted colour. It takes plain text, not markup. |
 | `headerText`? | `string` | The heading, rendered as an `h1` at 23px. |
-| `hideLogo`? | `boolean` | Hides the portal logo above the illustration. Set it outside a DocSpace portal, where the logo endpoint does not resolve. Default: `false`. |
+| `hideLogo`? | `boolean` | Hides the portal logo above the illustration. Set it outside an ONLYOFFICE Apps portal, where the logo endpoint does not resolve. Default: `false`. |
 | `id`? | `string` | Value of `id` on the outer element. It does not rename the fixed ids the component uses inside itself. |
 | `isEditor`? | `boolean` | Takes the container out of the flow — `position: absolute` at full width — for the document editor, which mounts it over a layout of its own. Default: `false`. |
 | `isPrimaryButton`? | `boolean` | Whether the action button is the filled accent one rather than the outlined one. Default: `true`. |
@@ -179,7 +179,7 @@ export function ExpiredLinkPage() {
   `height: 100dvh`, so it is a page, not a block: inside a card or a column it takes the whole
   screen anyway and scrolls within itself.
 - **The portal logo is on by default**, and it is fetched from the portal's own
-  `logo.ashx` endpoint, absolute from the site root. Outside DocSpace that request fails and the
+  `logo.ashx` endpoint, absolute from the site root. Outside ONLYOFFICE Apps that request fails and the
   bundled fallback mark appears instead. `hideLogo` removes it altogether.
 - **It uses fixed element ids.** `container-inner`, `header`, `text`, `customized-text`,
   `button-container`, `button` and thirteen more on the illustration's pieces. Two error

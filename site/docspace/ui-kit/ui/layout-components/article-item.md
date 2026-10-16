@@ -1,6 +1,6 @@
 ---
 description: "One catalog entry of the Article panel's body: an icon, a label and an optional badge."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/article/item/ArticleItem.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/article/item/ArticleItem.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

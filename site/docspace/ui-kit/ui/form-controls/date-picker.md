@@ -1,6 +1,6 @@
 ---
 description: "Button that becomes a removable chip once a date is chosen, with a calendar behind it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/date-picker/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/date-picker/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

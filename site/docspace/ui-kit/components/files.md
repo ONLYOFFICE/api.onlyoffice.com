@@ -1,6 +1,6 @@
 ---
 description: "The Files section as the portal draws it: a header, the filter bar and the rows of the caller's personal folder."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/sections/Files.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/sections/Files.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -22,7 +22,7 @@ only opens it or copies its link, so this screen never writes to a portal.
 
 <ThemedImage alt="Default" width={1014} sources={{ light: require('./files--default-light.png').default, dark: require('./files--default-dark.png').default }} />
 
-### Features
+## Features
 
 - **Type filter** — Folders, Documents, Spreadsheets, Presentations, PDF. One type at a time, as in the portal
 - **Search** — debounced by 300 ms, because each keystroke is a request to the portal
@@ -30,7 +30,7 @@ only opens it or copies its link, so this screen never writes to a portal.
 - **Folders open in place** — see below
 - **Demo or portal** — the same screen on in-memory data or on a real portal, with nothing to switch in the code
 
-### Opening folders, and the context menu
+## Opening folders, and the context menu
 
 A click on a folder's name, or **Open** in its context menu, lists that folder. The header
 becomes the kit's `Navigation`: the folder's title, a breadcrumb back to Files, and a
@@ -52,7 +52,7 @@ Each row has a context menu with the minimum a read-only list needs:
 Inside a folder the list is `foldersApi.getFolderByFolderId({ folderId, ... })`, with the same
 search, sort and type parameters; its `pathParts` become the breadcrumb.
 
-### Choosing a folder in a picker
+## Choosing a folder in a picker
 
 <ThemedImage alt="With Folder Picker" width={1014} sources={{ light: require('./files--with-folder-picker-light.png').default, dark: require('./files--with-folder-picker-dark.png').default }} />
 
@@ -67,7 +67,7 @@ The picker is the kit's `Selector` (`@onlyoffice/apps-ui-kit/components/selector
 kept beside Rooms — and it has no demo data, so with no portal it would open empty. The source
 is `docs/sections/FolderPicker.tsx`.
 
-### Where the rows come from
+## Where the rows come from
 
 The header says which source answered: `Demo data`, or the host of the connected portal.
 
@@ -93,7 +93,7 @@ Every filter is sent to the portal rather than applied to a page it already retu
 The first 100 entries are shown; when there are more, the count above the rows says
 `First 100 of N`.
 
-### Usage
+## Usage
 
 ```tsx
 import { FilterType, SortOrder } from "@onlyoffice/docspace-api-sdk";

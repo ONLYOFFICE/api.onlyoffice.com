@@ -1,6 +1,6 @@
 ---
 description: "Pill that switches the portal between its classic view and the new dashboard."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/two-state-toggle/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/two-state-toggle/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="TwoStateToggle" width={276} sources={{ light: require('./two-state-toggle--primary-light.png').default, dark: require('./two-state-toggle--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,9 +19,11 @@ Pill that switches the portal between its classic view and the new dashboard. It
 portal-internal: the destination URLs and the storage key are written into the component, so it
 does nothing useful outside ONLYOFFICE's own application.
 
+<ThemedImage alt="TwoStateToggle" width={328} sources={{ light: require('./two-state-toggle--primary-light.png').default, dark: require('./two-state-toggle--primary-dark.png').default }} />
+
 ## Use this when / not when
 
-- Use only inside the portal, to offer the switch between the classic DocSpace view and the new
+- Use only inside the portal, to offer the switch between the classic ONLYOFFICE Apps view and the new
   dashboard.
 - Not as a general two-way switch. It navigates to `/dashboard` and `/`, writes the
   `useDocSpace` key in `localStorage`, and cannot be pointed anywhere else.
@@ -48,13 +48,13 @@ an English default you are expected to replace; nothing here is translated for y
 
 The toggle in the NEW position, as a first visit finds it. Click it to open the confirmation dialog that guards the way back to the classic view; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={276} sources={{ light: require('./two-state-toggle--default-light.png').default, dark: require('./two-state-toggle--default-dark.png').default }} />
+<ThemedImage alt="Default" width={328} sources={{ light: require('./two-state-toggle--default-light.png').default, dark: require('./two-state-toggle--default-dark.png').default }} />
 
 ### Showing Old State
 
 Toggle in the OLD position. Clicking it switches to NEW immediately (calls `onNavigate("/dashboard")`).
 
-<ThemedImage alt="Showing Old State" width={276} sources={{ light: require('./two-state-toggle--showing-old-state-light.png').default, dark: require('./two-state-toggle--showing-old-state-dark.png').default }} />
+<ThemedImage alt="Showing Old State" width={328} sources={{ light: require('./two-state-toggle--showing-old-state-light.png').default, dark: require('./two-state-toggle--showing-old-state-dark.png').default }} />
 
 ### Without Title
 
@@ -78,7 +78,7 @@ The toggle in a right-to-left layout: the title moves to the right of the pill, 
 
 All three overridable variables set on one wrapper -- the variables are listed under CSS variables on this page. Press Tab to focus the switch and see the ring take the custom accent.
 
-<ThemedImage alt="Css Customization" width={276} sources={{ light: require('./two-state-toggle--css-customization-light.png').default, dark: require('./two-state-toggle--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={328} sources={{ light: require('./two-state-toggle--css-customization-light.png').default, dark: require('./two-state-toggle--css-customization-dark.png').default }} />
 
 ## Minimal example
 
@@ -103,9 +103,9 @@ export function DesignSwitch({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `ariaLabel`? | `string` | Accessible name of the switch button. The English default is not translated for you. Default: `"Switch DocSpace design"`. |
+| `ariaLabel`? | `string` | Accessible name of the switch button. The English default is not translated for you. Default: `"Switch ONLYOFFICE Apps design"`. |
 | `className`? | `string` | Applied to the wrapper around the title and the pill. |
-| `confirmBody`? | `string` | First paragraph of that dialog. Default: `"You are about to leave the new Dashboard and return to the classic DocSpace view."`. |
+| `confirmBody`? | `string` | First paragraph of that dialog. Default: `"You are about to leave the new Dashboard and return to the classic ONLYOFFICE Apps view."`. |
 | `confirmCancel`? | `string` | Label of its cancel button. Default: `"Cancel"`. |
 | `confirmHint`? | `string` | Second paragraph of that dialog. An empty string removes it. Default: `"You can return to the new Dashboard at any time by navigating to /dashboard."`. |
 | `confirmOk`? | `string` | Label of that dialog's primary button. Default: `"Switch"`. |
@@ -113,7 +113,7 @@ export function DesignSwitch({
 | `labelNew`? | `string` | Label on the right half, the new dashboard. Default: `"NEW"`. |
 | `labelOld`? | `string` | Label on the left half of the pill, the classic view. Default: `"OLD"`. |
 | `onNavigate`? | `(url: string) => void` | Called with the URL to go to — `/dashboard` or `/`, both hard-coded. Pass your router's navigate here; without it the component assigns `window.location.href` and the page reloads. |
-| `title`? | `string` | Text to the left of the pill. An empty string removes it. Default: `"DocSpace design"`. |
+| `title`? | `string` | Text to the left of the pill. An empty string removes it. Default: `"ONLYOFFICE Apps design"`. |
 
 </APITable>
 
@@ -195,7 +195,7 @@ The thumb and the label beside it are white and read no variable.
   Tab and toggled by Enter or Space as a click would. It is announced as on while the new view is
   active and off in the classic view. Keyboard focus draws a ring around the pill in the accent
   colour.
-- **Its name is `ariaLabel`**, the English "Switch DocSpace design" by default, which is not
+- **Its name is `ariaLabel`**, the English "Switch ONLYOFFICE Apps design" by default, which is not
   translated for you. `title`, `labelOld` and `labelNew` do not change it.
 - The OLD and NEW labels are `aria-hidden`, which is right — but it means the only thing
   announced is `ariaLabel` plus the checked state, so translate `ariaLabel` along with the

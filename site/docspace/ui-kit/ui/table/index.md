@@ -1,6 +1,6 @@
 ---
 description: "Columnar list with resizable, sortable and hideable columns, laid out by a CSS grid the header writes."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

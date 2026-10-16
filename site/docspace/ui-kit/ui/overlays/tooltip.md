@@ -1,6 +1,6 @@
 ---
 description: "Floating hint attached to one or more anchors, rendered in a portal and positioned to stay in the viewport."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tooltip/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tooltip/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -82,7 +82,7 @@ For content written once in the markup rather than on each anchor: hover the lin
 
 For anchors that cannot carry a `data-tooltip-id`: hover either link to see the tooltip below it; both are found by their class (`anchorSelect`). The selector is matched across the whole page.
 
-<ThemedImage alt="Anchored By Selector" width={106} sources={{ light: require('./tooltip--anchored-by-selector-light.png').default, dark: require('./tooltip--anchored-by-selector-dark.png').default }} />
+<ThemedImage alt="Anchored By Selector" width={126} sources={{ light: require('./tooltip--anchored-by-selector-light.png').default, dark: require('./tooltip--anchored-by-selector-dark.png').default }} />
 
 ### Clickable Content
 

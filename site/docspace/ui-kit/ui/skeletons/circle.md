@@ -1,6 +1,6 @@
 ---
 description: "Round loading placeholder with a sweeping highlight, for an avatar or an icon that has not arrived yet."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/circle/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/circle/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

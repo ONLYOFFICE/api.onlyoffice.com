@@ -1,6 +1,6 @@
 ---
 description: "Full-width notification bar that sits at the top of a section until it is dismissed."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/snackbar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/snackbar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

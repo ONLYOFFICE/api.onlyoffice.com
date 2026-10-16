@@ -1,6 +1,6 @@
 ---
 description: "A labelled bar for an operation whose progress you can measure, with a status or error line under it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/progress-bar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/progress-bar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

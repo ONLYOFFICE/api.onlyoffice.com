@@ -1,6 +1,6 @@
 ---
 description: "Eleven hooks, barrelled in `hooks/index.ts` and re-exported from the package root."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Hooks.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Hooks.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -15,7 +15,7 @@ necessary.
 ```tsx
 import { useIsMobile } from "@onlyoffice/apps-ui-kit/hooks/use-is-mobile";
 
-// or, and the only form a DocSpace plugin can use:
+// or, and the only form an ONLYOFFICE Apps plugin can use:
 import { useIsMobile } from "@onlyoffice/apps-ui-kit";
 ```
 

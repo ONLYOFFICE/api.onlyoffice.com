@@ -1,6 +1,6 @@
 ---
 description: "Body text at the kit's size and weight, rendered through whichever element you name."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/text/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/text/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -177,7 +177,7 @@ export function FileMeta() {
 
 </APITable>
 
-#### Added by the wrapper the folder exports
+### Added by the wrapper the folder exports
 
 The `index` module exports a wrapped component, so these are accepted on top of the props above.
 

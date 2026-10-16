@@ -1,6 +1,6 @@
 ---
 description: "Text field with an icon at the end and room for a prefix before it, inside one border."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/input-block/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/input-block/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -148,7 +148,7 @@ export function RoomName() {
 
 </APITable>
 
-#### Inherited from `TextInputProps`
+### Inherited from `TextInputProps`
 
 Declared by [`components/text-input`](./text-input.md) and accepted here too.
 

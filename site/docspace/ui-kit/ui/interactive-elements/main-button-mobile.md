@@ -1,6 +1,6 @@
 ---
 description: "Floating round button in the corner of the screen that opens a full-width sheet of actions."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/main-button-mobile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/main-button-mobile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

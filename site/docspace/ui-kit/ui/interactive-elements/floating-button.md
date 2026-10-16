@@ -1,6 +1,6 @@
 ---
 description: "Round corner badge that shows the progress of a background operation and opens its panel."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/floating-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/floating-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -42,7 +42,7 @@ background at all unless you pass `color`.
 
 An upload that has just started, with no progress value yet, so the ring spins; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={73} sources={{ light: require('./floating-button--default-light.png').default, dark: require('./floating-button--default-dark.png').default }} />
+<ThemedImage alt="Default" width={69} sources={{ light: require('./floating-button--default-light.png').default, dark: require('./floating-button--default-dark.png').default }} />
 
 ### With Progress
 
@@ -72,7 +72,7 @@ Floating button in stopped state. Shows the minus status icon when the user abor
 
 Floating buttons with different icon variants. Shows the available built-in icons for common operations.
 
-<ThemedImage alt="Icon Variants" width={443} sources={{ light: require('./floating-button--icon-variants-light.png').default, dark: require('./floating-button--icon-variants-dark.png').default }} />
+<ThemedImage alt="Icon Variants" width={441} sources={{ light: require('./floating-button--icon-variants-light.png').default, dark: require('./floating-button--icon-variants-dark.png').default }} />
 
 ### Without Progress
 
@@ -156,7 +156,7 @@ export function UploadBadge({
 
 </APITable>
 
-#### Added by the wrapper the folder exports
+### Added by the wrapper the folder exports
 
 The `index` module exports a wrapped component, so these are accepted on top of the props above.
 

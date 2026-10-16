@@ -1,6 +1,6 @@
 ---
 description: "Controlled single-line text field in three fixed widths, with optional masking, error and warning states."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/text-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/text-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

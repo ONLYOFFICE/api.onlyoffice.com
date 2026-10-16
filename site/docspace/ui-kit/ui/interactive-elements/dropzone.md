@@ -1,6 +1,6 @@
 ---
 description: "Dashed upload area with a picture, a prompt and a format list, which turns into a loader while the upload runs."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/dropzone/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/dropzone/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

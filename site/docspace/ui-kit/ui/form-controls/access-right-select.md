@@ -1,6 +1,6 @@
 ---
 description: "Drop-down for choosing an access level, with an icon, a description and a paid badge on each row."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/access-right-select/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/access-right-select/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -143,7 +143,7 @@ export function MemberAccess() {
 
 </APITable>
 
-#### Inherited from `TComboboxProps`
+### Inherited from `TComboboxProps`
 
 Declared by [`components/combobox`](./combobox.md) and accepted here too.
 

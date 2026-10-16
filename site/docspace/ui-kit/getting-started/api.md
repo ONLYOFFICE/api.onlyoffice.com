@@ -1,11 +1,11 @@
 ---
 description: "The UI Kit uses `ApiProvider` to give components access to the ONLYOFFICE Apps REST API."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/API.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/API.mdx"
 ---
 
 # API
 
-> **Portal-internal.** Everything on this page needs a DocSpace portal: a URL, an API key and a
+> **Portal-internal.** Everything on this page needs an ONLYOFFICE Apps portal: a URL, an API key and a
 > signed-in person. An application built on this kit does not mount `ApiProvider` and does not call
 > these endpoints — it talks to its own backend and composes only the theme and translation
 > providers.
@@ -21,7 +21,7 @@ documentation is published in a machine-readable form for agents and LLMs:
 
 - [`llms.txt`](https://api.teamlab.info/llms.txt) — index of every section
 - [`docspace/api-backend/llms.txt`](https://api.teamlab.info/docspace/api-backend/llms.txt) —
-  the DocSpace REST API reference the SDK wraps
+  the ONLYOFFICE Apps REST API reference the SDK wraps
 - [`docspace/javascript-sdk/llms.txt`](https://api.teamlab.info/docspace/javascript-sdk/llms.txt) —
   Embed SDK
 - [`docspace/plugins-sdk/llms.txt`](https://api.teamlab.info/docspace/plugins-sdk/llms.txt) —
@@ -47,7 +47,7 @@ import { ApiProvider } from "@onlyoffice/apps-ui-kit/providers/api";
 
 There is also a composite `Providers` component that bundles the API, translation and theme
 providers together. Everything on this page, that component included, is **portal-internal**: it
-needs a DocSpace URL, an API key and a portal behind them. An application of your own composes
+needs an ONLYOFFICE Apps URL, an API key and a portal behind them. An application of your own composes
 `ThemeProvider` and `TranslationProvider` and nothing else — see
 [Getting started](./welcome.md).
 

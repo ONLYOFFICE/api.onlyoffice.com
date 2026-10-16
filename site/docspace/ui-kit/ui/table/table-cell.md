@@ -1,6 +1,6 @@
 ---
 description: "TableCell is one cell of a TableRow: a fixed-height box that sits in the column the table's grid gives it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/sub-components/table-cell/TableCell.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/sub-components/table-cell/TableCell.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

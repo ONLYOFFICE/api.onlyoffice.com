@@ -1,6 +1,6 @@
 ---
 description: "PeopleSelector is a searchable, paginated selector for choosing users and groups from the ONLYOFFICE Apps system."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/People/People.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/People/People.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 PeopleSelector is a searchable, paginated selector for choosing users and groups from the ONLYOFFICE Apps system.
 
-### Features
+## Features
 
 - **Live API mode** — Fetches members, groups, and guests from the ONLYOFFICE Apps Search API with infinite scroll
 - **Tabs** — Toggle Members, Groups, and Guests tabs via `withGroups` and `withGuests`
@@ -28,7 +28,7 @@ PeopleSelector is a searchable, paginated selector for choosing users and groups
 - **Exclusions** — Hide or disable specific users via `excludeItems` / `disableInvitedUsers`
 - **Header / aside / cancel** — Fully composable via `withHeader`, `useAside`, `withCancelButton`
 
-### Default
+## Default
 
 A basic PeopleSelector with default settings.
 

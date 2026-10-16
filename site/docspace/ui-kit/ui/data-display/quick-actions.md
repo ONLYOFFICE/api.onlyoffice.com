@@ -1,6 +1,6 @@
 ---
 description: "Horizontal strip of large icon tiles that scrolls when the tiles no longer fit."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/quick-actions/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/quick-actions/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "Centred empty state: an illustration, a heading, up to two lines of explanation and a column of actions."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/empty-screen-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/empty-screen-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "TableBody holds the rows of a table and, for a long list, renders only the rows in view and asks for the next page as the user scrolls."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/table/table-body/TableBody.stories.tsx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/table/table-body/TableBody.stories.tsx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

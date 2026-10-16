@@ -1,6 +1,6 @@
 ---
 description: "Layout wrapper for one form field: an optional label with a help tooltip, the control itself, and its error message."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/field-container/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/field-container/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "Multi-line text field that grows with its content, with optional line numbers, a copy button and a JSON mode."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/textarea/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/textarea/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

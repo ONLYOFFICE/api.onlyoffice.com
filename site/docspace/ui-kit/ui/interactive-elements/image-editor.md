@@ -1,6 +1,6 @@
 ---
 description: "Crop window with drag, zoom and a replace control, for turning an uploaded picture into an avatar or a logo."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/image-editor/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/image-editor/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="ImageEditor" width={664} sources={{ light: require('./image-editor--primary-light.png').default, dark: require('./image-editor--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,8 +19,10 @@ Crop window with drag, zoom and a replace control, for turning an uploaded pictu
 or a logo. It holds nothing: the file, the crop and the rendered preview all live in your state
 and come back through callbacks.
 
+<ThemedImage alt="ImageEditor" width={664} sources={{ light: require('./image-editor--primary-light.png').default, dark: require('./image-editor--primary-dark.png').default }} />
+
 **Portal-internal.** `t` is required and the labels are asked for by key, so the component needs
-the portal's translation context. Outside DocSpace, supply a `t` of your own — see the example.
+the portal's translation context. Outside ONLYOFFICE Apps, supply a `t` of your own — see the example.
 
 ## Use this when / not when
 

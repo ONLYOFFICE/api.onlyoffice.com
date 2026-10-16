@@ -1,6 +1,6 @@
 ---
 description: "`utils/` holds the non-visual half of the library: 32 modules of date maths, device detection, URL and file helpers, cookie access, email parsing and the small generic helpers the components lean on."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Utils.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Utils.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -22,7 +22,7 @@ Two ways, and which one is right depends on who you are.
 import { isMobile } from "@onlyoffice/apps-ui-kit/utils/device";
 import { formatDate } from "@onlyoffice/apps-ui-kit/utils/date";
 
-// DocSpace plugins: the root barrel is the only entry the portal exposes.
+// ONLYOFFICE Apps plugins: the root barrel is the only entry the portal exposes.
 // A subpath import throws at plugin load.
 import { isMobile, formatDate } from "@onlyoffice/apps-ui-kit";
 ```
@@ -187,7 +187,7 @@ portal's own rules.
 
 ## Portal domain helpers
 
-These encode DocSpace concepts rather than generic browser behaviour.
+These encode ONLYOFFICE Apps concepts rather than generic browser behaviour.
 
 <APITable>
 
@@ -218,11 +218,11 @@ These encode DocSpace concepts rather than generic browser behaviour.
 ## What is deliberately not in the barrel
 
 Three modules ship in the package and resolve by subpath, but are left out of
-`utils/index.ts` — so they are not reachable from a DocSpace plugin:
+`utils/index.ts` — so they are not reachable from an ONLYOFFICE Apps plugin:
 
 - **`utils/socket`** — `SocketHelper`, `SocketEvents` and `SocketCommands`, the portal's
   WebSocket singleton. It is the only importer of `socket.io-client`, which is an optional
-  peer dependency, and it is meaningless without a DocSpace portal to talk to.
+  peer dependency, and it is meaningless without an ONLYOFFICE Apps portal to talk to.
 - **`utils/interop-default`** — a Node CJS/ESM interop shim used by the build, not
   application code.
 - **`utils/add-log`** — socket logging gated on `window.ClientConfig`.

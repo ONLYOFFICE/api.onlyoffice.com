@@ -1,6 +1,6 @@
 ---
 description: "Panel that slides in from the side of the viewport, with a header and a scrolling body."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/aside/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/aside/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -145,7 +145,7 @@ export function MembersPanel() {
 
 </APITable>
 
-#### Inherited from `AsideHeaderProps`
+### Inherited from `AsideHeaderProps`
 
 Declared by [`components/aside/aside-header`](./aside-header.md) and accepted here too.
 

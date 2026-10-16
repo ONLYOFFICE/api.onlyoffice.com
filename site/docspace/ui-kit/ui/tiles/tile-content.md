@@ -1,6 +1,6 @@
 ---
 description: "The title slot of a tile: three nested wrappers that give the name its width and its truncation."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/tile-content/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/tile-content/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

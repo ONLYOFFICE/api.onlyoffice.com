@@ -1,6 +1,6 @@
 ---
 description: "Section title rendered as a real heading element, sized by a preset rather than by its level."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/heading/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/heading/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -129,7 +129,7 @@ unknown attribute and warns in the console.
 
 </APITable>
 
-#### Inherited from `TextProps`
+### Inherited from `TextProps`
 
 Declared by [`components/text`](./text.md) and accepted here too.
 

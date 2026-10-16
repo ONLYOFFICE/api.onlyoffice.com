@@ -1,6 +1,6 @@
 ---
 description: "A set of radio buttons built from an array, with the selected value handled for you."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/radio-button-group/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/radio-button-group/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -121,7 +121,7 @@ export function SortOrder() {
 
 </APITable>
 
-#### Inherited from `RadioButtonProps`
+### Inherited from `RadioButtonProps`
 
 Declared by [`components/radio-button`](./radio-button.md) and accepted here too.
 

@@ -1,6 +1,6 @@
 ---
 description: "Month grid for picking a day, with month and year views behind it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/calendar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/calendar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,13 +1,13 @@
 ---
 description: "What the kit is, how it is installed and the providers every application mounts."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Welcome.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Welcome.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
 
 # ONLYOFFICE Apps UI Kit
 
-Version 4.0.0 • AGPL-3.0-only • on npm as @onlyoffice/apps-ui-kit -- [How to install it](#installation)
+Version 4.0.1 • AGPL-3.0-only • on npm as @onlyoffice/apps-ui-kit -- [How to install it](#installation)
 
 **The package at a glance**
 
@@ -15,7 +15,7 @@ Version 4.0.0 • AGPL-3.0-only • on npm as @onlyoffice/apps-ui-kit -- [How to
 
 | Package | Version | Licence | Peers |
 | --- | --- | --- | --- |
-| @onlyoffice/apps-ui-kit | 4.0.0 | AGPL-3.0-only | react 19, react-dom 19, i18next |
+| @onlyoffice/apps-ui-kit | 4.0.1 | AGPL-3.0-only | react 19, react-dom 19, i18next |
 
 </APITable>
 
@@ -30,13 +30,13 @@ npm install @onlyoffice/apps-ui-kit
 To try a build of this repository instead, pack it and install the file:
 
 ```bash
-pnpm build && pnpm pack   # -> onlyoffice-apps-ui-kit-4.0.0.tgz
+pnpm build && pnpm pack   # -> onlyoffice-apps-ui-kit-4.0.1.tgz
 ```
 
 Pack with **pnpm**, not npm: the `exports` map lives under `publishConfig`, which is a pnpm
 feature, and an npm-packed tarball ends up with no `exports` and no `main` at all.
 
-DocSpace **plugins** install nothing. The portal hands a plugin its own already-mounted copy of
+ONLYOFFICE Apps **plugins** install nothing. The portal hands a plugin its own already-mounted copy of
 the kit and refuses every subpath, so for a plugin the root barrel is the entire API — see
 **Utils** for what that means in practice.
 
@@ -100,7 +100,7 @@ the bundles you need — `Common.json`, `Payments.json` and `Settings.json` ship
 `pnpm sync-locales` refreshes the other languages from a DocSpace client checkout.
 
 There is also a composed `Providers` root, and it is **portal-specific**: it adds `ApiProvider`
-and fetches portal settings and the current user on mount, so it needs a DocSpace endpoint to
+and fetches portal settings and the current user on mount, so it needs an ONLYOFFICE Apps endpoint to
 talk to. That is why it is deliberately not re-exported from `providers` — import it by its own
 subpath, as a default export:
 

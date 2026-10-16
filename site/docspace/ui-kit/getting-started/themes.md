@@ -1,6 +1,6 @@
 ---
 description: "The UI Kit ships with Base (light) and Dark themes."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/Themes.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/Themes.mdx"
 ---
 
 # Themes
@@ -23,7 +23,7 @@ import { ThemeKeys } from "@onlyoffice/apps-ui-kit/enums";
 
 There is also a composite `Providers` component, which mounts `ApiProvider` and fetches portal
 settings on mount. **It is for the portal, not for an application of your own**: it requires a
-DocSpace URL and an API key, and without a portal behind them every request it makes fails. It
+ONLYOFFICE Apps URL and an API key, and without a portal behind them every request it makes fails. It
 is deliberately not re-exported from `providers`. Compose `ThemeProvider` and
 `TranslationProvider` yourself instead — see
 [Getting started](./welcome.md).
@@ -33,7 +33,7 @@ is deliberately not re-exported from `providers`. Compose `ThemeProvider` and
 - **`initialTheme`** (`ThemeKeys`) — starting theme: `BaseStr`, `DarkStr`, or `SystemStr`
 - **`systemTheme`** (`ThemeKeys`) — override detected OS preference
 - **`colorTheme`** (`CustomColorThemesSettingsDto`) — the portal's accent palette. **Pass it.**
-  Omitted, the provider calls the DocSpace REST API on mount to ask for one; outside a portal that
+  Omitted, the provider calls the ONLYOFFICE Apps REST API on mount to ask for one; outside a portal that
   request fails, the rejection is not caught, and it is never retried. `{ themes: [], selected: 0 }`
   says "no portal, no accent override".
 - **`locale`** (`string`) — language code for RTL detection and font selection

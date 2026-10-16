@@ -1,6 +1,6 @@
 ---
 description: "Menu opened at the pointer through a ref, with submenus, a mobile sheet form and working keyboard navigation."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/context-menu/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/context-menu/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -83,7 +83,7 @@ Every kind of item the model supports, in one menu. From top to bottom:
 
 `getContextModel` replaces a static `model`: the getter runs each time the menu opens, so the first item shows the time of that open and the favorite item reads the state changed by its own click. Leading and trailing separators in the result are trimmed.
 
-<ThemedImage alt="Dynamic Model" width={330} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
+<ThemedImage alt="Dynamic Model" width={337} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
 
 ### Attached To Document
 

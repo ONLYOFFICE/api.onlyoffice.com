@@ -1,6 +1,6 @@
 ---
 description: "Settings-page entry: a linked title, a line of explanation, an arrow, and an optional paid badge."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/category-item/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/category-item/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "Saturation square with a hue strip for choosing a colour, with or without a hex field and buttons."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/color-picker/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/color-picker/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

@@ -1,6 +1,6 @@
 ---
 description: "Provides API client context to all child components using the ONLYOFFICE Apps API SDK."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/providers/api/ApiProvider.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/providers/api/ApiProvider.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

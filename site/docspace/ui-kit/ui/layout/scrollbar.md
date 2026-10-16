@@ -1,6 +1,6 @@
 ---
 description: "Scrolling region with the kit's own thin tracks, which fade out when nothing is happening."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/scrollbar/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/scrollbar/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

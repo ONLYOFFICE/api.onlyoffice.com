@@ -1,6 +1,6 @@
 ---
 description: "Panel for picking one or many things out of a list too long to render at once."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/selector/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/selector/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

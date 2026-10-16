@@ -1,6 +1,6 @@
 ---
 description: "Installs the i18next instance the eleven components with labels of their own read from."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/providers/translation/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/providers/translation/README.md"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';
@@ -22,7 +22,7 @@ is **not** among them, despite the prompt it draws: that prompt is a prop like a
   do not depend on each other.
 - Mount it even in an English-only application. The package ships `en` and the components still
   need the table handed to them.
-- Not inside a DocSpace plugin: the portal supplies the instance, and a second one competes with
+- Not inside an ONLYOFFICE Apps plugin: the portal supplies the instance, and a second one competes with
   it for the same global.
 - Not for your own application's copy. It can share the map — add a namespace of your own beside
   `Common` — but the components only ever read `Common`.

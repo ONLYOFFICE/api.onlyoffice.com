@@ -1,6 +1,6 @@
 ---
 description: "The blank first screen: a fixed sheet over the whole viewport with the kit's rombs animation on it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/app-loader/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/app-loader/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

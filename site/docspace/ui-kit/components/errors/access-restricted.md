@@ -1,6 +1,6 @@
 ---
 description: "Access restricted error page."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/errors/AccessRestricted.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/errors/AccessRestricted.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,7 +9,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 Access restricted error page. Displayed when the user's account is restricted from accessing the portal.
 
-### Features
+## Features
 
 - **Full-Page Display**
 - **Internationalized**
@@ -18,7 +18,7 @@ Access restricted error page. Displayed when the user's account is restricted fr
 
 <ThemedImage alt="Default" width={996} sources={{ light: require('./access-restricted--default-light.png').default, dark: require('./access-restricted--default-dark.png').default }} />
 
-### Usage
+## Usage
 
 ```tsx
 import { AccessRestricted } from "@onlyoffice/apps-ui-kit/errors";

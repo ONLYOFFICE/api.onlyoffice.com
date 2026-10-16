@@ -1,6 +1,6 @@
 ---
 description: "Anchor styled to the kit's conventions, for navigation or for an in-place action."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/link/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/link/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -158,7 +158,7 @@ export function RoomLink({ id, name }: { id: string; name: string }) {
 
 </APITable>
 
-#### Inherited from `TextProps`
+### Inherited from `TextProps`
 
 Declared by [`components/text`](../data-display/text.md) and accepted here too.
 
@@ -193,7 +193,7 @@ Declared by [`components/text`](../data-display/text.md) and accepted here too.
 
 </APITable>
 
-#### Added by the wrapper the folder exports
+### Added by the wrapper the folder exports
 
 The `index` module exports a wrapped component, so these are accepted on top of the props above.
 

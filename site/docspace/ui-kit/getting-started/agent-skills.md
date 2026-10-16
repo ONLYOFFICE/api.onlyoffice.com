@@ -1,6 +1,6 @@
 ---
 description: "The `ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React app: which component fits the job, what its props are called, how to install and theme it, and a check it runs on the result."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/docs/AgentSkills.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/AgentSkills.mdx"
 ---
 
 import APITable from '@site/src/components/APITable/APITable';

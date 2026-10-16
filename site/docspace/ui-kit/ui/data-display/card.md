@@ -1,6 +1,6 @@
 ---
 description: "Grey panel with an optional header row, for a block of related information."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/card/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/card/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

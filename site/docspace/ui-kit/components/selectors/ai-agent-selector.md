@@ -1,6 +1,6 @@
 ---
 description: "AIAgentSelector is a selector panel for choosing an AI agent room."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/selectors/AIAgent/AIAgent.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/selectors/AIAgent/AIAgent.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -17,7 +17,7 @@ Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, s
 
 AIAgentSelector is a selector panel for choosing an AI agent room.
 
-### Features
+## Features
 
 - **Live API mode** — Fetches AI agent rooms from the ONLYOFFICE Apps API with infinite scroll
 - **Init data mode** — Accepts pre-loaded items for SSR or offline scenarios via `withInit`
@@ -26,7 +26,7 @@ AIAgentSelector is a selector panel for choosing an AI agent room.
 - **Padding control** — Toggle inner padding with `withPadding`
 - **Callbacks** — `onSubmit`, `onClose`, and `setIsDataReady` hooks
 
-### Default
+## Default
 
 A basic AIAgentSelector with default settings.
 

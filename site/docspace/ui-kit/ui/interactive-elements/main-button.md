@@ -1,6 +1,6 @@
 ---
 description: "Accent button at the top of a side menu that opens a menu of the things a user can create."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/main-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/main-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -139,9 +139,9 @@ export function CreateNew({ onCreate }: { onCreate: (kind: string) => void }) {
 
 </APITable>
 
-#### Portal-only props
+### Portal-only props
 
-These need DocSpace portal context and do nothing in a standalone app.
+These need ONLYOFFICE Apps portal context and do nothing in a standalone app.
 
 <APITable>
 

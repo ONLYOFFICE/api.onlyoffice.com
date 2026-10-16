@@ -1,6 +1,6 @@
 ---
 description: "Tile for a folder, as a single name row or, with one flag, a tall card with a picture on top."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/tiles/folder-tile/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/tiles/folder-tile/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

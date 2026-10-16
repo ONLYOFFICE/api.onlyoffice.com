@@ -1,6 +1,6 @@
 ---
 description: "Offline error page."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/errors/ErrorOffline.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/errors/ErrorOffline.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -9,7 +9,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 Offline error page. Displayed when the user has no internet connection.
 
-### Features
+## Features
 
 - **Full-Page Display**
 - **Internationalized**
@@ -18,7 +18,7 @@ Offline error page. Displayed when the user has no internet connection.
 
 <ThemedImage alt="Default" width={996} sources={{ light: require('./error-offline--default-light.png').default, dark: require('./error-offline--default-dark.png').default }} />
 
-### Usage
+## Usage
 
 ```tsx
 import { ErrorOfflineContainer } from "@onlyoffice/apps-ui-kit/errors";

@@ -1,6 +1,6 @@
 ---
 description: "Read-only field with a folder icon that opens the file dialog and accepts a drop."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/file-input/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/file-input/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

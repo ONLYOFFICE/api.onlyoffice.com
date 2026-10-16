@@ -1,6 +1,6 @@
 ---
 description: "Small coloured pill for a count or a short marker, announced as a live status region."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/badge/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/badge/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -142,7 +142,7 @@ tooltip wrapper the badge is built on, and `style` replaces the badge's own inli
 
 </APITable>
 
-#### Inherited from `TextProps`
+### Inherited from `TextProps`
 
 Declared by [`components/text`](./text.md) and accepted here too.
 
@@ -282,7 +282,7 @@ export function PlanMarker() {
   needs `<RootTooltip />` from [`Tooltip`](../overlays/tooltip.md) mounted once near the root of
   the app, or nothing appears.
 - **An ancestor with the class `ai-agents` repaints the badge** grey and cancels its hover. That
-  is the DocSpace portal's own hook and there is no prop for it.
+  is the ONLYOFFICE Apps portal's own hook and there is no prop for it.
 
 ## CSS variables
 

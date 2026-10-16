@@ -1,6 +1,6 @@
 ---
 description: "Modal that frames an uploaded picture: the kit's crop window between a title and a save and cancel pair."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/avatar-editor-dialog/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/avatar-editor-dialog/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="AvatarEditorDialog" width={1024} sources={{ light: require('./avatar-editor-dialog--primary-light.png').default, dark: require('./avatar-editor-dialog--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,8 +19,10 @@ Modal that frames an uploaded picture: the kit's crop window between a title and
 cancel pair. It owns the preview it hands back on save, and nothing else — the picture, the crop
 and the open state all stay in your code.
 
+<ThemedImage alt="AvatarEditorDialog" width={1024} sources={{ light: require('./avatar-editor-dialog--primary-light.png').default, dark: require('./avatar-editor-dialog--primary-dark.png').default }} />
+
 **Portal-internal.** `t` is required, and the two footer labels and the editor's replace control
-are asked for by key, so the component needs the portal's translation context. Outside DocSpace,
+are asked for by key, so the component needs the portal's translation context. Outside ONLYOFFICE Apps,
 supply a `t` of your own.
 
 ## Use this when / not when

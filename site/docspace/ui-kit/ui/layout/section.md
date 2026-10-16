@@ -1,6 +1,6 @@
 ---
-description: "DocSpace's page body: a sticky header and filter, a scrolling body, and the info and chat panels beside it."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/section/README.md"
+description: "The ONLYOFFICE Apps page body: a sticky header and filter, a scrolling body, and the info and chat panels beside it."
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/section/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,21 +11,21 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="Section" width={1020} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
 
-DocSpace's page body: a sticky header and filter, a scrolling body, and the info and chat panels
+The ONLYOFFICE Apps page body: a sticky header and filter, a scrolling body, and the info and chat panels
 beside it. It is the other half of the portal's layout, next to [`Article`](./article.md),
 and it is also what supplies the kit's layout context to everything inside it.
+
+<ThemedImage alt="Section" width={1020} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
 
 ## Use this when / not when
 
 - **This is portal-internal.** Nearly ninety props, most of them wiring for the portal's upload and
   operations machinery, and about a quarter of them dead.
-- Use it when you are rebuilding the DocSpace page layout and want the same header, filter, info
+- Use it when you are rebuilding the ONLYOFFICE Apps page layout and want the same header, filter, info
   panel and scroll behaviour.
 - **Several kit components need to be inside one.** It is the only source of the layout context
   `sectionWidth` and `sectionHeight`, which [`Navigation`](../navigation/navigation-component.md)'s breadcrumb box

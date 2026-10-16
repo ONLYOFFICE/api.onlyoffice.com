@@ -1,6 +1,6 @@
 ---
 description: "A conversation with the portal's AI models, about the files and rooms the user is working in."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/ai-agent/ai-chat-panel/AiChatPanel.docs.mdx"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/ai-agent/ai-chat-panel/AiChatPanel.docs.mdx"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -22,7 +22,7 @@ write at all.
 
 <ThemedImage alt="Default" width={458} sources={{ light: require('./ai-chat--default-light.png').default, dark: require('./ai-chat--default-dark.png').default }} />
 
-### Putting it on a screen
+## Putting it on a screen
 
 There is no `AiChatPanel` component to render. `useAiChatPanel()` returns the panel content
 and the state to place it by, and the host decides where it goes — in the DocSpace client, the

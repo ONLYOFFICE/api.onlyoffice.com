@@ -1,6 +1,6 @@
 ---
 description: "Icon that acts as a button, with hover and pressed colours and an optional tooltip."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/icon-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/icon-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';

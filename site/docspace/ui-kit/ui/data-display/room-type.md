@@ -1,6 +1,6 @@
 ---
 description: "Row offering one kind of room, with its glyph, its translated name and its description."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/room-type/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/room-type/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
@@ -11,8 +11,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 :::warning[Portal only]
 
-<ThemedImage alt="RoomType" width={1014} sources={{ light: require('./room-type--primary-light.png').default, dark: require('./room-type--primary-dark.png').default }} />
-
 Works only inside an ONLYOFFICE Apps portal: it needs the portal's API client, stores and translations, and is not part of the [public API](../../getting-started/installation-and-setup.md#public-and-portal-internal).
 
 :::
@@ -21,13 +19,15 @@ Row offering one kind of room, with its glyph, its translated name and its descr
 the "choose a room type" step of the portal's create-room flow, in three layouts: a card in the
 list, the collapsed button at the top of a dropdown, and an entry inside that dropdown.
 
+<ThemedImage alt="RoomType" width={1014} sources={{ light: require('./room-type--primary-light.png').default, dark: require('./room-type--primary-dark.png').default }} />
+
 ## Use this when / not when
 
 - Use when you are reproducing the portal's room-creation picker and want its exact wording.
 - Not for the glyph alone — that is [`RoomLogo`](./room-logo.md), which this component
   renders inside itself.
 - Not for a particular existing room — that is [`RoomIcon`](./room-icon.md).
-- Not as a generic option row: every string is a `Common` translation key of the DocSpace
+- Not as a generic option row: every string is a `Common` translation key of the ONLYOFFICE Apps
   portal, so a row about anything else comes out blank.
 
 **Portal-internal.** All six titles and all six descriptions come from the portal's `Common`

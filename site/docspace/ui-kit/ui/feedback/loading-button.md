@@ -1,6 +1,6 @@
 ---
 description: "16px progress ring with a cross in the middle, for cancelling what it is measuring."
-custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/9954315f61fd4830b7ea0582c3d58bee0e85d0aa/components/loading-button/README.md"
+custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/components/loading-button/README.md"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
