@@ -57,7 +57,7 @@ import TabItem from '@theme/TabItem';
     <TabItem value="com" label="COM">
         | 名称   | 类型          | 描述                                                                        |
         | ------ | ------------- | --------------------------------------------------------------------------- |
-        | type   | BSTR          | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
+        | type   | BSTR          | 文件类型（参见[支持的格式](../../get-started/supported-formats.md)）。 |
         | result | VARIANT_BOOL* | 指定创建文件操作是否成功。                                                  |
     </TabItem>
     <TabItem value="java" label="Java">
@@ -73,7 +73,7 @@ import TabItem from '@theme/TabItem';
     <TabItem value="js" label="JS">
         | 名称 | 类型   | 描述                                                                        |
         | ---- | ------ | --------------------------------------------------------------------------- |
-        | type | String | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
+        | type | String | 文件类型（参见[支持的格式](../../get-started/supported-formats.md)）。 |
     </TabItem>
 </Tabs>
 

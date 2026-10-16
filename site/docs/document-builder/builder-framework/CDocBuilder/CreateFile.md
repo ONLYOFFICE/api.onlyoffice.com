@@ -57,7 +57,7 @@ Creates a new file. The type of the file which will be created needs to be set.
     <TabItem value="com" label="COM">
         | Name   | Type          | Description                                                                            |
         | ------ | ------------- | -------------------------------------------------------------------------------------- |
-        | type   | BSTR          | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
+        | type   | BSTR          | The file type (see [Supported formats](../../get-started/supported-formats.md)). |
         | result | VARIANT_BOOL* | Specifies if the operation of creating a file is successful or not.                    |
     </TabItem>
     <TabItem value="java" label="Java">
@@ -73,7 +73,7 @@ Creates a new file. The type of the file which will be created needs to be set.
     <TabItem value="js" label="JS">
         | Name | Type   | Description                                                                            |
         | ---- | ------ | -------------------------------------------------------------------------------------- |
-        | type | String | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
+        | type | String | The file type (see [Supported formats](../../get-started/supported-formats.md)). |
     </TabItem>
 </Tabs>
 
