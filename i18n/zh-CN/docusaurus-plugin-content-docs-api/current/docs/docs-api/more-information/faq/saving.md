@@ -10,7 +10,7 @@ sidebar_position: -3
 
 有几种方法可以启动强制保存：
 
-- 设置参数 `c` 为 [forcesave](../../additional-api/command-service/forcesave.md) 值，将请求发送到[文档命令服务](../../additional-api/command-service/command-service.md):
+- 将参数 `c` 设置为 [forcesave](../../additional-api/command-service/forcesave.md) 值，将请求发送到[文档命令服务](../../additional-api/command-service/command-service.md)：
 
   ``` json
   {
