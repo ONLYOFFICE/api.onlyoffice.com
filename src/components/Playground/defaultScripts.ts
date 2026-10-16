@@ -190,7 +190,7 @@ const PDF_SCRIPTS: Template = {
     plugin: PLUGIN_SCRIPT,
 
     builder:
-        "builder.CreateFile(\"docx\");\n" +
+        "builder.OpenFile(\"document.pdf\");\n" +
         'const doc1 = Api.GetDocument();\n' +
         'const page = doc1.GetPage(0);\n' +
         'const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +
