@@ -28,11 +28,15 @@ Integrate Document Builder into your applications using [SDKs for various progra
 - **Java**. Work with the Java SDK for document creation and editing in enterprise applications.
 - **.NET**. Develop cross-platform applications for Windows, Linux, and macOS.
 
+The SDKs can also run the same [script files](../using-cli/script-file.md) as the CLI with the [Run](../builder-framework/CDocBuilder/Run.md) method.
+
 To install ONLYOFFICE Document Builder, visit [this page](./installing.md).
 
 ### Document Builder API
 
 Generate documents via HTTP requests to ONLYOFFICE Docs. This web service approach is ideal when you have ONLYOFFICE Docs installed and want to generate documents without installing Document Builder separately.
+
+The requests use the same [script files](../using-cli/script-file.md) as the CLI.
 
 See the [Document Builder API](../../docs-api/additional-api/document-builder-api.md) for details.
 

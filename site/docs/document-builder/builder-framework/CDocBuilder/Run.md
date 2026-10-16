@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Run
 
-Runs the ONLYOFFICE Document Builder executable with a script file as an argument.
+Runs a script file in the current process. The script has the [same syntax](../../using-cli/script-file.md) as when it is run with the CLI.
 
 :::note
 This method is not available for **JS**.
