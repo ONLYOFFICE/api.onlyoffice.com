@@ -255,7 +255,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 6.2
 
-- 添加了一个新的 [actions.type](../usage-api/callback-handler.md#actions) 字段值 (`actions.type = 2`)。
+- 添加了一个新的 [actions.type](../usage-api/callback-handler.md#actions) 字段值（`actions.type = 2`）。
 - 添加了 `editorConfig.customization.trackChanges` 字段。
 - 添加了 [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) 字段。
 - 根据 [forcesavetype](../usage-api/callback-handler.md) 选择 `status` `6` 的 `callbackUrl`。
