@@ -10,4 +10,3 @@ The list of changes for ONLYOFFICE Document Builder.
 
 - Added the PDF editing support. The [OpenFile](../builder-framework/CDocBuilder/OpenFile.md#opening-pdf-files) method opens a PDF form created in ONLYOFFICE in the document editor and any other PDF file in the PDF editor, where the full [PDF API](../../office-api/usage-api/pdf-api/pdf-api.md) is available.
 - Added the `m_sPassword` parameter to the [OpenFile](../builder-framework/CDocBuilder/OpenFile.md#opening-pdf-files) method for opening password-protected PDF files.
-- The [CreateFile](../builder-framework/CDocBuilder/CreateFile.md) method with the `pdf` file type creates a PDF form.
