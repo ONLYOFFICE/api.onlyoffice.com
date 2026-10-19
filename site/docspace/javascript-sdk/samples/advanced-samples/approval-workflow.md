@@ -399,7 +399,7 @@ async function createApprovalRequest() {
 ```
 
 - Creates a custom room (type `5`) for the approval request and adds the document to it. A custom room is required because it's the only room type that allows the **Review** access. In a collaboration room (type `2`), the portal rejects it with HTTP 403.
-- Handles errors in two ways. `createRoom()` is one of the two methods that resolve with `{ status, message }` on a portal error, so its result is checked for `id`. The other methods reject with an `SDKError` (`API_ERROR`) and are wrapped in `try`/`catch`. The `id` check for `createFile()` is kept for older portals that resolve errors instead of rejecting. If anything fails, the **Submit for Approval** button is enabled again so the user can retry. See [How API errors are reported](../../troubleshooting-faq.md#how-api-errors-are-reported).
+- Handles errors in two ways. `createRoom()` is one of the two methods that resolve with `{ status, message }` on a portal error, so its result is checked for `id`. The other methods reject with an `SDKError` (`API_ERROR`) and are wrapped in `try`/`catch`. The `id` check for `createFile()` is kept for older portals that resolve errors instead of rejecting. If anything fails, the **Submit for Approval** button is enabled again so the user can retry. See [How API errors are reported](../../more-information/troubleshooting-faq.md#how-api-errors-are-reported).
 - Tags the room **Pending review** so its status is visible in the room list
 - Reveals the reviewer selection step
 
