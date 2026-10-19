@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Public room mode
 
-Public room mode embeds a specific DocSpace room for anonymous viewers — no DocSpace account or sign-in required. Access is scoped to that one room through a `requestToken`, and depending on the external link's access level (set on the portal — see [Set the room external or invitation link](../../api-backend/usage-api/set-room-link.api.mdx)), users can view, edit, comment on, and review documents inside it.
+Public room mode embeds a specific DocSpace room for anonymous viewers — no DocSpace account or sign-in required. Access is scoped to that one room through a `requestToken`, and depending on the external link's access level (set on the portal — see [Set the room external or invitation link](/docspace/api-backend/usage-api/rooms/set-room-link.md)), users can view, edit, comment on, and review documents inside it.
 
 ## Initialization
 

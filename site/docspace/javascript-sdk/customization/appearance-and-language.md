@@ -6,7 +6,7 @@ sidebar_position: 1
 
 This page walks through the settings that affect how the embedded frame looks and what language it uses: `theme`, which controls the color scheme of the frame's own chrome (Manager, selectors, and the editor's surrounding UI), two narrower settings that are easy to confuse with theming — `showHeaderBanner` and `stylesUrl` — and `locale`, plus runtime patterns for all of them: matching your app's dark mode and language, and switching either at runtime.
 
-None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](../../api-backend/usage-api/save-white-label-settings.api.mdx) if you need to customize the DocSpace logo shown across the portal.
+None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](/docspace/api-backend/usage-api/settings/rebranding/save-white-label-settings.md) if you need to customize the DocSpace logo shown across the portal.
 
 ## Frame theme
 
@@ -70,7 +70,7 @@ Accepts either a two-letter language code (`"de"`) or a four-letter language-reg
 
 `locale` only affects the frame — it never changes the signed-in user's own profile language, in any mode. In Manager and System mode it updates live via `setConfig()`; in every other mode it's read once from the frame's initial URL, so changing it later needs a reload — see [Switching theme or language at runtime](#switching-theme-or-language-at-runtime) below.
 
-For the current, authoritative list of languages your portal supports, call [Get supported languages](../../api-backend/usage-api/get-supported-cultures.api.mdx) (`GET /api/2.0/settings/cultures`) rather than hardcoding a list — supported languages are configured per portal, and not every language has both a two-letter and a region-qualified form (for example, German may only be available as `"de"`, without a `"de-DE"` variant).
+For the current, authoritative list of languages your portal supports, call [Get supported languages](/docspace/api-backend/usage-api/settings/common-settings/get-supported-cultures.md) (`GET /api/2.0/settings/cultures`) rather than hardcoding a list — supported languages are configured per portal, and not every language has both a two-letter and a region-qualified form (for example, German may only be available as `"de"`, without a `"de-DE"` variant).
 
 Full parameter reference: [TFrameConfig#locale](../usage-sdk/type-aliases/TFrameConfig.md#locale).
 
