@@ -7,7 +7,7 @@ title: Introducing ONLYOFFICE DocSpace
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace?from=api) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - creating and customizing [rooms](#step-3-create-a-room) for collaboration;
-- collecting data from PDF forms in [Form Filling Spaces](../usage-api/create-room.api.mdx);
+- collecting data from PDF forms in [Form Filling Spaces](../usage-api/rooms/create-room.md);
 - inviting users to [collaborate on files](../samples/basic-samples/invite-users.md) in real time;
 - creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files using the built-in [ONLYOFFICE Docs](../../../docs/docs-api/get-started/basic-concepts.md);
 - creating and managing [AI agents](../../mcp-server/getting-started/index.md) to automate workflows;
