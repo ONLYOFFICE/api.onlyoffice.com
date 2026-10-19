@@ -67,12 +67,6 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. The IP address of such an integrator must be included in the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list). At the same time, access for all the other integrators must be denied.
 
-:::note
-By default, the `*` rule allows all the IP addresses. Starting from version 10.0, this is not enough for WOPI: ONLYOFFICE Docs sends requests only to a WOPI host that is explicitly allowed by a rule with its IP address or DNS name. A rule that consists only of wildcards, such as `*`, does not count.
-
-To allow unlisted WOPI hosts temporarily while you add the rules, set the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi) to `false`. This makes the server vulnerable to server-side request forgery (SSRF).
-:::
-
 Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
 
 1. Open the */etc/onlyoffice/documentserver/local.json* file using any available text editor:
@@ -127,11 +121,11 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 
 ### Requiring an explicit rule for the WOPI host
 
-Whether WOPI requires an explicit rule for its host is controlled by the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi). The default value is **true**.
+Starting from version 10.0, ONLYOFFICE Docs sends requests only to a WOPI host that is explicitly allowed in `services.CoAuthoring.ipfilter.rules` by a rule that names its IP address or DNS name, such as `wopi.example.com` or `*.example.com`. A rule that consists only of wildcards, such as `*` or `*.*.*.*`, does not count. This means that the default rule set (`{"address": "*", "allowed": true}`) is not enough: without a rule that names your WOPI host, WOPI does not work, even though the IP filter itself allows all addresses. Rules are checked in order and the first matching rule decides, so put the rule for your WOPI host before any `*` rule.
 
-*services.CoAuthoring.ipfilter.rules* is consulted for every WOPI request regardless of this setting — a host with no matching *allowed* rule at all is refused either way. What *wopi.requireIpFilterRule* controls is narrower: whether a match against the catch-all `*` rule is enough to trust the host, or whether the matched rule must explicitly name it. The catch-all `*` rule does not count as an explicit match — this is why the default rule set (`{"address": "*", "allowed": true}`) does not satisfy this requirement: without a rule that explicitly names your WOPI host, WOPI will not work, even though the IP filter itself remains wide open.
+This behavior is controlled by the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi). The default value is `true`.
 
-Set *wopi.requireIpFilterRule* to **false** to let a catch-all rule stand in for a named host as a temporary migration fallback while you are still writing the rules — this re-opens server-side request forgery. Every other WOPI egress protection stays active either way: *services.CoAuthoring.ipfilter.rules* is still enforced, the request is never treated as trusted, cloud metadata, link-local, multicast and *denyIPAddressList* addresses stay hard denied, each redirect hop is validated, and *externalRequest* routing still applies.
+Set `wopi.requireIpFilterRule` to `false` only as a temporary fallback while you add the rules. ONLYOFFICE Docs then also sends requests to hosts that match only a wildcard rule or no rule at all. This makes the server vulnerable to server-side request forgery (SSRF).
 
 ``` json
 {
@@ -141,6 +135,14 @@ Set *wopi.requireIpFilterRule* to **false** to let a catch-all rule stand in for
 }
 ```
 
+The other WOPI request checks apply regardless of this setting:
+
+- A host whose first matching rule in `services.CoAuthoring.ipfilter.rules` has `"allowed": false` is refused.
+- Cloud metadata addresses and link-local, multicast, broadcast and unspecified addresses are refused.
+- Addresses from `services.CoAuthoring.request-filtering-agent.denyIPAddressList` are refused.
+- If the host name resolves to several addresses, each of them must pass these checks.
+- Each redirect is checked in the same way as the original request.
+
 :::warning
-*allowIPAddressList* and *denyIPAddressList* are not a substitute for *services.CoAuthoring.ipfilter.rules* when it comes to WOPI. Adding a host to *allowIPAddressList* does not permit a WOPI destination — that is decided by *services.CoAuthoring.ipfilter.rules* alone. Adding a host to *denyIPAddressList*, however, does block it: a deny there outranks every permission, including an *ipfilter.rules* entry naming the same address.
+The [Request Filtering Agent](../get-started/configuration/server-config/server-config.md#request-filtering-agent) lists do not replace `services.CoAuthoring.ipfilter.rules` for WOPI. Adding a host to `allowIPAddressList` does not allow WOPI requests to it - add a rule for the host to `services.CoAuthoring.ipfilter.rules` instead. Adding a host to `denyIPAddressList`, however, blocks it, even if a rule in `services.CoAuthoring.ipfilter.rules` allows the same address.
 :::

@@ -67,13 +67,7 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 中。同时，必须拒绝所有其他集成商的访问。
 
-:::note
-默认情况下，`*` 规则允许所有 IP 地址。从 10.0 版本开始，这对 WOPI 已不再足够：ONLYOFFICE 文档只会向通过 IP 地址或 DNS 名称被规则明确允许的 WOPI 主机发送请求。仅由通配符组成的规则（例如 `*`）不计算在内。
-
-如果需要在添加规则期间临时允许未列出的 WOPI 主机，请将[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 设为 `false`。这会使服务器容易受到服务器端请求伪造（SSRF）攻击。
-:::
-
-按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
+按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
 
 1. 使用任何可用的文本编辑器打开 */etc/onlyoffice/documentserver/local.json* 文件：
 
@@ -127,11 +121,11 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
 ### 为 WOPI 主机要求显式规则 {#requiring-an-explicit-rule-for-the-wopi-host}
 
-是否要求为 WOPI 主机设置显式规则，由[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 控制。默认值为 **true**。
+从 10.0 版本开始，ONLYOFFICE 文档只会向在 `services.CoAuthoring.ipfilter.rules` 中被指明其 IP 地址或 DNS 名称的规则（例如 `wopi.example.com` 或 `*.example.com`）明确允许的 WOPI 主机发送请求。仅由通配符组成的规则（例如 `*` 或 `*.*.*.*`）不计算在内。因此，默认规则集（`{"address": "*", "allowed": true}`）并不足够：即使 IP 过滤器本身允许所有地址，如果没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。规则按顺序检查，由第一条匹配的规则决定结果，因此请将 WOPI 主机的规则放在所有 `*` 规则之前。
 
-无论该参数如何设置，*services.CoAuthoring.ipfilter.rules* 都会对每一个 WOPI 请求进行检查 —— 如果没有任何 *allowed* 规则与目标主机匹配，请求都会被拒绝。*wopi.requireIpFilterRule* 实际控制的范围更窄：它决定的是，命中通配符规则 `*` 是否足以信任该主机，还是必须命中一条明确指定该主机的规则。通配符规则 `*` 不算作明确匹配 —— 这正是默认规则集（`{"address": "*", "allowed": true}`）不满足该要求的原因：即使 IP filter 本身完全放开，没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。
+此行为由[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 控制。默认值为 `true`。
 
-将 *wopi.requireIpFilterRule* 设置为 **false**，可以在您仍在编写规则期间，作为临时的迁移回退方案，让通配符规则也能替代明确指定的主机规则 —— 但这会重新引入服务器端请求伪造（SSRF）风险。无论如何，WOPI 出站请求的其他所有防护仍然生效：*services.CoAuthoring.ipfilter.rules* 依然会被强制检查；请求永远不会被视为可信；云元数据地址、链路本地地址、组播地址以及 *denyIPAddressList* 中的地址仍会被强制拒绝；每一跳重定向都会被校验；*externalRequest* 的路由规则依然适用。
+仅在添加规则期间，才可将 `wopi.requireIpFilterRule` 设为 `false` 作为临时回退方案。此时，ONLYOFFICE 文档还会向仅匹配通配符规则或不匹配任何规则的主机发送请求。这会使服务器容易受到服务器端请求伪造（SSRF）攻击。
 
 ``` json
 {
@@ -141,6 +135,14 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 }
 ```
 
+无论该设置如何，以下 WOPI 请求检查始终生效：
+
+- 如果 `services.CoAuthoring.ipfilter.rules` 中第一条匹配的规则为 `"allowed": false`，则拒绝该主机。
+- 拒绝云元数据地址，以及链路本地地址、组播地址、广播地址和未指定地址。
+- 拒绝 `services.CoAuthoring.request-filtering-agent.denyIPAddressList` 中的地址。
+- 如果主机名解析为多个地址，则每个地址都必须通过这些检查。
+- 每一次重定向都会像原始请求一样接受检查。
+
 :::warning
-对于 WOPI 而言，*allowIPAddressList* 和 *denyIPAddressList* 并不能替代 *services.CoAuthoring.ipfilter.rules*。将某个主机加入 *allowIPAddressList* 并不会放行针对该主机的 WOPI 请求 —— 这完全由 *services.CoAuthoring.ipfilter.rules* 决定。但将某个主机加入 *denyIPAddressList* 则会阻止该请求：deny 规则的优先级高于任何放行规则，即便 *ipfilter.rules* 中存在指定同一地址的允许规则也是如此。
+对于 WOPI 而言，[Request Filtering Agent](../get-started/configuration/server-config/server-config.md#request-filtering-agent) 的列表并不能替代 `services.CoAuthoring.ipfilter.rules`。将某个主机加入 `allowIPAddressList` 并不会放行针对该主机的 WOPI 请求，应改为在 `services.CoAuthoring.ipfilter.rules` 中为该主机添加规则。但将某个主机加入 `denyIPAddressList` 则会阻止该主机，即使 `services.CoAuthoring.ipfilter.rules` 中有规则允许同一地址。
 :::
