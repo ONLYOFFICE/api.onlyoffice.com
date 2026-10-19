@@ -1,0 +1,47 @@
+# GetText
+
+Returns the inner text of the current math element.
+
+## Syntax
+
+```javascript
+expression.GetText(format);
+```
+
+`expression` - A variable that represents an [ApiMath](../ApiMath.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| format | Optional | "unicode" \| "latex" | "unicode" | The format the text should be returned in. |
+
+## Returns
+
+string
+
+## Example
+
+Read the text representation of a math equation, either as unicode linear text or as LaTeX, in a spreadsheet.
+
+```javascript editor-xlsx
+// Get the formula of an equation back as plain text or as LaTeX in a spreadsheet.
+
+// Build a fraction equation, then read it back both as unicode text and as LaTeX.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = worksheet.AddShape("rect", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+
+let docContent = shape.GetContent();
+let paragraph = docContent.GetElement(0);
+let math = Api.CreateMath("dx/dy", "unicode");
+paragraph.AddElement(math);
+let unicodeText = math.GetText("unicode");
+let latexText = math.GetText("latex");
+
+let paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("Unicode: " + unicodeText + ", LaTeX: " + latexText);
+docContent.Push(paragraph2);
+```

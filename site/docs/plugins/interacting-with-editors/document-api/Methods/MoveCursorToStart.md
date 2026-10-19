@@ -1,7 +1,8 @@
 # MoveCursorToStart
 
 Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).
-This method is similar to pressing the - **Ctrl + Home** keyboard shortcut.
+
+This method is similar to pressing the **Ctrl + Home** keyboard shortcut.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ This method is similar to pressing the - **Ctrl + Home** keyboard shortcut.
 expression.MoveCursorToStart(isMoveToMainContent);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

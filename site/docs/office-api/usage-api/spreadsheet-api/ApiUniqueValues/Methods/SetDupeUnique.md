@@ -8,7 +8,7 @@ Sets the setting that specifies whether to format duplicate or unique values for
 expression.SetDupeUnique(dupeUnique);
 ```
 
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
+`expression` - A variable that represents an [ApiUniqueValues](../ApiUniqueValues.md) class.
 
 ## Parameters
 
@@ -46,7 +46,7 @@ let settingBefore = uniqueValuesCondition.GetDupeUnique();
 uniqueValuesCondition.SetDupeUnique("xlDuplicate");
 let settingAfter = uniqueValuesCondition.GetDupeUnique();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Setting before: " + settingBefore);
 worksheet.GetRange("C2").SetValue("Setting after: " + settingAfter);

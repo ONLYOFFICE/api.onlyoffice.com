@@ -1,6 +1,7 @@
 # CreateRange
 
 Creates an element range.
+
 If you do not specify the start and end positions, the range will be taken from the entire element.
 
 ## Syntax
@@ -9,7 +10,7 @@ If you do not specify the start and end positions, the range will be taken from 
 expression.CreateRange(element, start, end);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

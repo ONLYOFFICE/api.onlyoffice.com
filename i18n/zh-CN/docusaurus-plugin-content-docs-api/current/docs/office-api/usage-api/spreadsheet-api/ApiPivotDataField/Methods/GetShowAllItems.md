@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetShowAllItems.md)。
 
+## 语法
+
+```javascript
+expression.GetShowAllItems();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中的透视字段是否设置为显示所有项目，包括没有数据的项目。

@@ -8,7 +8,7 @@ Returns the XML string representation of the current node content.
 expression.GetNodeValue();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Read the stored value of a specific XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I retrieve what value is saved inside an XML node in a spreadsheet?
+// Retrieve the value saved inside an XML node in a spreadsheet.
 
 // Extract a node's raw value to inspect embedded data in a spreadsheet.
 

@@ -4,6 +4,25 @@ Sets the position of the drawing on the page.
 
 Inherited from [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md).
 
+## Syntax
+
+```javascript
+expression.SetPosition(posX, posY);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| posX | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the page to the left side of the drawing measured in English measure units. |
+| posY | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the top side of the page to the upper side of the drawing measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Move a shape to a different location in a PDF.
@@ -16,7 +35,7 @@ Move a shape to a different location in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

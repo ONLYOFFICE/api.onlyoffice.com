@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseField.SetReadOnly](../../ApiBaseField/Methods/SetReadOnly.md)。
 
+## 语法
+
+```javascript
+expression.SetReadOnly(readOnly);
+```
+
+`expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| readOnly | 必需 | boolean |  | 指定字段是否为只读。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 锁定 PDF 中的表单字段以防止编辑。

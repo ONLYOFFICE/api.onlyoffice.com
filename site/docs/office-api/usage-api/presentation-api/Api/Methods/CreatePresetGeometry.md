@@ -5,20 +5,20 @@ Creates a geometry using one of the available preset shapes.
 ## Syntax
 
 ```javascript
-expression.CreatePresetGeometry(sPreset);
+expression.CreatePresetGeometry(preset);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPreset | Required | [ShapeType](../../Enumeration/ShapeType.md) |  | The preset name. |
+| preset | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The preset name. |
 
 ## Returns
 
-[ApiGeometry](../../ApiGeometry/ApiGeometry.md) \| null
+[ApiGeometry](../../ApiGeometry/ApiGeometry.md) \| null \| undefined
 
 ## Example
 

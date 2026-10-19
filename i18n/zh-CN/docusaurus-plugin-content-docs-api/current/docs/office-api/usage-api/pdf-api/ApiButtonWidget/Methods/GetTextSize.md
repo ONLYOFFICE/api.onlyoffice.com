@@ -1,9 +1,28 @@
 # GetTextSize
 
 获取控件文本大小。
-💡 文本大小 === 0 表示自动适应
+
+:::note
+文本大小 === 0 表示自动适应。
+:::
 
 继承自 [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md)。
+
+## 语法
+
+```javascript
+expression.GetTextSize();
+```
+
+`expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[hps](../../Enumeration/hps.md)
 
 ## 示例
 
@@ -22,7 +41,7 @@ page.AddObject(textField);
 textField.AddWidget(0, [10, 40, 160, 60]);
 let widgets = textField.GetAllWidgets();
 widgets.forEach(function(widget) {
-    widget.SetTextSize(15);
+    widget.SetTextSize(30);
 });
 let textSize = widgets[0].GetTextSize();
 textField.SetValue('Text size is: ' + textSize);

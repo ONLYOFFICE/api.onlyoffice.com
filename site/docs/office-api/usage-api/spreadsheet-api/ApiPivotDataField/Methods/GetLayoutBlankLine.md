@@ -4,6 +4,22 @@ Returns the setting which specifies whether to insert blank rows after each item
 
 Inherited from [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutBlankLine();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a blank row is inserted after each group in a pivot field in a spreadsheet.

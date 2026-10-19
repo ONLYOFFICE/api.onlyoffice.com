@@ -8,7 +8,7 @@ Adds the new rows to the current table.
 expression.AddRows(nCount, isBefore);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

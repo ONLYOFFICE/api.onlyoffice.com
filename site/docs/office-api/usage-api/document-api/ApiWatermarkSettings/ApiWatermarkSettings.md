@@ -1,13 +1,15 @@
 # ApiWatermarkSettings
 
-Represents the ApiWatermarkSettings class.
+Class representing the settings which are used to create a watermark.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "watermarkSettings" | Returns a type of the ApiWatermarkSettings class. |
-| [GetDirection](./Methods/GetDirection.md) | [WatermarkDirection](../Enumeration/WatermarkDirection.md) | Returns the direction of the watermark in the document. |
+| [GetDirection](./Methods/GetDirection.md) | [WatermarkDirection](../Enumeration/WatermarkDirection.md) \| null \| undefined | Returns the direction of the watermark in the document. |
 | [GetImageHeight](./Methods/GetImageHeight.md) | [EMU](../Enumeration/EMU.md) \| null | Returns the height of the watermark image in the document. |
 | [GetImageURL](./Methods/GetImageURL.md) | string \| null | Returns the image URL of the watermark in the document. |
 | [GetImageWidth](./Methods/GetImageWidth.md) | [EMU](../Enumeration/EMU.md) \| null | Returns the width of the watermark image in the document. |

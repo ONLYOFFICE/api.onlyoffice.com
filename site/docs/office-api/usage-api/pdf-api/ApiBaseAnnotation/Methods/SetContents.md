@@ -8,13 +8,13 @@ Sets annotation contents.
 expression.SetContents(contents);
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| contents | Required | string |  | The annotation text contents. |
+| contents | Required | string \| null \| undefined |  | The annotation text contents. |
 
 ## Returns
 

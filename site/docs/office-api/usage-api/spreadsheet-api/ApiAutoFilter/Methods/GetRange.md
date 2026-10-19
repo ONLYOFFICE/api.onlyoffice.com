@@ -8,7 +8,7 @@ Returns the ApiRange object that represents the AutoFilter range.
 expression.GetRange();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 
@@ -52,7 +52,7 @@ worksheet.GetRange("D1").SetValue("AutoFilter range address:");
 if (filterRange !== null) {
     worksheet.GetRange("D2").SetValue(filterRange.GetAddress());
     // Highlight the AutoFilter range
-    filterRange.SetFillColor(Api.CreateColorFromRGB(255, 255, 204));
+    filterRange.SetFillColor(Api.RGB(255, 255, 204));
 } else {
     worksheet.GetRange("D2").SetValue("No AutoFilter defined.");
 }

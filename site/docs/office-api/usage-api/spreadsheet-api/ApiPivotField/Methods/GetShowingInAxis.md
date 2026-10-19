@@ -8,7 +8,7 @@ Returns the setting which specifies whether the pivot table field is currently v
 expression.GetShowingInAxis();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

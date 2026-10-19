@@ -8,7 +8,7 @@ Adds a paragraph or a table or a blockLvl content control using its position in 
 expression.AddElement(oCell, nPos, oElement);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

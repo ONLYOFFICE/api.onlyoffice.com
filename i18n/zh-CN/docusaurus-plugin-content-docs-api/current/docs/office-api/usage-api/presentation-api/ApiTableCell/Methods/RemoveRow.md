@@ -1,0 +1,40 @@
+# RemoveRow
+
+删除包含当前单元格的行。
+
+## 语法
+
+```javascript
+expression.RemoveRow();
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
+## 示例
+
+在演示文稿中删除包含该单元格的行。
+
+```javascript editor-pptx
+// Useful for deleting a row by its cell.
+
+// Get the first cell and remove its entire row.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const table = Api.CreateTable(3, 3);
+const cell = table.GetRow(0).GetCell(0);
+const para = Api.CreateParagraph();
+para.AddText("This row will be removed.")
+cell.GetContent().Push(para);
+cell.RemoveRow();
+slide.RemoveAllObjects();
+slide.AddObject(table);
+```

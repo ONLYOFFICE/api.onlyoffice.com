@@ -8,7 +8,7 @@ Adds an image to the current sheet with the parameters specified.
 expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, nRowOffset);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -24,7 +24,7 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 ## Returns
 
-[ApiImage](../../ApiImage/ApiImage.md)
+[ApiImage](../../ApiImage/ApiImage.md) \| null
 
 ## Example
 

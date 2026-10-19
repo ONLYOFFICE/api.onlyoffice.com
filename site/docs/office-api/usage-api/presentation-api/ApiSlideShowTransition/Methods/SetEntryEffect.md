@@ -8,7 +8,7 @@ Sets the entry effect for the slide show transition.
 expression.SetEntryEffect(entryEffectName);
 ```
 
-`expression` - A variable that represents a [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
+`expression` - A variable that represents an [ApiSlideShowTransition](../ApiSlideShowTransition.md) class.
 
 ## Parameters
 

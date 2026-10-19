@@ -17,6 +17,10 @@ In the examples below, `example.com` represents the server where your **document
 
 ## Incoming request
 
+:::note
+Starting from version 10.0, the token of an incoming request can contain the `operation` field with the type of the request: `command` for the **document command service**, `converter` for the **document conversion service**, and `docbuilder` for the **document builder service**. If the field is present, it must match the service the request is sent to. These services also no longer accept the token from the editor configuration. How strictly the token is checked is set by the `services.CoAuthoring.token.purposeCheck` [server setting](../../../get-started/configuration/server-config/server-config.md#token).
+:::
+
 ### Get document status
 
 Validation is performed for incoming requests with the commands from the **document storage service** to the [document command service](../../command-service/command-service.md).
@@ -95,6 +99,10 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ## Outgoing requests
 
+:::note
+Starting from version 10.0, the token of every outgoing request also contains the `operation` field with the type of the request: `callback` for the requests to the `callbackUrl` address and `download` for the file and document changes downloads. ONLYOFFICE Docs rejects an incoming request whose token contains one of these values.
+:::
+
 ### Callback on close without changes
 
 Validation is performed for outgoing requests to "[callbackUrl](../../../usage-api/config/editor/editor.md#callbackurl)" address by **document editing service**.
@@ -114,7 +122,7 @@ Sample parameters of request to "callbackUrl" address by document editing servic
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.4350Gsw3fFOH9EC_tnY9iJ_PfAbKW8ZiNU4wiBagHdU"
   }'
 ```
 

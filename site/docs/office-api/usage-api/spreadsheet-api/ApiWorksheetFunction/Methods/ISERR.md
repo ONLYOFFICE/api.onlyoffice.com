@@ -1,6 +1,6 @@
 # ISERR
 
-Checks whether a value is an error other than *#N/A*, and returns - **true** or - **false**.
+Checks whether a value is an error other than *#N/A*, and returns **true** or **false**.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Checks whether a value is an error other than *#N/A*, and returns - **true** or 
 expression.ISERR(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -31,7 +31,7 @@ Check if a value is an error other than N/A in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
-worksheet.GetRange("B3").SetValue("45")
-let result = func.ISERROR("B3");
-worksheet.GetRange("C3").SetValue(result)
+worksheet.GetRange("A1").SetValue(func.ISERR("#N/A"));
+worksheet.GetRange("A2").SetValue(func.ISERR("#DIV/0!"));
+worksheet.GetRange("A3").SetValue(func.ISERR(255));
 ```

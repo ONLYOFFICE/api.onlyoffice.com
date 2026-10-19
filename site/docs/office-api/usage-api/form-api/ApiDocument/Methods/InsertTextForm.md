@@ -8,7 +8,7 @@ Inserts a text box with the specified text box properties over the selected text
 expression.InsertTextForm(formPr);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -23,7 +23,7 @@ expression.GetClassType();
 识别文档中自定义 XML 节点对象的类类型。
 
 ```javascript editor-docx
-// How do I get the class type of a custom XML node in a document?
+// Get the class type of a custom XML node in a document.
 
 // Confirm what kind of object a node is before working with it programmatically in a document.
 

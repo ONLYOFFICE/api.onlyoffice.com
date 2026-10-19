@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.GetLockValue](../../ApiDrawing/Methods/GetLockValue.md)。
 
+## 语法
+
+```javascript
+expression.GetLockValue(sType);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | 必需 | [DrawingLockType](../../Enumeration/DrawingLockType.md) |  | 字符串格式的锁定类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 获取演示文稿中形状的锁定设置。

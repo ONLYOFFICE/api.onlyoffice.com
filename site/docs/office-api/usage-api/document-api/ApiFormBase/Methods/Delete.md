@@ -1,6 +1,8 @@
 # Delete
 
-Removes a form and its content. If keepContent is true, the content is not deleted.
+Removes a form and its content.
+
+If keepContent is true, the content is not deleted.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Removes a form and its content. If keepContent is true, the content is not delet
 expression.Delete(keepContent);
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

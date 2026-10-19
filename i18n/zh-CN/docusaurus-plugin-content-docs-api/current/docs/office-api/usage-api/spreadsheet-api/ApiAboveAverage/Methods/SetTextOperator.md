@@ -4,6 +4,24 @@
 
 继承自 [ApiFormatCondition.SetTextOperator](../../ApiFormatCondition/Methods/SetTextOperator.md)。
 
+## 语法
+
+```javascript
+expression.SetTextOperator(TextOperator);
+```
+
+`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| TextOperator | 必需 | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | 文本运算符：“xlContains”、“xlDoesNotContain”、“xlBeginsWith”、“xlEndsWith”。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 更改电子表格中文本格式规则匹配单元格内容的方式，如以...开头或以...结尾。
@@ -27,7 +45,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTextString", "xlContains", "Apple");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original operator:");
 worksheet.GetRange("C2").SetValue(condition1.GetTextOperator() || "None");

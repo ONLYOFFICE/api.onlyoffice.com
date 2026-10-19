@@ -18,7 +18,7 @@
 为垂直坐标轴指定 “cross” 主刻度线类型。
 
 ```javascript editor-pdf
-// How to set major tick label symbol for the chart.
+// How do I set the major tick mark type of a chart?
 
 // Set a chart vertical axis major tick mark as cross.
 

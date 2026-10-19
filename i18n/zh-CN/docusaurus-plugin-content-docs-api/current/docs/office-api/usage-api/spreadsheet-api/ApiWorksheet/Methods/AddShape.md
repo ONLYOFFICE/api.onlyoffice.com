@@ -1,7 +1,10 @@
 # AddShape
 
 使用指定的参数向当前工作表添加形状。
-💡 请注意，水平和垂直偏移量仅在指定列和行单元格的范围内计算。如果此值超过单元格宽度或高度，将设置其他垂直/水平位置。
+
+:::note
+水平和垂直偏移量仅在指定列和行单元格的范围内计算。如果此值超过单元格宽度或高度，将设置其他垂直/水平位置。
+:::
 
 ## 语法
 
@@ -15,11 +18,11 @@ expression.AddShape(sType, nWidth, nHeight, oFill, oStroke, nFromCol, nColOffset
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。 |
+| sType | 可选 | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | 指定预设形状几何图形的形状类型。"textRect" 类型会以编辑器插入文本框的方式创建文本框：浅色填充和黑色细轮廓。 |
 | nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的形状宽度。 |
 | nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的形状高度。 |
-| oFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的颜色或图案。 |
-| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建元素阴影的笔触。 |
+| oFill | 可选 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的颜色或图案。如果未指定，则使用默认形状样式填充（主题强调色）。 |
+| oStroke | 可选 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于绘制形状轮廓的笔触。如果未指定，则使用默认形状样式轮廓（主题强调色）。 |
 | nFromCol | 必需 | number |  | 形状起始位置所在的列号。 |
 | nColOffset | 必需 | [EMU](../../Enumeration/EMU.md) |  | 从 nFromCol 列到形状左侧的偏移量，以英制单位测量。 |
 | nFromRow | 必需 | number |  | 形状起始位置所在的行号。 |
@@ -27,7 +30,7 @@ expression.AddShape(sType, nWidth, nHeight, oFill, oStroke, nFromCol, nColOffset
 
 ## 返回值
 
-[ApiShape](../../ApiShape/ApiShape.md)
+[ApiShape](../../ApiShape/ApiShape.md) \| null
 
 ## 示例
 

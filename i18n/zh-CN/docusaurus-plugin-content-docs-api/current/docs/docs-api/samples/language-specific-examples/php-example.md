@@ -1,96 +1,74 @@
 ---
 sidebar_position: -5
+description: 运行 ONLYOFFICE 文档 PHP 集成示例，并将其连接到您的 ONLYOFFICE 文档服务器。
+tags: ["Docs", "Integration", "PHP"]
 ---
 
 # PHP 集成
 
-## 概述
-
-本示例将帮助您把ONLYOFFICE 文档集成到用PHP编写的Web应用程序中。
+PHP 集成示例是一个不依赖框架、使用纯 PHP 编写的小型应用程序，它可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。在编写您自己的集成之前，运行此示例即可看到一个完整可用的集成。
 
 :::warning
-本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+本示例仅用于测试。它没有身份验证，不检查链接参数和保存请求，并接受来自任何网站的请求，因此任何能够访问它的人都可以读取和修改其中的文件。请勿在公共服务器上运行此示例，并在投入生产环境之前将其禁用。
 :::
 
-## 重要安全信息
+## 先决条件
 
-在使用测试示例时，请牢记以下安全方面的内容：
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **PHP**：请参阅[官方网站](https://www.php.net/downloads)。
+- **Composer**：请参阅[官方网站](https://getcomposer.org/download/)。
+- **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-- 由于无需授权，存储不受未经授权访问的保护。
-- 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
+## 步骤1. 下载示例
 
-## 步骤1.安装先决条件并运行带有编辑器的网站
-
-PHP示例提供了多种安装选项，但我们强烈建议为此使用Docker。
-
-### 选项1.使用Docker
-
-要使用[Docker](https://www.docker.com/)运行实例，您将需要[Docker Desktop 4.17.0](https://docs.docker.com/desktop/)或[Docker Engine 20.10.23](https://docs.docker.com/engine/)以及[Docker Compose 2.15.1](https://docs.docker.com/compose/)。另外，您可能需要考虑安装[GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
-
-安装好所有内容后，下载发行版压缩包并解压：
+克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/php)，进入 PHP 示例目录，并获取其子模块：
 
 ```sh
-curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
-unzip PHP.Example.zip
+git clone --depth 1 https://github.com/ONLYOFFICE/document-server-integration
+cd document-server-integration/web/documentserver-example/php
+git submodule update --init --depth 1 .
 ```
 
-然后打开示例目录并[启动容器](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L60):
+## 步骤2. 配置连接
+
+本示例没有配置文件，而是从环境变量中读取设置。因此，请在下一步运行示例所用的终端中设置这些变量：
 
 ```sh
-cd "PHP Example"
-make compose-prod
+export DOCUMENT_SERVER_PUBLIC_URL=http://documentserver
+export STORAGE_PATH=storage
+export JWT_SECRET=secret
+export EXAMPLE_URL=http://example.com:9000
 ```
 
-默认情况下，服务器在`localhost:80`启动。
+在 Windows 上，请在命令提示符中使用 `set NAME=value`，或在 PowerShell 中使用 `$env:NAME = "value"`，以代替 `export`。
 
-要配置示例，您可以编辑[docker-compose.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/docker-compose.yml)中的环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-php-example)。
+- `DOCUMENT_SERVER_PUBLIC_URL`：安装了 ONLYOFFICE 文档的服务器地址。请将 `documentserver` 替换为该服务器的名称或 IP 地址。默认值为 `http://documentserver`。
+- `STORAGE_PATH`：示例创建和存储文件的文件夹。默认值为 `storage`。相对路径以示例目录为基准进行解析，您也可以设置一个绝对路径。运行示例的用户需要对该文件夹具有读写权限。
+- `JWT_SECRET`：必须与 ONLYOFFICE 文档的 JWT 密钥一致。如果该值为空（默认情况），示例将禁用 JWT。ONLYOFFICE 文档默认启用 JWT，因此请将 `JWT_SECRET` 设置为您服务器的[密钥](/docs/docs-api/additional-api/signature/signature.md)。
+- `EXAMPLE_URL`：ONLYOFFICE 文档访问示例时使用的地址。如果 ONLYOFFICE 文档在另一台计算机上或在 Docker 中运行，则需要设置此项，因为您在浏览器中打开的地址（例如 `localhost`）在那里指向的是其他位置。
 
-### 选项2.在本地计算机上
+如果您想尝试配置编辑器，请修改 `src/views/DocEditorView.php` 文件中 `$config` 数组的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-下载并安装ONLYOFFICE 文档（打包为文档服务器）：
-
-[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download?from=api#docs-developer)
-
-查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_example)上安装它。
-
-要在您的本地计算机上运行示例，您将需要[PHP8.2.11](https://www.php.net/)和[Composer2.6.5](https://getcomposer.org/)。另外，您可能需要考虑安装[GNU Make4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
-
-安装好所有内容后，下载发行版压缩包并解压：
+## 步骤3. 安装依赖项并运行示例
 
 ```sh
-curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
-unzip PHP.Example.zip
+composer install --no-dev
+php -S 0.0.0.0:9000
 ```
 
-然后打开示例目录，[安装依赖项](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L16)，并[启动服务器](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L40):
+在浏览器中打开 `http://localhost:9000`。您将看到示例的起始页面，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单。
+
+## 使用 Docker 运行
+
+如果您已安装 Docker 和 Docker Compose，也可以将示例与其自带的 ONLYOFFICE 文档以及 nginx 代理一起运行，无需单独的 ONLYOFFICE 文档服务器。在示例目录中运行：
 
 ```sh
-cd "PHP Example"
-make prod
-make server-prod
+docker compose up --build --detach
 ```
 
-默认情况下，服务器在`0.0.0.0:9000`启动。
+在浏览器中打开 `http://localhost`。环境变量在 `docker-compose.yml` 文件中设置。JWT 已启用，密钥为 `your-256-bit-secret`。如果您要更改密钥，请同时更改 `documentserver` 和 `example` 两个服务的 `JWT_SECRET`。
 
-要配置示例，您可以在启动服务器的命令之前传递环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-php-example)。
+## 故障排除
 
-## 步骤2.检查可访问性
-
-如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。
-
-同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
-
-## 步骤3.配置PHP示例 {#step-3-configure-the-php-example}
-
-通过更改环境变量来配置示例。
-
-| 名称                           | 示例                    | 描述                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| `ADDRESS`                      | `0.0.0.0`               | 服务器应启动的地址。                                               |
-| `PORT`                         | `80`                    | 服务器应运行的端口。                                               |
-| `DOCUMENT_SERVER_PRIVATE_URL`  | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                              |
-| `DOCUMENT_SERVER_PUBLIC_URL`   | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                              |
-| `EXAMPLE_URL`                  | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                              |
-| `JWT_SECRET`                   | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                                              |
+- **文档安全令牌的格式不正确**：示例中未启用 JWT（`JWT_SECRET` 为空），或者 `JWT_SECRET` 与 ONLYOFFICE 文档的密钥不一致。
+- **下载失败**：ONLYOFFICE 文档无法访问示例。请将 `EXAMPLE_URL` 设置为 ONLYOFFICE 文档可以解析的地址，然后重新启动示例。

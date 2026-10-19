@@ -8,7 +8,7 @@ Creates a text field with the specified text field properties.
 expression.CreateTextForm(formPr);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

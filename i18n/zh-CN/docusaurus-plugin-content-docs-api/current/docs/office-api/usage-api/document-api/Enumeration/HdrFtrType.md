@@ -1,9 +1,10 @@
 # HdrFtrType
 
 可应用于文档节的页眉和页脚类型。
-- **“default”** - 可应用于任何默认页面的页眉或页脚。
-- **“title”** - 应用于标题页的页眉或页脚。
-- **“even”** - 可应用于偶数页以区别于奇数页（奇数页将被视为默认）的页眉或页脚。
+
+- **"default"** - 可应用于任何默认页面的页眉或页脚。
+- **"title"** - 应用于标题页的页眉或页脚。
+- **"even"** - 可应用于偶数页以区别于奇数页（奇数页将被视为默认）的页眉或页脚。
 
 ## 类型
 
@@ -20,7 +21,7 @@
 从文档最后一节中删除 'title' 类型的页眉。
 
 ```javascript editor-docx
-// How to delete a header from the title type.
+// How do I delete the title page header?
 
 // Remove a header from the specified type of the section.
 

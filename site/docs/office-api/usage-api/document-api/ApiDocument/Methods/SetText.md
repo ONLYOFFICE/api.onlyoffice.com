@@ -1,9 +1,26 @@
 # SetText
 
-Replaces all content of the current document content object with the specified text,
-preserving the formatting of the first paragraph.
+Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph.
 
 Inherited from [ApiDocumentContent.SetText](../../ApiDocumentContent/Methods/SetText.md).
+
+## Syntax
+
+```javascript
+expression.SetText(text);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | Required | string |  | The text to set. |
+
+## Returns
+
+[ApiRun](../../ApiRun/ApiRun.md)
 
 ## Example
 

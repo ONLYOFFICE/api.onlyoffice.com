@@ -8,14 +8,14 @@ Adds a new column to the current table.
 expression.AddColumn(oCell, isBefore);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new column will be added. If not specified, a new column will be added at the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new column before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell before or after which a new column will be added. If not specified, a new column will be added at the end of the table. |
+| isBefore | Optional | boolean | false | Adds a new column before (true) or after (false) the specified cell. If no cell is specified, then this parameter will be ignored. |
 
 ## Returns
 
@@ -26,13 +26,13 @@ boolean
 Insert an extra column into an existing table to expand its structure in a document.
 
 ```javascript editor-docx
-// How do I add a column next to an existing one to widen a table in a document?
+// Widen a table by adding a column next to an existing one in a document.
 
 // Grow a table horizontally by placing a new column at a chosen position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("We create a 2x2 table and add a new column, so that it becomes 3x2:");
+paragraph.AddText("We create a table with 2 rows and 2 columns and insert a new column before the second one, so that the table has 3 columns:");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(2, 2);

@@ -109,7 +109,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/files/fileops/duplicate](/docspace/api-backend/usage-api/duplicate-batch-items).
+A PUT request is sent to [/api/2.0/files/fileops/duplicate](/docspace/api-backend/usage-api/files/operations/duplicate-batch-items).
 
 You must pass:
 

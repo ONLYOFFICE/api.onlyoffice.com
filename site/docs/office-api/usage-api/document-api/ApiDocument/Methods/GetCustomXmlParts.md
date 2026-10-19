@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the document.
+
 This manager allows manipulation and access to custom XML parts within the document.
 
 ## Syntax
@@ -9,7 +10,7 @@ This manager allows manipulation and access to custom XML parts within the docum
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -24,7 +25,7 @@ This method doesn't have any parameters.
 Embed a custom XML part and retrieve it by its generated ID in a document.
 
 ```javascript editor-docx
-// How do I add and look up custom XML data stored inside a document?
+// Add and look up custom XML data stored inside a document.
 
 // Store structured XML payloads within a document and confirm they can be fetched back by identifier in a document.
 

@@ -8,7 +8,7 @@ Returns the page image.
 expression.GetPageImage(nPage, oParams);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../pdf-api.md) class.
 
 ## Parameters
 
@@ -20,7 +20,8 @@ expression.GetPageImage(nPage, oParams);
 | oParams.annotations | Optional | boolean | false | Specifies whether the annotations will be rendered. |
 | oParams.fields | Optional | boolean | false | Specifies whether the fields will be rendered. |
 | oParams.drawings | Optional | boolean | false | Specifies whether the drawings will be rendered. |
+| oParams.withInfo | Optional | boolean | false | Return an object with the image plus the page size instead of a bare data URL. |
 
 ## Returns
 
-canvas
+string \| Object

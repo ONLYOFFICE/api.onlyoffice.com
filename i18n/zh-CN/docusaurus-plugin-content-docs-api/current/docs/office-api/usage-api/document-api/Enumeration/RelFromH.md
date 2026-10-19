@@ -19,10 +19,10 @@
 
 ## 示例
 
-为绘图对象设置水平对齐方式。
+将绘图相对于页面水平居中。
 
 ```javascript editor-docx
-// How to align a drawing to the center.
+// How do I center a drawing horizontally relative to the page?
 
 // Set a drawing horizontal aligment.
 

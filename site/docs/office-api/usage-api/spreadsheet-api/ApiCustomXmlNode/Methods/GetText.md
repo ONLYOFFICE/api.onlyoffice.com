@@ -1,6 +1,7 @@
 # GetText
 
 Returns the inner text of the current node and its child nodes.
+
 For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 
 ## Syntax
@@ -9,7 +10,7 @@ For example: `\<text\>123\<one\>4\</one\>\</text\>` returns `"1234"`.
 expression.GetText();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -24,7 +25,7 @@ string
 Read the plain text stored inside an XML element in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I extract readable text from an XML node in a spreadsheet?
+// Extract readable text from an XML node in a spreadsheet.
 
 // Pull out the human-readable content of an XML entry in a spreadsheet.
 

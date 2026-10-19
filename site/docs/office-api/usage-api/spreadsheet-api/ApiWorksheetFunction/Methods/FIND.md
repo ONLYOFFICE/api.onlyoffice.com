@@ -8,7 +8,7 @@ Returns the starting position of one text string within another text string. Thi
 expression.FIND(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

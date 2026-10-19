@@ -1,7 +1,8 @@
 # GetText
 
 返回当前节点及其子节点的内部文本。
-例如：`\<text\>123\<one\>4\</one\>\</text\>` 返回 `“1234”`。
+
+例如：`\<text\>123\<one\>4\</one\>\</text\>` 返回 `"1234"`。
 
 ## 语法
 
@@ -24,7 +25,7 @@ string
 从演示文稿中的 XML 元素提取文本。
 
 ```javascript editor-pptx
-// How do I read the text inside an XML node in a presentation?
+// Read the text inside an XML node in a presentation.
 
 // Retrieve the string content of an XML element in a presentation.
 

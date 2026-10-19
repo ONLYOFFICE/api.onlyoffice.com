@@ -4,32 +4,51 @@ Sets the text outline to the current text run.
 
 Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
+## Syntax
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
-Add a border around text in a PDF.
+Add an outline border to text in a PDF.
 
 ```javascript editor-pdf
-// How do I create an outline effect on text in a PDF?
+// How do I add a stroke effect to text in a PDF?
 
-// Draw a stroke around characters in a PDF.
+// Apply a border around text characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
-const run = Api.CreateRun();
-const textPr = run.GetTextPr();
-textPr.SetFontSize(50);
-stroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
-textPr.SetOutLine(stroke);
-paragraph.SetJc("left");
-run.AddText("This is a text run with the black text outline set using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+
+run = Api.CreateRun();
+const runStroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
+run.SetOutLine(runStroke);
+run.AddText("This is a text run with the black text outline.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```

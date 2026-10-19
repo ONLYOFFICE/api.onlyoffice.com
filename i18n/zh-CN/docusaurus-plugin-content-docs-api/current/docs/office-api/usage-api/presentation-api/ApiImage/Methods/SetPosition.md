@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetPosition(nPosX, nPosY);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPosX | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位测量的从幻灯片左侧到绘图左侧的距离。 |
+| nPosY | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位测量的从幻灯片顶部到绘图上侧的距离。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 在演示文稿中为形状设置位置。

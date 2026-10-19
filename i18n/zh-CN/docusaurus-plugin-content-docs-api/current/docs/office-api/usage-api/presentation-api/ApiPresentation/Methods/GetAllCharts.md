@@ -1,6 +1,6 @@
 # GetAllCharts
 
-返回包含当前演示文稿中所有图表对象的数组。
+返回包含演示文稿幻灯片中所有图表对象的数组，不包括幻灯片版式和幻灯片母版中的图表对象。
 
 ## 语法
 
@@ -23,9 +23,9 @@ expression.GetAllCharts();
 列出演示文稿中的所有图表。
 
 ```javascript editor-pptx
-// How do I access every chart across the entire presentation in a presentation?
+// Access every chart placed on the presentation slides.
 
-// Retrieve and count charts to display their total in a presentation.
+// Retrieve charts from slides and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,7 +49,7 @@ const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelSt
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const chartsCount = presentation.GetAllCharts().length;
-paragraph.AddText('Charts: ' + chartsCount);
+paragraph.AddText('Charts in presentation excluding slide layouts and master slides: ' + chartsCount);
 label.SetPosition(36000, 170 * 36000);
 slide.AddObject(label);
 ```

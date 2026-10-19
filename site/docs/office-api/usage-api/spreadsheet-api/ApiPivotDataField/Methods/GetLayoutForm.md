@@ -4,6 +4,22 @@ Returns the way the specified pivot table items appear — in table format or in
 
 Inherited from [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutForm();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[PivotLayoutType](../../Enumeration/PivotLayoutType.md)
+
 ## Example
 
 Read the layout form style applied to a pivot field in a spreadsheet.

@@ -4,6 +4,22 @@
 
 继承自 [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md)。
 
+## 语法
+
+```javascript
+expression.GetDateOperator();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+
 ## 示例
 
 检索电子表格中基于日期的格式规则使用的时间段比较类型。
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTimePeriod", "xlThisMonth");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let dateOperator = condition1.GetDateOperator();
 

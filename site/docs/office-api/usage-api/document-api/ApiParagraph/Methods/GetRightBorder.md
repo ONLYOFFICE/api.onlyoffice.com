@@ -4,6 +4,22 @@ Returns the right border of the current paragraph.
 
 Inherited from [ApiParaPr.GetRightBorder](../../ApiParaPr/Methods/GetRightBorder.md).
 
+## Syntax
+
+```javascript
+expression.GetRightBorder();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## Example
 
 Retrieve the right border style and size applied to a paragraph in a document.
@@ -16,7 +32,7 @@ Retrieve the right border style and size applied to a paragraph in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let paraPr = paragraph.GetParaPr();
-paraPr.SetRightBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetRightBorder("single", 24, 0, Api.Color(255, 111, 61));
 paragraph.AddText("This is a paragraph with a right border.");
 let border = paraPr.GetRightBorder();
 let paragraph2 = Api.CreateParagraph();

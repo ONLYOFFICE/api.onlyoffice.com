@@ -8,7 +8,7 @@ Applies the text settings to the entire contents of the current cell.
 expression.SetTextPr(oTextPr);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

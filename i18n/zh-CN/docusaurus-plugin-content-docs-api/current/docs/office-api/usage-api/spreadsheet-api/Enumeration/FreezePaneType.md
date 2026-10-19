@@ -18,9 +18,9 @@
 将 “column” 冻结窗格类型设置到当前工作表。
 
 ```javascript editor-xlsx
-// Specify the freeze pane type.
+// How do I freeze columns in the current worksheet?
 
-// How to freeze columns in the current worksheet.
+// Specify the freeze pane type.
 
 const freezePaneType = "column";
 Api.SetFreezePanesType(freezePaneType);

@@ -1,8 +1,10 @@
 # ApiPath
 
-Represents the ApiPath class.
+Class representing a path in geometry.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

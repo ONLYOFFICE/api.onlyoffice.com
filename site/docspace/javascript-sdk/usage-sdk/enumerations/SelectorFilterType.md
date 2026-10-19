@@ -1,35 +1,28 @@
-# Enumeration: SelectorFilterType
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:48](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L48)
+import APITable from '@site/src/components/APITable/APITable';
 
-The filter type used in the selector views.
+# SelectorFilterType
+
+The content filter for selector modes ([SDKMode.RoomSelector](SDKMode.md#RoomSelector), [SDKMode.FileSelector](SDKMode.md#FileSelector)).
+Passed via [TFrameConfig.selectorType](../type-aliases/TFrameConfig.md#selectorType).
+
+## Example
+
+```typescript
+sdk.init({ mode: SDKMode.FileSelector, selectorType: SelectorFilterType.RoomsOnly, ... });
+```
 
 ## Enumeration Members
 
-### All
+<APITable>
 
-> **All**: `"all"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `All` | `"all"` | No filter — shows rooms and user folders. |
+| `RoomsOnly` | `"roomsOnly"` | Shows only rooms. |
+| `UserOnly` | `"userFolderOnly"` | Shows only the current user's personal folders. API value: `"userFolderOnly"`. |
 
-Defined in: [enums/index.ts:50](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L50)
-
-Shows all available items.
-
-***
-
-### RoomsOnly
-
-> **RoomsOnly**: `"roomsOnly"`
-
-Defined in: [enums/index.ts:52](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L52)
-
-Shows only rooms.
-
-***
-
-### UserOnly
-
-> **UserOnly**: `"userFolderOnly"`
-
-Defined in: [enums/index.ts:54](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L54)
-
-Shows only user folders.
+</APITable>

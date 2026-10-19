@@ -8,7 +8,7 @@ Returns a range that represents the expanded range around the current range.
 expression.GetCurrentRegion();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Replaces the current sentence or part of the current sentence with the specified
 expression.ReplaceCurrentSentence(sReplace, sPart);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

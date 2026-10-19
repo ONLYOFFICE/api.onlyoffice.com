@@ -8,7 +8,7 @@ Moves the cursor down.
 expression.MoveCursorDown(count, addToSelect);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Gets array with widgets of the current field.
 expression.GetAllWidgets();
 ```
 
-`expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
+`expression` - A variable that represents an [ApiBaseField](../ApiBaseField.md) class.
 
 ## Parameters
 

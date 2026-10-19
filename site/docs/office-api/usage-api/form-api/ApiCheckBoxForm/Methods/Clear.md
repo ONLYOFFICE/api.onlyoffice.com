@@ -4,22 +4,43 @@ Clears the current form.
 
 Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
+## Syntax
+
+```javascript
+expression.Clear();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Erase the entered value from a text form field in a document.
+Uncheck a checked checkbox form field in a document.
 
 ```javascript editor-forms
-// How do I clear the content of a form in a document?
+// How do I reset a checkbox back to its unchecked state in a document?
 
-// Reset a filled-in form field to blank so it is ready for new input in a document.
+// Remove a previously selected answer from a radio button group so the form appears blank again in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("John Smith");
-textForm.Clear();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+checkBoxForm.SetChecked(true);
+checkBoxForm.Clear();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first form from this document was cleared.");
+paragraph.AddText("The second form from this document was cleared.");
 doc.Push(paragraph);
 ```

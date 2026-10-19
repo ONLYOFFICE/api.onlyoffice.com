@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import GithubIcon from '@site/static/icons/github-icon.svg';
@@ -25,11 +24,9 @@ const categories: Category[] = [
 ];
 
 export default function SamplesPage(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
-
   return (
     <Layout
-      title={`${siteConfig.title} Samples`}
+      title="Samples"
       description="Explore ready-to-use code examples for integrating ONLYOFFICE document editing into your applications across multiple languages and platforms."
     >
       <div className={layoutStyles.container}>
@@ -61,7 +58,7 @@ export default function SamplesPage(): ReactNode {
               </li>
               <li>
                 You can also ask our developers on{' '}
-                <a href="https://forum.onlyoffice.com/c/document-api/39">ONLYOFFICE forum</a> (registration required).
+                <a href="https://community.onlyoffice.com/c/document-api/39">ONLYOFFICE forum</a> (registration required).
               </li>
             </ul>
           </div>

@@ -8,7 +8,7 @@ Returns an array of document elements from the current ApiDocumentContent object
 expression.GetContent(bGetCopies);
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.InsertInContentControl](../../ApiDrawing/Methods/InsertInContentControl.md)。
 
+## 语法
+
+```javascript
+expression.InsertInContentControl(nType);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nType | 必需 | number |  | 定义此方法是返回 ApiBlockLvlSdt（nType === 1）还是 ApiDrawing（除 1 以外的任何值）对象。 |
+
+## 返回值
+
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| [ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md)
+
 ## 示例
 
 在文档中将绘图包裹在富文本内容控件内。

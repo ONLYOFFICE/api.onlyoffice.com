@@ -1,8 +1,10 @@
 # ApiProtectedRangeUserInfo
 
-Represents the ApiProtectedRangeUserInfo class.
+Class representing a user from the current protected range.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

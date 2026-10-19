@@ -8,7 +8,7 @@ Creates a pattern fill to apply to the object using the selected pattern as the 
 expression.CreatePatternFill(patternType, bgColor, fgColor);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

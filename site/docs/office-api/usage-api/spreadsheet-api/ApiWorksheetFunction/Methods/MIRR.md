@@ -8,7 +8,7 @@ Returns the internal rate of return for a series of periodic cash flows, conside
 expression.MIRR(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

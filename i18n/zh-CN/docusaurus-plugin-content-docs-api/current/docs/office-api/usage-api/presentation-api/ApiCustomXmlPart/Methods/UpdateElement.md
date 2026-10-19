@@ -26,7 +26,7 @@ boolean
 更新演示文稿中自定义 XML 部件中的 XML 元素。
 
 ```javascript editor-pptx
-// How do I modify the content of an existing XML element in a presentation?
+// Modify the content of an existing XML element in a presentation.
 
 // Display the updated XML with the replaced element in a presentation.
 
@@ -35,7 +35,7 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
 const xmlManager = presentation.GetCustomXmlParts();
-const xml = xmlManager.Add('<content xmlns="http://example"><text>Example</text></content>');
+const xml = xmlManager.Add('<content xmlns="http://example.com"><text>Example</text></content>');
 xml.UpdateElement('/content', '<user>John</user>');
 
 const fill = Api.CreateSolidFill(Api.RGB(66, 133, 191));

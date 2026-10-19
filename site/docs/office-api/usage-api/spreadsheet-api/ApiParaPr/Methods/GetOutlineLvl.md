@@ -8,7 +8,7 @@ Returns the outline level of the specified properties.
 expression.GetOutlineLvl();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -30,7 +30,7 @@ Read the outline level assigned to a paragraph in a spreadsheet.
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 const content = shape.GetContent();

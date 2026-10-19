@@ -11,24 +11,12 @@ type Template = {
 
 type Script = Record<ModeType, Template>;
 
-const PLUGIN_HEADER =
-    'var Editor = {\n\
-    callCommand : async function(func) {\n\
-        return new Promise(resolve => (function(){\n\
-            Asc.plugin.callCommand(func, false, true, function(returnValue){\n\
-                resolve(returnValue);\n\
-            });\n\
-        })());\n\
-    },\n\
-    callMethod : async function(name, args)\n\
-    {\n\
-        return new Promise(resolve => (function(){\n\
-            Asc.plugin.executeMethod(name, args || [], function(returnValue){\n\
-                resolve(returnValue);\n\
-            });\n\
-        })());\n\
-    }\n\
-};\n\n';
+const PLUGIN_SCRIPT =
+    '(async function(){\n' +
+    '    let version = await Editor.GetVersion();\n' +
+    '    console.log(version);\n' +
+    '    await Editor.PasteHtml("<span>Hello, </span><span><b>world</b></span><span>!</span>");\n' +
+    '})();\n';
 
 export const FILE_CONFIGS: Record<string, FileConfig> = {
     word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
@@ -71,13 +59,7 @@ const WORD_SCRIPTS: Template = {
         '\n' +
         'connector.executeMethod("AddContentControl", [1, {"Tag": "sample_tag", "Lock": 0}]);\n',
 
-    plugin:
-        PLUGIN_HEADER +
-        '(async function(){\n' +
-        '    let version = await Editor.callMethod("GetVersion");\n' +
-        '    console.log(version);\n' +
-        '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
-        '})();\n',
+    plugin: PLUGIN_SCRIPT,
 
     builder:
         "builder.CreateFile(\"docx\");\n" +
@@ -105,13 +87,7 @@ const CELL_SCRIPTS: Template = {
         '   Api.GetActiveSheet().GetRange("A1:B3").Merge(true);\n' +
         '});\n',
 
-    plugin:
-        PLUGIN_HEADER +
-        '(async function(){\n' +
-        '    let version = await Editor.callMethod("GetVersion");\n' +
-        '    console.log(version);\n' +
-        '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
-        '})();\n',
+    plugin: PLUGIN_SCRIPT,
 
     builder:
         'builder.CreateFile("xlsx");\n' +
@@ -140,13 +116,7 @@ const SLIDE_SCRIPTS: Template = {
         '    oSlide.AddObject(oTable);\n' +
         '});\n',
 
-    plugin:
-        PLUGIN_HEADER +
-        '(async function(){\n' +
-        '    let version = await Editor.callMethod("GetVersion");\n' +
-        '    console.log(version);\n' +
-        '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
-        '})();\n',
+    plugin: PLUGIN_SCRIPT,
 
     builder:
         "builder.CreateFile(\"pptx\");\n" +
@@ -179,21 +149,15 @@ const FORM_SCRIPTS: Template = {
         '\n' +
         'connector.executeMethod("InputText", ["ONLYOFFICE Playground", ""]);\n',
 
-    plugin:
-        PLUGIN_HEADER +
-        '(async function(){\n' +
-        '    let version = await Editor.callMethod("GetVersion");\n' +
-        '    console.log(version);\n' +
-        '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
-        '})();\n',
+    plugin: PLUGIN_SCRIPT,
 
     builder:
-        "builder.CreateFile(\"docx\");\n" +
+        "builder.CreateFile(\"form\");\n" +
         "var oDocument = Api.GetDocument();\n" +
         "var oParagraph = Api.CreateParagraph();\n" +
         "oParagraph.AddText(\"Hello world!\");\n" +
         "oDocument.InsertContent([oParagraph]);\n" +
-        "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
+        "builder.SaveFile(\"form\", \"Api.pdf\");\n" +
         "builder.CloseFile();\n",
 };
 
@@ -223,16 +187,10 @@ const PDF_SCRIPTS: Template = {
         '    page.AddObject(shape);\n' +
         '});\n',
 
-    plugin:
-        PLUGIN_HEADER +
-        '(async function(){\n' +
-        '    let version = await Editor.callMethod("GetVersion");\n' +
-        '    console.log(version);\n' +
-        '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
-        '})();\n',
+    plugin: PLUGIN_SCRIPT,
 
     builder:
-        "builder.CreateFile(\"docx\");\n" +
+        "builder.OpenFile(\"document.pdf\");\n" +
         'const doc1 = Api.GetDocument();\n' +
         'const page = doc1.GetPage(0);\n' +
         'const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +

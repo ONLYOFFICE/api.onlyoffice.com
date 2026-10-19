@@ -8,7 +8,7 @@ Returns the document keywords.
 expression.GetKeywords();
 ```
 
-`expression` - A variable that represents a [ApiCore](../ApiCore.md) class.
+`expression` - A variable that represents an [ApiCore](../ApiCore.md) class.
 
 ## Parameters
 

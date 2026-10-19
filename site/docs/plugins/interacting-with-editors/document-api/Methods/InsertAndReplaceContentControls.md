@@ -1,6 +1,8 @@
 # InsertAndReplaceContentControls
 
-Inserts the content control containing data. The data is specified by the JS code for [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document.
+Inserts the content control containing data.
+
+The data is specified by the JS code for [Document Builder](../../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Inserts the content control containing data. The data is specified by the JS cod
 expression.InsertAndReplaceContentControls(arrDocuments);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

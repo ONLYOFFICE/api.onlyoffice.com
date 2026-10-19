@@ -4,14 +4,32 @@ Specifies if the current form should be required.
 
 Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
+## Syntax
+
+```javascript
+expression.SetRequired(bRequired);
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | Required | boolean |  | Defines if the current form is required (true) or not (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
-Mark a form field as required to enforce completion in a document.
+Mark a text form as required in a document.
 
 ```javascript editor-docx
-// How do I make a form field mandatory in a document?
+// How do I make a text form mandatory for the user to fill out in a document?
 
-// Ensure a field must be filled before the document form is submitted.
+// Enforce completion of a text form before the document can be submitted in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlNode class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Check what type of object represents a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I confirm the category of an XML node object before processing it in a spreadsheet?
+// Confirm the category of an XML node object before processing it in a spreadsheet.
 
 // Verify the identity of an XML node to ensure it is the expected kind before using it in a spreadsheet.
 

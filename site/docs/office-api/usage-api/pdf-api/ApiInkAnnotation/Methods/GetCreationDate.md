@@ -4,6 +4,22 @@ Gets annotation creation date.
 
 Inherited from [ApiBaseAnnotation.GetCreationDate](../../ApiBaseAnnotation/Methods/GetCreationDate.md).
 
+## Syntax
+
+```javascript
+expression.GetCreationDate();
+```
+
+`expression` - A variable that represents an [ApiInkAnnotation](../ApiInkAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Retrieve the date when an annotation was created in a PDF.

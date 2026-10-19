@@ -8,11 +8,13 @@ import APITable from '@site/src/components/APITable/APITable';
 从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到查询字符串中，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 :::
 
+:::note
+从 10.0 版本开始，可以通过[服务器设置](../get-started/configuration/server-config/server-config.md#server) `services.CoAuthoring.server.docbuilderEnable` 关闭文档生成器 API。在这种情况下，发送到 `https://documentserver/docbuilder` 地址的请求将被拒绝，并返回 HTTP 403 状态码。
+:::
+
 ## 请求参数
 
-```mdx-code-block
 <APITable>
-```
 
 | 参数      | 类型    | 是否必填       | 描述                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -22,9 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | token     | string  | 配置要求       | 以[令牌](./signature/request/token-in-body.md#document-builder)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                     |
 | url       | string  | 必填           |  `.js` 脚本文件的绝对 URL。                                                                                                                                                                                                                                                                                                            |
 
-```mdx-code-block
 </APITable>
-```
 
 `.js` 脚本文件是一个 JavaScript 文件，使用 [Office JavaScript API](../../office-api/get-started/overview.md) 来生成输出文档文件（文本文档、电子表格或演示文稿）。它使用 `builder.CreateFile()` 创建文档，使用 Office API 类来操作内容，使用 `builder.SaveFile()` 指定输出格式和名称，使用 `builder.CloseFile()` 完成文档处理。您可以在[此处](../../document-builder/using-cli/script-file.md)找到有关脚本文件语法的更多信息。一旦文档生成完成，将返回带有结果文件绝对 URL 的响应（见下文）。
 
@@ -40,9 +40,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 请求结果以 JSON 格式返回。
 
-```mdx-code-block
 <APITable name="response">
-```
 
 | 参数      | 类型    | 示例                                            | 描述                                                                                                                                                                                                                                                 |
 | --------- | ------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,9 +49,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | key       | string  | `af86C7e71Ca8`                                  | 文档生成任务的唯一标识符。如果请求中提供了 `key` 参数，则返回相同的值。如果在第一个异步请求中未提供 `key` 参数，则由**文档生成器服务**生成新的 key。请在所有后续轮询请求中使用此值。                                                              |
 | urls      | object  | `{"output.docx": "https://documentserver/..."}` | 包含生成的输出文件绝对 URL 的对象。对象键是 `.js` 脚本中指定的输出文件名。此参数仅在 `end` 值为 `true` 时存在。                                                                                                                                   |
 
-```mdx-code-block
 </APITable>
-```
 
 ## 示例脚本
 
@@ -269,6 +265,40 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 有关文档比较的更多详细信息，请参阅[文档比较](../../document-builder/using-cli/comparing-documents.md)。
+
+## 以文件形式发送脚本 {#sending-the-script-as-a-file}
+
+从 10.0 版本开始，可以直接在请求中发送 `.js` 脚本文件，而不是其 URL。脚本通过 `multipart/form-data` 格式的 POST 请求发送到 `https://documentserver/docbuilder/from-file` 地址。
+
+<APITable name="from-file">
+
+| 部分   | 类型   | 是否必填 | 描述 |
+| ------ | ------ | -------- | ---- |
+| file   | file   | 必填     | `.js` 脚本文件。只能发送一个文件。文件大小受[服务器设置](../get-started/configuration/server-config/server-config.md#converter) `FileConverter.converter.maxDownloadBytes` 限制。超出限制的文件将被拒绝，并返回 HTTP 413 状态码。仅在通过 `key` 检查异步请求状态时可以省略该文件。 |
+| params | string | 必填     | JSON 对象形式的请求参数：`argument`、`async` 和 `key`。不使用 `url` 参数。如果参数通过令牌发送，则可以省略 `params` 部分。 |
+| token  | string | 非必填   | 包含请求参数的令牌。令牌也可以作为 `params` 部分的 `token` 字段发送，或通过 `Authorization` 标头发送。启用令牌验证后，参数仅从令牌中获取。令牌的有效负载必须包含值为 `docbuilder` 的 `operation` 字段，且不得包含 `url` 字段。 |
+
+</APITable>
+
+响应与发送到 `/docbuilder` 地址的请求相同。要检查异步请求的状态，请发送带有返回的 `key` 值的 `params` 部分，不含 `file` 部分。
+
+```bash
+curl -X POST "https://documentserver/docbuilder/from-file" \
+  -F 'params={"async":false}' \
+  -F 'file=@script.js'
+```
+
+**响应：**
+
+```json
+{
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "output.docx": "https://documentserver/output.docx"
+  },
+  "end": true
+}
+```
 
 ## 可能的错误代码及其描述
 

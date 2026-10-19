@@ -8,7 +8,7 @@ Sets the axis position for the data bar conditional formatting rule.
 expression.SetAxisPosition(position);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

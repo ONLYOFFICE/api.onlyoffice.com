@@ -8,7 +8,7 @@ Returns a value that represents a number of objects in the collection.
 expression.GetCount();
 ```
 
-`expression` - A variable that represents a [ApiCharacters](../ApiCharacters.md) class.
+`expression` - A variable that represents an [ApiCharacters](../ApiCharacters.md) class.
 
 ## Parameters
 

@@ -1,7 +1,12 @@
-# Variable: connectErrorText
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts
+---
 
-> `const` **connectErrorText**: `"Message bus is not connected with frame"`
+# connectErrorText
 
-Defined in: [constants/index.ts:177](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/constants/index.ts#L177)
+Error message passed to [TFrameEvents.onAppError](../type-aliases/TFrameEvents.md#onAppError) when a method is called
+before the postMessage channel is established (i.e. before the first valid message from the iframe).
 
-The error message displayed when the message bus fails to connect with the embedded frame.
+```ts
+const connectErrorText: "Message bus is not connected with frame";
+```

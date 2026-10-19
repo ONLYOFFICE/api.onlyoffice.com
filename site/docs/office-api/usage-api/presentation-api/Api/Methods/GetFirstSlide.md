@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetFirstSlide();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiSlide](../../ApiSlide/ApiSlide.md)
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null \| undefined
 
 ## Example
 

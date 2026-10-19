@@ -4,6 +4,22 @@ Returns the rotation angle of the current drawing object.
 
 Inherited from [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md).
 
+## Syntax
+
+```javascript
+expression.GetRotation();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Find the rotation angle of a shape in a PDF.
@@ -16,7 +32,7 @@ Find the rotation angle of a shape in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 65 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);

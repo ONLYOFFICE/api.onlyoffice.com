@@ -1,6 +1,6 @@
 # RunTextW
 
-Runs all the commands for the document creation using a single command in the Unicode format. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunTextW` makes it possible to enter all the commands for the document creation at once.
+Runs all the commands for the document creation using a single command in the Unicode format. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunTextW` makes it possible to enter all the commands for the document creation at once. The commands have the [same syntax](../../using-cli/script-file.md) as a script file run with the CLI.
 
 :::note
 This method is only available for **C++**.

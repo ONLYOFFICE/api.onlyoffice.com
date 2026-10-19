@@ -1,6 +1,8 @@
 # GetFormValueByKey
 
-返回指定键的表单值。对于一组单选按钮，返回 Choice，即所选项目的名称。
+返回指定键的表单值。
+
+对于一组单选按钮，返回 Choice，即所选项目的名称。
 
 ## 语法
 
@@ -35,7 +37,7 @@ let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});
 checkBox.SetChecked(true);
 paragraph1.Push(checkBox);
 let textForm = Api.CreateTextForm({key: "CompanyName"});
-textForm.SetText("OnlyOffice");
+textForm.SetText("ONLYOFFICE");
 paragraph1.Push(textForm);
 
 let paragraph = Api.CreateParagraph();

@@ -1,0 +1,25 @@
+# FilterType
+
+Possible values:
+
+- `0` - None (`None`)
+- `1` - Files  only (`FilesOnly`)
+- `2` - Folders only (`FoldersOnly`)
+- `3` - Documents only (`DocumentsOnly`)
+- `4` - Presentations only (`PresentationsOnly`)
+- `5` - Spreadsheets only (`SpreadsheetsOnly`)
+- `7` - Images only (`ImagesOnly`)
+- `8` - By user (`ByUser`)
+- `9` - By department (`ByDepartment`)
+- `10` - Archive only (`ArchiveOnly`)
+- `11` - By extension (`ByExtension`)
+- `12` - Media only (`MediaOnly`)
+- `13` - Filling forms rooms (`FillingFormsRooms`)
+- `14` - Editing rooms (`EditingRooms`)
+- `17` - Custom rooms (`CustomRooms`)
+- `20` - Public rooms (`PublicRooms`)
+- `22` - Pdf (`Pdf`)
+- `23` - Pdf form (`PdfForm`)
+- `24` - Virtual data rooms (`VirtualDataRooms`)
+- `25` - Diagrams only (`DiagramsOnly`)
+- `26` - Ai rooms (`AiRooms`)

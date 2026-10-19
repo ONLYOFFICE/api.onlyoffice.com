@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetUniqueName](../../ApiBaseAnnotation/Methods/GetUniqueName.md)。
 
+## 语法
+
+```javascript
+expression.GetUniqueName();
+```
+
+`expression` - 表示 [ApiPolygonAnnotation](../ApiPolygonAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 获取 PDF 中注释的唯一标识符。

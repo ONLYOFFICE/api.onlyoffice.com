@@ -8,7 +8,7 @@ Sets the data to the current OLE object.
 expression.SetData(sData);
 ```
 
-`expression` - A variable that represents a [ApiOleObject](../ApiOleObject.md) class.
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
 
 ## Parameters
 

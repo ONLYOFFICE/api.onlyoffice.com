@@ -1,6 +1,6 @@
 # Clear
 
-Clears the content from the current cell.
+Clears the content of the current cell.
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Clears the content from the current cell.
 expression.Clear();
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

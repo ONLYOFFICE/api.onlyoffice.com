@@ -8,7 +8,7 @@ Inserts an attribute into the XML node at the specified XPath.
 expression.InsertAttribute(xPath, name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -27,7 +27,7 @@ boolean
 Add a new named property to an XML element stored in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I attach extra metadata to an existing XML node in a spreadsheet?
+// Attach extra metadata to an existing XML node in a spreadsheet.
 
 // Enrich an XML element with an additional attribute to carry more structured data in a spreadsheet.
 

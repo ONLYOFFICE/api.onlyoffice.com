@@ -4,6 +4,24 @@ Sets the lock state of the current form.
 
 Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
 
+## Syntax
+
+```javascript
+expression.SetLock(isLock);
+```
+
+`expression` - A variable that represents an [ApiComplexForm](../ApiComplexForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isLock | Required | boolean |  | Specifies whether to lock the form (true) or unlock it (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
 Lock a form field to prevent editing in a document.

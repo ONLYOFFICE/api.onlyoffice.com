@@ -1,6 +1,8 @@
-# IApiPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IApiPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IApiPlugin.ts#L79)
+# IApiPlugin
 
 The plugin that is provided with the origin, proxy, and prefix to make requests to the portal server.
 
@@ -214,11 +216,9 @@ An object containing the current origin, proxy, and prefix parameters
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -226,6 +226,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `proxy` | `string` | Stores the proxy parameter of the DocSpace portal |
 | `prefix` | `string` | Stores the prefix parameter of the DocSpace portal to access the server side |
 
-```mdx-code-block
 </APITable>
-```

@@ -4,14 +4,11 @@ sidebar_position: -2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 # ONLYOFFICE 文档本地部署版
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
 <YoutubeVideo videoId="R7gvhLvGL44"/>
-```
 
 可以通过以下三种方式添加插件：插件管理器、`sdkjs-plugins` 文件夹或 `config.json` 文件。
 
@@ -79,7 +76,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 ```
 
-## 通过 config.json 添加插件
+## 通过 config.json 添加插件 {#adding-plugins-through-the-configjson-file}
 
 在 [ONLYOFFICE 文档配置](../../../docs-api/usage-api/config/editor/plugins.md)中，将插件的 `config.json` 相对路径添加到 `plugins.pluginsData` 参数中：
 

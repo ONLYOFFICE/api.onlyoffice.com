@@ -8,7 +8,7 @@ Checks if the current text field is multiline.
 expression.IsMultiline();
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

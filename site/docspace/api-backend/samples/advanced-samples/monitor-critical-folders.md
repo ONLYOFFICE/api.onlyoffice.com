@@ -598,7 +598,7 @@ DocSpace may also send HEAD requests to check that the webhook URL is reachable,
 
 ## Step 2: Load file metadata and check the monitored folder
 
-For each accepted event, the script loads file metadata using GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/get-file-info)
+For each accepted event, the script loads file metadata using GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info)
 
 It reads:
 - `title`: file name,
@@ -670,7 +670,7 @@ In this example the minimal payload is `{ "templateId": <templateId>, "title": "
 
 ## Step 3: Resolve the user who changed the file (optional)
 
-If the payload contains userId, the script calls GET [/api/2.0/people/:userId](/docspace/api-backend/usage-api/get-profile-by-user-id) and resolves a friendly name/email to include in the notification.
+If the payload contains userId, the script calls GET [/api/2.0/people/:userId](/docspace/api-backend/usage-api/people/profiles/get-profile-by-user-id) and resolves a friendly name/email to include in the notification.
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
 

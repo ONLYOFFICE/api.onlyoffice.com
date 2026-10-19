@@ -8,7 +8,7 @@ Converts the ApiThemeFontScheme object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
+`expression` - A variable that represents an [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
 
 ## Parameters
 

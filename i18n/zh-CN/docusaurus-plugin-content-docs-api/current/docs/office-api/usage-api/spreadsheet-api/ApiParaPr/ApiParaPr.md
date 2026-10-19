@@ -1,8 +1,10 @@
 # ApiParaPr
 
-表示 ApiParaPr 类。
+表示段落属性的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -23,7 +25,7 @@
 | [SetIndRight](./Methods/SetIndRight.md) | boolean | 设置段落右侧缩进。 |
 | [SetJc](./Methods/SetJc.md) | boolean | 设置段落内容对齐方式。 |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | 设置指定属性的大纲级别。 |
-| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则 |
-| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。如果 isBeforeAuto 参数的值为 true，则 |
-| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。如果 sLineRule 参数的值为 |
+| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。 |
+| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。 |
+| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。 |
 | [SetTabs](./Methods/SetTabs.md) | boolean | 指定将用于当前段落中任何制表符的自定义制表位序列。 |

@@ -8,7 +8,7 @@ Creates a copy of the current theme font scheme.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
+`expression` - A variable that represents an [ApiThemeFontScheme](../ApiThemeFontScheme.md) class.
 
 ## Parameters
 
@@ -69,9 +69,9 @@ const oStroke3 = Api.CreateStroke(1 * 36000, oFill3);
 
 const formatScheme = Api.CreateThemeFormatScheme([oFill1, oFill2, oFill3], [oBgFill1, oBgFill2, oBgFill3], [oStroke1, oStroke2, oStroke3], "New format scheme");
 const colorScheme = Api.CreateThemeColorScheme([
-	Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51), Api.CreateRGBColor(230, 179, 117), Api.CreateRGBColor(235, 235, 235),
-	Api.CreateRGBColor(163, 21, 21), Api.CreateRGBColor(128, 43, 43), Api.CreateRGBColor(0, 0, 0), Api.CreateRGBColor(128, 128, 128),
-	Api.CreateRGBColor(176, 196, 222), Api.CreateRGBColor(65, 105, 225), Api.CreateRGBColor(255, 255, 255), Api.CreateRGBColor(255, 213, 191)
+	Api.RGB(255, 111, 61), Api.RGB(51, 51, 51), Api.RGB(230, 179, 117), Api.RGB(235, 235, 235),
+	Api.RGB(163, 21, 21), Api.RGB(128, 43, 43), Api.RGB(0, 0, 0), Api.RGB(128, 128, 128),
+	Api.RGB(176, 196, 222), Api.RGB(65, 105, 225), Api.RGB(255, 255, 255), Api.RGB(255, 213, 191)
 ], "New color scheme");
 const theme2 = Api.CreateTheme("New theme", master, colorScheme, formatScheme, copyFontScheme);
 slide2.ApplyTheme(theme2);

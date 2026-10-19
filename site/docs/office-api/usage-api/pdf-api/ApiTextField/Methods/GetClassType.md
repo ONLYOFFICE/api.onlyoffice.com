@@ -8,7 +8,7 @@ Returns a type of the ApiTextField class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

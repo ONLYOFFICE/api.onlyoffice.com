@@ -4,21 +4,37 @@ Clears the current form.
 
 Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
+## Syntax
+
+```javascript
+expression.Clear();
+```
+
+`expression` - A variable that represents an [ApiComboBoxForm](../ApiComboBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Erase the entered value from a text form field in a document.
+Clear the selected value from a combo box form field in a document.
 
 ```javascript editor-docx
-// How do I clear the content of a form in a document?
+// How do I reset a combo box form field to its empty state in a document?
 
-// Reset a filled-in form field to blank so it is ready for new input in a document.
+// Remove a previously entered answer from a combo box so the field shows its placeholder again in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetText("John Smith");
-textForm.Clear();
+paragraph.AddElement(comboBoxForm);
+comboBoxForm.SetText("John Smith");
+comboBoxForm.Clear();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);

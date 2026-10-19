@@ -1,10 +1,6 @@
 # Copy
 
-Copies the current OLE object.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current OLE object.
 
 ## Syntax
 
@@ -12,7 +8,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiOleObject](../ApiOleObject.md) class.
+`expression` - A variable that represents an [ApiOleObject](../ApiOleObject.md) class.
 
 ## Parameters
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md) \| null
 
 ## Example
 

@@ -1,7 +1,6 @@
 # GetOrientation
 
-Returns a pivot field orientation value that represents the location
-of the field in the specified pivot table report.
+Returns a pivot field orientation value that represents the location of the field in the specified pivot table report.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ of the field in the specified pivot table report.
 expression.GetOrientation();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

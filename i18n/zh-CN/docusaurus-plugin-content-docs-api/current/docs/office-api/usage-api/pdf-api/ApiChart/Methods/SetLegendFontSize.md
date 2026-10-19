@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetLegendFontSize(nFontSize);
+expression.SetLegendFontSize(fontSize);
 ```
 
 `expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetLegendFontSize(nFontSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nFontSize | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的文本大小值。 |
+| fontSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 
 ## 返回值
 
@@ -32,20 +32,20 @@ boolean
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
-chart.SetHorAxisTitle("Year", 11);
-chart.SetTitle("Financial Overview", 13);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 20);
+chart.SetHorAxisTitle("Year", 22);
+chart.SetTitle("Financial Overview", 26);
 chart.SetSize(150 * 36000, 65 * 36000);
-chart.SetLegendFontSize(16);
+chart.SetLegendFontSize(32);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```

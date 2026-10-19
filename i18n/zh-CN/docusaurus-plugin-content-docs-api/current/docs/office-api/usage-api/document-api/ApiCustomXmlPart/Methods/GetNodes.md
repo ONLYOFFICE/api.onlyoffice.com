@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 使用 XPath 查询从文档中的自定义 XML 部件选择 XML 节点。
 
 ```javascript editor-docx
-// How do I retrieve specific nodes from a custom XML part in a document?
+// Retrieve specific nodes from a custom XML part in a document.
 
 // Extract node text and attributes to read structured data stored in a document.
 

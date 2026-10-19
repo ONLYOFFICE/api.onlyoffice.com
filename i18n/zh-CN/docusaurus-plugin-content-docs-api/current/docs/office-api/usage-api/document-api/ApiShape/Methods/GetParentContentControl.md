@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentContentControl](../../ApiDrawing/Methods/GetParentContentControl.md)。
 
+## 语法
+
+```javascript
+expression.GetParentContentControl();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null
+
 ## 示例
 
 检索文档中包含绘图对象的父内容控件。

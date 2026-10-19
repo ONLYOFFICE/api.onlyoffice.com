@@ -8,6 +8,22 @@
 
 继承自 [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 从工作表移除形状并在电子表格中确认移除。

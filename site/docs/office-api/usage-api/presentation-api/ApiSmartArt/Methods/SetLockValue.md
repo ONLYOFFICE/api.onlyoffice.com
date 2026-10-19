@@ -4,6 +4,25 @@ Sets the lock value to the specified lock type of the current drawing.
 
 Inherited from [ApiDrawing.SetLockValue](../../ApiDrawing/Methods/SetLockValue.md).
 
+## Syntax
+
+```javascript
+expression.SetLockValue(sType, bValue);
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | [DrawingLockType](../../Enumeration/DrawingLockType.md) |  | Lock type in the string format. |
+| bValue | Required | boolean |  | Specifies if the specified lock is applied to the current drawing. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Prevent a shape from being selected on a slide in a presentation.

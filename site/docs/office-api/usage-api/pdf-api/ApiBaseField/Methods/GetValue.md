@@ -8,7 +8,7 @@ Gets field value
 expression.GetValue();
 ```
 
-`expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
+`expression` - A variable that represents an [ApiBaseField](../ApiBaseField.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string
+string \| string[]
 
 ## Example
 

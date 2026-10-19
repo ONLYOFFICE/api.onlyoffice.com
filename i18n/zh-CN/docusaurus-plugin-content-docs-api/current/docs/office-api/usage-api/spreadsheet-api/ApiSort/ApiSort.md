@@ -1,6 +1,6 @@
 # ApiSort
 
-表示 ApiSort 类。
+表示列表对象（表格）排序状态的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -20,10 +20,12 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Apply](./Methods/Apply.md) | 无 | 将当前排序设置应用于表格。 |
-| [GetHeader](./Methods/GetHeader.md) | string | 返回标题设置。对于 ListObject 始终为 “xlYes”。 |
+| [GetHeader](./Methods/GetHeader.md) | string | 返回标题设置。 |
 | [GetMatchCase](./Methods/GetMatchCase.md) | boolean | 返回排序是否区分大小写。 |
 | [GetOrientation](./Methods/GetOrientation.md) | [XlSortOrientation](../Enumeration/XlSortOrientation.md) | 返回排序方向：“xlTopToBottom” 或 “xlLeftToRight”。 |
 | [GetParent](./Methods/GetParent.md) | [ApiListObject](../ApiListObject/ApiListObject.md) | 返回父列表对象。 |

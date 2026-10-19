@@ -1,14 +1,14 @@
-﻿# 编辑器
+# 编辑器
 
 editorConfig 部分定义了编辑器界面参数。
 
 ## actionLink
 
-**类型：** `object`
+**类型**：`object`
 
 使用 `data.actionLink` 参数中的 [onMakeActionLink](../events.md#onmakeactionlink) 事件或 [onRequestSendNotify](../events.md#onrequestsendnotify) 事件指定从**文档编辑服务**接收的数据，其中包含有关将滚动到的文档中的操作的信息。
 
-**示例**:
+**示例**：
 
 ```ts
 {
@@ -21,41 +21,41 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### actionLink.action
 
-**类型：** `object`
+**类型**：`object`
 
 文档中要滚动到的操作对象。
 
 ### actionLink.action.type
 
-**类型：** `"bookmark" | "comment"`
+**类型**：`"bookmark" | "comment"`
 
 文档中的操作类型。
 
-**示例**: `"bookmark"`
+**示例**：`"bookmark"`
 
 ### actionLink.action.data
 
-**类型：** `string`
+**类型**：`string`
 
 与操作关联的数据：书签名称或评论 ID。
 
-**示例**: `"bookmark_name"`
+**示例**：`"bookmark_name"`
 
 ## callbackUrl
 
-**类型：** `string` | **必填**
+**类型**：`string` | **必填**
 
 **文档存储服务**的绝对 URL。此服务[必须](../../callback-handler.md)由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
 
-**示例**: `"https://example.com/url-to-callback"`
+**示例**：`"https://example.com/url-to-callback"`
 
 ## coEditing
 
-**类型：** `object`
+**类型**：`object`
 
 共同编辑模式以及更改它的可能性。此参数用于应用[共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes)和[查看](../../../get-started/how-it-works/viewing.md)模式。
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -66,7 +66,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### coEditing.mode
 
-**类型：** `"fast" | "strict"` | **默认值：** `"fast"`
+**类型**：`"fast" | "strict"` | **默认值**：`"fast"`
 
 共同编辑模式。
 
@@ -74,21 +74,21 @@ editorConfig 部分定义了编辑器界面参数。
 如果在编辑器界面中更改 `mode` 设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.coEditing.mode` 参数发送的任何值。`fast` 模式需要启用自动保存，因此如果 `customization.autosave` 设置为 `false`，它将被强制设为 `true`。
 :::
 
-**示例**: `"fast"`
+**示例**：`"fast"`
 
 ### coEditing.change
 
-**类型：** `boolean` | **默认值：** `true`
+**类型**：`boolean` | **默认值**：`true`
 
 是否允许在编辑器界面中更改共同编辑模式。
 
-**示例**: `true`
+**示例**：`true`
 
 ![共同编辑模式](/assets/images/editor/coediting-mode.png#gh-light-mode-only)![共同编辑模式](/assets/images/editor/coediting-mode.dark.png#gh-dark-mode-only)
 
 ## createUrl
 
-**类型：** `string`
+**类型**：`string`
 
 将在其中创建并在创建后可用的文档的绝对 URL。
 
@@ -96,13 +96,13 @@ editorConfig 部分定义了编辑器界面参数。
 如果未指定，**创建**按钮将不会显示。您可以使用 [onRequestCreateNew](../events.md#onrequestcreatenew) 事件代替此参数。
 :::
 
-**示例**: `"https://example.com/url-to-create-document"`
+**示例**：`"https://example.com/url-to-create-document"`
 
 ![创建 URL](/assets/images/editor/create.png#gh-light-mode-only)![创建 URL](/assets/images/editor/create.dark.png#gh-dark-mode-only)
 
 ## fileChoiceUrl
 
-**类型：** `string`
+**类型**：`string`
 
 在 iframe 中打开的文件选择对话框的 URL，用于插入图像、选择比较文档或选择邮件合并数据源。URL 可以包含 `{documentType}` 和 `{fileExt}` 占位符，它们将被替换为相应的值（例如 `ImagesOnly`、`DocumentsOnly`）。
 
@@ -114,11 +114,11 @@ editorConfig 部分定义了编辑器界面参数。
 请使用 [onRequestInsertImage](../events.md#onrequestinsertimage)、[onRequestSelectDocument](../events.md#onrequestselectdocument) 或 [onRequestSelectSpreadsheet](../events.md#onrequestselectspreadsheet) 事件代替此参数。
 :::
 
-**示例**: `"https://example.com/filechoice?type={documentType}"`
+**示例**：`"https://example.com/filechoice?type={documentType}"`
 
 ## lang
 
-**类型：** `string` | **默认值：** `"en"`
+**类型**：`string` | **默认值**：`"en"`
 
 编辑器界面语言。使用两个字母（`de`、`ru`、`it`等）语言代码。
 
@@ -180,11 +180,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 </details>
 
-**示例**: `"en"`
+**示例**：`"en"`
 
 ## 位置 {#location}
 
-**类型：** `string` | **默认值：** `""`
+**类型**：`string` | **默认值**：`""`
 
 默认测量单位。指定 `us` 或 `ca` 以设置英寸。
 
@@ -192,19 +192,19 @@ editorConfig 部分定义了编辑器界面参数。
 自 8.2 版起已弃用，请改用[地区](#region)参数。
 :::
 
-**示例**: `"us"`
+**示例**：`"us"`
 
 ## 模式 {#mode}
 
-**类型：** `"edit" | "view"` | **默认值：** `"edit"`
+**类型**：`"edit" | "view"` | **默认值**：`"edit"`
 
 编辑器打开模式。
 
-**示例**: `"view"`
+**示例**：`"view"`
 
 ## mergeFolderUrl
 
-**类型：** `string`
+**类型**：`string`
 
 用于保存邮件合并结果的文件夹的绝对 URL。
 
@@ -212,15 +212,15 @@ editorConfig 部分定义了编辑器界面参数。
 请使用 [onRequestSaveAs](../events.md#onrequestsaveas) 事件代替此参数。
 :::
 
-**示例**: `"https://example.com/url-to-merge-folder"`
+**示例**：`"https://example.com/url-to-merge-folder"`
 
 ## 最近 {#recent}
 
-**类型：** `object[]`
+**类型**：`object[]`
 
 **打开最近...**菜单选项中文档的存在或不存在。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -234,33 +234,33 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### recent.folder
 
-**类型：** `string`
+**类型**：`string`
 
 存储文档的文件夹。如果文档位于根文件夹中，可以为空。
 
-**示例**: `"Example Files"`
+**示例**：`"Example Files"`
 
 ### recent.title
 
-**类型：** `string`
+**类型**：`string`
 
 将在 **Open Recent...** 菜单选项中显示的文档标题。
 
-**示例**: `"exampledocument1.docx"`
+**示例**：`"exampledocument1.docx"`
 
 ### recent.url
 
-**类型：** `string`
+**类型**：`string`
 
 存储它的文档的绝对 URL。
 
-**示例**: `"https://example.com/exampledocument1.docx"`
+**示例**：`"https://example.com/exampledocument1.docx"`
 
 ![最近的文件](/assets/images/editor/recent.png#gh-light-mode-only)![最近的文件](/assets/images/editor/recent.dark.png#gh-dark-mode-only)
 
 ## 地区 {#region}
 
-**类型：** `string` | **默认值：** `"en-US"`
+**类型**：`string` | **默认值**：`"en-US"`
 
 货币、日期和时间的默认显示格式（仅在**电子表格编辑器**中）。使用四个字母（`en-US`、`fr-FR`等）语言代码设置。
 
@@ -322,11 +322,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 </details>
 
-**示例**: `"en-US"`
+**示例**：`"en-US"`
 
 ## saveAsUrl
 
-**类型：** `string`
+**类型**：`string`
 
 用于保存文件的文件夹的绝对 URL。
 
@@ -334,11 +334,11 @@ editorConfig 部分定义了编辑器界面参数。
 请使用 [onRequestSaveAs](../events.md#onrequestsaveas) 事件代替此参数。
 :::
 
-**示例**: `"https://example.com/url-to-save-folder"`
+**示例**：`"https://example.com/url-to-save-folder"`
 
 ## sharingSettingsUrl
 
-**类型：** `string`
+**类型**：`string`
 
 文档共享设置页面的绝对 URL。
 
@@ -346,15 +346,15 @@ editorConfig 部分定义了编辑器界面参数。
 请使用 [onRequestSharingSettings](../events.md#onrequestsharingsettings) 事件代替此参数。
 :::
 
-**示例**: `"https://example.com/url-to-sharing-settings"`
+**示例**：`"https://example.com/url-to-sharing-settings"`
 
 ## 模板 {#templates}
 
-**类型：** `object[]`
+**类型**：`object[]`
 
 **Create New...**菜单选项中模板的存在或不存在。
 
-**示例**:
+**示例**：
 
 ```json
 [
@@ -368,33 +368,33 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### templates.image
 
-**类型：** `string`
+**类型**：`string`
 
 模板图像的绝对 URL。
 
-**示例**: `"https://example.com/exampletemplate1.png"`
+**示例**：`"https://example.com/exampletemplate1.png"`
 
 ### templates.title
 
-**类型：** `string`
+**类型**：`string`
 
 将在 **Create New...** 菜单选项中显示的模板标题。
 
-**示例**: `"exampletemplate1.docx"`
+**示例**：`"exampletemplate1.docx"`
 
 ### templates.url
 
-**类型：** `string`
+**类型**：`string`
 
 将在其中创建并在创建后可用的文档的绝对 URL。
 
-**示例**: `"https://example.com/url-to-create-template1"`
+**示例**：`"https://example.com/url-to-create-template1"`
 
 ![模板](/assets/images/editor/templates.png#gh-light-mode-only)![模板](/assets/images/editor/templates.dark.png#gh-dark-mode-only)
 
 ## 用户 {#user}
 
-**类型：** `object`
+**类型**：`object`
 
 当前查看或编辑文档的用户。
 
@@ -404,7 +404,7 @@ editorConfig 部分定义了编辑器界面参数。
 如果您订阅了 [onRequestUsers](../events.md#onrequestusers) 事件并通过 [setUsers](../../methods.md#setusers) 方法发送头像，初始化配置中的 `user.image` 字段不是必需的。如果头像以 base64 格式发送且初始化配置使用 JWT 签名，不建议指定此参数，因为令牌会太长。
 :::
 
-**示例**:
+**示例**：
 
 ```json
 {
@@ -418,15 +418,15 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### user.group
 
-**类型：** `string`
+**类型**：`string`
 
 用户所属的组（或用逗号分隔的多个组）。可用于 `customization.reviewPermissions`、`permissions.reviewGroups` 或 `permissions.commentGroups`。
 
-**示例**: `"Group1,Group2"`
+**示例**：`"Group1,Group2"`
 
 ### user.id
 
-**类型：** `string`
+**类型**：`string`
 
 用户的标识。长度限制为 128 个符号。此信息被存储并用于：
 
@@ -438,63 +438,63 @@ editorConfig 部分定义了编辑器界面参数。
 建议使用唯一的匿名哈希。不要使用敏感数据，例如真实姓名或电子邮件。
 :::
 
-**示例**: `"78e1e841"`
+**示例**：`"78e1e841"`
 
 ### user.image
 
-**类型：** `string`
+**类型**：`string`
 
 用户头像的地址。
 
-**示例**: `"https://example.com/url-to-user-avatar.png"`
+**示例**：`"https://example.com/url-to-user-avatar.png"`
 
 ### user.name
 
-**类型：** `string`
+**类型**：`string`
 
 用户的全名。长度限制为 128 个符号。
 
-**示例**: `"John Smith"`
+**示例**：`"John Smith"`
 
 ### user.roles
 
-**类型：** `string[]`
+**类型**：`string[]`
 
 分配给用户的 PDF 表单填写角色。数组中的第一个角色用于确定用户可以填写哪些表单字段。
 
-**示例**: `["Role1"]`
+**示例**：`["Role1"]`
 
 ## customization
 
-**类型：** `object`
+**类型**：`object`
 
 customization 部分定义编辑器自定义参数：[标准品牌](customization/customization-standard-branding.md)和[白标](customization/customization-white-label.md)。
 
 ## embedded
 
-**类型：** `object`
+**类型**：`object`
 
 [embedded](embedded.md) 部分定义嵌入模式参数。
 
 ## plugins
 
-**类型：** `object`
+**类型**：`object`
 
 [plugins](plugins.md) 部分定义运行时插件参数。
 
 ## wopi
 
-**类型：** `object`
+**类型**：`object`
 
 WOPI 配置部分。仅在编辑器通过 [WOPI](../../../using-wopi/overview.md) 集成时使用。
 
 ### wopi.FileNameMaxLength
 
-**类型：** `integer` | **默认值：** `250`
+**类型**：`integer` | **默认值**：`250`
 
 WOPI 主机支持的文件名最大长度，不包括文件扩展名。对应 CheckFileInfo 中的 [FileNameMaxLength](../../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) 属性。
 
-**示例**: `20`
+**示例**：`20`
 
 ## 示例
 

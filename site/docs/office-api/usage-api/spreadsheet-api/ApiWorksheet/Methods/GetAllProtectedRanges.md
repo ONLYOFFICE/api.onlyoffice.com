@@ -8,7 +8,7 @@ Returns all protected ranges from the current worksheet.
 expression.GetAllProtectedRanges();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

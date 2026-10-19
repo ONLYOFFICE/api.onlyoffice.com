@@ -8,7 +8,7 @@ Selects the current graphic object.
 expression.Select(isReplace);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ This method doesn't return any data.
 Select a drawing object on the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I programmatically choose which drawings are selected in a spreadsheet?
+// Choose which drawings are selected in a spreadsheet.
 
 // Build a multi-shape selection by adding shapes one at a time or replacing the current selection in a spreadsheet.
 

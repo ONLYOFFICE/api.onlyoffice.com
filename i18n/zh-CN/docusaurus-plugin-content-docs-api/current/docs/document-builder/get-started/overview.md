@@ -28,11 +28,15 @@ sidebar_position: -3
 - **Java**：借助 Java SDK 在企业应用程序中进行文档创建和编辑。
 - **.NET**：开发适用于 Windows、Linux 和 macOS 的跨平台应用程序。
 
+SDK 还可以通过 [Run](../builder-framework/CDocBuilder/Run.md) 方法运行与 CLI 相同的[脚本文件](../using-cli/script-file.md)。
+
 如需安装 ONLYOFFICE Document Builder，请访问[此页面](./installing.md)。
 
 ### Document Builder API
 
 通过向 ONLYOFFICE Docs 发送 HTTP 请求来生成文档。当您已安装 ONLYOFFICE Docs 并希望无需单独安装 Document Builder 即可生成文档时，此 Web 服务方式是理想选择。
+
+请求使用与 CLI 相同的[脚本文件](../using-cli/script-file.md)。
 
 有关详细信息，请参阅 [Document Builder API](../../docs-api/additional-api/document-builder-api.md)。
 

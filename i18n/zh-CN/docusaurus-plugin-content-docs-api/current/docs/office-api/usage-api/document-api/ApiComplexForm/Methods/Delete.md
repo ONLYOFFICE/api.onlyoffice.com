@@ -1,31 +1,59 @@
 # Delete
 
-删除表单及其内容。如果 keepContent 为 true，则不删除内容。
+删除表单及其内容。
+
+如果 keepContent 为 true，则不删除内容。
 
 继承自 [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md)。
 
+## 语法
+
+```javascript
+expression.Delete(keepContent);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| keepContent | 必需 | boolean |  | 指定是否删除内容。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-从文档中删除表单字段。
+从文档中删除复合表单。
 
 ```javascript editor-docx
-// How do I delete a form field in a document?
+// How do I remove a complex form from a document?
 
-// Clean up a document by removing one of several inserted checkbox forms.
+// Eliminate an unwanted form while keeping any copies that were made beforehand.
 
 const doc = Api.GetDocument();
-const checkBoxForm = Api.CreateCheckBoxForm({
-	'key': 'Marital status',
-	'tip': 'Specify your marital status',
-	'placeholder': 'Marital status',
-	'radio': true
-});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(checkBoxForm);
-paragraph.AddText(' Married');
-let copyCheckBoxForm = checkBoxForm.Copy();
-paragraph.AddLineBreak();
-paragraph.AddElement(copyCheckBoxForm);
-paragraph.AddText(' Single');
-checkBoxForm.Delete();
+paragraph.AddText('Original complex form: ');
+
+const complexForm = Api.CreateComplexForm({
+	'key': 'Complex form',
+	'tip': 'Enter data',
+	'placeholder': 'Complex form'
+});
+paragraph.AddElement(complexForm);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('Copy of the form: ');
+doc.Push(paragraph);
+
+const complexFormCopy = complexForm.Copy();
+paragraph.AddElement(complexFormCopy);
+
+complexForm.Delete();
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText('The original complex form has been deleted, but the copy remains.');
+doc.Push(paragraph);
 ```

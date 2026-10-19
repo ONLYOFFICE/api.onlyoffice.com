@@ -4,6 +4,22 @@ Returns a type of the ApiTextPr class.
 
 Inherited from [ApiTextPr.GetClassType](../../ApiTextPr/Methods/GetClassType.md).
 
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"textPr"
+
 ## Example
 
 Read the type name of a text properties object in a document.

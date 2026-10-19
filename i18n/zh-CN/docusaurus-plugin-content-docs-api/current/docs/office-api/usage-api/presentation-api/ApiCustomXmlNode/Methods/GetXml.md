@@ -23,7 +23,7 @@ string
 在演示文稿中将 XML 元素导出为字符串。
 
 ```javascript editor-pptx
-// How do I get the XML markup of a node in a presentation?
+// Get the XML markup of a node in a presentation.
 
 // Retrieve the serialized form of an XML element in a presentation.
 

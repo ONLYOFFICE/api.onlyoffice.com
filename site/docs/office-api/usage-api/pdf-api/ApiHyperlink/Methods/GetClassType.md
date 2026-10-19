@@ -8,7 +8,7 @@ Returns a type of the ApiHyperlink class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 
@@ -37,8 +37,8 @@ page.AddObject(shape);
 
 const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
-paragraph.AddText("ONLYOFFICE Document Builder");
-const hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+paragraph.AddText("Visit ONLYOFFICE for developers");
+const hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com");
 const classType = hyperlink.GetClassType();
 
 paragraph = Api.CreateParagraph();

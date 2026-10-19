@@ -5,16 +5,16 @@ Sets the comment reply author's name.
 ## Syntax
 
 ```javascript
-expression.SetAuthorName(sAuthorName);
+expression.SetAuthorName(authorName);
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sAuthorName | Required | string |  | The comment reply author's name. |
+| authorName | Required | string |  | The comment reply author's name. |
 
 ## Returns
 

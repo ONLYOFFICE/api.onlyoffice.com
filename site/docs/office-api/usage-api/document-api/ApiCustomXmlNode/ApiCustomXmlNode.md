@@ -1,8 +1,10 @@
 # ApiCustomXmlNode
 
-Represents the ApiCustomXmlNode class.
+Class representing a custom XML node.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

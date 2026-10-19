@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetVertFlip](../../ApiDrawing/Methods/SetVertFlip.md)。
 
+## 语法
+
+```javascript
+expression.SetVertFlip(bFlip);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | 必需 | boolean |  | 指定图形是否垂直翻转。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中沿垂直轴将形状上下翻转。

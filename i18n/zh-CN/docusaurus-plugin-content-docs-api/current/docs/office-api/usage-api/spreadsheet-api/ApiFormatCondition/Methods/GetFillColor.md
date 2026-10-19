@@ -1,6 +1,8 @@
 # GetFillColor
 
-返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。
+返回格式条件的背景颜色。
+
+当格式条件的背景颜色为 null 时返回“无填充”。
 
 ## 语法
 
@@ -41,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
+let fillColor = Api.RGB(255, 255, 0);
 condition1.SetFillColor(fillColor);
 
 let currentColor = condition1.GetFillColor();

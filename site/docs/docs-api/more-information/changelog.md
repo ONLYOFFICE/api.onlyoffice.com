@@ -2,6 +2,35 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 10.0
+
+### Breaking changes
+
+- The [document command service](../additional-api/command-service/command-service.md), the [document conversion service](../additional-api/conversion-api/request.md), and the [document builder service](../additional-api/document-builder-api.md) no longer accept the token from the editor configuration. The [token](../additional-api/signature/request/token-in-body.md#incoming-request) of these requests can contain the optional `operation` field (`command`, `converter`, or `docbuilder`), which is required for the new [/converter/from-file](../additional-api/conversion-api/request-from-file.md) and [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) endpoints. These checks are controlled by the new `services.CoAuthoring.token.purposeCheck` [server setting](../get-started/configuration/server-config/server-config.md#token), which is `validate` by default. Set it to `off` to turn them off.
+- WOPI hosts must now be explicitly allowed by an [IP filter](../using-wopi/overview.md#ip-filter) rule. The `*` rule is no longer enough to open a document. Set the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi) to `false` to turn off the requirement for an explicit allow rule.
+- The `runtime.json` file can no longer change the logging configuration except for the log levels.
+- Removed the deprecated `editorConfig.customization.reviewDisplay`, `editorConfig.customization.showReviewChanges`, and `editorConfig.customization.trackChanges` parameters. Use the corresponding fields of the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
+- If the secret, including the secret of a tenant, is empty or not set, ONLYOFFICE Docs now rejects the token instead of verifying or signing it.
+
+### Other changes
+
+- Added the [interactivepreview](../using-wopi/wopi-discovery.md#interactivepreview) action to the WOPI discovery. It opens a read-only preview of the document, for example in the SharePoint details pane.
+- Added opening for [ofd](../usage-api/config/document/document.md#filetype) format. Like `xps`, it is opened for viewing only and can be [converted](../additional-api/conversion-api/conversion-tables.md#document-file-formats) to other formats, but cannot be edited or saved to.
+- Added conversion to [xls](../additional-api/conversion-api/conversion-tables.md#spreadsheet-file-formats) format from all spreadsheet formats.
+- Added the [/converter/from-file](../additional-api/conversion-api/request-from-file.md) and [/docbuilder/from-file](../additional-api/document-builder-api.md#sending-the-script-as-a-file) endpoints that take the file to convert or the script in the request itself in the `multipart/form-data` format instead of downloading it by URL.
+- In the commercial editions, the [Admin Panel](../get-started/configuration/server-config/server-config.md#admin-panel) now starts automatically with the server by default. Community Edition does not include the Admin Panel.
+- The first administrator is now created with the `documentserver-admin` host CLI (`create-admin`, `reset-admin-password`) instead of on a web page with a bootstrap code from the logs. The administrator login is always `admin`.
+- Added the [editorConfig.customization.ai](../usage-api/config/editor/customization/customization-standard-branding.md#ai) section with the `disabled` parameter to turn off the AI features in the editors.
+- Added the `aiSettings.enable` [server setting](../get-started/configuration/server-config/server-config.md#ai-tools-settings) to turn off the AI features. If set to `false`, AI Tools is excluded from `/plugins.json`, and requests to `/ai-proxy` are rejected.
+- Form submissions saved as plain PDF are now [signed](../get-started/configuration/server-config/server-config.md#converter) as well, not only those saved as OFORM PDF.
+- The [tokens](../additional-api/signature/signature.md) are now enabled in `default.json`, and the default secret is the `developer-only-not-a-real-secret` placeholder instead of `secret`. Installations are not affected: they still enable the tokens and generate their own secret during installation. A warning is logged at startup while the placeholder is used.
+- The tokens of the outgoing requests to the `callbackUrl` address and for the file downloads now contain the [operation](../additional-api/signature/request/token-in-header.md#outgoing-requests) field set to `callback` or `download`. ONLYOFFICE Docs rejects such a token if it is sent back in an incoming request.
+- Changes that were not saved before the server shut down are now recovered into [forgotten files](../additional-api/command-service/getforgottenlist.md) during shutdown. The standalone `changes2forgotten` script is removed.
+- Added the `services.CoAuthoring.server.convertServiceEnable` and `services.CoAuthoring.server.docbuilderEnable` [server settings](../get-started/configuration/server-config/server-config.md#server) to turn off the public [conversion](../additional-api/conversion-api/request.md) and [Document Builder](../additional-api/document-builder-api.md) APIs. Both are `true` by default for compatibility.
+- Added the `coauth.connections` [StatsD](../get-started/configuration/server-config/server-config.md#statsd) metric with the `mode` (`edit`, `liveview`, `view`) and `replica` tags. For a sharded cluster, the total is the sum over the replicas.
+- Downloaded files are now verified against the integrity headers sent by the integrator, such as `Content-Digest`, `Repr-Digest`, `x-amz-checksum-*`, or the WOPI SHA256 hash. This is controlled by the `services.CoAuthoring.requestDefaults.checksumVerification` [server setting](../get-started/configuration/server-config/server-config.md#default-request), which is `true` by default.
+- The default `User-Agent` header of the outgoing requests is now `DocumentServer` instead of `Node.js/6.13`. It is set by the `services.CoAuthoring.requestDefaults.headers.User-Agent` [server setting](../get-started/configuration/server-config/server-config.md#default-request).
+
 ## Version 9.4
 
 - Added the [plugin command logging](../usage-api/automation-api/automation-api.md#command-logging) feature for enabling debug output of plugin commands in the browser console.
@@ -14,10 +43,11 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 9.1
 
 - The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.
-- Added the [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) property to the `CheckFileInfo` WOPI operation.
 - The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
 - Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
-- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
+- Added the [sendEvent](../usage-api/automation-api/connector-class.md#sendevent) method to the `Connector` class.
+- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to `txt`.
 - Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
 
 ## Version 9.0
@@ -25,14 +55,14 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) parameter.
 - Changed [editorConfig.customization.macros](../usage-api/config/editor/customization/customization-standard-branding.md#macros): in version 9.0.3, this parameter completely disables running, adding, and editing macros (not just automatic startup).
 - The [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) parameter is now available for the mobile editors.
-- Added the *theme-white* and *theme-night* theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
+- Added the `theme-white` and `theme-night` theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
 - Added opening for [md](../usage-api/config/document/document.md#filetype) format.
 - Added the ability to [preload](../get-started/configuration/preload.md) the editor static resources.
 - Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
 - Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
 - Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
-- Added the *diagram* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
+- Added the `diagram` document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
 
 ## Version 8.3
 
@@ -45,13 +75,15 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
+- Added the [requestRoles](../usage-api/methods.md#requestroles) method.
+- Added the `disconnect` parameter to the [startFilling](../usage-api/methods.md#startfilling) method.
 - Added the [events.onStartFilling](../usage-api/config/events.md#onstartfilling) event.
-- Added the *roles* parameter to the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
+- Added the `roles` parameter to the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
 - Added the [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) event.
 - Added the [editorConfig.customization.startFillingForm](../usage-api/config/editor/customization/customization-standard-branding.md#startfillingform) parameter.
-- Added the *roles* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
+- Added the `roles` field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
 - Added the [editorConfig.customization.mobile.disableForceDesktop](../usage-api/config/editor/customization/customization-standard-branding.md#mobiledisableforcedesktop) parameter.
-- The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../additional-api/command-service/drop.md) command.
+- The document editing will be prohibited for all users editing the document with the specified `key`, if the `users` parameter is not specified for the [drop](../additional-api/command-service/drop.md) command.
 - The [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) parameter is now available for the viewer.
 - Added the [editorConfig.customization.pointerMode](../usage-api/config/editor/customization/customization-standard-branding.md#pointermode) parameter.
@@ -61,62 +93,62 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 8.2
 
 - The [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) parameter is deprecated, please use the [editorConfig.customization.mobile](../usage-api/config/editor/customization/customization-standard-branding.md#mobile) parameter instead.
-- Added the *Password* and *PasswordToOpen* request parameters to the [WOPI conversion API](../using-wopi/conversion-api.md).
+- Added the `Password` and `PasswordToOpen` request parameters to the [WOPI conversion API](../using-wopi/conversion-api.md).
 - The [editorConfig.region](../usage-api/config/editor/editor.md#region) field is now used to define the default measurement units in all editor types.
 - The [editorConfig.location](../usage-api/config/editor/editor.md#location) field is deprecated, please use the [editorConfig.region](../usage-api/config/editor/editor.md#region) field instead.
-- Added the *insert-text* type of document selection to the *c* parameter of the [setRequestedDocument](../usage-api/methods.md#setrequesteddocument) method.
+- Added the `insert-text` type of document selection to the `c` parameter of the [setRequestedDocument](../usage-api/methods.md#setrequesteddocument) method.
 - The `https://documentserver/coauthoring/CommandService.ashx` address of the [command service](../additional-api/command-service/command-service.md) is replaced with `https://documentserver/command`.
-- Added the *users* parameter to the response of the [info](../additional-api/command-service/info.md) command.
-- Added the [tabBackground](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabbackground) field to the *editorConfig.customization.features* parameter.
-- Added the [tabStyle](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabstyle) field to the *editorConfig.customization.features* parameter.
-- Added the [imageLight](../usage-api/config/editor/customization/customization-standard-branding.md#logoimagelight) field to the *editorConfig.customization.logo* parameter.
+- Added the `users` parameter to the response of the [info](../additional-api/command-service/info.md) command.
+- Added the [tabBackground](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabbackground) field to the `editorConfig.customization.features` parameter.
+- Added the [tabStyle](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabstyle) field to the `editorConfig.customization.features` parameter.
+- Added the [imageLight](../usage-api/config/editor/customization/customization-standard-branding.md#logoimagelight) field to the `editorConfig.customization.logo` parameter.
 - The [editorConfig.customization.toolbarNoTabs](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarnotabs) field is deprecated, please use the [editorConfig.customization.features.tabStyle](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabstyle) and [editorConfig.customization.features.tabBackground](../usage-api/config/editor/customization/customization-standard-branding.md#featurestabbackground) fields instead.
 
 ## Version 8.1
 
 - Added the [editorConfig.plugins.options](../usage-api/config/editor/plugins.md#options) parameter.
-- Added the possibility to [insert](../usage-api/methods.md#insertimage) the *tif* / *tiff* image type into the file.
+- Added the possibility to [insert](../usage-api/methods.md#insertimage) the `tif` / `tiff` image type into the file.
 - Added the [startFilling](../usage-api/methods.md#startfilling) method.
 - Added the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
-- Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
+- Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the `form` element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
 - Added the [events.onSaveDocument](../usage-api/config/events.md#onsavedocument) event.
-- Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
+- Added the `roles` field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
 - Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
-- Added the [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) methods to the *Automation API*.
+- Added the [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) methods to the Automation API.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.
-- Added the *visible* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
+- Added the `visible` field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
 - Added the [formsubmit](../using-wopi/wopi-discovery.md#formsubmit) action to the WOPI discovery.
 - The [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field is deprecated, please use the [editorConfig.customization.close](../usage-api/config/editor/customization/customization-standard-branding.md#close) field instead.
 - Added the [Save Copy As](../using-wopi/wopi-rest-api/putrelativefile.md#save-copy-as) functionality to WOPI.
-- Change the default value of the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) parameter to *true*.
+- Change the default value of the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) parameter to `true`.
 
 ## Version 8.0
 
 - Added the [document.isForm](../usage-api/config/document/document.md#isform) parameter.
 - Added the [WOPISrc](../using-wopi/key-concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../additional-api/conversion-api/request.md#watermark) field to the conversion request.
-- Added the *pdf* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
-- Added the [formsdataurl](../usage-api/callback-handler.md#formsdataurl) parameter to the *Callback handler*.
-- Added the *data.id* parameter to the [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
-- Added the *users.image* field to the [setUsers](../usage-api/methods.md#setusers) method.
-- Added the *info* operation type to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
-- Added the *image* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user) parameter.
+- Added the `pdf` document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
+- Added the [formsdataurl](../usage-api/callback-handler.md#formsdataurl) parameter to the callback handler.
+- Added the `data.id` parameter to the [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
+- Added the `users.image` field to the [setUsers](../usage-api/methods.md#setusers) method.
+- Added the `info` operation type to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
+- Added the `image` field to the [editorConfig.user](../usage-api/config/editor/editor.md#user) parameter.
 - Added the [editorConfig.customization.mobileForceView](../usage-api/config/editor/customization/customization-standard-branding.md#mobileforceview) parameter.
-- Added the *link* field to the *data* object which is sent to the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
+- Added the `link` field to the `data` object which is sent to the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 
 ## Version 7.5
 
-- Added the **3** type for the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) parameter of the callback handler.
+- Added the `3` type for the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) parameter of the callback handler.
 - Added the [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter.
 - The [events.onRequestMailMergeRecipients](../usage-api/config/events.md#onrequestmailmergerecipients) event is deprecated, please use the [events.onRequestSelectSpreadsheet](../usage-api/config/events.md#onrequestselectspreadsheet) event instead.
 - The [setMailMergeRecipients](../usage-api/methods.md#setmailmergerecipients) method is deprecated, please use the [setRequestedSpreadsheet](../usage-api/methods.md#setrequestedspreadsheet) method instead.
 - Added the [setReferenceSource](../usage-api/methods.md#setreferencesource) method.
 - Added the [events.onRequestReferenceSource](../usage-api/config/events.md#onrequestreferencesource) event.
 - Added the [-9 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
-- Added the *key* field to the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
+- Added the `key` field to the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - The [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) event is deprecated, please use the [events.onRequestSelectDocument](../usage-api/config/events.md#onrequestselectdocument) event instead.
 - The [setRevisedFile](../usage-api/methods.md#setrevisedfile) method is deprecated, please use the [setRequestedDocument](../usage-api/methods.md#setrequesteddocument) method instead.
 - Added the [events.onRequestOpen](../usage-api/config/events.md#onrequestopen) event.
@@ -126,8 +158,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the [mobileView](../using-wopi/wopi-discovery.md#mobileView) and [mobileEdit](../using-wopi/wopi-discovery.md#mobileEdit) actions to the WOPI discovery.
 - Added opening for [dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt](../usage-api/config/config.md#documenttype) formats.
-- Added the *users.id* field to the [setUsers](../usage-api/methods.md#setusers) method.
-- Added the *c* parameter to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
+- Added the `users.id` field to the [setUsers](../usage-api/methods.md#setusers) method.
+- Added the `c` parameter to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
 
 ## Version 7.3
 
@@ -135,7 +167,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
-- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) property to the `CheckFileInfo` WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
 - Added the [convert](../using-wopi/wopi-discovery.md#convert) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.
@@ -145,8 +177,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [title](../usage-api/config/config.md#title) parameter.
 - Added the [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) parameter.
 - Added the [Connector](../usage-api/automation-api/connector-class.md) class to interact with documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
-- Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
-- Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
+- Added the `theme-contrast-dark` theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
+- Added the `phone` field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
@@ -154,8 +186,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.1
 
-- The *services.CoAuthoring.token.inbox.inBody* and *services.CoAuthoring.token.outbox.inBody* parameters for enabling [token in body](../additional-api/signature/request/token-in-body.md) are deprecated.
-- Added the *X-LOOL-WOPI-IsModifiedByUser*, *X-LOOL-WOPI-IsAutosave* and *X-LOOL-WOPI-IsExitSave* request headers to the [PutFile](../using-wopi/wopi-rest-api/putfile.md) WOPI operation to distinguish between the type of document saving.
+- The `services.CoAuthoring.token.inbox.inBody` and `services.CoAuthoring.token.outbox.inBody` parameters for enabling [token in body](../additional-api/signature/request/token-in-body.md) are deprecated.
+- Added the `X-LOOL-WOPI-IsModifiedByUser`, `X-LOOL-WOPI-IsAutosave` and `X-LOOL-WOPI-IsExitSave` request headers to the [PutFile](../using-wopi/wopi-rest-api/putfile.md) WOPI operation to distinguish between the type of document saving.
 - The [editorConfig.customization.chat](../usage-api/config/editor/customization/customization-standard-branding.md#chat) parameter is deprecated, please use the [document.permissions.chat](../usage-api/config/document/permissions.md#chat) parameter instead.
 - Added conversion from [dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xlsb, xml](../additional-api/conversion-api/conversion-tables.md) format.
 - Added opening for [xlsb](../usage-api/config/config.md#documenttype) format.
@@ -164,28 +196,28 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter section.
 - Added the [documentLayout](../additional-api/conversion-api/request.md#documentLayout) parameter to the conversion request.
 - Added the [documentRenderer](../additional-api/conversion-api/request.md#documentRenderer) parameter to the conversion request.
-- Added conversion from [pdf/xps/oxps](../additional-api/conversion-api/conversion-tables.md#document-file-formats) formats to *docx*.
+- Added conversion from [pdf/xps/oxps](../additional-api/conversion-api/conversion-tables.md#document-file-formats) formats to `docx`.
 - Added the [document.permissions.userInfoGroups](../usage-api/config/document/permissions.md#userinfogroups) parameter.
-- Added conversion from [djvu](../additional-api/conversion-api/conversion-tables.md#document-file-formats) format to *pdf*.
+- Added conversion from [djvu](../additional-api/conversion-api/conversion-tables.md#document-file-formats) format to `pdf`.
 - Added conversion to [ppsm, ppsx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) formats.
 
 ## Version 7.0
 
 - The [callbackUrl](../usage-api/callback-handler.md) is used from the last tab of the same user.
-- Added the *logoDark* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
-- Added the *imageDark* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
-- The *imageEmbedded* field of the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is deprecated, please use the *image* field instead.
-- Added a signature to the request for file changes specified with the *changesUrl* parameter of the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
+- Added the `logoDark` field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
+- Added the `imageDark` field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
+- The `imageEmbedded` field of the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is deprecated, please use the `image` field instead.
+- Added a signature to the request for file changes specified with the `changesUrl` parameter of the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
 - Added the [document.permissions.protect](../usage-api/config/document/permissions.md#protect) field.
-- Added the *fileType* parameter to the [onDownloadAs](../usage-api/config/events.md#ondownloadas), [onRequestRestore](../usage-api/config/events.md#onrequestrestore) and [onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) events.
+- Added the `fileType` parameter to the [onDownloadAs](../usage-api/config/events.md#ondownloadas), [onRequestRestore](../usage-api/config/events.md#onrequestrestore) and [onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) events.
 - Added the possibility to insert several images via the [insertImage](../usage-api/methods.md#insertimage) method.
 - The [assemblyFormatAsOrigin](../get-started/how-it-works/saving-file.md#saving-in-original-format) server setting is enabled by default.
-- Added the *ooxml* and *odf* values to the [outputtype](../additional-api/conversion-api/request.md#outputtype) parameter of the conversion request.
-- Added the *fileType* and *previous.fileType* parameters to the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
-- Added the [filetype](../usage-api/callback-handler.md#filetype) parameter to the *Callback handler*.
+- Added the `ooxml` and `odf` values to the [outputtype](../additional-api/conversion-api/request.md#outputtype) parameter of the conversion request.
+- Added the `fileType` and `previous.fileType` parameters to the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
+- Added the [filetype](../usage-api/callback-handler.md#filetype) parameter to the callback handler.
 - Added the [fileType](../additional-api/conversion-api/response.md#fileType) field to the conversion response.
 - Added conversion to [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) formats.
-- The [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
+- The `editorConfig.customization.reviewDisplay`, `editorConfig.customization.showReviewChanges`, `editorConfig.customization.trackChanges` parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
@@ -196,7 +228,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added opening for [oxps](../usage-api/config/config.md#documenttype) format.
 - Added support for [WOPI protocol](../using-wopi/overview.md).
 - Added the [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) section.
-- Added the *simple* value to the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) parameter.
+- Added the `simple` value to the `editorConfig.customization.reviewDisplay` parameter.
 - Added the [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
 - Added the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) for the presentation files.
@@ -213,7 +245,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.anonymous](../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) field.
 - The `editorConfig.customization.commentAuthorOnly` field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) fields.
 - Added the [setFavorite](../usage-api/methods.md#setfavorite) method.
-- Added the *data.favorite* parameter to the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
+- Added the `data.favorite` parameter to the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
 - Added the [document.info.favorite](../usage-api/config/document/info.md#favorite) field.
 - Added the [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) field.
 - Added conversion to [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#document-file-formats) formats.
@@ -223,16 +255,16 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 6.2
 
-- Added a new [actions.type](../usage-api/callback-handler.md#actions) field value (*actions.type = 2*).
-- Added the [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) field.
+- Added a new [actions.type](../usage-api/callback-handler.md#actions) field value (`actions.type = 2`).
+- Added the `editorConfig.customization.trackChanges` field.
 - Added the [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) field.
-- The *callbackUrl* for *status* **6** is selected based on [forcesavetype](../usage-api/callback-handler.md).
+- The `callbackUrl` for `status` `6` is selected based on [forcesavetype](../usage-api/callback-handler.md).
 - Added opening for [fb2](../usage-api/config/config.md#documenttype) format.
 
 ## Version 6.1
 
-- The *text*, *spreadsheet* and *presentation* values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use *word*, *cell* and *slide* values instead.
-- Added the *group* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
+- The `text`, `spreadsheet` and `presentation` values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use `word`, `cell` and `slide` values instead.
+- Added the `group` field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
 - Added the [editorConfig.customization.reviewPermissions](../usage-api/config/editor/customization/customization-standard-branding.md#reviewpermissions) parameter.
 - Added conversion from [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) format.
 - Removed the deprecated `document.permissions.changeHistory` parameter.
@@ -266,7 +298,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added [input error](../additional-api/conversion-api/error-codes.md) for conversion.
 - The [events.onRequestSendNotify](../usage-api/config/events.md#onrequestsendnotify) event and the [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event can be set independently.
 - Added the [editorConfig.customization.mentionShare](../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) field.
-- The *callbackUrl* is selected based on [status](../usage-api/callback-handler.md).
+- The `callbackUrl` is selected based on [status](../usage-api/callback-handler.md).
 - Added the [editorConfig.customization.compatibleFeatures](../usage-api/config/editor/customization/customization-standard-branding.md#compatiblefeatures) field.
 
 ## Version 5.4
@@ -289,7 +321,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.3
 
 - Added [conversion](../additional-api/conversion-api/conversion-tables.md) to the OOXML (dotx, xltx, potx) and ODF (ott, ots, otp) templates.
-- Added the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) field.
+- Added the `editorConfig.customization.reviewDisplay` field.
 - The `editorConfig.customization.commentAuthorOnly` field is now used to restrict comment deletion as well.
 - Added the [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) field.
 - Added the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) field.
@@ -306,11 +338,11 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [document.permissions.fillForms](../usage-api/config/document/permissions.md#fillforms) field.
 - Added the [editorConfig.customization.help](../usage-api/config/editor/customization/customization-standard-branding.md#help) field.
 - Added the possibility to make the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) not clickable.
-- Added for the [aspect](../additional-api/conversion-api/request.md#thumbnail.aspect) field value *2* for the conversion.
+- Added for the [aspect](../additional-api/conversion-api/request.md#thumbnail.aspect) field value `2` for the conversion.
 
 ## Version 5.1
 
-- Added the *format* parameter to the [downloadAs](../usage-api/methods.md#downloadas) method.
+- Added the `format` parameter to the [downloadAs](../usage-api/methods.md#downloadas) method.
 - Added the [document.permissions.modifyContentControl](../usage-api/config/document/permissions.md#modifycontentcontrol) field.
 - Added conversion for [OpenDocument Template](../additional-api/conversion-api/conversion-tables.md) formats.
 - Added the [events.onRequestClose](../usage-api/config/events.md#onrequestclose) event.
@@ -337,7 +369,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) event.
 - Added the [meta](../additional-api/command-service/meta.md) command.
 - Added the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
-- Changed the use of *callbackUrl* from the [last user](../usage-api/callback-handler.md) who joined the co-editing.
+- Changed the use of `callbackUrl` from the [last user](../usage-api/callback-handler.md) who joined the co-editing.
 - Added the [editorConfig.location](../usage-api/config/editor/editor.md#location) field.
 - Added the [editorConfig.embedded.autostart](../usage-api/config/editor/embedded.md#autostart) field.
 
@@ -347,7 +379,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Removed the `editorConfig.plugins.url` field from the plugin connection pattern.
 - Added the `editorConfig.customization.commentAuthorOnly` field.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
-- Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.
+- Added the `editorConfig.customization.showReviewChanges` field.
 - Added the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) field in the callback handler request when force saving the file.
 - Added the [JSON format for response](../additional-api/conversion-api/response.md) from document conversion service.
 

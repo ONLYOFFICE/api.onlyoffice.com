@@ -1,6 +1,10 @@
 # ChangeChartType
 
-Tries to change the series type. Returns true if successful.
+Tries to change the series type.
+
+Returns true if successful.
+
+Throws: Error if the chart type is not supported.
 
 ## Syntax
 
@@ -8,7 +12,7 @@ Tries to change the series type. Returns true if successful.
 expression.ChangeChartType(sType);
 ```
 
-`expression` - A variable that represents a [ApiChartSeries](../ApiChartSeries.md) class.
+`expression` - A variable that represents an [ApiChartSeries](../ApiChartSeries.md) class.
 
 ## Parameters
 
@@ -41,8 +45,8 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "comboBarLine", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "ComboColumnClusteredLine", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -50,7 +54,7 @@ chart.SetSeriesFill(fill, 1, false);
 let series = chart.GetSeries(0);
 let seriesType = series.GetChartType();
 worksheet.GetRange("F1").SetValue("Old Series Type = " + seriesType);
-series.ChangeChartType("area");
+series.ChangeChartType("Area");
 seriesType = series.GetChartType();
 worksheet.GetRange("F2").SetValue("New Series Type = " + seriesType);
 ```

@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.AddBreak](../../ApiDrawing/Methods/AddBreak.md)。
 
+## 语法
+
+```javascript
+expression.AddBreak(breakType, position);
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| breakType | 必需 | number |  | 分隔符类型：分页符（0）或换行符（1）。 |
+| position | 必需 | string |  | 将插入分页符或换行符的位置（当前绘图的“before”或“after”）。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中绘图之前插入分页符或换行符。

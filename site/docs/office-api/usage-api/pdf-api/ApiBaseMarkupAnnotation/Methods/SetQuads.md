@@ -8,7 +8,7 @@ Sets quads to current markup annotation.
 expression.SetQuads(quads);
 ```
 
-`expression` - A variable that represents a [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@ Returns the drawing parent slide layout.
 
 Inherited from [ApiDrawing.GetParentLayout](../../ApiDrawing/Methods/GetParentLayout.md).
 
+## Syntax
+
+```javascript
+expression.GetParentLayout();
+```
+
+`expression` - A variable that represents an [ApiSmartArt](../ApiSmartArt.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiLayout](../../ApiLayout/ApiLayout.md) \| null
+
 ## Example
 
 Find the parent layout that contains a shape in a presentation.

@@ -8,7 +8,7 @@ Returns the visibility of the pivot item.
 expression.GetVisible();
 ```
 
-`expression` - A variable that represents a [ApiPivotItem](../ApiPivotItem.md) class.
+`expression` - A variable that represents an [ApiPivotItem](../ApiPivotItem.md) class.
 
 ## Parameters
 

@@ -4,14 +4,30 @@
 
 继承自 [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md)。
 
+## 语法
+
+```javascript
+expression.GetOutLine();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStroke](../../ApiStroke/ApiStroke.md)
+
 ## 示例
 
-检查 PDF 中的文本是否有轮廓边框效果。
+在 PDF 中检查文本是否应用了轮廓边框。
 
 ```javascript editor-pdf
-// How do I determine if text has an outline applied in a PDF?
+// How do I determine if text has an outline effect in a PDF?
 
-// Retrieve the outline properties from text formatting in a PDF.
+// Verify the outline property of text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,13 +44,12 @@ run.AddText("This is just a sample text. ");
 run.AddText("The text properties are changed and the style is added to the paragraph. ");
 run.AddLineBreak();
 paragraph.AddElement(run);
-const textPr = run.GetTextPr();
 stroke = Api.CreateStroke(0.2 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
-textPr.SetOutLine(stroke);
+run.SetOutLine(stroke);
 page.AddObject(shape);
 
 paragraph = Api.CreateParagraph();
-stroke = textPr.GetOutLine();
+stroke = run.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);

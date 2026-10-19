@@ -4,14 +4,32 @@ Sets the paragraph first line indentation.
 
 Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md).
 
+## Syntax
+
+```javascript
+expression.SetIndFirstLine(nValue);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph first line indentation value measured in twentieths of a point (1/1440 of an inch). |
+
+## Returns
+
+boolean
+
 ## Example
 
-Indent the first line of a paragraph in a presentation.
+Set indentation for the first line of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I set the first line indentation for a paragraph in a presentation?
+// How do I indent the first line of a paragraph in a presentation?
 
-// Apply a specific indentation distance to just the first line of text in a presentation.
+// Apply a specific indentation distance to the first line of text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -25,13 +43,17 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetIndFirstLine(1440);
-paragraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+let paragraph = docContent.GetElement(0);
+paragraph.AddText("This is a paragraph with the indent of 1 inch set to the first line. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndFirstLine(1440);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph without any indent set to the first line. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+docContent.Push(paragraph);
 slide.AddObject(shape);
 ```

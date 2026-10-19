@@ -1,8 +1,10 @@
 # RemoveAllElements
 
 Removes all the elements from the current document or from the current document element.
-💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add
-content to this paragraph, use the [ApiDocumentContent#GetElement](../../ApiDocumentContent/Methods/GetElement.md) method.
+
+:::note
+When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../../ApiDocumentContent/Methods/GetElement.md) method.
+:::
 
 ## Syntax
 
@@ -10,7 +12,7 @@ content to this paragraph, use the [ApiDocumentContent#GetElement](../../ApiDocu
 expression.RemoveAllElements();
 ```
 
-`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+`expression` - A variable that represents an [ApiDocumentContent](../ApiDocumentContent.md) class.
 
 ## Parameters
 

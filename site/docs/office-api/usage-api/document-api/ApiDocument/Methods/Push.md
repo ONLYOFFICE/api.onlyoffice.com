@@ -4,25 +4,39 @@ Pushes a paragraph or a table to actually add it to the document.
 
 Inherited from [ApiDocumentContent.Push](../../ApiDocumentContent/Methods/Push.md).
 
+## Syntax
+
+```javascript
+expression.Push(oElement);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The element type which will be pushed to the document. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Append a new paragraph to the content of a shape in a document.
+Append new paragraphs to the end of a document.
 
 ```javascript editor-docx
-// How do I add a paragraph at the end of a shape's content in a document?
+// How do I add multiple paragraphs one after another in a document?
 
-// Clear a shape's existing content and place a fresh paragraph inside it to replace all prior text.
+// Build a sequence of numbered paragraphs by pushing each one onto the document in a document.
 
-let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
-paragraph.AddDrawing(drawing);
-let docContent = drawing.GetDocContent();
-docContent.RemoveAllElements();
-paragraph = Api.CreateParagraph();
-paragraph.SetJc("left");
-paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
-docContent.Push(paragraph);
+const doc = Api.GetDocument();
+
+const paragraphCount = 5;
+for (let i = 0; i < paragraphCount; i++) {
+	const newParagraph = Api.CreateParagraph();
+	newParagraph.AddText("This is " + (i + 1) + " paragraph.");
+	doc.Push(newParagraph);
+}
 ```

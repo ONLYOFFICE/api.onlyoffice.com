@@ -116,7 +116,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/backup/getbackuphistory](/docspace/api-backend/usage-api/get-backup-history) with an optional query parameter:
+A GET request is sent to [/api/2.0/backup/getbackuphistory](/docspace/api-backend/usage-api/backup/get-backup-history) with an optional query parameter:
 
 - `Dump` — boolean flag to return only backups with (true) or without (false) database dump.
 

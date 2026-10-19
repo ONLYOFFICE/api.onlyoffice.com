@@ -1,23 +1,26 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run:
+Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
+
 - **"baseline"** - the characters in the current text run will be aligned by the default text baseline.
 - **"subscript"** - the characters in the current text run will be aligned below the default text baseline.
 - **"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
+Inherited from [ApiTextPr.SetVertAlign](../../ApiTextPr/Methods/SetVertAlign.md).
+
 ## Syntax
 
 ```javascript
-expression.SetVertAlign(sType);
+expression.SetVertAlign(type);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
+| type | Required | "baseline" \| "subscript" \| "superscript" \| null |  | The vertical alignment type applied to the text contents. Pass *null* to remove the vertical alignment. |
 
 ## Returns
 

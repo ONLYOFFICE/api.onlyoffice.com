@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/GetBorderEffectIntensity.md)。
 
+## 语法
+
+```javascript
+expression.GetBorderEffectIntensity();
+```
+
+`expression` - 表示 [ApiSquareAnnotation](../ApiSquareAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 检索 PDF 中注释上边框效果的强度级别。

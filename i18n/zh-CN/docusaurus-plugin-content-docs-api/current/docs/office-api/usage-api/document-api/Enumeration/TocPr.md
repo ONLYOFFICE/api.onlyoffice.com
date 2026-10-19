@@ -22,7 +22,7 @@ Object
 向文档添加具有指定属性的目录。
 
 ```javascript editor-docx
-// How to create a table of contents properties.
+// How do I create table of contents properties?
 
 // Add a table of contents from the properties.
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetShd(type, color);
+expression.SetShd(shd);
 ```
 
 `expression` - 表示 [ApiTextPr](../ApiTextPr.md) 类的变量。
@@ -14,8 +14,7 @@ expression.SetShd(type, color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 应用于当前文本块内容的底纹类型。 |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于填充底纹的颜色或图案。 |
+| shd | 必需 | [ApiShd](../../ApiShd/ApiShd.md) |  | 使用 Api.CreateShd 方法创建的底纹。 |
 
 ## 返回值
 
@@ -32,7 +31,7 @@ expression.SetShd(type, color);
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
-textPr.SetShd('clear', Api.HexColor('#ff6f3d'));
+textPr.SetShd(Api.CreateShd('clear', Api.HexColor('#ff6f3d')));
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the shading set to orange.");
 ```

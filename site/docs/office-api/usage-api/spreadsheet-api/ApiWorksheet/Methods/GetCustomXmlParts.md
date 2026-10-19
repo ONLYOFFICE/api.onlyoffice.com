@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the current sheet.
+
 This manager allows manipulation and access to custom XML parts within the current sheet.
 
 ## Syntax
@@ -9,7 +10,7 @@ This manager allows manipulation and access to custom XML parts within the curre
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -24,7 +25,7 @@ This method doesn't have any parameters.
 Access the custom XML storage on a worksheet to add and look up XML parts in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I store and retrieve custom XML data on a sheet in a spreadsheet?
+// Store and retrieve custom XML data on a sheet in a spreadsheet.
 
 // Manage structured XML content attached to a worksheet by adding a part and fetching it by ID in a spreadsheet.
 

@@ -8,7 +8,7 @@ Sets the setting which specifies whether a pivot table field is compacted.
 expression.SetLayoutCompactRow(compact);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

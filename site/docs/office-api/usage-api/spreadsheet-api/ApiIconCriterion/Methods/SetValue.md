@@ -8,7 +8,7 @@ Sets the threshold value for the icon criterion.
 expression.SetValue(value);
 ```
 
-`expression` - A variable that represents a [ApiIconCriterion](../ApiIconCriterion.md) class.
+`expression` - A variable that represents an [ApiIconCriterion](../ApiIconCriterion.md) class.
 
 ## Parameters
 

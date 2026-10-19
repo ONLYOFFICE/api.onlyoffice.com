@@ -8,7 +8,7 @@ Sets a value that represents the label text for the pivot field.
 expression.SetCaption(caption);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

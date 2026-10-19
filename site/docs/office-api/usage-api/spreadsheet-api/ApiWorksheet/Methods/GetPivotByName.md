@@ -8,7 +8,7 @@ Returns a pivot table by its name from the current worksheet, or null if it does
 expression.GetPivotByName(name);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ expression.GetPivotByName(name);
 
 ## Example
 
-Look up an existing pivot table by name and add fields to it in a spreadsheet.
+Find a pivot table by name on the active sheet and add fields to it in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I access a pivot table by its name in a spreadsheet?

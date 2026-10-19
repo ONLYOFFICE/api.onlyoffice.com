@@ -8,7 +8,7 @@ Returns the depreciation of an asset for any specified period, including partial
 expression.VDB(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -28,7 +28,7 @@ number
 
 ## Example
 
-Calculate asset depreciation using the double-declining balance method in a spreadsheet.
+Calculate asset depreciation for a specified period using the variable declining balance method in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I calculate asset depreciation over a specific time period in a spreadsheet?

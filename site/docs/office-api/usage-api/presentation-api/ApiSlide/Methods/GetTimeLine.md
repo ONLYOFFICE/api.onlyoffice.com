@@ -8,7 +8,7 @@ Returns the animation timeline for the slide.
 expression.GetTimeLine();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 
@@ -33,7 +33,7 @@ const slide = presentation.GetSlideByIndex(0);
 const shape = Api.CreateShape(
 	'rect',
 	200 * 36000, 100 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107)),
+	Api.CreateSolidFill(Api.RGB(61, 74, 107)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 shape.SetPosition(100 * 36000, 100 * 36000);
@@ -46,7 +46,7 @@ const effect = mainSequence.AddEffect(shape, 'entranceFade', 'onclick');
 const infoShape = Api.CreateShape(
 	'rect',
 	150 * 36000, 40 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(200, 200, 200)),
+	Api.CreateSolidFill(Api.RGB(200, 200, 200)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 infoShape.SetPosition(20 * 36000, 10 * 36000);

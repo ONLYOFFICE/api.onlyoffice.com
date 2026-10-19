@@ -14,10 +14,10 @@ expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) |  | 左内边距。 |
-| nTop | 必需 | [EMU](../../Enumeration/EMU.md) |  | 上内边距。 |
-| nRight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 右内边距。 |
-| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) |  | 下内边距。 |
+| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 左内边距。 |
+| nTop | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 上内边距。 |
+| nRight | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 右内边距。 |
+| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | 下内边距。 |
 
 ## 返回值
 
@@ -34,7 +34,7 @@ boolean
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 200 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

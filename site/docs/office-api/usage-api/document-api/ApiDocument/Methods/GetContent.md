@@ -4,40 +4,52 @@ Returns an array of document elements from the current ApiDocumentContent object
 
 Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md).
 
+## Syntax
+
+```javascript
+expression.GetContent(bGetCopies);
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bGetCopies | Required | boolean |  | Specifies if the copies of the document elements will be returned or not. |
+
+## Returns
+
+[DocumentElement](../../Enumeration/DocumentElement.md)[]
+
 ## Example
 
-Retrieve all elements from a document content container in a document.
+Get all top-level elements of a document as an array in a document.
 
 ```javascript editor-docx
-// How do I get an array of all elements stored in a document content in a document?
+// How do I access every element in a document by its position in a document?
 
-// Access individual paragraphs, tables, and controls by their position after listing all content elements.
+// Style individual paragraphs, tables, and content controls by iterating the element array in a document.
 
 let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
-paragraph.AddDrawing(shape);
-let docContent = shape.GetDocContent();
-paragraph = Api.CreateParagraph();
+let paragraph = Api.CreateParagraph();
 paragraph.AddText("This paragraph is the first document element.");
-docContent.AddElement(0, paragraph);
+doc.AddElement(0, paragraph);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(2, 2);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
-docContent.AddElement(1, table);
+doc.AddElement(1, table);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This table is the second document element.");
-let cell = table.GetCell(0, 0);
+let cell = table.GetCell(0,0);
 table.AddElement(cell, 0, paragraph);
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This block text content control is the third document element.");
-docContent.AddElement(2, blockLvlSdt);
-let docElements = docContent.GetContent(false);
+doc.AddElement(2, blockLvlSdt);
+let docElements = doc.GetContent(false);
 docElements[0].SetBold(true);
-docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
+docElements[1].SetBackgroundColor(Api.HexColor('#FF6F3D'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```

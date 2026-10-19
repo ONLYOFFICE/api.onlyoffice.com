@@ -1,6 +1,8 @@
 # GetImageDataFromSelection
 
-Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.
+Returns the image data from the first of the selected drawings.
+
+If there are no drawings selected, the method returns a white rectangle.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the image data from the first of the selected drawings. If there are no 
 expression.GetImageDataFromSelection();
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../spreadsheet-api.md) class.
 
 ## Parameters
 
@@ -16,7 +18,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ImageData](../Enumeration/ImageData.md)
+[ImageData](../Enumeration/ImageData.md) \| null \| undefined
 
 ## Example
 

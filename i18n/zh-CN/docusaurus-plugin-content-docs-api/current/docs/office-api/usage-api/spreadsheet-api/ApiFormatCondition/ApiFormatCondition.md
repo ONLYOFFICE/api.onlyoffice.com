@@ -1,6 +1,6 @@
 # ApiFormatCondition
 
-表示 ApiFormatCondition 类。
+表示单个格式条件的类。
 
 ## 属性
 
@@ -10,6 +10,7 @@
 | AppliesTo | [ApiRange](../ApiRange/ApiRange.md) | 返回此条件应用的区域。 |
 | DateOperator | [XlTimePeriods](../Enumeration/XlTimePeriods.md) | 返回或设置时间段条件的日期运算符。 |
 | FillColor | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回或设置格式条件的背景颜色。 |
+| Font | [ApiFont](../ApiFont/ApiFont.md) \| null | 返回格式条件所应用的字体。 |
 | Formula1 | string | 返回或设置格式条件使用的第一个公式。 |
 | Formula2 | string | 返回或设置格式条件使用的第二个公式。 |
 | NumberFormat | string | 返回或设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。 |
@@ -28,12 +29,14 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | 无 | 删除当前格式条件。 |
 | [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回当前条件格式规则应用的单元格区域。 |
 | [GetDateOperator](./Methods/GetDateOperator.md) | [XlTimePeriods](../Enumeration/XlTimePeriods.md) \| null | 返回时间段条件的日期运算符。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回“无填充”。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回格式条件的背景颜色。 |
 | [GetFont](./Methods/GetFont.md) | [ApiFont](../ApiFont/ApiFont.md) \| null | 返回当前格式条件应用的字体。 |
 | [GetFormula1](./Methods/GetFormula1.md) | string | 返回当前条件格式规则使用的第一个公式。 |
 | [GetFormula2](./Methods/GetFormula2.md) | string | 返回当前条件格式规则使用的第二个公式。 |
@@ -43,6 +46,7 @@
 | [GetParent](./Methods/GetParent.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回当前格式条件的父区域对象。 |
 | [GetPriority](./Methods/GetPriority.md) | number | 返回条件格式规则的优先级值。 |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | 返回条件格式规则的作用域类型。 |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | 返回如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。 |
 | [GetText](./Methods/GetText.md) | string | 返回基于文本的条件格式规则中使用的文本值。 |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | 返回基于文本的条件格式规则的文本运算符。 |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | 返回格式条件类型。 |
@@ -56,5 +60,6 @@
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | 无 | 设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。 |
 | [SetPriority](./Methods/SetPriority.md) | 无 | 设置条件格式规则的优先级值。 |
 | [SetScopeType](./Methods/SetScopeType.md) | 无 | 设置条件格式规则的作用域类型。 |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | 无 | 设置如果此规则计算结果为 true，编辑器是否停止计算其他格式规则。 |
 | [SetText](./Methods/SetText.md) | 无 | 设置基于文本的条件格式规则中使用的文本值。 |
 | [SetTextOperator](./Methods/SetTextOperator.md) | 无 | 设置基于文本的条件格式规则的文本运算符。 |

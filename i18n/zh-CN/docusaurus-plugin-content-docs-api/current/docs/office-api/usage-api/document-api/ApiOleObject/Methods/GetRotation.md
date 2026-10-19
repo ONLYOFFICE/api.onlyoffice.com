@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md)。
 
+## 语法
+
+```javascript
+expression.GetRotation();
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
+
 ## 示例
 
 读取文档中绘图对象的旋转角度。

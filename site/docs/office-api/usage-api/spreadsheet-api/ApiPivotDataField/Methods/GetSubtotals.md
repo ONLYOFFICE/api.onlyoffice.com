@@ -4,6 +4,22 @@ Returns an object that represents all subtotals.
 
 Inherited from [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md).
 
+## Syntax
+
+```javascript
+expression.GetSubtotals();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
+
 ## Example
 
 Retrieve which subtotal calculations are active for a pivot field in a spreadsheet.

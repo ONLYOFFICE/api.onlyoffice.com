@@ -405,7 +405,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
 
 ## Step 2: Check last login via audit logs
 
-Then it sends a GET request to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/get-login-events-by-filter) with:
+Then it sends a GET request to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/security/login-history/get-login-events-by-filter) with:
 
 - `userId`: contractor user ID in DocSpace
 - `action=0`: login events only
@@ -502,7 +502,7 @@ The script parses the returned events and picks the most recent login timestamp.
 ## Step 3: Disable inactive users
 
 If the last login is missing or older than `INACTIVITY_DAYS`, the script adds the user to the disable list.
-Then it sends a PUT request to [/api/2.0/people/status/:status](/docspace/api-backend/usage-api/update-user-status) with the collected userIds. This updates the user status and disables inactive contractors.
+Then it sends a PUT request to [/api/2.0/people/status/:status](/docspace/api-backend/usage-api/people/user-status/update-user-status) with the collected userIds. This updates the user status and disables inactive contractors.
 If your portal uses numeric status codes instead of string statuses, replace Terminated with the required status value.
 
 <Tabs>

@@ -23,7 +23,7 @@ string
 将文档中自定义 XML 部件的完整 XML 内容作为字符串读取。
 
 ```javascript editor-docx
-// How do I export or inspect the raw XML of a custom XML part in a document?
+// Export or inspect the raw XML of a custom XML part in a document.
 
 // Serialize the entire XML structure to display or process its contents in a document.
 

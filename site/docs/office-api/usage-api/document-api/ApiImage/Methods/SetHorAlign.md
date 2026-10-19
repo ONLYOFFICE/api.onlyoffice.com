@@ -4,6 +4,25 @@ Specifies how the floating object will be horizontally aligned.
 
 Inherited from [ApiDrawing.SetHorAlign](../../ApiDrawing/Methods/SetHorAlign.md).
 
+## Syntax
+
+```javascript
+expression.SetHorAlign(sRelativeFrom, sAlign);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | Optional | [RelFromH](../../Enumeration/RelFromH.md) | "page" | The document element which will be taken as a countdown point for the object horizontal alignment. |
+| sAlign | Optional | "left" \| "right" \| "center" | "left" | The alignment type which will be used for the object horizontal alignment. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Align a floating drawing to the horizontal center of the page in a document.

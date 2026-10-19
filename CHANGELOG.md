@@ -1,5 +1,190 @@
 # Change log
 
+## 10.0.0
+
+### New features
+
+#### Docs API
+
+* Added the Comparing documents sample
+* Added the File upload request page for `/converter/from-file` and documented `/docbuilder/from-file`
+* Documented the `customization.ai` parameter
+* Added the Configuring AI providers for all users guide for the Admin Panel
+* Documented the `interactivepreview` WOPI discovery action
+* Documented the `requestRoles` method, the `disconnect` parameter of `startFilling` and the `sendEvent` method of the Connector class
+* Added the `ofd` format and `xls` as a spreadsheet conversion target
+* Added the 10.0 changelog covering server, Admin Panel and API changes
+
+#### Office API
+
+* Added the 10.0 changelog with breaking changes, changed methods, and new methods and classes
+
+#### Plugins and macros
+
+* Added the 10.0 changelog
+* Documented the `Editor` object and `Editor.RunMacro`
+
+#### Desktop
+
+* Documented the `--prefer-alternate-url` flag and added the 10.0 changelog
+
+#### Document Builder
+
+* Documented opening PDF files in `OpenFile` and creating PDF forms with the `form` file type in `CreateFile`, and added the 10.0 changelog
+
+#### DocSpace
+
+* Added the UI Kit section to the DocSpace menu and landing page
+
+### Improvements
+
+#### Docs API
+
+* Documented the `operation` field in incoming and outgoing request tokens and `purposeCheck` for incoming ones
+* Documented the `convertServiceEnable` and `docbuilderEnable` settings and the WOPI IP filter requirement
+* Documented the `purposeCheck` and `wopi.requireIpFilterRule` settings and the new default `User-Agent` of outgoing requests in the 10.0 changelog
+* Removed the deprecated `reviewDisplay`, `showReviewChanges` and `trackChanges` customization parameters
+* Rewrote the integration examples overview and the Node.js, Go, Java, Java Spring, .NET, PHP, PHP Laravel, Python and Ruby examples
+* Formatted parameters, status values and identifiers as inline code in the FAQ and the changelog
+* Added ellipsis comments to partial config examples in the FAQ
+
+#### Office API
+
+* Updated the Document, Spreadsheet, Presentation, PDF and Form API references for 10.0
+* Linked the PDF API overview classes
+
+#### Plugins and macros
+
+* Updated the plugin API references for 10.0
+* Described the `executeMethod` signature and callback in How to call methods
+
+#### DocSpace
+
+* Built the API backend reference from DocSpace-server instead of the OpenAPI spec
+* Updated the API backend, JavaScript SDK, Plugins SDK and UI Kit references
+
+#### Common
+
+* Gave each deployment target its own site URL
+
+#### Playground
+
+* Updated the plugin template to use the built-in `Editor` object
+
+#### Localization
+
+* Synced the zh-CN pages with all of the above changes
+* Kept the per-editor API names (Document API, Form API and others) in English on zh-CN pages
+* Translated the missing customizing FAQ sections and the 9.3 section of the plugins changelog
+
+### Fixes
+
+* Fixed `serverVersion` in `refreshHistory` and the callback handler sample to be a version string rather than a number
+* Fixed the `ipfilter` example to nest under `services.CoAuthoring`
+* Fixed Office API changelog links to renamed and removed methods
+* Fixed the form widgets listed in the PDF API overview
+* Fixed DocSpace API backend links to point at the generated pages
+* Fixed the AI service reference to point at `aichat`
+* Fixed the UI Kit sidebar to open on its first generated page
+* Fixed the form builder sample in the Playground to create and save a PDF form
+* Fixed the PDF builder sample in the Playground to open a PDF file
+* Fixed the upload/download direction, the "Access denied" heading and the formatting on the troubleshooting page
+* Fixed the `fillForms` typo in the sharing FAQ
+* Fixed full-width punctuation and spacing on zh-CN pages and in the zh-CN announcement bar
+
+## 9.3.1
+
+### Improvements
+
+#### Common
+
+* Updated the announcement bar to announce ONLYOFFICE Docs 10.0
+* Pointed the forum links in the footer, landing pages, and plugin, macro and AI get-started guides to community.onlyoffice.com
+
+## 9.3.0
+
+### New features
+
+#### Common
+
+* Added llms.txt generation: a root index with an Optional section, one file per section, and separate Office API and plugin API indexes for each editor
+
+### Improvements
+
+#### Docs API
+
+* Reworked the React, Angular, and Vue guides around a signed configuration
+* Documented `callCommand` and the document key in the frontend framework guides
+* Highlighted the callback and key notes in the frontend framework guides
+* Scaffolded the Vue demo with the `--ts` flag
+* Showed the full nesting of the `angular.json` and `package.json` snippets in the Angular guide
+* Wrapped the Angular method snippets in the `App` class and highlighted commented JSON as `json5`
+* Moved the `otherWindow` definition out of the WOPI `targetOrigin` row and inlined the `CopyPasteRestrictions` values
+* Replaced hard `<br/>` line breaks in the WOPI config table
+* Clarified that `setRequestedDocument` can also be called directly once `onDocumentReady` has fired, not only from the `onRequestSelectDocument` handler
+
+#### Office API
+
+* Added Automation API and PDF API to the Get started overview
+* Expanded the main `Api` class descriptions in the editor API references
+* Added Syntax, Parameters and Returns sections to inherited method pages, and shortened method table descriptions to their first sentence
+
+#### Plugins and macros
+
+* Expanded the custom functions guide to cover the `this` context, async return values, sheet-qualified addresses and the required JSDoc comment, and changed the example to return a value
+* Replaced the custom functions note with an intro paragraph and made the sample link text descriptive
+* Documented the `*` icon fallback and dropped the duplicated selection steps from the scale row
+* Linked each plugin API overview to its Office API counterpart and clarified the `SetProperties` watermark parameter
+* Rewrote the plugins overview intro, troubleshooting and resources sections, and dropped the development time estimates
+* Linked the overview's distribution line to the marketplace submission and private distribution pages
+* Clarified the framework support row in the overview comparison table
+* Moved colons outside bold labels on the overview, common errors, and plugins, macros and AI get started pages
+
+#### Desktop
+
+* Described `uiTheme` in `login` as the cloud tab color, accepting a string or an object
+* Promoted the login and logout example headings to h3
+
+#### Workspace
+
+* Rewrote the Community Server and Hosted Solutions API references as Markdown pages
+
+#### Common
+
+* Site URLs no longer end with a trailing slash
+* Page Markdown is now served from the build instead of GitHub
+* Sharpened the Document Builder, Embed SDK and Plugins SDK descriptions
+* Moved the colon outside bold property labels (`**type**:` instead of `**type:**`)
+
+#### Localization
+
+* Synced the zh-CN frontend framework guides with the English version
+* Added dark mode icon variants to the zh-CN custom functions guide
+* Removed the UTF-8 BOM from zh-CN pages
+* Used full-width colons after bold labels in zh-CN pages
+* Added `hml` to the zh-CN text document conversion table
+* Dropped the duplicated `meta.title` description from the zh-CN `meta` row
+* Translated the zh-CN Office API overview page
+* Translated table headers and the Parameters/Example labels on the zh-CN methods, events and conversion API pages
+* Translated English image alt text on the zh-CN customization, embedded, events, external data, plugin configuration and macros pages
+
+### Fixes
+
+* Fixed the description of what `this.args` holds in custom functions
+* Fixed `APITable` row anchors to use the property name's exact casing
+* Fixed broken cross-page links and pointed links at the new per-editor API index pages
+* Fixed the Automation API sample cards linking to the wrong pages
+* Fixed the font and text size units of chart, paragraph, range and PDF widget methods: they take half-points (`hps`), not points (`pt`)
+* Fixed a stray asterisk before `otherWindow` in the WOPI postMessage `targetOrigin` description
+* Fixed Python sample indentation in the DocSpace basic samples
+* Fixed DocSpace samples that use `await` inside callbacks not marked `async`
+* Fixed a Cyrillic "с" in the `const` keyword in the DocSpace move file sample
+* Fixed the `isViewer` key casing in the plugin button examples
+* Fixed trailing slashes in Playground and editor links
+* Fixed the missing `:::note` admonition keyword on the zh-CN conversion tables page
+* Fixed zh-CN keyword search, windows and panels code examples that were out of sync with the English pages
+* Fixed stray spaces after full-width punctuation on zh-CN pages
+
 ## 9.2.0
 
 ### New features

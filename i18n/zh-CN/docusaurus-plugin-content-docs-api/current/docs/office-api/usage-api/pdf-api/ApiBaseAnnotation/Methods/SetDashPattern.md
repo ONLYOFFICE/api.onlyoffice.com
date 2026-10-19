@@ -1,7 +1,10 @@
 # SetDashPattern
 
 设置批注虚线图案。
-💡 边框样式属性必须设置为 “dashed”。
+
+:::note
+必须使用 [ApiBaseAnnotation#SetBorderStyle](../../ApiBaseAnnotation/Methods/SetBorderStyle.md) 方法将边框样式设置为 `"dashed"`。
+:::
 
 ## 语法
 

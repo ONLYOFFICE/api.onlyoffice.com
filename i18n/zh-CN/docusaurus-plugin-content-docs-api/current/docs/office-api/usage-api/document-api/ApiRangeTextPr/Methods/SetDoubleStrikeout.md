@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetDoubleStrikeout](../../ApiTextPr/Methods/SetDoubleStrikeout.md)。
 
+## 语法
+
+```javascript
+expression.SetDoubleStrikeout(isDoubleStrikeout);
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isDoubleStrikeout | 必需 | boolean |  | 指定当前文本块的内容显示为双删除线。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为默认文本字符绘制双删除线。

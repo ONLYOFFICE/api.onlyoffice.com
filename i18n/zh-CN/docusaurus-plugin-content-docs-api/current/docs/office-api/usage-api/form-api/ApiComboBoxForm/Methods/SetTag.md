@@ -4,34 +4,40 @@
 
 继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
 
+## 语法
+
+```javascript
+expression.SetTag(tag);
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| tag | 必需 | string |  | 将添加到当前容器的标签。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-用自定义标识符标记文档中的表单字段。
+在文档中为组合框表单附加标签。
 
 ```javascript editor-forms
-// How do I attach a label or identifier to a form field in a document?
+// How do I attach a tag to a combo box form in a document?
 
-// Organize or reference form fields programmatically using custom tags.
+// Label a combo box with a custom identifier so it can be found and referenced later in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
+comboBoxForm.SetTag("Country");
 let paragraph = doc.GetElement(0);
-
-const textForm = Api.CreateTextForm({
-	"key": "Personal information",
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-textForm.SetTag('MY_TAG');
-paragraph.AddElement(textForm);
-
-const formTag = textForm.GetTag();
+paragraph.AddElement(comboBoxForm);
+let tag = comboBoxForm.GetTag();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form tag: " + formTag);
+paragraph.AddText("Form tag: " + tag);
 doc.Push(paragraph);
 ```

@@ -8,7 +8,7 @@ Returns the right page margin for all pages in the current section.
 expression.GetPageMarginRight();
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

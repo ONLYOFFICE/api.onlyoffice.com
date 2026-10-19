@@ -1,6 +1,8 @@
 # SetCaps
 
-Specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
+Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+
+Inherited from [ApiTextPr.SetCaps](../../ApiTextPr/Methods/SetCaps.md).
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Specifies that any lowercase characters in the current text run are formatted fo
 expression.SetCaps(isCaps);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

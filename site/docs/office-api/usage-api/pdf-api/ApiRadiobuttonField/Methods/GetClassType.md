@@ -8,7 +8,7 @@ Returns a type of the ApiRadiobuttonField class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
 
 ## Parameters
 

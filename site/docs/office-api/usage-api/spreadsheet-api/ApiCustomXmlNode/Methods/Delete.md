@@ -8,7 +8,7 @@ Deletes the current XML node.
 expression.Delete();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 Remove a specific node from an embedded XML structure in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I delete an unwanted element from custom XML data in a spreadsheet?
+// Delete an unwanted element from custom XML data in a spreadsheet.
 
 // Trim embedded XML content by eliminating a node and verifying what remains in a spreadsheet.
 

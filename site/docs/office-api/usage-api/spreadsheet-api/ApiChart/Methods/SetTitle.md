@@ -5,17 +5,17 @@ Specifies the chart title.
 ## Syntax
 
 ```javascript
-expression.SetTitle(sTitle, nFontSize, bIsBold);
+expression.SetTitle(sTitle, fontSize, bIsBold);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | Required | string |  | The title which will be displayed for the current chart. |
-| nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
+| fontSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
 | bIsBold | Required | boolean |  | Specifies if the chart title is written in bold font or not. |
 
 ## Returns
@@ -43,8 +43,8 @@ worksheet.GetRange("C2").SetValue(240);
 worksheet.GetRange("C3").SetValue(260);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "3DColumnClustered", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -1,6 +1,8 @@
 # SetHighlight
 
-指定作为背景应用于当前文本块内容的高亮颜色。
+指定添加到文本属性并作为背景应用于当前文本块/范围/段落内容的高亮颜色。
+
+继承自 [ApiTextPr.SetHighlight](../../ApiTextPr/Methods/SetHighlight.md)。
 
 ## 语法
 

@@ -8,7 +8,7 @@ Returns the notes page from the current slide.
 expression.GetNotesPage();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

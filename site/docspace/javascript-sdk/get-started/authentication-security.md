@@ -109,11 +109,16 @@ Only exact origins are matched — subdomains and paths are not automatically in
 
 ## SameSite cookie requirements
 
-When DocSpace is embedded in an iframe on a different domain, the browser must send its session cookie along with the cross-origin request — otherwise the embedded DocSpace behaves as if no user is logged in. There's nothing to configure for the common case: with both sides served over HTTPS and the embedding page's origin registered under [Developer Tools](#registering-allowed-embed-origins), the portal sets the cookie's `SameSite=None; Secure; Partitioned` attributes automatically. Without HTTPS, the cookie falls back to `SameSite=Strict` and isn't sent inside the iframe at all, breaking session-based authentication (see the note in [Get started](./get-started.md#prerequisites)).
+When DocSpace is embedded in an iframe on a different domain, the browser must send the DocSpace session cookie with the cross-origin request. Otherwise, the embedded DocSpace behaves as if no user is logged in.
 
-The `Partitioned` attribute is what keeps this working even when the browser blocks third-party cookies outright — Chrome, Firefox, and Safari 18.4+ all still allow a partitioned cookie through, scoped to the embedding page's origin.
+You don't need to configure the cookie attributes manually. DocSpace sets `Secure` and `SameSite=None` on the authentication cookie automatically, and adds the `Partitioned` attribute, when both of these conditions are met:
 
-If you need to force a specific mode regardless of these defaults, the DocSpace server reads a `web.samesite` key from its configuration (empty/unset by default, which is what enables the automatic behavior above).
+- the request comes over HTTPS;
+- the CSP allowlist isn't empty (see [Registering allowed embed origins](#registering-allowed-embed-origins)).
+
+Otherwise, the cookie falls back to `SameSite=Strict`, and the embedded frame loses the session. So make sure that both the DocSpace server and the embedding page are served over HTTPS, and that the embedding origin is in the allowlist. The mode can be overridden with the `web:samesite` configuration key on the DocSpace server, but this is rarely needed.
+
+Thanks to the `Partitioned` attribute, browsers that support [CHIPS](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) (Chrome, Firefox, and Safari 18.4+) keep the session cookie in separate storage under the embedding site, even when third-party cookies are blocked.
 
 ## Content Security Policy (CSP)
 

@@ -1,12 +1,11 @@
 # SetPosition
 
-指定当前范围的文本相对于周围非定位文本的默认基线
-升高或降低的量。
+指定当前范围的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ## 语法
 
 ```javascript
-expression.SetPosition(nPosition);
+expression.SetPosition(position);
 ```
 
 `expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
@@ -15,7 +14,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（上标文本）或负值（下标文本）的度量值。 |
+| position | 必需 | [hps](../../Enumeration/hps.md) \| null |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。传递 *null* 可移除位置设置。 |
 
 ## 返回值
 

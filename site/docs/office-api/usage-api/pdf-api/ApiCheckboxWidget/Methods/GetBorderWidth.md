@@ -4,6 +4,22 @@ Gets widget border width.
 
 Inherited from [ApiBaseWidget.GetBorderWidth](../../ApiBaseWidget/Methods/GetBorderWidth.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderWidth();
+```
+
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md)
+
 ## Example
 
 Read the border width of a form field widget in a PDF.

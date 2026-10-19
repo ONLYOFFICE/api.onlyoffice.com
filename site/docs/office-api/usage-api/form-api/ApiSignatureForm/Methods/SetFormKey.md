@@ -4,21 +4,39 @@ Sets a key to the current form.
 
 Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.SetFormKey(sKey);
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sKey | Required | string |  | Form key. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Assign an identifying key to a form field in a document.
+Assign a unique identifier to a signature field in a document.
 
 ```javascript editor-forms
-// How do I set the key that identifies a form field in a document?
+// How do I label a signature field with a specific key so it can be referenced in a document?
 
-// Label a form field with a custom key so it can be referenced or grouped with related fields in a document.
+// Tag a signature field with a custom name to link or group related fields in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetFormKey("Personal information");
-let key = textForm.GetFormKey();
+paragraph.AddElement(signatureForm);
+signatureForm.SetFormKey("Signature");
+let key = signatureForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

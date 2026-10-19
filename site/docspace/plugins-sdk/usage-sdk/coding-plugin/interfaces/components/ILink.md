@@ -1,6 +1,8 @@
-# ILink
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ILink.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L45)
+# ILink
 
 Defines the link component properties.
 
@@ -31,11 +33,9 @@ const link: ILink = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
@@ -47,7 +47,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `enableUserSelect?` | `boolean` | Enables user selection | - |
 | `type?` | [`LinkType`](#linktype) | Link type (page or action) | - |
 | `target?` | [`LinkTarget`](#linktarget) | Target attribute for link | - |
-| `textDecoration?` | \| `"none"` \| `"underline"` \| `"line-through"` \| `"overline"` \| `"underline dotted"` \| `"underline dashed"` | Text decoration style | - |
+| `textDecoration?` | \| `"none"` \| `"line-through"` \| `"overline"` \| `"underline"` \| `"underline dotted"` \| `"underline dashed"` | Text decoration style | - |
 | `onClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | Click handler (for action type links) | - |
 | `text` | `string` | Defines the text | [`IText`](IText.md).[`text`](IText.md#text) |
 | `title?` | `string` | Defines the text title | [`IText`](IText.md).[`title`](IText.md#title?) |
@@ -64,13 +64,9 @@ import APITable from '@site/src/components/APITable/APITable';
 | `color?` | `string` | Defines the text color | [`IText`](IText.md).[`color`](IText.md#color?) |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. | [`IText`](IText.md).[`className`](IText.md#className?) |
 
-```mdx-code-block
 </APITable>
-```
 
 ## LinkType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L86)
 
 Defines the link type.
 
@@ -95,8 +91,6 @@ Action link (clickable but not navigating)
 ***
 
 ## LinkTarget
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILink.ts#L96)
 
 Defines the link target attribute.
 

@@ -1,8 +1,10 @@
 # ApiColor
 
-表示 ApiColor 类。
+表示可应用于文本的颜色。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -12,5 +14,6 @@
 | [GetRGB](./Methods/GetRGB.md) | Object | 获取颜色的 RGB 分量。 |
 | [GetRGBA](./Methods/GetRGBA.md) | Object | 获取颜色的 RGBA 分量。 |
 | [GetThemeName](./Methods/GetThemeName.md) | [SchemeColorId](../Enumeration/SchemeColorId.md) \| null | 如果颜色是主题颜色，则获取主题颜色名称。 |
+| [GetTintAndShade](./Methods/GetTintAndShade.md) | number | 返回应用于颜色的亮度偏移。 |
 | [IsThemeColor](./Methods/IsThemeColor.md) | boolean | 如果颜色是主题颜色则返回 true。 |
 | [ToJSON](./Methods/ToJSON.md) | string | 将 ApiColor 对象转换为 JSON 对象。 |

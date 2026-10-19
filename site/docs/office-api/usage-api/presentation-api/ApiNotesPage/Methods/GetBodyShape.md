@@ -8,7 +8,7 @@ Returns a shape with the type="body" attribute from the current notes page.
 expression.GetBodyShape();
 ```
 
-`expression` - A variable that represents a [ApiNotesPage](../ApiNotesPage.md) class.
+`expression` - A variable that represents an [ApiNotesPage](../ApiNotesPage.md) class.
 
 ## Parameters
 

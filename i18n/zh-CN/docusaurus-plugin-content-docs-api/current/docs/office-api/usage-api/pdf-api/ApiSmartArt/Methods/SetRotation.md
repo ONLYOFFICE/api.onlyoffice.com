@@ -4,6 +4,24 @@
 
 继承自 [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md)。
 
+## 语法
+
+```javascript
+expression.SetRotation(rotAngle);
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rotAngle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 新的绘图旋转角度。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将绘图对象旋转到特定角度。
@@ -16,7 +34,7 @@
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 65 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);

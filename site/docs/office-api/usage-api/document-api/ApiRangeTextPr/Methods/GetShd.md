@@ -4,6 +4,22 @@ Gets the text shading from the current text properties.
 
 Inherited from [ApiTextPr.GetShd](../../ApiTextPr/Methods/GetShd.md).
 
+## Syntax
+
+```javascript
+expression.GetShd();
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiShd](../../ApiShd/ApiShd.md) \| undefined
+
 ## Example
 
 Read the background shading applied to a run of text in a document.
@@ -30,7 +46,7 @@ secondRun.SetStyle(myNewRunStyle);
 secondRun.AddText('A text run with shd applied to it.');
 
 let secondRunTextPr = secondRun.GetTextPr();
-secondRunTextPr.SetShd('clear', Api.RGBA(255, 111, 61));
+secondRunTextPr.SetShd(Api.CreateShd('clear', Api.RGBA(255, 111, 61)));
 firstParagraph.AddElement(secondRun);
 
 let shd = secondRunTextPr.GetShd();
@@ -39,7 +55,7 @@ let secondParagraph = Api.CreateParagraph();
 let thirdRun = Api.CreateRun();
 thirdRun.AddText('This run has the shading from the last run in the first paragraph.');
 let thirdRunTextPr = thirdRun.GetTextPr();
-thirdRunTextPr.SetShd(shd.Type, shd.Color);
+thirdRunTextPr.SetShd(shd);
 secondParagraph.AddElement(thirdRun);
 doc.Push(secondParagraph);
 ```

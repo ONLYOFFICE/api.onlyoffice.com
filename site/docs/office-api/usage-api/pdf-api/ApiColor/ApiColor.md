@@ -1,8 +1,10 @@
 # ApiColor
 
-Represents the ApiColor class.
+Represents a color that can be applied to text.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -12,5 +14,6 @@ Represents the ApiColor class.
 | [GetRGB](./Methods/GetRGB.md) | Object | Gets the RGB components of the color. |
 | [GetRGBA](./Methods/GetRGBA.md) | Object | Gets the RGBA components of the color. |
 | [GetThemeName](./Methods/GetThemeName.md) | [SchemeColorId](../Enumeration/SchemeColorId.md) \| null | Gets the theme color name if the color is a theme color. |
+| [GetTintAndShade](./Methods/GetTintAndShade.md) | number | Returns the luminance shift applied to the color. |
 | [IsThemeColor](./Methods/IsThemeColor.md) | boolean | Returns true if the color is a theme color. |
 | [ToJSON](./Methods/ToJSON.md) | string | Converts the ApiColor object into the JSON object. |

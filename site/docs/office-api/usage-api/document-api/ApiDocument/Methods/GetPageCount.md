@@ -1,8 +1,10 @@
 # GetPageCount
 
 Returns a number of pages in the current document.
-💡 This method can be slow for large documents because it runs the document calculation
-process before the full recalculation.
+
+:::note
+This method can be slow for large documents because it runs the document calculation process before the full recalculation.
+:::
 
 ## Syntax
 
@@ -10,7 +12,7 @@ process before the full recalculation.
 expression.GetPageCount();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

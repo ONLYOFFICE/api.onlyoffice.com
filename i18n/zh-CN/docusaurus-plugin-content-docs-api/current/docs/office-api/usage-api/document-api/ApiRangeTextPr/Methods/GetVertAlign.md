@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetVertAlign](../../ApiTextPr/Methods/GetVertAlign.md)。
 
+## 语法
+
+```javascript
+expression.GetVertAlign();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string \| null \| undefined
+
 ## 示例
 
 读取文档中文本运行相对于基线的垂直位置。

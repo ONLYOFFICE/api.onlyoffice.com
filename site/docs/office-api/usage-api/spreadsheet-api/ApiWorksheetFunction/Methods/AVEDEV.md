@@ -8,7 +8,7 @@ Returns the average of the absolute deviations of data points from their mean.
 expression.AVEDEV(args);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

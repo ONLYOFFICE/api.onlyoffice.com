@@ -8,7 +8,7 @@ Sets the paragraph first line indentation.
 expression.SetIndFirstLine(nValue);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-Indent the first line of a paragraph in a PDF.
+Indent the first line of a paragraph using the paragraph properties in a PDF.
 
 ```javascript editor-pdf
 // How do I indent the first line of a paragraph in a PDF?

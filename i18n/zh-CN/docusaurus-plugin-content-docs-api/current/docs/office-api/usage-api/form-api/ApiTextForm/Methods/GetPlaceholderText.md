@@ -4,14 +4,30 @@
 
 继承自 [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md)。
 
+## 语法
+
+```javascript
+expression.GetPlaceholderText();
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-读取文档中表单字段的占位符文本。
+读取文档中空文本字段内显示的提示文本。
 
 ```javascript editor-forms
-// How do I get the placeholder text of a form field in a document?
+// How do I find out what placeholder text appears in a text entry area in a document?
 
-// Confirm a hint label by retrieving the placeholder text after setting it on a form.
+// Check the instructional text displayed before a user fills in a text field in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

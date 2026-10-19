@@ -8,7 +8,7 @@ Returns custom XML parts by namespace from the XML manager.
 expression.GetByNamespace(namespace);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetByNamespace(namespace);
 Get custom XML parts by their namespace in a presentation.
 
 ```javascript editor-pptx
-// How do I find all XML parts that use a specific namespace in a presentation?
+// Find all XML parts that use a specific namespace in a presentation.
 
 // Display the matching XML parts in a presentation.
 

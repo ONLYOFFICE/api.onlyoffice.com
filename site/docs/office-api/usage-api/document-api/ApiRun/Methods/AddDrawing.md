@@ -8,7 +8,7 @@ Adds a drawing object (image, shape or chart) to the current text run.
 expression.AddDrawing(oDrawing);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ Embed a chart inside a line of text in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
-let drawing = Api.CreateChart("bar3D", [
+let drawing = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
@@ -40,11 +40,11 @@ let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 drawing.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 drawing.SetSeriesFill(fill, 1, false);
-drawing.SetVerAxisTitle("USD In Hundred Thousands", 10);
-drawing.SetHorAxisTitle("Year", 11);
+drawing.SetVerAxisTitle("USD In Hundred Thousands", 20);
+drawing.SetHorAxisTitle("Year", 22);
 drawing.SetLegendPos("bottom");
 drawing.SetShowDataLabels(false, false, true, false);
-drawing.SetTitle("Financial Overview", 13);
+drawing.SetTitle("Financial Overview", 26);
 run.AddDrawing(drawing);
 paragraph.AddElement(run);
 ```

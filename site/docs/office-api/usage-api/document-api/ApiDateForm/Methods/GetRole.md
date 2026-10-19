@@ -4,37 +4,36 @@ Returns the role of the current form.
 
 Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
+## Syntax
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the role assigned to a form field in a document.
+Read the assigned role of a date form in a document.
 
 ```javascript editor-docx
-// How do I get the role of a form field in a document?
+// How do I find the role assigned to a date form in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Display the role to understand the form's purpose within the document structure.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+paragraph.AddElement(dateForm);
+let role = dateForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);

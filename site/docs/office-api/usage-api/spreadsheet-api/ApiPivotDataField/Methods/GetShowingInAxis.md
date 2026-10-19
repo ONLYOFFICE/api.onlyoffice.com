@@ -4,6 +4,22 @@ Returns the setting which specifies whether the pivot table field is currently v
 
 Inherited from [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md).
 
+## Syntax
+
+```javascript
+expression.GetShowingInAxis();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a pivot field is currently visible in the row or column axis of a pivot table in a spreadsheet.

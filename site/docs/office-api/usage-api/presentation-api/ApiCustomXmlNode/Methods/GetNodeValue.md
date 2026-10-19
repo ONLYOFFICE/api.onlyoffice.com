@@ -8,7 +8,7 @@ Returns the XML string representation of the current node content.
 expression.GetNodeValue();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Read the text content of an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I extract the value of an XML node in a presentation?
+// Extract the value of an XML node in a presentation.
 
 // Access the inner text of an XML element in a presentation.
 

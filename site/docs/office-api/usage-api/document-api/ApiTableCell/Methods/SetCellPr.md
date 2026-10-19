@@ -8,7 +8,7 @@ Sets the cell properties to the current cell.
 expression.SetCellPr(oApiTableCellPr);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

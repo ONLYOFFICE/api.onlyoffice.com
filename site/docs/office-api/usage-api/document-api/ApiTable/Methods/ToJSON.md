@@ -8,7 +8,7 @@ Converts the ApiTable object into the JSON object.
 expression.ToJSON(bWriteNumberings, bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
@@ -34,12 +34,12 @@ let doc = Api.GetDocument();
 let table = Api.CreateTable(3, 3);
 let json = table.ToJSON(false, true);
 let tableFromJSON = Api.FromJSON(json);
-tableFromJSON.SetTableBorderTop("single", 32, 0, 51, 51, 51);
-tableFromJSON.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
-tableFromJSON.SetTableBorderLeft("single", 32, 0, 51, 51, 51);
-tableFromJSON.SetTableBorderRight("single", 32, 0, 51, 51, 51);
-tableFromJSON.SetTableBorderInsideV("single", 32, 0, 255, 111, 6);
-tableFromJSON.SetTableBorderInsideH("single", 32, 0, 255, 111, 6);
+tableFromJSON.SetTableBorderTop("single", 32, 0, Api.Color(51, 51, 51));
+tableFromJSON.SetTableBorderBottom("single", 32, 0, Api.Color(51, 51, 51));
+tableFromJSON.SetTableBorderLeft("single", 32, 0, Api.Color(51, 51, 51));
+tableFromJSON.SetTableBorderRight("single", 32, 0, Api.Color(51, 51, 51));
+tableFromJSON.SetTableBorderInsideV("single", 32, 0, Api.Color(255, 111, 6));
+tableFromJSON.SetTableBorderInsideH("single", 32, 0, Api.Color(255, 111, 6));
 tableFromJSON.SetWidth("percent", 100);
 doc.Push(tableFromJSON);
 ```

@@ -4,7 +4,7 @@ The permissions section defines the document permission parameters.
 
 ## chat
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to enable the chat functionality in the document. In case the chat permission is set to `true`, the **Chat** menu button will be displayed.
 
@@ -12,7 +12,7 @@ Whether to enable the chat functionality in the document. In case the chat permi
 
 ## comment
 
-**type:** `boolean` | **default:** the value of the [edit](#edit) parameter
+**type**: `boolean` | **default**: the value of the [edit](#edit) parameter
 
 Whether to allow commenting on the document. In case the commenting permission is set to `true` the document **sidebar** will contain the **Comment** menu option; the document commenting will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -26,7 +26,7 @@ In case `edit` is set to `true` and `comment` is also set to `true`, the user wi
 
 ## commentGroups
 
-**type:** `object`
+**type**: `object`
 
 The [groups](../editor/editor.md#user) whose comments the user can edit, remove and/or view.
 
@@ -44,7 +44,7 @@ const config = {
 
 ### commentGroups.edit
 
-**type:** `string[]`
+**type**: `string[]`
 
 The user can edit comments made by other users.
 
@@ -52,7 +52,7 @@ The user can edit comments made by other users.
 
 ### commentGroups.remove
 
-**type:** `string[]`
+**type**: `string[]`
 
 The user can remove comments made by other users.
 
@@ -60,7 +60,7 @@ The user can remove comments made by other users.
 
 ### commentGroups.view
 
-**type:** `string[]`
+**type**: `string[]`
 
 The user can view comments made by other users.
 
@@ -68,7 +68,7 @@ The user can view comments made by other users.
 
 ## copy
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow copying content to the clipboard. In case the parameter is set to `false`, pasting the content will be available within the current document editor only.
 
@@ -76,7 +76,7 @@ Whether to allow copying content to the clipboard. In case the parameter is set 
 
 ## deleteCommentAuthorOnly
 
-**type:** `boolean` | **default:** `false`
+**type**: `boolean` | **default**: `false`
 
 Whether the user can delete only their comments.
 
@@ -84,7 +84,7 @@ Whether the user can delete only their comments.
 
 ## download
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow downloading the document or only viewing or editing it online. In case the downloading permission is set to `false` the **Download as...** menu option will be absent from the **File** menu.
 
@@ -94,7 +94,7 @@ Whether to allow downloading the document or only viewing or editing it online. 
 
 ## edit
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow editing the document or only viewing it. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will **not** be able to switch it to the editor even if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -104,7 +104,7 @@ Whether to allow editing the document or only viewing it. In case the editing pe
 
 ## editCommentAuthorOnly
 
-**type:** `boolean` | **default:** `false`
+**type**: `boolean` | **default**: `false`
 
 Whether the user can edit only their comments.
 
@@ -112,7 +112,7 @@ Whether the user can edit only their comments.
 
 ## fillForms
 
-**type:** `boolean` | **default:** the value of the [edit](#edit) or the [review](#review) parameter
+**type**: `boolean` | **default**: the value of the [edit](#edit) or the [review](#review) parameter
 
 Whether to allow filling forms. Filling in forms will only be available for the document and pdf editors if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -126,7 +126,7 @@ In case `edit` is set to `true` or `review` is set to `true`, the `fillForms` va
 
 ## modifyContentControl
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow changing content control settings. Content control modification will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -134,7 +134,7 @@ Whether to allow changing content control settings. Content control modification
 
 ## modifyFilter
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to apply the filter globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only. Filter modification will only be available for the spreadsheet editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -146,7 +146,7 @@ In case the document is edited by a user with the full access rights, the filter
 
 ## print
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow printing the document. In case the printing permission is set to `false` the **Print** menu option will be absent from the **File** menu.
 
@@ -156,7 +156,7 @@ Whether to allow printing the document. In case the printing permission is set t
 
 ## protect
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Protection** tab on the toolbar and the **Protect** button in the left menu (`true`) or hide them (`false`).
 
@@ -166,7 +166,7 @@ Whether to display the **Protection** tab on the toolbar and the **Protect** but
 
 ## review
 
-**type:** `boolean` | **default:** the value of the [edit](#edit) parameter
+**type**: `boolean` | **default**: the value of the [edit](#edit) parameter
 
 Whether to allow reviewing the document. In case the reviewing permission is set to `true` the document **status bar** will contain the **Review** menu option; the document review will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
@@ -180,7 +180,7 @@ In case `edit` is set to `true` and `review` is also set to `true`, the user wil
 
 ## reviewGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 The [groups](../editor/editor.md#user) whose changes the user can accept/reject. The `[""]` value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors). If the value is `[]`, the user cannot review changes made by any group. If the value is `""` or not specified, then the user can review changes made by any user.
 
@@ -188,7 +188,7 @@ The [groups](../editor/editor.md#user) whose changes the user can accept/reject.
 
 ## userInfoGroups
 
-**type:** `string[]`
+**type**: `string[]`
 
 The groups of users whose information is displayed in the editors:
 

@@ -1,6 +1,7 @@
 # headingRefTo
 
 Available values of the "heading" reference type:
+
 - **"text"** - the entire heading text;
 - **"pageNum"** - the heading page number;
 - **"headingNum"** - the heading sequence number;
@@ -26,7 +27,7 @@ Enumeration
 Add a cross-reference to the page containing a heading.
 
 ```javascript editor-docx
-// How to create a reference to the paragraph with a heading.
+// How do I create a reference to a paragraph with a heading?
 
 // Use heading to create a cross-reference.
 

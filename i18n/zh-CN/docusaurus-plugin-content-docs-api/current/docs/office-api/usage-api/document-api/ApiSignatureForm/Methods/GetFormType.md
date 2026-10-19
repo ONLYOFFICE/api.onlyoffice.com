@@ -4,20 +4,36 @@
 
 继承自 [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md)。
 
+## 语法
+
+```javascript
+expression.GetFormType();
+```
+
+`expression` - 表示 [ApiSignatureForm](../ApiSignatureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[FormType](../../Enumeration/FormType.md)
+
 ## 示例
 
-读取文档中表单字段的类型。
+读取文档中签名字段的表单类型。
 
 ```javascript editor-docx
-// How do I get the type of a form field in a document?
+// How do I find out what type a signature form is set to in a document?
 
-// Distinguish one form from another by printing its type identifier next to it.
+// Confirm the category label assigned to a signature form in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let formType = textForm.GetFormType();
+paragraph.AddElement(signatureForm);
+let formType = signatureForm.GetFormType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);

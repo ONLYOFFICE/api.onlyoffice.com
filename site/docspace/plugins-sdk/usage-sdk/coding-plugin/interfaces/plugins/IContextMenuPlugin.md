@@ -1,6 +1,8 @@
-# IContextMenuPlugin
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IContextMenuPlugin.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IContextMenuPlugin.ts#L77)
+# IContextMenuPlugin
 
 The plugin that is embedded in the context menu of files, folders, rooms, images, video (audio).
 
@@ -125,16 +127,12 @@ Update an existing context menu item.
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `contextMenuItems` | `Map`\<`string`, [`IContextMenuItem`](../items/IContextMenuItem.md)\> | Stores a collection of elements where the keys are the key parameters from the ContextMenuItem objects. A list for embedding into the context menu is generated based on this collection. |
 
-```mdx-code-block
 </APITable>
-```

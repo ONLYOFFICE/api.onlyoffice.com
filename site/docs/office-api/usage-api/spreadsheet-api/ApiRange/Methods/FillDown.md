@@ -1,6 +1,7 @@
 # FillDown
 
 Copies the contents and formatting of the top row of the range into the remaining rows.
+
 If the range has only one row, the method succeeds but makes no changes.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.FillDown();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

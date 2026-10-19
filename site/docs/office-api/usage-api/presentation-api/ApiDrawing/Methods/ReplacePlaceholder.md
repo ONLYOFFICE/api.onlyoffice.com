@@ -8,7 +8,7 @@ Replaces the placeholder by a drawing on the slide.
 expression.ReplacePlaceholder(drawing);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -46,6 +46,6 @@ const shapeCopy = shape.Copy();
 shapeCopy.SetPosition(0, Api.MillimetersToEmus(48));
 slide.AddObject(shapeCopy);
 
-const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
+const image = Api.CreateImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
 ```

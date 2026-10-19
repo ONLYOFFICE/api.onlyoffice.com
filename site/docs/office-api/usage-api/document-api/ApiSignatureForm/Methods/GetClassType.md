@@ -8,7 +8,7 @@ Returns a type of the ApiSignatureForm class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiSignatureForm](../ApiSignatureForm.md) class.
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
 
 ## Parameters
 

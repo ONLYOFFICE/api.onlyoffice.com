@@ -4,20 +4,36 @@ Returns the text from the current form.
 
 Inherited from [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md).
 
+## Syntax
+
+```javascript
+expression.GetText();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the entered text from a form field in a document.
+Read the text content of a signature form in a document.
 
 ```javascript editor-forms
-// How do I read the current value typed into a form in a document?
+// How do I get the plain text held inside a signature form in a document?
 
-// Extract the raw content of a filled-in text field to use or display elsewhere in a document.
+// Extract what is written inside a signature form to display it in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let text = textForm.GetText();
+paragraph.AddElement(signatureForm);
+let text = signatureForm.GetText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form text: " + text);
 doc.Push(paragraph);

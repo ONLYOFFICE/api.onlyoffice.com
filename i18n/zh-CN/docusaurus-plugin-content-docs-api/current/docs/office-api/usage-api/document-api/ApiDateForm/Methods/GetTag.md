@@ -4,34 +4,37 @@
 
 继承自 [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md)。
 
+## 语法
+
+```javascript
+expression.GetTag();
+```
+
+`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-读取文档中附加到表单字段的标签。
+读取文档中附加到日期表单的标签。
 
 ```javascript editor-docx
-// How do I get the tag of a form field in a document?
+// How do I retrieve the tag associated with a date form in a document?
 
-// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
+// Use the tag value to identify or group related forms by a custom label.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let dateForm = Api.CreateDateForm({"tag" : "Hello", "key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-
-const textForm = Api.CreateTextForm({
-	"key": "Personal information",
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
-textForm.SetTag('MY_TAG');
-paragraph.AddElement(textForm);
-
-const formTag = textForm.GetTag();
+paragraph.AddElement(dateForm);
+let tag = dateForm.GetTag();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form tag: " + formTag);
+paragraph.AddText("Form tag: " + tag);
 doc.Push(paragraph);
 ```

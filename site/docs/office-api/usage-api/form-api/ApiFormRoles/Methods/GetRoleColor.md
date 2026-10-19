@@ -8,7 +8,7 @@ Returns the RGB color of the specified role.
 expression.GetRoleColor(name);
 ```
 
-`expression` - A variable that represents a [ApiFormRoles](../ApiFormRoles.md) class.
+`expression` - A variable that represents an [ApiFormRoles](../ApiFormRoles.md) class.
 
 ## Parameters
 

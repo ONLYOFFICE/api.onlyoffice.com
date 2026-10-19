@@ -4,6 +4,22 @@ Gets annotation opacity.
 
 Inherited from [ApiBaseAnnotation.GetOpacity](../../ApiBaseAnnotation/Methods/GetOpacity.md).
 
+## Syntax
+
+```javascript
+expression.GetOpacity();
+```
+
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Retrieve the transparency level of an annotation in a PDF.

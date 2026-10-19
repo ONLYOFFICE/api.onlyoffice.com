@@ -1,6 +1,7 @@
 # SetLock
 
 Sets the lock to the current inline text content control:
+
 - **"unlocked"** - content can be edited and the container can be deleted.
 - **"contentLocked"** - content cannot be edited.
 - **"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.
@@ -12,7 +13,7 @@ Sets the lock to the current inline text content control:
 expression.SetLock(lockType);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

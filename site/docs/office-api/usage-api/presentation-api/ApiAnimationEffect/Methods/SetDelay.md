@@ -8,13 +8,13 @@ Sets the delay before the animation effect starts in milliseconds.
 expression.SetDelay(delay);
 ```
 
-`expression` - A variable that represents a [ApiAnimationEffect](../ApiAnimationEffect.md) class.
+`expression` - A variable that represents an [ApiAnimationEffect](../ApiAnimationEffect.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| delay | Required | number |  | The delay in milliseconds. |
+| delay | Required | number |  | The delay in milliseconds. The maximum delay is 65536000 ms, a larger value is set to 65536000 ms. |
 
 ## Returns
 
@@ -35,7 +35,7 @@ const slide = presentation.GetSlideByIndex(0);
 const shape = Api.CreateShape(
 	'rect',
 	150 * 36000, 100 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107)),
+	Api.CreateSolidFill(Api.RGB(61, 74, 107)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 shape.SetPosition(100 * 36000, 80 * 36000);
@@ -52,7 +52,7 @@ const delay = effect.GetDelay();
 const infoShape = Api.CreateShape(
 	'rect',
 	150 * 36000, 40 * 36000,
-	Api.CreateSolidFill(Api.CreateRGBColor(200, 200, 200)),
+	Api.CreateSolidFill(Api.RGB(200, 200, 200)),
 	Api.CreateStroke(0, Api.CreateNoFill())
 );
 infoShape.SetPosition(20 * 36000, 10 * 36000);

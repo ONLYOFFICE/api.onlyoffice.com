@@ -4,6 +4,22 @@ Returns the numbering level for the current paragraph referencing the numbering 
 
 Inherited from [ApiParaPr.GetNumPr](../../ApiParaPr/Methods/GetNumPr.md).
 
+## Syntax
+
+```javascript
+expression.GetNumPr();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiNumberingLevel](../../ApiNumberingLevel/ApiNumberingLevel.md) \| undefined
+
 ## Example
 
 Retrieve the numbering properties of a bulleted paragraph in a document.

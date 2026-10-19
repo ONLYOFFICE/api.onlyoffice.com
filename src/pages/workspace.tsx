@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import { FeaturePageTemplate } from "@site/src/components/FeaturePageLayout";
 import Link from "@docusaurus/Link";
@@ -16,17 +15,16 @@ const templateProps: FeaturePageTemplate.Props = {
   links: [
     <>If you have any questions about ONLYOFFICE DocSpace, try the <Link href='/workspace/api-backend/more-information/faq'>FAQ</Link> section first.</>,
     <>You can request a feature or report a bug by posting an issue on <a href='https://github.com/ONLYOFFICE/CommunityServer/issues'>GitHub</a>.</>,
-    <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/workspace/33'>ONLYOFFICE forum</a> (registration required).</>,
+    <>You can also ask our developers on <a href='https://community.onlyoffice.com/c/workspace/33'>ONLYOFFICE forum</a> (registration required).</>,
   ],
   linkPrefix: WorkspaceFeatures.linkPrefix,
   items: WorkspaceFeatures.items,
 };
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} Workspace API`}
+      title="Workspace API"
       description="Detailed guides on how to integrate ONLYOFFICE Workspace into your solution, manage documents, projects, emails, CRM, and timetables in one place."
     >
       <FeaturePageTemplate {...templateProps}/>

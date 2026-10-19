@@ -1,6 +1,8 @@
 # Delete
 
-删除内容控件及其内容。如果 keepContent 为 true，则不删除内容。
+删除内容控件及其内容。
+
+如果 keepContent 为 true，则不删除内容。
 
 ## 语法
 

@@ -8,7 +8,7 @@ Creates a new slide layout and adds it to the slide master if it is specified.
 expression.CreateLayout(oMaster);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

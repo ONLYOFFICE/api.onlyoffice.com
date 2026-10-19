@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md)。
 
+## 语法
+
+```javascript
+expression.GetQuads();
+```
+
+`expression` - 表示 [ApiStrikeoutAnnotation](../ApiStrikeoutAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Quad](../../Enumeration/Quad.md)[]
+
 ## 示例
 
 从 PDF 中的标记注释获取高亮区域。

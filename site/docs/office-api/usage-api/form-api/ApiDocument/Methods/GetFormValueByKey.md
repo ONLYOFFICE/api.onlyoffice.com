@@ -1,6 +1,8 @@
 # GetFormValueByKey
 
-Returns the form value for the specified key. For a group of radio buttons returns Choice, i.e. the name of the selected item.
+Returns the form value for the specified key.
+
+For a group of radio buttons returns Choice, i.e. the name of the selected item.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the form value for the specified key. For a group of radio buttons retur
 expression.GetFormValueByKey(key);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -35,7 +37,7 @@ let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});
 checkBox.SetChecked(true);
 paragraph1.Push(checkBox);
 let textForm = Api.CreateTextForm({key: "CompanyName"});
-textForm.SetText("OnlyOffice");
+textForm.SetText("ONLYOFFICE");
 paragraph1.Push(textForm);
 
 let paragraph = Api.CreateParagraph();

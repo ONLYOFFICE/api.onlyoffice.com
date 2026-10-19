@@ -17,9 +17,12 @@
 
 ## 示例
 
-此示例展示如何将形状高度设置为页面高度的百分比。
+设置绘图相对于页面高度的高度。
 
 ```javascript editor-docx
+// How do I make a drawing take up a quarter of the page height?
+
 // Set a drawing relative height to 25% of the page.
+
 drawing.SetRelativeHeight("page", 25);
 ```

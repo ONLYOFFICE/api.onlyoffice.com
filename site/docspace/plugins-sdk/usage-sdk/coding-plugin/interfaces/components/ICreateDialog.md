@@ -1,6 +1,8 @@
-# ICreateDialog
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ICreateDialog.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICreateDialog.ts#L110)
+# ICreateDialog
 
 Modal dialog for creating certain item (file, folder, etc.).
 The user gets the full access to the functionality but cannot control the layout.
@@ -91,11 +93,9 @@ const newDocumentDialog: ICreateDialog = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -117,6 +117,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `isAutoFocusOnError?` | `boolean` | Specifies if this modal dialog should automatically focus on the error input field when an error occurs during the onSave operation. |
 | `extension?` | `string` | Defines an extension of an item which will be created (file, folder, etc.). |
 
-```mdx-code-block
 </APITable>
-```

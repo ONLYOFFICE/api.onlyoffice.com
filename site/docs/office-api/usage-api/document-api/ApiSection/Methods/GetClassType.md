@@ -8,7 +8,7 @@ Returns a type of the ApiSection class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

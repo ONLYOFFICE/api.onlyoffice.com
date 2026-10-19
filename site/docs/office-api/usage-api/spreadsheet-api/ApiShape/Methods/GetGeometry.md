@@ -8,7 +8,7 @@ Returns the geometry object from the current shape.
 expression.GetGeometry();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 

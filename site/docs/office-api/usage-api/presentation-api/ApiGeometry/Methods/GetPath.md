@@ -8,7 +8,7 @@ Returns a geometry path by its index.
 expression.GetPath(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

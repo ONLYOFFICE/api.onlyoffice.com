@@ -1,25 +1,28 @@
 # SetStyle
 
 The paragraph style base method.
-💡 This method is not used by itself, as it only forms the basis for the [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) method which sets the selected or created style for the paragraph.
+
+:::note
+This method is not used by itself, as it only forms the basis for the [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) method which sets the selected or created style for the paragraph.
+:::
 
 ## Syntax
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style of the paragraph to be set. |
+| style | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | The style of the paragraph to be set, or the name of an existing style, or *undefined*/*null* to remove the style. |
 
 ## Returns
 
-boolean
+[ApiParaPr](../../ApiParaPr/ApiParaPr.md)
 
 ## Example
 

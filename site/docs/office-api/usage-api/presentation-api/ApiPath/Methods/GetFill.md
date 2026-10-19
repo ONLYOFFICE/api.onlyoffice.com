@@ -8,7 +8,7 @@ Returns the fill type of the current path.
 expression.GetFill();
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 

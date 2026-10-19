@@ -8,7 +8,7 @@ Returns the current paragraph where the cursor is located.
 expression.GetCurrentParagraph();
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md)
+[ApiRichParagraph](../../ApiRichParagraph/ApiRichParagraph.md) \| null \| undefined
 
 ## Example
 

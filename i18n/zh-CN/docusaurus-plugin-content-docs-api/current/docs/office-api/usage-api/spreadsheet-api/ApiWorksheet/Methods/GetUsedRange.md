@@ -29,5 +29,5 @@ expression.GetUsedRange();
 
 let worksheet = Api.GetActiveSheet();
 let usedRange = worksheet.GetUsedRange();
-usedRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+usedRange.SetFillColor(Api.RGB(255, 213, 191));
 ```

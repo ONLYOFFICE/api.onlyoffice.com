@@ -8,7 +8,7 @@ Converts the ApiFill object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiFill](../ApiFill.md) class.
+`expression` - A variable that represents an [ApiFill](../ApiFill.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the background color of the current form.
 expression.GetBackgroundColor();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 
@@ -16,4 +16,4 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../../document-api/ApiColor/ApiColor.md)
+[ApiColor](../../../document-api/ApiColor/ApiColor.md) \| null \| undefined

@@ -19,7 +19,7 @@ Enumeration
 Set the direction of the watermark within the document.
 
 ```javascript editor-docx
-// How to set a watermark direction.
+// How do I set the watermark direction?
 
 // Set direction in watermark settings to "clockwise45".
 

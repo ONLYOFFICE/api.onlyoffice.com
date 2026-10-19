@@ -8,7 +8,7 @@ Sets the border to the cell / cell range with the parameters specified.
 expression.SetBorders(bordersIndex, lineStyle, oColor);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -33,6 +33,6 @@ Add a border to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);
-worksheet.GetRange("A2").SetBorders("Bottom", "Thick", Api.CreateColorFromRGB(255, 111, 61));
+worksheet.GetRange("A2").SetBorders("Bottom", "Thick", Api.RGB(255, 111, 61));
 worksheet.GetRange("A2").SetValue("This is a cell with a bottom border");
 ```

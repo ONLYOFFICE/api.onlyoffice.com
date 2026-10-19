@@ -8,7 +8,7 @@ Sets the absolute measurement for the horizontal positioning of the floating obj
 expression.SetHorPosition(sRelativeFrom, nDistance, bPercent);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -53,7 +53,7 @@ paragraph.AddText("The shape is aligned next to the right margin horizontally.")
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The next blue shape is aligned next to the left margin horizontally by 10% percent.");
-fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
+fill = Api.CreateSolidFill(Api.RGB(91, 155, 213));
 stroke = Api.CreateStroke(0, Api.CreateNoFill());
 drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
 drawing.SetDistances(457200, 457200, 457200, 0);

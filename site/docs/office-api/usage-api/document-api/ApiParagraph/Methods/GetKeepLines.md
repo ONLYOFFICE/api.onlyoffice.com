@@ -4,6 +4,22 @@ Returns the keep lines value of the current paragraph.
 
 Inherited from [ApiParaPr.GetKeepLines](../../ApiParaPr/Methods/GetKeepLines.md).
 
+## Syntax
+
+```javascript
+expression.GetKeepLines();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| undefined
+
 ## Example
 
 Read whether all lines of a paragraph are kept together on one page in a document.

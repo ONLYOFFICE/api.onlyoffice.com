@@ -4,6 +4,22 @@ Returns the between border of the current paragraph.
 
 Inherited from [ApiParaPr.GetBetweenBorder](../../ApiParaPr/Methods/GetBetweenBorder.md).
 
+## Syntax
+
+```javascript
+expression.GetBetweenBorder();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[Border](../../Enumeration/Border.md) \| undefined
+
 ## Example
 
 Retrieve the between border settings applied to a paragraph style in a document.
@@ -16,7 +32,7 @@ Retrieve the between border settings applied to a paragraph style in a document.
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();
-paraPr.SetBetweenBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetBetweenBorder("single", 24, 0, Api.Color(255, 111, 61));
 let border = paraPr.GetBetweenBorder();
 let paragraph = doc.GetElement(0);
 paragraph.SetStyle(myStyle);

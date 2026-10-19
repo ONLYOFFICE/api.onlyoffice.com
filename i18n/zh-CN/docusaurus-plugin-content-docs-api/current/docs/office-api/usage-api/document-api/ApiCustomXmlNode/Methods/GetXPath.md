@@ -23,7 +23,7 @@ string
 检索文档中嵌入的 XML 数据内特定节点的路径。
 
 ```javascript editor-docx
-// How do I find the location of a node in embedded XML data in a document?
+// Find the location of a node in embedded XML data in a document.
 
 // Read a node's position to navigate or reference it programmatically in a document.
 

@@ -23,7 +23,7 @@ string
 获取演示文稿中 XML 节点的完整位置路径。
 
 ```javascript editor-pptx
-// How do I find the path to an XML element in a presentation?
+// Find the path to an XML element in a presentation.
 
 // Retrieve the XPath address of an XML node in a presentation.
 

@@ -8,7 +8,7 @@ Returns the ApiPivotTable object which represents the pivot table for the curren
 expression.GetTable();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

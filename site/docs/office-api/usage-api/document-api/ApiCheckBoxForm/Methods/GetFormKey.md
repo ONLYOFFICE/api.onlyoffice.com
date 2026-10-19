@@ -4,20 +4,43 @@ Returns the current form key.
 
 Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
 
+## Syntax
+
+```javascript
+expression.GetFormKey();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the key assigned to a form field in a document.
+Retrieve the unique key assigned to a checkbox form in a document.
 
 ```javascript editor-docx
-// How do I get the key of a form field in a document?
+// How do I read the identifying key of a checkbox form in a document?
 
-// Confirm the grouping key of a combo box by reading it back and displaying it.
+// Confirm which key a checkbox belongs to when managing grouped form fields in a document.
 
 let doc = Api.GetDocument();
-let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 1");
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(comboBoxForm);
-let key = comboBoxForm.GetFormKey();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
+checkBoxForm.SetFormKey("Marital status 2");
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let key = checkBoxForm.GetFormKey();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);

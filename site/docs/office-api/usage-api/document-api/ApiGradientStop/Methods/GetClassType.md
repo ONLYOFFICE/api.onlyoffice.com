@@ -8,7 +8,7 @@ Returns a type of the ApiGradientStop class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiGradientStop](../ApiGradientStop.md) class.
+`expression` - A variable that represents an [ApiGradientStop](../ApiGradientStop.md) class.
 
 ## Parameters
 

@@ -1,8 +1,10 @@
 # Api
 
-Represents the Api class.
+The main class of the Form API. Use it to create forms: text fields, combo boxes, checkboxes and radio buttons, date fields, picture forms, signature forms, and complex fields.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

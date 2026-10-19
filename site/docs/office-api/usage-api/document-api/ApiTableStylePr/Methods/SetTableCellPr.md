@@ -8,7 +8,7 @@ Sets the table cell properties to the current table style properties.
 expression.SetTableCellPr(oTableCellPr);
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 
@@ -42,7 +42,7 @@ table.SetWidth("percent", 100);
 let tableStylePr = tableStyle.GetConditionalTableStyle("topLeftCell");
 table.SetTableLook(true, true, true, true, true, true);
 let tableCellPr = Api.CreateTableCellPr();
-tableCellPr.SetShd("clear", 0xEE, 0xEE, 0xEE);
+tableCellPr.SetShd(Api.CreateShd("clear", Api.Color(0xEE, 0xEE, 0xEE)));
 tableStylePr.SetTableCellPr(tableCellPr);
 
 table.SetStyle(tableStyle);

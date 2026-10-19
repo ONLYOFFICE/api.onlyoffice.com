@@ -8,7 +8,7 @@ Gets the outline properties from the current shape.
 expression.GetLine();
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 
@@ -29,8 +29,8 @@ Read the border line properties of a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
-let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
 let shape = Api.CreateShape("rect", 100 * 36000, 50 * 36000, fill, stroke);
 paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();

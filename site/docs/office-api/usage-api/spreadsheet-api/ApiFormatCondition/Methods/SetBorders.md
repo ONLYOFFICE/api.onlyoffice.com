@@ -8,7 +8,7 @@ Sets the border style for the conditional formatting rule.
 expression.SetBorders(bordersIndex, lineStyle, oColor);
 ```
 
-`expression` - A variable that represents a [ApiFormatCondition](../ApiFormatCondition.md) class.
+`expression` - A variable that represents an [ApiFormatCondition](../ApiFormatCondition.md) class.
 
 ## Parameters
 
@@ -45,9 +45,9 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
-let borderColor = Api.CreateColorFromRGB(255, 0, 0);
+let borderColor = Api.RGB(255, 0, 0);
 condition1.SetBorders("Top", "Thick", borderColor);
 condition1.SetBorders("Bottom", "Thick", borderColor);
 

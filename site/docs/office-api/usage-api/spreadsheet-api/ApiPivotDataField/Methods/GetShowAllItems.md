@@ -4,6 +4,22 @@ Returns the setting which specifies whether to show items with no data.
 
 Inherited from [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetShowAllItems.md).
 
+## Syntax
+
+```javascript
+expression.GetShowAllItems();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a pivot field is set to display all items, including those with no data in a spreadsheet.

@@ -8,7 +8,7 @@ Returns a bitwise "XOR" (Exclusive Or) of two numbers.
 expression.BITXOR(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -4,6 +4,25 @@ Sets the relative height of the object (image, shape, chart) bounding box.
 
 Inherited from [ApiDrawing.SetRelativeHeight](../../ApiDrawing/Methods/SetRelativeHeight.md).
 
+## Syntax
+
+```javascript
+expression.SetRelativeHeight(relativeFrom, percent);
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| relativeFrom | Optional | [SizeRelFromV](../../Enumeration/SizeRelFromV.md) | "page" | The document element which will be taken as a countdown point for the object height. |
+| percent | Required | [percentage](../../Enumeration/percentage.md) |  | The height of the object as a percentage of the specified element. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Size a shape's height as a percentage of the page in a document.
@@ -15,8 +34,8 @@ Size a shape's height as a percentage of the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
-let stroke = Api.CreateStroke(0.4 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(65, 113, 156)));
+let fill = Api.CreateSolidFill(Api.RGB(91, 155, 213));
+let stroke = Api.CreateStroke(0.4 * 36000, Api.CreateSolidFill(Api.RGB(65, 113, 156)));
 let drawing = Api.CreateShape("rect", 1 * 36000, 1 * 36000, fill, stroke);
 drawing.SetWrappingStyle("inFront");
 drawing.SetVerPosition("page", 50 * 36000);

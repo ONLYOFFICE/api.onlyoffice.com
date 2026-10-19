@@ -1,6 +1,8 @@
-# ISkeleton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ISkeleton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ISkeleton.ts#L60)
+# ISkeleton
 
 A component that is used to hide components during uploading.
 
@@ -40,11 +42,9 @@ const textSkeleton: ISkeleton = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -53,6 +53,4 @@ import APITable from '@site/src/components/APITable/APITable';
 | `borderRadius?` | `string` | Defines the skeleton border radius |
 | `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
-```mdx-code-block
 </APITable>
-```

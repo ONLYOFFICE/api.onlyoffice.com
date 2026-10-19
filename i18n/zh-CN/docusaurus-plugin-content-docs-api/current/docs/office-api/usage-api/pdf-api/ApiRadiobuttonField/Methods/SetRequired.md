@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseField.SetRequired](../../ApiBaseField/Methods/SetRequired.md)。
 
+## 语法
+
+```javascript
+expression.SetRequired(required);
+```
+
+`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| required | 必需 | boolean |  | 指定字段是否为必填。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将表单字段标记为必填。

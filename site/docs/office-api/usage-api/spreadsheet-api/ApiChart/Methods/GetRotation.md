@@ -4,6 +4,22 @@ Returns the rotation angle of the current drawing object.
 
 Inherited from [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md).
 
+## Syntax
+
+```javascript
+expression.GetRotation();
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Retrieve the rotation angle of a drawing in a spreadsheet.

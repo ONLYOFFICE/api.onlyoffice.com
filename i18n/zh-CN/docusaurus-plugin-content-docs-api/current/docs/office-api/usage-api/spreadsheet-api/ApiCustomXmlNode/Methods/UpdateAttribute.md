@@ -1,6 +1,7 @@
 # UpdateAttribute
 
 更新自定义 XML 节点中现有属性的值。
+
 如果属性不存在，则不会执行更新。
 
 ## 语法
@@ -27,7 +28,7 @@ boolean
 更改电子表格中 XML 元素上现有属性的值。
 
 ```javascript editor-xlsx
-// How do I modify the value of an attribute already set on an XML node in a spreadsheet?
+// Modify the value of an attribute already set on an XML node in a spreadsheet.
 
 // Revise a previously assigned attribute to reflect updated information in a spreadsheet.
 

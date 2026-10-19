@@ -8,7 +8,7 @@ Sets whether to display field headers for rows and columns.
 expression.SetDisplayFieldCaptions(show);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

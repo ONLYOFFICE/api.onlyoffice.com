@@ -8,13 +8,13 @@ Specifies the default table cell spacing (the spacing between adjacent cells and
 expression.SetCellSpacing(nValue);
 ```
 
-`expression` - A variable that represents a [ApiTablePr](../ApiTablePr.md) class.
+`expression` - A variable that represents an [ApiTablePr](../ApiTablePr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | Spacing value measured in twentieths of a point (1/1440 of an inch). `"Null"` means that no spacing will be applied. |
+| nValue | Required | [twips](../../Enumeration/twips.md) \| null \| undefined |  | Spacing value measured in twentieths of a point (1/1440 of an inch). `"Null"` means that no spacing will be applied. |
 
 ## Returns
 

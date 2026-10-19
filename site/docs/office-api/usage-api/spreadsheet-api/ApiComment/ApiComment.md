@@ -1,6 +1,6 @@
 # ApiComment
 
-Represents the ApiComment class.
+Class representing a comment.
 
 ## Properties
 
@@ -18,6 +18,8 @@ Represents the ApiComment class.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | None | Adds a reply to a comment. |
@@ -26,8 +28,8 @@ Represents the ApiComment class.
 | [GetClassType](./Methods/GetClassType.md) | "comment" | Returns a type of the ApiComment class. |
 | [GetId](./Methods/GetId.md) | string | Returns the current comment ID. |
 | [GetQuoteText](./Methods/GetQuoteText.md) | String \| null | Returns the quote text of the current comment. |
-| [GetRepliesCount](./Methods/GetRepliesCount.md) | Number | Returns a number of the comment replies. |
-| [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) | Returns the specified comment reply. |
+| [GetRepliesCount](./Methods/GetRepliesCount.md) | Number \| null \| undefined | Returns a number of the comment replies. |
+| [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) \| null \| undefined | Returns the specified comment reply. |
 | [GetText](./Methods/GetText.md) | string | Returns the comment text. |
 | [GetTime](./Methods/GetTime.md) | Number | Returns the timestamp of the comment creation in the current time zone format. |
 | [GetTimeUTC](./Methods/GetTimeUTC.md) | Number | Returns the timestamp of the comment creation in UTC format. |

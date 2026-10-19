@@ -14,7 +14,7 @@ All the available pricing plans for the connections are available at [this page]
 
 ## How to find the information about users who are currently editing the document?
 
-You can use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [info](../../additional-api/command-service/info.md) value and the *key* parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:
+You can use the API to send a POST request to the **document command service**. Use the `c` parameter for that with the [info](../../additional-api/command-service/info.md) value and the `key` parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:
 
   ``` json
   {
@@ -33,17 +33,17 @@ In case the document is being edited, for instance, by two users, the **document
   }
   ```
 
-- *key* is the identifier of the document (the same as in the POST request above);
+- `key` is the identifier of the document (the same as in the POST request above);
 
-- *status* with value of **1** means that the document is currently being edited;
+- `status` with value of `1` means that the document is currently being edited;
 
-- and the *users* is the array of the IDs of the users who take part in the co-editing.
+- and the `users` is the array of the IDs of the users who take part in the co-editing.
 
   Further information about the response from the **document editing service** can be found [at this page](../../usage-api/callback-handler.md).
 
 ## How to disconnect users who are currently editing the document before saving the document?
 
-To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [drop](../../additional-api/command-service/drop.md) value and the *key* parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:
+To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the **document command service**. Use the `c` parameter for that with the [drop](../../additional-api/command-service/drop.md) value and the `key` parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:
 
   ``` json
   {

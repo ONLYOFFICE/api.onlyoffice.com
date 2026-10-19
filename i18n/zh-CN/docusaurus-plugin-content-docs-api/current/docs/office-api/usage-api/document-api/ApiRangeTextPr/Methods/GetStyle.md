@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetStyle](../../ApiTextPr/Methods/GetStyle.md)。
 
+## 语法
+
+```javascript
+expression.GetStyle();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStyle](../../ApiStyle/ApiStyle.md) \| null \| undefined
+
 ## 示例
 
 读取文档中附加到文本运行的命名样式。

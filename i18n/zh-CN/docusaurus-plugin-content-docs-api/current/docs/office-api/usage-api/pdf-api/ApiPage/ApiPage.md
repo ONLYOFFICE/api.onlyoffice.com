@@ -1,8 +1,10 @@
 # ApiPage
 
-表示 ApiPage 类。
+表示文档页面的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -11,13 +13,16 @@
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | 获取页面上的所有绘图对象。 |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取页面控件 |
 | [GetClassType](./Methods/GetClassType.md) | "page" | 返回 ApiPage 类的类型。 |
+| [GetHeight](./Methods/GetHeight.md) | [pt](../Enumeration/pt.md) | 获取页面高度 |
 | [GetIndex](./Methods/GetIndex.md) | number | 获取页面索引 |
 | [GetRotation](./Methods/GetRotation.md) | number | 获取页面旋转角度 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 获取页面上的选定文本 |
+| [GetSelection](./Methods/GetSelection.md) | [PageSelection](../Enumeration/PageSelection.md) \| null \| undefined | 获取页面选区。 |
 | [GetSelectionQuads](./Methods/GetSelectionQuads.md) | [Quad](../Enumeration/Quad.md)[] | 获取页面选择四边形 |
 | [GetText](./Methods/GetText.md) | string | 获取页面上的所有文本内容。 |
 | [GetTextWithQuads](./Methods/GetTextWithQuads.md) | [TextWithQuads](../Enumeration/TextWithQuads.md)[] | 获取页面上每行带有四边形坐标的所有文本内容。 |
+| [GetWidth](./Methods/GetWidth.md) | [pt](../Enumeration/pt.md) | 获取页面宽度 |
 | [RecognizeContent](./Methods/RecognizeContent.md) | [Drawing](../Enumeration/Drawing.md)[] | 识别页面上的内容并返回已识别对象的数组。 |
-| [Search](./Methods/Search.md) | Quads[] | 搜索词语并返回其四边形。 |
+| [Search](./Methods/Search.md) | [SearchResults](../Enumeration/SearchResults.md) | 搜索词语并返回其四边形。 |
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置页面旋转角度 |
 | [SetSelection](./Methods/SetSelection.md) | boolean | 设置页面选择。 |

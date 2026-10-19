@@ -8,7 +8,7 @@ Returns a paragraph element using the position specified.
 expression.GetElement(nPos);
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetElement(nPos);
 
 ## Returns
 
-[ParagraphContent](../../Enumeration/ParagraphContent.md)
+[ParagraphContent](../../Enumeration/ParagraphContent.md) \| null \| undefined
 
 ## Example
 

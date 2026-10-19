@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseAnnotation.SetPosition](../../ApiBaseAnnotation/Methods/SetPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetPosition(position);
+```
+
+`expression` - 表示 [ApiLinkAnnotation](../ApiLinkAnnotation.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| position | 必需 | [Point](../../Enumeration/Point.md) |  | 批注的新位置。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将注释移动到页面上的新位置。

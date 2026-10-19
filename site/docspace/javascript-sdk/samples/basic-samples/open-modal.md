@@ -65,6 +65,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",
+      src: "{PORTAL_SRC}",
       width: "100%",
       height: "700px",
       events: {
@@ -127,7 +128,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Embed SDK logic
 
-Use the [openModal()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready) event to open a specific modal by its ID.
+Use the [openModal()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onAppReady) event to open a specific modal by its ID.
 
 ``` ts
 function onAppReady() {
@@ -140,6 +141,7 @@ function onAppReady() {
 
 const config = {
   frameId: "ds-frame",
+  src: "{PORTAL_SRC}",
   width: "100%",
   height: "700px",
   events: {

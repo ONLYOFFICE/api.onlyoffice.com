@@ -1,25 +1,46 @@
 # SetTextPr
 
 Sets the text properties to the current form.
-*Used if possible for this type of form*
+
+:::note
+Used if possible for this type of form.
+:::
 
 Inherited from [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md).
 
+## Syntax
+
+```javascript
+expression.SetTextPr(textPr);
+```
+
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| textPr | Required | [ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md) |  | The text properties that will be set to the current form. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply custom text formatting to a form field in a document.
+Apply text formatting to a date form in a document.
 
 ```javascript editor-forms
-// How do I change the font size and style of text inside a form field in a document?
+// How do I apply bold and larger font to a date form in a document?
 
-// Make form field text bold and larger to improve readability.
+// Customize the appearance of a date form by changing its font size and weight in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(dateForm);
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
+dateForm.SetTextPr(textPr);
 ```

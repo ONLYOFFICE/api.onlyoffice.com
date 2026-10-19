@@ -8,7 +8,7 @@
 expression.GetCurrentAddinField();
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 
@@ -16,7 +16,7 @@ expression.GetCurrentAddinField();
 
 ## 返回值
 
-[AddinFieldData](../Enumeration/AddinFieldData.md)
+[AddinFieldData](../Enumeration/AddinFieldData.md) \| null \| undefined
 
 ## 示例
 

@@ -8,7 +8,7 @@ Returns the number of paths in the current geometry.
 expression.GetPathCount();
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

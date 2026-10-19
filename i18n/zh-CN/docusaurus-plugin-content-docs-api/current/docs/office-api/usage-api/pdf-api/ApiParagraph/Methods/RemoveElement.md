@@ -1,9 +1,10 @@
 # RemoveElement
 
 使用指定的位置移除元素。
-💡 如果移除的元素是段落的最后一个元素（即所有元素都从段落中移除），
-将自动创建一个新的空 Run。如果要向此 Run 添加
-内容，请使用 [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) 方法。
+
+:::note
+如果移除的元素是段落的最后一个元素（即所有元素都从段落中移除），将自动创建一个新的空 Run。如果要向此 Run 添加内容，请使用 [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) 方法。
+:::
 
 ## 语法
 
@@ -25,10 +26,10 @@ boolean
 
 ## 示例
 
-从 PDF 中的段落删除特定元素。
+在 PDF 中从段落对象删除特定元素。
 
 ```javascript editor-pdf
-// How do I remove an element by its position in a paragraph in a PDF?
+// Useful for removing an element by its position in a paragraph in a PDF.
 
 // Eliminate an element at a given index from a paragraph in a PDF.
 
@@ -47,26 +48,25 @@ const paragraph = docContent.GetElement(0);
 paragraph.RemoveAllElements();
 
 let run = Api.CreateRun();
-run.AddText("This is the first paragraph element. ");
+run.AddText("Run 1. ");
 paragraph.AddElement(run);
 
 run = Api.CreateRun();
-run.AddText("This is the second paragraph element. ");
+run.AddText("Run 2. ");
 paragraph.AddElement(run);
 
 run = Api.CreateRun();
-run.AddText("This is the third paragraph element (it will be removed from the paragraph and we will not see it). ");
+run.AddText("Run 3. ");
 paragraph.AddElement(run);
-paragraph.AddLineBreak();
 
 run = Api.CreateRun();
-run.AddText("This is the fourth paragraph element - it became the third, because we removed the previous run from the paragraph. ");
+run.AddText("Run 4. ");
 paragraph.AddElement(run);
-paragraph.AddLineBreak();
 
 run = Api.CreateRun();
-run.AddText("Please note that line breaks are not counted into paragraph elements!");
+run.AddText("Run 5. ");
 paragraph.AddElement(run);
+
 paragraph.RemoveElement(3);
 
 page.AddObject(shape);

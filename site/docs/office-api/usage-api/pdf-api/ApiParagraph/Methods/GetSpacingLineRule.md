@@ -4,14 +4,30 @@ Returns the paragraph line spacing rule.
 
 Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
+## Syntax
+
+```javascript
+expression.GetSpacingLineRule();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"auto" \| "atLeast" \| "exact" \| undefined
+
 ## Example
 
-Find out how line spacing is measured in a PDF.
+Find out the line spacing type used in a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How do I check the line spacing rule for a paragraph in a PDF?
+// How do I determine which line spacing rule applies to a paragraph in a PDF?
 
-// Identify the line spacing rule applied to a paragraph in a PDF.
+// Read the line spacing method assigned to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -25,16 +41,14 @@ shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
 const docContent = shape.GetContent();
-let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetSpacingLine(3 * 240, "auto");
+const paragraph = docContent.GetElement(0);
+paragraph.SetSpacingLine(3 * 240, "auto");
 paragraph.AddText("Paragraph 1. Spacing: 3 times of a common paragraph line spacing.");
 paragraph.AddLineBreak();
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddLineBreak();
 
-const spacingLineRule = paraPr.GetSpacingLineRule();
-paragraph = Api.CreateParagraph();
-paragraph.AddText("Spacing line rule : " + spacingLineRule);
-docContent.Push(paragraph);
+const spacingLineRule = paragraph.GetSpacingLineRule();
+paragraph.AddText("Spacing line rule: " + spacingLineRule);
 ```

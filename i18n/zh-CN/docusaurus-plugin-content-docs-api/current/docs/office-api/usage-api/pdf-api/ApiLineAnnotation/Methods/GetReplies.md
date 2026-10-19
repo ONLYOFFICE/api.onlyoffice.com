@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseAnnotation.GetReplies](../../ApiBaseAnnotation/Methods/GetReplies.md)。
 
+## 语法
+
+```javascript
+expression.GetReplies();
+```
+
+`expression` - 表示 [ApiLineAnnotation](../ApiLineAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md)[]
+
 ## 示例
 
 检索 PDF 中附加到注释的所有回复注释。

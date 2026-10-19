@@ -38,6 +38,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <script>
     const config = {
       frameId: "ds-frame",
+      src: "{PORTAL_SRC}",
       width: "100%",
       height: "700px",
     };
@@ -83,6 +84,7 @@ Configure and initialize the system view using the [initSystem()](/docspace/java
 ``` ts
 const config = {
   frameId: "ds-frame",
+  src: "{PORTAL_SRC}",
   width: "100%",
   height: "700px",
 };

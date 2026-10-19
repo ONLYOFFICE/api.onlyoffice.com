@@ -93,7 +93,7 @@ if __name__ == '__main__':
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 ## Step 1: Retrieve DocSpace groups
 
-Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/get-groups) request to retrieve the group ID and the group name for each team.
+Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/group/get-groups) request to retrieve the group ID and the group name for each team.
 
 ```py
 # Step 1: Retrieve DocSpace groups
@@ -145,7 +145,7 @@ if __name__ == '__main__':
 
 ## Step 3: Retrieve DocSpace group members
 
-Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/get-group) request to get a group by ID and extract user names and emails.
+Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/group/get-group) request to get a group by ID and extract user names and emails.
 
 ```py
 # Step 3: Retrieve DocSpace group members

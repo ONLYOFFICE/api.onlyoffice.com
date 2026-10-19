@@ -8,7 +8,7 @@ Copies the current graphic object.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null
 
 ## Example
 

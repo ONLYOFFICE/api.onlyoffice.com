@@ -8,7 +8,7 @@ Sets checkbox widget checked.
 expression.SetChecked(checked);
 ```
 
-`expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
+`expression` - A variable that represents an [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
 
 ## Parameters
 

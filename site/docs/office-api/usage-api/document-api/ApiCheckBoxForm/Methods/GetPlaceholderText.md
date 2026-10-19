@@ -4,21 +4,38 @@ Returns the placeholder text from the current form.
 
 Inherited from [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md).
 
+## Syntax
+
+```javascript
+expression.GetPlaceholderText();
+```
+
+`expression` - A variable that represents an [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Read the placeholder text of a form field in a document.
+Read the placeholder text set on a checkbox form in a document.
 
 ```javascript editor-docx
-// How do I get the placeholder text of a form field in a document?
+// How do I retrieve the placeholder text of a checkbox form in a document?
 
-// Confirm a hint label by retrieving the placeholder text after setting it on a form.
+// Verify the hint text shown inside an unfilled checkbox form before sharing a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": false});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetPlaceholderText("First name");
-let placeholderText = textForm.GetPlaceholderText();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+checkBoxForm.SetPlaceholderText("Marital status");
+let placeholderText = checkBoxForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);

@@ -77,9 +77,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 支持的属性
 
-```mdx-code-block
 <APITable>
-```
 
 | 名称                      | 类型   | 默认值 | 描述                                                                                   |
 | ------------------------- | ------ | ------ | -------------------------------------------------------------------------------------- |
@@ -93,9 +91,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | --fonts-system            | bool   | true   | 指定是否使用系统字体。                                                                 |
 | --fonts-dir               | string | ""     | 附加字体目录的路径（可能有多条记录）。                                                 |
 
-```mdx-code-block
 </APITable>
-```
 
 添加后，参数将作为 `Argument` 变量及其参数值可用：
 

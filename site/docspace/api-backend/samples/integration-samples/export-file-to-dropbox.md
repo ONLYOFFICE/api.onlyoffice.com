@@ -102,7 +102,7 @@ if __name__ == '__main__':
 ## Before you start
 
 1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
 ## Step 1: Retrieve file metadata from DocSpace
 
-Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/get-file-info).
+Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/files/files/get-file-info).
 
 ```py
 # Step 1: Get file info
@@ -133,7 +133,7 @@ def get_file_info(file_id):
 
 ## Step 2: Generate a presigned download URL
 
-Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](/docspace/api-backend/usage-api/get-presigned-uri) to obtain a secure link.
+Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](/docspace/api-backend/usage-api/files/files/get-presigned-uri) to obtain a secure link.
 
 ``` py
 # Step 2: Get presigned URL

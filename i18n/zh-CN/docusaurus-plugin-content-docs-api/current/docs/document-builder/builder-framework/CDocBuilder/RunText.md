@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # RunText
 
-使用单个命令运行所有文档创建命令。与 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 每次只允许执行一个命令不同，`CDocBuilder.RunText` 可以一次性输入所有文档创建命令。
+使用单个命令运行所有文档创建命令。与 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 每次只允许执行一个命令不同，`CDocBuilder.RunText` 可以一次性输入所有文档创建命令。这些命令的[语法](../../using-cli/script-file.md)与通过 CLI 运行的脚本文件相同。
 
 :::note
 此方法不适用于 **JS** 和 **C++**。对于 **C++**，请使用 [RunTextA](RunTextA.md) 或 [RunTextW](RunTextW.md)。

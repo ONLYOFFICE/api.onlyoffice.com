@@ -1,6 +1,7 @@
 # FillRight
 
 Copies the contents and formatting of the leftmost column of the range into the remaining columns.
+
 If the range has only one column, the method succeeds but makes no changes.
 
 :::note
@@ -13,7 +14,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.FillRight();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

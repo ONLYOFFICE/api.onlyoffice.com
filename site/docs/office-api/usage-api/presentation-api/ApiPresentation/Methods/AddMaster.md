@@ -8,13 +8,13 @@ Adds the slide master to the presentation slide masters collection.
 expression.AddMaster(pos, apiMaster);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| pos | Optional | number | ApiPresentation.GetMastersCount() | The position where the slide master will be added. |
+| pos | Optional | number | ApiPresentation.GetMastersCount() | The position where the slide master will be added. If the position is invalid, the slide master is added to the end. |
 | apiMaster | Required | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | The slide master to be added. |
 
 ## Returns

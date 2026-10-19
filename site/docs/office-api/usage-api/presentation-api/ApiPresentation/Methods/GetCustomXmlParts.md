@@ -1,6 +1,7 @@
 # GetCustomXmlParts
 
 Retrieves the custom XML manager associated with the presentation.
+
 This manager allows manipulation and access to custom XML parts within the presentation.
 
 ## Syntax
@@ -9,7 +10,7 @@ This manager allows manipulation and access to custom XML parts within the prese
 expression.GetCustomXmlParts();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

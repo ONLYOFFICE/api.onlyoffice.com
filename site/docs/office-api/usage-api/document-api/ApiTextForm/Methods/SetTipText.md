@@ -4,14 +4,32 @@ Sets the tip text to the current form.
 
 Inherited from [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md).
 
+## Syntax
+
+```javascript
+expression.SetTipText(sText);
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | Required | string |  | Tip text. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Set tooltip text on a form field to provide guidance in a document.
+Add a tooltip hint to a text form in a document.
 
 ```javascript editor-docx
-// How do I add a tooltip that appears when hovering over a form field in a document?
+// How do I provide guidance to users about what to enter in a text form in a document?
 
-// Give users helpful instructions that appear when they hover over a field.
+// Guide users by displaying a short hint when they hover over a text form in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

@@ -4,6 +4,24 @@ Sets all 4 font slots with the specified font family.
 
 Inherited from [ApiTextPr.SetFontFamily](../../ApiTextPr/Methods/SetFontFamily.md).
 
+## Syntax
+
+```javascript
+expression.SetFontFamily(sFontFamily);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sFontFamily | Optional | string \| null |  | The font family or families used for the current text run. Pass *null* or omit it to remove the font family. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Change the font family applied to text in a document.

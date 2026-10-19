@@ -1,7 +1,10 @@
 # SetColor
 
 设置指定字体的颜色属性。
-💡 此方法仅适用于单元格的文本格式。
+
+:::note
+此方法仅适用于单元格的文本格式。
+:::
 
 ## 语法
 
@@ -35,6 +38,6 @@ let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
-let color = Api.CreateColorFromRGB(255, 111, 61);
+let color = Api.RGB(255, 111, 61);
 font.SetColor(color);
 ```

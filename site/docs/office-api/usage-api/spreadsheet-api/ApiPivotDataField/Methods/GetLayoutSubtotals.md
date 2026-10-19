@@ -4,6 +4,22 @@ Returns the setting which specifies whether to show subtotals.
 
 Inherited from [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/GetLayoutSubtotals.md).
 
+## Syntax
+
+```javascript
+expression.GetLayoutSubtotals();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Read which subtotal types are enabled for a pivot field in a spreadsheet.

@@ -1,6 +1,6 @@
 # SetTableStyle
 
-按名称设置表格样式。
+按名称设置表格样式。内置表格样式名称：TableStyleLight1-21、TableStyleMedium1-28、TableStyleDark1-11。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -18,7 +18,7 @@ expression.SetTableStyle(styleName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| styleName | 必需 | string |  | 要应用的表格样式名称。 |
+| styleName | 必需 | string |  | 内置表格样式的名称（例如，"TableStyleMedium9"），或工作簿中定义的自定义样式。 |
 
 ## 返回值
 

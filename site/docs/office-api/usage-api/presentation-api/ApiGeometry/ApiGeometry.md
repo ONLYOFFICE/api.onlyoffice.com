@@ -1,8 +1,10 @@
 # ApiGeometry
 
-Represents the ApiGeometry class.
+Class representing the shape geometry.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
@@ -11,10 +13,11 @@ Represents the ApiGeometry class.
 | [AddGuide](./Methods/AddGuide.md) | boolean | Adds a guide (formula) to the current geometry. |
 | [AddPath](./Methods/AddPath.md) | [ApiPath](../ApiPath/ApiPath.md) \| null | Adds a new path to the current geometry. |
 | [GetAdjValue](./Methods/GetAdjValue.md) | number \| null | Returns the adjustment value by its name from the current geometry. |
+| [GetClassType](./Methods/GetClassType.md) | "geometry" | Returns a type of the ApiGeometry class. |
 | [GetPath](./Methods/GetPath.md) | [ApiPath](../ApiPath/ApiPath.md) | Returns a geometry path by its index. |
 | [GetPathCount](./Methods/GetPathCount.md) | number | Returns the number of paths in the current geometry. |
 | [GetPaths](./Methods/GetPaths.md) | [ApiPath](../ApiPath/ApiPath.md)[] | Returns all paths of the current geometry. |
-| [GetPreset](./Methods/GetPreset.md) | [ShapeType](../Enumeration/ShapeType.md) \| null | Returns the name of the preset shape if the current geometry is based on a preset. |
+| [GetPreset](./Methods/GetPreset.md) | [ShapeType](../Enumeration/ShapeType.md) \| null \| undefined | Returns the name of the preset shape if the current geometry is based on a preset. |
 | [IsCustom](./Methods/IsCustom.md) | boolean | Checks whether the current geometry is custom. |
 | [SetAdjValue](./Methods/SetAdjValue.md) | None | Sets the specified adjustment parameter for the current geometry. |
 | [SetTextRect](./Methods/SetTextRect.md) | boolean | Sets the text rectangle for the current geometry. |

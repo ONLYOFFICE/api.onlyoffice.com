@@ -11,7 +11,7 @@ number
 将文本字号设置为 22 半磅。
 
 ```javascript editor-docx
-// How to resize a text using half-points.
+// How do I resize text using half-points?
 
 // Resize a font size by specifying a size in half-points.
 

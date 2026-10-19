@@ -17,7 +17,7 @@
 在选定文本上方插入具有指定文本框属性的文本框。
 
 ```javascript editor-forms
-// How to insert a text form with adding properties like tip text, placeholder, etc. to it.
+// How do I insert a text form with properties such as a tip and a placeholder?
 
 // Add a text form with properties.
 

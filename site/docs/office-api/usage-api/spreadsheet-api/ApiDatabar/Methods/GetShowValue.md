@@ -8,7 +8,7 @@ Returns whether the data bar displays the cell value.
 expression.GetShowValue();
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 

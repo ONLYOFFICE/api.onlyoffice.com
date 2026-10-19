@@ -8,7 +8,7 @@ Returns the current range angle.
 expression.GetOrientation();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

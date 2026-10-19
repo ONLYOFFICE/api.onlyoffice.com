@@ -1,20 +1,28 @@
 # Api
 
-表示 Api 类。
+Document API 的主类。用于获取当前文档，以及创建段落、表格、图像和图表等文档元素。
+
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| FullName | string | 返回当前打开文件的完整名称。 |
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向指定的文档元素或 Runs 数组添加批注。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 向指定的文档元素或 Runs 数组添加批注。 |
 | [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建自动颜色。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
-| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
-| [CompareDocuments](./Methods/CompareDocuments.md) | 无 | 将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档进行比较。两个文档之间的修订在当前文档中生成。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。 |
+| [CompareDocuments](./Methods/CompareDocuments.md) | 无 | 将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档进行比较。 |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | 将文档转换为 Markdown 或 HTML 文本。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBlockLvlSdt](./Methods/CreateBlockLvlSdt.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 创建新的块级容器。 |
-| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | 使用指定的参数创建图表。 |
+| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | 使用指定的参数创建图表。 |
 | [CreateCheckBoxContentControl](./Methods/CreateCheckBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 创建复选框内容控件。 |
 | [CreateComboBoxContentControl](./Methods/CreateComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 使用给定的选项列表创建新的组合框容器。 |
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 创建新的自定义几何图形。 |
@@ -26,21 +34,24 @@
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | 使用指定的参数创建图像。 |
 | [CreateInlineLvlSdt](./Methods/CreateInlineLvlSdt.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 创建新的内联容器。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | 根据线性文本字符串创建数学公式。生成的对象可以像文本块一样插入到段落中（例如，通过 [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) 或 [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)）。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | 创建具有指定类型的抽象多级编号。 |
-| [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | 使用指定的参数创建 OLE 对象。 |
+| [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) \| null \| undefined | 使用指定的参数创建 OLE 对象。 |
 | [CreateParaPr](./Methods/CreateParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 创建空的段落属性。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图案填充，使用所选图案作为对象背景应用于对象。 |
 | [CreatePictureContentControl](./Methods/CreatePictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 创建新的图片容器。 |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | 从可用的颜色预设中选择创建颜色。 |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | 使用可用的预设形状之一创建几何图形。 |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | 使用可用的预设形状之一创建几何图形。 |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | 通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。 |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。 |
 | [CreateRange](./Methods/CreateRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 创建元素范围。 |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 创建要插入到当前段落或表格中的新的较小文本块。 |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | 从可用的配色方案中选择创建复杂配色方案。 |
-| [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 使用指定的参数创建形状。 |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | 创建可应用于图形对象的阴影。 |
+| [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | 使用指定的参数创建形状。 |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | 创建可应用于文本、段落、表格或表格单元格的底纹。 |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建纯色填充，使用所选纯色作为对象背景应用于对象。 |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | 创建为元素添加阴影的笔触。 |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | 创建具有指定行数和列数的新表格。 |
@@ -53,7 +64,7 @@
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | 将英制度量单位 (EMU) 转换为毫米。 |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | 将 EMU（英制度量单位）转换为磅。 |
 | [FromJSON](./Methods/FromJSON.md) | object | 将指定的 JSON 对象转换为相应类型的文档生成器对象。 |
-| [GetByInternalId](./Methods/GetByInternalId.md) | object | 通过内部 ID 返回对象。 |
+| [GetByInternalId](./Methods/GetByInternalId.md) | object \| null \| undefined | 通过内部 ID 返回对象。 |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | 返回主文档。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
 | [GetMailMergeReceptionsCount](./Methods/GetMailMergeReceptionsCount.md) | number | 返回邮件合并收件人计数。 |
@@ -63,7 +74,8 @@
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | 加载邮件合并的数据。 |
 | [MailMerge](./Methods/MailMerge.md) | boolean | 启动邮件合并过程。 |
-| [MergeDocuments](./Methods/MergeDocuments.md) | 无 | 将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档合并。其内容将合并到当前文档中。 |
+| [MergeDocuments](./Methods/MergeDocuments.md) | 无 | 将当前文档与通过 builderJS.OpenTmpFile 打开的另一个文档合并。 |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | 将绘图对象数组合并为新形状。生成的形状采用数组中第一个绘图对象的格式。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |
@@ -85,5 +97,5 @@
 | [Save](./Methods/Save.md) | boolean | 保存对指定文档的更改。 |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | 将缇转换为磅。 |
-| [attachEvent](./Methods/attachEvent.md) | boolean | 订阅指定事件，并在事件触发时调用回调函数。 |
-| [detachEvent](./Methods/detachEvent.md) | boolean | 取消订阅指定事件。 |
+| [attachEvent](./Methods/attachEvent.md) | 无 | 订阅指定事件，并在事件触发时调用回调函数。 |
+| [detachEvent](./Methods/detachEvent.md) | 无 | 取消订阅指定事件。 |

@@ -1,6 +1,8 @@
 # SetHidden
 
-Sets the value hiding property. The specified range must span an entire column or row.
+Sets the value hiding property.
+
+The specified range must span an entire column or row.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Sets the value hiding property. The specified range must span an entire column o
 expression.SetHidden(isHidden);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

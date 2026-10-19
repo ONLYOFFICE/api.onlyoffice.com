@@ -4,6 +4,24 @@ Sets the text value used in text-based conditional formatting rules.
 
 Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
 
+## Syntax
+
+```javascript
+expression.SetText(Text);
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Text | Required | string |  | The text value to compare against. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Update the word or phrase that triggers a text-based formatting rule in a spreadsheet.
@@ -27,7 +45,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTextString", "xlContains", "Apple");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Original text:");
 worksheet.GetRange("C2").SetValue(condition1.GetText());

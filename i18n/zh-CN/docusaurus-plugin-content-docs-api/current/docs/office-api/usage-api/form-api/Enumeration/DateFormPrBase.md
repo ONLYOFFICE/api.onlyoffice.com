@@ -18,7 +18,7 @@ Object
 创建具有特定日期表单属性的日期表单。
 
 ```javascript editor-forms
-// How to create a date form with its base properties.
+// How do I create a date form with its base properties?
 
 // Create the base properties and apply them to the ApiDateForm object.
 

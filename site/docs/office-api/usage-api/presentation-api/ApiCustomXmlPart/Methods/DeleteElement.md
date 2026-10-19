@@ -8,7 +8,7 @@ Deletes an XML element at the specified XPath.
 expression.DeleteElement(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -34,7 +34,7 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
 const xmlManager = presentation.GetCustomXmlParts();
-const xml = xmlManager.Add('<content xmlns="http://example"><text>example_text</text><imaginaryNode>text inside imaginary node</imaginaryNode></content>');
+const xml = xmlManager.Add('<content xmlns="http://example.com"><text>example_text</text><imaginaryNode>text inside imaginary node</imaginaryNode></content>');
 xml.DeleteElement('/content/imaginaryNode');
 
 const fill = Api.CreateSolidFill(Api.RGB(156, 90, 161));

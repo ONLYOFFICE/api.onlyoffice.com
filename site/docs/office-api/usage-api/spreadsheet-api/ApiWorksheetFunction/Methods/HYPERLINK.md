@@ -8,7 +8,7 @@ Creates a shortcut that jumps to another location in the current workbook, or op
 expression.HYPERLINK(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

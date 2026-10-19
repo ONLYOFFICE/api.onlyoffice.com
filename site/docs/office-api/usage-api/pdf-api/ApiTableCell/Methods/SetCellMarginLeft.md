@@ -1,7 +1,6 @@
 # SetCellMarginLeft
 
-Specifies an amount of space which shall be left between the left extent of the current cell contents and the
-left edge border of a specific individual table cell within a table.
+Specifies an amount of space which shall be left between the left extent of the current cell contents and the left edge border of a specific individual table cell within a table.
 
 ## Syntax
 
@@ -9,13 +8,13 @@ left edge border of a specific individual table cell within a table.
 expression.SetCellMarginLeft(margin);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| margin | Required | [twips](../../Enumeration/twips.md) |  | The cell margin. If this value is `null`, the default margin is used. otherwise override the table cell left margin with specified value for the current cell. |
+| margin | Required | [twips](../../Enumeration/twips.md) \| null \| undefined |  | The cell margin. If this value is `null`, the default margin is used. otherwise override the table cell left margin with specified value for the current cell. |
 
 ## Returns
 

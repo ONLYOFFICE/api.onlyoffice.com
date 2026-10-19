@@ -8,7 +8,7 @@ Returns the hyperlink from the current drawing object (shape or image).
 expression.GetHyperlink();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

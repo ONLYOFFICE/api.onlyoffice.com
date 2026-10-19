@@ -16,7 +16,7 @@ expression.GetTextColor();
 
 ## 返回值
 
-[ApiColor](../../ApiColor/ApiColor.md)
+[ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined
 
 ## 示例
 

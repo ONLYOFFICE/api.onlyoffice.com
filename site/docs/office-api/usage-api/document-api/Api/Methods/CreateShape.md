@@ -8,21 +8,21 @@ Creates a shape with the parameters specified.
 expression.CreateShape(shapeType, width, height, fill, stroke);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shapeType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. |
+| shapeType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. The "textRect" type creates a text box as the editor inserts it: a light fill and a thin black outline. |
 | width | Optional | [EMU](../../Enumeration/EMU.md) | 914400 | The shape width in English measure units. |
 | height | Optional | [EMU](../../Enumeration/EMU.md) | 914400 | The shape height in English measure units. |
-| fill | Optional | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | The color or pattern used to fill the shape. |
-| stroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | The stroke used to create the element shadow. |
+| fill | Optional | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the shape. If not specified, the default shape style fill (theme accent) is used. |
+| stroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to draw the shape outline. If not specified, the default shape style outline (theme accent) is used. |
 
 ## Returns
 
-[ApiShape](../../ApiShape/ApiShape.md)
+[ApiShape](../../ApiShape/ApiShape.md) \| null \| undefined
 
 ## Example
 

@@ -8,7 +8,7 @@ Returns the width of the specified column (by index) of the current table.
 expression.GetColumnWidth(columnIndex);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

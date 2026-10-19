@@ -8,7 +8,7 @@ Converts the ApiStyle object into the JSON object.
 expression.ToJSON(bWriteNumberings);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

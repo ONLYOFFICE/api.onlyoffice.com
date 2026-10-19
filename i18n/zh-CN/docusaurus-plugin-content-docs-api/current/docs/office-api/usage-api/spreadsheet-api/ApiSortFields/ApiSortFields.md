@@ -1,6 +1,6 @@
 # ApiSortFields
 
-表示 ApiSortFields 类。
+表示 Sort 对象的排序字段集合的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -14,6 +14,8 @@
 | Parent | [ApiSort](../ApiSort/ApiSort.md) | 返回父 Sort 对象。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

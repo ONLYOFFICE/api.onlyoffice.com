@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Run
 
-使用脚本文件作为参数运行 ONLYOFFICE Document Builder 可执行文件。
+在当前进程中运行脚本文件。脚本的[语法](../../using-cli/script-file.md)与通过 CLI 运行时相同。
 
 :::note
 此方法不适用于 **JS**。

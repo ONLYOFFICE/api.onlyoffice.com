@@ -8,7 +8,7 @@ Returns the specified comment reply.
 expression.GetReply(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetReply(nIndex);
 
 ## Returns
 
-[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md)
+[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md) \| null \| undefined
 
 ## Example
 

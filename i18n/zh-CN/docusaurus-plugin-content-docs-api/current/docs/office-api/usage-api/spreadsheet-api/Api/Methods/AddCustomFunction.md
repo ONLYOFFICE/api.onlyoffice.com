@@ -1,13 +1,8 @@
 # AddCustomFunction
 
 创建新的自定义函数。
-函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。
-参数和结果可以指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。
-参数可以是必需的或可选的。用户还可以设置默认值。
-传递的函数可以是异步的（async 函数或返回 Promise 的函数）。
-在传递的函数内部，可以使用 *this.address* 访问执行计算的当前单元格地址。
-还可以使用 *this.args[0].address*、*this.args[1].address* 等访问函数参数的地址。
-此方法不用于 ONLYOFFICE Document Builder。请改用 AddCustomFunctionLibrary。
+
+函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。参数和结果可以指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。参数可以是必需的或可选的。用户还可以设置默认值。传递的函数可以是异步的（async 函数或返回 Promise 的函数）。在传递的函数内部，可以使用 *this.address* 访问执行计算的当前单元格地址。还可以使用 *this.args[0].address*、*this.args[1].address* 等访问函数参数的地址。此方法不用于 ONLYOFFICE Document Builder。请改用 AddCustomFunctionLibrary。
 
 ## 语法
 

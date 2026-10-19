@@ -560,7 +560,7 @@ If `rootId` does not match your client room, the script skips the event.
 
 The script verifies the file name the title must start with `invoice` (case-insensitive)
 
-To be safer, it also loads the file title from DocSpace GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/get-file-info)
+To be safer, it also loads the file title from DocSpace GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info)
 
 If the file does not look like an invoice, the script skips it.
 
@@ -589,7 +589,7 @@ If the file does not look like an invoice, the script skips it.
 If all checks pass, the script:
 
 1. Moves the file into the Incoming folder:
-- PUT [/api/2.0/files/fileops/move}](/docspace/api-backend/usage-api/move-batch-items)
+- PUT [/api/2.0/files/fileops/move}](/docspace/api-backend/usage-api/files/operations/move-batch-items)
 - with `destFolderId = INCOMING_FOLDER_ID`
 
 2. Sends a notification to the account manager (placeholder)

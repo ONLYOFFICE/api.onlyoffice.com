@@ -8,7 +8,7 @@ Returns a type of the ApiCustomProperties class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomProperties](../ApiCustomProperties.md) class.
+`expression` - A variable that represents an [ApiCustomProperties](../ApiCustomProperties.md) class.
 
 ## Parameters
 

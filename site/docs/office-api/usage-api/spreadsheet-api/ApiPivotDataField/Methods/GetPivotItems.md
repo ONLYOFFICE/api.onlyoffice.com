@@ -1,9 +1,26 @@
 # GetPivotItems
 
-Returns an object that represents either a single pivot table item (the ApiPivotItem object)
-or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field.
+Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field.
 
 Inherited from [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md).
+
+## Syntax
+
+```javascript
+expression.GetPivotItems(index);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | Optional | number |  | The item index. |
+
+## Returns
+
+[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
 
 ## Example
 

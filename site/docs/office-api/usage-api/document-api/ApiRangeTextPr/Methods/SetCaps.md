@@ -4,6 +4,24 @@ Specifies that any lowercase characters in the text run are formatted for displa
 
 Inherited from [ApiTextPr.SetCaps](../../ApiTextPr/Methods/SetCaps.md).
 
+## Syntax
+
+```javascript
+expression.SetCaps(isCaps);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isCaps | Required | boolean |  | Specifies that the contents of the current run are displayed capitalized. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## Example
 
 Display all lowercase letters as capitals without changing the underlying text in a document.

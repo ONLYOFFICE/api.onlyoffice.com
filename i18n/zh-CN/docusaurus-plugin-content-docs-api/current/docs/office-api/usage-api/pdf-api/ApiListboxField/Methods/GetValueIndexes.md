@@ -4,6 +4,22 @@
 
 继承自 [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md)。
 
+## 语法
+
+```javascript
+expression.GetValueIndexes();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number[]
+
 ## 示例
 
 检索 PDF 中下拉列表中已选项目的索引位置。

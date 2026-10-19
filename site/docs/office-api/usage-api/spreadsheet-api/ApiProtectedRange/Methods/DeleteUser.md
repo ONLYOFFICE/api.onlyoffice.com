@@ -8,7 +8,7 @@ Removes a user from the current protected range.
 expression.DeleteUser(sId);
 ```
 
-`expression` - A variable that represents a [ApiProtectedRange](../ApiProtectedRange.md) class.
+`expression` - A variable that represents an [ApiProtectedRange](../ApiProtectedRange.md) class.
 
 ## Parameters
 

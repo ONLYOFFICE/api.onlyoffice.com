@@ -8,7 +8,7 @@ Creates a protected range of the specified type from the selected data range of 
 expression.AddProtectedRange(sTitle, sDataRange);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

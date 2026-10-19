@@ -1,4 +1,4 @@
-﻿# Lock
+# Lock
 
 `POST /wopi/files/(file_id)`
 

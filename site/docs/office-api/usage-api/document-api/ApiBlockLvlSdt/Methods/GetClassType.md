@@ -8,7 +8,7 @@ Returns a type of the ApiBlockLvlSdt class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

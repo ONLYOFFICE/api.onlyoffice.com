@@ -8,7 +8,7 @@ Returns a type of the ApiRichContent class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 

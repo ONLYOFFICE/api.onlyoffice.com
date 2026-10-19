@@ -8,7 +8,7 @@ Sets the text properties to the current run.
 expression.SetTextPr(textPr);
 ```
 
-`expression` - A variable that represents a [ApiRichRun](../ApiRichRun.md) class.
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
 
 ## Parameters
 

@@ -1,76 +1,36 @@
-# Enumeration: SDKMode
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts
+---
 
-Defined in: [enums/index.ts:28](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L28)
+import APITable from '@site/src/components/APITable/APITable';
 
-The available modes for initializing the SDK.
-Defines the context in which the SDK operates.
+# SDKMode
+
+The SDK initialization mode. Passed via [TFrameConfig.mode](../type-aliases/TFrameConfig.md#mode).
+Determines the UI and available functionality of the embedded frame.
+
+## Example
+
+```typescript
+sdk.init({ mode: SDKMode.Manager, frameId: "ds-frame", src: "https://portal.example.com" });
+```
 
 ## Enumeration Members
 
-### Manager
+<APITable>
 
-> **Manager**: `"manager"`
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `Chat` | `"chat"` | AI chat interface. Full-page conversation UI, bound to an AI agent when [TFrameConfig.agentId](../type-aliases/TFrameConfig.md#agentId) is set, to the current user otherwise. |
+| `Editor` | `"editor"` | Document editor. Requires [TFrameConfig.id](../type-aliases/TFrameConfig.md#id) — the file identifier to open for editing. |
+| `FileSelector` | `"file-selector"` | File picker dialog. Returns the selected file via [TFrameEvents.onSelectCallback](../type-aliases/TFrameEvents.md#onSelectCallback). Filterable by [TFrameConfig.selectorType](../type-aliases/TFrameConfig.md#selectorType). |
+| `Forms` | `"forms"` | Forms gallery. Displays forms for the room specified by [TFrameConfig.id](../type-aliases/TFrameConfig.md#id). Supports [TFrameConfig.showMenu](../type-aliases/TFrameConfig.md#showMenu) to toggle the side panel. |
+| `Manager` | `"manager"` | File/folder browser. Displays a list of entities at [TFrameConfig.rootPath](../type-aliases/TFrameConfig.md#rootPath). Supports CRUD operations on rooms, folders, and files. Forces [TFrameConfig.noLoader](../type-aliases/TFrameConfig.md#noLoader) to `false`. |
+| `Personal` | `"personal"` | Personal files browser. File/folder manager for the user's personal space (My Documents, Favorites, Recent, Shared with me, Trash). Uses [TFrameConfig.personalDestination](../type-aliases/TFrameConfig.md#personalDestination) to pick the initial section; has no navigation menu of its own, so the host switches sections with [SDKInstance.navigateSection](../classes/SDKInstance.md#navigatesection). |
+| `PublicRoom` | `"public-room"` | Public room view. Grants anonymous access to view, edit, comment on, and review documents. Requires [TFrameConfig.requestToken](../type-aliases/TFrameConfig.md#requestToken). |
+| `RoomSelector` | `"room-selector"` | Room picker dialog. Returns the selected room via [TFrameEvents.onSelectCallback](../type-aliases/TFrameEvents.md#onSelectCallback). |
+| `System` | `"system"` | Headless mode. Renders a blank page with a loader; used to call session methods ([SDKInstance.login](../classes/SDKInstance.md#login), [SDKInstance.logout](../classes/SDKInstance.md#logout)) without UI. Forces [TFrameConfig.noLoader](../type-aliases/TFrameConfig.md#noLoader) to `false`. |
+| `Uploader` | `"uploader"` | File upload interface. Uploads files to the folder specified by [TFrameConfig.id](../type-aliases/TFrameConfig.md#id). |
+| `Viewer` | `"viewer"` | Read-only document viewer. Requires [TFrameConfig.id](../type-aliases/TFrameConfig.md#id) — the file identifier to open for viewing. |
 
-Defined in: [enums/index.ts:30](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L30)
-
-Displays a list of entities based on the specified `rootPath`. Supports creating and managing rooms, folders, and files.
-
-***
-
-### Editor
-
-> **Editor**: `"editor"`
-
-Defined in: [enums/index.ts:32](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L32)
-
-Opens the document editor for the file specified by its `id` parameter.
-
-***
-
-### Viewer
-
-> **Viewer**: `"viewer"`
-
-Defined in: [enums/index.ts:34](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L34)
-
-Opens the document viewer for the file specified by its `id` parameter.
-
-***
-
-### RoomSelector
-
-> **RoomSelector**: `"room-selector"`
-
-Defined in: [enums/index.ts:36](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L36)
-
-Opens the room selector for selecting a room from the available list.
-
-***
-
-### FileSelector
-
-> **FileSelector**: `"file-selector"`
-
-Defined in: [enums/index.ts:38](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L38)
-
-Opens the file selector for selecting a file from the available list.
-
-***
-
-### System
-
-> **System**: `"system"`
-
-Defined in: [enums/index.ts:40](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L40)
-
-Displays a blank page with a loader and provides access to system methods.
-
-***
-
-### PublicRoom
-
-> **PublicRoom**: `"public-room"`
-
-Defined in: [enums/index.ts:42](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L42)
-
-Displays a public room that provides access to view, edit, comment on, and review documents without registration.
+</APITable>

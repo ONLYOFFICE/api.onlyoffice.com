@@ -2,19 +2,23 @@
 
 Sets image to button widget field.
 
+:::note
+Doesn't work with "textOnly" layout.
+:::
+
 ## Syntax
 
 ```javascript
 expression.SetImage(imageUrl, appearance);
 ```
 
-`expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | Optional | string | "" | The image URL. |
+| imageUrl | Optional | string | "" | The URL of the image to set for the button widget (currently only internet URL or Base64 encoded images are supported) |
 | appearance | Optional | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | The appearance state. |
 
 ## Returns

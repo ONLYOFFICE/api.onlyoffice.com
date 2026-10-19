@@ -23,7 +23,7 @@ Object
 向文档添加具有指定属性的图表目录。
 
 ```javascript editor-docx
-// How to create a table of figures properties.
+// How do I create table of figures properties?
 
 // Add a table of figures from created properties.
 

@@ -1,6 +1,6 @@
 # ApiComment
 
-表示 ApiComment 类。
+表示批注的类。
 
 ## 属性
 
@@ -18,6 +18,8 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | 无 | 向批注添加回复。 |
@@ -26,8 +28,8 @@
 | [GetClassType](./Methods/GetClassType.md) | "comment" | 返回 ApiComment 类的类型。 |
 | [GetId](./Methods/GetId.md) | string | 返回当前批注 ID。 |
 | [GetQuoteText](./Methods/GetQuoteText.md) | String \| null | 返回当前批注的引用文本。 |
-| [GetRepliesCount](./Methods/GetRepliesCount.md) | Number | 返回批注回复的数量。 |
-| [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) | 返回指定的批注回复。 |
+| [GetRepliesCount](./Methods/GetRepliesCount.md) | Number \| null \| undefined | 返回批注回复的数量。 |
+| [GetReply](./Methods/GetReply.md) | [ApiCommentReply](../ApiCommentReply/ApiCommentReply.md) \| null \| undefined | 返回指定的批注回复。 |
 | [GetText](./Methods/GetText.md) | string | 返回批注文本。 |
 | [GetTime](./Methods/GetTime.md) | Number | 返回批注创建时间戳（当前时区格式）。 |
 | [GetTimeUTC](./Methods/GetTimeUTC.md) | Number | 返回批注创建时间戳（UTC 格式）。 |

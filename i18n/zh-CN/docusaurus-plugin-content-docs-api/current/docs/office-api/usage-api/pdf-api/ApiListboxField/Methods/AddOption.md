@@ -4,6 +4,25 @@
 
 继承自 [ApiBaseListField.AddOption](../../ApiBaseListField/Methods/AddOption.md)。
 
+## 语法
+
+```javascript
+expression.AddOption(option, index);
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| option | 必需 | [ListOption](../../Enumeration/ListOption.md) |  | 要添加的列表选项 |
+| index | 可选 | number | this.GetOptions().lenght | 要添加选项的索引。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中向下拉列表或列表字段添加选项。

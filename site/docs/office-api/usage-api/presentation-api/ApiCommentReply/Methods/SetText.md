@@ -8,7 +8,7 @@ Sets the comment reply text.
 expression.SetText(sText);
 ```
 
-`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+`expression` - A variable that represents an [ApiCommentReply](../ApiCommentReply.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.SetText(sText);
 
 ## Returns
 
-[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md)
+[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md) \| null \| undefined
 
 ## Example
 

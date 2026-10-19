@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: -9
 ---
 
@@ -14,10 +14,11 @@ sidebar_position: -9
 
 您可以将具有任何外观的文档嵌入到您的网页中，但使用特定的**嵌入**显示类型更合乎逻辑，并且只为网页内的文档显示的编辑器提供主要控件。
 
-这就是为什么 *type* 应该设置为 **embedded** 并且配置文件看起来像这样：
+这就是为什么 `type` 应该设置为 **embedded** 并且配置文件看起来像这样：
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -30,15 +31,17 @@ sidebar_position: -9
 
 嵌入模式只允许使用三个控制按钮显示文档：**下载**、 **共享**和**嵌入**。您可以通过以下方式更改这些按钮的行为：
 
-- *editorConfig.embedded.embedUrl* 是配置中 *type* 参数设置为 **embedded** 的文档的绝对URL，其他用户可以使用该URL将其嵌入到自己的网站页面中。
+- `editorConfig.embedded.embedUrl` 是配置中 `type` 参数设置为 **embedded** 的文档的绝对URL，其他用户可以使用该URL将其嵌入到自己的网站页面中。
 
-- *editorConfig.embedded.saveUrl* 是 *document.permission.download* 参数设置为 **true** 的文档的绝对 URL，其他用户可以根据文件类型以 *DOCX*、*PPTX* 或 *XLSX* 格式将其保存到自己的计算机上。
+- `editorConfig.embedded.saveUrl` 是 `document.permissions.download` 参数设置为 `true` 的文档的绝对 URL，其他用户可以根据文件类型以 DOCX、PPTX 或 XLSX 格式将其保存到自己的计算机上。
 
-- *editorConfig.embedded.shareUrl* i是文档的绝对 URL，其他用户可以使用它与他人共享。
+- `editorConfig.embedded.shareUrl` i是文档的绝对 URL，其他用户可以使用它与他人共享。
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
         saveUrl: "https://example.com/download?doc=exampledocument1.docx",
@@ -54,7 +57,7 @@ sidebar_position: -9
 要删除这些按钮中的任何一个，只需在配置文件中不要包含相应的参数。
 
 :::note
-如果您决定隐藏**下载**按钮（*editorConfig.embedded.saveUrl* 参数），请不要忘记将文档配置中的 *document.permission.download*> 参数设置为 **false** 以完全禁用下载文件的可能性。
+如果您决定隐藏**下载**按钮（`editorConfig.embedded.saveUrl` 参数），请不要忘记将文档配置中的 `document.permissions.download`> 参数设置为 `false` 以完全禁用下载文件的可能性。
 :::
 
 有关嵌入参数的更多信息，请参见[此页面](../../usage-api/config/editor/embedded.md)。

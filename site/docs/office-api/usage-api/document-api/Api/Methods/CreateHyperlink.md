@@ -8,7 +8,7 @@ Creates a new hyperlink text block to be inserted to the current paragraph or ta
 expression.CreateHyperlink(link, display, screenTipText);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the page PrintHeadings property which specifies whether the current shee
 expression.GetPrintHeadings();
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 

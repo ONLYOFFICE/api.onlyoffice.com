@@ -8,7 +8,7 @@ Converts English Metric Units (EMUs) to millimeters.
 expression.EmusToMillimeters(emu);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ Convert measurement units from emus to millimeters in a presentation.
 const emus = 780000;
 const millimeters = Api.EmusToMillimeters(emus);
 
-const rgb = Api.CreateRGBColor(50, 150, 250);
+const rgb = Api.RGB(50, 150, 250);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 300 * 36000, 150 * 36000, fill, stroke);

@@ -8,7 +8,7 @@ Sets field in unison prop.
 expression.SetCheckInUnison(checkInUnison);
 ```
 
-`expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
+`expression` - A variable that represents an [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns a Range object that represents the column area in the pivot table report
 expression.GetColumnRange();
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

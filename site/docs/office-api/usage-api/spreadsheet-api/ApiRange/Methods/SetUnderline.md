@@ -8,7 +8,7 @@ Specifies that the contents of the current cell / cell range are displayed along
 expression.SetUnderline(undelineType);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

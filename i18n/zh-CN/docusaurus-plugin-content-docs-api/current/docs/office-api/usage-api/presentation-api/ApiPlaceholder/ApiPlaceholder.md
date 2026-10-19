@@ -1,8 +1,17 @@
 # ApiPlaceholder
 
-表示 ApiPlaceholder 类。
+表示占位符的类。
+
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Index | number \| undefined | 返回或设置占位符索引。 |
+| Type | [PlaceholderType](../Enumeration/PlaceholderType.md) | 返回或设置占位符类型。 |
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |

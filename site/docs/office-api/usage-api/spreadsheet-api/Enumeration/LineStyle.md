@@ -25,13 +25,13 @@ Enumeration
 
 ## Example
 
-Set a bottom black dotted border for a cell.
+Set the dotted line style for a cell border.
 
 ```javascript editor-xlsx
-// How to set a style of a border line.
+// How do I set the style of a border line?
 
 // Get a range and change its border line style to dotted.
 
-const color = Api.CreateColorFromRGB(0, 0, 0);
+const color = Api.RGB(0, 0, 0);
 worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", color);
 ```

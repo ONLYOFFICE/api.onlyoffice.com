@@ -4,6 +4,22 @@ Returns the date operator for time period conditions.
 
 Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
+## Syntax
+
+```javascript
+expression.GetDateOperator();
+```
+
+`expression` - A variable that represents an [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+
 ## Example
 
 Retrieve the time period comparison type used by a date-based formatting rule in a spreadsheet.
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlTimePeriod", "xlThisMonth");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let dateOperator = condition1.GetDateOperator();
 

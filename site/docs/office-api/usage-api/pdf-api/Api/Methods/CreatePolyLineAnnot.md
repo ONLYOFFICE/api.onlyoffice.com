@@ -8,7 +8,7 @@ Creates polyline annotation.
 expression.CreatePolyLineAnnot(rect, path);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

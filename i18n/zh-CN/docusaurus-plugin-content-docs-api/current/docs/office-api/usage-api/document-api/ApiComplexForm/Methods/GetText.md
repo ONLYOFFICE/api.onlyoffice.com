@@ -4,20 +4,38 @@
 
 继承自 [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md)。
 
+## 语法
+
+```javascript
+expression.GetText();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
-从文档中的表单字段检索输入的文本。
+提取文档中复合表单的组合文本内容。
 
 ```javascript editor-docx
-// How do I read the current value typed into a form in a document?
+// How do I read the text entered across all parts of a form in a document?
 
-// Extract the raw content of a filled-in text field to use or display elsewhere in a document.
+// Capture the assembled text from a multi-part form to display or validate it in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let complexForm = Api.CreateComplexForm({"key": "Complex1"});
+complexForm.Add(Api.CreateTextForm({"placeholder" : "username"}));
+complexForm.Add("@onlyoffice.com");
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let text = textForm.GetText();
+paragraph.AddElement(complexForm);
+let text = complexForm.GetText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form text: " + text);
 doc.Push(paragraph);

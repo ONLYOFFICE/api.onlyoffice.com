@@ -1,6 +1,8 @@
 # SetName
 
-设置表格的名称。等同于 SetDisplayName。
+设置表格的名称。
+
+等同于 SetDisplayName。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。

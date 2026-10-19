@@ -12,7 +12,7 @@ The parameters on this page are available only for the extended white label lice
 
 ## about
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **About** menu button.
 
@@ -20,7 +20,7 @@ Whether to display the **About** menu button.
 
 ## features.spellcheck.change
 
-**type:** `boolean`
+**type**: `boolean`
 
 Whether to display the spell checker setting. This setting is available in all editor types.
 
@@ -36,7 +36,7 @@ Deprecated since version 9.0.4.
 
 ## font
 
-**type:** `object`
+**type**: `object`
 
 The font for the interface elements (buttons, tabs, etc.).
 
@@ -51,7 +51,7 @@ The font for the interface elements (buttons, tabs, etc.).
 
 ### font.name
 
-**type:** `string`
+**type**: `string`
 
 The font name.
 
@@ -59,7 +59,7 @@ The font name.
 
 ### font.size
 
-**type:** `string`
+**type**: `string`
 
 The font size.
 
@@ -67,7 +67,7 @@ The font size.
 
 ## layout
 
-**type:** `object`
+**type**: `object`
 
 The parameters that the user can use to hide the interface elements but not to disable features completely. The hidden features are still available from other elements such as the context menu or via hotkeys.
 
@@ -120,7 +120,7 @@ The parameters that the user can use to hide the interface elements but not to d
 
 ### layout.header
 
-**type:** `object`
+**type**: `object`
 
 The editor header settings.
 
@@ -137,7 +137,7 @@ The editor header settings.
 
 ### layout.header.editMode
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display a button for switching editor modes in the header.
 
@@ -145,7 +145,7 @@ Whether to display a button for switching editor modes in the header.
 
 ### layout.header.save
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Save** button in the editor header. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `false`.
 
@@ -153,7 +153,7 @@ Whether to display the **Save** button in the editor header. Please note that th
 
 ### layout.header.user
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the icon with the user's avatar/initials in the editor header.
 
@@ -161,7 +161,7 @@ Whether to display the icon with the user's avatar/initials in the editor header
 
 ### layout.header.users
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the button with the editing users.
 
@@ -169,7 +169,7 @@ Whether to display the button with the editing users.
 
 ### layout.leftMenu
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The left menu settings. If set to `false`, the left menu is hidden.
 
@@ -185,7 +185,7 @@ The left menu settings. If set to `false`, the left menu is hidden.
 
 ### layout.leftMenu.mode
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 The initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab.
 
@@ -193,7 +193,7 @@ The initial value of the left panel visibility - displayed or hidden. It is used
 
 ### layout.leftMenu.navigation
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Navigation** button. This parameter will only be available for the document editor.
 
@@ -201,7 +201,7 @@ Whether to display the **Navigation** button. This parameter will only be availa
 
 ### layout.leftMenu.spellcheck
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Spellcheck** button. This parameter will only be available for the spreadsheet editor.
 
@@ -209,7 +209,7 @@ Whether to display the **Spellcheck** button. This parameter will only be availa
 
 ### layout.rightMenu
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The right menu settings. If set to `false`, the right menu is hidden.
 
@@ -223,7 +223,7 @@ The right menu settings. If set to `false`, the right menu is hidden.
 
 ### layout.rightMenu.mode
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 The initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab.
 
@@ -231,7 +231,7 @@ The initial value of the right panel visibility - displayed or hidden. It is use
 
 ### layout.statusBar
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The status bar settings. If set to `false`, the status bar is hidden.
 
@@ -247,7 +247,7 @@ The status bar settings. If set to `false`, the status bar is hidden.
 
 ### layout.statusBar.actionStatus
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display an action status.
 
@@ -255,7 +255,7 @@ Whether to display an action status.
 
 ### layout.statusBar.docLang
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display a button for choosing the document language. This parameter will only be available for the document editor and the presentation editor.
 
@@ -263,7 +263,7 @@ Whether to display a button for choosing the document language. This parameter w
 
 ### layout.statusBar.textLang
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display a button for choosing the text language. This parameter will only be available for the document editor and the presentation editor.
 
@@ -271,7 +271,7 @@ Whether to display a button for choosing the text language. This parameter will 
 
 ### layout.toolbar
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The toolbar settings. If set to `false`, the toolbar is hidden.
 
@@ -309,7 +309,7 @@ The toolbar settings. If set to `false`, the toolbar is hidden.
 
 ### layout.toolbar.collaboration
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The **Collaboration** tab settings. If set to `false`, the tab is hidden.
 
@@ -323,7 +323,7 @@ The **Collaboration** tab settings. If set to `false`, the tab is hidden.
 
 ### layout.toolbar.collaboration.mailmerge
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the button for choosing the mail merge base.
 
@@ -331,7 +331,7 @@ Whether to display the button for choosing the mail merge base.
 
 ### layout.toolbar.draw
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Draw** tab.
 
@@ -339,7 +339,7 @@ Whether to display the **Draw** tab.
 
 ### layout.toolbar.file
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The **File** tab settings. If set to `false`, the tab is hidden.
 
@@ -356,7 +356,7 @@ The **File** tab settings. If set to `false`, the tab is hidden.
 
 ### layout.toolbar.file.close
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Close menu** option.
 
@@ -364,7 +364,7 @@ Whether to display the **Close menu** option.
 
 ### layout.toolbar.file.info
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Document info** option.
 
@@ -372,7 +372,7 @@ Whether to display the **Document info** option.
 
 ### layout.toolbar.file.save
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Save** option.
 
@@ -380,7 +380,7 @@ Whether to display the **Save** option.
 
 ### layout.toolbar.file.settings
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Advanced settings** option.
 
@@ -388,7 +388,7 @@ Whether to display the **Advanced settings** option.
 
 ### layout.toolbar.home
 
-**type:** `object`
+**type**: `object`
 
 The **Home** tab settings. This tab cannot be hidden.
 
@@ -396,7 +396,7 @@ The **Home** tab settings. This tab cannot be hidden.
 
 ### layout.toolbar.home.mailmerge
 
-**type:** `boolean`
+**type**: `boolean`
 
 Whether to display the button for choosing the mail merge base.
 
@@ -408,7 +408,7 @@ Please use the [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmail
 
 ### layout.toolbar.insert
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The **Insert** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor.
 
@@ -423,7 +423,7 @@ The **Insert** tab settings. If set to `false`, the tab is hidden. This paramete
 
 ### layout.toolbar.insert.field
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Field** button. This parameter will only be available for the document editor.
 
@@ -431,7 +431,7 @@ Whether to display the **Field** button. This parameter will only be available f
 
 ### layout.toolbar.insert.file
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Text from File** button. This parameter will only be available for the document editor.
 
@@ -439,7 +439,7 @@ Whether to display the **Text from File** button. This parameter will only be av
 
 ### layout.toolbar.layout
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The **Layout** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor and the spreadsheet editor.
 
@@ -453,7 +453,7 @@ The **Layout** tab settings. If set to `false`, the tab is hidden. This paramete
 
 ### layout.toolbar.layout.pagecolor
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Page Color** button. This parameter will only be available for the document editor.
 
@@ -461,7 +461,7 @@ Whether to display the **Page Color** button. This parameter will only be availa
 
 ### layout.toolbar.plugins
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Plugins** tab.
 
@@ -469,7 +469,7 @@ Whether to display the **Plugins** tab.
 
 ### layout.toolbar.protect
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Protection** tab.
 
@@ -477,7 +477,7 @@ Whether to display the **Protection** tab.
 
 ### layout.toolbar.references
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **References** tab. This parameter will only be available for the document editor.
 
@@ -485,7 +485,7 @@ Whether to display the **References** tab. This parameter will only be available
 
 ### layout.toolbar.save
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Save** button on the toolbar. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `true`.
 
@@ -493,7 +493,7 @@ Whether to display the **Save** button on the toolbar. Please note that this set
 
 ### layout.toolbar.view
 
-**type:** `object | boolean` | **default:** `true`
+**type**: `object | boolean` | **default**: `true`
 
 The **View** tab settings. If set to `false`, the tab is hidden.
 
@@ -507,7 +507,7 @@ The **View** tab settings. If set to `false`, the tab is hidden.
 
 ### layout.toolbar.view.navigation
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the **Navigation** button. This parameter will only be available for the document editor.
 
@@ -515,7 +515,7 @@ Whether to display the **Navigation** button. This parameter will only be availa
 
 ## leftMenu
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the left menu panel.
 
@@ -527,7 +527,7 @@ Starting from version 7.1, please use the [layout.leftMenu](#layoutleftmenu) par
 
 ## loaderLogo
 
-**type:** `string`
+**type**: `string`
 
 The path to the image logo displayed while the document is being loaded. The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
 
@@ -539,7 +539,7 @@ There are no special recommendations for this file, but it would be better if it
 
 ## loaderName
 
-**type:** `string`
+**type**: `string`
 
 The text displayed while the document is being loaded.
 
@@ -547,7 +547,7 @@ The text displayed while the document is being loaded.
 
 ## rightMenu
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the right menu panel.
 
@@ -559,7 +559,7 @@ Starting from version 7.1, please use the [layout.rightMenu](#layoutrightmenu) p
 
 ## statusBar
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the status bar.
 
@@ -571,7 +571,7 @@ Starting from version 7.1, please use the [layout.statusBar](#layoutstatusbar) p
 
 ## toolbar
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to display the top toolbar.
 

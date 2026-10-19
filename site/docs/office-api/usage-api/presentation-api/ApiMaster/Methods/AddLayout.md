@@ -8,7 +8,7 @@ Adds a layout to the specified slide master.
 expression.AddLayout(nPos, oLayout);
 ```
 
-`expression` - A variable that represents a [ApiMaster](../ApiMaster.md) class.
+`expression` - A variable that represents an [ApiMaster](../ApiMaster.md) class.
 
 ## Parameters
 

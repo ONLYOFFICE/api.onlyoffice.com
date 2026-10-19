@@ -13,12 +13,12 @@ Object
 | ApplicationId | string | An identifier of the plugin which can edit the current OLE object and must be of the *asc.\{UUID\}* type. |
 | Data | string | OLE object data (internal format). |
 | Height | number | The OLE object height measured in millimeters. |
-| HeightPix | number | The OLE object image height in pixels. |
+| HeightPix | number \| null \| undefined | The OLE object image height in pixels. |
 | ImageData | string | An image in the base64 format stored in the OLE object and used by the plugin. |
 | InternalId | string | The OLE object identifier which is used to work with OLE object added to the document. |
 | ParaDrawingId | string | An identifier of the drawing object containing the current OLE object. |
 | Width | number | The OLE object width measured in millimeters. |
-| WidthPix | number | The OLE object image width in pixels. |
+| WidthPix | number \| null \| undefined | The OLE object image width in pixels. |
 
 ## Example
 

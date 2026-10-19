@@ -4,18 +4,36 @@ Sets the border color to the current form.
 
 Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Apply a border color to a form field to highlight it in a document.
+Change the outline color of a signature field's border in a document.
 
 ```javascript editor-docx
-// How do I change the border color of a form field in a document?
+// How do I set a custom border color for a signature field in a document?
 
-// Style the outline of a form field with a specific color to draw attention to it in a document.
+// Make a signature field stand out by styling its border with a specific color in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
+paragraph.AddElement(signatureForm);
+signatureForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```

@@ -8,14 +8,14 @@ The config base section defines the top-level parameters for initializing the do
 
 ## documentType
 
-**type:** `"word" | "cell" | "slide" | "pdf" | "diagram"`
+**type**: `"word" | "cell" | "slide" | "pdf" | "diagram"`
 
 The document type to be opened:
 
 - `word` - document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
 - `cell` - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
 - `slide` - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- `pdf` - portable document format (*.djvu, .oxps, .pdf, .xps*);
+- `pdf` - portable document format (*.djvu, .ofd, .oxps, .pdf, .xps*);
 - `diagram` - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
 :::info
@@ -30,7 +30,7 @@ If omitted, the document type is automatically inferred from the [`document.file
 
 ## height
 
-**type:** `string` | **default:** `"100%"`
+**type**: `string` | **default**: `"100%"`
 
 The document height in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
 
@@ -38,7 +38,7 @@ The document height in the browser window. Can be set to any CSS-compatible size
 
 ## title
 
-**type:** `string`
+**type**: `string`
 
 The title of the content opened in the editor. It is set as the `title` attribute of the editor frame and is used to describe the frame contents, in particular, by screen readers.
 
@@ -46,7 +46,7 @@ The title of the content opened in the editor. It is set as the `title` attribut
 
 ## token
 
-**type:** `string`
+**type**: `string`
 
 The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
 
@@ -54,7 +54,7 @@ The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a
 
 ## type
 
-**type:** `"desktop" | "mobile" | "embedded"` | **default:** `"desktop"`
+**type**: `"desktop" | "mobile" | "embedded"` | **default**: `"desktop"`
 
 The platform type used to access the document:
 
@@ -66,7 +66,7 @@ The platform type used to access the document:
 
 ## width
 
-**type:** `string` | **default:** `"100%"`
+**type**: `string` | **default**: `"100%"`
 
 The document width in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
 
@@ -74,19 +74,19 @@ The document width in the browser window. Can be set to any CSS-compatible size 
 
 ## document
 
-**type:** `object`
+**type**: `object`
 
 The [document](document/document.md) section defines the document parameters.
 
 ## editorConfig
 
-**type:** `object`
+**type**: `object`
 
 The [editorConfig](editor/editor.md) section defines the editor interface parameters.
 
 ## events
 
-**type:** `object`
+**type**: `object`
 
 The [events](events.md) section defines the callback functions for editor events.
 

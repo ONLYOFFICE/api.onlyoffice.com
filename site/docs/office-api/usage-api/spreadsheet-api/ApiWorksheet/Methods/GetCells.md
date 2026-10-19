@@ -8,7 +8,7 @@ Returns the ApiRange that represents all the cells on the worksheet (not just th
 expression.GetCells(row, col);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -32,5 +32,5 @@ Select every cell on a worksheet at once in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();
-cells.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+cells.SetFillColor(Api.RGB(255, 213, 191));
 ```

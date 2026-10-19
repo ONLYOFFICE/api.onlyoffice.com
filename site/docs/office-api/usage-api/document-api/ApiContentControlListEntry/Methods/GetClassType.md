@@ -8,7 +8,7 @@ Returns a type of the ApiContentControlListEntry class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

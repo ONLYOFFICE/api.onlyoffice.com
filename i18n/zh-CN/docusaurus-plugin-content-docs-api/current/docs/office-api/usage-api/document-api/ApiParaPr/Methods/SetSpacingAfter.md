@@ -1,8 +1,8 @@
 # SetSpacingAfter
 
-设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则
-nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
-将其解释为 false。
+设置当前段落的段后间距。
+
+如果 isAfterAuto 参数的值为 true，则 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则将其解释为 false。
 
 ## 语法
 

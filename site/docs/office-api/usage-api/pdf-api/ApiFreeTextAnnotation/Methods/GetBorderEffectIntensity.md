@@ -4,6 +4,22 @@ Gets annotation border effect intensity.
 
 Inherited from [ApiBaseAnnotation.GetBorderEffectIntensity](../../ApiBaseAnnotation/Methods/GetBorderEffectIntensity.md).
 
+## Syntax
+
+```javascript
+expression.GetBorderEffectIntensity();
+```
+
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Retrieve the intensity level of a border effect on an annotation in a PDF.

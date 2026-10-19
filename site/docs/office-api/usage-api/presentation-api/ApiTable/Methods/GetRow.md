@@ -8,7 +8,7 @@ Returns a row by its index.
 expression.GetRow(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ expression.GetRow(nIndex);
 
 ## Returns
 
-[ApiTableRow](../../ApiTableRow/ApiTableRow.md)
+[ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| null \| undefined
 
 ## Example
 

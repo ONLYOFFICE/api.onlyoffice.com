@@ -1,16 +1,26 @@
 # ApiDateForm
 
+表示文档日期字段的类。
+
 ApiDateForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
+## 属性
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Value | Date \| undefined | 返回或设置当前表单的日期。 |
+
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前表单。 |
-| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
-| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
+| [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) \| null \| undefined | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "dateForm" | 返回 ApiDateForm 类的类型。 |
 | [GetDate](./Methods/GetDate.md) | undefined \| Date | 返回当前表单的日期。 |
 | [GetFormKey](./Methods/GetFormKey.md) | string | 返回当前表单的键。 |
@@ -19,7 +29,9 @@ ApiDateForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前表单的内部 ID。 |
 | [GetLanguage](./Methods/GetLanguage.md) | string | 获取当前表单使用的日期语言。 |
 | [GetLock](./Methods/GetLock.md) | boolean | 返回当前表单的锁定状态。 |
+| [GetParent](./Methods/GetParent.md) | [ParagraphLikeContainer](../Enumeration/ParagraphLikeContainer.md) \| null \| undefined | 返回直接包含当前表单的父元素（段落或内联内容控件）。 |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | 返回当前表单的占位符文本。 |
+| [GetPosInParent](./Methods/GetPosInParent.md) | Number | 返回当前表单在其父元素中的位置（索引）。 |
 | [GetRole](./Methods/GetRole.md) | string | 返回当前表单的角色。 |
 | [GetTag](./Methods/GetTag.md) | string | 返回当前表单的标签属性。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前表单中的文本。 |
@@ -27,7 +39,7 @@ ApiDateForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [GetTime](./Methods/GetTime.md) | undefined \| number | 返回当前表单的时间戳。 |
 | [GetTipText](./Methods/GetTipText.md) | string | 返回当前表单的提示文本。 |
 | [GetValue](./Methods/GetValue.md) | Date \| undefined | 返回当前表单的日期。 |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null \| undefined | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。 |
 | [IsFilled](./Methods/IsFilled.md) | boolean | 检查当前表单是否已填写。 |
 | [IsFixed](./Methods/IsFixed.md) | boolean | 检查当前表单是否为固定大小。 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查当前表单是否为必填项。 |

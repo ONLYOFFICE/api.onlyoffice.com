@@ -8,7 +8,7 @@ Sets whether multiple values can be selected.
 expression.SetMultipleSelection(allowMultipleSelection);
 ```
 
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
+`expression` - A variable that represents an [ApiListboxField](../ApiListboxField.md) class.
 
 ## Parameters
 

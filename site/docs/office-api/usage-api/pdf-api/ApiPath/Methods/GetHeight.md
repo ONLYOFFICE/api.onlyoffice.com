@@ -8,7 +8,7 @@ Returns the height of the current path.
 expression.GetHeight();
 ```
 
-`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+`expression` - A variable that represents an [ApiPath](../ApiPath.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ number
 Measure the vertical size of a shape's drawing area in a PDF.
 
 ```javascript editor-pdf
-// How do I find the height of a custom shape in a PDF?
+// Find the height of a custom shape in a PDF.
 
 // Read the vertical measurement of a shape's outline bounds in a PDF.
 
@@ -32,7 +32,7 @@ const page = doc.GetPage(0);
 
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
-let shape = Api.CreateShape("cloud", 100 * 36000, 100 * 36000, fill, stroke);
+let shape = Api.CreateShape("cloud", 50 * 36000, 50 * 36000, fill, stroke);
 let geometry = shape.GetGeometry();
 let path = geometry.GetPath(0);
 let paths = geometry.GetPaths();

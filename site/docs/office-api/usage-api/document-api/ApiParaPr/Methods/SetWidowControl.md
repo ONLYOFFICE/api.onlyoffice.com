@@ -8,7 +8,7 @@ Specifies whether a single line of the current paragraph will be displayed on a 
 expression.SetWidowControl(isWidowControl);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets the comment author's name.
 expression.SetAuthorName(sAuthorName);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@ Returns the contextual spacing value of the current paragraph.
 
 Inherited from [ApiParaPr.GetContextualSpacing](../../ApiParaPr/Methods/GetContextualSpacing.md).
 
+## Syntax
+
+```javascript
+expression.GetContextualSpacing();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| undefined
+
 ## Example
 
 Read the contextual spacing setting from a paragraph's formatting in a document.

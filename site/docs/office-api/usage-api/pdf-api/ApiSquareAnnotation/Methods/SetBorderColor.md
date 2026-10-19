@@ -4,6 +4,24 @@ Sets annotation border color.
 
 Inherited from [ApiBaseAnnotation.SetBorderColor](../../ApiBaseAnnotation/Methods/SetBorderColor.md).
 
+## Syntax
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - A variable that represents an [ApiSquareAnnotation](../ApiSquareAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Change the border color of an annotation in a PDF.

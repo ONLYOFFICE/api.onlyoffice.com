@@ -4,14 +4,32 @@ Sets the paragraph contents justification.
 
 Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
+## Syntax
+
+```javascript
+expression.SetJc(sJc);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+
+## Returns
+
+boolean
+
 ## Example
 
-Center text alignment in a paragraph in a presentation.
+Align paragraph text in different directions in a presentation.
 
 ```javascript editor-pptx
-// How do I change the alignment of text in a presentation?
+// How do I change text alignment in a paragraph in a presentation?
 
-// Apply text alignment to a paragraph using paragraph properties in a presentation.
+// Apply left, center, or right alignment to paragraph content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -25,12 +43,24 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
+let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the right side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+docContent.Push(paragraph);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the left side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("left");
+docContent.Push(paragraph);
 slide.AddObject(shape);
 ```

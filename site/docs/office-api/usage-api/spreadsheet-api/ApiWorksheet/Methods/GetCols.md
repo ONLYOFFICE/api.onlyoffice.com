@@ -8,7 +8,7 @@ Returns the ApiRange object that represents all the cells on the columns range.
 expression.GetCols(sRange);
 ```
 
-`expression` - A variable that represents a [ApiWorksheet](../ApiWorksheet.md) class.
+`expression` - A variable that represents an [ApiWorksheet](../ApiWorksheet.md) class.
 
 ## Parameters
 
@@ -31,5 +31,5 @@ Select all cells within a specified column range on a worksheet in a spreadsheet
 
 let worksheet = Api.GetActiveSheet();
 let cols = worksheet.GetCols("A1:C1");
-cols.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+cols.SetFillColor(Api.RGB(255, 213, 191));
 ```

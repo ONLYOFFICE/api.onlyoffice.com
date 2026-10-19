@@ -8,14 +8,14 @@ Adds a new row to the current table.
 expression.AddRow(oCell, isBefore);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new row will be added. If not specified, a new row will be added at the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new row before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell before or after which a new row will be added. If not specified, a new row will be added at the end of the table. |
+| isBefore | Optional | boolean | false | Adds a new row before (true) or after (false) the specified cell. If no cell is specified, then this parameter will be ignored. |
 
 ## Returns
 
@@ -26,13 +26,13 @@ expression.AddRow(oCell, isBefore);
 Insert a new row into a table in a document.
 
 ```javascript editor-docx
-// How do I add an extra row to a table in a document?
+// Make room for more data by adding an extra row to a table in a document.
 
-// Extend a table by appending a row after a chosen position in a document.
+// Extend a table by inserting a row before a chosen row in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("We create a 2x2 table and add a new row, so that it becomes 2x3:");
+paragraph.AddText("We create a table with 2 rows and 2 columns and insert a new row before the second one, so that the table has 3 rows:");
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(2, 2);

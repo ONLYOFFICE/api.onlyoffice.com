@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentTableCell](../../ApiDrawing/Methods/GetParentTableCell.md)。
 
+## 语法
+
+```javascript
+expression.GetParentTableCell();
+```
+
+`expression` - 表示 [ApiImage](../ApiImage.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null
+
 ## 示例
 
 检索文档中包含绘图对象的表格单元格。

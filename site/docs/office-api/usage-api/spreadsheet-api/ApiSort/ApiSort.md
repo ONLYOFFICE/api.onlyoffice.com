@@ -1,6 +1,6 @@
 # ApiSort
 
-Represents the ApiSort class.
+Class representing the sort state of a list object (table).
 
 :::note
 This functionality is available in paid ONLYOFFICE Docs editions.
@@ -20,10 +20,12 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Apply](./Methods/Apply.md) | None | Applies the current sort settings to the table. |
-| [GetHeader](./Methods/GetHeader.md) | string | Returns the header setting. Always "xlYes" for a ListObject. |
+| [GetHeader](./Methods/GetHeader.md) | string | Returns the header setting. |
 | [GetMatchCase](./Methods/GetMatchCase.md) | boolean | Returns whether the sort is case-sensitive. |
 | [GetOrientation](./Methods/GetOrientation.md) | [XlSortOrientation](../Enumeration/XlSortOrientation.md) | Returns the sort orientation: "xlTopToBottom" or "xlLeftToRight". |
 | [GetParent](./Methods/GetParent.md) | [ApiListObject](../ApiListObject/ApiListObject.md) | Returns the parent list object. |

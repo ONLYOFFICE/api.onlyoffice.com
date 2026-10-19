@@ -8,7 +8,7 @@ Gets document pages count
 expression.GetPagesCount();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -23,11 +23,12 @@ number
 Count the total number of pages in a PDF.
 
 ```javascript editor-pdf
-// How do I find out how many pages my PDF has?
+// Useful for finding out how many pages a PDF has.
 
 // Show the page count in a text field in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);
 page.AddObject(textField);

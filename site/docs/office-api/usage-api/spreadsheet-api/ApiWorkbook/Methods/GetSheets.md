@@ -8,7 +8,7 @@ Returns a sheet collection that represents all the sheets in the workbook.
 expression.GetSheets();
 ```
 
-`expression` - A variable that represents a [ApiWorkbook](../ApiWorkbook.md) class.
+`expression` - A variable that represents an [ApiWorkbook](../ApiWorkbook.md) class.
 
 ## Parameters
 

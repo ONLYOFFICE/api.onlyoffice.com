@@ -8,7 +8,7 @@ Sets the negative bar border color for the data bar.
 expression.SetNegativeBorderColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 
@@ -46,7 +46,7 @@ let dataBar = formatConditions.AddDatabar();
 worksheet.GetRange("C1").SetValue("Before:");
 worksheet.GetRange("C2").SetValue(dataBar.GetNegativeBorderColor() ? "Set" : "None");
 
-let negativeBorderColor = Api.CreateColorFromRGB(200, 0, 0);
+let negativeBorderColor = Api.RGB(200, 0, 0);
 dataBar.SetNegativeBorderColor(negativeBorderColor);
 
 worksheet.GetRange("C3").SetValue("After:");

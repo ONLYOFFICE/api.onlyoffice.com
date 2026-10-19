@@ -1,9 +1,29 @@
 # SetDistances
 
-Specifies the minimum distance which will be maintained between the edges of the current drawing object and any
-subsequent text.
+Specifies the minimum distance which will be maintained between the edges of the current drawing object and any subsequent text.
 
 Inherited from [ApiDrawing.SetDistances](../../ApiDrawing/Methods/SetDistances.md).
+
+## Syntax
+
+```javascript
+expression.SetDistances(nLeft, nTop, nRight, nBottom);
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nLeft | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the left side of the current object and the subsequent text run measured in English measure units. |
+| nTop | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the top side of the current object and the preceding text run measured in English measure units. |
+| nRight | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the right side of the current object and the subsequent text run measured in English measure units. |
+| nBottom | Required | [EMU](../../Enumeration/EMU.md) |  | The distance from the bottom side of the current object and the subsequent text run measured in English measure units. |
+
+## Returns
+
+boolean
 
 ## Example
 

@@ -26,10 +26,10 @@ boolean
 
 ## 示例
 
-此示例展示如何为指定范围设置公式。
+在电子表格中为范围设置公式。
 
 ```javascript editor-xlsx
-// How to set a formula to a cell.
+// How do I set a formula to a cell?
 
 // Set a formula to a cell and get it back to display in the worksheet.
 

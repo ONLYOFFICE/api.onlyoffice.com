@@ -1,6 +1,7 @@
 # GetAttribute
 
 Retrieves the attribute value from the custom XML node.
+
 If the attribute doesn't exist, it returns `false`.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute doesn't exist, it returns `false`.
 expression.GetAttribute(name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -26,7 +27,7 @@ string \| null
 Read a single named attribute from an XML node embedded in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I extract the value of a specific attribute from a custom XML element in a spreadsheet?
+// Extract the value of a specific attribute from a custom XML element in a spreadsheet.
 
 // Pull individual attribute values out of stored XML data and display them in a spreadsheet.
 

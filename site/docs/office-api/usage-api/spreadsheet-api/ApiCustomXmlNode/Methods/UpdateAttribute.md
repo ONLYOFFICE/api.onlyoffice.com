@@ -1,6 +1,7 @@
 # UpdateAttribute
 
 Updates the value of an existing attribute in the custom XML node.
+
 If the attribute doesn't exist, the update will not occur.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute doesn't exist, the update will not occur.
 expression.UpdateAttribute(name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -27,7 +28,7 @@ boolean
 Change the value of an existing attribute on an XML element in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I modify the value of an attribute already set on an XML node in a spreadsheet?
+// Modify the value of an attribute already set on an XML node in a spreadsheet.
 
 // Revise a previously assigned attribute to reflect updated information in a spreadsheet.
 

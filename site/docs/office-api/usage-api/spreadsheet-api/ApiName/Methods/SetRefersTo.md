@@ -8,13 +8,13 @@ Sets a formula that the name is defined to refer to.
 expression.SetRefersTo(sRef);
 ```
 
-`expression` - A variable that represents a [ApiName](../ApiName.md) class.
+`expression` - A variable that represents an [ApiName](../ApiName.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". |
+| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". A constant or a formula is accepted as well, and so is a leading "=", as in the Excel RefersTo form. |
 
 ## Returns
 

@@ -8,7 +8,7 @@ Sets whether the rule targets values above or below the average.
 expression.SetAboveBelow(aboveBelow);
 ```
 
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
+`expression` - A variable that represents an [ApiAboveAverage](../ApiAboveAverage.md) class.
 
 ## Parameters
 
@@ -42,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition = formatConditions.AddAboveAverage();
-condition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition.SetFillColor(Api.RGB(255, 255, 0));
 
 worksheet.GetRange("C1").SetValue("Before:");
 worksheet.GetRange("C2").SetValue(condition.GetAboveBelow() ? "Above" : "Below");

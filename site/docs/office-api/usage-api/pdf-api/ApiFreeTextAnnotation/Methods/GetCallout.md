@@ -8,7 +8,7 @@ Gets annot callout.
 expression.GetCallout();
 ```
 
-`expression` - A variable that represents a [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
+`expression` - A variable that represents an [ApiFreeTextAnnotation](../ApiFreeTextAnnotation.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[FreeTextCallout](../../Enumeration/FreeTextCallout.md)
+[FreeTextCallout](../../Enumeration/FreeTextCallout.md) \| null \| undefined
 
 ## Example
 

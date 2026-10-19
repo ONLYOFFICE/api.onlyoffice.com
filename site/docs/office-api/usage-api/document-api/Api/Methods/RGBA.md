@@ -8,7 +8,7 @@ Creates an RGBA color from red, green, blue and alpha components.
 expression.RGBA(r, g, b, a);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

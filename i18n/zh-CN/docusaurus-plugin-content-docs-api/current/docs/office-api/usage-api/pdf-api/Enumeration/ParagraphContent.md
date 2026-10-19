@@ -11,13 +11,14 @@
 - [ApiUnsupported](../ApiUnsupported/ApiUnsupported.md)
 - [ApiRun](../ApiRun/ApiRun.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## 示例
 
 向段落添加名为 'text run' 的元素。
 
 ```javascript editor-pdf
-// How to add an element to paragraph.
+// How do I add an element to a paragraph?
 
 // Insert an element to paragraph.
 

@@ -1,0 +1,44 @@
+# GetText
+
+Returns a text from the text run.
+
+## Syntax
+
+```javascript
+expression.GetText();
+```
+
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
+## Example
+
+Read the text content from a text run in a PDF.
+
+```javascript editor-pdf
+// How do I extract the text from a text run in a PDF?
+
+// Retrieve what words are stored in a text element in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+console.log(`The rich run text is: "${run.GetText()}"`);
+```

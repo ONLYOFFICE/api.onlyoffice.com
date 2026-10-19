@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutCompactRow();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查电子表格中透视字段是否使用紧凑行布局。

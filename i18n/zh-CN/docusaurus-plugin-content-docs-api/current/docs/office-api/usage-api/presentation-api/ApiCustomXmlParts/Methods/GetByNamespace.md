@@ -25,7 +25,7 @@ expression.GetByNamespace(namespace);
 通过命名空间获取演示文稿中的自定义 XML 部件。
 
 ```javascript editor-pptx
-// How do I find all XML parts that use a specific namespace in a presentation?
+// Find all XML parts that use a specific namespace in a presentation.
 
 // Display the matching XML parts in a presentation.
 

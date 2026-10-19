@@ -1,6 +1,8 @@
 # SetXValues
 
-Sets the x-axis values to all chart series. It is used with the scatter charts only.
+Sets the x-axis values to all chart series.
+
+It is used with the scatter charts only.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Sets the x-axis values to all chart series. It is used with the scatter charts o
 expression.SetXValues(aValues);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -31,7 +33,7 @@ Assign horizontal axis values to all series of a scatter chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("scatter", [
+let chart = Api.CreateChart("XYScatter", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

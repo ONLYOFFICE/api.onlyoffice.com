@@ -5,16 +5,16 @@ Sets the font size to the characters of the current text run.
 ## Syntax
 
 ```javascript
-expression.SetFontSize(nSize);
+expression.SetFontSize(size);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | Required | [hps](../../Enumeration/hps.md) |  | The text size value measured in half-points (1/144 of an inch). |
+| size | Required | [hps](../../Enumeration/hps.md) \| null |  | The text size value measured in half-points (1/144 of an inch). Pass *null* to remove the font size. |
 
 ## Returns
 
@@ -22,7 +22,7 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-Adjust the text size in a PDF.
+Adjust the text size using the text properties in a PDF.
 
 ```javascript editor-pdf
 // How do I make text larger or smaller in a PDF?

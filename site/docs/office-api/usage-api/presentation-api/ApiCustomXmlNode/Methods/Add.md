@@ -8,7 +8,7 @@ Creates a child node for the current XML node.
 expression.Add(nodeName);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -25,13 +25,13 @@ expression.Add(nodeName);
 Add a child element to an XML structure in a presentation.
 
 ```javascript editor-pptx
-// How do I create and attach a new XML node to an existing one?
+// Create and attach a new XML node to an existing one in a presentation.
 
 // Build nested XML elements and verify their types in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
-let xml = xmlManager.Add("<content xmlns='http://example'><text>Hello World!</text></content>");
+let xml = xmlManager.Add("<content xmlns='http://example.com'><text>Hello World!</text></content>");
 let rootNode = xml.GetNodes("/content")[0];
 let textNode = rootNode.Add("text");
 let classType = textNode.GetClassType();

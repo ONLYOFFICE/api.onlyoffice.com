@@ -8,7 +8,7 @@ Returns a table cell that contains the current content control.
 expression.GetParentTableCell();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
@@ -41,5 +41,5 @@ paragraph.AddElement(inlineLvlSdt, 0);
 let cell = table.GetRow(0).GetCell(0);
 cell.AddElement(0, paragraph);
 let parentTableCell = inlineLvlSdt.GetParentTableCell();
-parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
+parentTableCell.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 ```

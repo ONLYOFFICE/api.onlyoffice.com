@@ -8,7 +8,7 @@ Returns the top border of the current paragraph.
 expression.GetTopBorder();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -30,7 +30,7 @@ Retrieve the top border settings of a paragraph in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let paraPr = paragraph.GetParaPr();
-paraPr.SetTopBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetTopBorder("single", 24, 0, Api.Color(255, 111, 61));
 paragraph.AddText("This is a paragraph with a top border.");
 let border = paraPr.GetTopBorder();
 let paragraph2 = Api.CreateParagraph();

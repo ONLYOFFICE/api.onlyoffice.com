@@ -8,7 +8,7 @@ Returns a cell by its position in the current row.
 expression.GetCell(cellIndex);
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 

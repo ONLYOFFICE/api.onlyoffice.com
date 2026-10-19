@@ -1,8 +1,8 @@
 # SetColumnWidth
 
 Sets the width of all the columns in the current range.
-One unit of column width is equal to the width of one character in the Normal style.
-For proportional fonts, the width of the character 0 (zero) is used.
+
+One unit of column width is equal to the width of one character in the Normal style. For proportional fonts, the width of the character 0 (zero) is used.
 
 ## Syntax
 
@@ -10,7 +10,7 @@ For proportional fonts, the width of the character 0 (zero) is used.
 expression.SetColumnWidth(nWidth);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

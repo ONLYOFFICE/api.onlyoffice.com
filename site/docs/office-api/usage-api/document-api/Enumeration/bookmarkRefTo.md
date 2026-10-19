@@ -1,6 +1,7 @@
 # bookmarkRefTo
 
 Available values of the "bookmark" reference type:
+
 - **"text"** - the entire bookmark text;
 - **"pageNum"** - the bookmark page number;
 - **"paraNum"** - the bookmark paragraph number;
@@ -26,7 +27,7 @@ Enumeration
 Add a cross-reference to the page containing a bookmark.
 
 ```javascript editor-docx
-// How to add reference to the bookmarked page.
+// How do I add a reference to the page of a bookmark?
 
 // Use a bookmark reference object to create a cross-reference.
 

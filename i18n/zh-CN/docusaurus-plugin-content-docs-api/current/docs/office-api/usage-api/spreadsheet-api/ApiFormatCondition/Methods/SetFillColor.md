@@ -1,6 +1,7 @@
 # SetFillColor
 
 使用先前创建的颜色对象设置格式条件的背景颜色。
+
 当先前创建的颜色对象为 null 时设置为“无填充”。
 
 ## 语法
@@ -48,7 +49,7 @@ let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 worksheet.GetRange("C1").SetValue("Original color:");
 worksheet.GetRange("C2").SetValue("No Fill");
 
-let fillColor = Api.CreateColorFromRGB(255, 255, 0);
+let fillColor = Api.RGB(255, 255, 0);
 condition1.SetFillColor(fillColor);
 
 worksheet.GetRange("C4").SetValue("New color:");

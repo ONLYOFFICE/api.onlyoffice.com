@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-从文档中的表格删除行。
+删除文档中表格的第一行。
 
 ```javascript editor-docx
 // How do I permanently remove an unwanted row from a table in a document?

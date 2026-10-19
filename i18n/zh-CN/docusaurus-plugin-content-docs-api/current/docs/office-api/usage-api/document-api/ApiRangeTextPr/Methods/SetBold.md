@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetBold](../../ApiTextPr/Methods/SetBold.md)。
 
+## 语法
+
+```javascript
+expression.SetBold(isBold);
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isBold | 必需 | boolean |  | 指定文本块的内容显示为粗体。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 在文档中为默认文本字符应用粗体格式。

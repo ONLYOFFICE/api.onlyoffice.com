@@ -1,22 +1,29 @@
 # ApiTextField
 
+Class representing a text field.
+
 ApiTextField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 
 ## Methods
 
+The following table lists the available methods.
+
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Adds new widget - visual representation for field |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | Adds new widget - visual representation for field |
 | [ClearFormat](./Methods/ClearFormat.md) | boolean | Clears format of field. |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetCharLimit](./Methods/GetCharLimit.md) | number | Gets the text field character limit. |
 | [GetClassType](./Methods/GetClassType.md) | "textField" | Returns a type of the ApiTextField class. |
+| [GetFormattedValue](./Methods/GetFormattedValue.md) | string | Gets formatted value of a field. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
+| [GetPlaceholder](./Methods/GetPlaceholder.md) | string | Gets text field placeholder. |
+| [GetRegularExp](./Methods/GetRegularExp.md) | boolean | Gets text widget regular validate expression. |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
-| [GetValue](./Methods/GetValue.md) | string | Gets field value |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | Gets field value |
 | [IsComb](./Methods/IsComb.md) | boolean | Checks if the text field uses comb formatting. |
 | [IsMultiline](./Methods/IsMultiline.md) | boolean | Checks if text field is multiline. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
@@ -31,6 +38,7 @@ ApiTextField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | Sets number format for field. |
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | Sets new field partial name. |
 | [SetPercentageFormat](./Methods/SetPercentageFormat.md) | boolean | Sets percentage format for field. |
+| [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets text field placeholder. |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
 | [SetRegularExp](./Methods/SetRegularExp.md) | boolean | Sets regular expression validate string for field. |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |

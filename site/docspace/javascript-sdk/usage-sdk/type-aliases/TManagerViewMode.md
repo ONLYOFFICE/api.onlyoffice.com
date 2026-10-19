@@ -1,7 +1,14 @@
-# Type Alias: TManagerViewMode
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TManagerViewMode** = `` `${ManagerViewMode}` ``
+# TManagerViewMode
 
-Defined in: [types/index.ts:57](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L57)
+String literal union of all [ManagerViewMode](../enumerations/ManagerViewMode.md) values.
 
-The template literal type representing the manager view mode.
+Accepted by [TFrameConfig.viewAs](TFrameConfig.md#viewAs) in [SDKMode.Manager](../enumerations/SDKMode.md#Manager) mode.
+Using the [ManagerViewMode](../enumerations/ManagerViewMode.md) enum constants is preferred.
+
+```ts
+type TManagerViewMode = `${ManagerViewMode}`;
+```

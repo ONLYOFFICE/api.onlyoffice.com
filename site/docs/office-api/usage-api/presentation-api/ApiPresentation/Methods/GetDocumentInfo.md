@@ -1,6 +1,7 @@
 # GetDocumentInfo
 
 Returns the document information:
+
 - **Application** - the application the document has been created with.
 - **CreatedRaw** - the date and time when the file was created.
 - **Created** - the parsed date and time when the file was created.
@@ -19,7 +20,7 @@ Returns the document information:
 expression.GetDocumentInfo();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

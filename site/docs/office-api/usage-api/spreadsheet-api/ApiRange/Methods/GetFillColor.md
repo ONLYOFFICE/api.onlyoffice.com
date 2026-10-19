@@ -1,6 +1,8 @@
 # GetFillColor
 
-Returns the background color for the current cell range. Returns 'No Fill' when the color of the background in the cell / cell range is null.
+Returns the background color for the current cell range.
+
+Returns 'No Fill' when the color of the background in the cell / cell range is null.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the background color for the current cell range. Returns 'No Fill' when 
 expression.GetFillColor();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -30,7 +32,7 @@ Read the background color of a cell range in a spreadsheet.
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 60);
 let range = worksheet.GetRange("A1");
-range.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.SetFillColor(Api.RGB(255, 213, 191));
 range.SetValue("This is the cell with a color set to its background.");
 let fillColor = range.GetFillColor();
 worksheet.GetRange("A3").SetValue("This is another cell with the same color set to its background");

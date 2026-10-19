@@ -1,6 +1,7 @@
 # SetAttribute
 
 为自定义 XML 节点设置属性。
+
 如果属性已存在，则不会被修改。
 
 ## 语法
@@ -27,7 +28,7 @@ boolean
 向电子表格中的 XML 元素附加带有值的命名属性。
 
 ```javascript editor-xlsx
-// How do I add an attribute to an XML node in a spreadsheet?
+// Add an attribute to an XML node in a spreadsheet.
 
 // Annotate an XML element with descriptive metadata fields in a spreadsheet.
 

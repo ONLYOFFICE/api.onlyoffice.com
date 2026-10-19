@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.EnterText(sText);
+expression.EnterText(text);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,7 +14,7 @@ expression.EnterText(sText);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | 必需 | string |  | 要添加到文档的文本。 |
+| text | 必需 | string |  | 要添加到文档的文本。 |
 
 ## 返回值
 

@@ -8,7 +8,7 @@ Sets values from the specified range to the specified series.
 expression.SetSeriaValues(sRange, nSeria);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -45,8 +45,8 @@ worksheet.GetRange("C4").SetValue(270);
 worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 worksheet.GetRange("D4").SetValue(300);
-let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
-chart.SetTitle("Financial Overview", 13);
+let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "3DColumnClustered", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
+chart.SetTitle("Financial Overview", 26);
 chart.SetSeriaValues("'Sheet1'!$B$4:$D$4", 1);
 chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetShowPointDataLabel(1, 1, false, false, true, false);

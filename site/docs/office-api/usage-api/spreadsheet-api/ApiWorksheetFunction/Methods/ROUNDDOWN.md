@@ -8,7 +8,7 @@ Rounds a number down, toward zero.
 expression.ROUNDDOWN(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ number
 
 ## Example
 
-Round a number down to the nearest integer in a spreadsheet.
+Round a number down to a specified number of digits in a spreadsheet.
 
 ```javascript editor-xlsx
 // How do I round numbers down while keeping decimals in a spreadsheet?

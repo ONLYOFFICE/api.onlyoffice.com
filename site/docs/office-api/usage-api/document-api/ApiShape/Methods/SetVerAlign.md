@@ -4,6 +4,25 @@ Specifies how the floating object will be vertically aligned.
 
 Inherited from [ApiDrawing.SetVerAlign](../../ApiDrawing/Methods/SetVerAlign.md).
 
+## Syntax
+
+```javascript
+expression.SetVerAlign(sRelativeFrom, sAlign);
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | Optional | [RelFromV](../../Enumeration/RelFromV.md) | "page" | The document element which will be taken as a countdown point for the object vertical alignment. |
+| sAlign | Optional | "top" \| "bottom" \| "center" | "top" | The alingment type which will be used for the object vertical alignment. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Align a floating shape vertically relative to the page in a document.

@@ -1,13 +1,17 @@
 # ApiCheckboxField
 
+表示复选框字段的类。
+
 ApiCheckboxField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddOption](./Methods/AddOption.md) | [ApiCheckboxWidget](../ApiCheckboxWidget/ApiCheckboxWidget.md) | 向复选框组添加选项。 |
-| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | 添加新控件 - 字段的可视化表示 |
+| [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) \| null \| undefined | 添加新控件 - 字段的可视化表示 |
 | [Delete](./Methods/Delete.md) | boolean | 从文档中移除字段。 |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "checkboxField" | 返回 ApiCheckboxField 类的类型。 |
@@ -15,7 +19,7 @@ ApiCheckboxField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类�
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前字段的内部 ID。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
 | [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
-| [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
+| [GetValue](./Methods/GetValue.md) | string \| string[] | 获取字段值 |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | 检查字段是否为只读 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查字段是否为必填 |
 | [IsToggleToOff](./Methods/IsToggleToOff.md) | boolean | 检查字段是否可以取消选中。 |

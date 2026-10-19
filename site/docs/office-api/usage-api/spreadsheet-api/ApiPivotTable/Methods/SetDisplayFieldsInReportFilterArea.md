@@ -8,7 +8,7 @@ Sets the pivot table display fields in the report filter area settings.
 expression.SetDisplayFieldsInReportFilterArea(type, fields);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

@@ -1,7 +1,8 @@
 # SetNoWrap
 
-指定在文档中显示父表格时当前表格单元格的布局方式。此设置
-仅在表格的 [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) 表格布局设置为使用 `"autofit"` 算法时影响单元格的行为。
+指定在文档中显示父表格时当前表格单元格的布局方式。
+
+此设置仅在表格的 [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) 表格布局设置为使用 `"autofit"` 算法时影响单元格的行为。
 
 ## 语法
 
@@ -23,7 +24,7 @@ boolean
 
 ## 示例
 
-防止文本在文档中的表格单元格内换行。
+在文档中使用样式的表格单元格属性防止文本在表格单元格内换行。
 
 ```javascript editor-docx
 // How do I stop text from breaking onto multiple lines inside a table cell in a document?

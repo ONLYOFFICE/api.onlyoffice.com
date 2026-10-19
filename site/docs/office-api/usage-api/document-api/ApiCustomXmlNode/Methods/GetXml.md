@@ -8,7 +8,7 @@ Returns the XML string of the current node.
 expression.GetXml();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Read the XML markup of a specific node stored in a document.
 
 ```javascript editor-docx
-// How do I extract the raw XML content of a node embedded in a document?
+// Extract the raw XML content of a node embedded in a document.
 
 // Inspect or export a node's full markup when working with structured data in a document.
 

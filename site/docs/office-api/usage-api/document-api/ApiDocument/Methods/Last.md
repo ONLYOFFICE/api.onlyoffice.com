@@ -8,7 +8,7 @@ Returns the last document element.
 expression.Last();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[DocumentElement](../../Enumeration/DocumentElement.md)
+[DocumentElement](../../Enumeration/DocumentElement.md) \| null \| undefined
 
 ## Example
 

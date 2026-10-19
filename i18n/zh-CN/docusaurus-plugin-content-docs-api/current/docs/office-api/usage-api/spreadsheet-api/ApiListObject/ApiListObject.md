@@ -1,6 +1,6 @@
 # ApiListObject
 
-表示 ApiListObject 类。
+表示格式化表格的类。
 
 :::note
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。
@@ -36,12 +36,14 @@
 
 ## 方法
 
+下表列出了可用的方法。
+
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | 在表格中指定的从 1 开始的位置添加新列。 |
-| [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | 在表格中指定的从 1 开始的位置添加新数据行。 |
+| [AddListColumn](./Methods/AddListColumn.md) | [ApiListColumn](../ApiListColumn/ApiListColumn.md) \| null | 在表格中指定的位置（从 1 开始）添加新列。 |
+| [AddListRow](./Methods/AddListRow.md) | [ApiListRow](../ApiListRow/ApiListRow.md) \| null | 在表格中指定的位置（从 1 开始）添加新数据行。 |
 | [Delete](./Methods/Delete.md) | 无 | 删除 ListObject 对象并清除单元格格式。 |
-| [GetActive](./Methods/GetActive.md) | boolean | 返回一个布尔值，指示 ListObject 是否处于活动状态。 |
+| [GetActive](./Methods/GetActive.md) | boolean | 返回一个布尔值，指示 ListObject 是否处于活动状态。当活动单元格位于 ListObject 的范围内时，该 ListObject 被视为处于活动状态。 |
 | [GetAlternativeText](./Methods/GetAlternativeText.md) | string | 返回表格的替代文本。 |
 | [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) \| null | 返回表示应用于表格的自动筛选的 ApiAutoFilter 对象。 |
 | [GetComment](./Methods/GetComment.md) | string | 返回表格的批注（摘要替代文本）。 |
@@ -62,15 +64,15 @@
 | [GetShowTableStyleRowStripes](./Methods/GetShowTableStyleRowStripes.md) | boolean | 返回是否对表格应用了条带行格式。 |
 | [GetShowTotals](./Methods/GetShowTotals.md) | boolean | 返回表格是否显示汇总行。 |
 | [GetSort](./Methods/GetSort.md) | [ApiSort](../ApiSort/ApiSort.md) | 返回此列表对象的 Sort 对象。 |
-| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。对于基于范围的表格，始终返回 “xlSrcRange”。 |
+| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。 |
 | [GetSummary](./Methods/GetSummary.md) | string | 返回表格的摘要描述（替代文本摘要）。 |
 | [GetTableStyle](./Methods/GetTableStyle.md) | string | 返回应用于表格的表格样式名称。 |
 | [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格汇总行的范围。 |
-| [Resize](./Methods/Resize.md) | 无 | 将 ListObject 调整为新范围。不插入或移动单元格。 |
+| [Resize](./Methods/Resize.md) | 无 | 将 ListObject 调整为新范围。 |
 | [SetAlternativeText](./Methods/SetAlternativeText.md) | 无 | 设置表格的替代文本。 |
 | [SetComment](./Methods/SetComment.md) | 无 | 设置表格的批注（摘要替代文本）。 |
 | [SetDisplayName](./Methods/SetDisplayName.md) | boolean | 设置表格的显示名称。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置表格的名称。等同于 SetDisplayName。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置表格的名称。 |
 | [SetShowAutoFilter](./Methods/SetShowAutoFilter.md) | 无 | 设置表格上是否存在自动筛选。 |
 | [SetShowAutoFilterDropDown](./Methods/SetShowAutoFilterDropDown.md) | 无 | 设置表格标题行上是否显示自动筛选下拉箭头。 |
 | [SetShowHeaders](./Methods/SetShowHeaders.md) | 无 | 设置表格是否显示标题行。 |
@@ -80,5 +82,5 @@
 | [SetShowTableStyleRowStripes](./Methods/SetShowTableStyleRowStripes.md) | 无 | 设置是否对表格应用条带行格式。 |
 | [SetShowTotals](./Methods/SetShowTotals.md) | 无 | 设置表格是否显示汇总行。 |
 | [SetSummary](./Methods/SetSummary.md) | 无 | 设置表格的摘要描述（替代文本摘要）。 |
-| [SetTableStyle](./Methods/SetTableStyle.md) | 无 | 按名称设置表格样式。 |
-| [Unlist](./Methods/Unlist.md) | 无 | 从 ListObject 中移除列表功能并将其转换为常规数据范围。 |
+| [SetTableStyle](./Methods/SetTableStyle.md) | 无 | 按名称设置表格样式。内置表格样式名称：TableStyleLight1-21、TableStyleMedium1-28、TableStyleDark1-11。 |
+| [Unlist](./Methods/Unlist.md) | 无 | 移除 ListObject 的列表功能，并将其转换为常规数据区域。 |

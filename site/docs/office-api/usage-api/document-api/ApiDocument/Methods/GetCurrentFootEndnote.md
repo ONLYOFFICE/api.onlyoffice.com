@@ -8,7 +8,7 @@ Returns the footnote or endnote content if the cursor is currently inside one, o
 expression.GetCurrentFootEndnote();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md)
+[ApiDocumentContent](../../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined
 
 ## Example
 

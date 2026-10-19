@@ -8,7 +8,7 @@ Specifies the distance from the bottom edge of the page to the bottom edge of th
 expression.SetFooterDistance(nDistance);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

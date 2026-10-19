@@ -8,7 +8,7 @@ Returns the current page which is displayed for the page field (valid only for p
 expression.GetCurrentPage();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

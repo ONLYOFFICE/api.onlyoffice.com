@@ -8,7 +8,7 @@ Moves the specified layout to a specific location within the same collection.
 expression.MoveTo(nPos);
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

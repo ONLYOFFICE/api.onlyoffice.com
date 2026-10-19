@@ -4,6 +4,24 @@ Returns the lock value for the specified lock type of the current drawing.
 
 Inherited from [ApiDrawing.GetLockValue](../../ApiDrawing/Methods/GetLockValue.md).
 
+## Syntax
+
+```javascript
+expression.GetLockValue(sType);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | Required | [DrawingLockType](../../Enumeration/DrawingLockType.md) |  | Lock type in the string format. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Get a lock setting for a shape in a presentation.

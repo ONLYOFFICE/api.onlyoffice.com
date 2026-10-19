@@ -8,7 +8,7 @@ Sets the table row properties to the current table style properties.
 expression.SetTableRowPr(oTableRowPr);
 ```
 
-`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+`expression` - A variable that represents an [ApiTableStylePr](../ApiTableStylePr.md) class.
 
 ## Parameters
 

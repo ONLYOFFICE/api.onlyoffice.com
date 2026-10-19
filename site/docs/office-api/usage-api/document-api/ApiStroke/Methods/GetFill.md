@@ -8,7 +8,7 @@ Gets the fill (color) of the stroke.
 expression.GetFill();
 ```
 
-`expression` - A variable that represents a [ApiStroke](../ApiStroke.md) class.
+`expression` - A variable that represents an [ApiStroke](../ApiStroke.md) class.
 
 ## Parameters
 
@@ -29,8 +29,8 @@ Retrieve the fill color applied to a shape border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
-let stroke = Api.CreateStroke(2 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(2 * 36000, Api.CreateSolidFill(Api.RGB(0, 0, 255)));
 let shape = Api.CreateShape("rect", 100 * 36000, 50 * 36000, fill, stroke);
 paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();

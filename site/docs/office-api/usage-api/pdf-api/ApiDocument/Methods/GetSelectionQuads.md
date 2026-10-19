@@ -1,0 +1,59 @@
+# GetSelectionQuads
+
+Gets document selection quads by page
+
+## Syntax
+
+```javascript
+expression.GetSelectionQuads();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[DocQuads](../../Enumeration/DocQuads.md)
+
+## Example
+
+Highlight selected text regions in a PDF.
+
+```javascript editor-pdf
+// Useful for marking the areas where text is selected in a PDF.
+
+// Get the boundaries of selected text and apply highlighting in a PDF.
+
+let doc = Api.GetDocument();
+doc.AddPage(0);
+let pageIndex = doc.GetPagesCount() - 1;
+let textPage = doc.GetPage(pageIndex);
+let fill = Api.CreateSolidFill(Api.RGB(50, 150, 250));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = Api.CreateShape("rect", 150 * 36000, 80 * 36000, fill, stroke);
+shape.SetPosition(10 * 12700, 10 * 12700);
+let paragraph = shape.GetContent().GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("Lorem selected text");
+textPage.AddObject(shape);
+
+let results = textPage.Search({text: "Lorem selected text", matchCase: true, wholeWords: false});
+let textQuads = results[0];
+let firstQuad = textQuads[0];
+let lastQuad = textQuads[textQuads.length - 1];
+doc.SetSelection({
+	start: { page: pageIndex, point: { x: firstQuad[0], y: firstQuad[1] } },
+	end:   { page: pageIndex, point: { x: lastQuad[2], y: lastQuad[3] } }
+});
+let docQuads = doc.GetSelectionQuads();
+Object.entries(docQuads).forEach(([pageIdx, quads]) => {
+    let page = doc.GetPage(Number(pageIdx));
+    let annot = Api.CreateHighlightAnnot(quads);
+    page.AddObject(annot);
+});
+
+console.log('We highlight the selected text on the first page');
+```

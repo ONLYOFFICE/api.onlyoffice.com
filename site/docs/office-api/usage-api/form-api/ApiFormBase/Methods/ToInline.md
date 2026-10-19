@@ -1,7 +1,10 @@
 # ToInline
 
 Converts the current form to an inline form.
-*Picture form can't be converted to an inline form, it's always a fixed size object.*
+
+:::note
+A picture form can't be converted to an inline form, as it's always a fixed-size object.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Converts the current form to an inline form.
 expression.ToInline();
 ```
 
-`expression` - A variable that represents a [ApiFormBase](../ApiFormBase.md) class.
+`expression` - A variable that represents an [ApiFormBase](../ApiFormBase.md) class.
 
 ## Parameters
 

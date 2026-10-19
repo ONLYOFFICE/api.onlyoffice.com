@@ -8,7 +8,7 @@ Sets the background to the current presentation slide.
 expression.SetBackground(oApiFill);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the absolute XPath of the current XML node.
 expression.GetXPath();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Retrieve the path of a specific node within embedded XML data in a document.
 
 ```javascript editor-docx
-// How do I find the location of a node in embedded XML data in a document?
+// Find the location of a node in embedded XML data in a document.
 
 // Read a node's position to navigate or reference it programmatically in a document.
 

@@ -8,13 +8,13 @@ Sets annotation subject.
 expression.SetSubject(subject);
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| subject | Required | string |  | The annotation subject text. |
+| subject | Required | string \| null \| undefined |  | The annotation subject text. |
 
 ## Returns
 

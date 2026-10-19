@@ -1,6 +1,7 @@
 # GetAttribute
 
 从自定义 XML 节点检索属性值。
+
 如果属性不存在，则返回 `false`。
 
 ## 语法
@@ -26,7 +27,7 @@ string \| null
 从演示文稿中的 XML 元素读取属性值。
 
 ```javascript editor-pptx
-// How do I extract an attribute from an XML node in a presentation?
+// Extract an attribute from an XML node in a presentation.
 
 // Access a specific property of an XML element in a presentation.
 

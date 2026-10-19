@@ -1,6 +1,7 @@
 # GetFontFamily
 
 从当前文本属性返回字体系列。
+
 如果字体是通过主题设置的，此方法会自动从主题计算字体。
 
 ## 语法
@@ -17,7 +18,7 @@ expression.GetFontFamily();
 
 ## 返回值
 
-string
+string \| null \| undefined
 
 ## 示例
 

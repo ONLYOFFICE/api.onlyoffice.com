@@ -8,7 +8,7 @@ Moves a role down in filling order.
 expression.MoveDown(name);
 ```
 
-`expression` - A variable that represents a [ApiFormRoles](../ApiFormRoles.md) class.
+`expression` - A variable that represents an [ApiFormRoles](../ApiFormRoles.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Resizes the current range by changing the number of rows and columns.
 expression.Resize(rowSize, columnSize);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -33,9 +33,9 @@ Expand or shrink a range by changing its row and column count in a spreadsheet.
 let worksheet = Api.GetActiveSheet();
 let originalRange = worksheet.GetRange("B2:C3");
 originalRange.SetValue("Original");
-originalRange.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
+originalRange.SetFillColor(Api.RGB(173, 216, 230));
 
 let resizedRange = originalRange.Resize(originalRange.Rows.Count + 2, originalRange.Columns.Count + 1);
-resizedRange.SetBorders("InsideHorizontal", "Thick", Api.CreateColorFromRGB(255, 111, 61));
-resizedRange.SetBorders("InsideVertical", "Thick", Api.CreateColorFromRGB(255, 111, 61));
+resizedRange.SetBorders("InsideHorizontal", "Thick", Api.RGB(255, 111, 61));
+resizedRange.SetBorders("InsideVertical", "Thick", Api.RGB(255, 111, 61));
 ```

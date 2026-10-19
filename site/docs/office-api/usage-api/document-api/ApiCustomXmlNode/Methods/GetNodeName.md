@@ -8,7 +8,7 @@ Returns the name of the current XML node.
 expression.GetNodeName();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ string
 Read the tag name of a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I get the name of a custom XML node in a document?
+// Get the name of a custom XML node in a document.
 
 // Identify which element you are working with by reading its tag name in a document.
 

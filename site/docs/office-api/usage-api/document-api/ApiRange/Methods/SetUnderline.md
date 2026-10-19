@@ -1,7 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the current Range are displayed along with a line appearing directly below the character
-(less than all the spacing above and below the characters on the line).
+Specifies that the contents of the current Range are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
 
 ## Syntax
 
@@ -9,7 +8,7 @@ Specifies that the contents of the current Range are displayed along with a line
 expression.SetUnderline(isUnderline);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

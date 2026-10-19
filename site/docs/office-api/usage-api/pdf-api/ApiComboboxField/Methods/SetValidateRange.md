@@ -1,7 +1,10 @@
 # SetValidateRange
 
 Sets validate range for field.
-💡  Can only be applied to fields with a percentage or number format. 
+
+:::note
+Can only be applied to fields with a percentage or number format.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets validate range for field.
 expression.SetValidateRange(greaterThan, greaterThanValue, lessThan, lessThanValue);
 ```
 
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
 
 ## Parameters
 

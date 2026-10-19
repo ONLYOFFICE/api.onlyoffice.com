@@ -8,7 +8,7 @@ Wraps the current table object with a content control.
 expression.InsertInContentControl(nType);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

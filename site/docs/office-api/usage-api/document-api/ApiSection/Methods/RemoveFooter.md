@@ -1,7 +1,8 @@
 # RemoveFooter
 
-Removes the footer of the specified type from the current section. After removal, the footer will be inherited from 
-the previous section, or if this is the first section in the document, no footer of the specified type will be presented.
+Removes the footer of the specified type from the current section.
+
+After removal, the footer will be inherited from the previous section, or if this is the first section in the document, no footer of the specified type will be presented.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ the previous section, or if this is the first section in the document, no footer
 expression.RemoveFooter(sType);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

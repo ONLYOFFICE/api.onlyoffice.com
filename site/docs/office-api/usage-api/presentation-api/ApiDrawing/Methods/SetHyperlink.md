@@ -1,6 +1,7 @@
 # SetHyperlink
 
 Sets a hyperlink to the current drawing object (shape or image).
+
 Pass null to remove the hyperlink.
 
 ## Syntax
@@ -9,7 +10,7 @@ Pass null to remove the hyperlink.
 expression.SetHyperlink(hyperlink);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
@@ -48,7 +49,7 @@ const image = Api.CreateImage(
 image.SetPosition(160 * 36000, 0);
 slide.AddObject(image);
 
-const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
+const urlHyperlink = Api.CreateHyperlink('https://www.onlyoffice.com', 'Link to ONLYOFFICE website');
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);

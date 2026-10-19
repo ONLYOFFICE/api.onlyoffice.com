@@ -1,0 +1,44 @@
+# SetShadow
+
+Sets the shadow to the current graphic object.
+
+Inherited from [ApiDrawing.SetShadow](../../ApiDrawing/Methods/SetShadow.md).
+
+## Syntax
+
+```javascript
+expression.SetShadow(shadow);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| shadow | Required | [ApiShadow](../../ApiShadow/ApiShadow.md) \| null \| undefined |  | The shadow to apply, or null to remove the current shadow. |
+
+## Returns
+
+boolean
+
+## Example
+
+Apply an outer shadow to a drawing in a document.
+
+```javascript editor-docx
+// Give a shape a soft offset shadow so it appears lifted off the page.
+
+// Create a shape, build a shadow, and set it on the drawing with SetShadow.
+
+const doc = Api.GetDocument();
+const paragraph = doc.GetElement(0);
+const fill = Api.CreateSolidFill(Api.RGB(255, 213, 191));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("rect", 120 * 36000, 60 * 36000, fill, stroke);
+paragraph.AddDrawing(shape);
+shape.SetWrappingStyle("inFront");
+shape.SetHorPosition("page", 30 * 36000);
+shape.SetVerPosition("page", 30 * 36000);
+shape.SetShadow(Api.CreateShadow({ color: Api.RGB(64, 64, 64), transparency: 0.3, offsetX: 4, offsetY: 4 }));
+```

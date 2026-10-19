@@ -8,7 +8,7 @@ Returns a number of cells in the current row.
 expression.GetCellsCount();
 ```
 
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
+`expression` - A variable that represents an [ApiTableRow](../ApiTableRow.md) class.
 
 ## Parameters
 

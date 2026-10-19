@@ -1,6 +1,8 @@
 # SetXValues
 
-将 x 轴值设置为所有图表系列。仅用于散点图。
+将 x 轴值设置为所有图表系列。
+
+仅用于散点图。
 
 ## 语法
 
@@ -33,7 +35,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const chart = Api.CreateChart("scatter", [
+const chart = Api.CreateChart("XYScatter", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

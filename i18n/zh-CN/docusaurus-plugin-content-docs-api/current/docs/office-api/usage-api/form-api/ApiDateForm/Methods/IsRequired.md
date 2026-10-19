@@ -4,20 +4,36 @@
 
 继承自 [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md)。
 
+## 语法
+
+```javascript
+expression.IsRequired();
+```
+
+`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
-确定文档中的表单字段是否标记为必填。
+检查文档中的日期表单是否被标记为必填。
 
 ```javascript editor-forms
-// How do I check if a form field must be filled out before the document is submitted in a document?
+// How do I determine if a date form must be filled out in a document?
 
-// Confirm whether a form field is required so the result can be shown to the reader in a document.
+// Confirm that a required date form reports its mandatory status correctly in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let required = textForm.IsRequired();
+paragraph.AddElement(dateForm);
+let required = dateForm.IsRequired();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);

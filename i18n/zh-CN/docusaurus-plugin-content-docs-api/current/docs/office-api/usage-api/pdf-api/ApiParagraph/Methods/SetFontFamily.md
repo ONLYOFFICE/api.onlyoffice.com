@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFontFamily(sFontFamily);
+expression.SetFontFamily(fontFamily);
 ```
 
 `expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
@@ -14,11 +14,11 @@ expression.SetFontFamily(sFontFamily);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | 必需 | string |  | 用于当前段落的字体系列。 |
+| fontFamily | 可选 | string \| null |  | 用于当前段落的一个或多个字体系列。传递 *null* 或省略此参数可移除字体系列。 |
 
 ## 返回值
 
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null \| undefined
 
 ## 示例
 

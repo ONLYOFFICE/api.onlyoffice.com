@@ -8,7 +8,7 @@ Sets the screen tip text of the hyperlink.
 expression.SetScreenTipText(sScreenTipText);
 ```
 
-`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+`expression` - A variable that represents an [ApiHyperlink](../ApiHyperlink.md) class.
 
 ## Parameters
 
@@ -32,9 +32,9 @@ Set the tooltip text that appears when hovering over a hyperlink in a document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
-run.AddText("ONLYOFFICE Document Builder");
+run.AddText("Visit ONLYOFFICE for developers");
 paragraph.AddElement(run);
-let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com");
 hyperlink.SetScreenTipText("ONLYOFFICE for developers");
 let screenTipText = hyperlink.GetScreenTipText();
 paragraph = Api.CreateParagraph();

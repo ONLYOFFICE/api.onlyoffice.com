@@ -4,6 +4,25 @@ Sets the size of the object (image, shape, chart) bounding box.
 
 Inherited from [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md).
 
+## Syntax
+
+```javascript
+expression.SetSize(width, height);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| width | Required | [EMU](../../Enumeration/EMU.md) |  | The object width measured in English measure units. |
+| height | Required | [EMU](../../Enumeration/EMU.md) |  | The object height measured in English measure units. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Resize a drawing object to specific dimensions in a PDF.
@@ -16,7 +35,7 @@ Resize a drawing object to specific dimensions in a PDF.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -8,7 +8,7 @@ Returns a collection of section objects in the document.
 expression.GetSections();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

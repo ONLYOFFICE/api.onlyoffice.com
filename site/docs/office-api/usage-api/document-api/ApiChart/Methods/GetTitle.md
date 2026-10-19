@@ -8,7 +8,7 @@ Returns the chart title text.
 expression.GetTitle();
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -39,7 +39,7 @@ const chart = Api.CreateChart(
 	24
 );
 chart.SetShowDataLabels(false, false, true, false);
-chart.SetTitle('Financial Overview', 13);
+chart.SetTitle('Financial Overview', 26);
 
 let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);

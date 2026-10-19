@@ -8,7 +8,7 @@ Returns the highlight color of the forms in the document.
 expression.GetFormsHighlight();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -31,7 +31,7 @@ let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
-doc.SetFormsHighlight(191, 219, 254);
+doc.SetFormsHighlight(Api.RGB(191, 219, 254));
 let highlight = doc.GetFormsHighlight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The forms highlight color is: " + highlight.GetHex());

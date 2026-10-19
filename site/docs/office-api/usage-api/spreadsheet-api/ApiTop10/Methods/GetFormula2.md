@@ -4,6 +4,22 @@ Returns the second formula used by the current conditional formatting rule.
 
 Inherited from [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md).
 
+## Syntax
+
+```javascript
+expression.GetFormula2();
+```
+
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Read the upper boundary value of a range-based conditional formatting rule in a spreadsheet.
@@ -27,7 +43,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.Add("xlCellValue", "xlBetween", "100", "200");
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+condition1.SetFillColor(Api.RGB(255, 0, 0));
 
 let formula1 = condition1.GetFormula1();
 let formula2 = condition1.GetFormula2();

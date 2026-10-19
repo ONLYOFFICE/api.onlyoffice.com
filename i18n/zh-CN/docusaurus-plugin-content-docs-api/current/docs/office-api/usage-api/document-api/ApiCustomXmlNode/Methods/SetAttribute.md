@@ -1,6 +1,7 @@
 # SetAttribute
 
 为自定义 XML 节点设置属性。
+
 如果属性已存在，则不会被修改。
 
 ## 语法
@@ -27,7 +28,7 @@ boolean
 向文档中嵌入的 XML 节点添加新属性。
 
 ```javascript editor-docx
-// How do I attach extra metadata to a node in the XML data stored in a document?
+// Attach extra metadata to a node in the XML data stored in a document.
 
 // Tag a node with a category or label so it can be filtered or identified later in a document.
 

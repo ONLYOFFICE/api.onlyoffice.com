@@ -18,6 +18,8 @@ Enumeration
 - "bg2"
 - "dk1"
 - "dk2"
+- "folHlink"
+- "hlink"
 - "lt1"
 - "lt2"
 - "tx1"
@@ -28,7 +30,7 @@ Enumeration
 Create a scheme color with the 'accent2' identifier.
 
 ```javascript editor-xlsx
-// How to create a scheme color.
+// How do I create a scheme color?
 
 // Create a scheme color with accent.
 

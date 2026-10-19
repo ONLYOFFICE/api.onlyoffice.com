@@ -16,4 +16,4 @@ expression.GetBackgroundColor();
 
 ## 返回值
 
-[ApiColor](../../../document-api/ApiColor/ApiColor.md)
+[ApiColor](../../../document-api/ApiColor/ApiColor.md) \| null \| undefined

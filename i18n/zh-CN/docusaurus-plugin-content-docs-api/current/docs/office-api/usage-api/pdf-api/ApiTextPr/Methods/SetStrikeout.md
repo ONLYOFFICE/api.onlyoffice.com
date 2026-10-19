@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-在 PDF 中为文本绘制删除线。
+在 PDF 中使用文本属性为文本绘制删除线。
 
 ```javascript editor-pdf
 // How do I add strikethrough formatting to text in a PDF?

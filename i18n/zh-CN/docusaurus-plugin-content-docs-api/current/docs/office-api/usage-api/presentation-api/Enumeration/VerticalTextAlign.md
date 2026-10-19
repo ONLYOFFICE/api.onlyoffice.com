@@ -17,7 +17,7 @@
 为创建的形状添加垂直对齐到更靠近形状上部位置的内部文本。
 
 ```javascript editor-pptx
-// How to set a vertical position of a text in a shape.
+// How do I set the vertical position of text in a shape?
 
 // Move drawing text to the top in the ApiShape object.
 

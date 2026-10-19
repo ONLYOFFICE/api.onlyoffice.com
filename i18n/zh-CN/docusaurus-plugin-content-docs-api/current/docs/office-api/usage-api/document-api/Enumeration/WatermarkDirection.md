@@ -19,7 +19,7 @@
 设置文档中水印的方向。
 
 ```javascript editor-docx
-// How to set a watermark direction.
+// How do I set the watermark direction?
 
 // Set direction in watermark settings to "clockwise45".
 

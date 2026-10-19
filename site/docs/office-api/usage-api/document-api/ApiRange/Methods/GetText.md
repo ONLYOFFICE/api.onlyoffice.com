@@ -8,7 +8,7 @@ Returns a text from the specified range.
 expression.GetText(options);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

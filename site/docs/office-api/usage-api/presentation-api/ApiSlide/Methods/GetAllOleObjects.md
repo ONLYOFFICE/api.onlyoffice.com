@@ -8,7 +8,7 @@ Returns an array with all the OLE objects from the slide.
 expression.GetAllOleObjects();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

@@ -105,7 +105,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A POST request is sent to [/api/2.0/settings/devtoolsaccess](/docspace/api-backend/usage-api/set-tenant-dev-tools-access-settings) with:
+A POST request is sent to [/api/2.0/settings/devtoolsaccess](/docspace/api-backend/usage-api/security/access-to-devtools/set-tenant-dev-tools-access-settings) with:
 
 limitedAccessForUsers:
 

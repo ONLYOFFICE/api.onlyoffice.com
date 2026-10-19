@@ -4,6 +4,22 @@ Gets selected value indexes.
 
 Inherited from [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md).
 
+## Syntax
+
+```javascript
+expression.GetValueIndexes();
+```
+
+`expression` - A variable that represents an [ApiComboboxField](../ApiComboboxField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number[]
+
 ## Example
 
 Retrieve the index positions of selected items in a dropdown in a PDF.

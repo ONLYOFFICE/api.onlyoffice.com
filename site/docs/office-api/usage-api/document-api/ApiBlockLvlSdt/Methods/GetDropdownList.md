@@ -8,7 +8,7 @@ Returns a list of values of the combo box / drop-down list content control.
 expression.GetDropdownList();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

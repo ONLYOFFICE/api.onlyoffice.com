@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetRange();
 ```
 
-`expression` - A variable that represents a [ApiListRow](../ApiListRow.md) class.
+`expression` - A variable that represents an [ApiListRow](../ApiListRow.md) class.
 
 ## Parameters
 

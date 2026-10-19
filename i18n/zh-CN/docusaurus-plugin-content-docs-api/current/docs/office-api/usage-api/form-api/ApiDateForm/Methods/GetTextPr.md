@@ -1,28 +1,47 @@
 # GetTextPr
 
 返回当前表单的文本属性。
-*如果该表单类型支持则使用*
+
+:::note
+仅在此类型表单支持时使用。
+:::
 
 继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 
+## 语法
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
-读取文档中应用于表单字段的文本格式属性。
+获取文档中日期表单的文本格式属性。
 
 ```javascript editor-forms
-// How do I access the font and style settings of a form field in a document?
+// How do I get the text properties applied to a date form in a document?
 
-// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
+// Modify the retrieved properties to further adjust the form's appearance, such as adding italic style.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
+paragraph.AddElement(dateForm);
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);
 textPr.SetBold(true);
-textForm.SetTextPr(textPr);
-let formTextPr = textForm.GetTextPr();
+dateForm.SetTextPr(textPr);
+let formTextPr = dateForm.GetTextPr();
 formTextPr.SetItalic(true);
-textForm.SetTextPr(formTextPr);
+dateForm.SetTextPr(formTextPr);
 ```

@@ -1,6 +1,8 @@
 # DELTA
 
-Tests whether two numbers are equal. The function returns 1 if the numbers are equal and 0 otherwise.
+Tests whether two numbers are equal.
+
+The function returns 1 if the numbers are equal and 0 otherwise.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Tests whether two numbers are equal. The function returns 1 if the numbers are e
 expression.DELTA(arg1, arg2);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Specifies that all the text columns in the current section are of equal width.
 expression.SetEqualColumns(nCount, nSpace);
 ```
 
-`expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
+`expression` - A variable that represents an [ApiSection](../ApiSection.md) class.
 
 ## Parameters
 

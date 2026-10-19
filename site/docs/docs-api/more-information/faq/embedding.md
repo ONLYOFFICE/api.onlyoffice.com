@@ -14,10 +14,11 @@ There are three main appearances of the editors, optimized for different use:
 
 You can embed the document with any appearance to your webpage, but it is more logical to use the specific **embedded** display type with only main controls for the editors displayed for the document within a website page.
 
-That is why the *type* should be set to **embedded** and the configuration file will look like this:
+That is why the `type` should be set to **embedded** and the configuration file will look like this:
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -30,15 +31,17 @@ Further information about the display type can be found [at this page](../../usa
 
 The embedded mode allows to display the document with only three control buttons: **Download**, **Share** and **Embed**. You can change the behavior of these buttons the following way:
 
-- *editorConfig.embedded.embedUrl* is the absolute URL to the document with the *type* parameter set to **embedded** in the configuration, which can be used by other users to embed it into their own website page.
+- `editorConfig.embedded.embedUrl` is the absolute URL to the document with the `type` parameter set to **embedded** in the configuration, which can be used by other users to embed it into their own website page.
 
-- *editorConfig.embedded.saveUrl* is the absolute URL to the document with the *document.permission.download* parameter set to **true**, which can be saved by other users to their own computer in the *DOCX*, *PPTX* or *XLSX* format depending on the file type.
+- `editorConfig.embedded.saveUrl` is the absolute URL to the document with the `document.permissions.download` parameter set to `true`, which can be saved by other users to their own computer in the DOCX, PPTX or XLSX format depending on the file type.
 
-- *editorConfig.embedded.shareUrl* is the absolute URL to the document which can be used by other users to share it with others.
+- `editorConfig.embedded.shareUrl` is the absolute URL to the document which can be used by other users to share it with others.
 
   ``` ts
   const config = {
+    // ...
     editorConfig: {
+      // ...
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
         saveUrl: "https://example.com/download?doc=exampledocument1.docx",
@@ -54,7 +57,7 @@ The embedded mode allows to display the document with only three control buttons
 To remove any of these buttons simply do not include the corresponding parameter into the configuration file.
 
 :::note
-If you decide to hide the **Download** button (*editorConfig.embedded.saveUrl* parameter), please do not forget to also set the *document.permission.download* parameter in the document configuration to **false** to completely disable the possibility to download the file.
+If you decide to hide the **Download** button (`editorConfig.embedded.saveUrl` parameter), please do not forget to also set the `document.permissions.download` parameter in the document configuration to `false` to completely disable the possibility to download the file.
 :::
 
 Further information about the embedding parameters can be found [at this page](../../usage-api/config/editor/embedded.md).

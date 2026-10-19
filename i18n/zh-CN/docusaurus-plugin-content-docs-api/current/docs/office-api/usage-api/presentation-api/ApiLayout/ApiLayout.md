@@ -1,8 +1,10 @@
 # ApiLayout
 
-表示 ApiLayout 类。
+表示幻灯片版式的类。
 
 ## 方法
+
+下表列出了可用的方法。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
@@ -18,14 +20,17 @@
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | 返回包含幻灯片版式中所有 OLE 对象的数组。 |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | 返回包含幻灯片版式中所有形状对象的数组。 |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回包含当前幻灯片版式中所有表格的数组。 |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 返回当前幻灯片版式的背景填充。 |
 | [GetClassType](./Methods/GetClassType.md) | "layout" | 返回 ApiLayout 类的类型。 |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | 按指定的占位符类型返回绘图数组。 |
 | [GetLayoutType](./Methods/GetLayoutType.md) | [LayoutType](../Enumeration/LayoutType.md) | 返回当前版式的类型。 |
-| [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | 返回当前版式的父幻灯片母版。 |
+| [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null \| undefined | 返回当前版式的父幻灯片母版。 |
 | [GetName](./Methods/GetName.md) | string | 返回当前版式的名称。 |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | 返回用于遍历当前幻灯片版式的图形对象和文本的访问器对象。 |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | 在当前版式中将绘图数组分组。 |
 | [MoveTo](./Methods/MoveTo.md) | boolean | 将指定版式移动到同一集合中的特定位置。 |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | 从当前幻灯片版式中删除对象（图像、形状或图表）。 |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | 在当前幻灯片版式中搜索指定文本，并将找到的所有匹配项作为文本范围返回。 |
 | [SetBackground](./Methods/SetBackground.md) | boolean | 设置当前幻灯片版式的背景。 |
 | [SetName](./Methods/SetName.md) | boolean | 为当前版式设置名称。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiLayout 对象转换为 JSON 对象。 |

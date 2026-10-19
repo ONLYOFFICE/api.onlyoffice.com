@@ -8,7 +8,7 @@ Pushes a rich paragraph to a rich content.
 expression.Push(richPara);
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 

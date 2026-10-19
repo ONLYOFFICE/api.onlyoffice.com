@@ -4,6 +4,22 @@ Check if the current document content is a footnote.
 
 Inherited from [ApiDocumentContent.IsFootnote](../../ApiDocumentContent/Methods/IsFootnote.md).
 
+## Syntax
+
+```javascript
+expression.IsFootnote();
+```
+
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Detect whether a note is a footnote in a document.

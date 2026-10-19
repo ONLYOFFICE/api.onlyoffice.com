@@ -1,7 +1,6 @@
 # GetPageFields
 
-Returns a collection that represents either a single pivot table page field
-or a collection of all visible page fields.
+Returns a collection that represents either a single pivot table page field or a collection of all visible page fields.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ or a collection of all visible page fields.
 expression.GetPageFields(field);
 ```
 
-`expression` - A variable that represents a [ApiPivotTable](../ApiPivotTable.md) class.
+`expression` - A variable that represents an [ApiPivotTable](../ApiPivotTable.md) class.
 
 ## Parameters
 

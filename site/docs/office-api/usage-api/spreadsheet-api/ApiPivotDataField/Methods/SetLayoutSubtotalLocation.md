@@ -4,6 +4,24 @@ Sets the layout subtotal location.
 
 Inherited from [ApiPivotField.SetLayoutSubtotalLocation](../../ApiPivotField/Methods/SetLayoutSubtotalLocation.md).
 
+## Syntax
+
+```javascript
+expression.SetLayoutSubtotalLocation(type);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | Required | [LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md) |  | The layout subtotal location. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Place subtotals at the top or bottom of each pivot field group in a spreadsheet.

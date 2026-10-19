@@ -126,7 +126,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/people/filter](/docspace/api-backend/usage-api/search-users-by-extended-filter) with the following optional query parameters:
+A GET request is sent to [/api/2.0/people/filter](/docspace/api-backend/usage-api/people/search/search-users-by-extended-filter) with the following optional query parameters:
 
 - `groupId`: UUID of the group to filter by.
 - `employeeType`: "User" or "Visitor".

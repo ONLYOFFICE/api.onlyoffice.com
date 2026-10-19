@@ -14,11 +14,11 @@ expression.IMPRODUCT(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | 最多 255 个以 *x + yi* 或 *x + yj* 形式表示的复数。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 255 个以 *x + yi* 或 *x + yj* 形式表示的复数。 |
 
 ## 返回值
 
-number
+string
 
 ## 示例
 

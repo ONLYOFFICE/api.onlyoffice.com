@@ -8,7 +8,7 @@ Returns an attribute from the XML node at the specified XPath.
 expression.GetAttribute(xPath, name);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -32,7 +32,7 @@ Get an attribute from the root element of a custom XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
-let xml = xmlManager.Add("<config version='1.0' xmlns='http://example'><setting>value</setting></config>");
+let xml = xmlManager.Add("<config version='1.0' xmlns='http://example.com'><setting>value</setting></config>");
 let rootNodes = xml.GetNodes('/config');
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

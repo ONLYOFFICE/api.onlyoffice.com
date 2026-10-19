@@ -8,7 +8,7 @@ Sets the fill properties to the current shape.
 expression.SetFill(oFill);
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 
@@ -37,7 +37,7 @@ paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();
 paragraph.AddText("Original shape with no fill");
 paragraph.AddLineBreak();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
+let fill = Api.CreateSolidFill(Api.RGB(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddText("Fill changed to red");
 ```

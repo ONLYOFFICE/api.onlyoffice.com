@@ -119,7 +119,7 @@ function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string
     type, name, description,
     image: require(`@site/static/assets/images/editor/${type}-${suffix}.png`).default + '#gh-light-mode-only',
     imageDark: require(`@site/static/assets/images/editor/${type}-${suffix}.dark.png`).default + '#gh-dark-mode-only',
-    url: `pathname:///${urlBase}/?${paramName}=${type}`,
+    url: `pathname:///${urlBase}?${paramName}=${type}`,
   }));
 }
 
@@ -128,7 +128,7 @@ function resolveDocspaceCards(cards: CardDef[]): ResolvedCard[] {
     type, name, description,
     image: require(`@site/static/assets/images/docspace/${type}-mode.png`).default + '#gh-light-mode-only',
     imageDark: require(`@site/static/assets/images/docspace/${type}-mode.dark.png`).default + '#gh-dark-mode-only',
-    url: `pathname:///docspace-playground/?mode=${type}`,
+    url: `pathname:///docspace-playground?mode=${type}`,
   }));
 }
 

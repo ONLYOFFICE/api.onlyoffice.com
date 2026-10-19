@@ -1,10 +1,12 @@
 # SetReadingOrder
 
 指定当前段落的阅读顺序。
+
 可能的值有：
+
 - **null** - 使用标准方向参数；
-- **“ltr”** - 从左到右的文本方向；
-- **“rtl”** - 从右到左的文本方向。
+- **"ltr"** - 从左到右的文本方向；
+- **"rtl"** - 从右到左的文本方向。
 
 ## 语法
 
@@ -18,7 +20,7 @@ expression.SetReadingOrder(readingOrder);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| readingOrder | 可选 | [ReadingOrder](../../Enumeration/ReadingOrder.md) |  | 阅读顺序。 |
+| readingOrder | 可选 | [ReadingOrder](../../Enumeration/ReadingOrder.md) \| null \| undefined |  | 阅读顺序。 |
 
 ## 返回值
 

@@ -5,17 +5,16 @@ Specifies the shading applied to the contents of the current text run.
 ## Syntax
 
 ```javascript
-expression.SetShd(type, color);
+expression.SetShd(shd);
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text run. |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color or pattern used to fill the shading. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -32,7 +31,7 @@ Apply a background shading color behind text in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
-textPr.SetShd('clear', Api.HexColor('#ff6f3d'));
+textPr.SetShd(Api.CreateShd('clear', Api.HexColor('#ff6f3d')));
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the shading set to orange.");
 ```

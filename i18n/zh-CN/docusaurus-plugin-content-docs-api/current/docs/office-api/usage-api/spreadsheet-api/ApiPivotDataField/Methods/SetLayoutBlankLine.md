@@ -4,6 +4,24 @@
 
 继承自 [ApiPivotField.SetLayoutBlankLine](../../ApiPivotField/Methods/SetLayoutBlankLine.md)。
 
+## 语法
+
+```javascript
+expression.SetLayoutBlankLine(insert);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| insert | 必需 | boolean |  | 指定是否在每个项目后插入空白行。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 在电子表格中透视字段的每组后添加空行以提高可读性。

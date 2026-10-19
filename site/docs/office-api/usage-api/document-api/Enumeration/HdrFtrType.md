@@ -1,6 +1,7 @@
 # HdrFtrType
 
 Header and footer types which can be applied to the document sections.
+
 - **"default"** - a header or footer which can be applied to any default page.
 - **"title"** - a header or footer which is applied to the title page.
 - **"even"** - a header or footer which can be applied to even pages to distinguish them from the odd ones (which will be considered default).
@@ -20,7 +21,7 @@ Enumeration
 Remove the header of the 'title' type from the final document section.
 
 ```javascript editor-docx
-// How to delete a header from the title type.
+// How do I delete the title page header?
 
 // Remove a header from the specified type of the section.
 

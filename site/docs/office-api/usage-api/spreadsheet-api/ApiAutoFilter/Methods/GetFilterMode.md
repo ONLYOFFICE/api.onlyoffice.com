@@ -8,7 +8,7 @@ Returns a value that indicates whether the worksheet has an AutoFilter applied.
 expression.GetFilterMode();
 ```
 
-`expression` - A variable that represents a [ApiAutoFilter](../ApiAutoFilter.md) class.
+`expression` - A variable that represents an [ApiAutoFilter](../ApiAutoFilter.md) class.
 
 ## Parameters
 

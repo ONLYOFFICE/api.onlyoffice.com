@@ -1,6 +1,8 @@
 # RATE
 
-Returns the interest rate per period for a loan or an investment. For example, use 6%/4 for quarterly payments at 6% APR.
+Returns the interest rate per period for a loan or an investment.
+
+For example, use 6%/4 for quarterly payments at 6% APR.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Returns the interest rate per period for a loan or an investment. For example, u
 expression.RATE(arg1, arg2, arg3, arg4, arg5, arg6);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

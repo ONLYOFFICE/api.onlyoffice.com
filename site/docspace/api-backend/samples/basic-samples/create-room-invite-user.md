@@ -134,7 +134,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
       return room_id
     else:
       print(f"Room creation failed. Status code: {response.status_code}, Message: {response.text}")
-  return None
+    return None
 
   # Step 2: Invite a user to the room
   def invite_user_to_room(room_id, email, access='ReadWrite'):
@@ -173,7 +173,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a room
 
-A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room) with:
+A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) with:
 
 - `title`: The room name.
 - `roomType`: The room type. Use 2 for collaboration rooms.
@@ -236,7 +236,7 @@ The API returns a unique `roomId` used in the next step.
 
 ## Step 2: Invite a user to the room
 
-A PUT request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) with:
+A PUT request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/rooms/set-room-security) with:
 
 - `email`: The invitee's email address.
 - `access`: Access level (e.g., ReadWrite, Editing, Read).

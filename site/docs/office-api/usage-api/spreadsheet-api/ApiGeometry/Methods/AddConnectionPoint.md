@@ -8,7 +8,7 @@ Adds a connection point to the current geometry.
 expression.AddConnectionPoint(sAngle, sX, sY);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 

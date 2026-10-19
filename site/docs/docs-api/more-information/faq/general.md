@@ -18,7 +18,7 @@ The detailed description of every API method is available in the larger **Docume
 
 The current ONLYOFFICE Docs version number can be found at the **About** page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name.
 
-You can use the API to send a POST request to the ****document command service****. Use the *c* parameter for that with the [version](../../additional-api/command-service/version.md) value, which is sent as a JSON object in the request body:
+You can use the API to send a POST request to the **document command service**. Use the `c` parameter for that with the [version](../../additional-api/command-service/version.md) value, which is sent as a JSON object in the request body:
 
   ``` json
   {
@@ -39,7 +39,7 @@ More detailed information about the interaction with the **document command serv
 
 ## I want to change some ONLYOFFICE Docs parameters from the default.json configuration file. How can I do that so that my changes were not lost after update?
 
-All the main settings for ONLYOFFICE Docs are stored in the *default.json* configuration file which is available in the */etc/onlyoffice/documentserver/* folder (for Linux) or *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\* (for Windows). There is also the platform-specific *production.json* file in the same folder, in which the settings relevant for Linux or Windows are stored.
+All the main settings for ONLYOFFICE Docs are stored in the `default.json` configuration file which is available in the `/etc/onlyoffice/documentserver/` folder (for Linux) or `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\` (for Windows). There is also the platform-specific `production.json` file in the same folder, in which the settings relevant for Linux or Windows are stored.
 
 ONLYOFFICE Docs uses the [Node.js config module](https://www.npmjs.com/package/config) to organize and structure configuration files, so the hierarchy of these files looks like this:
 
@@ -49,15 +49,15 @@ ONLYOFFICE Docs uses the [Node.js config module](https://www.npmjs.com/package/c
   local.json
   ```
 
-Where all the main settings are stored in the *default.json* file, with some of them added or overriden by ones from *production.json* file and any user/developer settings overriden by the ones from *local.json* configuration file.
+Where all the main settings are stored in the `default.json` file, with some of them added or overriden by ones from `production.json` file and any user/developer settings overriden by the ones from `local.json` configuration file.
 
 :::note
-If you change the parameters in either *default.json* or *production.json* file, all the changes will be lost after ONLYOFFICE Docs update or Docker container restart (in case you have ONLYOFFICE Docs installed using Docker).
+If you change the parameters in either `default.json` or `production.json` file, all the changes will be lost after ONLYOFFICE Docs update or Docker container restart (in case you have ONLYOFFICE Docs installed using Docker).
 :::
 
-So we strongly recommend that you **do not** alter the parameters in either *default.json* or *production.json* files and use *local.json* configuration file instead. This file must be created in the same folder with the *default.json* file and the **whole object structure** for the necessary parameter **must be retained**.
+So we strongly recommend that you **do not** alter the parameters in either `default.json` or `production.json` files and use `local.json` configuration file instead. This file must be created in the same folder with the `default.json` file and the **whole object structure** for the necessary parameter **must be retained**.
 
-The examples of *local.json* use can be found in the following sections:
+The examples of `local.json` use can be found in the following sections:
 
 - [Save delay](../../get-started/how-it-works/saving-file.md#save-delay)
 - [Force saving](../../get-started/how-it-works/saving-file.md#force-saving)

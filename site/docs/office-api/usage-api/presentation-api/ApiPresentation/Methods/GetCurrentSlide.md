@@ -8,7 +8,7 @@ Returns the current slide.
 expression.GetCurrentSlide();
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiSlide](../../ApiSlide/ApiSlide.md)
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null \| undefined
 
 ## Example
 

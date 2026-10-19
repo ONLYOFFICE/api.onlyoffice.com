@@ -1,4 +1,4 @@
-﻿# version
+# version
 
 向 ONLYOFFICE 文档请求许可证，并获取有关服务器和用户配额的信息。
 

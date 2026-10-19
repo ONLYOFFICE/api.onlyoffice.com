@@ -4,6 +4,22 @@
 
 继承自 [ApiParaPr.GetKeepNext](../../ApiParaPr/Methods/GetKeepNext.md)。
 
+## 语法
+
+```javascript
+expression.GetKeepNext();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean \| undefined
+
 ## 示例
 
 读取文档中段落是否设置为与下一段保持在同一页上。

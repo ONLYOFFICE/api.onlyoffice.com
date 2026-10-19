@@ -8,7 +8,7 @@ Sets an array formula to the current range.
 expression.SetFormulaArray(data);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

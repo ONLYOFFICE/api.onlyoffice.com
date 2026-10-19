@@ -8,7 +8,7 @@ Sets the fill to the marker in the specified chart series.
 expression.SetMarkerFill(oFill, nSeries, nMarker, bAllMarkers);
 ```
 
-`expression` - A variable that represents a [ApiChart](../ApiChart.md) class.
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
 
 ## Parameters
 
@@ -34,7 +34,7 @@ Fill the data point markers of a chart series with a solid color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("scatter", [
+let chart = Api.CreateChart("XYScatter", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

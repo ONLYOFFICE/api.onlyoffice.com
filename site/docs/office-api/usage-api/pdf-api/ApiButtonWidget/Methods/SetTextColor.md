@@ -4,6 +4,24 @@ Sets widget text color.
 
 Inherited from [ApiBaseWidget.SetTextColor](../../ApiBaseWidget/Methods/SetTextColor.md).
 
+## Syntax
+
+```javascript
+expression.SetTextColor(color);
+```
+
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The text color. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Apply a text color to all field widgets in a PDF.

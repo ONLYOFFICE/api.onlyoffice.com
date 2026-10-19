@@ -129,11 +129,11 @@ connector.addToolbarMenuItem({
 
 被调用以添加事件侦听器的函数，该函数将在指定事件传递到目标时被调用。所有可用事件的列表与插件的列表相同：
 
-- [文本文档事件](../../../plugins/interacting-with-editors/document-api/Events/Events.md)
-- [电子表格事件](../../../plugins/interacting-with-editors/spreadsheet-api/Events/Events.md)
-- [演示文稿事件](../../../plugins/interacting-with-editors/presentation-api/Events/Events.md)
-- [PDF 事件](../../../plugins/interacting-with-editors/pdf-api/Events/Events.md)
-- [表单事件](../../../plugins/interacting-with-editors/form-api/Events/Events.md)
+- [文本文档事件](../../../plugins/interacting-with-editors/document-api/document-api.md#事件)
+- [电子表格事件](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#事件)
+- [演示文稿事件](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#事件)
+- [PDF 事件](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#事件)
+- [表单事件](../../../plugins/interacting-with-editors/form-api/form-api.md#事件)
 
 ### 参数
 
@@ -241,11 +241,11 @@ connector.disconnect();
 
 调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同：
 
-- [文本文档方法](../../../plugins/interacting-with-editors/document-api/Methods/Methods.md)
-- [电子表格方法](../../../plugins/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
-- [演示文稿方法](../../../plugins/interacting-with-editors/presentation-api/Methods/Methods.md)
-- [PDF 方法](../../../plugins/interacting-with-editors/pdf-api/Methods/Methods.md)
-- [表单方法](../../../plugins/interacting-with-editors/form-api/Methods/Methods.md)
+- [文本文档方法](../../../plugins/interacting-with-editors/document-api/document-api.md#方法)
+- [电子表格方法](../../../plugins/interacting-with-editors/spreadsheet-api/spreadsheet-api.md#方法)
+- [演示文稿方法](../../../plugins/interacting-with-editors/presentation-api/presentation-api.md#方法)
+- [PDF 方法](../../../plugins/interacting-with-editors/pdf-api/pdf-api.md#方法)
+- [表单方法](../../../plugins/interacting-with-editors/form-api/form-api.md#方法)
 
 ### 参数
 
@@ -261,6 +261,34 @@ connector.disconnect();
 const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
+});
+```
+
+## sendEvent
+
+调用该函数以向编辑器中正在运行的插件发送自定义事件。该事件会传递给所有订阅了它的插件，订阅方式可以是 [attachEditorEvent](../../../plugins/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) 方法，也可以是插件 *config.json* 文件中的 [events](../../../plugins/configuration/configuration.md#variationsevents) 参数。如果插件尚未加载完成，则会在其准备就绪后传递该事件。
+
+### 参数
+
+| 名称 | 类型   | 描述                             |
+| ---- | ------ | -------------------------------- |
+| name | string | 事件名称。                       |
+| data | object | 传递给插件事件监听器的事件数据。 |
+
+### 示例
+
+```ts
+const connector = docEditor.createConnector();
+connector.sendEvent("onExternalDataReady", {
+  rows: 42,
+});
+```
+
+在插件代码中订阅该事件以接收数据：
+
+```ts
+Asc.plugin.attachEditorEvent("onExternalDataReady", (data) => {
+  console.log(`Rows: ${data.rows}`);
 });
 ```
 

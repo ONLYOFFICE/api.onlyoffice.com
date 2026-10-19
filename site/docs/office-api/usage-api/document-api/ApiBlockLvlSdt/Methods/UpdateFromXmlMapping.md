@@ -8,7 +8,7 @@ Updates the content control using the value from the XML mapping.
 expression.UpdateFromXmlMapping();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents an [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 Refresh a content control to display updated XML data in a document.
 
 ```javascript editor-docx
-// How do I update a content control after its linked XML data changes in a document?
+// Update a content control after its linked XML data changes in a document.
 
 // Change the value in an XML source and pull the new text into a content control in a document.
 

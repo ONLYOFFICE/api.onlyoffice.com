@@ -23,7 +23,7 @@ boolean
 使用更新的自定义 XML 数据刷新文档中的内联内容控件。
 
 ```javascript editor-docx
-// How do I sync an inline content control with changed XML data in a document?
+// Sync an inline content control with changed XML data in a document.
 
 // Bind a content control to an XML node so that edits to the XML are reflected automatically in a document.
 

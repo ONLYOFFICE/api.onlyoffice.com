@@ -1,8 +1,8 @@
 # SetSpacingBefore
 
-Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then 
-any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
-it will be interpreted as false.
+Sets the spacing before the current paragraph.
+
+If the value of the isBeforeAuto parameter is true, then any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then  it will be interpreted as false.
 
 ## Syntax
 
@@ -10,7 +10,7 @@ it will be interpreted as false.
 expression.SetSpacingBefore(nBefore, isBeforeAuto);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

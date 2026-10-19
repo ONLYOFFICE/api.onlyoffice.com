@@ -4,28 +4,44 @@ Checks if the current form is filled.
 
 Inherited from [ApiFormBase.IsFilled](../../ApiFormBase/Methods/IsFilled.md).
 
+## Syntax
+
+```javascript
+expression.IsFilled();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check whether a form field contains a value entered by the user in a document.
+Determine whether a signature field already contains a submitted signature in a document.
 
 ```javascript editor-forms
-// How do I tell if a form field has been filled out in a document?
+// How do I tell if a signer has already completed a signature field in a document?
 
-// Verify the fill status of multiple form fields to determine which ones still need input in a document.
+// Verify which signature fields have been filled and which remain empty in a document.
 
 let doc = Api.GetDocument();
-let textForm1 = Api.CreateTextForm({"key": "Name1", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": false, "multiLine": false, "autoFit": false});
+let signatureForm1 = Api.CreateSignatureForm({"key": "Signature1", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm1);
-let textForm2 = Api.CreateTextForm({"key": "Name2", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "comb": false, "multiLine": false, "autoFit": false});
-paragraph.AddElement(textForm2);
-textForm2.SetText("Smith");
-let filled1 = textForm1.IsFilled();
-let filled2 = textForm2.IsFilled();
+paragraph.AddElement(signatureForm1);
+let signatureForm2 = Api.CreateSignatureForm({"key": "Signature2", "tip": "Please sign here", "placeholder": "Signature"});
+paragraph.AddElement(signatureForm2);
+signatureForm2.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png");
+let filled1 = signatureForm1.IsFilled();
+let filled2 = signatureForm2.IsFilled();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first text form is filled: " + filled1);
+paragraph.AddText("The first signature form is filled: " + filled1);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The second text form is filled: " + filled2);
+paragraph.AddText("The second signature form is filled: " + filled2);
 doc.Push(paragraph);
 ```

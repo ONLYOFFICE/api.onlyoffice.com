@@ -16,7 +16,7 @@ expression.GetTableRowPr();
 
 ## 返回值
 
-[ApiTableRowPr](../../ApiTableRowPr/ApiTableRowPr.md)
+[ApiTableRowPr](../../ApiTableRowPr/ApiTableRowPr.md) \| null \| undefined
 
 ## 示例
 
@@ -35,8 +35,8 @@ doc.Push(table);
 table.SetStyle(tableStyle);
 table.SetTableLook(true, true, true, true, false, false);
 tableStyle.GetTableRowPr().SetHeight("atLeast", 1440);
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 111, 61);
-tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("clear", 51, 51, 51);
-tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
-tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 111, 61)));
+tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(51, 51, 51)));
+tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(128, 128, 128)));
+tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd(Api.CreateShd("clear", Api.Color(255, 213, 191)));
 ```

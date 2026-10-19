@@ -24,10 +24,10 @@ expression.GetDefNames();
 
 ## 示例
 
-此示例展示如何获取工作簿中定义的所有 ApiName 对象的数组。
+获取电子表格工作簿中定义的所有名称。
 
 ```javascript editor-xlsx
-// How to get all def names from the workbook across all scopes.
+// How do I get all defined names from a workbook across all scopes?
 
 // Get all workbook-level and sheet-level def names as an array.
 

@@ -5,16 +5,16 @@ Sets the user ID to the comment author.
 ## Syntax
 
 ```javascript
-expression.SetUserId(sUserId);
+expression.SetUserId(userId);
 ```
 
-`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+`expression` - A variable that represents an [ApiComment](../ApiComment.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sUserId | Required | string |  | The user ID of the comment author. |
+| userId | Required | string |  | The user ID of the comment author. |
 
 ## Returns
 

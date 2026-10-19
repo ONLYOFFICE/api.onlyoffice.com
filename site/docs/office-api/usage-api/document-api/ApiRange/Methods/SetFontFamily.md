@@ -5,16 +5,16 @@ Sets all 4 font slots with the specified font family.
 ## Syntax
 
 ```javascript
-expression.SetFontFamily(sFontFamily);
+expression.SetFontFamily(fontFamily);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | Required | string |  | The font family or families used for the current text Range. |
+| fontFamily | Optional | string \| null |  | The font family or families used for the current text Range. Pass *null* or omit it to remove the font family. |
 
 ## Returns
 

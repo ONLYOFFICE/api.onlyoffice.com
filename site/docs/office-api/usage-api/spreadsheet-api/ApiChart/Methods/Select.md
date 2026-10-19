@@ -4,12 +4,30 @@ Selects the current graphic object.
 
 Inherited from [ApiDrawing.Select](../../ApiDrawing/Methods/Select.md).
 
+## Syntax
+
+```javascript
+expression.Select(isReplace);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isReplace | Optional | boolean | false | Specifies whether the selection should replace the current selection (true) or be added to it (false). |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Select a drawing object on the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I programmatically choose which drawings are selected in a spreadsheet?
+// Choose which drawings are selected in a spreadsheet.
 
 // Build a multi-shape selection by adding shapes one at a time or replacing the current selection in a spreadsheet.
 

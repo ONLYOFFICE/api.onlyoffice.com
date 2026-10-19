@@ -1,10 +1,33 @@
 # SetPosition
 
 更改绘图对象的位置。
-💡 请注意，水平和垂直偏移量仅在指定的列和行单元格的限制范围内计算。
-如果此值超出单元格宽度或高度，将设置另一个垂直/水平位置。
+
+:::note
+水平和垂直偏移量仅在指定的列和行单元格的限制范围内计算。如果此值超出单元格宽度或高度，将设置另一个垂直/水平位置。
+:::
 
 继承自 [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md)。
+
+## 语法
+
+```javascript
+expression.SetPosition(nFromCol, nColOffset, nFromRow, nRowOffset);
+```
+
+`expression` - 表示 [ApiGroup](../ApiGroup.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nFromCol | 必需 | number |  | 绘图对象起始位置所在的列号。 |
+| nColOffset | 必需 | [EMU](../../Enumeration/EMU.md) |  | 从 nFromCol 列到绘图对象左侧的偏移量（以英制度量单位测量）。 |
+| nFromRow | 必需 | number |  | 绘图对象起始位置所在的行号。 |
+| nRowOffset | 必需 | [EMU](../../Enumeration/EMU.md) |  | 从 nFromRow 行到绘图对象顶部的偏移量（以英制度量单位测量）。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 

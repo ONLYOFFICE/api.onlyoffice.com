@@ -24,7 +24,7 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 ## 返回值
 
-[ApiImage](../../ApiImage/ApiImage.md)
+[ApiImage](../../ApiImage/ApiImage.md) \| null
 
 ## 示例
 

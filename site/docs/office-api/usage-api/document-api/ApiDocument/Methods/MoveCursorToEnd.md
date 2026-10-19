@@ -8,7 +8,7 @@ Moves a cursor to the end of the document.
 expression.MoveCursorToEnd();
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

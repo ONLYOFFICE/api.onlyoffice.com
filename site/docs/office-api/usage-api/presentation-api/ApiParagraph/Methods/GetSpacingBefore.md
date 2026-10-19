@@ -4,14 +4,30 @@ Returns the spacing before value of the current paragraph.
 
 Inherited from [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md).
 
+## Syntax
+
+```javascript
+expression.GetSpacingBefore();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[twips](../../Enumeration/twips.md)
+
 ## Example
 
-Check the space above a paragraph in a presentation.
+Get the spacing before value of the current paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I read the spacing value before a paragraph in a presentation?
+// How do I find the space above a paragraph in a presentation?
 
-// Retrieve the distance between the previous element and the start of a paragraph in a presentation.
+// Check and display the top spacing of a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -33,12 +49,11 @@ paragraph.AddText("This is due to the fact that the second paragraph has this of
 
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
-const paraPr = paragraph2.GetParaPr();
-paraPr.SetSpacingBefore(1440);
+paragraph2.SetSpacingBefore(1440);
 docContent.Push(paragraph2);
 
-const spacingBefore = paraPr.GetSpacingBefore();
+const spacingBefore = paragraph2.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
-paragraph3.AddText("Spacing before: " + spacingBefore);
+paragraph3.AddText("Spacing before second paragraph: " + spacingBefore);
 docContent.Push(paragraph3);
 ```

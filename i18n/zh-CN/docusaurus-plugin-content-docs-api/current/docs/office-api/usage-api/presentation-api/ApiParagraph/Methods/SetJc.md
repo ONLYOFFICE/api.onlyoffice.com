@@ -4,14 +4,32 @@
 
 继承自 [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md)。
 
+## 语法
+
+```javascript
+expression.SetJc(sJc);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 将应用于段落内容的对齐类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
-在演示文稿中将段落文本居中对齐。
+在演示文稿中按不同方向对齐段落文本。
 
 ```javascript editor-pptx
-// How do I change the alignment of text in a presentation?
+// How do I change text alignment in a paragraph in a presentation?
 
-// Apply text alignment to a paragraph using paragraph properties in a presentation.
+// Apply left, center, or right alignment to paragraph content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -25,12 +43,24 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetDocContent();
-const paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetJc("center");
+let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the text in it aligned by the center. ");
-paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("center");
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the right side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("right");
+docContent.Push(paragraph);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a paragraph with the text in it aligned by the left side. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetJc("left");
+docContent.Push(paragraph);
 slide.AddObject(shape);
 ```

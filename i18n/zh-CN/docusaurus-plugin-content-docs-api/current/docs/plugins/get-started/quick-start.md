@@ -6,7 +6,7 @@ sidebar_position: 2
 
 构建最简单的插件 — 一个将"Hello World"插入文档的按钮。
 
-**时间：** 5 分钟 | **技能等级：** 初级
+**时间**：5 分钟 | **技能等级**：初级
 
 ## 第 1 步：创建插件结构
 
@@ -46,7 +46,7 @@ New-Guid
 然后格式化为 `asc.{您生成的GUID}`。
 :::
 
-**关键字段说明：**
+**关键字段说明**：
 
 - `name` — 插件菜单中显示的名称
 - `guid` — 唯一标识符（每个插件必须不同）
@@ -179,13 +179,13 @@ function insertFormattedText() {
 
 ## 下一步
 
-**深入学习：**
+**深入学习**：
 
 - [插件结构与配置](../configuration/configuration.md)
 - [完整 API 参考](../interacting-with-editors/overview/overview.md)
 - [UI 自定义选项](../customization/toolbar.md)
 
-**浏览示例：**
+**浏览示例**：
 
 - [YouTube 插件](../samples/youtube.md) — 嵌入视频
 - [Translator 插件](../samples/translator.md) — 多语言支持
@@ -193,6 +193,6 @@ function insertFormattedText() {
 
 **需要帮助？**
 
-- [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
+- [开发者论坛](https://community.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
 - [常见问题](../more-information/faq.md) — 常见问题解答

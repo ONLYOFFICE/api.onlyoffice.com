@@ -4,6 +4,22 @@ Gets replies on this annot.
 
 Inherited from [ApiBaseAnnotation.GetReplies](../../ApiBaseAnnotation/Methods/GetReplies.md).
 
+## Syntax
+
+```javascript
+expression.GetReplies();
+```
+
+`expression` - A variable that represents an [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTextAnnotation](../../ApiTextAnnotation/ApiTextAnnotation.md)[]
+
 ## Example
 
 Retrieve all reply annotations attached to an annotation in a PDF.

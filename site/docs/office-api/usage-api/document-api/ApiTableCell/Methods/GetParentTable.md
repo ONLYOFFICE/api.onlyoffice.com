@@ -8,7 +8,7 @@ Returns a parent table of the current cell.
 expression.GetParentTable();
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 
@@ -36,5 +36,5 @@ table.SetStyle(tableStyle);
 doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 let parentTable = table.GetCell(0, 0).GetParentTable();
-parentTable.SetTableBorderTop("single", 32, 0, 51, 51, 51);
+parentTable.SetTableBorderTop("single", 32, 0, Api.Color(51, 51, 51));
 ```

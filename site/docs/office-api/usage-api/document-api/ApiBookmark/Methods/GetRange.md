@@ -8,7 +8,7 @@ Returns the bookmark range.
 expression.GetRange();
 ```
 
-`expression` - A variable that represents a [ApiBookmark](../ApiBookmark.md) class.
+`expression` - A variable that represents an [ApiBookmark](../ApiBookmark.md) class.
 
 ## Parameters
 

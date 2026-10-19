@@ -8,7 +8,7 @@ Returns the table position within its parent element.
 expression.GetPosInParent();
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 

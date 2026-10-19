@@ -8,7 +8,7 @@ Converts a document to HTML.
 expression.ToHtml(bHtmlHeadings, bBase64img, bDemoteHeadings, bRenderHTMLTags);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -50,7 +50,7 @@ paragraph3.SetStyle(heading2Style);
 let paragraph4 = Api.CreateParagraph();
 paragraph4.AddText("There is an example of two heading levels.");
 doc.Push(paragraph4);
-let html = Api.ConvertDocument("html", false, false, false, true);
+let html = doc.ToHtml(false, false, false, true);
 let paragraph5 = Api.CreateParagraph();
 paragraph5.AddLineBreak();
 paragraph5.AddText("HTML").SetBold(true);

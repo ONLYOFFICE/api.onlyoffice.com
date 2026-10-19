@@ -8,7 +8,7 @@ Sets the date to the current form.
 expression.SetDate(date);
 ```
 
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
+`expression` - A variable that represents an [ApiDateForm](../ApiDateForm.md) class.
 
 ## Parameters
 

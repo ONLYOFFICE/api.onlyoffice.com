@@ -4,6 +4,24 @@
 
 继承自 [ApiTextPr.SetSpacing](../../ApiTextPr/Methods/SetSpacing.md)。
 
+## 语法
+
+```javascript
+expression.SetSpacing(spacing);
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| spacing | 必需 | [twips](../../Enumeration/twips.md) \| null |  | 文本间距值，以二十分之一磅（1/1440 英寸）为单位。传递 *null* 可移除文本间距。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
 ## 示例
 
 设置文档中字符之间的间距。

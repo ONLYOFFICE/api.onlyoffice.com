@@ -1,7 +1,10 @@
 # SetName
 
 Sets the font name property to the specified font.
-💡 This method will work only with the text format of the cell.
+
+:::note
+This method will work only with the text format of the cell.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the font name property to the specified font.
 expression.SetName(FontName);
 ```
 
-`expression` - A variable that represents a [ApiFont](../ApiFont.md) class.
+`expression` - A variable that represents an [ApiFont](../ApiFont.md) class.
 
 ## Parameters
 

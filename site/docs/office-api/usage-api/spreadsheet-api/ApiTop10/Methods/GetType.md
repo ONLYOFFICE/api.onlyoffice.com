@@ -8,7 +8,7 @@ Returns the type of the top 10 conditional formatting rule.
 expression.GetType();
 ```
 
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
+`expression` - A variable that represents an [ApiTop10](../ApiTop10.md) class.
 
 ## Parameters
 
@@ -49,7 +49,7 @@ const formatConditions = dataRange.GetFormatConditions();
 const top10Condition = formatConditions.AddTop10();
 
 top10Condition.SetRank(3);
-top10Condition.SetFillColor(Api.CreateColorFromRGB(144, 238, 144));
+top10Condition.SetFillColor(Api.RGB(144, 238, 144));
 
 const conditionType = top10Condition.GetType();
 worksheet.GetRange('D2').SetValue('Condition type:');

@@ -1,6 +1,8 @@
 # Search
 
-Searches for a scope of a table object. The search results are a collection of ApiRange objects.
+Searches for a scope of a table object.
+
+The search results are a collection of ApiRange objects.
 
 ## Syntax
 
@@ -8,13 +10,13 @@ Searches for a scope of a table object. The search results are a collection of A
 expression.Search(sText, isMatchCase);
 ```
 
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+`expression` - A variable that represents an [ApiTable](../ApiTable.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | Search string. |
+| sText | Required | string \| RegExp |  | Search string, or a regular expression to match. When a RegExp is passed, the isMatchCase parameter is ignored (control case sensitivity with the "i" flag instead). |
 | isMatchCase | Required | boolean |  | Case sensitive or not. |
 
 ## Returns
@@ -23,12 +25,12 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-Find text within a table in a document.
+Find text in a table by a string and by a regular expression, then bold the matches.
 
 ```javascript editor-docx
-// How do I search for specific text inside a table in a document?
+// Combine a keyword lookup across cells with a RegExp that matches every cell number.
 
-// Locate matching words across all table cells and highlight the results in a document.
+// Bold the first keyword match, then bold each number found by the /\d+/g expression.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,6 +42,11 @@ table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 table.GetCell(0, 1).GetContent().GetElement(0).AddText("Cell 2");
 table.GetCell(0, 2).GetContent().GetElement(0).AddText("Cell 3");
 doc.Push(table);
-let searchResults = table.Search("Cell");
-searchResults[0].SetBold(true);
+
+let byKeyword = table.Search("Cell");
+byKeyword[0].SetBold(true);
+
+let byRegExp = table.Search(/\d+/g);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

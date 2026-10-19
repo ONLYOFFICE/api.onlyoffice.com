@@ -8,7 +8,7 @@ Sets icon type for this annotation.
 expression.SetIconType(iconType);
 ```
 
-`expression` - A variable that represents a [ApiTextAnnotation](../ApiTextAnnotation.md) class.
+`expression` - A variable that represents an [ApiTextAnnotation](../ApiTextAnnotation.md) class.
 
 ## Parameters
 

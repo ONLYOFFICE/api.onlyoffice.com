@@ -4,6 +4,22 @@ Returns the page break before value of the current paragraph.
 
 Inherited from [ApiParaPr.GetPageBreakBefore](../../ApiParaPr/Methods/GetPageBreakBefore.md).
 
+## Syntax
+
+```javascript
+expression.GetPageBreakBefore();
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| undefined
+
 ## Example
 
 Read whether a paragraph is set to start on a new page in a document.

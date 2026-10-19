@@ -20,7 +20,7 @@ expression.GetIndLeft();
 
 ## 示例
 
-读取文档中段落设置的左缩进值。
+从文档中的段落属性读取左缩进值。
 
 ```javascript editor-docx
 // How do I find out how far a paragraph is indented from the left margin in a document?

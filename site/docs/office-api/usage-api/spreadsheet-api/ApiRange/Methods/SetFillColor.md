@@ -1,21 +1,22 @@
 # SetFillColor
 
 Sets the background color to the current cell range with the previously created color object.
-Sets 'No Fill' when previously created color object is null.
+
+Sets 'No Fill' when the previously created color object is 'No Fill' or null.
 
 ## Syntax
 
 ```javascript
-expression.SetFillColor(oColor);
+expression.SetFillColor(color);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object which specifies the color to be set to the background in the cell / cell range. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill' \| null |  | The color object which specifies the color to be set to the background in the cell / cell range. Pass 'No Fill' or null to clear the background color. |
 
 ## Returns
 
@@ -32,7 +33,7 @@ Fill the background of a cell range with a color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);
-worksheet.GetRange("A2").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+worksheet.GetRange("A2").SetFillColor(Api.RGB(255, 213, 191));
 worksheet.GetRange("A2").SetValue("This is the cell with a color set to its background");
 worksheet.GetRange("A4").SetValue("This is the cell with a default background color");
 ```

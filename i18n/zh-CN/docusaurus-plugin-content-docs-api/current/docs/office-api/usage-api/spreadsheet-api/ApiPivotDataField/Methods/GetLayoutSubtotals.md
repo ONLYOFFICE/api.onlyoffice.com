@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/GetLayoutSubtotals.md)。
 
+## 语法
+
+```javascript
+expression.GetLayoutSubtotals();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 读取电子表格中为透视字段启用的小计类型。

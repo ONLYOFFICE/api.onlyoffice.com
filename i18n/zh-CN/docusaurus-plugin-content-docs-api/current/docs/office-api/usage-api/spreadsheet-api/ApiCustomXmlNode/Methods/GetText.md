@@ -1,7 +1,8 @@
 # GetText
 
 返回当前节点及其子节点的内部文本。
-例如：`\<text\>123\<one\>4\</one\>\</text\>` 返回 `“1234”`。
+
+例如：`\<text\>123\<one\>4\</one\>\</text\>` 返回 `"1234"`。
 
 ## 语法
 
@@ -24,7 +25,7 @@ string
 读取电子表格中 XML 元素内存储的纯文本。
 
 ```javascript editor-xlsx
-// How do I extract readable text from an XML node in a spreadsheet?
+// Extract readable text from an XML node in a spreadsheet.
 
 // Pull out the human-readable content of an XML entry in a spreadsheet.
 

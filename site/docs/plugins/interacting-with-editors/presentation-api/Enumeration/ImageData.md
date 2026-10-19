@@ -11,7 +11,7 @@ Object
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | height | number | The image height in pixels. |
-| replaceMode | [ReplaceImageMode](../Enumeration/ReplaceImageMode.md) | Specifies how to adjust the image object in case of replacing the selected image. |
+| replaceMode | [ReplaceImageMode](../Enumeration/ReplaceImageMode.md) \| null \| undefined | Specifies how to adjust the image object in case of replacing the selected image. |
 | src | string | The image source in the base64 format. |
 | width | number | The image width in pixels. |
 

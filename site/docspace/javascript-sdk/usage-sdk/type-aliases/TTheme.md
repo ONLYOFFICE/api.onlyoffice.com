@@ -1,7 +1,14 @@
-# Type Alias: TTheme
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TTheme** = `` `${Theme}` ``
+# TTheme
 
-Defined in: [types/index.ts:60](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L60)
+String literal union of all [Theme](../enumerations/Theme.md) values.
 
-The template literal type representing the theme options.
+Accepted by [TFrameConfig.theme](TFrameConfig.md#theme) to control the iframe color scheme.
+Using the [Theme](../enumerations/Theme.md) enum constants is preferred.
+
+```ts
+type TTheme = `${Theme}`;
+```

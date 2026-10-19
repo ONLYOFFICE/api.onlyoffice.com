@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Response
 
 The request result is returned in XML format. To receive a response in JSON format you need to specify the `Accept` header with the `application/json` value in the HTTP request. When forming the link to the resulting file, the same server name is used to which the conversion request was made.
@@ -12,11 +14,7 @@ JSON response format is available from version 4.3.
 
 ## Response parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
@@ -26,9 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | The link to the converted document. This parameter will be received only when the `endConvert` parameter is set to `true`. |
 | percent | integer | `100` | The percentage of the file conversion. If the `endConvert` parameter is set to `true`, the `percent` is equal to `100`. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Examples of responses
 

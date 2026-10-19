@@ -8,7 +8,7 @@ Returns the previous inline drawing object if exists.
 expression.GetPrevDrawing();
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

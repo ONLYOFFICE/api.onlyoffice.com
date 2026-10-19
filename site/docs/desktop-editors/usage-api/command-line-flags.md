@@ -58,6 +58,7 @@ Press **Command+Space**, type `Terminal`, open it, then run:
 | `--edit=path` | Windows, Linux | Opens a file for editing in a separate window without the main application window. Enclose paths containing spaces in double quotes. |
 | `--force-use-tab` | Windows, Linux | Used with `--edit`, `--review`, or `--view`; opens the file in a new tab instead of a separate window. |
 | `--single-window-app` | All | Launches as an independent process; prevents cascading close warnings across instances. |
+| `--prefer-alternate-url` | Windows | Downloads application updates from the alternate source listed in the update feed instead of the primary one. If no alternate source is listed, the primary one is used. Takes effect in the portable version, which passes its flags to the update service. In the installed version, updates are handled by a separate Windows service that does not receive flags passed to the editor. |
 | `--ignore-certificate-errors` | All | Disables SSL certificate validation for connections to servers with self-signed certificates. |
 | `--new:word` | All | Creates and opens a new blank DOCX file. |
 | `--new:cell` | All | Creates and opens a new blank XLSX file. |

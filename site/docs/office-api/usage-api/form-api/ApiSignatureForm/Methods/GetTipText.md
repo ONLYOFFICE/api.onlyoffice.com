@@ -4,20 +4,36 @@ Returns the tip text of the current form.
 
 Inherited from [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md).
 
+## Syntax
+
+```javascript
+expression.GetTipText();
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the tooltip hint text assigned to a form field in a document.
+Retrieve the tooltip hint assigned to a signature field in a document.
 
 ```javascript editor-forms
-// How do I read the instructional hint shown when a user hovers over a form field in a document?
+// How do I read the tooltip text that appears when hovering over a signature field in a document?
 
-// Display the tooltip message of a drop-down form to verify what guidance is shown to the user in a document.
+// Display the guidance message shown to signers when they interact with a signature field in a document.
 
 let doc = Api.GetDocument();
-let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(comboBoxForm);
-let tipText = comboBoxForm.GetTipText();
+paragraph.AddElement(signatureForm);
+let tipText = signatureForm.GetTipText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tip text: " + tipText);
 doc.Push(paragraph);

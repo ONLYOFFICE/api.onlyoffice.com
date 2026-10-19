@@ -4,6 +4,22 @@ Gets annotation last modification date.
 
 Inherited from [ApiBaseAnnotation.GetModDate](../../ApiBaseAnnotation/Methods/GetModDate.md).
 
+## Syntax
+
+```javascript
+expression.GetModDate();
+```
+
+`expression` - A variable that represents an [ApiCaretAnnotation](../ApiCaretAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+number
+
 ## Example
 
 Retrieve the last modification date of an annotation in a PDF.

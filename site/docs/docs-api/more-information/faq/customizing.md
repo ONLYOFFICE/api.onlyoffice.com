@@ -12,27 +12,29 @@ The below options can be edited for whitelabeling your version of ONLYOFFICE Doc
 Changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) users.
 :::
 
-- *editorConfig.customization.customer* options:
+- `editorConfig.customization.customer` options:
 
-  - *editorConfig.customization.customer.address* is used to specify the postal address of the company or person;
-  - *editorConfig.customization.customer.info* is used to give some additional information about the company or person;
-  - *editorConfig.customization.customer.logo* is used to specify the path to the image logo;
-  - *editorConfig.customization.customer.logoDark* is used to specify the path to the image logo for the dark theme;
-  - *editorConfig.customization.customer.mail* is used to specify the email address of the company or person;
-  - *editorConfig.customization.customer.name* is used to specify the name of the company or person who gives access to the editors or the editor authors;
-  - *editorConfig.customization.customer.www* is used to specify the home website address of the company or person.
+  - `editorConfig.customization.customer.address` is used to specify the postal address of the company or person;
+  - `editorConfig.customization.customer.info` is used to give some additional information about the company or person;
+  - `editorConfig.customization.customer.logo` is used to specify the path to the image logo;
+  - `editorConfig.customization.customer.logoDark` is used to specify the path to the image logo for the dark theme;
+  - `editorConfig.customization.customer.mail` is used to specify the email address of the company or person;
+  - `editorConfig.customization.customer.name` is used to specify the name of the company or person who gives access to the editors or the editor authors;
+  - `editorConfig.customization.customer.www` is used to specify the home website address of the company or person.
 
-- *editorConfig.customization.logo* options:
+- `editorConfig.customization.logo` options:
 
-  - *editorConfig.customization.logo.image* is used to specify the path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode;
-  - *editorConfig.customization.logo.imageDark* is used to specify the path to the image file used for the dark theme;
-  - *editorConfig.customization.logo.url* is used to specify the absolute URL which will be used when someone clicks the logo image (you can leave as an empty string or null to make the logo not clickable).
+  - `editorConfig.customization.logo.image` is used to specify the path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode;
+  - `editorConfig.customization.logo.imageDark` is used to specify the path to the image file used for the dark theme;
+  - `editorConfig.customization.logo.url` is used to specify the absolute URL which will be used when someone clicks the logo image (you can leave as an empty string or null to make the logo not clickable).
 
-With all the above fields filled, the *customization* configuration will look like this:
+With all the above fields filled, the `customization` configuration will look like this:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       customer: {
         address: "My City, 123a-45",
@@ -59,11 +61,13 @@ Further information about the customization can be found [at this page](../../us
 
 ## How to change the default language of the ONLYOFFICE Docs interface?
 
-If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx?from=api), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
+If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx?from=api), you can simply use the `editorConfig.lang` property in the configuration file to set it to the necessary locale, like this:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     lang: "de",
   },
 };
@@ -77,11 +81,13 @@ Further information about the language settings can be found [at this page](../.
 
 ## How to enable or disable the chat and/or the comments panel in the editors?
 
-The chat and comments are enabled by default. To disable them use the *document.permissions.comment* and *document.permissions.chat* parameters with the values set to **false** in the configuration file respectively:
+The chat and comments are enabled by default. To disable them use the `document.permissions.comment` and `document.permissions.chat` parameters with the values set to `false` in the configuration file respectively:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       comment: false,
@@ -98,11 +104,13 @@ Further information about the customization can be found [at this page](../../us
 
 ## How to customize the editors interface, e.g. adjust the top toolbar view?
 
-You can either display the full top toolbar or its compact version. To control this the *editorConfig.customization.compactToolbar* parameter is used. With the default **false** value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
+You can either display the full top toolbar or its compact version. To control this the `editorConfig.customization.compactToolbar` parameter is used. With the default `false` value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       compactToolbar: true,
     },
@@ -116,11 +124,13 @@ Further information about the customization can be found [at this page](../../us
 
 ## How to view and change the document additional parameters, e.g. its owner or uploading date?
 
-The document owner and uploading date is affected by the *document.info.owner* and *document.info.uploaded* parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
+The document owner and uploading date is affected by the `document.info.owner` and `document.info.uploaded` parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
@@ -143,6 +153,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "desktop",
   };
 
@@ -153,6 +164,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "mobile",
   };
 
@@ -163,6 +175,7 @@ There are three main appearances of the editors, optimized for different use:
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -183,7 +196,9 @@ To enable plugins for all ONLYOFFICE Docs users, you need the following:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
@@ -200,17 +215,19 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugins/configuration/configuration.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
+Where `editorConfig.plugins.autostart` is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugins/configuration/configuration.md#guid) file), and `editorConfig.plugins.pluginsData` is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
 Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).
 
 ## How to disable feature tips in editors?
 
-To disable the tooltips about new features in the editor on first loading, use the *features.featuresTips* configuration parameter and set its value to **false**:
+To disable the tooltips about new features in the editor on first loading, use the `features.featuresTips` configuration parameter and set its value to `false`:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       features: {
         featuresTips: false
@@ -226,11 +243,13 @@ Further information about the feature customization can be found [at this page](
 
 ## How to change the font and text size in the editor interface?
 
-To customize the font name and size of the interface elements (buttons, tabs, etc.), use the *font* configuration block and edit the *font.name* and *font.size* parameters:
+To customize the font name and size of the interface elements (buttons, tabs, etc.), use the `font` configuration block and edit the `font.name` and `font.size` parameters:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       font: {
         name: "Arial",
@@ -251,11 +270,13 @@ Further information about the interface font customization can be found [at this
 
 ## How to hide the active user's icon and the current username in the editor header?
 
-To hide the icon with the user's avatar/initials in the editor header, use the *layout* configuration block and set the *layout.header.user* parameter to **false**. You can also hide the button with the editing users setting the *layout.header.users* parameter to **false**:
+To hide the icon with the user's avatar/initials in the editor header, use the `layout` configuration block and set the `layout.header.user` parameter to `false`. You can also hide the button with the editing users setting the `layout.header.users` parameter to `false`:
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       layout: {
         header: {

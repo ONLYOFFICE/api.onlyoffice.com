@@ -1,6 +1,7 @@
 # SetAttribute
 
 Sets an attribute for the custom XML node.
+
 If the attribute already exists, it will not be modified.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute already exists, it will not be modified.
 expression.SetAttribute(name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -27,7 +28,7 @@ boolean
 Attach a named property with a value to an XML element in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I add an attribute to an XML node in a spreadsheet?
+// Add an attribute to an XML node in a spreadsheet.
 
 // Annotate an XML element with descriptive metadata fields in a spreadsheet.
 

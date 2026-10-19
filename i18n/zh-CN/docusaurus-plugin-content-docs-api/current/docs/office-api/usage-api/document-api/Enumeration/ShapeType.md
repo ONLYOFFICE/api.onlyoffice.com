@@ -183,6 +183,7 @@
 - "sun"
 - "swooshArrow"
 - "teardrop"
+- "textRect"
 - "trapezoid"
 - "triangle"
 - "upArrowCallout"
@@ -201,7 +202,7 @@
 使用 'diamond' 预设创建形状。
 
 ```javascript editor-docx
-// How to change a shape type of a drawing.
+// How do I change the shape type of a drawing?
 
 // Create a diamond shaped drawing with indicationg its size and color.
 

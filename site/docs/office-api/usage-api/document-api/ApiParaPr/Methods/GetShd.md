@@ -8,7 +8,7 @@ Returns the shading applied to the contents of the paragraph.
 expression.GetShd();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[Shd](../../Enumeration/Shd.md) \| undefined
+[ApiShd](../../ApiShd/ApiShd.md) \| undefined
 
 ## Example
 
@@ -32,13 +32,13 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText('This is the first paragraph with a custom shading applied.');
 
 let paraPr = paragraph.GetParaPr();
-paraPr.SetShd('clear', Api.HexColor('#ff6f3d'));
+paraPr.SetShd(Api.CreateShd('clear', Api.HexColor('#ff6f3d')));
 
 let shd = paraPr.GetShd();
 
 let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This is the second paragraph. The shading from the first paragraph is applied here.');
 let paraPr2 = paragraph2.GetParaPr();
-paraPr2.SetShd(shd.Type, shd.Color);
+paraPr2.SetShd(shd);
 doc.Push(paragraph2);
 ```

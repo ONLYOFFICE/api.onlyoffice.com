@@ -1,6 +1,7 @@
 # GetDocumentInfo
 
 返回文档信息：
+
 - **Application** - 创建文档的应用程序。
 - **CreatedRaw** - 文件创建的日期和时间。
 - **Created** - 解析后的文件创建日期和时间。

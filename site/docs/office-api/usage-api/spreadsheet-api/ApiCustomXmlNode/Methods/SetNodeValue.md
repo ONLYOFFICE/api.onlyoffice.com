@@ -8,7 +8,7 @@ Sets the XML content for the current node.
 expression.SetNodeValue(xml);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ boolean
 Write a new value into an XML node to update its stored data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I change the value held by an XML node in a spreadsheet?
+// Change the value held by an XML node in a spreadsheet.
 
 // Replace an existing node's content with fresh data in a spreadsheet.
 

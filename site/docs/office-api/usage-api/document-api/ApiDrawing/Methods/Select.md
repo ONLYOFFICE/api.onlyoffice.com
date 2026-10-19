@@ -8,13 +8,13 @@ Selects the current graphic object.
 expression.Select(isReplace);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isReplace | Optional | boolean | true | Specifies whether the selection should replace the current selection (true) or be added to it (false). |
+| isReplace | Optional | boolean | false | Specifies whether the selection should replace the current selection (true) or be added to it (false). |
 
 ## Returns
 
@@ -25,7 +25,7 @@ boolean
 Programmatically select one or more drawing objects in a document.
 
 ```javascript editor-docx
-// How do I select a shape or group of shapes in a document?
+// Choose a single shape or build a multi-shape selection in a document.
 
 // Control which shapes are highlighted by combining replace and additive selection modes in a document.
 

@@ -1,7 +1,22 @@
-# Type Alias: TFrameMode
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TFrameMode** = `` `${SDKMode}` ``
+# TFrameMode
 
-Defined in: [types/index.ts:48](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L48)
+String literal union of all [SDKMode](../enumerations/SDKMode.md) values.
 
-The template literal type representing the frame mode based on `SDKMode`.
+Accepted by [TFrameConfig.mode](TFrameConfig.md#mode). Using the [SDKMode](../enumerations/SDKMode.md) enum constants
+is preferred, but plain string literals (e.g. `"manager"`, `"editor"`) are equally valid.
+
+```ts
+type TFrameMode = `${SDKMode}`;
+```
+
+## Example
+
+```typescript
+sdk.init({ frameId: 'ds-frame', src: 'https://portal.example.com', mode: 'manager' });
+// equivalent to:
+sdk.init({ frameId: 'ds-frame', src: 'https://portal.example.com', mode: SDKMode.Manager });
+```

@@ -4,6 +4,24 @@ Sets the setting which specifies whether the specified field can be dragged to t
 
 Inherited from [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md).
 
+## Syntax
+
+```javascript
+expression.SetDragToData(flag);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the data position. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Control whether a pivot field can be dragged into the values area in a spreadsheet.

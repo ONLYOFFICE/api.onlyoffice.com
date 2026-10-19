@@ -4,6 +4,25 @@ Establishes automatic field-sorting rules for the pivot table reports.
 
 Inherited from [ApiPivotField.AutoSort](../../ApiPivotField/Methods/AutoSort.md).
 
+## Syntax
+
+```javascript
+expression.AutoSort(order, field);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| order | Required | [SortOrder](../../Enumeration/SortOrder.md) |  | The sort order. |
+| field | Required | string |  | The name of the field to sort by (pivotField.SourceName, pivotField.Name, dataField.Name). |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Sort a pivot table field automatically by its values in a spreadsheet.

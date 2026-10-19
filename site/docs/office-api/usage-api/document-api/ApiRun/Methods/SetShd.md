@@ -2,20 +2,21 @@
 
 Specifies the shading applied to the contents of the current text run.
 
+Inherited from [ApiTextPr.SetShd](../../ApiTextPr/Methods/SetShd.md).
+
 ## Syntax
 
 ```javascript
-expression.SetShd(type, color);
+expression.SetShd(shd);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text run. |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The shading color. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -36,7 +37,7 @@ let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetShd("clear", Api.HexColor('#FF6F3D'));
+run.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 run.AddText("This is a text run with the text shading set to orange.");
 paragraph.AddElement(run);
 ```

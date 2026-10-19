@@ -8,7 +8,7 @@ Gets the text spacing from the current text properties measured in twentieths of
 expression.GetSpacing();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[twips](../../Enumeration/twips.md)
+[twips](../../Enumeration/twips.md) \| null \| undefined
 
 ## Example
 

@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # Request
 
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
@@ -18,13 +20,17 @@ Please note that prior to version 5.5, the `https://documentserver/ConvertServic
 In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the query string were used.
 :::
 
+:::note
+Starting from version 10.0, the conversion API can be turned off with the `services.CoAuthoring.server.convertServiceEnable` [server setting](../../get-started/configuration/server-config/server-config.md#server). In this case, the requests to the `https://documentserver/converter` address are rejected with the HTTP 403 status code. The conversions performed by the editors are not affected.
+:::
+
+:::tip
+Starting from version 10.0, you can also send the file itself in the request instead of its URL. See [File upload request](./request-from-file.md).
+:::
+
 ## Request parameters
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Parameter | Type | Presence | Description |
 | --------- | ---- | -------- | ----------- |
@@ -93,9 +99,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.type | string | optional | The [shape type](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
 | watermark.width | integer | optional | The watermark width measured in millimeters. |
 
-```mdx-code-block
 </APITable>
-```
 
 :::warning
 If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur. Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.

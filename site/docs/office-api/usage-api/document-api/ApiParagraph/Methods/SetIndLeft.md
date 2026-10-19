@@ -4,31 +4,41 @@ Sets the paragraph left side indentation.
 
 Inherited from [ApiParaPr.SetIndLeft](../../ApiParaPr/Methods/SetIndLeft.md).
 
+## Syntax
+
+```javascript
+expression.SetIndLeft(nValue);
+```
+
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph left side indentation value measured in twentieths of a point (1/1440 of an inch). |
+
+## Returns
+
+boolean
+
 ## Example
 
-Push a paragraph inward from the left margin in a document.
+Move the entire left edge of a paragraph inward from the page margin in a document.
 
 ```javascript editor-docx
-// How do I set a left indent on paragraphs using a paragraph style in a document?
+// How do I shift a paragraph away from the left margin by a specific amount in a document?
 
-// Offset paragraph text from the left edge to create visual hierarchy or emphasize content.
+// Push a paragraph's left boundary inward to create a visual offset from surrounding text in a document.
 
 let doc = Api.GetDocument();
-let myStyle = doc.CreateStyle("My document style");
-let paraPr = myStyle.GetParaPr();
-paraPr.SetIndLeft(2880);
 let paragraph = doc.GetElement(0);
-paragraph.SetStyle(myStyle);
-paragraph.AddText("This is the first paragraph with the indent of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("This is a paragraph with the indent of 2 inches set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph.SetIndLeft(2880);
 paragraph = Api.CreateParagraph();
-paragraph.SetStyle(myStyle);
-paragraph.AddText("This is the second paragraph with the indent of 2 inches set to it. ");
-paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
-paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("This is a paragraph without any indent set to it. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);

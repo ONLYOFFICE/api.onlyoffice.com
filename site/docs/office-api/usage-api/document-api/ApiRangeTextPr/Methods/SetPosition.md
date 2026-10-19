@@ -1,9 +1,26 @@
 # SetPosition
 
-Specifies an amount by which text is raised or lowered for this run in relation to the default
-baseline of the surrounding non-positioned text.
+Specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
 
 Inherited from [ApiTextPr.SetPosition](../../ApiTextPr/Methods/SetPosition.md).
+
+## Syntax
+
+```javascript
+expression.SetPosition(position);
+```
+
+`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| position | Required | [hps](../../Enumeration/hps.md) \| null |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). Pass *null* to remove the position. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## Example
 

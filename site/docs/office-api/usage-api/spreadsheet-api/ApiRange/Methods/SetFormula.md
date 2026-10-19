@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.SetFormula(data);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -26,10 +26,10 @@ boolean
 
 ## Example
 
-This example shows how to set a formula to the specified range.
+Set a formula to a range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a formula to a cell.
+// How do I set a formula to a cell?
 
 // Set a formula to a cell and get it back to display in the worksheet.
 

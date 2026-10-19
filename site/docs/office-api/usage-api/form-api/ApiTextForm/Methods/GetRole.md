@@ -4,38 +4,37 @@ Returns the role of the current form.
 
 Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
+## Syntax
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
-Retrieve the role assigned to a form field in a document.
+Read the role assigned to a text field in a document.
 
 ```javascript editor-forms
-// How do I get the role of a form field in a document?
+// How do I find out what role is associated with a text entry area in a document?
 
-// Assign a custom role to a form, then read it back to verify the assignment.
+// Inspect the responsibility label attached to a text field to understand its purpose in a document.
 
-const doc = Api.GetDocument();
+let doc = Api.GetDocument();
+let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
-
-const roles = doc.GetFormRoles();
-const rolePr = { "color": "#ffefbf" };
-roles.Add("MY_ROLE", rolePr);
-
-const textForm = Api.CreateTextForm({
-	"tip": "Enter your first name",
-	"required": true,
-	"placeholder": "First name",
-	"comb": true,
-	"maxCharacters": 10,
-	"cellWidth": 3,
-	"multiLine": false,
-	"autoFit": false
-});
 paragraph.AddElement(textForm);
-
-textForm.SetRole("MY_ROLE");
-const role = textForm.GetRole();
-
+let role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form role: " + role);
+paragraph.AddText("Form key: " + role);
 doc.Push(paragraph);
 ```

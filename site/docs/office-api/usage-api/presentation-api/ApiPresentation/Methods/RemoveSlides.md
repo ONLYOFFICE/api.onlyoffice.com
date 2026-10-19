@@ -1,6 +1,7 @@
 # RemoveSlides
 
 Removes a range of slides from the presentation.
+
 Deletes all the slides from the presentation if no parameters are specified.
 
 ## Syntax
@@ -9,7 +10,7 @@ Deletes all the slides from the presentation if no parameters are specified.
 expression.RemoveSlides(nStart, nCount);
 ```
 
-`expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
+`expression` - A variable that represents an [ApiPresentation](../ApiPresentation.md) class.
 
 ## Parameters
 

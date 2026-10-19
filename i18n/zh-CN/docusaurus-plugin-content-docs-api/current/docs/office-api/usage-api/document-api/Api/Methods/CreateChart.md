@@ -18,7 +18,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| chartType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "bar" | 用于图表显示的图表类型。 |
+| chartType | 可选 | [ChartType](../../Enumeration/ChartType.md) | "ColumnClustered" | 用于图表显示的图表类型。 |
 | series | 必需 | number[][] |  | 用于构建图表的数据数组。 |
 | seriesNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表列名）。 |
 | catNames | 必需 | number[] \| string[] |  | 用于构建图表的数据所使用的名称数组（源表行名）。 |
@@ -29,7 +29,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## 返回值
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## 示例
 
@@ -42,7 +42,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

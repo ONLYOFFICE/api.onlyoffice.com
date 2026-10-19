@@ -8,7 +8,7 @@ Returns custom XML parts by namespace from the XML manager.
 expression.GetByNamespace(namespace);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetByNamespace(namespace);
 Filter stored XML blocks by their declared namespace in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find all XML entries that belong to a specific namespace in a spreadsheet?
+// Find all XML entries that belong to a specific namespace in a spreadsheet.
 
 // Narrow down embedded XML data to only those matching a given namespace in a spreadsheet.
 

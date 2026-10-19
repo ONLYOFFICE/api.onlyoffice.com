@@ -8,7 +8,7 @@ Adds a line break to the current run position and starts the next element from a
 expression.AddLineBreak();
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

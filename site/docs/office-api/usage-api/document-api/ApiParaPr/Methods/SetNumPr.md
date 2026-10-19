@@ -5,17 +5,17 @@ Specifies that the current paragraph references a numbering definition instance 
 ## Syntax
 
 ```javascript
-expression.SetNumPr(oNumPr, nLvl);
+expression.SetNumPr(numPr, lvl);
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oNumPr | Required | [ApiNumbering](../../ApiNumbering/ApiNumbering.md) |  | Specifies a numbering definition. |
-| nLvl | Optional | number | 0 | Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct formatting of a paragraph, then this parameter MUST BE specified. Otherwise, if the current instance of the ApiParaPr class is the part of ApiStyle properties, this parameter will be ignored. |
+| numPr | Required | [ApiNumbering](../../ApiNumbering/ApiNumbering.md) \| null \| undefined |  | Specifies a numbering definition, or *undefined*/*null* to remove numbering. |
+| lvl | Optional | number | 0 | Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct formatting of a paragraph, then this parameter MUST BE specified. Otherwise, if the current instance of the ApiParaPr class is the part of ApiStyle properties, this parameter will be ignored. |
 
 ## Returns
 

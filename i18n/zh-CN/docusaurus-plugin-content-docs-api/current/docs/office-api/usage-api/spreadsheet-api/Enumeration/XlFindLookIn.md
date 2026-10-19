@@ -13,10 +13,10 @@
 
 ## 示例
 
-指定在区域中搜索完整文本匹配。
+在区域的单元格值中搜索值。
 
 ```javascript editor-xlsx
-// How to indicate from where the text should be searched.
+// How do I specify where to look for the searched text?
 
 // Search inside a range specifying which values to look in.
 

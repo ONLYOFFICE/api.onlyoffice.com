@@ -8,7 +8,7 @@ Gets the text fill from the current text properties.
 expression.GetTextFill();
 ```
 
-`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+`expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
 
 ## Parameters
 
@@ -34,7 +34,7 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textPr.SetCaps(true);
 textPr.SetOutLine(Api.CreateStroke(0, Api.CreateNoFill()));
-textPr.SetTextFill(Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+textPr.SetTextFill(Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 textPr.SetFontFamily('Comic Sans MS');
 
 const textArt = Api.CreateWordArt(textPr, 'ONLYOFFICE', 'textArchUp', null, null, 0, 200 * 36000, 100 * 36000);

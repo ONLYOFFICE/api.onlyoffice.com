@@ -8,7 +8,7 @@ Returns an index for the pivot table field.
 expression.GetIndex();
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

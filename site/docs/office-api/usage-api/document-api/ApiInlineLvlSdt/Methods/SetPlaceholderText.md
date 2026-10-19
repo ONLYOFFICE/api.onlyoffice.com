@@ -1,7 +1,10 @@
 # SetPlaceholderText
 
 Sets the placeholder text to the current inline content control.
-*Can't be set to checkbox or radio button*
+
+:::note
+The placeholder text can't be set for checkbox or radio button content controls.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the placeholder text to the current inline content control.
 expression.SetPlaceholderText(sText);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 

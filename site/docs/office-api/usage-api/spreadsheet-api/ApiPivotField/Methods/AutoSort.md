@@ -8,7 +8,7 @@ Establishes automatic field-sorting rules for the pivot table reports.
 expression.AutoSort(order, field);
 ```
 
-`expression` - A variable that represents a [ApiPivotField](../ApiPivotField.md) class.
+`expression` - A variable that represents an [ApiPivotField](../ApiPivotField.md) class.
 
 ## Parameters
 

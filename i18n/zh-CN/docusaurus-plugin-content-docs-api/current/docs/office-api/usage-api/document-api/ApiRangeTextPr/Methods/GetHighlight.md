@@ -4,6 +4,22 @@
 
 继承自 [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md)。
 
+## 语法
+
+```javascript
+expression.GetHighlight();
+```
+
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string \| null \| undefined
+
 ## 示例
 
 读取文档中应用于文本运行的高亮颜色。

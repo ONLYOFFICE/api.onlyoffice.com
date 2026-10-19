@@ -8,16 +8,16 @@ Sets the text paddings to the current shape.
 expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 ```
 
-`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | Required | [EMU](../../Enumeration/EMU.md) |  | Left padding. |
-| nTop | Required | [EMU](../../Enumeration/EMU.md) |  | Top padding. |
-| nRight | Required | [EMU](../../Enumeration/EMU.md) |  | Right padding. |
-| nBottom | Required | [EMU](../../Enumeration/EMU.md) |  | Bottom padding. |
+| nLeft | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Left padding. |
+| nTop | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Top padding. |
+| nRight | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Right padding. |
+| nBottom | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Bottom padding. |
 
 ## Returns
 
@@ -34,7 +34,7 @@ Set internal spacing for text content within a shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 200 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

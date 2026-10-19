@@ -8,7 +8,7 @@ Sets the bar border color for the data bar.
 expression.SetBarBorderColor(oColor);
 ```
 
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+`expression` - A variable that represents an [ApiDatabar](../ApiDatabar.md) class.
 
 ## Parameters
 
@@ -46,7 +46,7 @@ let dataBar = formatConditions.AddDatabar();
 worksheet.GetRange("C1").SetValue("Before Color:");
 worksheet.GetRange("C2").SetValue(dataBar.GetBarBorderColor() ? "Set" : "None");
 
-let borderColor = Api.CreateColorFromRGB(128, 128, 128);
+let borderColor = Api.RGB(128, 128, 128);
 dataBar.SetBarBorderColor(borderColor);
 
 worksheet.GetRange("C3").SetValue("After Color:");

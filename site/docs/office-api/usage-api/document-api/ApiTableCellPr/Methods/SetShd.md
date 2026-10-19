@@ -5,20 +5,16 @@ Specifies the shading applied to the contents of the table cell.
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b, isAuto);
+expression.SetShd(shd);
 ```
 
-`expression` - A variable that represents a [ApiTableCellPr](../ApiTableCellPr.md) class.
+`expression` - A variable that represents an [ApiTableCellPr](../ApiTableCellPr.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type which will be applied to the contents of the current table cell. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| isAuto | Optional | boolean | false | The true value disables the table cell contents shading. |
+| shd | Required | [ApiShd](../../ApiShd/ApiShd.md) |  | The shading created with the Api.CreateShd method. |
 
 ## Returns
 
@@ -26,7 +22,7 @@ boolean
 
 ## Example
 
-Apply a background color to a table cell in a document.
+Apply a background shading to all table cells using the table cell properties of a style in a document.
 
 ```javascript editor-docx
 // How do I fill a table cell with a specific background color in a document?
@@ -41,7 +37,7 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetShd("clear", Api.HexColor('#FF6F3D'));
+tableCellPr.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

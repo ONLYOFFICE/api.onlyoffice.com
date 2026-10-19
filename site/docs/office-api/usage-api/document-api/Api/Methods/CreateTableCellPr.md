@@ -8,7 +8,7 @@ Creates the empty table cell properties.
 expression.CreateTableCellPr();
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 
@@ -40,7 +40,7 @@ table.SetWidth("percent", 100);
 let tableStylePr = tableStyle.GetConditionalTableStyle("topLeftCell");
 table.SetTableLook(true, true, true, true, true, true);
 let tableCellPr = Api.CreateTableCellPr();
-tableCellPr.SetShd("clear", 0xEE, 0xEE, 0xEE);
+tableCellPr.SetShd(Api.CreateShd("clear", Api.Color(0xEE, 0xEE, 0xEE)));
 tableStylePr.SetTableCellPr(tableCellPr);
 
 table.SetStyle(tableStyle);

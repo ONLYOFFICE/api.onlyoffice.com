@@ -1,20 +1,26 @@
 # SetStyle
 
-Sets a style to the current run.
+The text style base method.
+
+:::note
+This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets the selected or created style to the text.
+:::
+
+Inherited from [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md).
 
 ## Syntax
 
 ```javascript
-expression.SetStyle(oStyle);
+expression.SetStyle(style);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text run. |
+| style | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) \| string \| null \| undefined |  | The style which must be applied to the text character, or the name of an existing style, or *undefined*/*null* to remove the style. |
 
 ## Returns
 

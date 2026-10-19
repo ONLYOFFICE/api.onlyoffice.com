@@ -8,7 +8,7 @@ Adds a new adjustment parameter to the current geometry.
 expression.AddAdj(sName, nValue);
 ```
 
-`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+`expression` - A variable that represents an [ApiGeometry](../ApiGeometry.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-Create adjustable geometry with guides and connection points in a presentation.
+Add an adjustment parameter to a custom geometry in a presentation.
 
 ```javascript editor-pptx
 // Adjustable parameters allow shapes to be customized without changing their geometry.

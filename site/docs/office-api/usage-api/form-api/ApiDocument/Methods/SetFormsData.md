@@ -8,7 +8,7 @@ Sets the data to the specified forms.
 expression.SetFormsData(arrData);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
@@ -38,6 +38,6 @@ paragraph1.Push(textForm);
 
 doc.SetFormsData([
     {key: "BestCompany", value: true},
-    {key: "CompanyName", value: "OnlyOffice"}
+    {key: "CompanyName", value: "ONLYOFFICE"}
 ]);
 ```

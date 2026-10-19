@@ -1,6 +1,7 @@
 # PutImageDataToSelection
 
 Replaces the first selected drawing with the image specified in the parameters.
+
 If there are no drawings selected, the method inserts the image at the current position.
 
 ## Syntax
@@ -9,7 +10,7 @@ If there are no drawings selected, the method inserts the image at the current p
 expression.PutImageDataToSelection(oImageData);
 ```
 
-`expression` - A variable that represents a [Api](Methods.md) class.
+`expression` - A variable that represents an [Api](../document-api.md) class.
 
 ## Parameters
 

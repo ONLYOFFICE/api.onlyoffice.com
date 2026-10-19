@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: -7
 ---
 
@@ -12,27 +12,29 @@ sidebar_position: -7
 请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)用户。
 :::
 
-- *editorConfig.customization.customer* 选项：
+- `editorConfig.customization.customer` 选项：
 
-  - *editorConfig.customization.customer.address* 用于指定公司或个人的邮政地址；
-  - *editorConfig.customization.customer.info* 用于提供有关公司或个人的一些附加信息；
-  - *editorConfig.customization.customer.logo* 用于指定logo图片的路径；
-  - *editorConfig.customization.customer.logoDark* 用于指定深色主题的logo图片路径；
-  - *editorConfig.customization.customer.mail* 用于指定公司或个人的电子邮件地址；
-  - *editorConfig.customization.customer.name* 用于指定授予编辑或编辑作者访问权限的公司或个人的名称；
-  - *editorConfig.customization.customer.www* 用于指定公司或个人的主页地址。
+  - `editorConfig.customization.customer.address` 用于指定公司或个人的邮政地址；
+  - `editorConfig.customization.customer.info` 用于提供有关公司或个人的一些附加信息；
+  - `editorConfig.customization.customer.logo` 用于指定logo图片的路径；
+  - `editorConfig.customization.customer.logoDark` 用于指定深色主题的logo图片路径；
+  - `editorConfig.customization.customer.mail` 用于指定公司或个人的电子邮件地址；
+  - `editorConfig.customization.customer.name` 用于指定授予编辑或编辑作者访问权限的公司或个人的名称；
+  - `editorConfig.customization.customer.www` 用于指定公司或个人的主页地址。
 
-- *editorConfig.customization.logo* 选项：
+- `editorConfig.customization.logo` 选项：
 
-  - *editorConfig.customization.logo.image* 用于指定图像文件的路径，该图像在普通工作模式（即所有编辑器的查看和编辑模式）或嵌入模式下显示；
-  - *editorConfig.customization.logo.imageDark* 用于指定用于深色主题的图像文件的路径；
-  - *editorConfig.customization.logo.url* 用于指定当有人单击徽标图像时将使用的绝对 URL（您可以保留为空字符串或 null 以使徽标不可点击）。
+  - `editorConfig.customization.logo.image` 用于指定图像文件的路径，该图像在普通工作模式（即所有编辑器的查看和编辑模式）或嵌入模式下显示；
+  - `editorConfig.customization.logo.imageDark` 用于指定用于深色主题的图像文件的路径；
+  - `editorConfig.customization.logo.url` 用于指定当有人单击徽标图像时将使用的绝对 URL（您可以保留为空字符串或 null 以使徽标不可点击）。
 
-填写所有上述字段后，*定制*配置将如下所示：
+填写所有上述字段后，`customization` 配置将如下所示：
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       customer: {
         address: "My City, 123a-45",
@@ -59,11 +61,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何更改 ONLYOFFICE 文档界面的默认语言？ {#how-to-change-the-default-language-of-the-onlyoffice-docs-interface}
 
-如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
+如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx)中，您可以简单地使用配置文件中的 `editorConfig.lang` 属性将其设置为必要的语言环境，如下所示：
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     lang: "de",
   },
 };
@@ -77,11 +81,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何启用或禁用编辑器中的聊天和/或评论面板？ {#how-to-enable-or-disable-the-chat-andor-the-comments-panel-in-the-editors}
 
-默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false**:
+默认情况下聊天和评论是被启用的。要禁用它们，请使用 `document.permissions.comment` 和 `document.permissions.chat` 参数，并在配置文件中将它们的值分别设置为 `false`:
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: false,
       comment: false,
@@ -98,11 +104,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何自定义编辑器界面，例如调整顶部工具栏视图？ {#how-to-customize-the-editors-interface-eg-adjust-the-top-toolbar-view}
 
-您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 *editorConfig.customization.compactToolbar* 参数。使用默认的 **false** 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：
+您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 `editorConfig.customization.compactToolbar` 参数。使用默认的 `false` 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       compactToolbar: true,
     },
@@ -116,11 +124,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何查看和更改文档的附加参数，例如其所有者或上传日期？ {#how-to-view-and-change-the-document-additional-parameters-eg-its-owner-or-uploading-date}
 
-文档所有者和上传日期分别受 *document.info.owner* 和 *document.info.uploaded* 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：
+文档所有者和上传日期分别受 `document.info.owner` 和 `document.info.uploaded` 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：
 
 ```ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
@@ -143,6 +153,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "desktop",
   };
 
@@ -153,6 +164,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "mobile",
   };
 
@@ -163,6 +175,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
   ``` ts
   const config = {
+    // ...
     type: "embedded",
   };
 
@@ -183,7 +196,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
@@ -200,6 +215,84 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugins/configuration/configuration.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
+其中 `editorConfig.plugins.autostart` 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugins/configuration/configuration.md#guid) 文件中定义），`editorConfig.plugins.pluginsData` 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
 
 有关启用 ONLYOFFICE 文档插件的更多信息，请参见[此页面](../../usage-api/config/editor/plugins.md)。
+
+## 如何在编辑器中禁用功能提示？ {#how-to-disable-feature-tips-in-editors}
+
+要在首次加载编辑器时禁用有关新功能的提示，请使用 `features.featuresTips` 配置参数并将其值设置为 `false`：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      features: {
+        featuresTips: false
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+有关功能自定义的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md#features)。
+
+## 如何更改编辑器界面的字体和文字大小？ {#how-to-change-the-font-and-text-size-in-the-editor-interface}
+
+要自定义界面元素（按钮、选项卡等）的字体名称和大小，请使用 `font` 配置块并编辑 `font.name` 和 `font.size` 参数：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      font: {
+        name: "Arial",
+        size: 14
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+:::note
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+:::
+
+有关界面字体自定义的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#font)。
+
+## 如何在编辑器标题栏中隐藏当前用户的图标和用户名？ {#how-to-hide-the-active-users-icon-and-the-current-username-in-the-editor-header}
+
+要隐藏编辑器标题栏中带有用户头像/姓名首字母的图标，请使用 `layout` 配置块并将 `layout.header.user` 参数设置为 `false`。您还可以将 `layout.header.users` 参数设置为 `false`，以隐藏显示正在编辑的用户的按钮：
+
+```ts
+const config = {
+  // ...
+  editorConfig: {
+    // ...
+    customization: {
+      layout: {
+        header: {
+          user: false,
+          users: false,
+        }
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+:::note
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+:::
+
+有关编辑器标题栏设置的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader)。

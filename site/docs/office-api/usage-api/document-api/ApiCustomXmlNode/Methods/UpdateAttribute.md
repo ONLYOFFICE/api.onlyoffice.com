@@ -1,6 +1,7 @@
 # UpdateAttribute
 
 Updates the value of an existing attribute in the custom XML node.
+
 If the attribute doesn't exist, the update will not occur.
 
 ## Syntax
@@ -9,7 +10,7 @@ If the attribute doesn't exist, the update will not occur.
 expression.UpdateAttribute(name, value);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -27,7 +28,7 @@ boolean
 Update the value of an existing attribute on an XML node in a document.
 
 ```javascript editor-docx
-// How do I change the value of an attribute that already exists on a node in a document?
+// Change the value of an attribute that already exists on a node in a document.
 
 // Correct outdated metadata on a node without removing and re-adding the attribute in a document.
 

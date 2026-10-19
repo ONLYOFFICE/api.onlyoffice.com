@@ -1,8 +1,10 @@
 # ApiNumbering
 
-Represents the ApiNumbering class.
+Class representing the numbering properties.
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |

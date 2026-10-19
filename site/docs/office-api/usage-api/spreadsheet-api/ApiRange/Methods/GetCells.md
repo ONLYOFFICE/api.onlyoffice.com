@@ -8,7 +8,7 @@ Returns a Range object that represents all the cells in the specified range or a
 expression.GetCells(row, col);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 
@@ -32,5 +32,5 @@ Access a specific cell within a range by its row and column position in a spread
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
-range.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+range.GetCells(2, 1).SetFillColor(Api.RGB(255, 213, 191));
 ```

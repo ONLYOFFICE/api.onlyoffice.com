@@ -4,21 +4,40 @@ Specifies if the current form should be required.
 
 Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
+## Syntax
+
+```javascript
+expression.SetRequired(bRequired);
+```
+
+`expression` - A variable that represents an [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | Required | boolean |  | Defines if the current form is required (true) or not (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
-Mark a form field as required to enforce completion in a document.
+Mark a picture field as mandatory before the document can be submitted in a document.
 
 ```javascript editor-forms
-// How do I make a form field mandatory in a document?
+// How do I make filling in a picture field obligatory in a document?
 
-// Ensure a field must be filled before the document form is submitted.
+// Enforce that a picture field must be completed before the form is finished in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetRequired(true);
-let required = textForm.IsRequired();
+paragraph.AddElement(pictureForm);
+pictureForm.SetRequired(true);
+let required = pictureForm.IsRequired();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);

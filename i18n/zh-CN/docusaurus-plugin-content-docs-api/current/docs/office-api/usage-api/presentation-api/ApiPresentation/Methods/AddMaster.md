@@ -14,7 +14,7 @@ expression.AddMaster(pos, apiMaster);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| pos | 可选 | number | ApiPresentation.GetMastersCount() | 将添加幻灯片母版的位置。 |
+| pos | 可选 | number | ApiPresentation.GetMastersCount() | 将添加幻灯片母版的位置。如果位置无效，则将幻灯片母版添加到末尾。 |
 | apiMaster | 必需 | [ApiMaster](../../ApiMaster/ApiMaster.md) |  | 要添加的幻灯片母版。 |
 
 ## 返回值

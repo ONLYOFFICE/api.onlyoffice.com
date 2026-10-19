@@ -1,7 +1,10 @@
 # AddComment
 
 向当前块级内容控件添加批注。
-💡 请注意，当前块级内容控件必须在文档中。
+
+:::note
+当前块级内容控件必须在文档中。
+:::
 
 ## 语法
 
@@ -21,7 +24,7 @@ expression.AddComment(text, author, userId);
 
 ## 返回值
 
-[ApiComment](../../ApiComment/ApiComment.md)
+[ApiComment](../../ApiComment/ApiComment.md) \| null \| undefined
 
 ## 示例
 

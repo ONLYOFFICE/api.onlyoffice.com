@@ -4,7 +4,7 @@ The editorConfig section defines the editor interface parameters.
 
 ## actionLink
 
-**type:** `object`
+**type**: `object`
 
 The data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
 
@@ -21,13 +21,13 @@ The data received from the **document editing service** using the [onMakeActionL
 
 ### actionLink.action
 
-**type:** `object`
+**type**: `object`
 
 The action object that defines what to scroll to in the document.
 
 ### actionLink.action.type
 
-**type:** `"bookmark" | "comment"`
+**type**: `"bookmark" | "comment"`
 
 The type of action in the document.
 
@@ -35,7 +35,7 @@ The type of action in the document.
 
 ### actionLink.action.data
 
-**type:** `string`
+**type**: `string`
 
 The data associated with the action: the bookmark name or the comment ID.
 
@@ -43,7 +43,7 @@ The data associated with the action: the bookmark name or the comment ID.
 
 ## callbackUrl
 
-**type:** `string` | **required**
+**type**: `string` | **required**
 
 The absolute URL to the **document storage service**. This service [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server.
 
@@ -51,7 +51,7 @@ The absolute URL to the **document storage service**. This service [must be impl
 
 ## coEditing
 
-**type:** `object`
+**type**: `object`
 
 The co-editing mode and the possibility to change it. This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
 
@@ -66,7 +66,7 @@ The co-editing mode and the possibility to change it. This parameter is used to 
 
 ### coEditing.mode
 
-**type:** `"fast" | "strict"` | **default:** `"fast"`
+**type**: `"fast" | "strict"` | **default**: `"fast"`
 
 The co-editing mode.
 
@@ -78,7 +78,7 @@ In case `mode` setting is changed in the editor interface, it will be stored in 
 
 ### coEditing.change
 
-**type:** `boolean` | **default:** `true`
+**type**: `boolean` | **default**: `true`
 
 Whether to allow changing the co-editing mode in the editor interface.
 
@@ -88,7 +88,7 @@ Whether to allow changing the co-editing mode in the editor interface.
 
 ## createUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL of the document where it will be created and available after creation.
 
@@ -102,7 +102,7 @@ If not specified, the **Create** button will not be displayed. Instead of this p
 
 ## fileChoiceUrl
 
-**type:** `string`
+**type**: `string`
 
 The URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
 
@@ -118,7 +118,7 @@ Instead of this parameter, use the [onRequestInsertImage](../events.md#onrequest
 
 ## lang
 
-**type:** `string` | **default:** `"en"`
+**type**: `string` | **default**: `"en"`
 
 The editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
 
@@ -184,7 +184,7 @@ To translate the editor interface into Portuguese (Portugal) or Chinese (Traditi
 
 ## location
 
-**type:** `string` | **default:** `""`
+**type**: `string` | **default**: `""`
 
 The default measurement units. Specify `us` or `ca` to set inches.
 
@@ -196,7 +196,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 ## mode
 
-**type:** `"edit" | "view"` | **default:** `"edit"`
+**type**: `"edit" | "view"` | **default**: `"edit"`
 
 The editor opening mode.
 
@@ -204,7 +204,7 @@ The editor opening mode.
 
 ## mergeFolderUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the folder for saving the mail merge result.
 
@@ -216,7 +216,7 @@ Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsavea
 
 ## recent
 
-**type:** `object[]`
+**type**: `object[]`
 
 The presence or absence of the documents in the **Open Recent...** menu option.
 
@@ -234,7 +234,7 @@ The presence or absence of the documents in the **Open Recent...** menu option.
 
 ### recent.folder
 
-**type:** `string`
+**type**: `string`
 
 The folder where the document is stored. Can be empty if the document is in the root folder.
 
@@ -242,7 +242,7 @@ The folder where the document is stored. Can be empty if the document is in the 
 
 ### recent.title
 
-**type:** `string`
+**type**: `string`
 
 The document title that will be displayed in the **Open Recent...** menu option.
 
@@ -250,7 +250,7 @@ The document title that will be displayed in the **Open Recent...** menu option.
 
 ### recent.url
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the document where it is stored.
 
@@ -260,7 +260,7 @@ The absolute URL to the document where it is stored.
 
 ## region
 
-**type:** `string` | **default:** `"en-US"`
+**type**: `string` | **default**: `"en-US"`
 
 The default display format for currency, date, and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
 
@@ -326,7 +326,7 @@ Starting from version 8.2, this parameter also defines the default measurement u
 
 ## saveAsUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the folder for saving files.
 
@@ -338,7 +338,7 @@ Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsavea
 
 ## sharingSettingsUrl
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the document sharing settings page.
 
@@ -350,7 +350,7 @@ Instead of this parameter, use the [onRequestSharingSettings](../events.md#onreq
 
 ## templates
 
-**type:** `object[]`
+**type**: `object[]`
 
 The presence or absence of the templates in the **Create New...** menu option.
 
@@ -368,7 +368,7 @@ The presence or absence of the templates in the **Create New...** menu option.
 
 ### templates.image
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the image for the template.
 
@@ -376,7 +376,7 @@ The absolute URL to the image for the template.
 
 ### templates.title
 
-**type:** `string`
+**type**: `string`
 
 The template title that will be displayed in the **Create New...** menu option.
 
@@ -384,7 +384,7 @@ The template title that will be displayed in the **Create New...** menu option.
 
 ### templates.url
 
-**type:** `string`
+**type**: `string`
 
 The absolute URL to the document where it will be created and available after creation.
 
@@ -394,7 +394,7 @@ The absolute URL to the document where it will be created and available after cr
 
 ## user
 
-**type:** `object`
+**type**: `object`
 
 The user currently viewing or editing the document.
 
@@ -418,7 +418,7 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
 
 ### user.group
 
-**type:** `string`
+**type**: `string`
 
 The group (or several groups separated with commas) the user belongs to. Can be used for `customization.reviewPermissions`, `permissions.reviewGroups`, or `permissions.commentGroups`.
 
@@ -426,7 +426,7 @@ The group (or several groups separated with commas) the user belongs to. Can be 
 
 ### user.id
 
-**type:** `string`
+**type**: `string`
 
 The identification of the user. The length is limited to 128 symbols. This information is stored and used to:
 
@@ -442,7 +442,7 @@ It is recommended to use a unique anonymized hash. Do not use sensitive data suc
 
 ### user.image
 
-**type:** `string`
+**type**: `string`
 
 The path to the user's avatar.
 
@@ -450,7 +450,7 @@ The path to the user's avatar.
 
 ### user.name
 
-**type:** `string`
+**type**: `string`
 
 The full name of the user. The length is limited to 128 symbols.
 
@@ -458,7 +458,7 @@ The full name of the user. The length is limited to 128 symbols.
 
 ### user.roles
 
-**type:** `string[]`
+**type**: `string[]`
 
 The roles assigned to the user for PDF form filling. The first role in the array is used to determine which form fields the user can fill.
 
@@ -466,31 +466,31 @@ The roles assigned to the user for PDF form filling. The first role in the array
 
 ## customization
 
-**type:** `object`
+**type**: `object`
 
 The customization section defines the editor customization parameters: [standard branding](customization/customization-standard-branding.md) and [white label](customization/customization-white-label.md).
 
 ## embedded
 
-**type:** `object`
+**type**: `object`
 
 The [embedded](embedded.md) section defines the embedded mode parameters.
 
 ## plugins
 
-**type:** `object`
+**type**: `object`
 
 The [plugins](plugins.md) section defines the runtime plugin parameters.
 
 ## wopi
 
-**type:** `object`
+**type**: `object`
 
 The WOPI configuration section. Used only when the editor is integrated via [WOPI](../../../using-wopi/overview.md).
 
 ### wopi.FileNameMaxLength
 
-**type:** `integer` | **default:** `250`
+**type**: `integer` | **default**: `250`
 
 The maximum length for file names that the WOPI host supports, excluding the file extension. Corresponds to the [FileNameMaxLength](../../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) property from CheckFileInfo.
 

@@ -8,7 +8,7 @@ Adds an object (image, shape or chart) to the current slide layout.
 expression.AddObject(oDrawing);
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

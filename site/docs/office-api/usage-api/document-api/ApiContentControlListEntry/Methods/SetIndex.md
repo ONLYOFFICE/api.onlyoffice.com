@@ -8,7 +8,7 @@ Sets an index to the content control list item in the combo box / drop-down list
 expression.SetIndex(nIndex);
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns the range address.
 expression.GetAddress(RowAbs, ColAbs, RefStyle, External, RelativeTo);
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

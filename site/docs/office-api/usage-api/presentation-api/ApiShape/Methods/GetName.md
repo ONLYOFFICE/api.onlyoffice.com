@@ -4,6 +4,22 @@ Returns the name of the current drawing.
 
 Inherited from [ApiDrawing.GetName](../../ApiDrawing/Methods/GetName.md).
 
+## Syntax
+
+```javascript
+expression.GetName();
+```
+
+`expression` - A variable that represents an [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Get the name of a shape in a presentation.

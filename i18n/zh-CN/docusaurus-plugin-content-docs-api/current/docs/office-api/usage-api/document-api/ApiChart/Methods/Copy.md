@@ -1,10 +1,6 @@
 # Copy
 
-复制当前图表。
-
-:::note
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。
-:::
+创建当前图表的副本。
 
 ## 语法
 
@@ -20,7 +16,7 @@ expression.Copy();
 
 ## 返回值
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## 示例
 
@@ -33,7 +29,7 @@ expression.Copy();
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("bar3D", [
+let chart = Api.CreateChart("3DColumnClustered", [
     [200, 240, 280],
     [250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595);

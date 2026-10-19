@@ -2,13 +2,17 @@
 
 Sets annotation rect.
 
+:::note
+Not for stamps. The SetScale method is used to change the stamp size.
+:::
+
 ## Syntax
 
 ```javascript
 expression.SetRect(rect);
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 

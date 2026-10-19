@@ -8,7 +8,7 @@ Modifies data validation for a range.
 expression.Modify(Type, AlertStyle, Operator, Formula1, Formula2);
 ```
 
-`expression` - A variable that represents a [ApiValidation](../ApiValidation.md) class.
+`expression` - A variable that represents an [ApiValidation](../ApiValidation.md) class.
 
 ## Parameters
 

@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md)。
 
+## 语法
+
+```javascript
+expression.GetShowingInAxis();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
 ## 示例
 
 检查透视字段当前是否在电子表格中数据透视表的行轴或列轴上可见。

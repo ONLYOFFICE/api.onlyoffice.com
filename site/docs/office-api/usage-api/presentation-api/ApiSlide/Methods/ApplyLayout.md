@@ -1,6 +1,7 @@
 # ApplyLayout
 
 Applies the specified layout to the current slide.
+
 The layout must be in slide master.
 
 ## Syntax
@@ -9,7 +10,7 @@ The layout must be in slide master.
 expression.ApplyLayout(oLayout);
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

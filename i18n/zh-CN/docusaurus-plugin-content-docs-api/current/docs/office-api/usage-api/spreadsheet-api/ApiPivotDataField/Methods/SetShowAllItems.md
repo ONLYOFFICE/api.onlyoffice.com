@@ -4,6 +4,24 @@
 
 继承自 [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md)。
 
+## 语法
+
+```javascript
+expression.SetShowAllItems(show);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| show | 必需 | boolean |  | 指定是否显示无数据的项。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
 ## 示例
 
 强制电子表格中的数据透视表字段显示所有项目，包括没有数据的项目。

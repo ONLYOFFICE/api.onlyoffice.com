@@ -4,21 +4,39 @@ Specifies if the current form should be required.
 
 Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
+## Syntax
+
+```javascript
+expression.SetRequired(bRequired);
+```
+
+`expression` - A variable that represents an [ApiSignatureForm](../ApiSignatureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | Required | boolean |  | Defines if the current form is required (true) or not (false). |
+
+## Returns
+
+boolean
+
 ## Example
 
-Mark a form field as required to enforce completion in a document.
+Mark a signature field as required in a document.
 
 ```javascript editor-forms
-// How do I make a form field mandatory in a document?
+// How do I control whether a signature field must be completed in a document?
 
-// Ensure a field must be filled before the document form is submitted.
+// Verify that a signature field remains mandatory regardless of the required setting in a document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let signatureForm = Api.CreateSignatureForm({"key": "Signature", "tip": "Please sign here", "placeholder": "Signature"});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-textForm.SetRequired(true);
-let required = textForm.IsRequired();
+paragraph.AddElement(signatureForm);
+signatureForm.SetRequired(false);
+let required = signatureForm.IsRequired();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);

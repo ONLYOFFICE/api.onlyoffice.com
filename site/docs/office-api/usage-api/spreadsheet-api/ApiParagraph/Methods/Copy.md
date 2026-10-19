@@ -1,6 +1,8 @@
 # Copy
 
-Creates a paragraph copy. Ingnore comments, footnote references, complex fields.
+Creates a paragraph copy.
+
+Ignores comments, footnote references, complex fields.
 
 ## Syntax
 
@@ -8,7 +10,7 @@ Creates a paragraph copy. Ingnore comments, footnote references, complex fields.
 expression.Copy();
 ```
 
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+`expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
 
 ## Parameters
 

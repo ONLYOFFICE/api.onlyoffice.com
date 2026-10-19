@@ -5,13 +5,11 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/owncloud.svg
 ---
 
-# ownCloud integration
-
-```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
+# ownCloud integration
+
 <YoutubeVideo videoId="33w03FcPWTo"/>
-```
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
 

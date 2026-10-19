@@ -4,6 +4,22 @@
 
 继承自 [ApiDrawing.GetParentMaster](../../ApiDrawing/Methods/GetParentMaster.md)。
 
+## 语法
+
+```javascript
+expression.GetParentMaster();
+```
+
+`expression` - 表示 [ApiSmartArt](../ApiSmartArt.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiMaster](../../ApiMaster/ApiMaster.md) \| null
+
 ## 示例
 
 查找演示文稿中包含形状的幻灯片母版。

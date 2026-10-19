@@ -4,14 +4,30 @@
 
 继承自 [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md)。
 
+## 语法
+
+```javascript
+expression.GetSpacingLineValue();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
+
 ## 示例
 
-检查演示文稿中段落的行距。
+在演示文稿中获取段落的行距值。
 
 ```javascript editor-pptx
-// How do I read the line spacing value from a paragraph in a presentation?
+// How do I read the line spacing amount for a paragraph in a presentation?
 
-// Retrieve the distance between lines within a paragraph in a presentation.
+// Set line spacing and retrieve its numerical value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -26,16 +42,14 @@ shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
 
 const docContent = shape.GetDocContent();
-let paragraph = docContent.GetElement(0);
-const paraPr = paragraph.GetParaPr();
-paraPr.SetSpacingLine(3 * 240, "auto");
+const paragraph = docContent.GetElement(0);
+paragraph.SetSpacingLine(3 * 240, "auto");
 paragraph.AddText("Paragraph 1. Spacing: 3 times of a common paragraph line spacing.");
 paragraph.AddLineBreak();
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddLineBreak();
 
-const spacingLineValue = paraPr.GetSpacingLineValue();
-paragraph = Api.CreateParagraph();
-paragraph.AddText("Spacing line value : " + spacingLineValue);
-docContent.Push(paragraph);
+const spacingLineValue = paragraph.GetSpacingLineValue();
+paragraph.AddText("Spacing line value: " + spacingLineValue);
 ```

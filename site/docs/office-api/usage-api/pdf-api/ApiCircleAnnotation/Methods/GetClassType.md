@@ -8,7 +8,7 @@ Returns a type of the ApiCircleAnnotation class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
 
 ## Parameters
 

@@ -1,7 +1,6 @@
 # SetText
 
-Replaces all content of the current table cell with the specified text,
-preserving the formatting of the first paragraph.
+Replaces all content of the current table cell with the specified text, preserving the formatting of the first paragraph.
 
 ## Syntax
 
@@ -9,7 +8,7 @@ preserving the formatting of the first paragraph.
 expression.SetText(text);
 ```
 
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+`expression` - A variable that represents an [ApiTableCell](../ApiTableCell.md) class.
 
 ## Parameters
 

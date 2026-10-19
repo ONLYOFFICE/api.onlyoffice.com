@@ -1,9 +1,26 @@
 # SetOrientation
 
-设置表示字段在指定数据透视表报表中
-位置的透视字段方向值。
+设置表示字段在指定数据透视表报表中位置的透视字段方向值。
 
 继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
+
+## 语法
+
+```javascript
+expression.SetOrientation(type);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | 必需 | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 透视字段方向类型。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 

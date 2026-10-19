@@ -4,6 +4,24 @@ Sets the setting which specifies whether to show items with no data.
 
 Inherited from [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md).
 
+## Syntax
+
+```javascript
+expression.SetShowAllItems(show);
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| show | Required | boolean |  | Specifies whether to show items with no data. |
+
+## Returns
+
+This method doesn't return any data.
+
 ## Example
 
 Force a pivot table field to display all items, including those with no data, in a spreadsheet.

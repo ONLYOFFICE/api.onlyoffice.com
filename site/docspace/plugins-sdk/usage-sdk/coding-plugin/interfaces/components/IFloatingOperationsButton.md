@@ -1,6 +1,8 @@
-# IFloatingOperationsButton
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IFloatingOperationsButton.ts
+---
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L174)
+# IFloatingOperationsButton
 
 Configuration for the floating operations button.
 Used to display progress of long-running operations (upload, conversion, backup, etc.)
@@ -156,11 +158,9 @@ export const uploadMenuItem: IContextMenuItem = {
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable name="IFloatingOperationsButton">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -173,15 +173,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | `onCancelOperationFromList?` | (`operationId`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user closes a specific operation from the operations list. Receives the operation ID. Typically returns Actions.updateFloatingOperationsButton with the updated operations list. |
 | `onLoad?` | (`dispatchMessage`: (`message`: [`IMessage`](../utils.md#imessage)) => `void`) => [`TReturnMessage`](../utils.md#treturnmessage) | Lifecycle callback executed once when floating operations button with given id is displayed for the first time. Receives a dispatchMessage function to send updates back to DocSpace. Use this to initialize progress tracking or update. |
 
-```mdx-code-block
 </APITable>
-```
 
 ***
 
 ## FloatingOperationType
-
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L235)
 
 Determines the icon and visual representation of the operation.
 
@@ -295,16 +291,12 @@ Backup operation
 
 ## IFloatingOperation
 
-[View source on GitHub](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts#L268)
-
 Represents a single operation in the floating operations button.
 Each operation displays as a row with icon, label, and progress indicator.
 
 ### Properties
 
-```mdx-code-block
 <APITable name="IFloatingOperation">
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -316,6 +308,4 @@ Each operation displays as a row with icon, label, and progress indicator.
 | `percent?` | `number` | Progress percentage of the operation (0-100). If undefined, displays an infinite loader animation instead of percentage. |
 | `icon?` | `string` | Custom icon for the operation (overrides default operation icon). The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field, for example, "upload.svg" or "custom-icon.png". |
 
-```mdx-code-block
 </APITable>
-```

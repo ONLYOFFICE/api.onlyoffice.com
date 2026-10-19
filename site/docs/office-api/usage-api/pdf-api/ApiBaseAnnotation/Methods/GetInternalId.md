@@ -12,7 +12,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.
 expression.GetInternalId();
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
@@ -21,3 +21,20 @@ This method doesn't have any parameters.
 ## Returns
 
 string
+
+## Example
+
+Get the internal identifier of an annotation in a PDF.
+
+```javascript editor-pdf
+// Useful for retrieving an annotation's internal ID.
+
+// Create an annotation and print its internal ID.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
+page.AddObject(squareAnnot);
+
+console.log(`Annotation internal ID is: ${squareAnnot.GetInternalId()}`);
+```

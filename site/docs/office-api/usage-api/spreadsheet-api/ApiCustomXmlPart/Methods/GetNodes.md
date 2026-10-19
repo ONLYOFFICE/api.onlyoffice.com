@@ -8,7 +8,7 @@ Retrieves nodes from custom XML based on the provided XPath.
 expression.GetNodes(xPath);
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
+`expression` - A variable that represents an [ApiCustomXmlPart](../ApiCustomXmlPart.md) class.
 
 ## Parameters
 
@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Select matching elements from stored XML data by path in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I pull out specific nodes from a custom XML block saved in a spreadsheet?
+// Pull out specific nodes from a custom XML block saved in a spreadsheet.
 
 // Navigate an XML structure to collect all elements at a given location in a spreadsheet.
 

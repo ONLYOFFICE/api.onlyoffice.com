@@ -1,6 +1,7 @@
 # GetRange
 
 Returns a Range object that represents the part of the document contained in the specified run.
+
 The run must be attached to the document before calling this method.
 
 ## Syntax
@@ -9,7 +10,7 @@ The run must be attached to the document before calling this method.
 expression.GetRange(Start, End);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

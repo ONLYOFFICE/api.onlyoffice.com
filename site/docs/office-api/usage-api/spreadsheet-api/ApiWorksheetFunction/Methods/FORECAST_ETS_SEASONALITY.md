@@ -8,7 +8,7 @@ Returns the length of the repetitive pattern an application detects for the spec
 expression.FORECAST_ETS_SEASONALITY(arg1, arg2, arg3, arg4);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

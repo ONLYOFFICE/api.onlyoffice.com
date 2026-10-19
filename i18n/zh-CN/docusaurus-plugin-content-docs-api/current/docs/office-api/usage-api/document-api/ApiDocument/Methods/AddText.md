@@ -4,6 +4,24 @@
 
 继承自 [ApiDocumentContent.AddText](../../ApiDocumentContent/Methods/AddText.md)。
 
+## 语法
+
+```javascript
+expression.AddText(text);
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | 必需 | string |  | 要添加的文本。 |
+
+## 返回值
+
+[ApiRun](../../ApiRun/ApiRun.md)
+
 ## 示例
 
 ```javascript editor-docx

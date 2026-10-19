@@ -1,9 +1,28 @@
 # SetHyperlink
 
 Sets a hyperlink to the current drawing object (shape or image).
+
 Pass null to remove the hyperlink.
 
 Inherited from [ApiDrawing.SetHyperlink](../../ApiDrawing/Methods/SetHyperlink.md).
+
+## Syntax
+
+```javascript
+expression.SetHyperlink(hyperlink);
+```
+
+`expression` - A variable that represents an [ApiChart](../ApiChart.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| hyperlink | Required | [ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null |  | The hyperlink object to be set to the drawing, or null to remove the hyperlink. |
+
+## Returns
+
+boolean
 
 ## Example
 
@@ -32,7 +51,7 @@ const image = Api.CreateImage(
 image.SetPosition(160 * 36000, 0);
 slide.AddObject(image);
 
-const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
+const urlHyperlink = Api.CreateHyperlink('https://www.onlyoffice.com', 'Link to ONLYOFFICE website');
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);

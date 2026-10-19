@@ -4,6 +4,24 @@
 
 继承自 [ApiBaseWidget.SetPosition](../../ApiBaseWidget/Methods/SetPosition.md)。
 
+## 语法
+
+```javascript
+expression.SetPosition(position);
+```
+
+`expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| position | 必需 | [Point](../../Enumeration/Point.md) |  | 控件的新位置。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在 PDF 中将控件移动到新位置。

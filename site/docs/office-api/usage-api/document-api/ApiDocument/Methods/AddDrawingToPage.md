@@ -1,8 +1,10 @@
 # AddDrawingToPage
 
 Adds a drawing to the specified page.
-💡 This method can be a little bit slow, because it runs the document calculation
-process to arrange tables on the specified page.
+
+:::note
+This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page.
+:::
 
 ## Syntax
 
@@ -10,7 +12,7 @@ process to arrange tables on the specified page.
 expression.AddDrawingToPage(oDrawing, nPage, x, y);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

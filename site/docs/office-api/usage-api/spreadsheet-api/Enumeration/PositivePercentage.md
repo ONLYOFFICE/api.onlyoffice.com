@@ -11,7 +11,7 @@ number
 Set a gradient stop position in 100%.
 
 ```javascript editor-xlsx
-// How to create a gradient stop using positive percentage.
+// How do I create a gradient stop using a positive percentage?
 
 // Set percentage for gradient stop.
 

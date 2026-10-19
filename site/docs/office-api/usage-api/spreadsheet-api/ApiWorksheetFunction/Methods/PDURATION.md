@@ -8,7 +8,7 @@ Returns the number of periods required by an investment to reach a specified val
 expression.PDURATION(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

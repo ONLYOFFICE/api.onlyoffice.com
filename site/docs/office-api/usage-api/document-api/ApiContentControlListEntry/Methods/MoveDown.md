@@ -8,7 +8,7 @@ Moves the current item in the parent combo box / drop-down list content control 
 expression.MoveDown();
 ```
 
-`expression` - A variable that represents a [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
+`expression` - A variable that represents an [ApiContentControlListEntry](../ApiContentControlListEntry.md) class.
 
 ## Parameters
 

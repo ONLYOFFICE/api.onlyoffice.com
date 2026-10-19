@@ -8,7 +8,7 @@ Converts the ApiRun object into the JSON object.
 expression.ToJSON(bWriteStyles);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

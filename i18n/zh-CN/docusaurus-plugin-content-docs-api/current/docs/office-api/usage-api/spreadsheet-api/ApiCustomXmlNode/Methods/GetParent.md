@@ -23,7 +23,7 @@ expression.GetParent();
 向上导航到电子表格中 XML 元素的包含节点。
 
 ```javascript editor-xlsx
-// How do I find the parent node of an XML element in a spreadsheet?
+// Find the parent node of an XML element in a spreadsheet.
 
 // Traverse the XML hierarchy to identify where a node belongs in a spreadsheet.
 

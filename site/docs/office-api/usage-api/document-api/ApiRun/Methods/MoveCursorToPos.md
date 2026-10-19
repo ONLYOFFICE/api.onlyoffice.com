@@ -1,8 +1,8 @@
 # MoveCursorToPos
 
 Moves a cursor to a specified position of the current text run.
-If the current run is not assigned to any document part, then - **false** is returned. Otherwise, this method returns - **true**.
-If there is any selection in the document, it will be removed.
+
+If the current run is not assigned to any document part, then **false** is returned. Otherwise, this method returns **true**. If there is any selection in the document, it will be removed.
 
 ## Syntax
 
@@ -10,7 +10,7 @@ If there is any selection in the document, it will be removed.
 expression.MoveCursorToPos(nPos);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 

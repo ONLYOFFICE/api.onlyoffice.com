@@ -1,6 +1,7 @@
 # GetWrapperShape
 
 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。
+
 对于内联表单将返回 null 值。
 
 ## 语法
@@ -17,7 +18,7 @@ expression.GetWrapperShape();
 
 ## 返回值
 
-[ApiShape](../../../document-api/ApiShape/ApiShape.md)
+[ApiShape](../../../document-api/ApiShape/ApiShape.md) \| null \| undefined
 
 ## 示例
 

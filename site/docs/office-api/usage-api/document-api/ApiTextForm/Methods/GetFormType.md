@@ -4,14 +4,30 @@ Returns a type of the current form.
 
 Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
+## Syntax
+
+```javascript
+expression.GetFormType();
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[FormType](../../Enumeration/FormType.md)
+
 ## Example
 
-Read the type of a form field in a document.
+Read the type of a fillable field in a document.
 
 ```javascript editor-docx
-// How do I get the type of a form field in a document?
+// How do I determine what kind of fillable field is present in a document?
 
-// Distinguish one form from another by printing its type identifier next to it.
+// Distinguish a text field from other field varieties by checking its type in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

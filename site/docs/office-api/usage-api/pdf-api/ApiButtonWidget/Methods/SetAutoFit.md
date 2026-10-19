@@ -4,6 +4,24 @@ Sets text autofit.
 
 Inherited from [ApiBaseWidget.SetAutoFit](../../ApiBaseWidget/Methods/SetAutoFit.md).
 
+## Syntax
+
+```javascript
+expression.SetAutoFit(auto);
+```
+
+`expression` - A variable that represents an [ApiButtonWidget](../ApiButtonWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| auto | Required | boolean |  | Specifies whether text autofit is enabled. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Enable automatic text fitting for all field widgets in a PDF.

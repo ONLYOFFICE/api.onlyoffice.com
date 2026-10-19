@@ -8,7 +8,7 @@ Sets the date when the document was last printed.
 expression.SetLastPrinted(oLastPrinted);
 ```
 
-`expression` - A variable that represents a [ApiCore](../ApiCore.md) class.
+`expression` - A variable that represents an [ApiCore](../ApiCore.md) class.
 
 ## Parameters
 

@@ -1,36 +1,41 @@
 # ApiFreeTextAnnotation
 
+Class representing a freeText annotation.
+
 ApiFreeTextAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md).
 
 ## Methods
+
+The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | boolean | Adds reply on this annot. |
 | [Delete](./Methods/Delete.md) | boolean | Removes annotation from document. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Gets annotation author name. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation border color. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets annotation border color. |
 | [GetBorderEffectIntensity](./Methods/GetBorderEffectIntensity.md) | number | Gets annotation border effect intensity. |
 | [GetBorderEffectStyle](./Methods/GetBorderEffectStyle.md) | [AnnotBorderEffectStyle](../Enumeration/AnnotBorderEffectStyle.md) | Gets annotation border effect style. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [AnnotBorderStyle](../Enumeration/AnnotBorderStyle.md) | Gets annotation border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [pt](../Enumeration/pt.md) | Gets annotation border width. |
-| [GetCallout](./Methods/GetCallout.md) | [FreeTextCallout](../Enumeration/FreeTextCallout.md) | Gets annot callout. |
+| [GetCallout](./Methods/GetCallout.md) | [FreeTextCallout](../Enumeration/FreeTextCallout.md) \| null \| undefined | Gets annot callout. |
 | [GetClassType](./Methods/GetClassType.md) | "freeTextAnnot" | Returns a type of the ApiFreeTextAnnotation class. |
 | [GetContent](./Methods/GetContent.md) | [ApiRichContent](../ApiRichContent/ApiRichContent.md) | Gets annotation rich content. |
-| [GetContents](./Methods/GetContents.md) | string | Gets annotation contents. |
+| [GetContents](./Methods/GetContents.md) | string \| null \| undefined | Gets annotation contents. |
 | [GetCreationDate](./Methods/GetCreationDate.md) | number | Gets annotation creation date. |
 | [GetDashPattern](./Methods/GetDashPattern.md) | number[] | Gets annotation dash pattern. |
 | [GetDisplay](./Methods/GetDisplay.md) | [DisplayType](../Enumeration/DisplayType.md) | Gets annotation display type. |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation fill color. |
+| [GetEndStyle](./Methods/GetEndStyle.md) | [LineEndStyle](../Enumeration/LineEndStyle.md) | Gets a line end style. |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | Gets annotation fill color. |
 | [GetIntent](./Methods/GetIntent.md) | [FreeTextIntent](../Enumeration/FreeTextIntent.md) | Gets intent type of this annotation. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current annotation. |
 | [GetModDate](./Methods/GetModDate.md) | number | Gets annotation last modification date. |
 | [GetOpacity](./Methods/GetOpacity.md) | string | Gets annotation opacity. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets annotation position. |
-| [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets annotation rect. |
+| [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Gets annotation rect. |
 | [GetRectDiff](./Methods/GetRectDiff.md) | [Rect](../Enumeration/Rect.md) | Gets annotation rect difference. |
 | [GetReplies](./Methods/GetReplies.md) | [ApiTextAnnotation](../ApiTextAnnotation/ApiTextAnnotation.md)[] | Gets replies on this annot. |
-| [GetSubject](./Methods/GetSubject.md) | string | Gets annotation subject. |
+| [GetSubject](./Methods/GetSubject.md) | string \| null \| undefined | Gets annotation subject. |
 | [GetUniqueName](./Methods/GetUniqueName.md) | string | Gets annotation unique name. |
 | [SetAuthorName](./Methods/SetAuthorName.md) | boolean | Sets annotation author name. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets annotation border color. |
@@ -43,6 +48,7 @@ ApiFreeTextAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/
 | [SetCreationDate](./Methods/SetCreationDate.md) | boolean | Sets annotation creation date. |
 | [SetDashPattern](./Methods/SetDashPattern.md) | boolean | Sets annotation dash pattern. |
 | [SetDisplay](./Methods/SetDisplay.md) | boolean | Sets annotation display type. |
+| [SetEndStyle](./Methods/SetEndStyle.md) | boolean | Sets a line end style. |
 | [SetFillColor](./Methods/SetFillColor.md) | boolean | Sets annotation fill color. |
 | [SetIntent](./Methods/SetIntent.md) | boolean | Sets intent type for this annotation. |
 | [SetModDate](./Methods/SetModDate.md) | boolean | Sets annotation last modification date. |

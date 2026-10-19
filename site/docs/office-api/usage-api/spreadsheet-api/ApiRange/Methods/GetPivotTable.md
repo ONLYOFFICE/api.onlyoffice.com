@@ -8,7 +8,7 @@ Returns the ApiPivotTable object that represents the pivot table report containi
 expression.GetPivotTable();
 ```
 
-`expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
+`expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
 
 ## Parameters
 

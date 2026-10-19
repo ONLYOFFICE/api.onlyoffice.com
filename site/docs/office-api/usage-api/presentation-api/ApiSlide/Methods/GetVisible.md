@@ -8,7 +8,7 @@ Returns the visibility of the current presentation slide.
 expression.GetVisible();
 ```
 
-`expression` - A variable that represents a [ApiSlide](../ApiSlide.md) class.
+`expression` - A variable that represents an [ApiSlide](../ApiSlide.md) class.
 
 ## Parameters
 

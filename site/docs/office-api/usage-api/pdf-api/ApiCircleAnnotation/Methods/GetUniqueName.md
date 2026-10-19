@@ -4,6 +4,22 @@ Gets annotation unique name.
 
 Inherited from [ApiBaseAnnotation.GetUniqueName](../../ApiBaseAnnotation/Methods/GetUniqueName.md).
 
+## Syntax
+
+```javascript
+expression.GetUniqueName();
+```
+
+`expression` - A variable that represents an [ApiCircleAnnotation](../ApiCircleAnnotation.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
 ## Example
 
 Get the unique identifier of an annotation in a PDF.

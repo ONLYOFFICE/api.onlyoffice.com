@@ -35,6 +35,13 @@ import TabItem from '@theme/TabItem';
 有关在服务器上使用不同编程语言（C#、Node.js、PHP、Ruby）的 Document Builder CLI 示例，请参阅 [document-builder-integration](https://github.com/ONLYOFFICE/document-builder-integration) 仓库。
 :::
 
+## 运行脚本的其他方式 {#other-ways-to-run-scripts}
+
+同一个脚本文件也可以不通过 CLI 运行，脚本语法（包括 **builder** 和 **builderJS** 对象）保持不变：
+
+- [Document Builder API](../../docs-api/additional-api/document-builder-api.md)。ONLYOFFICE 文档使用同一个 Document Builder 可执行文件运行脚本。使用 `OpenFile` 打开的文件必须以绝对 URL 指定，而不是本地路径。
+- [Builder Framework](../builder-framework/overview.md)。[Run](../builder-framework/CDocBuilder/Run.md) 方法运行脚本文件，[RunText](../builder-framework/CDocBuilder/RunText.md)、[RunTextA](../builder-framework/CDocBuilder/RunTextA.md) 和 [RunTextW](../builder-framework/CDocBuilder/RunTextW.md) 方法运行以字符串形式传递的脚本文本。
+
 ## builder 与 builderJS 的区别 {#builder-vs-builderjs}
 
 有两个对象可用于处理文档。两者都可以访问 [CDocBuilder](../builder-framework/CDocBuilder/CDocBuilder.md) 方法，但它们处理 JavaScript 变量的方式不同。

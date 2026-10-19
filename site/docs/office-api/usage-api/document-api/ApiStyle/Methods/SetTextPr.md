@@ -8,7 +8,7 @@ Sets the text properties to the current style.
 expression.SetTextPr(textPr);
 ```
 
-`expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
+`expression` - A variable that represents an [ApiStyle](../ApiStyle.md) class.
 
 ## Parameters
 

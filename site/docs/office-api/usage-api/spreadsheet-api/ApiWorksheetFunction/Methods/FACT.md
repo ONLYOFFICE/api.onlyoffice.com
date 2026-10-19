@@ -8,7 +8,7 @@ Returns the factorial of a number, which is equal to *1*2*3*...** number.
 expression.FACT(arg1);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

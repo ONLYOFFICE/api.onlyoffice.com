@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+import APITable from '@site/src/components/APITable/APITable';
+
 # WOPI discovery
 
 [WOPI discovery](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery) is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. WOPI hosts use the discovery XML to specify how to interact with the online office. The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
@@ -15,11 +17,7 @@ The **action** element of the discovery XML provides the important characteristi
 
 ### WOPI actions
 
-```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
-```
 
 | Name       | Description                                                                                                                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,14 +25,13 @@ import APITable from '@site/src/components/APITable/APITable';
 | edit       | Allows users to edit a document.                                                                                                                                                                                                                  |
 | editnew    | Creates a new document using a blank file template appropriate to the file type and opens this file for editing in the online office.                                                                                                             |
 | embedview  | Renders a non-editable view of a document that is optimized for embedding in a web page. This action is available starting from version 7.2.                                                                                                      |
+| interactivepreview | Renders a read-only interactive preview of a document, for example in the SharePoint details pane. It uses the same URL as the *embedview* action. This action is available starting from version 10.0. |
 | convert    | Converts a document in a [binary format](./editing-binary-documents.md) (*doc, ppt, xls*) into a modern format (*docx, pptx, xlsx*) so that it can be edited in the online office. This action is available starting from version 7.3. |
 | formsubmit | Supports opening *pdf* files in the form filling mode. In this case, a user might be able to make changes to a *pdf* file even if they didn't have permission to use the *edit* action. This action is available starting from version 8.1.       |
 | mobileView | Renders a non-editable view of a document that is optimized for viewing on mobile devices such as smartphones. This action is available starting from version 7.4.                                                                                |
 | mobileEdit | Allows users to edit a document on mobile devices such as smartphones. This action is available starting from version 7.4.                                                                                                                        |
 
-```mdx-code-block
 </APITable>
-```
 
 ### Attributes
 
@@ -57,9 +54,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 ### Parameters
 
-```mdx-code-block
 <APITable>
-```
 
 | Name       | Example                                                          | Description                                                                                                                                                                                                                                                |
 | ---------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,9 +66,7 @@ ui=en-us&amp;thm=1&amp;"/>
 | wopisrc    | https\://\<host\_address>/ wopi/files/(file\_id)                 | Indicates that the WOPI server includes the [WOPISrc](./key-concepts.md#wopisrc) value. It tells the WOPI client what URL to call back to when running WOPI operations on a file. This parameter is required.                                     |
 | favIconUrl | "/web-apps/apps/ documenteditor/main/ resources/img/favicon.ico" | Indicates that the WOPI server includes a URL to an appropriate favicon for all online office applications. Hosts should use this URL as the favicon for their host page, so that the appropriate application icon appears when the online office is used. |
 
-```mdx-code-block
 </APITable>
-```
 
 ## Nextcloud specific
 

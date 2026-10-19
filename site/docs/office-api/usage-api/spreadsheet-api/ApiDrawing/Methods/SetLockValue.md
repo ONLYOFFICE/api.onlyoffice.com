@@ -8,7 +8,7 @@ Sets the lock value to the specified lock type of the current drawing.
 expression.SetLockValue(sType, bValue);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Returns an array with all tables from the current slide layout.
 expression.GetAllTables();
 ```
 
-`expression` - A variable that represents a [ApiLayout](../ApiLayout.md) class.
+`expression` - A variable that represents an [ApiLayout](../ApiLayout.md) class.
 
 ## Parameters
 

@@ -16,7 +16,7 @@
 将页面方向设置为纵向。
 
 ```javascript editor-xlsx
-// How to change an orientation of a page.
+// How do I change the page orientation?
 
 // Set a page orientation to portrait.
 

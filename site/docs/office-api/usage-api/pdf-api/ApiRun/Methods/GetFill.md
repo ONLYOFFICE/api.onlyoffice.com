@@ -4,14 +4,30 @@ Gets the text color from the current text properties.
 
 Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
 
+## Syntax
+
+```javascript
+expression.GetFill();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## Example
 
-Read the text color settings in a PDF.
+Get the color of text in a PDF.
 
 ```javascript editor-pdf
-// How do I find out what color text is using in a PDF?
+// How do I find out what color text is in a PDF?
 
-// Retrieve the fill color information from text properties in a PDF.
+// Read the text color setting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -29,13 +45,12 @@ run.AddText("The text properties are changed and the style is added to the parag
 run.AddLineBreak();
 paragraph.AddElement(run);
 
-const textPr = run.GetTextPr();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
-textPr.SetFill(fill);
+run.SetFill(fill);
 page.AddObject(shape);
 paragraph = Api.CreateParagraph();
 
-fill = textPr.GetFill();
+fill = run.GetFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);

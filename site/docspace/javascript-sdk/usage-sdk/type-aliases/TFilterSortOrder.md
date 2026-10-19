@@ -1,7 +1,14 @@
-# Type Alias: TFilterSortOrder
+---
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts
+---
 
-> **TFilterSortOrder** = `` `${FilterSortOrder}` ``
+# TFilterSortOrder
 
-Defined in: [types/index.ts:63](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L63)
+String literal union of all [FilterSortOrder](../enumerations/FilterSortOrder.md) values.
 
-The template literal type representing the filter sort order.
+Accepted by [TFrameFilter.sortOrder](TFrameFilter.md#sortOrder).
+Using the [FilterSortOrder](../enumerations/FilterSortOrder.md) enum constants is preferred.
+
+```ts
+type TFilterSortOrder = `${FilterSortOrder}`;
+```

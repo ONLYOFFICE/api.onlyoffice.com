@@ -8,7 +8,7 @@ Returns a Range object that represents the part of the document contained in the
 expression.GetRange(Start, End);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

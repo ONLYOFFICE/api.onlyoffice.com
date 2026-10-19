@@ -4,6 +4,22 @@ Gets the text color from the current text properties.
 
 Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
 
+## Syntax
+
+```javascript
+expression.GetFill();
+```
+
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
 ## Example
 
 Retrieve the fill property from text run properties.

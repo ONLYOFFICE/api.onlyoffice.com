@@ -25,13 +25,13 @@ expression.Add(xml);
 在演示文稿中添加新的自定义 XML 部件并访问它。
 
 ```javascript editor-pptx
-// How do I create a new custom XML part in a presentation?
+// Create a new custom XML part in a presentation.
 
 // Display the XML content of the added part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
-let newXml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");
+let newXml = xmlManager.Add("<content xmlns='http://example.com' version='1.0'></content>");
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

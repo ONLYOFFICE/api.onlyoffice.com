@@ -4,6 +4,25 @@
 
 继承自 [ApiDrawing.SetHorAlign](../../ApiDrawing/Methods/SetHorAlign.md)。
 
+## 语法
+
+```javascript
+expression.SetHorAlign(sRelativeFrom, sAlign);
+```
+
+`expression` - 表示 [ApiOleObject](../ApiOleObject.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sRelativeFrom | 可选 | [RelFromH](../../Enumeration/RelFromH.md) | "page" | 将作为对象水平对齐参考点的文档元素。 |
+| sAlign | 可选 | "left" \| "right" \| "center" | "left" | 将用于对象水平对齐的对齐类型。 |
+
+## 返回值
+
+boolean
+
 ## 示例
 
 在文档中将浮动绘图与页面水平居中对齐。

@@ -8,7 +8,7 @@ Specifies if the current text field should be miltiline.
 expression.SetMultiline(bMultiline);
 ```
 
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
 
 ## Parameters
 

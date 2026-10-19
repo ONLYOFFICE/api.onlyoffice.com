@@ -8,7 +8,7 @@ Returns a list of all content controls in the document with the specified tag na
 expression.GetContentControlsByTag(sTag);
 ```
 
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+`expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 

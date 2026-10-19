@@ -4,6 +4,22 @@ Returns the setting which specifies whether to repeat items labels at each row.
 
 Inherited from [ApiPivotField.GetRepeatLabels](../../ApiPivotField/Methods/GetRepeatLabels.md).
 
+## Syntax
+
+```javascript
+expression.GetRepeatLabels();
+```
+
+`expression` - A variable that represents an [ApiPivotDataField](../ApiPivotDataField.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
 Check whether a pivot field repeats its labels in every row of the table in a spreadsheet.

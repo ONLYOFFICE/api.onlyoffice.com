@@ -18,6 +18,8 @@
 - "bg2"
 - "dk1"
 - "dk2"
+- "folHlink"
+- "hlink"
 - "lt1"
 - "lt2"
 - "tx1"
@@ -28,7 +30,7 @@
 创建具有 'accent2' 标识符的主题颜色。
 
 ```javascript editor-docx
-// How to create a scheme color.
+// How do I create a scheme color?
 
 // Create a scheme color with accent.
 

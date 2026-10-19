@@ -8,7 +8,7 @@ Returns an array of rich paragraphs from the current rich content object.
 expression.GetContent(getCopies);
 ```
 
-`expression` - A variable that represents a [ApiRichContent](../ApiRichContent.md) class.
+`expression` - A variable that represents an [ApiRichContent](../ApiRichContent.md) class.
 
 ## Parameters
 

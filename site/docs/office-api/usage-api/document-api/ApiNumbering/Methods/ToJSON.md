@@ -8,7 +8,7 @@ Converts the ApiNumbering object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiNumbering](../ApiNumbering.md) class.
+`expression` - A variable that represents an [ApiNumbering](../ApiNumbering.md) class.
 
 ## Parameters
 

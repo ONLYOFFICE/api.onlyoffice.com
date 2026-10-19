@@ -1,7 +1,10 @@
 # SetCharLimit
 
 Sets the text field character limit.
-\<note\> Character limit 0 means the field doesn't have a character limit.
+
+:::note
+If the character limit is 0, the field has no character limit.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets the text field character limit.
 expression.SetCharLimit(charLimit);
 ```
 
-`expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
+`expression` - A variable that represents an [ApiTextField](../ApiTextField.md) class.
 
 ## Parameters
 

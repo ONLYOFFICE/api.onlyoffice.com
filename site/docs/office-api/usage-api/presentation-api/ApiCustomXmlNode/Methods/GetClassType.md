@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlNode class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Determine the class type of an XML node in a presentation.
 
 ```javascript editor-pptx
-// How do I find out what type an XML node object is in a presentation?
+// Find out what type an XML node object is in a presentation.
 
 // Get the class name of an XML element in a presentation.
 

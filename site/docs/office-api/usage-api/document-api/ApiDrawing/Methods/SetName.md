@@ -1,7 +1,8 @@
 # SetName
 
 Sets the name of the current drawing.
-If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name.
+
+If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. OLE objects do not support a custom name, so for them this method always returns false.
 
 ## Syntax
 
@@ -9,7 +10,7 @@ If another drawing with the same name already exists, that drawing's name will b
 expression.SetName(name);
 ```
 
-`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+`expression` - A variable that represents an [ApiDrawing](../ApiDrawing.md) class.
 
 ## Parameters
 

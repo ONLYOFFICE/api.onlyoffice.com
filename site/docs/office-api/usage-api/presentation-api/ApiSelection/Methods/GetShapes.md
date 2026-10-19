@@ -8,7 +8,7 @@ Returns the selected shapes.
 expression.GetShapes();
 ```
 
-`expression` - A variable that represents a [ApiSelection](../ApiSelection.md) class.
+`expression` - A variable that represents an [ApiSelection](../ApiSelection.md) class.
 
 ## Parameters
 

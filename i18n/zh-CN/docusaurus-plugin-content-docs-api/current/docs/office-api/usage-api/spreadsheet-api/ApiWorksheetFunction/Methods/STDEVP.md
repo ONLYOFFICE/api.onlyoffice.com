@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-计算整个总体的标准差。
+在电子表格中使用 STDEVP 兼容性函数计算整个总体的标准差。
 
 ```javascript editor-xlsx
 // The STDEVP function computes population standard deviation while ignoring logical values and text.
@@ -33,13 +33,12 @@ const worksheet = Api.GetActiveSheet();
 
 let valueArr = [1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12];
 
-// Place the numbers in cells
 for (let i = 0; i < valueArr.length; i++) {
   worksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
 }
 
 let func = Api.WorksheetFunction;
-let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12); 
+let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```

@@ -13,13 +13,14 @@ Enumeration
 - [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 - [ApiFormBase](../ApiFormBase/ApiFormBase.md)
+- [ApiMath](../ApiMath/ApiMath.md)
 
 ## Example
 
 Add an element called 'text run' to the paragraph.
 
 ```javascript editor-docx
-// How to add an element to paragraph.
+// How do I add an element to a paragraph?
 
 // Insert an element to paragraph.
 

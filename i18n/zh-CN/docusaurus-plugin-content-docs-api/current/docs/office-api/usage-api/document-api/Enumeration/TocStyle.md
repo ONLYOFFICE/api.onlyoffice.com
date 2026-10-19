@@ -19,7 +19,7 @@
 向文档添加标准样式的目录。
 
 ```javascript editor-docx
-// How to create a table of contents properties indicating its style.
+// How do I create table of contents properties with a specific style?
 
 // Add a table of contents with standard style.
 

@@ -8,7 +8,7 @@ Creates a signature form with the specified form properties.
 expression.CreateSignatureForm(formPr);
 ```
 
-`expression` - A variable that represents a [Api](../Api.md) class.
+`expression` - A variable that represents an [Api](../Api.md) class.
 
 ## Parameters
 

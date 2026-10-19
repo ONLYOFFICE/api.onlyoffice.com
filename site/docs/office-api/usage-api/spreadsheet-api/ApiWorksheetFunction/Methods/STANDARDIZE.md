@@ -8,7 +8,7 @@ Returns a normalised value from a distribution characterised by a mean and stand
 expression.STANDARDIZE(arg1, arg2, arg3);
 ```
 
-`expression` - A variable that represents a [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
+`expression` - A variable that represents an [ApiWorksheetFunction](../ApiWorksheetFunction.md) class.
 
 ## Parameters
 

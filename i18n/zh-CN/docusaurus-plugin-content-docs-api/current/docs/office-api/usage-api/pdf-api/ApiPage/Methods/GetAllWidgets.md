@@ -23,11 +23,12 @@ expression.GetAllWidgets();
 从 PDF 的页面检索所有交互式字段。
 
 ```javascript editor-pdf
-// How do I access all the form fields in a PDF?
+// Useful for accessing all the form fields in a PDF.
 
 // List every interactive element on the current page in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 
 let textField = Api.CreateTextField([10, 10, 160, 30]);

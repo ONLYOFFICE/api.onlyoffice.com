@@ -1,6 +1,8 @@
 # GetId
 
-返回当前批注 ID。如果批注没有 ID，则返回 null。
+返回当前批注 ID。
+
+如果批注没有 ID，则返回 null。
 
 ## 语法
 
@@ -16,7 +18,7 @@ expression.GetId();
 
 ## 返回值
 
-string
+string \| null \| undefined
 
 ## 示例
 

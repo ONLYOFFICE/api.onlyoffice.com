@@ -8,7 +8,7 @@ Returns a list of attributes of the current XML node.
 expression.GetAttributes();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
+`expression` - A variable that represents an [ApiCustomXmlNode](../ApiCustomXmlNode.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Retrieve every attribute attached to an XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I list all attributes of a custom XML element in a spreadsheet?
+// List all attributes of a custom XML element in a spreadsheet.
 
 // Loop through the complete set of attributes on an embedded XML node and display them in a spreadsheet.
 

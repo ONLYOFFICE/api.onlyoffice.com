@@ -8,7 +8,7 @@ Returns a type of the ApiCustomXmlParts class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
+`expression` - A variable that represents an [ApiCustomXmlParts](../ApiCustomXmlParts.md) class.
 
 ## Parameters
 
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Read the type label of the XML storage manager object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I find out what type of object manages XML data in a spreadsheet?
+// Find out what type of object manages XML data in a spreadsheet.
 
 // Confirm the category of the XML manager to handle it correctly in a spreadsheet.
 

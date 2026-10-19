@@ -38,6 +38,6 @@ paragraph1.Push(textForm);
 
 doc.SetFormsData([
     {key: "BestCompany", value: true},
-    {key: "CompanyName", value: "OnlyOffice"}
+    {key: "CompanyName", value: "ONLYOFFICE"}
 ]);
 ```

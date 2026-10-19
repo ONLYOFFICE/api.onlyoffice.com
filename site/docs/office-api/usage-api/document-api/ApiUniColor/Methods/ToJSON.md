@@ -8,7 +8,7 @@ Converts the ApiUniColor object into the JSON object.
 expression.ToJSON();
 ```
 
-`expression` - A variable that represents a [ApiUniColor](../ApiUniColor.md) class.
+`expression` - A variable that represents an [ApiUniColor](../ApiUniColor.md) class.
 
 ## Parameters
 

@@ -8,7 +8,7 @@ Sets selected value indexes.
 expression.SetValueIndexes(valueIndexes);
 ```
 
-`expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
+`expression` - A variable that represents an [ApiBaseListField](../ApiBaseListField.md) class.
 
 ## Parameters
 

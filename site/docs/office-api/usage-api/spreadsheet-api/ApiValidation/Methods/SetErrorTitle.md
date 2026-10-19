@@ -8,7 +8,7 @@ Sets the title of the data-validation error dialog box.
 expression.SetErrorTitle(ErrorTitle);
 ```
 
-`expression` - A variable that represents a [ApiValidation](../ApiValidation.md) class.
+`expression` - A variable that represents an [ApiValidation](../ApiValidation.md) class.
 
 ## Parameters
 

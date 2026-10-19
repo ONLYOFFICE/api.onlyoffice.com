@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md)。
 
+## 语法
+
+```javascript
+expression.GetSourceName();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中透视字段的原始数据源名称。

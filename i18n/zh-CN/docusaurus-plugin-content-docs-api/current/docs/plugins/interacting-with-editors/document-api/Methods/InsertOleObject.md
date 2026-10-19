@@ -8,14 +8,14 @@
 expression.InsertOleObject(NewObject, bSelect);
 ```
 
-`expression` - 表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](../document-api.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | NewObject | 必需 | [OLEObjectData](../Enumeration/OLEObjectData.md) |  | OLEObjectData 对象。 |
-| bSelect | 必需 | boolean |  | 定义 OLE 对象插入文档后是否被选中（**true**）或不选中（**false**）。 |
+| bSelect | 必需 | boolean \| null \| undefined |  | 定义 OLE 对象插入文档后是否被选中（**true**）或不选中（**false**）。 |
 
 ## 返回值
 

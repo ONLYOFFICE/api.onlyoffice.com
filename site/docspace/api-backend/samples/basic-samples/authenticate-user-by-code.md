@@ -160,7 +160,7 @@ Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual 
 
 ## Step 1: Start authentication
 
-A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authenticate-me) with userName, password.
+A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authentication/authenticate-me) with userName, password.
 If the response has token, the user is authenticated without 2FA. Otherwise 2FA is required. The response may include a temporary key (`tfaKey`) or the server may set an `asc_auth_key` cookie.
 
 <Tabs>
@@ -211,7 +211,7 @@ If the response has token, the user is authenticated without 2FA. Otherwise 2FA 
 
 ## Step 2: Confirm with a code
 
-Send a POST to [/api/2.0/authentication/:code](/docspace/api-backend/usage-api/authenticate-me-from-body-with-code) where `:code` is the one-time code from the authenticator app.
+Send a POST to [/api/2.0/authentication/:code](/docspace/api-backend/usage-api/authentication/authenticate-me-from-body-with-code) where `:code` is the one-time code from the authenticator app.
 Include credentials again in the JSON body. If `tfaKey` (or `asc_auth_key` cookie) is present, add it as the `asc_auth_key` header.
 
 <Tabs>

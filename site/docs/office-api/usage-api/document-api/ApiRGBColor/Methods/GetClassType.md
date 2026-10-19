@@ -8,7 +8,7 @@ Returns a type of the ApiRGBColor class.
 expression.GetClassType();
 ```
 
-`expression` - A variable that represents a [ApiRGBColor](../ApiRGBColor.md) class.
+`expression` - A variable that represents an [ApiRGBColor](../ApiRGBColor.md) class.
 
 ## Parameters
 

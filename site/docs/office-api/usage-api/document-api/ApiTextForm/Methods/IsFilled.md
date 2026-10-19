@@ -4,28 +4,45 @@ Checks if the current form is filled.
 
 Inherited from [ApiFormBase.IsFilled](../../ApiFormBase/Methods/IsFilled.md).
 
+## Syntax
+
+```javascript
+expression.IsFilled();
+```
+
+`expression` - A variable that represents an [ApiTextForm](../ApiTextForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
 ## Example
 
-Check whether a form field contains a value entered by the user in a document.
+Check whether a text field contains any entered text in a document.
 
 ```javascript editor-docx
-// How do I tell if a form field has been filled out in a document?
+// How do I tell if a form field has been filled in by the user in a document?
 
-// Verify the fill status of multiple form fields to determine which ones still need input in a document.
+// Confirm which text fields have content and which are still empty in a document.
 
 let doc = Api.GetDocument();
-let textForm1 = Api.CreateTextForm({"key": "Name1", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": false, "multiLine": false, "autoFit": false});
+let textForm1 = Api.CreateTextForm({"key": "First name", "tip": "Enter your first name", "required": true, "placeholder": "First name", "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm1);
-let textForm2 = Api.CreateTextForm({"key": "Name2", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "comb": false, "multiLine": false, "autoFit": false});
+paragraph.AddLineBreak();
+let textForm2 = Api.CreateTextForm({"key": "Last name", "tip": "Enter your last name", "required": true, "placeholder": "Last name", "multiLine": false, "autoFit": false});
 paragraph.AddElement(textForm2);
 textForm2.SetText("Smith");
 let filled1 = textForm1.IsFilled();
 let filled2 = textForm2.IsFilled();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The first text form is filled: " + filled1);
+paragraph.AddText("The first name is filled: " + filled1);
 doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
-paragraph.AddText("The second text form is filled: " + filled2);
+paragraph.AddText("The last name is filled: " + filled2);
 doc.Push(paragraph);
 ```

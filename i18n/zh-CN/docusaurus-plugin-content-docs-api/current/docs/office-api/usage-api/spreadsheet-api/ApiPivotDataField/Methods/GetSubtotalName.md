@@ -4,6 +4,22 @@
 
 继承自 [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md)。
 
+## 语法
+
+```javascript
+expression.GetSubtotalName();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
+
 ## 示例
 
 读取电子表格中分配给透视字段的自定义小计标签。

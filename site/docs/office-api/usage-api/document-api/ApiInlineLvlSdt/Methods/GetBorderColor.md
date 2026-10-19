@@ -8,7 +8,7 @@ Returns the border color of the current content control.
 expression.GetBorderColor();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents an [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../ApiColor/ApiColor.md)
+[ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined
 
 ## Example
 

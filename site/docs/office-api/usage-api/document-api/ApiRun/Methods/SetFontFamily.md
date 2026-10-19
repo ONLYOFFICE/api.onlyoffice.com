@@ -2,19 +2,21 @@
 
 Sets all 4 font slots with the specified font family.
 
+Inherited from [ApiTextPr.SetFontFamily](../../ApiTextPr/Methods/SetFontFamily.md).
+
 ## Syntax
 
 ```javascript
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+`expression` - A variable that represents an [ApiRun](../ApiRun.md) class.
 
 ## Parameters
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | Required | string |  | The font family or families used for the current text run. |
+| sFontFamily | Optional | string \| null |  | The font family or families used for the current text run. Pass *null* or omit it to remove the font family. |
 
 ## Returns
 

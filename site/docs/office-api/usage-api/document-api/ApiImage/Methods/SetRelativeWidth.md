@@ -4,6 +4,25 @@ Sets the relative width of the object (image, shape, chart) bounding box.
 
 Inherited from [ApiDrawing.SetRelativeWidth](../../ApiDrawing/Methods/SetRelativeWidth.md).
 
+## Syntax
+
+```javascript
+expression.SetRelativeWidth(relativeFrom, percent);
+```
+
+`expression` - A variable that represents an [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| relativeFrom | Optional | [SizeRelFromH](../../Enumeration/SizeRelFromH.md) | "page" | The document element which will be taken as a countdown point for the object width. |
+| percent | Required | [percentage](../../Enumeration/percentage.md) |  | The width of the object as a percentage of the specified element. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Size a shape's width as a percentage of the page in a document.
@@ -15,8 +34,8 @@ Size a shape's width as a percentage of the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 250, 0));
-let stroke = Api.CreateStroke(0.4 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(65, 113, 156)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 250, 0));
+let stroke = Api.CreateStroke(0.4 * 36000, Api.CreateSolidFill(Api.RGB(65, 113, 156)));
 let drawing = Api.CreateShape("rect", 1 * 36000, 1 * 36000, fill, stroke);
 drawing.SetWrappingStyle("inFront");
 drawing.SetVerPosition("page", 50 * 36000);

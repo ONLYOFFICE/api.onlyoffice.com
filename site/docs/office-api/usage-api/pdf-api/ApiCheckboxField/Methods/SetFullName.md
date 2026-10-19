@@ -4,6 +4,24 @@ Sets new field name if possible.
 
 Inherited from [ApiBaseField.SetFullName](../../ApiBaseField/Methods/SetFullName.md).
 
+## Syntax
+
+```javascript
+expression.SetFullName(name);
+```
+
+`expression` - A variable that represents an [ApiCheckboxField](../ApiCheckboxField.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | The new full name for the field. |
+
+## Returns
+
+boolean
+
 ## Example
 
 Assign a complete name identifier to a form field in a PDF.

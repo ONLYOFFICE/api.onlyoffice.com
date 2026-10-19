@@ -22,7 +22,7 @@ expression.GetPivotByName(name);
 
 ## 示例
 
-按名称查找现有的数据透视表并在电子表格中向其添加字段。
+在电子表格的活动工作表上按名称查找数据透视表并向其添加字段。
 
 ```javascript editor-xlsx
 // How do I access a pivot table by its name in a spreadsheet?

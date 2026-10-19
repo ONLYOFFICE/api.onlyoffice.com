@@ -1,7 +1,10 @@
 # SetBorderEffectStyle
 
 Sets annotation border effect style.
-💡  Can be applied to circle, square, freeText and polygon annotations 
+
+:::note
+Can be applied to circle, square, freeText and polygon annotations.
+:::
 
 ## Syntax
 
@@ -9,7 +12,7 @@ Sets annotation border effect style.
 expression.SetBorderEffectStyle(style);
 ```
 
-`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+`expression` - A variable that represents an [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 

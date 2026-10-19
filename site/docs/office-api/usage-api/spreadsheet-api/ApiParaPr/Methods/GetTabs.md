@@ -8,7 +8,7 @@ Returns the custom tab stops of the current paragraph.
 expression.GetTabs();
 ```
 
-`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+`expression` - A variable that represents an [ApiParaPr](../ApiParaPr.md) class.
 
 ## Parameters
 

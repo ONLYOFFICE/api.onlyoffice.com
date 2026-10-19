@@ -1,0 +1,48 @@
+# GetBold
+
+Gets the bold property from the current text properties.
+
+Inherited from [ApiRichTextPr.GetBold](../../ApiRichTextPr/Methods/GetBold.md).
+
+## Syntax
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - A variable that represents an [ApiRichRun](../ApiRichRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| null \| undefined
+
+## Example
+
+Check if text in a free text annotation is bold in a PDF.
+
+```javascript editor-pdf
+// How do I find out whether text is bold in a PDF?
+
+// Retrieve the bold state of formatted text in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let run = para.GetElement(0);
+run.AddText("Some example text");
+
+let textPr = run.GetTextPr();
+
+console.log(`The bold property is: ${textPr.GetBold()}`);
+```
