@@ -11,7 +11,7 @@ A speech recognition software that allows you to recognize and translate spoken 
 
 ## Installation
 
-Available by default in the DocSpace Saas solution.
+Available by default in the DocSpace SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
