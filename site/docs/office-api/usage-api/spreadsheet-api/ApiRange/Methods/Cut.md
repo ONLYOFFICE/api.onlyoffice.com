@@ -14,7 +14,7 @@ expression.Cut(destination);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) |  | Specifies the new range to which the cut range will be pasted. If this argument is omitted, the range will be copied to the clipboard. |
+| destination | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| null \| undefined |  | Specifies the new range to which the cut range will be pasted. If this argument is omitted, the range will be copied to the clipboard. |
 
 ## Returns
 

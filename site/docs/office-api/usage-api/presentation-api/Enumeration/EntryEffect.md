@@ -1,6 +1,6 @@
 # EntryEffect
 
-The available slide transition effects (similar to PowerPoint VBA ppEffect).
+The available slide transition effects.
 
 ## Type
 

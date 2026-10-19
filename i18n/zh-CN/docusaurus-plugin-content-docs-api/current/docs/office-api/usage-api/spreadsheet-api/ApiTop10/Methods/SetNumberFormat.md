@@ -1,8 +1,6 @@
 # SetNumberFormat
 
-设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。
-
-继承自 [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md)。
+设置前 10 项条件格式规则的数字格式。
 
 ## 语法
 
@@ -16,7 +14,7 @@ expression.SetNumberFormat(NumberFormat);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | 必需 | string |  | 数字格式代码（例如 “General”、“#,##0.00” 等） |
+| NumberFormat | 必需 | string |  | 要应用的数字格式。 |
 
 ## 返回值
 
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let condition1 = formatConditions.AddTop10();
-condition1.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+condition1.SetFillColor(Api.RGB(255, 255, 0));
 
 let formatBefore = condition1.GetNumberFormat();
 condition1.SetNumberFormat("$#,##0.00");

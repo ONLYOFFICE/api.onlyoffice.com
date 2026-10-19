@@ -14,10 +14,10 @@ expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | Required | [EMU](../../Enumeration/EMU.md) |  | Left padding. |
-| nTop | Required | [EMU](../../Enumeration/EMU.md) |  | Top padding. |
-| nRight | Required | [EMU](../../Enumeration/EMU.md) |  | Right padding. |
-| nBottom | Required | [EMU](../../Enumeration/EMU.md) |  | Bottom padding. |
+| nLeft | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Left padding. |
+| nTop | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Top padding. |
+| nRight | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Right padding. |
+| nBottom | Required | [EMU](../../Enumeration/EMU.md) \| null \| undefined |  | Bottom padding. |
 
 ## Returns
 

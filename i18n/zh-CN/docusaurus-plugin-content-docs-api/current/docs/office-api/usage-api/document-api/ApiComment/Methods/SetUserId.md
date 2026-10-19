@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetUserId(sUserId);
+expression.SetUserId(userId);
 ```
 
 `expression` - 表示 [ApiComment](../ApiComment.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetUserId(sUserId);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sUserId | 必需 | string |  | 批注作者的用户 ID。 |
+| userId | 必需 | string |  | 批注作者的用户 ID。 |
 
 ## 返回值
 

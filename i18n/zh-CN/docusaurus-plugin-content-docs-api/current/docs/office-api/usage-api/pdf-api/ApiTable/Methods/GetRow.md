@@ -18,7 +18,7 @@ expression.GetRow(rowIndex);
 
 ## 返回值
 
-[ApiTableRow](../../ApiTableRow/ApiTableRow.md)
+[ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| null \| undefined
 
 ## 示例
 

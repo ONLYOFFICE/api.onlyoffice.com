@@ -12,9 +12,9 @@ The following table lists the available methods.
 | [GetColumnsCount](./Methods/GetColumnsCount.md) | number | Returns number of columns in this section. |
 | [GetColumnsSpaces](./Methods/GetColumnsSpaces.md) | [twips](../Enumeration/twips.md)[] | Returns an array of distance values between the columns measured in twentieths of a point (1/1440 of an inch). |
 | [GetColumnsWidths](./Methods/GetColumnsWidths.md) | [twips](../Enumeration/twips.md)[] | Returns an array of column width values measured in twentieths of a point (1/1440 of an inch). |
-| [GetFooter](./Methods/GetFooter.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content for the specified footer type. |
+| [GetFooter](./Methods/GetFooter.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Returns the content for the specified footer type. |
 | [GetFooterDistance](./Methods/GetFooterDistance.md) | [twips](../Enumeration/twips.md) | Returns the distance from the bottom edge of the page to the bottom edge of the footer. |
-| [GetHeader](./Methods/GetHeader.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content for the specified header type. |
+| [GetHeader](./Methods/GetHeader.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Returns the content for the specified header type. |
 | [GetHeaderDistance](./Methods/GetHeaderDistance.md) | [twips](../Enumeration/twips.md) | Returns the distance from the top edge of the page to the top edge of the header. |
 | [GetNext](./Methods/GetNext.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Returns the next section if exists. |
 | [GetPageHeight](./Methods/GetPageHeight.md) | [twips](../Enumeration/twips.md) | Gets page height for current section. |

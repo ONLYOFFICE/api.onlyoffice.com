@@ -2,8 +2,6 @@
 
 返回条件格式规则的作用域类型。
 
-继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
-
 ## 语法
 
 ```javascript

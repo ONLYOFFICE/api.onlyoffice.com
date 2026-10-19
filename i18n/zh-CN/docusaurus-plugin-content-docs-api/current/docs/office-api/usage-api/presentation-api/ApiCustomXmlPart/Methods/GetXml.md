@@ -23,7 +23,7 @@ string
 获取演示文稿中自定义 XML 部件的 XML 内容。
 
 ```javascript editor-pptx
-// How do I extract the raw XML from a custom XML part in a presentation?
+// Extract the raw XML from a custom XML part in a presentation.
 
 // Display the XML content in a shape in a presentation.
 

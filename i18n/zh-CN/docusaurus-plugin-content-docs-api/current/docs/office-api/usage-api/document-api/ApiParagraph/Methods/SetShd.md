@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.SetShd(type, color);
+expression.SetShd(shd);
 ```
 
 `expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
@@ -16,8 +16,7 @@ expression.SetShd(type, color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 将应用于当前段落内容的底纹类型。 |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于填充底纹的颜色或图案。 |
+| shd | 必需 | [ApiShd](../../ApiShd/ApiShd.md) |  | 使用 Api.CreateShd 方法创建的底纹。 |
 
 ## 返回值
 
@@ -39,5 +38,5 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-paragraph.SetShd("clear", Api.HexColor('#FF6F3D'));
+paragraph.SetShd(Api.CreateShd("clear", Api.HexColor('#FF6F3D')));
 ```

@@ -97,6 +97,6 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和PDF的两种
 
 - 在[嵌入式模式](../../usage-api/config/editor/embedded.md)下；
 - 使用 [WOPI](../../using-wopi/overview.md) 时；
-- 打开 `.djvu` 或 `.xps` 格式时。
+- 打开 `.djvu`、`.ofd` 或 `.xps` 格式时。
 
 移动编辑器支持与Web版本相同的查看模式和 `coEditing` 配置。

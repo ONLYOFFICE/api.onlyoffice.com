@@ -49,6 +49,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",         // ID of the iframe container
+      src: "{PORTAL_SRC}",
       width: "100%",               // Full width
       height: "700px",             // Custom height
       events: {
@@ -109,6 +110,7 @@ function onSelectCallback(event) {
 
 const config = {
   frameId: "ds-frame",         // ID of the iframe container
+  src: "{PORTAL_SRC}",
   width: "100%",               // Full width
   height: "700px",             // Custom height
   events: {

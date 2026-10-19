@@ -1,6 +1,8 @@
 # SetCaps
 
-指定当前文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+指定文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+
+继承自 [ApiTextPr.SetCaps](../../ApiTextPr/Methods/SetCaps.md)。
 
 ## 语法
 

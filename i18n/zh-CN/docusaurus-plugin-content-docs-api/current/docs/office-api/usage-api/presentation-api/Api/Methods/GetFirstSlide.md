@@ -20,7 +20,7 @@ expression.GetFirstSlide();
 
 ## 返回值
 
-[ApiSlide](../../ApiSlide/ApiSlide.md)
+[ApiSlide](../../ApiSlide/ApiSlide.md) \| null \| undefined
 
 ## 示例
 

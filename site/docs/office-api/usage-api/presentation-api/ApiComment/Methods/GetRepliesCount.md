@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Number
+Number \| null \| undefined
 
 ## Example
 

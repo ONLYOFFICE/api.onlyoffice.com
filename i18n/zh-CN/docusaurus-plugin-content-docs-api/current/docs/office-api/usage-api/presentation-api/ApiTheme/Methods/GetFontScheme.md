@@ -16,7 +16,7 @@ expression.GetFontScheme();
 
 ## 返回值
 
-[ApiThemeFontScheme](../../ApiThemeFontScheme/ApiThemeFontScheme.md)
+[ApiThemeFontScheme](../../ApiThemeFontScheme/ApiThemeFontScheme.md) \| null \| undefined
 
 ## 示例
 

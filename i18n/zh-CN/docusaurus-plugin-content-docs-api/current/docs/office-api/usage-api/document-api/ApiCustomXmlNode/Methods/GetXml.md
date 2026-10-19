@@ -23,7 +23,7 @@ string
 读取文档中存储的特定节点的 XML 标记。
 
 ```javascript editor-docx
-// How do I extract the raw XML content of a node embedded in a document?
+// Extract the raw XML content of a node embedded in a document.
 
 // Inspect or export a node's full markup when working with structured data in a document.
 

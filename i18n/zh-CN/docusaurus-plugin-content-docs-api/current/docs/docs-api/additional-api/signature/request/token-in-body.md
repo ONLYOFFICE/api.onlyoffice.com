@@ -17,6 +17,10 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 
 ## 传入请求 {#incoming-request}
 
+:::note
+从 10.0 版本开始，传入请求的令牌可以包含 `operation` 字段，用于标明请求类型：**文档命令服务**为 `command`，**文档转换服务**为 `converter`，**文档生成服务**为 `docbuilder`。如果包含该字段，其值必须与请求发送到的服务一致。这些服务也不再接受编辑器配置中的令牌。令牌的检查严格程度由[服务器设置](../../../get-started/configuration/server-config/server-config.md#token) `services.CoAuthoring.token.purposeCheck` 决定。
+:::
+
 ### 获取文档状态 {#get-document-status}
 
 使用从**文档存储服务**到[文档命令服务](../../command-service/command-service.md)的命令对传入请求执行验证。
@@ -95,6 +99,10 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ## 传出请求 {#outgoing-requests}
 
+:::note
+从 10.0 版本开始，每个传出请求的令牌还包含 `operation` 字段，用于标明请求类型：对 `callbackUrl` 地址的请求为 `callback`，文件和文档更改下载请求为 `download`。如果传入请求的令牌包含其中任一值，ONLYOFFICE 文档将拒绝该请求。
+:::
+
 ### 关闭时回调（无更改） {#callback-on-close-without-changes}
 
 **文档编辑服务**对 "[callbackUrl](../../../usage-api/config/editor/editor.md#callbackurl)" 地址的传出请求执行验证。
@@ -114,7 +122,7 @@ curl -X POST "https://documentserver/docbuilder" \
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0LCJvcGVyYXRpb24iOiJjYWxsYmFjayJ9.4350Gsw3fFOH9EC_tnY9iJ_PfAbKW8ZiNU4wiBagHdU"
   }'
 ```
 

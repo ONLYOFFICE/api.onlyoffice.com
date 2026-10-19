@@ -18,7 +18,7 @@ expression.GetParentSheet();
 
 ## 返回值
 
-[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) \| null \| undefined
 
 ## 示例
 

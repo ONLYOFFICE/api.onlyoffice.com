@@ -1,8 +1,6 @@
 # ModifyAppliesToRange
 
-Sets the cell range to which the current conditional formatting rule applies.
-
-Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
+Modifies the cell range to which the current conditional formatting rule applies.
 
 ## Syntax
 

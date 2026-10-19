@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IPlugin.ts
 ---
 
 # IPlugin
@@ -10,11 +10,13 @@ This interface must be implemented in each plugin because without the plugin sta
 ## Example
 
 Every plugin class implements `IPlugin` (usually together with one or more
-type-specific interfaces such as `IContextMenuPlugin`). DocSpace reads the
-plugin status via `getStatus` and runs `onLoadCallback` when the plugin is
-uploaded to the portal. The optional `language` field and its `setLanguage`/
-`getLanguage` methods let the portal keep the plugin in sync with the current
-portal language.
+type-specific interfaces such as `IContextMenuPlugin`). DocSpace runs
+`onLoadCallback` when the plugin is uploaded to the portal and reads the
+plugin status via `getStatus` as a switch: `active` publishes the plugin's
+items, `hide` takes them back. The optional `language` field and its
+`setLanguage`/`getLanguage` methods record the portal language: `setLanguage`
+is called once while the plugin loads, and `getLanguage` is what the portal reads to
+pick the plugin name and description from the manifest.
 
 ```typescript
 import { type IPlugin, PluginStatus, PluginLocale } from "@onlyoffice/docspace-plugin-sdk";
@@ -40,7 +42,7 @@ class Plugin implements IPlugin {
     return this.status;
   };
 
-  // Called by the portal when the portal language changes
+  // Called by the portal once while the plugin is loading
   setLanguage = (language: PluginLocale): void => {
     this.language = language;
   };
@@ -64,7 +66,10 @@ class Plugin implements IPlugin {
 updateStatus(status: PluginStatus): void;
 ```
 
-Update the plugin status
+Update the plugin status. The portal does not watch the field: a status
+changed outside one of the moments listed on `getStatus` reaches the
+interface only through the
+[`Actions.updateStatus`](../../enums/Actions.md#updatestatus) action.
 
 #### Parameters
 
@@ -82,7 +87,14 @@ Update the plugin status
 getStatus(): PluginStatus;
 ```
 
-Get the current plugin status
+The method is called on the portal side to read the current plugin status:
+after `onLoadCallback`, after the stored settings reach a plugin that
+implements [`ISettingsPlugin`](ISettingsPlugin.md), after
+[`save`](../../react/settings.md#save) in the React settings client, and
+on every [`Actions.updateStatus`](../../enums/Actions.md#updatestatus).
+`active` registers the items of every scope the plugin declares and loads
+its CSS, `hide` unregisters them and unloads the CSS again; a plugin the
+portal administrator has disabled stays hidden whatever the status says.
 
 #### Returns
 
@@ -108,20 +120,16 @@ Sets the onLoadCallback variable to the plugin
 
 ## Properties
 
-```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
-```
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `status` | [`PluginStatus`](../../enums/Plugins.md#pluginstatus) | The plugin status (active or hide) |
+| `status` | [`PluginStatus`](../../enums/Plugins.md#pluginstatus) | The plugin status: [`active`](../../enums/Plugins.md#active) while the plugin's items belong in the interface, [`hide`](../../enums/Plugins.md#hide) while they do not. |
 | `language?` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
-| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side when the portal language is changed. |
+| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side once per plugin instance, right before `onLoadCallback`. It is not a change notification: switching the interface language reloads the plugin. |
 | `getLanguage?` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language. |
 | `onLoadCallback` | () => `Promise`\<`void`\> | Callback which will be executed when uploading the plugin to the portal |
 
-```mdx-code-block
 </APITable>
-```

@@ -68,7 +68,9 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. The IP address of such an integrator must be included in the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list). At the same time, access for all the other integrators must be denied.
 
 :::note
-By default, all the IP addresses are considered trusted.
+By default, the `*` rule allows all the IP addresses. Starting from version 10.0, this is not enough for WOPI: ONLYOFFICE Docs sends requests only to a WOPI host that is explicitly allowed by a rule with its IP address or DNS name. A rule that consists only of wildcards, such as `*`, does not count.
+
+To allow unlisted WOPI hosts temporarily while you add the rules, set the `wopi.requireIpFilterRule` [server setting](../get-started/configuration/server-config/server-config.md#wopi) to `false`. This makes the server vulnerable to server-side request forgery (SSRF).
 :::
 
 Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
@@ -77,19 +79,23 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 
    ``` json
    {
-     "ipfilter": {
-       "rules": [
-         {
-           "address": "ip_address",
-           "allowed": true
-         },
-         {
-           "address": "*",
-           "allowed": false
+     "services": {
+       "CoAuthoring": {
+         "ipfilter": {
+           "rules": [
+             {
+               "address": "ip_address",
+               "allowed": true
+             },
+             {
+               "address": "*",
+               "allowed": false
+             }
+           ],
+           "useforrequest": false,
+           "errorcode": 403
          }
-       ],
-       "useforrequest": false,
-       "errorcode": 403
+       }
      }
    }
   

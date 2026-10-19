@@ -1,6 +1,10 @@
 # SetRect
 
-设置批注矩形。
+设置注释矩形。
+
+:::note
+不适用于图章。使用 SetScale 方法更改图章大小。
+:::
 
 继承自 [ApiBaseAnnotation.SetRect](../../ApiBaseAnnotation/Methods/SetRect.md)。
 

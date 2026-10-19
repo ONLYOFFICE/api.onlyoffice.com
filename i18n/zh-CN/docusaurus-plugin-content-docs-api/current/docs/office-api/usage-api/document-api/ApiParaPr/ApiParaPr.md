@@ -23,12 +23,12 @@
 | [GetOutlineLvl](./Methods/GetOutlineLvl.md) | Number \| undefined | 返回指定属性的大纲级别。 |
 | [GetPageBreakBefore](./Methods/GetPageBreakBefore.md) | boolean \| undefined | 返回当前段落的段前分页值。 |
 | [GetRightBorder](./Methods/GetRightBorder.md) | [Border](../Enumeration/Border.md) \| undefined | 返回当前段落的右边框。 |
-| [GetShd](./Methods/GetShd.md) | [Shd](../Enumeration/Shd.md) \| undefined | 返回应用于段落内容的底纹。 |
+| [GetShd](./Methods/GetShd.md) | [ApiShd](../ApiShd/ApiShd.md) \| undefined | 返回应用于段落内容的底纹。 |
 | [GetSpacingAfter](./Methods/GetSpacingAfter.md) | [twips](../Enumeration/twips.md) | 返回当前段落的段后间距值。 |
 | [GetSpacingBefore](./Methods/GetSpacingBefore.md) | [twips](../Enumeration/twips.md) | 返回当前段落的段前间距值。 |
 | [GetSpacingLineRule](./Methods/GetSpacingLineRule.md) | "auto" \| "atLeast" \| "exact" \| undefined | 返回段落行距规则。 |
 | [GetSpacingLineValue](./Methods/GetSpacingLineValue.md) | [twips](../Enumeration/twips.md) \| [line240](../Enumeration/line240.md) \| undefined | 返回段落行距值。 |
-| [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | 返回段落样式方法。 |
+| [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null \| undefined | 返回段落样式方法。 |
 | [GetTabs](./Methods/GetTabs.md) | [TabStop](../Enumeration/TabStop.md)[] | 返回当前段落的自定义制表位。 |
 | [GetTopBorder](./Methods/GetTopBorder.md) | [Border](../Enumeration/Border.md) \| undefined | 返回当前段落的顶部边框。 |
 | [GetWidowControl](./Methods/GetWidowControl.md) | boolean \| undefined | 返回当前段落的孤行控制值。 |
@@ -50,7 +50,7 @@
 | [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。 |
 | [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。 |
 | [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。 |
-| [SetStyle](./Methods/SetStyle.md) | boolean | 段落样式基础方法。 |
+| [SetStyle](./Methods/SetStyle.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 段落样式基础方法。 |
 | [SetTabs](./Methods/SetTabs.md) | boolean | 指定将用于当前段落中任何制表符的自定义制表位序列。 |
 | [SetTopBorder](./Methods/SetTopBorder.md) | boolean | 指定在具有相同段落边框设置的一组段落上方显示的边框。 |
 | [SetWidowControl](./Methods/SetWidowControl.md) | boolean | 指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。 |

@@ -23,7 +23,7 @@ boolean
 刷新文档中的内容控件以显示更新的 XML 数据。
 
 ```javascript editor-docx
-// How do I update a content control after its linked XML data changes in a document?
+// Update a content control after its linked XML data changes in a document.
 
 // Change the value in an XML source and pull the new text into a content control in a document.
 

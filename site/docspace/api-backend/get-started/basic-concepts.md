@@ -24,11 +24,11 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with:
 
-- **Workspace:** A secure, web-based [gateway](../usage-api/get-portal-information.api.mdx) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This workspace enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources.
-- **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](../usage-api/create-room.api.mdx) (Collaboration, Public, Custom, and Virtual data) based on your specific needs.
-- **Form Filling Spaces:** Spaces in the **Forms** section for working with PDF forms. You can create, edit, or upload forms, invite members and guests to fill them out, review completed copies, and analyze the collected data in a spreadsheet. In the API, Form Filling Spaces are created with the [create room](../usage-api/create-room.api.mdx) method using the `FillingFormsRoom` type.
+- **Workspace:** A secure, web-based [gateway](../usage-api/portal/settings/get-portal-information.md) that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This workspace enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources.
+- **Rooms:** A space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](../usage-api/rooms/create-room.md) (Collaboration, Public, Custom, and Virtual data) based on your specific needs.
+- **Form Filling Spaces:** Spaces in the **Forms** section for working with PDF forms. You can create, edit, or upload forms, invite members and guests to fill them out, review completed copies, and analyze the collected data in a spreadsheet. In the API, Form Filling Spaces are created with the [create room](../usage-api/rooms/create-room.md) method using the `FillingFormsRoom` type.
 - **AI agents:** Integrations that connect DocSpace to external tools and automate workflows via the [MCP server](../../mcp-server/getting-started/index.md).
-- **Users:** People with access to your DocSpace workspace. Each user has a [type](../usage-api/update-user-type.api.mdx) that defines their access rights: owner, full admin, room admin, user, or guest.
+- **Users:** People with access to your DocSpace workspace. Each user has a [type](../usage-api/people/user-type/update-user-type.md) that defines their access rights: owner, full admin, room admin, user, or guest.
 
 ## Quickstart
 
@@ -44,7 +44,7 @@ Authenticate your account using API keys, OAuth, or any of the other [authentica
 
 ### Step 3: Create a room
 
-This sample request creates a **Public Room** titled **Graduation Planning**. You can replace `PublicRoom` with any other [supported room type](../usage-api/create-room.api.mdx).
+This sample request creates a **Public Room** titled **Graduation Planning**. You can replace `PublicRoom` with any other [supported room type](../usage-api/rooms/create-room.md).
 
 :::note
 Set your `Content-Type` and `Accept` headers to `application/json`, as every endpoint in the DocSpace API supports JSON.

@@ -1,12 +1,109 @@
 # Change log
 
-## 9.3.0
+## 10.0.0
 
 ### New features
 
 #### Docs API
 
-* Added Comparing documents sample
+* Added the Comparing documents sample
+* Added the File upload request page for `/converter/from-file` and documented `/docbuilder/from-file`
+* Documented the `customization.ai` parameter
+* Added the Configuring AI providers for all users guide for the Admin Panel
+* Documented the `interactivepreview` WOPI discovery action
+* Documented the `requestRoles` method, the `disconnect` parameter of `startFilling` and the `sendEvent` method of the Connector class
+* Added the `ofd` format and `xls` as a spreadsheet conversion target
+* Added the 10.0 changelog covering server, Admin Panel and API changes
+
+#### Office API
+
+* Added the 10.0 changelog with breaking changes, changed methods, and new methods and classes
+
+#### Plugins and macros
+
+* Added the 10.0 changelog
+* Documented the `Editor` object and `Editor.RunMacro`
+
+#### Desktop
+
+* Documented the `--prefer-alternate-url` flag and added the 10.0 changelog
+
+#### Document Builder
+
+* Documented opening PDF files in `OpenFile` and creating PDF forms with the `form` file type in `CreateFile`, and added the 10.0 changelog
+
+#### DocSpace
+
+* Added the UI Kit section to the DocSpace menu and landing page
+
+### Improvements
+
+#### Docs API
+
+* Documented the `operation` field in incoming and outgoing request tokens and `purposeCheck` for incoming ones
+* Documented the `convertServiceEnable` and `docbuilderEnable` settings and the WOPI IP filter requirement
+* Documented the `purposeCheck` and `wopi.requireIpFilterRule` settings and the new default `User-Agent` of outgoing requests in the 10.0 changelog
+* Removed the deprecated `reviewDisplay`, `showReviewChanges` and `trackChanges` customization parameters
+* Rewrote the integration examples overview and the Node.js, Go, Java, Java Spring, .NET, PHP, PHP Laravel, Python and Ruby examples
+* Formatted parameters, status values and identifiers as inline code in the FAQ and the changelog
+* Added ellipsis comments to partial config examples in the FAQ
+
+#### Office API
+
+* Updated the Document, Spreadsheet, Presentation, PDF and Form API references for 10.0
+* Linked the PDF API overview classes
+
+#### Plugins and macros
+
+* Updated the plugin API references for 10.0
+* Described the `executeMethod` signature and callback in How to call methods
+
+#### DocSpace
+
+* Built the API backend reference from DocSpace-server instead of the OpenAPI spec
+* Updated the API backend, JavaScript SDK, Plugins SDK and UI Kit references
+
+#### Common
+
+* Gave each deployment target its own site URL
+
+#### Playground
+
+* Updated the plugin template to use the built-in `Editor` object
+
+#### Localization
+
+* Synced the zh-CN pages with all of the above changes
+* Kept the per-editor API names (Document API, Form API and others) in English on zh-CN pages
+* Translated the missing customizing FAQ sections and the 9.3 section of the plugins changelog
+
+### Fixes
+
+* Fixed `serverVersion` in `refreshHistory` and the callback handler sample to be a version string rather than a number
+* Fixed the `ipfilter` example to nest under `services.CoAuthoring`
+* Fixed Office API changelog links to renamed and removed methods
+* Fixed the form widgets listed in the PDF API overview
+* Fixed DocSpace API backend links to point at the generated pages
+* Fixed the AI service reference to point at `aichat`
+* Fixed the UI Kit sidebar to open on its first generated page
+* Fixed the form builder sample in the Playground to create and save a PDF form
+* Fixed the PDF builder sample in the Playground to open a PDF file
+* Fixed the upload/download direction, the "Access denied" heading and the formatting on the troubleshooting page
+* Fixed the `fillForms` typo in the sharing FAQ
+* Fixed full-width punctuation and spacing on zh-CN pages and in the zh-CN announcement bar
+
+## 9.3.1
+
+### Improvements
+
+#### Common
+
+* Updated the announcement bar to announce ONLYOFFICE Docs 10.0
+* Pointed the forum links in the footer, landing pages, and plugin, macro and AI get-started guides to community.onlyoffice.com
+
+## 9.3.0
+
+### New features
 
 #### Common
 

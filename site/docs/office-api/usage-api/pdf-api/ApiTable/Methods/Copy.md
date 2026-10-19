@@ -1,10 +1,6 @@
 # Copy
 
-Creates a copy of the specified table.
-
-:::note
-This functionality is available in paid ONLYOFFICE Docs editions.
-:::
+Creates a copy of the current table.
 
 ## Syntax
 
@@ -27,7 +23,7 @@ This method doesn't have any parameters.
 Duplicate a table and place the copy on another page in a PDF.
 
 ```javascript editor-pdf
-// How do I make a copy of a table in a PDF?
+// Make a copy of a table in a PDF.
 
 // Create an exact duplicate of a table and add it to a new page in a PDF.
 
@@ -39,6 +35,6 @@ table.SetPosition(608400, 1267200);
 page.AddObject(table);
 
 const copyTable = table.Copy();
-const newPage = doc.AddPage(1);
+const newPage = doc.AddPage(0);
 newPage.AddObject(copyTable);
 ```

@@ -25,7 +25,7 @@ string
 读取电子表格中 XML 元素内存储的纯文本。
 
 ```javascript editor-xlsx
-// How do I extract readable text from an XML node in a spreadsheet?
+// Extract readable text from an XML node in a spreadsheet.
 
 // Pull out the human-readable content of an XML entry in a spreadsheet.
 

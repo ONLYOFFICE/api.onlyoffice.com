@@ -10,29 +10,47 @@ ApiOleObject 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | 创建指定 OLE 对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | 创建当前 OLE 对象的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除指定的绘图对象。 |
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetApplicationId](./Methods/GetApplicationId.md) | string | 返回当前 OLE 对象的应用程序 ID。 |
 | [GetClassType](./Methods/GetClassType.md) | "oleObject" | 返回 ApiOleObject 类的类型。 |
 | [GetData](./Methods/GetData.md) | string | 返回当前 OLE 对象的字符串数据。 |
+| [GetDescription](./Methods/GetDescription.md) | string \| null | 获取当前绘图对象的描述。 |
+| [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 从当前图形对象获取填充格式属性。 |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | 获取当前绘图的水平翻转状态。 |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | 获取当前绘图的垂直翻转状态。 |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的高度。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前绘图对象的内部 ID。 |
+| [GetLine](./Methods/GetLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) \| null | 从当前图形对象获取轮廓属性。 |
+| [GetLockAspect](./Methods/GetLockAspect.md) | boolean | 返回绘图对象的纵横比是否已锁定。 |
 | [GetLockValue](./Methods/GetLockValue.md) | boolean | 返回当前绘图的指定锁定类型的锁定值。 |
 | [GetName](./Methods/GetName.md) | string | 返回当前绘图的名称。 |
-| [GetParentSheet](./Methods/GetParentSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回当前绘图的父工作表。 |
+| [GetParentSheet](./Methods/GetParentSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) \| null \| undefined | 返回当前绘图的父工作表。 |
+| [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图对象在工作表上的 x 坐标位置。 |
+| [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图对象在工作表上的 y 坐标位置。 |
+| [GetPosition](./Methods/GetPosition.md) | [DrawingCellAnchor](../Enumeration/DrawingCellAnchor.md) \| null | 返回当前绘图对象的单元格锚点；偏移量受锚点单元格限制。 |
 | [GetRotation](./Methods/GetRotation.md) | number | 返回当前绘图对象的旋转角度。 |
+| [GetShadow](./Methods/GetShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) \| null | 返回当前图形对象的阴影。 |
+| [GetTextRange](./Methods/GetTextRange.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md) \| null | 返回覆盖当前绘图对象全部文本的文本范围。如果绘图对象还没有文本主体，则会创建一个。 |
+| [GetTitle](./Methods/GetTitle.md) | string \| null | 获取当前绘图对象的标题。 |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的宽度。 |
+| [HasTextContent](./Methods/HasTextContent.md) | boolean | 检查当前绘图对象是否具有文本主体。 |
 | [Select](./Methods/Select.md) | 无 | 选择当前图形对象。 |
 | [SetApplicationId](./Methods/SetApplicationId.md) | boolean | 设置当前 OLE 对象的应用程序 ID。 |
 | [SetData](./Methods/SetData.md) | boolean | 设置当前 OLE 对象的数据。 |
+| [SetDescription](./Methods/SetDescription.md) | boolean | 设置当前绘图对象的描述。 |
+| [SetFill](./Methods/SetFill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | 设置当前绘图的水平翻转。 |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | 设置当前绘图的垂直翻转。 |
+| [SetLine](./Methods/SetLine.md) | boolean | 为当前图形对象设置轮廓属性。 |
+| [SetLockAspect](./Methods/SetLockAspect.md) | boolean | 设置是否锁定绘图对象的纵横比。 |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | 设置当前绘图的指定锁定类型的锁定值。 |
 | [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。 |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | 设置指定图形对象的轮廓属性。 |
 | [SetPosition](./Methods/SetPosition.md) | 无 | 更改绘图对象的位置。 |
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置当前绘图对象的旋转角度。 |
+| [SetShadow](./Methods/SetShadow.md) | boolean | 为当前图形对象设置阴影。 |
 | [SetSize](./Methods/SetSize.md) | 无 | 设置对象（图像、形状、图表）边界框的大小。 |
+| [SetTitle](./Methods/SetTitle.md) | boolean | 设置当前绘图对象的标题。 |
 | [Unselect](./Methods/Unselect.md) | boolean | 从选择中移除当前绘图。 |

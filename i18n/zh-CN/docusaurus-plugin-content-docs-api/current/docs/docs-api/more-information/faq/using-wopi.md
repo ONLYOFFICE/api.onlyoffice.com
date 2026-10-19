@@ -6,13 +6,13 @@ sidebar_position: -1
 
 ## 如何启用WOPI？ {#how-to-enable-wopi}
 
-要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**。
+要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 `true`。
 
 参数：
 
 | 名称        | 类型    | 示例 | 描述                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
-| wopi.enable | boolean | true    | 定义是否启用 WOPI。默认值为 **false**。 |
+| wopi.enable | boolean | true    | 定义是否启用 WOPI。默认值为 `false`。 |
 
 示例：
 
@@ -37,7 +37,7 @@ sidebar_position: -1
 - 在线办公室中可用的文档操作，
 - 支持的文件格式（扩展名）。
 
-请求被发送到`https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 有关 WOPI discovery的更多信息，请参见[此处](../../using-wopi/wopi-discovery.md)。
 
@@ -60,7 +60,7 @@ sidebar_position: -1
   ui=en-us&amp;thm=1&amp;"/>
   ```
 
-语言、主题或聊天等编辑器行为可以通过**发现查询参数**进行自定义，这些参数是可以通过文件存储在 *urlsrc* 属性中公开的参数。
+语言、主题或聊天等编辑器行为可以通过**发现查询参数**进行自定义，这些参数是可以通过文件存储在 `urlsrc` 属性中公开的参数。
 
 所有可用的发现查询参数都可以在 [这里](../../using-wopi/wopi-discovery.md#wopi-standard) 找到。
 
@@ -70,13 +70,13 @@ sidebar_position: -1
 
 主机页面必须包含以下元素：
 
-- 出于安全目的，主机必须通过该 *form* 元素将 *access_token* 和 *access_token_ttl* 参数 *POST* 到在线办公室 iframe。
+- 出于安全目的，主机必须通过该 `form` 元素将 `access_token` 和 `access_token_ttl` 参数 `POST` 到在线办公室 iframe。
 
 - 使用 [PostMessage](../../using-wopi/postmessage.md) 与在线办公室 iframe 交互的 JavaScript 代码。
 
 - body元素和在线office的特定 CSS 样式，以避免视觉包。此外，主机页面应使用 [WOPI discovery](../../using-wopi/wopi-discovery.md) 中提供的网站图标 URL 为页面设置适当的网站图标。
 
-- 用于避免移动端浏览器的视觉和功能问题的 *viewport* 元标签。
+- 用于避免移动端浏览器的视觉和功能问题的 `viewport` 元标签。
 
  可以在[此页面](../../using-wopi/host-page.md)上找到主机页面代码的示例。
 

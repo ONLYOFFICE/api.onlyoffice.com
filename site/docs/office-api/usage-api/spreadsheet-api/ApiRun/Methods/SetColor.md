@@ -1,6 +1,8 @@
 # SetColor
 
-Sets the text color for the current text run.
+Sets the text color to the current text run.
+
+Inherited from [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md).
 
 ## Syntax
 
@@ -14,7 +16,7 @@ expression.SetColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The text color. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | The text color. Pass *null* to remove the text color. |
 
 ## Returns
 

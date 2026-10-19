@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMasLayouts, bWriteTableStyles);
+expression.SlidesToJSON(nStart, nEnd, bWriteLayout, bWriteMaster, bWriteAllMasLayouts, bWriteTableStyles);
 ```
 
 `expression` - 表示 [ApiPresentation](../ApiPresentation.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMas
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nStart | 可选 | boolean | 0 | 起始幻灯片的索引。 |
-| nStart | 可选 | boolean | ApiPresentation.GetSlidesCount() - 1 | 结束幻灯片的索引。 |
+| nStart | 可选 | number | 0 | 起始幻灯片的索引。 |
+| nEnd | 可选 | number | ApiPresentation.GetSlidesCount() - 1 | 结束幻灯片的索引。 |
 | bWriteLayout | 可选 | boolean | false | 指定是否将幻灯片版式写入 JSON 对象。 |
 | bWriteMaster | 可选 | boolean | false | 指定是否将幻灯片母版写入 JSON 对象（如果 bWriteLayout === false，则 bWriteMaster 为 false）。 |
 | bWriteAllMasLayouts | 可选 | boolean | false | 指定是否将幻灯片母版中的所有子版式写入 JSON 对象。 |
@@ -23,7 +23,7 @@ expression.SlidesToJSON(nStart, nStart, bWriteLayout, bWriteMaster, bWriteAllMas
 
 ## 返回值
 
-JSON[]
+JSON \| null
 
 ## 示例
 

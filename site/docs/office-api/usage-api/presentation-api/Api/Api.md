@@ -12,7 +12,7 @@ The following table lists the available methods.
 | [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
-| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |
+| [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Creates a chart with the parameters specified. |
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Creates a new custom geometry. |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | Creates a gradient stop used for different types of gradients. |
 | [CreateGroup](./Methods/CreateGroup.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Creates a group of drawings. |
@@ -20,43 +20,49 @@ The following table lists the available methods.
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Creates an image with the parameters specified. |
 | [CreateLayout](./Methods/CreateLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) | Creates a new slide layout and adds it to the slide master if it is specified. |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background. |
-| [CreateMaster](./Methods/CreateMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | Creates a new slide master. |
+| [CreateMaster](./Methods/CreateMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null \| undefined | Creates a new slide master. |
+| [CreateMath](./Methods/CreateMath.md) | [ApiMath](../ApiMath/ApiMath.md) | Creates a math equation from a linear text string. The resulting object can be inserted into a paragraph the same way as a run (e.g. via [ApiParagraph#AddElement](../ApiParagraph/Methods/AddElement.md) or [ApiParagraph#Push](../ApiParagraph/Methods/Push.md)). |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates no fill and removes the fill from the element. |
-| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the numbering character or symbol specified with the numType parameter. |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) \| null \| undefined | Creates a bullet for a paragraph with the numbering character or symbol specified with the numType parameter. |
 | [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Creates an OLE object with the parameters specified. |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph. |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a pattern fill to apply to the object using the selected pattern as the object background. |
 | [CreatePlaceholder](./Methods/CreatePlaceholder.md) | [ApiPlaceholder](../ApiPlaceholder/ApiPlaceholder.md) | Creates a new placeholder. |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | Creates a color selecting it from one of the available color presets. |
-| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | Creates a geometry using one of the available preset shapes. |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null \| undefined | Creates a geometry using one of the available preset shapes. |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Creates an RGB color setting the appropriate values for the red, green and blue color components. |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a radial gradient fill to apply to the object using the selected radial gradient as the object background. |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Creates a new smaller text block to be inserted to the current paragraph or table. |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | Creates a complex color scheme selecting from one of the available schemes. |
+| [CreateShadow](./Methods/CreateShadow.md) | [ApiShadow](../ApiShadow/ApiShadow.md) | Creates a shadow which can be applied to a graphic object. |
 | [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a shape with the parameters specified. |
+| [CreateShd](./Methods/CreateShd.md) | [ApiShd](../ApiShd/ApiShd.md) | Creates the shading which can be applied to text, a paragraph, a table or a table cell. |
 | [CreateSlide](./Methods/CreateSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Creates a new slide. |
 | [CreateSlideShowTransition](./Methods/CreateSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) | Creates a new slide show transition object. |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a solid fill to apply to the object using a selected solid color as the object background. |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Creates a stroke adding shadows to the element. |
-| [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a table. |
+| [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null \| undefined | Creates a table. |
+| [CreateTablePr](./Methods/CreateTablePr.md) | [ApiTablePr](../ApiTablePr/ApiTablePr.md) | Creates the empty table properties. |
+| [CreateTableRowPr](./Methods/CreateTableRowPr.md) | [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md) | Creates the empty table row properties. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
 | [CreateTheme](./Methods/CreateTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Creates a new presentation theme. |
-| [CreateThemeColorScheme](./Methods/CreateThemeColorScheme.md) | [ApiThemeColorScheme](../ApiThemeColorScheme/ApiThemeColorScheme.md) | Creates a new theme color scheme. |
+| [CreateThemeColorScheme](./Methods/CreateThemeColorScheme.md) | [ApiThemeColorScheme](../ApiThemeColorScheme/ApiThemeColorScheme.md) \| null \| undefined | Creates a new theme color scheme. |
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | Creates a new theme font scheme. |
-| [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | Creates a new theme format scheme. |
+| [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) \| null \| undefined | Creates a new theme format scheme. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
 | [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | None | Converts the specified JSON object into the Document Builder object of the corresponding type. |
-| [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns the first slide of the presentation. |
+| [GetFirstSlide](./Methods/GetFirstSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | Returns the first slide of the presentation. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
-| [GetLastSlide](./Methods/GetLastSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns the last slide of the presentation. |
+| [GetLastSlide](./Methods/GetLastSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | Returns the last slide of the presentation. |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | Returns the main presentation. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | Returns the selection from the current presentation. |
-| [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns a slide by its position in the presentation. |
+| [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null \| undefined | Returns a slide by its position in the presentation. |
 | [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
+| [MergeShapes](./Methods/MergeShapes.md) | [Drawing](../Enumeration/Drawing.md)[] \| null | Merges an array of drawings into new shapes. The resulting shapes take the formatting of the first drawing in the array. |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |

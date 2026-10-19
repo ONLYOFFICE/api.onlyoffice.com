@@ -27,8 +27,8 @@ The following table lists the available methods.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Delete](./Methods/Delete.md) | None | Deletes the current format condition. |
-| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the range of cells to which the current conditional formatting rule applies. |
+| [Delete](./Methods/Delete.md) | None | Deletes the data bar conditional formatting rule. |
+| [GetAppliesTo](./Methods/GetAppliesTo.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the range of cells to which the current conditional formatting rule applies. |
 | [GetAxisColor](./Methods/GetAxisColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the axis color of the data bar conditional formatting rule. |
 | [GetAxisPosition](./Methods/GetAxisPosition.md) | [XlDataBarAxisPosition](../Enumeration/XlDataBarAxisPosition.md) | Returns the axis position of the data bar conditional formatting rule. |
 | [GetBarBorderColor](./Methods/GetBarBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the bar border color of the data bar. |
@@ -56,11 +56,12 @@ The following table lists the available methods.
 | [GetPriority](./Methods/GetPriority.md) | number | Returns the priority value of the conditional formatting rule. |
 | [GetScopeType](./Methods/GetScopeType.md) | [XlPivotConditionScope](../Enumeration/XlPivotConditionScope.md) | Returns the scope type of the conditional formatting rule. |
 | [GetShowValue](./Methods/GetShowValue.md) | boolean | Returns whether the data bar displays the cell value. |
+| [GetStopIfTrue](./Methods/GetStopIfTrue.md) | boolean | Returns whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. This rule type cannot stop the evaluation, so the value can be changed only by opening a file where it is set. |
 | [GetText](./Methods/GetText.md) | string | Returns the text value used in text-based conditional formatting rules. |
 | [GetTextOperator](./Methods/GetTextOperator.md) | [XlContainsOperator](../Enumeration/XlContainsOperator.md) \| null | Returns the text operator for text-based conditional formatting rules. |
 | [GetType](./Methods/GetType.md) | [XlFormatConditionType](../Enumeration/XlFormatConditionType.md) | Returns the type of the data bar conditional formatting rule. |
 | [Modify](./Methods/Modify.md) | [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) \| null | Modifies the current format condition with the specified parameters. |
-| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Sets the cell range to which the current conditional formatting rule applies. |
+| [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | None | Modifies the cell range to which the current conditional formatting rule applies. |
 | [SetAxisColor](./Methods/SetAxisColor.md) | None | Sets the axis color for the data bar conditional formatting rule. |
 | [SetAxisPosition](./Methods/SetAxisPosition.md) | None | Sets the axis position for the data bar conditional formatting rule. |
 | [SetBarBorderColor](./Methods/SetBarBorderColor.md) | None | Sets the bar border color for the data bar. |
@@ -81,8 +82,9 @@ The following table lists the available methods.
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Sets the number format applied to a cell when the conditional formatting rule evaluates to true. |
 | [SetPercentMax](./Methods/SetPercentMax.md) | None | Sets the percent maximum value for the data bar. |
 | [SetPercentMin](./Methods/SetPercentMin.md) | None | Sets the percent minimum value for the data bar. |
-| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value of the conditional formatting rule. |
+| [SetPriority](./Methods/SetPriority.md) | None | Sets the priority value for the conditional formatting rule. |
 | [SetScopeType](./Methods/SetScopeType.md) | None | Sets the scope type for the conditional formatting rule. |
 | [SetShowValue](./Methods/SetShowValue.md) | None | Specifies whether the data bar displays the cell value. |
+| [SetStopIfTrue](./Methods/SetStopIfTrue.md) | None | Sets whether the editor will stop evaluating additional formatting rules if this rule evaluates to true. |
 | [SetText](./Methods/SetText.md) | None | Sets the text value used in text-based conditional formatting rules. |
 | [SetTextOperator](./Methods/SetTextOperator.md) | None | Sets the text operator for text-based conditional formatting rules. |

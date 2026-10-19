@@ -161,7 +161,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Get recent login audit events
 
-A GET request is sent to [/api/2.0/security/audit/login/last](/docspace/api-backend/usage-api/get-last-login-events).
+A GET request is sent to [/api/2.0/security/audit/login/last](/docspace/api-backend/usage-api/security/login-history/get-last-login-events).
 
 This returns the most recent login activities across the DocSpace portal.
 
@@ -207,7 +207,7 @@ This returns the most recent login activities across the DocSpace portal.
 
 ## Step 2: Filter login events by user, action or date
 
-A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/get-login-events-by-filter).
+A GET request is sent to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/security/login-history/get-login-events-by-filter).
 
 You can apply filters such as:
 

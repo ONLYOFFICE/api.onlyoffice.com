@@ -23,7 +23,7 @@ string
 提取文档中内联内容控件在 XML 映射中显示的文本值。
 
 ```javascript editor-docx
-// How do I retrieve the XML-mapped data from an inline content control in a document?
+// Retrieve the XML-mapped data from an inline content control in a document.
 
 // Output the raw control value to verify what would be written to a bound XML store in a document.
 

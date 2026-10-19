@@ -60,7 +60,7 @@ Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tool
 
 If a plugin does not appear, shows a blank window, or an API call fails, see [Common errors and solutions](../development-workflow/common-errors-solutions.md) for symptoms and fixes, and [Debugging plugins](../development-workflow/debugging-plugins.md) for inspecting a running plugin in DevTools.
 
-Still stuck? Ask on the [ONLYOFFICE forum](https://forum.onlyoffice.com/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice), or report a bug in [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).
+Still stuck? Ask on the [ONLYOFFICE forum](https://community.onlyoffice.com/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice), or report a bug in [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).
 
 ## Resources
 

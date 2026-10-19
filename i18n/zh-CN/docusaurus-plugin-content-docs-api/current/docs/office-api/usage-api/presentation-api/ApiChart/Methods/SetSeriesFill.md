@@ -1,6 +1,10 @@
 # SetSeriesFill
 
-设置指定图表系列的填充。
+为指定的图表系列设置填充。
+
+:::note
+填充不适用于二维折线图和散点图系列。请使用 SetSeriesOutLine 方法更改其线条，使用 SetMarkerFill 方法更改其标记。
+:::
 
 ## 语法
 
@@ -35,7 +39,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);

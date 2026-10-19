@@ -1,6 +1,6 @@
 # GetRect
 
-Sets annotation rect.
+Gets annotation rect.
 
 ## Syntax
 

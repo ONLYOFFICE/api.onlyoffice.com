@@ -31,7 +31,7 @@ The following table lists the available methods.
 | [AVERAGEA](./Methods/AVERAGEA.md) | number | Returns the average (arithmetic mean) of the specified arguments, evaluating text and **false** in arguments as 0; **true** evaluates as 1. |
 | [AVERAGEIF](./Methods/AVERAGEIF.md) | number | Finds the average (arithmetic mean) for the cells specified by a given condition or criteria. |
 | [AVERAGEIFS](./Methods/AVERAGEIFS.md) | number | Finds the average (arithmetic mean) for the cells specified by a given set of conditions or criteria. |
-| [BASE](./Methods/BASE.md) | number | Converts a number into a text representation with the given radix (base). |
+| [BASE](./Methods/BASE.md) | string | Converts a number into a text representation with the given radix (base). |
 | [BESSELI](./Methods/BESSELI.md) | number | Returns the modified Bessel function In(x). |
 | [BESSELJ](./Methods/BESSELJ.md) | number | Returns the Bessel function Jn(x). |
 | [BESSELK](./Methods/BESSELK.md) | number | Returns the modified Bessel function Kn(x). |
@@ -41,8 +41,8 @@ The following table lists the available methods.
 | [BETA_DIST](./Methods/BETA_DIST.md) | number | Returns the beta probability distribution function. |
 | [BETA_INV](./Methods/BETA_INV.md) | number | Returns the inverse of the cumulative beta probability density function (BETA_DIST). |
 | [BIN2DEC](./Methods/BIN2DEC.md) | number | Converts a binary number to decimal. |
-| [BIN2HEX](./Methods/BIN2HEX.md) | number | Converts a binary number to hexadecimal. |
-| [BIN2OCT](./Methods/BIN2OCT.md) | number | Converts a binary number to octal. |
+| [BIN2HEX](./Methods/BIN2HEX.md) | string | Converts a binary number to hexadecimal. |
+| [BIN2OCT](./Methods/BIN2OCT.md) | string | Converts a binary number to octal. |
 | [BINOMDIST](./Methods/BINOMDIST.md) | number | Returns the individual term binomial distribution probability. |
 | [BINOM_DIST](./Methods/BINOM_DIST.md) | number | Returns the individual term binomial distribution probability. |
 | [BINOM_DIST_RANGE](./Methods/BINOM_DIST_RANGE.md) | number | Returns the probability of a trial result using a binomial distribution. |
@@ -69,7 +69,7 @@ The following table lists the available methods.
 | [COLUMNS](./Methods/COLUMNS.md) | number | Returns the number of columns in the cell range. |
 | [COMBIN](./Methods/COMBIN.md) | number | Returns the number of combinations for a given number of items. |
 | [COMBINA](./Methods/COMBINA.md) | number | Returns the number of combinations with repetitions for a given number of items. |
-| [COMPLEX](./Methods/COMPLEX.md) | number | Converts real and imaginary coefficients into a complex number. |
+| [COMPLEX](./Methods/COMPLEX.md) | string | Converts real and imaginary coefficients into a complex number. |
 | [CONCATENATE](./Methods/CONCATENATE.md) | string | Combines multiple text strings into one text string. |
 | [CONFIDENCE](./Methods/CONFIDENCE.md) | number | Returns the confidence interval for a population mean, using a normal distribution. |
 | [CONFIDENCE_NORM](./Methods/CONFIDENCE_NORM.md) | number | Returns the confidence interval for a population mean, using a normal distribution. |
@@ -105,9 +105,9 @@ The following table lists the available methods.
 | [DCOUNT](./Methods/DCOUNT.md) | number | Counts the cells containing numbers in the field (column) of records in the database that match the conditions you specify. |
 | [DCOUNTA](./Methods/DCOUNTA.md) | number | Counts nonblank cells in the field (column) of records in the database that match the conditions you specify. |
 | [DDB](./Methods/DDB.md) | number | Returns the depreciation of an asset for a specified period using the double-declining balance method or some other method you specify. |
-| [DEC2BIN](./Methods/DEC2BIN.md) | number | Converts a decimal number to binary. |
-| [DEC2HEX](./Methods/DEC2HEX.md) | number | Converts a decimal number to hexadecimal. |
-| [DEC2OCT](./Methods/DEC2OCT.md) | number | Converts a decimal number to octal. |
+| [DEC2BIN](./Methods/DEC2BIN.md) | string | Converts a decimal number to binary. |
+| [DEC2HEX](./Methods/DEC2HEX.md) | string | Converts a decimal number to hexadecimal. |
+| [DEC2OCT](./Methods/DEC2OCT.md) | string | Converts a decimal number to octal. |
 | [DECIMAL](./Methods/DECIMAL.md) | number | Converts a text representation of a number in a given base into a decimal number. |
 | [DEGREES](./Methods/DEGREES.md) | number | Converts radians to degrees. |
 | [DELTA](./Methods/DELTA.md) | number | Tests whether two numbers are equal. |
@@ -157,7 +157,7 @@ The following table lists the available methods.
 | [FORECAST_ETS_CONFINT](./Methods/FORECAST_ETS_CONFINT.md) | number | Returns a confidence interval for the forecast value at the specified target date. |
 | [FORECAST_ETS_SEASONALITY](./Methods/FORECAST_ETS_SEASONALITY.md) | number | Returns the length of the repetitive pattern an application detects for the specified time series. |
 | [FORECAST_ETS_STAT](./Methods/FORECAST_ETS_STAT.md) | number | Returns the requested statistic for the forecast. |
-| [FREQUENCY](./Methods/FREQUENCY.md) | number | Calculates how often values occur within a range of values and then returns the first value of the returned vertical array of numbers. |
+| [FREQUENCY](./Methods/FREQUENCY.md) | number[][] | Calculates how often values occur within a range of values and then returns the first value of the returned vertical array of numbers. |
 | [FV](./Methods/FV.md) | number | Returns the future value of an investment based on periodic, constant payments and a constant interest rate. |
 | [FVSCHEDULE](./Methods/FVSCHEDULE.md) | number | Returns the future value of an initial principal after applying a series of compound interest rates. |
 | [F_DIST](./Methods/F_DIST.md) | number | Returns the (left-tailed) F probability distribution (degree of diversity) for two data sets. |
@@ -175,11 +175,11 @@ The following table lists the available methods.
 | [GCD](./Methods/GCD.md) | number | Returns the greatest common divisor. |
 | [GEOMEAN](./Methods/GEOMEAN.md) | number | Returns the geometric mean of positive numeric data. |
 | [GESTEP](./Methods/GESTEP.md) | number | Tests whether a number is greater than a threshold value. |
-| [GROWTH](./Methods/GROWTH.md) | number | Calculates predicted exponential growth by using existing data. |
+| [GROWTH](./Methods/GROWTH.md) | number[][] | Calculates predicted exponential growth by using existing data. |
 | [HARMEAN](./Methods/HARMEAN.md) | number | Returns the harmonic mean of a data set of positive numbers: the reciprocal of the arithmetic mean of reciprocals. |
-| [HEX2BIN](./Methods/HEX2BIN.md) | number | Converts a hexadecimal number to binary. |
+| [HEX2BIN](./Methods/HEX2BIN.md) | string | Converts a hexadecimal number to binary. |
 | [HEX2DEC](./Methods/HEX2DEC.md) | number | Converts a hexadecimal number to decimal. |
-| [HEX2OCT](./Methods/HEX2OCT.md) | number | Converts a hexadecimal number to octal. |
+| [HEX2OCT](./Methods/HEX2OCT.md) | string | Converts a hexadecimal number to octal. |
 | [HLOOKUP](./Methods/HLOOKUP.md) | number \| string | Looks for a value in the top row of a table or array of values and returns the value in the same column from the specified row. |
 | [HOUR](./Methods/HOUR.md) | number | Returns the hour as a number from 0 (12:00 A.M.) to 23 (11:00 P.M.). |
 | [HYPERLINK](./Methods/HYPERLINK.md) | string | Creates a shortcut that jumps to another location in the current workbook, or opens a document stored on your hard drive, a network server, or on the Internet. |
@@ -191,28 +191,28 @@ The following table lists the available methods.
 | [IMABS](./Methods/IMABS.md) | number | Returns the absolute value (modulus) of a complex number. |
 | [IMAGINARY](./Methods/IMAGINARY.md) | number | Returns the imaginary coefficient of a complex number. |
 | [IMARGUMENT](./Methods/IMARGUMENT.md) | number | Returns the argument Theta, an angle expressed in radians. |
-| [IMCONJUGATE](./Methods/IMCONJUGATE.md) | number | Returns the complex conjugate of a complex number. |
-| [IMCOS](./Methods/IMCOS.md) | number | Returns the cosine of a complex number. |
-| [IMCOSH](./Methods/IMCOSH.md) | number | Returns the hyperbolic cosine of a complex number. |
-| [IMCOT](./Methods/IMCOT.md) | number | Returns the cotangent of a complex number. |
-| [IMCSC](./Methods/IMCSC.md) | number | Returns the cosecant of a complex number. |
-| [IMCSCH](./Methods/IMCSCH.md) | number | Returns the hyperbolic cosecant of a complex number. |
-| [IMDIV](./Methods/IMDIV.md) | number | Returns the quotient of two complex numbers. |
-| [IMEXP](./Methods/IMEXP.md) | number | Returns the exponential of a complex number. |
-| [IMLN](./Methods/IMLN.md) | number | Returns the natural logarithm of a complex number. |
-| [IMLOG10](./Methods/IMLOG10.md) | number | Returns the base-10 logarithm of a complex number. |
-| [IMLOG2](./Methods/IMLOG2.md) | number | Returns the base-2 logarithm of a complex number. |
-| [IMPOWER](./Methods/IMPOWER.md) | number | Returns a complex number raised to an integer power. |
-| [IMPRODUCT](./Methods/IMPRODUCT.md) | number | Returns the product of the specified complex numbers. |
+| [IMCONJUGATE](./Methods/IMCONJUGATE.md) | string | Returns the complex conjugate of a complex number. |
+| [IMCOS](./Methods/IMCOS.md) | string | Returns the cosine of a complex number. |
+| [IMCOSH](./Methods/IMCOSH.md) | string | Returns the hyperbolic cosine of a complex number. |
+| [IMCOT](./Methods/IMCOT.md) | string | Returns the cotangent of a complex number. |
+| [IMCSC](./Methods/IMCSC.md) | string | Returns the cosecant of a complex number. |
+| [IMCSCH](./Methods/IMCSCH.md) | string | Returns the hyperbolic cosecant of a complex number. |
+| [IMDIV](./Methods/IMDIV.md) | string | Returns the quotient of two complex numbers. |
+| [IMEXP](./Methods/IMEXP.md) | string | Returns the exponential of a complex number. |
+| [IMLN](./Methods/IMLN.md) | string | Returns the natural logarithm of a complex number. |
+| [IMLOG10](./Methods/IMLOG10.md) | string | Returns the base-10 logarithm of a complex number. |
+| [IMLOG2](./Methods/IMLOG2.md) | string | Returns the base-2 logarithm of a complex number. |
+| [IMPOWER](./Methods/IMPOWER.md) | string | Returns a complex number raised to an integer power. |
+| [IMPRODUCT](./Methods/IMPRODUCT.md) | string | Returns the product of the specified complex numbers. |
 | [IMREAL](./Methods/IMREAL.md) | number | Returns the real coefficient of a complex number. |
-| [IMSEC](./Methods/IMSEC.md) | number | Returns the secant of a complex number. |
-| [IMSECH](./Methods/IMSECH.md) | number | Returns the hyperbolic secant of a complex number. |
-| [IMSIN](./Methods/IMSIN.md) | number | Returns the sine of a complex number. |
-| [IMSINH](./Methods/IMSINH.md) | number | Returns the hyperbolic sine of a complex number. |
-| [IMSQRT](./Methods/IMSQRT.md) | number | Returns the square root of a complex number. |
-| [IMSUB](./Methods/IMSUB.md) | number | Returns the difference of two complex numbers expressed in the *x + yi* or *x + yj* form. |
-| [IMSUM](./Methods/IMSUM.md) | number | Returns the sum of the specified complex numbers. |
-| [IMTAN](./Methods/IMTAN.md) | number | Returns the tangent of a complex number. |
+| [IMSEC](./Methods/IMSEC.md) | string | Returns the secant of a complex number. |
+| [IMSECH](./Methods/IMSECH.md) | string | Returns the hyperbolic secant of a complex number. |
+| [IMSIN](./Methods/IMSIN.md) | string | Returns the sine of a complex number. |
+| [IMSINH](./Methods/IMSINH.md) | string | Returns the hyperbolic sine of a complex number. |
+| [IMSQRT](./Methods/IMSQRT.md) | string | Returns the square root of a complex number. |
+| [IMSUB](./Methods/IMSUB.md) | string | Returns the difference of two complex numbers expressed in the *x + yi* or *x + yj* form. |
+| [IMSUM](./Methods/IMSUM.md) | string | Returns the sum of the specified complex numbers. |
+| [IMTAN](./Methods/IMTAN.md) | string | Returns the tangent of a complex number. |
 | [INDEX](./Methods/INDEX.md) | number \| string | Returns a value or reference of the cell at the intersection of a particular row and column, in a given range. |
 | [INT](./Methods/INT.md) | number | Rounds a number down to the nearest integer. |
 | [INTRATE](./Methods/INTRATE.md) | number | Returns the interest rate for a fully invested security. |
@@ -239,11 +239,11 @@ The following table lists the available methods.
 | [LEFTB](./Methods/LEFTB.md) | string | Extracts the substring from the specified string starting from the left character and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
 | [LEN](./Methods/LEN.md) | number | Returns the number of characters in a text string. |
 | [LENB](./Methods/LENB.md) | number | Analyses the specified string and returns the number of characters it contains and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
-| [LINEST](./Methods/LINEST.md) | number | Returns statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method. |
+| [LINEST](./Methods/LINEST.md) | number[][] | Returns statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method. |
 | [LN](./Methods/LN.md) | number | Returns the natural logarithm of a number. |
 | [LOG](./Methods/LOG.md) | number | Returns the logarithm of a number to the specified base. |
 | [LOG10](./Methods/LOG10.md) | number | Returns the base-10 logarithm of a number. |
-| [LOGEST](./Methods/LOGEST.md) | number | Returns statistics that describe an exponential curve matching known data points. |
+| [LOGEST](./Methods/LOGEST.md) | number[][] | Returns statistics that describe an exponential curve matching known data points. |
 | [LOGINV](./Methods/LOGINV.md) | number | Returns the inverse of the lognormal cumulative distribution function of x, where ln(x) is normally distributed with the specified parameters. |
 | [LOGNORMDIST](./Methods/LOGNORMDIST.md) | number | Returns the cumulative lognormal distribution of x, where ln(x) is normally distributed with the specified parameters. |
 | [LOGNORM_DIST](./Methods/LOGNORM_DIST.md) | number | Returns the lognormal distribution of x, where ln(x) is normally distributed with the specified parameters. |
@@ -265,7 +265,7 @@ The following table lists the available methods.
 | [MONTH](./Methods/MONTH.md) | number | Returns the month, a number from 1 (January) to 12 (December). |
 | [MROUND](./Methods/MROUND.md) | number | Returns a number rounded to the desired multiple. |
 | [MULTINOMIAL](./Methods/MULTINOMIAL.md) | number | Returns the ratio of the factorial of a sum of numbers to the product of factorials. |
-| [MUNIT](./Methods/MUNIT.md) | number | Returns the unit matrix for the specified dimension. |
+| [MUNIT](./Methods/MUNIT.md) | number[][] | Returns the unit matrix for the specified dimension. |
 | [N](./Methods/N.md) | number | Converts a value to a number, dates to serial numbers, **true** to 1, error to [ErrorValue](../Enumeration/ErrorValue.md), anything else to 0 (zero). |
 | [NA](./Methods/NA.md) | string | Returns the *#N/A* error value which means "no value is available". |
 | [NEGBINOMDIST](./Methods/NEGBINOMDIST.md) | number | Returns the negative binomial distribution, the probability that there will be the specified number of failures before the last success, with the specified probability of a success. |
@@ -286,9 +286,9 @@ The following table lists the available methods.
 | [NPER](./Methods/NPER.md) | number | Returns the number of periods for an investment based on periodic, constant payments and a constant interest rate. |
 | [NPV](./Methods/NPV.md) | number | Returns the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values). |
 | [NUMBERVALUE](./Methods/NUMBERVALUE.md) | number | Converts text to a number, in a locale-independent way. |
-| [OCT2BIN](./Methods/OCT2BIN.md) | number | Converts an octal number to binary. |
+| [OCT2BIN](./Methods/OCT2BIN.md) | string | Converts an octal number to binary. |
 | [OCT2DEC](./Methods/OCT2DEC.md) | number | Converts an octal number to decimal. |
-| [OCT2HEX](./Methods/OCT2HEX.md) | number | Converts an octal number to hexadecimal. |
+| [OCT2HEX](./Methods/OCT2HEX.md) | string | Converts an octal number to hexadecimal. |
 | [ODD](./Methods/ODD.md) | number | Rounds a positive number up and negative number down to the nearest odd integer. |
 | [ODDFPRICE](./Methods/ODDFPRICE.md) | number | Returns the price per $100 face value of a security with an odd first period. |
 | [ODDFYIELD](./Methods/ODDFYIELD.md) | number | Returns the yield of a security with an odd first period. |
@@ -383,8 +383,8 @@ The following table lists the available methods.
 | [TIMEVALUE](./Methods/TIMEVALUE.md) | number | Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM). |
 | [TINV](./Methods/TINV.md) | number | Returns the two-tailed inverse of the Student's t-distribution. |
 | [TODAY](./Methods/TODAY.md) | number | Returns the current date in the *MM/dd/yy* format. |
-| [TRANSPOSE](./Methods/TRANSPOSE.md) | [ApiRange](../ApiRange/ApiRange.md) | Converts a vertical range of cells to a horizontal range, or vice versa. |
-| [TREND](./Methods/TREND.md) | number | Returns numbers in a linear trend matching known data points, using the least squares method. |
+| [TRANSPOSE](./Methods/TRANSPOSE.md) | (number \| string \| boolean)[][] | Converts a vertical range of cells to a horizontal range, or vice versa. |
+| [TREND](./Methods/TREND.md) | number[][] | Returns numbers in a linear trend matching known data points, using the least squares method. |
 | [TRIM](./Methods/TRIM.md) | string | Removes all spaces from a text string except for single spaces between words. |
 | [TRIMMEAN](./Methods/TRIMMEAN.md) | number | Returns the mean of the interior portion of a set of data values. |
 | [TRUE](./Methods/TRUE.md) | boolean | Returns the **true** logical value. |

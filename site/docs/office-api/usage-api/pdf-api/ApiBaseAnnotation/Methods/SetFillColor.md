@@ -14,7 +14,7 @@ expression.SetFillColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | color to set fill (omit the argument to set no fill) |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined |  | color to set fill (omit the argument to set no fill) |
 
 ## Returns
 

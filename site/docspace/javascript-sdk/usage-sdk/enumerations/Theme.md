@@ -6,7 +6,13 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Theme
 
-The available application themes.
+The UI color theme. Passed via [TFrameConfig.theme](../type-aliases/TFrameConfig.md#theme).
+
+## Example
+
+```typescript
+sdk.init({ theme: Theme.Dark, ... });
+```
 
 ## Enumeration Members
 
@@ -14,8 +20,8 @@ The available application themes.
 
 | Enumeration Member | Value | Description |
 | ------ | ------ | ------ |
-| `Base` | `"Base"` | The light/base theme. |
-| `Dark` | `"Dark"` | The dark mode theme. |
-| `System` | `"System"` | Follows the system UI theme. |
+| `Base` | `"Base"` | Light theme. |
+| `Dark` | `"Dark"` | Dark theme. |
+| `System` | `"System"` | Follows the OS / browser preferred color scheme. |
 
 </APITable>

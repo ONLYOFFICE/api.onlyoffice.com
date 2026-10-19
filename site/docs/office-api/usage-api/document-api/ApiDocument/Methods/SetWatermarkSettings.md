@@ -18,7 +18,7 @@ expression.SetWatermarkSettings(Settings);
 
 ## Returns
 
-[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md) \| null \| undefined
 
 ## Example
 

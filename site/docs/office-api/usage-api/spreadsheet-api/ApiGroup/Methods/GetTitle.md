@@ -1,0 +1,40 @@
+# GetTitle
+
+Gets the title of the current drawing.
+
+Inherited from [ApiDrawing.GetTitle](../../ApiDrawing/Methods/GetTitle.md).
+
+## Syntax
+
+```javascript
+expression.GetTitle();
+```
+
+`expression` - A variable that represents an [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string \| null
+
+## Example
+
+Get the title of a drawing in a spreadsheet.
+
+```javascript editor-xlsx
+// Needed when reading the alternative text title of a drawing.
+
+// Create a drawing, set its title, and read it back.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = worksheet.AddShape("cube", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+drawing.SetTitle("My Drawing Title");
+let title = drawing.GetTitle();
+worksheet.SetColumnWidth(0, 25);
+worksheet.GetRange("A1").SetValue("Drawing title: " + title);
+```

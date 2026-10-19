@@ -7,7 +7,7 @@ Its contents are merged into the current document.
 ## Syntax
 
 ```javascript
-expression.MergeDocuments(file);
+expression.MergeDocuments(file, comparisonPr);
 ```
 
 `expression` - A variable that represents an [Api](../Api.md) class.
@@ -17,6 +17,7 @@ expression.MergeDocuments(file);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | file | Required | object |  | The second document, returned by builderJS.OpenTmpFile. |
+| comparisonPr | Optional | [ComparisonPr](../../Enumeration/ComparisonPr.md) | \{\} | The document merge properties. |
 
 ## Returns
 

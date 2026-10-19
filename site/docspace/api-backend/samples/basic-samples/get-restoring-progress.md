@@ -115,7 +115,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## How it works
 
-A GET request is sent to [/api/2.0/backup/getrestoreprogress](/docspace/api-backend/usage-api/get-restore-progress) with an optional query parameter:
+A GET request is sent to [/api/2.0/backup/getrestoreprogress](/docspace/api-backend/usage-api/backup/get-restore-progress) with an optional query parameter:
 
 - `Dump` — boolean; set to true if the restore operation includes a database dump, otherwise false.
 

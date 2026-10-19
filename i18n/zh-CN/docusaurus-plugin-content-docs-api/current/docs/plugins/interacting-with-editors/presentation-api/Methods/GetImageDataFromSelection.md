@@ -18,7 +18,7 @@ expression.GetImageDataFromSelection();
 
 ## 返回值
 
-[ImageData](../Enumeration/ImageData.md)
+[ImageData](../Enumeration/ImageData.md) \| null \| undefined
 
 ## 示例
 

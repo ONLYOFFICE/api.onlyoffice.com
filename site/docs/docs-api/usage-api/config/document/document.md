@@ -11,7 +11,7 @@ The type of the file for the source viewed or edited document. Must be lowercase
 - `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — for documents;
 - `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — for spreadsheets;
 - `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — for presentations;
-- `djvu`, `oxps`, `pdf`, `xps` — for portable document format;
+- `djvu`, `ofd`, `oxps`, `pdf`, `xps` — for portable document format;
 - `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — for diagrams.
 
 :::info

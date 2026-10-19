@@ -13,18 +13,18 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [AcceptAllRevisionChanges](./Methods/AcceptAllRevisionChanges.md) | boolean | 接受在审阅模式下所做的所有更改。 |
 | [AddCheckBoxContentControl](./Methods/AddCheckBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 向文档添加新的复选框内容控件。 |
 | [AddComboBoxContentControl](./Methods/AddComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 向文档添加新的组合框内容控件。 |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向当前文档选区添加批注，如果未选择文本，则向当前单词添加批注。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 向当前文档选区添加批注，如果未选择文本，则向当前单词添加批注。 |
 | [AddDatePickerContentControl](./Methods/AddDatePickerContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 向文档添加新的日期选择器内容控件。 |
 | [AddDrawingToPage](./Methods/AddDrawingToPage.md) | boolean | 向指定页面添加绘图。 |
 | [AddDropDownListContentControl](./Methods/AddDropDownListContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 向文档添加新的下拉列表内容控件。 |
 | [AddElement](./Methods/AddElement.md) | boolean | 使用在文档内容中的位置添加段落、表格或块级内容控件。 |
-| [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 为选定文本添加尾注（如果没有选区，则为当前位置添加）。 |
-| [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 为选定文本添加脚注（如果没有选区，则为当前位置添加）。 |
+| [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | 为选定文本添加尾注（如果没有选区，则为当前位置添加）。 |
+| [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | 为选定文本添加脚注（如果没有选区，则为当前位置添加）。 |
 | [AddMathEquation](./Methods/AddMathEquation.md) | boolean | 向当前文档添加数学公式。 |
 | [AddParagraph](./Methods/AddParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落并将其追加到文档内容的末尾。 |
 | [AddPictureContentControl](./Methods/AddPictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 向文档添加新的图片内容控件。 |
-| [AddTableOfContents](./Methods/AddTableOfContents.md) | boolean | 向当前文档添加目录。 |
-| [AddTableOfFigures](./Methods/AddTableOfFigures.md) | boolean | 向当前文档添加图表目录。 |
+| [AddTableOfContents](./Methods/AddTableOfContents.md) | [ApiTableOfContents](../ApiTableOfContents/ApiTableOfContents.md) \| null \| undefined | 向当前文档添加目录。 |
+| [AddTableOfFigures](./Methods/AddTableOfFigures.md) | [ApiTableOfFigures](../ApiTableOfFigures/ApiTableOfFigures.md) \| null \| undefined | 向当前文档添加图表目录。 |
 | [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | 将指定文本追加到文档内容的末尾。 |
 | [ClearAllFields](./Methods/ClearAllFields.md) | boolean | 清除文档中的所有表单。 |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | 创建新的历史记录点。 |
@@ -35,6 +35,7 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | 创建具有指定行数和列数的新表格。 |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | 从文档中移除书签（如果存在）。 |
 | [EnterText](./Methods/EnterText.md) | boolean | 在光标位置向文档添加文本。 |
+| [GetActiveTable](./Methods/GetActiveTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | 返回当前文档中的当前表格。 |
 | [GetAllBookmarksNames](./Methods/GetAllBookmarksNames.md) | string[] | 返回当前文档中所有书签名称的数组。 |
 | [GetAllCaptionParagraphs](./Methods/GetAllCaptionParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 从当前文档返回指定类型的所有题注段落。 |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | 从文档内容返回图表对象集合。 |
@@ -51,32 +52,33 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [GetAllStyles](./Methods/GetAllStyles.md) | [ApiStyle](../ApiStyle/ApiStyle.md)[] | 返回当前文档的所有样式。 |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 从当前文档内容返回所有表格的数组。 |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回给定绝对页面上的表格集合。 |
-| [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) | 从当前文档中按名称返回书签。 |
+| [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) \| null \| undefined | 从当前文档中按名称返回书签。 |
 | [GetBookmarkRange](./Methods/GetBookmarkRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回书签范围。 |
 | [GetClassType](./Methods/GetClassType.md) | "document" | 返回 ApiDocument 类的类型。 |
-| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | 通过 ID 从当前文档返回批注。 |
+| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 通过 ID 从当前文档返回批注。 |
 | [GetCommentsReport](./Methods/GetCommentsReport.md) | [CommentReport](../Enumeration/CommentReport.md) | 返回有关添加到文档的所有批注的报告。 |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | 从当前 ApiDocumentContent 对象返回文档元素数组。 |
 | [GetContentControlsByTag](./Methods/GetContentControlsByTag.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | 返回文档中具有指定标签名称的所有内容控件的列表。 |
 | [GetControlsHighlight](./Methods/GetControlsHighlight.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | 返回当前文档中内容控件的高亮颜色。 |
 | [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | 检索当前文档的核心属性接口。 |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | 返回当前选中的内容控件。 |
-| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 如果光标当前在脚注或尾注内，则返回脚注或尾注内容，否则返回 null。 |
+| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | 如果光标当前在脚注或尾注内，则返回脚注或尾注内容，否则返回 null。 |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | 返回当前页面的索引。 |
-| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 返回光标所在的当前段落。 |
-| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 返回光标所在的当前文本域。 |
+| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | 返回光标所在的当前段落。 |
+| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) \| null \| undefined | 返回光标所在的当前文本域。 |
 | [GetCurrentSentence](./Methods/GetCurrentSentence.md) | string | 返回当前句子或当前句子的一部分。 |
 | [GetCurrentVisiblePages](./Methods/GetCurrentVisiblePages.md) | number[] | 返回当前可见页面的索引。 |
 | [GetCurrentWord](./Methods/GetCurrentWord.md) | string | 返回当前单词或当前单词的一部分。 |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | 从文档检索自定义属性。 |
 | [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | 检索与文档关联的自定义 XML 管理器。 |
 | [GetDefaultParaPr](./Methods/GetDefaultParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 返回当前文档中的默认段落属性集。 |
-| [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | 返回指定文档元素的默认样式参数。 |
+| [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null \| undefined | 返回指定文档元素的默认样式参数。 |
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回当前文档中文本域的默认属性集。 |
 | [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | 返回文档信息： |
-| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | 返回用于遍历当前文档元素的访问器对象。 |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | [ApiDocumentVisitor](../ApiDocumentVisitor/ApiDocumentVisitor.md) | 返回用于遍历当前文档元素的访问器对象。 |
 | [GetDrawingsByName](./Methods/GetDrawingsByName.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | 返回按名称筛选的文档绘图对象集合。 |
-| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | 通过元素在文档中的位置返回元素。 |
+| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | 通过元素在文档中的位置返回元素。 |
+| [GetElementIndex](./Methods/GetElementIndex.md) | Number | 返回指定元素在当前文档内容中的位置（索引）。 |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前文档中的元素数量。 |
 | [GetEndNotesFirstParagraphs](./Methods/GetEndNotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 返回当前文档中所有尾注的第一个段落。 |
 | [GetFinalSection](./Methods/GetFinalSection.md) | [ApiSection](../ApiSection/ApiSection.md) | 返回文档的最后一节。 |
@@ -97,6 +99,8 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | 返回当前文档中所有选中的绘图。 |
 | [GetStatistics](./Methods/GetStatistics.md) | object | 返回以对象形式表示的文档统计信息，包含以下参数： |
 | [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null | 按名称返回样式。 |
+| [GetTablesOfContents](./Methods/GetTablesOfContents.md) | [ApiTablesOfContents](../ApiTablesOfContents/ApiTablesOfContents.md) | 返回文档中所有目录的集合。 |
+| [GetTablesOfFigures](./Methods/GetTablesOfFigures.md) | [ApiTablesOfFigures](../ApiTablesOfFigures/ApiTablesOfFigures.md) | 返回文档中所有图表目录的集合。 |
 | [GetTagsOfAllContentControls](./Methods/GetTagsOfAllContentControls.md) | String[] | 返回文档中所有内容控件使用的所有标签的列表。 |
 | [GetTagsOfAllForms](./Methods/GetTagsOfAllForms.md) | String[] | 返回文档中所有表单使用的所有标签的列表。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前文档内容对象的内部文本。 |
@@ -104,21 +108,26 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [GoToPage](./Methods/GoToPage.md) | boolean | 将光标移动到文档中指定页面的开头。 |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | 在当前文档中将绘图数组分组。 |
 | [InsertBlankPage](./Methods/InsertBlankPage.md) | boolean | 在当前位置插入空白页。 |
-| [InsertContent](./Methods/InsertContent.md) | boolean | 将元素数组插入到文档的当前位置。 |
+| [InsertContent](./Methods/InsertContent.md) | boolean | 将元素数组插入到文档的当前位置。数组可以包含多种元素类型的组合：- \{@link DocumentElement\} 元素按原样插入。- \{@link ParagraphContent\} 元素会自动分组到段落中：连续的段落级元素   共用一个新段落。- 纯字符串和数字会包装到新的文本块中并添加到当前段落（分组规则与 \{@link ParagraphContent\} 相同）。- \{@link ApiDrawing\} 元素会包装到新的文本块中并添加到当前段落。已在文档中使用的元素将被跳过。 |
 | [InsertParagraphBreak](./Methods/InsertParagraphBreak.md) | boolean | 在光标位置向文档添加段落。 |
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | 在每个文档页面上插入水印。 |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | 检查当前文档内容是否为尾注。 |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | 检查当前文档内容是否为脚注。 |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | 检查是否启用了修订跟踪模式。 |
-| [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | 返回最后一个文档元素。 |
+| [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | 返回最后一个文档元素。 |
 | [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | 向下移动光标。 |
 | [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | 向左移动光标。 |
 | [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | 向右移动光标。 |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | 将光标移动到文档末尾。 |
+| [MoveCursorToFooter](./Methods/MoveCursorToFooter.md) | boolean | 将光标移动到指定页面的页脚中，并将文档切换到页脚编辑模式。光标位于页脚的开头。 |
+| [MoveCursorToHeader](./Methods/MoveCursorToHeader.md) | boolean | 将光标移动到指定页面的页眉中，并将文档切换到页眉编辑模式。光标位于页眉的开头。 |
+| [MoveCursorToMainDocument](./Methods/MoveCursorToMainDocument.md) | boolean | 将光标从页眉、页脚或文档的任何其他特殊部分移回当前页面的主文档内容。 |
 | [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。 |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | 将光标移动到当前文档的指定位置。 |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | 将光标移动到文档开头。 |
 | [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | 向上移动光标。 |
+| [MoveToNextCell](./Methods/MoveToNextCell.md) | boolean | 将光标移动到下一个表格单元格。 |
+| [MoveToPrevCell](./Methods/MoveToPrevCell.md) | boolean | 将光标移动到上一个表格单元格。 |
 | [Push](./Methods/Push.md) | boolean | 推送段落或表格以将其实际添加到文档中。 |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | 拒绝在审阅模式下所做的所有更改。 |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。 |
@@ -131,6 +140,7 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [ReplaceDrawing](./Methods/ReplaceDrawing.md) | boolean | 用新绘图替换绘图。 |
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | 搜索文档对象的范围。 |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | 查找并替换文本。 |
+| [SelectCurrentSentence](./Methods/SelectCurrentSentence.md) | boolean | 如果可能，选择当前句子。 |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | 如果可能，选择当前单词。 |
 | [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。 |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | 在文档中启用或禁用 AI 辅助修订跟踪。 |
@@ -140,7 +150,7 @@ ApiDocument 是 [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | 为文档中的表单设置突出显示。 |
 | [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换当前文档内容对象的所有内容，保留第一个段落的格式。 |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | 设置修订跟踪模式。 |
-| [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 设置当前文档中的水印设置。 |
+| [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) \| null \| undefined | 设置当前文档中的水印设置。 |
 | [ShowComment](./Methods/ShowComment.md) | boolean | 通过 ID 显示批注。 |
 | [ToHtml](./Methods/ToHtml.md) | string | 将文档转换为 HTML。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDocument 对象转换为 JSON 对象。 |

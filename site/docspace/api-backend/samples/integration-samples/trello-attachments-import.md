@@ -145,7 +145,7 @@ def download_trello_attachment(file_url):
 
 ## Step 4: Upload the file to DocSpace
 
-Upload the downloaded file into a specific DocSpace room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/upload-file)
+Upload the downloaded file into a specific DocSpace room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file)
 
 ```py
 # Step 4: Upload to DocSpace

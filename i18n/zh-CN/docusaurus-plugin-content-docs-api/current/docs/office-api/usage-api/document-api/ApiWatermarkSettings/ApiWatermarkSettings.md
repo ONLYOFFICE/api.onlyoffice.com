@@ -9,7 +9,7 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "watermarkSettings" | 返回 ApiWatermarkSettings 类的类型。 |
-| [GetDirection](./Methods/GetDirection.md) | [WatermarkDirection](../Enumeration/WatermarkDirection.md) | 返回文档中水印的方向。 |
+| [GetDirection](./Methods/GetDirection.md) | [WatermarkDirection](../Enumeration/WatermarkDirection.md) \| null \| undefined | 返回文档中水印的方向。 |
 | [GetImageHeight](./Methods/GetImageHeight.md) | [EMU](../Enumeration/EMU.md) \| null | 返回文档中水印图像的高度。 |
 | [GetImageURL](./Methods/GetImageURL.md) | string \| null | 返回文档中水印的图像 URL。 |
 | [GetImageWidth](./Methods/GetImageWidth.md) | [EMU](../Enumeration/EMU.md) \| null | 返回文档中水印图像的宽度。 |

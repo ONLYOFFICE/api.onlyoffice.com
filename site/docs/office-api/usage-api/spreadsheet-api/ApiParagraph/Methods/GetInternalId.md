@@ -1,6 +1,6 @@
 # GetInternalId
 
-Returns an internal ID of the current content paragraph.
+Returns an internal ID of the current paragraph.
 
 ## Syntax
 

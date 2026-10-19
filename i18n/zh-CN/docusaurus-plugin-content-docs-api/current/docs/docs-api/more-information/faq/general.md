@@ -18,7 +18,7 @@ sidebar_position: -12
 
 当前的ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
 
-您可以使用 API 向 **文档命令服务**发送 POST 请求。将 *c* 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
+您可以使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
 
   ``` json
   {
@@ -39,7 +39,7 @@ sidebar_position: -12
 
 ## 我想从 default.json 配置文件中更改一些 ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
 
-ONLYOFFICE 文档的所有主要设置都存储在 *default.json* 配置文件中，该文件位于 */etc/onlyoffice/documentserver* /文件夹（适用于 Linux）或 *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\* （适用于 Windows）中。在同一文件夹中还有特定于平台的 *production.json* 文件，其中存储了与 Linux 或 Windows 相关的设置。
+ONLYOFFICE 文档的所有主要设置都存储在 `default.json` 配置文件中，该文件位于 `/etc/onlyoffice/documentserver/` 文件夹（适用于 Linux）或 `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\`（适用于 Windows）中。在同一文件夹中还有特定于平台的 `production.json` 文件，其中存储了与 Linux 或 Windows 相关的设置。
 
 ONLYOFFICE 文档使用 [Node.js 配置模块](https://www.npmjs.com/package/config)来组织和构造配置文件，因此这些文件的层次结构如下所示：
 
@@ -49,15 +49,15 @@ ONLYOFFICE 文档使用 [Node.js 配置模块](https://www.npmjs.com/package/con
   local.json
   ```
 
-所有主要设置都存储在 *default.json* 文件中，其中一些设置被 *production.json* 文件中的设置添加或覆盖，任何用户/开发人员设置被 *local.json* 配置文件中的设置覆盖。
+所有主要设置都存储在 `default.json` 文件中，其中一些设置被 `production.json` 文件中的设置添加或覆盖，任何用户/开发人员设置被 `local.json` 配置文件中的设置覆盖。
 
 :::note
-如果您更改 *default.json* 或 *production.json* 文件中的参数，所有更改将在 ONLYOFFICE 文档更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 ONLYOFFICE 文档）。
+如果您更改 `default.json` 或 `production.json` 文件中的参数，所有更改将在 ONLYOFFICE 文档更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 ONLYOFFICE 文档）。
 :::
 
-因此，我们强烈建议您**不要**更改 *default.json* 或 *production.json* 文件中的参数，而是使用 *local.json* 配置文件。此文件必须与 *default.json* 文件在同一文件夹中创建，并且**必须保留**必要参数的**整个对象结构**。
+因此，我们强烈建议您**不要**更改 `default.json` 或 `production.json` 文件中的参数，而是使用 `local.json` 配置文件。此文件必须与 `default.json` 文件在同一文件夹中创建，并且**必须保留**必要参数的**整个对象结构**。
 
-*local.json* 的使用示例可以在以下部分中找到：
+`local.json` 的使用示例可以在以下部分中找到：
 
 - [保存延迟](../../get-started/how-it-works/saving-file.md#save-delay)
 - [强制保存](../../get-started/how-it-works/saving-file.md#force-saving)

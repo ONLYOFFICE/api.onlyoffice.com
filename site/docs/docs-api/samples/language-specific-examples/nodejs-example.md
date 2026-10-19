@@ -40,7 +40,7 @@ Open the `config/default.json` file and edit the following keys. All of them are
     "exampleUrl": null,
     "token": {
       "enable": true,
-      "secret": "secret"
+      "secret": "developer-only-not-a-real-secret"
     }
   }
 }

@@ -153,7 +153,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a group
 
-A POST request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/add-group) with:
+A POST request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/group/add-group) with:
 
 - `groupName`: A new group name.
 - `groupManager`: The user ID of the group manager.
@@ -215,7 +215,7 @@ The API returns a group ID, which is required for further operations.
 
 ## Step 2: Reassign group ownership
 
-A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/update-group) with:
+A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/update-group) with:
 
 - `group_id`: The group ID.
 - `groupManager`: The user ID of the new group manager.

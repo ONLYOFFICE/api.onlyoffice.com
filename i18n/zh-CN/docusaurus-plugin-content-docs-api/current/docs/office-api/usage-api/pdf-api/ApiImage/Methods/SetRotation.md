@@ -16,7 +16,7 @@ expression.SetRotation(rotAngle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| rotAngle | 必需 | number |  | 新的绘图旋转角度。 |
+| rotAngle | 必需 | [Degree](../../Enumeration/Degree.md) |  | 新的绘图旋转角度。 |
 
 ## 返回值
 
@@ -34,7 +34,7 @@ boolean
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 65 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);

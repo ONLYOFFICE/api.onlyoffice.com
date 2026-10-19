@@ -20,7 +20,7 @@ expression.GetWrapperShape();
 
 ## 返回值
 
-[ApiShape](../../ApiShape/ApiShape.md)
+[ApiShape](../../ApiShape/ApiShape.md) \| null \| undefined
 
 ## 示例
 

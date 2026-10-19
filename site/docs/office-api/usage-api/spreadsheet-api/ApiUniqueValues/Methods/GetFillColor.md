@@ -1,10 +1,6 @@
 # GetFillColor
 
-Returns the background color for the format condition.
-
-Returns 'No Fill' when the background color of the format condition is null.
-
-Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
+Returns the fill color for the unique values conditional formatting rule.
 
 ## Syntax
 
@@ -20,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+[ApiColor](../../ApiColor/ApiColor.md) \| null
 
 ## Example
 
@@ -43,11 +39,11 @@ let range = worksheet.GetRange("A2:A5");
 let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(255, 255, 0));
 
 let fillColor = uniqueValuesCondition.GetFillColor();
 let rgbValue = fillColor.GetRGB();
 
 worksheet.GetRange("C1").SetValue("Fill Color RGB:");
-worksheet.GetRange("C2").SetValue(rgbValue);
+worksheet.GetRange("C2").SetValue(rgbValue.r + ", " + rgbValue.g + ", " + rgbValue.b);
 ```

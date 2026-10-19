@@ -10,7 +10,7 @@
 expression.GetColor();
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
@@ -18,7 +18,7 @@ expression.GetColor();
 
 ## 返回值
 
-[ApiColor](../../ApiColor/ApiColor.md)
+[ApiColor](../../ApiColor/ApiColor.md) \| null \| undefined
 
 ## 示例
 

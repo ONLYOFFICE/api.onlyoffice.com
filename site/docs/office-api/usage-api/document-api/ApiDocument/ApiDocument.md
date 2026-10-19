@@ -13,18 +13,18 @@ The following table lists the available methods.
 | [AcceptAllRevisionChanges](./Methods/AcceptAllRevisionChanges.md) | boolean | Accepts all changes made in review mode. |
 | [AddCheckBoxContentControl](./Methods/AddCheckBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new checkbox content control to the document. |
 | [AddComboBoxContentControl](./Methods/AddComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new combo box content control to the document. |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current document selection, or to the current word if no text is selected. |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | Adds a comment to the current document selection, or to the current word if no text is selected. |
 | [AddDatePickerContentControl](./Methods/AddDatePickerContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new date picker content control to the document. |
 | [AddDrawingToPage](./Methods/AddDrawingToPage.md) | boolean | Adds a drawing to the specified page. |
 | [AddDropDownListContentControl](./Methods/AddDropDownListContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new drop-down list content control to the document. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the document content. |
-| [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds an endnote for the selected text (or the current position if the selection doesn't exist). |
-| [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds a footnote for the selected text (or the current position if the selection doesn't exist). |
+| [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Adds an endnote for the selected text (or the current position if the selection doesn't exist). |
+| [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Adds a footnote for the selected text (or the current position if the selection doesn't exist). |
 | [AddMathEquation](./Methods/AddMathEquation.md) | boolean | Adds a math equation to the current document. |
 | [AddParagraph](./Methods/AddParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph and appends it to the end of the document content. |
 | [AddPictureContentControl](./Methods/AddPictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new picture content control to the document. |
-| [AddTableOfContents](./Methods/AddTableOfContents.md) | boolean | Adds a table of content to the current document. |
-| [AddTableOfFigures](./Methods/AddTableOfFigures.md) | boolean | Adds a table of figures to the current document. |
+| [AddTableOfContents](./Methods/AddTableOfContents.md) | [ApiTableOfContents](../ApiTableOfContents/ApiTableOfContents.md) \| null \| undefined | Adds a table of content to the current document. |
+| [AddTableOfFigures](./Methods/AddTableOfFigures.md) | [ApiTableOfFigures](../ApiTableOfFigures/ApiTableOfFigures.md) \| null \| undefined | Adds a table of figures to the current document. |
 | [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | Appends the specified text to the end of the document content. |
 | [ClearAllFields](./Methods/ClearAllFields.md) | boolean | Clears all forms in the document. |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | Creates a new history point. |
@@ -35,6 +35,7 @@ The following table lists the available methods.
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a new table with a specified number of rows and columns. |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | Removes a bookmark from the document, if one exists. |
 | [EnterText](./Methods/EnterText.md) | boolean | Add text to the document on the cursor position. |
+| [GetActiveTable](./Methods/GetActiveTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Return current table from the current document. |
 | [GetAllBookmarksNames](./Methods/GetAllBookmarksNames.md) | string[] | Returns an array with names of all bookmarks in the current document. |
 | [GetAllCaptionParagraphs](./Methods/GetAllCaptionParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns all caption paragraphs of the specified type from the current document. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns a collection of chart objects from the document content. |
@@ -51,32 +52,33 @@ The following table lists the available methods.
 | [GetAllStyles](./Methods/GetAllStyles.md) | [ApiStyle](../ApiStyle/ApiStyle.md)[] | Returns all styles of the current document. |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array of all tables from the current document content. |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. |
-| [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) | Returns a bookmark by its name from the current document. |
+| [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) \| null \| undefined | Returns a bookmark by its name from the current document. |
 | [GetBookmarkRange](./Methods/GetBookmarkRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a bookmark range. |
 | [GetClassType](./Methods/GetClassType.md) | "document" | Returns a type of the ApiDocument class. |
-| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | Returns a comment from the current document by its ID. |
+| [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | Returns a comment from the current document by its ID. |
 | [GetCommentsReport](./Methods/GetCommentsReport.md) | [CommentReport](../Enumeration/CommentReport.md) | Returns a report about all the comments added to the document. |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | Returns an array of document elements from the current ApiDocumentContent object. |
 | [GetContentControlsByTag](./Methods/GetContentControlsByTag.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a list of all content controls in the document with the specified tag name. |
 | [GetControlsHighlight](./Methods/GetControlsHighlight.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | Returns the highlight color of the content controls in the current document. |
 | [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Retrieves the core properties interface for the current document. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
-| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null. |
+| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null. |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | Returns the index of the current page. |
-| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |
-| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |
+| [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null \| undefined | Returns the current paragraph where the cursor is located. |
+| [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) \| null \| undefined | Returns the current run where the cursor is located. |
 | [GetCurrentSentence](./Methods/GetCurrentSentence.md) | string | Returns the current sentence or part of the current sentence. |
 | [GetCurrentVisiblePages](./Methods/GetCurrentVisiblePages.md) | number[] | Returns the indexes of the currently visible pages. |
 | [GetCurrentWord](./Methods/GetCurrentWord.md) | string | Returns the current word or part of the current word. |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | Retrieves the custom properties from the document. |
 | [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the document. |
 | [GetDefaultParaPr](./Methods/GetDefaultParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Returns a set of default paragraph properties in the current document. |
-| [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Returns the default style parameters for the specified document element. |
+| [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null \| undefined | Returns the default style parameters for the specified document element. |
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns a set of default properties for the text run in the current document. |
 | [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: |
-| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | [ApiDocumentVisitor](../ApiDocumentVisitor/ApiDocumentVisitor.md) | Returns a visitor object for traversing the elements of the current document. |
 | [GetDrawingsByName](./Methods/GetDrawingsByName.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | Returns a collection of drawing objects from the document filtered by their names. |
-| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
+| [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | Returns an element by its position in the document. |
+| [GetElementIndex](./Methods/GetElementIndex.md) | Number | Returns the position (index) of the specified element within the current document content. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
 | [GetEndNotesFirstParagraphs](./Methods/GetEndNotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns the first paragraphs from all endnotes in the current document. |
 | [GetFinalSection](./Methods/GetFinalSection.md) | [ApiSection](../ApiSection/ApiSection.md) | Returns the document final section. |
@@ -97,6 +99,8 @@ The following table lists the available methods.
 | [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns all the selected drawings in the current document. |
 | [GetStatistics](./Methods/GetStatistics.md) | object | Returns the document statistics represented as an object with the following parameters: |
 | [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) \| null | Returns a style by its name. |
+| [GetTablesOfContents](./Methods/GetTablesOfContents.md) | [ApiTablesOfContents](../ApiTablesOfContents/ApiTablesOfContents.md) | Returns the collection of all tables of contents in the document. |
+| [GetTablesOfFigures](./Methods/GetTablesOfFigures.md) | [ApiTablesOfFigures](../ApiTablesOfFigures/ApiTablesOfFigures.md) | Returns the collection of all tables of figures in the document. |
 | [GetTagsOfAllContentControls](./Methods/GetTagsOfAllContentControls.md) | String[] | Returns a list of all tags that are used for all content controls in the document. |
 | [GetTagsOfAllForms](./Methods/GetTagsOfAllForms.md) | String[] | Returns a list of all tags that are used for all forms in the document. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
@@ -104,21 +108,26 @@ The following table lists the available methods.
 | [GoToPage](./Methods/GoToPage.md) | boolean | Moves a cursor to the start of the specified page in the document. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current document. |
 | [InsertBlankPage](./Methods/InsertBlankPage.md) | boolean | Inserts a blank page to the current location. |
-| [InsertContent](./Methods/InsertContent.md) | boolean | Inserts an array of elements into the current position of the document. |
+| [InsertContent](./Methods/InsertContent.md) | boolean | Inserts an array of elements into the current position of the document. The array may contain a mix of element types: - \{@link DocumentElement\} elements are inserted as-is. - \{@link ParagraphContent\} elements are automatically grouped into paragraphs: consecutive paragraph-level elements   share one new paragraph. - Plain strings and numbers are wrapped in a new run and added to the current paragraph (same grouping rules as \{@link ParagraphContent\}). - \{@link ApiDrawing\} elements are wrapped in a new run and added to the current paragraph. Elements that are already in use in a document are skipped. |
 | [InsertParagraphBreak](./Methods/InsertParagraphBreak.md) | boolean | Add paragraph to the document on the cursor position. |
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | Inserts a watermark on each document page. |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | Check if the current document content is an endnote. |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | Check if the current document content is a footnote. |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | Checks if change tracking mode is enabled or not. |
-| [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns the last document element. |
+| [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) \| null \| undefined | Returns the last document element. |
 | [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | Moves the cursor down. |
 | [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves the cursor to the left. |
 | [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves the cursor to the right. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
+| [MoveCursorToFooter](./Methods/MoveCursorToFooter.md) | boolean | Moves the cursor into the footer of the specified page and switches the document into the footer editing mode. The cursor is positioned at the beginning of the footer. |
+| [MoveCursorToHeader](./Methods/MoveCursorToHeader.md) | boolean | Moves the cursor into the header of the specified page and switches the document into the header editing mode. The cursor is positioned at the beginning of the header. |
+| [MoveCursorToMainDocument](./Methods/MoveCursorToMainDocument.md) | boolean | Moves the cursor from the header, footer or any other special part of the document back to the main document content on the current page. |
 | [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
 | [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves the cursor up. |
+| [MoveToNextCell](./Methods/MoveToNextCell.md) | boolean | Moves the cursor to the next table cell. |
+| [MoveToPrevCell](./Methods/MoveToPrevCell.md) | boolean | Moves the cursor to the previous table cell. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | Rejects all changes made in review mode. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. |
@@ -131,6 +140,7 @@ The following table lists the available methods.
 | [ReplaceDrawing](./Methods/ReplaceDrawing.md) | boolean | Replaces a drawing with a new drawing. |
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a document object. |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | Finds and replaces the text. |
+| [SelectCurrentSentence](./Methods/SelectCurrentSentence.md) | boolean | Selects the current sentence if it is possible. |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | Selects the current word if it is possible. |
 | [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Selects the reference to this footnote/endnote. |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | Enables or disables AI-assisted change tracking in the document. |
@@ -140,7 +150,7 @@ The following table lists the available methods.
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | Sets the highlight to the forms in the document. |
 | [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, preserving the formatting of the first paragraph. |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | Sets the change tracking mode. |
-| [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Sets the watermark settings in the current document. |
+| [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) \| null \| undefined | Sets the watermark settings in the current document. |
 | [ShowComment](./Methods/ShowComment.md) | boolean | Shows a comment by its ID. |
 | [ToHtml](./Methods/ToHtml.md) | string | Converts a document to HTML. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocument object into the JSON object. |

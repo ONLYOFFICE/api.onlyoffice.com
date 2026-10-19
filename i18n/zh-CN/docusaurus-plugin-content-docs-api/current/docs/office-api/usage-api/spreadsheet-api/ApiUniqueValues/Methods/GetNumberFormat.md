@@ -1,8 +1,6 @@
 # GetNumberFormat
 
-返回当条件格式规则计算结果为 true 时应用于单元格的数字格式。
-
-继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
+返回唯一值条件格式规则的数字格式。
 
 ## 语法
 

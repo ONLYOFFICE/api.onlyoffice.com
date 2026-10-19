@@ -7,7 +7,7 @@
 ## 语法
 
 ```javascript
-expression.SetRightBorder(sType, nSize, nSpace, r, g, b);
+expression.SetRightBorder(type, size, space, color);
 ```
 
 `expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
@@ -16,12 +16,10 @@ expression.SetRightBorder(sType, nSize, nSpace, r, g, b);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
-| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前右侧边框的宽度，以磅的八分之一为单位。 |
-| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落右侧间距偏移量，以磅为单位。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+| type | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
+| size | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前右侧边框的宽度，以磅的八分之一为单位。 |
+| space | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落右侧间距偏移量，以磅为单位。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 边框颜色。 |
 
 ## 返回值
 
@@ -42,5 +40,5 @@ paragraph.AddText("This is the first paragraph. We will add a two point orange b
 paragraph.AddText("The space between the right side of the paragraph and the border is 8 points. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetRightBorder("single", 16, 8, 255, 111, 61);
+paragraph.SetRightBorder("single", 16, 8, Api.Color(255, 111, 61));
 ```

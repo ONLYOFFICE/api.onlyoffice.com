@@ -1,10 +1,6 @@
 # SetFillColor
 
-Sets the background color to the format condition with the previously created color object.
-
-Sets 'No Fill' when previously created color object is null.
-
-Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md).
+Sets the fill color for the top 10 conditional formatting rule.
 
 ## Syntax
 
@@ -18,7 +14,7 @@ expression.SetFillColor(oColor);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object that specifies the background color for the format condition. |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The fill color to apply. |
 
 ## Returns
 
@@ -48,7 +44,7 @@ let formatConditions = dataRange.GetFormatConditions();
 let condition1 = formatConditions.AddTop10();
 
 let colorBefore = condition1.GetFillColor();
-condition1.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+condition1.SetFillColor(Api.RGB(0, 255, 0));
 let colorAfter = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Fill color changed");

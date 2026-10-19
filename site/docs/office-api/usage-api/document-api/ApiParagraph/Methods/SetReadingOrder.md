@@ -20,7 +20,7 @@ expression.SetReadingOrder(readingOrder);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| readingOrder | Optional | [ReadingOrder](../../Enumeration/ReadingOrder.md) |  | The reading order. |
+| readingOrder | Optional | [ReadingOrder](../../Enumeration/ReadingOrder.md) \| null \| undefined |  | The reading order. |
 
 ## Returns
 

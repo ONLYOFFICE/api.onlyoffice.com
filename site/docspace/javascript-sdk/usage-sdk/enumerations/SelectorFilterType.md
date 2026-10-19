@@ -6,7 +6,14 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # SelectorFilterType
 
-The filter type used in the selector views.
+The content filter for selector modes ([SDKMode.RoomSelector](SDKMode.md#RoomSelector), [SDKMode.FileSelector](SDKMode.md#FileSelector)).
+Passed via [TFrameConfig.selectorType](../type-aliases/TFrameConfig.md#selectorType).
+
+## Example
+
+```typescript
+sdk.init({ mode: SDKMode.FileSelector, selectorType: SelectorFilterType.RoomsOnly, ... });
+```
 
 ## Enumeration Members
 
@@ -14,8 +21,8 @@ The filter type used in the selector views.
 
 | Enumeration Member | Value | Description |
 | ------ | ------ | ------ |
-| `All` | `"all"` | Shows all available items. |
+| `All` | `"all"` | No filter — shows rooms and user folders. |
 | `RoomsOnly` | `"roomsOnly"` | Shows only rooms. |
-| `UserOnly` | `"userFolderOnly"` | Shows only user folders. |
+| `UserOnly` | `"userFolderOnly"` | Shows only the current user's personal folders. API value: `"userFolderOnly"`. |
 
 </APITable>

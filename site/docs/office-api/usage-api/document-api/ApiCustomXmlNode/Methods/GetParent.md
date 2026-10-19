@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 Navigate to the parent of a custom XML node in a document.
 
 ```javascript editor-docx
-// How do I get the parent node of a custom XML node in a document?
+// Get the parent node of a custom XML node in a document.
 
 // Move up the XML tree from a child element to find its containing node in a document.
 

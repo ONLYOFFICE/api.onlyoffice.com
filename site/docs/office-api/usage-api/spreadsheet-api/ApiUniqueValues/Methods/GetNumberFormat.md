@@ -1,8 +1,6 @@
 # GetNumberFormat
 
-Returns the number format applied to a cell when the conditional formatting rule evaluates to true.
-
-Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
+Returns the number format for the unique values conditional formatting rule.
 
 ## Syntax
 

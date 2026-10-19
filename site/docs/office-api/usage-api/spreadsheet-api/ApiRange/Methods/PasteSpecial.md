@@ -21,7 +21,7 @@ expression.PasteSpecial(sPasteType, sPasteSpecialOperation, bSkipBlanks, bTransp
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 

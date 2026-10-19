@@ -18,28 +18,32 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiPage](../../ApiPage/ApiPage.md)
+[ApiPage](../../ApiPage/ApiPage.md) \| null \| undefined
 
 ## Example
 
-Identify the type classification of a table in a PDF.
+Find the page that contains a shape in a PDF.
 
 ```javascript editor-pdf
-// How can I determine what type a table is in a PDF?
+// How do I get the page number of a shape I'm viewing in a PDF?
 
-// Retrieve the object type information for any table in a PDF.
+// Locate which page an object belongs to in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const table = Api.CreateTable(2, 4);
-const row = table.GetRow(0);
-const cell = row.GetCell(0);
-const content = cell.GetContent();
-const paragraph = Api.CreateParagraph();
-const classType = table.GetClassType();
-paragraph.AddText("Class type: " + classType);
-content.Push(paragraph);
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(150 * 36000, 65 * 36000);
 
-page.AddObject(table);
+page.AddObject(shape);
+
+const parentPage = shape.GetParentPage();
+const sType = parentPage.GetClassType();
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("The index of the shape parent page = " + parentPage.GetIndex());
 ```

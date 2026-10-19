@@ -15,6 +15,32 @@ customization 部分定义编辑器自定义参数。
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
 :::
 
+## ai
+
+**类型**：`object`
+
+编辑器中 AI 功能的设置。
+
+:::tip
+如需在管理面板中为所有用户连接 AI 提供商，或为整个服务器关闭 AI，请参阅[为所有用户配置 AI 提供商](/docs/ai/guides/server-ai-providers.md)。
+:::
+
+**示例**：
+
+```ts
+{
+  disabled: true,
+}
+```
+
+### ai.disabled
+
+**类型**：`boolean` | **默认值**：`false`
+
+是否禁用编辑器中的 AI 功能。如果设置为 `true`，则隐藏 **AI 工具**。这是将 [AI 插件](../../../../../ai/guides/ai-plugin.md)标识符（`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`）添加到 [editorConfig.plugins.disable](../plugins.md#disable) 列表的快捷方式。
+
+**示例**：`true`
+
 ## 匿名 {#anonymous}
 
 **类型**：`object`
@@ -654,7 +680,6 @@ customization 部分定义编辑器自定义参数。
 
 移动文档编辑器设置。
 
-
 **示例**：
 
 ```ts
@@ -735,8 +760,6 @@ customization 部分定义编辑器自定义参数。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.review.hoverMode` 和 `editorConfig.customization.review.reviewDisplay` 参数发送的任何值。
-
-[showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 `review` 参数。
 :::
 
 **示例**：
@@ -822,28 +845,6 @@ customization 部分定义编辑器自定义参数。
 - *Group2* 的用户可以接受/拒绝 *Group1* 和 *Group2* 用户所做的审阅更改；
 - *Group3* 的用户可以接受/拒绝不属于任何组的用户所做的审阅更改。
 
-## reviewDisplay
-
-**类型**：`"markup" | "simple" | "final" | "original"`
- 
- 文档编辑器中的审阅编辑模式。此参数可以采用以下值：
-
-- `markup` - 显示文档并突出显示建议的更改；
-- `simple` - 显示文档并突出显示建议的更改，但气球已关闭；
-- `final` - 显示文档并应用所有建议的更改；
-- `original` - 显示原始文档，没有建议的更改。
-
-查看器的默认值是 `original`，编辑器的默认值是 `markup`。
-
-:::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.reviewDisplay` 参数发送的任何值。
-:::
-:::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.reviewDisplay](#reviewreviewdisplay) 参数。
-:::
-
-**示例**：`"original"`
-
 ## showHorizontalScroll
 
 **类型**：`boolean` | **默认值**：`true`
@@ -851,18 +852,6 @@ customization 部分定义编辑器自定义参数。
 在加载电子表格编辑器时是否自动显示或隐藏水平滚动条。
 
 **示例**：`true`
-
-## showReviewChanges
-
-**类型**：`boolean` | **默认值**：`false`
-
-在加载编辑器时是否自动显示或隐藏审阅更改面板。
-
-:::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.showReviewChanges](#reviewshowreviewchanges) 参数。
-:::
-
-**示例**：`false`
 
 ## showVerticalScroll
 
@@ -973,7 +962,6 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 当 [compactHeader](#compactheader) 参数设置为 `true` 时使用此设置。
 :::
 
-
 **示例**：`false`
 
 ![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png#gh-light-mode-only)![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.dark.png#gh-dark-mode-only)
@@ -989,18 +977,6 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 :::
 
 **示例**：`false`
-
-## trackChanges
-
-**类型**：`boolean`
-
-是否为当前用户启用审阅编辑模式。此参数会覆盖 [document.permissions.review](../../document/permissions.md#review)。如果设置为 `true`，启用审阅模式。如果设置为 `false`，禁用审阅模式。如果为 `undefined`，则使用 `document.permissions.review` 值。
-
-:::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.trackChanges](#reviewtrackchanges) 参数。
-:::
-
-**示例**：`true`
 
 ## uiTheme
 
@@ -1073,6 +1049,9 @@ const config = {
   editorConfig: {
     // ...
     customization: {
+      ai: {
+        disabled: false,
+      },
       anonymous: {
         request: true,
         label: "Elizabeth",

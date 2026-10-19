@@ -18,18 +18,19 @@ expression.GetFieldByName(name);
 
 ## 返回值
 
-[ApiField](../../Enumeration/ApiField.md)
+[ApiField](../../Enumeration/ApiField.md) \| null \| undefined
 
 ## 示例
 
 按名称在 PDF 中查找特定表单字段。
 
 ```javascript editor-pdf
-// How do I search for a field using its assigned name in a PDF?
+// Useful for searching for a field using its assigned name in a PDF.
 
 // Retrieve a field and set its value by name in a PDF.
 
 let doc = Api.GetDocument();
+doc.AddPage(0);
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
 page.AddObject(textField);

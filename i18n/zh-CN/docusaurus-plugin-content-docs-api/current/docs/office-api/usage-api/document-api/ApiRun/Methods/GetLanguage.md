@@ -18,7 +18,7 @@ expression.GetLanguage();
 
 ## 返回值
 
-string
+string \| null \| undefined
 
 ## 示例
 

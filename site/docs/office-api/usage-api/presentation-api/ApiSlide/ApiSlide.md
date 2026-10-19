@@ -25,6 +25,7 @@ The following table lists the available methods.
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide. |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array with all tables from the current slide. |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Returns the background fill of the current presentation slide. |
 | [GetClassType](./Methods/GetClassType.md) | "slide" | Returns the type of the ApiSlide class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the slide height in English measure units. |
@@ -32,14 +33,16 @@ The following table lists the available methods.
 | [GetNotesPage](./Methods/GetNotesPage.md) | [ApiNotesPage](../ApiNotesPage/ApiNotesPage.md) \| null | Returns the notes page from the current slide. |
 | [GetSlideIndex](./Methods/GetSlideIndex.md) | number | Returns a position of the current slide in the presentation. |
 | [GetSlideShowTransition](./Methods/GetSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) \| null | Returns the slide show transition of the current slide. |
-| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) | Returns a theme of the current slide. |
+| [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the current slide. |
 | [GetTimeLine](./Methods/GetTimeLine.md) | [ApiTimeLine](../ApiTimeLine/ApiTimeLine.md) | Returns the animation timeline for the slide. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the visibility of the current presentation slide. |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | Returns a visitor object for traversing the drawings, speaker notes and text of the current slide. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the slide width in English measure units. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide. |
 | [MoveTo](./Methods/MoveTo.md) | boolean | Moves the current slide to a specific location within the same collection. |
 | [RemoveAllObjects](./Methods/RemoveAllObjects.md) | None | Removes all the objects from the current slide. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide. |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | Searches for the specified text within the current slide and returns all found occurrences as text ranges. |
 | [Select](./Methods/Select.md) | None | Selects the current slide. |
 | [SetBackground](./Methods/SetBackground.md) | boolean | Sets the background to the current presentation slide. |
 | [SetSlideShowTransition](./Methods/SetSlideShowTransition.md) | boolean | Sets the slide show transition to the current slide. |

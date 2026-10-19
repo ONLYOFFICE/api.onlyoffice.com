@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/enums/Actions.ts
 ---
 
 # Actions
@@ -64,15 +64,17 @@ const message: IMessage = {
 updateStatus: "update-status";
 ```
 
-Calls a function to update the plugin status.
+Makes the portal re-read the plugin status through
+[`getStatus`](../interfaces/plugins/IPlugin.md#getstatus) and apply
+it: `active` registers the items of every scope the plugin declares and
+loads its CSS, `hide` unregisters them and unloads the CSS again.
 
 #### Example
 
 ```typescript
+// the plugin has just set its own status to PluginStatus.hide
 const message: IMessage = {
-  newProps: {...acceptButton, isDisabled: true},
-  actions: [Actions.showToast, Actions.updateProps, Actions.updateStatus],
-  toastProps,
+  actions: [Actions.updateStatus],
 }
 ```
 
@@ -169,6 +171,40 @@ Calls a function to update all the event listener items.
 ```typescript
 const message: IMessage = {
   actions: [Actions.updateEventListenerItems],
+}
+```
+
+### updateArticleNavigationItems
+
+```ts
+updateArticleNavigationItems: "update-article-navigation-items";
+```
+
+Calls a function to update all the article navigation items.
+The sidebar is refreshed, so a new "label" or "icon" set through
+"IArticleNavigationPlugin.updateArticleNavigationItem" becomes visible.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleNavigationItems],
+}
+```
+
+### updateArticleButtonItems
+
+```ts
+updateArticleButtonItems: "update-article-button-items";
+```
+
+Calls a function to update all the article button items.
+
+#### Example
+
+```typescript
+const message: IMessage = {
+  actions: [Actions.updateArticleButtonItems],
 }
 ```
 

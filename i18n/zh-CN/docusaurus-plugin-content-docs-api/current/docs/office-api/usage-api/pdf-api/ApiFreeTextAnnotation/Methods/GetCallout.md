@@ -16,7 +16,7 @@ expression.GetCallout();
 
 ## 返回值
 
-[FreeTextCallout](../../Enumeration/FreeTextCallout.md)
+[FreeTextCallout](../../Enumeration/FreeTextCallout.md) \| null \| undefined
 
 ## 示例
 

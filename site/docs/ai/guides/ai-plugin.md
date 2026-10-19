@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: 1
 ---
 
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
@@ -23,6 +23,10 @@ If you need to add it manually, download this plugin from the [ONLYOFFICE Plugin
 The plugin guid is `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 
 ## Configuring
+
+:::tip
+If your administrator has configured AI providers on the server, the **Settings** button is not shown and no setup is needed. See [Configuring AI providers for all users](server-ai-providers.md).
+:::
 
 To start using the plugin, you need to set up an AI provider:
 

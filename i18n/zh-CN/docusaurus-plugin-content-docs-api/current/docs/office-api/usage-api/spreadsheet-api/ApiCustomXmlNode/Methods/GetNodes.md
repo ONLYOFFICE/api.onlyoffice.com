@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 在电子表格中的 XML 结构内查找并收集匹配的子节点。
 
 ```javascript editor-xlsx
-// How do I search for specific nodes inside an XML tree in a spreadsheet?
+// Search for specific nodes inside an XML tree in a spreadsheet.
 
 // Gather a set of related XML nodes by their shared path in a spreadsheet.
 

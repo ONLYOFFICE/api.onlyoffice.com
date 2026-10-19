@@ -17,7 +17,7 @@ const templateProps: FeaturePageTemplate.Props = {
     </>,
     <>You can request a feature or report a bug by posting an issue on <a
       href='https://github.com/ONLYOFFICE/documentServer/issues'>GitHub</a>.</>,
-    <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/document-api/39'>ONLYOFFICE forum</a> (registration
+    <>You can also ask our developers on <a href='https://community.onlyoffice.com/c/document-api/39'>ONLYOFFICE forum</a> (registration
       required).</>,
   ],
   linkPrefix: DocsFeatures.linkPrefix,

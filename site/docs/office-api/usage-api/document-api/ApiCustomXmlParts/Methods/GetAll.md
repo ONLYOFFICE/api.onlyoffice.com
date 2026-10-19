@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 List every custom XML part stored in a document.
 
 ```javascript editor-docx
-// How do I retrieve all custom XML parts at once in a document?
+// Retrieve all custom XML parts at once in a document.
 
 // Iterate over every embedded XML part to audit or process stored data in a document.
 

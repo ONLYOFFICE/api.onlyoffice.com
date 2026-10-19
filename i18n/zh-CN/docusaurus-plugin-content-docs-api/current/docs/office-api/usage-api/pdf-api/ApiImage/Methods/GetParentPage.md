@@ -18,37 +18,32 @@ expression.GetParentPage();
 
 ## 返回值
 
-[ApiPage](../../ApiPage/ApiPage.md)
+[ApiPage](../../ApiPage/ApiPage.md) \| null \| undefined
 
 ## 示例
 
-识别 PDF 中图像是哪种对象类型。
+在 PDF 中查找包含形状的页面。
 
 ```javascript editor-pdf
-// How do I find out what kind of image object I'm working with in a PDF?
+// How do I get the page number of a shape I'm viewing in a PDF?
 
-// Retrieve the classification of an image element in a PDF.
+// Locate which page an object belongs to in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const image = Api.CreateImage(
-	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
-	60 * 36000, 60 * 36000
-);
-page.AddObject(image);
-
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
-const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape('flowChartMagneticTape', 150 * 36000, 65 * 36000, fill, stroke);
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
+shape.SetSize(150 * 36000, 65 * 36000);
 
-const docContent = shape.GetContent();
-const classType = image.GetClassType();
-const paragraph = docContent.GetElement(0);
-paragraph.SetJc('left');
-paragraph.AddText('Class Type = ' + classType);
 page.AddObject(shape);
+
+const parentPage = shape.GetParentPage();
+const sType = parentPage.GetClassType();
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("The index of the shape parent page = " + parentPage.GetIndex());
 ```

@@ -10,6 +10,7 @@ The following table lists the available methods.
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | string \| null | Adds a comment to the presentation. |
 | [AddOleObject](./Methods/AddOleObject.md) | None | Adds an OLE object to the current document position. |
+| [AnnotateParagraph](./Methods/AnnotateParagraph.md) | None | Adds annotations to the specified paragraph. |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | Applies a theme to the presentation by index or name. |
 | [ChangeComment](./Methods/ChangeComment.md) | boolean | Changes the specified comment. |
 | [CoAuthoringChatSendMessage](./Methods/CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
@@ -22,9 +23,10 @@ The following table lists the available methods.
 | [GetEditorThemes](./Methods/GetEditorThemes.md) | object[] | Returns the list of available editor themes. |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | Returns the fonts list. |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | Returns the image data from the first of the selected drawings. |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | Returns all the installed plugins. |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | Returns the document macros. |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | Returns the restrictions the editor currently applies to the document. |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | Returns the selected content in the specified format. |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | Returns an array of the selected OLE objects. |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Returns the selected text from the document. |
@@ -36,6 +38,7 @@ The following table lists the available methods.
 | [GoToSlide](./Methods/GoToSlide.md) | None | Sets the active slide in the editor by its index. |
 | [GoToSlideInSlideShow](./Methods/GoToSlideInSlideShow.md) | None | Displays the slide with the specific index. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
+| [InsertPresentationFromUrl](./Methods/InsertPresentationFromUrl.md) | number | Inserts slides from an external presentation referenced by URL into the current presentation. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
@@ -45,12 +48,17 @@ The following table lists the available methods.
 | [PasteText](./Methods/PasteText.md) | None | Pastes text into the document. |
 | [PauseSlideShow](./Methods/PauseSlideShow.md) | None | Pauses the current slide show. |
 | [PutImageDataToSelection](./Methods/PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. |
+| [RemoveAnnotationRange](./Methods/RemoveAnnotationRange.md) | None | Removes a specific annotation range from the presentation. |
 | [RemoveComments](./Methods/RemoveComments.md) | None | Removes the specified comments. |
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | None | Removes the OLE object from the presentation by its internal ID. |
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [ResumeSlideShow](./Methods/ResumeSlideShow.md) | None | Resumes the current slide show. |
+| [SelectAnnotationRange](./Methods/SelectAnnotationRange.md) | None | Selects text in a presentation using a given annotation. |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | None | Enables or disables the modal plugin footer button by index. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | boolean | Replaces all content of the specified paragraph with the content parsed from the given HTML string. Slide number and date fields and equations of the paragraph are kept as they are. |
+| [SetParagraphRangeHtml](./Methods/SetParagraphRangeHtml.md) | boolean | Replaces a part of the specified paragraph with the content parsed from the given HTML string. Slide number and date fields and equations of the paragraph are kept as they are. |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
@@ -73,6 +81,7 @@ The following table lists the available events.
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | The function called when the document is completely loaded. |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | The function called to turn the mouse or touchpad events on/off. |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | The function called when the floating action button has been clicked. |
 | [onSlideShowBegin](./Events/onSlideShowBegin.md) | The function called when a slide show presentation starts. |
 | [onSlideShowEnd](./Events/onSlideShowEnd.md) | The function called when a slide show presentation ends. |
 | [onSlideShowNextSlide](./Events/onSlideShowNextSlide.md) | The function called after a slide has been changed and displayed during a slide show presentation. Fires before the slide content is actually displayed. |

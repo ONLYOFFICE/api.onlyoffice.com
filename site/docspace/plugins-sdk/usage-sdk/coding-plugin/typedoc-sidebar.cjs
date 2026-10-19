@@ -132,6 +132,11 @@ const typedocSidebar = {
         },
         {
           "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IArticleNavigationItem",
+          "label": "IArticleNavigationItem"
+        },
+        {
+          "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem",
           "label": "IContextMenuItem"
         },
@@ -179,6 +184,11 @@ const typedocSidebar = {
           "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleButtonPlugin",
           "label": "IArticleButtonPlugin"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IArticleNavigationPlugin",
+          "label": "IArticleNavigationPlugin"
         },
         {
           "type": "doc",
@@ -239,6 +249,41 @@ const typedocSidebar = {
     },
     {
       "type": "category",
+      "label": "React",
+      "link": {
+        "type": "doc",
+        "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/index"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/actions",
+          "label": "PluginActions"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/api",
+          "label": "Api"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/hooks",
+          "label": "Hooks"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/runtime",
+          "label": "Runtime"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/react/settings",
+          "label": "PluginSettingsClient"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Enums",
       "link": {
         "type": "doc",
@@ -279,6 +324,11 @@ const typedocSidebar = {
           "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/Rooms",
           "label": "Rooms"
+        },
+        {
+          "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/Section",
+          "label": "Section"
         },
         {
           "type": "doc",

@@ -23,7 +23,7 @@ string
 读取演示文稿中 XML 元素的文本内容。
 
 ```javascript editor-pptx
-// How do I extract the value of an XML node in a presentation?
+// Extract the value of an XML node in a presentation.
 
 // Access the inner text of an XML element in a presentation.
 

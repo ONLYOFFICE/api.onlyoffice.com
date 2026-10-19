@@ -27,7 +27,7 @@ boolean
 向电子表格中存储的现有 XML 结构添加子元素。
 
 ```javascript editor-xlsx
-// How do I nest a new node inside an XML block already saved in a spreadsheet?
+// Nest a new node inside an XML block already saved in a spreadsheet.
 
 // Expand stored XML data by appending a new element at a chosen location in a spreadsheet.
 

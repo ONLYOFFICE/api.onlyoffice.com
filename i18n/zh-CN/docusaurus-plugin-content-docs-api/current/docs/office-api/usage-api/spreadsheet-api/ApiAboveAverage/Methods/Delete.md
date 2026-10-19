@@ -1,8 +1,6 @@
 # Delete
 
-删除当前格式条件。
-
-继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
+删除高于平均值条件格式规则。
 
 ## 语法
 
@@ -41,7 +39,7 @@ worksheet.GetRange("A6").SetValue(88);
 let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 let aboveAverageCondition = formatConditions.AddAboveAverage();
-aboveAverageCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
+aboveAverageCondition.GetFont().SetColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Before: " + formatConditions.GetCount() + " rules");
 aboveAverageCondition.Delete();

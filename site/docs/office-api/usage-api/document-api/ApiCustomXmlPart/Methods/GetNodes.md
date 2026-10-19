@@ -25,7 +25,7 @@ expression.GetNodes(xPath);
 Select XML nodes from a custom XML part using an XPath query in a document.
 
 ```javascript editor-docx
-// How do I retrieve specific nodes from a custom XML part in a document?
+// Retrieve specific nodes from a custom XML part in a document.
 
 // Extract node text and attributes to read structured data stored in a document.
 

@@ -11,13 +11,14 @@ PDF API 列出了插件在 ONLYOFFICE 文档中处理 PDF 文件时可以使用�
 | [CoAuthoringChatSendMessage](./Methods/CoAuthoringChatSendMessage.md) | 无 | 向协作聊天发送消息。 |
 | [EndAction](./Methods/EndAction.md) | 无 | 指定长时间操作的结束操作。 |
 | [FocusEditor](./Methods/FocusEditor.md) | 无 | 将焦点返回到编辑器。 |
-| [GetAllComments](./Methods/GetAllComments.md) | comment[] | 返回文档中的所有批注。 |
+| [GetAllComments](./Methods/GetAllComments.md) | [comment](./Enumeration/comment.md)[] | 返回文档中的所有批注。 |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | 返回当前页面索引。 |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
-| [GetPageImage](./Methods/GetPageImage.md) | canvas | 返回页面图像。 |
+| [GetPageImage](./Methods/GetPageImage.md) | string \| Object | 返回页面图像。 |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | 返回编辑器当前对文档应用的限制。 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 返回文档中的所选文本。 |
 | [GetVersion](./Methods/GetVersion.md) | string | 返回编辑器版本。 |
 | [GoToPage](./Methods/GoToPage.md) | boolean | 移动到指定页面。 |
@@ -50,4 +51,7 @@ PDF API 列出了插件在 ONLYOFFICE 文档中处理 PDF 文件时可以使用�
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | 当文档完全加载时调用的函数。 |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | 用于开启/关闭鼠标或触控板事件的函数。 |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | 当鼠标按钮在插件 iframe 外部释放时调用的函数。 |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | 单击浮动操作按钮时调用的函数。 |
+| [onSelectionCancel](./Events/onSelectionCancel.md) | 取消选择时调用的函数。 |
+| [onSelectionEnd](./Events/onSelectionEnd.md) | 选择结束时调用的函数。 |
 | [onTargetPositionChanged](./Events/onTargetPositionChanged.md) | 当编辑器中的目标位置发生更改时调用的函数。 |

@@ -20,6 +20,14 @@ Please note that prior to version 5.5, the `https://documentserver/ConvertServic
 In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the query string were used.
 :::
 
+:::note
+Starting from version 10.0, the conversion API can be turned off with the `services.CoAuthoring.server.convertServiceEnable` [server setting](../../get-started/configuration/server-config/server-config.md#server). In this case, the requests to the `https://documentserver/converter` address are rejected with the HTTP 403 status code. The conversions performed by the editors are not affected.
+:::
+
+:::tip
+Starting from version 10.0, you can also send the file itself in the request instead of its URL. See [File upload request](./request-from-file.md).
+:::
+
 ## Request parameters
 
 <APITable>

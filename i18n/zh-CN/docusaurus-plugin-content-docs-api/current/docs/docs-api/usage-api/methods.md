@@ -185,7 +185,7 @@ docEditor.insertImage({
 | options.history.changes       | `object` | 非必填的 | 保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
 | options.history.created       | `string` | 必填 | 文档版本创建日期。                                                                                                       |
 | options.history.key           | `string` | 必填 | 服务用来识别文档的唯一文档标识符。                                                             |
-| options.history.serverVersion | `number` | 非必填的 | 当前服务器版本号。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
+| options.history.serverVersion | `string` | 非必填的 | 保存更改的文档编辑服务的版本，例如 `"10.0.0"`。请原样传递[历史对象](./callback-handler.md#history)中的 `serverVersion` 值。仅当此值与当前服务器版本一致时，才会显示更改。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
 | options.history.user          | `object` | 非必填的 | 作为文档版本作者的用户。                                                                                      |
 | options.history.user.id       | `string` | 非必填的 | 作为文档版本作者的用户的标识符。                                                                    |
 | options.history.user.name     | `string` | 非必填的 | 作为文档版本作者的用户的名称                                                                          |
@@ -267,6 +267,16 @@ docEditor.insertImage({
 
   ``` ts
   docEditor.requestClose();
+  ```
+
+## requestRoles
+
+请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*开始填写*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
+
+使用此方法可以获取表单角色，而无需等待用户单击*开始填写*按钮。
+
+  ``` ts
+  docEditor.requestRoles();
   ```
 
 ## setActionLink
@@ -705,8 +715,24 @@ docEditor.insertImage({
 
 ## startFilling
 
-开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。
+开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
+
+:::note
+仅当声明了 [onStartFilling](./config/events.md#onstartfilling) 事件时，此方法才有效。否则，调用将被忽略。
+:::
 
   ``` ts
-  docEditor.startFilling();
+  docEditor.startFilling(disconnect);
+  ```
+
+**参数**：
+
+| 参数       | 类型      | 是否必填 | 描述 |
+| ---------- | --------- | -------- | ---- |
+| disconnect | `boolean` | 非必填 | 指定是否为所有正在编辑表单的用户锁定编辑：`true` 表示将所有协作编辑者切换到查看模式，并向他们显示表单正在填写中的警告；`false` 表示仅为当前用户锁定编辑。默认值为 `false`。 |
+
+**示例**：
+
+  ``` ts
+  docEditor.startFilling(true);
   ```

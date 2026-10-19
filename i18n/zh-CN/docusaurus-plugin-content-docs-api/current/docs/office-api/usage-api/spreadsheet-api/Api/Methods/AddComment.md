@@ -1,6 +1,6 @@
 # AddComment
 
-返回 ApiComment 对象的数组。
+向当前工作簿添加批注。
 
 ## 语法
 

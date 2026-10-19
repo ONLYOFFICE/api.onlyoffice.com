@@ -16,7 +16,7 @@ expression.MoveCursorOutside(isAfter);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
+| isAfter | Optional | boolean \| null \| undefined | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
 
 ## Returns
 

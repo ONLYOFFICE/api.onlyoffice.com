@@ -2,8 +2,6 @@
 
 Sets the number format applied to a cell when the conditional formatting rule evaluates to true.
 
-Inherited from [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md).
-
 ## Syntax
 
 ```javascript
@@ -16,7 +14,7 @@ expression.SetNumberFormat(NumberFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | Required | string |  | The number format code (e.g., "General", "#,##0.00", etc.) |
+| NumberFormat | Required | string |  | The number format code. |
 
 ## Returns
 

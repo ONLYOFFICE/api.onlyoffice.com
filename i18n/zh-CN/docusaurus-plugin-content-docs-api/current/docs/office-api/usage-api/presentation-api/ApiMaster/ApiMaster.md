@@ -21,15 +21,18 @@
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | 返回包含幻灯片母版中所有 OLE 对象的数组。 |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | 返回包含幻灯片母版中所有形状对象的数组。 |
 | [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回包含幻灯片母版中所有表格的数组。 |
+| [GetBackground](./Methods/GetBackground.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 返回当前幻灯片母版的背景填充。 |
 | [GetClassType](./Methods/GetClassType.md) | "master" | 返回 ApiMaster 类的类型。 |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | 按指定的占位符类型返回绘图数组。 |
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 按位置返回指定幻灯片母版的版式。 |
 | [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 返回与幻灯片母版的指定版式类型对应的版式。 |
 | [GetLayoutsCount](./Methods/GetLayoutsCount.md) | number | 返回版式对象的数量。 |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | 返回幻灯片母版的主题。 |
+| [GetVisitor](./Methods/GetVisitor.md) | [ApiPresentationVisitor](../ApiPresentationVisitor/ApiPresentationVisitor.md) | 返回用于遍历当前幻灯片母版（并可按需遍历其版式）的图形对象和文本的访问器对象。 |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | 在当前幻灯片母版中将绘图数组分组。 |
 | [RemoveLayout](./Methods/RemoveLayout.md) | boolean | 从当前幻灯片母版中删除版式。 |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | 从当前幻灯片母版中删除对象（图像、形状或图表）。 |
+| [Search](./Methods/Search.md) | [ApiTextRange](../ApiTextRange/ApiTextRange.md)[] | 在当前幻灯片母版中搜索指定文本，并将找到的所有匹配项作为文本范围返回。 |
 | [SetBackground](./Methods/SetBackground.md) | boolean | 设置当前幻灯片母版的背景。 |
 | [SetTheme](./Methods/SetTheme.md) | boolean | 为幻灯片母版设置主题。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiMaster 对象转换为 JSON 对象。 |

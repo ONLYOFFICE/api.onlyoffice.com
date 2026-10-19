@@ -18,6 +18,8 @@ Enumeration
 - "bg2"
 - "dk1"
 - "dk2"
+- "folHlink"
+- "hlink"
 - "lt1"
 - "lt2"
 - "tx1"

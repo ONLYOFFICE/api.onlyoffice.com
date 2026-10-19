@@ -2,8 +2,6 @@
 
 返回条件格式规则的优先级值。
 
-继承自 [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md)。
-
 ## 语法
 
 ```javascript

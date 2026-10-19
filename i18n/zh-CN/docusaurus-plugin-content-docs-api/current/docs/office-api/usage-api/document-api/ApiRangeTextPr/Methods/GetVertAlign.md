@@ -10,7 +10,7 @@
 expression.GetVertAlign();
 ```
 
-`expression` - A variable that represents an [ApiRangeTextPr](../ApiRangeTextPr.md) class.
+`expression` - 表示 [ApiRangeTextPr](../ApiRangeTextPr.md) 类的变量。
 
 ## 参数
 
@@ -18,7 +18,7 @@ expression.GetVertAlign();
 
 ## 返回值
 
-string
+string \| null \| undefined
 
 ## 示例
 

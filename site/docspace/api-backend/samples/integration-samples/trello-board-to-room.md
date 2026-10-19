@@ -95,7 +95,7 @@ def get_trello_board_name(board_id):
 
 ## Step 2: Create a DocSpace room
 
-Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room) to create a private collaboration room in DocSpace.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a private collaboration room in DocSpace.
 Retrieve metadata about the file attachments (name, ID, download URL) for further processing.
 
 ``` py

@@ -6,6 +6,10 @@ sidebar_position: -2
 
 The list of changes for ONLYOFFICE Desktop Editors API.
 
+## Version 10.0
+
+- Added the [--prefer-alternate-url](../usage-api/command-line-flags.md#flags) command-line flag for downloading updates from an alternate source on Windows.
+
 ## Version 9.2
 
 - Added support for [connecting MCP servers](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md) to extend AI capabilities with custom tools and integrations.

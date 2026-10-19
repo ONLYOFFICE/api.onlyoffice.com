@@ -4,8 +4,6 @@ Returns the background color for the format condition.
 
 Returns 'No Fill' when the background color of the format condition is null.
 
-Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
-
 ## Syntax
 
 ```javascript
@@ -44,7 +42,7 @@ let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 
 let aboveAvgCondition = formatConditions.AddAboveAverage();
-aboveAvgCondition.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
+aboveAvgCondition.SetFillColor(Api.RGB(255, 255, 0));
 
 let fillColor = aboveAvgCondition.GetFillColor();
 

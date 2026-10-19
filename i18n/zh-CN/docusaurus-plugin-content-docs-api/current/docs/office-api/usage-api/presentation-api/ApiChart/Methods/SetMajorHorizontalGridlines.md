@@ -14,7 +14,7 @@ expression.SetMajorHorizontalGridlines(oStroke);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建元素阴影的笔触。 |
+| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) \| null \| undefined |  | 用于创建元素阴影的笔触。 |
 
 ## 返回值
 
@@ -33,13 +33,13 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const chart = Api.CreateChart("bar3D", [
+const chart = Api.CreateChart("3DColumnClustered", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
-chart.SetHorAxisTitle("Year", 11);
-chart.SetTitle("Financial Overview", 13);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 20);
+chart.SetHorAxisTitle("Year", 22);
+chart.SetTitle("Financial Overview", 26);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 

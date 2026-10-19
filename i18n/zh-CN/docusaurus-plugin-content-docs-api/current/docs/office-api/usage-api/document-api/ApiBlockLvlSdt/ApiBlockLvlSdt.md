@@ -9,7 +9,7 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddCaption](./Methods/AddCaption.md) | boolean | 在当前内容控件之后（或之前）添加题注段落。 |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | 向当前块级内容控件添加批注。 |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null \| undefined | 向当前块级内容控件添加批注。 |
 | [AddElement](./Methods/AddElement.md) | boolean | 向当前容器添加段落、表格或块级内容控件。 |
 | [AddText](./Methods/AddText.md) | boolean | 向当前内容控件添加文本。 |
 | [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 创建块级内容控件的副本。 |
@@ -20,17 +20,19 @@
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 返回当前内容控件中的段落对象集合。 |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回给定绝对页面上的表格集合。 |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | 获取内容控件的可视化效果。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前内容控件的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前内容控件的边框颜色。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前内容控件的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前内容控件的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | 返回 ApiBlockLvlSdt 类的类型。 |
+| [GetColor](./Methods/GetColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | 返回内容控件的标签颜色。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回当前容器的内容。 |
-| [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | 检索内容控件的数据绑定。 |
+| [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) \| null \| undefined | 检索内容控件的数据绑定。 |
 | [GetDataForXmlMapping](./Methods/GetDataForXmlMapping.md) | string | 返回用于 XML 映射的内容控件数据。 |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | 返回组合框/下拉列表内容控件的值列表。 |
 | [GetId](./Methods/GetId.md) | string | 返回当前内容控件的唯一 ID。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前内容控件的内部 ID。 |
 | [GetLabel](./Methods/GetLabel.md) | number | 返回当前容器的标签属性。 |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | 返回当前容器的锁定类型。 |
+| [GetParent](./Methods/GetParent.md) | [ApiDocument](../ApiDocument/ApiDocument.md) \| [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null | 返回包含当前内容控件的文档内容。 |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | 返回包含当前内容控件的内容控件。 |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | 返回包含当前内容控件的表格。 |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | 返回包含当前内容控件的表格单元格。 |
@@ -49,6 +51,7 @@
 | [SetAppearance](./Methods/SetAppearance.md) | 无 | 设置内容控件的可视化效果。 |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前内容控件的背景颜色。 |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | 设置当前内容控件的边框颜色。 |
+| [SetColor](./Methods/SetColor.md) | boolean | 设置内容控件的标签颜色。 |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | 设置内容控件的数据绑定。 |
 | [SetId](./Methods/SetId.md) | 无 | 指定当前内容控件的唯一 ID。 |
 | [SetLabel](./Methods/SetLabel.md) | boolean | 设置当前容器的标签属性。 |

@@ -1,8 +1,6 @@
 # GetFont
 
-Returns the font applied by the current format condition.
-
-Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
+Returns the font formatting for the unique values conditional formatting rule.
 
 ## Syntax
 
@@ -18,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+[ApiFont](../../ApiFont/ApiFont.md)
 
 ## Example
 
@@ -42,7 +40,7 @@ let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 let font = uniqueValuesCondition.GetFont();
-font.SetColor(Api.CreateColorFromRGB(255, 0, 0));
+font.SetColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Font formatting applied");
 ```

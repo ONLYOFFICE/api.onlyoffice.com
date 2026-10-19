@@ -16,7 +16,7 @@ expression.GetDirection();
 
 ## 返回值
 
-[WatermarkDirection](../../Enumeration/WatermarkDirection.md)
+[WatermarkDirection](../../Enumeration/WatermarkDirection.md) \| null \| undefined
 
 ## 示例
 

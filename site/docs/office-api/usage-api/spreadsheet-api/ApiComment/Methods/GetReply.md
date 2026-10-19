@@ -18,7 +18,7 @@ expression.GetReply(nIndex);
 
 ## Returns
 
-[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md)
+[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md) \| null \| undefined
 
 ## Example
 

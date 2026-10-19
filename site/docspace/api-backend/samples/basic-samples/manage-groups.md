@@ -203,7 +203,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Create a group
 
-A POST request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/add-group) with:
+A POST request is sent to [/api/2.0/group](/docspace/api-backend/usage-api/group/add-group) with:
 
 - `groupName`: A new group name.
 - `groupManager`: The user ID of the group manager.
@@ -257,7 +257,7 @@ The API returns a group ID, which is required for further operations.
 
 ## Step 2: Retrieve a group by ID
 
-A GET request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/get-group) to fetch group details.
+A GET request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/get-group) to fetch group details.
 
 The response includes the group's information.
 
@@ -301,7 +301,7 @@ This step ensures that the group exists before making any updates or deletions.
 
 ## Step 3: Update a group
 
-A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/update-group).
+A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/update-group).
 
 The request updates the group details and returns a confirmation if successful.
 
@@ -351,7 +351,7 @@ This step simulates renaming or modifying the existing group's properties.
 
 ## Step 4: Delete a group
 
-A DELETE request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/delete-group).
+A DELETE request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/group/delete-group).
 
 The response confirms the deletion, ensuring that the group no longer appears in the list of groups.
 

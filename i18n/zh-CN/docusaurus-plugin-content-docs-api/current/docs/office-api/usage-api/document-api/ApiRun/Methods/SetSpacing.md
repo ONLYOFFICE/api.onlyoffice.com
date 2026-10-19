@@ -2,10 +2,12 @@
 
 设置以二十分之一磅为单位测量的文本间距。
 
+继承自 [ApiTextPr.SetSpacing](../../ApiTextPr/Methods/SetSpacing.md)。
+
 ## 语法
 
 ```javascript
-expression.SetSpacing(nSpacing);
+expression.SetSpacing(spacing);
 ```
 
 `expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
@@ -14,7 +16,7 @@ expression.SetSpacing(nSpacing);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSpacing | 必需 | [twips](../../Enumeration/twips.md) |  | 以二十分之一磅（1/1440 英寸）为单位测量的文本间距值。 |
+| spacing | 必需 | [twips](../../Enumeration/twips.md) \| null |  | 文本间距值，以二十分之一磅（1/1440 英寸）为单位。传递 *null* 可移除文本间距。 |
 
 ## 返回值
 

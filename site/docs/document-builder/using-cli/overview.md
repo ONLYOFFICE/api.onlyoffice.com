@@ -35,6 +35,13 @@ Visit the [Script file](./script-file.md) section for more information about fil
 For examples of using Document Builder CLI on servers with different programming languages (C#, Node.js, PHP, Ruby), see the [document-builder-integration](https://github.com/ONLYOFFICE/document-builder-integration) repository.
 :::
 
+## Other ways to run scripts
+
+The same script file can also be run without the CLI. The script syntax, including the **builder** and **builderJS** objects, stays the same:
+
+- [Document Builder API](../../docs-api/additional-api/document-builder-api.md). ONLYOFFICE Docs runs the script with the same Document Builder executable. Files opened with `OpenFile` must be specified as absolute URLs, not local paths.
+- [Builder Framework](../builder-framework/overview.md). The [Run](../builder-framework/CDocBuilder/Run.md) method runs a script file, and the [RunText](../builder-framework/CDocBuilder/RunText.md), [RunTextA](../builder-framework/CDocBuilder/RunTextA.md), and [RunTextW](../builder-framework/CDocBuilder/RunTextW.md) methods run the script text passed as a string.
+
 ## builder vs builderJS
 
 There are two objects available for working with documents. Both provide access to [CDocBuilder](../builder-framework/CDocBuilder/CDocBuilder.md) methods, but they differ in how they handle JavaScript variables.

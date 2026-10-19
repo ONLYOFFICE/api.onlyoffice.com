@@ -19,7 +19,7 @@ expression.FREQUENCY(arg1, arg2);
 
 ## 返回值
 
-number
+number[][]
 
 ## 示例
 

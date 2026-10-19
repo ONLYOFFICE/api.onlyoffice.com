@@ -1,6 +1,6 @@
 # TransitionSpeed
 
-The available slide transition speed values (similar to PowerPoint VBA ppTransitionSpeed).
+The available slide transition speed values.
 
 ## Type
 

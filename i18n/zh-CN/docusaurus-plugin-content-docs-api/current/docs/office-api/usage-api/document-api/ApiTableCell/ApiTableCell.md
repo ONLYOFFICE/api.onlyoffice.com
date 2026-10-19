@@ -15,7 +15,7 @@ ApiTableCell 是 [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) 的子类
 | [AddRows](./Methods/AddRows.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | 向当前表格添加新行。 |
 | [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | 将文本追加到单元格内容的末尾。 |
 | [Clear](./Methods/Clear.md) | boolean | 清除当前单元格的内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前表格单元格的背景颜色。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| null \| undefined | 返回当前表格单元格的背景颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "tableCell" | 返回 ApiTableCell 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回当前单元格的内容。 |
 | [GetIndex](./Methods/GetIndex.md) | Number | 返回当前单元格的索引。 |

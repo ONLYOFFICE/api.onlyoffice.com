@@ -7,7 +7,7 @@ Inherited from [ApiParaPr.SetLeftBorder](../../ApiParaPr/Methods/SetLeftBorder.m
 ## Syntax
 
 ```javascript
-expression.SetLeftBorder(sType, nSize, nSpace, r, g, b);
+expression.SetLeftBorder(type, size, space, color);
 ```
 
 `expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
@@ -16,12 +16,10 @@ expression.SetLeftBorder(sType, nSize, nSpace, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current left border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset to the left of the paragraph measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| type | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
+| size | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current left border measured in eighths of a point. |
+| space | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset to the left of the paragraph measured in points used to place this border. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
 
 ## Returns
 
@@ -42,5 +40,5 @@ paragraph.AddText("This is the first paragraph. We will add a two point orange b
 paragraph.AddText("The space between the left side of the paragraph and the border is 8 points. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-paragraph.SetLeftBorder("single", 16, 8, 255, 111, 61);
+paragraph.SetLeftBorder("single", 16, 8, Api.Color(255, 111, 61));
 ```

@@ -2,8 +2,6 @@
 
 Returns the range of cells to which the current conditional formatting rule applies.
 
-Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
-
 ## Syntax
 
 ```javascript
@@ -18,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+[ApiRange](../../ApiRange/ApiRange.md)
 
 ## Example
 

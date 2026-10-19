@@ -9,7 +9,7 @@ Specifies the alignment which will be applied to the contents of the run in rela
 ## Syntax
 
 ```javascript
-expression.SetVertAlign(sType);
+expression.SetVertAlign(type);
 ```
 
 `expression` - A variable that represents an [ApiTextPr](../ApiTextPr.md) class.
@@ -18,7 +18,7 @@ expression.SetVertAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
+| type | Required | "baseline" \| "subscript" \| "superscript" \| null |  | The vertical alignment type applied to the text contents. Pass *null* to remove the vertical alignment. |
 
 ## Returns
 

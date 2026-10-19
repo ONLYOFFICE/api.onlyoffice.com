@@ -220,7 +220,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
 
 ## Step 1: Retrieve contents of "My Documents"
 
-A GET request is sent to [/api/2.0/files/@my](/docspace/api-backend/usage-api/get-my-folder).
+A GET request is sent to [/api/2.0/files/@my](/docspace/api-backend/usage-api/files/folders/get-my-folder).
 
 It returns a list of files and folders in the user's personal space.
 
@@ -264,7 +264,7 @@ It returns a list of files and folders in the user's personal space.
 
 ## Step 2: Upload a file to "My Documents"
 
-A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usage-api/upload-file-to-my) with the following parameter:
+A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usage-api/files/folders/upload-file-to-my) with the following parameter:
 
 - `file`: The file represented as binary data.
 
@@ -325,7 +325,7 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
 ## Step 3: Create an empty file in "My Documents"
 
-A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-api/create-file-in-my-documents) with the following parameter:
+A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-api/files/files/create-file-in-my-documents) with the following parameter:
 
 - `title`: The file title.
 
@@ -376,7 +376,7 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
 
 ## Step 4: Delete a file from "My Documents"
 
-A DELETE request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/delete-file).
+A DELETE request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/delete-file).
 
 The following parameters can be optionally defined:
 

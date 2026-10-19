@@ -2,6 +2,8 @@
 
 Sets the italic property to the text character.
 
+Inherited from [ApiTextPr.SetItalic](../../ApiTextPr/Methods/SetItalic.md).
+
 ## Syntax
 
 ```javascript

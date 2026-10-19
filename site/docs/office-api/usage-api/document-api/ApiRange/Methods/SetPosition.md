@@ -5,7 +5,7 @@ Specifies the amount by which text is raised or lowered for the current Range in
 ## Syntax
 
 ```javascript
-expression.SetPosition(nPosition);
+expression.SetPosition(position);
 ```
 
 `expression` - A variable that represents an [ApiRange](../ApiRange.md) class.
@@ -14,7 +14,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| position | Required | [hps](../../Enumeration/hps.md) \| null |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). Pass *null* to remove the position. |
 
 ## Returns
 

@@ -1,8 +1,6 @@
 # GetFont
 
-返回当前格式条件应用的字体。
-
-继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
+返回唯一值条件格式规则的字体格式。
 
 ## 语法
 
@@ -18,7 +16,7 @@ expression.GetFont();
 
 ## 返回值
 
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+[ApiFont](../../ApiFont/ApiFont.md)
 
 ## 示例
 
@@ -42,7 +40,7 @@ let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 let font = uniqueValuesCondition.GetFont();
-font.SetColor(Api.CreateColorFromRGB(255, 0, 0));
+font.SetColor(Api.RGB(255, 0, 0));
 
 worksheet.GetRange("C1").SetValue("Font formatting applied");
 ```

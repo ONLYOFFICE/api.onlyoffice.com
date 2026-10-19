@@ -1,8 +1,6 @@
 # Delete
 
-Deletes the current format condition.
-
-Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
+Deletes the icon set conditional formatting rule.
 
 ## Syntax
 

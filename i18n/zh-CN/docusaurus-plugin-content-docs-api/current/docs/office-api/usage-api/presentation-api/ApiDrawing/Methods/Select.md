@@ -25,7 +25,7 @@ boolean
 在演示文稿中选择和取消选择幻灯片上的形状。
 
 ```javascript editor-pptx
-// How do I select multiple shapes and replace the selection in a presentation?
+// Select multiple shapes and replace the selection in a presentation.
 
 // Create several shapes and choose them individually or add them to the selection in a presentation.
 

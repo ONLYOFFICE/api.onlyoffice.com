@@ -11,6 +11,7 @@ import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
 import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
 import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
+import UiKitIcon from "@site/static/icons/ui-kit-icon.svg";
 import {
   docsSections,
   docspaceSections,
@@ -37,6 +38,7 @@ const icons: Record<SectionId, ReactNode> = {
   'docspace-api': <DocSpaceApiIcon/>,
   'embed-sdk': <SdkIcon/>,
   'plugins-sdk': <PluginIcon/>,
+  'ui-kit': <UiKitIcon/>,
   'mcp-server': <MCPServerIcon/>,
   'workspace-api': <DocSpaceApiIcon/>,
   'workspace-hosting': <HostingIcon/>,

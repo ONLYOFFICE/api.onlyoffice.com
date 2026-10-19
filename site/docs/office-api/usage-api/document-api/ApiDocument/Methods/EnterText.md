@@ -5,7 +5,7 @@ Add text to the document on the cursor position.
 ## Syntax
 
 ```javascript
-expression.EnterText(sText);
+expression.EnterText(text);
 ```
 
 `expression` - A variable that represents an [ApiDocument](../ApiDocument.md) class.
@@ -14,7 +14,7 @@ expression.EnterText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text to add to document. |
+| text | Required | string |  | The text to add to document. |
 
 ## Returns
 

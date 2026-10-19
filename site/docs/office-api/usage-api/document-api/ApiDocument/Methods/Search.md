@@ -16,7 +16,7 @@ expression.Search(sText, isMatchCase);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | Search string. |
+| sText | Required | string \| RegExp |  | Search string, or a regular expression to match. When a RegExp is passed, the isMatchCase parameter is ignored (control case sensitivity with the "i" flag instead). |
 | isMatchCase | Required | boolean |  | Case sensitive or not. |
 
 ## Returns
@@ -25,12 +25,12 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-Search for all occurrences of a word and apply bold to one result in a document.
+Find text in a document by a string and by a regular expression, then bold the matches.
 
 ```javascript editor-docx
-// How do I find every match of a string and format a specific result in a document?
+// Combine a keyword lookup with a RegExp that matches every numbered label.
 
-// Collect search results by keyword and style the second match to highlight it in a document.
+// Bold the second keyword match, then bold each label found by the /№\d+/g expression.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,6 +38,11 @@ paragraph.AddText("This is paragraph №1.");
 paragraph = Api.CreateParagraph();
 paragraph.AddText("This is paragraph №2.");
 doc.Push(paragraph);
-let searchResults = doc.Search("paragraph");
-searchResults[1].SetBold(true);
+
+let byKeyword = doc.Search("paragraph");
+byKeyword[1].SetBold(true);
+
+let byRegExp = doc.Search(/№\d+/g);
+for (let index = 0; index < byRegExp.length; index++)
+	byRegExp[index].SetBold(true);
 ```

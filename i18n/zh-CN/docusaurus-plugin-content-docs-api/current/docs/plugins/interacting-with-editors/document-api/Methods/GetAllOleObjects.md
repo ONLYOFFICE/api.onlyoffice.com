@@ -16,7 +16,7 @@ expression.GetAllOleObjects(sPluginId);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPluginId | 必需 | string |  | 插件标识符。必须是 *asc.\{UUID\}* 类型。 |
+| sPluginId | 必需 | string \| null \| undefined |  | 插件标识符。必须是 *asc.\{UUID\}* 类型。 |
 
 ## 返回值
 

@@ -19,7 +19,7 @@ expression.OCT2BIN(arg1, arg2);
 
 ## Returns
 
-number
+string
 
 ## Example
 

@@ -23,7 +23,7 @@ expression.GetAll();
 获取演示文稿中的所有自定义 XML 部件。
 
 ```javascript editor-pptx
-// How do I retrieve all custom XML parts from a presentation?
+// Retrieve all custom XML parts from a presentation.
 
 // Display the count and content of each XML part in a presentation.
 

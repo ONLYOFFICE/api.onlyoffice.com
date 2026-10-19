@@ -25,7 +25,7 @@ expression.GetByNamespace(namespace);
 Retrieve all custom XML parts that match a specific namespace in a document.
 
 ```javascript editor-docx
-// How do I filter custom XML parts by namespace in a document?
+// Filter custom XML parts by namespace in a document.
 
 // Narrow down embedded XML data to only the parts belonging to a given namespace in a document.
 

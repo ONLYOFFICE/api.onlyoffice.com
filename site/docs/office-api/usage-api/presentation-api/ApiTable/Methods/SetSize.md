@@ -19,7 +19,7 @@ expression.SetSize(width, height);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 

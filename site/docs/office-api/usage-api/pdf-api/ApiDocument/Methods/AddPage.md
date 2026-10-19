@@ -14,7 +14,7 @@ expression.AddPage(index, width, height);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | Required | number |  | The index where the page will be added. |
+| index | Optional | number | this.GetPagesCount() | The index where the page will be added. |
 | width | Optional | [pt](../../Enumeration/pt.md) |  | The page width. |
 | height | Optional | [pt](../../Enumeration/pt.md) |  | The page height. |
 
@@ -32,5 +32,5 @@ Insert a new page into a document in a PDF.
 // Place additional pages at specific positions in a PDF.
 
 let doc = Api.GetDocument();
-doc.AddPage(1);
+doc.AddPage(0);
 ```

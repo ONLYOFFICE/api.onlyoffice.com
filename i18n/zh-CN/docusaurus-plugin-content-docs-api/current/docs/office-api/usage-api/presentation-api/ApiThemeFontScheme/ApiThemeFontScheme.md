@@ -10,6 +10,9 @@
 | ------ | ------- | ----------- |
 | [Copy](./Methods/Copy.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | 创建当前主题字体方案的副本。 |
 | [GetClassType](./Methods/GetClassType.md) | "themeFontScheme" | 返回 ApiThemeFontScheme 类的类型。 |
+| [GetMajorFont](./Methods/GetMajorFont.md) | string \| null \| undefined | 返回当前主题字体方案的主要主题字体。 |
+| [GetMinorFont](./Methods/GetMinorFont.md) | string \| null \| undefined | 返回当前主题字体方案的次要主题字体。 |
+| [GetSchemeName](./Methods/GetSchemeName.md) | string | 返回当前主题字体方案的名称。 |
 | [SetFonts](./Methods/SetFonts.md) | 无 | 为当前主题字体方案设置字体。 |
 | [SetSchemeName](./Methods/SetSchemeName.md) | boolean | 为当前主题字体方案设置名称。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiThemeFontScheme 对象转换为 JSON 对象。 |

@@ -25,7 +25,7 @@ boolean
 替换文档中嵌入的节点的完整 XML 标记。
 
 ```javascript editor-docx
-// How do I substitute an entire node's XML structure in the data stored in a document?
+// Substitute an entire node's XML structure in the data stored in a document.
 
 // Swap in revised markup for a node when its schema or content needs a full overhaul in a document.
 

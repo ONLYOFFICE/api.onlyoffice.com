@@ -2,8 +2,6 @@
 
 Returns the range of cells to which the current conditional formatting rule applies.
 
-Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
-
 ## Syntax
 
 ```javascript
@@ -18,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+[ApiRange](../../ApiRange/ApiRange.md)
 
 ## Example
 
@@ -41,7 +39,7 @@ worksheet.GetRange("A6").SetValue(85);
 let dataRange = worksheet.GetRange("A2:A6");
 let formatConditions = dataRange.GetFormatConditions();
 let aboveAverageCondition = formatConditions.AddAboveAverage();
-aboveAverageCondition.GetFont().SetColor(Api.CreateColorFromRGB(0, 128, 0));
+aboveAverageCondition.GetFont().SetColor(Api.RGB(0, 128, 0));
 
 let appliedRange = aboveAverageCondition.GetAppliesTo();
 worksheet.GetRange("C1").SetValue("Rule applies to:");

@@ -25,7 +25,7 @@ expression.GetCustomXmlParts();
 访问工作表上的自定义 XML 存储以在电子表格中添加和查找 XML 部件。
 
 ```javascript editor-xlsx
-// How do I store and retrieve custom XML data on a sheet in a spreadsheet?
+// Store and retrieve custom XML data on a sheet in a spreadsheet.
 
 // Manage structured XML content attached to a worksheet by adding a part and fetching it by ID in a spreadsheet.
 

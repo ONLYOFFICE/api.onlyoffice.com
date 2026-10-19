@@ -193,6 +193,6 @@ function insertFormattedText() {
 
 **需要帮助？**
 
-- [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
+- [开发者论坛](https://community.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
 - [常见问题](../more-information/faq.md) — 常见问题解答

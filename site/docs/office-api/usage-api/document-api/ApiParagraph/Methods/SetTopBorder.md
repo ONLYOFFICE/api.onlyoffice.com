@@ -11,7 +11,7 @@ Inherited from [ApiParaPr.SetTopBorder](../../ApiParaPr/Methods/SetTopBorder.md)
 ## Syntax
 
 ```javascript
-expression.SetTopBorder(sType, nSize, nSpace, r, g, b);
+expression.SetTopBorder(type, size, space, color);
 ```
 
 `expression` - A variable that represents an [ApiParagraph](../ApiParagraph.md) class.
@@ -20,12 +20,10 @@ expression.SetTopBorder(sType, nSize, nSpace, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current top border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset above the paragraph measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| type | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
+| size | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current top border measured in eighths of a point. |
+| space | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset above the paragraph measured in points used to place this border. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The border color. |
 
 ## Returns
 
@@ -43,5 +41,5 @@ Draw a visible line above a paragraph to separate it from the content above in a
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the first paragraph. We will add a thick orange border above it.");
-paragraph.SetTopBorder("single", 24, 0, 255, 111, 61);
+paragraph.SetTopBorder("single", 24, 0, Api.Color(255, 111, 61));
 ```

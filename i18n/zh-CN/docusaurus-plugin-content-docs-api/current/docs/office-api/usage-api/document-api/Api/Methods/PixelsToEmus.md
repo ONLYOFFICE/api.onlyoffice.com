@@ -19,3 +19,21 @@ expression.PixelsToEmus(px);
 ## 返回值
 
 number
+
+## 示例
+
+将像素值转换为英制度量单位并在文档中显示结果。
+
+```javascript editor-docx
+// How do I find the English metric unit equivalent of a pixel measurement in a document?
+
+// Show the English metric unit value that matches a given number of pixels in a document.
+
+const doc = Api.GetDocument();
+const paragraph = Api.CreateParagraph();
+
+const pixels = 1080;
+const emus = Api.PixelsToEmus(pixels);
+paragraph.AddText(pixels + ' pixels are equal to ' + emus + ' english metric units.');
+doc.Push(paragraph);
+```

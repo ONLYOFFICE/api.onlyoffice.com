@@ -12,9 +12,9 @@
 | [GetColumnsCount](./Methods/GetColumnsCount.md) | number | 返回此节中的列数。 |
 | [GetColumnsSpaces](./Methods/GetColumnsSpaces.md) | [twips](../Enumeration/twips.md)[] | 返回列之间的距离值数组，以点的二十分之一为单位（1/1440 英寸）。 |
 | [GetColumnsWidths](./Methods/GetColumnsWidths.md) | [twips](../Enumeration/twips.md)[] | 返回列宽值数组，以点的二十分之一为单位（1/1440 英寸）。 |
-| [GetFooter](./Methods/GetFooter.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回指定页脚类型的内容。 |
+| [GetFooter](./Methods/GetFooter.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | 返回指定页脚类型的内容。 |
 | [GetFooterDistance](./Methods/GetFooterDistance.md) | [twips](../Enumeration/twips.md) | 返回从页面底边到页脚底边的距离。 |
-| [GetHeader](./Methods/GetHeader.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回指定页眉类型的内容。 |
+| [GetHeader](./Methods/GetHeader.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) \| null \| undefined | 返回指定页眉类型的内容。 |
 | [GetHeaderDistance](./Methods/GetHeaderDistance.md) | [twips](../Enumeration/twips.md) | 返回从页面顶边到页眉顶边的距离。 |
 | [GetNext](./Methods/GetNext.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | 返回下一节（如果存在）。 |
 | [GetPageHeight](./Methods/GetPageHeight.md) | [twips](../Enumeration/twips.md) | 获取当前节的页面高度。 |

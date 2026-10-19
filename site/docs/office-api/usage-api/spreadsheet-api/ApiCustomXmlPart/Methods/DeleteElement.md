@@ -25,7 +25,7 @@ boolean
 Remove a child element from stored XML data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I cut out an unwanted XML node from custom data saved in a spreadsheet?
+// Cut out an unwanted XML node from custom data saved in a spreadsheet.
 
 // Prune a specific branch of an XML structure to keep only the relevant content in a spreadsheet.
 

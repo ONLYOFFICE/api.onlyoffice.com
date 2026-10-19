@@ -25,7 +25,7 @@ boolean
 向 XML 元素写入可读文本以更新电子表格中的内容。
 
 ```javascript editor-xlsx
-// How do I change the text inside an XML node in a spreadsheet?
+// Change the text inside an XML node in a spreadsheet.
 
 // Store a new text value inside an existing XML entry in a spreadsheet.
 

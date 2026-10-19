@@ -2,6 +2,10 @@
 
 Sets button widget layout type
 
+:::note
+For signature field can't set "textOnly" layout
+:::
+
 ## Syntax
 
 ```javascript

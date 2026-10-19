@@ -1,10 +1,6 @@
 # SetFillColor
 
-Sets the background color to the format condition with the previously created color object.
-
-Sets 'No Fill' when previously created color object is null.
-
-Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md).
+Sets the fill color for the unique values conditional formatting rule.
 
 ## Syntax
 
@@ -18,7 +14,7 @@ expression.SetFillColor(oColor);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object that specifies the background color for the format condition. |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The fill color to apply. |
 
 ## Returns
 
@@ -45,7 +41,7 @@ let range = worksheet.GetRange("A2:A5");
 let formatConditions = range.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
-uniqueValuesCondition.SetFillColor(Api.CreateColorFromRGB(0, 255, 0));
+uniqueValuesCondition.SetFillColor(Api.RGB(0, 255, 0));
 
 worksheet.GetRange("C1").SetValue("Fill color set to green");
 ```

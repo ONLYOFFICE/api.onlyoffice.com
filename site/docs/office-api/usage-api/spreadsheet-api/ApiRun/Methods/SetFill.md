@@ -2,6 +2,8 @@
 
 Sets the text color to the current text run.
 
+Inherited from [ApiTextPr.SetFill](../../ApiTextPr/Methods/SetFill.md).
+
 ## Syntax
 
 ```javascript

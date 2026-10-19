@@ -26,13 +26,13 @@ string \| null
 从电子表格中的 XML 元素读取命名属性的值。
 
 ```javascript editor-xlsx
-// How do I look up what a specific attribute on an XML node is set to in a spreadsheet?
+// Look up what a specific attribute on an XML node is set to in a spreadsheet.
 
 // Extract configuration data stored as an XML attribute for use in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
-let xml = xmlManager.Add("<config version='1.0' xmlns='http://example'><setting>value</setting></config>");
+let xml = xmlManager.Add("<config version='1.0' xmlns='http://example.com'><setting>value</setting></config>");
 let rootNodes = xml.GetNodes('/config');
 if (rootNodes.length > 0) {
     let version = rootNodes[0].GetAttribute('version');

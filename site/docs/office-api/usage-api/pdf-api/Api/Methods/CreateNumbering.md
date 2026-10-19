@@ -19,7 +19,7 @@ expression.CreateNumbering(numType, startAt);
 
 ## Returns
 
-[ApiBullet](../../ApiBullet/ApiBullet.md)
+[ApiBullet](../../ApiBullet/ApiBullet.md) \| null \| undefined
 
 ## Example
 

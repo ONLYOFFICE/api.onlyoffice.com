@@ -5,7 +5,7 @@ Creates a theme color.
 ## Syntax
 
 ```javascript
-expression.ThemeColor(name);
+expression.ThemeColor(name, tintAndShade);
 ```
 
 `expression` - A variable that represents an [Api](../Api.md) class.
@@ -15,6 +15,7 @@ expression.ThemeColor(name);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | name | Optional | [SchemeColorId](../../Enumeration/SchemeColorId.md) | "tx1" | The theme color name. If the provided name is not supported, the 'tx1' color will be used. |
+| tintAndShade | Optional | number | 0 | The luminance shift from -1 (the darkest shade) to 1 (the lightest tint). 0 keeps the theme color as it is. |
 
 ## Returns
 

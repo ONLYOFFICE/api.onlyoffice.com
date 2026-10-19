@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetShd(shadingType, r, g, b);
+expression.SetShd(shd);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,10 +14,7 @@ expression.SetShd(shadingType, r, g, b);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shadingType | 必需 | [ShdType](../../Enumeration/ShdType.md) \| [ApiFill](../../ApiFill/ApiFill.md) |  | 要应用的底纹类型或填充。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+| shd | 必需 | [ApiShd](../../ApiShd/ApiShd.md) |  | 使用 Api.CreateShd 方法创建的底纹。 |
 
 ## 返回值
 
@@ -36,7 +33,7 @@ const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
 const table = Api.CreateTable(2, 4);
-table.SetShd("clear", 255, 111, 61);
+table.SetShd(Api.CreateShd("clear", Api.Color(255, 111, 61)));
 
 page.AddObject(table);
 ```

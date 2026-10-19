@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTimeUTC(nTimeStamp);
+expression.SetTimeUTC(timeStamp);
 ```
 
 `expression` - 表示 [ApiComment](../ApiComment.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nTimeStamp | 必需 | Number \| String |  | 批注创建时间戳（UTC 格式）。 |
+| timeStamp | 必需 | Number \| String |  | 批注创建时间戳（UTC 格式）。 |
 
 ## 返回值
 

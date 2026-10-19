@@ -1,6 +1,6 @@
 # GetRect
 
-Sets annotation rect.
+Gets annotation rect.
 
 Inherited from [ApiBaseAnnotation.GetRect](../../ApiBaseAnnotation/Methods/GetRect.md).
 

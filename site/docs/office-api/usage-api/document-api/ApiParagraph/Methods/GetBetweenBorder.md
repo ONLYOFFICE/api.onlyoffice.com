@@ -32,7 +32,7 @@ Retrieve the between border settings applied to a paragraph style in a document.
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();
-paraPr.SetBetweenBorder("single", 24, 0, 255, 111, 61);
+paraPr.SetBetweenBorder("single", 24, 0, Api.Color(255, 111, 61));
 let border = paraPr.GetBetweenBorder();
 let paragraph = doc.GetElement(0);
 paragraph.SetStyle(myStyle);

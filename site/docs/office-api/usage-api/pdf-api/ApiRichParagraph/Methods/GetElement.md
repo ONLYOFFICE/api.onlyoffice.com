@@ -18,7 +18,7 @@ expression.GetElement(pos);
 
 ## Returns
 
-[ApiRichRun](../../ApiRichRun/ApiRichRun.md)
+[ApiRichRun](../../ApiRichRun/ApiRichRun.md) \| null \| undefined
 
 ## Example
 

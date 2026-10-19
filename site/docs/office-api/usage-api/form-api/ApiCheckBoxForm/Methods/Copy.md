@@ -18,7 +18,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiForm](../../Enumeration/ApiForm.md)
+[ApiForm](../../Enumeration/ApiForm.md) \| null \| undefined
 
 ## Example
 

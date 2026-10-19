@@ -27,7 +27,7 @@ string \| null
 从嵌入在电子表格中的 XML 节点读取单个命名属性。
 
 ```javascript editor-xlsx
-// How do I extract the value of a specific attribute from a custom XML element in a spreadsheet?
+// Extract the value of a specific attribute from a custom XML element in a spreadsheet.
 
 // Pull individual attribute values out of stored XML data and display them in a spreadsheet.
 

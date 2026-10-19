@@ -10,6 +10,7 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | string \| null | 向演示文稿添加批注。 |
 | [AddOleObject](./Methods/AddOleObject.md) | 无 | 在当前文档位置添加 OLE 对象。 |
+| [AnnotateParagraph](./Methods/AnnotateParagraph.md) | 无 | 向指定的段落添加注解。 |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | 通过索引或名称将主题应用于演示文稿。 |
 | [ChangeComment](./Methods/ChangeComment.md) | boolean | 更改指定的批注。 |
 | [CoAuthoringChatSendMessage](./Methods/CoAuthoringChatSendMessage.md) | 无 | 向协作聊天发送消息。 |
@@ -22,9 +23,10 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [GetEditorThemes](./Methods/GetEditorThemes.md) | object[] | 返回可用编辑器主题的列表。 |
 | [GetFileToDownload](./Methods/GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./Methods/GetFontList.md) | [FontInfo](./Enumeration/FontInfo.md)[] | 返回字体列表。 |
-| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。 |
+| [GetImageDataFromSelection](./Methods/GetImageDataFromSelection.md) | [ImageData](./Enumeration/ImageData.md) \| null \| undefined | 返回所选图形中第一个图形的图像数据。 |
 | [GetInstalledPlugins](./Methods/GetInstalledPlugins.md) | [PluginData](./Enumeration/PluginData.md)[] | 返回所有已安装的插件。 |
 | [GetMacros](./Methods/GetMacros.md) | [Macros](./Enumeration/Macros.md) | 返回文档宏。 |
+| [GetRestrictions](./Methods/GetRestrictions.md) | [EditorRestrictions](./Enumeration/EditorRestrictions.md) | 返回编辑器当前对文档应用的限制。 |
 | [GetSelectedContent](./Methods/GetSelectedContent.md) | string | 以指定格式返回所选内容。 |
 | [GetSelectedOleObjects](./Methods/GetSelectedOleObjects.md) | [OLEProperties](./Enumeration/OLEProperties.md)[] | 返回所选 OLE 对象的数组。 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 返回文档中的所选文本。 |
@@ -36,6 +38,7 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [GoToSlide](./Methods/GoToSlide.md) | 无 | 通过索引在编辑器中设置活动幻灯片。 |
 | [GoToSlideInSlideShow](./Methods/GoToSlideInSlideShow.md) | 无 | 显示具有特定索引的幻灯片。 |
 | [InputText](./Methods/InputText.md) | 无 | 向文档中插入文本。 |
+| [InsertPresentationFromUrl](./Methods/InsertPresentationFromUrl.md) | number | 将通过 URL 引用的外部演示文稿中的幻灯片插入到当前演示文稿中。 |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [MouseMoveWindow](./Methods/MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
@@ -45,12 +48,17 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [PasteText](./Methods/PasteText.md) | 无 | 将文本粘贴到文档中。 |
 | [PauseSlideShow](./Methods/PauseSlideShow.md) | 无 | 暂停当前幻灯片放映。 |
 | [PutImageDataToSelection](./Methods/PutImageDataToSelection.md) | 无 | 用参数中指定的图像替换第一个选定的图形。 |
+| [RemoveAnnotationRange](./Methods/RemoveAnnotationRange.md) | 无 | 从演示文稿中移除特定的批注范围。 |
 | [RemoveComments](./Methods/RemoveComments.md) | 无 | 删除指定的批注。 |
 | [RemoveOleObject](./Methods/RemoveOleObject.md) | 无 | 通过内部 ID 从演示文稿中删除 OLE 对象。 |
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | 删除具有指定 GUID 的插件。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选定内容中的每个段落（或单元格中的文本）。 |
 | [ResumeSlideShow](./Methods/ResumeSlideShow.md) | 无 | 恢复当前幻灯片放映。 |
+| [SelectAnnotationRange](./Methods/SelectAnnotationRange.md) | 无 | 使用给定批注在演示文稿中选择文本。 |
+| [SetButtonDisabled](./Methods/SetButtonDisabled.md) | 无 | 按索引启用或禁用模态插件的页脚按钮。 |
 | [SetMacros](./Methods/SetMacros.md) | 无 | 为文档设置宏。 |
+| [SetParagraphHtml](./Methods/SetParagraphHtml.md) | boolean | 用从给定 HTML 字符串解析的内容替换指定段落的全部内容。段落中的幻灯片编号和日期字段以及公式将保持不变。 |
+| [SetParagraphRangeHtml](./Methods/SetParagraphRangeHtml.md) | boolean | 用从给定 HTML 字符串解析的内容替换指定段落的一部分。段落中的幻灯片编号和日期字段以及公式将保持不变。 |
 | [SetPluginsOptions](./Methods/SetPluginsOptions.md) | 无 | 从外部源配置插件。 |
 | [SetProperties](./Methods/SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./Methods/ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
@@ -73,6 +81,7 @@ Presentation API 列出了插件在 ONLYOFFICE 文档中处理演示文稿时可
 | [onDocumentContentReady](./Events/onDocumentContentReady.md) | 当文档完全加载时调用的函数。 |
 | [onEnableMouseEvent](./Events/onEnableMouseEvent.md) | 用于开启/关闭鼠标或触控板事件的函数。 |
 | [onExternalMouseUp](./Events/onExternalMouseUp.md) | 当鼠标按钮在插件 iframe 外部释放时调用的函数。 |
+| [onFloatActionButtonClick](./Events/onFloatActionButtonClick.md) | 单击浮动操作按钮时调用的函数。 |
 | [onSlideShowBegin](./Events/onSlideShowBegin.md) | 幻灯片放映演示开始时调用的函数。 |
 | [onSlideShowEnd](./Events/onSlideShowEnd.md) | 幻灯片放映演示结束时调用的函数。 |
 | [onSlideShowNextSlide](./Events/onSlideShowNextSlide.md) | 在幻灯片放映演示中，当幻灯片更改并显示后调用的函数。在幻灯片内容实际显示之前触发。 |

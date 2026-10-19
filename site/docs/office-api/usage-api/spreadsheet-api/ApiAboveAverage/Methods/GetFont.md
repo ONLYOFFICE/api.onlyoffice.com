@@ -2,8 +2,6 @@
 
 Returns the font applied by the current format condition.
 
-Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
-
 ## Syntax
 
 ```javascript
@@ -18,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+[ApiFont](../../ApiFont/ApiFont.md)
 
 ## Example
 
@@ -43,7 +41,7 @@ let aboveAverageCondition = formatConditions.AddAboveAverage();
 
 let font = aboveAverageCondition.GetFont();
 font.SetBold(true);
-font.SetColor(Api.CreateColorFromRGB(0, 0, 255));
+font.SetColor(Api.RGB(0, 0, 255));
 
 worksheet.GetRange("C1").SetValue("Font formatting applied");
 worksheet.GetRange("C2").SetValue("Bold blue text for above average");

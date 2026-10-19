@@ -16,7 +16,7 @@ expression.Last();
 
 ## 返回值
 
-[ParagraphContent](../../Enumeration/ParagraphContent.md)
+[ParagraphContent](../../Enumeration/ParagraphContent.md) \| null \| undefined
 
 ## 示例
 

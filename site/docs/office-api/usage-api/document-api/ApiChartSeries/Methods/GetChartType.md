@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ChartType](../../Enumeration/ChartType.md)
+[ChartTypeLegacy](../../Enumeration/ChartTypeLegacy.md)
 
 ## Example
 
@@ -29,7 +29,7 @@ Read and display the chart type of a specific data series in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let chart = Api.CreateChart("comboBarLine", [
+let chart = Api.CreateChart("ComboColumnClusteredLine", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
@@ -37,11 +37,11 @@ let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
-chart.SetHorAxisTitle("Year", 11);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 20);
+chart.SetHorAxisTitle("Year", 22);
 chart.SetLegendPos("bottom");
 chart.SetShowDataLabels(false, false, true, false);
-chart.SetTitle("Financial Overview", 13);
+chart.SetTitle("Financial Overview", 26);
 paragraph.AddDrawing(chart);
 let series = chart.GetSeries(0);
 let seriesType = series.GetChartType();

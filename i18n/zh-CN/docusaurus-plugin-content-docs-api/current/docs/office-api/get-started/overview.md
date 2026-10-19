@@ -6,7 +6,7 @@ sidebar_position: -1
 
 **Office API** 可让您快速轻松地将内容插入文档并按需设置格式。任何文档都是一个复合对象：由较大的节点（段落和表格）组成的树，您可以在其中插入较小的文档元素（文本块、图像、图表、形状）。
 
-Office API 是用于操作文档编辑器的 JavaScript 库。它包含适用于各种文档类型的类和方法：[文档 API](../usage-api/document-api/document-api.md)、[电子表格 API](../usage-api/spreadsheet-api/spreadsheet-api.md)、[演示文稿 API](../usage-api/presentation-api/presentation-api.md)、[表单 API](../usage-api/form-api/form-api.md) 和 [PDF API](../usage-api/pdf-api/pdf-api.md)。
+Office API 是用于操作文档编辑器的 JavaScript 库。它包含适用于各种文档类型的类和方法：[Document API](../usage-api/document-api/document-api.md)、[Spreadsheet API](../usage-api/spreadsheet-api/spreadsheet-api.md)、[Presentation API](../usage-api/presentation-api/presentation-api.md)、[Form API](../usage-api/form-api/form-api.md) 和 [PDF API](../usage-api/pdf-api/pdf-api.md)。
 
 ## 使用场景
 
