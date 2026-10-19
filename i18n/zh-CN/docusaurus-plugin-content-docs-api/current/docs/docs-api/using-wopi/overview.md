@@ -65,7 +65,7 @@ import TabItem from '@theme/TabItem';
 
 ## IP filter
 
-ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 中。同时，必须拒绝所有其他集成商的访问。
+ONLYOFFICE 文档只能与受信任的 WOPI 主机配合使用。这与 WOPI 文档中的 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 是同一理念。请在 IP 过滤器规则中允许您的 WOPI 主机，并拒绝所有其他主机。
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
 
@@ -112,20 +112,25 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
           systemctl restart ds-*
           ```
       </TabItem>
-      <TabItem value="docker" label="Docker">
-          ``` bash
-          supervisorctl restart all
-          ```
-      </TabItem>
     </Tabs>
+
+在 Docker 中，请在启动容器时通过 `IP_FILTER_RULES` 环境变量设置规则。规则之间用分号分隔，并按相同的顺序检查：
+
+``` bash
+docker run -itd -p 80:80 -e WOPI_ENABLED=true -e IP_FILTER_RULES="allow wopi.example.com; deny all" onlyoffice/documentserver
+```
+
+如果设置了此变量，每次启动容器时它都会替换 *local.json* 中的规则。有关其他 Docker 参数，请参阅 [Docker-DocumentServer](https://github.com/ONLYOFFICE/Docker-DocumentServer) 仓库。
 
 ### 为 WOPI 主机要求显式规则 {#requiring-an-explicit-rule-for-the-wopi-host}
 
 从 10.0 版本开始，ONLYOFFICE 文档只会向在 `services.CoAuthoring.ipfilter.rules` 中被指明其 IP 地址或 DNS 名称的规则（例如 `wopi.example.com` 或 `*.example.com`）明确允许的 WOPI 主机发送请求。仅由通配符组成的规则（例如 `*` 或 `*.*.*.*`）不计算在内。因此，默认规则集（`{"address": "*", "allowed": true}`）并不足够：即使 IP 过滤器本身允许所有地址，如果没有一条明确指定您的 WOPI 主机的规则，WOPI 也无法正常工作。规则按顺序检查，由第一条匹配的规则决定结果，因此请将 WOPI 主机的规则放在所有 `*` 规则之前。
 
+即使 `externalRequest.action.blockPrivateIP` 服务器设置默认会阻止私有地址，指明 WOPI 主机的规则也允许向其私有 IP 地址发送请求。
+
 此行为由[服务器设置](../get-started/configuration/server-config/server-config.md#wopi) `wopi.requireIpFilterRule` 控制。默认值为 `true`。
 
-仅在添加规则期间，才可将 `wopi.requireIpFilterRule` 设为 `false` 作为临时回退方案。此时，ONLYOFFICE 文档还会向仅匹配通配符规则或不匹配任何规则的主机发送请求。这会使服务器容易受到服务器端请求伪造（SSRF）攻击。
+仅在添加规则期间，才可将 `wopi.requireIpFilterRule` 设为 `false` 作为临时回退方案。此时，ONLYOFFICE 文档还会向仅匹配通配符规则或不匹配任何规则的主机（包括具有私有 IP 地址的主机）发送 WOPI 请求。
 
 ``` json
 {
