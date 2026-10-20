@@ -64,3 +64,7 @@ Parameters in this group ensure compliance with data and privacy regulations.
 
 When all settings are specified, click **Save**. A new application will appear in the application list.
 
+:::note
+You cannot change the **Website URL**, **Privacy policy URL**, and **Terms of service URL** after the app is created. **Redirect URLs** and **Access scopes** cannot be changed in the editing form either, but you can update them with the [update client](../../../../../docspace/api-backend/usage-api/oauth-2-0/client-management/update-client.md) method.
+:::
+
