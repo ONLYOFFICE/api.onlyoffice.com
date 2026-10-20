@@ -1,21 +1,21 @@
 ---
-description: Summarize the current chat and save the summary text to DocSpace.
+description: Summarize the current chat and save the summary text to ONLYOFFICE Apps.
 tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
-# Summarize chat and save to DocSpace
+# Summarize chat and save to ONLYOFFICE Apps
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate a summary from the text messages in the current chat and save that summary as a text file in a specific DocSpace room folder.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to generate a summary from the text messages in the current chat and save that summary as a text file in a specific ONLYOFFICE Apps room folder.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
-- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 
@@ -45,7 +45,7 @@ If you need a shorter output, specify it:
 
 **Example request:** Summarize this chat in 5 bullet points focused only on action items.
 
-### 3. Save the summary text to DocSpace
+### 3. Save the summary text to ONLYOFFICE Apps
 
 Send a request to save the generated summary as a text file in the target room folder.
 
@@ -54,7 +54,7 @@ Send a request to save the generated summary as a text file in the target room f
 What you should expect:
 
 - The target room and folder are resolved.
-- A text file with the summary is created in DocSpace.
+- A text file with the summary is created in ONLYOFFICE Apps.
 - The save result is confirmed (file name and destination folder).
 
 ### 4. Verify the outcome
@@ -67,10 +67,10 @@ What you should expect in the response:
 
 - Room and folder name where the file is stored
 - File name
-- (Optional) a direct link to open the file in DocSpace
+- (Optional) a direct link to open the file in ONLYOFFICE Apps
 
 ## Result
 
 - A structured summary of the current chat is generated in the requested format.
-- The summary text is saved to the correct room folder in DocSpace.
+- The summary text is saved to the correct room folder in ONLYOFFICE Apps.
 - The user receives confirmation and can continue the workflow (share, review, or store the output).

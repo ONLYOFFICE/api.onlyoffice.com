@@ -5,17 +5,17 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Generate monthly report from Excel
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to analyze a monthly metrics spreadsheet and generate a short report document saved to DocSpace.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to analyze a monthly metrics spreadsheet and generate a short report document saved to ONLYOFFICE Apps.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
-- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 
@@ -34,7 +34,7 @@ Before sending a request, decide:
 
 This helps generate a report that is easy to share and easy to store.
 
-### 2. Locate the spreadsheet in DocSpace
+### 2. Locate the spreadsheet in ONLYOFFICE Apps
 
 Send a request that specifies the room and the file name.
 
@@ -42,7 +42,7 @@ Send a request that specifies the room and the file name.
 
 What you should expect:
 
-- The file is located in DocSpace.
+- The file is located in ONLYOFFICE Apps.
 - If multiple files match the same name, you may be asked to select the correct one.
 
 ### 3. Generate the monthly report document
@@ -60,7 +60,7 @@ If you prefer a shorter output, specify it:
 
 **Example request:** Create a monthly report in 10 bullet points and save it as "Monthly report - 2026-02.docx".
 
-### 4. Save the report to DocSpace and provide a link
+### 4. Save the report to ONLYOFFICE Apps and provide a link
 
 Request that the report is saved to the required location and provide a link.
 
@@ -70,11 +70,11 @@ What you should expect in the response:
 
 - Report file name
 - Save location (room and folder)
-- (Optional) a direct link to open the report in DocSpace
+- (Optional) a direct link to open the report in ONLYOFFICE Apps
 - A short confirmation that the report is ready
 
 ## Result
 
 - The monthly metrics spreadsheet is analyzed.
 - A short monthly report document is generated.
-- The report is saved to DocSpace and can be shared with stakeholders.
+- The report is saved to ONLYOFFICE Apps and can be shared with stakeholders.

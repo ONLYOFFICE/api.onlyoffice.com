@@ -5,17 +5,17 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Analyze Excel and generate report
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to analyze an Excel file stored in DocSpace and generate a short executive summary report. This is useful when you need key insights from a spreadsheet without reviewing the entire file manually.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to analyze an Excel file stored in ONLYOFFICE Apps and generate a short executive summary report. This is useful when you need key insights from a spreadsheet without reviewing the entire file manually.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
-- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 
@@ -34,7 +34,7 @@ Before sending a request, decide:
 
 This helps the summary focus on what matters for your task.
 
-### 2. Locate the spreadsheet in DocSpace
+### 2. Locate the spreadsheet in ONLYOFFICE Apps
 
 Send a request that clearly specifies the room and the file.
 
@@ -43,7 +43,7 @@ Send a request that clearly specifies the room and the file.
 What you should expect:
 
 - The room is located.
-- The file is found in DocSpace.
+- The file is found in ONLYOFFICE Apps.
 - If multiple files match the name, you may be asked to select the correct one.
 
 If you want to narrow the search to a folder, include it:
@@ -81,7 +81,7 @@ If you need a shorter output, specify the size:
 
 **Example request:** Create an executive summary report in no more than 10 bullet points and save it as "Q4 Budget Summary.docx".
 
-### 5. Save the report to DocSpace and confirm the result
+### 5. Save the report to ONLYOFFICE Apps and confirm the result
 
 Request that the report is saved to a specific folder and provide a link.
 
@@ -91,12 +91,12 @@ What you should expect in the response:
 
 - Report file name
 - Save location (room and folder)
-- (Optional) a direct link to open the report in DocSpace
+- (Optional) a direct link to open the report in ONLYOFFICE Apps
 - A short confirmation that the report is ready
 
 ## Result
 
-- The Excel file is located in DocSpace.
+- The Excel file is located in ONLYOFFICE Apps.
 - Key insights and data issues are identified from the spreadsheet.
 - A structured executive summary report is generated as a document.
-- The report is saved to DocSpace and can be shared with the team.
+- The report is saved to ONLYOFFICE Apps and can be shared with the team.
