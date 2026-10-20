@@ -8,11 +8,13 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Connecting MCP servers
 
-ONLYOFFICE Desktop Editors version 9.2 and later supports connecting MCP (Model Context Protocol) servers to extend AI capabilities with custom tools and integrations. MCP allows AI agents to interact with various services and data sources through standardized protocols.
+ONLYOFFICE Desktop Editors supports connecting MCP (Model Context Protocol) servers to extend AI capabilities with custom tools and integrations. MCP allows AI agents to interact with various services and data sources through standardized protocols.
 
-## AI Agent capabilities
+MCP servers were first supported in version 9.2, in the desktop chat only. Version 10.0 introduced the AI Tools add-on, which brings MCP support to the editors. This guide describes the setup for version 10.0 and later.
 
-The AI agent in Desktop Editors provides several powerful features:
+## AI Chat capabilities
+
+AI Chat in Desktop Editors provides several powerful features:
 
 1. **Chat interface** - Natural language interaction with documents and data
 2. **Web search** - Integrated web search capabilities for real-time information
