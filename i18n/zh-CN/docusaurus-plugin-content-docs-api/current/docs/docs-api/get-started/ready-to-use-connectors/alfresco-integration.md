@@ -27,7 +27,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 - 若要将ODT、ODP、ODS、DOC、XLS、PPT文件转换为对应的OOXML格式文件，请选择**使用ONLYOFFICE转换**选项。转换后的文件将放置在同一文件夹中。您还可以为文件夹配置规则，使其在上传或更改时自动转换文件。具体细节可在此处找到：[这里](https://docs.alfresco.com/content-services/latest/using/content/rules/)。
 
-- 若要创建新文档，请打开您想要创建文档的文件夹，然后点击**创建...**按钮。
+- 若要创建新文档，请打开您想要创建文档的文件夹，然后点击**创建...** 按钮。
 
   ![创建...](/assets/images/editor/alfresco-create.png)
 
@@ -50,7 +50,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    您可以在此处下载已编译的包文件，并将它们放置到相应的目录中：[此处](https://github.com/onlyoffice/onlyoffice-alfresco/releases)。
    :::
 
-2. 使用**模块管理工具(MMT)**安装模块，运行以下命令：
+2. 使用**模块管理工具(MMT)** 安装模块，运行以下命令：
 
    <Tabs>
       <TabItem value="alfresco" label="Alfresco">

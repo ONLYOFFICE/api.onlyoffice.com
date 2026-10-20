@@ -84,7 +84,7 @@ To open the terminal:
 
 To open the developer tools, right-click any editable field on the top toolbar (for example, font list combo) and click **Inspect Element**, or click anywhere in the document and press **F1**.
 
-<img alt="Inspect Element" src="/assets/images/desktop/inspect-element.png" />
+![Inspect Element](/assets/images/desktop/inspect-element.png#gh-light-mode-only)![Inspect Element](/assets/images/desktop/inspect-element.dark.png#gh-dark-mode-only)
 
 Here is the result:
 

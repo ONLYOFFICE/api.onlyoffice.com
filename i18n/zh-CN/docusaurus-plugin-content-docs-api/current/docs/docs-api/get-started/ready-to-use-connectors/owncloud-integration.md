@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为OOXML格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。ODT、ODS和ODP也支持即时转换。在管理员设置中启用相应选项后，ODF格式的文档在点击后会立即在编辑器中转换并打开。
-- 该应用程序会在**新建(+)**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回ownCloud。连接到同一文档服务器的多个联合ownCloud实例之间也支持协同编辑。
+- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回ownCloud。连接到同一文档服务器的多个联合ownCloud实例之间也支持协同编辑。
 - 支持以不同的权限类型共享文件，如查看/编辑、评论、审阅、填写表单。还可以限制下载（在所有编辑器中）和修改筛选器（在电子表格中）。也支持通过公共链接进行共享。
 - 支持在**ownCloud Web**中处理文档、电子表格和演示文稿。
 
@@ -125,7 +125,7 @@ occ onlyoffice:documentserver --check
 
 ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
-1. 创建新文件时，用户在ownCloud中导航到文档文件夹，然后点击**新建(+)**菜单中的**文档**、**电子表格**或**演示文稿**选项。
+1. 创建新文件时，用户在ownCloud中导航到文档文件夹，然后点击**新建(+)** 菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
 2. 浏览器调用 */lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
 
@@ -166,7 +166,7 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 - **证书验证**：如果您正在为您的ONLYOFFICE 文档使用自签名证书，ownCloud将不会验证此类证书，并且不允许与ONLYOFFICE 文档进行连接。这个问题可以通过两种方式解决：
 
-  1. 在ownCloud的ONLYOFFICE管理页面服务器设置部分，勾选**禁用证书验证（不安全）**复选框。
+  1. 在ownCloud的ONLYOFFICE管理页面服务器设置部分，勾选**禁用证书验证（不安全）** 复选框。
   2. 手动更改ownCloud配置文件。找到ownCloud配置文件(*/owncloud/config/config.php*)并打开它。在其中插入以下部分：
 
   ``` php

@@ -4,17 +4,17 @@ sidebar_position: 1
 
 # DocSpace MCP
 
-The ONLYOFFICE DocSpace MCP server allows AI agents in Desktop Editors to interact with your DocSpace instance, enabling document management operations through natural language commands.
+The ONLYOFFICE DocSpace MCP server allows AI Chat in Desktop Editors to interact with your DocSpace instance, enabling document management operations through natural language commands.
 
 ## Prerequisites
 
 Before connecting the DocSpace MCP server, ensure you have:
 
-- **ONLYOFFICE Desktop Editors** version 9.2 or higher
+- **ONLYOFFICE Desktop Editors** version 10.0 or higher
 - Access to your ONLYOFFICE DocSpace instance (SaaS or on-premises)
 - Valid API key for DocSpace
 - Docker installed and running on your machine
-- Configured AI provider (OpenAI, Anthropic Claude, or other supported LLM)
+- Installed AI Tools and at least one connected AI model (OpenAI, Anthropic Claude, or other supported LLM)
 
 ## Getting a DocSpace API key
 
@@ -34,9 +34,10 @@ The steps below apply to ONLYOFFICE Desktop Editors versions earlier than 10.0. 
 ### Step 1: Access MCP configuration
 
 1. Open ONLYOFFICE Desktop Editors
-2. Navigate to the start window
-3. Go to **AI agent** → **MCP Servers**
-4. Click **Edit configuration**
+2. In the left panel, click **AI Tools**. If AI Tools are not installed yet, click **Accept & Install**, and then restart the application
+3. Connect an AI model. In the **AI Chat** panel, select a provider, enter its API key, select a model, and click **Add Model**. You can also do this later in **Settings** → **AI Models**. The **MCP Servers** settings are unavailable until at least one AI model is added
+4. In the left panel, click **Settings** and navigate to **MCP Servers**
+5. Click **Edit configuration**
 
 ![Access MCP configuration](/assets/images/desktop/step1.png#gh-light-mode-only)![Access MCP configuration](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
 
@@ -47,7 +48,7 @@ Enter the following JSON configuration, replacing the placeholder values with yo
 ```json
 {
   "mcpServers": {
-    "onlyoffice-docspace": {
+    "onlyoffice-apps": {
       "command": "docker",
       "args": [
         "run",
@@ -59,7 +60,7 @@ Enter the following JSON configuration, replacing the placeholder values with yo
       ],
       "env": {
         "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
-        "DOCSPACE_API_KEY": "your-api-key-here"
+        "DOCSPACE_API_KEY": "your-api-key"
       }
     }
   }
@@ -75,10 +76,11 @@ Enter the following JSON configuration, replacing the placeholder values with yo
 
 ### Step 3: Save and verify
 
-1. Click **Save** to apply the configuration
-2. The DocSpace MCP server should appear in your servers list
-3. Verify that the server status shows as connected
-4. Enable the tools you want to use
+1. Click **Save**. The server starts automatically and appears in the **Permissions** section
+2. Make sure the **onlyoffice-apps** toggle is on
+3. To enable or disable individual tools, expand the server entry and use the toggles next to them
+
+You can now use the DocSpace tools in **AI Chat**.
 
 ![Save and verify](/assets/images/desktop/step3.png#gh-light-mode-only)![Save and verify](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
 
@@ -94,7 +96,7 @@ Once connected, the DocSpace MCP server provides various tools for document mana
 
 ## Usage examples
 
-After connecting the DocSpace MCP server, you can use natural language commands in the AI agent:
+After connecting the DocSpace MCP server, you can use natural language commands in AI Chat:
 
 - "List all documents in the shared folder"
 - "Create a new folder called 'Q1 Reports' in DocSpace"
@@ -102,7 +104,7 @@ After connecting the DocSpace MCP server, you can use natural language commands 
 - "Share the document 'Budget 2026.xlsx' with john@example.com"
 - "Show me the contents of the Marketing folder"
 
-The AI agent will automatically utilize the DocSpace MCP tools to execute these commands and display the results.
+AI Chat will automatically use the DocSpace MCP tools to execute these commands and display the results.
 
 ## Troubleshooting
 
@@ -127,7 +129,7 @@ The AI agent will automatically utilize the DocSpace MCP tools to execute these 
 ### Tools not appearing
 
 - Restart ONLYOFFICE Desktop Editors after saving the configuration
-- Check that the MCP server status shows as "Connected"
+- Check that there is no error icon next to the server in the **Permissions** section. Expand the server entry to see the connection log
 - Review Docker logs: `docker logs <container-id>`
 
 ## Notes

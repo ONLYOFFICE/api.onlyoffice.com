@@ -7,21 +7,21 @@ import TabItem from '@theme/TabItem';
 
 # 添加插件
 
-**ONLYOFFICE 桌面编辑器** 允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 ONLYOFFICE 插件市场 中的现成插件，也可以参考我们的 [插件和宏 API 文档](../../plugins/get-started/overview.md) 创建自己的插件。
+**ONLYOFFICE 桌面编辑器**允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 ONLYOFFICE 插件市场中的现成插件，也可以参考我们的 [插件和宏 API 文档](../../plugins/get-started/overview.md) 创建自己的插件。
 
 添加插件有两种方式：通过插件管理器和通过插件文件夹。
 
 ## 通过插件管理器添加插件
 
-从 7.4 版本开始，您可以从 **ONLYOFFICE 插件市场** 下载现成的插件。
+从 7.4 版本开始，您可以从 **ONLYOFFICE 插件市场**下载现成的插件。
 
 ### 选项 1：使用安装按钮（需要互联网连接）
 
 按照以下步骤通过插件管理器向编辑器添加插件：
 
-1. 打开 **插件** 选项卡。
-2. 点击 **插件管理器**。
-3. 找到所需插件并点击 **安装**。
+1. 打开**插件**选项卡。
+2. 点击**插件管理器**。
+3. 找到所需插件并点击**安装**。
 
 ![插件管理器](/assets/images/plugins/desktop-plugin-manager.png#gh-light-mode-only)![插件管理器](/assets/images/plugins/desktop-plugin-manager.dark.png#gh-dark-mode-only)
 
@@ -35,15 +35,15 @@ import TabItem from '@theme/TabItem';
    如果您从 GitHub（[插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io) 或 [插件示例](https://github.com/ONLYOFFICE/sdkjs-plugins)）下载插件，请先解压插件文件夹，然后仅归档其中的元素。
    :::
 
-2. 在 **插件** 选项卡上打开 **插件管理器**。
+2. 在**插件**选项卡上打开**插件管理器**。
 
-3. 进入 **我的插件** 选项卡，点击 **手动安装插件** 按钮。
+3. 点击左侧面板底部的**手动安装插件**。
 
-4. 选择您创建的归档文件并点击 **打开**。
+4. 选择您创建的归档文件并点击**打开**。
 
 ![手动安装插件](/assets/images/plugins/plugin-install-manually.png#gh-light-mode-only)![手动安装插件](/assets/images/plugins/plugin-install-manually.dark.png#gh-dark-mode-only)
 
-该插件将添加到已打开的编辑器以及之后打开的所有编辑器中，并显示在 **插件** 选项卡内。
+该插件将添加到已打开的编辑器以及之后打开的所有编辑器中，并显示在**插件**选项卡内。
 
 ## 通过插件文件夹添加插件
 
@@ -69,7 +69,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2.** 使用插件的 **GUID** 作为文件夹名称。您可以在 *config.json* 文件中找到插件的 GUID。
 
-例如，对于 **扩展评论** 插件，*guid* 参数如下所示：
+例如，对于**扩展评论**插件，*guid* 参数如下所示：
 
 ```json
 {
@@ -82,19 +82,20 @@ import TabItem from '@theme/TabItem';
 
 **步骤 3.** 将所有插件文件放入此文件夹：
 
-![插件文件夹](/assets/images/desktop/plugins_folder.png)
+![插件文件夹](/assets/images/desktop/plugins_folder.png#gh-light-mode-only)![插件文件夹](/assets/images/desktop/plugins_folder.dark.png#gh-dark-mode-only)
 
-**步骤 4.** 启动 ONLYOFFICE 桌面编辑器。如果一切操作正确，插件将显示在 **插件** 选项卡中：
+**步骤 4.** 启动 ONLYOFFICE 桌面编辑器。如果一切操作正确，插件将显示在**插件**选项卡中：
 
-![扩展评论](/assets/images/desktop/extended_comments.png)
+![扩展评论](/assets/images/desktop/extended_comments.png#gh-light-mode-only)![扩展评论](/assets/images/desktop/extended_comments.dark.png#gh-dark-mode-only)
 
 ## 从 ONLYOFFICE 桌面编辑器中移除插件
 
 要卸载新添加的插件，请按以下方式操作：
 
-1. 打开 **插件** 选项卡。
-2. 进入 **插件管理器**。
-3. 点击相应插件下方的 **移除** 按钮。
+1. 打开**插件**选项卡。
+2. 进入**插件管理器**。
+3. 打开左侧面板中的**已安装**部分。
+4. 点击相应插件下方的**移除**按钮。
 
 :::note
 此选项不适用于默认插件和通过插件文件夹添加的插件。

@@ -4,24 +4,24 @@ sidebar_position: 1
 
 # DocSpace MCP
 
-ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 DocSpace 实例交互，通过自然语言命令实现文档管理操作。
+ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI Chat 与您的 DocSpace 实例交互，通过自然语言命令实现文档管理操作。
 
 ## 先决条件
 
 在连接 DocSpace MCP 服务器之前，请确保您具有：
 
-- **ONLYOFFICE 桌面编辑器** 9.2 或更高版本
+- **ONLYOFFICE 桌面编辑器** 10.0 或更高版本
 - 访问您的 ONLYOFFICE DocSpace 实例（SaaS 或本地部署）
 - DocSpace 的有效 API 密钥
 - 在您的计算机上安装并运行 Docker
-- 已配置的 AI 提供商（OpenAI、Anthropic Claude 或其他支持的 LLM）
+- 已安装 AI 工具，并至少连接了一个 AI 模型（OpenAI、Anthropic Claude 或其他支持的 LLM）
 
 ## 获取 DocSpace API 密钥
 
 要从 DocSpace 实例获取 API 密钥：
 
 1. 以管理员身份登录您的 DocSpace 门户
-2. 单击左侧面板底部的 **开发者工具**，然后选择 **API 密钥**
+2. 单击左侧面板底部的**开发者工具**，然后选择 **API 密钥**
 3. 创建新的 API 密钥或使用现有密钥
 4. 复制 API 密钥以在配置中使用
 
@@ -34,9 +34,10 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 ### 步骤 1：访问 MCP 配置
 
 1. 打开 ONLYOFFICE 桌面编辑器
-2. 导航到开始窗口
-3. 转到 **AI 代理** → **MCP 服务器**
-4. 点击 **编辑配置**
+2. 在左侧面板中点击 **AI 工具**。如果尚未安装 AI 工具，请点击**接受并安装**，然后重新启动应用程序
+3. 连接 AI 模型。在 **AI Chat** 面板中选择提供商，输入其 API 密钥，选择模型，然后点击**添加模型**。您也可以稍后在**设置** → **AI 模型**中完成此操作。在至少添加一个 AI 模型之前，**MCP 服务器**设置不可用
+4. 在左侧面板中点击**设置**，然后转到 **MCP 服务器**
+5. 点击**编辑配置**
 
 ![访问 MCP 配置](/assets/images/desktop/step1.png#gh-light-mode-only)![访问 MCP 配置](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
 
@@ -47,7 +48,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 ```json
 {
   "mcpServers": {
-    "onlyoffice-docspace": {
+    "onlyoffice-apps": {
       "command": "docker",
       "args": [
         "run",
@@ -59,7 +60,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
       ],
       "env": {
         "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
-        "DOCSPACE_API_KEY": "your-api-key-here"
+        "DOCSPACE_API_KEY": "your-api-key"
       }
     }
   }
@@ -75,10 +76,11 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 
 ### 步骤 3：保存并验证
 
-1. 点击 **保存** 以应用配置
-2. DocSpace MCP 服务器应出现在您的服务器列表中
-3. 验证服务器状态显示为已连接
-4. 启用您想要使用的工具
+1. 点击**保存**。服务器将自动启动并显示在**权限**部分中
+2. 确保 **onlyoffice-apps** 开关已打开
+3. 要启用或禁用单个工具，请展开服务器条目并使用工具旁边的开关
+
+现在您可以在 **AI Chat** 中使用 DocSpace 工具。
 
 ![保存并验证](/assets/images/desktop/step3.png#gh-light-mode-only)![保存并验证](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
 
@@ -94,7 +96,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 
 ## 使用示例
 
-连接 DocSpace MCP 服务器后，您可以在 AI 代理中使用自然语言命令：
+连接 DocSpace MCP 服务器后，您可以在 AI Chat 中使用自然语言命令：
 
 - "列出共享文件夹中的所有文档"
 - "在 DocSpace 中创建一个名为 'Q1 报告' 的新文件夹"
@@ -102,7 +104,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 - "将文档 'Budget 2026.xlsx' 共享给 john@example.com"
 - "显示营销文件夹的内容"
 
-AI 代理将自动使用 DocSpace MCP 工具执行这些命令并显示结果。
+AI Chat 将自动使用 DocSpace MCP 工具执行这些命令并显示结果。
 
 ## 故障排除
 
@@ -127,7 +129,7 @@ AI 代理将自动使用 DocSpace MCP 工具执行这些命令并显示结果。
 ### 工具未显示
 
 - 保存配置后重新启动 ONLYOFFICE 桌面编辑器
-- 检查 MCP 服务器状态是否显示为"已连接"
+- 检查**权限**部分中服务器旁边是否没有错误图标。展开服务器条目可查看连接日志
 - 查看 Docker 日志：`docker logs <container-id>`
 
 ## 注意事项

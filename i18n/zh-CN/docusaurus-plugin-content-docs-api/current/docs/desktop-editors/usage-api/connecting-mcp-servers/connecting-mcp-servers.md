@@ -8,11 +8,13 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # 连接 MCP 服务器
 
-ONLYOFFICE 桌面编辑器 9.2 及更高版本支持连接 MCP（模型上下文协议）服务器，以通过自定义工具和集成扩展 AI 功能。MCP 允许 AI 代理通过标准化协议与各种服务和数据源交互。
+ONLYOFFICE 桌面编辑器支持连接 MCP（模型上下文协议）服务器，以通过自定义工具和集成扩展 AI 功能。MCP 允许 AI 代理通过标准化协议与各种服务和数据源交互。
 
-## AI 代理功能
+桌面编辑器从 9.2 版本开始支持 MCP 服务器，但仅限于桌面聊天。10.0 版本推出了 AI 工具附加组件，将 MCP 支持扩展到编辑器中。本指南介绍 10.0 及更高版本中的配置方法。
 
-桌面编辑器中的 AI 代理提供多项强大功能：
+## AI Chat 功能
+
+桌面编辑器中的 AI Chat 提供多项强大功能：
 
 1. **聊天界面** - 与文档和数据进行自然语言交互
 2. **网络搜索** - 集成网络搜索功能，获取实时信息
@@ -43,11 +45,11 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 在连接 MCP 服务器之前，请确保您具有：
 
-- **ONLYOFFICE 桌面编辑器** 9.2 或更高版本
-- 已配置的 AI 提供商（OpenAI、Anthropic Claude 或其他支持的 LLM）
+- **ONLYOFFICE 桌面编辑器** 10.0 或更高版本
+- 已安装 AI 工具，并至少连接了一个 AI 模型（OpenAI、Anthropic Claude 或其他支持的 LLM）
 - MCP 服务器所需的依赖项（例如 Docker、Node.js 或 Python）
 
-**重要提示：** 只有在桌面编辑器中建立 AI 连接后，MCP 服务器选项卡才会显示。
+**重要提示：** 在桌面编辑器中至少添加一个 AI 模型之前，**MCP 服务器**设置不可用。
 
 ## 配置步骤
 
@@ -56,9 +58,10 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 ### 步骤 1：访问 MCP 配置
 
 1. 打开 ONLYOFFICE 桌面编辑器
-2. 导航到开始窗口
-3. 转到 **AI 代理** → **MCP 服务器** 部分
-4. 点击 **编辑配置** 打开 JSON 编辑器
+2. 在左侧面板中点击 **AI 工具**。如果尚未安装 AI 工具，请点击**接受并安装**，然后重新启动应用程序
+3. 连接 AI 模型。在 **AI Chat** 面板中选择提供商，输入其 API 密钥，选择模型，然后点击**添加模型**。您也可以稍后在**设置** → **AI 模型**中完成此操作
+4. 在左侧面板中点击**设置**，然后转到 **MCP 服务器**
+5. 点击**编辑配置**打开 JSON 编辑器
 
 ### 步骤 2：添加服务器配置
 
@@ -152,7 +155,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 | 参数          | 类型   | 描述                                                                |
 |---------------|--------|---------------------------------------------------------------------|
 | mcpServers    | object | 包含所有 MCP 服务器配置的根对象。                                    |
-| server-name   | object | MCP 服务器的唯一标识符。替换为您的服务器名称（例如 "onlyoffice-docspace"）。|
+| server-name   | object | MCP 服务器的唯一标识符。替换为您的服务器名称（例如 "onlyoffice-apps"）。|
 | command       | string | 启动 MCP 服务器的命令（例如 "docker"、"node"、"python"）。            |
 | args          | array  | 传递给命令的命令行参数数组。                                         |
 | env           | object | MCP 服务器所需的环境变量（例如 API 密钥、URL）。                      |
@@ -168,10 +171,10 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 ```json
 {
   "mcpServers": {
-    "onlyoffice-docspace": {
+    "onlyoffice-apps": {
       "env": {
         "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
-        "DOCSPACE_API_KEY": "your-api-key-here"
+        "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",
       "args": [
@@ -222,10 +225,10 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
         "D:/MCP_EXAMPLE/index.js"
       ]
     },
-    "onlyoffice-docspace": {
+    "onlyoffice-apps": {
       "env": {
         "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
-        "DOCSPACE_API_KEY": "your-api-key-here"
+        "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",
       "args": [
@@ -243,18 +246,18 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 ### 步骤 3：保存并启用工具
 
-1. 输入配置后，点击 **保存**
-2. 服务器将出现在您的 MCP 服务器列表中
-3. 启用或禁用服务器提供的单个工具
-4. 您还可以使用切换控件一次管理所有工具
+1. 输入配置后，点击**保存**
+2. 服务器将自动启动并显示在**权限**部分中
+3. 确保服务器名称旁边的开关已打开
+4. 要启用或禁用单个工具，请展开服务器条目并使用工具旁边的开关
 
 ### 步骤 4：使用 MCP 服务器
 
 连接并启用后：
 
-1. 在桌面编辑器中打开 **AI 代理** 面板
+1. 在桌面编辑器中打开 **AI Chat** 面板
 2. 输入与服务器功能相对应的自然语言命令
-3. AI 代理将自动使用可用的 MCP 工具
+3. AI Chat 将自动使用可用的 MCP 工具
 4. 结果直接显示在聊天界面中
 5. 您可以复制对话或将其保存为 .docx 文件
 
@@ -269,7 +272,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 常见问题和解决方案：
 
-- **MCP 服务器选项卡不可见**：确保您首先配置了 AI 提供商连接
+- **MCP 服务器设置不可用**：确保您首先至少添加了一个 AI 模型
 - **服务器无法启动**：检查是否安装并运行了所有必需的依赖项
 - **身份验证错误**：验证 `env` 部分中的 API 密钥和凭据是否正确
 - **工具未显示**：保存配置后重新启动桌面编辑器

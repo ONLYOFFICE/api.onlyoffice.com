@@ -422,9 +422,9 @@ sudo systemctl reload nginx
 
 ### 环境变量已设置但 CORS 不起作用
 
-**症状：**您设置了 `OLLAMA_ORIGINS`，但请求仍然因 CORS 错误而失败。
+**症状：** 您设置了 `OLLAMA_ORIGINS`，但请求仍然因 CORS 错误而失败。
 
-**解决方案：**设置环境变量后必须重新启动 Ollama 服务。
+**解决方案：** 设置环境变量后必须重新启动 Ollama 服务。
 
 <Tabs>
   <TabItem value="linux-systemd" label="Linux (systemd)">
@@ -461,7 +461,7 @@ docker restart <container_name>
 
 ### CORS 在 curl 中有效但在浏览器中无效
 
-**症状：**`curl` 请求成功，但浏览器请求失败。
+**症状：** `curl` 请求成功，但浏览器请求失败。
 
 **可能的原因：**
 1. 浏览器发送的 `Origin` 头与允许的来源不匹配
@@ -524,7 +524,7 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ### 端口 11434 上的连接被拒绝
 
-**症状：**无法从另一台计算机连接到 Ollama。
+**症状：** 无法从另一台计算机连接到 Ollama。
 
 **解决方案：**
 1. 确保设置了 `OLLAMA_HOST=0.0.0.0` (不仅仅是 localhost)
@@ -539,7 +539,7 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ### Nginx 返回 502 Bad Gateway
 
-**症状：**Nginx 已配置但返回 502 错误。
+**症状：** Nginx 已配置但返回 502 错误。
 
 **解决方案：**
 1. 验证 Ollama 是否正在运行：`systemctl status ollama`
@@ -552,7 +552,7 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ### 流式响应不起作用
 
-**症状：**响应一次性到达而不是流式传输。
+**症状：** 响应一次性到达而不是流式传输。
 
 **解决方案：**
 1. 在 Nginx location 块中添加 `proxy_buffering off;`
