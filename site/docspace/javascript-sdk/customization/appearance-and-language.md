@@ -36,7 +36,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-Accepts `"all"`, `"info"` (informational only), or `"none"`. Full reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showheaderbanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
+Accepts `"all"`, `"info"` (informational only), or `"none"`. Full reference: [TFrameConfig#showHeaderBanner](../usage-sdk/type-aliases/TFrameConfig.md#showHeaderBanner), [HeaderBannerDisplaying enum](../usage-sdk/enumerations/HeaderBannerDisplaying.md).
 
 ## Custom stylesheet
 
@@ -52,7 +52,7 @@ const docSpace = DocSpace.SDK.initPersonal({
 
 Only an absolute `http`/`https` URL is accepted — a relative path is silently dropped, with no error and no stylesheet applied. The portal applies it via a plain `<link rel="stylesheet">` tag, so it isn't blocked by CORS — but it is gated by the portal's own Content Security Policy: the stylesheet's origin must be one of the domains registered in [Developer Tools → Embed SDK](../get-started/authentication-security.md#registering-allowed-embed-origins), the same allowlist that governs which origins can embed the portal at all. A file hosted anywhere else is blocked outright by the portal's `style-src` policy before the browser even attempts to load it — it shows up in the browser's network panel as `(blocked:csp)`, not a CORS error. In practice this is rarely a constraint, since the natural place to host a custom stylesheet is your own embedding page's domain, which you already need registered for the SDK to work at all.
 
-Full parameter reference: [TFrameConfig#stylesUrl](../usage-sdk/type-aliases/TFrameConfig.md#stylesurl).
+Full parameter reference: [TFrameConfig#stylesUrl](../usage-sdk/type-aliases/TFrameConfig.md#stylesUrl).
 
 ## Locale and language
 

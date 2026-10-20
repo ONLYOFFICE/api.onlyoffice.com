@@ -22,7 +22,7 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 - Added the OAuth bootstrap fields `providerName`, `inviteKey`, `emplType`, and `uid` for automatic sign-in/sign-up in Forms, Chat, and Personal mode
 - Added [custom actions](../embedding-modes/manager-mode.md#adding-custom-actions) in Manager, Personal, and Forms mode — context menu items for files, folders, and rooms, plus create-menu items, set via `customActions` or `setCustomActions()`
 - Added `onGetExternalData`/`onSetExternalData`: the frame asks the host for integrator-defined data and pushes it back
-- Added the `stylesUrl` [config field](../usage-sdk/type-aliases/TFrameConfig.md#stylesurl) — see also [Appearance and language](../customization/appearance-and-language.md)
+- Added the `stylesUrl` [config field](../usage-sdk/type-aliases/TFrameConfig.md#stylesUrl) — see also [Appearance and language](../customization/appearance-and-language.md)
 - Added `headerOffset`/`headerHeight` (header layout overrides in Forms, Chat, and Personal mode) and `openEditorInSameTab` (where a file opens from the list in Forms and Personal mode when `onEditorOpen` isn't set)
 - Added `filter.groupId` for [pinning the room list to one room group](../embedding-modes/manager-mode.md#filtering-sorting-and-pinning-the-room-list) in Manager mode
 - Added the `onFilterSearch` [event](../events-and-callbacks/events-and-callbacks.md#available-events) (Personal and Public room mode)
@@ -68,15 +68,15 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 
 ## Version 2.1.0
 
-- Added the `onFileManagerClick` [event](../usage-sdk/type-aliases/TFrameEvents.md#onfilemanagerclick)
+- Added the `onFileManagerClick` [event](../usage-sdk/type-aliases/TFrameEvents.md#onFileManagerClick)
 - Fixed: restored the default `showHeader` value in the config
 
 ## Version 2.0.0
 
 - Added [Public room mode](../embedding-modes/public-room-mode.md)
-- Added the `noLoader` [config field](../usage-sdk/type-aliases/TFrameConfig.md#noloader) — see also [Hiding and showing UI elements](../customization/ui-elements.md#frame-layout)
+- Added the `noLoader` [config field](../usage-sdk/type-aliases/TFrameConfig.md#noLoader) — see also [Hiding and showing UI elements](../customization/ui-elements.md#frame-layout)
 - Added an Index column to the `viewTableColumns` parameter of the default config
-- Added the `onEditorOpen` [event](../usage-sdk/type-aliases/TFrameEvents.md#oneditoropen)
+- Added the `onEditorOpen` [event](../usage-sdk/type-aliases/TFrameEvents.md#onEditorOpen)
 - Added the [`executeInEditor()`](../usage-sdk/classes/SDKInstance.md#executeineditor) instance method
 - Added server-side rendering (SSR) support
 

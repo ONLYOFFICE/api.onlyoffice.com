@@ -70,7 +70,7 @@ A `getToken` failure on the very first token request typically fires both of the
 
 Treat all four as the same kind of problem in practice: something is wrong with the token your backend is producing, or the session it depends on at the OAuth provider has ended. Re-check `getToken`'s own logic first; if that isn't it, call `destroyFrame()` and send the user back through your own re-authentication flow rather than leaving the frame stuck on its loader. There's no dedicated `onAuthSuccess` for OAuth mode — that event only fires from DocSpace's own confirm-by-link login page — so a successful token resolution is visible only indirectly, through the frame loading and firing `onAppReady`.
 
-Full parameter reference: [TFrameConfig#getToken](../usage-sdk/type-aliases/TFrameConfig.md#gettoken), [TFrameConfig#accessToken](../usage-sdk/type-aliases/TFrameConfig.md#accesstoken).
+Full parameter reference: [TFrameConfig#getToken](../usage-sdk/type-aliases/TFrameConfig.md#getToken), [TFrameConfig#accessToken](../usage-sdk/type-aliases/TFrameConfig.md#accessToken).
 
 ## Token-based auth for public rooms
 
