@@ -267,6 +267,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 In **Strict** mode, each user works in an isolated session. Changes made by others stay hidden until you click **Save**. While several users are editing simultaneously, their regions are marked with dashed lines of different colors.
 
-After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
+After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png#gh-light-mode-only" width="20px" /><img alt="Save updates" src="/assets/images/editor/save-updates.dark.png#gh-dark-mode-only" width="20px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
 
 ![Strict mode](/assets/images/editor/strict-mode.png#gh-light-mode-only)![Strict mode](/assets/images/editor/strict-mode.dark.png#gh-dark-mode-only)
