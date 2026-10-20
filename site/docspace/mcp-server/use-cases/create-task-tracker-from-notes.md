@@ -5,14 +5,14 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Create task tracker from notes
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to convert meeting notes into a structured task tracker spreadsheet saved to DocSpace. This is useful when you want action items in a clear format without rewriting notes manually.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to convert meeting notes into a structured task tracker spreadsheet saved to ONLYOFFICE Apps. This is useful when you want action items in a clear format without rewriting notes manually.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
 - use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
 - run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
@@ -26,7 +26,7 @@ Before sending a request, decide:
 - **Room name** where the notes file is stored (or where you want to upload it)
 - **Folder name** to store notes and results (optional)
 - **Notes source**, for example:
-  - an existing file in DocSpace; or
+  - an existing file in ONLYOFFICE Apps; or
   - a file you attach in your request
 - **Tracker columns**, for example:
   - Task
@@ -40,13 +40,13 @@ This ensures the spreadsheet matches the way your team tracks work.
 
 ### 2. Provide the meeting notes
 
-If the notes are already stored in DocSpace, reference the file.
+If the notes are already stored in ONLYOFFICE Apps, reference the file.
 
 **Example request:** In the "Website Redesign" room, use the file "Meeting notes - 2026-02-17.docx" from the "Brief" folder.
 
 What you should expect:
 
-- The file is located in DocSpace.
+- The file is located in ONLYOFFICE Apps.
 - The content is used as the input for task extraction.
 
 If you want to upload notes instead, include that in the request:
@@ -83,7 +83,7 @@ If you want default values for status, specify it:
 
 **Example request:** Set the initial status to "To do" for all tasks.
 
-### 5. Save the spreadsheet to DocSpace and provide a link
+### 5. Save the spreadsheet to ONLYOFFICE Apps and provide a link
 
 Request that the tracker is saved to a specific folder and provide a link.
 
@@ -93,11 +93,11 @@ What you should expect in the response:
 
 - Spreadsheet file name
 - Save location (room and folder)
-- (Optional) a direct link to open the spreadsheet in DocSpace
+- (Optional) a direct link to open the spreadsheet in ONLYOFFICE Apps
 - A short confirmation that the tracker is ready
 
 ## Result
 
 - Meeting notes are converted into structured action items.
 - A task tracker spreadsheet is generated in `.xlsx` format.
-- The spreadsheet is saved to DocSpace and can be shared with the team.
+- The spreadsheet is saved to ONLYOFFICE Apps and can be shared with the team.

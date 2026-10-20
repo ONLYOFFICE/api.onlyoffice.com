@@ -5,14 +5,14 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Generate NDA document
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate an NDA document from provided details and save it to a DocSpace folder. This is useful when you want to quickly create a consistent document without writing it manually.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to generate an NDA document from provided details and save it to an ONLYOFFICE Apps folder. This is useful when you want to quickly create a consistent document without writing it manually.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
 - use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
 - run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
@@ -48,9 +48,9 @@ If you want to include an optional purpose clause, specify it:
 
 **Example request:** Create an NDA between "Aurora Design Ltd." and "Northwind Studio" for sharing design materials. Effective date: 2026-02-17. Term: 12 months. Save it as "NDA - Aurora Design - 2026-02-17.docx".
 
-### 3. Save the document to a room folder in DocSpace
+### 3. Save the document to a room folder in ONLYOFFICE Apps
 
-Specify where the document should be stored in DocSpace.
+Specify where the document should be stored in ONLYOFFICE Apps.
 
 **Example request:** Save the document to the "Legal" folder in the "Website Redesign" room and provide a link to the file.
 
@@ -58,7 +58,7 @@ What you should expect in the response:
 
 - Document file name
 - Save location (room and folder)
-- (Optional) a direct link to open the document in DocSpace
+- (Optional) a direct link to open the document in ONLYOFFICE Apps
 - A short confirmation that the document is ready
 
 ### 4. Verify the result
@@ -75,5 +75,5 @@ What you should expect:
 ## Result
 
 - An NDA document is generated from the provided details.
-- The document is saved to the selected folder in DocSpace.
+- The document is saved to the selected folder in ONLYOFFICE Apps.
 - The user receives a link and can review or share the document.

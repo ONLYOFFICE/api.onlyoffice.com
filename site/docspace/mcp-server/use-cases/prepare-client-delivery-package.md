@@ -5,14 +5,14 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Prepare client delivery package
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to collect final project files into a single "Delivery" folder and provide a shareable link to that folder.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to collect final project files into a single "Delivery" folder and provide a shareable link to that folder.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
 - use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
 - run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
@@ -82,7 +82,7 @@ What you should expect in the response:
 
 ### 5. Provide a link to the delivery folder
 
-Request a link that can be used to open the delivery folder in DocSpace.
+Request a link that can be used to open the delivery folder in ONLYOFFICE Apps.
 
 **Example request:** Provide a link to the "Delivery" folder in the "Website Redesign" room.
 

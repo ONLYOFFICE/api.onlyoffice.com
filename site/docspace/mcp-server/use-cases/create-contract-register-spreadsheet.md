@@ -5,14 +5,14 @@ tags: ["DocSpace", "MCP Server", "AI"]
 
 # Create contract register spreadsheet
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to create a contract register spreadsheet from multiple contract files stored in a DocSpace folder. This is useful when you have many contracts and want a single Excel table for tracking.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to create a contract register spreadsheet from multiple contract files stored in an ONLYOFFICE Apps folder. This is useful when you have many contracts and want a single Excel table for tracking.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
 - use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
 - run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
@@ -37,7 +37,7 @@ Before sending a request, decide:
 
 This ensures the register contains the exact columns you need.
 
-### 2. Locate the contract folder in DocSpace
+### 2. Locate the contract folder in ONLYOFFICE Apps
 
 Send a request that specifies the room and folder where the contracts are stored.
 
@@ -79,7 +79,7 @@ If you want the table to include links to the source files, specify it:
 
 **Example request:** Include a link to the source contract file in each row.
 
-### 5. Save the spreadsheet to DocSpace and confirm the result
+### 5. Save the spreadsheet to ONLYOFFICE Apps and confirm the result
 
 Request that the spreadsheet is saved to the required folder and provide a link.
 
@@ -89,12 +89,12 @@ What you should expect in the response:
 
 - Spreadsheet file name
 - Save location (room and folder)
-- (Optional) a direct link to open the spreadsheet in DocSpace
+- (Optional) a direct link to open the spreadsheet in ONLYOFFICE Apps
 - A short confirmation that the register is ready
 
 ## Result
 
 - All contract documents in the selected folder are processed.
 - Key contract details are extracted into structured fields.
-- A contract register spreadsheet is generated and saved to DocSpace.
+- A contract register spreadsheet is generated and saved to ONLYOFFICE Apps.
 - The user gets a single Excel table for tracking contracts and their key details.
