@@ -141,7 +141,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-该值将显示在**文件** > **文档信息...**菜单选项中。
+该值将显示在**文件** > **文档信息...** 菜单选项中。
 
 有关这些设置的更多信息，请参见[此页面](../../usage-api/config/document/info.md)。
 

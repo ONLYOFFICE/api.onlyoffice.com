@@ -4,9 +4,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在文档编辑器中插入一个国际象棋棋盘对象。该对象支持以 *FEN* 格式编辑和保存棋局。
 
-**插件类型：**可视化、OLE 对象、非系统插件。  
+**插件类型：** 可视化、OLE 对象、非系统插件。  
 
-**支持的编辑器：**文档、表格、演示文稿。
+**支持的编辑器：** 文档、表格、演示文稿。
 
 <YoutubeVideo videoId="PV5TSRvKKU0" />
 

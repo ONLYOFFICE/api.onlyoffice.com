@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TSV、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为OOXML格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
-- 该应用程序会在**新建(+)**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Nextcloud。连接到同一文档服务器的多个联合Nextcloud实例之间也支持协同编辑。
+- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Nextcloud。连接到同一文档服务器的多个联合Nextcloud实例之间也支持协同编辑。
 
 ## 安装ONLYOFFICE 文档
 
@@ -90,7 +90,7 @@ https://<文档服务器地址>/
 
 ![本地的](/assets/images/editor/nextcloud-local.jpg)
 
-有时，网络配置可能会导致已安装的Nextcloud和ONLYOFFICE 文档之间无法通过公共地址进行请求。**高级服务器设置”**允许设置Nextcloud服务器内部请求的ONLYOFFICE 文档地址，以及ONLYOFFICE 文档内部请求的返回Nextcloud地址。您需要在相应字段中输入这些地址。
+有时，网络配置可能会导致已安装的Nextcloud和ONLYOFFICE 文档之间无法通过公共地址进行请求。**高级服务器设置**允许设置Nextcloud服务器内部请求的ONLYOFFICE 文档地址，以及ONLYOFFICE 文档内部请求的返回Nextcloud地址。您需要在相应字段中输入这些地址。
 
 ![公共](/assets/images/editor/nextcloud-public.jpg)
 
@@ -241,7 +241,7 @@ occ onlyoffice:documentserver --check
 
 ONLYOFFICE集成遵循此处记录的API规范：[此处](../basic-concepts.md)。
 
-1. 创建新文件时，用户在Nextcloud中导航到文档文件夹，然后点击**新建(+)**菜单中的**文档**、**电子表格**或**演示文稿**选项。
+1. 创建新文件时，用户在Nextcloud中导航到文档文件夹，然后点击**新建(+)** 菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
 2. 浏览器调用*/lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
 
@@ -276,7 +276,7 @@ ONLYOFFICE集成遵循此处记录的API规范：[此处](../basic-concepts.md)�
 
 - **证书验证**：如果文档服务器使用自签名证书，Nextcloud将不会验证此类证书，并且不允许与ONLYOFFICE 文档进行连接。这个问题可以通过两种方式解决：
 
-  1. 在Nextcloud的ONLYOFFICE管理页面服务器设置部分，勾选**禁用证书验证（不安全）**复选框。
+  1. 在Nextcloud的ONLYOFFICE管理页面服务器设置部分，勾选**禁用证书验证（不安全）** 复选框。
   2. 手动更改Nextcloud配置文件。找到Nextcloud配置文件(*/Nextcloud/config/config.php*)并打开它。在其中插入以下部分：
 
   ``` php

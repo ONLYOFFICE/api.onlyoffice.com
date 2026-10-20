@@ -25,21 +25,21 @@ import TabItem from '@theme/TabItem';
 
 1. 按下 **Win+R**。
 
-2. 在弹出的 **运行** 窗口中，在 **打开** 字段中键入 `cmd`。
+2. 在弹出的**运行**窗口中，在**打开**字段中键入 `cmd`。
 
    <img alt="Windows 运行对话框" src="/assets/images/desktop/windows-terminal.png" width="416px" />
 
-3. 单击 **确定** 按钮。终端将会打开。
+3. 单击**确定**按钮。终端将会打开。
 
 4. 输入上述命令并按 **Enter**。
 
 **选项 2**：通过快捷方式运行应用程序：
 
 1. 右键单击桌面屏幕上的应用程序快捷方式。
-2. 选择 **属性**。
-3. 打开 **快捷方式** 选项卡。
-4. 在 **目标** 字段中，在应用程序路径后输入一个空格，然后键入 `--ascdesktop-support-debug-info` 标志。
-5. 单击 **应用** 按钮。
+2. 选择**属性**。
+3. 打开**快捷方式**选项卡。
+4. 在**目标**字段中，在应用程序路径后输入一个空格，然后键入 `--ascdesktop-support-debug-info` 标志。
+5. 单击**应用**按钮。
 
 <img alt="Windows 快捷方式" src="/assets/images/desktop/windows-shortcut.png" width="416px" />
 
@@ -73,7 +73,7 @@ import TabItem from '@theme/TabItem';
 
    <img alt="macOS Spotlight" src="/assets/images/desktop/macos-spotlight.png" width="536px" />
 
-3. 选择 **终端** 选项。
+3. 选择**终端**选项。
 
    <img alt="macOS 终端" src="/assets/images/desktop/macos-terminal.png" width="536px" />
 
@@ -82,7 +82,7 @@ import TabItem from '@theme/TabItem';
 
 ## 在调试模式下工作
 
-要打开开发者工具，右键单击顶部工具栏上的任何可编辑字段（例如，字体列表组合框），然后单击 **检查元素**，或者在文档中的任意位置单击并按 **F1**。
+要打开开发者工具，右键单击顶部工具栏上的任何可编辑字段（例如，字体列表组合框），然后单击**检查元素**，或者在文档中的任意位置单击并按 **F1**。
 
 ![检查元素](/assets/images/desktop/inspect-element.png#gh-light-mode-only)![检查元素](/assets/images/desktop/inspect-element.dark.png#gh-dark-mode-only)
 

@@ -22,7 +22,7 @@ sidebar_position: -2
 
 ## 查看模式
 
-可能还有另一种情况，主机首先在查看器中打开文档，然后使用**“编辑”**按钮将文档转换为 OOXML 格式并进行编辑。使用[查看](./wopi-discovery.md#view)操作打开二进制文件的过程应如下所示：
+可能还有另一种情况，主机首先在查看器中打开文档，然后使用**编辑**按钮将文档转换为 OOXML 格式并进行编辑。使用[查看](./wopi-discovery.md#view)操作打开二进制文件的过程应如下所示：
 
 1. 将 [UserCanWrite](./wopi-rest-api/checkfileinfo.md#UserCanWrite) 属性设置为 **true**。
 2. 将 [UserCanNotWriteRelative](./wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性设置为**false**（或简单地忽略它）。
