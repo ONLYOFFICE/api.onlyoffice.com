@@ -22,7 +22,7 @@ The DocSpace MCP server allows you to connect numerous MCP clients, offering fle
 Take note of these environment variables used when configuring the DocSpace MCP server:
 
 - `DOCSPACE_BASE_URL` — the URL of your DocSpace instance (e.g., `https://portal.onlyoffice.com`).
-- `DOCSPACE_API_KEY` — your personal API key generated in DocSpace settings → **Developer Tools** → **API Keys**.
+- `DOCSPACE_API_KEY` — your personal API key generated in DocSpace **Developer Tools** → **API keys**.
 
 **Ensure your API key is valid**.
 
@@ -257,7 +257,7 @@ Connect to the locally running MCP server using stdio transport.
         - Enter your **Client ID** and **Client Secret** gotten from [creating your custom app on DocSpace](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/)
     - **API Token**: 
         - Select "API Token Authentication" from "Authentication Methods" section and 
-        - In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
+        - In the "Header value" field, enter your personal API key generated in DocSpace **Developer Tools** → **API keys**.
 9. Click **Connect**.
 10. Confirm connection by enabling the DocSpace MCP server in the **Enable tools** section of the chat bar.
 

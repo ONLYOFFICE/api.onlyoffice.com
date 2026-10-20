@@ -42,7 +42,7 @@ The OAuth token was not saved correctly, or the session expired before the hands
 This happens when the `DOCSPACE_BASE_URL` value is incorrect or the API key is invalid/expired. To fix:
 
 - Verify that the URL is correct and accessible: open it in a browser and confirm the DocSpace login page loads.
-- Regenerate the API key in DocSpace **Settings → Developer Tools → API Keys** and update the value in the configuration file.
+- Regenerate the API key in DocSpace **Developer Tools → API keys** and update the value in the configuration file.
 - Ensure the URL does not have a trailing slash (e.g., use `https://portal.onlyoffice.com`, not `https://portal.onlyoffice.com/`).
 
 ## Docker container exits immediately after starting

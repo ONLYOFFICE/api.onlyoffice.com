@@ -10,15 +10,15 @@ When a user clicks the authorization link, any of these four scenarios can occur
 
 ## Scenario 1: User authorization
 
-For users not yet authorized on the portal, the authorization link opens an authorization form where they enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
+For users not yet authorized in the workspace, the authorization link opens an authorization form where they enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
 
-## Scenario 2: Portal selection
+## Scenario 2: Workspace selection
 
-If the user has more than one portal with the entered personal data, they will be redirected to the page for choosing the necessary one.
+If the user has more than one workspace with the entered personal data, they will be redirected to the page for choosing the necessary one.
 
-<img alt="Choose portal" src="/assets/images/docspace/choose-portal.png" width="400px" />
+<img alt="Choose workspace" src="/assets/images/docspace/choose-portal.png#gh-light-mode-only" width="400px" /><img alt="Choose workspace" src="/assets/images/docspace/choose-portal.dark.png#gh-dark-mode-only" width="400px" />
 
 ## Scenario 3: Consent page
 
@@ -30,7 +30,10 @@ Click **Allow** or **Deny** to finish the authorization flow.
 
 ## Scenario 4: Error page
 
-If the authorization link contains non-existent [client_id](auth-button.md#client_id) and [redirect_uri](auth-button.md#redirect_uri), it redirects the user to the DocSpace error page.
+If the authorization link contains invalid parameters, the user is redirected to an error page. The page displays a message that describes the specific error, for example:
+
+- the [client_id](auth-button.md#client_id) parameter is missing or the application with this ID does not exist;
+- the [redirect_uri](auth-button.md#redirect_uri) does not match the redirect URI specified in the application settings.
 
 <img alt="Error page" src="/assets/images/docspace/error-page.png#gh-light-mode-only" width="400px" /><img alt="Error page" src="/assets/images/docspace/error-page.dark.png#gh-dark-mode-only" width="400px" />
 

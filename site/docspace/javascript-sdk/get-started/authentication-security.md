@@ -42,9 +42,9 @@ For the Embed SDK to work correctly, it must be launched on the server. Note tha
 
 You need to add the URL of your server's root directory to the **Developer Tools** section of DocSpace:
 
-1. Go to the DocSpace settings.
-2. Navigate to the **Developer Tools** section.
-3. On the **Embed SDK** tab, in the **Enter the address of DocSpace to embed** field, add the URL of your server's root directory.
+1. Click the **Developer Tools** banner at the bottom of the left panel.
+2. Select **Embed SDK** in the left menu.
+3. In the **Enter the address of DocSpace to embed** field, add the URL of your server's root directory.
 
 ![Developer Tools URL whitelist](/assets/images/docspace/add-in-js-sdk-root-url.png#gh-light-mode-only)![Developer Tools URL whitelist](/assets/images/docspace/add-in-js-sdk-root-url.dark.png#gh-dark-mode-only)
 
@@ -69,6 +69,6 @@ Before initializing the iframe, the SDK checks whether the embedding domain is i
 
 > *"The current domain is not set in the Content Security Policy (CSP) settings."*
 
-The current CSP allowlist can be checked via `GET /api/2.0/security/csp`. To add your domain, register it in **DocSpace settings → Developer Tools → Embed SDK** as described in [Registering allowed embed origins](#registering-allowed-embed-origins) above.
+The current CSP allowlist can be checked via `GET /api/2.0/security/csp`. To add your domain, register it in **Developer Tools → Embed SDK** as described in [Registering allowed embed origins](#registering-allowed-embed-origins) above.
 
 You can set `checkCSP: false` in the frame config to skip the check, but this is not recommended for production — doing so allows the SDK to initialize on any domain, including unauthorized ones.

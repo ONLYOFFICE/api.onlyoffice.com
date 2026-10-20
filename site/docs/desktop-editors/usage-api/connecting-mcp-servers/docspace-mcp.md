@@ -21,7 +21,7 @@ Before connecting the DocSpace MCP server, ensure you have:
 To obtain an API key from your DocSpace instance:
 
 1. Log in to your DocSpace portal as an administrator
-2. Navigate to **Settings** → **Developer Tools** → **API**
+2. Click **Developer Tools** at the bottom of the left panel and select **API keys**
 3. Create a new API key or use an existing one
 4. Copy the API key for use in the configuration
 

@@ -6,19 +6,17 @@ sidebar_position: -6
 
 To create a new OAuth application, send a POST request to the [api/2.0/clients](../../../../../docspace/api-backend/usage-api/oauth-2-0/client-management/create-client.md) address.
 
-You can also create and manage OAuth clients on your portal from the **Developer Tools** page:
+You can also create and manage OAuth clients in your workspace from the **Developer Tools** page:
 
-1. Go to the DocSpace settings.
+1. Click the **Developer Tools** banner at the bottom of the left panel.
 
-2. Navigate to the **Developer Tools** section.
+2. Select **OAuth 2.0** in the left menu.
 
-3. Open the **OAuth 2.0** tab.
-
-4. Click **Register a new application**.
+3. Click **Register new application**.
 
    ![OAuth new app](/assets/images/docspace/oauth-new-app.png#gh-light-mode-only)![OAuth new app](/assets/images/docspace/oauth-new-app.dark.png#gh-dark-mode-only)
 
-5. Specify the following settings to configure the behavior of your OAuth app. These settings are grouped into **Basic info**, **Access scopes**, and **Support and legal info**.
+4. Specify the following settings to configure the behavior of your OAuth app. These settings are grouped into **Basic info**, **Access scopes**, and **Support and legal info**.
 
 ## Basic info
 
@@ -45,8 +43,8 @@ This parameter defines the capabilities of a third-party application in relation
 | --------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Profile         | `accounts.self:read` - view basic information about your profile. | `accounts.self:write` - view and manage basic information about your profile. |
 | Accounts        | `accounts:read` - view all accounts.                              | `accounts:write` - view and manage all accounts.                              |
-| Files & Folders | `files:read` - view all files and folders.                        | `files:write` - view and manage all files and folders.                        |
 | Rooms           | `rooms:read` - view all rooms.                                    | `rooms:write` - view and manage all rooms.                                    |
+| Files & Folders | `files:read` - view all files and folders.                        | `files:write` - view and manage all files and folders.                        |
 | Open ID         | `openid` - view your personal data.                               |                                                                               |
 
 Check **Read** or **Write** options near each scope. When selecting the **Write** capability, the **Read** option is automatically enabled.
@@ -65,4 +63,8 @@ Parameters in this group ensure compliance with data and privacy regulations.
 ![Support and legal info](/assets/images/docspace/support-and-legal-info.png#gh-light-mode-only)![Support and legal info](/assets/images/docspace/support-and-legal-info.dark.png#gh-dark-mode-only)
 
 When all settings are specified, click **Save**. A new application will appear in the application list.
+
+:::note
+You cannot change the **Website URL**, **Privacy policy URL**, and **Terms of service URL** after the app is created. **Redirect URLs** and **Access scopes** cannot be changed in the editing form either, but you can update them with the [update client](../../../../../docspace/api-backend/usage-api/oauth-2-0/client-management/update-client.md) method.
+:::
 
