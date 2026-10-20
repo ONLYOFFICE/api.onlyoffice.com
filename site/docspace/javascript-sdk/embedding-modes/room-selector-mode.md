@@ -36,7 +36,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   showSelectorHeader: true,
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
+    onSelectCallback: function (rooms) {
+      const room = rooms[0];
       console.log("Selected room:", room.label, room.id);
       linkRoomToTask(currentTaskId, room.id);
       selector.destroyFrame();
@@ -50,13 +51,13 @@ const selector = DocSpace.SDK.initRoomSelector({
 
 ### Filtering by room type
 
-Show only collaboration rooms by passing `roomType` to narrow the selection:
+Show only collaboration rooms by passing `roomType` — a room type value as a string, not its name — to narrow the selection. See [RoomType](../usage-sdk/enumerations/RoomType.md) for the full type-to-number mapping:
 
 ```javascript
 const docSpace = DocSpace.SDK.initRoomSelector({
   frameId: "ds-selector",
   src: "https://your-docspace.com",
-  roomType: "collaboration",
+  roomType: "2", // Collaboration room
   withSearch: true,
 });
 ```
@@ -74,8 +75,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   src: "https://your-docspace.com",
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
-      handleRoomSelected(room);
+    onSelectCallback: function (rooms) {
+      handleRoomSelected(rooms[0]);
       dialog.close();
       selector.destroyFrame();
     },

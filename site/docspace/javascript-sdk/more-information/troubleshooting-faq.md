@@ -5,13 +5,13 @@ tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
 
 # Troubleshooting & FAQ
 
-This page collects fixes for the errors integrators run into most often, tips for debugging a frame that isn't behaving as expected, and known limitations of the current SDK. For a deeper look at how authentication, CSP, and cookies work together, see [Authentication & Security](./get-started/authentication-security.md).
+This page collects fixes for the errors integrators run into most often, tips for debugging a frame that isn't behaving as expected, and known limitations of the current SDK. For a deeper look at how authentication, CSP, and cookies work together, see [Authentication & Security](../get-started/authentication-security.md).
 
 ## Common errors and fixes
 
 ### "The current domain is not set in the Content Security Policy (CSP) settings."
 
-This is the error every init method reports through `onAppError` and renders inside the frame when the embedding domain isn't in DocSpace's CSP allowlist. See [Content Security Policy (CSP)](./get-started/authentication-security.md#content-security-policy-csp) for how to check and update the allowlist.
+This is the error every init method reports through `onAppError` and renders inside the frame when the embedding domain isn't in DocSpace's CSP allowlist. See [Content Security Policy (CSP)](../get-started/authentication-security.md#content-security-policy-csp) for how to check and update the allowlist.
 
 :::note
 The frame shows the same CSP error page for init failures that have nothing to do with CSP. Check the `onAppError` payload and the browser console for the real cause before assuming your CSP settings are wrong. See [Known limitations](#known-limitations) below.
@@ -19,15 +19,15 @@ The frame shows the same CSP error page for init failures that have nothing to d
 
 ### Cross-origin / "domain not allowed" errors
 
-The SDK doesn't rely on traditional CORS response headers. Instead, the embedding origin must be explicitly added to the DocSpace allowlist. If requests from your page are being rejected, see [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins). The SDK compares only the host and port, case-insensitively, so add the entry as a host and port, without a scheme or path. An entry with a path, such as `https://example.com/app`, never matches, and subdomains aren't matched automatically.
+The SDK doesn't rely on traditional CORS response headers. Instead, the embedding origin must be explicitly added to the DocSpace allowlist. If requests from your page are being rejected, see [Registering allowed embed origins](../get-started/authentication-security.md#registering-allowed-embed-origins). The SDK compares only the host and port, case-insensitively, so add the entry as a host and port, without a scheme or path. An entry with a path, such as `https://example.com/app`, never matches, and subdomains aren't matched automatically.
 
 ### Blank iframe (frame loads but shows nothing)
 
 Check these in order:
 
 1. The container element referenced by `frameId` exists in the DOM *before* `initManager`/`initEditor` is called. If there's no element with this ID, the init method returns `null` and inserts nothing.
-2. `src` is set and points at a reachable DocSpace instance served over HTTPS. When `src` is empty or isn't a valid URL, the SDK logs `SDK Warning: src is empty` or `src "..." is not a valid URL` to the console. Mixed content (an HTTPS page loading an HTTP `src`) is silently blocked by the browser. See [Prerequisites](./get-started/get-started.md#prerequisites).
-3. The origin is in the allowlist, per [Registering allowed embed origins](./get-started/authentication-security.md#registering-allowed-embed-origins).
+2. `src` is set and points at a reachable DocSpace instance served over HTTPS. When `src` is empty or isn't a valid URL, the SDK logs `SDK Warning: src is empty` or `src "..." is not a valid URL` to the console. Mixed content (an HTTPS page loading an HTTP `src`) is silently blocked by the browser. See [Prerequisites](../get-started/get-started.md#prerequisites).
+3. The origin is in the allowlist, per [Registering allowed embed origins](../get-started/authentication-security.md#registering-allowed-embed-origins).
 4. The browser console and the `onAppError` event (see [Debugging tips](#debugging-tips)) for the actual error. A blank frame is usually a swallowed init error rather than a rendering issue.
 
 ### Authentication loops (user is repeatedly asked to sign in)
@@ -39,7 +39,7 @@ This is almost always a cross-origin cookie problem: the browser isn't sending t
 
 Otherwise, the cookie falls back to `SameSite=Strict`, and the embedded frame loses the session. So make sure that both the DocSpace server and the embedding page are served over HTTPS, and that the embedding origin is in the allowlist. The mode can be overridden with the `web:samesite` configuration key on the DocSpace server, but this is rarely needed.
 
-Thanks to the `Partitioned` attribute, browsers that support [CHIPS](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) (Chrome, Firefox, and Safari 18.4+) keep the session cookie in separate storage under the embedding site, even when third-party cookies are blocked. If the loop persists in a browser without CHIPS support or in a strict privacy mode, use [token-based auth for public rooms](./get-started/authentication-security.md#token-based-auth-for-public-rooms) instead.
+Thanks to the `Partitioned` attribute, browsers that support [CHIPS](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) (Chrome, Firefox, and Safari 18.4+) keep the session cookie in separate storage under the embedding site, even when third-party cookies are blocked. If the loop persists in a browser without CHIPS support or in a strict privacy mode, use [token-based auth for public rooms](../get-started/authentication-security.md#token-based-auth-for-public-rooms) instead.
 
 ### "Message bus is not connected with frame"
 
@@ -104,9 +104,9 @@ const instance = DocSpace.SDK.initManager({
 
 `onAppError` fires for SDK-side errors: CSP check failures, message parsing errors, a disconnected frame, or token errors. The frame also sends it with its own message when its page fails to load, for example, in the Chat mode. DocSpace API errors don't trigger it: the method's promise rejects with `API_ERROR` instead (see [How API errors are reported](#how-api-errors-are-reported)). Authorization errors in an OAuth frame arrive in the `onAuthError` event with `{ code: "UNAUTHORIZED" }`.
 
-For the full list of available events and their payloads, see [TFrameEvents](./usage-sdk/type-aliases/TFrameEvents.md).
+For the full list of available events and their payloads, see [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md).
 
 ## Known limitations
 
 - **The frame shows the same CSP error page for any init failure.** When the CSP check fails for any reason, the SDK renders the same CSP error page inside the frame, not only for an actual allowlist violation. The `onAppError` payload tells the cases apart: `Invalid URL` for an empty or invalid `src`, `CSP validation failed: ...` when the portal can't be reached, and the "not set in the Content Security Policy (CSP) settings" message only when the domain is really missing from the allowlist. Check `onAppError` and the browser console before changing your CSP settings. To detect an allowlist violation in code, check for the `CSP_VIOLATION` error code.
-- **`checkCSP: false` is all-or-nothing.** There's currently no way to relax the CSP check for debugging without disabling it completely, which is why it's not recommended outside local development. See [Content Security Policy (CSP)](./get-started/authentication-security.md#content-security-policy-csp).
+- **`checkCSP: false` is all-or-nothing.** There's currently no way to relax the CSP check for debugging without disabling it completely, which is why it's not recommended outside local development. See [Content Security Policy (CSP)](../get-started/authentication-security.md#content-security-policy-csp).

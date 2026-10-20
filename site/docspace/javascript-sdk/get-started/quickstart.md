@@ -39,6 +39,8 @@ const docSpace = DocSpace.SDK.initManager({
 
 The DocSpace instance will render inside the `ds-frame` div. Users who are already logged in will see their workspace immediately. Users who are not logged in will be prompted to sign in.
 
+`src` must be the portal's own absolute URL — the SDK only accepts messages from the iframe if they come from that exact origin, so a `src` that redirects to a different origin on load will leave the frame looking stuck, with no error of its own.
+
 Below is a basic working example you can save and serve to verify your setup:
 
 ```html

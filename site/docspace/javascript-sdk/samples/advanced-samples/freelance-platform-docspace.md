@@ -385,7 +385,7 @@ async function createOrder() {
 ```
 
 - Creates a collaboration room (type 2) with the project title, where the freelancer can get the **Content creator** role
-- Checks `id` in the result to detect errors. `createRoom()` resolves with `{ status, message }` on a portal error instead of rejecting, so the result is checked for `id`. See [How API errors are reported](../../troubleshooting-faq.md#how-api-errors-are-reported).
+- Checks `id` in the result to detect errors. `createRoom()` resolves with `{ status, message }` on a portal error instead of rejecting, so the result is checked for `id`. See [How API errors are reported](../../more-information/troubleshooting-faq.md#how-api-errors-are-reported).
 - Opens the new room in the file manager
 
 ### 6. Display the workspace

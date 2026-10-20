@@ -41,7 +41,7 @@ const docSpace = DocSpace.SDK.initViewer({
 
 ### Embedding a document preview in mobile layout
 
-Use `editorType` to switch the viewer to a mobile-optimized layout and hide the "Open file location" button:
+`editorType: "mobile"` switches to a mobile-optimized layout; `editorGoBack: false` additionally hides the "Open file location" button — see [Hiding UI elements and frame layout](../customization/ui-elements.md#editor-mode) for its other two values:
 
 ```javascript
 const docSpace = DocSpace.SDK.initViewer({
@@ -50,27 +50,5 @@ const docSpace = DocSpace.SDK.initViewer({
   id: "your-file-id",
   editorType: "mobile",
   editorGoBack: false,
-});
-```
-
-### Handling access and not found errors
-
-Display a fallback UI when the user cannot access the document or the file no longer exists:
-
-```javascript
-const docSpace = DocSpace.SDK.initViewer({
-  frameId: "ds-frame",
-  src: "https://your-docspace.com",
-  id: "your-file-id",
-  events: {
-    onNoAccess: function () {
-      document.getElementById("ds-frame").innerHTML =
-        "You do not have permission to view this document.";
-    },
-    onNotFound: function () {
-      document.getElementById("ds-frame").innerHTML =
-        "This document no longer exists.";
-    },
-  },
 });
 ```

@@ -6,7 +6,11 @@ sidebar_position: 6
 
 System mode initializes a lightweight, hidden SDK frame that displays a blank page with a loader. It renders no visible DocSpace UI. Instead, it provides access to a focused set of system-level methods for managing user sessions programmatically, such as authentication, hash generation, and user info retrieval — without embedding a visible interface.
 
-File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` are not processed by the DocSpace server when called from a system frame — use [Manager mode](./manager-mode.md) for those.
+File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` aren't available from a system frame — use [Manager mode](./manager-mode.md) for those instead.
+
+:::note
+Calling `createRoom()` from a system frame rejects the returned promise with `SDKErrorCode.ModeMismatch` (message naming the method and the mode) instead of resolving with a room object, and no room is created. See [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for how this generalizes to any method the current mode has no handler for.
+:::
 
 ## Initialization
 
@@ -64,15 +68,15 @@ After initialization, the SDK instance can be accessed by its `frameId`:
 const frame = DocSpace.SDK.frames["ds-frame"];
 ```
 
-System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame is not prevented by the SDK, but the DocSpace server does not process them in this mode.
+System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame isn't blocked at the type level, but the DocSpace client has no handler for them in this mode — the call rejects instead of doing anything.
 
 | Method | Description |
 | -------- | ------------- |
-| `setConfig(config)` | Updates the frame configuration. In system mode, only `theme` and `locale` are applied. |
-| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
+| `setConfig(config)` | Updates the frame configuration — `theme`, `locale`, `stylesUrl`, and `customActions` are all applied, though System mode has no visible UI for most of them to affect. |
+| `getUserInfo()` | Returns information about the currently authenticated user. Resolves with an empty value — not `null`, and not a rejection — when nobody is signed in; check `user && user.id` rather than a falsy/`catch` check. |
 | `getHashSettings()` | Returns the DocSpace hash settings used for generating a password hash. |
 | `createHash(password, hashSettings)` | Generates a hash string from a plain-text password using the specified hash settings. |
-| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?, code?)` | Logs in to DocSpace using the specified credentials. See [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md) for the `code` argument. |
 | `logout()` | Logs out the current user. |
 
 ## Use cases
@@ -84,26 +88,40 @@ System mode exposes a focused set of methods for session management. Calling fil
 Authenticate a user in the background without displaying a login form, for example, from a third-party application. See also: [Authorization](../samples/advanced-samples/authorization.md).
 
 ```javascript
-const sdk = new SDK();
-
-const system = sdk.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
+const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
 
 const settings = await system.getHashSettings();
 const hash = await system.createHash("p@ssw0rd", settings);
-await system.login("user@example.com", hash, undefined, true);
+const result = await system.login("user@example.com", hash);
+
+if (result.url === "/") {
+  console.log("Signed in");
+} else if (result.url && result.url.startsWith("/confirm/")) {
+  console.log("Two-factor code required"); // see Two-factor authentication
+} else {
+  console.error("Login failed"); // don't log `result` itself — see Method-call errors
+}
 ```
+
+`login()` never rejects due to a portal-side failure — it always resolves, even with wrong credentials, so check `result.url` rather than wrapping the call in `try`/`catch` for that case. It can still reject for an SDK-level problem (`SDKErrorCode.Timeout`, `SDKErrorCode.Disconnected`) or if the frame is in [OAuth mode](../get-started/authentication-security.md#oauth-authentication). Never log or forward the resolved `result` object as-is on failure: see [Method-call errors](../events-and-callbacks/events-and-callbacks.md#method-call-errors) for why.
 
 ### Switching users
 
 Log out the current user and authenticate a different account:
 
 ```javascript
+const system = DocSpace.SDK.frames["ds-auth"];
+
 await system.logout();
 const settings = await system.getHashSettings();
 const hash = await system.createHash("otherPassword", settings);
-await system.login("other@example.com", hash);
+const result = await system.login("other@example.com", hash);
 
-// Reinitialize the Manager frame for the new user
+if (result.url !== "/") {
+  console.error("Login failed"); // see the result-checking note above
+} else {
+  // Reinitialize the Manager frame for the new user
+}
 ```
 
 ### Checking authorization status
@@ -111,23 +129,31 @@ await system.login("other@example.com", hash);
 Check whether a user is already authenticated before deciding what to display.
 
 ```javascript
-const system = sdk.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
+const system = DocSpace.SDK.initSystem({ frameId: "ds-auth", src: "https://your-docspace.com" });
 
 try {
   const user = await system.getUserInfo();
-  // User is authenticated — open Manager
-  sdk.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
+  if (user && user.id) {
+    // User is authenticated — open Manager
+    DocSpace.SDK.initManager({ frameId: "ds-frame", src: "https://your-docspace.com" });
+  } else {
+    // User is not authenticated — show your own login form
+    showLoginForm();
+  }
 } catch {
-  // User is not authenticated — show your own login form
+  // A genuine SDK-level failure (e.g. a timeout) — not the same as "not authenticated"
   showLoginForm();
 }
 ```
+
+`getUserInfo()` doesn't reject, and doesn't resolve with `null`, when nobody is signed in — it resolves with an empty value, so check for a real user object rather than relying on a `catch` for that case; the `catch` here is only for genuine SDK-level failures.
 
 ### Changing the theme/locale
 
 Change the theme and locale without rebooting the DocSpace instance:
 
 ```javascript
+const system = DocSpace.SDK.frames["ds-auth"];
 await system.setConfig({ theme: 'Dark', locale: 'de' });
 ```
 
@@ -136,7 +162,7 @@ await system.setConfig({ theme: 'Dark', locale: 'de' });
 Hide the system frame visually and use it as a backend for your own login form. The frame can be hidden using `width: 0px` and `height: 0px`.
 
 ```javascript
-const system = sdk.initSystem({
+const system = DocSpace.SDK.initSystem({
   frameId: "ds-auth",
   src: "https://your-docspace.com",
   width: "0px",
