@@ -62,7 +62,12 @@ You can also create and manage API keys on your portal from the **Developer Tool
     ![API keys](/assets/images/docspace/api-keys.png#gh-light-mode-only)![API keys](/assets/images/docspace/api-keys.dark.png#gh-dark-mode-only)
 
 3. Specify the key name. The name usually contains information that allows the user to quickly understand where the key is used. For example, "LangFlow on a home computer."
-4. Configure the key access rights. You can create a read-only key or grant full access to the data.
+4. Configure the key permissions:
+
+    - **All** grants full access to the data.
+    - **Restricted** grants access only to the selected scopes (**Files & Folders**, **Rooms**, **Profile**, and **Contacts**). Check **Read** or **Write** next to each scope.
+    - **Read only** grants read access to the data.
+
 5. Specify the key lifetime in days (maximum 365), after which the key will be automatically deactivated.
 
     ![Create API key](/assets/images/docspace/create-api-key.png#gh-light-mode-only)![Create API key](/assets/images/docspace/create-api-key.dark.png#gh-dark-mode-only)

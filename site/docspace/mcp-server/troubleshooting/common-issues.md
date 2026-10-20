@@ -43,7 +43,7 @@ Sometimes OAuth authentication fails or the browser fails to open to authenticat
 
 This signals invalid authentication credentials to access the server and may result from any of these:
 
-- **Key copied incorrectly.** Regenerate the API key in DocSpace settings → **Developer Tools** → **API Keys** and paste it again, making sure there are no leading or trailing whitespace characters.
+- **Key copied incorrectly.** Regenerate the API key in DocSpace **Developer Tools** → **API keys** and paste it again, making sure there are no leading or trailing whitespace characters.
 - **Invalid key.** Check to confirm your API key is still valid and not revoked. If revoked, generate a new API key and update the value of `DOCSPACE_API_KEY` in the configuration file.
 - **Insufficient permissions.** Ensure your DocSpace account has the permissions required by the MCP server. Contact your DocSpace administrator to verify your account role.
 
@@ -108,7 +108,7 @@ After editing the client `config.json` file, the client displays an error for th
 - **Docker is not running:** Make sure Docker Desktop (or the Docker daemon on Linux) is started before launching the client.
 - **The Docker image is not pulled:** Run `docker pull onlyoffice/docspace-mcp` manually in a terminal to verify the image can be downloaded.
 - **Invalid JSON in the config file:** A single misplaced comma or brace will prevent the config from loading. Validate the file with a JSON linter (e.g., [jsonlint.com](https://jsonlint.com)) before saving.
-- **Incorrect environment variable values:** Double-check that `DOCSPACE_BASE_URL` includes the `https://` scheme and has no trailing slash, and that `DOCSPACE_API_KEY` is copied correctly from DocSpace **Settings → Developer Tools → API Keys** and update the `env` block in `mcp_settings.json`.
+- **Incorrect environment variable values:** Double-check that `DOCSPACE_BASE_URL` includes the `https://` scheme and has no trailing slash, and that `DOCSPACE_API_KEY` is copied correctly from DocSpace **Developer Tools → API keys** and update the `env` block in `mcp_settings.json`.
 - **The API key has been revoked or expired:** Generate a new API key in DocSpace and update the config file, then restart Claude Desktop.
 - **Port conflict.** If another local service occupies the default port, try restarting Docker or the conflicting service.
 
