@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/ISettingsPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/ISettingsPlugin.ts
 ---
 
 # ISettingsPlugin
@@ -17,7 +17,7 @@ and hold anything bulkier in a file or a portal entity the plugin refers to by I
 
 The plugin class implements `ISettingsPlugin`: `adminPluginSettings` describes the
 settings block (a webhook URL input and a save button) shown in the modal window
-with the plugin description. DocSpace calls `getAdminPluginSettings` to render the
+with the plugin description. ONLYOFFICE Apps calls `getAdminPluginSettings` to render the
 block and `setAdminPluginSettingsValue` to pass the saved value back to the plugin.
 
 ```typescript
@@ -117,12 +117,8 @@ Update the administrator or owner plugin settings
 setAdminPluginSettingsValue(settings: string | null): void;
 ```
 
-Transfer the administrator or owner plugin settings to all the portal
-users. It functions on the DocSpace side: the portal calls it with the
-stored settings while the plugin loads, and again after a save through the
-React settings client, re-reading [`getStatus`](IPlugin.md#getstatus)
-straight after — so a plugin can hide itself according to its own
-configuration.
+The method is called on the portal side with the stored settings string,
+`null` until the first save.
 
 #### Parameters
 
@@ -133,6 +129,13 @@ configuration.
 #### Returns
 
 `void`
+
+#### Remarks:
+
+Called as the plugin loads and after a save through the React
+settings client, with [`getStatus`](IPlugin.md#getstatus) re-read straight
+after, so a plugin can hide itself by its own configuration. A save
+reaches only the browser session that made it.
 
 ### getAdminPluginSettings()
 

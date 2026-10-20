@@ -1,10 +1,10 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/react/hooks.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/react/hooks.ts
 ---
 
 # Hooks
 
-React hooks for plugin components rendered inside the DocSpace application tree.
+React hooks for plugin components rendered inside the ONLYOFFICE Apps application tree.
 
 A plugin component is passed to the SDK through one of the `*Component` props —
 [`IInfoPanelItem.component`](../interfaces/items/IInfoPanelItem.md#component?),
@@ -12,7 +12,7 @@ A plugin component is passed to the SDK through one of the `*Component` props �
 [`IArticleNavigationItem.component`](../interfaces/items/IArticleNavigationItem.md#component),
 [`IModalDialog.dialogBodyComponent`](../interfaces/components/IModalDialog.md#dialogBodyComponent?)
 or [`ISettings.component`](../interfaces/settings/ISettings.md#component?).
-DocSpace renders it with the plugin runtime in context, and these hooks read
+ONLYOFFICE Apps renders it with the plugin runtime in context, and these hooks read
 that context.
 
 The hooks are published from the `@onlyoffice/docspace-plugin-sdk/react`
@@ -24,8 +24,8 @@ import { useCurrentFile, usePluginActions } from "@onlyoffice/docspace-plugin-sd
 
 :::info Bundling
 `react`, `react-dom`, `react/jsx-runtime`,
-`@onlyoffice/docspace-plugin-sdk/react` and `@docspace/ui-kit` must stay
-**external** in the plugin bundle — DocSpace supplies its own copies at load
+`@onlyoffice/docspace-plugin-sdk/react` and `@onlyoffice/apps-ui-kit` must stay
+**external** in the plugin bundle — ONLYOFFICE Apps supplies its own copies at load
 time. A plugin that bundles its own React gets a second React instance with
 its own context objects, and every hook below then throws; the same goes for
 a second copy of this subpath, which owns the context those hooks read.
@@ -34,8 +34,8 @@ The SDK root, `@onlyoffice/docspace-plugin-sdk`, is **not** on that list. It
 carries string enums and types and no module state, so it is bundled like
 any other dependency.
 
-DocSpace substitutes these specifiers, spelled exactly that way.
-`@docspace/ui-kit` is today the package root only: a subpath import left
+ONLYOFFICE Apps substitutes these specifiers, spelled exactly that way.
+`@onlyoffice/apps-ui-kit` is today the package root only: a subpath import left
 external reaches the portal unresolved and the plugin then fails to load,
 naming the specifier in the console.
 :::
@@ -73,7 +73,7 @@ readable and produce narrower TypeScript types.
 
 ### Throws
 
-When called outside a plugin component rendered by DocSpace.
+When called outside a plugin component rendered by ONLYOFFICE Apps.
 
 ## useCurrentFile()
 
@@ -82,7 +82,7 @@ function useCurrentFile(): TCurrentFile | null;
 ```
 
 Returns metadata of the file, folder or room currently selected in the
-DocSpace UI, or `null` when nothing is selected. It is also `null` on
+ONLYOFFICE Apps UI, or `null` when nothing is selected. It is also `null` on
 surfaces that have no selection of their own — an article navigation page,
 the settings panel, and a dialog opened from a class-side callback — so pass
 the id the click knew through a module variable or a factory closure.
@@ -237,18 +237,9 @@ type Config = { apiKey: string };
 
 function SettingsPanel() {
   const settings = usePluginSettings();
-  const [apiKey, setApiKey] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  const [apiKey, setApiKey] = useState(() => settings.load<Config>()?.apiKey ?? "");
 
   useEffect(() => {
-    settings.load<Config>().then((saved) => {
-      if (saved) setApiKey(saved.apiKey);
-      setLoaded(true);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!loaded) return;
     settings.setSaveButton({
       component: Components.button,
       props: {
@@ -258,7 +249,7 @@ function SettingsPanel() {
         onClick: async () => { await settings.save({ apiKey }); },
       },
     });
-  }, [apiKey, loaded]);
+  }, [apiKey]);
 
   return <input value={apiKey} onChange={(e) => setApiKey(e.target.value)} />;
 }

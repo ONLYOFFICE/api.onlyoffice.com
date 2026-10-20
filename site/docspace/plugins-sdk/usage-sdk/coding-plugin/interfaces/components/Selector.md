@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/Selector/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Selector/index.ts
 ---
 
 # TSelector
@@ -28,7 +28,7 @@ type TSelector =
 };
 ```
 
-Provides selector components for choosing files, rooms, users, and groups within DocSpace.
+Provides selector components for choosing files, rooms, users, and groups within ONLYOFFICE Apps.
 
 Set `type` to the desired [SelectorType](../../enums/Selector.md) value and `props` to the matching
 selector props interface ([TBaseSelector](#tbaseselector), [TFilesSelector](#tfilesselector),
@@ -492,7 +492,7 @@ Lifecycle callback properties for selectors.
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `onLoad?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is loaded. |
-| `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is closed. |
+| `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks outside the selector. Return [`Actions.closeSelector`](../../enums/Actions.md#closeselector) to close it. Not called by the Files selector. |
 
 </APITable>
 
@@ -645,6 +645,8 @@ const filesSelectorProps: TFilesSelector = {
   // Enables and sets the text for the cancel button.
   withCancelButton: true,
   cancelButtonLabel: "Cancel",
+  // A callback function that is executed when the user clicks the cancel button.
+  onCancel: () => ({ actions: [Actions.closeSelector] }),
 
   // Enables breadcrumbs for easy navigation through folders.
   withBreadCrumbs: true,
@@ -902,6 +904,8 @@ const roomSelectorProps: TRoomSelector = {
   // Enables and sets the text for the cancel button.
   withCancelButton: true,
   cancelButtonLabel: "Close",
+  // A callback function that is executed when the user clicks the cancel button.
+  onCancel: () => ({ actions: [Actions.closeSelector] }),
 
   // Custom text to display when no rooms are found.
   emptyScreenHeader: "No Rooms Available",

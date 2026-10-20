@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IApiPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IApiPlugin.ts
 ---
 
 # IApiPlugin
@@ -8,7 +8,7 @@ The plugin that is provided with the origin, proxy, and prefix to make requests 
 
 ## Example
 
-The plugin class implements `IApiPlugin`. DocSpace fills in the API parameters
+The plugin class implements `IApiPlugin`. ONLYOFFICE Apps fills in the API parameters
 via `setOrigin`/`setProxy`/`setPrefix` (or `setAPI`) when the plugin is loaded;
 the plugin then uses `getAPI` to build request URLs to the portal.
 
@@ -71,7 +71,7 @@ class Plugin implements IApiPlugin {
 setOrigin(origin: string): void;
 ```
 
-Update the origin parameter of the DocSpace portal.
+Update the origin parameter of the ONLYOFFICE Apps portal.
 
 #### Parameters
 
@@ -89,7 +89,7 @@ Update the origin parameter of the DocSpace portal.
 setProxy(proxy: string): void;
 ```
 
-Update the proxy parameter of the DocSpace portal.
+Update the proxy parameter of the ONLYOFFICE Apps portal.
 
 #### Parameters
 
@@ -107,7 +107,7 @@ Update the proxy parameter of the DocSpace portal.
 setPrefix(prefix: string): void;
 ```
 
-Update the prefix parameter of the DocSpace portal.
+Update the prefix parameter of the ONLYOFFICE Apps portal.
 
 #### Parameters
 
@@ -125,7 +125,7 @@ Update the prefix parameter of the DocSpace portal.
 getOrigin(): string;
 ```
 
-Get the origin parameter of the DocSpace portal.
+Get the origin parameter of the ONLYOFFICE Apps portal.
 
 #### Returns
 
@@ -139,7 +139,7 @@ The current origin parameter
 getProxy(): string;
 ```
 
-Get the proxy parameter of the DocSpace portal.
+Get the proxy parameter of the ONLYOFFICE Apps portal.
 
 #### Returns
 
@@ -153,7 +153,7 @@ The current proxy parameter
 getPrefix(): string;
 ```
 
-Get the prefix parameter of the DocSpace portal to access the server side.
+Get the prefix parameter of the ONLYOFFICE Apps portal to access the server side.
 
 #### Returns
 
@@ -170,7 +170,7 @@ setAPI(
    prefix: string): void;
 ```
 
-Update all the API parameters of the DocSpace portal in one request.
+Update all the API parameters of the ONLYOFFICE Apps portal in one request.
 
 #### Parameters
 
@@ -194,7 +194,7 @@ getAPI(): {
 };
 ```
 
-Get all the API parameters of the DocSpace portal in one request.
+Get all the API parameters of the ONLYOFFICE Apps portal in one request.
 
 #### Returns
 
@@ -222,8 +222,8 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `origin` | `string` | Stores the origin parameter of the DocSpace portal |
-| `proxy` | `string` | Stores the proxy parameter of the DocSpace portal |
-| `prefix` | `string` | Stores the prefix parameter of the DocSpace portal to access the server side |
+| `origin` | `string` | Stores the origin parameter of the ONLYOFFICE Apps portal |
+| `proxy` | `string` | Stores the proxy parameter of the ONLYOFFICE Apps portal |
+| `prefix` | `string` | Stores the prefix parameter of the ONLYOFFICE Apps portal to access the server side |
 
 </APITable>

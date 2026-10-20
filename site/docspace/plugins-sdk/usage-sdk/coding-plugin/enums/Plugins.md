@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/enums/Plugins.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts
 ---
 
 # Plugins
@@ -20,9 +20,8 @@ and switches the plugin on and off by it.
 active: "active";
 ```
 
-Plugin is enabled and visible to users: the portal registers the items of
-every scope the plugin declares and loads its CSS. A plugin that reports
-no status of its own is treated as active.
+Plugin is enabled and visible to users: its items are registered and its
+CSS is loaded. A plugin that reports no status is treated as active.
 
 #### hide
 
@@ -30,10 +29,9 @@ no status of its own is treated as active.
 hide: "hide";
 ```
 
-Plugin is disabled and hidden from the user interface: the portal
-unregisters every item the plugin published and unloads its CSS. The
-plugin comes back as soon as the status is read as `active` again — the
-portal administrator's switch is what disables a plugin for good.
+Plugin is hidden from the user interface: its items are unregistered and
+its CSS unloaded until the status is read as `active` again. Unlike the
+administrator's switch, it does not disable the plugin.
 
 ***
 

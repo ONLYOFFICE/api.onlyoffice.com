@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IMainButtonPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IMainButtonPlugin.ts
 ---
 
 # IMainButtonPlugin
@@ -9,8 +9,8 @@ The plugin that can add items to the main button menu.
 ## Example
 
 The plugin class implements `IMainButtonPlugin` and registers an "Export to PDF"
-action in the constructor. DocSpace calls `getMainButtonItems` to embed the items
-into the **More** section of the main button menu inside a room.
+action in the constructor. ONLYOFFICE Apps calls `getMainButtonItems` to embed the items
+into the **More** submenu of the main button menu.
 
 ```typescript
 import {

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IContextMenuPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IContextMenuPlugin.ts
 ---
 
 # IContextMenuPlugin
@@ -9,7 +9,7 @@ The plugin that is embedded in the context menu of files, folders, rooms, images
 ## Example
 
 The plugin class implements `IContextMenuPlugin` and registers a "Share Document"
-item in the constructor. DocSpace calls `getContextMenuItems` to embed the items
+item in the constructor. ONLYOFFICE Apps calls `getContextMenuItems` to embed the items
 into the context menu.
 
 ```typescript

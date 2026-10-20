@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IFilePlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IFilePlugin.ts
 ---
 
 # IFilePlugin
@@ -9,7 +9,7 @@ The plugin that can interact with the file list.
 ## Example
 
 The plugin class implements `IFilePlugin` and registers a handler for the ".drawio"
-extension in the constructor. DocSpace calls `getFileItems` to hook the plugin into
+extension in the constructor. ONLYOFFICE Apps calls `getFileItems` to hook the plugin into
 the file list: files with the registered extension get the custom icon, and clicking
 them triggers the item's `onClick`.
 

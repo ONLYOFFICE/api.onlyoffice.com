@@ -1,12 +1,12 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
 ---
 
 # Plugins
 
-Core plugin interfaces that define the contract for each plugin type supported by DocSpace. Every plugin must implement `IPlugin` plus one or more type-specific interfaces.
+Core plugin interfaces that define the contract for each plugin type supported by ONLYOFFICE Apps. Every plugin must implement `IPlugin` plus one or more type-specific interfaces.
 
-Implement the interface that matches the DocSpace UI area you want to extend. Each plugin type registers its UI entries as [items](../items/index.md) kept in a `Map`.
+Implement the interface that matches the ONLYOFFICE Apps UI area you want to extend. Each plugin type registers its UI entries as [items](../items/index.md) kept in a `Map`.
 
 ## Overview
 
@@ -22,7 +22,7 @@ Available plugin type interfaces:
 | [`IFilePlugin`](IFilePlugin.md) | The plugin that can interact with the file list. |
 | [`IInfoPanelPlugin`](IInfoPanelPlugin.md) | The plugin that is embedded as a separate tab in the file info panel. |
 | [`IMainButtonPlugin`](IMainButtonPlugin.md) | The plugin that can add items to the main button menu. |
-| [`IPlugin`](IPlugin.md) | The default plugin. |
+| [`IPlugin`](IPlugin.md) | The default plugin, implemented by every plugin class together with the interfaces of the scopes it declares, such as [`IContextMenuPlugin`](IContextMenuPlugin.md). |
 | [`IPostMessagePlugin`](IPostMessagePlugin.md) | The plugin that is given the access to handle postMessage events from iframe components. |
 | [`IProfileMenuPlugin`](IProfileMenuPlugin.md) | Plugin for embedding items in the profile menu. |
 | [`ISettingsPlugin`](ISettingsPlugin.md) | The plugin that manages settings for the administrator or owner. |

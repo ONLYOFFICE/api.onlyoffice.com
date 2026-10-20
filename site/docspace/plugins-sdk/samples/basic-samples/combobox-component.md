@@ -412,7 +412,7 @@ This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles 
 
 1. Log in as an administrator.
 2. Go to **Settings → Integration → Plugins**.
-3. Click **Upload**, and select the generated `dist/plugin.zip`.
+3. Click **Upload plugin**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 10: Test the plugin

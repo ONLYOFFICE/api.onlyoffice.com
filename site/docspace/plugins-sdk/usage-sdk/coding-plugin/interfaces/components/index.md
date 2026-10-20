@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
 ---
 
 # Components
@@ -32,4 +32,4 @@ The following components are available:
 | [`ITextArea`](ITextArea.md) | Custom textarea. |
 | [`IToast`](IToast.md) | A brief notification that appears on the screen. |
 | [`IToggleButton`](IToggleButton.md) | Custom toggle button input for binary state controls. |
-| [`TSelector`](Selector.md) | Provides selector components for choosing files, rooms, users, and groups within DocSpace. |
+| [`TSelector`](Selector.md) | Provides selector components for choosing files, rooms, users, and groups within ONLYOFFICE Apps. |

@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IBox.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts
 ---
 
 # IBox
@@ -44,7 +44,7 @@ const inputBox: IBox = {
   flexBasis: "50%",
   flexProp: "1",
   flexWrap: "wrap",
-  children: inputComponent
+  children: [inputComponent]
 }
 ```
 

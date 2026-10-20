@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/utils/index.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts
 ---
 
 # Utils
@@ -121,8 +121,8 @@ const fieldUpdateMessage: IMessage = {
 | `floatingOperationsButtonProps?` | [`IFloatingOperationsButton`](components/IFloatingOperationsButton.md) | Defines the configuration for the floating operations button that displays progress of long-running operations. Used with Actions.addFloatingOperationsButton to create a new button or Actions.updateFloatingOperationsButton to update existing one. The button appears as a floating action button in the bottom-right corner. Multiple plugins can show operations simultaneously. |
 | `floatingOperationsButtonPropsId?` | `string` | Unique identifier for the floating operations button to remove. Used only with Actions.removeFloatingOperationsButton to close a specific operations panel. The ID should match the `id` property of the IFloatingOperationsButton that was previously added. |
 | `postMessage?` | [`IPostMessage`](#ipostmessage) | Defines the properties that are used to send a message to a frame. If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes. This parameter is used only with Actions.sendPostMessage. |
-| `settings?` | `string` | Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users. This parameter is used only with Actions.saveSettings. This is the one string the portal caps at 255 characters — see [`ISettingsPlugin`](plugins/ISettingsPlugin.md) for what fits into it. |
-| `navigatePath?` | `string` | Defines the path to navigate to. All actions listed after navigate will be called after the navigation is complete. This parameter is used only with Actions.navigate. |
+| `settings?` | `string` | Defines the administrator or owner plugin settings to store, one string of at most 255 characters (see [`ISettingsPlugin`](plugins/ISettingsPlugin.md)). This parameter is used only with Actions.saveSettings. **Remarks:** Unlike `save` in the React settings client, the action does not pass the settings to the plugin class: it receives them the next time it loads. |
+| `navigatePath?` | `string` | Defines the path to navigate to. The portal starts the navigation and goes straight on to the actions listed after navigate, without waiting for the new page. This parameter is used only with Actions.navigate. |
 | `infoPanelTab?` | `string` | Defines the info panel tab to open. This parameter is used only with Actions.openInfoPanel. |
 | `mediaViewerProps?` | [`IMediaViewer`](components/IMediaViewer.md) | Defines the properties for the media viewer. This parameter is used only with Actions.showMediaViewer and Actions.updateMediaViewer. |
 
@@ -162,7 +162,7 @@ const postMessageResponse: IPostMessageCallbackMessage = {
 | `selectorProps?` | [`TSelector`](components/Selector.md) | Defines the properties that display the selector. This parameter is used only with Actions.showSelector. |
 | `floatingOperationsButtonProps?` | [`IFloatingOperationsButton`](components/IFloatingOperationsButton.md) | Defines the configuration for the floating operations button that displays progress of long-running operations. Used with Actions.addFloatingOperationsButton to create a new button. |
 | `floatingOperationsButtonPropsId?` | `string` | Unique identifier for the floating operations button to remove. Used with Actions.removeFloatingOperationsButton to close a specific operations panel. The ID should match the `id` property of the IFloatingOperationsButton that was previously added. |
-| `navigatePath?` | `string` | Defines the path to navigate to. All actions listed after navigate will be called after the navigation is complete. This parameter is used only with Actions.navigate. |
+| `navigatePath?` | `string` | Defines the path to navigate to. The portal starts the navigation and goes straight on to the actions listed after navigate, without waiting for the new page. This parameter is used only with Actions.navigate. |
 | `infoPanelTab?` | `string` | Defines the info panel tab to open. This parameter is used only with Actions.openInfoPanel. |
 
 </APITable>

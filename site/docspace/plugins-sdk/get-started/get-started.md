@@ -53,7 +53,7 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 For more information about plugin settings and scopes, see [creating a plugin template](../usage-sdk/creating-plugin-template.md).
 
-![Creating template](/assets/images/docspace/creating-template.png)
+![Creating template](/assets/images/docspace/creating-template.png#gh-light-mode-only)![Creating template](/assets/images/docspace/creating-template.dark.png#gh-dark-mode-only)
 
 ### Step 3. Coding
 
@@ -71,7 +71,7 @@ Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-pl
 
 ### Step 4. Building
 
-To build a plugin, you need to have *npm* (included with Node.js) installed.
+To build a plugin, you need to have *npm* (included with Node.js) installed. The plugin template builds with Vite 8, which requires Node.js `^20.19.0 || >=22.12.0`.
 
 1. Install all the necessary dependencies using the **npm install** command in the plugin root folder (if this was not done previously in Step 2).
 

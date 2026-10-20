@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/items/IProfileMenuItem.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IProfileMenuItem.ts
 ---
 
 # IProfileMenuItem
@@ -85,7 +85,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `label` | `string` | The item display name |
 | `icon` | `string` | The item display icon. The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field. The required icon size is 16x16 px. Otherwise, it will be compressed to this size. |
 | `onClick` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | A function that is executed when the item is clicked. This function can be asynchronous. |
-| `usersType?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who will see the current item in the profile menu. Currently the following user types are available: owner, docSpaceAdmin, roomAdmin, collaborator, user. If this parameter is not specified, then the current profile menu item will be displayed for all user types. |
+| `usersType?` | ( \| [`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who will see the current item in the profile menu. Currently the following user types are available: owner, fullAdmin, roomAdmin, user, guest. If this parameter is not specified, then the current profile menu item will be displayed for all user types. |
 | `devices?` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current item will be displayed in the profile menu. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current profile menu item will be displayed in any device types. |
 
 </APITable>

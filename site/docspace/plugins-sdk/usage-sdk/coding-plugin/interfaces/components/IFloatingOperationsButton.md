@@ -1,12 +1,12 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IFloatingOperationsButton.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts
 ---
 
 # IFloatingOperationsButton
 
 Configuration for the floating operations button.
 Used to display progress of long-running operations (upload, conversion, backup, etc.)
-The button appears as a floating action button in the bottom-right corner of DocSpace.
+The button appears as a floating action button in the bottom-right corner of ONLYOFFICE Apps.
 
 To display the button, return an [`IMessage`](../utils.md#imessage) with
 [`Actions.addFloatingOperationsButton`](../../enums/Actions.md#addfloatingoperationsbutton) in `actions`
@@ -171,7 +171,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `showCancelButton?` | `boolean` | Controls the visibility of the cancel button. Cancel button is displayed only if the floating button contains only one operation from the plugin and this flag is set to true. |
 | `cancelOperation?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user clicks the cancel button in the floating button. |
 | `onCancelOperationFromList?` | (`operationId`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user closes a specific operation from the operations list. Receives the operation ID. Typically returns Actions.updateFloatingOperationsButton with the updated operations list. |
-| `onLoad?` | (`dispatchMessage`: (`message`: [`IMessage`](../utils.md#imessage)) => `void`) => [`TReturnMessage`](../utils.md#treturnmessage) | Lifecycle callback executed once when floating operations button with given id is displayed for the first time. Receives a dispatchMessage function to send updates back to DocSpace. Use this to initialize progress tracking or update. |
+| `onLoad?` | (`dispatchMessage`: (`message`: [`IMessage`](../utils.md#imessage)) => `void`) => [`TReturnMessage`](../utils.md#treturnmessage) | Lifecycle callback executed when the entry with given id is shown, and again if it was cleared and added anew. Send later updates through `dispatchMessage`. |
 
 </APITable>
 

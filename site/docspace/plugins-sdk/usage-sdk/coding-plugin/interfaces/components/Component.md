@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/Component.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts
 ---
 
 # Component
@@ -565,7 +565,7 @@ Defines the text component.
 import { IText, Components, Component } from "@onlyoffice/docspace-plugin-sdk";
 
 const text: IText = {
-  text: "Welcome to DocSpace Plugin",
+  text: "Welcome to ONLYOFFICE Apps Plugin",
   fontSize: "18px",
   fontWeight: 500,
   lineHeight: "24px",
@@ -573,7 +573,7 @@ const text: IText = {
   isBold: false,
   textAlign: "left",
   truncate: true,
-  title: "Welcome to DocSpace Plugin"
+  title: "Welcome to ONLYOFFICE Apps Plugin"
 };
 
 const textGroup: Component = {
