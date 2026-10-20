@@ -130,6 +130,24 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     updateUrlParams({ text: value || null });
   }, []);
 
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const handleClearSearch = useCallback(() => {
+    setSearchQuery('');
+    setCurrentPage(0);
+    prevSearchRef.current = { query: '', results: [] };
+
+    updateUrlParams({ text: null });
+    searchInputRef.current?.focus();
+  }, []);
+
+  const handleSearchKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape' && e.currentTarget.value) {
+      e.preventDefault();
+      handleClearSearch();
+    }
+  }, [handleClearSearch]);
+
   const handleTagClick = useCallback((label: string) => {
     const lowerLabel = label.toLowerCase();
     setSearchQuery(lowerLabel);
@@ -157,13 +175,31 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
       </div>
 
       <div className={styles.searchWrapper}>
-        <input
-          type="text"
-          className={styles.searchInput}
-          placeholder="Search samples..."
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
+        <div className={styles.searchField}>
+          <input
+            ref={searchInputRef}
+            type="text"
+            className={styles.searchInput}
+            placeholder="Search samples..."
+            aria-label="Search samples"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            onKeyDown={handleSearchKeyDown}
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              className={styles.searchClear}
+              aria-label="Clear search"
+              title="Clear search"
+              onClick={handleClearSearch}
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                <path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
       {isBrowser && (
