@@ -38,7 +38,6 @@ Enables meta tools for dynamic tool selection. Complementary to `DOCSPACE_TOOLSE
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 
-
 ### DOCSPACE_TOOLSETS
 
 Comma-separated list of toolsets to enable. Use `all` to include every available tool.
@@ -50,7 +49,6 @@ Comma-separated list of toolsets to enable. Use `all` to include every available
 | **Example** | `files,people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
-
 
 ### DOCSPACE_ENABLED_TOOLS
 
@@ -113,7 +111,6 @@ User agent sent in the `User-Agent` header for API requests.
 | **Attributes** | trimmable |
 | **Transports** | all |
 
-
 ### DOCSPACE_BASE_URL
 
 Base URL of the ONLYOFFICE Apps instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication option is set.
@@ -155,7 +152,6 @@ and the [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
 | **Example** | `Bearer sk-a499e...` |
 | **Attributes** | sensitive, trimmable |
 | **Transports** | all |
-
 
 ### DOCSPACE_AUTH_TOKEN
 
@@ -199,7 +195,6 @@ This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 | **Example** | `ditgor-p...` |
 | **Attributes** | sensitive, trimmable |
 | **Transports** | all |
-
 
 ### DOCSPACE_OAUTH_BASE_URL
 
@@ -835,8 +830,6 @@ DOCSPACE_HOST=0.0.0.0
 DOCSPACE_SERVER_CORS_MCP_ORIGIN=https://example.com,https://another-example.com
 DOCSPACE_SERVER_CORS_MCP_MAX_AGE=1800000 # 30 minutes
 ```
-
-<!-- Definitions -->
 
 [`DOCSPACE_TRANSPORT`]: #docspace_transport
 [`DOCSPACE_TOOLSETS`]: #docspace_toolsets

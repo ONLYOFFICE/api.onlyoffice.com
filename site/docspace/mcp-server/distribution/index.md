@@ -34,8 +34,6 @@ source:
 - [Docker Docs: MCP Catalog and Toolkit]
 - [GitHub Anthropic: MCP Bundles]
 
-<!-- Footnotes -->
-
 [Docker Docs: What is an image?]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/
 [Docker Docs: MCP Catalog and Toolkit]: https://docs.docker.com/ai/mcp-catalog-and-toolkit/
 [GitHub Anthropic: MCP Bundles]: https://github.com/anthropics/mcpb/

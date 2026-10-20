@@ -12,8 +12,6 @@ A toolset is an ONLYOFFICE Apps MCP server extension to the standard MCP Tools c
 Toolsets provide logical grouping of related tools to organize
 ONLYOFFICE Apps functionality into manageable categories.
 
-<!--generate toolsets-start-->
-
 | #   | Toolset Name | Toolset Description                  |
 | --- | ------------ | ------------------------------------ |
 | 1   | `files`      | Operations for working with files.   |
@@ -21,14 +19,10 @@ ONLYOFFICE Apps functionality into manageable categories.
 | 3   | `people`     | Operations for working with users.   |
 | 4   | `rooms`      | Operations for working with rooms.   |
 
-<!--generate toolsets-end-->
-
 ## Regular tools
 
 Regular tools are standard MCP Tools. Each tool corresponds to a specific
 ONLYOFFICE Apps operation.
-
-<!--generate tools-start-->
 
 ### Files toolset
 
@@ -77,8 +71,6 @@ Supported file formats for uploading: `txt`, `md`.
 | 22  | `set_room_security`      | Invite or remove users from a room.                     |
 | 23  | `update_room`            | Update a room.                                          |
 
-<!--generate tools-end-->
-
 ## Meta tools
 
 Meta tools are an ONLYOFFICE Apps MCP server extension to the standard MCP Tools
@@ -90,8 +82,6 @@ When enabled, regular tools are wrapped into meta tools. Meta tools work in
 conjunction with the same toolset and tool configuration options as regular
 tools, providing the same level of control over available functionality.
 
-<!--generate meta-tools-start-->
-
 | #   | Meta Tool Name           | Meta Tool Description                                                                                                                                                                           |
 | --- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | `call_tool`              | This is a meta tool for calling a tool. The list of available tools can be obtained using the list_tools meta tool. The input schema can be obtained using the get_tool_input_schema meta tool. |
@@ -99,9 +89,6 @@ tools, providing the same level of control over available functionality.
 | 3   | `get_tool_output_schema` | This is a meta tool for getting an output schema for a specific tool. The list of available tools can be obtained using the list_tools meta tool.                                               |
 | 4   | `list_tools`             | This is a meta tool for listing available tools of a specific toolset. The list of available toolsets can be obtained using the list_toolsets meta tool.                                        |
 | 5   | `list_toolsets`          | This is a meta tool for listing available toolsets. Toolset is a set of available tools.                                                                                                        |
-
-<!--generate meta-tools-end-->
-
 
 ## Resolving tools
 

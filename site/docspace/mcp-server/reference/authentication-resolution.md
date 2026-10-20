@@ -67,7 +67,5 @@ flowchart TD
 - [ONLYOFFICE Apps MCP: Global Configuration]
 - [ONLYOFFICE Apps MCP: Request Configuration]
 
-<!-- Definitions -->
-
 [ONLYOFFICE Apps MCP: Global Configuration]: ./global-configuration.md
 [ONLYOFFICE Apps MCP: Request Configuration]: ./request-configuration.md
