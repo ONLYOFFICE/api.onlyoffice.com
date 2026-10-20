@@ -4,7 +4,7 @@ sidebar_position: 1
 title: Getting started with the ONLYOFFICE Apps MCP server
 ---
 
-Connect the [ONLYOFFICE Apps MCP server](index.md) to Claude Desktop and start interacting with your ONLYOFFICE Apps through natural language.
+Connect the [ONLYOFFICE Apps MCP server](index.md) to Claude Desktop and start interacting with your ONLYOFFICE Apps workspace through natural language.
 
 ## Step 1: Connect to MCP client
 
@@ -65,7 +65,7 @@ It's important to quit and not just close the Claude Desktop window as quitting 
 
 ![This image confirms a successful client-ONLYOFFICE Apps MCP server connection](/img/confirm-connection.light.png#gh-light-mode-only)![This image confirms a successful client-ONLYOFFICE Apps MCP server connection](/img/confirm-connection.dark.png#gh-dark-mode-only)
 
-## Step 3: Interact with your ONLYOFFICE Apps using the newly connected client
+## Step 3: Interact with your ONLYOFFICE Apps workspace using the newly connected client
 
 Now we have our connection, let us interact with ONLYOFFICE Apps via Claude:
 
@@ -85,7 +85,7 @@ Now we have our connection, let us interact with ONLYOFFICE Apps via Claude:
 
 ![This image confirms the document was created](/img/confirm-new-doc.light.png#gh-light-mode-only)![This image confirms the document was created](/img/confirm-new-doc.dark.png#gh-dark-mode-only)
 
-   You can confirm the existence of this new document in the new room in your ONLYOFFICE Apps.
+   You can confirm the existence of this new document in the new room in your ONLYOFFICE Apps workspace.
 
 ![This image shows the new document visible inside the new room in ONLYOFFICE Apps](/img/confirm-new-doc-in-new-room.light.png#gh-light-mode-only)![This image shows the new document visible inside the new room in ONLYOFFICE Apps](/img/confirm-new-doc-in-new-room.dark.png#gh-dark-mode-only)
 

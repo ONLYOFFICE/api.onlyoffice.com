@@ -119,9 +119,9 @@ The configuration is saved successfully, but the MCP client does not show any ON
 - Sign in to your ONLYOFFICE Apps workspace and confirm that the account used for authentication has access to at least one room.
 - Check that the Docker image was pulled successfully and the container can start. Sometimes, your Docker image may be outdated - run `docker pull onlyoffice/docspace-mcp` to update to the latest version of the image.
 
-## Issues uploading a file to ONLYOFFICE Apps room with Claude Desktop
+## Issues uploading a file to an ONLYOFFICE Apps room with Claude Desktop
 
-Receiving error messages like **Claude's response could not be fully generated** or any other issues uploading a file to your ONLYOFFICE Apps with the Claude Desktop client.
+Receiving error messages like **Claude's response could not be fully generated** or any other issues uploading a file to your ONLYOFFICE Apps workspace with the Claude Desktop client.
 
 - **Issues with Claude Desktop:** Delete and reinstall Claude Desktop
 - **Incorrect environment variable values:** Double-check that your `DOCSPACE_BASE_URL` is correct and that `DOCSPACE_API_KEY` is still valid and copied correctly.

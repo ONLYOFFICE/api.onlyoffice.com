@@ -1,11 +1,12 @@
 ---
 sidebar_label: Set up a project room
 sidebar_position: 1
+title: How to set up a project room
 ---
 
 Managing multiple projects, each with numerous moving parts, can be taxing and, without careful management, can lead to inefficient processes. ONLYOFFICE Apps provides you with rooms to work and collaborate with team members.
 
-Connecting your ONLYOFFICE Apps to MCP clients via the ONLYOFFICE Apps MCP server enables you to use these AI clients as assistants, allowing you to issue commands that improve the efficiency of how you handle projects.
+Connecting your ONLYOFFICE Apps workspace to MCP clients via the ONLYOFFICE Apps MCP server enables you to use these AI clients as assistants, allowing you to issue commands that improve the efficiency of how you handle projects.
 
 This guide will show you how to set up a project room using the MCP server.
 

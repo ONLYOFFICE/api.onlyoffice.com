@@ -7,7 +7,7 @@ title: Connect ONLYOFFICE Apps MCP server to MCP clients
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The ONLYOFFICE Apps MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your ONLYOFFICE Apps. This guide demonstrates how to connect the ONLYOFFICE Apps MCP server to the following clients:
+The ONLYOFFICE Apps MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your ONLYOFFICE Apps workspace. This guide demonstrates how to connect the ONLYOFFICE Apps MCP server to the following clients:
 
 - [ONLYOFFICE Apps](#connect-to-onlyoffice-apps)
 - [ONLYOFFICE Desktop Editors](#connect-to-onlyoffice-desktop-editors)
@@ -235,7 +235,7 @@ Connectors are linked to your Claude account. A connector added in Claude Web is
 
 ### Encode credentials for the URL
 
-:::note
+:::warning
 Credentials in the URL are stored in the connector settings and are visible to anyone who opens them. They may also be logged in browser history or network monitoring tools. Use this method only for testing, and prefer OAuth for regular use.
 :::
 

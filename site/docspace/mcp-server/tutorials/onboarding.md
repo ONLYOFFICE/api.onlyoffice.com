@@ -1,6 +1,7 @@
 ---
 sidebar_label: Onboard a distributed team
 sidebar_position: 2
+title: How to successfully onboard a distributed team into your project
 ---
 
 With businesses increasingly adopting remote work, managing these teams efficiently without sacrificing security and access becomes a priority.
@@ -31,7 +32,7 @@ Every AI MCP client sends a confirmation message to deny or confirm every action
 
 ### Step 1: Review your existing rooms
 
-Before inviting anyone, get a clear picture of what rooms currently exist in your ONLYOFFICE Apps.
+Before inviting anyone, get a clear picture of what rooms currently exist in your ONLYOFFICE Apps workspace.
 
 ```text
 Show me the Rooms folder — I want to see all existing rooms.

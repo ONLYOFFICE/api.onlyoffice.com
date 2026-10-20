@@ -10,7 +10,7 @@ The ONLYOFFICE Apps MCP Server connects AI tools directly to ONLYOFFICE Apps. Th
 
 <DocCardList items={[
   {type: 'link', label: 'Quickstart', href: '/docspace/mcp-server/getting-started/quickstart', description: 'Get started with the ONLYOFFICE Apps MCP server'},
-  {type: 'link', label: 'Connect to MCP clients', href: '/docspace/mcp-server/getting-started/clients', description: 'Connect MCP server to clients and start communicating with your ONLYOFFICE Apps'},
+  {type: 'link', label: 'Connect to MCP clients', href: '/docspace/mcp-server/getting-started/clients', description: 'Connect MCP server to clients and start communicating with your ONLYOFFICE Apps workspace'},
 ]} />
 
 ## Features
