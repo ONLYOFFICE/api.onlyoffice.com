@@ -1,5 +1,25 @@
 # Change log
 
+## 10.1.0
+
+### New features
+
+#### Samples
+
+* Search now covers every Docs, DocSpace and AI sample, whatever category is selected
+* Added a clear button to the samples search
+
+### Improvements
+
+#### Docs API
+
+* Documented the `wopi.requireIpFilterRule` setting and the explicit IP filter rule that the WOPI host requires from 10.0
+* Listed the WOPI request checks that always apply and explained how the Request Filtering Agent lists interact with the IP filter
+
+### Fixes
+
+* Fixed the WOPI IP filter example address not matching the step that describes it
+
 ## 10.0.0
 
 ### New features
@@ -21,8 +41,8 @@
 
 #### Plugins and macros
 
+* Documented the `Editor` object for calling editor methods and `Editor.RunMacro` as the replacement for `callCommand`
 * Added the 10.0 changelog
-* Documented the `Editor` object and `Editor.RunMacro`
 
 #### Desktop
 
@@ -57,6 +77,10 @@
 
 * Updated the plugin API references for 10.0
 * Described the `executeMethod` signature and callback in How to call methods
+
+#### AI
+
+* Reordered the AI guides sidebar so the setup pages come first
 
 #### DocSpace
 
