@@ -6,17 +6,10 @@ import FavoriteIcon from '@site/static/icons/favorite-icon.svg';
 import DocsApiIcon from '@site/static/icons/docs-api-icon.svg';
 import DocSpaceIcon from '@site/static/icons/docspace-icon.svg';
 import AiIcon from '@site/static/icons/ai-icon.svg';
-import { SamplesContent } from '@site/src/components/SamplesContent';
+import { SamplesContent, type SamplesCategory } from '@site/src/components/SamplesContent';
 import layoutStyles from '@site/src/components/FeaturePageLayout/styles.module.css';
 
-type Category = {
-  id: string;
-  label: string;
-  subtitle: string;
-  icon: ReactNode;
-};
-
-const categories: Category[] = [
+const categories: SamplesCategory[] = [
   { id: 'favorites', label: 'Favorites', subtitle: 'Frequently used', icon: <FavoriteIcon /> },
   { id: 'docs', label: 'Docs', subtitle: 'Document Editors', icon: <DocsApiIcon /> },
   { id: 'docspace', label: 'DocSpace', subtitle: 'Collaborative cloud', icon: <DocSpaceIcon /> },

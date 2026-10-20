@@ -6,7 +6,7 @@ import { Samples } from '@site/src/homepageItems';
 import { getDocsSamples, getDocspaceSamples, getAiSamples } from '@site/src/utils/getSamplesFromDir';
 import styles from '@site/src/pages/samples.module.css';
 
-type Category = {
+export type SamplesCategory = {
   id: string;
   label: string;
   subtitle: string;
@@ -15,19 +15,44 @@ type Category = {
 
 const ITEMS_PER_PAGE = 30;
 
-const itemsByCategory: Record<string, SamplesGrid.Item[]> = {
-  favorites: Samples.items,
+const samplesByCategory: Record<string, SamplesGrid.Item[]> = {
   docs: getDocsSamples('docs'),
   docspace: getDocspaceSamples('docspace'),
   ai: getAiSamples('ai'),
 };
 
+const itemsByCategory: Record<string, SamplesGrid.Item[]> = {
+  favorites: Samples.items,
+  ...samplesByCategory,
+};
+
 type Props = {
-  categories: Category[];
+  categories: SamplesCategory[];
 };
 
 const VALID_CATEGORIES = new Set(Object.keys(itemsByCategory));
 const DEFAULT_CATEGORY = 'favorites';
+
+// Some samples sit in two categories, so deduplicate by link.
+const allSamples: SamplesGrid.Item[] = (() => {
+  const byLink = new Map<string, SamplesGrid.Item>();
+  for (const item of Object.values(samplesByCategory).flat()) {
+    const key = item.viewLink ?? item.title;
+    if (!byLink.has(key)) byLink.set(key, item);
+  }
+  const sortKey = (item: SamplesGrid.Item) => item.title.replace(/^[^a-zA-Z]+/, '');
+  return [...byLink.values()].sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+})();
+
+function getSearchableText(item: SamplesGrid.Item): string {
+  return [
+    item.title,
+    typeof item.description === 'string' ? item.description : '',
+    item.tags?.map((t) => t.label).join(' ') ?? '',
+  ].join(' ').toLowerCase();
+}
+
+const searchableText = new Map(allSamples.map((item) => [item, getSearchableText(item)]));
 
 function getCategoryFromUrl(search: string): string {
   const params = new URLSearchParams(search);
@@ -51,7 +76,8 @@ function updateUrlParams(updates: Record<string, string | null>): void {
       params.delete(key);
     }
   }
-  window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+  const query = params.toString();
+  window.history.replaceState(null, '', `${window.location.pathname}${query && `?${query}`}`);
 }
 
 export const SamplesContent: FC<Props> = ({ categories }) => {
@@ -68,44 +94,27 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     if (categoryFromUrl !== activeCategory) {
       setActiveCategory(categoryFromUrl);
       setCurrentPage(0);
-      setSearchQuery(textFromUrl);
-      prevSearchRef.current = { query: '', results: [] };
-    } else if (textFromUrl !== searchQuery) {
+    }
+    if (textFromUrl !== searchQuery) {
       setSearchQuery(textFromUrl);
       setCurrentPage(0);
     }
   }, [location.search]);
 
-  const allItems = itemsByCategory[activeCategory] || [];
-  const prevSearchRef = useRef({ query: '', results: [] as SamplesGrid.Item[] });
+  const searchWords = useMemo(
+    () => searchQuery.toLowerCase().split(/\s+/).filter(Boolean),
+    [searchQuery],
+  );
+  const isSearching = searchWords.length > 0;
 
+  // Search ignores the active tab; it is kept so clearing the search returns to it.
   const filteredItems = useMemo(() => {
-    if (!searchQuery) {
-      prevSearchRef.current = { query: '', results: [] };
-      return allItems;
-    }
-
-    const prev = prevSearchRef.current;
-    const isExtending = prev.query && searchQuery.startsWith(prev.query);
-    if (isExtending && prev.results.length === 0) {
-      prevSearchRef.current = { query: searchQuery, results: [] };
-      return [];
-    }
-    const source = isExtending ? prev.results : allItems;
-
-    const words = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
-    const results = source.filter((item) => {
-      const haystack = [
-        item.title,
-        typeof item.description === 'string' ? item.description : '',
-        item.tags?.map((t) => t.label).join(' ') ?? '',
-      ].join(' ').toLowerCase();
-      return words.every((w: string) => haystack.includes(w));
+    if (!isSearching) return itemsByCategory[activeCategory] || [];
+    return allSamples.filter((item) => {
+      const haystack = searchableText.get(item)!;
+      return searchWords.every((w) => haystack.includes(w));
     });
-
-    prevSearchRef.current = { query: searchQuery, results };
-    return results;
-  }, [allItems, searchQuery]);
+  }, [activeCategory, isSearching, searchWords]);
 
   const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
   const items = useMemo(
@@ -117,9 +126,8 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     setActiveCategory(id);
     setCurrentPage(0);
     setSearchQuery('');
-    prevSearchRef.current = { query: '', results: [] };
 
-    updateUrlParams({ doctype: id, text: null });
+    updateUrlParams({ doctype: id === DEFAULT_CATEGORY ? null : id, text: null });
   }, []);
 
   const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -135,7 +143,6 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
   const handleClearSearch = useCallback(() => {
     setSearchQuery('');
     setCurrentPage(0);
-    prevSearchRef.current = { query: '', results: [] };
 
     updateUrlParams({ text: null });
     searchInputRef.current?.focus();
@@ -159,19 +166,24 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
   return (
     <>
       <div className={styles.categoryTabs}>
-        {categories.map((cat) => (
-          <button
-            key={cat.id}
-            className={`${styles.categoryTab} ${isBrowser && activeCategory === cat.id ? styles.categoryTabActive : ''}`}
-            onClick={() => handleCategoryChange(cat.id)}
-          >
-            <span className={styles.categoryIcon}>{cat.icon}</span>
-            <span className={styles.categoryText}>
-              <span className={styles.categoryLabel}>{cat.label}</span>
-              <span className={styles.categorySubtitle}>{cat.subtitle}</span>
-            </span>
-          </button>
-        ))}
+        {categories.map((cat) => {
+          const isActive = isBrowser && !isSearching && activeCategory === cat.id;
+          return (
+            <button
+              key={cat.id}
+              type="button"
+              aria-pressed={isActive}
+              className={`${styles.categoryTab} ${isActive ? styles.categoryTabActive : ''}`}
+              onClick={() => handleCategoryChange(cat.id)}
+            >
+              <span className={styles.categoryIcon}>{cat.icon}</span>
+              <span className={styles.categoryText}>
+                <span className={styles.categoryLabel}>{cat.label}</span>
+                <span className={styles.categorySubtitle}>{cat.subtitle}</span>
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       <div className={styles.searchWrapper}>
