@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
 
 要打开开发者工具，右键单击顶部工具栏上的任何可编辑字段（例如，字体列表组合框），然后单击 **检查元素**，或者在文档中的任意位置单击并按 **F1**。
 
-<img alt="检查元素" src="/assets/images/desktop/inspect-element.png" />
+![检查元素](/assets/images/desktop/inspect-element.png#gh-light-mode-only)![检查元素](/assets/images/desktop/inspect-element.dark.png#gh-dark-mode-only)
 
 结果如下：
 

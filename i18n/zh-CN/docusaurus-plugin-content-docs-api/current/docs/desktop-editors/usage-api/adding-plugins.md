@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
 
 2. 在 **插件** 选项卡上打开 **插件管理器**。
 
-3. 进入 **我的插件** 选项卡，点击 **手动安装插件** 按钮。
+3. 点击左侧面板底部的 **手动安装插件**。
 
 4. 选择您创建的归档文件并点击 **打开**。
 
@@ -82,11 +82,11 @@ import TabItem from '@theme/TabItem';
 
 **步骤 3.** 将所有插件文件放入此文件夹：
 
-![插件文件夹](/assets/images/desktop/plugins_folder.png)
+![插件文件夹](/assets/images/desktop/plugins_folder.png#gh-light-mode-only)![插件文件夹](/assets/images/desktop/plugins_folder.dark.png#gh-dark-mode-only)
 
 **步骤 4.** 启动 ONLYOFFICE 桌面编辑器。如果一切操作正确，插件将显示在 **插件** 选项卡中：
 
-![扩展评论](/assets/images/desktop/extended_comments.png)
+![扩展评论](/assets/images/desktop/extended_comments.png#gh-light-mode-only)![扩展评论](/assets/images/desktop/extended_comments.dark.png#gh-dark-mode-only)
 
 ## 从 ONLYOFFICE 桌面编辑器中移除插件
 
@@ -94,7 +94,8 @@ import TabItem from '@theme/TabItem';
 
 1. 打开 **插件** 选项卡。
 2. 进入 **插件管理器**。
-3. 点击相应插件下方的 **移除** 按钮。
+3. 打开左侧面板中的 **已安装** 部分。
+4. 点击相应插件下方的 **移除** 按钮。
 
 :::note
 此选项不适用于默认插件和通过插件文件夹添加的插件。

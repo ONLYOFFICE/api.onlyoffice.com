@@ -45,7 +45,7 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 | 参数                  | 类型                   | 示例                                                                                                      | 描述                                                                                                                                                                                  |
 |-----------------------|------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | provider              | string                 | `"onlyoffice"`                                                                                             | 在JavaScript命令中用于引用桌面应用的提供商ID。                                                                                                                                     |
-| name                  | string                 | `"ONLYOFFICE"`                                                                                             | 在添加云端时提供商选择部分显示的名称。                                                                                                                                              |
+| name                  | string                 | `"ONLYOFFICE"`                                                                                             | 在**可用云端**列表中显示的名称。                                                                                                                                                    |
 | check                 | object                 | `{ "url": "status", "headers": { "X-CUSTOM-HEADER": true } }`                                              | 用于检查门户可用性的参数。会发送一个`GET`请求，之后期望返回`HTTP_STATUS_CODE = 200`。响应必须以JSON格式返回。                                                                        |
 | check.url             | string                 | `"status"`                                                                                                 | 请求中使用的URL。                                                                                                                                                                     |
 | check.headers         | object                 | `{ "OCS-APIREQUEST": true }`                                                                               | 添加到ajax请求的头部。                                                                                                                                                                |
@@ -54,8 +54,8 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 | editorPage            | string                 | `"/apps/onlyoffice/"` 或 `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`                                           | 指示正在打开的文件类型为文档的相对URL。您可以为此参数使用正则表达式。                                                                                                              |
 | startPage             | string                 | `"/"`                                                                                                      | 在创建新连接时添加到输入的IP或域名后的相对URL。                                                                                                                                  |
 | icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | 门户的图标。您可以通过指定带有相应图标的`themeLight`和`themeDark`对象，为每种UI主题类型（亮色和暗色）添加图标。                                                                     |
-| icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 连接列表图标的路径。                                                                                                                                                                 |
-| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 当门户列表为空时，连接页面上提供商按钮的图标路径。此参数适用于9.0以下版本。                                                                                                            |
+| icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 在**已连接的云端**和**可用云端**列表中显示的图标路径。                                                                                                                              |
+| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 在**连接到**窗口中显示的提供商徽标路径。在9.0以下版本中，当门户列表为空时，它显示在连接页面上的提供商按钮上。                                                                          |
 
 </APITable>
 
@@ -92,11 +92,11 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 
 创建应用程序页面的图标，并将其放入*config.json*文件中指定的文件夹：
 
-1. 连接列表的亮色和暗色图标。所需图标尺寸为36x36：
+1. **已连接的云端**和**可用云端**列表的亮色和暗色图标。所需图标尺寸为36x36：
 
    ![连接列表](/assets/images/desktop/connection-list.png#gh-light-mode-only)![连接列表](/assets/images/desktop/connection-list.dark.png#gh-dark-mode-only)
 
-2. 当**已连接的云端**列表为空时，连接页面上提供商按钮的亮色和暗色图标。所需图标尺寸为148x38。这些图标适用于9.0以下版本：
+2. **连接到**窗口中提供商的亮色和暗色徽标。所需图标尺寸为148x38。在9.0以下版本中，当**已连接的云端**列表为空时，这些图标显示在连接页面上的提供商按钮上：
 
    ![提供商按钮](/assets/images/desktop/provider-button.png#gh-light-mode-only)![提供商按钮](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
@@ -107,5 +107,5 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 ## 步骤4
 
 1. 启动ONLYOFFICE桌面编辑器，如果需要请重启。
-2. 点击**云端**旁边的 ![加号图标](/assets/images/desktop/plus.svg#gh-light-mode-only)![加号图标](/assets/images/desktop/plus.dark.svg#gh-dark-mode-only)。
-3. 在**连接到云端办公**窗口中，打开可用云端列表，检查连接是否正常工作。
+2. 在左侧边栏中点击**云端**。
+3. 在**可用云端**列表中找到您的提供商，然后点击**连接**，检查连接是否正常工作。
