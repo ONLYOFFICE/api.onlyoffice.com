@@ -66,7 +66,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-Accepts either a two-letter language code (`"de"`) or a four-letter language-region code (`"en-US"`). If omitted, the interface follows the language configured on the DocSpace portal (or the signed-in user's own language preference).
+Accepts a BCP 47 language tag — either a bare language code (`"de"`) or a language-region code (`"en-US"`). If omitted, the interface follows the language configured on the DocSpace portal (or the signed-in user's own language preference).
 
 `locale` only affects the frame — it never changes the signed-in user's own profile language, in any mode. In Manager and System mode it updates live via `setConfig()`; in every other mode it's read once from the frame's initial URL, so changing it later needs a reload — see [Switching theme or language at runtime](#switching-theme-or-language-at-runtime) below.
 
@@ -92,13 +92,19 @@ const docSpace = DocSpace.SDK.initManager({
 
 ### Matching your app's language
 
-Pass through the language your application is already using, converting it to a locale DocSpace recognizes:
+Pass through the language your application is already using. Since a portal may offer a language only in its bare form (`"de"`, not `"de-DE"`), check the tag against the portal's supported languages and fall back to the bare language code when the exact tag isn't there:
 
 ```javascript
+// The portal's supported languages, fetched by your backend from GET /api/2.0/settings/cultures
+const supported = ["en-US", "de", "fr", "es"];
+
+const preferred = navigator.language; // e.g. "de-DE"
+const locale = supported.includes(preferred) ? preferred : preferred.split("-")[0];
+
 const docSpace = DocSpace.SDK.initManager({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  locale: navigator.language, // e.g. "en-US", "de"
+  locale,
 });
 ```
 

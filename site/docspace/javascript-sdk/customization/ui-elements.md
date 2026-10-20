@@ -36,7 +36,7 @@ const docSpace = DocSpace.SDK.initManager({
 ```
 
 :::note
-Despite the framing of this list as "what you can hide," not everything on it defaults to visible — confirmed against `docspace-sdk-js`'s own `defaultConfig` (the type reference doesn't state defaults at all). **Off by default:** `showMenu`, `showHeader`, `showFilter`, `showSettings`. **On by default:** `showTitle`, `showSignOut`, `infoPanelVisible`, and the Actions button itself (`disableActionButton` defaults to `false`, i.e. not disabled). A plain `initManager()` call with no other config therefore shows no left menu at all — and since `showSignOut` and `disableActionButton` control elements that live *inside* that menu, both stay invisible along with it until you pass `showMenu: true` explicitly.
+Despite the framing of this list as "what you can hide," not everything on it defaults to visible. **Off by default:** `showMenu`, `showHeader`, `showFilter`, `showSettings`. **On by default:** `showTitle`, `showSignOut`, `infoPanelVisible`, and the Actions button itself (`disableActionButton` defaults to `false`, i.e. not disabled). A plain `initManager()` call with no other config therefore shows no left menu at all — and since `showSignOut` and `disableActionButton` control elements that live *inside* that menu, both stay invisible along with it until you pass `showMenu: true` explicitly.
 :::
 
 :::note

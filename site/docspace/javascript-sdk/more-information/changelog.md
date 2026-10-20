@@ -32,7 +32,6 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 - Added the `navigateSection()`, `setCustomActions()`, and `upload()` [instance methods](../usage-sdk/classes/SDKInstance.md) — see [Forms mode](../embedding-modes/forms-mode.md) and [Personal mode](../embedding-modes/personal-mode.md) for usage examples
 - Added the `onNavigate`, `onUploadSuccess`, `onUploadError`, `onCustomAction`, `onContentReady`, `onNoAccess`, `onNotFound`, `onEditorOpen`, `onGetExternalData`, and `onSetExternalData` [events](../usage-sdk/type-aliases/TFrameEvents.md) — see also [Events and callbacks](../events-and-callbacks/events-and-callbacks.md#available-events)
 - Added an optional `code` argument to [`login()`](../usage-sdk/classes/SDKInstance.md#login) for two-factor sign-in — see [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md)
-- `upload()` now sends an `uploadId` with every file and matches it to `onUploadSuccess`/`onUploadError` by that id, so two files with the same name no longer resolve each other's promise
 - Added named exports of the whole public API from the package root (`SDK`, `SDKInstance`, `SDKError`, `SDKErrorCode`, every enum, and every `T*` type) — previously only `SDK` was available, as the default export
 - Added `TInitConfig`, the parameter type of the `init*()` wrappers — a `TFrameConfig` without the `mode` field each wrapper already sets, for strict TypeScript callers
 
@@ -51,8 +50,8 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 
 ### Deprecated
 
-- `buttonColor` and `viewAs` — ONLYOFFICE Apps 4.0 does not read them. Call `setListView()` after `onAppReady` to change the layout instead
-- `integrationUrl` — ONLYOFFICE Apps 4.0 does not read it
+- `buttonColor` and `viewAs` — DocSpace client 4.0 does not read them. Call `setListView()` after `onAppReady` to change the layout instead
+- `integrationUrl` — DocSpace client 4.0 does not read it
 
 ### Fixed
 
@@ -65,6 +64,7 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 - A trailing slash in `src` no longer produces a doubled slash in the iframe URL or the CSP request
 - Messages from another window at the portal's origin (a popup, a second frame) are ignored — only the instance's own iframe drives it
 - A method called while the iframe is missing rejects with `SDKErrorCode.Disconnected` instead of hanging
+- `upload()` matches `onUploadSuccess`/`onUploadError` to each file by a per-file `uploadId`, so two files with the same name no longer resolve each other's promise
 
 ## Version 2.1.0
 
@@ -74,7 +74,7 @@ The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
 ## Version 2.0.0
 
 - Added [Public room mode](../embedding-modes/public-room-mode.md)
-- Added the `noLoader` [config field](../usage-sdk/type-aliases/TFrameConfig.md#noLoader) — see also [Hiding and showing UI elements](../customization/ui-elements.md#frame-layout)
+- Added the `noLoader` [config field](../usage-sdk/type-aliases/TFrameConfig.md#noLoader) — see also [Hiding UI elements and frame layout](../customization/ui-elements.md#frame-layout)
 - Added an Index column to the `viewTableColumns` parameter of the default config
 - Added the `onEditorOpen` [event](../usage-sdk/type-aliases/TFrameEvents.md#onEditorOpen)
 - Added the [`executeInEditor()`](../usage-sdk/classes/SDKInstance.md#executeineditor) instance method

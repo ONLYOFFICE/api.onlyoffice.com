@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Chat mode
 
-Chat mode embeds a full-page AI chat interface. It can be bound to a specific DocSpace AI agent, or left to talk to the current user directly, giving users a conversational interface without leaving your application.
+Chat mode embeds a full-page AI chat interface. It can be bound to a specific DocSpace AI agent or opened as the current user's own general AI chat, giving users a conversational interface without leaving your application.
 
 ## Initialization
 
@@ -16,7 +16,7 @@ const docSpace = DocSpace.SDK.initChat({
 });
 ```
 
-Only `frameId` and `src` are required. `agentId` is optional: set it to bind the chat to a specific AI agent, or omit it to bind the chat to the current user instead. All other parameters are optional and have sensible defaults.
+Only `frameId` and `src` are required. `agentId` is optional: set it to the ID of an AI agent room to chat with that agent, or omit it to open the current user's general AI chat, which isn't tied to any agent. All other parameters are optional and have sensible defaults.
 
 For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 

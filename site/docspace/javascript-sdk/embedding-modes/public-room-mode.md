@@ -46,9 +46,9 @@ const docSpace = DocSpace.SDK.initPublicRoom({
 });
 ```
 
-### Showing filter controls and the mobile header
+### Showing filter controls
 
-Both default to hidden for anonymous visitors, same as in Manager mode — pass `showFilter`/`showHeader` to show them:
+Filter controls are hidden by default, same as in Manager mode — pass `showFilter: true` to show them:
 
 ```javascript
 const docSpace = DocSpace.SDK.initPublicRoom({
@@ -57,8 +57,7 @@ const docSpace = DocSpace.SDK.initPublicRoom({
   requestToken: "your-request-token",
   id: "your-room-or-folder-id",
   showFilter: true,
-  showHeader: true,
 });
 ```
 
-`showTitle` (the room/folder title, shown by default) works the same way here too — see [Hiding UI elements and frame layout](../customization/ui-elements.md#manager-mode) for the full set of Manager-mode chrome toggles this mode shares.
+`showTitle` (the room/folder title, shown by default) works the same way here too. The other Manager-mode toggles in [Hiding UI elements and frame layout](../customization/ui-elements.md#manager-mode), including `showHeader`, aren't read in Public room mode.

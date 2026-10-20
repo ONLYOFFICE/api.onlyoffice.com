@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The SDK reports what's happening inside the embedded frame through callbacks — there is no separate `addEventListener()`/`removeEventListener()` API. All events are attached through the `events` key of the frame config, either at initialization or later via `setConfig()`.
 
-[TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md) types most handlers with their actual payload shape now (`onAppReady`'s `{ frameId }`, `onSelectCallback`'s `TSelectedRoom[] | TSelectedFile`, `onEditorOpen`'s `TEditorOpenPayload`, `onFileManagerClick`'s `TFileInfo`, the upload events, `onNavigate`, `onCustomAction`, `onAuthError`), but it never says which embedding modes actually fire a given event — that's what this page adds.
+[TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md) is the alphabetical type reference for every handler and its payload. This page groups the events by the embedding modes that fire them, and covers the timing and default-behavior details that a single field's description doesn't.
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
@@ -130,7 +130,7 @@ await frame.setConfig({
 
 ## Event payloads
 
-Most events are simple lifecycle signals and are called with no arguments at all. Internally, the SDK invokes every handler as `handler(eventData.data || {})` — so an event the iframe reports with no data of its own always arrives as an empty object `{}`, not `undefined`; only the handful of events the SDK itself emits directly (`onContentReady`, `onAppError`, `onAuthError`) can genuinely have no payload at all. A few events pass along real data about what happened:
+Most events are simple lifecycle signals with no data of their own. An event the iframe reports without data still reaches your handler as an empty object `{}`, not `undefined` — only the events the SDK emits itself (`onContentReady`, `onAppError`, `onAuthError`) can be called with no argument at all. A few events pass along real data about what happened:
 
 | Event | Payload |
 | ------- | ------------- |
@@ -186,7 +186,7 @@ When the current mode has no handler at all for a method you called, the rejecti
 :::warning
 Most method calls reject with `code: "API_ERROR"` (carrying the portal's HTTP `status` and a sanitized error `data` object) when the DocSpace portal itself reports a failure — an invalid parameter, a permission error, and so on. This requires a portal that flags method errors this way (client 4.0+); on an older portal, or if you're unsure which version you're targeting, treat a resolved value as unverified rather than assuming success. `login()` and `createRoom()` are the two exceptions that keep an older contract: instead of rejecting, they resolve with a sanitized `{ status, message }` object — `.catch()` alone won't catch a failure from either. For a method that returns an entity (like `createRoom()`), checking for `result.id` on the resolved value is a more reliable success check than assuming a resolved promise means success.
 
-[`login()`](../embedding-modes/system-mode.md#application-authentication-sso-bridge) needs its own check beyond `status`/`message`, since the shape of what actually gets returned has been inconsistent across portal versions in practice. The one check that's held up across everything tested: `result.url === "/"` means success; `result.url` starting with `/confirm/` means a second factor is still required (not a failure — see [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md)); anything else is a failure. Still avoid logging or forwarding the resolved `result` object in its entirety on a failed attempt as a matter of habit — a portal older than client 4.0 won't have sanitized it first.
+[`login()`](../embedding-modes/system-mode.md#application-authentication-sso-bridge) needs its own check beyond `status`/`message`, since the shape of the returned object differs across portal versions. The reliable check is `result.url`: `result.url === "/"` means success; `result.url` starting with `/confirm/` means a second factor is still required (not a failure — see [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md)); anything else is a failure. Still avoid logging or forwarding the resolved `result` object in its entirety on a failed attempt as a matter of habit — a portal older than client 4.0 won't have sanitized it first.
 :::
 
 ## Common patterns

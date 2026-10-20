@@ -85,7 +85,7 @@ const docSpace = DocSpace.SDK.initManager({
 `createRoom()` also accepts an optional third argument for room settings — storage quota, tags, accent color, cover image, and (for a virtual data room) file indexing and download restrictions:
 
 ```javascript
-const room = await frame.createRoom("Confidential Project", 8, {
+const room = await frame.createRoom("Confidential Project", 8, { // 8 = Virtual data room
   quota: 1073741824, // 1 GB, in bytes
   tags: ["confidential"],
   indexing: true,
@@ -232,7 +232,7 @@ Each action can be restricted, and every condition set must hold for it to show:
 
 - `section` — one or more sections it shows in: `"rooms"`, `"archive"`, `"my-documents"`, `"recent"`, `"favorites"`, `"shared"`, or `"trash"` in Manager mode; omit it to show the action in every section.
 - `extensions` — file extensions it shows for (file actions only), with or without the leading dot, case-insensitive.
-- `roomTypes` — numeric room types it shows for (room actions only) — see [Creating a room programmatically](#creating-a-room-programmatically) above for the value mapping.
+- `roomTypes` — numeric room types it shows for (room actions only) — see [RoomType](../usage-sdk/enumerations/RoomType.md) for the value mapping.
 - `requireSecurity` — access flags the clicked item's `security` object must all have, e.g. `["Download"]` or `["EditRoom"]`.
 
 `onCustomAction`'s payload: `{ action, type, item?, items?, folderId? }` — `action` is the `key` you registered; `type` is `"file"`, `"folder"`, `"room"`, or `"create"`. For a single clicked entity, both `item` and `items` (a one-element array) are set; for a same-type multi-selection, only `items` is set; for `create`, neither is set. `folderId` is the id of the folder or room the user was in.
