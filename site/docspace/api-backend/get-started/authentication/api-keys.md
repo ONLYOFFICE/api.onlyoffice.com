@@ -54,10 +54,10 @@ The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user A
   </TabItem>
 </Tabs>
 
-You can also create and manage API keys on your portal from the **Developer Tools** page:
+You can also create and manage API keys in your workspace from the **Developer Tools** page:
 
 1. Click the **Developer Tools** banner at the bottom of the left panel.
-2. On the **API keys** tab, click the **Create new secret key** button to generate a new secret key.
+2. Select **API keys** in the left menu and click the **Create new secret key** button to generate a new secret key.
     
     ![API keys](/assets/images/docspace/api-keys.png#gh-light-mode-only)![API keys](/assets/images/docspace/api-keys.dark.png#gh-dark-mode-only)
 
