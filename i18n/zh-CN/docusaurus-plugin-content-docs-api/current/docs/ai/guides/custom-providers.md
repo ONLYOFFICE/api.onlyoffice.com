@@ -76,7 +76,7 @@ class Provider extends AI.Provider {
 
 要将自定义提供商添加到 AI 插件：
 
-1. 打开 ONLYOFFICE 编辑器顶部工具栏中的 **AI** 选项卡。
+1. 打开 ONLYOFFICE 编辑器顶部工具栏中的 **AI 工具** 选项卡。
 2. 选择 **设置**。
 3. 在 **AI 配置** 窗口中，选择 **编辑 AI 模型**。
 4. 在 **AI 模型列表** 窗口中，点击 ![编辑图标](/assets/images/plugins/edit.svg#gh-light-mode-only)![编辑图标](/assets/images/plugins/edit.dark.svg#gh-dark-mode-only) 来编辑模型。
