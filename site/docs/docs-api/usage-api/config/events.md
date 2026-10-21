@@ -329,7 +329,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
+The function called when the user is trying to select a document for comparing by clicking the *Document from storage* button.
 
 :::note
 This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
@@ -555,10 +555,10 @@ Where the `changesUrl` is the `changesUrl` from [the JSON object](../callback-ha
 
 ## onRequestInsertImage
 
-The function called when the user is trying to insert an image by clicking the *Image from Storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
+The function called when the user is trying to insert an image by clicking the *Image from storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
 
 :::note
-If this event is not declared, the *Image from Storage* button will not be displayed.
+If this event is not declared, the *Image from storage* button will not be displayed.
 :::
 
 **Parameters**:

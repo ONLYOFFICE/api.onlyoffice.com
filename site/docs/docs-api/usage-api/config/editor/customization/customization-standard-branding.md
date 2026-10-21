@@ -52,7 +52,7 @@ Adds a request for the anonymous name.
 ```ts
 {
   request: true,
-  label: "Elizabeth",
+  label: "Guest",
 }
 ```
 
@@ -70,9 +70,11 @@ Whether the request is sent or not.
 
 **type**: `string` | **default**: `"Guest"`
 
-A postfix added to the user name.
+A postfix added in brackets to the name of an anonymous user. Other users see it next to the name, for example, in the chat user list: `Elizabeth (Guest)`.
 
-**Example**: `"Elizabeth"`
+**Example**: `"Guest"`
+
+![Anonymous label](/assets/images/editor/label.png#gh-light-mode-only)![Anonymous label](/assets/images/editor/label.dark.png#gh-dark-mode-only)
 
 ## autosave
 
@@ -358,7 +360,13 @@ The background of the top toolbar tabs. Can be a string or an object. If set to 
 
 The background of the top toolbar tabs. If set to `header`, the tab background matches the header. If set to `toolbar`, the tab background matches the toolbar. This value is used when the editor is first opened.
 
+:::note
+The difference between the two values is visible only in the [themes](#uitheme) where the header and the toolbar have different colors. It is most noticeable in the themes with a colored header (`theme-light`, `theme-classic-light`) and less noticeable in the dark themes. In the `theme-white` and `theme-gray` themes, the header and the toolbar have the same or almost the same color, so both values look the same.
+:::
+
 **Example**: `"header"`
+
+![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabBackground.change
 
@@ -368,7 +376,7 @@ Whether to display the tab background setting in the **File -> Advanced settings
 
 **Example**: `true`
 
-![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
+![Tab background setting](/assets/images/editor/tab-background-setting.png#gh-light-mode-only)![Tab background setting](/assets/images/editor/tab-background-setting.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -386,6 +394,8 @@ The style of the top toolbar tabs. If set to `fill`, the tabs are distinctly dis
 
 **Example**: `"fill"`
 
+![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+
 ### features.tabStyle.change
 
 **type**: `boolean`
@@ -394,7 +404,7 @@ Whether to display the tab style setting in the **File -> Advanced settings**. T
 
 **Example**: `true`
 
-![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+![Tab style setting](/assets/images/editor/tab-style-setting.png#gh-light-mode-only)![Tab style setting](/assets/images/editor/tab-style-setting.dark.png#gh-dark-mode-only)
 
 ## feedback
 
@@ -417,7 +427,7 @@ The settings for the **Feedback & Support** menu button. If set to `false`, the 
 
 **type**: `string`
 
-The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button.
+The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button. If not specified, the ONLYOFFICE support contact form is opened.
 
 **Example**: `"https://example.com"`
 
@@ -1054,7 +1064,7 @@ const config = {
       },
       anonymous: {
         request: true,
-        label: "Elizabeth",
+        label: "Guest",
       },
       autosave: true,
       close: {

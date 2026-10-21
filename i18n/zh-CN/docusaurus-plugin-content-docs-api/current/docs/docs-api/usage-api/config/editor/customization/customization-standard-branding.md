@@ -52,7 +52,7 @@ customization 部分定义编辑器自定义参数。
 ```ts
 {
   request: true,
-  label: "Elizabeth",
+  label: "Guest",
 }
 ```
 
@@ -70,9 +70,11 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`string` | **默认值**：`"Guest"`
 
-添加到用户名的后缀。
+以括号形式添加到匿名用户名称后的后缀。其他用户会在名称旁边看到它，例如在聊天用户列表中显示为 `Elizabeth (Guest)`。
 
-**示例**：`"Elizabeth"`
+**示例**：`"Guest"`
+
+![匿名用户后缀](/assets/images/editor/label.png#gh-light-mode-only)![匿名用户后缀](/assets/images/editor/label.dark.png#gh-dark-mode-only)
 
 ## 自动保存 {#autosave}
 
@@ -358,7 +360,13 @@ customization 部分定义编辑器自定义参数。
 
 顶部工具栏选项卡的背景。如果设置为 `header`，选项卡背景与标题背景匹配。如果设置为 `toolbar`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
 
+:::note
+只有在标题栏和工具栏颜色不同的[主题](#uitheme)中，才能看出这两个值的区别。在带有彩色标题栏的主题（`theme-light`、`theme-classic-light`）中区别最为明显，在深色主题中则不太明显。在 `theme-white` 和 `theme-gray` 主题中，标题栏和工具栏的颜色相同或几乎相同，因此两个值看起来一样。
+:::
+
 **示例**：`"header"`
+
+![选项卡背景](/assets/images/editor/tab-background.png#gh-light-mode-only)![选项卡背景](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabBackground.change
 
@@ -368,7 +376,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-![选项卡背景](/assets/images/editor/tab-background.png#gh-light-mode-only)![选项卡背景](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
+![选项卡背景设置](/assets/images/editor/tab-background-setting.png#gh-light-mode-only)![选项卡背景设置](/assets/images/editor/tab-background-setting.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -386,6 +394,8 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`"fill"`
 
+![选项卡样式](/assets/images/editor/tab-style.png#gh-light-mode-only)![选项卡样式](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+
 ### features.tabStyle.change
 
 **类型**：`boolean`
@@ -394,7 +404,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-![选项卡样式](/assets/images/editor/tab-style.png#gh-light-mode-only)![选项卡样式](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+![选项卡样式设置](/assets/images/editor/tab-style-setting.png#gh-light-mode-only)![选项卡样式设置](/assets/images/editor/tab-style-setting.dark.png#gh-dark-mode-only)
 
 ## feedback
 
@@ -417,7 +427,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`string`
 
-单击**反馈和支持**菜单按钮时将打开的网站绝对URL。
+单击**反馈和支持**菜单按钮时将打开的网站绝对URL。如果未指定，将打开 ONLYOFFICE 支持联系表单。
 
 **示例**：`"https://example.com"`
 
@@ -1054,7 +1064,7 @@ const config = {
       },
       anonymous: {
         request: true,
-        label: "Elizabeth",
+        label: "Guest",
       },
       autosave: true,
       close: {
