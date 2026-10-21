@@ -1,6 +1,6 @@
 ---
 description: Monitor login activity and detect logins from disallowed IP addresses.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

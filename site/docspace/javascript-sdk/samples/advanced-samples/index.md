@@ -1,6 +1,6 @@
 ---
 description: Overview of advanced Embed SDK samples, grouped by use-case scenario.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Advanced samples

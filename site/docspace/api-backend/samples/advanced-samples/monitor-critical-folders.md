@@ -1,6 +1,6 @@
 ---
 description: Notify the department owner when files in a critical folder change.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

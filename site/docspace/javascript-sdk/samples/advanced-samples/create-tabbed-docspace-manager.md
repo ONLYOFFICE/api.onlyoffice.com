@@ -1,6 +1,6 @@
 ---
 description: Embed DocSpace in a tabbed interface with multiple manager instances.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Tabbed manager UI

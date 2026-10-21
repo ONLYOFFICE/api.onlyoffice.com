@@ -1,6 +1,6 @@
 ---
 description: Generate a password hash using the DocSpace JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Create password hash

@@ -12,7 +12,7 @@ import layoutStyles from '@site/src/components/FeaturePageLayout/styles.module.c
 const categories: SamplesCategory[] = [
   { id: 'favorites', label: 'Favorites', subtitle: 'Frequently used', icon: <FavoriteIcon /> },
   { id: 'docs', label: 'Docs', subtitle: 'Document Editors', icon: <DocsApiIcon /> },
-  { id: 'docspace', label: 'DocSpace', subtitle: 'Collaborative cloud', icon: <DocSpaceIcon /> },
+  { id: 'apps', label: 'Apps', subtitle: 'Collaborative cloud', icon: <DocSpaceIcon /> },
   { id: 'ai', label: 'AI', subtitle: 'Artificial Intelligence', icon: <AiIcon /> },
 ];
 

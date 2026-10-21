@@ -1,6 +1,6 @@
 ---
 description: Log in to a DocSpace account using email and password hash.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Video from '@site/src/components/Video/Video';

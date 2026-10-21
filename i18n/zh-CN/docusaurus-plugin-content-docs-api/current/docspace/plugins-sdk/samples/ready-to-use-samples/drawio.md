@@ -1,6 +1,6 @@
 ---
 description: 使用 Draw.io 插件创建图表和流程图。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Draw.io

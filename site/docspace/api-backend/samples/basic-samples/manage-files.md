@@ -1,6 +1,6 @@
 ---
 description: Create, upload, update, and delete files via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

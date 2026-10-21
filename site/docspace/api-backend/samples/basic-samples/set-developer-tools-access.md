@@ -1,6 +1,6 @@
 ---
 description: Configure developer tools access settings via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

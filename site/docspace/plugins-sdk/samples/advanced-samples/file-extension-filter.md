@@ -1,6 +1,6 @@
 ---
 description: Filter and display files by extension in a modal dialog.
-tags: ["DocSpace", "Plugins", "Advanced"]
+tags: ["Apps", "Plugins", "Advanced"]
 ---
 
 # File extension filter plugin

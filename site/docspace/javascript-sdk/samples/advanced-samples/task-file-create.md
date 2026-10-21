@@ -1,6 +1,6 @@
 ---
 description: Create tasks linked to DocSpace rooms and add files inside them.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

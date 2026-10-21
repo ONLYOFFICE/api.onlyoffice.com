@@ -1,6 +1,6 @@
 ---
 description: Open a modal window in DocSpace using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Open modal

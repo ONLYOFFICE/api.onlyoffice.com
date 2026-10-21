@@ -1,6 +1,6 @@
 ---
 description: Create a new file inside a DocSpace room using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Create file

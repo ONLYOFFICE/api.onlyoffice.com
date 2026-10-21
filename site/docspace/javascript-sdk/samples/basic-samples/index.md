@@ -1,6 +1,6 @@
 ---
 description: Overview of basic Embed SDK samples, grouped by SDK area.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Basic samples

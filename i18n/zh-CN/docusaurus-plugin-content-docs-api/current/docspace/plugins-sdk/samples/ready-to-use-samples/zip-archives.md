@@ -1,6 +1,6 @@
 ---
 description: 使用 ZIP archives 插件打开和解压 ZIP 压缩包。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # ZIP archives

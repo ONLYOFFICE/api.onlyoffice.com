@@ -1,6 +1,6 @@
 ---
 description: Add sidebar entries that open full React pages, built with Vite and the ONLYOFFICE Apps UI kit.
-tags: ["DocSpace", "Plugins", "Advanced"]
+tags: ["Apps", "Plugins", "Advanced"]
 ---
 
 # Article navigation plugin

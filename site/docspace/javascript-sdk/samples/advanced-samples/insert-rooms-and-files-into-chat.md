@@ -1,6 +1,6 @@
 ---
 description: Insert room and file links into a chat using slash commands.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # DocSpace chat commands

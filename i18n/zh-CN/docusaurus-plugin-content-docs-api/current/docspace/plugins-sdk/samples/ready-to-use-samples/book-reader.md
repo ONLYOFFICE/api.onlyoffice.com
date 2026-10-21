@@ -1,6 +1,6 @@
 ---
 description: 在 DocSpace 专用阅读器中直接查看 EPUB、FB2 和 ZIP 文件。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Book reader

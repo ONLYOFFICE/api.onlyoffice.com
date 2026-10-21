@@ -1,6 +1,6 @@
 ---
 description: Delete the entire backup history for the portal via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

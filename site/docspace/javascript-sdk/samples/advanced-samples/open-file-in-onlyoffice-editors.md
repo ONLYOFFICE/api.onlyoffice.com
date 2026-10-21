@@ -1,6 +1,6 @@
 ---
 description: Select a file and open it in ONLYOFFICE editors via the SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Video from '@site/src/components/Video/Video';

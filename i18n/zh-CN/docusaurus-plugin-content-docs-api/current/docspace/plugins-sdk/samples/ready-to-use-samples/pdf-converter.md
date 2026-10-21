@@ -1,6 +1,6 @@
 ---
 description: 将文档、电子表格和演示文稿转换为 PDF。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # PDF converter

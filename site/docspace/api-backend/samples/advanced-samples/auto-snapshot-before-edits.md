@@ -1,6 +1,6 @@
 ---
 description: Create a timestamped snapshot of room files before running mass edits.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

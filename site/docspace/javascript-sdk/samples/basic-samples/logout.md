@@ -1,6 +1,6 @@
 ---
 description: Log out a user from the DocSpace session using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Logout

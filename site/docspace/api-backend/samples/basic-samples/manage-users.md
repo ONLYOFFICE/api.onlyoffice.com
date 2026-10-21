@@ -1,6 +1,6 @@
 ---
 description: Create, retrieve, terminate, and delete user accounts via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

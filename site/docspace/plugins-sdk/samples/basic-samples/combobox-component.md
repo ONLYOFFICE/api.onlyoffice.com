@@ -1,6 +1,6 @@
 ---
 description: Configure and use the ComboBox dropdown component.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # ComboBox component

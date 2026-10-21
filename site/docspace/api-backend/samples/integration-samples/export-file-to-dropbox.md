@@ -1,6 +1,6 @@
 ---
 description: Export a file from DocSpace to Dropbox via presigned URL.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Export DocSpace file to Dropbox

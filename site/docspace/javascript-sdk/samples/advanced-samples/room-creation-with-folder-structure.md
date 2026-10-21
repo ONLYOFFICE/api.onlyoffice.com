@@ -1,6 +1,6 @@
 ---
 description: Create client rooms with predefined folders and document templates.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Structured room creation

@@ -1,6 +1,6 @@
 ---
 description: Initialize the DocSpace file selector using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Initialize file selector

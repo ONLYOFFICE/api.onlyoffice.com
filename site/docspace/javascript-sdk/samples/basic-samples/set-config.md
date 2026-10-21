@@ -1,6 +1,6 @@
 ---
 description: Update the embedded frame configuration using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Set config

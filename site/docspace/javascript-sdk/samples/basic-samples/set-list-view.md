@@ -1,6 +1,6 @@
 ---
 description: Change the file list display mode using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Set list view

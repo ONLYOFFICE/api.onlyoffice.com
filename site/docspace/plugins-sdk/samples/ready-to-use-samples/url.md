@@ -1,6 +1,6 @@
 ---
 description: Save external URLs in the file list and open them in a new browser tab.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # URL

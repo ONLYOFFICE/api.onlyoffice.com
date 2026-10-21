@@ -1,6 +1,6 @@
 ---
 description: Remove tags from a DocSpace room using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Remove tags from room

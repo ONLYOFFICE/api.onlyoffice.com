@@ -1,6 +1,6 @@
 ---
 description: 在 DocSpace 中查看、编辑和创建 Markdown 文件。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Markdown

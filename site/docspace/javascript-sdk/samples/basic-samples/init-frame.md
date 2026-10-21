@@ -1,6 +1,6 @@
 ---
 description: Initialize a DocSpace frame in the mode set by the config using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Initialize frame

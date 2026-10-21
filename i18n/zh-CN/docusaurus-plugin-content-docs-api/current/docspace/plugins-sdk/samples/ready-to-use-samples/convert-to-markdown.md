@@ -1,6 +1,6 @@
 ---
 description: 在 DocSpace 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Convert to markdown

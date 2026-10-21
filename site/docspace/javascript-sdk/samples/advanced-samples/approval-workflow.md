@@ -1,6 +1,6 @@
 ---
 description: Route a document through reviewer sign-off before it's approved.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Document approval workflow

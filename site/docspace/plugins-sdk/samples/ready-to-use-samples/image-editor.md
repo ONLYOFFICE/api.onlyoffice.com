@@ -1,6 +1,6 @@
 ---
 description: View and edit images with the Image editor plugin.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Image editor

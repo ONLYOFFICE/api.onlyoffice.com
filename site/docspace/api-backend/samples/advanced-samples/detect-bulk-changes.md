@@ -1,6 +1,6 @@
 ---
 description: Detect bulk file changes and temporarily restrict suspicious user accounts.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

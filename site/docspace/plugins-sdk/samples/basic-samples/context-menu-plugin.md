@@ -1,6 +1,6 @@
 ---
 description: Add a custom item to the file context menu.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # Context menu plugin

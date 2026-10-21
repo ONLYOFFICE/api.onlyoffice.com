@@ -1,6 +1,6 @@
 ---
 description: 识别并将口语转换为文本。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Speech to text

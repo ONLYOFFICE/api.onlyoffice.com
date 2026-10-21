@@ -1,6 +1,6 @@
 ---
 description: Import Trello card attachments into a DocSpace room.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Trello attachments import

@@ -1,6 +1,6 @@
 ---
 description: Create a plugin that makes authorized API requests.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # API plugin

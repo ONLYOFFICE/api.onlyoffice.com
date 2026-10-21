@@ -1,6 +1,6 @@
 ---
 description: 集成 DocSpace 嵌入式 SDK 时常见错误及修复方法、调试技巧以及已知限制。
-tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
+tags: ["Apps", "Embed SDK", "Troubleshooting", "FAQ"]
 ---
 
 # 故障排除与常见问题 {#troubleshooting--faq}

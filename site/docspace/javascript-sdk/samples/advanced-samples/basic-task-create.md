@@ -1,6 +1,6 @@
 ---
 description: Create a task management table with auto-generated DocSpace rooms.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

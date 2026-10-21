@@ -1,6 +1,6 @@
 ---
 description: Verify users with a phone code before granting DocSpace access.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Two-factor authentication

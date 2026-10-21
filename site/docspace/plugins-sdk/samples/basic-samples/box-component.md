@@ -1,6 +1,6 @@
 ---
 description: Configure and use the Box layout component.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # Box component

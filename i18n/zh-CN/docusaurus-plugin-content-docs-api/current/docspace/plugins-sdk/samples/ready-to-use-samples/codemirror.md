@@ -1,6 +1,6 @@
 ---
 description: 使用 CodeMirror 插件查看和编辑代码文件。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # CodeMirror

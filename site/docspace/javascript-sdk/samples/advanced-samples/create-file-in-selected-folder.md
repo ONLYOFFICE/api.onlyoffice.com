@@ -1,6 +1,6 @@
 ---
 description: Create a file in a selected folder and open it in the editor.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Video from '@site/src/components/Video/Video';

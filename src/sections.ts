@@ -98,7 +98,7 @@ export const docsSections = {
 
 export const docspaceSections = {
   linkPrefix: 'docspace',
-  group: 'ONLYOFFICE DocSpace',
+  group: 'ONLYOFFICE Apps',
   items: [
     {
       id: 'docspace-api',
@@ -106,7 +106,7 @@ export const docspaceSections = {
       link: 'api-backend/get-started/basic-concepts',
       sidebar: 'docspaceApiBackend',
       description:
-        'Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
+        'Integrate ONLYOFFICE Apps into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.',
     },
     {
       id: 'embed-sdk',
@@ -114,7 +114,7 @@ export const docspaceSections = {
       link: 'javascript-sdk/get-started',
       sidebar: 'docspaceJSSdk',
       description:
-        'Embed DocSpace in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
+        'Embed ONLYOFFICE Apps in your web app: the full workspace, a room, a document editor or viewer, or a file picker.',
     },
     {
       id: 'plugins-sdk',
@@ -122,7 +122,7 @@ export const docspaceSections = {
       link: 'plugins-sdk/get-started',
       sidebar: 'docspacePlugins',
       description:
-        'Extend the DocSpace portal with your own plugins: context menu items, main button actions, or third-party services.',
+        'Extend the ONLYOFFICE Apps portal with your own plugins: context menu items, main button actions, or third-party services.',
     },
     {
       id: 'ui-kit',
@@ -130,7 +130,7 @@ export const docspaceSections = {
       link: 'ui-kit/getting-started',
       sidebar: 'docspaceUiKit',
       description:
-        'Build DocSpace plugin screens and Apps interfaces with the React components the portal itself uses: form controls, overlays, selectors, and theming.',
+        'Build ONLYOFFICE Apps plugin screens and interfaces with the React components the portal itself uses: form controls, overlays, selectors, and theming.',
     },
     {
       id: 'mcp-server',
@@ -138,7 +138,7 @@ export const docspaceSections = {
       link: 'mcp-server/getting-started',
       sidebar: 'docspaceMCPServer',
       description:
-        'Connect AI tools directly to ONLYOFFICE DocSpace to execute actions through natural language interactions.',
+        'Connect AI tools directly to ONLYOFFICE Apps to execute actions through natural language interactions.',
     },
   ],
 } as const satisfies SectionGroup;

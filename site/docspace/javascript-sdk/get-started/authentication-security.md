@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 description: How authentication works in the DocSpace Embed SDK and how to configure your integration securely.
-tags: ["DocSpace", "Embed SDK", "Integration", "Security"]
+tags: ["Apps", "Embed SDK", "Integration", "Security"]
 ---
 
 # Authentication and security

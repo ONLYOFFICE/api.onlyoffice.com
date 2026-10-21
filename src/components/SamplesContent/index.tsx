@@ -17,7 +17,7 @@ const ITEMS_PER_PAGE = 30;
 
 const samplesByCategory: Record<string, SamplesGrid.Item[]> = {
   docs: getDocsSamples('docs'),
-  docspace: getDocspaceSamples('docspace'),
+  apps: getDocspaceSamples('apps'),
   ai: getAiSamples('ai'),
 };
 

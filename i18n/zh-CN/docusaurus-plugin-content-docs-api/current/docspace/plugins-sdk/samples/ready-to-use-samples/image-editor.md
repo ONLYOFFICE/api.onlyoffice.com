@@ -1,6 +1,6 @@
 ---
 description: 使用 Image editor 插件查看和编辑图像。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Image editor

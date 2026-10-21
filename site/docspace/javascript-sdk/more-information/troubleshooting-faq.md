@@ -1,6 +1,6 @@
 ---
 description: Common errors and fixes, debugging tips, and known limitations when integrating the DocSpace Embed SDK.
-tags: ["DocSpace", "Embed SDK", "Troubleshooting", "FAQ"]
+tags: ["Apps", "Embed SDK", "Troubleshooting", "FAQ"]
 ---
 
 # Troubleshooting & FAQ

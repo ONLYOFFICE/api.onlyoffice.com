@@ -1,6 +1,6 @@
 ---
 description: Open and extract ZIP archives with the ZIP archives plugin.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # ZIP archives

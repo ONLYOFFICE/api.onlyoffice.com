@@ -1,6 +1,6 @@
 ---
 description: Add support for a custom file extension with icons.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # File plugin

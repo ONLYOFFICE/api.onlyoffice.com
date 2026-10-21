@@ -1,6 +1,6 @@
 ---
 description: Create a new shared room using the DocSpace JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Create room

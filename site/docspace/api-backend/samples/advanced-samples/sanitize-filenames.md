@@ -1,6 +1,6 @@
 ---
 description: Rename uploaded files automatically to enforce safe naming rules.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

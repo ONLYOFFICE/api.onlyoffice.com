@@ -1,6 +1,6 @@
 ---
 description: Search for users by text query with optional filters via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

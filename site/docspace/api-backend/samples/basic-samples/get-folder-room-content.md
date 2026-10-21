@@ -1,6 +1,6 @@
 ---
 description: Retrieve the contents of a folder or room via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

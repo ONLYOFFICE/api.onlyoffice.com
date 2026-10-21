@@ -1,6 +1,6 @@
 ---
 description: Summarize the current chat and save the summary text to ONLYOFFICE Apps.
-tags: ["DocSpace", "MCP Server", "AI"]
+tags: ["Apps", "MCP Server", "AI"]
 ---
 
 # Summarize chat and save to ONLYOFFICE Apps

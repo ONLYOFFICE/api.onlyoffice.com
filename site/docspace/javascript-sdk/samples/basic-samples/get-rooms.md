@@ -1,6 +1,6 @@
 ---
 description: Retrieve available rooms using the DocSpace JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Get rooms

@@ -1,6 +1,6 @@
 ---
 description: View and edit code files with the CodeMirror plugin.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # CodeMirror

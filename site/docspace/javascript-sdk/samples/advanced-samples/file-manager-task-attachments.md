@@ -1,6 +1,6 @@
 ---
 description: Attach files to tasks using a DocSpace file selector modal.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # File manager with task attachments

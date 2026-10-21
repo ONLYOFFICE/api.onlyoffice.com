@@ -1,6 +1,6 @@
 ---
 description: Track portal storage usage and send alerts when quota is nearly full.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

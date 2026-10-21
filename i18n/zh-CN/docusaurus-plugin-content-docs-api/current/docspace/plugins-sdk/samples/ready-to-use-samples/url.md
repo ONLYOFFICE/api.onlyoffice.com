@@ -1,6 +1,6 @@
 ---
 description: 将外部 URL 保存到文件列表，并在新浏览器标签页中打开。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # URL

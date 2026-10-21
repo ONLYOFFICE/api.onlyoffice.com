@@ -1,6 +1,6 @@
 ---
 description: View EPUB, FB2, and ZIP files in a dedicated reading viewer directly in DocSpace.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Book reader
