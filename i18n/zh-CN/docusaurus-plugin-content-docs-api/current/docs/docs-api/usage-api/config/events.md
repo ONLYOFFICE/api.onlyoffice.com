@@ -1068,10 +1068,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-当用户尝试通过单击 PDF 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
+当用户尝试通过单击 PDF 编辑模式下的*共享和收集数据*按钮开始填写准备好的表单时调用的函数（可以使用 [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) 参数更改按钮标题）。当用户单击*共享和收集数据*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
 
 :::note
-如果未声明此事件，则不会显示*开始填写*按钮。
+如果声明了此事件或 [onStartFilling](#onstartfilling) 事件，则会显示*共享和收集数据*按钮。如果仅声明了 `onStartFilling`，单击该按钮将打开内置的**发送以供签署**面板，用户可以在其中为表单角色分配用户并发送表单以供填写。此面板的用户列表通过 `c` 设置为 `"filler"` 的 [onRequestUsers](#onrequestusers) 事件请求。表单发送后，将调用 `onStartFilling` 事件。
 :::
 
 **参数**：
@@ -1105,13 +1105,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
+当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像或在**发送以供签署**面板中为表单角色分配用户时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
 **参数**：
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | `"mention"` \| `"protect"` \| `"info"` | 操作类型。                           |
+| event.data.c  | `"mention"` \| `"protect"` \| `"info"` \| `"filler"` | 操作类型。                           |
 | event.data.id | `string[]` | 与操作关联的用户 ID 列表。 |
 
 <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
@@ -1184,7 +1184,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onStartFilling
 
-调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+调用 [startFilling](../methods.md#startfilling) 方法或从内置的**发送以供签署**面板发送表单且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+
+:::note
+仅当从**发送以供签署**面板发送表单时，才会在 `event.data` 中传递角色数组。使用 [startFilling](../methods.md#startfilling) 方法开始填写时，`event.data` 为 `undefined`。
+:::
 
 **参数**：
 

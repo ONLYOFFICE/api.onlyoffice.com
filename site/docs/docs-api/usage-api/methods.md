@@ -271,9 +271,9 @@ Request to close the editor. It is recommended to call this method before the [d
 
 ## requestRoles
 
-Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Start filling* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
+Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Share & collect* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
 
-This method can be used to get the form roles without waiting for the user to click the *Start filling* button.
+This method can be used to get the form roles without waiting for the user to click the *Share & collect* button.
 
   ``` ts
   docEditor.requestRoles();
@@ -641,7 +641,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
 
 ## setUsers
 
-Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
+Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, set the user avatars, or assign users to the form roles in the **Send for signing** panel. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
 
   ``` ts
   docEditor.setUsers(options);
@@ -651,7 +651,7 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 
 | Parameter           | Type             | Presence | Description                                                                                                                                                                                               |
 | ------------------- | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | required | The operation type from the [onRequestUsers](./config/events.md#onrequestusers) event: `mention`, `protect`, or `info`. The default value is `mention`. |
+| options.c           | `string` | required | The operation type from the [onRequestUsers](./config/events.md#onrequestusers) event: `mention`, `protect`, `info`, or `filler`. The default value is `mention`. |
 | options.users       | `object[]` | optional | The list of the users.                                                                                                                                                                            |
 | options.users.email | `string` | optional | The email address of the user. This field is required when the `c` parameter is `mention`.                                                                                                        |
 | options.users.id    | `string` | optional | The identification of the user. This field is required when the `c` parameter is `protect`.                                                                                                       |

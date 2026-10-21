@@ -271,9 +271,9 @@ docEditor.insertImage({
 
 ## requestRoles
 
-请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*开始填写*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
+请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*共享和收集数据*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
 
-使用此方法可以获取表单角色，而无需等待用户单击*开始填写*按钮。
+使用此方法可以获取表单角色，而无需等待用户单击*共享和收集数据*按钮。
 
   ``` ts
   docEditor.requestRoles();
@@ -641,7 +641,7 @@ docEditor.insertImage({
 
 ## setUsers
 
-设置用户列表、用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
+设置用户列表、用来在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像，或在**发送以供签署**面板中为表单角色分配用户。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
 
   ``` ts
   docEditor.setUsers(options);
@@ -651,7 +651,7 @@ docEditor.insertImage({
 
 | 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
 | ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | 必填 |  [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`, `protect` 或 `info`。默认值为 `mention`。|
+| options.c           | `string` | 必填 |  [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`, `protect`, `info` 或 `filler`。默认值为 `mention`。|
 | options.users       | `object[]` | 非必填的 | 用户列表。                                                                                                                                                                                   |
 | options.users.email | `string` | 非必填的 | 用户的电子邮件地址。当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
 | options.users.id    | `string` | 非必填的 | 用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |

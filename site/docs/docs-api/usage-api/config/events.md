@@ -1068,10 +1068,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available). This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
+The function called when the user is trying to start filling out ready forms by clicking the *Share & collect* button in PDF editing mode (the button caption can be changed with the [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) parameter). When the user clicks the *Share & collect* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available). This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
 
 :::note
-If this event is not declared, the *Start filling* button will not be displayed.
+The *Share & collect* button is displayed if this event or the [onStartFilling](#onstartfilling) event is declared. If only `onStartFilling` is declared, clicking the button opens the built-in **Send for signing** panel, where the user assigns users to the form roles and sends the form for filling. The list of users for this panel is requested with the [onRequestUsers](#onrequestusers) event with `c` set to `"filler"`. After the form is sent, the `onStartFilling` event is called.
 :::
 
 **Parameters**:
@@ -1105,13 +1105,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
+The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, set the user avatars, or assign users to the form roles in the **Send for signing** panel. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
 **Parameters**:
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | `"mention"` \| `"protect"` \| `"info"` | The operation type.                                                |
+| event.data.c | `"mention"` \| `"protect"` \| `"info"` \| `"filler"` | The operation type.                                                |
 | event.data.id | `string[]` | The list of user IDs associated with the operation. |
 
 ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
@@ -1184,7 +1184,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onStartFilling
 
-The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
+The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called or the form is sent from the built-in **Send for signing** panel, and the form preparation is complete.
+
+:::note
+The array of roles is passed in `event.data` only when the form is sent from the **Send for signing** panel. When the form is started with the [startFilling](../methods.md#startfilling) method, `event.data` is `undefined`.
+:::
 
 **Parameters**:
 

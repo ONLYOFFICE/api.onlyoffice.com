@@ -72,7 +72,7 @@ The complete HTML page:
 </script>
 ```
 
-After editing, click **Start filling** to switch the form to filling mode.
+After editing, click **Share & collect** to send the form for filling. Editing of the form is then locked, and it becomes available for filling.
 
 ![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 

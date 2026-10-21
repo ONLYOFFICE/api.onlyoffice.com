@@ -898,23 +898,23 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`object`
 
-PDF 表单编辑模式下*开始填写*按钮的设置。
+PDF 表单编辑模式下*共享和收集数据*按钮的设置。
 
 **示例**：
 
 ```ts
 {
-  text: "Share & collect",
+  text: "Start filling",
 }
 ```
 
 ### startFillingForm.text
 
-**类型**：`string` | **默认值**：`"Start filling"`
+**类型**：`string` | **默认值**：`"Share & collect"`
 
-PDF 表单编辑模式下*开始填写*按钮的标题。
+PDF 表单编辑模式下*共享和收集数据*按钮的标题。
 
-**示例**：`"Share & collect"`
+**示例**：`"Start filling"`
 
 ## submitForm
 

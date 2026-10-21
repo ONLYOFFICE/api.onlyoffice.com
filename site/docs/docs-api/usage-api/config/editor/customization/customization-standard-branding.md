@@ -898,23 +898,23 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **type**: `object`
 
-The *Start filling* button settings in PDF form editing mode.
+The settings of the *Share & collect* button in PDF form editing mode.
 
 **Example**:
 
 ```ts
 {
-  text: "Share & collect",
+  text: "Start filling",
 }
 ```
 
 ### startFillingForm.text
 
-**type**: `string` | **default**: `"Start filling"`
+**type**: `string` | **default**: `"Share & collect"`
 
-The caption of the *Start filling* button in PDF form editing mode.
+The caption of the *Share & collect* button in PDF form editing mode.
 
-**Example**: `"Share & collect"`
+**Example**: `"Start filling"`
 
 ## submitForm
 

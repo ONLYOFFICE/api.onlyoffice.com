@@ -72,7 +72,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 ```
 
-编辑完成后，点击**开始填写**按钮切换到填写模式。
+编辑完成后，点击**共享和收集数据**按钮将表单发送以供填写。随后表单的编辑将被锁定，表单即可供填写。
 
 ![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
