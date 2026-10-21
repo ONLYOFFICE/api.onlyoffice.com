@@ -32,7 +32,7 @@ To install the AI agent, follow the steps below:
 
     ![Activate AI](/assets/images/plugins/activate-ai.png#gh-light-mode-only)![Activate AI](/assets/images/plugins/activate-ai.dark.png#gh-dark-mode-only)
 
-3. Find a new **AI** tab in the top toolbar of ONLYOFFICE editors.
+3. Find a new **AI Tools** tab in the top toolbar of ONLYOFFICE editors.
 4. Click **Settings** to open the configuration window.
 5. Select **Edit AI models** and click ![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only).
 6. Choose an AI provider from the list or add new AI models by entering your API keys.
@@ -67,7 +67,7 @@ The Create AI assistant feature lets you turn any repetitive text task into a de
 
 To create a new assistant:
 
-1. Open the **AI** tab and click **Create AI assistant**.
+1. Open the **AI Tools** tab and click **Create AI assistant**.
 
 2. Fill in the fields:
    - **Name** - a short name for the assistant, displayed as the button label on the toolbar.
@@ -78,7 +78,7 @@ To create a new assistant:
 
    ![Create AI assistant](/assets/images/plugins/create-ai-assistant.png#gh-light-mode-only)![Create AI assistant](/assets/images/plugins/create-ai-assistant.dark.png#gh-dark-mode-only)
 
-The assistant appears as a new button in the **AI** tab and can be used in the document.
+The assistant appears as a new button in the **AI Tools** tab and can be used in the document.
 
 :::note
 If the assistant cannot perform the requested action - for example, when the prompt is unrelated to text editing - a warning is displayed and the operation is stopped.

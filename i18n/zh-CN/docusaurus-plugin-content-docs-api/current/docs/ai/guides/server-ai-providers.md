@@ -53,7 +53,7 @@ ONLYOFFICE 文档管理员可以在管理面板中统一连接一次 AI 提供�
 6. 确认模型能够正常响应：
    1. 在 **Dashboard** 页面上找到 **Test Example** 部分。如果其状态为 **Not running**，请点击 **Start**。
    2. 点击 **Open test example** 并打开一个文档。
-   3. 在 **AI Tools** 选项卡上点击 **AI Chat** 并发送一条消息。
+   3. 在 **AI 工具** 选项卡上点击 **AI 聊天** 并发送一条消息。
 
    如果模型没有响应，请参阅[故障排除](#troubleshooting)。
 
@@ -65,9 +65,9 @@ ONLYOFFICE 文档管理员可以在管理面板中统一连接一次 AI 提供�
 
 - 使用管理员配置的模型和任务分配；
 - 忽略用户之前在浏览器中保存的提供商和密钥；
-- 隐藏 **AI Tools** 选项卡上的 **设置** 按钮，因此用户无法添加提供商、输入 API 密钥或更改所使用的模型。
+- 隐藏 **AI 工具** 选项卡上的 **设置** 按钮，因此用户无法添加提供商、输入 API 密钥或更改所使用的模型。
 
-其他所有 AI 功能（例如 AI Chat、摘要、翻译以及语法和拼写检查）照常可用，用户端无需任何设置。
+其他所有 AI 功能（例如 AI 聊天、摘要、翻译以及语法和拼写检查）照常可用，用户端无需任何设置。
 
 ## 其他设置 {#additional-settings}
 
@@ -81,7 +81,7 @@ ONLYOFFICE 文档管理员可以在管理面板中统一连接一次 AI 提供�
 
 ### 连接 MCP 服务器 {#connecting-mcp-servers}
 
-MCP（Model Context Protocol）服务器为 AI Chat 提供额外的工具，例如访问外部服务和数据源。连接 MCP 服务器的方法如下：
+MCP（Model Context Protocol）服务器为 AI 聊天提供额外的工具，例如访问外部服务和数据源。连接 MCP 服务器的方法如下：
 
 1. 在 **MCP Servers** 选项卡上点击 **Edit configuration**。
 2. 将服务器添加到 JSON 配置的 `mcpServers` 对象中。仅支持通过 HTTP 访问的远程服务器：请为每个服务器指定 `"type": "http"`、服务器 `url`，以及服务器要求的 `headers`（如需要）。无法添加以命令方式运行的本地服务器（例如在 Docker 中运行的服务器）。
@@ -111,14 +111,14 @@ MCP（Model Context Protocol）服务器为 AI Chat 提供额外的工具，例�
 
 ### 配置网络搜索 {#configuring-web-search}
 
-网络搜索让 AI Chat 能够使用来自互联网的实时信息。启用方法如下：
+网络搜索让 AI 聊天能够使用来自互联网的实时信息。启用方法如下：
 
 1. 打开 **Web search** 选项卡。
 2. 在 **Web Search Engine** 列表中选择搜索引擎，例如 **Exa**。
 3. 在 **API key** 字段中输入您的搜索引擎账户密钥。如需获取密钥，请点击 **Get API key**。
 4. 点击页面底部的 **Save Changes**。
 
-配置网络搜索后，AI Chat 中会默认启用该功能。用户可以将其关闭：点击消息框旁的 **+**，然后使用 **Web search** 开关。
+配置网络搜索后，AI 聊天中会默认启用该功能。用户可以将其关闭：点击消息框旁的 **+**，然后使用 **Web search** 开关。
 
 如果文档内容绝不能发送到已批准的 AI 提供商以外的服务，请关闭网络搜索。如需为所有用户关闭网络搜索，请清空 **API key** 字段并点击 **Save Changes**。
 
