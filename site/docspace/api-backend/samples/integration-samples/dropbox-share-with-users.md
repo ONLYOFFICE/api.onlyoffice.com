@@ -1,17 +1,17 @@
 ---
-description: Share Dropbox folders with DocSpace users.
+description: Share Dropbox folders with ONLYOFFICE Apps users.
 tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Dropbox share with users
 
-This integration automates the process of sharing Dropbox folders with DocSpace users.
+This integration automates the process of sharing Dropbox folders with ONLYOFFICE Apps users.
 
 ## How it works
 
-- Retrieve DocSpace users - Fetches a list of users with names and emails from the DocSpace.
-- Create Dropbox folders - Each DocSpace user gets a dedicated folder in the Dropbox.
-- Share Dropbox folders - Generates a Dropbox shared link for each DocSpace user.
+- Retrieve ONLYOFFICE Apps users - Fetches a list of users with names and emails from ONLYOFFICE Apps.
+- Create Dropbox folders - Each ONLYOFFICE Apps user gets a dedicated folder in the Dropbox.
+- Share Dropbox folders - Generates a Dropbox shared link for each ONLYOFFICE Apps user.
 
 <details>
   <summary>Full example</summary>
@@ -76,8 +76,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     pip install dropbox
     ```
 
-## Step 1: Retrieve DocSpace users
+## Step 1: Retrieve ONLYOFFICE Apps users
 
 Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/get-all-profiles) request to retrieve each user's first name and email.
 
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
 ## Step 2: Create shared Dropbox folders
 
-Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each DocSpace user.
+Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each ONLYOFFICE Apps user.
 
 ``` py
 # Step 2: Create a Dropbox folder for each DocSpace user
@@ -130,7 +130,7 @@ if __name__ == '__main__':
 
 ## Step 3: Share the Dropbox folder with the user
 
-Use the Dropbox SDK [`sharing_create_shared_link_with_settings`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.sharing_create_shared_link_with_settings) method to share Dropbox folders with DocSpace users.
+Use the Dropbox SDK [`sharing_create_shared_link_with_settings`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.sharing_create_shared_link_with_settings) method to share Dropbox folders with ONLYOFFICE Apps users.
 
 ```py
 # Step 3: Share the Dropbox folder with the user

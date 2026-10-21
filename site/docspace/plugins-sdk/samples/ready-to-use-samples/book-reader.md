@@ -1,17 +1,17 @@
 ---
-description: View EPUB, FB2, and ZIP files in a dedicated reading viewer directly in DocSpace.
+description: View EPUB, FB2, and ZIP files in a dedicated reading viewer directly in ONLYOFFICE Apps.
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Book reader
 
-A tool for viewing EPUB, FB2, and ZIP files in a dedicated reading viewer directly in DocSpace.
+A tool for viewing EPUB, FB2, and ZIP files in a dedicated reading viewer directly in ONLYOFFICE Apps.
 
 ![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
 
 ## Installation
 
-Available by default in the DocSpace SaaS solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -41,7 +41,7 @@ Use the **‹** and **›** buttons at the bottom to navigate between pages. A p
 
 ### ZIP files
 
-ZIP files cannot be opened with a single click — since DocSpace has a dedicated archiver plugin that handles the `.zip` file type, the book reader opens ZIP files through the context menu only (**right-click → Open in Reader**).
+ZIP files cannot be opened with a single click — since ONLYOFFICE Apps has a dedicated archiver plugin that handles the `.zip` file type, the book reader opens ZIP files through the context menu only (**right-click → Open in Reader**).
 
 When a ZIP file is opened, the plugin inspects its contents:
 
@@ -59,7 +59,7 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement a context menu action. The plugin adds an **Open in Reader** item to the context menu of supported files (`.epub`, `.fb2`, `.zip`).
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md). Used to interact with the specified file types. Enables single-click file opening directly from the file list.
 

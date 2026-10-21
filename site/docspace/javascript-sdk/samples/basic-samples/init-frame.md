@@ -1,18 +1,18 @@
 ---
-description: Initialize a DocSpace frame in the mode set by the config using the JS SDK.
+description: Initialize an ONLYOFFICE Apps frame in the mode set by the config using the JS SDK.
 tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Initialize frame
 
-This example demonstrates how to initialize a DocSpace frame using the universal Embed SDK init method. The frame opens in the mode set by the `mode` config field (`manager` by default).
+This example demonstrates how to initialize an ONLYOFFICE Apps frame using the universal Embed SDK init method. The frame opens in the mode set by the `mode` config field (`manager` by default).
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-frame.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -53,7 +53,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ## Step 1. Set HTML structure
 
-Add an iframe to your HTML page to embed the DocSpace frame.
+Add an iframe to your HTML page to embed the ONLYOFFICE Apps frame.
 
 ``` html
 <!-- Step 1: HTML Structure -->
@@ -75,12 +75,12 @@ Add an iframe to your HTML page to embed the DocSpace frame.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ## Step 2. Embed SDK logic
 
-This example demonstrates how to initialize a DocSpace frame using the [initFrame()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#initframe) method.
+This example demonstrates how to initialize an ONLYOFFICE Apps frame using the [initFrame()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#initframe) method.
 Unlike the mode-specific init methods, `initFrame()` doesn't set the mode itself: it reads it from the `mode` field and falls back to `manager` when the field is omitted.
 
 ``` ts

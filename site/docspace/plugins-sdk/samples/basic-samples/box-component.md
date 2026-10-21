@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Basic"]
 
 # Box component
 
-This guide demonstrates how to configure and use the [Box](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IBox) component in the DocSpace Plugins SDK with common layout, alignment, and spacing properties.
+This guide demonstrates how to configure and use the [Box](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IBox) component in the ONLYOFFICE Apps Plugins SDK with common layout, alignment, and spacing properties.
 
 <details>
   <summary>Full example</summary>
@@ -168,7 +168,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -399,7 +399,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `dist/plugin.zip`.
 
-## Step 9: Upload to DocSpace
+## Step 9: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

@@ -1,5 +1,5 @@
 ---
-description: 在 DocSpace 中查看、编辑和创建 Markdown 文件。
+description: 在 ONLYOFFICE Apps 中查看、编辑和创建 Markdown 文件。
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -52,8 +52,8 @@ GitHub 仓库：[markdown](https://github.com/ONLYOFFICE/docspace-plugins/tree/m
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于向 DocSpace 门户 API 发送请求（例如创建和保存文件）。该插件还使用 [markdown-it](https://markdown-it.github.io/markdown-it/) 作为客户端 Markdown 渲染库。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于向 ONLYOFFICE Apps 门户 API 发送请求（例如创建和保存文件）。该插件还使用 [markdown-it](https://markdown-it.github.io/markdown-it/) 作为客户端 Markdown 渲染库。
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。
 - [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Markdown** 插件中，我们使用**文档**部分或所选房间中的**操作 → 更多**菜单元素来创建 `.md` 文件。

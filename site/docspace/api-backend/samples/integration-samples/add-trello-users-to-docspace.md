@@ -1,16 +1,16 @@
 ---
-description: Retrieve Trello board members and add them to DocSpace.
+description: Retrieve Trello board members and add them to ONLYOFFICE Apps.
 tags: ["Apps", "REST API", "Integration"]
 ---
 
-# Add Trello users to DocSpace
+# Add Trello users to ONLYOFFICE Apps
 
-This script automates the process of retrieving Trello users and adding them to the DocSpace. It ensures that all Trello team members are onboarded into DocSpace.
+This script automates the process of retrieving Trello users and adding them to ONLYOFFICE Apps. It ensures that all Trello team members are onboarded into ONLYOFFICE Apps.
 
 ## How it works
 
 - Retrieve Trello users - Fetches a list of users with their names and usernames.
-- Add Trello users to the DocSpace - Trello usernames are used to create temporary emails.
+- Add Trello users to ONLYOFFICE Apps - Trello usernames are used to create temporary emails.
 
 <details>
   <summary>Full example</summary>
@@ -79,8 +79,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant `read` access to the boards.
 4. Replace `your_trello_api_key`, `your_trello_token`, and `your_board_id` with your actual Trello API key, token, and board ID.
 
@@ -106,9 +106,9 @@ if __name__ == '__main__':
     trello_users = get_trello_users(TRELLO_BOARD_ID)
 ```
 
-## Step 2: Add Trello users to the DocSpace
+## Step 2: Add Trello users to ONLYOFFICE Apps
 
-Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add new DocSpace users.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add new ONLYOFFICE Apps users.
 
 ``` py
 # Step 2: Add Trello users to the DocSpace

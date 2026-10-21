@@ -14,7 +14,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -66,7 +66,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ### 1. Set HTML structure
 
-Create an HTML file. It must include a *div* tag where we specify the DocSpace connection parameters:
+Create an HTML file. It must include a *div* tag where we specify the ONLYOFFICE Apps connection parameters:
 
 ``` html
 <!DOCTYPE html>
@@ -85,7 +85,7 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ### 2. Add the file selector

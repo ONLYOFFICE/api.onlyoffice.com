@@ -5,11 +5,11 @@ tags: ["Apps", "Plugins", "Basic"]
 
 # File plugin
 
-This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.
+This guide walks you through creating a plugin for ONLYOFFICE Apps that adds support for a specific file extension, custom icons, and an action when such files are clicked.
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -107,7 +107,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 6: Upload to DocSpace
+## Step 6: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.
@@ -122,7 +122,7 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
+- The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#extension) must match a file type used in your ONLYOFFICE Apps (e.g. `.md`).
 - You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileRowIcon?) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileTileIcon?).
 - Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#onClick) logic instead.
 - You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#devices?) (for example, desktop, mobile, and tablet).

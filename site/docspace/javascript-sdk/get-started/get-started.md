@@ -6,7 +6,7 @@ import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
 
 # Introduction
 
-The [ONLYOFFICE DocSpace Embed SDK](https://github.com/ONLYOFFICE/docspace-sdk-js), based on JavaScript, lets you embed DocSpace directly inside your web application. You can integrate a full document workspace, a standalone editor, a file picker, or a background authentication frame — with just a few lines of code.
+The [ONLYOFFICE Apps Embed SDK](https://github.com/ONLYOFFICE/docspace-sdk-js), based on JavaScript, lets you embed ONLYOFFICE Apps directly inside your web application. You can integrate a full document workspace, a standalone editor, a file picker, or a background authentication frame — with just a few lines of code.
 
 You can use it as an [npm package](./quickstart.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quickstart.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
 
@@ -14,14 +14,14 @@ You can use it as an [npm package](./quickstart.md#using-the-npm-package) for mo
 
 Before you begin, make sure you have the following:
 
-- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later (Embed SDK 2.2.0 requires DocSpace 4.0.0).
-- The origin of your embedding page added in DocSpace **Developer Tools** → **Embed SDK**
+- A running ONLYOFFICE Apps instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later (Embed SDK 2.2.0 requires ONLYOFFICE Apps 4.0.0).
+- The origin of your embedding page added in ONLYOFFICE Apps **Developer Tools** → **Embed SDK**
 - A server environment to serve your embedding page from — opening it as a local HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
 
 :::info
 
-If your DocSpace instance is served over HTTPS, your embedding page must also be served over HTTPS — browsers block mixed content (an HTTPS page loading resources from HTTP), which prevents the SDK from loading at all.
+If your ONLYOFFICE Apps instance is served over HTTPS, your embedding page must also be served over HTTPS — browsers block mixed content (an HTTPS page loading resources from HTTP), which prevents the SDK from loading at all.
 
 With HTTPS on both sides and the embedding page's origin registered in Developer Tools (see the Prerequisites above), the portal automatically sets the auth cookie's `SameSite=None; Secure; Partitioned` attributes for you — no manual configuration needed. Without HTTPS, the cookie falls back to `SameSite=Strict` and won't be sent inside the iframe, breaking session-based authentication.
 
@@ -50,11 +50,11 @@ The SDK supports multiple initialization modes:
 - Selector, system, and uploader modes do not expose editing capabilities.
 :::
 
-Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).
+Ready to embed ONLYOFFICE Apps? Follow the [Quickstart](./quickstart.md).
 
 ## Live demo
 
-To see what the SDK looks like in a real product, explore the [live demo](https://demo-embed.onlyoffice.com/) — a sample conference website with DocSpace embedded across multiple pages, each using a different mode:
+To see what the SDK looks like in a real product, explore the [live demo](https://demo-embed.onlyoffice.com/) — a sample conference website with ONLYOFFICE Apps embedded across multiple pages, each using a different mode:
 
 | Page | What's embedded |
 | --- | --- |
@@ -66,6 +66,6 @@ To see what the SDK looks like in a real product, explore the [live demo](https:
 
 ## Example
 
-This example shows what a DocSpace Public room looks like when embedded in your website as a frame.
+This example shows what an ONLYOFFICE Apps Public room looks like when embedded in your website as a frame.
 
 <DocspaceEmbed params="?mode=public-room&id=2613800&token=ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI" />

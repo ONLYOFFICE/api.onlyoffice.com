@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Reminding inactive members
 
-This example shows how to use DocSpace audit events to identify room members who are not participating.
+This example shows how to use ONLYOFFICE Apps audit events to identify room members who are not participating.
 It loads audit events for the last N days, counts events per user for selected rooms, and sends a reminder to members whose activity is below a defined threshold. Optionally, it sends a short summary report to a room owner/manager.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -437,7 +437,7 @@ It loads audit events for the last N days, counts events per user for selected r
 ## Step 1: Get room members
 
 The script loads room members for each monitored room.
-In this example, `fetch_room_members()` is a placeholder returning static data. In a real integration, replace it with a real DocSpace endpoint for room members or sharing entries.
+In this example, `fetch_room_members()` is a placeholder returning static data. In a real integration, replace it with a real ONLYOFFICE Apps endpoint for room members or sharing entries.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

@@ -1,5 +1,5 @@
 ---
-description: Create tasks linked to DocSpace rooms and add files inside them.
+description: Create tasks linked to ONLYOFFICE Apps rooms and add files inside them.
 tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Create files in rooms
 
-This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the Embed SDK.
+This example demonstrates how to create tasks linked to rooms in ONLYOFFICE Apps, and then create files inside those rooms using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/task-file-create.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -307,7 +307,7 @@ const docSpace = DocSpace.SDK.initManager({
 })
 ```
 
-- Sets up the main DocSpace manager interface and enables the "New Task" button
+- Sets up the main ONLYOFFICE Apps manager interface and enables the "New Task" button
 
 ---
 
@@ -379,7 +379,7 @@ const showRoom = (id) => {
 }
 ```
 
-- Initializes a second DocSpace instance to show a room
+- Initializes a second ONLYOFFICE Apps instance to show a room
 - Binds logic to preview the room and create a file within it
 
 ---

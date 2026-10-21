@@ -1,17 +1,17 @@
 ---
-description: 在 DocSpace 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式。
+description: 在 ONLYOFFICE Apps 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式。
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Convert to markdown
 
-用于在 DocSpace 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式的工具。
+用于在 ONLYOFFICE Apps 中直接将 DOCX、TXT 和 HTML 文件转换为 Markdown 格式的工具。
 
 ![Convert to markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -47,8 +47,8 @@ GitHub 仓库：[convert-to-markdown](https://github.com/ONLYOFFICE/docspace-plu
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于访问 DocSpace API，以下载源文件并将转换后的 Markdown 文件上传到同一文件夹。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于访问 ONLYOFFICE Apps API，以下载源文件并将转换后的 Markdown 文件上传到同一文件夹。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。该插件会为 `.docx`、`.txt` 和 `.html` 文件添加**转换为 Markdown**项目。
 
 ## 支持

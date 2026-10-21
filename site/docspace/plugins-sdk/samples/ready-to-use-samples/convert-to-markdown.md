@@ -1,17 +1,17 @@
 ---
-description: Convert DOCX, TXT, and HTML files to Markdown format directly in DocSpace.
+description: Convert DOCX, TXT, and HTML files to Markdown format directly in ONLYOFFICE Apps.
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Convert to markdown
 
-A tool for converting DOCX, TXT, and HTML files to Markdown format directly in DocSpace.
+A tool for converting DOCX, TXT, and HTML files to Markdown format directly in ONLYOFFICE Apps.
 
 ![Convert to markdown](/assets/images/docspace/convert-to-markdown.png#gh-light-mode-only)![Convert to markdown](/assets/images/docspace/convert-to-markdown.dark.png#gh-dark-mode-only)
 
 ## Installation
 
-Available by default in the DocSpace SaaS solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -47,8 +47,8 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Used to access the DocSpace API for downloading the source file and uploading the converted Markdown file to the same folder.
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Used to access the ONLYOFFICE Apps API for downloading the source file and uploading the converted Markdown file to the same folder.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement a context menu action. The plugin adds a **Convert to Markdown** item to the context menu of `.docx`, `.txt`, and `.html` files.
 
 ## Support

@@ -1,5 +1,5 @@
 ---
-description: View, edit, and create Markdown files in DocSpace.
+description: View, edit, and create Markdown files in ONLYOFFICE Apps.
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
@@ -11,7 +11,7 @@ A tool for viewing, editing and creating `.md` files.
 
 ## Installation
 
-Available by default in the DocSpace SaaS solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -52,8 +52,8 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for requests to the DocSpace portal API (for example, creating and saving files). The plugin also uses [markdown-it](https://markdown-it.github.io/markdown-it/) as a client-side Markdown rendering library.
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for requests to the ONLYOFFICE Apps portal API (for example, creating and saving files). The plugin also uses [markdown-it](https://markdown-it.github.io/markdown-it/) as a client-side Markdown rendering library.
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings → Integration → Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement a context menu action.
 - [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to implement the main button action. In the **Markdown** plugin, we use the **Actions → More** menu elements in the **Documents** section or in the selected room to create `.md` files.

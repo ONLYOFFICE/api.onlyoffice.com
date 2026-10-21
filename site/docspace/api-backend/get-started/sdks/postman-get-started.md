@@ -4,11 +4,11 @@ sidebar_position: -3
 
 # Postman
 
-The ONLYOFFICE DocSpace SDK for Postman is a simple Postman Collection for integrating with the ONLYOFFICE DocSpace API.
+The ONLYOFFICE Apps SDK for Postman is a simple Postman Collection for integrating with the ONLYOFFICE Apps API.
 
 A Postman Collection is a structured format for organizing API requests.
 
-The collection includes comprehensive API endpoints for managing groups, people, files, folders, rooms, and more in DocSpace.
+The collection includes comprehensive API endpoints for managing groups, people, files, folders, rooms, and more in ONLYOFFICE Apps.
 
 **[ONLYOFFICE Postman Collection on GitHub](https://github.com/ONLYOFFICE/docspace-api-postman-collections)**
 
@@ -29,7 +29,7 @@ Go to your collection → **Variables** tab and fill in the following:
 
 | Variable | Description | Example |
 |---|---|---|
-| `baseUrl` | The URL of your DocSpace instance | `https://your-docspace.onlyoffice.com` |
+| `baseUrl` | The URL of your ONLYOFFICE Apps instance | `https://your-docspace.onlyoffice.com` |
 | `asc_auth_key` | Your personal API key | `your-api-key-here` |
 | `ApiKeyBearer` | The key is passed via the Authorization header | `your-api-key-here` |
 | `x-signature` | JWT signature passed as a cookie. Obtain the token via `POST /api/2.0/security/oauth2/token` | `your-api-key-here` |

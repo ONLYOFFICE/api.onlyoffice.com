@@ -5,11 +5,11 @@ tags: ["Apps", "Plugins", "Basic"]
 
 # Settings plugin
 
-This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.
+This guide walks you through creating a plugin for ONLYOFFICE Apps that adds a plugin configuration panel to the plugin settings area in the admin interface.
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -87,7 +87,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 5: Upload to DocSpace
+## Step 5: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

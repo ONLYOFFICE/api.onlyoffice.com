@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Basic"]
 
 # ComboBox component
 
-This guide demonstrates how to configure and use the [ComboBox](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IComboBox) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.
+This guide demonstrates how to configure and use the [ComboBox](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/components/IComboBox) component in the ONLYOFFICE Apps Plugins SDK with nearly all supported layout and style properties.
 
 <details>
   <summary>Full example</summary>
@@ -166,7 +166,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -408,7 +408,7 @@ npm run build
 
 This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles it as `dist/plugin.zip`.
 
-## Step 9: Upload to DocSpace
+## Step 9: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Go to **Settings → Integration → Plugins**.

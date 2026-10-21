@@ -10,17 +10,17 @@ import TabItem from '@theme/TabItem';
 
 This example shows how to automatically move all documents related to a task into a common Completed folder when the task is closed.
 In a typical setup:
-- each task in an external system (task tracker, CRM, etc.) has its own DocSpace folder for documents,
+- each task in an external system (task tracker, CRM, etc.) has its own ONLYOFFICE Apps folder for documents,
 - when the task status becomes closed, you move all files from that task folder into a global Completed folder.
 
 The external system is abstract in this sample: the script receives a list of tasks containing:
 - `id` — task identifier,
 - `status` — task status (open, `in_progress`, `closed`),
-- `docsFolderId` — DocSpace folder ID where task documents are stored.
+- `docsFolderId` — ONLYOFFICE Apps folder ID where task documents are stored.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -318,9 +318,9 @@ The external system is abstract in this sample: the script receives a list of ta
 </Tabs>
 </details>
 
-## Step 1: Identify closed tasks with linked DocSpace folders
+## Step 1: Identify closed tasks with linked ONLYOFFICE Apps folders
 
-Your external system provides a task list where each task includes `docsFolderId` — the DocSpace folder that stores its documents.
+Your external system provides a task list where each task includes `docsFolderId` — the ONLYOFFICE Apps folder that stores its documents.
 
 The script keeps only tasks where:
 - status is closed

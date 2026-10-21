@@ -31,13 +31,13 @@ You can also create and manage OAuth clients in your workspace from the **Develo
 
    Because PKCE is not a replacement for client authentication, it does not allow treating a public client as a confidential client.
 - **Redirects URLs (Required):** The URLs where the user will be redirected after successfully passing the consent screen. Enter the address and click **+**. You can specify several URLs by clicking the **+** icon. For example, to add test and production versions.
-- **Allowed origins (Required):** The URLs of sources that will be able to make requests to the DocSpace API without CORS blocking. Enter the address and click **+**. You can also specify several URLs by clicking **+**.
+- **Allowed origins (Required):** The URLs of sources that will be able to make requests to the ONLYOFFICE Apps API without CORS blocking. Enter the address and click **+**. You can also specify several URLs by clicking **+**.
 
 ![Basic info](/assets/images/docspace/basic-info.png#gh-light-mode-only)![Basic info](/assets/images/docspace/basic-info.dark.png#gh-dark-mode-only)
 
 ## Access scopes
 
-This parameter defines the capabilities of a third-party application in relation to the DocSpace API. Scopes are used to limit your app's access to all user-related data, and they'll let you specify exactly what kind of access you need. This parameter is required.
+This parameter defines the capabilities of a third-party application in relation to the ONLYOFFICE Apps API. Scopes are used to limit your app's access to all user-related data, and they'll let you specify exactly what kind of access you need. This parameter is required.
 
 | Scope           | Read                                                              | Write                                                                         |
 | --------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------- |

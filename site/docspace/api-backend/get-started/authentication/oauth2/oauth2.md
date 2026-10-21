@@ -6,7 +6,7 @@ sidebar_position: -4
 
 The [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authorization protocol enables a third-party application to obtain limited access to an HTTP service.
 
-The **DocSpace OAuth API** allows developers to register a new OAuth application on the portal and use it to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
+The **ONLYOFFICE Apps OAuth API** allows developers to register a new OAuth application on the portal and use it to access the API for authorization and further actions such as accessing accounts, rooms, files, etc.
 
 This documentation describes:
 
@@ -19,13 +19,13 @@ This documentation describes:
 
 API methods for working with OAuth 2.0 clients are detailed [in this section](../../../../../docspace/api-backend/usage-api/oauth-2-0/authorization/authorize-o-auth.md).
 
-The Node.js and Python examples demonstrating OAuth 2.0 integration with ONLYOFFICE DocSpace can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2).
+The Node.js and Python examples demonstrating OAuth 2.0 integration with ONLYOFFICE Apps can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2).
 
 ## What OAuth apps can do
 
 An OAuth application can:
 
-- authorize users through the DocSpace portal without storing or processing passwords;
+- authorize users through the ONLYOFFICE Apps portal without storing or processing passwords;
 - access user account information (such as name) to verify their identity without having access to the password;
 - use an access token to retrieve user information (before the token expires);
 - perform only those actions on the data that are allowed by the authorized user.

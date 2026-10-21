@@ -1,16 +1,16 @@
 ---
-description: Import a file from Dropbox into a DocSpace room.
+description: Import a file from Dropbox into an ONLYOFFICE Apps room.
 tags: ["Apps", "REST API", "Integration"]
 ---
 
-# Import Dropbox file to DocSpace
+# Import Dropbox file to ONLYOFFICE Apps
 
-This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE DocSpace. It’s ideal for collecting external resources, migrating document libraries, or building automated submission workflows.
+This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE Apps. It’s ideal for collecting external resources, migrating document libraries, or building automated submission workflows.
 
 ## How it works
 
 - Download file from Dropbox - Use the Dropbox SDK to fetch the file content and name.
-- Upload to DocSpace room - Send the binary file to the specified room using the file upload API.
+- Upload to ONLYOFFICE Apps room - Send the binary file to the specified room using the file upload API.
 - Run the import - Execute the process with a specific Dropbox file path.
 
 <details>
@@ -78,8 +78,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com`, `your_onlyoffice_api_key`, and `your_room_id` with your actual DocSpace portal host, API key, and room ID. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com`, `your_onlyoffice_api_key`, and `your_room_id` with your actual ONLYOFFICE Apps portal host, API key, and room ID. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -108,9 +108,9 @@ def download_from_dropbox(file_path):
     return None, None
 ```
 
-## Step 2: Upload the file to DocSpace
+## Step 2: Upload the file to ONLYOFFICE Apps
 
-Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file) to upload the binary content to a DocSpace room.
+Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file) to upload the binary content to an ONLYOFFICE Apps room.
 
 ``` py
 # Step 2: Upload file to DocSpace room
@@ -127,7 +127,7 @@ def upload_to_docspace(file_content, filename, room_id):
 
 ## Step 3: Run the import
 
-Trigger the full import flow from Dropbox to DocSpace.
+Trigger the full import flow from Dropbox to ONLYOFFICE Apps.
 
 ```py
 # Step 3: Transfer file from Dropbox to DocSpace

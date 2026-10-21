@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Creating room from template
 
-This example demonstrates how to create a DocSpace room for a new project from an existing room template.
+This example demonstrates how to create an ONLYOFFICE Apps room for a new project from an existing room template.
 The external project system (PM/ERP/CRM) sends project data (for example, `projectId`, `projectType`, `projectName`). The integration then:
 
 - fetches available room templates,
@@ -19,7 +19,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -342,7 +342,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
 ## Step 1: Get templates and choose one for the project
 
-The integration loads templates from DocSpace and picks a suitable template for the project type.
+The integration loads templates from ONLYOFFICE Apps and picks a suitable template for the project type.
 
 It requests the templates list using GET [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/rooms/get-rooms-folder) and selects a template (for example, by matching `projectType` against template `title`).
 

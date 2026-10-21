@@ -5,13 +5,13 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 # ZIP archives
 
-直接在 DocSpace 中打开和解压 ZIP 压缩包。
+直接在 ONLYOFFICE Apps 中打开和解压 ZIP 压缩包。
 
 ![ZIP archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -25,7 +25,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 ### 处理压缩包文件
 
-该插件使您可以直接在 DocSpace 中处理 ZIP 压缩包。首先，右键点击压缩包文件，然后打开**更多选项**下拉菜单：
+该插件使您可以直接在 ONLYOFFICE Apps 中处理 ZIP 压缩包。首先，右键点击压缩包文件，然后打开**更多选项**下拉菜单：
 
 - **打开压缩包**：在不解压的情况下查看压缩包内容。您还可以直接从预览窗口中解压特定文件。
 - **解压**子菜单：
@@ -61,8 +61,8 @@ GitHub 仓库：[archives](https://github.com/ONLYOFFICE/docspace-plugins/tree/m
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于与 DocSpace 进行 API 交互。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于与 ONLYOFFICE Apps 进行 API 交互。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作：**打开压缩包**；针对压缩包文件的**解压**子菜单（**选择位置**、**在此处解压**）；针对文件夹的**压缩**子菜单（**压缩到此处**、**选择位置**）；以及针对文件、图片和视频的**压缩所选项目**。
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于注册 `.zip` 文件类型并处理压缩包操作。
 

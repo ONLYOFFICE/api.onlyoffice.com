@@ -5,22 +5,22 @@ tags: ["Apps", "Embed SDK", "Integration"]
 
 # Advanced samples
 
-These samples show how to combine DocSpace Embed SDK calls into complete, real-world integrations. Each one builds on the basics covered in [Basic samples](../basic-samples/index.md) and targets a specific use case.
+These samples show how to combine ONLYOFFICE Apps Embed SDK calls into complete, real-world integrations. Each one builds on the basics covered in [Basic samples](../basic-samples/index.md) and targets a specific use case.
 
 ## Security and access
 
 | Sample | Description |
 | --- | --- |
-| [Authorization](authorization.md) | Log in to a DocSpace account using email and password hash. |
-| [Two-factor authentication](two-factor-authentication.md) | Verify users with a phone code before granting DocSpace access. |
+| [Authorization](authorization.md) | Log in to an ONLYOFFICE Apps account using email and password hash. |
+| [Two-factor authentication](two-factor-authentication.md) | Verify users with a phone code before granting ONLYOFFICE Apps access. |
 
 ## Room and workspace setup
 
 | Sample | Description |
 | --- | --- |
 | [Structured room creation](room-creation-with-folder-structure.md) | Create client rooms with predefined folders and document templates. |
-| [Tabbed manager UI](create-tabbed-docspace-manager.md) | Embed DocSpace in a tabbed interface with multiple manager instances. |
-| [Draggable resizable modals](draggable-resizable-modals.md) | Embed DocSpace in draggable and resizable modal windows. |
+| [Tabbed manager UI](create-tabbed-docspace-manager.md) | Embed ONLYOFFICE Apps in a tabbed interface with multiple manager instances. |
+| [Draggable resizable modals](draggable-resizable-modals.md) | Embed ONLYOFFICE Apps in draggable and resizable modal windows. |
 
 ## File and folder management
 
@@ -34,11 +34,11 @@ These samples show how to combine DocSpace Embed SDK calls into complete, real-w
 
 | Sample | Description |
 | --- | --- |
-| [Create basic task](basic-task-create.md) | Create a task management table with auto-generated DocSpace rooms. |
-| [Create files in rooms](task-file-create.md) | Create tasks linked to DocSpace rooms and add files inside them. |
-| [Room selector](task-room-selector.md) | Link tasks to DocSpace rooms using the room selector component. |
+| [Create basic task](basic-task-create.md) | Create a task management table with auto-generated ONLYOFFICE Apps rooms. |
+| [Create files in rooms](task-file-create.md) | Create tasks linked to ONLYOFFICE Apps rooms and add files inside them. |
+| [Room selector](task-room-selector.md) | Link tasks to ONLYOFFICE Apps rooms using the room selector component. |
 | [Manage project folders](project-manager-folder-integration.md) | Track projects as folders in a shared room with file locking. |
-| [File manager with task attachments](file-manager-task-attachments.md) | Attach files to tasks using a DocSpace file selector modal. |
+| [File manager with task attachments](file-manager-task-attachments.md) | Attach files to tasks using an ONLYOFFICE Apps file selector modal. |
 | [Collaborative project workflow](freelance-platform-docspace.md) | Build a freelance project workspace with rooms and file management. |
 
 ## Document workflows
@@ -51,4 +51,4 @@ These samples show how to combine DocSpace Embed SDK calls into complete, real-w
 
 | Sample | Description |
 | --- | --- |
-| [DocSpace chat commands](insert-rooms-and-files-into-chat.md) | Insert room and file links into a chat using slash commands. |
+| [ONLYOFFICE Apps chat commands](insert-rooms-and-files-into-chat.md) | Insert room and file links into a chat using slash commands. |

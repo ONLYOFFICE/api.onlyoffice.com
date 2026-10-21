@@ -5,14 +5,14 @@ tags: ["Apps", "Embed SDK", "Integration"]
 
 # Manage project folders
 
-This example shows how to create a simple project tracker that interacts with DocSpace. Each project is represented as a folder inside a shared room. You can add or remove projects, and when a project is deleted, all associated files are locked using the ONLYOFFICE API.
+This example shows how to create a simple project tracker that interacts with ONLYOFFICE Apps. Each project is represented as a folder inside a shared room. You can add or remove projects, and when a project is deleted, all associated files are locked using the ONLYOFFICE API.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/project-manager-folder-integration.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -200,7 +200,7 @@ docSpace = DocSpace.SDK.initManager({
 })
 ```
 
-- Initializes the DocSpace SDK
+- Initializes the ONLYOFFICE Apps SDK
 - Targets a specific shared room by `collaborationRoomID`
 - Sets the `onAppReady` callback for post-initialization logic
 

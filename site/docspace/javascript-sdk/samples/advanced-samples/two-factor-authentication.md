@@ -1,18 +1,18 @@
 ---
-description: Verify users with a phone code before granting DocSpace access.
+description: Verify users with a phone code before granting ONLYOFFICE Apps access.
 tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Two-factor authentication
 
-This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to DocSpace via the SDK. Once verified, users are redirected to a file management interface embedded in an iframe.
+This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to ONLYOFFICE Apps via the SDK. Once verified, users are redirected to a file management interface embedded in an iframe.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/two-factor-authentication.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -156,10 +156,10 @@ codeButton.addEventListener("click", function () {
 ```
 
 - Validates the entered code against the one generated earlier
-- If valid: hides the code screen and displays DocSpace
+- If valid: hides the code screen and displays ONLYOFFICE Apps
 - If invalid: shows an error alert
 
-### 3. Initializing the DocSpace file manager
+### 3. Initializing the ONLYOFFICE Apps file manager
 
 ``` ts
 const docSpace = DocSpace.SDK.initManager({
@@ -169,5 +169,5 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-- Displays DocSpace in an iframe
+- Displays ONLYOFFICE Apps in an iframe
 - File manager becomes accessible only after verification is successful

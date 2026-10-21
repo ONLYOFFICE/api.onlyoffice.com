@@ -1,17 +1,17 @@
 ---
-description: 在 DocSpace 专用阅读器中直接查看 EPUB、FB2 和 ZIP 文件。
+description: 在 ONLYOFFICE Apps 专用阅读器中直接查看 EPUB、FB2 和 ZIP 文件。
 tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Book reader
 
-用于在 DocSpace 专用阅读查看器中查看 EPUB、FB2 和 ZIP 文件的工具。
+用于在 ONLYOFFICE Apps 专用阅读查看器中查看 EPUB、FB2 和 ZIP 文件的工具。
 
 ![Book reader](/assets/images/docspace/book-reader.png#gh-light-mode-only)![Book reader](/assets/images/docspace/book-reader.dark.png#gh-dark-mode-only)
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -41,7 +41,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 ### ZIP 文件
 
-ZIP 文件无法通过单击打开——因为 DocSpace 有专门的压缩包插件处理 `.zip` 文件类型，图书阅读器仅通过上下文菜单打开 ZIP 文件（**右键点击 → 在阅读器中打开**）。
+ZIP 文件无法通过单击打开——因为 ONLYOFFICE Apps 有专门的压缩包插件处理 `.zip` 文件类型，图书阅读器仅通过上下文菜单打开 ZIP 文件（**右键点击 → 在阅读器中打开**）。
 
 打开 ZIP 文件时，插件会检查其内容：
 
@@ -59,7 +59,7 @@ GitHub 仓库：[reader](https://github.com/ONLYOFFICE/docspace-plugins/tree/mas
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。该插件会为受支持的文件（`.epub`、`.fb2`、`.zip`）添加**在阅读器中打开**项目。
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于与指定的文件类型交互。支持直接从文件列表单击打开文件。
 

@@ -1,18 +1,18 @@
 ---
-description: Embed DocSpace in draggable and resizable modal windows.
+description: Embed ONLYOFFICE Apps in draggable and resizable modal windows.
 tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Draggable resizable modals
 
-Embed DocSpace inside draggable and resizable modal windows built with Vite, React, TypeScript, and Tailwind CSS.
-This example shows how to embed multiple DocSpace instances, automatically log in via the SDK, and manage them dynamically.
+Embed ONLYOFFICE Apps inside draggable and resizable modal windows built with Vite, React, TypeScript, and Tailwind CSS.
+This example shows how to embed multiple ONLYOFFICE Apps instances, automatically log in via the SDK, and manage them dynamically.
 
 The `DocSpace` component logs in through a service frame and then opens the file manager.
 
 ## Before you start
 
-The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
+The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of ONLYOFFICE Apps.
 
 ## Script execution steps
 
@@ -38,7 +38,7 @@ VITE_DOCSPACE_USER_LOGIN=user@example.com
 VITE_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
 ```
 
-- `VITE_DOCSPACE_URL` - your DocSpace portal URL (root).
+- `VITE_DOCSPACE_URL` - your ONLYOFFICE Apps portal URL (root).
 - `VITE_DOCSPACE_USER_LOGIN` - user login for authentication.
 - `VITE_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see the [Create password hash](../basic-samples/create-hash.md) sample).
 
@@ -87,7 +87,7 @@ export default {
 html, body, #root { height: 100%; margin: 0; }
 ```
 
-### 4. Install the DocSpace SDK packages
+### 4. Install the ONLYOFFICE Apps SDK packages
 
 Install the React wrapper and the core SDK:
 
@@ -99,7 +99,7 @@ npm i @onlyoffice/docspace-react @onlyoffice/docspace-sdk-js
 
 ### 5. Create the modal component
 
-Add a reusable modal that embeds DocSpace in `manager` mode. The `DocSpace` component handles the login itself:
+Add a reusable modal that embeds ONLYOFFICE Apps in `manager` mode. The `DocSpace` component handles the login itself:
 
 - `email` and `onRequestPasswordHash` tell the component which credentials to use. It opens a service frame in `system` mode, signs in if the user isn't signed in yet, and then opens the frame with the passed `config`.
 - `onUnsuccessLogin` is called if the sign-in fails, for example, because of a wrong password hash.
@@ -213,7 +213,7 @@ export default function DraggableModal({
 
 ### 6. Render multiple modals
 
-Create a page that opens, focuses, and closes DocSpace windows.
+Create a page that opens, focuses, and closes ONLYOFFICE Apps windows.
 
 `src/pages/Modals/index.tsx`
 
@@ -312,4 +312,4 @@ Start the dev server:
 npm run dev
 ```
 
-Open `http://localhost:5173`. You should see a modal with DocSpace. Drag it by the header and resize from the bottom-right. Click New Window to open another modal.
+Open `http://localhost:5173`. You should see a modal with ONLYOFFICE Apps. Drag it by the header and resize from the bottom-right. Click New Window to open another modal.

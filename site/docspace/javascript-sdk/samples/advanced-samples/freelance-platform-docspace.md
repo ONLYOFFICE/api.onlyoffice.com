@@ -5,14 +5,14 @@ tags: ["Apps", "Embed SDK", "Integration"]
 
 # Collaborative project workflow
 
-This example shows how to build a freelance project workspace using the DocSpace Embed SDK. When a project is created, a collaboration room is generated for it, a freelancer is added to the room as a content creator, the project files are managed in the embedded file manager, and the room is archived when the project is complete.
+This example shows how to build a freelance project workspace using the ONLYOFFICE Apps Embed SDK. When a project is created, a collaboration room is generated for it, a freelancer is added to the room as a content creator, the project files are managed in the embedded file manager, and the room is archived when the project is complete.
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
-The user who runs the example must be a DocSpace admin or a room admin: only these roles can create rooms and invite users to them.
+The user who runs the example must be an ONLYOFFICE Apps admin or a room admin: only these roles can create rooms and invite users to them.
 
 :::warning
 The example requests an access token from `/api/2.0/authentication` with a login and password written in client-side code. This is acceptable for a local demo only. In production, get the token on your backend and never expose user credentials in the browser.
@@ -436,7 +436,7 @@ async function confirmUser() {
 ```
 
 - Adds the selected freelancer to the room with the **Content creator** access right, so they can upload and edit project files
-- Sends the access level as a number (11 for Content creator, 0 for None), the same way the DocSpace client does
+- Sends the access level as a number (11 for Content creator, 0 for None), the same way the ONLYOFFICE Apps client does
 - Waits for the response and stops if the portal rejects the request
 - Reveals the **Complete Order** button
 

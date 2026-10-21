@@ -1,15 +1,15 @@
 ---
-description: Embed DocSpace in a tabbed interface with multiple manager instances.
+description: Embed ONLYOFFICE Apps in a tabbed interface with multiple manager instances.
 tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Tabbed manager UI
 
-This example demonstrates how to embed ONLYOFFICE DocSpace in a tabbed interface, where each tab runs its own DocSpace instance in manager mode.
+This example demonstrates how to embed ONLYOFFICE Apps in a tabbed interface, where each tab runs its own ONLYOFFICE Apps instance in manager mode.
 
 ## Before you start
 
-The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of DocSpace.
+The app runs on the Vite dev server at `http://localhost:5173`. [Add this origin](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) to the **Developer Tools** section of ONLYOFFICE Apps.
 
 ## Script execution steps
 
@@ -35,7 +35,7 @@ VITE_DOCSPACE_USER_LOGIN=user@example.com
 VITE_DOCSPACE_USER_PASSWORD_HASH=PASTE_HASH_HERE
 ```
 
-- `VITE_DOCSPACE_URL` - your DocSpace portal URL (root).
+- `VITE_DOCSPACE_URL` - your ONLYOFFICE Apps portal URL (root).
 - `VITE_DOCSPACE_USER_LOGIN` - user login for authentication.
 - `VITE_DOCSPACE_USER_PASSWORD_HASH` - password hash generated via the SDK (see the [Create password hash](../basic-samples/create-hash.md) sample).
 
@@ -84,7 +84,7 @@ export default {
 html, body, #root { height: 100%; margin: 0; }
 ```
 
-### 4. Install the DocSpace SDK packages
+### 4. Install the ONLYOFFICE Apps SDK packages
 
 Install the React wrapper and the core SDK:
 
@@ -96,7 +96,7 @@ npm i @onlyoffice/docspace-react @onlyoffice/docspace-sdk-js
 
 ### 5. Create the tab iframe component
 
-Add a reusable component that embeds DocSpace and logs in on `onAppReady`. The component gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component. The config has no `src` because the component takes it from the `url` prop.
+Add a reusable component that embeds ONLYOFFICE Apps and logs in on `onAppReady`. The component gets the SDK instance from the `onSetDocspaceInstance` prop of the `DocSpace` component. The config has no `src` because the component takes it from the `url` prop.
 
 `src/components/TabDocSpace.tsx`
 
@@ -164,7 +164,7 @@ export default function TabDocSpace({
 
 ### 6. Render the tabs
 
-Render a tab bar with + New Tab and per-tab close button. The active tab shows its DocSpace instance.
+Render a tab bar with + New Tab and per-tab close button. The active tab shows its ONLYOFFICE Apps instance.
 
 `src/pages/Tabs/index.tsx`
 
@@ -334,4 +334,4 @@ Start the dev server:
 npm run dev
 ```
 
-Open `http://localhost:5173`. You should see a tab with DocSpace in manager mode. Click **+ New Tab** to open another DocSpace instance, and switch between tabs or close them with **✕**.
+Open `http://localhost:5173`. You should see a tab with ONLYOFFICE Apps in manager mode. Click **+ New Tab** to open another ONLYOFFICE Apps instance, and switch between tabs or close them with **✕**.

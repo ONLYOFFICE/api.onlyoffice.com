@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # Monthly compliance report
 
-This example demonstrates how to generate a monthly compliance report in ONLYOFFICE DocSpace using the API. It retrieves audit events for a selected period, optionally filters events to focus on important documents, builds a human-readable TXT report, and uploads the report to a dedicated folder (for example, a “Compliance” room folder).
+This example demonstrates how to generate a monthly compliance report in ONLYOFFICE Apps using the API. It retrieves audit events for a selected period, optionally filters events to focus on important documents, builds a human-readable TXT report, and uploads the report to a dedicated folder (for example, a “Compliance” room folder).
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>

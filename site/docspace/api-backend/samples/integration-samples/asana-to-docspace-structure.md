@@ -1,16 +1,16 @@
 ---
-description: Create DocSpace rooms and folders from Asana projects.
+description: Create ONLYOFFICE Apps rooms and folders from Asana projects.
 tags: ["Apps", "REST API", "Integration"]
 ---
 
-# Asana to DocSpace structure
+# Asana to ONLYOFFICE Apps structure
 
-This integration creates collaboration rooms in ONLYOFFICE DocSpace based on Asana projects and generates folders for each task inside the corresponding room. This setup is ideal for aligning your document structure with your project management workflow.
+This integration creates collaboration rooms in ONLYOFFICE Apps based on Asana projects and generates folders for each task inside the corresponding room. This setup is ideal for aligning your document structure with your project management workflow.
 
 ## How it works
 
 - Get projects from Asana - Retrieve all projects in your Asana workspace.
-- Create rooms in DocSpace - Create a room per project in DocSpace.
+- Create rooms in ONLYOFFICE Apps - Create a room per project in ONLYOFFICE Apps.
 - Get tasks per project - Fetch all tasks from each Asana project.
 - Create folders per task - Create a folder inside the room for each task.
 
@@ -97,8 +97,8 @@ if __name__ == "__main__":
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Personal access token](https://developers.asana.com/docs/personal-access-token) in your Asana developer settings. This token will be used to authenticate API requests. Make sure the token has access to the necessary projects and tasks in your Asana workspace.
 4. Replace `your_asana_token` with your actual Asana token.
 
@@ -136,7 +136,7 @@ def get_asana_project_tasks(project_id):
         return []
 ```
 
-## Step 3: Create a room in DocSpace for the project
+## Step 3: Create a room in ONLYOFFICE Apps for the project
 
 Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a collaboration room named after the project.
 

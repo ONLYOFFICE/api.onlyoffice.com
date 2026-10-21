@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Routing docs by status
 
-This example shows how to automatically classify an uploaded document as **Draft**, **Final**, or **Signed** based on its filename, and move it to the corresponding folder in ONLYOFFICE DocSpace.
+This example shows how to automatically classify an uploaded document as **Draft**, **Final**, or **Signed** based on its filename, and move it to the corresponding folder in ONLYOFFICE Apps.
 
 When a file is uploaded, a webhook triggers a backend script that:
 
@@ -24,7 +24,7 @@ This pattern is useful for simple workflow automation where users follow naming 
 
 ## Status definitions
 
-In this example, **Draft**, **Final**, and **Signed** are *convention-based labels* derived from the file name. They are not built-in DocSpace document statuses.
+In this example, **Draft**, **Final**, and **Signed** are *convention-based labels* derived from the file name. They are not built-in ONLYOFFICE Apps document statuses.
 
 - **Draft**: the file name contains `draft` (for example, `Contract_draft.docx`). The file is moved to `/Draft`.
 - **Final**: the file name contains `final` (for example, `Agreement_final.pdf`). The file is moved to `/Final`.
@@ -34,21 +34,21 @@ If no keyword is found, the script treats the status as unknown and does not mov
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -462,7 +462,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
 ## Step 1: Receive the file upload webhook
 
-DocSpace sends an HTTP POST notification when a file is created or uploaded.
+ONLYOFFICE Apps sends an HTTP POST notification when a file is created or uploaded.
 
 The script reads `event.trigger` and `payload` from the webhook JSON.
 Only upload-related triggers are processed (for example, `file.uploaded`, `file.created`). All other triggers are ignored.
@@ -506,7 +506,7 @@ Only upload-related triggers are processed (for example, `file.uploaded`, `file.
 
 ## Step 2: Read the uploaded file name
 
-To classify the document reliably, the script loads file metadata from DocSpace and reads the actual file title.
+To classify the document reliably, the script loads file metadata from ONLYOFFICE Apps and reads the actual file title.
 It requests file details using GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info).
 
 <Tabs>

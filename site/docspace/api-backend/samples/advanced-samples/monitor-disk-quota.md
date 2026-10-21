@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Monitoring disk quota
 
-This example shows how to track DocSpace storage consumption using the API. The script reads the portal quota (total capacity) and the current used space, calculates the usage percentage, and triggers a warning (placeholder) when the usage exceeds a configured threshold.
+This example shows how to track ONLYOFFICE Apps storage consumption using the API. The script reads the portal quota (total capacity) and the current used space, calculates the usage percentage, and triggers a warning (placeholder) when the usage exceeds a configured threshold.
 Optionally, it requests files usage statistics (if available) and prints the largest folders/files returned by the API to help you locate the main storage consumers.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>

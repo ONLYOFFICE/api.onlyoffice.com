@@ -8,16 +8,16 @@ import TabItem from '@theme/TabItem';
 
 # Onboarding employee
 
-This example demonstrates how to prepare a structured workspace for a new employee in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to prepare a structured workspace for a new employee in ONLYOFFICE Apps using the API.
 
 The workflow creates a personal folder inside a shared Employees directory, builds a standard subfolder structure, copies starter documents from templates, and generates an external access link.
-Optionally, the example also shows how a DocSpace user can be created as part of the same onboarding process.
+Optionally, the example also shows how an ONLYOFFICE Apps user can be created as part of the same onboarding process.
 
 This approach helps standardize employee document storage and simplifies access management during onboarding.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -366,7 +366,7 @@ This approach helps standardize employee document storage and simplifies access 
 
 ## Step 1: Create an employee user
 
-A POST request is sent to [/api/2.0/people/](/docspace/api-backend/usage-api/people/profiles/add-member) to create a new DocSpace user.
+A POST request is sent to [/api/2.0/people/](/docspace/api-backend/usage-api/people/profiles/add-member) to create a new ONLYOFFICE Apps user.
 
 The request body includes:
 - `email`: The employee email address.

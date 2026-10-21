@@ -15,7 +15,7 @@ API methods for working with API keys are detailed [in this section](../../../..
 
 ## How to create API keys
 
-The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send a POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/api-keys/create-api-key.md) endpoint:
+The ONLYOFFICE Apps API uses API keys for authentication. To create a user API key, send a POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/api-keys/create-api-key.md) endpoint:
 
 <Tabs>
   <TabItem value="request" label="Request">

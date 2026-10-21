@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # Finding abandoned rooms
 
-This example demonstrates how to find rooms that have not been updated for a certain number of days in ONLYOFFICE DocSpace. The script retrieves the room list, skips archived rooms, checks the last update date, and prints a simple report of rooms that look abandoned.
+This example demonstrates how to find rooms that have not been updated for a certain number of days in ONLYOFFICE Apps. The script retrieves the room list, skips archived rooms, checks the last update date, and prints a simple report of rooms that look abandoned.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>

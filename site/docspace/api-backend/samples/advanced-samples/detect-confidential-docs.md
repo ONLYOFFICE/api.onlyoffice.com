@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Detecting confidential docs
 
-This example shows how to automatically detect sensitive documents in ONLYOFFICE DocSpace by searching for the keyword `confidential` and moving such files into a secure folder (for example, inside a secure room).
+This example shows how to automatically detect sensitive documents in ONLYOFFICE Apps by searching for the keyword `confidential` and moving such files into a secure folder (for example, inside a secure room).
 
 The script:
 
@@ -22,7 +22,7 @@ There are no webhooks in this case - it is a batch scan that you can start whene
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -316,7 +316,7 @@ There are no webhooks in this case - it is a batch scan that you can start whene
 
 The script starts from `START_FOLDER_ID` (a room ID or folder ID) and reads its contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/files/folders/get-folder-by-folder-id).
 
-DocSpace returns two lists:
+ONLYOFFICE Apps returns two lists:
 
 `files` — files inside this folder
 `folders` — subfolders inside this folder

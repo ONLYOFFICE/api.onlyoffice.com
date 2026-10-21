@@ -1,16 +1,16 @@
 ---
-description: Export a file from DocSpace to Dropbox via presigned URL.
+description: Export a file from ONLYOFFICE Apps to Dropbox via presigned URL.
 tags: ["Apps", "REST API", "Integration"]
 ---
 
-# Export DocSpace file to Dropbox
+# Export ONLYOFFICE Apps file to Dropbox
 
-This integration allows you to automatically export files from DocSpace to Dropbox using a presigned download URL. It’s ideal for building document archiving workflows, offloading files to external storage, or syncing selected documents outside of the DocSpace environment.
+This integration allows you to automatically export files from ONLYOFFICE Apps to Dropbox using a presigned download URL. It’s ideal for building document archiving workflows, offloading files to external storage, or syncing selected documents outside of the ONLYOFFICE Apps environment.
 
 ## How it works
 
-- Retrieve file metadata - Get file title and MIME type using the DocSpace API.
-- Generate presigned URL - Request a secure download link from DocSpace.
+- Retrieve file metadata - Get file title and MIME type using the ONLYOFFICE Apps API.
+- Generate presigned URL - Request a secure download link from ONLYOFFICE Apps.
 - Download file content - Retrieve the file using the presigned URL.
 - Upload to Dropbox - Store the downloaded file into a specified Dropbox folder.
 
@@ -101,8 +101,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -111,7 +111,7 @@ if __name__ == '__main__':
   pip install dropbox
   ```
 
-## Step 1: Retrieve file metadata from DocSpace
+## Step 1: Retrieve file metadata from ONLYOFFICE Apps
 
 Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/files/files/get-file-info).
 
@@ -145,7 +145,7 @@ def get_presigned_url(file_id):
     return None
 ```
 
-## Step 3: Download the file from DocSpace
+## Step 3: Download the file from ONLYOFFICE Apps
 
 Use the presigned link to securely download the file.
 

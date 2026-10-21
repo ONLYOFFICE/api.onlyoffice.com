@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Advanced"]
 
 # Article navigation plugin
 
-This plugin adds two entries to the DocSpace sidebar (the *article*) using the `ArticleNavigation` scope. Clicking an entry opens a full portal page — not a dialog — and DocSpace renders the entry's `component` on that page, inside its own React tree:
+This plugin adds two entries to the ONLYOFFICE Apps sidebar (the *article*) using the `ArticleNavigation` scope. Clicking an entry opens a full portal page — not a dialog — and ONLYOFFICE Apps renders the entry's `component` on that page, inside its own React tree:
 
 | Sidebar entry     | Appears in       | Visible to             | Page shows                   |
 | ------------------ | ----------------- | ----------------------- | ------------------------------ |
@@ -194,7 +194,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running — version **4.0.0 or later**, since SDK 3.0.0 plugins require [`minDocSpaceVersion: "4.0.0"`](/docspace/plugins-sdk/more-information/migration.md#updating-a-plugin-to-sdk-300) — and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running — version **4.0.0 or later**, since SDK 3.0.0 plugins require [`minDocSpaceVersion: "4.0.0"`](/docspace/plugins-sdk/more-information/migration.md#updating-a-plugin-to-sdk-300) — and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -240,7 +240,7 @@ This adds it to `dependencies` in `package.json`:
 }
 ```
 
-The UI kit is only needed for type checking and editor support: it is not bundled into *plugin.js*. DocSpace supplies its own copy at load time and rewrites the `@onlyoffice/apps-ui-kit` specifier to it. The template's *vite.config.ts* already marks it as external with the pattern `/^@onlyoffice\/apps-ui-kit(\/.*)?$/`. Import components only from the package root, as noted at the top of this page.
+The UI kit is only needed for type checking and editor support: it is not bundled into *plugin.js*. ONLYOFFICE Apps supplies its own copy at load time and rewrites the `@onlyoffice/apps-ui-kit` specifier to it. The template's *vite.config.ts* already marks it as external with the pattern `/^@onlyoffice\/apps-ui-kit(\/.*)?$/`. Import components only from the package root, as noted at the top of this page.
 
 ## Step 4: Review and extend plugin code
 
@@ -350,7 +350,7 @@ export default plugin;
 
 </details>
 
-The items are registered in `onLoadCallback` rather than right after construction, ensuring DocSpace is ready to receive them.
+The items are registered in `onLoadCallback` rather than right after construction, ensuring ONLYOFFICE Apps is ready to receive them.
 
 ## Step 5: Build the pages with the UI kit
 
@@ -454,7 +454,7 @@ npm run build
 
 This runs `vite build && npx build-docspace-plugin`, which bundles `src/index.tsx` into `dist/plugin.js`, packs the `assets` folder contents, and produces `dist/plugin.zip`.
 
-## Step 8: Upload to DocSpace
+## Step 8: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

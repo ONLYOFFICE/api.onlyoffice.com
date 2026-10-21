@@ -5,14 +5,14 @@ tags: ["Apps", "Embed SDK", "Integration"]
 
 # Get files and folders list
 
-This example demonstrates how to retrieve both files and folders from a DocSpace room using the Embed SDK.
+This example demonstrates how to retrieve both files and folders from an ONLYOFFICE Apps room using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-files-and-folders-list.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -83,7 +83,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ## Step 1. Set HTML structure
 
-Create an HTML page with an embedded DocSpace iframe and a button to trigger list retrieval.
+Create an HTML page with an embedded ONLYOFFICE Apps iframe and a button to trigger list retrieval.
 
 ``` html
 <!-- Step 1: HTML Setup -->
@@ -125,7 +125,7 @@ Create an HTML page with an embedded DocSpace iframe and a button to trigger lis
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ## Step 2. Embed SDK logic

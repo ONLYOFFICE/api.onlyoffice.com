@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Advanced"]
 
 # Modal dialog plugin
 
-This guide walks you through building a plugin for DocSpace that adds a custom toolbar button. When clicked, it opens a dialog allowing users to input a filename and create an empty `.docx` file in the current room using a backend API call.
+This guide walks you through building a plugin for ONLYOFFICE Apps that adds a custom toolbar button. When clicked, it opens a dialog allowing users to input a filename and create an empty `.docx` file in the current room using a backend API call.
 
 <details>
   <summary>Full example</summary>
@@ -256,7 +256,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -569,7 +569,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 8: Upload to DocSpace
+## Step 8: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

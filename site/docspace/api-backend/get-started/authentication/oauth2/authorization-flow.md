@@ -47,7 +47,7 @@ If the authorization link contains invalid parameters, the user is redirected to
 
    To send a consent request, you can also send a POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/oauth-2-0/authorization/submit-consent.md) address.
 
-2. The application exchanges the user code for the access token and refresh token, saves them to its storage, and uses these tokens to get access to the DocSpace API.
+2. The application exchanges the user code for the access token and refresh token, saves them to its storage, and uses these tokens to get access to the ONLYOFFICE Apps API.
 
 3. The application sends the [POST request](../../../../../docspace/api-backend/usage-api/oauth-2-0/authorization/exchange-token.md):
 

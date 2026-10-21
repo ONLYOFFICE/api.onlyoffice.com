@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Advanced"]
 
 # File extension filter plugin
 
-This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
+This guide shows how to build an ONLYOFFICE Apps plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
 
 <details>
   <summary>Full example</summary>
@@ -282,7 +282,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -316,7 +316,7 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 
 ## Step 3: Review and extend plugin code
 
-By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md). It includes `setAPI` and `getAPI` helper methods to store and retrieve the DocSpace API parameters (`origin`, `proxy`, `prefix`). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md):
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md). It includes `setAPI` and `getAPI` helper methods to store and retrieve the ONLYOFFICE Apps API parameters (`origin`, `proxy`, `prefix`). For the full API plugin interface, see [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md):
 
 <details>
   <summary>ExtSearchPlugin class</summary>
@@ -614,7 +614,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 6: Upload to DocSpace
+## Step 6: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

@@ -5,7 +5,7 @@ tags: ["Apps", "Plugins", "Advanced"]
 
 # Settings plugin UI
 
-This plugin adds a settings interface for administrators in DocSpace. It includes:
+This plugin adds a settings interface for administrators in ONLYOFFICE Apps. It includes:
 
 - a toggle for offline mode;
 - a dropdown to select language;
@@ -361,7 +361,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -630,7 +630,7 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 6: Upload to DocSpace
+## Step 6: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.

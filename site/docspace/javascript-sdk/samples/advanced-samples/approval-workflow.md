@@ -5,7 +5,7 @@ tags: ["Apps", "Embed SDK", "Integration"]
 
 # Document approval workflow
 
-This example shows how to build a document approval workflow using the DocSpace Embed SDK. When an author submits a document, a custom room is created for it and tagged **Pending review**, a reviewer is granted review-only access, and the reviewer can then approve the document or request changes. Each decision updates the room's tag so its status stays visible at a glance.
+This example shows how to build a document approval workflow using the ONLYOFFICE Apps Embed SDK. When an author submits a document, a custom room is created for it and tagged **Pending review**, a reviewer is granted review-only access, and the reviewer can then approve the document or request changes. Each decision updates the room's tag so its status stays visible at a glance.
 
 :::note
 To keep the example short, the author and the reviewer act in the same browser session: the user who submits the document also sees the **Approve** and **Request changes** buttons. In a real integration, the reviewer makes the decision in their own session.
@@ -14,9 +14,9 @@ To keep the example short, the author and the reviewer act in the same browser s
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
-The user who runs the example must be a **DocSpace admin** or a **room admin**: only these roles can create tags, and the example creates the **Pending review**, **Approved**, and **Changes requested** tags on the fly.
+The user who runs the example must be a **ONLYOFFICE Apps admin** or a **room admin**: only these roles can create tags, and the example creates the **Pending review**, **Approved**, and **Changes requested** tags on the fly.
 
 :::warning
 The example requests an access token from `/api/2.0/authentication` with a login and password written in client-side code. This is acceptable for a local demo only. In production, get the token on your backend and never expose user credentials in the browser.
@@ -442,7 +442,7 @@ async function assignReviewer() {
 ```
 
 - Grants the selected reviewer the **Review** access right on the room, so they can add comments but not edit the content
-- Sends the access level as a number (`5` for **Review**, `2` for **Read**), the same way the DocSpace client does. The API also accepts the access names as strings, but an unrecognized string is silently treated as **None**, which removes the user from the room.
+- Sends the access level as a number (`5` for **Review**, `2` for **Read**), the same way the ONLYOFFICE Apps client does. The API also accepts the access names as strings, but an unrecognized string is silently treated as **None**, which removes the user from the room.
 - Waits for the response and stops if the portal rejects the request
 - Opens the review workspace once a reviewer is assigned
 
@@ -493,4 +493,4 @@ async function requestChanges() {
 - Wraps the tag calls in `try`/`catch` and shows the error message if the portal rejects one of them
 - On approval, drops the reviewer's access to read-only and swaps the **Pending review** tag for **Approved**
 - On a change request, swaps the tag to **Changes requested**, leaving the reviewer's access untouched so the author can address the feedback and resubmit. The example doesn't notify the author: the tag is the only status signal.
-- Calling `createTag()` for a tag that already exists is safe: DocSpace returns the existing tag
+- Calling `createTag()` for a tag that already exists is safe: ONLYOFFICE Apps returns the existing tag
