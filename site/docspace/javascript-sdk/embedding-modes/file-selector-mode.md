@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # File selector mode
 
-File selector mode integrates a file picker interface inside your application. It allows users to view, browse and select from a list of DocSpace files. The selected file's data is returned via a callback function.
+File selector mode integrates a file picker interface inside your application. It allows users to view, browse and select from a list of ONLYOFFICE Apps files. The selected file's data is returned via a callback function.
 
 File selector is similar to [Room selector mode](./room-selector-mode.md) in terms of functionality.
 
@@ -27,7 +27,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ## Use cases
 
-### Attaching a DocSpace file to a form
+### Attaching an ONLYOFFICE Apps file to a form
 
 Let users browse and pick a file, then use the returned data to attach it to a record in your application. See also: [File manager with task attachments](../samples/advanced-samples/file-manager-task-attachments.md).
 

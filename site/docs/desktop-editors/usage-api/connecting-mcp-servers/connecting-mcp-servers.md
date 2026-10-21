@@ -164,9 +164,9 @@ Enter your MCP server configuration in JSON format. The configuration structure 
 
 ## Practical examples
 
-### ONLYOFFICE DocSpace MCP
+### ONLYOFFICE Apps MCP
 
-Connect to DocSpace for document management operations:
+Connect to ONLYOFFICE Apps for document management operations:
 
 ```json
 {
@@ -265,7 +265,7 @@ Once connected and enabled:
 
 Desktop Editors supports various MCP servers that extend AI capabilities:
 
-- [ONLYOFFICE DocSpace](./docspace-mcp.md) - Connect to DocSpace for document management
+- [ONLYOFFICE Apps](./docspace-mcp.md) - Connect to ONLYOFFICE Apps for document management
 - Community MCP servers - Any MCP-compatible server following the protocol specification
 
 ## Troubleshooting

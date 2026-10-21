@@ -6,7 +6,7 @@ sidebar_position: 1
 
 This page walks through the settings that affect how the embedded frame looks and what language it uses: `theme`, which controls the color scheme of the frame's own chrome (Manager, selectors, and the editor's surrounding UI), two narrower settings that are easy to confuse with theming — `showHeaderBanner` and `stylesUrl` — and `locale`, plus runtime patterns for all of them: matching your app's dark mode and language, and switching either at runtime.
 
-None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](/docspace/api-backend/usage-api/settings/rebranding/save-white-label-settings.md) if you need to customize the DocSpace logo shown across the portal.
+None of this controls your host application's branding (logo, company name) — that is a portal-wide setting, not a per-frame configuration option. See [White label settings](/docspace/api-backend/usage-api/settings/rebranding/save-white-label-settings.md) if you need to customize the ONLYOFFICE Apps logo shown across the portal.
 
 ## Frame theme
 
@@ -26,7 +26,7 @@ This is also what controls the editor's own theme in Editor and Viewer modes —
 
 ## Header banner
 
-`showHeaderBanner` controls DocSpace's own promotional/informational banners in the header — unrelated to your application's UI, but listed here since it affects the visual chrome of the frame. It only has an effect in **Manager mode**; no other mode's header reads this field.
+`showHeaderBanner` controls the ONLYOFFICE Apps promotional/informational banners in the header — unrelated to your application's UI, but listed here since it affects the visual chrome of the frame. It only has an effect in **Manager mode**; no other mode's header reads this field.
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
@@ -56,7 +56,7 @@ Full parameter reference: [TFrameConfig#stylesUrl](../usage-sdk/type-aliases/TFr
 
 ## Locale and language
 
-The `locale` parameter sets the language of the DocSpace user interface, independently of the host application's own language.
+The `locale` parameter sets the language of the ONLYOFFICE Apps user interface, independently of the host application's own language.
 
 ```javascript
 const docSpace = DocSpace.SDK.initManager({
@@ -66,7 +66,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-Accepts a BCP 47 language tag — either a bare language code (`"de"`) or a language-region code (`"en-US"`). If omitted, the interface follows the language configured on the DocSpace portal (or the signed-in user's own language preference).
+Accepts a BCP 47 language tag — either a bare language code (`"de"`) or a language-region code (`"en-US"`). If omitted, the interface follows the language configured on the ONLYOFFICE Apps portal (or the signed-in user's own language preference).
 
 `locale` only affects the frame — it never changes the signed-in user's own profile language, in any mode. In Manager and System mode it updates live via `setConfig()`; in every other mode it's read once from the frame's initial URL, so changing it later needs a reload — see [Switching theme or language at runtime](#switching-theme-or-language-at-runtime) below.
 

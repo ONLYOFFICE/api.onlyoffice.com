@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Chat mode
 
-Chat mode embeds a full-page AI chat interface. It can be bound to a specific DocSpace AI agent or opened as the current user's own general AI chat, giving users a conversational interface without leaving your application.
+Chat mode embeds a full-page AI chat interface. It can be bound to a specific ONLYOFFICE Apps AI agent or opened as the current user's own general AI chat, giving users a conversational interface without leaving your application.
 
 ## Initialization
 

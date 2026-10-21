@@ -8,7 +8,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # 添加DMS提供商
 
-ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到ONLYOFFICE DocSpace（SaaS或本地部署）、Nextcloud、ownCloud、Moodle、Liferay、kDrive或Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
+ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到 ONLYOFFICE Apps（SaaS 或本地部署）、Nextcloud、ownCloud、Moodle、Liferay、kDrive 或 Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
 
 按照以下步骤将您自己的文档管理系统（DMS）添加到连接列表中：
 

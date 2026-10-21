@@ -1,6 +1,6 @@
 # Changelog
 
-The list of changes for ONLYOFFICE DocSpace Plugins SDK.
+The list of changes for ONLYOFFICE Apps Plugins SDK.
 
 ## Version 3.0
 

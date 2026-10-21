@@ -62,7 +62,7 @@ sidebar_position: -1
 
 ## 生成雇佣协议
 
-根据人力资源表单数据创建个性化的 PDF 雇佣协议，并将其保存到 DocSpace 以供签署和存储。
+根据人力资源表单数据创建个性化的 PDF 雇佣协议，并将其保存到 ONLYOFFICE Apps 以供签署和存储。
 
 参见：[C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_employment_agreement/main.cpp) / [.Net](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_employment_agreement/Program.cs) / [Python](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/python/creating_employment_agreement/main.py) / [Java](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_employment_agreement/Program.java)
 

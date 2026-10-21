@@ -4,12 +4,12 @@ sidebar_position: 2
 
 # Migration
 
-This guide helps you migrate your plugins to newer versions of the DocSpace Plugin SDK.
+This guide helps you migrate your plugins to newer versions of the ONLYOFFICE Apps Plugin SDK.
 
 ## Updating a plugin to SDK 3.0.0
 
 :::note
-SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 have `minDocSpaceVersion: "4.0.0"` set automatically in *config.json* by the build process. On older versions, plugins install but are flagged as incompatible and do not function.
+SDK 3.0.0 is compatible with ONLYOFFICE Apps 4.0.0 and later. Plugins built with SDK 3.0.0 have `minDocSpaceVersion: "4.0.0"` set automatically in *config.json* by the build process. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
 :::important

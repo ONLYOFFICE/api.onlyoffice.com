@@ -114,7 +114,7 @@ See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 ## Frame layout
 
-A few parameters control the frame's own footprint rather than DocSpace's internal UI: `width`/`height` (pixels or percentages), and `destroyText` (text inserted into the frame's container when `destroyFrame()` is called — see [Destroy frame](../samples/basic-samples/destroy-frame.md)).
+A few parameters control the frame's own footprint rather than the internal ONLYOFFICE Apps UI: `width`/`height` (pixels or percentages), and `destroyText` (text inserted into the frame's container when `destroyFrame()` is called — see [Destroy frame](../samples/basic-samples/destroy-frame.md)).
 
 `noLoader` skips the loading spinner while the frame initializes — `true` by default everywhere, except two mode pairs that ignore whatever you set it to: Manager and System mode always show the spinner (forced `false`), while Forms and Personal mode always skip it (forced `true`, same as the default) — the spinner never shows in either, even with `noLoader: false`.
 

@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # System mode
 
-System mode initializes a lightweight, hidden SDK frame that displays a blank page with a loader. It renders no visible DocSpace UI. Instead, it provides access to a focused set of system-level methods for managing user sessions programmatically, such as authentication, hash generation, and user info retrieval — without embedding a visible interface.
+System mode initializes a lightweight, hidden SDK frame that displays a blank page with a loader. It renders no visible ONLYOFFICE Apps UI. Instead, it provides access to a focused set of system-level methods for managing user sessions programmatically, such as authentication, hash generation, and user info retrieval — without embedding a visible interface.
 
 File and room operations such as `getFiles()`, `createFile()`, and `createRoom()` aren't available from a system frame — use [Manager mode](./manager-mode.md) for those instead.
 
@@ -32,7 +32,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 | Parameter | Type | Description |
 | ----------- | ------ | ------------- |
 | `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
-| `src` | string | The URL of your DocSpace server. |
+| `src` | string | The URL of your ONLYOFFICE Apps server. |
 
 ### Lifecycle
 
@@ -68,15 +68,15 @@ After initialization, the SDK instance can be accessed by its `frameId`:
 const frame = DocSpace.SDK.frames["ds-frame"];
 ```
 
-System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame isn't blocked at the type level, but the DocSpace client has no handler for them in this mode — the call rejects instead of doing anything.
+System mode exposes a focused set of methods for session management. Calling file or room operations such as `getFiles()`, `createRoom()`, or `getRooms()` on a system frame isn't blocked at the type level, but the ONLYOFFICE Apps client has no handler for them in this mode — the call rejects instead of doing anything.
 
 | Method | Description |
 | -------- | ------------- |
 | `setConfig(config)` | Updates the frame configuration — `theme`, `locale`, `stylesUrl`, and `customActions` are all applied, though System mode has no visible UI for most of them to affect. |
 | `getUserInfo()` | Returns information about the currently authenticated user. Resolves with an empty value — not `null`, and not a rejection — when nobody is signed in; check `user && user.id` rather than a falsy/`catch` check. |
-| `getHashSettings()` | Returns the DocSpace hash settings used for generating a password hash. |
+| `getHashSettings()` | Returns the ONLYOFFICE Apps hash settings used for generating a password hash. |
 | `createHash(password, hashSettings)` | Generates a hash string from a plain-text password using the specified hash settings. |
-| `login(email, passwordHash, password?, session?, code?)` | Logs in to DocSpace using the specified credentials. See [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md) for the `code` argument. |
+| `login(email, passwordHash, password?, session?, code?)` | Logs in to ONLYOFFICE Apps using the specified credentials. See [Two-factor authentication](../samples/advanced-samples/two-factor-authentication.md) for the `code` argument. |
 | `logout()` | Logs out the current user. |
 
 ## Use cases
@@ -150,7 +150,7 @@ try {
 
 ### Changing the theme/locale
 
-Change the theme and locale without rebooting the DocSpace instance:
+Change the theme and locale without rebooting the ONLYOFFICE Apps instance:
 
 ```javascript
 const system = DocSpace.SDK.frames["ds-auth"];

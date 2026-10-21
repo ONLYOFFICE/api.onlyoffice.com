@@ -164,9 +164,9 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 ## 实际示例
 
-### ONLYOFFICE DocSpace MCP
+### ONLYOFFICE Apps MCP
 
-连接到 DocSpace 进行文档管理操作：
+连接到 ONLYOFFICE Apps 进行文档管理操作：
 
 ```json
 {
@@ -265,7 +265,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 
 桌面编辑器支持各种扩展 AI 功能的 MCP 服务器：
 
-- [ONLYOFFICE DocSpace](./docspace-mcp.md) - 连接到 DocSpace 进行文档管理
+- [ONLYOFFICE Apps](./docspace-mcp.md) - 连接到 ONLYOFFICE Apps 进行文档管理
 - 社区 MCP 服务器 - 任何遵循协议规范的 MCP 兼容服务器
 
 ## 故障排除

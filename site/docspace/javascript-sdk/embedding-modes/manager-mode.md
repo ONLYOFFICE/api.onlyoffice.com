@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Manager mode
 
-Manager mode embeds the full DocSpace interface inside your application, including rooms, folders, files, navigation, and settings. It is the most complete embedding mode and gives users an entire DocSpace window without having to leave the application.
+Manager mode embeds the full ONLYOFFICE Apps interface inside your application, including rooms, folders, files, navigation, and settings. It is the most complete embedding mode and gives users an entire ONLYOFFICE Apps window without having to leave the application.
 
 Manager mode is the default SDK mode.
 
@@ -191,7 +191,7 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-`groupId` requires DocSpace client 4.0 or later.
+`groupId` requires ONLYOFFICE Apps client 4.0 or later.
 
 ### Adding custom actions
 

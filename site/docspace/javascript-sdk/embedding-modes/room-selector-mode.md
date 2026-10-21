@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Room selector mode
 
-Room selector mode integrates a room picker interface inside your application. It presents users with a list of DocSpace rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional DocSpace interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
+Room selector mode integrates a room picker interface inside your application. It presents users with a list of ONLYOFFICE Apps rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional ONLYOFFICE Apps interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
 
 ## Initialization
 
@@ -25,7 +25,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ## Use cases
 
-### Linking a task or record to a DocSpace room
+### Linking a task or record to an ONLYOFFICE Apps room
 
 Let users pick a room from a dialog and associate it with an item in your application. See also: [Room selector](../samples/advanced-samples/task-room-selector.md).
 

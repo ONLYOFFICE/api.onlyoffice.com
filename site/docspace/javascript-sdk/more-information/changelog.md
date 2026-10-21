@@ -1,6 +1,6 @@
 # Changelog
 
-The list of changes for the ONLYOFFICE DocSpace Embed SDK (`docspace-sdk-js`).
+The list of changes for the ONLYOFFICE Apps Embed SDK (`docspace-sdk-js`).
 
 ## Version 2.2.0
 
