@@ -50,8 +50,8 @@ The list of changes for the ONLYOFFICE Apps Embed SDK (`docspace-sdk-js`).
 
 ### Deprecated
 
-- `buttonColor` and `viewAs` — DocSpace client 4.0 does not read them. Call `setListView()` after `onAppReady` to change the layout instead
-- `integrationUrl` — DocSpace client 4.0 does not read it
+- `buttonColor` and `viewAs` — ONLYOFFICE Apps client 4.0 does not read them. Call `setListView()` after `onAppReady` to change the layout instead
+- `integrationUrl` — ONLYOFFICE Apps client 4.0 does not read it
 
 ### Fixed
 

@@ -14,7 +14,7 @@ For migration instructions, see [Updating a plugin to SDK 3.0.0](migration.md#up
 - Deprecated `body` in `IInfoPanelItem` and `IArticleButtonItem`, `settings` in `ISettings`, `content` in `IMediaViewer`, and `dialogBody` / `dialogFooter` in `IModalDialog`. Use `component` (`dialogBodyComponent` in `IModalDialog`) instead.
 - Deprecated `onLoad` on those items and components. Load data with `useEffect` inside the React component.
 - Replaced Webpack with Vite in the plugin [template](../usage-sdk/creating-plugin-template.md) and [build](../usage-sdk/building-plugin.md) process.
-- Raised `minDocSpaceVersion` to `"4.0.0"`. Plugins built with SDK 3.0.0 require DocSpace 4.0.0 or later.
+- Raised `minDocSpaceVersion` to `"4.0.0"`. Plugins built with SDK 3.0.0 require ONLYOFFICE Apps 4.0.0 or later.
 
 ## Version 2.1.1
 
