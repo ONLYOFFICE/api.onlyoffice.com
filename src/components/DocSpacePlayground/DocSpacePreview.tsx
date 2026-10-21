@@ -138,7 +138,7 @@ export const DocSpacePreview = forwardRef<DocSpacePreviewHandle, DocSpacePreview
 
         function initDocSpace() {
             if (typeof DocSpace === 'undefined' || !DocSpace.SDK) {
-                showError('DocSpace SDK unavailable.');
+                showError('ONLYOFFICE Apps SDK unavailable.');
                 return;
             }
 
@@ -158,7 +158,7 @@ export const DocSpacePreview = forwardRef<DocSpacePreviewHandle, DocSpacePreview
                         }
                     },
                     onAppError(e: any) {
-                        showError('DocSpace error: ' + (e?.message ?? e));
+                        showError('ONLYOFFICE Apps error: ' + (e?.message ?? e));
                     },
                 },
             };
@@ -183,7 +183,7 @@ export const DocSpacePreview = forwardRef<DocSpacePreviewHandle, DocSpacePreview
 
         ensureReady()
             .then(() => initDocSpace())
-            .catch(() => showError('Failed to load DocSpace SDK.'));
+            .catch(() => showError('Failed to load ONLYOFFICE Apps SDK.'));
 
         return destroyFrame;
     }, [autoInit, mode, theme, fileId, requestToken]);
@@ -245,7 +245,7 @@ function ensureReady(): Promise<void> {
             const script = document.createElement('script');
             script.src = `${DOCSPACE_URL}/static/scripts/sdk/2.0.0/api.js?src=${encodeURIComponent(DOCSPACE_URL)}`;
             script.onload = () => doLogin();
-            script.onerror = () => reject('Failed to load DocSpace SDK.');
+            script.onerror = () => reject('Failed to load ONLYOFFICE Apps SDK.');
             document.head.appendChild(script);
         }
     });

@@ -43,7 +43,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     }
 
     const config = {
-      id: "123456", // Replace with your DocSpace file ID
+      id: "123456", // Replace with your ONLYOFFICE Apps file ID
       frameId: "ds-frame", // Matches iframe ID
       src: "{PORTAL_SRC}",
       width: "100%",
@@ -100,7 +100,7 @@ function onAppReady() {
 }
 
 const config = {
-  id: "123456", // Replace with your DocSpace file ID
+  id: "123456", // Replace with your ONLYOFFICE Apps file ID
   frameId: "ds-frame", // Matches iframe ID
   src: "{PORTAL_SRC}",
   width: "100%",

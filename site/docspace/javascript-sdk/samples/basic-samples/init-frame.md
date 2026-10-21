@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Init Frame</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
@@ -43,7 +43,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       height: "700px",     // Set desired height
     };
 
-    // Initialize the DocSpace SDK frame
+    // Initialize the ONLYOFFICE Apps SDK frame
     const docSpace = DocSpace.SDK.initFrame(config);
   </script>
 </html>
@@ -63,7 +63,7 @@ Add an iframe to your HTML page to embed the ONLYOFFICE Apps frame.
     <meta charset="UTF-8" />
     <title>Init Frame</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
@@ -91,6 +91,6 @@ const config = {
   height: "700px",     // Set desired height
 };
 
-// Initialize the DocSpace SDK frame
+// Initialize the ONLYOFFICE Apps SDK frame
 const docSpace = DocSpace.SDK.initFrame(config);
 ```

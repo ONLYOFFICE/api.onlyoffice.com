@@ -49,7 +49,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       let docSpace
       let token
 
-      const portalUrl = "{PORTAL_SRC}" // Replace with your actual DocSpace URL
+      const portalUrl = "{PORTAL_SRC}" // Replace with your actual ONLYOFFICE Apps URL
       const collaborationRoomID = "your-room-id" // Replace with shared room ID
       const login = "your-login" // Replace with your login
       const password = "your-password" // Replace with your password
@@ -153,7 +153,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         })
       }
 
-      // Step 6: Initialize the DocSpace manager
+      // Step 6: Initialize the ONLYOFFICE Apps manager
       docSpace = DocSpace.SDK.initManager({
         frameId: "ds-frame",
         rootPath: "/rooms/shared/" + collaborationRoomID,

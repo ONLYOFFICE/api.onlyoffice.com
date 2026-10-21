@@ -222,7 +222,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   });
 
   app.listen(3000, () => {
-    console.log('DocSpace webhook listener: http://localhost:3000/docspace/webhook');
+    console.log('ONLYOFFICE Apps webhook listener: http://localhost:3000/docspace/webhook');
   });
   ```
 
@@ -384,7 +384,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   if __name__ == '__main__':
     port = int(os.environ.get('PORT', 3000))
-    print(f'DocSpace webhook listener: http://localhost:{port}/docspace/webhook')
+    print(f'ONLYOFFICE Apps webhook listener: http://localhost:{port}/docspace/webhook')
     app.run(host='0.0.0.0', port=port)
   ```
 

@@ -47,7 +47,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       <button id="btnCode">Verify</button>
     </div>
 
-    <!-- Step 4: DocSpace access screen -->
+    <!-- Step 4: ONLYOFFICE Apps access screen -->
     <div id="screen3" class="screen">
       <iframe id="ds-frame"></iframe>
     </div>
@@ -90,7 +90,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
           elScreen2.classList.remove("active");
           elScreen3.classList.add("active");
 
-          // Step 5.3: Unlock DocSpace SDK
+          // Step 5.3: Unlock ONLYOFFICE Apps SDK
           const spaceInstance = DocSpace.SDK.initManager({
             frameId: "ds-frame",
             width: "100%",

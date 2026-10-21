@@ -24,11 +24,11 @@ TRELLO_TOKEN = "your_trello_token"
 TRELLO_BOARD_ID = "your_board_id"
 TRELLO_API_URL = "https://api.trello.com/1"
 
-# DocSpace API credentials
+# ONLYOFFICE Apps API credentials
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
-# Headers for the DocSpace authentication
+# Headers for the ONLYOFFICE Apps authentication
 ONLYOFFICE_HEADERS = {
     "Accept": "application/json",
     "Authorization": f"Bearer {ONLYOFFICE_API_KEY}",
@@ -48,7 +48,7 @@ def get_trello_users(board_id):
         print(f"Failed to retrieve Trello users: {response.status_code} - {response.text}")
         return []
 
-# Step 2: Add Trello users to the DocSpace
+# Step 2: Add Trello users to ONLYOFFICE Apps
 def add_user_to_docspace(name, username, password):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/people'
     data = {
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add new ONLYOFFICE Apps users.
 
 ``` py
-# Step 2: Add Trello users to the DocSpace
+# Step 2: Add Trello users to ONLYOFFICE Apps
 def add_user_to_docspace(name, username, password):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/people'
     data = {

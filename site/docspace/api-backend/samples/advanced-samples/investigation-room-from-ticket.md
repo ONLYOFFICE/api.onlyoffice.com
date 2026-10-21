@@ -32,7 +32,7 @@ When a ticket is created, the integration:
   ``` ts
   import express from "express";
 
-  // DocSpace configuration
+  // ONLYOFFICE Apps configuration
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -46,7 +46,7 @@ When a ticket is created, the integration:
     // { id: "SUPPORT_TEAM_ID", isGroup: true, access: 4 },
   ];
 
-  // DocSpace auth headers
+  // ONLYOFFICE Apps auth headers
   const HEADERS: Record<string, string> = {
     Accept: "application/json",
     Authorization: `Bearer ${API_KEY}`,
@@ -66,14 +66,14 @@ When a ticket is created, the integration:
 
       if (!res.ok) {
         const text = await res.text();
-        console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+        console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.error(`[ERROR] DocSpace request error: ${err?.message || err}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -227,7 +227,7 @@ When a ticket is created, the integration:
   from flask import Flask, request, jsonify
   import requests
 
-  # DocSpace configuration
+  # ONLYOFFICE Apps configuration
   API_HOST = os.environ.get("DOCSPACE_API_HOST")  # Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   API_KEY = os.environ.get("DOCSPACE_API_KEY")  # Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -256,11 +256,11 @@ When a ticket is created, the integration:
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 

@@ -27,11 +27,11 @@ NOTION_HEADERS = {
     "Content-Type": "application/json"
 }
 
-# DocSpace API credentials
+# ONLYOFFICE Apps API credentials
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
-# Headers for the DocSpace authentication
+# Headers for the ONLYOFFICE Apps authentication
 ONLYOFFICE_HEADERS = {
     "Accept": "application/json",
     "Authorization": f"Bearer {ONLYOFFICE_API_KEY}",
@@ -48,13 +48,13 @@ def get_notion_users():
         print("Failed to fetch Notion users:", response.text)
         return []
 
-# Step 2: Check if user exists in DocSpace by email
+# Step 2: Check if user exists in ONLYOFFICE Apps by email
 def check_docspace_user(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/email?email={email}"
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     return response.status_code == 200
 
-# Step 3: Add missing users to DocSpace
+# Step 3: Add missing users to ONLYOFFICE Apps
 def add_docspace_user(first_name, last_name, email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people"
     data = {
@@ -65,7 +65,7 @@ def add_docspace_user(first_name, last_name, email):
     }
     response = requests.post(url, json=data, headers=ONLYOFFICE_HEADERS)
     if response.status_code == 200:
-        print(f"User {email} added to DocSpace!")
+        print(f"User {email} added to ONLYOFFICE Apps!")
     else:
         print(f"Failed to add {email}: {response.text}")
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/people/profiles/get-profile-by-email) request to check if the user exists in ONLYOFFICE Apps.
 
 ``` py
-# Step 2: Check if user exists in DocSpace by email
+# Step 2: Check if user exists in ONLYOFFICE Apps by email
 def check_docspace_user(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/email?email={email}"
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
             if email:
                 if not check_docspace_user(email):
-                    # if user is missing in DocSpace
+                    # if user is missing in ONLYOFFICE Apps
                     pass
 ```
 
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add missing users to ONLYOFFICE Apps using Notion data.
 
 ``` py
-# Step 3: Add missing users to DocSpace
+# Step 3: Add missing users to ONLYOFFICE Apps
 def add_docspace_user(first_name, last_name, email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people"
     data = {
@@ -158,7 +158,7 @@ def add_docspace_user(first_name, last_name, email):
     }
     response = requests.post(url, json=data, headers=ONLYOFFICE_HEADERS)
     if response.status_code == 200:
-        print(f"User {email} added to DocSpace!")
+        print(f"User {email} added to ONLYOFFICE Apps!")
     else:
         print(f"Failed to add {email}: {response.text}")
 

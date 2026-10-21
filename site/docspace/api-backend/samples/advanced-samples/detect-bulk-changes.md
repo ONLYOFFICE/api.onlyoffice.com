@@ -277,11 +277,11 @@ The workflow monitors recent file-related activity, identifies users who modify 
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 

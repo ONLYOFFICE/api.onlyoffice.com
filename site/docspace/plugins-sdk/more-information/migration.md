@@ -104,7 +104,7 @@ For plugins created with an SDK 2.x template:
          fileName: () => "plugin.js",
        },
        rolldownOptions: {
-         // Kept out of the bundle: DocSpace supplies its own copies at load
+         // Kept out of the bundle: ONLYOFFICE Apps supplies its own copies at load
          // time and rewrites these specifiers to them. A second React arrives with
          // its own contexts, so every SDK hook throws. The SDK root stays bundled
          // like any other dependency: string enums and types, no module state.

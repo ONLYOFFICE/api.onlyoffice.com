@@ -43,7 +43,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   import http from "http";
   import crypto from "crypto";
 
-  // DocSpace configuration
+  // ONLYOFFICE Apps configuration
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -88,13 +88,13 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
         body: jsonBody ? JSON.stringify(jsonBody) : undefined,
       });
     } catch (e: any) {
-      console.error(`[ERROR] DocSpace request error: ${e?.message || e}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${e?.message || e}`);
       return null;
     }
 
     if (!res.ok) {
       const text = await res.text().catch(() => "");
-      console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
       console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
       return null;
     }
@@ -245,7 +245,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   const PORT = 3000;
 
   const server = http.createServer((req, res) => {
-    // DocSpace may send HEAD requests to validate the webhook URL
+    // ONLYOFFICE Apps may send HEAD requests to validate the webhook URL
     if (req.method === "HEAD" && req.url === "/docspace/webhook") {
       res.statusCode = 200;
       res.end();
@@ -342,11 +342,11 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 
@@ -479,7 +479,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   @app.route("/docspace/webhook", methods=["POST", "HEAD"])
   def docspace_webhook():
-    # DocSpace may send HEAD requests to validate the webhook URL
+    # ONLYOFFICE Apps may send HEAD requests to validate the webhook URL
     if request.method == "HEAD":
       return "", 200
 

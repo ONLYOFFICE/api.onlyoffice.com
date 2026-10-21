@@ -75,7 +75,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   const FINAL_FOLDER_ID = 341029;
   const SIGNED_FOLDER_ID = 694513;
 
-  // Triggers enabled in DocSpace webhook settings
+  // Triggers enabled in ONLYOFFICE Apps webhook settings
   const ALLOWED_TRIGGERS = new Set<string>(["file.uploaded", "file.created"]);
 
   const HEADERS: Record<string, string> = {
@@ -103,7 +103,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     return crypto.timingSafeEqual(Buffer.from(received), Buffer.from(expected));
   }
 
-  // DocSpace API helper
+  // ONLYOFFICE Apps API helper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -116,19 +116,19 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
       if (!res.ok) {
         const text = await res.text();
-        console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+        console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.error(`[ERROR] DocSpace request error: ${err?.message || err}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
 
-  // Extract trigger and payload (same structure as working DocSpace webhooks)
+  // Extract trigger and payload (same structure as working ONLYOFFICE Apps webhooks)
   function extractTriggerAndPayload(body: any) {
     const trigger = String(body?.event?.trigger || "").trim();
     const payload = body?.payload && typeof body.payload === "object" ? body.payload : null;
@@ -264,7 +264,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   });
 
   app.listen(3000, () => {
-    console.log("DocSpace webhook listener: http://localhost:3000/docspace/webhook");
+    console.log("ONLYOFFICE Apps webhook listener: http://localhost:3000/docspace/webhook");
   });
   ```
 
@@ -290,7 +290,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   FINAL_FOLDER_ID = 341029
   SIGNED_FOLDER_ID = 694513
 
-  # Triggers enabled in DocSpace webhook settings
+  # Triggers enabled in ONLYOFFICE Apps webhook settings
   ALLOWED_TRIGGERS = {"file.uploaded", "file.created"}
 
   HEADERS = {
@@ -311,18 +311,18 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     expected = hmac.new(secret_key.encode("utf-8"), raw_body, hashlib.sha256).hexdigest().lower()
     return hmac.compare_digest(received, expected)
 
-  # DocSpace API helper
+  # ONLYOFFICE Apps API helper
   def docspace_request(path, method= "GET", json_body= None):
     url = f"{API_HOST}{path}"
 
     try:
       resp = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= resp.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {resp.status_code}, Message: {resp.text}")
       return None
 
@@ -332,7 +332,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
       print(f"[ERROR] Invalid JSON response from: {url}")
       return None
 
-  # Extract trigger and payload (same structure as working DocSpace webhooks)
+  # Extract trigger and payload (same structure as working ONLYOFFICE Apps webhooks)
   def extract_trigger_and_payload(body):
     trigger = str(((body.get("event") or {}).get("trigger") or "")).strip()
     payload = body.get("payload")
@@ -452,7 +452,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
-    print(f"DocSpace webhook listener: http://localhost:{port}/docspace/webhook")
+    print(f"ONLYOFFICE Apps webhook listener: http://localhost:{port}/docspace/webhook")
     app.run(host="0.0.0.0", port=port)
   ```
 

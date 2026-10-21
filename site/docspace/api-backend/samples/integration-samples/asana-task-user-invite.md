@@ -18,7 +18,7 @@ This integration automatically retrieves the email of the assignee from an Asana
 ```py
 import requests
 
-# ONLYOFFICE DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_docspace_api_key"
 
@@ -44,7 +44,7 @@ def get_asana_assignee_email(task_gid):
         print(f"Asana task fetch error: {response.status_code}")
         return None
 
-# Step 2: Invite user to DocSpace by email
+# Step 2: Invite user to ONLYOFFICE Apps by email
 def invite_user_to_docspace(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/invite"
     payload = {
@@ -54,10 +54,10 @@ def invite_user_to_docspace(email):
     }
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, json=payload)
     if response.status_code == 200:
-        print(f"User invited to DocSpace: {email}")
+        print(f"User invited to ONLYOFFICE Apps: {email}")
         return True
     else:
-        print(f"DocSpace invitation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps invitation error: {response.status_code}, {response.text}")
         return False
 
 # Run integration
@@ -101,7 +101,7 @@ def get_asana_assignee_email(task_gid):
 Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/people/profiles/invite-users) to invite the user using their email address.
 
 ``` py
-# Step 2: Invite user to DocSpace by email
+# Step 2: Invite user to ONLYOFFICE Apps by email
 def invite_user_to_docspace(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/invite"
     payload = {
@@ -111,9 +111,9 @@ def invite_user_to_docspace(email):
     }
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, json=payload)
     if response.status_code == 200:
-        print(f"User invited to DocSpace: {email}")
+        print(f"User invited to ONLYOFFICE Apps: {email}")
         return True
     else:
-        print(f"DocSpace invitation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps invitation error: {response.status_code}, {response.text}")
         return False
 ```

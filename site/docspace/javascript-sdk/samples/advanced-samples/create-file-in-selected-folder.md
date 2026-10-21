@@ -23,7 +23,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
       .holder {
@@ -106,7 +106,7 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>DocSpace Embed SDK</title>
+        <title>ONLYOFFICE Apps Embed SDK</title>
         <style>
             .holder {
                 margin: auto;

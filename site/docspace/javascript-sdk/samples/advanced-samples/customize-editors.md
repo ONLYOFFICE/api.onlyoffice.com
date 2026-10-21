@@ -22,7 +22,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 <html lang="en">
   <head>
   <meta charset="UTF-8">
-  <title>DocSpace Embed SDK</title>
+  <title>ONLYOFFICE Apps Embed SDK</title>
   <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     ...
   </head>
@@ -83,7 +83,7 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     ...
   </head>

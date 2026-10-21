@@ -18,7 +18,7 @@ This integration retrieves the name of a Trello board and creates a new room in 
 ```py
 import requests
 
-# ONLYOFFICE DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
@@ -44,7 +44,7 @@ def get_trello_board_name(board_id):
         print(f"Trello board fetch error: {response.status_code}")
         return None
 
-# Step 2: Create a DocSpace room with board name
+# Step 2: Create an ONLYOFFICE Apps room with board name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -57,7 +57,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return response.json()
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 
 # Run integration
@@ -99,7 +99,7 @@ Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-r
 Retrieve metadata about the file attachments (name, ID, download URL) for further processing.
 
 ``` py
-# Step 2: Create a DocSpace room with board name
+# Step 2: Create an ONLYOFFICE Apps room with board name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -112,7 +112,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return response.json()
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 
 # Run integration

@@ -67,7 +67,7 @@ class ExtSearchPlugin implements IPlugin, IContextMenuPlugin {
     this.contextMenuItems.set(item.key, item);
   };
 
-  // Set API parameters provided by DocSpace
+  // Set API parameters provided by ONLYOFFICE Apps
   setAPI = (origin: string, proxy: string, prefix: string): void => {
     this.origin = origin;
     this.proxy = proxy;
@@ -265,7 +265,7 @@ const contextMenuItem: IContextMenuItem = {
 // Register menu item inside the plugin
 plugin.addContextMenuItem(contextMenuItem);
 
-// Register plugin globally for DocSpace to find
+// Register plugin globally for ONLYOFFICE Apps to find
 declare global {
   interface Window {
     Plugins: any;
@@ -378,7 +378,7 @@ class ExtSearchPlugin implements IPlugin, IContextMenuPlugin {
     this.contextMenuItems.set(item.key, item);
   };
 
-  // Set API parameters provided by DocSpace
+  // Set API parameters provided by ONLYOFFICE Apps
   setAPI = (origin: string, proxy: string, prefix: string): void => {
     this.origin = origin;
     this.proxy = proxy;
@@ -397,7 +397,7 @@ const plugin = new ExtSearchPlugin();
 
 // Add the plugin items and components below the plugin initialization line
 
-// Register plugin globally for DocSpace to find
+// Register plugin globally for ONLYOFFICE Apps to find
 declare global {
   interface Window {
     Plugins: any;

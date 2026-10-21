@@ -141,7 +141,7 @@ This example demonstrates how to generate a monthly compliance report in ONLYOFF
       const auditData = await getAuditEventsByFilter(fromDate, toDate);
       if (!auditData) return;
 
-      // In DocSpace audit API the events are usually under "response"
+      // In ONLYOFFICE Apps audit API the events are usually under "response"
       let events = (auditData.response ?? auditData) as any[];
       if (!Array.isArray(events)) events = [];
 
@@ -299,7 +299,7 @@ This example demonstrates how to generate a monthly compliance report in ONLYOFF
     if not audit_data:
       return
 
-    # In DocSpace audit API the events are usually under "response"
+    # In ONLYOFFICE Apps audit API the events are usually under "response"
     events = audit_data.get("response") or audit_data
     if not isinstance(events, list):
       events = []

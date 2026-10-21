@@ -23,7 +23,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL and API key
+  // Set your ONLYOFFICE Apps portal URL and API key
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
   const GROUP_ID = '08e455dc-98c4-4390-b36f-54757080149c'; // Replace with your actual group ID
@@ -72,7 +72,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL and API key
+  # Set your ONLYOFFICE Apps portal URL and API key
   API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
   GROUP_ID = '08e455dc-98c4-4390-b36f-54757080149c'  # Replace with your actual group ID

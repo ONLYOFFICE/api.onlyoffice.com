@@ -40,7 +40,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  // Helper: DocSpace request wrapper
+  // Helper: ONLYOFFICE Apps request wrapper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -52,7 +52,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`DocSpace request failed: ${method} ${url}`);
+      console.log(`ONLYOFFICE Apps request failed: ${method} ${url}`);
       console.log(`Status: ${res.status}, Message: ${text}`);
       return null;
     }
@@ -193,18 +193,18 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
     "Content-Type": "application/json",
   }
 
-  # Helper: DocSpace request wrapper
+  # Helper: ONLYOFFICE Apps request wrapper
   def docspace_request(method, path, json_body = None):
     url = f"{API_HOST}{path}"
 
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"DocSpace request failed: {method} {url}")
+      print(f"ONLYOFFICE Apps request failed: {method} {url}")
       print(f"Status: {r.status_code}, Message: {r.text}")
       return None
 

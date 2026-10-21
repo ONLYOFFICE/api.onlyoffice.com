@@ -90,11 +90,11 @@ The example requests an access token from `/api/2.0/authentication` with a login
 
       // Room type 5 is a custom room: the only room type that allows the Review access
       const CUSTOM_ROOM = 5
-      // Access levels are sent as numbers, the same way the DocSpace client sends them
+      // Access levels are sent as numbers, the same way the ONLYOFFICE Apps client sends them
       const REVIEW_ACCESS = 5
       const READ_ACCESS = 2
 
-      // Initialize DocSpace SDK
+      // Initialize ONLYOFFICE Apps SDK
       function initDocSpace(rootPath = null, filter = null) {
         const config = {
           frameId: "ds-frame",

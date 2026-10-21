@@ -20,7 +20,7 @@ This integration allows you to automatically export files from ONLYOFFICE Apps t
 ```py
 import requests, dropbox
 
-# DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 

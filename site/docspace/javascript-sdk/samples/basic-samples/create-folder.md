@@ -55,7 +55,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
   <!-- Step 2: Embed SDK Logic -->
   <script>
-    const roomId = "71234"; // Replace with your DocSpace Room ID
+    const roomId = "71234"; // Replace with your ONLYOFFICE Apps Room ID
 
     function onAppReady() {
       document.getElementById("button").onclick = () => {
@@ -131,7 +131,7 @@ The API JavaScript file can normally be found in the following ONLYOFFICE Apps f
 Create a script block to configure and initialize the SDK. Use the [createFolder()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createfolder) method to create a new folder inside the specified room.
 
 ``` ts
-const roomId = "71234"; // Replace with your DocSpace Room ID
+const roomId = "71234"; // Replace with your ONLYOFFICE Apps Room ID
 function onAppReady() {
   document.getElementById("button").onclick = () => {
   docSpace.createFolder(roomId, "New Folder");

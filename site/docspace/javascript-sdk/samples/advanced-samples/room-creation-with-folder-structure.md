@@ -64,7 +64,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         document.getElementById("ds-frame").style.display = "none"
       }
 
-      // Step 7: Init DocSpace SDK
+      // Step 7: Init ONLYOFFICE Apps SDK
       docSpace = DocSpace.SDK.initManager({
         frameId: "ds-frame",
         events: { onAppReady }

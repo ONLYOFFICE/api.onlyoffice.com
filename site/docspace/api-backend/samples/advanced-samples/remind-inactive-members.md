@@ -50,13 +50,13 @@ It loads audit events for the last N days, counts events per user for selected r
 
       if (!res.ok) {
         const t = await res.text();
-        console.log(`DocSpace request failed. Status: ${res.status}, Message: ${t}`);
+        console.log(`ONLYOFFICE Apps request failed. Status: ${res.status}, Message: ${t}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.log(`DocSpace request error: ${err?.message || err}`);
+      console.log(`ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -152,7 +152,7 @@ It loads audit events for the last N days, counts events per user for selected r
 
     console.log('--- USER REMINDER ---');
     console.log(`To: ${to}`);
-    console.log('Subject: Infrequent activity in DocSpace room');
+    console.log('Subject: Infrequent activity in ONLYOFFICE Apps room');
     console.log(
       `Body:\nHello ${member.displayName || 'there'},\n` +
       `We noticed that you had no activity in room ID ${roomId} during the last ${periodDays} days.\n` +
@@ -261,13 +261,13 @@ It loads audit events for the last N days, counts events per user for selected r
       )
 
       if not (200 <= response.status_code < 300):
-        print(f"DocSpace request failed. Status: {response.status_code}, Message: {response.text}")
+        print(f"ONLYOFFICE Apps request failed. Status: {response.status_code}, Message: {response.text}")
         return None
 
       return response.json()
 
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
   # Step 1: Get room members (placeholder)
@@ -366,7 +366,7 @@ It loads audit events for the last N days, counts events per user for selected r
 
     print("--- USER REMINDER ---")
     print(f"To: {to}")
-    print("Subject: Infrequent activity in DocSpace room")
+    print("Subject: Infrequent activity in ONLYOFFICE Apps room")
     print(
       "Body:\n"
       f"Hello {member.get('displayName') or 'there'},\n"
@@ -602,7 +602,7 @@ The script sends:
 
     console.log('--- USER REMINDER ---');
     console.log(`To: ${to}`);
-    console.log('Subject: Infrequent activity in DocSpace room');
+    console.log('Subject: Infrequent activity in ONLYOFFICE Apps room');
     console.log(
       `Body:\nHello ${member.displayName || 'there'},\n` +
       `We noticed that you had no activity in room ID ${roomId} during the last ${periodDays} days.\n` +
@@ -620,7 +620,7 @@ The script sends:
 
     print("--- USER REMINDER ---")
     print(f"To: {to}")
-    print("Subject: Infrequent activity in DocSpace room")
+    print("Subject: Infrequent activity in ONLYOFFICE Apps room")
     print(
       "Body:\n"
       f"Hello {member.get('displayName') or 'there'},\n"

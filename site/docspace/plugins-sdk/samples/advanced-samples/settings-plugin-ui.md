@@ -468,7 +468,7 @@ const plugin = new Settingsplugin();
 
 // Add the plugin items and components below the plugin initialization line
 
-// Register plugin globally for DocSpace to find
+// Register plugin globally for ONLYOFFICE Apps to find
 declare global {
   interface Window {
     Plugins: any;

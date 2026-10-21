@@ -169,13 +169,13 @@ Optionally, it requests files usage statistics (if available) and prints the lar
 
     const percentUsed = (usedBytes / totalBytes) * 100;
 
-    console.log('\n=== DocSpace storage usage report ===');
+    console.log('\n=== ONLYOFFICE Apps storage usage report ===');
     console.log(`Total quota: ${bytesToGb(totalBytes)}`);
     console.log(`Used space: ${bytesToGb(usedBytes)} (${percentUsed.toFixed(1)}%)`);
 
     if (percentUsed >= QUOTA_THRESHOLD_PERCENT) {
       const warningMessage =
-        `DocSpace storage usage has reached ${percentUsed.toFixed(1)}% of the quota. ` +
+        `ONLYOFFICE Apps storage usage has reached ${percentUsed.toFixed(1)}% of the quota. ` +
         `Please clean up or increase the quota.`;
       sendQuotaWarning(warningMessage);
     }
@@ -345,13 +345,13 @@ Optionally, it requests files usage statistics (if available) and prints the lar
     used_bytes = int(used_bytes)
     percent_used = (used_bytes / total_bytes) * 100
 
-    print("\n=== DocSpace storage usage report ===")
+    print("\n=== ONLYOFFICE Apps storage usage report ===")
     print(f"Total quota: {bytes_to_gb(total_bytes)}")
     print(f"Used space: {bytes_to_gb(used_bytes)} ({percent_used:.1f}%)")
 
     if percent_used >= QUOTA_THRESHOLD_PERCENT:
       warning_message = (
-        f"DocSpace storage usage has reached {percent_used:.1f}% of the quota. "
+        f"ONLYOFFICE Apps storage usage has reached {percent_used:.1f}% of the quota. "
         f"Please clean up or increase the quota."
       )
       send_quota_warning(warning_message)

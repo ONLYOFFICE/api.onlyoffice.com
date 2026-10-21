@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Destroy Frame</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
@@ -92,7 +92,7 @@ Embed the ONLYOFFICE Apps iframe and add a button that will destroy the frame wh
     <meta charset="UTF-8" />
     <title>Destroy Frame</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>

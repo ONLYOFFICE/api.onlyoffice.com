@@ -23,7 +23,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL and token
+  // Set your ONLYOFFICE Apps portal URL and token
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const AUTH_TOKEN = 'your_access_token';
 
@@ -70,7 +70,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL and token
+  # Set your ONLYOFFICE Apps portal URL and token
   API_HOST = 'https://yourportal.onlyoffice.com'
   AUTH_TOKEN = 'your_access_token'
 

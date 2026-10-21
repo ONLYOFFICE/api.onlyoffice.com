@@ -20,7 +20,7 @@ This integration creates collaboration rooms in ONLYOFFICE Apps based on Asana p
 ```py
 import requests
 
-# ONLYOFFICE DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
@@ -55,7 +55,7 @@ def get_asana_project_tasks(project_id):
         print(f"Asana task fetch error: {response.status_code}")
         return []
 
-# Step 3: Create a DocSpace room using the project name
+# Step 3: Create an ONLYOFFICE Apps room using the project name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -69,7 +69,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return room_id
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 
 # Step 4: Create a folder for each Asana task
@@ -80,7 +80,7 @@ def create_docspace_folder(parent_id, folder_name):
     if response.status_code == 200:
         print(f"Folder created: {folder_name}")
     else:
-        print(f"DocSpace folder creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps folder creation error: {response.status_code}, {response.text}")
 
 # Execute the full flow
 if __name__ == "__main__":
@@ -141,7 +141,7 @@ def get_asana_project_tasks(project_id):
 Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a collaboration room named after the project.
 
 ```py
-# Step 3: Create a DocSpace room using the project name
+# Step 3: Create an ONLYOFFICE Apps room using the project name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -155,7 +155,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return room_id
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 ```
 
@@ -172,5 +172,5 @@ def create_docspace_folder(parent_id, folder_name):
     if response.status_code == 200:
         print(f"Folder created: {folder_name}")
     else:
-        print(f"DocSpace folder creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps folder creation error: {response.status_code}, {response.text}")
 ```

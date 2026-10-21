@@ -87,11 +87,11 @@ The example requests an access token from `/api/2.0/authentication` with a login
       let selectedUserEmail = null
       // Room type 2 is a collaboration room
       const COLLABORATION_ROOM = 2
-      // Access levels are sent as numbers, the same way the DocSpace client sends them
+      // Access levels are sent as numbers, the same way the ONLYOFFICE Apps client sends them
       const CONTENT_CREATOR_ACCESS = 11
       const NO_ACCESS = 0
 
-      // Initialize DocSpace SDK
+      // Initialize ONLYOFFICE Apps SDK
       function initDocSpace(rootPath = null, filter = null) {
         const config = {
           frameId: "ds-frame",

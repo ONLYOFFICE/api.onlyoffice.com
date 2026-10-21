@@ -156,7 +156,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   );
 
   app.head("/webhook", (_req, res) => {
-    // DocSpace (or your reverse proxy) may validate the URL with HEAD
+    // ONLYOFFICE Apps (or your reverse proxy) may validate the URL with HEAD
     return res.status(200).send("");
   });
 
@@ -311,7 +311,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   @app.route("/webhook", methods=["POST", "HEAD"])
   def webhook():
     if request.method == "HEAD":
-      # DocSpace (or your reverse proxy) may validate the URL with HEAD
+      # ONLYOFFICE Apps (or your reverse proxy) may validate the URL with HEAD
       return "", 200
 
     raw_body = request.data

@@ -76,7 +76,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       events: { onAppReady },
     };
 
-    // Initialize DocSpace SDK
+    // Initialize ONLYOFFICE Apps SDK
     const docSpace = DocSpace.SDK.initManager(config);
   </script>
 </html>

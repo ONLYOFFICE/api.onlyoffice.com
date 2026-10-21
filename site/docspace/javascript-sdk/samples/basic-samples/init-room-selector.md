@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Init Room Selector</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
@@ -78,7 +78,7 @@ Create a basic HTML page with an iframe to host the ONLYOFFICE Apps SDK interfac
     <meta charset="UTF-8" />
     <title>Init Room Selector</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 

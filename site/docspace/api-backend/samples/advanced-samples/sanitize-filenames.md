@@ -83,7 +83,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     return crypto.timingSafeEqual(Buffer.from(received), Buffer.from(expected));
   }
 
-  // DocSpace request helper
+  // ONLYOFFICE Apps request helper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -290,7 +290,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     expected = hmac.new(secret_key.encode("utf-8"), raw_body, hashlib.sha256).hexdigest().lower()
     return hmac.compare_digest(received, expected)
 
-  # DocSpace request helper
+  # ONLYOFFICE Apps request helper
   def docspace_request(path, method= "GET", json_body = None):
     url = f"{API_HOST}{path}"
 

@@ -48,7 +48,7 @@ Below is a basic working example you can save and serve to verify your setup:
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>DocSpace</title>
+    <title>ONLYOFFICE Apps</title>
     <style>
       html,
       body {

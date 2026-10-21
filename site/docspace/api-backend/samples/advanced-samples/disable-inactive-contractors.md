@@ -81,7 +81,7 @@ Script loads external contractors (placeholder), checks their last login via aud
   function fetchExternalContractors() {
     // Replace this with:
     // - your HR/CRM source, or
-    // - DocSpace People list filtered by your own logic.
+    // - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       { id: 'user-id-1', email: 'contractor1@vendor.com', displayName: 'Contractor One' },
       { id: 'user-id-2', email: 'contractor2@vendor.com', displayName: 'Contractor Two' },
@@ -246,7 +246,7 @@ Script loads external contractors (placeholder), checks their last login via aud
   def fetch_external_contractors():
     # Replace this with:
     # - your HR/CRM source, or
-    # - DocSpace People list filtered by your own logic.
+    # - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       {"id": "user-id-1", "email": "contractor1@vendor.com", "displayName": "Contractor One"},
       {"id": "user-id-2", "email": "contractor2@vendor.com", "displayName": "Contractor Two"},
@@ -378,7 +378,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
   function fetchExternalContractors() {
     // Replace this with:
     // - your HR/CRM source, or
-    // - DocSpace People list filtered by your own logic.
+    // - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       { id: 'user-id-1', email: 'contractor1@vendor.com', displayName: 'Contractor One' },
       { id: 'user-id-2', email: 'contractor2@vendor.com', displayName: 'Contractor Two' },
@@ -393,7 +393,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
   def fetch_external_contractors():
     # Replace this with:
     # - your HR/CRM source, or
-    # - DocSpace People list filtered by your own logic.
+    # - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       {"id": "user-id-1", "email": "contractor1@vendor.com", "displayName": "Contractor One"},
       {"id": "user-id-2", "email": "contractor2@vendor.com", "displayName": "Contractor Two"},

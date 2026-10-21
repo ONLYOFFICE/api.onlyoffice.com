@@ -61,7 +61,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   // Comment text to enforce on every update
   const NEED_REVIEW_TEXT = "Need Review";
 
-  // Put here the exact trigger names you enabled in DocSpace Webhooks
+  // Put here the exact trigger names you enabled in ONLYOFFICE Apps Webhooks
   const ALLOWED_TRIGGERS = new Set([
     "file.updated",
     // "file.versionCreated",
@@ -85,14 +85,14 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
       if (!res.ok) {
         const text = await res.text().catch(() => "");
-        console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+        console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return await res.json();
     } catch (err) {
-      console.error(`[ERROR] DocSpace request error: ${err?.message || err}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -257,7 +257,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   # Comment text to enforce on every update
   NEED_REVIEW_TEXT = "Need Review"
 
-  # Put here the exact trigger names you enabled in DocSpace Webhooks
+  # Put here the exact trigger names you enabled in ONLYOFFICE Apps Webhooks
   ALLOWED_TRIGGERS = {
     "file.updated",
     # "file.versionCreated",
@@ -402,7 +402,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
-    print(f"DocSpace webhook listener: http://localhost:{port}/docspace/review-comment")
+    print(f"ONLYOFFICE Apps webhook listener: http://localhost:{port}/docspace/review-comment")
     app.run(host="0.0.0.0", port=port)
   ```
 

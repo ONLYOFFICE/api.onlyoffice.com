@@ -145,7 +145,7 @@ There are no webhooks in this case - it is a batch scan that you can start whene
 
   // Run flow
   (async () => {
-    console.log("[INFO] Scanning DocSpace for sensitive documents by TITLE...");
+    console.log("[INFO] Scanning ONLYOFFICE Apps for sensitive documents by TITLE...");
     console.log(`[INFO] Start folder/room: ${START_FOLDER_ID}`);
     console.log(`[INFO] Keywords: ${JSON.stringify(KEYWORDS)}`);
     console.log(`[INFO] Secure folder: ${SECURE_FOLDER_ID}\n`);
@@ -286,7 +286,7 @@ There are no webhooks in this case - it is a batch scan that you can start whene
     return data is not None
 
   if __name__ == "__main__":
-    print("[INFO] Scanning DocSpace for sensitive documents by TITLE...")
+    print("[INFO] Scanning ONLYOFFICE Apps for sensitive documents by TITLE...")
     print(f"[INFO] Start folder/room: {START_FOLDER_ID}")
     print(f"[INFO] Keywords: {KEYWORDS}")
     print(f"[INFO] Secure folder: {SECURE_FOLDER_ID}\n")

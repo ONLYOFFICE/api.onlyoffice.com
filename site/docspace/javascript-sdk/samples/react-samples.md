@@ -45,7 +45,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
    import React, {useRef} from "react";
 
    function onAppReady(e) {
-     console.log("ONLYOFFICE DocSpace App is ready!");
+     console.log("ONLYOFFICE Apps is ready!");
    }
 
    function onAppError(e) {

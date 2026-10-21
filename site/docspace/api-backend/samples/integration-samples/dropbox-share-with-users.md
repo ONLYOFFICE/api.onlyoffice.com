@@ -34,17 +34,17 @@ ONLYOFFICE_HEADERS = {
     'Content-Type': 'application/json'
 }
 
-# Step 1: Retrieve DocSpace users
+# Step 1: Retrieve ONLYOFFICE Apps users
 def get_docspace_users():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/people'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'name': user['firstName'], 'email': user['email']} for user in response.json()['response']]
-    print(f'Failed to retrieve DocSpace users: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps users: {response.status_code} - {response.text}')
     return []
 
-# Step 2: Create a Dropbox folder for each DocSpace user
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps user
 def create_dropbox_folder(user_name, user_email):
     folder_path = f'/DocSpace_users/{user_name.replace(" ", "_")}'
     try:
@@ -91,14 +91,14 @@ if __name__ == '__main__':
 Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/get-all-profiles) request to retrieve each user's first name and email.
 
 ```py
-# Step 1: Retrieve DocSpace users
+# Step 1: Retrieve ONLYOFFICE Apps users
 def get_docspace_users():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/people'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'name': user['firstName'], 'email': user['email']} for user in response.json()['response']]
-    print(f'Failed to retrieve DocSpace users: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps users: {response.status_code} - {response.text}')
     return []
 
 if __name__ == '__main__':
@@ -110,7 +110,7 @@ if __name__ == '__main__':
 Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each ONLYOFFICE Apps user.
 
 ``` py
-# Step 2: Create a Dropbox folder for each DocSpace user
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps user
 def create_dropbox_folder(user_name, user_email):
     folder_path = f'/DocSpace_users/{user_name.replace(" ", "_")}'
     try:

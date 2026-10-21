@@ -20,7 +20,7 @@ This integration allows you to automatically import all file attachments from a 
 ```py
 import requests, io
 
-# DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 ONLYOFFICE_ROOM_ID = "your_room_id"
@@ -62,12 +62,12 @@ def download_trello_attachment(file_url):
     response = requests.get(signed_url, headers={"Accept": "application/json"})
     return response.content if response.status_code == 200 else None
 
-# Step 4: Upload to DocSpace
+# Step 4: Upload to ONLYOFFICE Apps
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, files=files)
-    print(f"DocSpace upload status for '{filename}': {response.status_code}")
+    print(f"ONLYOFFICE Apps upload status for '{filename}': {response.status_code}")
 
 # Step 5: Execute transfer
 def transfer_trello_to_docspace(board_id, card_name, room_id):
@@ -148,12 +148,12 @@ def download_trello_attachment(file_url):
 Upload the downloaded file into a specific ONLYOFFICE Apps room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file)
 
 ```py
-# Step 4: Upload to DocSpace
+# Step 4: Upload to ONLYOFFICE Apps
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, files=files)
-    print(f"DocSpace upload status for '{filename}': {response.status_code}")
+    print(f"ONLYOFFICE Apps upload status for '{filename}': {response.status_code}")
 ```
 
 ## Step 5: Run the import process

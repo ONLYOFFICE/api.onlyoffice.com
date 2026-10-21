@@ -69,7 +69,7 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  // Basic DocSpace request helper
+  // Basic ONLYOFFICE Apps request helper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -82,14 +82,14 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
 
       if (!res.ok) {
         const text = await res.text();
-        console.log(`DocSpace request failed: ${method} ${url}`);
+        console.log(`ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.log(`Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.log(`DocSpace request error: ${err?.message || err}`);
+      console.log(`ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -330,18 +330,18 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
     with _LOCK_GUARD:
       _ROOM_LOCKS.pop(room_id, None)
 
-  # Basic DocSpace request helper
+  # Basic ONLYOFFICE Apps request helper
   def docspace_request(method, path, *, json_body = None):
     url = f"{API_HOST}{path}"
 
     try:
       resp = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= resp.status_code < 300):
-      print(f"DocSpace request failed: {method} {url}")
+      print(f"ONLYOFFICE Apps request failed: {method} {url}")
       print(f"Status: {resp.status_code}, Message: {resp.text}")
       return None
 

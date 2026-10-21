@@ -60,13 +60,13 @@ The external system is abstract in this sample: the script receives a list of ta
         body: jsonBody ? JSON.stringify(jsonBody) : undefined,
       });
     } catch (e: any) {
-      console.error(`[ERROR] DocSpace request error: ${e?.message || e}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${e?.message || e}`);
       return null;
     }
 
     if (!res.ok) {
       const text = await res.text().catch(() => "");
-      console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
       console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
       return null;
     }
@@ -202,11 +202,11 @@ The external system is abstract in this sample: the script receives a list of ta
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 

@@ -19,7 +19,7 @@ This integration allows you to automatically import files from Dropbox into a sp
 ```py
 import requests, dropbox, io
 
-# DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 ONLYOFFICE_ROOM_ID = "your_room_id"
@@ -51,7 +51,7 @@ def download_from_dropbox(file_path):
         print(f"Unexpected error during Dropbox download: {e}")
     return None, None
 
-# Step 2: Upload file to DocSpace room
+# Step 2: Upload file to ONLYOFFICE Apps room
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
@@ -60,9 +60,9 @@ def upload_to_docspace(file_content, filename, room_id):
     if response.status_code == 200:
         print(f"File '{filename}' uploaded to DocSpace.")
     else:
-        print(f"Failed to upload to DocSpace: {response.status_code} - {response.text}")
+        print(f"Failed to upload to ONLYOFFICE Apps: {response.status_code} - {response.text}")
 
-# Step 3: Transfer file from Dropbox to DocSpace
+# Step 3: Transfer file from Dropbox to ONLYOFFICE Apps
 def transfer_dropbox_to_docspace(file_path, room_id):
     file_content, filename = download_from_dropbox(file_path)
     if file_content:
@@ -113,7 +113,7 @@ def download_from_dropbox(file_path):
 Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file) to upload the binary content to an ONLYOFFICE Apps room.
 
 ``` py
-# Step 2: Upload file to DocSpace room
+# Step 2: Upload file to ONLYOFFICE Apps room
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
@@ -122,7 +122,7 @@ def upload_to_docspace(file_content, filename, room_id):
     if response.status_code == 200:
         print(f"File '{filename}' uploaded to DocSpace.")
     else:
-        print(f"Failed to upload to DocSpace: {response.status_code} - {response.text}")
+        print(f"Failed to upload to ONLYOFFICE Apps: {response.status_code} - {response.text}")
 ```
 
 ## Step 3: Run the import
@@ -130,7 +130,7 @@ def upload_to_docspace(file_content, filename, room_id):
 Trigger the full import flow from Dropbox to ONLYOFFICE Apps.
 
 ```py
-# Step 3: Transfer file from Dropbox to DocSpace
+# Step 3: Transfer file from Dropbox to ONLYOFFICE Apps
 def transfer_dropbox_to_docspace(file_path, room_id):
     file_content, filename = download_from_dropbox(file_path)
     if file_content:

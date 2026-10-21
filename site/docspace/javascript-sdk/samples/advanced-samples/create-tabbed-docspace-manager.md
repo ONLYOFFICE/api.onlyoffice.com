@@ -223,8 +223,8 @@ export default function TabsPage() {
       <header className="bg-white border-b shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-semibold">DocSpace Tabs (Manager mode)</h1>
-            <p className="text-gray-500 text-sm">Each tab is a separate DocSpace instance.</p>
+            <h1 className="text-xl font-semibold">ONLYOFFICE Apps Tabs (Manager mode)</h1>
+            <p className="text-gray-500 text-sm">Each tab is a separate ONLYOFFICE Apps instance.</p>
           </div>
           <div className="flex items-center gap-2">
             {portal ? (
@@ -234,7 +234,7 @@ export default function TabsPage() {
                 rel="noreferrer"
                 className="px-3 py-1.5 rounded bg-[#2e66f5] text-white text-sm"
               >
-                Open DocSpace
+                Open ONLYOFFICE Apps
               </a>
             ) : (
               <span className="text-xs text-red-600">Set VITE_DOCSPACE_URL in .env</span>

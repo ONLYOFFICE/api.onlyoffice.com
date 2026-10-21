@@ -250,13 +250,13 @@ export default function ModalsPage() {
       <header className="bg-white border-b shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-semibold">DocSpace Modals</h1>
+            <h1 className="text-xl font-semibold">ONLYOFFICE Apps Modals</h1>
             <p className="text-gray-500 text-sm">Draggable & resizable windows with embedded DocSpace.</p>
           </div>
           <div className="flex items-center gap-2">
             {portal ? (
               <a href={portal} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded bg-[#2e66f5] text-white text-sm">
-                Open DocSpace
+                Open ONLYOFFICE Apps
               </a>
             ) : (
               <span className="text-xs text-red-600">Set VITE_DOCSPACE_URL in .env</span>
@@ -273,7 +273,7 @@ export default function ModalsPage() {
           <DraggableModal
             key={w.id}
             id={w.id}
-            title={`DocSpace #${i + 1}`}
+            title={`ONLYOFFICE Apps #${i + 1}`}
             zIndex={w.z}
             portalUrl={portal}
             login={login}

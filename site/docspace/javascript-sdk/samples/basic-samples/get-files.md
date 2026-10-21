@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Get Files</title>
 
-    <!-- Replace with your DocSpace portal URL -->
+    <!-- Replace with your ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
@@ -96,7 +96,7 @@ Create an HTML page with an embedded iframe and a button to fetch the list of fi
     <meta charset="UTF-8" />
     <title>Get Files</title>
 
-    <!-- Replace with your DocSpace portal URL -->
+    <!-- Replace with your ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>

@@ -230,7 +230,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
     console.log("[WELCOME MESSAGE]");
     console.log(`To: ${email}`);
-    console.log("Subject: Welcome to DocSpace");
+    console.log("Subject: Welcome to ONLYOFFICE Apps");
     console.log(`Body: Hello ${firstName}, your personal home room has been created.`);
     console.log(`Link: ${roomLink}`);
   }
@@ -512,7 +512,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
     print("[WELCOME MESSAGE]")
     print(f"To: {email}")
-    print("Subject: Welcome to DocSpace")
+    print("Subject: Welcome to ONLYOFFICE Apps")
     print(f"Body: Hello {first_name}, your personal home room has been created.")
     print(f"Link: {room_link}")
 

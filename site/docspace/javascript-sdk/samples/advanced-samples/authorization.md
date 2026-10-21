@@ -24,7 +24,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
   <body>
@@ -74,7 +74,7 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
   <body>

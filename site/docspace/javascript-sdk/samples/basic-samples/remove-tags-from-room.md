@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Remove Tags from Room</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>
@@ -92,7 +92,7 @@ Build an HTML page with an embedded iframe and a button to trigger tag removal.
     <meta charset="UTF-8" />
     <title>Remove Tags from Room</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
 
     <style>

@@ -25,11 +25,11 @@ This example demonstrates how to onboard a client in ONLYOFFICE Apps. The script
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
-  // IDs from your DocSpace
+  // IDs from your ONLYOFFICE Apps
   const ACCOUNT_MANAGER_ID = 'account_manager_user_id_here';
   const CLIENT_USER_ID = 'client_user_id_here';
 
-  // Template files stored somewhere in DocSpace
+  // Template files stored somewhere in ONLYOFFICE Apps
   const TEMPLATE_WELCOME_FILE_ID = 'template_welcome_file_id_here';
   const TEMPLATE_GUIDE_FILE_ID = 'template_guide_file_id_here';
 
@@ -218,11 +218,11 @@ This example demonstrates how to onboard a client in ONLYOFFICE Apps. The script
   API_HOST = os.environ.get("DOCSPACE_API_HOST")  # Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   API_KEY = os.environ.get("DOCSPACE_API_KEY")  # Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
-  # IDs from your DocSpace
+  # IDs from your ONLYOFFICE Apps
   ACCOUNT_MANAGER_ID = "account_manager_user_id_here"
   CLIENT_USER_ID = "client_user_id_here"
 
-  # Template files stored somewhere in DocSpace
+  # Template files stored somewhere in ONLYOFFICE Apps
   TEMPLATE_WELCOME_FILE_ID = "template_welcome_file_id_here"
   TEMPLATE_GUIDE_FILE_ID = "template_guide_file_id_here"
 

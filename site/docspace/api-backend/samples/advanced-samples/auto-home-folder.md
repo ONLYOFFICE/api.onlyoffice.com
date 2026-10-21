@@ -298,7 +298,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
     console.log("[WELCOME EMAIL]");
     console.log(`To: ${email}`);
-    console.log("Subject: Welcome to DocSpace");
+    console.log("Subject: Welcome to ONLYOFFICE Apps");
     console.log(`Body: Hello ${first_name}, your personal folder has been created in /Employees.`);
     console.log(`Link: ${folder_link}`);
   }
@@ -610,7 +610,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
     print("[WELCOME EMAIL]")
     print(f"To: {email}")
-    print("Subject: Welcome to DocSpace")
+    print("Subject: Welcome to ONLYOFFICE Apps")
     print(f"Body: Hello {first_name}, your personal folder has been created in /Employees.")
     print(f"Link: {folder_link}")
 
@@ -977,7 +977,7 @@ Replace this stub with SMTP/SendGrid/Slack/Teams depending on your integration.
 
     console.log("[WELCOME EMAIL]");
     console.log(`To: ${email}`);
-    console.log("Subject: Welcome to DocSpace");
+    console.log("Subject: Welcome to ONLYOFFICE Apps");
     console.log(`Body: Hello ${first_name}, your personal folder has been created in /Employees.`);
     console.log(`Link: ${folder_link}`);
   }
@@ -994,7 +994,7 @@ Replace this stub with SMTP/SendGrid/Slack/Teams depending on your integration.
 
     print("[WELCOME EMAIL]")
     print(f"To: {email}")
-    print("Subject: Welcome to DocSpace")
+    print("Subject: Welcome to ONLYOFFICE Apps")
     print(f"Body: Hello {first_name}, your personal folder has been created in /Employees.")
     print(f"Link: {folder_link}")
   ```

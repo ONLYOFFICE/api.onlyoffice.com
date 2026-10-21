@@ -30,7 +30,7 @@ This approach helps standardize employee document storage and simplifies access 
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
-  // IDs from your DocSpace
+  // IDs from your ONLYOFFICE Apps
   const EMPLOYEES_FOLDER_ID = 'employees_folder_id_here'; // Shared "Employees" folder
   const TEMPLATE_NDA_FILE_ID = 'template_nda_file_id_here';
   const TEMPLATE_POLICIES_FILE_ID = 'template_policies_file_id_here';
@@ -42,7 +42,7 @@ This approach helps standardize employee document storage and simplifies access 
     'Content-Type': 'application/json',
   };
 
-  // Step 1: Create a new user in DocSpace
+  // Step 1: Create a new user in ONLYOFFICE Apps
   async function createEmployeeUser(employee: { email: string; firstName: string; lastName: string }) {
     
     const url = `${API_HOST}/api/2.0/people/`;
@@ -199,7 +199,7 @@ This approach helps standardize employee document storage and simplifies access 
   API_HOST = os.environ.get("DOCSPACE_API_HOST")  # Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   API_KEY = os.environ.get("DOCSPACE_API_KEY")  # Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
-  # IDs from your DocSpace
+  # IDs from your ONLYOFFICE Apps
   EMPLOYEES_FOLDER_ID = "employees_folder_id_here"  # Shared "Employees" folder
   TEMPLATE_NDA_FILE_ID = "template_nda_file_id_here"
   TEMPLATE_POLICIES_FILE_ID = "template_policies_file_id_here"
@@ -211,7 +211,7 @@ This approach helps standardize employee document storage and simplifies access 
     "Content-Type": "application/json"
   }
 
-  # Step 1: Create a new user in DocSpace
+  # Step 1: Create a new user in ONLYOFFICE Apps
   def create_employee_user(employee):
     url = f"{API_HOST}/api/2.0/people/"
 

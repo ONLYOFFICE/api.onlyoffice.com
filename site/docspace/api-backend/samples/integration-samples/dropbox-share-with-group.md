@@ -34,17 +34,17 @@ ONLYOFFICE_HEADERS = {
     'Content-Type': 'application/json'
 }
 
-# Step 1: Retrieve DocSpace groups
+# Step 1: Retrieve ONLYOFFICE Apps groups
 def get_docspace_groups():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-    print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps groups: {response.status_code} - {response.text}')
     return []
 
-# Step 2: Create a Dropbox folder for each DocSpace group
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps group
 def create_dropbox_group_folder(group_name):
     folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
     try:
@@ -55,7 +55,7 @@ def create_dropbox_group_folder(group_name):
         print(f'Failed to create folder for {group_name}: {e}')
         return None
 
-# Step 3: Retrieve DocSpace group members
+# Step 3: Retrieve ONLYOFFICE Apps group members
 def get_group_members(group_id):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -107,14 +107,14 @@ if __name__ == '__main__':
 Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/group/get-groups) request to retrieve the group ID and the group name for each team.
 
 ```py
-# Step 1: Retrieve DocSpace groups
+# Step 1: Retrieve ONLYOFFICE Apps groups
 def get_docspace_groups():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-    print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps groups: {response.status_code} - {response.text}')
     return []
 
 if __name__ == '__main__':
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each ONLYOFFICE Apps group.
 
 ``` py
-# Step 2: Create a Dropbox folder for each DocSpace group
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps group
 def create_dropbox_group_folder(group_name):
     folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
     try:
@@ -148,7 +148,7 @@ if __name__ == '__main__':
 Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/group/get-group) request to get a group by ID and extract user names and emails.
 
 ```py
-# Step 3: Retrieve DocSpace group members
+# Step 3: Retrieve ONLYOFFICE Apps group members
 def get_group_members(group_id):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)

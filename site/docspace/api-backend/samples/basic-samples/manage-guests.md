@@ -26,7 +26,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL, access token, and guest email
+  // Set your ONLYOFFICE Apps portal URL, access token, and guest email
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
   const EMAIL = 'guest@example.com';
@@ -104,7 +104,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL, access token, and guest email
+  # Set your ONLYOFFICE Apps portal URL, access token, and guest email
   API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
   EMAIL = 'guest@example.com'
