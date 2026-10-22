@@ -86,6 +86,7 @@
 - [什么是'回调处理程序'，我为什么需要它？](editing.md#what-is-the-callback-handler-and-why-do-i-need-it)
 - [什么是'document.key'参数？](editing.md#what-is-the-documentkey-parameter)
 - [如何定义打开文件的模式（查看或编辑）？](editing.md#how-to-define-the-mode-that-the-file-should-be-opened-in-viewing-or-editing)
+- [如何获取编辑器中已打开文档的表单字段值？](editing.md#how-to-get-the-form-field-values-from-a-document-that-is-open-in-the-editor)
 
 [更多](editing.md)
 
