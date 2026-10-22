@@ -19,7 +19,7 @@ tags: ["Apps", "Embed SDK", "Troubleshooting", "FAQ"]
 
 ### 跨域 / "domain not allowed" 错误 {#cross-origin--domain-not-allowed-errors}
 
-SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加入 ONLYOFFICE Apps 的允许列表。如果来自您页面的请求被拒绝，请参阅[注册允许的嵌入来源](../get-started/authentication-security.md#registering-allowed-embed-origins)。SDK 只比较主机和端口（不区分大小写），因此请以"主机和端口"的形式添加条目，不要包含协议或路径。带路径的条目（例如 `https://example.com/app`）永远不会匹配，子域也不会被自动匹配。
+SDK 并不依赖传统的 CORS 响应头，而是要求将嵌入来源显式加入 ONLYOFFICE Apps 的允许列表。如果来自您页面的请求被拒绝，请参阅[注册允许的嵌入来源](../get-started/authentication-security.md#registering-allowed-embed-origins)。SDK 只比较主机和端口（不区分大小写），因此请以“主机和端口”的形式添加条目，不要包含协议或路径。带路径的条目（例如 `https://example.com/app`）永远不会匹配，子域也不会被自动匹配。
 
 ### 空白 iframe（框架已加载但无任何内容） {#blank-iframe-frame-loads-but-shows-nothing}
 

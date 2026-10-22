@@ -200,7 +200,7 @@ php occ config:app:set files {watermark_setting_key} --value={setting_value}
 | `disable_download`         | 如果为`true`，禁用文件下载功能。                                                                   |
 | `editors_check_interval`   | 使用cron检查ONLYOFFICE 文档可用性的时间间隔（秒）。默认值：`86400`。                                     |
 | `permissions_modifyFilter` | 全局应用电子表格筛选（`true`，影响所有用户）或仅本地应用（`false`）。默认值：`true`。                     |
-| `customization_customer`   | 显示在编辑器"关于"部分的客户信息。                                                                   |
+| `customization_customer`   | 显示在编辑器“关于”部分的客户信息。                                                                   |
 | `customization_logo`       | 编辑器标题栏中显示的徽标。                                                                          |
 | `customization_loaderLogo` | 编辑器加载页面中显示的徽标。                                                                        |
 | `customization_loaderName` | 编辑器加载页面中显示的文本。                                                                        |

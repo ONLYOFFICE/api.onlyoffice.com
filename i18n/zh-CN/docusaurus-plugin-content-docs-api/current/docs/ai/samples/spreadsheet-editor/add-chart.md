@@ -15,7 +15,7 @@ import Video from '@site/src/components/Video/Video';
 - 根据当前选择创建条形图
 - 根据当前选择创建普通折线图
 - 根据范围 A1:B10 创建饼图
-- 创建标题为"Sales Overview"的图表
+- 创建标题为“Sales Overview”的图表
 
 ## 函数注册 {#function-registration}
 

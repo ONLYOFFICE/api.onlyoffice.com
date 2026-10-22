@@ -23,8 +23,8 @@
 
 本节中不同权限的文档共享的相关问题。
 
-- [如何打开启用了"跟踪更改"模式的文档？](sharing.md#how-to-open-a-document-with-track-changes-mode-enabled)
-- [如何打开启用"评论"模式的文档？](sharing.md#how-to-open-a-document-with-commenting-mode-enabled)
+- [如何打开启用了“跟踪更改”模式的文档？](sharing.md#how-to-open-a-document-with-track-changes-mode-enabled)
+- [如何打开启用“评论”模式的文档？](sharing.md#how-to-open-a-document-with-commenting-mode-enabled)
 - [如何使用'fillForms'参数？](sharing.md#how-can-the-fillforms-parameter-be-used)
 - [如何同时启用文档的编辑和评论模式？](sharing.md#how-to-enable-both-the-editing-and-commenting-mode-for-a-document)
 - [权限参数是否相互影响？](sharing.md#do-the-permission-parameters-influence-each-other)

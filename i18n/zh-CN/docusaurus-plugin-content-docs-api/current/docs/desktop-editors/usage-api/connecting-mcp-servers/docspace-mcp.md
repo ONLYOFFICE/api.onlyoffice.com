@@ -98,11 +98,11 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYO
 
 连接 ONLYOFFICE Apps MCP 服务器后，您可以在 AI Chat 中使用自然语言命令：
 
-- "列出共享文件夹中的所有文档"
-- "在 ONLYOFFICE Apps 中创建一个名为 'Q1 报告' 的新文件夹"
-- "查找上周修改的所有演示文稿"
-- "将文档 'Budget 2026.xlsx' 共享给 john@example.com"
-- "显示营销文件夹的内容"
+- “列出共享文件夹中的所有文档”
+- “在 ONLYOFFICE Apps 中创建一个名为 ‘Q1 报告’ 的新文件夹”
+- “查找上周修改的所有演示文稿”
+- “将文档 ‘Budget 2026.xlsx’ 共享给 john@example.com”
+- “显示营销文件夹的内容”
 
 AI Chat 将自动使用 ONLYOFFICE Apps MCP 工具执行这些命令并显示结果。
 

@@ -183,7 +183,7 @@ var language = document.getElementById("language");
 
 :::
 
-错误输出：_"document.getElementBy 不是一个函数"_ (开发者工具)
+错误输出：_“document.getElementBy 不是一个函数”_ (开发者工具)
 
 **错误名称：** 元素 ID 不匹配
 

@@ -110,7 +110,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 工作原理
 
-该插件使用[ONLYOFFICE 文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
+该插件使用[ONLYOFFICE 文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如[“在ONLYOFFICE中创建”](#create-in-onlyoffice)和[“使用ONLYOFFICE转换”](#convert-with-onlyoffice)等常规页面。
 
 ### 文档 {#documents}
 
