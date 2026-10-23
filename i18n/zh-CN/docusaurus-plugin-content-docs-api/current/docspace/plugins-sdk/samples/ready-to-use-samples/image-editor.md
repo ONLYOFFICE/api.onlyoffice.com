@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改任何设置——Image editor 插件没有可配置参数。
 
-如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **Image editor** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
+如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **image-editor** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
 ## 使用
 

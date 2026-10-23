@@ -21,7 +21,7 @@ To start working with the plugin:
 
 1. Generate the API token using [ConvertAPI](https://convertapi.com).
 2. Go to **Settings → Integration → Plugins**.
-3. Click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **PDF converter** plugin.
+3. Click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **pdf-converter** plugin.
 4. Enter the API token in the corresponding field.
 
 Once the API token is enabled, the plugin becomes available to all users of the current ONLYOFFICE Apps portal. 

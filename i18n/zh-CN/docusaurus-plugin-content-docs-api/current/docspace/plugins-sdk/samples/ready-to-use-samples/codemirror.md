@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **CodeMirror** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置分为两个分组：
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **codemirror** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置分为两个分组：
 
 **常规**
 

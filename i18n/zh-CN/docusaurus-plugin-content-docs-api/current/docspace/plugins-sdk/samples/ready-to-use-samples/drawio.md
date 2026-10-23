@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **draw.io** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
 
 - **语言**：从列表中选择所需语言。**Auto** 选项对应门户语言。
 - **离线模式**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
