@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # 主机页面
 
-为了在您的应用程序中创建一个online office会话，主机必须创建一个 HTML 页面，该页面将在其中嵌入一个指向特定 [WOPI 操作 URL](./wopi-discovery.md#wopi-actions)的 iframe 元素。
+为了在您的应用程序中创建一个online office会话，主机必须创建一个 HTML 页面，该页面将在其中嵌入一个指向特定 [WOPI 操作 URL](./wopi-discovery.md#wopi-actions) 的 iframe 元素。
 
 主机页面必须包含以下元素：
 f

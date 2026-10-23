@@ -9,7 +9,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="U20aA97JglI"/>
 
-这个[应用](https://github.com/ONLYOFFICE/onlyoffice-liferay)允许用户使用 ONLYOFFICE 文档在[Liferay](https://www.liferay.com/)中编辑办公文档。
+这个[应用](https://github.com/ONLYOFFICE/onlyoffice-liferay)允许用户使用 ONLYOFFICE 文档在 [Liferay](https://www.liferay.com/) 中编辑办公文档。
 
 ## 功能特性
 
@@ -19,17 +19,17 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Liferay 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Liferay 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Liferay 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Liferay 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Liferay 的 ONLYOFFICE 应用
 
-您可以从[Liferay 市场](https://web.liferay.com/marketplace/-/mp/application/171169174)进行安装，或者如果您要自行构建应用，只需将 `build/libs` 文件夹中编译好的 `.jar` 文件放入 `/opt/liferay/deploy`。Liferay 会自动进行安装。
+您可以从 [Liferay 市场](https://web.liferay.com/marketplace/-/mp/application/171169174)进行安装，或者如果您要自行构建应用，只需将 `build/libs` 文件夹中编译好的 `.jar` 文件放入 `/opt/liferay/deploy`。Liferay 会自动进行安装。
 
 ## 配置 Liferay 的 ONLYOFFICE 应用
 
-要配置该应用，请导航至**控制面板 -> 配置 -> 系统设置**。在**平台**部分，点击**连接器**类别并选择**ONLYOFFICE**。
+要配置该应用，请导航至**控制面板 -> 配置 -> 系统设置**。在**平台**部分，点击**连接器**类别并选择 **ONLYOFFICE**。
 
 从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Liferay 的**系统设置**页面指定您自己的**密钥**。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
@@ -41,7 +41,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API。
 
-1. 用户在 Liferay 中导航至**文档和媒体**部分，并选择在**ONLYOFFICE 中编辑**操作。
+1. 用户在 Liferay 中导航至**文档和媒体**部分，并选择在 **ONLYOFFICE 中编辑**操作。
 
 2. Liferay 为 ONLYOFFICE 文档准备一个包含以下属性的 JSON 对象：
 

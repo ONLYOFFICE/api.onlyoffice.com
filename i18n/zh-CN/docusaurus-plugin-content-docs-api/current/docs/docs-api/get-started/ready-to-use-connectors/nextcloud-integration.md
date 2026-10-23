@@ -9,30 +9,30 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="vN9v9sJ0HVw"/>
 
-这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)允许用户借助 ONLYOFFICE 文档在[Nextcloud](https://nextcloud.com)中编辑办公文档。
+这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)允许用户借助 ONLYOFFICE 文档在 [Nextcloud](https://nextcloud.com) 中编辑办公文档。
 
-最新的已签名连接器版本可在[Nextcloud 应用商店](https://apps.nextcloud.com/apps/onlyoffice)获取。
+最新的已签名连接器版本可在 [Nextcloud 应用商店](https://apps.nextcloud.com/apps/onlyoffice)获取。
 
 ## 功能特性
 
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TSV、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
-- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF**的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
+- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF** 的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
 
 ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都使用80端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
-您也可以使用我们的[Docker 安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud)，通过几条命令就能完成 ONLYOFFICE 文档和 Nextcloud 的安装与配置。
+您也可以使用我们的 [Docker 安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud)，通过几条命令就能完成 ONLYOFFICE 文档和 Nextcloud 的安装与配置。
 
 ## 安装 Nextcloud ONLYOFFICE 集成应用程序
 
-Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此，点击用户名并选择**应用**。然后，在可用应用列表中找到**ONLYOFFICE**并进行安装。
+Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此，点击用户名并选择**应用**。然后，在可用应用列表中找到 **ONLYOFFICE** 并进行安装。
 
 如果安装 Nextcloud 的服务器没有互联网访问权限，或者由于其他原因需要手动安装，管理员可以按以下步骤手动安装该应用程序。要在 Nextcloud 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
@@ -44,7 +44,7 @@ Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此�
 
 2. 获取 Nextcloud ONLYOFFICE 集成应用程序。有以下几种方法：
 
-   1. 从[Nextcloud](https://apps.nextcloud.com/apps/onlyoffice)官方应用商店下载最新的已签名版本。
+   1. 从 [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice) 官方应用商店下载最新的已签名版本。
    2. 从 GitHub 上的应用程序[发布页面](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases)下载最新的已签名版本。
    3. 克隆应用程序源代码并自行编译：
 
@@ -76,17 +76,17 @@ Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此�
     chown -R www-data:www-data onlyoffice
     ```
 
-6. 在 Nextcloud 中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为**ONLYOFFICE**应用点击**启用**。
+6. 在 Nextcloud 中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为 **ONLYOFFICE** 应用点击**启用**。
 
 ## 配置 Nextcloud ONLYOFFICE 集成应用程序 {#configuring-nextcloud-onlyoffice-integration-app}
 
-在 Nextcloud 中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin/onlyoffice*页面。输入以下地址来连接 ONLYOFFICE 文档：
+在 Nextcloud 中，打开包含 **ONLYOFFICE** 部分管理设置的*\~/settings/admin/onlyoffice*页面。输入以下地址来连接 ONLYOFFICE 文档：
 
 ```sh
 https://<文档服务器地址>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Nextcloud 服务器访问。Nextcloud 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**文档服务器地址**是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Nextcloud 服务器访问。Nextcloud 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ![本地的](/assets/images/editor/nextcloud-local.jpg)
 
@@ -232,10 +232,10 @@ occ onlyoffice:documentserver --check
 
 高级标签页允许您仅向共享标签页中指定的用户授予额外的访问权限，而不允许他们重新共享文件。根据所选的自定义权限选项和文件类型（docx、pptx、xlsx），您可以授予不同的额外权限。
 
-- 如果**DOCX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅审阅（**仅审阅**）或仅评论（**仅评论**）。
-- 如果**XLSX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）或为所有人应用筛选（**全局筛选**，默认启用）。
-- 如果**PPTX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）。
-- 如果**PDF**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅填写（**表单填写**）。
+- 如果 **DOCX** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅审阅（**仅审阅**）或仅评论（**仅评论**）。
+- 如果 **XLSX** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）或为所有人应用筛选（**全局筛选**，默认启用）。
+- 如果 **PPTX** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）。
+- 如果 **PDF** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅填写（**表单填写**）。
 
 ## 工作原理
 
@@ -295,7 +295,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 
 -  **后台任务**：如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或 SSL 证书存在问题。
 
- 为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务，用于检查编辑器的可用性。它可以测试您的**Nextcloud 实例**和**ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。
+ 为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务，用于检查编辑器的可用性。它可以测试您的 **Nextcloud 实例**和 **ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。
 
  如果检测到任何问题，ONLYOFFICE 集成连接器（以及创建和打开文件的功能）将被禁用。作为 Nextcloud 管理员，您将收到相应的通知。
 

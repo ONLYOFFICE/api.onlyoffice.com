@@ -114,7 +114,7 @@ const config = {
 
 **类型**：`boolean` | **默认值**：the value of the [edit](#edit) or the [review](#review) parameter
 
-是否允许填写表单。仅当[mode](../editor/editor.md#mode)参数设置为 `edit` 时，文档编辑器和 pdf编辑器才可以填写表单。
+是否允许填写表单。仅当 [mode](../editor/editor.md#mode) 参数设置为 `edit` 时，文档编辑器和 pdf编辑器才可以填写表单。
 
 :::note
 如果 `edit` 设置为 `true` 或 `review` 设置为 `true`，则不考虑 `fillForms` 值并且可以填写表单。如果 `edit` 设置为 `false` 并且 `review` 设置为 `false` 并且 `fillForms` 也设置为 `true`，用户只能填写文档中的表单。如果 `edit` 设置为 `false` 并且 `review` 设置为 `false` 而且 `fillForms` 设置为 `true`，不考虑 `comment` 值并且评论不可用。仅填写表单模式目前仅适用于**文档**和 **pdf** 编辑器。

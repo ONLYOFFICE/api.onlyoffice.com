@@ -10,7 +10,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## WOPI 发现操作
 
-发现 XML 的**action**元素提供了在线办公室的重要特征。此元素表示：
+发现 XML 的 **action** 元素提供了在线办公室的重要特征。此元素表示：
 
 - online office中可用的文档操作，
 - 支持的文件格式（扩展名）。

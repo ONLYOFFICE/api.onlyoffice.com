@@ -9,9 +9,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="_1Q86nRnumo"/>
 
-这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助 ONLYOFFICE 文档，在[Redmine](https://www.redmine.org/)中编辑附件。
+这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助 ONLYOFFICE 文档，在 [Redmine](https://www.redmine.org/) 中编辑附件。
 
-该插件可在官方的[Redmine 插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。
+该插件可在官方的 [Redmine 插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。
 
 ## 功能特性
 
@@ -36,13 +36,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在安装插件之前，请确保您拥有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Redmine 和任何终端客户端解析并连接。此外，要确保 ONLYOFFICE 文档能够直接向 Redmine 发送 POST 请求。
 
-我们建议使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)来安装 ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在 Debian、Ubuntu 或其衍生系统上进行安装。
+我们建议使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 来安装 ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在 Debian、Ubuntu 或其衍生系统上进行安装。
 
 ## 安装 Redmine ONLYOFFICE 集成插件
 
 安装该插件需要 Redmine4.2 或更高版本，或者5.0或更高版本。同时要注意，该插件与 Ruby2.7.2 或更高版本，或者3.0.0或更高版本兼容。我们建议使用 Redmine5 搭配 Ruby3。
 
-此外，您可能需要[zstd](https://github.com/facebook/zstd)来解压该插件。
+此外，您可能需要 [zstd](https://github.com/facebook/zstd) 来解压该插件。
 
 1. 如果您是 Redmine 新手，请按照[这些说明](https://www.redmine.org/projects/redmine/wiki/RedmineInstall)安装 Redmine。
 
@@ -110,7 +110,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 工作原理
 
-该插件使用[ONLYOFFICE 文档 API](../basic-concepts.md)并集成到 Redmine 的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如[“在 ONLYOFFICE 中创建”](#create-in-onlyoffice)和[“使用 ONLYOFFICE 转换”](#convert-with-onlyoffice)等常规页面。
+该插件使用 [ONLYOFFICE 文档 API](../basic-concepts.md) 并集成到 Redmine 的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如[“在 ONLYOFFICE 中创建”](#create-in-onlyoffice)和[“使用 ONLYOFFICE 转换”](#convert-with-onlyoffice)等常规页面。
 
 ### 文档 {#documents}
 
@@ -201,7 +201,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ![在 ONLYOFFICE 中查看或编辑](/assets/images/editor/view-or-edit.png)
 
-在**ONLYOFFICE 中查看或编辑**页面，用户可以查看或编辑附件。此页面的可见性取决于用户对附件所在模块的权限。
+在 **ONLYOFFICE 中查看或编辑**页面，用户可以查看或编辑附件。此页面的可见性取决于用户对附件所在模块的权限。
 
 ### 在 ONLYOFFICE 中创建 {#create-in-onlyoffice}
 

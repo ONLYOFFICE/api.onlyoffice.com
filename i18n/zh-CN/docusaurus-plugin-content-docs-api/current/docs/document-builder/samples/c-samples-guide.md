@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 ##  Hello World 示例
 
-本节将帮助您构建“Hello World”应用程序。如果您能够打开、保存和关闭文档，那么集成**ONLYOFFICE Document Builder SDK**会很容易。
+本节将帮助您构建“Hello World”应用程序。如果您能够打开、保存和关闭文档，那么集成 **ONLYOFFICE Document Builder SDK** 会很容易。
 
 ```cpp
 #include <string>
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
 
 ## 运行其他示例
 
-从[https://github.com/ONLYOFFICE/document-builder-samples](https://github.com/ONLYOFFICE/document-builder-samples)克隆包含Document Builder 示例的存储库。创建的文件夹必须具有一般编辑权限。
+从 [https://github.com/ONLYOFFICE/document-builder-samples](https://github.com/ONLYOFFICE/document-builder-samples) 克隆包含Document Builder 示例的存储库。创建的文件夹必须具有一般编辑权限。
 
 ```bash
 git clone https://github.com/ONLYOFFICE/document-builder-samples

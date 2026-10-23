@@ -9,7 +9,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="5rN7CksWE-w"/>
 
-该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助 ONLYOFFICE 文档在[SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration)中编辑办公文档。
+该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助 ONLYOFFICE 文档在 [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) 中编辑办公文档。
 
 ## 功能特性
 
@@ -19,15 +19,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 SharePoint 和任何终端客户端解析并连接。如果无法满足此要求，请参考官方[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 SharePoint 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 SharePoint 和任何终端客户端解析并连接。如果无法满足此要求，请参考官方 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 SharePoint 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 ONLYOFFICE SharePoint 集成解决方案
 
 要在 SharePoint 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
-1. 点击**开始**，指向**所有程序**，选择**管理工具**，然后点击**服务**。确保**SharePoint 管理**服务已启动。
+1. 点击**开始**，指向**所有程序**，选择**管理工具**，然后点击**服务**。确保 **SharePoint 管理**服务已启动。
 
 2. 点击**开始->SharePoint 管理外壳**，进入包含 *.wsp* 文件的目录。
 
@@ -44,16 +44,16 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    ```
 
    :::note
-   除了步骤**3**和**4**，您也可以输入以下命令：
+   除了步骤**3** 和**4**，您也可以输入以下命令：
 
    ``` ps1
    Add-SPSolution -LiteralPath <SolutionPath>/onlyoffice.wsp
    ```
    
-   在**SharePoint 中央管理**主页上，点击**系统设置->场管理->管理场解决方案**。在**解决方案管理**页面，点击**onlyoffice.wsp->部署解决方案**。
+   在 **SharePoint 中央管理**主页上，点击**系统设置->场管理->管理场解决方案**。在**解决方案管理**页面，点击 **onlyoffice.wsp->部署解决方案**。
    :::
 
-5. 在**SharePoint 中央管理**主页的**应用程序管理**下，点击**管理 Web 应用程序**。
+5. 在 **SharePoint 中央管理**主页的**应用程序管理**下，点击**管理 Web 应用程序**。
 
 6. 确保选择了您的网站，然后点击**身份验证提供程序**图标。
 
@@ -61,7 +61,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 8. 在**编辑身份验证**下，勾选**启用匿名访问**，然后点击**保存**。
 
-9. 返回**Web 应用程序管理**，点击**匿名策略**图标。
+9. 返回 **Web 应用程序管理**，点击**匿名策略**图标。
 
 10. 在**匿名访问限制**下，选择您的**区域**，将**权限**设置为*无 – 无策略*，然后点击**保存**。
 
@@ -73,7 +73,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 https://<documentserver>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE 文档**的服务器名称，该地址必须能被用户浏览器和 SharePoint 服务器访问。SharePoint 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**文档服务器地址**是安装了 **ONLYOFFICE 文档**的服务器名称，该地址必须能被用户浏览器和 SharePoint 服务器访问。SharePoint 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 :::note
 请注意，如果您使用 SharePoint 设置了子网站，为确保功能正常，您需要为每个子网站额外配置 ONLYOFFICE 文档连接。进入每个子网站的设置，在相应字段中输入 ONLYOFFICE 文档地址。
@@ -81,13 +81,13 @@ https://<documentserver>/
 
 从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 SharePoint 管理设置中指定您自己的**密钥**。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
-如果启用了 JWT 保护，由于 SharePoint 安全策略会阻止外部的**Authorization**标头，因此需要指定一个自定义标头名称。该标头也应在 ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[这里](../../additional-api/signature/signature.md)。
+如果启用了 JWT 保护，由于 SharePoint 安全策略会阻止外部的 **Authorization** 标头，因此需要指定一个自定义标头名称。该标头也应在 ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[这里](../../additional-api/signature/signature.md)。
 
 ## 编译 ONLYOFFICE SharePoint 集成解决方案
 
 编译 ONLYOFFICE SharePoint 集成解决方案有两种方法：
 
-1. 使用**MS Visual Studio**：
+1. 使用 **MS Visual Studio**：
 
    1. 进入 SharePoint 服务器，在 Visual Studio 中打开该项目。
    2. 在**解决方案资源管理器**中，打开项目的快捷菜单，然后选择**发布**。
@@ -97,7 +97,7 @@ https://<documentserver>/
 
 2. 借助提供的 *build.bat* 文件：
 
-   1. 进入**BuildAndInstall**文件夹。
+   1. 进入 **BuildAndInstall** 文件夹。
    2. 运行*build.bat*文件。
    3. 生成的解决方案 *.wsp* 文件将被创建并放置在 BuildAndInstall 文件夹中。
 

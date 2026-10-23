@@ -11,9 +11,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="pQPm00oUqOE"/>
 
-这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share 中用 ONLYOFFICE 文档编辑办公文档。
+这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在 [Alfresco](https://www.alfresco.com/)Share 中用 ONLYOFFICE 文档编辑办公文档。
 
-该插件在官方[Alfresco 附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
+该插件在官方 [Alfresco 附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
 
 ## 功能特性
 
@@ -33,15 +33,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Alfresco 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Alfresco 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Alfresco 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Alfresco 发送 POST 请求。
 
-使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 ONLYOFFICE Alfresco 模块包
 
 要在 Alfresco 中使用 ONLYOFFICE 文档，对于 Ubuntu 系统，请按照以下步骤操作：
 
-1. 根据您的 Alfresco 安装情况，将已编译的 **\*.amp**包上传到相应的目录：
+1. 根据您的 Alfresco 安装情况，将已编译的 **\*.amp** 包上传到相应的目录：
 
    - 对于 Alfresco 存储库，将*onlyoffice-alfresco/repo/target/*中的文件上传到*/usr/local/tomcat/amps/*目录
    - 对于 Share，将*onlyoffice-alfresco/share/target/*中的文件上传到*/usr/local/tomcat/amps\_share/*目录。
@@ -65,11 +65,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
       </TabItem>
    </Tabs>
 
-   有关使用 MMT 的更多详细信息，请参阅[Alfresco 文档](https://docs.alfresco.com/content-services/latest/install/zip/amp/)。
+   有关使用 MMT 的更多详细信息，请参阅 [Alfresco 文档](https://docs.alfresco.com/content-services/latest/install/zip/amp/)。
 
 3. 确保 ONLYOFFICE 文档能够向 Alfresco 发送 POST 请求。
 
-   您可能需要在**alfresco-global.properties**中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-module-package-for-alfresco)进行设置：
+   您可能需要在 **alfresco-global.properties** 中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-module-package-for-alfresco)进行设置：
 
    ``` ini
    alfresco.host=<hostname>
@@ -96,26 +96,26 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 配置 ONLYOFFICE Alfresco 模块包 {#configuring-onlyoffice-module-package-for-alfresco}
 
-模块配置可以在**Alfresco 管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
+模块配置可以在 **Alfresco 管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
 
 :::note
-您也可以将*onlyoffice.url*添加到**alfresco-global.properties**中。通过设置页面进行的配置将覆盖**alfresco-global.properties**中的设置。
+您也可以将*onlyoffice.url*添加到 **alfresco-global.properties** 中。通过设置页面进行的配置将覆盖 **alfresco-global.properties** 中的设置。
 :::
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Alfresco 配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Alfresco 配置页面指定您自己的**密钥**，或者通过在 **alfresco-global.properties** 中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译 ONLYOFFICE Alfresco 模块包
 
 如果您计划自行编译 ONLYOFFICE Alfresco 模块包（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
-1. 成功编译需要最新的稳定版**Java**。如果未安装，可使用以下命令安装 OpenJDK 8：
+1. 成功编译需要最新的稳定版 **Java**。如果未安装，可使用以下命令安装 OpenJDK 8：
 
    ``` sh
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
 
-2. 安装最新版的**Maven**。安装过程可参考：[这里](https://maven.apache.org/install.html)。
+2. 安装最新版的 **Maven**。安装过程可参考：[这里](https://maven.apache.org/install.html)。
 
 3. 下载 ONLYOFFICE Alfresco 模块包的源代码：
 
@@ -136,7 +136,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    mvn clean install
    ```
 
-另一种构建 ONLYOFFICE Alfresco 模块包的方法是使用**docker-compose**文件。
+另一种构建 ONLYOFFICE Alfresco 模块包的方法是使用 **docker-compose** 文件。
 
 在项目目录中使用以下命令：
 

@@ -24,5 +24,5 @@ sidebar_position: -5
 - **文档构建服务**：一种服务器服务，无需运行文档编辑器即可轻松构建文档。
 
 :::note
-ONLYOFFICE 文档包括**文档编辑器**、**文档编辑服务**、**文档命令服务**、**文档转换服务**和**文档构建服务**。**文档管理器**和**文档存储服务**必须由集成商提供。可以是**ONLYOFFICE Apps**、您在自己服务器上的实现，或 ONLYOFFICE 文档附带的**Node.js 测试示例**（仅用于测试 — 参见 [Node.js 示例](../../samples/language-specific-examples/nodejs-example.md)）。
+ONLYOFFICE 文档包括**文档编辑器**、**文档编辑服务**、**文档命令服务**、**文档转换服务**和**文档构建服务**。**文档管理器**和**文档存储服务**必须由集成商提供。可以是 **ONLYOFFICE Apps**、您在自己服务器上的实现，或 ONLYOFFICE 文档附带的 **Node.js 测试示例**（仅用于测试 — 参见 [Node.js 示例](../../samples/language-specific-examples/nodejs-example.md)）。
 :::

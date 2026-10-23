@@ -9,9 +9,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="pGd06HLkWU4"/>
 
-这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-confluence)允许用户在[Confluence](https://www.atlassian.com/software/confluence/)中使用 ONLYOFFICE 文档直接编辑办公文档。
+这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-confluence)允许用户在 [Confluence](https://www.atlassian.com/software/confluence/) 中使用 ONLYOFFICE 文档直接编辑办公文档。
 
-该连接器可在官方的[Atlassian 应用市场](https://marketplace.atlassian.com/1218214)获取。
+该连接器可在官方的 [Atlassian 应用市场](https://marketplace.atlassian.com/1218214)获取。
 
 ## 功能特性
 
@@ -22,34 +22,34 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Confluence 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Confluence 发送 POST 请求。
+您需要有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Confluence 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Confluence 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是安装 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Confluence ONLYOFFICE 集成应用程序
 
 在 Confluence 的**管理插件**页面上传已编译的*target/onlyoffice-confluence-plugin.jar*文件。
 
-最新的编译包文件可在[这里](https://github.com/onlyoffice/onlyoffice-confluence/releases)以及[Atlassian 应用市场](https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview&hosting=datacenter)获取。
+最新的编译包文件可在[这里](https://github.com/onlyoffice/onlyoffice-confluence/releases)以及 [Atlassian 应用市场](https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview&hosting=datacenter)获取。
 
 您也可以从 Confluence 管理面板安装该应用程序：
 
 1. 以管理员身份登录您的 Confluence 实例。
 2. 导航至**管理插件**页面。
 3. 点击左侧面板中的**查找新应用程序**或**查找新插件**。
-4. 通过搜索找到**ONLYOFFICE Connector for Confluence**。搜索结果将包含与您的 Confluence 实例兼容的插件版本。
+4. 通过搜索找到 **ONLYOFFICE Connector for Confluence**。搜索结果将包含与您的 Confluence 实例兼容的插件版本。
 5. 点击**安装**以下载并安装该应用程序。
 6. 现在您可以在**已安装并准备就绪**对话框中点击**关闭**。
 
 ## 配置 Confluence ONLYOFFICE 集成应用程序
 
-在**管理插件**页面找到已上传的**ONLYOFFICE Connector for Confluence**。点击**配置**，然后输入安装了 ONLYOFFICE 文档的服务器名称：
+在**管理插件**页面找到已上传的 **ONLYOFFICE Connector for Confluence**。点击**配置**，然后输入安装了 ONLYOFFICE 文档的服务器名称：
 
 ```sh
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Confluence 服务器访问。Confluence 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Confluence 服务器访问。Confluence 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Confluence 管理页面上指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
@@ -57,14 +57,14 @@ https://<documentserver>/
 
 如果您计划自行编译 Confluence ONLYOFFICE 集成应用程序（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
-1. 成功编译需要稳定的 Java 版本。如果未安装，可使用以下命令安装**Open JDK 8**：
+1. 成功编译需要稳定的 Java 版本。如果未安装，可使用以下命令安装 **Open JDK 8**：
 
    ``` sh
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
 
-2. 安装**Atlassian 插件软件开发工具包(SDK)**。安装过程可参考[这里](https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project)。
+2. 安装 **Atlassian 插件软件开发工具包(SDK)**。安装过程可参考[这里](https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project)。
 
 3. 获取子模块：
 
@@ -84,7 +84,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 1. 用户导航至 Confluence 附件并选择**在 ONLYOFFICE 中编辑**操作。
 
-2. Confluence 向**OnlyOfficeEditorServlet**发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
+2. Confluence 向 **OnlyOfficeEditorServlet** 发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
 
 3. Confluence 将文档发送到 ONLYOFFICE 文档存储服务，并接收一个临时链接。
 

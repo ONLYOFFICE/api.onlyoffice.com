@@ -91,7 +91,7 @@ window.Asc.plugin.init = function init(obj) {
 
 ## 步骤 2：为应用创建 UI 插件
 
-**加密**插件没有界面，默认情况下无法运行。它仅在打开它的文档中工作（在应用的一个选项卡中）。要处理在 ONLYOFFICE 桌面版不同选项卡中打开或创建的所有文档，应该创建应用的**UI**插件。它有助于在必要时为整个应用使用**加密**插件。
+**加密**插件没有界面，默认情况下无法运行。它仅在打开它的文档中工作（在应用的一个选项卡中）。要处理在 ONLYOFFICE 桌面版不同选项卡中打开或创建的所有文档，应该创建应用的 **UI** 插件。它有助于在必要时为整个应用使用**加密**插件。
 
 此插件无法访问编辑功能，但具有几乎相同的配置：
 
@@ -136,7 +136,7 @@ window.Asc.plugin.init = function init(obj) {
 </html>
 ```
 
-有了它，我们将在主应用页面上获得一个名为**Encryption**的新选项卡：
+有了它，我们将在主应用页面上获得一个名为 **Encryption** 的新选项卡：
 
 ![Encryption enabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption enabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
@@ -193,7 +193,7 @@ window.addEventListener("load", () => {
 
 ## 步骤 4：使用加密插件
 
-将两个插件都添加到应用后，将显示一个新的**Encryption**选项卡。如果您在此处勾选复选框，您创建和编辑的所有文件都将用密码加密：
+将两个插件都添加到应用后，将显示一个新的 **Encryption** 选项卡。如果您在此处勾选复选框，您创建和编辑的所有文件都将用密码加密：
 
 - 如果加密保持启用状态，打开受保护文件时不需要密码（将调用 *getPasswordByFile*）。
 - 如果加密被禁用或文件在另一个应用中打开，将要求输入密码。

@@ -127,7 +127,7 @@ New-Guid
 1. 在 ONLYOFFICE 中打开文档。
 2. 点击工具栏中的**插件**。
 3. 选择 **Hello World**。
-4. 点击**Insert Hello World** 按钮。
+4. 点击 **Insert Hello World** 按钮。
 5. "Hello World!" 出现在您的文档中。
 
 ## 第 5 步：扩展插件

@@ -9,9 +9,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="33w03FcPWTo"/>
 
-这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助 ONLYOFFICE 文档，在[ownCloud](https://owncloud.com)中编辑办公文档。
+这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助 ONLYOFFICE 文档，在 [ownCloud](https://owncloud.com) 中编辑办公文档。
 
-最新的已签名的应用版本可在[ownCloud](https://marketplace.owncloud.com/apps/onlyoffice)官方商店中获取。
+最新的已签名的应用版本可在 [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice) 官方商店中获取。
 
 ## 功能特性
 
@@ -20,19 +20,19 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。ODT、ODS 和 ODP 也支持即时转换。在管理员设置中启用相应选项后，ODF 格式的文档在点击后会立即在编辑器中转换并打开。
 - 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 ownCloud。连接到同一文档服务器的多个联合 ownCloud 实例之间也支持协同编辑。
 - 支持以不同的权限类型共享文件，如查看/编辑、评论、审阅、填写表单。还可以限制下载（在所有编辑器中）和修改筛选器（在电子表格中）。也支持通过公共链接进行共享。
-- 支持在**ownCloud Web**中处理文档、电子表格和演示文稿。
+- 支持在 **ownCloud Web** 中处理文档、电子表格和演示文稿。
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 ownCloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 ownCloud 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 ownCloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 ownCloud 发送 POST 请求。
 
 ONLYOFFICE 文档和 ownCloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 ownCloud 都使用80端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
 
-您也可以使用我们的[Docker 安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud)，通过几条命令就能完成 ONLYOFFICE 文档和 ownCloud 的安装与配置。
+您也可以使用我们的 [Docker 安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud)，通过几条命令就能完成 ONLYOFFICE 文档和 ownCloud 的安装与配置。
 
 ## 安装 ownCloud ONLYOFFICE 集成应用程序 {#installing-onlyoffice-app-for-owncloud}
 
-ownCloud 管理员可以从内置的应用市场安装集成应用程序。为此，点击左上角的汉堡菜单，选择**应用市场**。然后，在可用应用程序列表中找到**ONLYOFFICE**并进行安装。
+ownCloud 管理员可以从内置的应用市场安装集成应用程序。为此，点击左上角的汉堡菜单，选择**应用市场**。然后，在可用应用程序列表中找到 **ONLYOFFICE** 并进行安装。
 
 如果安装 ownCloud 的服务器没有互联网访问权限，或者由于其他原因需要手动安装，管理员可以按以下步骤手动安装该应用程序。要在 ownCloud 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
@@ -44,7 +44,7 @@ ownCloud 管理员可以从内置的应用市场安装集成应用程序。为�
 
 2. 获取 ownCloud ONLYOFFICE 集成应用程序。有以下几种方法：
 
-   1. 从[ownCloud](https://marketplace.owncloud.com/apps/onlyoffice)官方应用商店下载最新的已签名版本。
+   1. 从 [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice) 官方应用商店下载最新的已签名版本。
    2. 从 GitHub 上的应用程序[发布页面](https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases)下载最新的已签名版本。
    3. 克隆应用程序源代码并自行编译：
    
@@ -55,7 +55,7 @@ ownCloud 管理员可以从内置的应用市场安装集成应用程序。为�
    ```
 
    :::note
-   ownCloud 无法使用未签名的应用程序，并会给出警告，所以您需要使用选项**1**或**2**来获取应用程序。
+   ownCloud 无法使用未签名的应用程序，并会给出警告，所以您需要使用选项**1** 或**2** 来获取应用程序。
    :::
 
 3. 修改所有者，以便可以从 ownCloud Web 界面更新应用程序：
@@ -64,17 +64,17 @@ ownCloud 管理员可以从内置的应用市场安装集成应用程序。为�
     chown -R www-data:www-data onlyoffice
     ```
 
-4. 在 ownCloud 中，管理员打开包含**未启用**应用的*\~/settings/admin?sectionid=apps\&category=disabled*页面，并为**ONLYOFFICE**应用点击**启用**。
+4. 在 ownCloud 中，管理员打开包含**未启用**应用的*\~/settings/admin?sectionid=apps\&category=disabled*页面，并为 **ONLYOFFICE** 应用点击**启用**。
 
 ## 配置 ownCloud ONLYOFFICE 集成应用程序 {#configuring-owncloud-onlyoffice-integration-app}
 
-在 ownCloud 中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin?sectionid=additional#onlyoffice*页面。输入以下地址来连接 ONLYOFFICE 文档：
+在 ownCloud 中，打开包含 **ONLYOFFICE** 部分管理设置的*\~/settings/admin?sectionid=additional#onlyoffice*页面。输入以下地址来连接 ONLYOFFICE 文档：
 
 ```sh
 https://<documentserver>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE 文档** 的服务器名称。该地址必须能被用户浏览器和 ownCloud 服务器访问。ownCloud 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**文档服务器地址**是安装了 **ONLYOFFICE 文档** 的服务器名称。该地址必须能被用户浏览器和 ownCloud 服务器访问。ownCloud 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ![本地的](/assets/images/editor/owncloud-local.jpg)
 
@@ -100,7 +100,7 @@ occ onlyoffice:documentserver --check
 
 ## 在 ownCloud Web 中启用编辑功能
 
-要在**ownCloud Web**中启用编辑功能，需要在 ownCloud Web 的*config.json*中注册该应用程序：
+要在 **ownCloud Web** 中启用编辑功能，需要在 ownCloud Web 的*config.json*中注册该应用程序：
 
 - 如果您是从[官方应用市场](https://marketplace.owncloud.com/apps/onlyoffice)安装的 ownCloud Web，路径是 *\<owncloud-root-catalog>/config/config.json*。
 - 如果您是根据[此说明](#installing-onlyoffice-app-for-owncloud)自行从源代码编译的，路径是*\<owncloud-web-root-catalog>/config/config.json*。
@@ -158,7 +158,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 - **连接外部存储**：在某些情况下，使用**外部存储**应用添加存储时，协同编辑会出现问题。如果使用相同的授权密钥进行连接（选择*用户名和密码*或*全局凭证*身份验证类型），则用户可以进行协同编辑。如果使用不同的授权密钥（*登录凭据，保存到数据库*或*用户输入，存储到数据库*身份验证选项），则无法进行协同编辑。当使用*登录凭据，保存到会话*身份验证类型时，文件无法在编辑器中打开。
 
-- **加密文件存储**：ownCloud 提供了加密文件存储的选项。但是，如果启用了*每个用户的加密密钥*加密(ownCloud**默认加密模块**应用默认使用)，ONLYOFFICE 文档将无法打开加密文件进行编辑，也无法在编辑后保存。管理设置页面的 ONLYOFFICE 部分将显示相关通知。不过，如果设置了*主密钥*加密，ONLYOFFICE 应用将按预期工作。启用*主密钥*加密的说明可在 ownCloud 官方文档网站的[ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line)获取。
+- **加密文件存储**：ownCloud 提供了加密文件存储的选项。但是，如果启用了*每个用户的加密密钥*加密(ownCloud **默认加密模块**应用默认使用)，ONLYOFFICE 文档将无法打开加密文件进行编辑，也无法在编辑后保存。管理设置页面的 ONLYOFFICE 部分将显示相关通知。不过，如果设置了*主密钥*加密，ONLYOFFICE 应用将按预期工作。启用*主密钥*加密的说明可在 ownCloud 官方文档网站的 [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) 获取。
 
   :::note
   ownCloud 建议仅在没有现有数据的全新安装或尚未启用加密的系统上使用*主加密密钥*，因为在已使用*每个用户的加密密钥*加密的文件上启用*主密钥*加密后，这些文件**可能会永久丢失**。
@@ -185,7 +185,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 - **后台任务**：如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或 SSL 证书存在问题。
 
-  为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务，用于检查编辑器的可用性。它可以测试您的**ownCloud 实例**和**ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。
+  为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务，用于检查编辑器的可用性。它可以测试您的 **ownCloud 实例**和 **ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。
 
   如果检测到任何问题，ONLYOFFICE 应用（以及创建和打开文件的功能）将被禁用。作为 ownCloud 管理员，您将收到相应的通知。
 

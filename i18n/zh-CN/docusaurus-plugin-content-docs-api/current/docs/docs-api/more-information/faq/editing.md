@@ -38,8 +38,8 @@ sidebar_position: -5
 
 要定义文档打开模式，请使用 `editorConfig.mode` 参数。它可以获取两个值：
 
-- **edit**默认使用，允许打开文档文件进行编辑（如果相应的 [document.permissions](../../usage-api/config/document/permissions.md) 参数也设置为 `true`）;
-- **view**允许在主工具栏和禁用编辑的情况下打开文档进行查看。
+- **edit** 默认使用，允许打开文档文件进行编辑（如果相应的 [document.permissions](../../usage-api/config/document/permissions.md) 参数也设置为 `true`）;
+- **view** 允许在主工具栏和禁用编辑的情况下打开文档进行查看。
 
 使用配置文件的 `editorConfig` 部分设置模式：
 

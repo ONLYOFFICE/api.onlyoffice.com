@@ -25,7 +25,7 @@ sidebar_position: -2
 可能还有另一种情况，主机首先在查看器中打开文档，然后使用**编辑**按钮将文档转换为 OOXML 格式并进行编辑。使用[查看](./wopi-discovery.md#view)操作打开二进制文件的过程应如下所示：
 
 1. 将 [UserCanWrite](./wopi-rest-api/checkfileinfo.md#UserCanWrite) 属性设置为 **true**。
-2. 将 [UserCanNotWriteRelative](./wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性设置为**false**（或简单地忽略它）。
+2. 将 [UserCanNotWriteRelative](./wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性设置为 **false**（或简单地忽略它）。
 3. 将 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl) 属性设置为在加载时执行**转换**操作的主机 URL。
 
 如果满足所有这些条件，**编辑**按钮将显示在查看器中。当用户单击它时，为二进制文件提供的 **HostEditUrl** 将打开并开始转换过程。最后，用户被重定向到新转换文档的 **HostEditUrl**。

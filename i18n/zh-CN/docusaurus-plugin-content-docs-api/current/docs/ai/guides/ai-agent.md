@@ -24,11 +24,11 @@ AI 助手具有以下特点：
 
 要安装 AI 助手，请按照以下步骤操作：
 
-1. 转到**插件**选项卡并打开**插件管理器**。找到**AI 插件**，如果尚未安装则点击**安装**，如果已安装则点击**更新**。
+1. 转到**插件**选项卡并打开**插件管理器**。找到 **AI 插件**，如果尚未安装则点击**安装**，如果已安装则点击**更新**。
 
    ![AI 插件](/assets/images/plugins/install-ai-plugin.png#gh-light-mode-only)![AI 插件](/assets/images/plugins/install-ai-plugin.dark.png#gh-dark-mode-only)
 
-2. 点击**后台插件**按钮，激活**AI**开关。
+2. 点击**后台插件**按钮，激活 **AI** 开关。
 
     ![激活 AI](/assets/images/plugins/activate-ai.png#gh-light-mode-only)![激活 AI](/assets/images/plugins/activate-ai.dark.png#gh-dark-mode-only)
 

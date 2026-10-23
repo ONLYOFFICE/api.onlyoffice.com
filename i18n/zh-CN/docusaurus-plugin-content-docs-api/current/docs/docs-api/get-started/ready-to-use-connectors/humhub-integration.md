@@ -5,9 +5,9 @@ sidebar_custom_props:
 
 # HumHub 集成
 
-这个[模块](https://github.com/ONLYOFFICE/onlyoffice-humhub)允许用户借助 ONLYOFFICE 文档在[HumHub](https://www.humhub.com/)中编辑办公文档。
+这个[模块](https://github.com/ONLYOFFICE/onlyoffice-humhub)允许用户借助 ONLYOFFICE 文档在 [HumHub](https://www.humhub.com/) 中编辑办公文档。
 
-该模块可在官方的[HumHub 应用市场](https://marketplace.humhub.com/module/onlyoffice)获取。
+该模块可在官方的 [HumHub 应用市场](https://marketplace.humhub.com/module/onlyoffice)获取。
 
 ## 功能特性
 
@@ -18,19 +18,19 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 HumHub 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 HumHub 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 HumHub 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 HumHub 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 HumHub ONLYOFFICE 模块
 
-您可以从[HumHub 应用市场](https://marketplace.humhub.com/module/onlyoffice)或者直接将[代码仓库](https://github.com/ONLYOFFICE/onlyoffice-humhub)克隆到*moduleAutoloadPaths*参数指定的其中一个文件夹内。更多信息请查看[HumHub 文档](https://docs.humhub.org/docs/develop/environment#module-loader-path)。
+您可以从 [HumHub 应用市场](https://marketplace.humhub.com/module/onlyoffice)或者直接将[代码仓库](https://github.com/ONLYOFFICE/onlyoffice-humhub)克隆到*moduleAutoloadPaths*参数指定的其中一个文件夹内。更多信息请查看 [HumHub 文档](https://docs.humhub.org/docs/develop/environment#module-loader-path)。
 
 ## 配置 HumHub ONLYOFFICE 模块
 
 要配置该模块，请进入**管理->模块**。找到 ONLYOFFICE 模块并点击**配置**。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 HumHub 配置页面指定您自己的 JWT**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 HumHub 配置页面指定您自己的 JWT **密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 工作原理
 

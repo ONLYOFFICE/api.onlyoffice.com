@@ -39,7 +39,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
 
 ## 配置 WordPress ONLYOFFICE 集成插件
 
-通过 WordPress 界面配置插件。进入**WordPress 管理仪表板**，打开**ONLYOFFICE**部分，然后导航到**设置**。请指定以下参数：
+通过 WordPress 界面配置插件。进入 **WordPress 管理仪表板**，打开 **ONLYOFFICE** 部分，然后导航到**设置**。请指定以下参数：
 
 - **文档编辑服务地址**。填写已安装的 ONLYOFFICE 文档的 URL。
 - **文档服务器 JWT 密钥**。从7.2版本开始，JWT 默认启用，并且会自动生成密钥，以限制对 ONLYOFFICE 文档的访问，出于安全原因和数据完整性考虑。在 WordPress 管理配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
@@ -50,7 +50,7 @@ ONLYOFFICE 集成插件支持 WordPress 管理员借助 ONLYOFFICE 文档打开�
 
 ### 编辑上传到 WordPress 的文件
 
-从**媒体**部分上传的所有文件都将显示在**ONLYOFFICE->文件**页面。点击文件名，编辑器将在同一标签页中打开。具有管理员权限的用户可以共同编辑文档。所有更改都将保存到同一个文件中。
+从**媒体**部分上传的所有文件都将显示在 **ONLYOFFICE->文件**页面。点击文件名，编辑器将在同一标签页中打开。具有管理员权限的用户可以共同编辑文档。所有更改都将保存到同一个文件中。
 
 ### 创建文章
 

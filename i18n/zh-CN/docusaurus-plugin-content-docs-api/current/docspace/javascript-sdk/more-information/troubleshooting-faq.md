@@ -102,7 +102,7 @@ const instance = DocSpace.SDK.initManager({
 
 即使框架内显示的是通用的 CSP 错误页面，`onAppError` 也会收到错误的真实原因，因此记录它往往比阅读渲染出的页面更快。将其与浏览器的网络（Network）面板结合使用，可以确认请求确实到达了您的 ONLYOFFICE Apps 实例（而不是被混合内容限制或广告拦截插件所阻止）。
 
-`onAppError` 会在 SDK 端发生错误时触发：CSP 检查失败、消息解析错误、框架断开连接或令牌错误。当框架页面加载失败时（例如在 Chat 模式下），框架本身也会发送该事件并附带自己的消息。ONLYOFFICE Apps API 错误不会触发该事件：方法的 Promise 会以 `API_ERROR` 被拒绝（参见[API 错误的报告方式](#how-api-errors-are-reported)）。OAuth 框架中的授权错误会通过 `onAuthError` 事件传递，数据为 `{ code: "UNAUTHORIZED" }`。
+`onAppError` 会在 SDK 端发生错误时触发：CSP 检查失败、消息解析错误、框架断开连接或令牌错误。当框架页面加载失败时（例如在 Chat 模式下），框架本身也会发送该事件并附带自己的消息。ONLYOFFICE Apps API 错误不会触发该事件：方法的 Promise 会以 `API_ERROR` 被拒绝（参见 [API 错误的报告方式](#how-api-errors-are-reported)）。OAuth 框架中的授权错误会通过 `onAuthError` 事件传递，数据为 `{ code: "UNAUTHORIZED" }`。
 
 关于可用事件及其数据负载的完整列表，请参阅 [TFrameEvents](../usage-sdk/type-aliases/TFrameEvents.md)。
 

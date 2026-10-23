@@ -22,7 +22,7 @@ sidebar_position: -19
 
 1. 创建一个`.html`文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
-2. 在编辑器配置中添加[onRequestHistory](../../usage-api/config/events.md#onrequesthistory)事件处理程序。当用户打开版本历史记录时，此事件将触发。在处理程序中，调用[refreshHistory](../../usage-api/methods.md#refreshhistory)方法并传入完整的版本列表。要突出显示每个版本中的各个更改，请按照[突出显示更改](#highlighting-changes)中的说明传递额外数据。
+2. 在编辑器配置中添加 [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) 事件处理程序。当用户打开版本历史记录时，此事件将触发。在处理程序中，调用 [refreshHistory](../../usage-api/methods.md#refreshhistory) 方法并传入完整的版本列表。要突出显示每个版本中的各个更改，请按照[突出显示更改](#highlighting-changes)中的说明传递额外数据。
 
    ``` ts
    function onRequestHistory() {
@@ -62,7 +62,7 @@ sidebar_position: -19
 
    ![打开文件](/assets/images/editor/history_open.png)
 
-3. 添加[onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)事件处理程序。当用户从列表中选择一个版本时，此事件将触发并传入版本号。在处理程序中，调用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法并传入该版本文件的绝对 URL。
+3. 添加 [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) 事件处理程序。当用户从列表中选择一个版本时，此事件将触发并传入版本号。在处理程序中，调用 [setHistoryData](../../usage-api/methods.md#sethistorydata) 方法并传入该版本文件的绝对 URL。
 
    调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 
@@ -89,7 +89,7 @@ sidebar_position: -19
 
    ![历史记录](/assets/images/editor/history.png)
 
-4. 添加[onRequestRestore](../../usage-api/config/events.md#onrequestrestore)事件处理程序。当用户点击*恢复*按钮时，此事件将触发并传入所选版本的数据。在处理程序中，将恢复的版本保存到您的服务器上，然后调用[refreshHistory](../../usage-api/methods.md#refreshhistory)重新加载版本列表。
+4. 添加 [onRequestRestore](../../usage-api/config/events.md#onrequestrestore) 事件处理程序。当用户点击*恢复*按钮时，此事件将触发并传入所选版本的数据。在处理程序中，将恢复的版本保存到您的服务器上，然后调用 [refreshHistory](../../usage-api/methods.md#refreshhistory) 重新加载版本列表。
 
    ``` ts
    function onRequestRestore(event) {
@@ -135,7 +135,7 @@ sidebar_position: -19
 
    ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
-5. 添加[onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose)事件处理程序。当用户点击*关闭历史记录*按钮时，此事件将触发。在处理程序中，重新初始化编辑器为编辑模式——例如，通过重新加载页面。
+5. 添加 [onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose) 事件处理程序。当用户点击*关闭历史记录*按钮时，此事件将触发。在处理程序中，重新初始化编辑器为编辑模式——例如，通过重新加载页面。
 
    ``` ts
    function onRequestHistoryClose() {
@@ -167,7 +167,7 @@ sidebar_position: -19
 
 除了已更改的文档本身之外，**文档编辑服务**还会发送：
 
-- [history](../../usage-api/callback-handler.md#history)——包含每个更改的时间戳和作者，显示在版本历史记录侧面板中。将此数据作为传递给[refreshHistory](../../usage-api/methods.md#refreshhistory)的对象中每个版本的`changes`属性传递。
+- [history](../../usage-api/callback-handler.md#history)——包含每个更改的时间戳和作者，显示在版本历史记录侧面板中。将此数据作为传递给 [refreshHistory](../../usage-api/methods.md#refreshhistory) 的对象中每个版本的`changes`属性传递。
 
   ``` ts
   docEditor.refreshHistory({
@@ -203,7 +203,7 @@ sidebar_position: -19
   ONLYOFFICE 文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
   :::
 
-- [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对 URL，用于突出显示特定版本的更改。保存此文件，并在调用[setHistoryData](../../usage-api/methods.md#sethistorydata)时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
+- [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对 URL，用于突出显示特定版本的更改。保存此文件，并在调用 [setHistoryData](../../usage-api/methods.md#sethistorydata) 时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
 
   调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 

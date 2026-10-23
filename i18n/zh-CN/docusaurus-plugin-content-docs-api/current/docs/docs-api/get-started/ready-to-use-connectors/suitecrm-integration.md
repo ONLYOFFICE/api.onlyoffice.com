@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # SuiteCRM 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-suitecrm)支持在[SuiteCRM](https://suitecrm.com/)中使用 ONLYOFFICE 文档编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-suitecrm)支持在 [SuiteCRM](https://suitecrm.com/) 中使用 ONLYOFFICE 文档编辑办公文档。
 
 ## 功能特性
 
@@ -16,9 +16,9 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 SuiteCRM 和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还需具备直接向 SuiteCRM 发送 POST 请求的能力。
+您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 SuiteCRM 和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还需具备直接向 SuiteCRM 发送 POST 请求的能力。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是安装 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 SuiteCRM ONLYOFFICE 集成插件
 
@@ -40,9 +40,9 @@ sidebar_custom_props:
 https://<documentserver>/
 ```
 
-这里的**documentserver**指的是安装了**ONLYOFFICE 文档**的服务器名称。该地址要确保用户浏览器和 SuiteCRM 服务器均可访问，同时，SuiteCRM 服务器地址也需能被**ONLYOFFICE 文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些信息可以在云控制台的**实例**部分找到。
+这里的 **documentserver** 指的是安装了 **ONLYOFFICE 文档**的服务器名称。该地址要确保用户浏览器和 SuiteCRM 服务器均可访问，同时，SuiteCRM 服务器地址也需能被 **ONLYOFFICE 文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些信息可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT 会默认开启，并自动生成一个密钥，用于限制对 ONLYOFFICE 文档的访问，以确保安全性和数据完整性。在 SuiteCRM 的**ONLYOFFICE 设置**页面中指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 会默认开启，并自动生成一个密钥，用于限制对 ONLYOFFICE 文档的访问，以确保安全性和数据完整性。在 SuiteCRM 的 **ONLYOFFICE 设置**页面中指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 使用 SuiteCRM ONLYOFFICE 集成插件
 

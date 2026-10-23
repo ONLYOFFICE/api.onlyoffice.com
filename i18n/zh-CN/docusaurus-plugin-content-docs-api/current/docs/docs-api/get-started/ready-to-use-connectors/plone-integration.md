@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Plone 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-plone)允许用户在[Plone](https://plone.org/)中借助 ONLYOFFICE 文档编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-plone)允许用户在 [Plone](https://plone.org/) 中借助 ONLYOFFICE 文档编辑办公文档。
 
 ## 功能特性
 
@@ -13,13 +13,13 @@ sidebar_custom_props:
 - 仅支持查看的文档格式如下：DJVU、DOC、DOCM、DOT、DOTM、DOTX、EPUB、FB2、FODT、HTML、MHT、ODT、OTT、OXPS、PDF、RTF、TXT、XPS、XML、CSV、FODS、ODS、OTS、XLS、XLSB、XLSM、XLT、XLTM、XLTX、FODP、ODP、OTP、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM。
 - 支持转换（另存为）的文档格式如下：DOC、DOCM、DOCX、DOT、DOTM、DOTX、EPUB、FB2、FODT、HTML、MHT、ODT、OTT、OXPS、PDF、RTF、XPS、XML、FODS、ODS、OTS、XLS、XLSB、XLSM、XLSX、XLT、XLTM、XLTX、FODP、ODP、OTP、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、PPTX。
 - 支持转换为 Office Open XML 格式的文档格式如下：DOC、DOCM、DOT、DOTM、DOTX、EPUB、FB2、FODT、HTML、MHT、ODT、OTT、OXPS、PDF、RTF、XPS、XML、FODS、ODS、OTS、XLS、XLSB、XLSM、XLT、XLTM、XLTX、FODP、ODP、OTP、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM。
-- 该插件会在文档库中为 Office 文档创建一个新的**ONLYOFFICE 编辑**菜单项。这使得多个用户能够实时协作，并将更改保存回 Plone。
+- 该插件会在文档库中为 Office 文档创建一个新的 **ONLYOFFICE 编辑**菜单项。这使得多个用户能够实时协作，并将更改保存回 Plone。
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Plone 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Plone 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Plone 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Plone 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Plone ONLYOFFICE 集成插件
 
@@ -41,7 +41,7 @@ docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 sta
 
 ## 配置 Plone ONLYOFFICE 集成插件
 
-要配置插件，请前往**站点设置**。向下滚动到**附加组件配置**部分，然后点击**ONLYOFFICE 配置**按钮。
+要配置插件，请前往**站点设置**。向下滚动到**附加组件配置**部分，然后点击 **ONLYOFFICE 配置**按钮。
 
 从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Plone 配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
@@ -70,13 +70,13 @@ docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyo
 
 3. 重启 Plone。在执行下一步操作之前，您的站点可能会显示异常，甚至无法访问。
 
-4. 导航到**附加组件**界面（在站点 URL 后添加 */prefs\_install\_products\_form*），在**升级**列表中选择**onlyoffice.plone**，然后点击**升级onlyoffice.plone**。
+4. 导航到**附加组件**界面（在站点 URL 后添加 */prefs\_install\_products\_form*），在**升级**列表中选择 **onlyoffice.plone**，然后点击**升级onlyoffice.plone**。
 
 ## 工作原理
 
 ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
-1. 用户在 Plone 中找到文档，并选择**ONLYOFFICE 编辑**操作。
+1. 用户在 Plone 中找到文档，并选择 **ONLYOFFICE 编辑**操作。
 
 2. Plone 为 ONLYOFFICE 文档准备一个包含以下属性的 JSON 对象：
 

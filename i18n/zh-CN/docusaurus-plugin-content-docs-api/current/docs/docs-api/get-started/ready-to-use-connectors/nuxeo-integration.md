@@ -9,7 +9,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="W6z0475IxCU"/>
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-nuxeo)允许用户借助 ONLYOFFICE 文档，在[Nuxeo](https://www.nuxeo.com/)中编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-nuxeo)允许用户借助 ONLYOFFICE 文档，在 [Nuxeo](https://www.nuxeo.com/) 中编辑办公文档。
 
 ## 功能特性
 
@@ -20,9 +20,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nuxeo 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nuxeo 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nuxeo 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nuxeo 发送 POST 请求。
 
-使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Nuxeo ONLYOFFICE 集成插件
 
@@ -40,28 +40,28 @@ nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
 
 ## 配置 Nuxeo ONLYOFFICE 集成插件
 
-打开[nuxeo.conf](https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/)，输入安装了 ONLYOFFICE 文档的服务器名称：
+打开 [nuxeo.conf](https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/)，输入安装了 ONLYOFFICE 文档的服务器名称：
 
 ``` ini
 onlyoffice.docserv.url=http://documentserver/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Nuxeo 服务器访问。Nuxeo 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Nuxeo 服务器访问。Nuxeo 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在`nuxeo.conf`文件中添加**onlyoffice.jwt.secret=yoursecret**这一行来指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在`nuxeo.conf`文件中添加 **onlyoffice.jwt.secret=yoursecret** 这一行来指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译 Nuxeo ONLYOFFICE 插件
 
 在 Ubuntu 系统上构建 Nuxeo 插件，必须执行以下步骤：
 
-1. 成功构建需要稳定的 Java 版本。如果未安装，可使用以下命令安装**Open JDK 8**：
+1. 成功构建需要稳定的 Java 版本。如果未安装，可使用以下命令安装 **Open JDK 8**：
 
    ``` sh
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
 
-2. 安装最新版的**Maven**。安装过程可参考[此处](https://maven.apache.org/install.html)。
+2. 安装最新版的 **Maven**。安装过程可参考[此处](https://maven.apache.org/install.html)。
 
 3. 下载 Nuxeo ONLYOFFICE 集成插件的源代码：
 

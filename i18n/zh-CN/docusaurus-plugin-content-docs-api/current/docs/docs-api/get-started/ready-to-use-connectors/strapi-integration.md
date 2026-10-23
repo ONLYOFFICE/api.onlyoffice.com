@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Strapi 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi) 能让用户借助 ONLYOFFICE 文档，在[Strapi](https://strapi.io/)中编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi) 能让用户借助 ONLYOFFICE 文档，在 [Strapi](https://strapi.io/) 中编辑办公文档。
 
 ## 功能特性
 
@@ -15,9 +15,9 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 Strapi 和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Strapi 发送 POST 请求。
+您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 Strapi 和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Strapi 发送 POST 请求。
 
-安装 ONLYOFFICE 文档实例的最简单方法是使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)。
+安装 ONLYOFFICE 文档实例的最简单方法是使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)。
 
 ## 安装 Strapi ONLYOFFICE 集成插件
 
@@ -64,7 +64,7 @@ sidebar_custom_props:
 
 ## 配置 Strapi ONLYOFFICE 集成插件
 
-您可以通过 Strapi 的**控制面板->设置->全局设置->ONLYOFFICE**来配置 ONLYOFFICE 应用。在设置页面，输入：
+您可以通过 Strapi 的**控制面板->设置->全局设置->ONLYOFFICE** 来配置 ONLYOFFICE 应用。在设置页面，输入：
 
 - **文档服务器地址**。已安装的 ONLYOFFICE 文档的 URL。
 - **文档服务器 JWT 密钥**。从7.2版本起，JWT 默认开启，并自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障系统安全和数据完整。在 Strapi 设置页面指定自己的密钥，在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，设置相同密钥并启用验证。

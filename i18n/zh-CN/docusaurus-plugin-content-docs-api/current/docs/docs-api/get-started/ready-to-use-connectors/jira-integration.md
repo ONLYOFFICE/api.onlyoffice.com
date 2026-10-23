@@ -9,9 +9,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="mQgpkMwwbLE"/>
 
-该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-jira)允许用户借助 ONLYOFFICE 文档在[Jira Software](https://www.atlassian.com/software/jira)中编辑办公文档。
+该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-jira)允许用户借助 ONLYOFFICE 文档在 [Jira Software](https://www.atlassian.com/software/jira) 中编辑办公文档。
 
-该连接器可在官方的[Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)中获取。
+该连接器可在官方的 [Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)中获取。
 
 ## 功能特性
 
@@ -21,21 +21,21 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Jira 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Jira 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Jira 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Jira 发送 POST 请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
+使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Jira ONLYOFFICE 集成应用程序
 
 在 Jira 的**管理应用程序**页面上传已编译的*target/onlyoffice-jira-app.jar*文件。
 
-最新的编译包文件可在[此处](https://github.com/ONLYOFFICE/onlyoffice-jira/releases)以及[Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)获取。
+最新的编译包文件可在[此处](https://github.com/ONLYOFFICE/onlyoffice-jira/releases)以及 [Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)获取。
 
 您也可以从 Jira 管理面板安装该应用程序：
 
 1. 导航至**管理应用程序**页面。
 2. 点击左侧面板中的**查找新应用程序**。
-3. 使用搜索功能找到**ONLYOFFICE Connector for Jira**。
+3. 使用搜索功能找到 **ONLYOFFICE Connector for Jira**。
 4. 点击**安装**以下载并安装该应用程序。
 
 ## 配置 Jira ONLYOFFICE 集成应用程序
@@ -46,7 +46,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Jira 服务器访问。Jira 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Jira 服务器访问。Jira 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 有时，您的网络配置可能不允许 Jira 和 ONLYOFFICE 文档之间通过公共地址进行请求。**高级服务器设置**部分允许您设置 Jira 内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求返回的 Jira 地址。
 
@@ -56,14 +56,14 @@ https://<documentserver>/
 
 如果您打算自行编译 Jira ONLYOFFICE 集成应用程序（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
-1. 成功构建需要稳定的 Java 版本。如果未安装，可使用以下命令安装**Open JDK 8**：
+1. 成功构建需要稳定的 Java 版本。如果未安装，可使用以下命令安装 **Open JDK 8**：
 
    ``` sh
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
 
-2. 安装**Atlassian 插件开发工具包（Atlassian Plugin SDK）**。安装过程可参考[此处](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)。
+2. 安装 **Atlassian 插件开发工具包（Atlassian Plugin SDK）**。安装过程可参考[此处](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)。
 
 3. 编译软件包：
 
@@ -85,7 +85,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 1. 用户导航至 Jira 附件并选择**在 ONLYOFFICE 中编辑**操作。
 
-2. Jira 向**OnlyOfficeEditorServlet**发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
+2. Jira 向 **OnlyOfficeEditorServlet** 发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
 
 3. Jira 将文档发送到 ONLYOFFICE 文档存储服务，并接收一个临时链接。
 
