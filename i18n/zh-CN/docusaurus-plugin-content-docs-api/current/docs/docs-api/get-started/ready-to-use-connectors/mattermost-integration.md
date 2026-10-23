@@ -95,7 +95,7 @@ ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以
 
 ### 设置文件访问权限
 
-<img alt="Mattermost共享" src="/assets/images/editor/mattermost-share.png" width="400px" />
+<img alt="Mattermost 共享" src="/assets/images/editor/mattermost-share.png" width="400px" />
 
 默认情况下，消息发送者对文件拥有完整的编辑权限，而所有接收者仅获得只读权限。只有发送者可以通过上下文菜单中的**更改访问权限**选项来修改用户访问权限。
 
@@ -113,7 +113,7 @@ ONLYOFFICE 机器人会发送关于文档更改的通知，其中会指明做出
 
 所有更改通知均可在消息的讨论线程中找到。只需点击消息右侧边缘的箭头，即可打开右侧面板，其中显示该消息讨论的完整历史记录。
 
-<img alt="Mattermost机器人" src="/assets/images/editor/mattermost-bot.png" width="300px" />
+<img alt="Mattermost 机器人" src="/assets/images/editor/mattermost-bot.png" width="300px" />
 
 ## 工作原理
 
