@@ -20,10 +20,10 @@ Changes the name, the type, the options or the display order of a metadata field
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Updated metadata field | [**MetadataFieldWrapper**](../../models/metadata-field-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The field after the change, with a generated identifier for every new option | [**MetadataFieldWrapper**](../../models/metadata-field-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | Invalid field, a name another field of the template has, a type change on a field with values or the removal of an option in use | - | - |
 | **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | Field not found | - | - |
+| **404** | The template does not exist, or it has no field with this identifier | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

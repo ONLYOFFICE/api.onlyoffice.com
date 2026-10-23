@@ -22,7 +22,7 @@ Sets the custom text fields of a file: free-form name and value pairs that need 
 | **200** | The custom fields of the file with their values | [**CustomFieldValueArrayWrapper**](../../models/custom-field-value-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | Invalid custom fields or too many of them | - | - |
 | **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | File not found | - | - |
+| **404** | No file with this identifier exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

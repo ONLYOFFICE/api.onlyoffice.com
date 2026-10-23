@@ -10,3 +10,4 @@ Possible values:
 - `5` - Import (`Import`)
 - `6` - Convert (`Convert`)
 - `7` - Duplicate (`Duplicate`)
+- `8` - Build (`Build`)

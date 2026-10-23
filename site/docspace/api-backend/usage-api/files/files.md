@@ -1,9 +1,9 @@
-# ONLYOFFICE DocSpace Files API
+# ONLYOFFICE Apps Files API
 
 The browsable version of this reference, with a request builder and code samples, is published at
 [https://api.onlyoffice.com/docspace/api-backend/usage-api/](https://api.onlyoffice.com/docspace/api-backend/usage-api/).
 
-All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is the address of your DocSpace instance.
+All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is the address of your Apps instance.
 
 ## Files
 
@@ -121,6 +121,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**unassignFileTemplate**](metadata/unassign-file-template.md) | **DELETE** /api/2.0/files/metadata/file/\{fileId\}/templates/\{templateId\} | Unassign a template from a file |
 | [**unassignFolderTemplate**](metadata/unassign-folder-template.md) | **DELETE** /api/2.0/files/metadata/folder/\{folderId\}/templates/\{templateId\} | Unassign a template from a folder |
 | [**updateField**](metadata/update-field.md) | **PUT** /api/2.0/files/metadata/templates/\{templateId\}/fields/\{fieldId\} | Update a metadata field |
+| [**updateFolderTemplate**](metadata/update-folder-template.md) | **PUT** /api/2.0/files/metadata/folder/\{folderId\}/templates/\{templateId\} | Update a template assignment on a folder |
 | [**updateTemplate**](metadata/update-template.md) | **PUT** /api/2.0/files/metadata/templates/\{templateId\} | Update a metadata template |
 
 ## Operations

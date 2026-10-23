@@ -6,7 +6,7 @@
 
 Update an API key
 
-Renames an API key, replaces the scopes it may use, or activates and deactivates it, without changing the secret. The caller may update a key they created themselves, and a DocSpace administrator may update any key of the portal. Take the values for `permissions` from `GET api/2.0/keys/permissions`; an unknown scope or an empty array is rejected with 400, and the fields that are left out keep their current values. The answer is a plain boolean: true when the key was changed, and false when it was not - which is also what an already expired key returns, because such a key is left untouched instead of being reported as an error. Deactivating a key through `isActive` stops it from authenticating while keeping it in the list, so use it when the key may be needed again and `DELETE api/2.0/keys/{keyId}` when it may not.
+Renames an API key, replaces the scopes it may use, or activates and deactivates it, without changing the secret. The caller may update a key they created themselves, and a DocSpace administrator may update any key of the portal. Take the values for `permissions` from `GET api/2.0/keys/permissions`; an unknown scope or an empty array is rejected with 400, as is a name that is empty or made of whitespace only, and the fields that are left out keep their current values. The answer is a plain boolean: true when the key was changed, and false when it was not - which is also what an already expired key returns, because such a key is left untouched instead of being reported as an error. Deactivating a key through `isActive` stops it from authenticating while keeping it in the list, so use it when the key may be needed again and `DELETE api/2.0/keys/{keyId}` when it may not. An ID that matches no key of the portal, including a key that has already been deleted, is rejected with 404.
 
 ## Parameters
 
@@ -20,11 +20,12 @@ Renames an API key, replaces the scopes it may use, or activates and deactivates
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | True if the key was changed, false if it was left untouched because it has already expired | [**BooleanWrapper**](../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The request body cannot be read, the name is longer than 30 characters, or the permissions array is empty or contains a scope the portal does not know | - | - |
+| **400** | The request body cannot be read, the name is empty, made of whitespace only or longer than 30 characters, or the permissions array is empty or contains a scope the portal does not know | - | - |
 | **403** | The key belongs to another member and the caller is not a DocSpace admin | - | - |
-| **500** | The portal has no key with this ID | - | - |
+| **404** | The portal has no key with this ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 
