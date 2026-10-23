@@ -99,4 +99,4 @@ f
 
 </APITable>
 
-可以在 [这里](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage)找到有关构建主机页面的更多信息。
+可以在[这里](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage)找到有关构建主机页面的更多信息。

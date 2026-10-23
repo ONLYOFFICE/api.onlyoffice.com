@@ -30,7 +30,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 **方式一**：Nuxeo 应用市场（推荐）
 
-直接从 [Nuxeo 应用市场](https://connect.nuxeo.com/nuxeo/site/marketplace) 安装。
+直接从 [Nuxeo 应用市场](https://connect.nuxeo.com/nuxeo/site/marketplace)安装。
 
 **方式二**：[nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/)
 

@@ -62,7 +62,7 @@ sidebar_position: -1
 
 语言、主题或聊天等编辑器行为可以通过**发现查询参数**进行自定义，这些参数是可以通过文件存储在 `urlsrc` 属性中公开的参数。
 
-所有可用的发现查询参数都可以在 [这里](../../using-wopi/wopi-discovery.md#wopi-standard) 找到。
+所有可用的发现查询参数都可以在[这里](../../using-wopi/wopi-discovery.md#wopi-standard)找到。
 
 ## 如何在应用程序中创建在线办公会话？ {#how-to-create-an-online-office-session-within-the-application}
 
@@ -90,7 +90,7 @@ sidebar_position: -1
 
 ## 我在哪里可以找到可能的 WOPI 错误代码及其描述？ {#where-can-i-find-possible-wopi-error-codes-and-their-descriptions}
 
-您可以在 [此页面](../../using-wopi/wopi-rest-api/wopi-rest-api.md)上找到可能的 WOPI 错误代码及其描述。
+您可以在[此页面](../../using-wopi/wopi-rest-api/wopi-rest-api.md)上找到可能的 WOPI 错误代码及其描述。
 
 ## ONLYOFFICE 文档支持哪些 WOPI REST API 操作？ {#which-wopi-rest-api-operations-are-supported-by-onlyoffice-docs}
 
@@ -120,6 +120,6 @@ ONLYOFFICE 文档使用以下 WOPI 操作：[CheckFileInfo](../../using-wopi/wop
 
 ## ONLYOFFICE 文档 API 和 WOPI 有什么区别？ {#what-are-the-difference-between-onlyoffice-docs-api-and-wopi}
 
-Y 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api) 与任何云服务集成。
+Y 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api)与任何云服务集成。
 
 [此页面上](../../using-wopi/api-vs-wopi.md)的表格将帮助您找出这些选项之间的区别。

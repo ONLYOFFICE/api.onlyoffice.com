@@ -9,7 +9,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="5rN7CksWE-w"/>
 
-该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助 ONLYOFFICE 文档在 [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) 中编辑办公文档。
+该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint)可让用户借助 ONLYOFFICE 文档在 [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) 中编辑办公文档。
 
 ## 功能特性
 

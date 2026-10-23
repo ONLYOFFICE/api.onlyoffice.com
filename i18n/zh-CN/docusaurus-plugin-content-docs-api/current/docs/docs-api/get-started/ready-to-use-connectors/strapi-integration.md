@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Strapi 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi) 能让用户借助 ONLYOFFICE 文档，在 [Strapi](https://strapi.io/) 中编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi)能让用户借助 ONLYOFFICE 文档，在 [Strapi](https://strapi.io/) 中编辑办公文档。
 
 ## 功能特性
 

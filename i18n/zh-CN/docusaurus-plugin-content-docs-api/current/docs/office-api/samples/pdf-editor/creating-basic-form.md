@@ -11,7 +11,7 @@ hide_table_of_contents: true
 
 :::tip
 此示例也适用于 **Document Builder**。
-下载示例并在 [Document Builder 示例](/docs/document-builder/samples/samples.md) 页面获取更多信息。
+下载示例并在 [Document Builder 示例](/docs/document-builder/samples/samples.md)页面获取更多信息。
 :::
 
 ```ts editor-pdf zoom=60

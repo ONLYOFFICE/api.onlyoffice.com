@@ -16,13 +16,13 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
 
 从 9.0 版本开始，您可以使用 ONLYOFFICE 内置的 AI 插件，自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript 代码：
 
-1. 配置 AI 插件。详情请参见 [配置 AI 插件](ai-plugin.md#configuring)。
-2. 打开 **视图** 选项卡，点击 **宏**。
-3. 在 **宏** 窗口中点击 **AI** 图标，选择 **从 VBA 转换**。
+1. 配置 AI 插件。详情请参见[配置 AI 插件](ai-plugin.md#configuring)。
+2. 打开**视图**选项卡，点击**宏**。
+3. 在**宏**窗口中点击 **AI** 图标，选择**从 VBA 转换**。
 
     ![AI plugin](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI plugin](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
 
-4. 在 **从 VBA 转换宏** 窗口中插入 VBA 代码，点击 **创建**。生成的宏示例将插入到 **宏** 窗口中。
+4. 在**从 VBA 转换宏**窗口中插入 VBA 代码，点击**创建**。生成的宏示例将插入到**宏**窗口中。
 
     ![Convert VBA](/assets/images/plugins/convert-vba.png#gh-light-mode-only)![Convert VBA](/assets/images/plugins/convert-vba.dark.png#gh-dark-mode-only)
 
@@ -32,7 +32,7 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
     虽然 AI 插件可以生成完整且可运行的宏，但并不总是完美无误。请务必仔细检查输出结果并进行充分测试，尤其是对于复杂的宏。
     :::
 
-6. 点击 ![运行图标](/assets/images/plugins/play.svg) 测试脚本。
+6. 点击 ![运行图标](/assets/images/plugins/play.svg)测试脚本。
 
 例如，以下 VBA 宏可取消合并活动工作表中所有已合并的单元格：
 
@@ -75,7 +75,7 @@ End Sub
 1. **VBA 输入分析：** 解析所提供的 VBA 代码，检测其逻辑（范围、公式、循环、条件和操作）。
 2. **Office API 映射：** 将 VBA 操作映射到等效的 ONLYOFFICE Office API 方法。
 3. **JavaScript 宏生成：** 生成与 ONLYOFFICE 宏兼容的 JavaScript 宏。
-4. **结果插入：** 将生成的脚本插入到 **宏** 窗口中供审查。
+4. **结果插入：** 将生成的脚本插入到**宏**窗口中供审查。
 5. **验证与调整：** 您对脚本进行审查、测试并根据需要进行调整，尤其是对于复杂或 VBA 特有的行为。
 
 如果 VBA 转换失败，插件将输出错误信息，或生成一个带有注释说明失败原因的宏。

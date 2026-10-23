@@ -97,8 +97,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | options.images          | `object[]` | 必填 | 要插入的图像数组。                                                                                                                                                                                                                                      |
 | options.images.fileType | `string` | 必填 | 要插入文件的图像类型：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`。                                                                                                                                                     |
 | options.images.url      | `string` | 必填 | 存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。                                                                                                              |
-| options.token           | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
-| options.url             | `string` | 必填 | 存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 `options.images.url` 参数。 |
+| options.token           | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#insertimage)形式添加到参数的加密签名。                                                                                                                                |
+| options.url             | `string` | 必填 | 存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)否则会出现错误。自 7.0 版起已弃用，请改用 `options.images.url` 参数。 |
 
 **示例**：
 
@@ -182,7 +182,7 @@ docEditor.insertImage({
 | options.currentVersion        | `number` | 必填 | 当前文档版本号。                                                                                                      |
 | options.error                 | `string` | 非必填的 | 错误消息文本。                                                                                                                   |
 | options.history               | `object[]` | 必填 | 文档版本数组。                                                                                                    |
-| options.history.changes       | `object` | 非必填的 | 保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
+| options.history.changes       | `object` | 非必填的 | 保存文档后返回的[历史对象](./callback-handler.md#history)的 `changes`。                      |
 | options.history.created       | `string` | 必填 | 文档版本创建日期。                                                                                                       |
 | options.history.key           | `string` | 必填 | 服务用来识别文档的唯一文档标识符。                                                             |
 | options.history.serverVersion | `string` | 非必填的 | 保存更改的文档编辑服务的版本，例如 `"10.0.0"`。请原样传递[历史对象](./callback-handler.md#history)中的 `serverVersion` 值。仅当此值与当前服务器版本一致时，才会显示更改。如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
@@ -281,7 +281,7 @@ docEditor.insertImage({
 
 ## setActionLink
 
-设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 `ACTION_DATA` 以设置链接。该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。
+设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 `ACTION_DATA` 以设置链接。该链接由软件集成商创建，他们在**文档管理器**中使用 ONLYOFFICE 文档。
 
   ``` ts
   docEditor.setActionLink(link);
@@ -333,7 +333,7 @@ docEditor.insertImage({
 
 | 参数                     | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.changesUrl        | `string` | 非必填的 | 带有文档更改数据的文件的url地址，可以通过 `changesurl` 链接从保存文档后返回的 [JSON 对象](./callback-handler.md#changesurl) 中下载。文件请求使用由 ONLYOFFICE 文档检查的令牌进行签名。            |
+| options.changesUrl        | `string` | 非必填的 | 带有文档更改数据的文件的url地址，可以通过 `changesurl` 链接从保存文档后返回的 [JSON 对象](./callback-handler.md#changesurl)中下载。文件请求使用由 ONLYOFFICE 文档检查的令牌进行签名。            |
 | options.error             | `string` | 非必填的 | 错误消息文本。                                                                                                                                                                                                                                                                                             |
 | options.fileType          | `string` | 非必填的 | 使用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                    |
 | options.key               | `string` | 必填 | 文档标识符，用于明确标识文档文件。                                                                                                                                                                                                                                           |
@@ -606,7 +606,7 @@ docEditor.insertImage({
 
 ## setSharingSettings
 
-更新有关允许与其他用户共享文档的设置的 [信息](./config/document/info.md#sharingsettings)。该方法可以在 [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) 事件之后调用。
+更新有关允许与其他用户共享文档的设置的[信息](./config/document/info.md#sharingsettings)。该方法可以在 [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) 事件之后调用。
 
   ``` ts
   docEditor.setSharingSettings(options);

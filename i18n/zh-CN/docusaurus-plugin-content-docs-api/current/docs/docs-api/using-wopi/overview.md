@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 概述
 
-从 6.4 版开始，ONLYOFFICE 文档提供 **对 Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
+从 6.4 版开始，ONLYOFFICE 文档提供**对 Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
 
 本文档描述：
 
@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 - 支持的 [WOPI REST API](./wopi-rest-api/wopi-rest-api.md) 函数；
 - 可以通过 [PostMessage](./postmessage.md) 发布的可用消息；
 - 在online office中[转换](./conversion-api.md)不同文件格式请求参数；
-- [编辑二进制文档格式](./editing-binary-documents.md) 的方案；
+- [编辑二进制文档格式](./editing-binary-documents.md)的方案；
 - ONLYOFFICE 文档 API 和 WOPI 之间的[区别](./api-vs-wopi.md)。
 
 有关 WOPI 协议的更多信息，请阅读 [WOPI 文档](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/)。
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 :::note
-默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档** 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 :::
 
 ## 启用 WOPI {#enabling-wopi}
@@ -65,7 +65,7 @@ import TabItem from '@theme/TabItem';
 
 ## IP filter
 
-ONLYOFFICE 文档只能与受信任的 WOPI 主机配合使用。这与 WOPI 文档中的 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 是同一理念。请在 IP 过滤器规则中允许您的 WOPI 主机，并拒绝所有其他主机。
+ONLYOFFICE 文档只能与受信任的 WOPI 主机配合使用。这与 WOPI 文档中的 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list)是同一理念。请在 IP 过滤器规则中允许您的 WOPI 主机，并拒绝所有其他主机。
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
 

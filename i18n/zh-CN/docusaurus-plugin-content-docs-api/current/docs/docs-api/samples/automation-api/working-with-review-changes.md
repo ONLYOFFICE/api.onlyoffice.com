@@ -10,7 +10,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 使用自动化 API 从外部 UI 接受或拒绝跟踪的更改，无需用户直接操作编辑器。
 
 :::info
-文档以 **修订模式** 打开。您的代码调用 `connector.executeMethod()` 来导航和处理更改。编辑器会实时更新。
+文档以**修订模式**打开。您的代码调用 `connector.executeMethod()` 来导航和处理更改。编辑器会实时更新。
 :::
 
 <ReviewChangesExternalToolbar/>
@@ -35,7 +35,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
    });
    ```
 
-2. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 [AcceptReviewChanges](/docs/plugins/interacting-with-editors/document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugins/interacting-with-editors/document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
+2. 当用户单击自定义界面中的**接受/拒绝**按钮时，将执行 [AcceptReviewChanges](/docs/plugins/interacting-with-editors/document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugins/interacting-with-editors/document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
 
    ``` ts
    document.getElementById("accept").addEventListener("click", () => {
@@ -46,7 +46,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
    });
    ```
 
-3. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToNextReviewChange](/docs/plugins/interacting-with-editors/document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
+3. 当用户单击自定义界面中的**上一个/下一个**按钮时，将执行 [MoveToNextReviewChange](/docs/plugins/interacting-with-editors/document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
 
    ``` ts
    document.getElementById("prev").addEventListener("click", () => {
@@ -60,5 +60,5 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
-该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

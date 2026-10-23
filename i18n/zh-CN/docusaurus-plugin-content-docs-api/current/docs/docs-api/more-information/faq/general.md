@@ -18,7 +18,7 @@ sidebar_position: -12
 
 当前的 ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
 
-您可以使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
+您可以使用 API 向**文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
 
   ``` json
   {

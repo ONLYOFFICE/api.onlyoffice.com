@@ -62,7 +62,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 针对简体中文界面，新增 [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) 参数。
 - 新增 [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) 参数。
 - 新增对 [vsdm、vsdx、vssm、vssx、vstm、vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) 格式的转换能力。
-- 在 [文档类型](../usage-api/config/config.md#documenttype) 参数中新增 `diagram` 文档类型。
+- 在[文档类型](../usage-api/config/config.md#documenttype)参数中新增 `diagram` 文档类型。
 
 ## 版本 8.3 {#version-83}
 
@@ -107,7 +107,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 8.1
 
 - 新增 [editorConfig.plugins.options](../usage-api/config/editor/plugins.md#options) 参数。
-- 新增支持将 `tif` / `tiff` 图像类型[插入](../usage-api/methods.md#insertimage) 文件。
+- 新增支持将 `tif` / `tiff` 图像类型[插入](../usage-api/methods.md#insertimage)文件。
 - 添加了 [startFilling](../usage-api/methods.md#startfilling) 方法。
 - 添加了 [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) 事件。
 - 向 WOPI 主机页面的 `form` 元素添加了 [docs\_api\_config](../using-wopi/host-page.md#parameters) 参数。
@@ -168,7 +168,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) 事件。
 - 添加了 [document.referenceData](../usage-api/config/document/document.md#referencedata) 参数。
 - 向 `CheckFileInfo` WOPI 操作添加了 [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性。
-- 添加了 [编辑二进制文档格式](../using-wopi/editing-binary-documents.md) 的方案。
+- 添加了[编辑二进制文档格式](../using-wopi/editing-binary-documents.md)的方案。
 - 向 WOPI 发现添加了 [convert](../using-wopi/wopi-discovery.md#convert) 操作。
 - 添加了 [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI 操作。
 
@@ -180,7 +180,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 将 `theme-contrast-dark` 主题 id 添加到 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中。
 - 将 `phone` 字段添加到 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中。
 - 向许可证响应添加 [connections\_view](../additional-api/command-service/license.md#license.connections_view)、[users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) 和 [users\_view](../additional-api/command-service/license.md#quota.users_view)。
-- 在文本文档、电子表格和演示文稿编辑器中添加了 [实时查看器](../get-started/how-it-works/viewing.md) 模式。
+- 在文本文档、电子表格和演示文稿编辑器中添加了[实时查看器](../get-started/how-it-works/viewing.md)模式。
 - 将 [embedview](../using-wopi/wopi-discovery.md#embedview) 操作添加到 wopi 发现中。
 - [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#configuration-parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#configuration-parameters) 参数。
 
@@ -220,18 +220,18 @@ ONLYOFFICE 文档 API 的更改列表。
 - `editorConfig.customization.reviewDisplay`、`editorConfig.customization.showReviewChanges`、`editorConfig.customization.trackChanges` 参数已弃用，请改用 [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) 参数。
 - 添加了 [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了 [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
-- 添加了查看电子表格文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
+- 添加了查看电子表格文件的[文档历史记录](../get-started/how-it-works/document-history.md)的可能性。
 - 为 PostMessage WOPI 协议添加了 [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) 消息。
 
 ## 版本 6.4
 
 - 增加了打开 [oxps](../usage-api/config/config.md#documenttype) 格式的功能。
-- 增加了对 [WOPI 协议](../using-wopi/overview.md) 的支持。
+- 增加了对 [WOPI 协议](../using-wopi/overview.md)的支持。
 - 添加了 [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) 部分。
 - 将 `simple` 值添加到 `editorConfig.customization.reviewDisplay` 参数中。
 - 添加了保存在电子表格文件中的 [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) 线程评论。
 - 添加了 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 字段。
-- 添加了查看演示文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
+- 添加了查看演示文件的[文档历史记录](../get-started/how-it-works/document-history.md)的可能性。
 - 添加了 [editorConfig.customization.hideNotes](../usage-api/config/editor/customization/customization-standard-branding.md#hidenotes) 字段。
 - 添加了 [editorConfig.coEditing](../usage-api/config/editor/editor.md#coediting) 字段。
 - 添加了 [requestClose](../usage-api/methods.md#requestclose) 方法。
@@ -283,7 +283,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 5.5
 
-- [转换服务](../additional-api/conversion-api/request.md) 地址 `https://documentserver/ConvertService.ashx` 已替换为 `https://documentserver/converter`。
+- [转换服务](../additional-api/conversion-api/request.md)地址 `https://documentserver/ConvertService.ashx` 已替换为 `https://documentserver/converter`。
 - 添加了 [editorConfig.customization.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#spellcheck) 字段。
 - 添加了转换到 [pdfa](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的功能。
 - 添加了 [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) 事件。
@@ -295,7 +295,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.unit](../usage-api/config/editor/customization/customization-standard-branding.md#unit) 字段。
 - 添加了 [region](../additional-api/conversion-api/request.md#region) 字段。
 - 添加了转换的 [spreadsheetLayout](../additional-api/conversion-api/request.md#spreadsheetLayout) 字段。
-- 添加了转换的 [输入错误](../additional-api/conversion-api/error-codes.md)。
+- 添加了转换的[输入错误](../additional-api/conversion-api/error-codes.md)。
 - [events.onRequestSendNotify](../usage-api/config/events.md#onrequestsendnotify) 事件和 [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) 事件可以独立设置。
 - 添加了 [editorConfig.customization.mentionShare](../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) 字段。
 - [status](../usage-api/callback-handler.md) 选择 `callbackUrl`>。
@@ -320,20 +320,20 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 5.3
 
-- 添加了 [转换](../additional-api/conversion-api/conversion-tables.md) 到 OOXML（dotx、 xltx、potx）和 ODF（ott、ots、otp）模板的功能。
+- 添加了[转换](../additional-api/conversion-api/conversion-tables.md)到 OOXML（dotx、 xltx、potx）和 ODF（ott、ots、otp）模板的功能。
 - 添加了 `editorConfig.customization.reviewDisplay` 字段。
 - `editorConfig.customization.commentAuthorOnly` 字段现在也用于限制评论删除。
 - 添加了 [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) 字段。
 - 添加了 [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) 字段。
 - 添加了 [editorConfig.customization.toolbarNoTabs](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarnotabs) 字段。
-- 为受密码保护的文档添加了 [转换错误](../additional-api/conversion-api/error-codes.md)。
+- 为受密码保护的文档添加了[转换错误](../additional-api/conversion-api/error-codes.md)。
 - 添加了 [editorConfig.actionLink](../usage-api/config/editor/editor.md#actionlink) 字段。
 - 添加了 [setActionLink](../usage-api/methods.md#setactionlink) 方法。
 - 添加了 [events.onMakeActionLink](../usage-api/config/events.md#onmakeactionlink) 事件。
 
 ## 版本 5.2
 
-- 请求 [正文](../additional-api/signature/request/token-in-body.md) 参数中的令牌。
+- 请求[正文](../additional-api/signature/request/token-in-body.md)参数中的令牌。
 - [document.permissions.comment](../usage-api/config/document/permissions.md#comment) 适用于所有类型的编辑器。
 - 添加了 [document.permissions.fillForms](../usage-api/config/document/permissions.md#fillforms) 字段。
 - 添加了 [editorConfig.customization.help](../usage-api/config/editor/customization/customization-standard-branding.md#help) 字段。
@@ -351,12 +351,12 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 5.0
 
 - 添加了 [document.permissions.modifyFilter](../usage-api/config/document/permissions.md#modifyfilter) 字段。
-- 添加了启用宏的文档、文档模板和平面文档 [格式](../additional-api/conversion-api/conversion-tables.md) 的转换。
+- 添加了启用宏的文档、文档模板和平面文档[格式](../additional-api/conversion-api/conversion-tables.md)的转换。
 - `events.onReady` 事件已弃用，请改用 [events.onAppReady](../usage-api/config/events.md#onappready) 事件。
 - 添加了 [events.onDocumentReady](../usage-api/config/events.md#ondocumentready) 事件。
 - 添加了 [editorConfig.plugins.autostart](../usage-api/config/editor/plugins.md#autostart) 字段。
 - 添加了 [events.onWarning](../usage-api/config/events.md#onwarning) 事件。
-- 添加了 [文档生成器服务](../additional-api/document-builder-api.md)。
+- 添加了[文档生成器服务](../additional-api/document-builder-api.md)。
 
 ## 版本 4.4
 
@@ -369,7 +369,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onRequestRename](../usage-api/config/events.md#onrequestrename) 事件。
 - 添加了 [meta](../additional-api/command-service/meta.md) 命令。
 - 添加了 [events.onMetaChange](../usage-api/config/events.md#onmetachange) 事件。
-- 添加了 [最后一个加入共同编辑的用户](../usage-api/callback-handler.md) 对 `callbackUrl` 的使用。
+- 添加了[最后一个加入共同编辑的用户](../usage-api/callback-handler.md)对 `callbackUrl` 的使用。
 - 添加了 [editorConfig.location](../usage-api/config/editor/editor.md#location) 字段。
 - 添加了 [editorConfig.embedded.autostart](../usage-api/config/editor/embedded.md#autostart) 字段。
 
@@ -392,7 +392,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.autosave](../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 字段。
 - [changeshistory](../usage-api/callback-handler.md#changeshistory) 字段已删除，请改用 [history](../usage-api/callback-handler.md#history) 字段。
 - 更改了 [setHistoryData](../usage-api/methods.md#sethistorydata) 方法。
-- 在 [文档转换服务](../additional-api/conversion-api/request.md) 中添加了将文件转换为 [缩略图](../additional-api/conversion-api/request.md#从-docx-生成-png-缩略图) 的可能性。
-- POST 请求现在用于与 [文档命令服务](../additional-api/command-service/command-service.md) 和 [文档转换服务](../additional-api/conversion-api/request.md) 的交互。
+- 在[文档转换服务](../additional-api/conversion-api/request.md)中添加了将文件转换为[缩略图](../additional-api/conversion-api/request.md#从-docx-生成-png-缩略图)的可能性。
+- POST 请求现在用于与[文档命令服务](../additional-api/command-service/command-service.md)和[文档转换服务](../additional-api/conversion-api/request.md)的交互。
 - 添加了 [version](../additional-api/command-service/version.md) 命令。
 - 添加了编辑器打开和传入传出请求的 [signature](../additional-api/signature/signature.md)。
