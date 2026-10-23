@@ -21,7 +21,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 1. 使用 [AssemblyAI](https://www.assemblyai.com/) 生成 API 令牌。
 2. 前往**设置 → 集成 → 插件**。
-3. 点击 **Speech to text** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+3. 点击 **Speech to text** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 4. 在相应字段中输入 API 令牌。
 
 启用 API 令牌后，该插件将对当前 ONLYOFFICE Apps 门户的所有用户可用。
@@ -36,7 +36,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 1. 打开**文档**部分或某个可用房间。
 2. 右键点击文件名以打开文件上下文菜单。
-3. 点击 **Convert to text**。
+3. 点击**转换为文本**。
 4. 如果在音频/视频文件中检测到语音，将创建名为 *“Filename + text”* 的新文件。
 
 ## 插件结构

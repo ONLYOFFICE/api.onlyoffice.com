@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改任何设置——ZIP archives 插件没有可配置参数。
 
-如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **ZIP archives** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
+如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **ZIP archives** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
 ## 使用
 
@@ -36,7 +36,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要将文件夹压缩为 ZIP 压缩包，请右键点击文件列表中的文件夹，打开**更多选项 → 压缩**子菜单，然后选择一个选项：
 
-![Archive folder](/assets/images/docspace/zip-archive-folder.png#gh-light-mode-only)![Archive folder](/assets/images/docspace/zip-archive-folder.dark.png#gh-dark-mode-only)
+![压缩文件夹](/assets/images/docspace/zip-archive-folder.png#gh-light-mode-only)![压缩文件夹](/assets/images/docspace/zip-archive-folder.dark.png#gh-dark-mode-only)
 
 - **压缩到此处**：在文件夹的父目录中创建一个与文件夹同名的 `.zip` 文件。
 - **选择位置**：在您选择的文件夹或房间中创建一个与文件夹同名的 `.zip` 文件。
@@ -48,7 +48,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 1. 要压缩单个项目，请右键点击该项目，然后从**更多选项**下拉菜单中选择**压缩所选项目**。
 2. 要一次压缩多个项目，请使用复选框选中它们，然后右键点击所选项目并选择**压缩所选项目**。
 
-    ![Archive selected files](/assets/images/docspace/create-archive-from-files.png#gh-light-mode-only)![Archive selected files](/assets/images/docspace/create-archive-from-files.dark.png#gh-dark-mode-only)
+    ![压缩所选文件](/assets/images/docspace/create-archive-from-files.png#gh-light-mode-only)![压缩所选文件](/assets/images/docspace/create-archive-from-files.dark.png#gh-dark-mode-only)
 3. 插件会在同一文件夹中创建一个名为 `新压缩包.zip` 的文件。
 
 ## 插件结构

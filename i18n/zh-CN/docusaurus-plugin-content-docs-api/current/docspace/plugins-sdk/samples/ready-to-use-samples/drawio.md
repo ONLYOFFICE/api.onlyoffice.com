@@ -19,11 +19,11 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
 
-- **Languages**：从列表中选择所需语言。**Auto** 选项对应门户语言。
-- **Offline mode**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
-- **Libraries**：打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择 **File → New Library / Open Library from**）。
+- **语言**：从列表中选择所需语言。**Auto** 选项对应门户语言。
+- **离线模式**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
+- **资源库**：打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择 **文件 → 新建库 / 从...打开库**）。
 
 您还可以在此查看插件元数据，例如作者、版本、状态、主页和描述。
 
@@ -36,9 +36,9 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 1. 打开**文档**部分或某个可用房间。
 2. 点击**操作 → 更多**。
 3. 从出现的菜单中选择 **Draw.io** 插件。
-4. 在弹出窗口中更改文件名，然后点击 **Create**。新的 `.drawio` 文件会显示在文件列表中。
+4. 在弹出窗口中更改文件名，然后点击**创建**。新的 `.drawio` 文件会显示在文件列表中。
 
-要打开已创建的图表，请点击文件名，或通过文件上下文菜单操作：**右键点击 → Edit diagram**。文件将在同一标签页中打开。要返回文件列表，请点击 **Save & Exit** 或 **Exit**。如果图表由具有查看权限的用户打开，则仅提供 **Exit** 按钮。该用户所做的任何更改都不会被保存。
+要打开已创建的图表，请点击文件名，或通过文件上下文菜单操作：**右键点击 → 打开图表**。文件将在同一标签页中打开。要返回文件列表，请点击**保存并退出**或**退出**。如果图表由具有查看权限的用户打开，则仅提供**退出**按钮。该用户所做的任何更改都不会被保存。
 
 ### 编辑已导出的图表
 

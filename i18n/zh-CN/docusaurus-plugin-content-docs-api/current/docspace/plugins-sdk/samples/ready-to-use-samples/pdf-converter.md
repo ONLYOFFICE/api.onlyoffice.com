@@ -21,7 +21,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 1. 使用 [ConvertAPI](https://convertapi.com) 生成 API 令牌。
 2. 前往**设置 → 集成 → 插件**。
-3. 点击 **PDF converter** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+3. 点击 **PDF converter** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 4. 在相应字段中输入 API 令牌。
 
 启用 API 令牌后，该插件将对当前 ONLYOFFICE Apps 门户的所有用户可用。
@@ -40,8 +40,8 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 1. 打开**文档**部分或某个可用房间。
 2. 右键点击文件名以打开文件上下文菜单。
-3. 点击 **Convert to PDF**。
-4. 在弹出窗口中更改文件名，然后点击 **Convert file**。转换后的文件会保存在与原始文件相同的文件夹中。
+3. 点击**转换为 PDF**。
+4. 在弹出窗口中更改文件名，然后点击**转换文件**。转换后的文件会保存在与原始文件相同的文件夹中。
 
 ## 插件结构
 

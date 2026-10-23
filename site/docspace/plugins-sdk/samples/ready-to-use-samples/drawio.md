@@ -38,7 +38,7 @@ To create a new `.drawio` diagram:
 3. Select the **Draw.io** plugin from the appeared menu.
 4. Change the file name in a pop-up window and click **Create**. A new `.drawio` file appears in the file list.
 
-To open the created diagram, click the file name or do it via the file context menu: **right-click → Edit diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
+To open the created diagram, click the file name or do it via the file context menu: **right-click → Open diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
 
 ### Editing an exported diagram
 

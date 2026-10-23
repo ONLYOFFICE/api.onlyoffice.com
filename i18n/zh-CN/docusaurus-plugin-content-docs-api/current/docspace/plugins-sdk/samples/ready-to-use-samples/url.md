@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **URL** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **URL** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 
 ## 使用
 
@@ -32,7 +32,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 3. 选择**新建 URL**。
 4. 在对话框中指定 URL 和标题，然后点击**创建**（或点击**取消**放弃）。
 
-![Create URL](/assets/images/docspace/url-create.png#gh-light-mode-only)![Create URL](/assets/images/docspace/url-create.dark.png#gh-dark-mode-only)
+![创建 URL](/assets/images/docspace/url-create.png#gh-light-mode-only)![创建 URL](/assets/images/docspace/url-create.dark.png#gh-dark-mode-only)
 
 该链接会以 `.url` 文件的形式出现在文件列表中。点击该项目时，外部资源会在单独的浏览器标签页中打开。
 
@@ -44,7 +44,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 2. 选择**编辑 URL**。
 3. 在对话框中更新 URL 和/或标题，然后点击**保存**（或点击**取消**放弃）。
 
-![Edit URL](/assets/images/docspace/url-edit.png#gh-light-mode-only)![Edit URL](/assets/images/docspace/url-edit.dark.png#gh-dark-mode-only)
+![编辑 URL](/assets/images/docspace/url-edit.png#gh-light-mode-only)![编辑 URL](/assets/images/docspace/url-edit.dark.png#gh-dark-mode-only)
 
 ## 插件结构
 

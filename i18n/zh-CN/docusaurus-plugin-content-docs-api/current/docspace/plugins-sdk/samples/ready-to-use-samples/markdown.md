@@ -19,7 +19,7 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **Markdown** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **Markdown** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 
 ## 使用
 
@@ -30,17 +30,17 @@ tags: ["Apps", "Plugins", "Ready-to-use"]
 1. 打开**文档**部分或某个可用房间。
 2. 点击**操作 → 更多**。
 3. 从出现的菜单中选择 **Markdown** 插件。
-4. 在弹出窗口中更改文件名，然后点击 **Create**。新的 `.md` 文件会显示在文件列表中。
+4. 在弹出窗口中更改文件名，然后点击**创建**。新的 `.md` 文件会显示在文件列表中。
 
-要打开已创建的 `.md` 文件，请点击文件名，或通过文件上下文菜单操作：**右键点击 → Edit markdown (Preview markdown)**。文件将在同一标签页中打开。要返回文件列表，请点击 **Save and close** 或 ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。如果文件由具有查看权限的用户打开，则仅提供 ![Cross](/assets/images/docspace/cross.png#gh-light-mode-only)![Cross](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。该用户所做的任何更改都不会被保存。
+要打开已创建的 `.md` 文件，请点击文件名，或通过文件上下文菜单操作：**右键点击 → 编辑 Markdown（预览 Markdown）**。文件将在同一标签页中打开。要返回文件列表，请点击**保存并关闭**或 ![关闭图标](/assets/images/docspace/cross.png#gh-light-mode-only)![关闭图标](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。如果文件由具有查看权限的用户打开，则仅提供 ![关闭图标](/assets/images/docspace/cross.png#gh-light-mode-only)![关闭图标](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。该用户所做的任何更改都不会被保存。
 
 ### 编辑 .md 文件
 
-要编辑 `.md` 文件，您需要在 **Markdown** 部分添加标记文本。输入的文本将显示在右侧的 **Preview** 部分。
+要编辑 `.md` 文件，您需要在 **Markdown** 部分添加标记文本。输入的文本将显示在右侧的**预览**部分。
 
-要展开 **Markdown** / **Preview** 部分，请使用 **Resize** 按钮。
+要展开 **Markdown** / **预览**部分，请使用**调整大小**按钮。
 
-以查看模式打开文件时，无法展开 **Preview** 部分，因为它会立即以展开形式打开。
+以查看模式打开文件时，无法展开**预览**部分，因为它会立即以展开形式打开。
 
 ## 插件结构
 
