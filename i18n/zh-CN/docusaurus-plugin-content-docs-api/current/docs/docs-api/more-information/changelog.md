@@ -288,7 +288,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了转换到 [pdfa](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的功能。
 - 添加了 [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) 事件。
 - 添加了 [setRevisedFile](../usage-api/methods.md#setrevisedfile) 方法。
-- [methods](../additional-api/signature/browser.md#methods) 参数中的Token。
+- [methods](../additional-api/signature/browser.md#methods) 参数中的 Token。
 - `document.permissions.changeHistory` 字段已弃用，请添加 [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) 字段。
 - 添加了 [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) 字段。
 - 添加了 [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) 事件。

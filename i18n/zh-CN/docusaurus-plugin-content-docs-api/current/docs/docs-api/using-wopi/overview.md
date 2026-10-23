@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 概述
 
-从 6.4 版开始，ONLYOFFICE 文档提供 **对Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
+从 6.4 版开始，ONLYOFFICE 文档提供 **对 Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
 
 本文档描述：
 
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 有关 WOPI 协议的更多信息，请阅读 [WOPI 文档](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/)。
 
-您可以在配置文件中查找和更改所有必要的 [WOPI设置](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) ，该文件可以在以下路径中找到（或创建）：
+您可以在配置文件中查找和更改所有必要的 [WOPI 设置](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) ，该文件可以在以下路径中找到（或创建）：
 
 <Tabs>
   <TabItem value="windows" label="Windows">

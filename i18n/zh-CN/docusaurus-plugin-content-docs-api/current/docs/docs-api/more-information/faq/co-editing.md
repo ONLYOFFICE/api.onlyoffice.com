@@ -14,7 +14,7 @@ sidebar_position: -8
 
 ## 如何找到当前正在编辑文档的用户的信息？ {#how-to-find-the-information-about-users-who-are-currently-editing-the-document}
 
-您可以使用API向**文档命令服务**发送 POST 请求。将 `c` 参数设置为 [info](../../additional-api/command-service/info.md) 与 `key` 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中JSON对象的一部分发送：
+您可以使用 API 向**文档命令服务**发送 POST 请求。将 `c` 参数设置为 [info](../../additional-api/command-service/info.md) 与 `key` 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中 JSON 对象的一部分发送：
 
   ``` json
   {
@@ -43,7 +43,7 @@ sidebar_position: -8
 
 ## 如何在保存文档之前断开当前正在编辑文档的用户？ {#how-to-disconnect-users-who-are-currently-editing-the-document-before-saving-the-document}
 
-要在保存文档之前强制断开用户与文档的连接，请使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数设置为 [drop](../../additional-api/command-service/drop.md) 与标识文档的 `key` 参数、以及要断开连接的用户ID数组一起使用。参数作为请求正文中 JSON 对象的一部分发送：
+要在保存文档之前强制断开用户与文档的连接，请使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数设置为 [drop](../../additional-api/command-service/drop.md) 与标识文档的 `key` 参数、以及要断开连接的用户 ID 数组一起使用。参数作为请求正文中 JSON 对象的一部分发送：
 
   ``` json
   {

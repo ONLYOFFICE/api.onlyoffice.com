@@ -11,34 +11,34 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-jira)允许用户借助 ONLYOFFICE 文档在[Jira Software](https://www.atlassian.com/software/jira)中编辑办公文档。
 
-该连接器可在官方的[Atlassian市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)中获取。
+该连接器可在官方的[Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)中获取。
 
 ## 功能特性
 
 - 目前，可使用本应用程序打开和编辑的文档格式有：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
-- 该应用程序会在文档库中为Office文档创建一个新的**在ONLYOFFICE中编辑**菜单项。这使得多个用户能够实时协作，并将更改保存回Jira。
+- 该应用程序会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中编辑**菜单项。这使得多个用户能够实时协作，并将更改保存回 Jira。
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Jira和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Jira发送POST请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Jira 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Jira 发送 POST 请求。
 
 使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
 
-## 安装Jira ONLYOFFICE集成应用程序
+## 安装 Jira ONLYOFFICE 集成应用程序
 
-在Jira的**管理应用程序**页面上传已编译的*target/onlyoffice-jira-app.jar*文件。
+在 Jira 的**管理应用程序**页面上传已编译的*target/onlyoffice-jira-app.jar*文件。
 
-最新的编译包文件可在[此处](https://github.com/ONLYOFFICE/onlyoffice-jira/releases)以及[Atlassian市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)获取。
+最新的编译包文件可在[此处](https://github.com/ONLYOFFICE/onlyoffice-jira/releases)以及[Atlassian 市场](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira)获取。
 
-您也可以从Jira管理面板安装该应用程序：
+您也可以从 Jira 管理面板安装该应用程序：
 
 1. 导航至**管理应用程序**页面。
 2. 点击左侧面板中的**查找新应用程序**。
 3. 使用搜索功能找到**ONLYOFFICE Connector for Jira**。
 4. 点击**安装**以下载并安装该应用程序。
 
-## 配置Jira ONLYOFFICE集成应用程序
+## 配置 Jira ONLYOFFICE 集成应用程序
 
 在**管理应用程序**页面找到已上传的应用程序。点击**配置**，并输入安装了 ONLYOFFICE 文档的服务器名称：
 
@@ -46,24 +46,24 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Jira服务器访问。Jira服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Jira 服务器访问。Jira 服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-有时，您的网络配置可能不允许Jira和ONLYOFFICE 文档之间通过公共地址进行请求。**高级服务器设置**部分允许您设置Jira内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求返回的Jira地址。
+有时，您的网络配置可能不允许 Jira 和 ONLYOFFICE 文档之间通过公共地址进行请求。**高级服务器设置**部分允许您设置 Jira 内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求返回的 Jira 地址。
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Jira管理页面指定您自己的**密钥**。在ONLYOFFICE官方的[配置文档](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Jira 管理页面指定您自己的**密钥**。在 ONLYOFFICE 官方的[配置文档](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
-## 编译Jira ONLYOFFICE集成应用程序
+## 编译 Jira ONLYOFFICE 集成应用程序
 
-如果您打算自行编译Jira ONLYOFFICE集成应用程序（例如，编辑源代码然后进行编译），请按照以下步骤操作：
+如果您打算自行编译 Jira ONLYOFFICE 集成应用程序（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
-1. 成功构建需要稳定的Java版本。如果未安装，可使用以下命令安装**Open JDK 8**：
+1. 成功构建需要稳定的 Java 版本。如果未安装，可使用以下命令安装**Open JDK 8**：
 
    ``` sh
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
 
-2. 安装**Atlassian插件开发工具包（Atlassian Plugin SDK）**。安装过程可参考[此处](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)。
+2. 安装**Atlassian 插件开发工具包（Atlassian Plugin SDK）**。安装过程可参考[此处](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)。
 
 3. 编译软件包：
 
@@ -71,42 +71,42 @@ https://<documentserver>/
    atlas-package
    ```
 
-## 使用Jira ONLYOFFICE集成应用程序
+## 使用 Jira ONLYOFFICE 集成应用程序
 
-借助ONLYOFFICE集成应用程序，您可以直接在Jira仪表板中查看、编辑附加到任务的办公文件，并进行协同创作。
+借助 ONLYOFFICE 集成应用程序，您可以直接在 Jira 仪表板中查看、编辑附加到任务的办公文件，并进行协同创作。
 
-要编辑文档，选择附件名称旁边的**在ONLYOFFICE中编辑**操作，相应的在线编辑器将在新标签页中打开。
+要编辑文档，选择附件名称旁边的**在 ONLYOFFICE 中编辑**操作，相应的在线编辑器将在新标签页中打开。
 
 编辑会话结束后，包含所有更改的文档将作为新附件保存，文件名会添加后缀。如果您正在协作编辑附件，只有在最后一个用户退出编辑器后，更改才会被保存。
 
 ## 工作原理
 
-ONLYOFFICE集成遵循此处记录的API规范：[这里](../basic-concepts.md)。
+ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.md)。
 
-1. 用户导航至Jira附件并选择**在ONLYOFFICE中编辑**操作。
+1. 用户导航至 Jira 附件并选择**在 ONLYOFFICE 中编辑**操作。
 
-2. Jira向**OnlyOfficeEditorServlet**发出请求(URL格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
+2. Jira 向**OnlyOfficeEditorServlet**发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
 
-3. Jira将文档发送到 ONLYOFFICE 文档存储服务，并接收一个临时链接。
+3. Jira 将文档发送到 ONLYOFFICE 文档存储服务，并接收一个临时链接。
 
-4. Jira准备一个包含以下属性的JSON对象：
+4. Jira 准备一个包含以下属性的 JSON 对象：
 
    - **url** - ONLYOFFICE 文档用于下载文档的临时链接；
-   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的URL；
-   - **docserviceApiUrl** - 客户端需要回复给 ONLYOFFICE 文档的URL（由*files.docservice.url.api*属性提供）；
-   - **key** - 用于指示 ONLYOFFICE 文档是否需要重新下载文档的UUID；
+   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **docserviceApiUrl** - 客户端需要回复给 ONLYOFFICE 文档的 URL（由*files.docservice.url.api*属性提供）；
+   - **key** - 用于指示 ONLYOFFICE 文档是否需要重新下载文档的 UUID；
    - **title** - 文档标题（名称）。
 
-5. Jira获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
+5. Jira 获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 
-6. 客户端浏览器向 ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给 ONLYOFFICE 文档。
+6. 客户端浏览器向 ONLYOFFICE 文档的 JavaScript 库发出请求，并将包含上述属性的 DocEditor 配置发送给 ONLYOFFICE 文档。
 
 7. 然后，ONLYOFFICE 文档从文档存储中下载文档，用户开始编辑。
 
 8. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-9. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送POST请求，告知Jira客户端已完成文档编辑并关闭了窗口。
+9. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Jira 客户端已完成文档编辑并关闭了窗口。
 
 10. 包含所有更改的文档将作为新附件保存，文件名会添加后缀。
 
-在此处下载Jira ONLYOFFICE集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-jira)。
+在此处下载 Jira ONLYOFFICE 集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-jira)。

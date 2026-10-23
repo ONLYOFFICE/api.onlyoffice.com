@@ -8,7 +8,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # 回调处理程序
 
-**文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 [callbackUrl](./config/editor/editor.md#callbackurl) 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用POST 请求，请求信息在正文中。
+**文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 [callbackUrl](./config/editor/editor.md#callbackurl) 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用 POST 请求，请求信息在正文中。
 
 ## 参数 {#parameters}
 
@@ -50,7 +50,7 @@ import APITable from '@site/src/components/APITable/APITable';
 每次用户连接或断开文档共同编辑时都会收到它。他们的 `callbackUrl` 被使用。
 
 :::note
-当用户在遭遇Internet 故障后返回到没有更改的文档时也可以收到 `status` **1**。这种情况可以描述如下：
+当用户在遭遇 Internet 故障后返回到没有更改的文档时也可以收到 `status` **1**。这种情况可以描述如下：
 
 - 当用户打开文档时，会发送 `status` **1**。
 - 如果 Internet 连接丢失并且用户没有对文档进行任何更改，则会发送 `status` **4**。屏幕上显示错误并在查看器中打开文档。

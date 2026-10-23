@@ -14,7 +14,7 @@ sidebar_position: -2
 
 1. 主机对二进制文件执行**转换**操作。
 2. 在线办公从主机上取回文件并进行转换。
-3. 在线办公将转换后的文档以原文件ID执行 **PutRelativeFile** 操作回传给主机。
+3. 在线办公将转换后的文档以原文件 ID 执行 **PutRelativeFile** 操作回传给主机。
 4. 主机使用 **PutRelativeFile** 操作的 **X-WOPI-FileConversion** 请求标头来确定请求是在文件转换的上下文中发出的。
 5. 文档转换成功后，在线办公将用户重定向到 **PutRelativeFile** 响应体中返回的 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl)。
 
@@ -26,7 +26,7 @@ sidebar_position: -2
 
 1. 将 [UserCanWrite](./wopi-rest-api/checkfileinfo.md#UserCanWrite) 属性设置为 **true**。
 2. 将 [UserCanNotWriteRelative](./wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性设置为**false**（或简单地忽略它）。
-3. 将 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl) 属性设置为在加载时执行**转换**操作的主机URL。
+3. 将 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl) 属性设置为在加载时执行**转换**操作的主机 URL。
 
 如果满足所有这些条件，**编辑**按钮将显示在查看器中。当用户单击它时，为二进制文件提供的 **HostEditUrl** 将打开并开始转换过程。最后，用户被重定向到新转换文档的 **HostEditUrl**。
 

@@ -2,9 +2,9 @@
 sidebar_position: -1
 ---
 
-# 使用WOPI
+# 使用 WOPI
 
-## 如何启用WOPI？ {#how-to-enable-wopi}
+## 如何启用 WOPI？ {#how-to-enable-wopi}
 
 要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 `true`。
 
@@ -32,7 +32,7 @@ sidebar_position: -1
 
 ## 为什么我需要discovery XML 以及如何获取它？ {#why-do-i-need-the-discovery-xml-and-how-can-i-get-it}
 
-[WOPI 发现](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery)是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML的 **action** 元素表示：
+[WOPI 发现](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery)是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML 的 **action** 元素表示：
 
 - 在线办公室中可用的文档操作，
 - 支持的文件格式（扩展名）。
@@ -96,7 +96,7 @@ sidebar_position: -1
 
 ONLYOFFICE 文档使用以下 WOPI 操作：[CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/getfile.md), [Lock](../../using-wopi/wopi-rest-api/lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/refreshlock.md), [Unlock](../../using-wopi/wopi-rest-api/unlock.md), [PutFile](../../using-wopi/wopi-rest-api/putfile.md), [RenameFile](../../using-wopi/wopi-rest-api/renamefile.md)。有关这些操作的更多信息，请参见相应页面。
 
-## 如何通过WOPI限制访问ONLYOFFICE服务器的使用？ {#how-to-restrict-access-to-the-use-of-onlyoffice-server-via-wopi}
+## 如何通过 WOPI 限制访问 ONLYOFFICE 服务器的使用？ {#how-to-restrict-access-to-the-use-of-onlyoffice-server-via-wopi}
 
 您不能通过 WOPI 限制对 ONLYOFFICE 服务器的使用。编辑访问控制只能通过 ONLYOFFICE 文档 API 并基于 JWT 签名。生成[文件打开请求](../../additional-api/signature/browser.md)需要密钥。
 
@@ -120,6 +120,6 @@ ONLYOFFICE 文档使用以下 WOPI 操作：[CheckFileInfo](../../using-wopi/wop
 
 ## ONLYOFFICE 文档 API 和 WOPI 有什么区别？ {#what-are-the-difference-between-onlyoffice-docs-api-and-wopi}
 
-Y您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api) 与任何云服务集成。
+Y 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api) 与任何云服务集成。
 
 [此页面上](../../using-wopi/api-vs-wopi.md)的表格将帮助您找出这些选项之间的区别。

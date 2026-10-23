@@ -122,11 +122,11 @@
 
 [更多](renaming.md)
 
-## 使用WOPI
+## 使用 WOPI
 
 本节中有关使用 WOPI 的问题。
 
-- [如何启用WOPI？](using-wopi.md#how-to-enable-wopi)
+- [如何启用 WOPI？](using-wopi.md#how-to-enable-wopi)
 - [如何将 ONLYOFFICE 文档配置为仅接受来自受信任的集成商的 WOPI 请求？](using-wopi.md#how-can-i-configure-the-onlyoffice-docs-to-accept-wopi-requests-only-from-the-trusted-integrator)
 - [为什么我需要发现 XML 以及如何获取它？](using-wopi.md#why-do-i-need-the-discovery-xml-and-how-can-i-get-it)
 - [如何通过 WOPI 自定义编辑器行为？](using-wopi.md#how-to-customize-the-editor-behavior-via-wopi)
@@ -134,7 +134,7 @@
 - [如何通过 WOPI 限制公众对数据的访问？](using-wopi.md#how-to-restrict-public-access-to-the-data-via-wopi)
 - [我在哪里可以找到可能的 WOPI 错误代码及其描述？](using-wopi.md#where-can-i-find-possible-wopi-error-codes-and-their-descriptions)
 - [ONLYOFFICE 文档支持哪些 WOPI REST API 操作？](using-wopi.md#which-wopi-rest-api-operations-are-supported-by-onlyoffice-docs)
-- [如何通过WOPI限制访问 ONLYOFFICE 服务器的使用？](using-wopi.md#how-to-restrict-access-to-the-use-of-onlyoffice-server-via-wopi)
+- [如何通过 WOPI 限制访问 ONLYOFFICE 服务器的使用？](using-wopi.md#how-to-restrict-access-to-the-use-of-onlyoffice-server-via-wopi)
 - [如何通过 WOPI 获取有关文件属性、访问权限和编辑器设置的信息？](using-wopi.md#how-to-get-information-about-the-file-properties-access-rights-and-editor-settings-via-wopi)
 - [WOPI 支持哪些操作？](using-wopi.md#what-actions-are-supported-via-wopi)
 - [我可以通过 WOPI 对文档设置哪些访问权限？](using-wopi.md#which-access-rights-can-i-set-to-the-document-via-wopi)

@@ -120,4 +120,4 @@ SDK 由 5 个主要管理器和 4 个服务组成。
    }
    ```
 
-6. 创建[文件控制器](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/FileController.java)获取要在编辑器中打开的文件。当配置服务生成配置模型时，该模型中指定了下载文件的URL。要打开文档，编辑器向此 URL 发送请求，文件控制器响应此请求并返回文档。
+6. 创建[文件控制器](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/FileController.java)获取要在编辑器中打开的文件。当配置服务生成配置模型时，该模型中指定了下载文件的 URL。要打开文档，编辑器向此 URL 发送请求，文件控制器响应此请求并返回文档。

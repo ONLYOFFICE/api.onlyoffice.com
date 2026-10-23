@@ -11,21 +11,21 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="pQPm00oUqOE"/>
 
-这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share中用 ONLYOFFICE 文档编辑办公文档。
+这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share 中用 ONLYOFFICE 文档编辑办公文档。
 
-该插件在官方[Alfresco附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
+该插件在官方[Alfresco 附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
 
 ## 功能特性
 
 - 目前，使用该插件可打开并编辑的文档格式有：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 以下格式仅支持查看：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
-- 该插件会在文档库中为办公文档添加**在ONLYOFFICE中编辑**选项。
+- 该插件会在文档库中为办公文档添加**在 ONLYOFFICE 中编辑**选项。
 
-  ![在OnlyOffice中编辑](/assets/images/editor/alfresco.png)
+  ![在 OnlyOffice 中编辑](/assets/images/editor/alfresco.png)
 
-  这使多个用户能够实时协作，并将更改保存回Alfresco。
+  这使多个用户能够实时协作，并将更改保存回 Alfresco。
 
-- 若要将ODT、ODP、ODS、DOC、XLS、PPT文件转换为对应的OOXML格式文件，请选择**使用ONLYOFFICE转换**选项。转换后的文件将放置在同一文件夹中。您还可以为文件夹配置规则，使其在上传或更改时自动转换文件。具体细节可在此处找到：[这里](https://docs.alfresco.com/content-services/latest/using/content/rules/)。
+- 若要将 ODT、ODP、ODS、DOC、XLS、PPT 文件转换为对应的 OOXML 格式文件，请选择**使用 ONLYOFFICE 转换**选项。转换后的文件将放置在同一文件夹中。您还可以为文件夹配置规则，使其在上传或更改时自动转换文件。具体细节可在此处找到：[这里](https://docs.alfresco.com/content-services/latest/using/content/rules/)。
 
 - 若要创建新文档，请打开您想要创建文档的文件夹，然后点击**创建...** 按钮。
 
@@ -33,18 +33,18 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Alfresco和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Alfresco发送POST请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Alfresco 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Alfresco 发送 POST 请求。
 
 使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
 
-## 安装 ONLYOFFICE Alfresco模块包
+## 安装 ONLYOFFICE Alfresco 模块包
 
-要在Alfresco中使用 ONLYOFFICE 文档，对于Ubuntu系统，请按照以下步骤操作：
+要在 Alfresco 中使用 ONLYOFFICE 文档，对于 Ubuntu 系统，请按照以下步骤操作：
 
-1. 根据您的Alfresco安装情况，将已编译的 **\*.amp**包上传到相应的目录：
+1. 根据您的 Alfresco 安装情况，将已编译的 **\*.amp**包上传到相应的目录：
 
-   - 对于Alfresco存储库，将*onlyoffice-alfresco/repo/target/*中的文件上传到*/usr/local/tomcat/amps/*目录
-   - 对于Share，将*onlyoffice-alfresco/share/target/*中的文件上传到*/usr/local/tomcat/amps\_share/*目录。
+   - 对于 Alfresco 存储库，将*onlyoffice-alfresco/repo/target/*中的文件上传到*/usr/local/tomcat/amps/*目录
+   - 对于 Share，将*onlyoffice-alfresco/share/target/*中的文件上传到*/usr/local/tomcat/amps\_share/*目录。
 
    :::note
    您可以在此处下载已编译的包文件，并将它们放置到相应的目录中：[此处](https://github.com/onlyoffice/onlyoffice-alfresco/releases)。
@@ -65,9 +65,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
       </TabItem>
    </Tabs>
 
-   有关使用MMT的更多详细信息，请参阅[Alfresco文档](https://docs.alfresco.com/content-services/latest/install/zip/amp/)。
+   有关使用 MMT 的更多详细信息，请参阅[Alfresco 文档](https://docs.alfresco.com/content-services/latest/install/zip/amp/)。
 
-3. 确保ONLYOFFICE 文档能够向Alfresco发送POST请求。
+3. 确保 ONLYOFFICE 文档能够向 Alfresco 发送 POST 请求。
 
    您可能需要在**alfresco-global.properties**中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-module-package-for-alfresco)进行设置：
 
@@ -85,28 +85,28 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    该文件可能位于 */usr/local/tomcat/shared/classes/alfresco-global.properties*。
    :::
 
-4. 重启Alfresco:
+4. 重启 Alfresco:
 
    ``` sh
    sudo ./alfresco.sh stop
    sudo ./alfresco.sh start
    ```
 
-您可以在Alfresco的管理员工具中，通过 */share/page/console/admin-console/module-package*检查该模块。
+您可以在 Alfresco 的管理员工具中，通过 */share/page/console/admin-console/module-package*检查该模块。
 
-## 配置 ONLYOFFICE Alfresco模块包 {#configuring-onlyoffice-module-package-for-alfresco}
+## 配置 ONLYOFFICE Alfresco 模块包 {#configuring-onlyoffice-module-package-for-alfresco}
 
-模块配置可以在**Alfresco管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
+模块配置可以在**Alfresco 管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
 
 :::note
 您也可以将*onlyoffice.url*添加到**alfresco-global.properties**中。通过设置页面进行的配置将覆盖**alfresco-global.properties**中的设置。
 :::
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Alfresco配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Alfresco 配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
-## 编译 ONLYOFFICE Alfresco模块包
+## 编译 ONLYOFFICE Alfresco 模块包
 
-如果您计划自行编译 ONLYOFFICE Alfresco模块包（例如，编辑源代码然后进行编译），请按照以下步骤操作：
+如果您计划自行编译 ONLYOFFICE Alfresco 模块包（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
 1. 成功编译需要最新的稳定版**Java**。如果未安装，可使用以下命令安装 OpenJDK 8：
 
@@ -117,7 +117,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 2. 安装最新版的**Maven**。安装过程可参考：[这里](https://maven.apache.org/install.html)。
 
-3. 下载 ONLYOFFICE Alfresco模块包的源代码：
+3. 下载 ONLYOFFICE Alfresco 模块包的源代码：
 
    ``` sh
    git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git
@@ -136,7 +136,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    mvn clean install
    ```
 
-另一种构建 ONLYOFFICE Alfresco模块包的方法是使用**docker-compose**文件。
+另一种构建 ONLYOFFICE Alfresco 模块包的方法是使用**docker-compose**文件。
 
 在项目目录中使用以下命令：
 
@@ -146,34 +146,34 @@ docker-compose up
 
 ## 工作原理
 
-ONLYOFFICE集成遵循此处记录的API规范：[这里](../basic-concepts.md)。
+ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.md)。
 
-1. 您在Alfresco Share中导航到一个文档，并选择**在ONLYOFFICE中编辑**菜单选项。
+1. 您在 Alfresco Share 中导航到一个文档，并选择**在 ONLYOFFICE 中编辑**菜单选项。
 
-2. Alfresco Share向存储库端发出请求(URL格式为：*/parashift/onlyoffice/prepare?nodeRef=\{nodeRef\}*)。
+2. Alfresco Share 向存储库端发出请求(URL 格式为：*/parashift/onlyoffice/prepare?nodeRef=\{nodeRef\}*)。
 
-3. Alfresco存储库端为Share准备一个包含以下属性的JSON对象：
+3. Alfresco 存储库端为 Share 准备一个包含以下属性的 JSON 对象：
 
-   - **url**：ONLYOFFICE 文档用于下载文档的URL(包含当前用户的*alf\_ticket*);
-   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的URL；
-   - **onlyofficeUrl**：客户端需要回复给 ONLYOFFICE 文档的URL（由*onlyoffice.url*属性提供）；
-   - **key**：用于指示 ONLYOFFICE 文档是否需要重新下载文档的*UUID+修改时间戳*；
+   - **url**：ONLYOFFICE 文档用于下载文档的 URL(包含当前用户的*alf\_ticket*);
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **onlyofficeUrl**：客户端需要回复给 ONLYOFFICE 文档的 URL（由*onlyoffice.url*属性提供）；
+   - **key**：用于指示 ONLYOFFICE 文档是否需要重新下载文档的*UUID+ 修改时间戳*；
    - **title**：文档标题（名称）。
 
-4. Alfresco Share获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便您的浏览器可以加载编辑器。
+4. Alfresco Share 获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便您的浏览器可以加载编辑器。
 
-5. 您的浏览器向 ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给 ONLYOFFICE 文档。
+5. 您的浏览器向 ONLYOFFICE 文档的 JavaScript 库发出请求，并将包含上述属性的 DocEditor 配置发送给 ONLYOFFICE 文档。
 
-6. 然后，ONLYOFFICE 文档从Alfresco下载文档，您开始编辑。
+6. 然后，ONLYOFFICE 文档从 Alfresco 下载文档，您开始编辑。
 
-7. ONLYOFFICE 文档向*callbackUrl*发送POST请求，通知Alfresco您正在编辑文档。
+7. ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，通知 Alfresco 您正在编辑文档。
 
-8. Alfresco锁定文档，但仍允许具有写入权限的其他用户通过保留相关操作，与 ONLYOFFICE 文档进行实时协作。
+8. Alfresco 锁定文档，但仍允许具有写入权限的其他用户通过保留相关操作，与 ONLYOFFICE 文档进行实时协作。
 
 9. 当所有用户和浏览器完成编辑后，关闭编辑窗口。
 
-10. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送POST请求，告知Alfresco客户端已完成文档编辑并关闭了窗口。
+10. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Alfresco 客户端已完成文档编辑并关闭了窗口。
 
-11. Alfresco下载文档的新版本，替换旧版本。
+11. Alfresco 下载文档的新版本，替换旧版本。
 
-在此处下载 ONLYOFFICE Alfresco模块包：[这里](https://github.com/ONLYOFFICE/onlyoffice-alfresco)。
+在此处下载 ONLYOFFICE Alfresco 模块包：[这里](https://github.com/ONLYOFFICE/onlyoffice-alfresco)。

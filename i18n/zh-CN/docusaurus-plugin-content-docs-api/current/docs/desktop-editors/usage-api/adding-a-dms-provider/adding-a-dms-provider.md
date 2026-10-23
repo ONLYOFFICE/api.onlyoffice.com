@@ -6,15 +6,15 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import APITable from '@site/src/components/APITable/APITable';
 
-# 添加DMS提供商
+# 添加 DMS 提供商
 
-ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到 ONLYOFFICE Apps（SaaS 或本地部署）、Nextcloud、ownCloud、Moodle、Liferay、kDrive 或 Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
+ONLYOFFICE 桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到 ONLYOFFICE Apps（SaaS 或本地部署）、Nextcloud、ownCloud、Moodle、Liferay、kDrive 或 Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
 
 按照以下步骤将您自己的文档管理系统（DMS）添加到连接列表中：
 
 ## 步骤1
 
-在*providers*目录中使用DMS提供商的名称创建一个文件夹（例如*onlyoffice*）。文件夹的路径取决于您使用的操作系统：
+在*providers*目录中使用 DMS 提供商的名称创建一个文件夹（例如*onlyoffice*）。文件夹的路径取决于您使用的操作系统：
 
 <Tabs>
   <TabItem value="win" label="Windows">
@@ -44,16 +44,16 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 
 | 参数                  | 类型                   | 示例                                                                                                      | 描述                                                                                                                                                                                  |
 |-----------------------|------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| provider              | string                 | `"onlyoffice"`                                                                                             | 在JavaScript命令中用于引用桌面应用的提供商ID。                                                                                                                                     |
+| provider              | string                 | `"onlyoffice"`                                                                                             | 在 JavaScript 命令中用于引用桌面应用的提供商 ID。                                                                                                                                     |
 | name                  | string                 | `"ONLYOFFICE"`                                                                                             | 在**可用云端**列表中显示的名称。                                                                                                                                                    |
-| check                 | object                 | `{ "url": "status", "headers": { "X-CUSTOM-HEADER": true } }`                                              | 用于检查门户可用性的参数。会发送一个`GET`请求，之后期望返回`HTTP_STATUS_CODE = 200`。响应必须以JSON格式返回。                                                                        |
-| check.url             | string                 | `"status"`                                                                                                 | 请求中使用的URL。                                                                                                                                                                     |
+| check                 | object                 | `{ "url": "status", "headers": { "X-CUSTOM-HEADER": true } }`                                              | 用于检查门户可用性的参数。会发送一个`GET`请求，之后期望返回`HTTP_STATUS_CODE = 200`。响应必须以 JSON 格式返回。                                                                        |
+| check.url             | string                 | `"status"`                                                                                                 | 请求中使用的 URL。                                                                                                                                                                     |
 | check.headers         | object                 | `{ "OCS-APIREQUEST": true }`                                                                               | 添加到ajax请求的头部。                                                                                                                                                                |
-| entryPage             | string                 | `https://url-to-connect-provider.com`                                                                      | 用于连接提供商的URL。它代替提供商地址使用，并允许桌面应用不发送检查请求。                                                                                                          |
-| extraLogout           | string / array[string] | `https://url-for-logout.com`                                                                               | 从云端登出的URL。它代替提供商地址使用。                                                                                                                                            |
-| editorPage            | string                 | `"/apps/onlyoffice/"` 或 `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`                                           | 指示正在打开的文件类型为文档的相对URL。您可以为此参数使用正则表达式。                                                                                                              |
-| startPage             | string                 | `"/"`                                                                                                      | 在创建新连接时添加到输入的IP或域名后的相对URL。                                                                                                                                  |
-| icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | 门户的图标。您可以通过指定带有相应图标的`themeLight`和`themeDark`对象，为每种UI主题类型（亮色和暗色）添加图标。                                                                     |
+| entryPage             | string                 | `https://url-to-connect-provider.com`                                                                      | 用于连接提供商的 URL。它代替提供商地址使用，并允许桌面应用不发送检查请求。                                                                                                          |
+| extraLogout           | string / array[string] | `https://url-for-logout.com`                                                                               | 从云端登出的 URL。它代替提供商地址使用。                                                                                                                                            |
+| editorPage            | string                 | `"/apps/onlyoffice/"` 或 `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`                                           | 指示正在打开的文件类型为文档的相对 URL。您可以为此参数使用正则表达式。                                                                                                              |
+| startPage             | string                 | `"/"`                                                                                                      | 在创建新连接时添加到输入的 IP 或域名后的相对 URL。                                                                                                                                  |
+| icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | 门户的图标。您可以通过指定带有相应图标的`themeLight`和`themeDark`对象，为每种 UI 主题类型（亮色和暗色）添加图标。                                                                     |
 | icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 在**已连接的云端**和**可用云端**列表中显示的图标路径。                                                                                                                              |
 | icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 在**连接到**窗口中显示的提供商徽标路径。在9.0以下版本中，当门户列表为空时，它显示在连接页面上的提供商按钮上。                                                                          |
 
@@ -100,12 +100,12 @@ ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协�
 
    ![提供商按钮](/assets/images/desktop/provider-button.png#gh-light-mode-only)![提供商按钮](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
-支持的图像格式为 *.png*、*.jpeg*、*.svg*。我们建议使用 *.svg*文件，以便在系统中200%缩放的HiDPI显示器上正确显示。
+支持的图像格式为 *.png*、*.jpeg*、*.svg*。我们建议使用 *.svg*文件，以便在系统中200%缩放的 HiDPI 显示器上正确显示。
 
-您也可以为每种UI主题类型（亮色和暗色）添加图标。在这种情况下，创建四个图标（每种主题两个）并将它们全部添加到*config.json*文件中。
+您也可以为每种 UI 主题类型（亮色和暗色）添加图标。在这种情况下，创建四个图标（每种主题两个）并将它们全部添加到*config.json*文件中。
 
 ## 步骤4
 
-1. 启动ONLYOFFICE桌面编辑器，如果需要请重启。
+1. 启动 ONLYOFFICE 桌面编辑器，如果需要请重启。
 2. 在左侧边栏中点击**云端**。
 3. 在**可用云端**列表中找到您的提供商，然后点击**连接**，检查连接是否正常工作。

@@ -12,7 +12,7 @@ sidebar_position: -12
 
 使用某些文档管理系统（如 Nextcloud、ownCloud、SharePoint 等）并希望了解如何将 ONLYOFFICE 文档连接到这些系统的用户，可以访问[即用型连接器](../../get-started/ready-to-use-connectors/nextcloud-integration.md)部分。该部分详细介绍了与 ONLYOFFICE 文档配合使用的主要插件。
 
-每个API方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
+每个 API 方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
 
 ## 如何查看 ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
 
@@ -37,7 +37,7 @@ sidebar_position: -12
 
 有关与**文档命令服务**交互以及使用各种命令执行此操作的更多详细信息，请访问[此页面](../../additional-api/command-service/command-service.md)。
 
-## 我想从 default.json 配置文件中更改一些ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
+## 我想从 default.json 配置文件中更改一些 ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
 
 ONLYOFFICE 文档的所有主要设置都存储在 `default.json` 配置文件中，该文件位于 `/etc/onlyoffice/documentserver/` 文件夹（适用于 Linux）或 `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\`（适用于 Windows）中。在同一文件夹中还有特定于平台的 `production.json` 文件，其中存储了与 Linux 或 Windows 相关的设置。
 
@@ -63,4 +63,4 @@ ONLYOFFICE 文档使用 [Node.js 配置模块](https://www.npmjs.com/package/con
 - [强制保存](../../get-started/how-it-works/saving-file.md#force-saving)
 - [请求正文中的令牌](../../additional-api/signature/request/token-in-body.md)
 - [启用 WOPI](../../using-wopi/overview.md#enabling-wopi)
-- [IP过滤器](../../using-wopi/overview.md#ip-filter)
+- [IP 过滤器](../../using-wopi/overview.md#ip-filter)

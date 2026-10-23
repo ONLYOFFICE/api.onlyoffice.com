@@ -4,7 +4,7 @@ sidebar_position: -19
 
 # 文档历史记录
 
-**文档编辑器**可以显示文本文档、电子表格、演示文稿和PDF的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE 文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
+**文档编辑器**可以显示文本文档、电子表格、演示文稿和 PDF 的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE 文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
 
 以下图表和步骤解释了在 ONLYOFFICE 文档中查看文档历史记录的工作方式。
 
@@ -62,7 +62,7 @@ sidebar_position: -19
 
    ![打开文件](/assets/images/editor/history_open.png)
 
-3. 添加[onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)事件处理程序。当用户从列表中选择一个版本时，此事件将触发并传入版本号。在处理程序中，调用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法并传入该版本文件的绝对URL。
+3. 添加[onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)事件处理程序。当用户从列表中选择一个版本时，此事件将触发并传入版本号。在处理程序中，调用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法并传入该版本文件的绝对 URL。
 
    调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 
@@ -203,7 +203,7 @@ sidebar_position: -19
   ONLYOFFICE 文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
   :::
 
-- [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对URL，用于突出显示特定版本的更改。保存此文件，并在调用[setHistoryData](../../usage-api/methods.md#sethistorydata)时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
+- [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对 URL，用于突出显示特定版本的更改。保存此文件，并在调用[setHistoryData](../../usage-api/methods.md#sethistorydata)时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
 
   调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 
@@ -224,7 +224,7 @@ sidebar_position: -19
   ```
 
   :::warning
-  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了 ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
+  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了 ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源 HTTP 请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些可以在云控制台的**实例**部分找到。
   :::
 
   ![变更目录](/assets/images/editor/changesurl.png)

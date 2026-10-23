@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # 删除单个字段
 
-通过ID或索引从表单中删除不必要的字段，用于简化界面、隐藏内部字段或根据用户角色动态自定义表单：
+通过 ID 或索引从表单中删除不必要的字段，用于简化界面、隐藏内部字段或根据用户角色动态自定义表单：
 
 - 创建具有角色特定字段的表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
 - 实现字段删除功能（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)）；
