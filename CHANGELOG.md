@@ -4,6 +4,10 @@
 
 ### New features
 
+#### Docs API
+
+* Added an FAQ entry on reading form field values from a document that is open in the editor
+
 #### Samples
 
 * Search now covers every Docs, DocSpace and AI sample, whatever category is selected
@@ -32,6 +36,9 @@
 * Synced the MCP server docs with the `docspace-mcp` repository, refreshed the quickstart screenshots and described the tool confirmation dialog
 * Polished the MCP server getting started, tutorials and troubleshooting pages
 * Moved Troubleshooting & FAQ into More information in the Embed SDK
+* Linked the Desktop Editors MCP setup steps from the MCP server clients page instead of duplicating them
+* Showed the build script in its `package.json` context in the Plugins SDK migration guide
+* Used plugin package names as shown in the plugins list on the Plugins SDK sample pages
 
 #### AI
 
@@ -42,6 +49,13 @@
 
 * Updated screenshots and UI steps for 10.0
 * Renamed the MCP chat to AI Chat, clarified the MCP version history and noted which setup steps predate 10.0
+* Dropped DocSpace from the placeholder URL in the MCP server samples
+
+#### Localization
+
+* Replaced 协作空间 with ONLYOFFICE Apps and spaced product names, Latin text and numbers from adjacent Chinese text
+* Switched zh-CN pages to full-width quotes, brackets and `——` dashes, `：` between terms and descriptions, and `、` between list items
+* Translated remaining English UI labels, menu names and image alt text in plugin samples, MCP and AI guides, and the WOPI overview
 
 ### Fixes
 
