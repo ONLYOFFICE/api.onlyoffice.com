@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # ONLYOFFICE Apps MCP
 
-ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYOFFICE Apps 实例交互，通过自然语言命令实现文档管理操作。
+ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI 聊天与您的 ONLYOFFICE Apps 实例交互，通过自然语言命令实现文档管理操作。
 
 ## 先决条件
 
@@ -35,7 +35,7 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYO
 
 1. 打开 ONLYOFFICE 桌面编辑器
 2. 在左侧面板中点击 **AI 工具**。如果尚未安装 AI 工具，请点击**接受并安装**，然后重新启动应用程序
-3. 连接 AI 模型。在 **AI Chat** 面板中选择提供商，输入其 API 密钥，选择模型，然后点击**添加模型**。您也可以稍后在**设置** → **AI 模型**中完成此操作。在至少添加一个 AI 模型之前，**MCP 服务器**设置不可用
+3. 连接 AI 模型。在 **AI 聊天**面板中选择提供商，输入其 API 密钥，选择模型，然后点击**添加模型**。您也可以稍后在**设置** → **AI 模型**中完成此操作。在至少添加一个 AI 模型之前，**MCP 服务器**设置不可用
 4. 在左侧面板中点击**设置**，然后转到 **MCP 服务器**
 5. 点击**编辑配置**
 
@@ -80,7 +80,7 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYO
 2. 确保 **onlyoffice-apps** 开关已打开
 3. 要启用或禁用单个工具，请展开服务器条目并使用工具旁边的开关
 
-现在您可以在 **AI Chat** 中使用 ONLYOFFICE Apps 工具。
+现在您可以在 **AI 聊天**中使用 ONLYOFFICE Apps 工具。
 
 ![保存并验证](/assets/images/desktop/step3.png#gh-light-mode-only)![保存并验证](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
 
@@ -96,7 +96,7 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYO
 
 ## 使用示例
 
-连接 ONLYOFFICE Apps MCP 服务器后，您可以在 AI Chat 中使用自然语言命令：
+连接 ONLYOFFICE Apps MCP 服务器后，您可以在 AI 聊天中使用自然语言命令：
 
 - “列出共享文件夹中的所有文档”
 - “在 ONLYOFFICE Apps 中创建一个名为‘Q1 报告’的新文件夹”
@@ -104,7 +104,7 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI Chat 与您的 ONLYO
 - “将文档‘Budget 2026.xlsx’共享给 john@example.com”
 - “显示营销文件夹的内容”
 
-AI Chat 将自动使用 ONLYOFFICE Apps MCP 工具执行这些命令并显示结果。
+AI 聊天将自动使用 ONLYOFFICE Apps MCP 工具执行这些命令并显示结果。
 
 ## 故障排除
 
